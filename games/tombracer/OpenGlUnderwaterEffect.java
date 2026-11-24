@@ -3,8 +3,8 @@
  */
 final class OpenGlUnderwaterEffect extends ShaderEffect {
     private GpuTexture2D field_p;
-    private mf field_r;
-    private mf field_o;
+    private ArbAssemblyProgram field_r;
+    private ArbAssemblyProgram field_o;
     static java.awt.Color field_i;
     private boolean field_m;
     private boolean field_g;
@@ -15,8 +15,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     private float[] field_h;
     private boolean field_k;
     static int[] field_n;
-    private mf field_e;
-    private mf field_l;
+    private ArbAssemblyProgram field_e;
+    private ArbAssemblyProgram field_l;
 
     final void setParameters(byte param0, int param1, int param2) {
         if (param0 != 55) {

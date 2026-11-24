@@ -381,7 +381,7 @@ final class PcmResampler {
         if (param0 == param1) {
           return;
         }
-        var3 = MouseWheelInput.a(-102, param0, param1);
+        var3 = MouseWheelInput.greatestCommonDivisor(-102, param0, param1);
         param0 = param0 / var3;
         param1 = param1 / var3;
         this.field_b = param0;

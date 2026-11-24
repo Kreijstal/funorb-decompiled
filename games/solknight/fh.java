@@ -10,7 +10,7 @@ final class fh {
     static rj field_e;
     static int field_b;
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;

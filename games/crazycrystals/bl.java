@@ -114,7 +114,7 @@ final class bl extends IntrusiveNode {
           var9 = new int[var5];
           var10 = eq.bitLength(var5 - 1, (byte) 100);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = sl.a((byte) -24, var11, var10);
+            var9[var11] = sl.reverseLowBits((byte) -24, var11, var10);
           }
           if (var1 == 0) {
             field_t = var6_ref_float__;

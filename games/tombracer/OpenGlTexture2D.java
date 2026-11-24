@@ -20,7 +20,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.width = param3;
           this.height = param4;
           this.field_j.bindTexture(true, (GpuTexture) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(108), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(108), param3, param4, 0, SneakHintDecoration.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -30,7 +30,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         try {
           this.field_j.bindTexture(param8, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, waa.toGlFormat(param7, 1383), 5121, param1, param5);
+          jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, SneakHintDecoration.toGlFormat(param7, 1383), 5121, param1, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
@@ -83,7 +83,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
             this.uploadByteMipmaps(this.field_i, param2, param5, -118, param3);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(110), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(110), param2, param3, 0, SneakHintDecoration.toGlFormat(this.field_f, 1383), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -167,8 +167,8 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         eu.field_a = null;
         tka.field_p = null;
         HardwareModelBillboardState.field_a = null;
-        bsa.field_i = null;
-        nc.field_e = null;
+        RadialSelectionPainter.field_i = null;
+        QuickChatCategoryLoader.field_e = null;
         System.gc();
     }
 
@@ -248,7 +248,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.getGlFormat(44), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param5, param6 * 4);
+          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.getGlFormat(44), param2, param3, 0, SneakHintDecoration.toGlFormat(this.field_f, 1383), 5126, param5, param6 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1240,7 +1240,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param4);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_i, 0, param0, param8, param7, param2, waa.toGlFormat(param6, 1383), 5121, param3, param5);
+          jaggl.OpenGL.glTexSubImage2Dub(this.field_i, 0, param0, param8, param7, param2, SneakHintDecoration.toGlFormat(param6, 1383), 5121, param3, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
           int var10_int = -48 % ((-62 - param1) / 60);

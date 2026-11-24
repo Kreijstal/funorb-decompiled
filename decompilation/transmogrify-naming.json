@@ -1612,6 +1612,14 @@
       "renamedSymbol": "M:ByteStorage.getBytes(Z)[B"
     },
     {
+      "symbol": "M:dj.a(ZII)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index1. false boolean guard clears StringBuilder field_b after bit loop. Complete original-body SHA256 7ab51eb9ca2e9e686933e9fb01ca24117d61686ba3383a97b6e05bf81800535f.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteStorage.reverseLowBits(ZII)I"
+    },
+    {
       "symbol": "M:dj.a([BB)V",
       "originalName": "a",
       "to": "setBytes",
@@ -49524,7 +49532,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#0",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#0",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -49535,7 +49543,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#1",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#1",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -49546,7 +49554,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#2",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#2",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -49557,7 +49565,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#3",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#3",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -49568,7 +49576,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#4",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#4",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -49579,7 +49587,7 @@
     },
     {
       "symbol": "L:dj.a(ZII)I#5",
-      "renamedSymbol": "L:ByteStorage.a(ZII)I#5",
+      "renamedSymbol": "L:ByteStorage.reverseLowBits(ZII)I#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -152187,9 +152195,9 @@
     },
     {
       "symbol": "M:dj.a(ZII)I",
-      "renamedSymbol": "M:ByteStorage.a(ZII)I",
+      "renamedSymbol": "M:ByteStorage.reverseLowBits(ZII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "dj.java",
         "start": 6664,
@@ -182030,7 +182038,7 @@
     },
     {
       "symbol": "P:dj.a(ZII)I#0",
-      "renamedSymbol": "P:ByteStorage.a(ZII)I#0",
+      "renamedSymbol": "P:ByteStorage.reverseLowBits(ZII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -182041,7 +182049,7 @@
     },
     {
       "symbol": "P:dj.a(ZII)I#1",
-      "renamedSymbol": "P:ByteStorage.a(ZII)I#1",
+      "renamedSymbol": "P:ByteStorage.reverseLowBits(ZII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -182052,7 +182060,7 @@
     },
     {
       "symbol": "P:dj.a(ZII)I#2",
-      "renamedSymbol": "P:ByteStorage.a(ZII)I#2",
+      "renamedSymbol": "P:ByteStorage.reverseLowBits(ZII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -236506,7 +236514,7 @@
       "original": "dj.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "117c04bf3c89c4ded77739b094e6299dc9ab5b7554021d13a91e0d861afb4725",
-      "outputSha256": "42b22f76c5b0f7e424de7de1c0a436e876eb4d020410eb438646af8d91e61c86",
+      "outputSha256": "f9f08dfc715be623276bb1293c00fb413ba3224d04dcfdd3c105399fd3f958f5",
       "edits": [
         {
           "start": 53,
@@ -236577,6 +236585,13 @@
           "symbol": "M:dj.a([BB)V",
           "original": "a",
           "renamed": "setBytes"
+        },
+        {
+          "start": 6664,
+          "end": 6665,
+          "symbol": "M:dj.a(ZII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 7464,
@@ -256883,7 +256898,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "3dd636780797671a4463e45d63e001b2fa3eee155b62321980dd9c03d1d1e4b1",
-      "outputSha256": "1548f2ea8ebb5dbb2829c7e573f80e9ab2654eb250cd45877da7f277854f9b42",
+      "outputSha256": "6bf7dd805ca9a495605fb3ec08ded3ed75515b34f4ccaaa2e2a1490d5a011b8a",
       "edits": [
         {
           "start": 80,
@@ -257052,6 +257067,13 @@
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 24002,
+          "end": 24003,
+          "symbol": "M:dj.a(ZII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 24380,
@@ -282945,10 +282967,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/transmogrify"
     },
-    "rulesSha256": "8e7b3de2c49c378c7ae1b3e961290615395f85650d13eb92ddcb180173f7512e",
+    "rulesSha256": "faf8421e1021cf9384379728aa5c3b3b17934a0fc4ba5628aa9716de71c49c5b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
-    "outputTreeSha256": "3da3fdf6bceef4dd552abf210bb90105f947c0bdf3d90efa71293d3d5fd0a890",
+    "outputTreeSha256": "34e09f0e08bafdc0654482e3b5857e99dcd448d85158cac21997519bd16b36f6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

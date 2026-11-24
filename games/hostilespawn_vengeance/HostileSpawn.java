@@ -2326,7 +2326,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           if (param1 > -18) {

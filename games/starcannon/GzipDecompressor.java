@@ -140,7 +140,7 @@ final class GzipDecompressor {
           var3.field_m = param2;
           var3.field_g = param1.field_g;
           if (param0 >= -60) {
-            GzipDecompressor.a(false, -94);
+            GzipDecompressor.updateMembershipSlides(false, -94);
           }
           var3.field_e = param1.field_e;
           var3.field_f = param1.field_f;
@@ -225,7 +225,7 @@ final class GzipDecompressor {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int updateMembershipSlides(boolean param0, int param1) {
         int stackIn_62_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_73_0 = 0;

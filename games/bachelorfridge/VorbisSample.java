@@ -208,7 +208,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = mda.bitLength(var5 - 1, 16);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = gna.b(255, var10, var11);
+            var9[var11] = gna.reverseLowBits(255, var10, var11);
           }
           if (var1 == 0) {
             field_n = var6_ref_float__;

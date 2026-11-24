@@ -201,7 +201,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.move((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
-          this.trap.rotateBy(false, -lw.signum(var11Lifetime6, (byte) -76) * this.turnSpeed);
+          this.trap.rotateBy(false, -SneakHintCharacter.signum(var11Lifetime6, (byte) -76) * this.turnSpeed);
           if (this.stopsWhileTurning) {
             return;
           }
@@ -269,7 +269,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.move((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
-        this.trap.rotateBy(false, -lw.signum(var11Lifetime3, (byte) -76) * this.turnSpeed);
+        this.trap.rotateBy(false, -SneakHintCharacter.signum(var11Lifetime3, (byte) -76) * this.turnSpeed);
         if (this.stopsWhileTurning) {
           return;
         }

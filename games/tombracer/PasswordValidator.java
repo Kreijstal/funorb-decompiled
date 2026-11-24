@@ -249,7 +249,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_11_0;
           }
           if (this.passwordContainsEmailPart(-37, param1)) {
-            stackIn_15_0 = waa.field_e;
+            stackIn_15_0 = SneakHintDecoration.field_e;
             return stackIn_15_0;
           }
           if (var6.length() <= 0) {

@@ -14,7 +14,7 @@ abstract class MouseWheelInput {
 
     abstract void attach(byte param0, java.awt.Component param1);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int greatestCommonDivisor(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_10_0 = 0;

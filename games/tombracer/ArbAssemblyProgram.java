@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf {
+final class ArbAssemblyProgram {
     int field_b;
     private HardwareOpenGlToolkit field_c;
     static PlayerViewportLayout fullViewportLayout;
@@ -14,7 +14,7 @@ final class mf {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          mf.buildPowerCurveTable(-23);
+          ArbAssemblyProgram.buildPowerCurveTable(-23);
         }
         fullViewportLayout = null;
     }
@@ -48,7 +48,7 @@ final class mf {
         }
     }
 
-    mf(HardwareOpenGlToolkit param0, int param1, int param2) {
+    ArbAssemblyProgram(HardwareOpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_c = param0;

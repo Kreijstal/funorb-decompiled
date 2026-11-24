@@ -9,10 +9,10 @@ final class AccountRequestState {
           AudioOutput.configureAudio(param2, param0, 10);
           int var8_int = 6 % ((-86 - param5) / 39);
           ub.field_n = AudioOutput.createOutput(param7, param4, 0, param3);
-          hm.field_n = AudioOutput.createOutput(param7, param4, 1, param6);
+          AchievementIconEntry.field_n = AudioOutput.createOutput(param7, param4, 1, param6);
           wa.field_j = new PcmStreamMixer();
           kc.field_U = param6;
-          hm.field_n.setRootStream(wa.field_j);
+          AchievementIconEntry.field_n.setRootStream(wa.field_j);
           FullscreenFocusCanvas.field_b = param1;
           FullscreenFocusCanvas.field_b.a(DelegatingCanvas.field_d, 256);
           ub.field_n.setRootStream(FullscreenFocusCanvas.field_b);

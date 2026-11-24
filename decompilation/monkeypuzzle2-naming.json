@@ -892,6 +892,14 @@
       "renamedSymbol": "M:bb.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:bc.a(IIB)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator,consuming input with unsigned right shift until the original full-width count is nonpositive. Preserve int overflow and counts beyond32 without clamping or masking. Unused -64%((byteGuard+8)/50) precedes bit loop and wrapper diagnostic uses original field_z string. Complete original-body SHA256 f1e31977065f2e2a2eb8b9e16364e7dcb169e8ca55497b68343f36fa4543dab2. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bc.reverseLowBits(IIB)I"
+    },
+    {
       "symbol": "M:be.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1098,6 +1106,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 4bf480a97a7dca2469fab19744d447add958a30767d7f8df0b132cf6a3f709c8.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ec.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ed.a(III)I",
+      "originalName": "a",
+      "to": "greatestCommonDivisor",
+      "evidence": "Compute the retained Euclidean rate-normalization divisor using initial signed comparison/swap and repeated signed-int remainder updates. Preserve zero,negative and MIN_VALUE domains without abs or positive normalization,mutated arguments in diagnostic wrapping,and all captured global reads. Int guard!=0 clears field_a before loop. Complete original-body SHA256 11d01ce0dfa8cf76d0b53ec627d2f57bc6925d89c77641402e7c95095fb1392c. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ed.greatestCommonDivisor(III)I"
     },
     {
       "symbol": "M:ed.a(Z)V",
@@ -42687,7 +42703,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#0",
-      "renamedSymbol": "L:bc.a(IIB)I#0",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -42698,7 +42714,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#1",
-      "renamedSymbol": "L:bc.a(IIB)I#1",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -42709,7 +42725,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#2",
-      "renamedSymbol": "L:bc.a(IIB)I#2",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -42720,7 +42736,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#3",
-      "renamedSymbol": "L:bc.a(IIB)I#3",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -42731,7 +42747,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#4",
-      "renamedSymbol": "L:bc.a(IIB)I#4",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -42742,7 +42758,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#5",
-      "renamedSymbol": "L:bc.a(IIB)I#5",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -42753,7 +42769,7 @@
     },
     {
       "symbol": "L:bc.a(IIB)I#6",
-      "renamedSymbol": "L:bc.a(IIB)I#6",
+      "renamedSymbol": "L:bc.reverseLowBits(IIB)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -57427,7 +57443,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#0",
-      "renamedSymbol": "L:ed.a(III)I#0",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -57438,7 +57454,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#1",
-      "renamedSymbol": "L:ed.a(III)I#1",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -57449,7 +57465,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#2",
-      "renamedSymbol": "L:ed.a(III)I#2",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -57460,7 +57476,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#3",
-      "renamedSymbol": "L:ed.a(III)I#3",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -57471,7 +57487,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#4",
-      "renamedSymbol": "L:ed.a(III)I#4",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -57482,7 +57498,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#5",
-      "renamedSymbol": "L:ed.a(III)I#5",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#5",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -57493,7 +57509,7 @@
     },
     {
       "symbol": "L:ed.a(III)I#6",
-      "renamedSymbol": "L:ed.a(III)I#6",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(III)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150168,9 +150184,9 @@
     },
     {
       "symbol": "M:bc.a(IIB)I",
-      "renamedSymbol": "M:bc.a(IIB)I",
+      "renamedSymbol": "M:bc.reverseLowBits(IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "bc.java",
         "start": 136,
@@ -153138,9 +153154,9 @@
     },
     {
       "symbol": "M:ed.a(III)I",
-      "renamedSymbol": "M:ed.a(III)I",
+      "renamedSymbol": "M:ed.greatestCommonDivisor(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "greatestCommonDivisor",
       "declaration": {
         "file": "ed.java",
         "start": 192,
@@ -177129,7 +177145,7 @@
     },
     {
       "symbol": "P:bc.a(IIB)I#0",
-      "renamedSymbol": "P:bc.a(IIB)I#0",
+      "renamedSymbol": "P:bc.reverseLowBits(IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -177140,7 +177156,7 @@
     },
     {
       "symbol": "P:bc.a(IIB)I#1",
-      "renamedSymbol": "P:bc.a(IIB)I#1",
+      "renamedSymbol": "P:bc.reverseLowBits(IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -177151,7 +177167,7 @@
     },
     {
       "symbol": "P:bc.a(IIB)I#2",
-      "renamedSymbol": "P:bc.a(IIB)I#2",
+      "renamedSymbol": "P:bc.reverseLowBits(IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -183476,7 +183492,7 @@
     },
     {
       "symbol": "P:ed.a(III)I#0",
-      "renamedSymbol": "P:ed.a(III)I#0",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -183487,7 +183503,7 @@
     },
     {
       "symbol": "P:ed.a(III)I#1",
-      "renamedSymbol": "P:ed.a(III)I#1",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -183498,7 +183514,7 @@
     },
     {
       "symbol": "P:ed.a(III)I#2",
-      "renamedSymbol": "P:ed.a(III)I#2",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -230663,8 +230679,16 @@
       "original": "bc.java",
       "renamed": "bc.java",
       "inputSha256": "39e40d266ed52b4fb98fbd9040bb3cae0b59b0e3ab12c5f9ef298505e0ffebf3",
-      "outputSha256": "39e40d266ed52b4fb98fbd9040bb3cae0b59b0e3ab12c5f9ef298505e0ffebf3",
-      "edits": []
+      "outputSha256": "59fea75adf1d80405ea6daaff90a9df4be20c93db278dcb43efeac6cc678dfc9",
+      "edits": [
+        {
+          "start": 136,
+          "end": 137,
+          "symbol": "M:bc.a(IIB)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        }
+      ]
     },
     {
       "original": "bd.java",
@@ -236029,7 +236053,7 @@
       "original": "ed.java",
       "renamed": "ed.java",
       "inputSha256": "f52c9b1dbe74d834db2fcce8065f25eccfd179bf8d2f724529383771f5f8b0ea",
-      "outputSha256": "f89e74fd853273423789db013f3cc83c99dcaa9b8b7c92c71499126fb129f509",
+      "outputSha256": "173eca64d37d4ac77c22b3c6c31958d26c05d683be1d37dc9125e76f1b0c9cdb",
       "edits": [
         {
           "start": 66,
@@ -236037,6 +236061,20 @@
           "symbol": "C:lk",
           "original": "lk",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 192,
+          "end": 193,
+          "symbol": "M:ed.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
+        },
+        {
+          "start": 1428,
+          "end": 1429,
+          "symbol": "M:ed.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 1763,
@@ -252725,7 +252763,7 @@
       "original": "o.java",
       "renamed": "PcmResampler.java",
       "inputSha256": "538f363512309c3d407ec8f780b99f3f110561142ebdb6991ad069031a3b24ce",
-      "outputSha256": "faad9f3028d3ba598c1e5b5ef95ffe1c17b6146333288b4e23978ec3d4b007ff",
+      "outputSha256": "08543de1448610d3473d2ed0b66c59872364291a6824378261397ee895cb4f8e",
       "edits": [
         {
           "start": 50,
@@ -252852,6 +252890,13 @@
           "symbol": "M:o.<init>(II)V",
           "original": "o",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 7162,
+          "end": 7163,
+          "symbol": "M:ed.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         }
       ]
     },
@@ -259459,7 +259504,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "02310d5721b0e0dda582a2379dd3aa0de7a952065a3c17f7a79977634ad99e58",
-      "outputSha256": "fdadb93217abbcb5251b5f81e9385cafc10282de86b2d5c815251c478e3879fa",
+      "outputSha256": "dc6fee35bc9a89ccbacfba9c991af67c2dd22316a0d6b5b5e89ebea414101422",
       "edits": [
         {
           "start": 80,
@@ -259677,6 +259722,13 @@
           "symbol": "M:nf.a(IZ)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 26840,
+          "end": 26841,
+          "symbol": "M:bc.a(IIB)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 27223,
@@ -266297,10 +266349,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "605251fc754927244da40d2fd9f0f0412cde3e94e13ef6af324044be641aa1d9",
+    "rulesSha256": "57fd274ea58570e1f91e0799d87671064db5082534c470dcbd4e5fb5f3aa12a2",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "d55cc96b664637634cab2d8306cdaef96a757d8d17ed368125b88692a8cd5701",
+    "outputTreeSha256": "2af2ae07227b2e0ff7bc0e173b3be36d9c63dfd3be69224960bdb160a79d38e1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

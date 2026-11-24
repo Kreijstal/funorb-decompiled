@@ -227,7 +227,7 @@ final class ig extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ia.bitLength(var5 - 1, 2);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = kk.a(var11, 127, var10);
+            var9[var11] = kk.reverseLowBits(var11, 127, var10);
           }
           if (var1 == 0) {
             field_h = var6_ref_float__;

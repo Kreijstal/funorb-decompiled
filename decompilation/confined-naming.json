@@ -3044,6 +3044,14 @@
       "renamedSymbol": "M:wd.sleepIgnoringInterrupts(JI)V"
     },
     {
+      "symbol": "M:wf.a(III)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index1. int guard!=1 returns36 before accumulator initialization. Complete original-body SHA256 3ceaf08d85701f1a51d9108ef3ad076f5f5b867afe4e331ce467d8ba125d3c8c.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wf.reverseLowBits(III)I"
+    },
+    {
       "symbol": "M:wi.b(B)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -194606,7 +194614,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#0",
-      "renamedSymbol": "L:wf.a(III)I#0",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -194617,7 +194625,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#1",
-      "renamedSymbol": "L:wf.a(III)I#1",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -194628,7 +194636,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#2",
-      "renamedSymbol": "L:wf.a(III)I#2",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -194639,7 +194647,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#3",
-      "renamedSymbol": "L:wf.a(III)I#3",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -194650,7 +194658,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#4",
-      "renamedSymbol": "L:wf.a(III)I#4",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#4",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -194661,7 +194669,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#5",
-      "renamedSymbol": "L:wf.a(III)I#5",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -194672,7 +194680,7 @@
     },
     {
       "symbol": "L:wf.a(III)I#6",
-      "renamedSymbol": "L:wf.a(III)I#6",
+      "renamedSymbol": "L:wf.reverseLowBits(III)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225450,9 +225458,9 @@
     },
     {
       "symbol": "M:wf.a(III)I",
-      "renamedSymbol": "M:wf.a(III)I",
+      "renamedSymbol": "M:wf.reverseLowBits(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "wf.java",
         "start": 1780,
@@ -297368,7 +297376,7 @@
     },
     {
       "symbol": "P:wf.a(III)I#0",
-      "renamedSymbol": "P:wf.a(III)I#0",
+      "renamedSymbol": "P:wf.reverseLowBits(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297379,7 +297387,7 @@
     },
     {
       "symbol": "P:wf.a(III)I#1",
-      "renamedSymbol": "P:wf.a(III)I#1",
+      "renamedSymbol": "P:wf.reverseLowBits(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297390,7 +297398,7 @@
     },
     {
       "symbol": "P:wf.a(III)I#2",
-      "renamedSymbol": "P:wf.a(III)I#2",
+      "renamedSymbol": "P:wf.reverseLowBits(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -323320,7 +323328,7 @@
       "original": "ph.java",
       "renamed": "ph.java",
       "inputSha256": "84e1dc3b0fb1fee7196e679d76811a31d5353c69e1fe34d325d68c85145bff60",
-      "outputSha256": "b1355ff494044d1ac2106462974532c3f61bf5800e2671a5571871c121888f7c",
+      "outputSha256": "00b0db1a8b70407b048140e4f1c054294d0f42aaa2ec708845439b1b71863b2e",
       "edits": [
         {
           "start": 80,
@@ -323454,6 +323462,13 @@
           "symbol": "M:km.b(II)I",
           "original": "b",
           "renamed": "bitLength"
+        },
+        {
+          "start": 7003,
+          "end": 7004,
+          "symbol": "M:wf.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 7378,
@@ -332216,7 +332231,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "99fc123328d81eae16f5229eba7c6defc68c01e56a56976e2b6c1a2788f7ddbd",
-      "outputSha256": "b07a231be2a5cbc18a8b256d105fc138e4c37eece804e9df1327b28e80976dd7",
+      "outputSha256": "4c19e7cd05299292c2839ab2ff26ae1aba8cee006f2a78a043d423dc013904a6",
       "edits": [
         {
           "start": 600,
@@ -332238,6 +332253,13 @@
           "symbol": "C:rk",
           "original": "rk",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1780,
+          "end": 1781,
+          "symbol": "M:wf.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         }
       ]
     },
@@ -332555,10 +332577,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/confined"
     },
-    "rulesSha256": "d588ea612ba8d6572f8509dc4963f84327d526c4f3e955de242c5314e7ceb55d",
+    "rulesSha256": "e9b07de04d0792c25dc55f6bc67dfd1b6ef8ec8c56ae552ac8e8878c172b3466",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
-    "outputTreeSha256": "1f441ad55d4b1615c3fb0701e3dbd1772cbbd68a2c37eed72edf73e7f86f52ae",
+    "outputTreeSha256": "b570048f65702ba67f8ed3e28487f61aa7b382a139185675a61cfa3c03678548",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

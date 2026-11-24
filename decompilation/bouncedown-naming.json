@@ -1404,6 +1404,14 @@
       "renamedSymbol": "M:AudioOutput.clearStaticReferences()V"
     },
     {
+      "symbol": "M:ed.a(IBI)I",
+      "originalName": "a",
+      "to": "greatestCommonDivisor",
+      "evidence": "Compute the retained Euclidean rate-normalization divisor using initial signed comparison/swap and repeated signed-int remainder updates. Preserve zero,negative and MIN_VALUE domains without abs or positive normalization,mutated arguments in diagnostic wrapping,and all captured global reads. Byte guard>=-50 returns106 before Euclidean loop. Complete original-body SHA256 4fc111deb240e6e100ff07107001c09e8bf1ff799c77806fd058c78bf653e271. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ed.greatestCommonDivisor(IBI)I"
+    },
+    {
       "symbol": "M:ek.c(I)Lkf;",
       "originalName": "c",
       "to": "createMouseWheelInput",
@@ -1954,6 +1962,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 02ca90b6de7ea3b211fe1feb0f5cebc2f67f4bf1ad3f431edaba0b3638d0e950.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountNameAvailabilityValidator.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:mi.a(IBI)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index0. byte guard!=122 returns -76 after accumulator initialization before loop. Complete original-body SHA256 8c39b10013ffcdafc80725a287c86e16dd321a8e0ed3b4fbfd8db1edf0107192.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mi.reverseLowBits(IBI)I"
     },
     {
       "symbol": "M:mi.b(B)V",
@@ -48659,7 +48675,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#0",
-      "renamedSymbol": "L:ed.a(IBI)I#0",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -48670,7 +48686,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#1",
-      "renamedSymbol": "L:ed.a(IBI)I#1",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -48681,7 +48697,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#2",
-      "renamedSymbol": "L:ed.a(IBI)I#2",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -48692,7 +48708,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#3",
-      "renamedSymbol": "L:ed.a(IBI)I#3",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -48703,7 +48719,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#4",
-      "renamedSymbol": "L:ed.a(IBI)I#4",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -48714,7 +48730,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#5",
-      "renamedSymbol": "L:ed.a(IBI)I#5",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -48725,7 +48741,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#6",
-      "renamedSymbol": "L:ed.a(IBI)I#6",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#6",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -48736,7 +48752,7 @@
     },
     {
       "symbol": "L:ed.a(IBI)I#7",
-      "renamedSymbol": "L:ed.a(IBI)I#7",
+      "renamedSymbol": "L:ed.greatestCommonDivisor(IBI)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -85399,7 +85415,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#0",
-      "renamedSymbol": "L:mi.a(IBI)I#0",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -85410,7 +85426,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#1",
-      "renamedSymbol": "L:mi.a(IBI)I#1",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -85421,7 +85437,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#2",
-      "renamedSymbol": "L:mi.a(IBI)I#2",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85432,7 +85448,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#3",
-      "renamedSymbol": "L:mi.a(IBI)I#3",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -85443,7 +85459,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#4",
-      "renamedSymbol": "L:mi.a(IBI)I#4",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -85454,7 +85470,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#5",
-      "renamedSymbol": "L:mi.a(IBI)I#5",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85465,7 +85481,7 @@
     },
     {
       "symbol": "L:mi.a(IBI)I#6",
-      "renamedSymbol": "L:mi.a(IBI)I#6",
+      "renamedSymbol": "L:mi.reverseLowBits(IBI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -141070,9 +141086,9 @@
     },
     {
       "symbol": "M:ed.a(IBI)I",
-      "renamedSymbol": "M:ed.a(IBI)I",
+      "renamedSymbol": "M:ed.greatestCommonDivisor(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "greatestCommonDivisor",
       "declaration": {
         "file": "ed.java",
         "start": 11120,
@@ -148803,9 +148819,9 @@
     },
     {
       "symbol": "M:mi.a(IBI)I",
-      "renamedSymbol": "M:mi.a(IBI)I",
+      "renamedSymbol": "M:mi.reverseLowBits(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "mi.java",
         "start": 9255,
@@ -167756,7 +167772,7 @@
     },
     {
       "symbol": "P:ed.a(IBI)I#0",
-      "renamedSymbol": "P:ed.a(IBI)I#0",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -167767,7 +167783,7 @@
     },
     {
       "symbol": "P:ed.a(IBI)I#1",
-      "renamedSymbol": "P:ed.a(IBI)I#1",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -167778,7 +167794,7 @@
     },
     {
       "symbol": "P:ed.a(IBI)I#2",
-      "renamedSymbol": "P:ed.a(IBI)I#2",
+      "renamedSymbol": "P:ed.greatestCommonDivisor(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -185477,7 +185493,7 @@
     },
     {
       "symbol": "P:mi.a(IBI)I#0",
-      "renamedSymbol": "P:mi.a(IBI)I#0",
+      "renamedSymbol": "P:mi.reverseLowBits(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -185488,7 +185504,7 @@
     },
     {
       "symbol": "P:mi.a(IBI)I#1",
-      "renamedSymbol": "P:mi.a(IBI)I#1",
+      "renamedSymbol": "P:mi.reverseLowBits(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -185499,7 +185515,7 @@
     },
     {
       "symbol": "P:mi.a(IBI)I#2",
-      "renamedSymbol": "P:mi.a(IBI)I#2",
+      "renamedSymbol": "P:mi.reverseLowBits(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -220877,7 +220893,7 @@
       "original": "ed.java",
       "renamed": "ed.java",
       "inputSha256": "86acbcaf5b510908fbb9d3bc365c050cddc5d8b950cb625989604085a6073ec4",
-      "outputSha256": "3903c4accf53dd5edea6e758cbec1ad9c9830f5442aa4905fa9dd5694d09aae6",
+      "outputSha256": "1635749452d192ae212725172791163bd29919157a3a3ce0f5f2415e3490fc75",
       "edits": [
         {
           "start": 2596,
@@ -221041,6 +221057,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 8276,
+          "end": 8277,
+          "symbol": "M:ed.a(IBI)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
+        },
+        {
           "start": 10954,
           "end": 10956,
           "symbol": "C:ii",
@@ -221053,6 +221076,13 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 11120,
+          "end": 11121,
+          "symbol": "M:ed.a(IBI)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 12109,
@@ -232452,8 +232482,15 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "20b79be2bb190ca2bed286265e2d1af790f851ee126128e89e0daae5cb22776c",
-      "outputSha256": "c3c713e5d75d0a9fef35fcbe123f41024c3f9a1b0eb32cf1a4f37d3bb3e8db51",
+      "outputSha256": "138ecd034701859c15405101b87d0d8c5bc9165865abd52537df91a3d4ef755b",
       "edits": [
+        {
+          "start": 9255,
+          "end": 9256,
+          "symbol": "M:mi.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        },
         {
           "start": 10089,
           "end": 10091,
@@ -232621,6 +232658,13 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 12508,
+          "end": 12509,
+          "symbol": "M:mi.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         }
       ]
     },
@@ -244722,7 +244766,7 @@
       "original": "te.java",
       "renamed": "te.java",
       "inputSha256": "0a3cbbcdf885f5d0cfc54f70f71afe23464d0dd525fd76f8ae860ca7318bff00",
-      "outputSha256": "c14929c0ff899109191029d253b998f1e3fd3ba206ba4f571ab3e0e8ca0975a1",
+      "outputSha256": "8d159b698ae65d81563b916f2dad54a65838ac0ae44af4acffe28232e258a5e4",
       "edits": [
         {
           "start": 80,
@@ -244772,6 +244816,13 @@
           "symbol": "M:wb.a(BI)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 4255,
+          "end": 4256,
+          "symbol": "M:mi.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 4639,
@@ -245563,7 +245614,7 @@
       "original": "u.java",
       "renamed": "PcmResampler.java",
       "inputSha256": "a7f2d473531f1c409f0eee29e69bc690d44a7a17e7886d7cb92775c8ec6e7f6b",
-      "outputSha256": "b28218f526ba2ebb402ad063126465bfd2ceabd1caf28a072373b1eb1fe4f373",
+      "outputSha256": "66389a8d7251dbbfd029a70dc76e9510855a684b523c9f5c3facca35075cdf80",
       "edits": [
         {
           "start": 50,
@@ -245613,6 +245664,13 @@
           "symbol": "M:u.<init>(II)V",
           "original": "u",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 4034,
+          "end": 4035,
+          "symbol": "M:ed.a(IBI)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 5482,
@@ -252074,10 +252132,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "e2067e1c015838ece665c60d439474c73d9af47c377273d81e4dfcd1b8b1da99",
+    "rulesSha256": "30abf38cc2381f340de450ad46a92c5ec99932033e40ce65fd8acfb25c1cd5fd",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "dd396899a74ad5601e4a05a2d1658adf9c7febeddf9c895997b2da689e793468",
+    "outputTreeSha256": "e7392d2e18f1feafff1a94ed1df2321a01fb3a25a65ea3e430e5a4478ab40593",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -112,7 +112,7 @@ final class VorbisSample extends HashNode {
           integerArrayLocal18 = new int[integerLocal14];
           integerLocal19 = SceneWidgetPart010.bitLength((byte) -57, integerLocal14 - 1);
           for (integerLocal4 = 0; integerLocal4 < integerLocal14; integerLocal4++) {
-            integerArrayLocal18[integerLocal4] = MixedSupport108.computeInteger1413((byte) 16, integerLocal19, integerLocal4);
+            integerArrayLocal18[integerLocal4] = MixedSupport108.reverseLowBits((byte) 16, integerLocal19, integerLocal4);
           }
           if (integerLocal10 == 0) {
             floatArrayState0006 = floatArrayLocal15;

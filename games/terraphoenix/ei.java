@@ -42,7 +42,7 @@ abstract class ei extends kh {
         return param0 | param1;
     }
 
-    final static int a(byte param0, boolean param1) {
+    final static int updateMembershipSlides(byte param0, boolean param1) {
         int stackIn_61_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
@@ -480,7 +480,7 @@ abstract class ei extends kh {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$b925f3f4834c(int param0, boolean param1) {
+    final static int updateMembershipSlidesWithIntGuard(int param0, boolean param1) {
         int stackIn_61_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;

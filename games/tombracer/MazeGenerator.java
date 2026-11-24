@@ -24,13 +24,13 @@ abstract class MazeGenerator {
               param3 != nba.field_b) {
               PlatformModel.field_B = true;
               nba.field_b = param3;
-              wga.sendChatSettings(true, param1);
+              S2CSimulationSignalPacket.sendChatSettings(true, param1);
             }
             if (param0 == 2 &&
               UrlDownloadRequest.field_i != param3) {
               PlatformModel.field_B = true;
               UrlDownloadRequest.field_i = param3;
-              wga.sendChatSettings(true, param1);
+              S2CSimulationSignalPacket.sendChatSettings(true, param1);
             }
             if (param2 != 108) {
             }
@@ -38,7 +38,7 @@ abstract class MazeGenerator {
           }
           k.field_A = param3;
           PlatformModel.field_B = true;
-          wga.sendChatSettings(true, param1);
+          S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
         if (param0 == 1) {
           if (param3 == nba.field_b) {
@@ -52,7 +52,7 @@ abstract class MazeGenerator {
               } else {
                 PlatformModel.field_B = true;
                 UrlDownloadRequest.field_i = param3;
-                wga.sendChatSettings(true, param1);
+                S2CSimulationSignalPacket.sendChatSettings(true, param1);
                 if (param2 == 108) {
                 }
               }
@@ -61,13 +61,13 @@ abstract class MazeGenerator {
           }
           PlatformModel.field_B = true;
           nba.field_b = param3;
-          wga.sendChatSettings(true, param1);
+          S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
         if (param0 == 2 &&
           UrlDownloadRequest.field_i != param3) {
           PlatformModel.field_B = true;
           UrlDownloadRequest.field_i = param3;
-          wga.sendChatSettings(true, param1);
+          S2CSimulationSignalPacket.sendChatSettings(true, param1);
         }
         if (param2 == 108) {
         }

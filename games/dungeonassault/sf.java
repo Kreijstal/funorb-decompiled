@@ -124,7 +124,7 @@ final class sf implements cl {
         }
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(boolean param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_9_0 = null;

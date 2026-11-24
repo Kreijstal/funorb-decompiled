@@ -929,7 +929,7 @@ final class t {
                                         if (this.field_i != 7) {
                                           break;
                                         }
-                                        il.a((byte) 77, BoundedRandomAccessFile.getApplet((byte) -66));
+                                        il.openSubscriptionPage((byte) 77, BoundedRandomAccessFile.getApplet((byte) -66));
                                       }
                                     } else {
                                       stackIn_150_0 = (fleas.field_L == 0) ? 2 : 5;
@@ -1157,12 +1157,12 @@ final class t {
         if (this.field_i == 7) {
           stackIn_4_0 = 26;
           stackIn_5_1 = (il.a((byte) 78)) ? false : true;
-          var2 = si.a(stackIn_4_0, stackIn_5_1);
+          var2 = si.updateMembershipSlides(stackIn_4_0, stackIn_5_1);
           if (var2 == 3) {
             if (null != ResourceArchive.field_p) {
               IntrusiveNode.a(false);
             }
-            il.a((byte) 77, BoundedRandomAccessFile.getApplet((byte) -99));
+            il.openSubscriptionPage((byte) 77, BoundedRandomAccessFile.getApplet((byte) -99));
           }
           if (var2 == 1) {
             oa.a(0, false, 40);

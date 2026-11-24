@@ -259,7 +259,7 @@ abstract class ed {
           return this.field_a[0].a(param0, (byte) 110);
         }
         if (param1 >= -92) {
-          ed.a(-47, (byte) 83, -109);
+          ed.greatestCommonDivisor(-47, (byte) 83, -109);
         }
         int var4 = 0;
         for (var5 = 0; this.field_a.length > var5; var5++) {
@@ -340,7 +340,7 @@ abstract class ed {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int greatestCommonDivisor(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

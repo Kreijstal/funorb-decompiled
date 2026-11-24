@@ -928,9 +928,9 @@ public final class stellarshard extends rb implements cf {
               gj.field_r.b(25, 0);
             }
             if (tl.field_c == 8) {
-              var2_int = qc.a((byte) -115, true);
+              var2_int = qc.updateMembershipSlides((byte) -115, true);
               if (3 == var2_int) {
-                qd.a(hf.a((byte) -68), (byte) -30);
+                qd.openSubscriptionPage(hf.a((byte) -68), (byte) -30);
               }
               if (var2_int == 1) {
                 na.field_j.field_l = 0;

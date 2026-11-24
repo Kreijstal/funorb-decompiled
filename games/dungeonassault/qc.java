@@ -210,7 +210,7 @@ final class qc extends qe {
         if (this.field_x.c(31) &&
           this.d(param1, -7228) &&
           rp.a(15204376, var4)) {
-          hm.a(var4, param1, param2, -28);
+          AchievementIconEntry.a(var4, param1, param2, -28);
         }
         var6 = var4;
         if (var6 == 13) {
@@ -505,7 +505,7 @@ final class qc extends qe {
         String[] stackIn_63_0 = null;
         String stackIn_64_1 = null;
         int var3;
-        hm var4;
+        AchievementIconEntry var4;
         int[] var4_array;
         cn var5_ref_cn;
         int var5;
@@ -538,7 +538,7 @@ final class qc extends qe {
           gf.a(kd.field_g);
           gf.e(94, 90, 546, 184);
           var3 = ig.b(31131);
-          var4 = (hm) (nj.field_f.beginBackward(-24172));
+          var4 = (AchievementIconEntry) (nj.field_f.beginBackward(-24172));
           while (var4 != null) {
             var5_ref_cn = f.field_a;
             if (var4.field_r) {
@@ -572,7 +572,7 @@ final class qc extends qe {
                 fj.field_f.a(var6_ref_cn, -12, 32);
               }
             }
-            var4 = (hm) (nj.field_f.nextBackward(4));
+            var4 = (AchievementIconEntry) (nj.field_f.nextBackward(4));
           }
           gf.b(kd.field_g);
         }
@@ -794,7 +794,7 @@ final class qc extends qe {
         int var11;
         int var12;
         int var13;
-        hm var14;
+        AchievementIconEntry var14;
         int var15;
         int[] var16;
         int[] var17;
@@ -856,11 +856,11 @@ final class qc extends qe {
               if (var9 != 0 ||
                 var8 != 0) {
                 var6++;
-                nj.field_f.addFirst(new hm(var7, var8 != 0), false);
+                nj.field_f.addFirst(new AchievementIconEntry(var7, var8 != 0), false);
               }
             } else {
               if (var8 != 0) {
-                nj.field_f.addFirst(new hm(var7, var8 != 0), false);
+                nj.field_f.addFirst(new AchievementIconEntry(var7, var8 != 0), false);
                 var6++;
               }
             }
@@ -885,7 +885,7 @@ final class qc extends qe {
           var11 = 100;
           var12 = 0;
           var13 = 0;
-          var14 = (hm) (nj.field_f.beginBackward(-24172));
+          var14 = (AchievementIconEntry) (nj.field_f.beginBackward(-24172));
           while (var14 != null) {
             var14.field_o = var10;
             var14.field_p = var11;
@@ -894,7 +894,7 @@ final class qc extends qe {
             if (var13 > of.field_l) {
               of.field_l = var13;
             }
-            var14 = (hm) (nj.field_f.nextBackward(4));
+            var14 = (AchievementIconEntry) (nj.field_f.nextBackward(4));
             var12++;
             if (var12 != var7Lifetime1) {
               continue;
@@ -938,12 +938,12 @@ final class qc extends qe {
         super.c(param0);
         if (12 == this.field_B) {
           stackIn_5_0 = !(kk.d(0));
-          var2 = hm.a(stackIn_5_0, (byte) -20);
+          var2 = AchievementIconEntry.updateMembershipSlides(stackIn_5_0, (byte) -20);
           if (var2 == 3) {
             if (null != cm.field_R) {
               ib.a(930);
             }
-            sf.a(false, m.c(true));
+            sf.openSubscriptionPage(false, m.c(true));
           }
           if (var2 == 1) {
             gd.a(dc.field_z, 0, 0, false);
@@ -978,7 +978,7 @@ final class qc extends qe {
             gd.a(g.field_Hb, 0, g.field_Hb, false);
           }
           if (!this.d()) {
-            this.field_x.a(-7734, this.a(hm.field_k, true, lc.field_c), this.a(eh.field_h, true, hj.field_S));
+            this.field_x.a(-7734, this.a(AchievementIconEntry.field_k, true, lc.field_c), this.a(eh.field_h, true, hj.field_S));
             if (this.field_x.field_b != -1) {
               this.a((byte) -112, this.field_x.field_b, true);
             }

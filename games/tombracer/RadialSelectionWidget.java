@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rr extends FocusableWidget {
+final class RadialSelectionWidget extends FocusableWidget {
     int field_E;
     int field_z;
     int field_C;
@@ -32,7 +32,7 @@ final class rr extends FocusableWidget {
         try {
           if (!super.handlePointerPress(112, param1, param2, param3, param4, param5, param6)) {
             if (param0 <= 70) {
-              rr.releaseStatics(-11);
+              RadialSelectionWidget.releaseStatics(-11);
             }
             return false;
           }
@@ -70,7 +70,7 @@ final class rr extends FocusableWidget {
         }
     }
 
-    private rr() throws Throwable {
+    private RadialSelectionWidget() throws Throwable {
         throw new Error();
     }
 

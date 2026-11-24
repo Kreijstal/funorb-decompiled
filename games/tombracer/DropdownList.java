@@ -60,7 +60,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.field_A = param2;
           this.field_I = new FocusableWidget("", new DropdownButtonPainter(this), (WidgetListener) (this));
           this.field_E = new FocusableWidget();
-          this.field_E.field_r = (WidgetPainter) ((Object) new ema());
+          this.field_E.field_r = (WidgetPainter) ((Object) new DropdownArrowPainter());
           this.field_E.field_h = (WidgetListener) (this);
           this.addChild(this.field_I, -1);
           this.addChild(this.field_E, -1);

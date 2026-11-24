@@ -355,7 +355,7 @@ final class mi {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseLowBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -459,7 +459,7 @@ final class mi {
 
     final boolean a(int param0) {
         if (param0 != -1) {
-          mi.a(30, (byte) -44, -106);
+          mi.reverseLowBits(30, (byte) -44, -106);
           if (this.field_h != 0) {
             return true;
           }

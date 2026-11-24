@@ -31,7 +31,7 @@ final class HiscoreTable extends IntrusiveNode {
     }
 
     final static void openQuickChatMenu(int param0) {
-        AffineTransform3D.showQuickChatMenu(param0 ^ 21810, cia.field_g);
+        AffineTransform3D.showQuickChatMenu(param0 ^ 21810, MovementHintCharacter.field_g);
         if (param0 != -21844) {
           field_l = (String) null;
         }

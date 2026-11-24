@@ -1820,6 +1820,14 @@
       "renamedSymbol": "M:kh.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:kk.a(III)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index0,count parameter index2. int guard<113 invokes kk.a(null,null,-29,88,105) before accumulator initialization. Complete original-body SHA256 f661ec2e551cdd91df5ac51325bbabec694cd06a922abd0550ac89dd2bd7c508.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kk.reverseLowBits(III)I"
+    },
+    {
       "symbol": "M:kk.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -85888,7 +85896,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#0",
-      "renamedSymbol": "L:kk.a(III)I#0",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -85899,7 +85907,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#1",
-      "renamedSymbol": "L:kk.a(III)I#1",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -85910,7 +85918,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#2",
-      "renamedSymbol": "L:kk.a(III)I#2",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85921,7 +85929,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#3",
-      "renamedSymbol": "L:kk.a(III)I#3",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85932,7 +85940,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#4",
-      "renamedSymbol": "L:kk.a(III)I#4",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -85943,7 +85951,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#5",
-      "renamedSymbol": "L:kk.a(III)I#5",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -85954,7 +85962,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#6",
-      "renamedSymbol": "L:kk.a(III)I#6",
+      "renamedSymbol": "L:kk.reverseLowBits(III)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -149875,9 +149883,9 @@
     },
     {
       "symbol": "M:kk.a(III)I",
-      "renamedSymbol": "M:kk.a(III)I",
+      "renamedSymbol": "M:kk.reverseLowBits(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "kk.java",
         "start": 137,
@@ -187539,7 +187547,7 @@
     },
     {
       "symbol": "P:kk.a(III)I#0",
-      "renamedSymbol": "P:kk.a(III)I#0",
+      "renamedSymbol": "P:kk.reverseLowBits(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187550,7 +187558,7 @@
     },
     {
       "symbol": "P:kk.a(III)I#1",
-      "renamedSymbol": "P:kk.a(III)I#1",
+      "renamedSymbol": "P:kk.reverseLowBits(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187561,7 +187569,7 @@
     },
     {
       "symbol": "P:kk.a(III)I#2",
-      "renamedSymbol": "P:kk.a(III)I#2",
+      "renamedSymbol": "P:kk.reverseLowBits(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -235351,7 +235359,7 @@
       "original": "ig.java",
       "renamed": "ig.java",
       "inputSha256": "0385bbe1f239158bb2683cce8cf3f2aaeea2d895d35f40538eacf027e6ab4dfe",
-      "outputSha256": "b00a118952d53a3a3cfaab80166fe620fb4caaf27bfb46422b619bea3ffff225",
+      "outputSha256": "3c690ee0aa7f562c35bec49bca0b8015dd5b6c6a072562e7788d55802fafd03e",
       "edits": [
         {
           "start": 80,
@@ -235436,6 +235444,13 @@
           "symbol": "M:ia.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 7272,
+          "end": 7273,
+          "symbol": "M:kk.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 7649,
@@ -238368,8 +238383,15 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "4a96f56cbcb2a063e44137559f42d7ec2f887d8d8daa2cf0aa19b6db38984367",
-      "outputSha256": "44c6099d7c20f6116386e0d1911cb086e9f126d6d8de2133475429db73952d28",
+      "outputSha256": "d6b679851e6185b4c03032857b2d4b233a746da92612fd0254bb6d90b889916a",
       "edits": [
+        {
+          "start": 137,
+          "end": 138,
+          "symbol": "M:kk.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        },
         {
           "start": 1000,
           "end": 1001,
@@ -256299,10 +256321,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/36cardtrick"
     },
-    "rulesSha256": "4432eb24d05c38b3ba6d1888d1ecbdf1b12eac435a07d401f1145bac87ea25b2",
+    "rulesSha256": "9ecd5c745a6146d582a550e9cfee9f98f7e665f7ceed28b20bc225d29193aa9f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
-    "outputTreeSha256": "1a1f8be2ec88ced1afa9c8455008a29ebcea6651e4fd999c3e64f2eecd5ec6d3",
+    "outputTreeSha256": "d634cf78af98c366298390c9e2bcd6061d3df8916e650b08f2245a2b59c747da",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

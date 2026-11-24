@@ -578,8 +578,8 @@ final class WallTile implements Renderable {
         try {
           if (cga.field_f < 10) {
             var3_int = 0;
-            if (bsa.field_k) {
-              bsa.field_k = false;
+            if (RadialSelectionPainter.field_k) {
+              RadialSelectionPainter.field_k = false;
               var3_int = 1;
             }
             MidiVoiceMixer.drawAwtLoadingBar((byte) 108, MidiPatch.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, ArchiveIndex.getLoadingPercent(7), var3_int != 0);

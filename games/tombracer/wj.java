@@ -33,7 +33,7 @@ final class wj {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
         if (OpenGlUnderwaterEffect.field_q != param3) {
-          var7 = lw.field_i;
+          var7 = SneakHintCharacter.field_i;
         } else {
           var7 = BitPackedColour.field_a;
         }

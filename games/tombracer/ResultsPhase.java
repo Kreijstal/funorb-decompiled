@@ -365,15 +365,15 @@ final class ResultsPhase extends MatchPhase {
           var24Lifetime1 = 32 + var10;
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
           RoomEffectTraps.drawLeftTextWithShadow(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
-          RoomEffectTraps.drawLeftTextWithShadow(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
+          RoomEffectTraps.drawLeftTextWithShadow(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime2]);
           var26 = this.matchState.roundWins[var8Lifetime2];
           if (var8Lifetime2 == this.matchState.getRoundWinner(2) &&
             var7Lifetime2 < -100 + OpenGlModelBillboardState.field_e) {
             var26--;
           }
-          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
-          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(this.matchState.roundsToWin), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
-          MembersUpsellMenu.drawCentredTextWithShadow("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var26), S2CSimulationSignalPacket.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(this.matchState.roundsToWin), S2CSimulationSignalPacket.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("_", S2CSimulationSignalPacket.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
         for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.playerCount; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
@@ -402,7 +402,7 @@ final class ResultsPhase extends MatchPhase {
             }
           }
           CurrentGraphicsToolkit.toolkit.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
-          var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
+          var10Lifetime1Lifetime1 = S2CSimulationSignalPacket.field_a[var8Lifetime3];
           HardwareModelBillboardState.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           CurrentGraphicsToolkit.toolkit.resetClip();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
@@ -443,10 +443,10 @@ final class ResultsPhase extends MatchPhase {
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
             eca.field_c[0].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[0].width() >> 1, eca.field_c[0].height() >> 1);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = 25 + LargeFontMetrics.metrics.stringWidth("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
@@ -494,10 +494,10 @@ final class ResultsPhase extends MatchPhase {
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
             eca.field_c[1].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.drawLeftTextWithShadow(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = var17Lifetime1 + (LargeFontMetrics.metrics.stringWidth("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
@@ -542,10 +542,10 @@ final class ResultsPhase extends MatchPhase {
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
               eca.field_c[2].drawScaled(var17Lifetime1, var18 - 5, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
-              RoomEffectTraps.drawLeftTextWithShadow(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.drawLeftTextWithShadow(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.drawLeftTextWithShadow(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.drawLeftTextWithShadow(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[var8Lifetime3]);
               if (var15Lifetime1 != 0) {
                 var19Lifetime1 = var17Lifetime1 + LargeFontMetrics.metrics.stringWidth("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;
@@ -768,7 +768,7 @@ final class ResultsPhase extends MatchPhase {
           if (0.0 < var11) {
             ScrollPanel.field_ub = var17Lifetime2;
             var17Lifetime2 = var17Lifetime2 + var4_int * 50 + 50;
-            ema.field_b = var17Lifetime2;
+            DropdownArrowPainter.field_b = var17Lifetime2;
             var17Lifetime2 += 100;
           } else {
             this.field_o = true;

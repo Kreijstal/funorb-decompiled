@@ -172,7 +172,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("ticketing_xunread", 127);
                 if (var2 != null) {
-                  hm.field_j = dj.a(var2, false);
+                  AchievementIconEntry.field_j = dj.a(var2, false);
                 }
                 var2 = rp.a("ticketing_gotowebsite", param0 + 27194);
                 if (null != var2) {
@@ -2791,7 +2791,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("mb_full_access_2", 70);
                 if (null != var2) {
-                  hm.field_t = dj.a(var2, false);
+                  AchievementIconEntry.field_t = dj.a(var2, false);
                 }
                 var2 = rp.a("mb_achievement_count_1", 95);
                 if (var2 != null) {

@@ -272,7 +272,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           !ToolkitInstance.field_c.isPanelActive(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
           this.c(false))) {
           this.actionStates[0][0] = var9[HardwareOpenGlToolkit.field_hd];
-          this.actionStates[0][1] = var9[mf.field_a];
+          this.actionStates[0][1] = var9[ArbAssemblyProgram.field_a];
           this.actionStates[0][2] = var9[ConsoleToken.field_k];
           this.actionStates[0][3] = var9[TextureCombineSource.field_a];
           this.actionStates[0][4] = var9[PlayerResultRow.field_j];

@@ -96,7 +96,7 @@ final class il {
         field_f = null;
         if (param0 > -68) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          il.a((byte) 45, (java.applet.Applet) null);
+          il.openSubscriptionPage((byte) 45, (java.applet.Applet) null);
         }
     }
 
@@ -113,7 +113,7 @@ final class il {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

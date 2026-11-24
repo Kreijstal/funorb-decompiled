@@ -561,7 +561,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = kb.bitLength(var5 - 1, 16);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = ah.a(var10, var11, true);
+            var9[var11] = ah.reverseLowBits(var10, var11, true);
           }
           if (var1 == 0) {
             field_P = var6_ref_float__;

@@ -179,7 +179,7 @@ final class fk extends kl {
         } else {
           if (hh.field_s != this.field_o) {
             if (no.field_d != 0) {
-              var2 = this.b(lc.field_c, 27403, hm.field_k);
+              var2 = this.b(lc.field_c, 27403, AchievementIconEntry.field_k);
               if (-1 != var2) {
                 var3 = gm.field_d.field_a[var2];
                 if (var3 != null &&

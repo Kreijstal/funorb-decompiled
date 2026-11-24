@@ -530,9 +530,9 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder3)) {
             stackIn_296_0 = -102;
             stackIn_297_1 = !(qf.a(true));
-            var3Lifetime1 = ei.$cfr$intArgs$a$b925f3f4834c(stackIn_296_0, stackIn_297_1);
+            var3Lifetime1 = ei.updateMembershipSlidesWithIntGuard(stackIn_296_0, stackIn_297_1);
             if (var3Lifetime1 == 3) {
-              NodeHashTableIterator.a((byte) -110, dg.a(false));
+              NodeHashTableIterator.openSubscriptionPage((byte) -110, dg.a(false));
             }
             if (var3Lifetime1 == 1) {
               this.field_xb = 0;

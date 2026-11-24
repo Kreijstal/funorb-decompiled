@@ -133,7 +133,7 @@ final class te extends IntrusiveNode {
           var9 = new int[var5];
           var10 = wb.bitLength((byte) 100, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = mi.a(var10, (byte) 122, var11);
+            var9[var11] = mi.reverseLowBits(var10, (byte) 122, var11);
           }
           if (var1 == 0) {
             field_K = var6_ref_float__;

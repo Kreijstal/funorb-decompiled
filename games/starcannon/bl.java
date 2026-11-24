@@ -13,12 +13,12 @@ final class bl {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        bl.a(true, (java.applet.Applet) null);
+        bl.openSubscriptionPage(true, (java.applet.Applet) null);
         field_c = null;
         field_b = null;
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(boolean param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

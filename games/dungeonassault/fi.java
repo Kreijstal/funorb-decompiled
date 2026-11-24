@@ -145,7 +145,7 @@ final class fi extends qe {
             }
             this.b(false, 240, nk.field_Jb.field_b);
           }
-          nk.field_Jb.a(-7734, this.a(hm.field_k, (byte) 116, lc.field_c), this.a(eh.field_h, (byte) 116, hj.field_S));
+          nk.field_Jb.a(-7734, this.a(AchievementIconEntry.field_k, (byte) 116, lc.field_c), this.a(eh.field_h, (byte) 116, hj.field_S));
           if (-1 != nk.field_Jb.field_b) {
             this.b(true, 240, nk.field_Jb.field_b);
           }
@@ -528,7 +528,7 @@ final class fi extends qe {
             if (var4 != 25 &&
               var4 != 24 &&
               26 != var4) {
-              hm.a(var4, param2, param0, param1 ^ -221);
+              AchievementIconEntry.a(var4, param2, param0, param1 ^ -221);
             } else {
               if (var4 != 26) {
                 if (var4 == 25) {

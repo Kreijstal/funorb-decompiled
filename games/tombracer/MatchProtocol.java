@@ -66,12 +66,12 @@ final class MatchProtocol {
         this.localInputs.add((byte) -113, param1);
     }
 
-    private final void a(int param0, BitPacketBuffer param1, MatchScreen param2) {
-        wga var4 = null;
+    private final void handleSimulationSignalPacket(int param0, BitPacketBuffer param1, MatchScreen param2) {
+        S2CSimulationSignalPacket var4 = null;
         try {
-          var4 = new wga();
+          var4 = new S2CSimulationSignalPacket();
           this.decodePacket(var4, -46, param1);
-          var4.a(4545315, this, param2);
+          var4.applyToMatch(4545315, this, param2);
           int var5 = -6 / ((param0 + 78) / 34);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -297,7 +297,7 @@ final class MatchProtocol {
           var4.apply(param1, -1, this);
           if (param0 >= -7) {
             var5 = (MatchScreen) null;
-            this.a(-98, (BitPacketBuffer) null, (MatchScreen) null);
+            this.handleSimulationSignalPacket(-98, (BitPacketBuffer) null, (MatchScreen) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -392,7 +392,7 @@ final class MatchProtocol {
             return true;
           }
           if (param3 == 84) {
-            this.a(-31, param2, param1);
+            this.handleSimulationSignalPacket(-31, param2, param1);
             return true;
           }
           if (param3 == 93) {

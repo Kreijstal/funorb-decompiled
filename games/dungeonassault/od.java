@@ -80,7 +80,7 @@ final class od {
           if (no.field_d != 0 &&
             -1 == ii.field_G) {
             ii.field_G = lc.field_c;
-            a.field_i = hm.field_k;
+            a.field_i = AchievementIconEntry.field_k;
             if (param0 > -50) {
               field_b = (String[]) null;
             }
@@ -198,7 +198,7 @@ final class od {
           if (no.field_d != 0 &&
             -1 == ii.field_G) {
             ii.field_G = lc.field_c;
-            a.field_i = hm.field_k;
+            a.field_i = AchievementIconEntry.field_k;
             if (param0 > -50) {
               field_b = (String[]) null;
             }
@@ -281,7 +281,7 @@ final class od {
           return true;
         }
         if (no.field_d != 0) {
-          if (!pd.c(hm.field_k, lc.field_c, (byte) 67)) {
+          if (!pd.c(AchievementIconEntry.field_k, lc.field_c, (byte) 67)) {
             return false;
           }
           KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
@@ -321,7 +321,7 @@ final class od {
         if (no.field_d != 0 &&
           -1 == ii.field_G) {
           ii.field_G = lc.field_c;
-          a.field_i = hm.field_k;
+          a.field_i = AchievementIconEntry.field_k;
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);

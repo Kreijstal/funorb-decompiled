@@ -456,7 +456,7 @@ final class PcmResampler {
         if (param1 == param0) {
           return;
         }
-        var3 = tk.a(param1, (byte) 44, param0);
+        var3 = tk.greatestCommonDivisor(param1, (byte) 44, param0);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_g = param0;

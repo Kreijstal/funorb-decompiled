@@ -276,7 +276,7 @@ final class MenuScreen {
                               if (null != dj.field_k) {
                                 ProxySocketConnector.d(14995);
                               }
-                              fh.a(25, ia.g(-55));
+                              fh.openSubscriptionPage(25, ia.g(-55));
                               mb.a(true, 14, 256);
                             }
                             break;
@@ -559,9 +559,9 @@ final class MenuScreen {
           return;
         }
         if (9 == this.field_d) {
-          var2 = ke.a(true, true);
+          var2 = ke.updateMembershipSlides(true, true);
           if (var2 == 3) {
-            fh.a(62, ia.g(param0 ^ -89));
+            fh.openSubscriptionPage(62, ia.g(param0 ^ -89));
           }
           if (var2 == 1) {
             PacketBuffer.a(false, 0, -128);

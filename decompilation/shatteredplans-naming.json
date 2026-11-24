@@ -9668,6 +9668,14 @@
       "renamedSymbol": "M:js.nextPowerOfTwo(IB)I"
     },
     {
+      "symbol": "M:js.a(IIB)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index0,count parameter index1. byte guard<3 invokes js.a(-8,21,null,-124,16,false,64,-69) after accumulator initialization before loop. Complete original-body SHA256 a33cddf52589f1f4dc1eec17c713efd5a26f6e7f759be2542ad4183ae71bbdfa.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:js.reverseLowBits(IIB)I"
+    },
+    {
       "symbol": "M:js.c(B)V",
       "originalName": "c",
       "to": "clearStatics",
@@ -15474,6 +15482,14 @@
       "evidence": "Tests the pointer against the widget bounds and notifies the HoverListener when the flag changes. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextHotspotWidget.updateHover(IILUiWidget;B)V"
+    },
+    {
+      "symbol": "M:ts.a(Ljava/applet/Applet;B)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain 96/((byteGuard+19)/53) after URL allocation and before AppletContext evaluation,inside original Exception catch. Complete original-body SHA256 4f52833e1bee17b3da267b7eaa80ce42a22ec32cc38ac31feaaac7d0f61efb3f. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V"
     },
     {
       "symbol": "M:ts.c(Z)Ljava/lang/String;",
@@ -171523,7 +171539,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#0",
-      "renamedSymbol": "L:js.a(IIB)I#0",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -171534,7 +171550,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#1",
-      "renamedSymbol": "L:js.a(IIB)I#1",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -171545,7 +171561,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#2",
-      "renamedSymbol": "L:js.a(IIB)I#2",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -171556,7 +171572,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#3",
-      "renamedSymbol": "L:js.a(IIB)I#3",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -171567,7 +171583,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#4",
-      "renamedSymbol": "L:js.a(IIB)I#4",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -171578,7 +171594,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#5",
-      "renamedSymbol": "L:js.a(IIB)I#5",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -171589,7 +171605,7 @@
     },
     {
       "symbol": "L:js.a(IIB)I#6",
-      "renamedSymbol": "L:js.a(IIB)I#6",
+      "renamedSymbol": "L:js.reverseLowBits(IIB)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -291511,7 +291527,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -291522,7 +291538,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#1",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#1",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -291533,7 +291549,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#10",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#10",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -291544,7 +291560,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#11",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#11",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -291555,7 +291571,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#2",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#2",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#2",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -291566,7 +291582,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#3",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#3",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -291577,7 +291593,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#4",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#4",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -291588,7 +291604,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#5",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#5",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -291599,7 +291615,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#6",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#6",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -291610,7 +291626,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#7",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#7",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -291621,7 +291637,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#8",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#8",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -291632,7 +291648,7 @@
     },
     {
       "symbol": "L:ts.a(Ljava/applet/Applet;B)V#9",
-      "renamedSymbol": "L:TextHotspotWidget.a(Ljava/applet/Applet;B)V#9",
+      "renamedSymbol": "L:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -329912,9 +329928,9 @@
     },
     {
       "symbol": "M:js.a(IIB)I",
-      "renamedSymbol": "M:js.a(IIB)I",
+      "renamedSymbol": "M:js.reverseLowBits(IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "js.java",
         "start": 1560,
@@ -348216,9 +348232,9 @@
     },
     {
       "symbol": "M:ts.a(Ljava/applet/Applet;B)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(Ljava/applet/Applet;B)V",
+      "renamedSymbol": "M:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "ts.java",
         "start": 6349,
@@ -396132,7 +396148,7 @@
     },
     {
       "symbol": "P:js.a(IIB)I#0",
-      "renamedSymbol": "P:js.a(IIB)I#0",
+      "renamedSymbol": "P:js.reverseLowBits(IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -396143,7 +396159,7 @@
     },
     {
       "symbol": "P:js.a(IIB)I#1",
-      "renamedSymbol": "P:js.a(IIB)I#1",
+      "renamedSymbol": "P:js.reverseLowBits(IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -396154,7 +396170,7 @@
     },
     {
       "symbol": "P:js.a(IIB)I#2",
-      "renamedSymbol": "P:js.a(IIB)I#2",
+      "renamedSymbol": "P:js.reverseLowBits(IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -440484,7 +440500,7 @@
     },
     {
       "symbol": "P:ts.a(Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -440495,7 +440511,7 @@
     },
     {
       "symbol": "P:ts.a(Ljava/applet/Applet;B)V#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(Ljava/applet/Applet;B)V#1",
+      "renamedSymbol": "P:TextHotspotWidget.openSubscriptionPage(Ljava/applet/Applet;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -516742,7 +516758,7 @@
       "original": "fd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "88e0ac6479a7b3b469c8ba4ffd941a1e9bf1539018e65a692b376fa661f04648",
-      "outputSha256": "f3f1d2af555830a7367786dffbc043b41ef4f285355ea8d5d2b2312dc97a198b",
+      "outputSha256": "fabaf233e56df10d7be0e0e3aba33bbdd335755c9e5ad76b808395d70e92816c",
       "edits": [
         {
           "start": 69,
@@ -517009,6 +517025,13 @@
           "symbol": "M:rj.c(II)I",
           "original": "c",
           "renamed": "bitLength"
+        },
+        {
+          "start": 22152,
+          "end": 22153,
+          "symbol": "M:js.a(IIB)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 22532,
@@ -557129,7 +557152,7 @@
       "original": "js.java",
       "renamed": "js.java",
       "inputSha256": "a58cb6d498bf787115958edfcf4f46781eb9a25473b448b14da27c372538138e",
-      "outputSha256": "4888fbb00f1d163c3cdfa976dc9bd62fbaee2b2efc494ea2ef55ebe8424c20ed",
+      "outputSha256": "3b89b9b822439ef8ce1305dcd5db910b3a0a149455e20e89013cccc683aeea94",
       "edits": [
         {
           "start": 137,
@@ -557333,6 +557356,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1560,
+          "end": 1561,
+          "symbol": "M:js.a(IIB)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 2438,
@@ -651200,7 +651230,7 @@
       "original": "sm.java",
       "renamed": "sm.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "1b5ad464fee907389ebce4b16e3f3bd995ad2b966ea688bd9d717976d81e8dd0",
+      "outputSha256": "ea41759fae243415f53ec95efc03ef9112cd628d79162d9511fefb1a412778e2",
       "edits": [
         {
           "start": 678,
@@ -657064,6 +657094,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 91406,
+          "end": 91407,
+          "symbol": "M:ts.a(Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 91408,
@@ -677117,7 +677154,7 @@
       "original": "ts.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "54760a1fa09f23be3fde025def12069f417c3b57f25afd20d86fcc2458e5bac2",
+      "outputSha256": "af771219e7db2e22ee818a4e0115aa72aebee918d46ee6a809d85a0a5bc9acaa",
       "edits": [
         {
           "start": 63,
@@ -677496,6 +677533,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "DebouncedValidator"
+        },
+        {
+          "start": 6349,
+          "end": 6350,
+          "symbol": "M:ts.a(Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 6943,
@@ -712937,10 +712981,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "ec9c86ff77468ae28611cafafc4bcbd43fa44923198a95307a4f4fb10f2ed41f",
+    "rulesSha256": "867d36776d50aeb49221f6681875b8d5105b3b81f7ad5cb876bfe528cdffcea5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "9d39e0c5b48a3c0c9fd5194675ef877bbb81c37bc826458dacf25cbdf23a002b",
+    "outputTreeSha256": "c0c1037c62499092e459a46c6d1c754aec0c66bede6c8ae260ca6c7cf66eb6af",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -79,10 +79,10 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[33] = OpenGlSprite.field_k;
         OpenGlSceneLight.field_q[40] = ResourceArchive.field_f;
         OpenGlSceneLight.field_q[29] = SweeperMountComponent.field_F;
-        TripBeamBehaviour.field_w[0][0] = TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd] + "<lt> <gt>" + TextInputWidget.field_z[mf.field_a];
+        TripBeamBehaviour.field_w[0][0] = TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd] + "<lt> <gt>" + TextInputWidget.field_z[ArbAssemblyProgram.field_a];
         TripBeamBehaviour.field_w[1][0] = PerlinNoise2D.field_y;
         StatReportingScoringObserver.field_j = new String[3];
-        TripBeamBehaviour.field_w[1][1] = waa.field_b;
+        TripBeamBehaviour.field_w[1][1] = SneakHintDecoration.field_b;
         StatReportingScoringObserver.field_j[1] = CircleMovementLocomotor.field_s;
         StatReportingScoringObserver.field_j[0] = DoorwayModel.field_m;
         MidiPatchEnvelope.field_k = new String[13];

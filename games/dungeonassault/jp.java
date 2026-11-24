@@ -611,7 +611,7 @@ final class jp extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ue.bitLength(var5 - 1, -715);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = lp.a(var10, false, var11);
+            var9[var11] = lp.reverseLowBits(var10, false, var11);
           }
           if (var1 == 0) {
             field_j = var6_ref_float__;

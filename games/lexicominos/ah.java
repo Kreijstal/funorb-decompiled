@@ -111,7 +111,7 @@ final class ah {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int reverseLowBits(int param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

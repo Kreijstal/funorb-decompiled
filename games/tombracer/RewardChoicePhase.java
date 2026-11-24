@@ -172,7 +172,7 @@ final class RewardChoicePhase extends MatchPhase {
                 if (this.isLocalPlayersTurn(true) &&
                   var10 == this.selectedRow &&
                   var11_int == this.selectedColumn) {
-                  CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(SoundEvent.withFullAlpha(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(SoundEvent.withFullAlpha(false, S2CSimulationSignalPacket.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.drawSlot(1);
               }
@@ -187,7 +187,7 @@ final class RewardChoicePhase extends MatchPhase {
         while (this.matchState.players.length > var17) {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, TooltipRenderer.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, TooltipRenderer.field_p, S2CSimulationSignalPacket.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.matchState.hasFinishedCourse((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;

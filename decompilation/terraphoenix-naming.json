@@ -2132,6 +2132,14 @@
       "renamedSymbol": "M:bk.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:c.a(BLjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain byte guard -110 early return inside original inner try. Complete original-body SHA256 12da3eba427cef19f3e4f4903f754b092476e0d5a0d10083f52de15f0f0f440e. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V"
+    },
+    {
       "symbol": "M:c.a(Z)V",
       "originalName": "a",
       "to": "reset",
@@ -2580,6 +2588,22 @@
       "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
     },
     {
+      "symbol": "M:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+      "originalName": "$cfr$intArgs$a$b925f3f4834c",
+      "to": "updateMembershipSlidesWithIntGuard",
+      "evidence": "Independent full-int-guard variant of the membership slideshow updater,with byte-for-byte matching body and identical compiler-resolved external bindings to the byte entry. Preserve full int arithmetic and guard behavior without forwarding,narrowing or merging into the byte entry. Guard>-100 clears field_R after timer stepping before frame-array reads;retain independent byte/int-width argument domains. Complete original-body SHA256 763e9e142cedb53dc8c5e2fb6fa5c8e0f72d9498c38e45a376e08a8082c6b58b. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.updateMembershipSlidesWithIntGuard(IZ)I"
+    },
+    {
+      "symbol": "M:ei.a(BZ)I",
+      "originalName": "a",
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. Guard>-100 clears field_R after timer stepping before frame-array reads;retain independent byte/int-width argument domains. Complete original-body SHA256 763e9e142cedb53dc8c5e2fb6fa5c8e0f72d9498c38e45a376e08a8082c6b58b. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ei.updateMembershipSlides(BZ)I"
+    },
+    {
       "symbol": "M:ei.a(Ljava/lang/Object;ZZ)[B",
       "originalName": "a",
       "to": "extractBytes",
@@ -2738,6 +2762,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 6d9d7ebf360c6a0648785ee6c2effd21c5d75f4208208f4921ef0a64e2a9e8ca.",
       "confidence": "reviewed",
       "renamedSymbol": "M:gd.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ge.a(III)I",
+      "originalName": "a",
+      "to": "greatestCommonDivisor",
+      "evidence": "Compute the retained Euclidean rate-normalization divisor using initial signed comparison/swap and repeated signed-int remainder updates. Preserve zero,negative and MIN_VALUE domains without abs or positive normalization,mutated arguments in diagnostic wrapping,and all captured global reads. First int guard!=-1 returns -89 before loop. Complete original-body SHA256 1206f69321986bf1ae2425edd0f35cf884a6feef49dc40b918aa0ae0009d2916. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ge.greatestCommonDivisor(III)I"
     },
     {
       "symbol": "M:gf.g(I)V",
@@ -3994,6 +4026,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 7b20fded843f7cd187f3f627772c417599f564bac6d213980f98ad905a86e89d.",
       "confidence": "reviewed",
       "renamedSymbol": "M:re.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:re.a(IBI)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index0,count parameter index2. Retain -20/((-11-byteGuard)/61) after bit loop before return. Complete original-body SHA256 8507448c2bd8a03c558d7cb0d7ba61c66d6ba822cc4221fefe2af96e715ce2d1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:re.reverseLowBits(IBI)I"
     },
     {
       "symbol": "M:rh.a(I)V",
@@ -59708,7 +59748,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -59719,7 +59759,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -59730,7 +59770,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -59741,7 +59781,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -59752,7 +59792,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -59763,7 +59803,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -59774,7 +59814,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -59785,7 +59825,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#6",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -59796,7 +59836,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -59807,7 +59847,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -59818,7 +59858,7 @@
     },
     {
       "symbol": "L:c.a(BLjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:NodeHashTableIterator.a(BLjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -95557,7 +95597,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#0",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -95568,7 +95608,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#1",
       "originalName": "stackIn_65_0",
       "renamedName": "stackIn_65_0",
       "declaration": {
@@ -95579,7 +95619,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#10",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#10",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -95590,7 +95630,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#11",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#11",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -95601,7 +95641,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#12",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#12",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -95612,7 +95652,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#13",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#13",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -95623,7 +95663,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#14",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#14",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -95634,7 +95674,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#2",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#2",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#2",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIn_68_0",
       "declaration": {
@@ -95645,7 +95685,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#3",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#3",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -95656,7 +95696,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#4",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#4",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#4",
       "originalName": "stackIn_76_0",
       "renamedName": "stackIn_76_0",
       "declaration": {
@@ -95667,7 +95707,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#5",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#5",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#5",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -95678,7 +95718,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#6",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#6",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#6",
       "originalName": "stackIn_81_0",
       "renamedName": "stackIn_81_0",
       "declaration": {
@@ -95689,7 +95729,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#7",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#7",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -95700,7 +95740,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#8",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#8",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#8",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -95711,7 +95751,7 @@
     },
     {
       "symbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#9",
-      "renamedSymbol": "L:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#9",
+      "renamedSymbol": "L:ei.updateMembershipSlidesWithIntGuard(IZ)I#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -95722,7 +95762,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#0",
-      "renamedSymbol": "L:ei.a(BZ)I#0",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#0",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -95733,7 +95773,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#1",
-      "renamedSymbol": "L:ei.a(BZ)I#1",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#1",
       "originalName": "stackIn_65_0",
       "renamedName": "stackIn_65_0",
       "declaration": {
@@ -95744,7 +95784,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#10",
-      "renamedSymbol": "L:ei.a(BZ)I#10",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -95755,7 +95795,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#11",
-      "renamedSymbol": "L:ei.a(BZ)I#11",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -95766,7 +95806,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#12",
-      "renamedSymbol": "L:ei.a(BZ)I#12",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -95777,7 +95817,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#13",
-      "renamedSymbol": "L:ei.a(BZ)I#13",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -95788,7 +95828,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#14",
-      "renamedSymbol": "L:ei.a(BZ)I#14",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -95799,7 +95839,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#2",
-      "renamedSymbol": "L:ei.a(BZ)I#2",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#2",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIn_68_0",
       "declaration": {
@@ -95810,7 +95850,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#3",
-      "renamedSymbol": "L:ei.a(BZ)I#3",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -95821,7 +95861,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#4",
-      "renamedSymbol": "L:ei.a(BZ)I#4",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#4",
       "originalName": "stackIn_76_0",
       "renamedName": "stackIn_76_0",
       "declaration": {
@@ -95832,7 +95872,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#5",
-      "renamedSymbol": "L:ei.a(BZ)I#5",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#5",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -95843,7 +95883,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#6",
-      "renamedSymbol": "L:ei.a(BZ)I#6",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#6",
       "originalName": "stackIn_81_0",
       "renamedName": "stackIn_81_0",
       "declaration": {
@@ -95854,7 +95894,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#7",
-      "renamedSymbol": "L:ei.a(BZ)I#7",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -95865,7 +95905,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#8",
-      "renamedSymbol": "L:ei.a(BZ)I#8",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#8",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -95876,7 +95916,7 @@
     },
     {
       "symbol": "L:ei.a(BZ)I#9",
-      "renamedSymbol": "L:ei.a(BZ)I#9",
+      "renamedSymbol": "L:ei.updateMembershipSlides(BZ)I#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -106854,7 +106894,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#0",
-      "renamedSymbol": "L:ge.a(III)I#0",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -106865,7 +106905,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#1",
-      "renamedSymbol": "L:ge.a(III)I#1",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -106876,7 +106916,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#2",
-      "renamedSymbol": "L:ge.a(III)I#2",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106887,7 +106927,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#3",
-      "renamedSymbol": "L:ge.a(III)I#3",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -106898,7 +106938,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#4",
-      "renamedSymbol": "L:ge.a(III)I#4",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -106909,7 +106949,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#5",
-      "renamedSymbol": "L:ge.a(III)I#5",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -106920,7 +106960,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#6",
-      "renamedSymbol": "L:ge.a(III)I#6",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#6",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -106931,7 +106971,7 @@
     },
     {
       "symbol": "L:ge.a(III)I#7",
-      "renamedSymbol": "L:ge.a(III)I#7",
+      "renamedSymbol": "L:ge.greatestCommonDivisor(III)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -164439,7 +164479,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#0",
-      "renamedSymbol": "L:re.a(IBI)I#0",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -164450,7 +164490,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#1",
-      "renamedSymbol": "L:re.a(IBI)I#1",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -164461,7 +164501,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#2",
-      "renamedSymbol": "L:re.a(IBI)I#2",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -164472,7 +164512,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#3",
-      "renamedSymbol": "L:re.a(IBI)I#3",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -164483,7 +164523,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#4",
-      "renamedSymbol": "L:re.a(IBI)I#4",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -164494,7 +164534,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#5",
-      "renamedSymbol": "L:re.a(IBI)I#5",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -164505,7 +164545,7 @@
     },
     {
       "symbol": "L:re.a(IBI)I#6",
-      "renamedSymbol": "L:re.a(IBI)I#6",
+      "renamedSymbol": "L:re.reverseLowBits(IBI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -193930,9 +193970,9 @@
     },
     {
       "symbol": "M:c.a(BLjava/applet/Applet;)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(BLjava/applet/Applet;)V",
+      "renamedSymbol": "M:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "c.java",
         "start": 5613,
@@ -198176,9 +198216,9 @@
     },
     {
       "symbol": "M:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I",
-      "renamedSymbol": "M:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+      "renamedSymbol": "M:ei.updateMembershipSlidesWithIntGuard(IZ)I",
       "originalName": "$cfr$intArgs$a$b925f3f4834c",
-      "renamedName": "$cfr$intArgs$a$b925f3f4834c",
+      "renamedName": "updateMembershipSlidesWithIntGuard",
       "declaration": {
         "file": "ei.java",
         "start": 16517,
@@ -198198,9 +198238,9 @@
     },
     {
       "symbol": "M:ei.a(BZ)I",
-      "renamedSymbol": "M:ei.a(BZ)I",
+      "renamedSymbol": "M:ei.updateMembershipSlides(BZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "ei.java",
         "start": 1011,
@@ -200706,9 +200746,9 @@
     },
     {
       "symbol": "M:ge.a(III)I",
-      "renamedSymbol": "M:ge.a(III)I",
+      "renamedSymbol": "M:ge.greatestCommonDivisor(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "greatestCommonDivisor",
       "declaration": {
         "file": "ge.java",
         "start": 453,
@@ -211728,9 +211768,9 @@
     },
     {
       "symbol": "M:re.a(IBI)I",
-      "renamedSymbol": "M:re.a(IBI)I",
+      "renamedSymbol": "M:re.reverseLowBits(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "re.java",
         "start": 470,
@@ -223432,7 +223472,7 @@
     },
     {
       "symbol": "P:c.a(BLjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(BLjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223443,7 +223483,7 @@
     },
     {
       "symbol": "P:c.a(BLjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:NodeHashTableIterator.a(BLjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:NodeHashTableIterator.openSubscriptionPage(BLjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234366,7 +234406,7 @@
     },
     {
       "symbol": "P:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
-      "renamedSymbol": "P:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
+      "renamedSymbol": "P:ei.updateMembershipSlidesWithIntGuard(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234377,7 +234417,7 @@
     },
     {
       "symbol": "P:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
-      "renamedSymbol": "P:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
+      "renamedSymbol": "P:ei.updateMembershipSlidesWithIntGuard(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234421,7 +234461,7 @@
     },
     {
       "symbol": "P:ei.a(BZ)I#0",
-      "renamedSymbol": "P:ei.a(BZ)I#0",
+      "renamedSymbol": "P:ei.updateMembershipSlides(BZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234432,7 +234472,7 @@
     },
     {
       "symbol": "P:ei.a(BZ)I#1",
-      "renamedSymbol": "P:ei.a(BZ)I#1",
+      "renamedSymbol": "P:ei.updateMembershipSlides(BZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -240251,7 +240291,7 @@
     },
     {
       "symbol": "P:ge.a(III)I#0",
-      "renamedSymbol": "P:ge.a(III)I#0",
+      "renamedSymbol": "P:ge.greatestCommonDivisor(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -240262,7 +240302,7 @@
     },
     {
       "symbol": "P:ge.a(III)I#1",
-      "renamedSymbol": "P:ge.a(III)I#1",
+      "renamedSymbol": "P:ge.greatestCommonDivisor(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -240273,7 +240313,7 @@
     },
     {
       "symbol": "P:ge.a(III)I#2",
-      "renamedSymbol": "P:ge.a(III)I#2",
+      "renamedSymbol": "P:ge.greatestCommonDivisor(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -267553,7 +267593,7 @@
     },
     {
       "symbol": "P:re.a(IBI)I#0",
-      "renamedSymbol": "P:re.a(IBI)I#0",
+      "renamedSymbol": "P:re.reverseLowBits(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -267564,7 +267604,7 @@
     },
     {
       "symbol": "P:re.a(IBI)I#1",
-      "renamedSymbol": "P:re.a(IBI)I#1",
+      "renamedSymbol": "P:re.reverseLowBits(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -267575,7 +267615,7 @@
     },
     {
       "symbol": "P:re.a(IBI)I#2",
-      "renamedSymbol": "P:re.a(IBI)I#2",
+      "renamedSymbol": "P:re.reverseLowBits(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -278799,7 +278839,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "5c0afbe0714767b7a9c86e0416215142ad5f6bca56f10806ff60a2a23ad8f967",
+      "outputSha256": "a1f6554009a02b06f26640dc34dca20ff50bb6fc7906fb2c154f39e00dd955a0",
       "edits": [
         {
           "start": 78,
@@ -279210,11 +279250,25 @@
           "renamed": "TutorialText"
         },
         {
+          "start": 19788,
+          "end": 19815,
+          "symbol": "M:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+          "original": "$cfr$intArgs$a$b925f3f4834c",
+          "renamed": "updateMembershipSlidesWithIntGuard"
+        },
+        {
           "start": 19899,
           "end": 19900,
           "symbol": "C:c",
           "original": "c",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 19901,
+          "end": 19902,
+          "symbol": "M:c.a(BLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 22119,
@@ -295887,7 +295941,7 @@
       "original": "c.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "28beab2d79caaf0ee3e1dbb5de05f54b3106025232ccf2fdf12cc0bb7cd3ca5f",
-      "outputSha256": "6243995fd56c7fdbed746f00737c3ba8237b0ac15d807f58f4ed215e811aba0a",
+      "outputSha256": "cce232526cee76f13928d7616b2fddb7ee0d70cbdb6cba2b5795841df9798413",
       "edits": [
         {
           "start": 71,
@@ -295937,6 +295991,13 @@
           "symbol": "C:c",
           "original": "c",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3046,
+          "end": 3047,
+          "symbol": "M:c.a(BLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 3582,
@@ -296070,6 +296131,13 @@
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 5613,
+          "end": 5614,
+          "symbol": "M:c.a(BLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 7054,
@@ -337829,7 +337897,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "62cc6a031224ab501dfea1cdba5ccea834e5134df24fea5c4c412ccc578cddef",
-      "outputSha256": "b5f6539bd42fc210e6c68a8ac00faefb46b5d74a50bd2c60b5fb7b3ce16d73c4",
+      "outputSha256": "037601ca831e77d3e97625837aa112960c2af31a86367fff06ede5b301f12a42",
       "edits": [
         {
           "start": 437,
@@ -337844,6 +337912,13 @@
           "symbol": "F:gl.field_n:I",
           "original": "field_n",
           "renamed": "height"
+        },
+        {
+          "start": 1011,
+          "end": 1012,
+          "symbol": "M:ei.a(BZ)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 1586,
@@ -338297,6 +338372,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 16517,
+          "end": 16544,
+          "symbol": "M:ei.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+          "original": "$cfr$intArgs$a$b925f3f4834c",
+          "renamed": "updateMembershipSlidesWithIntGuard"
         },
         {
           "start": 17117,
@@ -343439,8 +343521,15 @@
       "original": "ge.java",
       "renamed": "ge.java",
       "inputSha256": "905666619d368f05df650d236448a1f7578c692986df425fb11deb4ecb6cf6fc",
-      "outputSha256": "803f1bbb15f00f2b4213c1ef14d622a723ca64fe22f502ccf12d38aff9bfe82e",
+      "outputSha256": "e9f073e662e4bd0a53a1f91a3fc70e387f04b121f291b29d5bb7b30fc3846ef5",
       "edits": [
+        {
+          "start": 453,
+          "end": 454,
+          "symbol": "M:ge.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
+        },
         {
           "start": 1446,
           "end": 1447,
@@ -361882,7 +361971,7 @@
       "original": "m.java",
       "renamed": "PcmResampler.java",
       "inputSha256": "0a767a5f83b65e4e585193028d4579a9f4ec5c57edaf39d3e58373cbf4e36960",
-      "outputSha256": "39eee307c270f24a03a89e842ba6965dfe7d41327258c51535d030b43f422e12",
+      "outputSha256": "166281ae2be10f29f1ddc1988fd50b40b303edb14a483e78f9df6b9cd3e1f8b3",
       "edits": [
         {
           "start": 50,
@@ -361988,6 +362077,13 @@
           "symbol": "M:m.<init>(II)V",
           "original": "m",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 8191,
+          "end": 8192,
+          "symbol": "M:ge.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         }
       ]
     },
@@ -375653,8 +375749,15 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "8279938405c9631b7805f538b4880d743833c691a28aef4fb0ab5daf6e071b13",
-      "outputSha256": "2e906c4d66afe9aa2923685fe2e2eda15d582aa1c2e41cc87580e15797e1381c",
+      "outputSha256": "c97ecd0b1780f77d4ba48740852055bb9cf2de98a47d64507188b8cdef500bca",
       "edits": [
+        {
+          "start": 470,
+          "end": 471,
+          "symbol": "M:re.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        },
         {
           "start": 1246,
           "end": 1247,
@@ -382084,7 +382187,7 @@
       "original": "tl.java",
       "renamed": "VorbisDecoder.java",
       "inputSha256": "be5fa6dd9b843362a8e2df602a283c97fd68ddceba6c47b2a1b31c0a108a306b",
-      "outputSha256": "eb71e207f1d9dff21153ce6739ab30d5c751a30e92bed31b4d4413026713158f",
+      "outputSha256": "87e55cdf519d45bf25a9bfabbfa760db37045769918a9f61ca3f8016d619158c",
       "edits": [
         {
           "start": 69,
@@ -382267,6 +382370,13 @@
           "symbol": "M:je.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 8121,
+          "end": 8122,
+          "symbol": "M:re.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 8503,
@@ -391390,10 +391500,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "af6f89053ff15b113eabf6a5332d3f924d2af1f954d6a7e16d5387867b650bcb",
+    "rulesSha256": "62ddcc16f3e96c3a7cc47018ed9f7cb8fd53b96e3a11cb3ed7c95eddaac139ac",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "74d63049177d0e09302b2fe6cd1ee63fadc048851b4f5ce499bb9b05b6ae3a56",
+    "outputTreeSha256": "154d18c5bc24820f9f06aa5f6753f045f10f58c99e2b5ec364fda6cd4c6a0b92",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

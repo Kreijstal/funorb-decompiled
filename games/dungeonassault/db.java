@@ -317,7 +317,7 @@ final class db extends qe {
           var4 = (var3Lifetime1 * 1 + 10) * fj.field_g[var2_intLifetime1] / 10;
           if (ve.a(false)) {
             if (var3Lifetime1 >= 5) {
-              stackIn_35_0 = (hm.field_m[var2_intLifetime1]) ? 1 : 0;
+              stackIn_35_0 = (AchievementIconEntry.field_m[var2_intLifetime1]) ? 1 : 0;
             } else {
               stackIn_35_0 = 0;
             }
@@ -622,7 +622,7 @@ final class db extends qe {
         if (super.d()) {
           return;
         }
-        this.field_w.a(-7734, this.a(hm.field_k, lc.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
+        this.field_w.a(-7734, this.a(AchievementIconEntry.field_k, lc.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
         if (param0 != -50) {
           this.field_w = (ae) null;
         }
@@ -1030,7 +1030,7 @@ final class db extends qe {
           field_v.c(li.field_b[var4_int], var2, var3 + 90, 0, -1);
           var5 = gm.field_d.field_J[var4_int] + gm.field_d.field_F[var4_int];
           if (ve.a(false)) {
-            if (hm.field_m[var4_int]) {
+            if (AchievementIconEntry.field_m[var4_int]) {
               stackIn_11_0 = (var5 >= 5) ? 1 : 0;
             } else {
               stackIn_11_0 = 0;
@@ -1078,7 +1078,7 @@ final class db extends qe {
         }
         if (this.field_w.c(97) &&
           sg.a(3, 3, param0) && rp.a(param1 ^ -15204377, var4)) {
-          hm.a(var4, param0, param2, -64);
+          AchievementIconEntry.a(var4, param0, param2, -64);
         }
     }
 

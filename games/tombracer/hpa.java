@@ -53,7 +53,7 @@ final class hpa extends aa {
             param1.field_e == C2SChooseRewardPacket.field_a.getGameId(0)) {
             if (!PowerDownItemBehaviour.field_s) {
               var9 = UnlockEntryDecoder.field_b;
-              var10 = lw.field_i;
+              var10 = SneakHintCharacter.field_i;
               var9.field_f.addItem((byte) -84, 14, var10);
             }
             var11 = UnlockEntryDecoder.field_b;

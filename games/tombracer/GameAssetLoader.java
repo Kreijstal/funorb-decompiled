@@ -245,7 +245,7 @@ final class GameAssetLoader implements LoadingStage {
           int var6 = 0;
           int var7 = 0;
           BitPacketBuffer var11 = null;
-          esa var12 = null;
+          RoomSelectionProfile var12 = null;
           byte[] var15 = null;
           var8 = TombRacer.field_G ? 1 : 0;
           try {
@@ -282,7 +282,7 @@ final class GameAssetLoader implements LoadingStage {
               return stackIn_16_0;
             }
             var11 = new BitPacketBuffer(var15);
-            var12 = new esa();
+            var12 = new RoomSelectionProfile();
             var7 = -101 % ((-14 - param1) / 49);
             var6 = var11.readUnsignedByte(255);
             dga.a(var11, 0);

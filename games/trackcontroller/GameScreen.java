@@ -1430,7 +1430,7 @@ final class GameScreen {
                                                   if (AccountCreationResultPanel.field_rb != null) {
                                                     oj.a(param3 ^ -499);
                                                   }
-                                                  of.a(-80, CachedArchiveSource.b((byte) 77));
+                                                  of.openSubscriptionPage(-80, CachedArchiveSource.b((byte) 77));
                                                 }
                                                 decompiledFrameRemainder0 = false;
                                               }

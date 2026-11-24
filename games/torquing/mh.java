@@ -1023,7 +1023,7 @@ final class mh {
         }
         ed.a(param1 ^ param1);
         if (11 == this.field_h) {
-          var3 = mo.b(-457010900, param0);
+          var3 = mo.updateMembershipSlides(-457010900, param0);
           switch (var3) {
             default:
               break;
@@ -2249,7 +2249,7 @@ final class mh {
                   !param3) {
                   break regionExit1;
                 }
-                cq.a(true, ip.a(9));
+                cq.openSubscriptionPage(true, ip.a(9));
                 if (var11 == 0) {
                   break regionExit2;
                 }

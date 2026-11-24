@@ -71,7 +71,7 @@ final class cq extends am {
         field_w = null;
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(boolean param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           java.applet.Applet var3 = null;
@@ -87,7 +87,7 @@ final class cq extends am {
               param1.getAppletContext().showDocument(og.a(var2, param1, (byte) -122), "_top");
               if (!param0) {
                 var3 = (java.applet.Applet) null;
-                cq.a(false, (java.applet.Applet) null);
+                cq.openSubscriptionPage(false, (java.applet.Applet) null);
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ final class cq extends am {
         return var3;
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int reverseLowBits(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

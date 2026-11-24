@@ -341,12 +341,12 @@ final class ja {
         }
         if (this.field_a == 7) {
           stackIn_13_0 = !(ki.d(-116));
-          var2 = wd.a(stackIn_13_0, false);
+          var2 = wd.updateMembershipSlides(stackIn_13_0, false);
           if (var2 == 3) {
             if (PacketBuffer.field_k != null) {
               lb.a(true);
             }
-            tl.a((byte) -102, uj.b((byte) -120));
+            tl.openSubscriptionPage((byte) -102, uj.b((byte) -120));
           }
           if (1 == var2) {
             rh.a((byte) 119, 0, false);

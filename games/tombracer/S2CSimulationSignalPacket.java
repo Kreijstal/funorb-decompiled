@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wga implements GamePacket {
+final class S2CSimulationSignalPacket implements GamePacket {
     private int field_b;
     static int[] field_a;
 
-    final void a(int param0, MatchProtocol param1, MatchScreen param2) {
+    final void applyToMatch(int param0, MatchProtocol param1, MatchScreen param2) {
         try {
-          param2.matchState.h(this.field_b, 78);
+          param2.matchState.broadcastSimulationSignal(this.field_b, 78);
           if (param0 != 4545315) {
             this.field_b = 35;
           }
@@ -31,7 +31,7 @@ final class wga implements GamePacket {
         try {
           param0.beginBitAccess((byte) 125);
           if (param1 != -19) {
-            wga.releaseStatics(false);
+            S2CSimulationSignalPacket.releaseStatics(false);
           }
           this.field_b = param0.readBits((byte) 44, 5);
           param0.endBitAccess((byte) 98);

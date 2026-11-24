@@ -217,7 +217,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 124, "mu_request_withdrawn");
                 if (null != var2) {
-                  esa.field_a = BitPackedColour.decodeText((byte) 60, var2);
+                  RoomSelectionProfile.field_a = BitPackedColour.decodeText((byte) 60, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -27, "mu_all_players_have_left");
                 if (null != var2) {
@@ -549,7 +549,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 127, "message_game");
                 if (var2 != null) {
-                  lw.field_i = BitPackedColour.decodeText((byte) 62, var2);
+                  SneakHintCharacter.field_i = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile(param0, "message_team");
                 if (var2 != null) {
@@ -1043,7 +1043,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 106, "changedisplayname");
                 if (var2 != null) {
-                  epa.field_q = BitPackedColour.decodeText((byte) 82, var2);
+                  GraphicsAndAudioMenu.field_q = BitPackedColour.decodeText((byte) 82, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -9, "returntohomepage");
                 if (null != var2) {
@@ -1531,7 +1531,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -88, "create_email_tooltip");
                 if (var2 != null) {
-                  ema.field_a = BitPackedColour.decodeText((byte) 124, var2);
+                  DropdownArrowPainter.field_a = BitPackedColour.decodeText((byte) 124, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_email_confirm_tooltip");
                 if (var2 != null) {
@@ -1611,7 +1611,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  waa.field_e = BitPackedColour.decodeText((byte) 95, var2);
+                  SneakHintDecoration.field_e = BitPackedColour.decodeText((byte) 95, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 121, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -2659,7 +2659,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 118, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  rr.field_G = BitPackedColour.decodeText((byte) 25, var2);
+                  RadialSelectionWidget.field_G = BitPackedColour.decodeText((byte) 25, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 122, "fs_accept_countdown_pl");
                 if (var2 != null) {

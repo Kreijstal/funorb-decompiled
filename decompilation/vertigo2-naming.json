@@ -2244,6 +2244,14 @@
       "renamedSymbol": "M:CrossfadingMidiPcmStream.skipFrames(I)V"
     },
     {
+      "symbol": "M:fk.a(III)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index1,count parameter index0. int guard!=1 invokes fk.c(-114,68,-107) after accumulator initialization before loop. Complete original-body SHA256 867c6be9aadaa0d984af123e84da72957f082620fd020b3b5bee5f5eebbe8874.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CrossfadingMidiPcmStream.reverseLowBits(III)I"
+    },
+    {
       "symbol": "M:fk.b([III)V",
       "originalName": "b",
       "to": "mixInto",
@@ -117406,7 +117414,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#0",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#0",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -117417,7 +117425,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#1",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#1",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -117428,7 +117436,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#2",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#2",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -117439,7 +117447,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#3",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#3",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -117450,7 +117458,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#4",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#4",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -117461,7 +117469,7 @@
     },
     {
       "symbol": "L:fk.a(III)I#5",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(III)I#5",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(III)I#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -262375,9 +262383,9 @@
     },
     {
       "symbol": "M:fk.a(III)I",
-      "renamedSymbol": "M:CrossfadingMidiPcmStream.a(III)I",
+      "renamedSymbol": "M:CrossfadingMidiPcmStream.reverseLowBits(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "fk.java",
         "start": 856,
@@ -315604,7 +315612,7 @@
     },
     {
       "symbol": "P:fk.a(III)I#0",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(III)I#0",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -315615,7 +315623,7 @@
     },
     {
       "symbol": "P:fk.a(III)I#1",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(III)I#1",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -315626,7 +315634,7 @@
     },
     {
       "symbol": "P:fk.a(III)I#2",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(III)I#2",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -404204,7 +404212,7 @@
       "original": "fk.java",
       "renamed": "CrossfadingMidiPcmStream.java",
       "inputSha256": "4ea831b36472e14d9e81c35231c13e6519e3aa0a17428b7b5b95f4cbf80b0a2c",
-      "outputSha256": "32fbc078f1bb6d030dd89933713beb79f1b9d09f124e526fbb298c4dccf46ced",
+      "outputSha256": "fea6cf4fd38e6f8f78e5d2dc1d16b05a0aa49092b5db37c35536fbfc34f145e0",
       "edits": [
         {
           "start": 50,
@@ -404240,6 +404248,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 856,
+          "end": 857,
+          "symbol": "M:fk.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 1190,
@@ -461426,7 +461441,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "c4d9877b5c8c31438e6fe7772c8535024c1bf9a2e9041c0d136c239daaba6859",
-      "outputSha256": "d0a499f07a6b849fccc6128e6097f439f121574c5f0c6146fc4e7fd881d3b52d",
+      "outputSha256": "092cd3d72f46f4799fb959a59991f211cf7f67562826808227bb633c12b09507",
       "edits": [
         {
           "start": 80,
@@ -461665,6 +461680,13 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 26841,
+          "end": 26842,
+          "symbol": "M:fk.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 27216,
@@ -466315,10 +466337,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/vertigo2"
     },
-    "rulesSha256": "80e3bbf8b6aef3db12a2cf0e2ee9b297ac4cfa8f9f161a62236ef8687ed53bc6",
+    "rulesSha256": "e971df625a8d6ad7900399219995036ff29f975a463f87c5f7752445b283edd4",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
-    "outputTreeSha256": "c73a291e199d0a9be09eb7dcf89ce416e3934f1f8627b7db09ee4d44ca272660",
+    "outputTreeSha256": "8faf61aae561203506edb29518f89f4f63d94a823814ac57f460fb8b8e2bf87a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

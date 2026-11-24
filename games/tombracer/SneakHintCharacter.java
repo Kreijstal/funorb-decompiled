@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lw {
+final class SneakHintCharacter {
     static String field_i;
     private int field_e;
     private boolean field_c;
@@ -30,7 +30,7 @@ final class lw {
         if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
-          stackIn_5_0 = (VerticalScrollbar.field_tb[mf.field_a]) ? 1 : 0;
+          stackIn_5_0 = (VerticalScrollbar.field_tb[ArbAssemblyProgram.field_a]) ? 1 : 0;
         }
         var2 = stackIn_5_0;
         if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
@@ -147,7 +147,7 @@ final class lw {
         return this.field_e >> 16;
     }
 
-    lw() {
+    SneakHintCharacter() {
         this.field_d = new ModelAnimator(0, 0, 1);
         this.field_d.play(0, false, 0, 0, true);
         this.field_b = false;
@@ -155,7 +155,7 @@ final class lw {
 
     final static int signum(int param0, byte param1) {
         if (param1 > -49) {
-          lw.signum(-18, (byte) 73);
+          SneakHintCharacter.signum(-18, (byte) 73);
           if (0 > param0) {
             return -1;
           }

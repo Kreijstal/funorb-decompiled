@@ -71,54 +71,54 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             if (0 > param1) {
               return -1;
             }
-            return lw.field_g[param1] >> 12;
+            return SneakHintCharacter.field_g[param1] >> 12;
           }
           if (param1 >= 4096) {
             if (param1 >= 16384) {
-              return lw.field_g[param1 >> 8] >> 8;
+              return SneakHintCharacter.field_g[param1 >> 8] >> 8;
             }
-            return lw.field_g[param1 >> 6] >> 9;
+            return SneakHintCharacter.field_g[param1 >> 6] >> 9;
           }
           if (param1 >= 1024) {
-            return lw.field_g[param1 >> 4] >> 10;
+            return SneakHintCharacter.field_g[param1 >> 4] >> 10;
           }
-          return lw.field_g[param1 >> 2] >> 11;
+          return SneakHintCharacter.field_g[param1 >> 2] >> 11;
         }
         if (param1 < 16777216) {
           if (1048576 <= param1) {
             if (param1 < 4194304) {
-              return lw.field_g[param1 >> 14] >> 5;
+              return SneakHintCharacter.field_g[param1 >> 14] >> 5;
             }
-            return lw.field_g[param1 >> 16] >> 4;
+            return SneakHintCharacter.field_g[param1 >> 16] >> 4;
           }
           if (262144 > param1) {
-            return lw.field_g[param1 >> 10] >> 7;
+            return SneakHintCharacter.field_g[param1 >> 10] >> 7;
           }
-          return lw.field_g[param1 >> 12] >> 6;
+          return SneakHintCharacter.field_g[param1 >> 12] >> 6;
         }
         if (268435456 <= param1) {
           if (param1 >= 1073741824) {
-            return lw.field_g[param1 >> 24] << var3;
+            return SneakHintCharacter.field_g[param1 >> 24] << var3;
           }
           if (1 > var3) {
-            stackIn_42_0 = lw.field_g[param1 >> 22] >> 1 - var3;
+            stackIn_42_0 = SneakHintCharacter.field_g[param1 >> 22] >> 1 - var3;
           } else {
-            stackIn_42_0 = lw.field_g[param1 >> 22] << var3 - 1;
+            stackIn_42_0 = SneakHintCharacter.field_g[param1 >> 22] << var3 - 1;
           }
           return stackIn_42_0;
         }
         if (param1 >= 67108864) {
           if (2 > var3) {
-            stackIn_51_0 = lw.field_g[param1 >> 20] >> 2 - var3;
+            stackIn_51_0 = SneakHintCharacter.field_g[param1 >> 20] >> 2 - var3;
           } else {
-            stackIn_51_0 = lw.field_g[param1 >> 20] << -2 + var3;
+            stackIn_51_0 = SneakHintCharacter.field_g[param1 >> 20] << -2 + var3;
           }
           return stackIn_51_0;
         }
         if (var3 >= 3) {
-          stackIn_47_0 = lw.field_g[param1 >> 18] << var3 - 3;
+          stackIn_47_0 = SneakHintCharacter.field_g[param1 >> 18] << var3 - 3;
         } else {
-          stackIn_47_0 = lw.field_g[param1 >> 18] >> 3 - var3;
+          stackIn_47_0 = SneakHintCharacter.field_g[param1 >> 18] >> 3 - var3;
         }
         return stackIn_47_0;
     }

@@ -1065,7 +1065,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                           if (frameRemainderLocal23) {
                             MixedSupport051.performAction0606((RenderingSupport007) null, (byte) 95);
                             SoftwareFramebuffer.computeBoolean1798(false);
-                            integerLocal13 = UiComponentPart017.computeInteger0955(0, true);
+                            integerLocal13 = UiComponentPart017.updateMembershipSlides(0, true);
                             if (1 == integerLocal13 ||
                               integerLocal13 == 2) {
                               MixedSupport049.booleanState0058 = false;
@@ -1075,7 +1075,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                               ((RenderingSupport007) (Object) stackRenderingSupport007Local1).performAction0865(stackIntegerLocal2, stackBooleanLocal3);
                             }
                             if (3 == integerLocal13) {
-                              NetworkSupport012.performAction1533((byte) -65, UiComponentPart029.computeApplet1485(25144));
+                              NetworkSupport012.openSubscriptionPage((byte) -65, UiComponentPart029.computeApplet1485(25144));
                             }
                             frameRemainderLocal23 = (integerLocal17 != 0);
                           }

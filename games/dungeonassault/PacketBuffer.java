@@ -3423,7 +3423,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_advance_tooltip", false);
                 if (var2 != null) {
-                  hm.field_l = dj.a(var2, param1);
+                  AchievementIconEntry.field_l = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_charge_tooltip", false);
                 if (null != var2) {

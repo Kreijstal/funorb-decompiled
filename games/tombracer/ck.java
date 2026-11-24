@@ -110,15 +110,15 @@ final class ck {
           RasterShape.field_e = new UiComponent(0L, (UiComponent) null);
           LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          bsa.field_j = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
+          RadialSelectionPainter.field_j = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.addChild(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.addChild(param11 - 25575, ShaderEffect.field_b);
           }
-          RasterShape.field_e.addChild(-127, bsa.field_j);
-          bsa.field_j.field_vb.applyStyle(false, Corpse.field_i);
-          var15 = bsa.field_j.field_vb;
-          bsa.field_j.field_vb.field_bb = 1;
+          RasterShape.field_e.addChild(-127, RadialSelectionPainter.field_j);
+          RadialSelectionPainter.field_j.field_vb.applyStyle(false, Corpse.field_i);
+          var15 = RadialSelectionPainter.field_j.field_vb;
+          RadialSelectionPainter.field_j.field_vb.field_bb = 1;
           var15.field_z = 1;
           PerlinNoise2D.field_t = new UiComponent(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;

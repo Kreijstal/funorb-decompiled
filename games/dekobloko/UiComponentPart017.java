@@ -46,7 +46,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         uiComponentPart029State0001 = null;
     }
 
-    final static int computeInteger0955(int integerArgument1, boolean booleanArgument2) {
+    final static int updateMembershipSlides(int integerArgument1, boolean booleanArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;

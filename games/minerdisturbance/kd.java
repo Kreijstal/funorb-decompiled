@@ -169,7 +169,7 @@ final class kd {
 
     private final void c(byte param0) {
         try {
-          ArchiveIndex.a(bm.c(-119), 88);
+          ArchiveIndex.openSubscriptionPage(bm.c(-119), 88);
         } catch (Exception exception) {
           exception.printStackTrace();
         }

@@ -401,12 +401,12 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (OpenGlDisplayLists.field_e &&
           C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
           RasterShape.field_e.field_X = false;
-          bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
-          BridgeModel.resetLayoutOffsets(-116, bsa.field_j.field_tb);
+          RadialSelectionPainter.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
+          BridgeModel.resetLayoutOffsets(-116, RadialSelectionPainter.field_j.field_tb);
         } else {
           RasterShape.field_e.field_X = true;
-          bsa.field_j.field_vb.field_r = null;
-          ava.updateLobbyPlayerRows(bsa.field_j, param6, param0, param9, 2);
+          RadialSelectionPainter.field_j.field_vb.field_r = null;
+          ava.updateLobbyPlayerRows(RadialSelectionPainter.field_j, param6, param0, param9, 2);
         }
         PlayTrackCommand.updateLobbyGameList(param7, 0, param3, param0, param4, param6, param9);
         if (param2 != 4096) {

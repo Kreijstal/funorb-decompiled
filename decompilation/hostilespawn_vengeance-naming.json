@@ -1052,6 +1052,14 @@
       "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;"
     },
     {
+      "symbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain bad int guard call HostileSpawn.a(-115,(byte)85) before inner Exception catch. Complete original-body SHA256 28d23cbb006540b8a92ffadba0458e49cad603a1ccdf3bae473be95ad1a5ae91. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V"
+    },
+    {
       "symbol": "M:aa.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2044,6 +2052,14 @@
       "renamedSymbol": "M:kc.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:kd.a(BII)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index1. Retain96/((byteGuard-53)/63) after bit loop before return. Complete original-body SHA256 6c61a80cdeb5d557e9e87d5011fb5e0dd29c0879af3ad7d2c7160d6cec7cdc01.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CrossfadingMidiPcmStream.reverseLowBits(BII)I"
+    },
+    {
       "symbol": "M:kd.b()Ltj;",
       "originalName": "b",
       "to": "nextChildStream",
@@ -2818,6 +2834,14 @@
       "evidence": "Begin enumeration of immediate child PCM streams using the original null/raw,linked-mixer,voice-deque or paired-stream contract. Preserve all mutable iterator cursors,guard/global exceptional paths,casts and exact null behavior. Abstract root contract;original declaration SHA256 5fefddae772fb9c58b824c48ea8ce089cea454447223d701179aa1106e95f404. Naming only. Complete original owning/supporting bodies,compiler-bound fields/calls,root constructor/wrapper and selected override families source-reviewed. Preserve all JVM argument widths and domains,operators/constants/diagnostic literals,int overflow,FP/cast order,shared aliases,partial mutations,allocation/call/exception ordering,visibility/modifiers and native/override bindings. No fields,parameters,locals,method bodies or intentional native/class-name-literal edits. Existing meaningful aliases remain unchanged;no whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmStream.firstChildStream()LPcmStream;"
+    },
+    {
+      "symbol": "M:tk.a(IBI)I",
+      "originalName": "a",
+      "to": "greatestCommonDivisor",
+      "evidence": "Compute the retained Euclidean rate-normalization divisor using initial signed comparison/swap and repeated signed-int remainder updates. Preserve zero,negative and MIN_VALUE domains without abs or positive normalization,mutated arguments in diagnostic wrapping,and all captured global reads. Byte guard!=44 clears field_f after loop. Complete original-body SHA256 cb57e9cb23ad74f4ccaa72a68a1bb1cad9a026c097f70d4363bf24c4322ea287. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tk.greatestCommonDivisor(IBI)I"
     },
     {
       "symbol": "M:tm.a(Z)V",
@@ -40844,7 +40868,7 @@
     },
     {
       "symbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "L:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -40855,7 +40879,7 @@
     },
     {
       "symbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "L:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -40866,7 +40890,7 @@
     },
     {
       "symbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#2",
-      "renamedSymbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#2",
+      "renamedSymbol": "L:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#2",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -40877,7 +40901,7 @@
     },
     {
       "symbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#3",
-      "renamedSymbol": "L:HostileSpawn.a(Ljava/applet/Applet;I)V#3",
+      "renamedSymbol": "L:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#3",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -112212,7 +112236,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#0",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#0",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -112223,7 +112247,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#1",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#1",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -112234,7 +112258,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#2",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#2",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -112245,7 +112269,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#3",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#3",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -112256,7 +112280,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#4",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#4",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -112267,7 +112291,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#5",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#5",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -112278,7 +112302,7 @@
     },
     {
       "symbol": "L:kd.a(BII)I#6",
-      "renamedSymbol": "L:CrossfadingMidiPcmStream.a(BII)I#6",
+      "renamedSymbol": "L:CrossfadingMidiPcmStream.reverseLowBits(BII)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -181358,7 +181382,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#0",
-      "renamedSymbol": "L:tk.a(IBI)I#0",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -181369,7 +181393,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#1",
-      "renamedSymbol": "L:tk.a(IBI)I#1",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -181380,7 +181404,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#2",
-      "renamedSymbol": "L:tk.a(IBI)I#2",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -181391,7 +181415,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#3",
-      "renamedSymbol": "L:tk.a(IBI)I#3",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -181402,7 +181426,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#4",
-      "renamedSymbol": "L:tk.a(IBI)I#4",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -181413,7 +181437,7 @@
     },
     {
       "symbol": "L:tk.a(IBI)I#5",
-      "renamedSymbol": "L:tk.a(IBI)I#5",
+      "renamedSymbol": "L:tk.greatestCommonDivisor(IBI)I#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -201719,9 +201743,9 @@
     },
     {
       "symbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
-      "renamedSymbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
+      "renamedSymbol": "M:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "HostileSpawn.java",
         "start": 96256,
@@ -214831,9 +214855,9 @@
     },
     {
       "symbol": "M:kd.a(BII)I",
-      "renamedSymbol": "M:CrossfadingMidiPcmStream.a(BII)I",
+      "renamedSymbol": "M:CrossfadingMidiPcmStream.reverseLowBits(BII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "kd.java",
         "start": 583,
@@ -225974,9 +225998,9 @@
     },
     {
       "symbol": "M:tk.a(IBI)I",
-      "renamedSymbol": "M:tk.a(IBI)I",
+      "renamedSymbol": "M:tk.greatestCommonDivisor(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "greatestCommonDivisor",
       "declaration": {
         "file": "tk.java",
         "start": 724,
@@ -230627,7 +230651,7 @@
     },
     {
       "symbol": "P:HostileSpawn.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "P:HostileSpawn.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "P:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -230638,7 +230662,7 @@
     },
     {
       "symbol": "P:HostileSpawn.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "P:HostileSpawn.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "P:HostileSpawn.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263121,7 +263145,7 @@
     },
     {
       "symbol": "P:kd.a(BII)I#0",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(BII)I#0",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263132,7 +263156,7 @@
     },
     {
       "symbol": "P:kd.a(BII)I#1",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(BII)I#1",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -263143,7 +263167,7 @@
     },
     {
       "symbol": "P:kd.a(BII)I#2",
-      "renamedSymbol": "P:CrossfadingMidiPcmStream.a(BII)I#2",
+      "renamedSymbol": "P:CrossfadingMidiPcmStream.reverseLowBits(BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -289763,7 +289787,7 @@
     },
     {
       "symbol": "P:tk.a(IBI)I#0",
-      "renamedSymbol": "P:tk.a(IBI)I#0",
+      "renamedSymbol": "P:tk.greatestCommonDivisor(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289774,7 +289798,7 @@
     },
     {
       "symbol": "P:tk.a(IBI)I#1",
-      "renamedSymbol": "P:tk.a(IBI)I#1",
+      "renamedSymbol": "P:tk.greatestCommonDivisor(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -289785,7 +289809,7 @@
     },
     {
       "symbol": "P:tk.a(IBI)I#2",
-      "renamedSymbol": "P:tk.a(IBI)I#2",
+      "renamedSymbol": "P:tk.greatestCommonDivisor(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -299194,7 +299218,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "387e7887694e7c4730a9100ff20a4b123bb7280937b07c7a2bf2cbeaff4d0962",
+      "outputSha256": "dff28c1dec04f980c2cc592341b5d8acc350fbb5076fa414b73cd1e5e0801081",
       "edits": [
         {
           "start": 78,
@@ -302997,6 +303021,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 96256,
+          "end": 96257,
+          "symbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 96578,
@@ -316016,7 +316047,7 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "282ba6062f570b7ad36847e09ac3c6f5116d33f90be849b76434fef4ffcba1bd",
-      "outputSha256": "c8df21daf9a1db0c0fc8be45bc039386715cc93f9b8deb882c5df11e9de8c8d1",
+      "outputSha256": "e5a33b9413d41232f49aecf947119b54d07d8ab01baef53e406aff5f307948ed",
       "edits": [
         {
           "start": 579,
@@ -316087,6 +316118,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 13074,
+          "end": 13075,
+          "symbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 15628,
@@ -330958,7 +330996,7 @@
       "original": "kd.java",
       "renamed": "CrossfadingMidiPcmStream.java",
       "inputSha256": "e643b9178840e48d8193514d4b1f95e3a5dcc03cb70696ef643b141cdfbeb267",
-      "outputSha256": "def85ceb03129146d27e6cbb6c72b44ba597ebbc8e532570a013c40e032af3e3",
+      "outputSha256": "8cf1e0cf99a556cbc20de3046b61ced138b0c4c608eee17ab01d1c054a8c9bc2",
       "edits": [
         {
           "start": 50,
@@ -331001,6 +331039,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "ReverbPcmStream"
+        },
+        {
+          "start": 583,
+          "end": 584,
+          "symbol": "M:kd.a(BII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 1362,
@@ -337755,7 +337800,7 @@
       "original": "nm.java",
       "renamed": "PcmResampler.java",
       "inputSha256": "3cda71639c00f5f1d28f8510b187c29c1a7df9611afe9ca243c6328b07944755",
-      "outputSha256": "4d3ed09a5ac27420f445f7454d69b6ee67398299f76293e282c901bb6a2e36a3",
+      "outputSha256": "deecaa9e016a19b730106a509f3bccdc9f4f3fb893d7646698642938acccd5d2",
       "edits": [
         {
           "start": 50,
@@ -337973,6 +338018,13 @@
           "symbol": "M:nm.<init>(II)V",
           "original": "nm",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 20234,
+          "end": 20235,
+          "symbol": "M:tk.a(IBI)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 21462,
@@ -344364,7 +344416,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "67a1adf4abd09a7b4b72de1d1604e6aca4ef59fcbe6d9237f5a4c39fc2f2b5f5",
-      "outputSha256": "80498b7d647af83d702ac4910e20844cb523218a6c1efe4032ffcd4dc386b219",
+      "outputSha256": "6b5cb6af6f599cb9cb96928e19a28c19a196c77efeb6ac671c00ba819bbd2a48",
       "edits": [
         {
           "start": 80,
@@ -344414,6 +344466,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 3564,
+          "end": 3565,
+          "symbol": "M:kd.a(BII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 3948,
@@ -352767,7 +352826,7 @@
       "original": "tk.java",
       "renamed": "tk.java",
       "inputSha256": "96c6c8817cdcd9819e262af3be8280d29a1cdba3a6d2636552ffee0198207056",
-      "outputSha256": "ce7032a6447a5ee8413aff5e079e5b295a9ed4c393466040c1b2a3031d30d31d",
+      "outputSha256": "369517e119aaa13d986fc9de68ee3be0e369285d1471622d43aa24f587f58b34",
       "edits": [
         {
           "start": 89,
@@ -352803,6 +352862,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 724,
+          "end": 725,
+          "symbol": "M:tk.a(IBI)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 1806,
@@ -359766,10 +359832,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "eb5d8184ff9e793971afc90d4339da71a03aa07dc12533ce31bb001b41094540",
+    "rulesSha256": "832117ae1d5a0d672c1a7926c79fe9d482102420e3dd5ec639b2878f86961971",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "2dd65208e6534cfc8302c710e5409c212b18e75686095743362e8d74bfc325c6",
+    "outputTreeSha256": "82136d38d4600d2094039ae8258dee39b9ae89e7797c93adf9b2ae066138d62a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

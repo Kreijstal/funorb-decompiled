@@ -104,7 +104,7 @@ final class AccountNameAvailabilityValidator extends qf {
           gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
           return;
         }
-        AccountNameAvailabilityValidator.a(false, -9, -79);
+        AccountNameAvailabilityValidator.reverseLowBits(false, -9, -79);
         gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
     }
 
@@ -178,7 +178,7 @@ final class AccountNameAvailabilityValidator extends qf {
         return bl.field_a == 11 ? true : false;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int reverseLowBits(boolean param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

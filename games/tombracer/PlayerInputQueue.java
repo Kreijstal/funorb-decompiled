@@ -220,8 +220,8 @@ final class PlayerInputQueue {
         if (param2 < 106) {
           field_a = (ToolkitSprite) null;
         }
-        qpa var3 = new qpa();
-        var3.b(param1, -123);
+        CourseDeathCountPacket var3 = new CourseDeathCountPacket();
+        var3.setCourseId(param1, -123);
         var3.setDeathCount(7, param0);
         hw.sendGamePacket((byte) -111, 1, 79, var3);
     }

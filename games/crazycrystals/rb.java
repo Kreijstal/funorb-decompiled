@@ -130,10 +130,10 @@ final class rb extends ue {
           this.a(96);
           return;
         }
-        var2 = da.a(true, true);
+        var2 = da.updateMembershipSlides(true, true);
         if (3 == var2) {
           q.a(param0);
-          on.a(95, le.b((byte) -20));
+          on.openSubscriptionPage(95, le.b((byte) -20));
         }
         if (var2 == 1) {
           MouseInputHandler.field_b = (ue) ((Object) this.field_f);

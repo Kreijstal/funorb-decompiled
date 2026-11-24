@@ -45,7 +45,7 @@ final class ra {
         int var3;
         var3 = DungeonAssault.field_K;
         jj.b((byte) -103);
-        var1 = lc.a(hj.field_S, (byte) -98, eh.field_h);
+        var1 = lc.findAchievementIconAt(hj.field_S, (byte) -98, eh.field_h);
         if (var1 != ak.field_n) {
           ak.field_n = var1;
           if (var1 == -1) {
@@ -58,7 +58,7 @@ final class ra {
           ra.b(-102);
         }
         if (1 == no.field_d) {
-          var2 = lc.a(lc.field_c, (byte) -94, hm.field_k);
+          var2 = lc.findAchievementIconAt(lc.field_c, (byte) -94, AchievementIconEntry.field_k);
           if (var2 == GameAppletShell.field_f) {
             um.field_g = null;
             GameAppletShell.field_f = -1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cia {
+final class MovementHintCharacter {
     private int field_b;
     static String[] field_a;
     private boolean field_d;
@@ -43,7 +43,7 @@ final class cia {
         if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
           stackIn_5_0 = -1;
         } else {
-          stackIn_5_0 = (!VerticalScrollbar.field_tb[mf.field_a]) ? 0 : 1;
+          stackIn_5_0 = (!VerticalScrollbar.field_tb[ArbAssemblyProgram.field_a]) ? 0 : 1;
         }
         var2 = stackIn_5_0;
         if (param0 >= 120) {
@@ -124,7 +124,7 @@ final class cia {
         }
     }
 
-    cia() {
+    MovementHintCharacter() {
         this.field_c = new ModelAnimator(0, 0, 1);
         this.field_c.play(0, false, 0, 0, true);
         this.field_d = false;
@@ -132,7 +132,7 @@ final class cia {
 
     public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          cia.releaseStatics(42);
+          MovementHintCharacter.releaseStatics(42);
           field_a = null;
           field_g = null;
           return;

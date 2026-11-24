@@ -309,7 +309,7 @@ abstract class l {
             }
             var1_int = 1;
           }
-          h.field_h.a(-7734, wi.c(hm.field_k, param0 ^ 2118074, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
+          h.field_h.a(-7734, wi.c(AchievementIconEntry.field_k, param0 ^ 2118074, lc.field_c), wi.c(eh.field_h, 2113632, hj.field_S));
           if (h.field_h.c(param0 - 4689)) {
             var1_int = 1;
           }

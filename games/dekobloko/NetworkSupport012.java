@@ -73,7 +73,7 @@ final class NetworkSupport012 {
         mixedSupport001State0001 = null;
     }
 
-    final static void performAction1533(byte byteArgument1, java.applet.Applet appletArgument2) {
+    final static void openSubscriptionPage(byte byteArgument1, java.applet.Applet appletArgument2) {
         try {
           java.net.URL uRLLocal1 = null;
           Exception exceptionLocal2 = null;

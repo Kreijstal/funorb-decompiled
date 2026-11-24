@@ -2717,7 +2717,7 @@ final class BucketBoard {
           MixedSupport005.booleanArrayState0001[this.integerState0453] = true;
           rawPcmStreamLocal11 = MixedSupport062.rawPcmStreamArrayState0002[this.integerState0453];
           if (rawPcmStreamLocal11 == null) {
-            integerLocal24 = 100 + MixedSupport108.computeInteger1413((byte) 16, 4, this.integerState0453);
+            integerLocal24 = 100 + MixedSupport108.reverseLowBits((byte) 16, 4, this.integerState0453);
             rawPcmStreamLocal17 = RawPcmStream.computeRawPcmStream0450(ComponentContainer.rawSoundState0014, integerLocal24, GameDomainSupport005.integerState0578 * this.integerState0474, this.integerState0462 << 6);
             rawPcmStreamLocal18 = rawPcmStreamLocal17;
             rawPcmStreamLocal18.performAction0458(-1);

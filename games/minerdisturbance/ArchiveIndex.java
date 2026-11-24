@@ -48,7 +48,7 @@ final class ArchiveIndex {
         pf.a(0, param0);
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -191,7 +191,7 @@ final class ArchiveIndex {
             var19 = var15;
             if (param4 <= 13) {
               var23 = (java.applet.Applet) null;
-              ArchiveIndex.a((java.applet.Applet) null, 77);
+              ArchiveIndex.openSubscriptionPage((java.applet.Applet) null, 77);
             }
             if (var18 > var19) {
               var19 = param1 * var8 / (var9 + var8) + param0;
@@ -535,7 +535,7 @@ final class ArchiveIndex {
         boolean stackIn_6_0 = false;
         if (param1 != -68) {
           var3 = (java.applet.Applet) null;
-          ArchiveIndex.a((java.applet.Applet) null, -49);
+          ArchiveIndex.openSubscriptionPage((java.applet.Applet) null, -49);
         }
         stackIn_6_0 = (param0 >= 48) && (param0 <= 57);
         return stackIn_6_0;

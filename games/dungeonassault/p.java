@@ -771,7 +771,7 @@ final class p extends qe {
                       if (decompiledFrameRemainder1) {
                         if ((!(hh.field_s instanceof cp)) &&
                           (decompiledFrameRemainder1 = (0 != no.field_d))) {
-                          var2 = this.b(lc.field_c, hm.field_k, param0 + 1380862337);
+                          var2 = this.b(lc.field_c, AchievementIconEntry.field_k, param0 + 1380862337);
                           if (var2 != -1 &&
                             var2 != 0 &&
                             var2 != 6 &&

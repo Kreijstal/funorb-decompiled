@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class epa extends MenuScreen {
+final class GraphicsAndAudioMenu extends MenuScreen {
     static int[] field_r;
     static String field_q;
 
@@ -15,13 +15,13 @@ final class epa extends MenuScreen {
         return cq.field_d.field_k + cq.field_d.field_w;
     }
 
-    epa(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    GraphicsAndAudioMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 2) {
-          epa.releaseStatics(10);
+          GraphicsAndAudioMenu.releaseStatics(10);
           field_q = null;
           field_r = null;
           return;
@@ -97,7 +97,7 @@ final class epa extends MenuScreen {
 
     final static PcmStreamMixer getPcmStreamMixer(byte param0) {
         if (param0 != -91) {
-          epa.releaseStatics(15);
+          GraphicsAndAudioMenu.releaseStatics(15);
           return PitModel.field_n;
         }
         return PitModel.field_n;

@@ -44,7 +44,7 @@ final class on {
         field_a = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           int var2_int = 0;
           java.net.URL var3 = null;

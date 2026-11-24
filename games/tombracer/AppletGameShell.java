@@ -137,7 +137,7 @@ abstract class AppletGameShell extends GameApplet {
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
                 } else {
-                  epa.handleLoginResponseCode(var5Lifetime2, (byte) -84, io.field_b);
+                  GraphicsAndAudioMenu.handleLoginResponseCode(var5Lifetime2, (byte) -84, io.field_b);
                   io.field_b = null;
                 }
               }
@@ -334,7 +334,7 @@ abstract class AppletGameShell extends GameApplet {
               this.reportError(-6738, "reconnect");
             }
             TextureMetadata.b(param0);
-            epa.handleLoginResponseCode(var2, (byte) -84, io.field_b);
+            GraphicsAndAudioMenu.handleLoginResponseCode(var2, (byte) -84, io.field_b);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = AdjustedWallClock.currentTimeMillis((byte) -107) + 15000L;
             return var2;
@@ -511,7 +511,7 @@ abstract class AppletGameShell extends GameApplet {
           return;
         }
         ToggleMusicChannelCommand.field_o = null;
-        cia.field_a = null;
+        MovementHintCharacter.field_a = null;
         C2SActionPacket.field_k = null;
         OpenGlModelBillboard.field_d = null;
     }
@@ -579,7 +579,7 @@ abstract class AppletGameShell extends GameApplet {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
-            epa.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
+            GraphicsAndAudioMenu.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = 15000L + AdjustedWallClock.currentTimeMillis((byte) -107);
@@ -628,18 +628,18 @@ abstract class AppletGameShell extends GameApplet {
                 if (Trap.field_m != 4) {
                   if (Trap.field_m != 2) {
                     if (Trap.field_m != 5) {
-                      epa.handleLoginResponseCode(256, (byte) -84, GasTrapComponent.field_H);
+                      GraphicsAndAudioMenu.handleLoginResponseCode(256, (byte) -84, GasTrapComponent.field_H);
                     } else {
-                      epa.handleLoginResponseCode(5, (byte) -84, MovementHintPanel.field_a);
+                      GraphicsAndAudioMenu.handleLoginResponseCode(5, (byte) -84, MovementHintPanel.field_a);
                     }
                   } else {
-                    epa.handleLoginResponseCode(256, (byte) -84, NativeSceneLight.field_r);
+                    GraphicsAndAudioMenu.handleLoginResponseCode(256, (byte) -84, NativeSceneLight.field_r);
                   }
                 } else {
-                  epa.handleLoginResponseCode(256, (byte) -84, ConsoleWindow.field_e);
+                  GraphicsAndAudioMenu.handleLoginResponseCode(256, (byte) -84, ConsoleWindow.field_e);
                 }
               } else {
-                epa.handleLoginResponseCode(256, (byte) -84, MatchingTextValidator.field_l);
+                GraphicsAndAudioMenu.handleLoginResponseCode(256, (byte) -84, MatchingTextValidator.field_l);
               }
               TrackingCrusherComponent.field_G = true;
             }
@@ -693,7 +693,7 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (cga.field_f == 3 &&
-          esa.areCommonUiArchivesReady(WeaveOperator.field_p, MusicVolumeControl.field_b, -128, OpenGlTexture2D.field_n) &&
+          RoomSelectionProfile.areCommonUiArchivesReady(WeaveOperator.field_p, MusicVolumeControl.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.isArchiveComplete(WeaveOperator.field_p, (byte) -53)) {
           CheckboxPainter.releaseStatics(-1);
           SimulationObserver.composeAgreementText((byte) -27);
@@ -710,7 +710,7 @@ abstract class AppletGameShell extends GameApplet {
             S2CPlayerProfilePacket.b(true);
           }
           if (null == ScoreStandings.field_c) {
-            ScoreStandings.field_c = epa.getPcmStreamMixer((byte) -91);
+            ScoreStandings.field_c = GraphicsAndAudioMenu.getPcmStreamMixer((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
           MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);

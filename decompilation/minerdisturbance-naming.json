@@ -1644,6 +1644,14 @@
       "renamedSymbol": "M:AudioOutput.writeMixBlock()V"
     },
     {
+      "symbol": "M:g.a(Ljava/applet/Applet;I)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain guard<=34 write field_k=6 after URL allocation and before AppletContext evaluation. Complete original-body SHA256 de26893f1e6a8fdd47bf394f2ecf3752f784f264922ca435d7c2d2806e508fb0. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V"
+    },
+    {
       "symbol": "M:gb.c(I)V",
       "originalName": "c",
       "to": "reset",
@@ -2700,6 +2708,14 @@
       "renamedSymbol": "M:sa.countSetBits(II)I"
     },
     {
+      "symbol": "M:sa.a(III)I",
+      "originalName": "a",
+      "to": "greatestCommonDivisor",
+      "evidence": "Compute the retained Euclidean rate-normalization divisor using initial signed comparison/swap and repeated signed-int remainder updates. Preserve zero,negative and MIN_VALUE domains without abs or positive normalization,mutated arguments in diagnostic wrapping,and all captured global reads. Int guard!=0 clears field_r before loop. Complete original-body SHA256 80268fa2dc5efd193b0571614c0abb70fe87406eed96256151775e8c04f1fdfb. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sa.greatestCommonDivisor(III)I"
+    },
+    {
       "symbol": "M:sb.a(B)I",
       "originalName": "a",
       "to": "readUnsignedShortOrInt",
@@ -3546,6 +3562,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 3f6d5edae9eb2ea87d361a4cba1af557381853e47a0e3a8f31c2e2532a703541.",
       "confidence": "reviewed",
       "renamedSymbol": "M:wa.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:wb.a(IZI)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index0,count parameter index2. false boolean guard invokes wb.a(17,-87,null,80) before accumulator initialization. Complete original-body SHA256 c51a1a889ecb5634bb50e6bce51c16aa2be5a484027a11ca0403b0e2064265f9.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wb.reverseLowBits(IZI)I"
     },
     {
       "symbol": "M:we.a()V",
@@ -77731,7 +77755,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -77742,7 +77766,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -77753,7 +77777,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#10",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#10",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -77764,7 +77788,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#2",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#2",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -77775,7 +77799,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#3",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#3",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -77786,7 +77810,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#4",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#4",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -77797,7 +77821,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#5",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#5",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -77808,7 +77832,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#6",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#6",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#6",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -77819,7 +77843,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#7",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#7",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -77830,7 +77854,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#8",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#8",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -77841,7 +77865,7 @@
     },
     {
       "symbol": "L:g.a(Ljava/applet/Applet;I)V#9",
-      "renamedSymbol": "L:ArchiveIndex.a(Ljava/applet/Applet;I)V#9",
+      "renamedSymbol": "L:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -149858,7 +149882,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#0",
-      "renamedSymbol": "L:sa.a(III)I#0",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -149869,7 +149893,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#1",
-      "renamedSymbol": "L:sa.a(III)I#1",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -149880,7 +149904,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#2",
-      "renamedSymbol": "L:sa.a(III)I#2",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -149891,7 +149915,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#3",
-      "renamedSymbol": "L:sa.a(III)I#3",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -149902,7 +149926,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#4",
-      "renamedSymbol": "L:sa.a(III)I#4",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -149913,7 +149937,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#5",
-      "renamedSymbol": "L:sa.a(III)I#5",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#5",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -149924,7 +149948,7 @@
     },
     {
       "symbol": "L:sa.a(III)I#6",
-      "renamedSymbol": "L:sa.a(III)I#6",
+      "renamedSymbol": "L:sa.greatestCommonDivisor(III)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169988,7 +170012,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#0",
-      "renamedSymbol": "L:wb.a(IZI)I#0",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -169999,7 +170023,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#1",
-      "renamedSymbol": "L:wb.a(IZI)I#1",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -170010,7 +170034,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#2",
-      "renamedSymbol": "L:wb.a(IZI)I#2",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -170021,7 +170045,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#3",
-      "renamedSymbol": "L:wb.a(IZI)I#3",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -170032,7 +170056,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#4",
-      "renamedSymbol": "L:wb.a(IZI)I#4",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -170043,7 +170067,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#5",
-      "renamedSymbol": "L:wb.a(IZI)I#5",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -170054,7 +170078,7 @@
     },
     {
       "symbol": "L:wb.a(IZI)I#6",
-      "renamedSymbol": "L:wb.a(IZI)I#6",
+      "renamedSymbol": "L:wb.reverseLowBits(IZI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -182363,9 +182387,9 @@
     },
     {
       "symbol": "M:g.a(Ljava/applet/Applet;I)V",
-      "renamedSymbol": "M:ArchiveIndex.a(Ljava/applet/Applet;I)V",
+      "renamedSymbol": "M:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "g.java",
         "start": 1162,
@@ -196553,9 +196577,9 @@
     },
     {
       "symbol": "M:sa.a(III)I",
-      "renamedSymbol": "M:sa.a(III)I",
+      "renamedSymbol": "M:sa.greatestCommonDivisor(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "greatestCommonDivisor",
       "declaration": {
         "file": "sa.java",
         "start": 867,
@@ -200810,9 +200834,9 @@
     },
     {
       "symbol": "M:wb.a(IZI)I",
-      "renamedSymbol": "M:wb.a(IZI)I",
+      "renamedSymbol": "M:wb.reverseLowBits(IZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "wb.java",
         "start": 277,
@@ -220225,7 +220249,7 @@
     },
     {
       "symbol": "P:g.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "P:ArchiveIndex.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "P:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -220236,7 +220260,7 @@
     },
     {
       "symbol": "P:g.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "P:ArchiveIndex.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "P:ArchiveIndex.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -253632,7 +253656,7 @@
     },
     {
       "symbol": "P:sa.a(III)I#0",
-      "renamedSymbol": "P:sa.a(III)I#0",
+      "renamedSymbol": "P:sa.greatestCommonDivisor(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -253643,7 +253667,7 @@
     },
     {
       "symbol": "P:sa.a(III)I#1",
-      "renamedSymbol": "P:sa.a(III)I#1",
+      "renamedSymbol": "P:sa.greatestCommonDivisor(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -253654,7 +253678,7 @@
     },
     {
       "symbol": "P:sa.a(III)I#2",
-      "renamedSymbol": "P:sa.a(III)I#2",
+      "renamedSymbol": "P:sa.greatestCommonDivisor(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -262333,7 +262357,7 @@
     },
     {
       "symbol": "P:wb.a(IZI)I#0",
-      "renamedSymbol": "P:wb.a(IZI)I#0",
+      "renamedSymbol": "P:wb.reverseLowBits(IZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262344,7 +262368,7 @@
     },
     {
       "symbol": "P:wb.a(IZI)I#1",
-      "renamedSymbol": "P:wb.a(IZI)I#1",
+      "renamedSymbol": "P:wb.reverseLowBits(IZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262355,7 +262379,7 @@
     },
     {
       "symbol": "P:wb.a(IZI)I#2",
-      "renamedSymbol": "P:wb.a(IZI)I#2",
+      "renamedSymbol": "P:wb.reverseLowBits(IZI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -271483,7 +271507,7 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "4494f35c5a80499c781d668df00e838d6cc532d309d4efea19915f02a045e5ae",
-      "outputSha256": "623dd20fecaded90e27e79a62f2e61048ccd927e594974e82a08be6863d28313",
+      "outputSha256": "5f8419f4df80f02cd8d3c99b20c0eb6d3c815736ad111cf6f7873385d641bf73",
       "edits": [
         {
           "start": 79,
@@ -271582,6 +271606,13 @@
           "symbol": "M:d.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 7818,
+          "end": 7819,
+          "symbol": "M:wb.a(IZI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 8195,
@@ -282984,7 +283015,7 @@
       "original": "g.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "e6db1ca78d87be66e0452e2b4cbe0985ee9be41c1de87905c89774045ac7d035",
-      "outputSha256": "a73b39e2b4a3751f6d015774fe55c9f153760241444515e3637bc41f8735a241",
+      "outputSha256": "d840d8ad2d30551617995ae9395c7b2d7fa55956c5684db5b0161667071d1dc4",
       "edits": [
         {
           "start": 50,
@@ -283027,6 +283058,13 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1162,
+          "end": 1163,
+          "symbol": "M:g.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 2571,
@@ -283076,6 +283114,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 6308,
+          "end": 6309,
+          "symbol": "M:g.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 6539,
@@ -283405,6 +283450,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 20156,
+          "end": 20157,
+          "symbol": "M:g.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 20455,
@@ -292691,7 +292743,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a669ea547d662632669a1e19b9e018028e8ea3c14c7da4b0c5fd3ab57814bb07",
-      "outputSha256": "b171d8366f7a45fe195bd9a1e5e0f565609f14f43b44bf15bb94ffb1faf35fb6",
+      "outputSha256": "0ac9593522be5e89d4b5b2f5ff63edc9f15e71950a6c3a88d9533560c77fb657",
       "edits": [
         {
           "start": 116,
@@ -292895,6 +292947,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 5493,
+          "end": 5494,
+          "symbol": "M:g.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 5656,
@@ -311392,7 +311451,7 @@
       "original": "sa.java",
       "renamed": "sa.java",
       "inputSha256": "a8a5effb392f03fed9e7f05ee25dbf505f48fd375951682413e9933830e7f785",
-      "outputSha256": "e1e3c194e7d8b4fa1a724139cf51ef0f3b06b729930bde1a384d27487db5b840",
+      "outputSha256": "5e9d4bbc1b3ad57ee3e37c842153344d065362d4a7564ace7f84043c6a7794ac",
       "edits": [
         {
           "start": 61,
@@ -311421,6 +311480,13 @@
           "symbol": "M:sa.a(II)I",
           "original": "a",
           "renamed": "countSetBits"
+        },
+        {
+          "start": 867,
+          "end": 868,
+          "symbol": "M:sa.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         },
         {
           "start": 1809,
@@ -323118,7 +323184,7 @@
       "original": "wb.java",
       "renamed": "wb.java",
       "inputSha256": "b865e93489368655a4477ee2cefcd7099ede471bb7a904e8f2a6fa2deb2985f7",
-      "outputSha256": "bb4da4775914f0b644f66e37926a20211efd4faf9d55370f782fbd79b556fe12",
+      "outputSha256": "bcdd1be7405f66b0dd68e8159406f184d43671170db2a2f20c90db08cb8dc80f",
       "edits": [
         {
           "start": 61,
@@ -323126,6 +323192,13 @@
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "symbol": "M:wb.a(IZI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 1138,
@@ -324652,7 +324725,7 @@
       "original": "wm.java",
       "renamed": "PcmResampler.java",
       "inputSha256": "0958f77350ccafca3ab8a7ba64fd7404ee572664eea017f66e7a61a7e3178c28",
-      "outputSha256": "9c5bfd4ca16d0fb6e5d3cf5918aaf9bb3d54853244b9087cf4cc42c68e21001e",
+      "outputSha256": "68c16d1db7125152a42ab68c4bac132404981d78ac4c22c04442a34a424ab7c4",
       "edits": [
         {
           "start": 50,
@@ -324730,6 +324803,13 @@
           "symbol": "M:wm.<init>(II)V",
           "original": "wm",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 4839,
+          "end": 4840,
+          "symbol": "M:sa.a(III)I",
+          "original": "a",
+          "renamed": "greatestCommonDivisor"
         }
       ]
     }
@@ -324742,10 +324822,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/minerdisturbance"
     },
-    "rulesSha256": "c4841579580ff661dbdb06320aaf4440ec338ff28bdf254447a214d1f68b948d",
+    "rulesSha256": "4b944c3bd369cf01b0f70621e1030102ba4d4facff1ba53c181d365685cdc19b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
-    "outputTreeSha256": "e489998250cb968ecf63f511397f7e8799e4e7ca2c41b728fe2266ad2c799c7a",
+    "outputTreeSha256": "49115707698422eb512e405a4062d8f07c551c091bcffed6993f08a20333c9fb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

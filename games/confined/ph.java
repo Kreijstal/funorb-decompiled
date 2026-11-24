@@ -220,7 +220,7 @@ final class ph extends IntrusiveNode {
           var9 = new int[var5];
           var10 = km.bitLength(4, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = wf.a(1, var10, var11);
+            var9[var11] = wf.reverseLowBits(1, var10, var11);
           }
           if (var1 == 0) {
             field_A = var6_ref_float__;

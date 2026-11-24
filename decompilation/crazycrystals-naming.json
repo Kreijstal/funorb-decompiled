@@ -1116,6 +1116,14 @@
       "renamedSymbol": "M:cp.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:da.a(ZZ)I",
+      "originalName": "a",
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. False second boolean recurses with false,true after timer stepping before frame-array reads. Complete original-body SHA256 68fb28a4d75fd1b7d6edd7685e7c613cef5ee6d7eee788682a56604a5fe656c1. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:da.updateMembershipSlides(ZZ)I"
+    },
+    {
       "symbol": "M:dd.a(Lun;B)V",
       "originalName": "a",
       "to": "exitFullscreen",
@@ -2516,6 +2524,14 @@
       "renamedSymbol": "M:oj.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:on.a(ILjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain 10%((-8-intGuard)/55) before URL allocation inside original Exception catch. Complete original-body SHA256 54b144dec902ca5098da96ff55144331c75216e5ecfbadef6feec29076173bff. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:on.openSubscriptionPage(ILjava/applet/Applet;)V"
+    },
+    {
       "symbol": "M:pb.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2794,6 +2810,14 @@
       "evidence": "Complete concrete synchronized body and abstract declaration reviewed. Copies accumulator before guard; true returns115 without clearing, false clears and returns copy. Preserve exact read/write/guard order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MouseWheelHandler.pollRotation(Z)I"
+    },
+    {
+      "symbol": "M:sl.a(BII)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index1,count parameter index2. byte guard!=-24 returns -34 after accumulator initialization before loop. Complete original-body SHA256 37846101f71a8ef48bc6f6e14ef121c673ab2decdce41fe51942788d2f4b1a2e.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sl.reverseLowBits(BII)I"
     },
     {
       "symbol": "M:sm.a(I[B)[B",
@@ -59175,7 +59199,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#0",
-      "renamedSymbol": "L:da.a(ZZ)I#0",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#0",
       "originalName": "stackIn_59_0",
       "renamedName": "stackIn_59_0",
       "declaration": {
@@ -59186,7 +59210,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#1",
-      "renamedSymbol": "L:da.a(ZZ)I#1",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#1",
       "originalName": "stackIn_62_0",
       "renamedName": "stackIn_62_0",
       "declaration": {
@@ -59197,7 +59221,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#10",
-      "renamedSymbol": "L:da.a(ZZ)I#10",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -59208,7 +59232,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#11",
-      "renamedSymbol": "L:da.a(ZZ)I#11",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -59219,7 +59243,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#12",
-      "renamedSymbol": "L:da.a(ZZ)I#12",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -59230,7 +59254,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#13",
-      "renamedSymbol": "L:da.a(ZZ)I#13",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -59241,7 +59265,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#2",
-      "renamedSymbol": "L:da.a(ZZ)I#2",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#2",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -59252,7 +59276,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#3",
-      "renamedSymbol": "L:da.a(ZZ)I#3",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -59263,7 +59287,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#4",
-      "renamedSymbol": "L:da.a(ZZ)I#4",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#4",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -59274,7 +59298,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#5",
-      "renamedSymbol": "L:da.a(ZZ)I#5",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#5",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -59285,7 +59309,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#6",
-      "renamedSymbol": "L:da.a(ZZ)I#6",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -59296,7 +59320,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#7",
-      "renamedSymbol": "L:da.a(ZZ)I#7",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -59307,7 +59331,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#8",
-      "renamedSymbol": "L:da.a(ZZ)I#8",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -59318,7 +59342,7 @@
     },
     {
       "symbol": "L:da.a(ZZ)I#9",
-      "renamedSymbol": "L:da.a(ZZ)I#9",
+      "renamedSymbol": "L:da.updateMembershipSlides(ZZ)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136131,7 +136155,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -136142,7 +136166,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136153,7 +136177,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -136164,7 +136188,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#11",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#11",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -136175,7 +136199,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -136186,7 +136210,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -136197,7 +136221,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -136208,7 +136232,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136219,7 +136243,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136230,7 +136254,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#7",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -136241,7 +136265,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136252,7 +136276,7 @@
     },
     {
       "symbol": "L:on.a(ILjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:on.a(ILjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:on.openSubscriptionPage(ILjava/applet/Applet;)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -160595,7 +160619,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#0",
-      "renamedSymbol": "L:sl.a(BII)I#0",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -160606,7 +160630,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#1",
-      "renamedSymbol": "L:sl.a(BII)I#1",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160617,7 +160641,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#2",
-      "renamedSymbol": "L:sl.a(BII)I#2",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160628,7 +160652,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#3",
-      "renamedSymbol": "L:sl.a(BII)I#3",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -160639,7 +160663,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#4",
-      "renamedSymbol": "L:sl.a(BII)I#4",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -160650,7 +160674,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#5",
-      "renamedSymbol": "L:sl.a(BII)I#5",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -160661,7 +160685,7 @@
     },
     {
       "symbol": "L:sl.a(BII)I#6",
-      "renamedSymbol": "L:sl.a(BII)I#6",
+      "renamedSymbol": "L:sl.reverseLowBits(BII)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -194035,9 +194059,9 @@
     },
     {
       "symbol": "M:da.a(ZZ)I",
-      "renamedSymbol": "M:da.a(ZZ)I",
+      "renamedSymbol": "M:da.updateMembershipSlides(ZZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "da.java",
         "start": 16503,
@@ -211074,9 +211098,9 @@
     },
     {
       "symbol": "M:on.a(ILjava/applet/Applet;)V",
-      "renamedSymbol": "M:on.a(ILjava/applet/Applet;)V",
+      "renamedSymbol": "M:on.openSubscriptionPage(ILjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "on.java",
         "start": 1126,
@@ -216464,9 +216488,9 @@
     },
     {
       "symbol": "M:sl.a(BII)I",
-      "renamedSymbol": "M:sl.a(BII)I",
+      "renamedSymbol": "M:sl.reverseLowBits(BII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "sl.java",
         "start": 15473,
@@ -231765,7 +231789,7 @@
     },
     {
       "symbol": "P:da.a(ZZ)I#0",
-      "renamedSymbol": "P:da.a(ZZ)I#0",
+      "renamedSymbol": "P:da.updateMembershipSlides(ZZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -231776,7 +231800,7 @@
     },
     {
       "symbol": "P:da.a(ZZ)I#1",
-      "renamedSymbol": "P:da.a(ZZ)I#1",
+      "renamedSymbol": "P:da.updateMembershipSlides(ZZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277525,7 +277549,7 @@
     },
     {
       "symbol": "P:on.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:on.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:on.openSubscriptionPage(ILjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277536,7 +277560,7 @@
     },
     {
       "symbol": "P:on.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:on.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:on.openSubscriptionPage(ILjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -290725,7 +290749,7 @@
     },
     {
       "symbol": "P:sl.a(BII)I#0",
-      "renamedSymbol": "P:sl.a(BII)I#0",
+      "renamedSymbol": "P:sl.reverseLowBits(BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -290736,7 +290760,7 @@
     },
     {
       "symbol": "P:sl.a(BII)I#1",
-      "renamedSymbol": "P:sl.a(BII)I#1",
+      "renamedSymbol": "P:sl.reverseLowBits(BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -290747,7 +290771,7 @@
     },
     {
       "symbol": "P:sl.a(BII)I#2",
-      "renamedSymbol": "P:sl.a(BII)I#2",
+      "renamedSymbol": "P:sl.reverseLowBits(BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -310203,7 +310227,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "dc591eb10a41f039ec79924f875a8af01d0b5f09a4b9b642067bfb4f4a8fb82e",
-      "outputSha256": "7c2a778f39a78f1c054f38e48a2ecfd4d9f7bb5967c86435787427c3c8121394",
+      "outputSha256": "eea1044d9bbda2e9a399133550c3013d92e7eb4590db2fd1aaa080ae97333543",
       "edits": [
         {
           "start": 80,
@@ -310246,6 +310270,13 @@
           "symbol": "M:eq.c(IB)I",
           "original": "c",
           "renamed": "bitLength"
+        },
+        {
+          "start": 3833,
+          "end": 3834,
+          "symbol": "M:sl.a(BII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 4217,
@@ -312866,7 +312897,7 @@
       "original": "da.java",
       "renamed": "da.java",
       "inputSha256": "ed103909f4200ed3ba52ccef5e79b5d516f10511b138d8c188ed55783bef9bc8",
-      "outputSha256": "6b4285391c763c143eb112ff6380501309bc7e70bf9a1c2977d0fb6f95bb083f",
+      "outputSha256": "c3bf71447aa9216b867acff76318aca0c39eb564c49c9c528574bbcd5925069f",
       "edits": [
         {
           "start": 2650,
@@ -312895,6 +312926,20 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 16503,
+          "end": 16504,
+          "symbol": "M:da.a(ZZ)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
+        },
+        {
+          "start": 17232,
+          "end": 17233,
+          "symbol": "M:da.a(ZZ)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 19498,
@@ -332851,7 +332896,7 @@
       "original": "on.java",
       "renamed": "on.java",
       "inputSha256": "ddc3094c14c84045d5c7b9668abe0b904b54d448a98db56dd8c256e56be67edf",
-      "outputSha256": "e1920e4beaa49368f87eae9af7792d6fd29ba19c4c1fa2edaf7e6ecfa6fcbecd",
+      "outputSha256": "8015c9eeebed032e4bb19f1b6151c1218364103a8f0a349216ee0be918c9c921",
       "edits": [
         {
           "start": 857,
@@ -332859,6 +332904,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1126,
+          "end": 1127,
+          "symbol": "M:on.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 2555,
@@ -336199,7 +336251,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "f6855124d509b6dd84d2baf7bb48437e8de3e3f47ceeaf6de139b1a1cd9e86a4",
-      "outputSha256": "003f2073a767b3425cc1276d811160c2d396747b01c534ca89983a9f9a106779",
+      "outputSha256": "1cea45a74670045f61182f07313170a0ffa5f441f176b7168921b1cdf0aa44c8",
       "edits": [
         {
           "start": 265,
@@ -336249,6 +336301,20 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 4209,
+          "end": 4210,
+          "symbol": "M:da.a(ZZ)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
+        },
+        {
+          "start": 4285,
+          "end": 4286,
+          "symbol": "M:on.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 4355,
@@ -339067,7 +339133,7 @@
       "original": "sl.java",
       "renamed": "sl.java",
       "inputSha256": "1ea8ea5f869fcae79e365eb9e6836932acc1ac1d6da175017e4247770be4884b",
-      "outputSha256": "c9b9904249c56866bafca08307741eb501a0738bd289b0784aa228feed15cce1",
+      "outputSha256": "23fb3f0c7a43861272cecb14ead5391bffe407ba79506b38e6d63e45e8146130",
       "edits": [
         {
           "start": 2072,
@@ -339124,6 +339190,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 15473,
+          "end": 15474,
+          "symbol": "M:sl.a(BII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 16317,
@@ -347070,10 +347143,10 @@
       "commit": "67141d635b7060c02e01505325a82243446974c0",
       "subdirectory": "games/crazycrystals"
     },
-    "rulesSha256": "e5c828e00fb41f504a5d8fff6e39c593a52b4aac8b249f9101dfecc966f66b69",
+    "rulesSha256": "9e1d178eab3eba7ac0d96f8c17d958990db672853c69a3fbe265514a0ef5a707",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
-    "outputTreeSha256": "06c71f51a19718a759e5fdbfc209ec3edc83ee6c7396a8bb17d7281dd68b06a2",
+    "outputTreeSha256": "8d8eca8e720c1b6c1222c0a9d8ffffa5b4aebf44ba1ff4fdd33827f2caa61ea4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

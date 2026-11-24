@@ -69,7 +69,7 @@ abstract class MouseWheelInput {
 
     abstract void attach(java.awt.Component param0, byte param1);
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseLowBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -128,7 +128,7 @@ abstract class MouseWheelInput {
     public static void a(int param0) {
         field_b = null;
         if (param0 > -102) {
-          MouseWheelInput.a(-26, (byte) 90, -68);
+          MouseWheelInput.reverseLowBits(-26, (byte) 90, -68);
         }
     }
 
@@ -181,7 +181,7 @@ abstract class MouseWheelInput {
           var21 = 480;
           var22 = 32;
           if (param2 != -15516) {
-            MouseWheelInput.a(-113, (byte) -23, -27);
+            MouseWheelInput.reverseLowBits(-113, (byte) -23, -27);
           }
           var23 = 608;
           for (var24 = 0; 4 > var24; var24++) {

@@ -96,9 +96,9 @@ final class CharacterSelectPhase extends MatchPhase {
           if (this.field_t[var11] != null) {
             this.field_t[var11].draw(var8, 1400, var9 + 55, (byte) 73);
           } else {
-            bsa.field_i.draw(-(bsa.field_i.width() >> 1) + var8, -(bsa.field_i.height() >> 1) + var9, 0, 1627389951, 1);
+            RadialSelectionPainter.field_i.draw(-(RadialSelectionPainter.field_i.width() >> 1) + var8, -(RadialSelectionPainter.field_i.height() >> 1) + var9, 0, 1627389951, 1);
           }
-          SocketConnector.drawWrappedText(this.screen.getPlayerName(var11, false).toUpperCase(), 1, FloatPacketBuffer.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var11, false).toUpperCase(), 1, FloatPacketBuffer.field_j, S2CSimulationSignalPacket.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
         RemovedFromGameMenu.resetDepthRange((byte) -6);

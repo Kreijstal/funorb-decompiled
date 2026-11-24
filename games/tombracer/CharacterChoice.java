@@ -388,12 +388,12 @@ final class CharacterChoice implements BitDecodableMarker {
         }
     }
 
-    final static mf compileAssemblyProgram(byte param0, HardwareOpenGlToolkit param1, byte[] param2, int param3) {
+    final static ArbAssemblyProgram compileAssemblyProgram(byte param0, HardwareOpenGlToolkit param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        mf stackIn_5_0 = null;
+        ArbAssemblyProgram stackIn_5_0 = null;
         Object stackIn_9_0 = null;
-        mf stackIn_11_0 = null;
+        ArbAssemblyProgram stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -407,7 +407,7 @@ final class CharacterChoice implements BitDecodableMarker {
           var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param3, var4_int);
           if (param0 != -70) {
-            stackIn_5_0 = (mf) null;
+            stackIn_5_0 = (ArbAssemblyProgram) null;
             return stackIn_5_0;
           }
           jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
@@ -415,10 +415,10 @@ final class CharacterChoice implements BitDecodableMarker {
           if (GrowableIntList.field_a[0] != -1) {
             jaggl.OpenGL.glBindProgramARB(param3, 0);
             stackIn_9_0 = null;
-            return (mf) (stackIn_9_0);
+            return (ArbAssemblyProgram) (stackIn_9_0);
           }
           jaggl.OpenGL.glBindProgramARB(param3, 0);
-          stackIn_11_0 = new mf(param1, param3, var4_int);
+          stackIn_11_0 = new ArbAssemblyProgram(param1, param3, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

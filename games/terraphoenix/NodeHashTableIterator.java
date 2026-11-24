@@ -88,7 +88,7 @@ final class NodeHashTableIterator implements Iterator {
           }
           if (param0 != -86) {
             var8 = (java.applet.Applet) null;
-            NodeHashTableIterator.a((byte) 118, (java.applet.Applet) null);
+            NodeHashTableIterator.openSubscriptionPage((byte) 118, (java.applet.Applet) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class NodeHashTableIterator implements Iterator {
         return var1;
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;

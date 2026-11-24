@@ -102,7 +102,7 @@ final class hk extends IntrusiveNode {
           var9 = new int[var5];
           var10 = dk.bitLength(var5 - 1, (byte) -57);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = si.a(var10, (byte) -56, var11);
+            var9[var11] = si.reverseLowBits(var10, (byte) -56, var11);
           }
           if (var1 == 0) {
             field_o = var6_ref_float__;

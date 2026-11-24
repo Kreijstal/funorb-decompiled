@@ -152,7 +152,7 @@ final class go extends qe {
             field_A = (String[]) null;
           }
           ub.field_n.serviceOutput();
-          hm.field_n.serviceOutput();
+          AchievementIconEntry.field_n.serviceOutput();
           lj.field_r = lj.field_r - 1;
           if (lj.field_r == 0) {
             lj.field_r = 200;
@@ -729,7 +729,7 @@ final class go extends qe {
           this.field_b.field_d) {
           if (this.field_b instanceof ro) {
             this.field_b.c(-123);
-            hm.a(11, -1, true, -62);
+            AchievementIconEntry.a(11, -1, true, -62);
           } else {
             if (this.field_b instanceof hn) {
               var7 = (hn) (this.field_b);
@@ -886,7 +886,7 @@ final class go extends qe {
         var2 = null;
         var3 = -1;
         if (no.field_d == 1) {
-          var3 = this.field_R.b(lc.field_c, 19091, hm.field_k);
+          var3 = this.field_R.b(lc.field_c, 19091, AchievementIconEntry.field_k);
           if (-1 != var3) {
             this.field_u = var3;
           }
@@ -897,7 +897,7 @@ final class go extends qe {
             gd.a(dc.field_z, param0 - 2, 1, false);
           }
           if (this.field_K == hh.field_s) {
-            hm.a(11, -1, true, -23);
+            AchievementIconEntry.a(11, -1, true, -23);
           }
           if (this.field_N == hh.field_s) {
             if (this.field_Y.field_k != 16) {
@@ -2472,7 +2472,7 @@ final class go extends qe {
           if (var6.field_h.field_g != 1) {
             if (3 != var6.field_h.field_g) {
               if (!var6.field_h.a((byte) -123, 15)) {
-                this.field_N.field_n = (en) ((Object) new qf(dn.field_L, hm.field_l, gi.field_Q));
+                this.field_N.field_n = (en) ((Object) new qf(dn.field_L, AchievementIconEntry.field_l, gi.field_Q));
               } else {
                 this.field_N.field_n = (en) ((Object) new qf(dn.field_L, a.field_k, gi.field_Q));
               }

@@ -137,7 +137,7 @@ final class lk extends gd {
             this.field_N = rb.a(16, this.field_H, 16711680, (byte) -18);
             return;
           }
-          if (!hm.field_m[this.field_O]) {
+          if (!AchievementIconEntry.field_m[this.field_O]) {
             var11 = li.field_b[this.field_O];
             var6Lifetime2 = db.field_v.b(var11);
             var7Lifetime2 = db.field_v.field_H + la.field_b.field_E;

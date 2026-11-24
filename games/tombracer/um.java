@@ -46,12 +46,12 @@ class um extends DualLinkNode {
 
     final static int daysInMonth(int param0, int param1, int param2) {
         if (~param2 != param1) {
-          return epa.field_r[param2];
+          return GraphicsAndAudioMenu.field_r[param2];
         }
         if (OpenGlRenderbuffer.isLeapYear(param1 + 1, param0)) {
           return 29;
         }
-        return epa.field_r[param2];
+        return GraphicsAndAudioMenu.field_r[param2];
     }
 
     public static void releaseStatics(byte param0) {

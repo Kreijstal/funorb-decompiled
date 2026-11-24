@@ -156,7 +156,7 @@ final class p {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;

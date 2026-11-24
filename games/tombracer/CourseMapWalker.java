@@ -455,7 +455,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keys", (byte) 107);
                 if (null != var2) {
-                  waa.field_b = BitPackedColour.decodeText((byte) 115, var2);
+                  SneakHintDecoration.field_b = BitPackedColour.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1left", (byte) 122);
                 if (null != var2) {
@@ -463,7 +463,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1right", (byte) 119);
                 if (null != var2) {
-                  mf.field_a = var2[0] & 255;
+                  ArbAssemblyProgram.field_a = var2[0] & 255;
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1up", (byte) 111);
                 if (var2 != null) {

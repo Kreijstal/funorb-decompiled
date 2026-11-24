@@ -526,13 +526,13 @@ class ok extends ko {
           no.field_d != 0 &&
           gf.field_j <= lc.field_c &&
           lc.field_c < gf.field_h &&
-          hm.field_k >= gf.field_f &&
-          gf.field_e > hm.field_k) {
+          AchievementIconEntry.field_k >= gf.field_f &&
+          gf.field_e > AchievementIconEntry.field_k) {
           var12 = 1;
           this.field_db = lc.field_c - this.field_zb;
           this.field_I = no.field_d;
           this.field_G = no.field_d;
-          this.field_N = -this.field_ub + hm.field_k;
+          this.field_N = -this.field_ub + AchievementIconEntry.field_k;
         } else {
           this.field_G = 0;
           if (0 != no.field_d) {

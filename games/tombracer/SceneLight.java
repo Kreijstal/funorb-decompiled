@@ -105,9 +105,9 @@ abstract class SceneLight extends IntrusiveNode {
             }
             FloatPacketBuffer.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].height(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].width(), OpenGlFramebuffer.field_i[var2_intLifetime2].width(), 0);
           }
-          bsa.field_i = QuickChatParamType.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
+          RadialSelectionPainter.field_i = QuickChatParamType.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
           fa.field_a = LoadLevelCommand.createToolkitSprites(param0, AnimationFrameBase.field_k, -99);
-          nc.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
+          QuickChatCategoryLoader.field_e = QuickChatParamType.createToolkitSprite(UnlockEntryDecoder.field_c, param0, (byte) -15);
           LegacyOpenGlEffectManager.field_a = QuickChatParamType.createToolkitSprite(LegacyOpenGlSpriteTexture.field_u, param0, (byte) 125);
           QuickChatParamType.createToolkitSprite(mp.field_d, param0, (byte) 126);
           QuickChatParamType.createToolkitSprite(baa.field_g, param0, (byte) -43);

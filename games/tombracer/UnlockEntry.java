@@ -4,7 +4,7 @@
 final class UnlockEntry extends IntrusiveNode {
     private int field_f;
     private int field_h;
-    static nc field_g;
+    static QuickChatCategoryLoader field_g;
 
     final void write(PacketBuffer param0, int param1) {
         try {

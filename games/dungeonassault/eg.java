@@ -366,8 +366,8 @@ final class eg {
             (decompiledSharedTail0)) {
             um.field_h = 0;
             kp.field_c = lc.field_c;
-            rn.field_a = hm.field_k;
-            pa.field_c = to.a(lc.field_c, hm.field_k, param0, 0);
+            rn.field_a = AchievementIconEntry.field_k;
+            pa.field_c = to.a(lc.field_c, AchievementIconEntry.field_k, param0, 0);
           }
           if (CombatState.field_r != 0 &&
             null != wi.field_ob) {

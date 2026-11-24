@@ -75,7 +75,7 @@ final class TextSpewerBehaviour extends Behaviour {
         if (param0 != 19845) {
           return (UiComponent) null;
         }
-        return bsa.field_j.field_tb;
+        return RadialSelectionPainter.field_j.field_tb;
     }
 
     TextSpewerBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {

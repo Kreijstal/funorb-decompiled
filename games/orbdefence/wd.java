@@ -47,7 +47,7 @@ final class wd {
     private boolean field_O;
     int field_P;
 
-    final static int a(boolean param0, boolean param1) {
+    final static int updateMembershipSlides(boolean param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_60_0 = 0;
         int stackIn_64_0 = 0;

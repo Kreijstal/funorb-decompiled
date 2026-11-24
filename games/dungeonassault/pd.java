@@ -141,7 +141,7 @@ final class pd extends rj {
         var7 = DungeonAssault.field_K;
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
-        bp.a(var5, hm.field_q, var4, (byte) 99);
+        bp.a(var5, AchievementIconEntry.field_q, var4, (byte) 99);
         bp.a(this.field_F + var5 + 10, qf.field_f, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
           te.b(var6 + (6 + var4), var5 + 11, this.field_F - 2, kc.field_M);

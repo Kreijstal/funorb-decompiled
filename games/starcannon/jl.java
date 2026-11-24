@@ -871,7 +871,7 @@ final class jl {
                                   if (n.field_a != null) {
                                     re.a(0);
                                   }
-                                  bl.a(false, ll.b(94));
+                                  bl.openSubscriptionPage(false, ll.b(94));
                                   mj.a(255, 12, 0, 12, 50);
                                 }
                                 break;
@@ -1454,9 +1454,9 @@ final class jl {
         int stackIn_25_1Lifetime1;
         var3 = StarCannon.field_A;
         if (this.field_f == 7) {
-          var2 = GzipDecompressor.a(true, param0 + 0);
+          var2 = GzipDecompressor.updateMembershipSlides(true, param0 + 0);
           if (var2 == 3) {
-            bl.a(false, ll.b(94));
+            bl.openSubscriptionPage(false, ll.b(94));
           }
           if (var2 == 1) {
             od.a(-102, 0, false);

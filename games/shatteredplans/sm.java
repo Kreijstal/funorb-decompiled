@@ -2362,7 +2362,7 @@ final class sm {
                                                       if (this.field_a != 8 &&
                                                         5 != GameRules.field_c) {
                                                         if ((this.field_a == 11)) {
-                                                          TextHotspotWidget.a(GameScreen.getHostApplet((byte) 126), (byte) 51);
+                                                          TextHotspotWidget.openSubscriptionPage(GameScreen.getHostApplet((byte) 126), (byte) 51);
                                                         }
                                                       } else {
                                                         MenuLabel.a(AchievementProgress.field_a, this.field_a, (byte) 123);

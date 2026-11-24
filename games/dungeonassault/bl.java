@@ -132,7 +132,7 @@ final class bl {
           dc.field_x.f();
           ml.field_a = qh.field_q.d();
           ml.field_a.f();
-          hm.field_q = dd.a((byte) -112, 4, bo.field_Kb);
+          AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
           qf.field_f = dd.a((byte) -112, 4, ud.field_y);
           ji.field_G = dd.a((byte) -112, 4, qh.field_q);
           field_o = dd.a((byte) -112, 4, tn.field_W);
@@ -423,7 +423,7 @@ final class bl {
           var1 = hf.field_sb;
           if (0 < var1) {
             if (var1 != 1) {
-              ub.field_o = jk.a(new String[]{Integer.toString(var1)}, hm.field_j, 30496);
+              ub.field_o = jk.a(new String[]{Integer.toString(var1)}, AchievementIconEntry.field_j, 30496);
             } else {
               ub.field_o = fb.field_g;
             }

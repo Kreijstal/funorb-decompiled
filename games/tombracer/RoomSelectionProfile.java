@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class esa {
+final class RoomSelectionProfile {
     static String field_c;
     private PlayerProfile field_b;
     private BitSet field_d;
@@ -136,7 +136,7 @@ final class esa {
         field_c = null;
     }
 
-    public esa() {
+    public RoomSelectionProfile() {
         int var2 = 0;
         int var1;
         int var3;

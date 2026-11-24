@@ -323,7 +323,7 @@ final class wd extends ab implements ue, dn, bh {
         this.a(var3 - (-55 - var6), 0, 0, 496, (byte) 127);
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int reverseLowBits(int param0, int param1, int param2) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var3_int = 0;
@@ -420,7 +420,7 @@ final class wd extends ab implements ue, dn, bh {
           field_v = null;
           return;
         }
-        wd.b(53, -86, -124);
+        wd.reverseLowBits(53, -86, -124);
         field_G = null;
         hudMessages = null;
         field_v = null;

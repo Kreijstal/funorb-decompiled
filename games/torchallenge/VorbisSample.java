@@ -263,7 +263,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = sa.bitLength((byte) 104, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = MouseWheelInput.a(var11, (byte) -126, var10);
+            var9[var11] = MouseWheelInput.reverseLowBits(var11, (byte) -126, var10);
           }
           if (var1 == 0) {
             field_E = var6_ref_float__;

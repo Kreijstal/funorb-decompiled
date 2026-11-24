@@ -10,7 +10,7 @@ final class MixedSupport108 {
 
     final static SceneWidget computeSceneWidget1421(int integerArgument1) {
         if (integerArgument1 > -26) {
-          MixedSupport108.computeInteger1413((byte) -21, 73, 124);
+          MixedSupport108.reverseLowBits((byte) -21, 73, 124);
           return UiComponentPart007.computeSceneWidget0360(119);
         }
         return UiComponentPart007.computeSceneWidget0360(119);
@@ -276,7 +276,7 @@ final class MixedSupport108 {
         }
     }
 
-    final static int computeInteger1413(byte byteArgument1, int integerArgument2, int integerArgument3) {
+    final static int reverseLowBits(byte byteArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;

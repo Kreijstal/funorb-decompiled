@@ -25,7 +25,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     static String field_E;
     static String field_A;
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int reverseLowBits(byte param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -1682,12 +1682,12 @@ class jla {
         }
         if (this.field_b == 11) {
           stackIn_6_0 = !(RefreshingAnimation.e(-8774));
-          var2 = em.a(stackIn_6_0, param0 ^ 8456);
+          var2 = em.updateMembershipSlides(stackIn_6_0, param0 ^ 8456);
           if (var2 == 3) {
             if (null != kga.field_c) {
               lga.c((byte) 119);
             }
-            rj.a(param0 - 38592, nia.d(-31768));
+            rj.openSubscriptionPage(param0 - 38592, nia.d(-31768));
           }
           if (1 == var2) {
             lg.a(true, 0, false);

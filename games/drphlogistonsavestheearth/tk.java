@@ -676,7 +676,7 @@ final class tk extends IntrusiveNode {
           var9 = new int[var5];
           var10 = MouseWheelInput.bitLength(var5 - 1, (byte) 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = hg.a(var10, var11, (byte) -82);
+            var9[var11] = hg.reverseLowBits(var10, var11, (byte) -82);
           }
           if (var1 == 0) {
             field_N = var6_ref_float__;

@@ -1222,12 +1222,12 @@ final class ld {
         if (11 == this.field_c) {
           stackIn_6_0 = 21;
           stackIn_7_1 = (eh.a(-875)) ? false : true;
-          var2 = wa.$cfr$intArgs$a$b925f3f4834c(stackIn_6_0, stackIn_7_1);
+          var2 = wa.updateMembershipSlidesWithIntGuard(stackIn_6_0, stackIn_7_1);
           if (var2 == 3) {
             if (null != df.field_l) {
               qk.a(true);
             }
-            p.a(-161, nb.a(97));
+            p.openSubscriptionPage(-161, nb.a(97));
           }
           if (var2 == 1) {
             ek.a(-73, false, 0);
@@ -1699,7 +1699,7 @@ final class ld {
                                             wl.a(9, 5, 123);
                                           } else {
                                             if ((11 == this.field_c)) {
-                                              p.a(-161, nb.a(param1 + 43));
+                                              p.openSubscriptionPage(-161, nb.a(param1 + 43));
                                             }
                                           }
                                           decompiledFrameRemainder0 = false;

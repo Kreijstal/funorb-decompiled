@@ -240,14 +240,14 @@ final class MatchState implements BitDecodableMarker {
         return var3;
     }
 
-    final void h(int param0, int param1) {
+    final void broadcastSimulationSignal(int param0, int param1) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param1 <= 45) {
           return;
         }
         for (var3 = 0; this.players.length > var3; var3++) {
-          this.simulations[var3].d(119, param0);
+          this.simulations[var3].acceptSimulationSignal(119, param0);
         }
     }
 

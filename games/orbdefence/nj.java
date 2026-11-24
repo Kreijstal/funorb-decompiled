@@ -240,7 +240,7 @@ final class nj extends IntrusiveNode {
           var9 = new int[var5];
           var10 = uh.bitLength((byte) -57, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = ld.a(var11, var10, (byte) -125);
+            var9[var11] = ld.reverseLowBits(var11, var10, (byte) -125);
           }
           if (var1 == 0) {
             field_j = var6_ref_float__;

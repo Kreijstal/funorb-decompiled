@@ -257,7 +257,7 @@ final class MembershipExpansionScreen {
         RuntimeException var2_ref = null;
         try {
           try {
-            QuickChatPhraseRepository.a(32767, CombatEvent.d((byte) 73));
+            QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.d((byte) 73));
             if (param0 >= -84) {
               this.field_n = 29;
             }

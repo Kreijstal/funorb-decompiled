@@ -102,7 +102,7 @@ final class qf extends IntrusiveNode {
           var9 = new int[var5];
           var10 = vf.bitLength(-119, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = CrossfadingMidiPcmStream.a((byte) 117, var10, var11);
+            var9[var11] = CrossfadingMidiPcmStream.reverseLowBits((byte) 117, var10, var11);
           }
           if (var1 == 0) {
             field_t = var6_ref_float__;

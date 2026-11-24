@@ -137,7 +137,7 @@ final class VorbisDecoder extends IntrusiveNode {
           var9 = new int[var5];
           var10 = LevelData.bitLength(false, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = fj.b(var10, 1, var11);
+            var9[var11] = fj.reverseLowBits(var10, 1, var11);
           }
           if (var1 == 0) {
             field_D = var6_ref_float__;

@@ -115,7 +115,7 @@ final class tl {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;

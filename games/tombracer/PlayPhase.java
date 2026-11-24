@@ -371,7 +371,7 @@ final class PlayPhase extends MatchPhase {
     private final void applyViewportLayout(byte param0) {
         int var2 = this.screen.getViewedPlayerIndex(89);
         if (this.matchState.playersRemaining <= 1) {
-          this.viewports[var2].applyLayout(0, mf.fullViewportLayout, -20186);
+          this.viewports[var2].applyLayout(0, ArbAssemblyProgram.fullViewportLayout, -20186);
         } else {
           this.viewports[var2].applyLayout(0, OpenGlEnvironmentWaterEffect.leftViewportLayout, -20186);
         }

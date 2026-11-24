@@ -560,7 +560,7 @@ final class da extends ue {
         this.e(17832);
     }
 
-    final static int a(boolean param0, boolean param1) {
+    final static int updateMembershipSlides(boolean param0, boolean param1) {
         int stackIn_59_0 = 0;
         int stackIn_62_0 = 0;
         int stackIn_69_0 = 0;
@@ -582,7 +582,7 @@ final class da extends ue {
           }
           var2_int = -1;
           if (!param1) {
-            da.a(false, true);
+            da.updateMembershipSlides(false, true);
           }
           if (nl.field_f != null) {
             var2_int = nl.field_f.length;

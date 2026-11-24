@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ema implements WidgetPainter {
+final class DropdownArrowPainter implements WidgetPainter {
     static String field_a;
     static int field_b;
 
@@ -27,7 +27,7 @@ final class ema implements WidgetPainter {
             SoftwareRasterizer.drawHorizontalLine(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
           }
           if (param2 != 16777215) {
-            ema.isSpritePixelOpaque(false, 4, -88, -72, -24);
+            DropdownArrowPainter.isSpritePixelOpaque(false, 4, -88, -72, -24);
           }
           for (var6_intLifetime1 = 1; var6_intLifetime1 <= 5; var6_intLifetime1++) {
             var7Lifetime1 = param0.field_m + param0.field_i + (param1 - (param0.field_m >> 1) - 5) + var6_intLifetime1;
@@ -98,7 +98,7 @@ final class ema implements WidgetPainter {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 48) {
-          ema.isSpritePixelOpaque(false, 111, 21, -70, 126);
+          DropdownArrowPainter.isSpritePixelOpaque(false, 111, 21, -70, 126);
         }
     }
 

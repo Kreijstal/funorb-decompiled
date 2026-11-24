@@ -143,7 +143,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         TextInputWidget.paintNineSliceFrame(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
         CurrentGraphicsToolkit.toolkit.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
         if (this.isEmpty(-64)) {
-          nc.field_e.draw(this.field_k, this.field_g);
+          QuickChatCategoryLoader.field_e.draw(this.field_k, this.field_g);
           CurrentGraphicsToolkit.toolkit.resetClip();
           var3 = 2431750;
           if (param1) {

@@ -980,6 +980,14 @@
       "renamedSymbol": "M:SecondaryNodeDeque.removeFirst(I)LDualLinkNode;"
     },
     {
+      "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain boolean guard write field_a=90 after URL allocation before AppletContext evaluation. Complete original-body SHA256 97eb7d6b552527d42b5bd072fa364e20e358cda9fcdc9624e0c743d74c6ae406. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bl.openSubscriptionPage(ZLjava/applet/Applet;)V"
+    },
+    {
       "symbol": "M:c.a()Lc;",
       "originalName": "a",
       "to": "nextChildStream",
@@ -2164,12 +2172,28 @@
       "renamedSymbol": "M:GzipDecompressor.decompress(LPacketBuffer;Z[B)V"
     },
     {
+      "symbol": "M:nc.a(ZI)I",
+      "originalName": "a",
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. Keep transition predicate intGuard!=~frameCount,including absent arrays;keyboard call retains intGuard-101. Complete original-body SHA256 66a5300b3e74b6cd614cc9ab3a93bed263580c8768def048136497ecd4b84a2c. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GzipDecompressor.updateMembershipSlides(ZI)I"
+    },
+    {
       "symbol": "M:nc.b(B)V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Complete own-static cleanup reviewed: null first two strings, evaluate original guard division, then null random generator and final string. Preserve partial cleanup on arithmetic failure and exact write order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GzipDecompressor.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:nd.a(ZII)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index1,count parameter index2. false boolean guard clears sprite array field_j before accumulator initialization. Complete original-body SHA256 c3feb70dc974c5189d00a02dbb650d30676ccfce97bdc630e4777021750bc06d.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.reverseLowBits(ZII)I"
     },
     {
       "symbol": "M:nf.b(I)V",
@@ -42475,7 +42499,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -42486,7 +42510,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -42497,7 +42521,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -42508,7 +42532,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#2",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -42519,7 +42543,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -42530,7 +42554,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#4",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -42541,7 +42565,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#5",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -42552,7 +42576,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -42563,7 +42587,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -42574,7 +42598,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -42585,7 +42609,7 @@
     },
     {
       "symbol": "L:bl.a(ZLjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:bl.a(ZLjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -98014,7 +98038,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#0",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#0",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#0",
       "originalName": "stackIn_62_0",
       "renamedName": "stackIn_62_0",
       "declaration": {
@@ -98025,7 +98049,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#1",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#1",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#1",
       "originalName": "stackIn_66_0",
       "renamedName": "stackIn_66_0",
       "declaration": {
@@ -98036,7 +98060,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#10",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#10",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -98047,7 +98071,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#11",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#11",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -98058,7 +98082,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#12",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#12",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -98069,7 +98093,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#13",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#13",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -98080,7 +98104,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#2",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#2",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#2",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -98091,7 +98115,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#3",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#3",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#3",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -98102,7 +98126,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#4",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#4",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#4",
       "originalName": "stackIn_81_0",
       "renamedName": "stackIn_81_0",
       "declaration": {
@@ -98113,7 +98137,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#5",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#5",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#5",
       "originalName": "stackIn_83_0",
       "renamedName": "stackIn_83_0",
       "declaration": {
@@ -98124,7 +98148,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#6",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#6",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -98135,7 +98159,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#7",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#7",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -98146,7 +98170,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#8",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#8",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -98157,7 +98181,7 @@
     },
     {
       "symbol": "L:nc.a(ZI)I#9",
-      "renamedSymbol": "L:GzipDecompressor.a(ZI)I#9",
+      "renamedSymbol": "L:GzipDecompressor.updateMembershipSlides(ZI)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -98520,7 +98544,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#0",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#0",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -98531,7 +98555,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#1",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#1",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -98542,7 +98566,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#2",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#2",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -98553,7 +98577,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#3",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#3",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -98564,7 +98588,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#4",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#4",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -98575,7 +98599,7 @@
     },
     {
       "symbol": "L:nd.a(ZII)I#5",
-      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(ZII)I#5",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -145963,9 +145987,9 @@
     },
     {
       "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
-      "renamedSymbol": "M:bl.a(ZLjava/applet/Applet;)V",
+      "renamedSymbol": "M:bl.openSubscriptionPage(ZLjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "bl.java",
         "start": 466,
@@ -157194,9 +157218,9 @@
     },
     {
       "symbol": "M:nc.a(ZI)I",
-      "renamedSymbol": "M:GzipDecompressor.a(ZI)I",
+      "renamedSymbol": "M:GzipDecompressor.updateMembershipSlides(ZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "nc.java",
         "start": 9266,
@@ -157260,9 +157284,9 @@
     },
     {
       "symbol": "M:nd.a(ZII)I",
-      "renamedSymbol": "M:AccountNameAvailabilityValidator.a(ZII)I",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.reverseLowBits(ZII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "nd.java",
         "start": 5708,
@@ -171098,7 +171122,7 @@
     },
     {
       "symbol": "P:bl.a(ZLjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:bl.a(ZLjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -171109,7 +171133,7 @@
     },
     {
       "symbol": "P:bl.a(ZLjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:bl.a(ZLjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:bl.openSubscriptionPage(ZLjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201568,7 +201592,7 @@
     },
     {
       "symbol": "P:nc.a(ZI)I#0",
-      "renamedSymbol": "P:GzipDecompressor.a(ZI)I#0",
+      "renamedSymbol": "P:GzipDecompressor.updateMembershipSlides(ZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201579,7 +201603,7 @@
     },
     {
       "symbol": "P:nc.a(ZI)I#1",
-      "renamedSymbol": "P:GzipDecompressor.a(ZI)I#1",
+      "renamedSymbol": "P:GzipDecompressor.updateMembershipSlides(ZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201700,7 +201724,7 @@
     },
     {
       "symbol": "P:nd.a(ZII)I#0",
-      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(ZII)I#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201711,7 +201735,7 @@
     },
     {
       "symbol": "P:nd.a(ZII)I#1",
-      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(ZII)I#1",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201722,7 +201746,7 @@
     },
     {
       "symbol": "P:nd.a(ZII)I#2",
-      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(ZII)I#2",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.reverseLowBits(ZII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -230804,8 +230828,22 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "3db7a8663e1ff84efc6d5893ece371890105c2e995f123565e373b1166ed7166",
-      "outputSha256": "59816bcbe6ea9dd06cbf7acc11a04952fbff8d46f593088f70e804c587e15c7d",
+      "outputSha256": "b0b385b0d994a55206648d678ccf313839e2783d83db2d4418fe3281a6c7f584",
       "edits": [
+        {
+          "start": 353,
+          "end": 354,
+          "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
+        },
+        {
+          "start": 466,
+          "end": 467,
+          "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
+        },
         {
           "start": 1065,
           "end": 1067,
@@ -249284,7 +249322,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "108da62551c91e2b290616fea4045f8fc06b9fd46b9e419db3ef8afbf05d66fa",
-      "outputSha256": "e7833f5ea7919ecadc66ca7674d64957c13c5b0f5b74cb37af219cf7d4d76606",
+      "outputSha256": "0b576f766373c4aa6508b749cd8301413eaef9499e47056e6ea1dc100feab22e",
       "edits": [
         {
           "start": 143,
@@ -249530,6 +249568,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 34664,
+          "end": 34665,
+          "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
+        },
+        {
           "start": 36245,
           "end": 36247,
           "symbol": "C:ij",
@@ -249712,6 +249757,20 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 54622,
+          "end": 54623,
+          "symbol": "M:nc.a(ZI)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
+        },
+        {
+          "start": 54685,
+          "end": 54686,
+          "symbol": "M:bl.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 55484,
@@ -254082,7 +254141,7 @@
       "original": "nc.java",
       "renamed": "GzipDecompressor.java",
       "inputSha256": "3680abadfe9dfcd22e48d1ff3cfd6cd0423d7f360c0ed74d86bfcd4bb7d1175a",
-      "outputSha256": "95805a84fafc414a91c6f8b3d57dd86f43e39a57a5583f99f7740dadeeaf38f2",
+      "outputSha256": "f37ef6cc4107c65172eaab3564f690957d2a0a1f1085bf622c477b68e87be42b",
       "edits": [
         {
           "start": 71,
@@ -254111,6 +254170,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 5574,
+          "end": 5575,
+          "symbol": "M:nc.a(ZI)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 6516,
@@ -254195,6 +254261,13 @@
           "symbol": "M:sd.a(Ljava/lang/Throwable;Ljava/lang/String;)Lii;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 9266,
+          "end": 9267,
+          "symbol": "M:nc.a(ZI)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 9793,
@@ -254489,7 +254562,7 @@
       "original": "nd.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "8c6f3aa8698c163b35c1fa824e2c3ced8283f0e44afe84cf75aec3b12259af77",
-      "outputSha256": "875a3e38cca945c68e26e6215e6ae9a91a78238d1b429ee82b177e7c2b9dd0b9",
+      "outputSha256": "487f3ba206c90adcc79acee5246d63a1f4150bfa07d562bd5786bc1602a5b409",
       "edits": [
         {
           "start": 50,
@@ -254653,6 +254726,13 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 3264,
+          "end": 3265,
+          "symbol": "M:nd.a(ZII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        },
+        {
           "start": 3316,
           "end": 3318,
           "symbol": "C:ud",
@@ -254742,6 +254822,13 @@
           "symbol": "M:dd.b(I)J",
           "original": "b",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 5708,
+          "end": 5709,
+          "symbol": "M:nd.a(ZII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 6023,
@@ -255160,7 +255247,7 @@
       "original": "nj.java",
       "renamed": "nj.java",
       "inputSha256": "5493f99dc822d1975519c3b4493dfae133e9ed2cf55c0c5ed45dc5f3f9396abb",
-      "outputSha256": "f585a5279ed5dda62d8e79593e3305aa82ef0b2135d3110565eb25dfd1b2e26d",
+      "outputSha256": "0678069e872306b436878ab8f9149b8ded68da55f44ec35d5d2d768c61996495",
       "edits": [
         {
           "start": 80,
@@ -255385,6 +255472,13 @@
           "symbol": "C:nd",
           "original": "nd",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 26913,
+          "end": 26914,
+          "symbol": "M:nd.a(ZII)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 27291,
@@ -271417,10 +271511,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/starcannon"
     },
-    "rulesSha256": "696f91194b32ecc36391d98cffbedc6e0f63ac5ff76ec8a49e1d3d439e4dc037",
+    "rulesSha256": "4eb9518514ea7f54fab1bf20d2ff2a12ff32391038190d7522f71e447b857b78",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
-    "outputTreeSha256": "11c730d6b0f23f595679456a88137c12c3636b50d6ac27b76964a3ed84e3d6ee",
+    "outputTreeSha256": "8f8c90cf7f506fd0e5ede76caf0fcabafc3545baf6cd2ec974d261189af81c8f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

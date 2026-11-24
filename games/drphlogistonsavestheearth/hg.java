@@ -96,7 +96,7 @@ final class hg extends hc {
         if (param0 <= -11) {
           return new a(IntrusiveDeque.f(-52), ByteStorage.b((byte) -94));
         }
-        hg.a(-53, 13, (byte) 24);
+        hg.reverseLowBits(-53, 13, (byte) 24);
         return new a(IntrusiveDeque.f(-52), ByteStorage.b((byte) -94));
     }
 
@@ -143,7 +143,7 @@ final class hg extends hc {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int reverseLowBits(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

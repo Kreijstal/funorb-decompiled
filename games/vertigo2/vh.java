@@ -701,7 +701,7 @@ final class vh extends IntrusiveNode {
           var9 = new int[var5];
           var10 = d.bitLength(-118, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = CrossfadingMidiPcmStream.a(var10, var11, 1);
+            var9[var11] = CrossfadingMidiPcmStream.reverseLowBits(var10, var11, 1);
           }
           if (var1 == 0) {
             field_r = var6_ref_float__;

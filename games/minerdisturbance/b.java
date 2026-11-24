@@ -252,7 +252,7 @@ final class b extends IntrusiveNode {
           var9 = new int[var5];
           var10 = d.bitLength(var5 - 1, -31479);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = wb.a(var11, true, var10);
+            var9[var11] = wb.reverseLowBits(var11, true, var10);
           }
           if (var1 == 0) {
             field_o = var6_ref_float__;

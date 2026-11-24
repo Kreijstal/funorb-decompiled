@@ -63,7 +63,7 @@ final class QuickChatPhraseRepository {
         ValidationStatusIcon.awtToClientKeyCodes[47] = 73;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -121,7 +121,7 @@ final class QuickChatPhraseRepository {
           var2 = (LobbyRoom) (GameClock.lobbyRoomOrder.first((byte) 92));
           if (obfuscationGuard > -66) {
             var4 = (java.applet.Applet) null;
-            QuickChatPhraseRepository.a(-6, (java.applet.Applet) null);
+            QuickChatPhraseRepository.openSubscriptionPage(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
             if (var2.sortsBefore((byte) -76, room)) {

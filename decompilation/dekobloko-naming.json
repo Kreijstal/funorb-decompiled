@@ -86473,7 +86473,7 @@
       "to": "stackIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#0"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#0"
     },
     {
       "symbol": "L:lg.a(IZ)I#1",
@@ -86481,7 +86481,7 @@
       "to": "stackIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#1"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#1"
     },
     {
       "symbol": "L:lg.a(IZ)I#10",
@@ -86489,7 +86489,7 @@
       "to": "runtimeExceptionLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#10"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#10"
     },
     {
       "symbol": "L:lg.a(IZ)I#11",
@@ -86497,7 +86497,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#11"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#11"
     },
     {
       "symbol": "L:lg.a(IZ)I#12",
@@ -86505,7 +86505,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#12"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#12"
     },
     {
       "symbol": "L:lg.a(IZ)I#13",
@@ -86513,7 +86513,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#13"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#13"
     },
     {
       "symbol": "L:lg.a(IZ)I#14",
@@ -86521,7 +86521,7 @@
       "to": "frameRemainderLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#14"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#14"
     },
     {
       "symbol": "L:lg.a(IZ)I#15",
@@ -86529,7 +86529,7 @@
       "to": "caughtParameterLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#15"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#15"
     },
     {
       "symbol": "L:lg.a(IZ)I#2",
@@ -86537,7 +86537,7 @@
       "to": "stackIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#2"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#2"
     },
     {
       "symbol": "L:lg.a(IZ)I#3",
@@ -86545,7 +86545,7 @@
       "to": "stackIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#3"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#3"
     },
     {
       "symbol": "L:lg.a(IZ)I#4",
@@ -86553,7 +86553,7 @@
       "to": "stackIntegerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#4"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#4"
     },
     {
       "symbol": "L:lg.a(IZ)I#5",
@@ -86561,7 +86561,7 @@
       "to": "stackIntegerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#5"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#5"
     },
     {
       "symbol": "L:lg.a(IZ)I#6",
@@ -86569,7 +86569,7 @@
       "to": "stackIntegerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#6"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#6"
     },
     {
       "symbol": "L:lg.a(IZ)I#7",
@@ -86577,7 +86577,7 @@
       "to": "stackIntegerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#7"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#7"
     },
     {
       "symbol": "L:lg.a(IZ)I#8",
@@ -86585,7 +86585,7 @@
       "to": "caughtExceptionLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#8"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#8"
     },
     {
       "symbol": "L:lg.a(IZ)I#9",
@@ -86593,7 +86593,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#9"
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#9"
     },
     {
       "symbol": "L:li.a(I)V#0",
@@ -121785,7 +121785,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#0"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#0"
     },
     {
       "symbol": "L:rd.a(BII)I#1",
@@ -121793,7 +121793,7 @@
       "to": "runtimeExceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#1"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#1"
     },
     {
       "symbol": "L:rd.a(BII)I#2",
@@ -121801,7 +121801,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#2"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#2"
     },
     {
       "symbol": "L:rd.a(BII)I#3",
@@ -121809,7 +121809,7 @@
       "to": "stackIntegerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#3"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#3"
     },
     {
       "symbol": "L:rd.a(BII)I#4",
@@ -121817,7 +121817,7 @@
       "to": "caughtExceptionLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#4"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#4"
     },
     {
       "symbol": "L:rd.a(BII)I#5",
@@ -121825,7 +121825,7 @@
       "to": "caughtParameterLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#5"
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#5"
     },
     {
       "symbol": "L:rd.a(I)Lbh;#0",
@@ -130249,7 +130249,7 @@
       "to": "uRLLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#0"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#0"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#1",
@@ -130257,7 +130257,7 @@
       "to": "exceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#1"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#1"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#10",
@@ -130265,7 +130265,7 @@
       "to": "checkedExceptionLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#10"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#10"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#2",
@@ -130273,7 +130273,7 @@
       "to": "runtimeExceptionLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#2"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#2"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#3",
@@ -130281,7 +130281,7 @@
       "to": "stackRuntimeExceptionLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#3"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#3"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#4",
@@ -130289,7 +130289,7 @@
       "to": "stackStringBuilderLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#4"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#4"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#5",
@@ -130297,7 +130297,7 @@
       "to": "stackStringLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#5"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#5"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#6",
@@ -130305,7 +130305,7 @@
       "to": "caughtExceptionLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#6"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#6"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#7",
@@ -130313,7 +130313,7 @@
       "to": "caughtParameterLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#7"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#7"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#8",
@@ -130321,7 +130321,7 @@
       "to": "caughtParameterLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#8"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#8"
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#9",
@@ -130329,7 +130329,7 @@
       "to": "uncheckedExceptionLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#9"
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#9"
     },
     {
       "symbol": "L:sm.a(II)Lme;#0",
@@ -156638,10 +156638,10 @@
     {
       "symbol": "M:lg.a(IZ)I",
       "originalName": "a",
-      "to": "computeInteger0955",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:UiComponentPart017.computeInteger0955(IZ)I"
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. Full int guard contributes to original division helper argument and returns81 after arrow handling when nonzero,before input processing. Complete original-body SHA256 cbf535743e6e9e4aef0c31474cf9452b718ee182ccbd54980e1e9f620127e18c. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiComponentPart017.updateMembershipSlides(IZ)I"
     },
     {
       "symbol": "M:lg.a(ZI)V",
@@ -161846,10 +161846,10 @@
     {
       "symbol": "M:rd.a(BII)I",
       "originalName": "a",
-      "to": "computeInteger1413",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport108.computeInteger1413(BII)I"
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index1. byte guard!=16 invokes rd.b(15) before accumulator initialization. Complete original-body SHA256 c646169e6d0834964685ae10f238c3eb2b2de510af75a964bb728979a25d6be8.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MixedSupport108.reverseLowBits(BII)I"
     },
     {
       "symbol": "M:rd.a(I)Lbh;",
@@ -163086,10 +163086,10 @@
     {
       "symbol": "M:sm.a(BLjava/applet/Applet;)V",
       "originalName": "a",
-      "to": "performAction1533",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V"
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain byte guard -65 early return before URL allocation. Complete original-body SHA256 d7ee4c6d6d976ff1b8ba81ed4a3c8cd5381f5f2761add0fedc58b5ea7e64d7f6. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V"
     },
     {
       "symbol": "M:sm.a(I)V",
@@ -195001,7 +195001,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:UiComponentPart017.computeInteger0955(IZ)I#0"
+      "renamedSymbol": "P:UiComponentPart017.updateMembershipSlides(IZ)I#0"
     },
     {
       "symbol": "P:lg.a(IZ)I#1",
@@ -195009,7 +195009,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:UiComponentPart017.computeInteger0955(IZ)I#1"
+      "renamedSymbol": "P:UiComponentPart017.updateMembershipSlides(IZ)I#1"
     },
     {
       "symbol": "P:lg.a(ZI)V#0",
@@ -210969,7 +210969,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#0"
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#0"
     },
     {
       "symbol": "P:rd.a(BII)I#1",
@@ -210977,7 +210977,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#1"
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#1"
     },
     {
       "symbol": "P:rd.a(BII)I#2",
@@ -210985,7 +210985,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#2"
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#2"
     },
     {
       "symbol": "P:rd.a(I)Lbh;#0",
@@ -214697,7 +214697,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#0"
+      "renamedSymbol": "P:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#0"
     },
     {
       "symbol": "P:sm.a(BLjava/applet/Applet;)V#1",
@@ -214705,7 +214705,7 @@
       "to": "appletArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#1"
+      "renamedSymbol": "P:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#1"
     },
     {
       "symbol": "P:sm.a(I)V#0",
@@ -344035,7 +344035,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#0",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#0",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#0",
       "originalName": "stackIn_54_0",
       "renamedName": "stackIntegerLocal1",
       "declaration": {
@@ -344046,7 +344046,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#1",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#1",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#1",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIntegerLocal2",
       "declaration": {
@@ -344057,7 +344057,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#10",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#10",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#10",
       "originalName": "var2",
       "renamedName": "runtimeExceptionLocal11",
       "declaration": {
@@ -344068,7 +344068,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#11",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#11",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#11",
       "originalName": "var3",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -344079,7 +344079,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#12",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#12",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#12",
       "originalName": "var4",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -344090,7 +344090,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#13",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#13",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#13",
       "originalName": "var5",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -344101,7 +344101,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#14",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#14",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#14",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "frameRemainderLocal15",
       "declaration": {
@@ -344112,7 +344112,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#15",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#15",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal16",
       "declaration": {
@@ -344123,7 +344123,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#2",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#2",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#2",
       "originalName": "stackIn_65_0",
       "renamedName": "stackIntegerLocal3",
       "declaration": {
@@ -344134,7 +344134,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#3",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#3",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#3",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIntegerLocal4",
       "declaration": {
@@ -344145,7 +344145,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#4",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#4",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#4",
       "originalName": "stackIn_72_0",
       "renamedName": "stackIntegerLocal5",
       "declaration": {
@@ -344156,7 +344156,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#5",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#5",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#5",
       "originalName": "stackIn_75_0",
       "renamedName": "stackIntegerLocal6",
       "declaration": {
@@ -344167,7 +344167,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#6",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#6",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#6",
       "originalName": "stackIn_78_0",
       "renamedName": "stackIntegerLocal7",
       "declaration": {
@@ -344178,7 +344178,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#7",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#7",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#7",
       "originalName": "stackIn_80_0",
       "renamedName": "stackIntegerLocal8",
       "declaration": {
@@ -344189,7 +344189,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#8",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#8",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal9",
       "declaration": {
@@ -344200,7 +344200,7 @@
     },
     {
       "symbol": "L:lg.a(IZ)I#9",
-      "renamedSymbol": "L:UiComponentPart017.computeInteger0955(IZ)I#9",
+      "renamedSymbol": "L:UiComponentPart017.updateMembershipSlides(IZ)I#9",
       "originalName": "var2_int",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -394019,7 +394019,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#0",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#0",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#0",
       "originalName": "var3_int",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -394030,7 +394030,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#1",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#1",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#1",
       "originalName": "var3",
       "renamedName": "runtimeExceptionLocal2",
       "declaration": {
@@ -394041,7 +394041,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#2",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#2",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#2",
       "originalName": "var4",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -394052,7 +394052,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#3",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#3",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIntegerLocal4",
       "declaration": {
@@ -394063,7 +394063,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#4",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#4",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal5",
       "declaration": {
@@ -394074,7 +394074,7 @@
     },
     {
       "symbol": "L:rd.a(BII)I#5",
-      "renamedSymbol": "L:MixedSupport108.computeInteger1413(BII)I#5",
+      "renamedSymbol": "L:MixedSupport108.reverseLowBits(BII)I#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal6",
       "declaration": {
@@ -405855,7 +405855,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#0",
       "originalName": "var2",
       "renamedName": "uRLLocal1",
       "declaration": {
@@ -405866,7 +405866,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#1",
       "originalName": "var2_ref",
       "renamedName": "exceptionLocal2",
       "declaration": {
@@ -405877,7 +405877,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "checkedExceptionLocal11",
       "declaration": {
@@ -405888,7 +405888,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#2",
       "originalName": "var2_ref2",
       "renamedName": "runtimeExceptionLocal3",
       "declaration": {
@@ -405899,7 +405899,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackRuntimeExceptionLocal4",
       "declaration": {
@@ -405910,7 +405910,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#4",
       "originalName": "stackIn_8_1",
       "renamedName": "stackStringBuilderLocal5",
       "declaration": {
@@ -405921,7 +405921,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#5",
       "originalName": "stackIn_9_2",
       "renamedName": "stackStringLocal6",
       "declaration": {
@@ -405932,7 +405932,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal7",
       "declaration": {
@@ -405943,7 +405943,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameterLocal8",
       "declaration": {
@@ -405954,7 +405954,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "caughtParameterLocal9",
       "declaration": {
@@ -405965,7 +405965,7 @@
     },
     {
       "symbol": "L:sm.a(BLjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "uncheckedExceptionLocal10",
       "declaration": {
@@ -444740,9 +444740,9 @@
     },
     {
       "symbol": "M:lg.a(IZ)I",
-      "renamedSymbol": "M:UiComponentPart017.computeInteger0955(IZ)I",
+      "renamedSymbol": "M:UiComponentPart017.updateMembershipSlides(IZ)I",
       "originalName": "a",
-      "renamedName": "computeInteger0955",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "lg.java",
         "start": 1666,
@@ -452781,9 +452781,9 @@
     },
     {
       "symbol": "M:rd.a(BII)I",
-      "renamedSymbol": "M:MixedSupport108.computeInteger1413(BII)I",
+      "renamedSymbol": "M:MixedSupport108.reverseLowBits(BII)I",
       "originalName": "a",
-      "renamedName": "computeInteger1413",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "rd.java",
         "start": 9253,
@@ -454695,9 +454695,9 @@
     },
     {
       "symbol": "M:sm.a(BLjava/applet/Applet;)V",
-      "renamedSymbol": "M:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V",
+      "renamedSymbol": "M:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "performAction1533",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "sm.java",
         "start": 2377,
@@ -499300,7 +499300,7 @@
     },
     {
       "symbol": "P:lg.a(IZ)I#0",
-      "renamedSymbol": "P:UiComponentPart017.computeInteger0955(IZ)I#0",
+      "renamedSymbol": "P:UiComponentPart017.updateMembershipSlides(IZ)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -499311,7 +499311,7 @@
     },
     {
       "symbol": "P:lg.a(IZ)I#1",
-      "renamedSymbol": "P:UiComponentPart017.computeInteger0955(IZ)I#1",
+      "renamedSymbol": "P:UiComponentPart017.updateMembershipSlides(IZ)I#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -521289,7 +521289,7 @@
     },
     {
       "symbol": "P:rd.a(BII)I#0",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#0",
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -521300,7 +521300,7 @@
     },
     {
       "symbol": "P:rd.a(BII)I#1",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#1",
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -521311,7 +521311,7 @@
     },
     {
       "symbol": "P:rd.a(BII)I#2",
-      "renamedSymbol": "P:MixedSupport108.computeInteger1413(BII)I#2",
+      "renamedSymbol": "P:MixedSupport108.reverseLowBits(BII)I#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -526437,7 +526437,7 @@
     },
     {
       "symbol": "P:sm.a(BLjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -526448,7 +526448,7 @@
     },
     {
       "symbol": "P:sm.a(BLjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:NetworkSupport012.performAction1533(BLjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:NetworkSupport012.openSubscriptionPage(BLjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "appletArgument2",
       "declaration": {
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "d4259a01250caf21ef9e644583949e5442e8d0c44a9100e163d37dd86cf8a4a1",
+      "outputSha256": "a323b2ddd7c65caaac83d52f1383fcb45a7371b4120bb16f8d268722d7b943a9",
       "edits": [
         {
           "start": 57,
@@ -722674,7 +722674,7 @@
           "end": 42373,
           "symbol": "M:lg.a(IZ)I",
           "original": "a",
-          "renamed": "computeInteger0955"
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 42421,
@@ -722807,7 +722807,7 @@
           "end": 42904,
           "symbol": "M:sm.a(BLjava/applet/Applet;)V",
           "original": "a",
-          "renamed": "performAction1533"
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 42917,
@@ -1133891,7 +1133891,7 @@
       "original": "lg.java",
       "renamed": "UiComponentPart017.java",
       "inputSha256": "593df3d81f1af3afeb5f17d8f528b7b915c20ef5b245b5757ac68994456fc4c8",
-      "outputSha256": "8aaa67d330b8e649161454dcc9153a908b62dfc3c3260dbebbfe210ddb694b72",
+      "outputSha256": "9893fe34d6c9dd6f6df9374f24ed223e1dfcfd8055cf097446f05cec3092634e",
       "edits": [
         {
           "start": 50,
@@ -1134633,7 +1134633,7 @@
           "end": 1667,
           "symbol": "M:lg.a(IZ)I",
           "original": "a",
-          "renamed": "computeInteger0955"
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 1672,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "3c572aef5705f66a3d10a33e3b0ba6f51b25ee5602212b60d700d547bf00bd47",
+      "outputSha256": "457ec23efb0e2082b2cf98b175d572bb58692183aa0b5a3786f3a51288a5e351",
       "edits": [
         {
           "start": 71,
@@ -1168571,7 +1168571,7 @@
           "end": 94106,
           "symbol": "M:rd.a(BII)I",
           "original": "a",
-          "renamed": "computeInteger1413"
+          "renamed": "reverseLowBits"
         },
         {
           "start": 94126,
@@ -1529934,7 +1529934,7 @@
       "original": "rd.java",
       "renamed": "MixedSupport108.java",
       "inputSha256": "948f3e24e6215bbd4598b3d9914c010596dedc42ac00e62e827952bc74032333",
-      "outputSha256": "ebf6d1f0ec54dbe340a6f93194b91f06040ef714a6abc813c39b0a6d4fde8a69",
+      "outputSha256": "c338b4b328013344dadef156807e03674bb95b2bc74ffe25092392bb80a5f60c",
       "edits": [
         {
           "start": 50,
@@ -1530046,7 +1530046,7 @@
           "end": 255,
           "symbol": "M:rd.a(BII)I",
           "original": "a",
-          "renamed": "computeInteger1413"
+          "renamed": "reverseLowBits"
         },
         {
           "start": 295,
@@ -1532496,7 +1532496,7 @@
           "end": 9254,
           "symbol": "M:rd.a(BII)I",
           "original": "a",
-          "renamed": "computeInteger1413"
+          "renamed": "reverseLowBits"
         },
         {
           "start": 9260,
@@ -1602117,7 +1602117,7 @@
       "original": "sm.java",
       "renamed": "NetworkSupport012.java",
       "inputSha256": "a738038e8c05014088bcf87fd0d8f3ccb74d532e3de1e5dde5eb6a07a271bb4c",
-      "outputSha256": "4f518f6bb0ddfcc81d6e6495a06782393c2f3d719b678bfee575cc14c8fd9898",
+      "outputSha256": "8df05be05b7bd6aee47d6f321bea0da64aa0a8e4407ed6cfeea4ae8360863799",
       "edits": [
         {
           "start": 50,
@@ -1602817,7 +1602817,7 @@
           "end": 2378,
           "symbol": "M:sm.a(BLjava/applet/Applet;)V",
           "original": "a",
-          "renamed": "performAction1533"
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 2384,
@@ -1682805,7 +1682805,7 @@
       "original": "va.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "2f16eeab9de4cdc5ce2b234a983fff5658a3a1ad6e4fc6ed1178cb4b1537c271",
-      "outputSha256": "e912481506b0bfae8ba6844b82e15fbf0f7dfafa1955fb6984bd9672a66a9f4c",
+      "outputSha256": "a900e80e31afa29dd9c2d83ccde3708d0fc5c06613b1e906f5e2a4012bab7054",
       "edits": [
         {
           "start": 69,
@@ -1683981,7 +1683981,7 @@
           "end": 3876,
           "symbol": "M:rd.a(BII)I",
           "original": "a",
-          "renamed": "computeInteger1413"
+          "renamed": "reverseLowBits"
         },
         {
           "start": 3888,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "3a1814baa42d65f458ae5d228a1f27baf893c080e51bde3a69a898b300fe25dc",
+    "rulesSha256": "3c774fbdd2ea6b6c3c388e7455e574f768a680ed8731b880bcfb969e2ed53d71",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "345bc1779e5792b925db88213d3583dfb5c71afaa93dd73e8661edd5415b2352",
+    "outputTreeSha256": "1b825d68c00c72b9b720aa9db8e16bb1026a2f118af8c02391bf2903b83c338a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

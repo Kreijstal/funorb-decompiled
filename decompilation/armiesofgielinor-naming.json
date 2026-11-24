@@ -89060,6 +89060,14 @@
       "renamedSymbol": "M:QuickChatPhraseRepository.insertLobbyRoomSorted(ILLobbyRoom;)V"
     },
     {
+      "symbol": "M:rf.a(ILjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "rf.java: Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain int guard32767 early return before URL allocation. Complete original-body SHA256 37947915be525b76fe39a323648954441f0dc77a3e4bf31d40ddcb9c15bdc6b0. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V"
+    },
+    {
       "symbol": "M:rf.b(B)V",
       "originalName": "b",
       "to": "configurePunctuationKeys",
@@ -454534,7 +454542,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -454545,7 +454553,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -454556,7 +454564,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -454567,7 +454575,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#2",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -454578,7 +454586,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -454589,7 +454597,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#4",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -454600,7 +454608,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#5",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -454611,7 +454619,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -454622,7 +454630,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -454633,7 +454641,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -454644,7 +454652,7 @@
     },
     {
       "symbol": "L:rf.a(ILjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -565447,9 +565455,9 @@
     },
     {
       "symbol": "M:rf.a(ILjava/applet/Applet;)V",
-      "renamedSymbol": "M:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V",
+      "renamedSymbol": "M:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "rf.java",
         "start": 1529,
@@ -677900,7 +677908,7 @@
     },
     {
       "symbol": "P:rf.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -677911,7 +677919,7 @@
     },
     {
       "symbol": "P:rf.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:QuickChatPhraseRepository.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:QuickChatPhraseRepository.openSubscriptionPage(ILjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -825164,7 +825172,7 @@
       "original": "ci.java",
       "renamed": "TutorialController.java",
       "inputSha256": "80ac322e88dcfc245e81cb8a0641dbae8905c22f35e0b301188e432ab1eae40e",
-      "outputSha256": "b830ac10161a3abc0ab78bec559104693b031ade211e59e5fd44e6c6c0415ac3",
+      "outputSha256": "aa2f50ca377da682f47c46287544c0d456a5a82d93e7a6ab3b775cf362b7c8ef",
       "edits": [
         {
           "start": 50,
@@ -846946,6 +846954,13 @@
           "symbol": "C:rf",
           "original": "rf",
           "renamed": "QuickChatPhraseRepository"
+        },
+        {
+          "start": 256645,
+          "end": 256646,
+          "symbol": "M:rf.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 256654,
@@ -1494413,7 +1494428,7 @@
       "original": "oo.java",
       "renamed": "MembershipExpansionScreen.java",
       "inputSha256": "0f5d484f1d6e8ae2cd6f733834b60e2d34328bcc8143ee6bbcdb8f62f5064db3",
-      "outputSha256": "b53764960d77122409a6dc7c21e32c0ec3c7ae9fb0c7875886d1d55b04b75a58",
+      "outputSha256": "124b82d4fec72f33154409e0b1c08296678ed407a56dc4cfa20ff339631bbbe5",
       "edits": [
         {
           "start": 50,
@@ -1494897,6 +1494912,13 @@
           "symbol": "C:rf",
           "original": "rf",
           "renamed": "QuickChatPhraseRepository"
+        },
+        {
+          "start": 9067,
+          "end": 9068,
+          "symbol": "M:rf.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 9076,
@@ -1597387,7 +1597409,7 @@
       "original": "rf.java",
       "renamed": "QuickChatPhraseRepository.java",
       "inputSha256": "d41d6ab32778229c3c8d7bddcd53948c7528c9733d900ee211ab1134aa55ee0b",
-      "outputSha256": "79bda4444f3e09b12b0756903e2c86738196713d0fb9a16762b66e6f4b2a146b",
+      "outputSha256": "720ef9141c9d5db1b8244b3ed5a6f4a1f93b527f29556ecb55d34f381bb8ba8f",
       "edits": [
         {
           "start": 50,
@@ -1597782,6 +1597804,13 @@
           "renamed": "awtToClientKeyCodes"
         },
         {
+          "start": 1529,
+          "end": 1530,
+          "symbol": "M:rf.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
+        },
+        {
           "start": 2127,
           "end": 2129,
           "symbol": "C:ck",
@@ -1597899,6 +1597928,13 @@
           "symbol": "C:rf",
           "original": "rf",
           "renamed": "QuickChatPhraseRepository"
+        },
+        {
+          "start": 4001,
+          "end": 4002,
+          "symbol": "M:rf.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 4101,
@@ -1843764,10 +1843800,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "360200698ec0ce13cfb5c0b5db748707818d3842b0f1f99bace1d5dce8f01a6c",
+    "rulesSha256": "b35f4b7db0aa934024a2f3c82ee1fb12d55e1dcaed7139ac0f34b496af7d6bb3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "240b38dacd6d4e6ee1f159c61e5699da209839579443e2d626f462869f362299",
+    "outputTreeSha256": "f170b0405a83cf68952163ff643dc3de38c56392b2188938e8b177ff045015fa",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

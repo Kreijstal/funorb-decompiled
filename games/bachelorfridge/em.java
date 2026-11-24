@@ -7,7 +7,7 @@ final class em extends am implements WidgetActionListener {
     static String field_V;
     static vr field_T;
 
-    final static int a(boolean param0, int param1) {
+    final static int updateMembershipSlides(boolean param0, int param1) {
         int stackIn_61_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_71_0 = 0;

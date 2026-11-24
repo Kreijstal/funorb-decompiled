@@ -133,7 +133,7 @@ final class mo extends am {
         this.field_G = 0;
     }
 
-    final static int b(int param0, boolean param1) {
+    final static int updateMembershipSlides(int param0, boolean param1) {
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_72_0 = 0;

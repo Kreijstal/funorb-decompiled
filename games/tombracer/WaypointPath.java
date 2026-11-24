@@ -62,7 +62,7 @@ final class WaypointPath {
           }
           param1.field_j = 0;
           param1.field_g = false;
-          UnlockEntry.field_g = new nc(var3_int, param1, param1);
+          UnlockEntry.field_g = new QuickChatCategoryLoader(var3_int, param1, param1);
           ByteStorage.field_a = new QuickChatPhraseSource(var3_int, param1, param1, new DecodableArrayReader());
           var4 = BlendModeOperator.findRootQuickChatCategory((byte) 86);
           if (var4 == null) {
@@ -84,7 +84,7 @@ final class WaypointPath {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          cia.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
+          MovementHintCharacter.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
           AccountCreationDialog.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -204,7 +204,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(byte[] param0, byte param1);
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int reverseLowBits(boolean param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

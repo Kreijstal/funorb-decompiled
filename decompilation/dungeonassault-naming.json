@@ -428,6 +428,14 @@
       "renamedSymbol": "C:MusicPatchPcmStream"
     },
     {
+      "symbol": "C:hm",
+      "originalName": "hm",
+      "to": "AchievementIconEntry",
+      "evidence": "Intrusive achievement-icon display entry storing achievement ID,availability boolean and mutable x/y layout coordinates. Constructor stores boolean then ID and leaves coordinate defaults. Assets load from achievements_large;achievement-bitset filtering creates entries,grid layout assigns coordinates and renderer selects artwork/highlights by ID and availability. Preserve inherited node links,all four instance fields,eight unrelated static fields/helpers and original initializer state. Original constructor SHA256 5f476714fa8ba1b8bb06e09bffdc9b4b85b924855e3e89408347ea5de6308b27. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AchievementIconEntry"
+    },
+    {
       "symbol": "C:ho",
       "originalName": "ho",
       "to": "NodeHashTableIterator",
@@ -2052,6 +2060,14 @@
       "renamedSymbol": "M:hk.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:hm.a(ZB)I",
+      "originalName": "a",
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. Byte guard!=-20 returns -25 after timer and frame-array length reads before slide mutation. Complete original-body SHA256 8814a8aae0a9c18272c81788cb6ea17a2a5480811a51b6aae1cdf7608f2cb038. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementIconEntry.updateMembershipSlides(ZB)I"
+    },
+    {
       "symbol": "M:ho.a(B)V",
       "originalName": "a",
       "to": "reset",
@@ -2332,6 +2348,14 @@
       "renamedSymbol": "M:l.createAccountSuccessResult(BZ)LAccountServiceResult;"
     },
     {
+      "symbol": "M:lc.a(IBI)I",
+      "originalName": "a",
+      "to": "findAchievementIconAt",
+      "evidence": "Find the first achievement icon ID in the retained intrusive list at the supplied pointer coordinate. Preserve strict outer x94/546 and y>=90/y<=184 bounds,horizontal scroll adjustment,inclusive32-by32 node rectangles,traversal cursor mutations,signed overflow and -1 misses. Original byte-guard remainder65%((47-guard)/58) runs on miss but is bypassed by successful early hit. Successful early hit skips original guard arithmetic;miss/outside executes it before returning -1. Complete original-body SHA256 775d1a1672df3834cd59421a91e5b7c14fe20cf2023630769cfee29aa55c618d. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:lc.findAchievementIconAt(IBI)I"
+    },
+    {
       "symbol": "M:lc.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2402,6 +2426,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 6 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 5e3be4003dded37cb1c08bcfb0ba64e49840ce34047dde7975cb56b4d71b8c55.",
       "confidence": "reviewed",
       "renamedSymbol": "M:lp.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:lp.a(IZI)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index0. true boolean guard returns -112 before accumulator initialization. Complete original-body SHA256 050c3456a7fe3b41ee70d52891f2bb6fe819937679c3722b154837bfebfe0626.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:lp.reverseLowBits(IZI)I"
     },
     {
       "symbol": "M:m.d(I)V",
@@ -3298,6 +3330,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 f8937414271f1d04a56d02ffb5d776622527dbad9b6358b0d2f3d446f3d1132a.",
       "confidence": "reviewed",
       "renamedSymbol": "M:se.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:sf.a(ZLjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain boolean guard early return before original inner try. Complete original-body SHA256 acfa67cf42bcf7d17821369e573265edd4ee7351bfeb2776b674b20154d581f5. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sf.openSubscriptionPage(ZLjava/applet/Applet;)V"
     },
     {
       "symbol": "M:sh.a(Z)V",
@@ -5905,9 +5945,9 @@
     },
     {
       "symbol": "C:hm",
-      "renamedSymbol": "C:hm",
+      "renamedSymbol": "C:AchievementIconEntry",
       "originalName": "hm",
-      "renamedName": "hm",
+      "renamedName": "AchievementIconEntry",
       "declaration": {
         "file": "hm.java",
         "start": 50,
@@ -20986,7 +21026,7 @@
     },
     {
       "symbol": "F:hm.field_i:I",
-      "renamedSymbol": "F:hm.field_i:I",
+      "renamedSymbol": "F:AchievementIconEntry.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -20997,7 +21037,7 @@
     },
     {
       "symbol": "F:hm.field_j:Ljava/lang/String;",
-      "renamedSymbol": "F:hm.field_j:Ljava/lang/String;",
+      "renamedSymbol": "F:AchievementIconEntry.field_j:Ljava/lang/String;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -21008,7 +21048,7 @@
     },
     {
       "symbol": "F:hm.field_k:I",
-      "renamedSymbol": "F:hm.field_k:I",
+      "renamedSymbol": "F:AchievementIconEntry.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -21019,7 +21059,7 @@
     },
     {
       "symbol": "F:hm.field_l:Ljava/lang/String;",
-      "renamedSymbol": "F:hm.field_l:Ljava/lang/String;",
+      "renamedSymbol": "F:AchievementIconEntry.field_l:Ljava/lang/String;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -21030,7 +21070,7 @@
     },
     {
       "symbol": "F:hm.field_m:[Z",
-      "renamedSymbol": "F:hm.field_m:[Z",
+      "renamedSymbol": "F:AchievementIconEntry.field_m:[Z",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -21041,7 +21081,7 @@
     },
     {
       "symbol": "F:hm.field_n:Lvn;",
-      "renamedSymbol": "F:hm.field_n:LAudioOutput;",
+      "renamedSymbol": "F:AchievementIconEntry.field_n:LAudioOutput;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -21052,7 +21092,7 @@
     },
     {
       "symbol": "F:hm.field_o:I",
-      "renamedSymbol": "F:hm.field_o:I",
+      "renamedSymbol": "F:AchievementIconEntry.field_o:I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -21063,7 +21103,7 @@
     },
     {
       "symbol": "F:hm.field_p:I",
-      "renamedSymbol": "F:hm.field_p:I",
+      "renamedSymbol": "F:AchievementIconEntry.field_p:I",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -21074,7 +21114,7 @@
     },
     {
       "symbol": "F:hm.field_q:Lcn;",
-      "renamedSymbol": "F:hm.field_q:Lcn;",
+      "renamedSymbol": "F:AchievementIconEntry.field_q:Lcn;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -21085,7 +21125,7 @@
     },
     {
       "symbol": "F:hm.field_r:Z",
-      "renamedSymbol": "F:hm.field_r:Z",
+      "renamedSymbol": "F:AchievementIconEntry.field_r:Z",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -21096,7 +21136,7 @@
     },
     {
       "symbol": "F:hm.field_s:I",
-      "renamedSymbol": "F:hm.field_s:I",
+      "renamedSymbol": "F:AchievementIconEntry.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -21107,7 +21147,7 @@
     },
     {
       "symbol": "F:hm.field_t:Ljava/lang/String;",
-      "renamedSymbol": "F:hm.field_t:Ljava/lang/String;",
+      "renamedSymbol": "F:AchievementIconEntry.field_t:Ljava/lang/String;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -118589,7 +118629,7 @@
     },
     {
       "symbol": "L:hm.a(I)V#0",
-      "renamedSymbol": "L:hm.a(I)V#0",
+      "renamedSymbol": "L:AchievementIconEntry.a(I)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -118600,7 +118640,7 @@
     },
     {
       "symbol": "L:hm.a(I)V#1",
-      "renamedSymbol": "L:hm.a(I)V#1",
+      "renamedSymbol": "L:AchievementIconEntry.a(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118611,7 +118651,7 @@
     },
     {
       "symbol": "L:hm.a(I)V#2",
-      "renamedSymbol": "L:hm.a(I)V#2",
+      "renamedSymbol": "L:AchievementIconEntry.a(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -118622,7 +118662,7 @@
     },
     {
       "symbol": "L:hm.a(I)V#3",
-      "renamedSymbol": "L:hm.a(I)V#3",
+      "renamedSymbol": "L:AchievementIconEntry.a(I)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -118633,7 +118673,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#0",
-      "renamedSymbol": "L:hm.a(IIZI)V#0",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#0",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -118644,7 +118684,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#1",
-      "renamedSymbol": "L:hm.a(IIZI)V#1",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#1",
       "originalName": "stackIn_67_0",
       "renamedName": "stackIn_67_0",
       "declaration": {
@@ -118655,7 +118695,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#2",
-      "renamedSymbol": "L:hm.a(IIZI)V#2",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#2",
       "originalName": "stackIn_75_0",
       "renamedName": "stackIn_75_0",
       "declaration": {
@@ -118666,7 +118706,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#3",
-      "renamedSymbol": "L:hm.a(IIZI)V#3",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -118677,7 +118717,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#4",
-      "renamedSymbol": "L:hm.a(IIZI)V#4",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -118688,7 +118728,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#5",
-      "renamedSymbol": "L:hm.a(IIZI)V#5",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -118699,7 +118739,7 @@
     },
     {
       "symbol": "L:hm.a(IIZI)V#6",
-      "renamedSymbol": "L:hm.a(IIZI)V#6",
+      "renamedSymbol": "L:AchievementIconEntry.a(IIZI)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -118710,7 +118750,7 @@
     },
     {
       "symbol": "L:hm.a(Lsa;I)V#0",
-      "renamedSymbol": "L:hm.a(Lsa;I)V#0",
+      "renamedSymbol": "L:AchievementIconEntry.a(Lsa;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118721,7 +118761,7 @@
     },
     {
       "symbol": "L:hm.a(Lsa;I)V#1",
-      "renamedSymbol": "L:hm.a(Lsa;I)V#1",
+      "renamedSymbol": "L:AchievementIconEntry.a(Lsa;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -118732,7 +118772,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#0",
-      "renamedSymbol": "L:hm.a(ZB)I#0",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#0",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -118743,7 +118783,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#1",
-      "renamedSymbol": "L:hm.a(ZB)I#1",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#1",
       "originalName": "stackIn_64_0",
       "renamedName": "stackIn_64_0",
       "declaration": {
@@ -118754,7 +118794,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#10",
-      "renamedSymbol": "L:hm.a(ZB)I#10",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -118765,7 +118805,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#11",
-      "renamedSymbol": "L:hm.a(ZB)I#11",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -118776,7 +118816,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#12",
-      "renamedSymbol": "L:hm.a(ZB)I#12",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -118787,7 +118827,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#13",
-      "renamedSymbol": "L:hm.a(ZB)I#13",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -118798,7 +118838,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#14",
-      "renamedSymbol": "L:hm.a(ZB)I#14",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -118809,7 +118849,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#2",
-      "renamedSymbol": "L:hm.a(ZB)I#2",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#2",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIn_68_0",
       "declaration": {
@@ -118820,7 +118860,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#3",
-      "renamedSymbol": "L:hm.a(ZB)I#3",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#3",
       "originalName": "stackIn_74_0",
       "renamedName": "stackIn_74_0",
       "declaration": {
@@ -118831,7 +118871,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#4",
-      "renamedSymbol": "L:hm.a(ZB)I#4",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#4",
       "originalName": "stackIn_78_0",
       "renamedName": "stackIn_78_0",
       "declaration": {
@@ -118842,7 +118882,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#5",
-      "renamedSymbol": "L:hm.a(ZB)I#5",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#5",
       "originalName": "stackIn_82_0",
       "renamedName": "stackIn_82_0",
       "declaration": {
@@ -118853,7 +118893,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#6",
-      "renamedSymbol": "L:hm.a(ZB)I#6",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#6",
       "originalName": "stackIn_84_0",
       "renamedName": "stackIn_84_0",
       "declaration": {
@@ -118864,7 +118904,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#7",
-      "renamedSymbol": "L:hm.a(ZB)I#7",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -118875,7 +118915,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#8",
-      "renamedSymbol": "L:hm.a(ZB)I#8",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#8",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -118886,7 +118926,7 @@
     },
     {
       "symbol": "L:hm.a(ZB)I#9",
-      "renamedSymbol": "L:hm.a(ZB)I#9",
+      "renamedSymbol": "L:AchievementIconEntry.updateMembershipSlides(ZB)I#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118897,7 +118937,7 @@
     },
     {
       "symbol": "L:hm.d(I)V#0",
-      "renamedSymbol": "L:hm.d(I)V#0",
+      "renamedSymbol": "L:AchievementIconEntry.d(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -141667,7 +141707,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#0",
-      "renamedSymbol": "L:lc.a(IBI)I#0",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -141678,7 +141718,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#1",
-      "renamedSymbol": "L:lc.a(IBI)I#1",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -141689,7 +141729,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#2",
-      "renamedSymbol": "L:lc.a(IBI)I#2",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#2",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -141700,7 +141740,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#3",
-      "renamedSymbol": "L:lc.a(IBI)I#3",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -141711,7 +141751,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#4",
-      "renamedSymbol": "L:lc.a(IBI)I#4",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#4",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -141722,7 +141762,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#5",
-      "renamedSymbol": "L:lc.a(IBI)I#5",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#5",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -141733,7 +141773,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#6",
-      "renamedSymbol": "L:lc.a(IBI)I#6",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -141744,7 +141784,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#7",
-      "renamedSymbol": "L:lc.a(IBI)I#7",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#7",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -141755,7 +141795,7 @@
     },
     {
       "symbol": "L:lc.a(IBI)I#8",
-      "renamedSymbol": "L:lc.a(IBI)I#8",
+      "renamedSymbol": "L:lc.findAchievementIconAt(IBI)I#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -152887,7 +152927,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#0",
-      "renamedSymbol": "L:lp.a(IZI)I#0",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -152898,7 +152938,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#1",
-      "renamedSymbol": "L:lp.a(IZI)I#1",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -152909,7 +152949,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#2",
-      "renamedSymbol": "L:lp.a(IZI)I#2",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -152920,7 +152960,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#3",
-      "renamedSymbol": "L:lp.a(IZI)I#3",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -152931,7 +152971,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#4",
-      "renamedSymbol": "L:lp.a(IZI)I#4",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#4",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -152942,7 +152982,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#5",
-      "renamedSymbol": "L:lp.a(IZI)I#5",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -152953,7 +152993,7 @@
     },
     {
       "symbol": "L:lp.a(IZI)I#6",
-      "renamedSymbol": "L:lp.a(IZI)I#6",
+      "renamedSymbol": "L:lp.reverseLowBits(IZI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -201254,7 +201294,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -201265,7 +201305,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -201276,7 +201316,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -201287,7 +201327,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#2",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -201298,7 +201338,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#3",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -201309,7 +201349,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -201320,7 +201360,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -201331,7 +201371,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#6",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -201342,7 +201382,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -201353,7 +201393,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -201364,7 +201404,7 @@
     },
     {
       "symbol": "L:sf.a(ZLjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:sf.a(ZLjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -238764,9 +238804,9 @@
     },
     {
       "symbol": "M:hm.<init>(IZ)V",
-      "renamedSymbol": "M:hm.<init>(IZ)V",
+      "renamedSymbol": "M:AchievementIconEntry.<init>(IZ)V",
       "originalName": "hm",
-      "renamedName": "hm",
+      "renamedName": "AchievementIconEntry",
       "declaration": {
         "file": "hm.java",
         "start": 8404,
@@ -238775,7 +238815,7 @@
     },
     {
       "symbol": "M:hm.a(I)V",
-      "renamedSymbol": "M:hm.a(I)V",
+      "renamedSymbol": "M:AchievementIconEntry.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -238786,7 +238826,7 @@
     },
     {
       "symbol": "M:hm.a(IIZI)V",
-      "renamedSymbol": "M:hm.a(IIZI)V",
+      "renamedSymbol": "M:AchievementIconEntry.a(IIZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -238797,7 +238837,7 @@
     },
     {
       "symbol": "M:hm.a(Lsa;I)V",
-      "renamedSymbol": "M:hm.a(Lsa;I)V",
+      "renamedSymbol": "M:AchievementIconEntry.a(Lsa;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -238808,9 +238848,9 @@
     },
     {
       "symbol": "M:hm.a(ZB)I",
-      "renamedSymbol": "M:hm.a(ZB)I",
+      "renamedSymbol": "M:AchievementIconEntry.updateMembershipSlides(ZB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "hm.java",
         "start": 8542,
@@ -238819,7 +238859,7 @@
     },
     {
       "symbol": "M:hm.d(I)V",
-      "renamedSymbol": "M:hm.d(I)V",
+      "renamedSymbol": "M:AchievementIconEntry.d(I)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -243285,9 +243325,9 @@
     },
     {
       "symbol": "M:lc.a(IBI)I",
-      "renamedSymbol": "M:lc.a(IBI)I",
+      "renamedSymbol": "M:lc.findAchievementIconAt(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findAchievementIconAt",
       "declaration": {
         "file": "lc.java",
         "start": 8193,
@@ -244781,9 +244821,9 @@
     },
     {
       "symbol": "M:lp.a(IZI)I",
-      "renamedSymbol": "M:lp.a(IZI)I",
+      "renamedSymbol": "M:lp.reverseLowBits(IZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "lp.java",
         "start": 4911,
@@ -255022,9 +255062,9 @@
     },
     {
       "symbol": "M:sf.a(ZLjava/applet/Applet;)V",
-      "renamedSymbol": "M:sf.a(ZLjava/applet/Applet;)V",
+      "renamedSymbol": "M:sf.openSubscriptionPage(ZLjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "sf.java",
         "start": 4120,
@@ -291300,7 +291340,7 @@
     },
     {
       "symbol": "P:hm.<init>(IZ)V#0",
-      "renamedSymbol": "P:hm.<init>(IZ)V#0",
+      "renamedSymbol": "P:AchievementIconEntry.<init>(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291311,7 +291351,7 @@
     },
     {
       "symbol": "P:hm.<init>(IZ)V#1",
-      "renamedSymbol": "P:hm.<init>(IZ)V#1",
+      "renamedSymbol": "P:AchievementIconEntry.<init>(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291322,7 +291362,7 @@
     },
     {
       "symbol": "P:hm.a(I)V#0",
-      "renamedSymbol": "P:hm.a(I)V#0",
+      "renamedSymbol": "P:AchievementIconEntry.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291333,7 +291373,7 @@
     },
     {
       "symbol": "P:hm.a(IIZI)V#0",
-      "renamedSymbol": "P:hm.a(IIZI)V#0",
+      "renamedSymbol": "P:AchievementIconEntry.a(IIZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291344,7 +291384,7 @@
     },
     {
       "symbol": "P:hm.a(IIZI)V#1",
-      "renamedSymbol": "P:hm.a(IIZI)V#1",
+      "renamedSymbol": "P:AchievementIconEntry.a(IIZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291355,7 +291395,7 @@
     },
     {
       "symbol": "P:hm.a(IIZI)V#2",
-      "renamedSymbol": "P:hm.a(IIZI)V#2",
+      "renamedSymbol": "P:AchievementIconEntry.a(IIZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -291366,7 +291406,7 @@
     },
     {
       "symbol": "P:hm.a(IIZI)V#3",
-      "renamedSymbol": "P:hm.a(IIZI)V#3",
+      "renamedSymbol": "P:AchievementIconEntry.a(IIZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -291377,7 +291417,7 @@
     },
     {
       "symbol": "P:hm.a(Lsa;I)V#0",
-      "renamedSymbol": "P:hm.a(Lsa;I)V#0",
+      "renamedSymbol": "P:AchievementIconEntry.a(Lsa;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291388,7 +291428,7 @@
     },
     {
       "symbol": "P:hm.a(Lsa;I)V#1",
-      "renamedSymbol": "P:hm.a(Lsa;I)V#1",
+      "renamedSymbol": "P:AchievementIconEntry.a(Lsa;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291399,7 +291439,7 @@
     },
     {
       "symbol": "P:hm.a(ZB)I#0",
-      "renamedSymbol": "P:hm.a(ZB)I#0",
+      "renamedSymbol": "P:AchievementIconEntry.updateMembershipSlides(ZB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291410,7 +291450,7 @@
     },
     {
       "symbol": "P:hm.a(ZB)I#1",
-      "renamedSymbol": "P:hm.a(ZB)I#1",
+      "renamedSymbol": "P:AchievementIconEntry.updateMembershipSlides(ZB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291421,7 +291461,7 @@
     },
     {
       "symbol": "P:hm.d(I)V#0",
-      "renamedSymbol": "P:hm.d(I)V#0",
+      "renamedSymbol": "P:AchievementIconEntry.d(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300133,7 +300173,7 @@
     },
     {
       "symbol": "P:lc.a(IBI)I#0",
-      "renamedSymbol": "P:lc.a(IBI)I#0",
+      "renamedSymbol": "P:lc.findAchievementIconAt(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300144,7 +300184,7 @@
     },
     {
       "symbol": "P:lc.a(IBI)I#1",
-      "renamedSymbol": "P:lc.a(IBI)I#1",
+      "renamedSymbol": "P:lc.findAchievementIconAt(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300155,7 +300195,7 @@
     },
     {
       "symbol": "P:lc.a(IBI)I#2",
-      "renamedSymbol": "P:lc.a(IBI)I#2",
+      "renamedSymbol": "P:lc.findAchievementIconAt(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -304445,7 +304485,7 @@
     },
     {
       "symbol": "P:lp.a(IZI)I#0",
-      "renamedSymbol": "P:lp.a(IZI)I#0",
+      "renamedSymbol": "P:lp.reverseLowBits(IZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -304456,7 +304496,7 @@
     },
     {
       "symbol": "P:lp.a(IZI)I#1",
-      "renamedSymbol": "P:lp.a(IZI)I#1",
+      "renamedSymbol": "P:lp.reverseLowBits(IZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -304467,7 +304507,7 @@
     },
     {
       "symbol": "P:lp.a(IZI)I#2",
-      "renamedSymbol": "P:lp.a(IZI)I#2",
+      "renamedSymbol": "P:lp.reverseLowBits(IZI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -330537,7 +330577,7 @@
     },
     {
       "symbol": "P:sf.a(ZLjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:sf.a(ZLjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -330548,7 +330588,7 @@
     },
     {
       "symbol": "P:sf.a(ZLjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:sf.a(ZLjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:sf.openSubscriptionPage(ZLjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -342102,7 +342142,7 @@
       "original": "DungeonAssault.java",
       "renamed": "DungeonAssault.java",
       "inputSha256": "b5464cbb2115c14735feab48fc15b139ffc8cb70c93977ed2f68b3e29596a14a",
-      "outputSha256": "08f1edc2650c45377679fecad99a18e26958c2a9ef7b11f6cbd702371cd87ec7",
+      "outputSha256": "8c8489ffd4b4974a55e9f8dd38919f4ccba9585b349751ae8fc404e9dc3b7188",
       "edits": [
         {
           "start": 101,
@@ -342499,6 +342539,13 @@
           "original": "L19",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 15757,
+          "end": 15759,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 15793,
@@ -343769,6 +343816,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 28100,
+          "end": 28102,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 28143,
           "end": 28144,
           "symbol": "M:k.a(Z)V",
@@ -344731,7 +344785,7 @@
       "original": "af.java",
       "renamed": "AccountRequestState.java",
       "inputSha256": "580b349f5d18a014476d57b270253de73f646e399c1d510b2cc7f06a6646bee1",
-      "outputSha256": "4c755af72d6e2bca2273ebb5bef78e3b874b9ef57d80c0a95035030e21f42897",
+      "outputSha256": "7b37f79802169538888fbd4270934f4e053bb188b85a657c19ced7cbad8b2b73",
       "edits": [
         {
           "start": 50,
@@ -344783,6 +344837,13 @@
           "renamed": "createOutput"
         },
         {
+          "start": 390,
+          "end": 392,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 403,
           "end": 405,
           "symbol": "C:vn",
@@ -344802,6 +344863,13 @@
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "PcmStreamMixer"
+        },
+        {
+          "start": 510,
+          "end": 512,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 521,
@@ -346596,7 +346664,7 @@
       "original": "bg.java",
       "renamed": "bg.java",
       "inputSha256": "a06fb24cad3da1a883f870845b1e394d53deb41d50e078fe215929511b96408d",
-      "outputSha256": "6f979e46453053a6dfc7613b58a2ac9e3f148239e852895bc865f34629c893c9",
+      "outputSha256": "1a13cdd0eee7e19f26b7633417f259d31e951b634414f91ae66bdb407cd2d205",
       "edits": [
         {
           "start": 125,
@@ -346891,6 +346959,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 28624,
+          "end": 28626,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 28922,
@@ -347833,7 +347908,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "41fa483355b034e320ad1571bbfe9506560df306d2478a51f57fa99de5ef3a1e",
-      "outputSha256": "21c2c3ffc7a4f32c4f5343a044b404f50dad4581dec1d478f66a2778c13928f0",
+      "outputSha256": "2a58f5628835c4743eb1484b337eb0956848d76f6a0fd498f80f27e466651c72",
       "edits": [
         {
           "start": 241,
@@ -347904,6 +347979,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 4618,
+          "end": 4620,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 8263,
@@ -348051,6 +348133,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 20437,
+          "end": 20439,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 21295,
@@ -350408,7 +350497,7 @@
       "original": "db.java",
       "renamed": "db.java",
       "inputSha256": "f785df4d16bb74d29c8fb36bc22c968bf1f9a53da8a8728617dcdfaf0424e9af",
-      "outputSha256": "244f89e285e42424c17ef5f0a90517ec84982e74e4098140916736fbc519efa1",
+      "outputSha256": "c1edf390a3cb46c55f826fcad3177eca1d36de603780ae9f79db469205ff0aa4",
       "edits": [
         {
           "start": 874,
@@ -350659,6 +350748,13 @@
           "kind": "label"
         },
         {
+          "start": 11302,
+          "end": 11304,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 11533,
           "end": 11535,
           "symbol": "C:og",
@@ -350847,6 +350943,13 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 22100,
+          "end": 22102,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 23290,
           "end": 23291,
           "symbol": "M:kd.c(I)J",
@@ -350949,6 +351052,13 @@
           "renamed": "nextBackward"
         },
         {
+          "start": 35793,
+          "end": 35795,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 36300,
           "end": 36302,
           "symbol": "C:ho",
@@ -350961,6 +351071,13 @@
           "symbol": "C:un",
           "original": "un",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 37846,
+          "end": 37848,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 37964,
@@ -352893,7 +353010,7 @@
       "original": "ec.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "2e19d6e3c95777c5a8674d94fcc8f2e531a5e6b31bb3a450cc3a1c5aab78a5d5",
-      "outputSha256": "463c784c774e8a34b171dcff53bb487b5bc5943bab93fd67a2a1bcdadb996828",
+      "outputSha256": "c56f935b79725d76583507f867c39150cd98a39390c3bd4eb5a10b7ca8ebf78d",
       "edits": [
         {
           "start": 44,
@@ -355191,6 +355308,13 @@
           "symbol": "C:nh",
           "original": "nh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 138423,
+          "end": 138425,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 139006,
@@ -357573,7 +357697,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "d373955132b9653a929b07818dee68b671027f74e58db223c62ea848a33645a3",
-      "outputSha256": "def5809f542c25c80fdbc1f7b3a6994ac16f53c42bdc61bef6d00a5d43822ce7",
+      "outputSha256": "437a31cfb31b6ba611f0a392a102772fc32fc33f6df65be4246f3c0bc357775a",
       "edits": [
         {
           "start": 148,
@@ -357854,6 +357978,20 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 13166,
+          "end": 13168,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 13220,
+          "end": 13222,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 13270,
@@ -359335,7 +359473,7 @@
       "original": "fi.java",
       "renamed": "fi.java",
       "inputSha256": "ca1e6052188c181aad7a14bcefcdac277e31882bf4c5e652e5fd749c44175d19",
-      "outputSha256": "8f1aded48990764751a7d1fbc7c8150a1d54c7e291471e4610c668bd2cdc6d52",
+      "outputSha256": "fd00cd3affbcd50cf2a762c10bb2ac6f77334b4c0d9858b5020daea67af787ac",
       "edits": [
         {
           "start": 251,
@@ -359371,6 +359509,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 4049,
+          "end": 4051,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 5126,
@@ -359527,6 +359672,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 16879,
+          "end": 16881,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 18187,
           "end": 18189,
           "symbol": "C:ne",
@@ -359575,7 +359727,7 @@
       "original": "fk.java",
       "renamed": "fk.java",
       "inputSha256": "776e7331bc047be66e0f41b63fbcb066193119b911028b88a0be96747278443d",
-      "outputSha256": "c191c3166fb1415aa53b5d27e140a9b38e40910fc1fcedcdf4577fb58b7aa60d",
+      "outputSha256": "2d0e42434f2e69dce0d59175ac14be4d5710ca59aa27ae6c3406c4c08943d6ab",
       "edits": [
         {
           "start": 468,
@@ -359660,6 +359812,13 @@
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "Raider"
+        },
+        {
+          "start": 6047,
+          "end": 6049,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 11424,
@@ -361828,7 +361987,7 @@
       "original": "go.java",
       "renamed": "go.java",
       "inputSha256": "d27a6b3585d6c2945da763f9402c3f8634334d22acf2df5936bf0fa11c39443e",
-      "outputSha256": "f255018370890794b398e643799586ae3735f54f027826ddb234e0655af5c66f",
+      "outputSha256": "446171451d9fa965e8af11c65712fb26ec8e230dff5368ac8b176f38f91eba74",
       "edits": [
         {
           "start": 172,
@@ -361934,6 +362093,13 @@
           "symbol": "M:vn.a()V",
           "original": "a",
           "renamed": "serviceOutput"
+        },
+        {
+          "start": 4792,
+          "end": 4794,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 4803,
@@ -362258,6 +362424,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 23665,
+          "end": 23667,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 23865,
           "end": 23867,
           "symbol": "C:ec",
@@ -362333,6 +362506,20 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 28960,
+          "end": 28962,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 29333,
+          "end": 29335,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 31502,
@@ -363313,6 +363500,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 83694,
+          "end": 83696,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 83948,
@@ -364557,7 +364751,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "fd7c6b1324f6e47a87ee94e6fce588221fc431a0c0a4af4702fe6157f6e4fb53",
-      "outputSha256": "b4780e349fef15a36e99dedaf030b066c8a9d7ac604a0f2a6bcc01a0a9b6dd6f",
+      "outputSha256": "7be1dd64cf6277d1edd2a32aff1596e74fe9cf726e6646615114098009c28b71",
       "edits": [
         {
           "start": 7192,
@@ -365237,6 +365431,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 44357,
+          "end": 44359,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 44445,
@@ -366900,10 +367101,17 @@
     },
     {
       "original": "hm.java",
-      "renamed": "hm.java",
+      "renamed": "AchievementIconEntry.java",
       "inputSha256": "1cd6cf72a57cfb338f3d221170baa166c71a20593045daca662a474954157d2d",
-      "outputSha256": "f4a9ff0dd02b7c42a3416a0ed272c883e935f0c411d1f8b892e955e2cdc52d9d",
+      "outputSha256": "4d821502811f08303080231d8970f5d23e6a769ea0aa059d58ccae997864de93",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
         {
           "start": 61,
           "end": 63,
@@ -366989,6 +367197,20 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 7623,
+          "end": 7625,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 8180,
+          "end": 8182,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 8312,
           "end": 8314,
           "symbol": "C:vk",
@@ -367001,6 +367223,20 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8404,
+          "end": 8406,
+          "symbol": "M:hm.<init>(IZ)V",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 8542,
+          "end": 8543,
+          "symbol": "M:hm.a(ZB)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 9087,
@@ -367106,7 +367342,7 @@
       "original": "hn.java",
       "renamed": "hn.java",
       "inputSha256": "692aa605a29697ab4dec1dd8dd0f2162a5923d1775f26b2f02336ac5338db6dd",
-      "outputSha256": "3b8dc47847225983628a96ece70ec80d6e2dd0daf0eccb138be6d2b722631205",
+      "outputSha256": "a910bf25f89c63b4d705aa096785f4e25410ee25bd81f67ff6f91dd8f6a8c3c2",
       "edits": [
         {
           "start": 630,
@@ -367177,6 +367413,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2989,
+          "end": 2991,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 3544,
@@ -368698,7 +368941,7 @@
       "original": "ih.java",
       "renamed": "ih.java",
       "inputSha256": "82cc9d478f1ae7dc2cbc8f566ccd63c13bc7b95d87e18818f51ad9746fe4d3ed",
-      "outputSha256": "e71a6fa3c8e7442c0dd1e02b9d2eb7f76adda3906838e6aa71a17c5ccaf5a912",
+      "outputSha256": "7d63d68cd24193a20a4374c68b5e769578699862001b769a10204bc850a507de",
       "edits": [
         {
           "start": 2039,
@@ -368879,11 +369122,25 @@
           "kind": "label"
         },
         {
+          "start": 11172,
+          "end": 11174,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 11625,
           "end": 11627,
           "symbol": "C:ho",
           "original": "ho",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 11947,
+          "end": 11949,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 13194,
@@ -371671,7 +371928,7 @@
       "original": "jp.java",
       "renamed": "jp.java",
       "inputSha256": "65dfc7b5b0f39ae35ca07151a67cc4c4850fd4eba6cc1606965f6b5b0c07a0ce",
-      "outputSha256": "46003221e9f708128f1ec4f1bcf6cbf29781f2b2eb1e2dab7a68e8b22a2cb72d",
+      "outputSha256": "791ced831ded6d4d5e9c3f8677bc3c5d1b8e518a0ea0d5575002932e5bc96d93",
       "edits": [
         {
           "start": 80,
@@ -371833,6 +372090,13 @@
           "symbol": "M:ue.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 24169,
+          "end": 24170,
+          "symbol": "M:lp.a(IZI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 24548,
@@ -372356,8 +372620,15 @@
       "original": "ke.java",
       "renamed": "ke.java",
       "inputSha256": "f3d26216fe7e5eedc7887f6cd9cd91142de1671566df1db2302aac9a4f6c15e5",
-      "outputSha256": "bc3a3726533b8c70a632588a072ef30354bd5dac2a99c9450d06d319bceccc8c",
+      "outputSha256": "4b4af6f2a671ee13e0bf90e38d9be4a3e3de5885a8c474beb33cb074e8619647",
       "edits": [
+        {
+          "start": 964,
+          "end": 966,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
         {
           "start": 2463,
           "end": 2465,
@@ -374402,7 +374673,7 @@
       "original": "kn.java",
       "renamed": "kn.java",
       "inputSha256": "d3be516a16c30be47dde02998924fa02446c338de97d1aa15732a476b082bf2b",
-      "outputSha256": "0c2650e0d7f06dd6e816cf526691afa46b1f8645abb03d417c9cda33fd59935a",
+      "outputSha256": "a3eb6186510d1df3fea3cd76881c8d1c3d520beeb8ad5ceb80835497bd35143b",
       "edits": [
         {
           "start": 174,
@@ -374410,6 +374681,41 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 1285,
+          "end": 1287,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 1327,
+          "end": 1329,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 1353,
+          "end": 1355,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 1366,
+          "end": 1368,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 1465,
+          "end": 1467,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 5146,
@@ -374524,7 +374830,7 @@
       "original": "l.java",
       "renamed": "l.java",
       "inputSha256": "553a9244f02824191fba60906e64149f8ac8c3f8cf5f16751bb007f8758cbbb0",
-      "outputSha256": "2060518a08802cf873d9857e96d1eba03fcb4a9ac1c58067905f2b63ac3b2b69",
+      "outputSha256": "b18e54e2b09ad4db63daa5fc9b4f5908614280705ba6cb332d765e7c326aff7b",
       "edits": [
         {
           "start": 1966,
@@ -374658,6 +374964,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 9942,
+          "end": 9944,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 10289,
@@ -375143,7 +375456,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "0e026200519894b933176425c60c1f659074d3c8b3c79fd9d209272b0cebcb31",
-      "outputSha256": "edaef2e3455a5f50dc1c5585c6cf88c71397e8c0fc1895b09cafe63ed329fe9f",
+      "outputSha256": "a317c448db56ebf75410f6d2c47c95fc988125dbfca6a48539ea97a725da077f",
       "edits": [
         {
           "start": 123,
@@ -375377,11 +375690,39 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 8193,
+          "end": 8194,
+          "symbol": "M:lc.a(IBI)I",
+          "original": "a",
+          "renamed": "findAchievementIconAt"
+        },
+        {
+          "start": 8268,
+          "end": 8270,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 8863,
+          "end": 8865,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 8879,
           "end": 8880,
           "symbol": "M:md.e(I)Lne;",
           "original": "e",
           "renamed": "beginBackward"
+        },
+        {
+          "start": 9226,
+          "end": 9228,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 9242,
@@ -376835,7 +377176,7 @@
       "original": "lk.java",
       "renamed": "lk.java",
       "inputSha256": "ae9c43fe779d30821caea89c1f418dd53a9b40fa8bf9260934e8dd80d4618c96",
-      "outputSha256": "fb122e6c25070198fb5eb4f80d2e90e53e7c6617f3bd1913bc5a43e460ddbb76",
+      "outputSha256": "a9b335208ccf49114d7923f9692fe1f03772a030c5c46df1867183d73aed5819",
       "edits": [
         {
           "start": 471,
@@ -376857,6 +377198,13 @@
           "symbol": "C:nh",
           "original": "nh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 4664,
+          "end": 4666,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 13937,
@@ -377082,7 +377430,7 @@
       "original": "lm.java",
       "renamed": "lm.java",
       "inputSha256": "30c78724c74db27789c475adc3ee5b0e9b722598e0018fd24085289393668021",
-      "outputSha256": "c90972fe207544c9141befd45bfbf8c727b8b95dd6c25f69e46c25376f2c66eb",
+      "outputSha256": "9e05a3edb1adb8f0685dddb048b914923fa19e0e89481c46b230b5ac2dfb674d",
       "edits": [
         {
           "start": 94,
@@ -377330,11 +377678,25 @@
           "renamed": "CombatState"
         },
         {
+          "start": 27526,
+          "end": 27528,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 29131,
           "end": 29133,
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 29314,
+          "end": 29316,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 30462,
@@ -377344,11 +377706,25 @@
           "renamed": "CombatState"
         },
         {
+          "start": 30591,
+          "end": 30593,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 32448,
           "end": 32450,
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 32582,
+          "end": 32584,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 33343,
@@ -377364,6 +377740,13 @@
           "original": "sharedTailExit_5",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 33506,
+          "end": 33508,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 34286,
@@ -377386,6 +377769,13 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "CombatState"
+        },
+        {
+          "start": 35571,
+          "end": 35573,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 39207,
@@ -378196,7 +378586,7 @@
       "original": "lp.java",
       "renamed": "lp.java",
       "inputSha256": "6efb2a34e1638b0187735a85c7479183111fccb75cbafd0d2337455cd402e1fd",
-      "outputSha256": "e7ea47b83b7b7283697daac2c1dea232403195a07a825cb2a07bc98ef5252b86",
+      "outputSha256": "550f6220398a5ee79a9a8cadb12cfe56cc5f9e4f62c9c0ddb350a2975df98462",
       "edits": [
         {
           "start": 61,
@@ -378260,6 +378650,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4911,
+          "end": 4912,
+          "symbol": "M:lp.a(IZI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 5750,
@@ -378935,7 +379332,7 @@
       "original": "md.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "601bd235e7bb9bf8e2b9969f064f951651ef5eb5a82c0f3057fc6c9c63b7436a",
-      "outputSha256": "af324015e6c78a58dd5592c9f4d11c31f9c5c34576921a41c8cfba9a0360b4ec",
+      "outputSha256": "aa067b5af6b22a3df6093c9d766f2beff7cc222b75edaf64843f161442191c23",
       "edits": [
         {
           "start": 71,
@@ -379286,6 +379683,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ReverbPcmStream"
+        },
+        {
+          "start": 2534,
+          "end": 2536,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 2545,
@@ -380043,7 +380447,7 @@
       "original": "mf.java",
       "renamed": "mf.java",
       "inputSha256": "aed0764cbdc070b1b880dcf3c824ac24dbbb0afc0a1483e152225fefa28a06ff",
-      "outputSha256": "cdcc848b235a0bb42e9f3a6f926643c4277f3a88ef8a0a19d1a7f202782eae09",
+      "outputSha256": "d56f01f66286dd634f1a8a0aef5685bbfce5a88d97115be05a52985b38d8a3fe",
       "edits": [
         {
           "start": 218,
@@ -380072,6 +380476,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4519,
+          "end": 4521,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 4963,
@@ -381542,7 +381953,7 @@
       "original": "ng.java",
       "renamed": "ng.java",
       "inputSha256": "4ead403e3c89f9ec416529d4dc4c4b02a3c5a174d44a5737331335e330310b7e",
-      "outputSha256": "e94081a40ed6716da620e36e22e71414b4c5ac1286c538cc8a7f1a99498a0de6",
+      "outputSha256": "e635115de49b56b10570f0a740a16602d62dd2b7f6e98c203ebc194f6a94e12f",
       "edits": [
         {
           "start": 801,
@@ -381613,6 +382024,13 @@
           "symbol": "C:b",
           "original": "b",
           "renamed": "ClientException"
+        },
+        {
+          "start": 6518,
+          "end": 6520,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 14204,
@@ -381718,6 +382136,13 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 106388,
+          "end": 106390,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 107626,
@@ -384737,8 +385162,15 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "68d7033e1a4ecaff186340d77aff2b53659ca84e365ce478ff97a511d7a918eb",
-      "outputSha256": "7581e61f21e935265af5e3f3eb4e012a7afa1372153533eb11cbe7dd978e0173",
+      "outputSha256": "6cd9a8879b175742e9c0d1fd39ac1f2292ad6d7275bc0255194ddbe427bdc724",
       "edits": [
+        {
+          "start": 2365,
+          "end": 2367,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
         {
           "start": 2516,
           "end": 2518,
@@ -384822,6 +385254,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 6337,
+          "end": 6339,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 6488,
@@ -384908,11 +385347,25 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 9211,
+          "end": 9213,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 9297,
           "end": 9299,
           "symbol": "C:og",
           "original": "og",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 10417,
+          "end": 10419,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 10550,
@@ -385927,7 +386380,7 @@
       "original": "ok.java",
       "renamed": "ok.java",
       "inputSha256": "a00e938580ef9f8b49b423d197519f1e8202f6afefb3476dfbf544bac30b1b7a",
-      "outputSha256": "ad7545c38dfd97034f6000cfbe26ab1a67367212a1479dd421f3e39f7802cb0d",
+      "outputSha256": "19004b4c16bca0643883c1aa2e3cfc4d5b5cbb3ad28fc6a15d4f1ccff0320da9",
       "edits": [
         {
           "start": 168,
@@ -386005,6 +386458,27 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 17717,
+          "end": 17719,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 17768,
+          "end": 17770,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 17973,
+          "end": 17975,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 18571,
@@ -386666,7 +387140,7 @@
       "original": "p.java",
       "renamed": "p.java",
       "inputSha256": "2ab0b0edc552eca6f0f1e8f66e4de8d09e3438e830785d5ea6700f78c4650b1a",
-      "outputSha256": "195dede24ea7571e7f9e064ece3ebfc6a5ffd945d095b9f4bbd1c01f3a7db66b",
+      "outputSha256": "12fa89169d13ee7d4eb2089dcb228f8af08d47041a7fb82df8ec76f2512b3e55",
       "edits": [
         {
           "start": 2990,
@@ -386894,6 +387368,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 28243,
+          "end": 28245,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 39887,
@@ -387250,7 +387731,7 @@
       "original": "pd.java",
       "renamed": "pd.java",
       "inputSha256": "50d63ff114391281954494f4f91ebc7a74adf5d292a60517182da904fc97ee3e",
-      "outputSha256": "ab66ee6e1329758795408ef1490f1c0742abc0088270bdfd583cf57c4063b08c",
+      "outputSha256": "156df38b308f25acce393f7a7a87996acddec028e451dec4002ed5200e632855",
       "edits": [
         {
           "start": 660,
@@ -387293,6 +387774,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4367,
+          "end": 4369,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         }
       ]
     },
@@ -390046,7 +390534,7 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "2f1f04c7d1cf72560cd769308f2319391493636db1a7d6634b6647fd5b3843df",
-      "outputSha256": "8eda79591749541a8c9fdd32fcb5eb5cb28c5c91608a1ed7502c42d4b88ba6e8",
+      "outputSha256": "8913bad225d6cfc46cc0a591f90416780a79e775bbbe88d9197c6680c932c5ce",
       "edits": [
         {
           "start": 1366,
@@ -390103,6 +390591,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 6371,
+          "end": 6373,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 6857,
@@ -390203,6 +390698,20 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 16011,
+          "end": 16013,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 16822,
+          "end": 16824,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 16838,
           "end": 16839,
           "symbol": "M:md.e(I)Lne;",
@@ -390222,6 +390731,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 18117,
+          "end": 18119,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 18133,
@@ -390301,6 +390817,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 25680,
+          "end": 25682,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 26365,
           "end": 26367,
           "symbol": "C:kg",
@@ -390329,11 +390852,32 @@
           "renamed": "addFirst"
         },
         {
+          "start": 27665,
+          "end": 27667,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 27789,
           "end": 27790,
           "symbol": "M:md.a(Lne;Z)V",
           "original": "a",
           "renamed": "addFirst"
+        },
+        {
+          "start": 27795,
+          "end": 27797,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 28557,
+          "end": 28559,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 28573,
@@ -390343,6 +390887,13 @@
           "renamed": "beginBackward"
         },
         {
+          "start": 28846,
+          "end": 28848,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 28862,
           "end": 28863,
           "symbol": "M:md.a(I)Lne;",
@@ -390350,11 +390901,39 @@
           "renamed": "nextBackward"
         },
         {
+          "start": 30189,
+          "end": 30191,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 30192,
+          "end": 30193,
+          "symbol": "M:hm.a(ZB)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
+        },
+        {
+          "start": 30339,
+          "end": 30340,
+          "symbol": "M:sf.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
+        },
+        {
           "start": 30576,
           "end": 30578,
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 31354,
+          "end": 31356,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 32521,
@@ -390398,7 +390977,7 @@
       "original": "qe.java",
       "renamed": "qe.java",
       "inputSha256": "2dd61ba04f58d9b6dbdc8c363dff126e3c3222096b5137f0a927755e4494eb71",
-      "outputSha256": "a80e2132515252c97bd39f164f7983ecf7a00b28e81ff6ad636a65c1e83fddce",
+      "outputSha256": "2337c8c08c1714d011e04a84f85df36a4856d502fa0f7f863323cf0275a2f84b",
       "edits": [
         {
           "start": 364,
@@ -390490,6 +391069,20 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 18741,
+          "end": 18743,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 18790,
+          "end": 18792,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 24739,
@@ -392943,7 +393536,7 @@
       "original": "ra.java",
       "renamed": "ra.java",
       "inputSha256": "76c369cdb577bbf30b76e7f1cc838102bf34e321cd515cddaf503162e4be25bd",
-      "outputSha256": "4db8ca3d4e71fdc7152ef162e6d9611c280c6e9325d494b0cb82fc2cd690d8dd",
+      "outputSha256": "df4e815c97589533103047d3b6bc11320dd303ed0563c0fd67bbaa7caafbedf0",
       "edits": [
         {
           "start": 120,
@@ -392951,6 +393544,27 @@
           "symbol": "C:wj",
           "original": "wj",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1081,
+          "end": 1082,
+          "symbol": "M:lc.a(IBI)I",
+          "original": "a",
+          "renamed": "findAchievementIconAt"
+        },
+        {
+          "start": 1458,
+          "end": 1459,
+          "symbol": "M:lc.a(IBI)I",
+          "original": "a",
+          "renamed": "findAchievementIconAt"
+        },
+        {
+          "start": 1484,
+          "end": 1486,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 1519,
@@ -395121,7 +395735,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "d817d7a49418b3b1985334420a9f810e7b679664b8f171da378639e60329d4ff",
-      "outputSha256": "ea2b6f80c88d7c3f8d0332dd66c055b508c230a8e76a9ac261e27dd7c4c0bd29",
+      "outputSha256": "8fd91cfc5221152cd380108e8c172fcbe6e9899465ab88d54424253b592d2eb1",
       "edits": [
         {
           "start": 181,
@@ -395206,6 +395820,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4120,
+          "end": 4121,
+          "symbol": "M:sf.a(ZLjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 5550,
@@ -404979,7 +405600,7 @@
       "original": "wh.java",
       "renamed": "wh.java",
       "inputSha256": "f275b21137b2e29e0219fa1b803e25c3a75d9a53253a5ecb552e0f9b1a9c6b58",
-      "outputSha256": "bcaffabe7395849dfc2f40ba1af8b3a55b55a3d4eb5edd4c8e9db3ea3784df69",
+      "outputSha256": "299af48978bdd8ea33bb565771b4179e0c95f9a4e139b8e7ed9527f3b1e61c95",
       "edits": [
         {
           "start": 365,
@@ -404989,11 +405610,39 @@
           "renamed": "dispose"
         },
         {
+          "start": 392,
+          "end": 394,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 418,
+          "end": 420,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
           "start": 429,
           "end": 430,
           "symbol": "M:vn.c()V",
           "original": "c",
           "renamed": "dispose"
+        },
+        {
+          "start": 514,
+          "end": 516,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
+        },
+        {
+          "start": 564,
+          "end": 566,
+          "symbol": "C:hm",
+          "original": "hm",
+          "renamed": "AchievementIconEntry"
         },
         {
           "start": 575,
@@ -405629,10 +406278,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "1abe16d66895c1bf1f6bfb5965a919bd7b2b10a0b99095fb781f630384442218",
+    "rulesSha256": "8d30a58c38f1281a11b35acb3a0d145b05ea192090d3b09cf8064f8d99da91ba",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "0661190703e1c571025a0ad0e823506b26819130121cff5ec63e6e8304e65c30",
+    "outputTreeSha256": "5fef130f7fc35563228befcfb439c7c5f1f14ca621c969aa1afcf34b89221210",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

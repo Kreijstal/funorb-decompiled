@@ -187,7 +187,7 @@ final class TextureFormat {
                   var24Lifetime1 = param0.field_E[var23Lifetime2];
                   var25Lifetime1 = param0.field_v[var23Lifetime2];
                   var26Lifetime1 = param0.field_L[var23Lifetime2];
-                  nc.field_b[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
+                  QuickChatCategoryLoader.field_b[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
                   SimpleBlockBehaviour.field_p[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var19 * var26Lifetime1) >> 16);
                   ByteStorageFactory.field_b[var23Lifetime2] = var11 + (var25Lifetime1 * var17 + var14 * var24Lifetime1 + var26Lifetime1 * var20 >> 16);
                   var23Lifetime2++;

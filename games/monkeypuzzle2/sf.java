@@ -701,7 +701,7 @@ final class sf extends IntrusiveNode {
           var9 = new int[var5];
           var10 = nf.bitLength(var5 - 1, true);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = bc.a(var11, var10, (byte) 76);
+            var9[var11] = bc.reverseLowBits(var11, var10, (byte) 76);
           }
           if (var1 == 0) {
             field_f = var6_ref_float__;

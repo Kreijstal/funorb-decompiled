@@ -4593,7 +4593,7 @@ final class TutorialController {
               if (null != FixedQuaternion.fullscreenCanvas) {
                 StructureTerrainSupport.b(-99);
               }
-              QuickChatPhraseRepository.a(32767, CombatEvent.d((byte) 65));
+              QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.d((byte) 65));
             }
             if (var2_int == 1) {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);

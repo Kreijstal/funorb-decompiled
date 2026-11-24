@@ -11844,6 +11844,14 @@
       "renamedSymbol": "M:WhirlpoolHasher.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:wd.b(III)I",
+      "originalName": "b",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index1. int guard!=12871 clears String[] field_G after bit loop. Complete original-body SHA256 58490eaf5a3ad92fd9cadfab5cb92ac3b52215506b1479ca6845a9ad8cebe5d2.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wd.reverseLowBits(III)I"
+    },
+    {
       "symbol": "M:wf.a(JZ)V",
       "originalName": "a",
       "to": "sleepMillis",
@@ -233230,7 +233238,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#0",
-      "renamedSymbol": "L:wd.b(III)I#0",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -233241,7 +233249,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#1",
-      "renamedSymbol": "L:wd.b(III)I#1",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -233252,7 +233260,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#2",
-      "renamedSymbol": "L:wd.b(III)I#2",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -233263,7 +233271,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#3",
-      "renamedSymbol": "L:wd.b(III)I#3",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -233274,7 +233282,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#4",
-      "renamedSymbol": "L:wd.b(III)I#4",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -233285,7 +233293,7 @@
     },
     {
       "symbol": "L:wd.b(III)I#5",
-      "renamedSymbol": "L:wd.b(III)I#5",
+      "renamedSymbol": "L:wd.reverseLowBits(III)I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -283698,9 +283706,9 @@
     },
     {
       "symbol": "M:wd.b(III)I",
-      "renamedSymbol": "M:wd.b(III)I",
+      "renamedSymbol": "M:wd.reverseLowBits(III)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "wd.java",
         "start": 13796,
@@ -389232,7 +389240,7 @@
     },
     {
       "symbol": "P:wd.b(III)I#0",
-      "renamedSymbol": "P:wd.b(III)I#0",
+      "renamedSymbol": "P:wd.reverseLowBits(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389243,7 +389251,7 @@
     },
     {
       "symbol": "P:wd.b(III)I#1",
-      "renamedSymbol": "P:wd.b(III)I#1",
+      "renamedSymbol": "P:wd.reverseLowBits(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389254,7 +389262,7 @@
     },
     {
       "symbol": "P:wd.b(III)I#2",
-      "renamedSymbol": "P:wd.b(III)I#2",
+      "renamedSymbol": "P:wd.reverseLowBits(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -544310,7 +544318,7 @@
       "original": "t.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "94cccde116826768cb6d49b307d0116a8f54a5d4b9118e5fcdf8337eff6ceffd",
-      "outputSha256": "453a9fca3c8f51c7fa386f2d1def61e3aad8d85cae5ba9621ea107291c22fb25",
+      "outputSha256": "aa11071e98a289983b67a15b4a6e33a0f64299f61d029d21a80a1118706d7d7b",
       "edits": [
         {
           "start": 69,
@@ -544661,6 +544669,13 @@
           "symbol": "M:ek.a(BI)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 21265,
+          "end": 21266,
+          "symbol": "M:wd.b(III)I",
+          "original": "b",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 21645,
@@ -566901,7 +566916,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "e348358b529bcf668a3acafb0ef1997771700a8fb3e34746307c860d1687b5a7",
-      "outputSha256": "9f51c3d4b1b19b225a6e881f532b8f45426db0da6c2e7ee1fe99b0a315fe925b",
+      "outputSha256": "1bb44ebbab7f002d75839d57181ccd6f16fe1b7dec9b514b44877e7a12573945",
       "edits": [
         {
           "start": 235,
@@ -567037,6 +567052,13 @@
           "renamed": "maxAscent"
         },
         {
+          "start": 13796,
+          "end": 13797,
+          "symbol": "M:wd.b(III)I",
+          "original": "b",
+          "renamed": "reverseLowBits"
+        },
+        {
           "start": 13866,
           "end": 13873,
           "symbol": "F:AceOfSkies.field_G:Z",
@@ -567091,6 +567113,13 @@
           "symbol": "F:wd.field_t:Lkp;",
           "original": "field_t",
           "renamed": "hudMessages"
+        },
+        {
+          "start": 17260,
+          "end": 17261,
+          "symbol": "M:wd.b(III)I",
+          "original": "b",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 17310,
@@ -574374,10 +574403,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "6093fc63838f210ee4671ab7891b5cea3f24463cbc3b833bff4727555bb51c0a",
+    "rulesSha256": "e04881265d50d4cec970c401be62f87e600ccd77abde75e2ce0f42b812ea0c6b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "fe6da10159a6ec2e932ed3fdbedc2e1e4e86730925685054f2c5901fa25b787e",
+    "outputTreeSha256": "f994dc30d586aecb22be586653af5da037864048667e9f77f9800eefcdd234c6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -43,7 +43,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
           var7 = 0;
           var5_intLifetime1 = var7;
           while (6 > var7) {
-            jaggl.OpenGL.glTexImage2Di(34069 + var7, 0, this.getGlFormat(92), param1, param1, 0, waa.toGlFormat(this.field_f, 1383), this.field_j.field_od, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(34069 + var7, 0, this.getGlFormat(92), param1, param1, 0, SneakHintDecoration.toGlFormat(this.field_f, 1383), this.field_j.field_od, param3[var7], 0);
             var7++;
           }
           return;

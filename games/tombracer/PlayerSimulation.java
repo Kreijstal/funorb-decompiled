@@ -59,7 +59,7 @@ final class PlayerSimulation {
         return -1 != this.effectSlots[param0] ? true : false;
     }
 
-    final void d(int param0, int param1) {
+    final void acceptSimulationSignal(int param0, int param1) {
         int var3 = -110 % ((param0 - 73) / 33);
     }
 
@@ -178,7 +178,7 @@ final class PlayerSimulation {
             var5.onPenalty(15, param0, param1, param0.getRoom((byte) -96), this.tick, param3);
           }
           if (param2 != 1) {
-            this.d(18, 84);
+            this.acceptSimulationSignal(18, 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

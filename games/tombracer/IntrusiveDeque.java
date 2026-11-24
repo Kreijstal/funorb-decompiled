@@ -292,7 +292,7 @@ final class IntrusiveDeque {
               } else {
                 decompiledFrameRemainder0 = (TextureCoordinateGeneration.field_b.field_yb.field_y != 0);
                 if (decompiledFrameRemainder0) {
-                  bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
+                  bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -301,7 +301,7 @@ final class IntrusiveDeque {
               if (0 == TextureCoordinateGeneration.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
+              bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
               ResourceArchive.field_k = 1;
               break;
             }

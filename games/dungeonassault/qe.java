@@ -584,9 +584,9 @@ abstract class qe {
         }
         if (this.field_q == null) {
           var5 = (sa) null;
-          hm.a((sa) null, -21);
+          AchievementIconEntry.a((sa) null, -21);
         } else {
-          hm.a(this.field_q, -21);
+          AchievementIconEntry.a(this.field_q, -21);
           this.field_q.a(false);
         }
     }

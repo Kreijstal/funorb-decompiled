@@ -55,7 +55,7 @@ final class qd {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           java.applet.Applet var3 = null;
@@ -76,7 +76,7 @@ final class qd {
             }
             if (param1 != -30) {
               var3 = (java.applet.Applet) null;
-              qd.a((java.applet.Applet) null, (byte) 50);
+              qd.openSubscriptionPage((java.applet.Applet) null, (byte) 50);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -122,7 +122,7 @@ final class qd {
           var4_int = param0.b(param2, (byte) -118);
           if (param3 < 41) {
             var6 = (java.applet.Applet) null;
-            qd.a((java.applet.Applet) null, (byte) -109);
+            qd.openSubscriptionPage((java.applet.Applet) null, (byte) -109);
           }
           var5 = param0.a(var4_int, param1, (byte) -11);
           stackIn_3_0 = vc.a(param0, var5, var4_int, -2);

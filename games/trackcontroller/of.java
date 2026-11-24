@@ -19,7 +19,7 @@ final class of extends ec {
         try {
           if (param2) {
             var5 = (java.applet.Applet) null;
-            of.a(-79, (java.applet.Applet) null);
+            of.openSubscriptionPage(-79, (java.applet.Applet) null);
           }
           var3 = null;
           var4 = null;
@@ -97,7 +97,7 @@ final class of extends ec {
         return PacketBuffer.field_m;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

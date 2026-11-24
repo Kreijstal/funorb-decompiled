@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class waa {
+final class SneakHintDecoration {
     private ModelAnimator field_d;
     static String field_b;
     private int field_c;
@@ -93,11 +93,11 @@ final class waa {
           return;
         }
         TextureFormat var3 = (TextureFormat) null;
-        waa.toGlFormat((TextureFormat) null, 19);
+        SneakHintDecoration.toGlFormat((TextureFormat) null, 19);
         this.field_d.tick(0);
     }
 
-    waa(int param0, int param1) {
+    SneakHintDecoration(int param0, int param1) {
         this.field_d = new ModelAnimator(6, 4, 1);
         this.field_d.play(1, true, (byte) -94, 6);
         this.field_a = (int)((double)param0 * Math.random());

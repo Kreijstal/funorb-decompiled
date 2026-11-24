@@ -144,7 +144,7 @@ final class si {
         this.field_a = false;
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int updateMembershipSlides(int param0, boolean param1) {
         int stackIn_59_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_67_0 = 0;
@@ -288,7 +288,7 @@ final class si {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseLowBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

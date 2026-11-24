@@ -4,7 +4,7 @@
 final class MovementHintPanel implements MessagePanel {
     static String field_d;
     static String field_a;
-    private cia field_b;
+    private MovementHintCharacter field_b;
     private boolean field_c;
 
     public final int getHeight(boolean param0) {
@@ -86,7 +86,7 @@ final class MovementHintPanel implements MessagePanel {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
             this.field_b.draw(param2, param0, -82);
           }
           return;
@@ -98,7 +98,7 @@ final class MovementHintPanel implements MessagePanel {
             RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
             RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
           }
-          if (VerticalScrollbar.field_tb[mf.field_a]) {
+          if (VerticalScrollbar.field_tb[ArbAssemblyProgram.field_a]) {
             RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
             RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, CurrentGraphicsToolkit.toolkit, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           }
@@ -110,7 +110,7 @@ final class MovementHintPanel implements MessagePanel {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
             this.field_b.draw(param2, param0, -82);
           }
           return;
@@ -119,7 +119,7 @@ final class MovementHintPanel implements MessagePanel {
           RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
           RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, CurrentGraphicsToolkit.toolkit, 4, param0, 40, 1080057857, 2, 40);
         }
-        if (VerticalScrollbar.field_tb[mf.field_a]) {
+        if (VerticalScrollbar.field_tb[ArbAssemblyProgram.field_a]) {
           RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, CurrentGraphicsToolkit.toolkit, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
           RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, CurrentGraphicsToolkit.toolkit, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           if (VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
@@ -129,7 +129,7 @@ final class MovementHintPanel implements MessagePanel {
               SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
               SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
               SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-              SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+              SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
               this.field_b.draw(param2, param0, -82);
             }
             return;
@@ -138,7 +138,7 @@ final class MovementHintPanel implements MessagePanel {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
             this.field_b.draw(param2, param0, -82);
           }
           return;
@@ -148,7 +148,7 @@ final class MovementHintPanel implements MessagePanel {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
             this.field_b.draw(param2, param0, -82);
           }
           return;
@@ -159,7 +159,7 @@ final class MovementHintPanel implements MessagePanel {
           SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
           SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
           SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-          SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+          SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[ArbAssemblyProgram.field_a]);
           this.field_b.draw(param2, param0, -82);
         }
     }
@@ -205,7 +205,7 @@ final class MovementHintPanel implements MessagePanel {
     }
 
     public MovementHintPanel() {
-        this.field_b = new cia();
+        this.field_b = new MovementHintCharacter();
         this.field_b.setPosition(this.getHeight(false) / 2, 15 + this.getWidth(-8660) / 2, 1823844912);
     }
 

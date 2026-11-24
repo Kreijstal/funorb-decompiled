@@ -705,7 +705,7 @@ final class ho extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ke.bitLength(var5 - 1, (byte) -103);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = cq.a(var11, var10, (byte) 125);
+            var9[var11] = cq.reverseLowBits(var11, var10, (byte) 125);
           }
           if (var1 == 0) {
             field_x = var6_ref_float__;

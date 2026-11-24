@@ -237,12 +237,12 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           ComponentMount.field_b = new UiComponent(0L, LoginAttemptStarter.field_b);
           dh.field_e.addChild(-128, ComponentMount.field_b);
           ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, BillboardDefinitionCache.field_a);
-          qpa.field_b = new UiComponent(0L, VortexBehaviour.field_t);
+          CourseDeathCountPacket.field_b = new UiComponent(0L, VortexBehaviour.field_t);
           SimpleMoveLocomotor.field_s.addChild(param1 ^ -122, ClientMemoryVertexArray.field_e);
           SimpleMoveLocomotor.field_s.addChild(-123, Projectile.field_r);
           Projectile.field_r.addChild(-123, dh.field_e);
           Projectile.field_r.addChild(-126, ClientMemoryVertexArray.field_d);
-          Projectile.field_r.addChild(-125, qpa.field_b);
+          Projectile.field_r.addChild(-125, CourseDeathCountPacket.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

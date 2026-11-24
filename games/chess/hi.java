@@ -666,7 +666,7 @@ final class hi extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ql.bitLength(-123, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = ie.a(var10, -1, var11);
+            var9[var11] = ie.reverseLowBits(var10, -1, var11);
           }
           if (var1 == 0) {
             field_E = var6_ref_float__;

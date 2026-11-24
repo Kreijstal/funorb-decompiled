@@ -8,7 +8,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     static String field_c;
     static volatile boolean field_a;
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseLowBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

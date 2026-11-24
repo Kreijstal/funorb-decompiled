@@ -42,7 +42,7 @@ final class rj extends vo {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSubscriptionPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -56,7 +56,7 @@ final class rj extends vo {
             try {
               if (param0 != -30136) {
                 var3 = (java.applet.Applet) null;
-                rj.a(33, (java.applet.Applet) null);
+                rj.openSubscriptionPage(33, (java.applet.Applet) null);
               }
               var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
               param1.getAppletContext().showDocument(ow.a(var2, (byte) -122, param1), "_top");

@@ -114,12 +114,12 @@ final class PitSnake extends IntrusiveNode {
             this.field_p = VertexStreamLayout.field_f[this.direction][1] * var12Lifetime1;
             if (0 < this.scaredTicks) {
               if (this.field_s != 0 &&
-                lw.signum(this.field_s, (byte) -87) == lw.signum(-this.offsetX + this.field_u, (byte) -87)) {
+                SneakHintCharacter.signum(this.field_s, (byte) -87) == SneakHintCharacter.signum(-this.offsetX + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
                 this.direction = EditableTextField.mirrorDirection(this.direction, 6);
               }
               if (this.field_p != 0 &&
-                lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.offsetY, (byte) -93)) {
+                SneakHintCharacter.signum(this.field_p, (byte) -95) == SneakHintCharacter.signum(this.field_m - this.offsetY, (byte) -93)) {
                 this.field_p = -this.field_p;
                 this.direction = SweeperMountComponent.mirrorDirection(0, this.direction);
               }

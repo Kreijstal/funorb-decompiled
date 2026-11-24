@@ -214,7 +214,7 @@ final class PcmResampler {
         if (param1 == param0) {
           return;
         }
-        var3 = ed.a(param0, param1, 0);
+        var3 = ed.greatestCommonDivisor(param0, param1, 0);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_g = param1;

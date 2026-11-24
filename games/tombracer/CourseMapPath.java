@@ -127,7 +127,7 @@ final class CourseMapPath extends IntrusiveNode {
           if (HardwareOpenGlToolkit.field_hd != param1 &&
             param1 != 96 ||
             var8Lifetime1 >= 0) {
-            if (param1 != mf.field_a &&
+            if (param1 != ArbAssemblyProgram.field_a &&
               param1 != 97) {
               return false;
             }

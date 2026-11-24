@@ -32,9 +32,9 @@ final class MazeSolver {
         int var12 = 0;
         ClientMemoryVertexArray.field_e.field_r = param4;
         if (2 != OpenGlUnderwaterEffect.field_q) {
-          qpa.field_b.field_r = ValidationMessageWidget.field_J;
+          CourseDeathCountPacket.field_b.field_r = ValidationMessageWidget.field_J;
         } else {
-          qpa.field_b.field_r = VertexAttribute.field_a;
+          CourseDeathCountPacket.field_b.field_r = VertexAttribute.field_a;
         }
         int var9_int = 495;
         int var10 = 5;
@@ -47,8 +47,8 @@ final class MazeSolver {
           var10 = var10 + (param7 + param5);
           ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
           ClientMemoryVertexArray.field_d.setBounds(ClientMemoryVertexArray.field_d.measureNaturalWidth((byte) 69), param6, param3 - 18449, var10, 5);
-          var11 = qpa.field_b.measureNaturalWidth((byte) 69);
-          qpa.field_b.setBounds(var11, param6, -23776, var10, var9_int - 5 - var11);
+          var11 = CourseDeathCountPacket.field_b.measureNaturalWidth((byte) 69);
+          CourseDeathCountPacket.field_b.setBounds(var11, param6, -23776, var10, var9_int - 5 - var11);
           var12 = 5 + (param6 + var10);
           ClientMemoryVertexArray.field_e.setBounds(var9_int, param1, -23776, 0, 0);
           Projectile.field_r.setBounds(var9_int, var12, -23776, param1, 0);

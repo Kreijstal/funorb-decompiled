@@ -209,7 +209,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (ClientMemoryVertexArray.field_d.field_y != 0) {
             DynamicGeometryBuffer.field_c = false;
           }
-          if (0 == qpa.field_b.field_y) {
+          if (0 == CourseDeathCountPacket.field_b.field_y) {
             return;
           }
           PlayerProfile.clearChatInput(true);

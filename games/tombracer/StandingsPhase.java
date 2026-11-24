@@ -190,7 +190,7 @@ final class StandingsPhase extends MatchPhase {
             }
             var12 = 150;
             RasterBuffer.a(-60 + var11, 2, CurrentGraphicsToolkit.toolkit, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
-            MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], TooltipRenderer.field_p, -1, var10 - 230, var11, 0);
+            MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var22, false).toUpperCase(), S2CSimulationSignalPacket.field_a[var22], TooltipRenderer.field_p, -1, var10 - 230, var11, 0);
             try {
               CurrentGraphicsToolkit.toolkit.fillShadedTriangle(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -230,7 +230,7 @@ final class StandingsPhase extends MatchPhase {
             var10_ref_String = SecondaryLinkQueue.worldNames[var9].toUpperCase();
           }
           SocketConnector.drawWrappedText(var10_ref_String, 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), S2CSimulationSignalPacket.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.declaredWinner < 0) {
             MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
             MembersUpsellMenu.drawCentredTextWithShadow(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, TooltipRenderer.field_p, -1, 45 + var4, var3, -1);

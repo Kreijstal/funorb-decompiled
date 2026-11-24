@@ -504,8 +504,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             0 == this.animationState ||
             this.animationState == 6)) {
             if (2 == param2) {
-              this.facingX = lw.signum(-param4, (byte) -109);
-              this.facingY = lw.signum(-param3, (byte) -119);
+              this.facingX = SneakHintCharacter.signum(-param4, (byte) -109);
+              this.facingY = SneakHintCharacter.signum(-param3, (byte) -119);
               this.setAnimationState(-5636, 2, false);
             }
             if (this.slowTicks == 0) {
@@ -1518,9 +1518,9 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             if (!param1) {
               this.field_cb = 60;
             }
-            var4 = lw.signum(this.facingX, (byte) -96);
+            var4 = SneakHintCharacter.signum(this.facingX, (byte) -96);
             var5 = var3_int * var4 + this.x;
-            var6 = lw.signum(this.facingY, (byte) -109);
+            var6 = SneakHintCharacter.signum(this.facingY, (byte) -109);
             var7 = var6 * var3_int + this.y;
             if (null != this.carried) {
               if (!(this.carried instanceof Trap) ||

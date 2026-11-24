@@ -27,7 +27,7 @@ final class sla {
     }
 
     final static void b(int param0) {
-        qpa.field_b = null;
+        CourseDeathCountPacket.field_b = null;
         if (RenderableNode.field_i != null) {
           ComponentMount.field_b = LoginAttemptStarter.field_b;
           CharacterChoiceFactory.field_g = RenderableNode.field_i;

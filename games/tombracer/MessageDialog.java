@@ -198,7 +198,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
                   this.transitionToContent(95, var7);
                   return;
                 }
-                var7.appendButton(epa.field_q, (byte) -102, (WidgetListener) (this));
+                var7.appendButton(GraphicsAndAudioMenu.field_q, (byte) -102, (WidgetListener) (this));
               } else {
                 var7.addAction(RenderLayer.field_a, 9, -65);
               }

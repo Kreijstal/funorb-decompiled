@@ -465,11 +465,11 @@ final class ChatOverlay {
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 + 19042) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        esa.field_c = var8.readString((byte) -76);
+        RoomSelectionProfile.field_c = var8.readString((byte) -76);
         if (var4 != 0) {
           TextureSampleOperator.field_q = var8.readString((byte) -76);
         } else {
-          TextureSampleOperator.field_q = esa.field_c;
+          TextureSampleOperator.field_q = RoomSelectionProfile.field_c;
         }
         if (HardwareModel.field_x != 1 &&
           HardwareModel.field_x != 4) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qpa implements GamePacket {
+final class CourseDeathCountPacket implements GamePacket {
     private int field_a;
     static UiComponent field_b;
     private int field_c;
@@ -25,7 +25,7 @@ final class qpa implements GamePacket {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setCourseId(int param0, int param1) {
         this.field_a = param0;
         int var3 = 28 % ((-35 - param1) / 61);
     }
@@ -34,7 +34,7 @@ final class qpa implements GamePacket {
         try {
           this.field_a = param0.readUnsignedByte(255);
           if (param1 != -19) {
-            qpa.releaseStatics(false);
+            CourseDeathCountPacket.releaseStatics(false);
           }
           this.field_c = param0.readUnsignedByte(255);
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class qpa implements GamePacket {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (param5 < 123) {
-            qpa.releaseStatics(true);
+            CourseDeathCountPacket.releaseStatics(true);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param2 != 0) {
@@ -105,7 +105,7 @@ final class qpa implements GamePacket {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    RenderScene.field_g[param2] = (MenuScreen) ((Object) new epa(param2, param6, param4, param0, param3, param1));
+                    RenderScene.field_g[param2] = (MenuScreen) ((Object) new GraphicsAndAudioMenu(param2, param6, param4, param0, param3, param1));
                   }
                 }
               } else {

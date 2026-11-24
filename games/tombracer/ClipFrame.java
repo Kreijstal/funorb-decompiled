@@ -151,13 +151,13 @@ final class ClipFrame {
             var6 = (ContactListEntry) (var4.next(126));
           }
           if (OpenGlSprite.field_j.field_yb.field_y != 0) {
-            bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
+            bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
             ResourceArchive.field_k = 2;
           }
           if (0 == OpenGlSprite.field_j.field_wb.field_y) {
             return;
           }
-          bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, MazeSolver.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
+          bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, MazeSolver.field_b, SneakHintCharacter.field_a, Corpse.field_i, Corpse.field_i);
           ResourceArchive.field_k = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

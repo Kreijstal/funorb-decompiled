@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc {
+final class QuickChatCategoryLoader {
     static ToolkitSprite field_e;
     private ResourceArchive field_a;
     private SoftReferenceCache field_c;
@@ -11,7 +11,7 @@ final class nc {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 <= 44) {
-          nc.releaseStatics(-93);
+          QuickChatCategoryLoader.releaseStatics(-93);
           field_e = null;
           return;
         }
@@ -49,7 +49,7 @@ final class nc {
         return var6;
     }
 
-    nc(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryLoader(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

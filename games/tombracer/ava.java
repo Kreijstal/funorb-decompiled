@@ -186,7 +186,7 @@ final class ava {
             var20 = var32;
             var20 = var32;
             var21 = 72;
-            if (param0 == bsa.field_j) {
+            if (param0 == RadialSelectionPainter.field_j) {
               var21 += 42;
             }
             var33 = BitmapFont.truncateWithEllipsis(var12.field_Nb.field_H, var32, var21);

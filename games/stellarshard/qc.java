@@ -6,7 +6,7 @@ final class qc {
     static boolean field_a;
     private Sprite[] field_c;
 
-    final static int a(byte param0, boolean param1) {
+    final static int updateMembershipSlides(byte param0, boolean param1) {
         int stackIn_6_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_69_0 = 0;

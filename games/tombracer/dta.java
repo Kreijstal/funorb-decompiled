@@ -134,8 +134,8 @@ final class dta {
               if (var15 < 0) {
                 RoomEffectTraps.drawLeftTextWithShadow(0, -34, param6 - 26, IntArrayRequest.field_j, param0 + var8_int, eda.field_f, 16777215);
               } else {
-                RoomEffectTraps.drawLeftTextWithShadow(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
-                RoomEffectTraps.drawLeftTextWithShadow(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, S2CSimulationSignalPacket.field_a[param2]);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, S2CSimulationSignalPacket.field_a[param2]);
               }
             }
             if (param4.isSpectating((byte) 118)) {

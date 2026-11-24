@@ -2060,6 +2060,22 @@
       "renamedSymbol": "M:id.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+      "originalName": "$cfr$intArgs$a$b925f3f4834c",
+      "to": "updateMembershipSlidesWithIntGuard",
+      "evidence": "Independent full-int-guard variant of the membership slideshow updater,with byte-for-byte matching body and identical compiler-resolved external bindings to the byte entry. Preserve full int arithmetic and guard behavior without forwarding,narrowing or merging into the byte entry. Guard!=76 writes long field_b=6L after accumulator increment before timer-stepping loop;retain byte/int-width domains. Complete original-body SHA256 8de5d64271d2c0d35d82224bbd89895ce762e3f5eca41ec7cd8dde796ef99671. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ik.updateMembershipSlidesWithIntGuard(IZ)I"
+    },
+    {
+      "symbol": "M:ik.a(BZ)I",
+      "originalName": "a",
+      "to": "updateMembershipSlides",
+      "evidence": "Advance the membership slideshow fixed-point timer,slide transition and wrapped current/previous indices;respect original primary/fallback frame readiness,arrow click direction and hover delay;optionally process pointer/keyboard button input and return original action codes0/1/2/3. Subscription purpose follows caller action3 to source-reviewed subscribe.ws helper,including Torquing action24 dispatch. Guard!=76 writes long field_b=6L after accumulator increment before timer-stepping loop;retain byte/int-width domains. Complete original-body SHA256 8de5d64271d2c0d35d82224bbd89895ce762e3f5eca41ec7cd8dde796ef99671. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ik.updateMembershipSlides(BZ)I"
+    },
+    {
       "symbol": "M:il.g(I)V",
       "originalName": "g",
       "to": "clearStaticReferences",
@@ -2804,6 +2820,14 @@
       "renamedSymbol": "M:MouseWheelInput.detach(BLjava/awt/Component;)V"
     },
     {
+      "symbol": "M:og.a(IBI)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator,consuming input with unsigned right shift until the original full-width count is nonpositive. Preserve int overflow and counts beyond32 without clamping or masking. Unused75%((-57-byteGuard)/42) follows bit loop;original wrapper sees mutated full-width arguments. Complete original-body SHA256 e8e20fddee2df1bbcd3ecd42a09f54bcf7d3ceec797b7f2ec7a79902154b3948. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.reverseLowBits(IBI)I"
+    },
+    {
       "symbol": "M:og.a(Ljava/awt/Component;B)V",
       "originalName": "a",
       "to": "attach",
@@ -3042,6 +3066,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 fa6cb99dcb7ff547a1e544ef54258f96a3452b69b824b6b196a541311240678b.",
       "confidence": "reviewed",
       "renamedSymbol": "M:r.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:re.a(Ljava/applet/Applet;I)V",
+      "originalName": "a",
+      "to": "openSubscriptionPage",
+      "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain bad int guard clearing field_B after showDocument inside original inner try. Complete original-body SHA256 1e9c1988823709cad648297552e741867c83a0b2236e725f0bd3d39a6b7a55fb. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:re.openSubscriptionPage(Ljava/applet/Applet;I)V"
     },
     {
       "symbol": "M:ri.g(I)V",
@@ -90269,7 +90301,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#0",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -90280,7 +90312,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#1",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -90291,7 +90323,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#10",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#10",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -90302,7 +90334,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#11",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#11",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -90313,7 +90345,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#12",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#12",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -90324,7 +90356,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#13",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#13",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -90335,7 +90367,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#2",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#2",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#2",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -90346,7 +90378,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#3",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#3",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -90357,7 +90389,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#4",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#4",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#4",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -90368,7 +90400,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#5",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#5",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#5",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -90379,7 +90411,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#6",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#6",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -90390,7 +90422,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#7",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#7",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -90401,7 +90433,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#8",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#8",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -90412,7 +90444,7 @@
     },
     {
       "symbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#9",
-      "renamedSymbol": "L:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#9",
+      "renamedSymbol": "L:ik.updateMembershipSlidesWithIntGuard(IZ)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -90423,7 +90455,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#0",
-      "renamedSymbol": "L:ik.a(BZ)I#0",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#0",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -90434,7 +90466,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#1",
-      "renamedSymbol": "L:ik.a(BZ)I#1",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#1",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -90445,7 +90477,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#10",
-      "renamedSymbol": "L:ik.a(BZ)I#10",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -90456,7 +90488,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#11",
-      "renamedSymbol": "L:ik.a(BZ)I#11",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -90467,7 +90499,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#12",
-      "renamedSymbol": "L:ik.a(BZ)I#12",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -90478,7 +90510,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#13",
-      "renamedSymbol": "L:ik.a(BZ)I#13",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -90489,7 +90521,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#2",
-      "renamedSymbol": "L:ik.a(BZ)I#2",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#2",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -90500,7 +90532,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#3",
-      "renamedSymbol": "L:ik.a(BZ)I#3",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -90511,7 +90543,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#4",
-      "renamedSymbol": "L:ik.a(BZ)I#4",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#4",
       "originalName": "stackIn_77_0",
       "renamedName": "stackIn_77_0",
       "declaration": {
@@ -90522,7 +90554,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#5",
-      "renamedSymbol": "L:ik.a(BZ)I#5",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#5",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -90533,7 +90565,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#6",
-      "renamedSymbol": "L:ik.a(BZ)I#6",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -90544,7 +90576,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#7",
-      "renamedSymbol": "L:ik.a(BZ)I#7",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -90555,7 +90587,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#8",
-      "renamedSymbol": "L:ik.a(BZ)I#8",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -90566,7 +90598,7 @@
     },
     {
       "symbol": "L:ik.a(BZ)I#9",
-      "renamedSymbol": "L:ik.a(BZ)I#9",
+      "renamedSymbol": "L:ik.updateMembershipSlides(BZ)I#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128714,7 +128746,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#0",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#0",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -128725,7 +128757,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#1",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#1",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128736,7 +128768,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#2",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#2",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -128747,7 +128779,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#3",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#3",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -128758,7 +128790,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#4",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#4",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -128769,7 +128801,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#5",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#5",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -128780,7 +128812,7 @@
     },
     {
       "symbol": "L:og.a(IBI)I#6",
-      "renamedSymbol": "L:MouseWheelInput.a(IBI)I#6",
+      "renamedSymbol": "L:MouseWheelInput.reverseLowBits(IBI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -170569,7 +170601,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -170580,7 +170612,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -170591,7 +170623,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#10",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#10",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -170602,7 +170634,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#2",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#2",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#2",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -170613,7 +170645,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#3",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#3",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#3",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -170624,7 +170656,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#4",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#4",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -170635,7 +170667,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#5",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#5",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -170646,7 +170678,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#6",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#6",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#6",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -170657,7 +170689,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#7",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#7",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -170668,7 +170700,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#8",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#8",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -170679,7 +170711,7 @@
     },
     {
       "symbol": "L:re.a(Ljava/applet/Applet;I)V#9",
-      "renamedSymbol": "L:re.a(Ljava/applet/Applet;I)V#9",
+      "renamedSymbol": "L:re.openSubscriptionPage(Ljava/applet/Applet;I)V#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -208827,9 +208859,9 @@
     },
     {
       "symbol": "M:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I",
-      "renamedSymbol": "M:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+      "renamedSymbol": "M:ik.updateMembershipSlidesWithIntGuard(IZ)I",
       "originalName": "$cfr$intArgs$a$b925f3f4834c",
-      "renamedName": "$cfr$intArgs$a$b925f3f4834c",
+      "renamedName": "updateMembershipSlidesWithIntGuard",
       "declaration": {
         "file": "ik.java",
         "start": 8082,
@@ -208838,9 +208870,9 @@
     },
     {
       "symbol": "M:ik.a(BZ)I",
-      "renamedSymbol": "M:ik.a(BZ)I",
+      "renamedSymbol": "M:ik.updateMembershipSlides(BZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMembershipSlides",
       "declaration": {
         "file": "ik.java",
         "start": 1539,
@@ -215823,9 +215855,9 @@
     },
     {
       "symbol": "M:og.a(IBI)I",
-      "renamedSymbol": "M:MouseWheelInput.a(IBI)I",
+      "renamedSymbol": "M:MouseWheelInput.reverseLowBits(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "og.java",
         "start": 2113,
@@ -220355,9 +220387,9 @@
     },
     {
       "symbol": "M:re.a(Ljava/applet/Applet;I)V",
-      "renamedSymbol": "M:re.a(Ljava/applet/Applet;I)V",
+      "renamedSymbol": "M:re.openSubscriptionPage(Ljava/applet/Applet;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openSubscriptionPage",
       "declaration": {
         "file": "re.java",
         "start": 5065,
@@ -250803,7 +250835,7 @@
     },
     {
       "symbol": "P:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
-      "renamedSymbol": "P:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#0",
+      "renamedSymbol": "P:ik.updateMembershipSlidesWithIntGuard(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -250814,7 +250846,7 @@
     },
     {
       "symbol": "P:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
-      "renamedSymbol": "P:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I#1",
+      "renamedSymbol": "P:ik.updateMembershipSlidesWithIntGuard(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -250825,7 +250857,7 @@
     },
     {
       "symbol": "P:ik.a(BZ)I#0",
-      "renamedSymbol": "P:ik.a(BZ)I#0",
+      "renamedSymbol": "P:ik.updateMembershipSlides(BZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -250836,7 +250868,7 @@
     },
     {
       "symbol": "P:ik.a(BZ)I#1",
-      "renamedSymbol": "P:ik.a(BZ)I#1",
+      "renamedSymbol": "P:ik.updateMembershipSlides(BZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -270702,7 +270734,7 @@
     },
     {
       "symbol": "P:og.a(IBI)I#0",
-      "renamedSymbol": "P:MouseWheelInput.a(IBI)I#0",
+      "renamedSymbol": "P:MouseWheelInput.reverseLowBits(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -270713,7 +270745,7 @@
     },
     {
       "symbol": "P:og.a(IBI)I#1",
-      "renamedSymbol": "P:MouseWheelInput.a(IBI)I#1",
+      "renamedSymbol": "P:MouseWheelInput.reverseLowBits(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -270724,7 +270756,7 @@
     },
     {
       "symbol": "P:og.a(IBI)I#2",
-      "renamedSymbol": "P:MouseWheelInput.a(IBI)I#2",
+      "renamedSymbol": "P:MouseWheelInput.reverseLowBits(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281823,7 +281855,7 @@
     },
     {
       "symbol": "P:re.a(Ljava/applet/Applet;I)V#0",
-      "renamedSymbol": "P:re.a(Ljava/applet/Applet;I)V#0",
+      "renamedSymbol": "P:re.openSubscriptionPage(Ljava/applet/Applet;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281834,7 +281866,7 @@
     },
     {
       "symbol": "P:re.a(Ljava/applet/Applet;I)V#1",
-      "renamedSymbol": "P:re.a(Ljava/applet/Applet;I)V#1",
+      "renamedSymbol": "P:re.openSubscriptionPage(Ljava/applet/Applet;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -324947,7 +324979,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "945f861a30795501e70a6a794c7f22775c1ea23b0528a04d3ed9bf3045436f90",
-      "outputSha256": "0a92ed059e177c37a071f098ddcbe0178bc5f01de8f987bca06ed5cce68a7008",
+      "outputSha256": "f82fa41efebe36aca35d81c68c52b2e545df3c113731482601242f56a3e3636a",
       "edits": [
         {
           "start": 338,
@@ -324976,6 +325008,13 @@
           "symbol": "C:lk",
           "original": "lk",
           "renamed": "SpriteLoader"
+        },
+        {
+          "start": 1539,
+          "end": 1540,
+          "symbol": "M:ik.a(BZ)I",
+          "original": "a",
+          "renamed": "updateMembershipSlides"
         },
         {
           "start": 2137,
@@ -325235,6 +325274,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 8082,
+          "end": 8109,
+          "symbol": "M:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+          "original": "$cfr$intArgs$a$b925f3f4834c",
+          "renamed": "updateMembershipSlidesWithIntGuard"
         },
         {
           "start": 8705,
@@ -348997,7 +349043,7 @@
       "original": "og.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "d617cd00ab21d923775c567385e15e80aedd939d620d1c38333c5f2f25c358ae",
-      "outputSha256": "d24361f5a989cf8a6b43daab233581a6594cf57c6de1aaf8a6372701c14f7778",
+      "outputSha256": "0aeb8e16d76f8592cc9464bfcf6e4c97d12824e6d9522e183fd64f6cee97f981",
       "edits": [
         {
           "start": 53,
@@ -349077,6 +349123,13 @@
           "renamed": "attach"
         },
         {
+          "start": 2113,
+          "end": 2114,
+          "symbol": "M:og.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
+        },
+        {
           "start": 2896,
           "end": 2897,
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
@@ -349103,6 +349156,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 4255,
+          "end": 4256,
+          "symbol": "M:og.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 5426,
@@ -349138,6 +349198,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 5605,
+          "end": 5606,
+          "symbol": "M:og.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 6790,
@@ -350940,7 +351007,7 @@
       "original": "pd.java",
       "renamed": "GameScreen.java",
       "inputSha256": "1fc4b6a63dfb1422e8f73d2aef6f3a3d86b163dd84b569f0812d5d481661368f",
-      "outputSha256": "cba124406d372f8cd71270ce26a42c5399f35eebe8fb7345223fcef55906158d",
+      "outputSha256": "683571c1e08bd8c7f22b3f5357bd3148c5c8effd642ae5717b9fdcbf84ca2f61",
       "edits": [
         {
           "start": 50,
@@ -351592,6 +351659,20 @@
           "symbol": "F:pd.field_e:I",
           "original": "field_e",
           "renamed": "screenId"
+        },
+        {
+          "start": 14137,
+          "end": 14164,
+          "symbol": "M:ik.$cfr$intArgs$a$b925f3f4834c(IZ)I",
+          "original": "$cfr$intArgs$a$b925f3f4834c",
+          "renamed": "updateMembershipSlidesWithIntGuard"
+        },
+        {
+          "start": 14335,
+          "end": 14336,
+          "symbol": "M:re.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 14610,
@@ -374469,7 +374550,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "09a298984d55e0e3e18a5df7b0b0c8715dd4120ccf90c7b6a206929e0adfd1f6",
-      "outputSha256": "686ad0a7f989cb902d69ec9cdc66783294417831156035d8a72ad54b69f35304",
+      "outputSha256": "ca7fbcafed5fda22e38a2535bd24f0d945c5f41cce55e1406b20fd26b23a34ea",
       "edits": [
         {
           "start": 132,
@@ -374519,6 +374600,13 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5065,
+          "end": 5066,
+          "symbol": "M:re.a(Ljava/applet/Applet;I)V",
+          "original": "a",
+          "renamed": "openSubscriptionPage"
         },
         {
           "start": 5682,
@@ -390447,7 +390535,7 @@
       "original": "wg.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "4093d980f50a1a32c8791422df1420aff986228e4804ca6b765301c41891a6b7",
-      "outputSha256": "6cb7cb11207bdaeeb06ac7807bf1544b6a5877d1a24f901d92f08808a47516cc",
+      "outputSha256": "2d05ce706d2d99c7eadbc613cffcae422c5d95fd088848c64255143e60bcb1e6",
       "edits": [
         {
           "start": 69,
@@ -390700,6 +390788,13 @@
           "symbol": "C:og",
           "original": "og",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 8182,
+          "end": 8183,
+          "symbol": "M:og.a(IBI)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 8564,
@@ -392677,10 +392772,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "733f26a9d17c42ee1935c96586a79f5fc8efb6f051f3fca861b1e0b4c7d183a3",
+    "rulesSha256": "2190062613f67287d5d1f22fc5c2b3102d4eeb656ef5bb46583d624bf9169e53",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "6aa034a1ff0cbf3c7877d176e4c5f3e8b1d8e20ecb902e457bb2e6482f016e41",
+    "outputTreeSha256": "1dd4bdb162ba7f985c4e89998cae0ca204b033e364db837bdad53aca9d598e9c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

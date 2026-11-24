@@ -79,7 +79,7 @@ final class PlayerResultRow {
           }
         } else {
           if (ScrollPanel.field_ub <= param1 &&
-            ema.field_b > param1) {
+            DropdownArrowPainter.field_b > param1) {
             if (!this.field_l &&
               param1 >= ScrollPanel.field_ub + 50 * param2) {
               this.field_l = true;
@@ -151,8 +151,8 @@ final class PlayerResultRow {
           }
           this.field_q = this.field_q + var7Lifetime1 * this.field_g;
         }
-        if (param1 >= ema.field_b) {
-          var7Lifetime2 = (double)(param1 - ema.field_b);
+        if (param1 >= DropdownArrowPainter.field_b) {
+          var7Lifetime2 = (double)(param1 - DropdownArrowPainter.field_b);
           if (var7Lifetime2 > 100.0) {
             var7Lifetime2 = 100.0;
           }

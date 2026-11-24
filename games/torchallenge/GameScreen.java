@@ -401,12 +401,12 @@ final class GameScreen {
             }
             stackIn_48_0 = 76;
             stackIn_49_1 = !(v.f((byte) -105));
-            var2_int = ik.$cfr$intArgs$a$b925f3f4834c(stackIn_48_0, stackIn_49_1);
+            var2_int = ik.updateMembershipSlidesWithIntGuard(stackIn_48_0, stackIn_49_1);
             if (3 == var2_int) {
               if (null != gi.field_d) {
                 ij.c((byte) -126);
               }
-              re.a(gi.b(12476), param0 - 2320);
+              re.openSubscriptionPage(gi.b(12476), param0 - 2320);
             }
             if (var2_int == 1) {
               be.a(0, (byte) -102, false);

@@ -167,7 +167,7 @@ final class re extends lb {
         return this.field_y;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_7_0 = null;

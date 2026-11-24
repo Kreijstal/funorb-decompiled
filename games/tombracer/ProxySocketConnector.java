@@ -59,7 +59,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_21_0;
           }
           if (param2 == 11) {
-            stackIn_24_0 = esa.field_a;
+            stackIn_24_0 = RoomSelectionProfile.field_a;
             return stackIn_24_0;
           }
           if (14 != param2) {

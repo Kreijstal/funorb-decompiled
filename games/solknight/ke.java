@@ -95,7 +95,7 @@ final class ke extends si {
         return param0 ^ param1;
     }
 
-    final static int a(boolean param0, boolean param1) {
+    final static int updateMembershipSlides(boolean param0, boolean param1) {
         int stackIn_62_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_72_0 = 0;
@@ -246,7 +246,7 @@ final class ke extends si {
         if (param0 > 14) {
           return var3;
         }
-        ke.a(false, true);
+        ke.updateMembershipSlides(false, true);
         return var3;
     }
 

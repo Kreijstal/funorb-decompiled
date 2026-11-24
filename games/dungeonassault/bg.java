@@ -805,7 +805,7 @@ final class bg extends qe {
         var2 = this.b(-73, eh.field_h, hj.field_S);
         var3 = -1;
         if (no.field_d == 1) {
-          var3 = this.b(-119, hm.field_k, lc.field_c);
+          var3 = this.b(-119, AchievementIconEntry.field_k, lc.field_c);
         }
         if (hh.field_s == le.field_g) {
           gd.a(dc.field_z, 0, 0, true);

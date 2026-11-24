@@ -1908,6 +1908,14 @@
       "renamedSymbol": "M:id.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ie.a(III)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index2,count parameter index0. int guard!=-1 returns77 after accumulator initialization before loop. Complete original-body SHA256 cab32c9ad997269132fb3ca4a0cf6fde97ad8e56215b50cadf0fbc6a8421a61b.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ie.reverseLowBits(III)I"
+    },
+    {
       "symbol": "M:ig.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -98744,7 +98752,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#0",
-      "renamedSymbol": "L:ie.a(III)I#0",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -98755,7 +98763,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#1",
-      "renamedSymbol": "L:ie.a(III)I#1",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -98766,7 +98774,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#2",
-      "renamedSymbol": "L:ie.a(III)I#2",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -98777,7 +98785,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#3",
-      "renamedSymbol": "L:ie.a(III)I#3",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -98788,7 +98796,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#4",
-      "renamedSymbol": "L:ie.a(III)I#4",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -98799,7 +98807,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#5",
-      "renamedSymbol": "L:ie.a(III)I#5",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -98810,7 +98818,7 @@
     },
     {
       "symbol": "L:ie.a(III)I#6",
-      "renamedSymbol": "L:ie.a(III)I#6",
+      "renamedSymbol": "L:ie.reverseLowBits(III)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -211472,9 +211480,9 @@
     },
     {
       "symbol": "M:ie.a(III)I",
-      "renamedSymbol": "M:ie.a(III)I",
+      "renamedSymbol": "M:ie.reverseLowBits(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "ie.java",
         "start": 1384,
@@ -255087,7 +255095,7 @@
     },
     {
       "symbol": "P:ie.a(III)I#0",
-      "renamedSymbol": "P:ie.a(III)I#0",
+      "renamedSymbol": "P:ie.reverseLowBits(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255098,7 +255106,7 @@
     },
     {
       "symbol": "P:ie.a(III)I#1",
-      "renamedSymbol": "P:ie.a(III)I#1",
+      "renamedSymbol": "P:ie.reverseLowBits(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255109,7 +255117,7 @@
     },
     {
       "symbol": "P:ie.a(III)I#2",
-      "renamedSymbol": "P:ie.a(III)I#2",
+      "renamedSymbol": "P:ie.reverseLowBits(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -322297,7 +322305,7 @@
       "original": "hi.java",
       "renamed": "hi.java",
       "inputSha256": "d1128b33f868a84d264e3beac8b6f18f4f2276c61baaea5328da0a5f32481716",
-      "outputSha256": "ad5ada4426b7240ec48f400849d2fbcdddb0e18db5be42c77d8435a63fb38190",
+      "outputSha256": "4a616c92ffdf38c2e00a60549e8f7847e09f4a9edf20e68cc57a056cfa507cdd",
       "edits": [
         {
           "start": 80,
@@ -322522,6 +322530,13 @@
           "symbol": "M:ql.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 25771,
+          "end": 25772,
+          "symbol": "M:ie.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 26147,
@@ -323351,7 +323366,7 @@
       "original": "ie.java",
       "renamed": "ie.java",
       "inputSha256": "82ac47a5c93ba823bf59a602681e34a6607c10be0c5ae09a8551fb20d7d611fe",
-      "outputSha256": "4414afcb1f9fc35fd8c224da4fc370a38f8142341ad0ef03c1093f180fa24754",
+      "outputSha256": "a5e7f55c30760f9e213d47b6acb06bd9553e17ca797860e208d80071ca377078",
       "edits": [
         {
           "start": 1278,
@@ -323359,6 +323374,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1384,
+          "end": 1385,
+          "symbol": "M:ie.a(III)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 2217,
@@ -353583,10 +353605,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/chess"
     },
-    "rulesSha256": "bdd257a6cc62cc5529ac6aed5c5d5415e29a5836ea3eefe27e17177f539ced66",
+    "rulesSha256": "75caa8fad068e3a148aa30f053ba6b16349323268897258cb4803cd7c120736b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
-    "outputTreeSha256": "541bdcc258fbbfd386bf89b6e4976fcd704e11eb8cf4b542d93c91e47cb8bc8b",
+    "outputTreeSha256": "ad506616e3c901ba456b71f8062d05f84801aea6ca57cc0cf0109b3667409cbe",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

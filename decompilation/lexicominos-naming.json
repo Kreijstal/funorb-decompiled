@@ -1124,6 +1124,14 @@
       "renamedSymbol": "M:af.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ah.a(IIZ)I",
+      "originalName": "a",
+      "to": "reverseLowBits",
+      "evidence": "Reverse the requested low input bits into the retained int accumulator by repeatedly shifting the accumulator left,ORing the low input bit,and shifting input right unsigned until the original full-width count is nonpositive. Preserve negative/zero counts and counts beyond32 without clamping,masking or positive normalization,int overflow,all captured global field reads before the try,exact argument mutation/call/guard/write/exception order and original diagnostic literals with mutated arguments. Naming only;all24complete concrete bodies and28used field declarations source-reviewed;original JVM descriptors,visibility/modifiers,native and override bindings preserved. Existing meaningful aliases and two frozen queued counterparts unchanged;no field/class/literal edits or whole-game runtime equivalence claim. Input parameter index1,count parameter index0. false boolean guard returns -15 after accumulator initialization before loop. Complete original-body SHA256 6e11c54658be2854b1a9040f133c2941605a12a5de2fbaba90a283ede2b79967.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ah.reverseLowBits(IIZ)I"
+    },
+    {
       "symbol": "M:ah.b(B)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -34656,7 +34664,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#0",
-      "renamedSymbol": "L:ah.a(IIZ)I#0",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -34667,7 +34675,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#1",
-      "renamedSymbol": "L:ah.a(IIZ)I#1",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -34678,7 +34686,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#2",
-      "renamedSymbol": "L:ah.a(IIZ)I#2",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -34689,7 +34697,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#3",
-      "renamedSymbol": "L:ah.a(IIZ)I#3",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -34700,7 +34708,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#4",
-      "renamedSymbol": "L:ah.a(IIZ)I#4",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -34711,7 +34719,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#5",
-      "renamedSymbol": "L:ah.a(IIZ)I#5",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -34722,7 +34730,7 @@
     },
     {
       "symbol": "L:ah.a(IIZ)I#6",
-      "renamedSymbol": "L:ah.a(IIZ)I#6",
+      "renamedSymbol": "L:ah.reverseLowBits(IIZ)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151608,9 +151616,9 @@
     },
     {
       "symbol": "M:ah.a(IIZ)I",
-      "renamedSymbol": "M:ah.a(IIZ)I",
+      "renamedSymbol": "M:ah.reverseLowBits(IIZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseLowBits",
       "declaration": {
         "file": "ah.java",
         "start": 3640,
@@ -175984,7 +175992,7 @@
     },
     {
       "symbol": "P:ah.a(IIZ)I#0",
-      "renamedSymbol": "P:ah.a(IIZ)I#0",
+      "renamedSymbol": "P:ah.reverseLowBits(IIZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175995,7 +176003,7 @@
     },
     {
       "symbol": "P:ah.a(IIZ)I#1",
-      "renamedSymbol": "P:ah.a(IIZ)I#1",
+      "renamedSymbol": "P:ah.reverseLowBits(IIZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176006,7 +176014,7 @@
     },
     {
       "symbol": "P:ah.a(IIZ)I#2",
-      "renamedSymbol": "P:ah.a(IIZ)I#2",
+      "renamedSymbol": "P:ah.reverseLowBits(IIZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -234082,7 +234090,7 @@
       "original": "ah.java",
       "renamed": "ah.java",
       "inputSha256": "7a0f4b6e1d308783a104247bc1394ff99e08803738ac0737a1282d1cf536fcf5",
-      "outputSha256": "8393c03751f3242dfb6c99f1918c8bdb6aa59e2d1e199f080160a4aab9f5921b",
+      "outputSha256": "3ab89c35de1f3d8ecea9682930bcff16280e138fd9867620d2e44f7e66f6017a",
       "edits": [
         {
           "start": 106,
@@ -234097,6 +234105,13 @@
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3640,
+          "end": 3641,
+          "symbol": "M:ah.a(IIZ)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 4487,
@@ -267421,7 +267436,7 @@
       "original": "sd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "9d3919f9f2d4907eda81ef486ab86b00ef2d52f78175e331600f191b098aa800",
-      "outputSha256": "9762da46154b8ad77aa72c3f8c909ec24436ac2859105e2fde16afba348738b7",
+      "outputSha256": "a74214a68507a6a6e6946e265222338045e21a2e5e321440e4dc82b6c76f451c",
       "edits": [
         {
           "start": 69,
@@ -267709,6 +267724,13 @@
           "symbol": "M:kb.a(II)I",
           "original": "a",
           "renamed": "bitLength"
+        },
+        {
+          "start": 22750,
+          "end": 22751,
+          "symbol": "M:ah.a(IIZ)I",
+          "original": "a",
+          "renamed": "reverseLowBits"
         },
         {
           "start": 23125,
@@ -278903,10 +278925,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/lexicominos"
     },
-    "rulesSha256": "9ce9e2c9b8485c87b4befa98209f495b43ad6077bc2514063f8742e88874e0db",
+    "rulesSha256": "a200fb10e571ff667832958b02da463b4650e897da7d373f8d385ae25e633b25",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
-    "outputTreeSha256": "08e4103c144f9f9a379ce1a22e8638d8eda859d2f82f2c1fb6c5ce6245e9cb9a",
+    "outputTreeSha256": "33b38c4835cc226e507b593c73508322de2f9e9de0cd7679e1adad55b548d36f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

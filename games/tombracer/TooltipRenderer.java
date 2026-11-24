@@ -224,7 +224,7 @@ final class TooltipRenderer {
         int var7_int = 0;
         StatefulWidgetPainter var6 = null;
         StatefulWidgetPainter var7 = null;
-        bsa discarded$0 = null;
+        RadialSelectionPainter discarded$0 = null;
         cj discarded$1 = null;
         StatefulWidgetPainter var8 = null;
         Sprite[] var9 = null;
@@ -275,7 +275,7 @@ final class TooltipRenderer {
           var7.setAllLayerSprites(-18379, eca.createSolidNineSlice(4, 8947848));
           var7.createStateLayer(1, (byte) 85).setSprites(2, eca.createSolidNineSlice(4, 11184810)).withTextColour(2236962, -2147483648);
           this.field_d = (WidgetPainter) ((Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$0 = new RadialSelectionPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyTo(var8, -107);

@@ -41,11 +41,11 @@ final class kn {
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
-          hm.field_s > 0) {
-          fieldTemp$5 = hm.field_s - 1;
-          hm.field_s = hm.field_s - 1;
+          AchievementIconEntry.field_s > 0) {
+          fieldTemp$5 = AchievementIconEntry.field_s - 1;
+          AchievementIconEntry.field_s = AchievementIconEntry.field_s - 1;
           var2_ref_byte__Lifetime2 = lm.field_l[fieldTemp$5];
-          lm.field_l[hm.field_s] = null;
+          lm.field_l[AchievementIconEntry.field_s] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (lo.field_c != null) {

@@ -447,7 +447,7 @@ public final class DungeonAssault extends NetworkGameClient {
               if (56 != hc.field_c &&
                 57 != hc.field_c) {
                 if (hc.field_c == 58) {
-                  hm.a(0);
+                  AchievementIconEntry.a(0);
                   continue scanLoop1;
                 }
                 if (61 == hc.field_c) {
@@ -878,7 +878,7 @@ public final class DungeonAssault extends NetworkGameClient {
           fa.a(-28822);
           wm.clearStaticReferences((byte) 112);
           gg.clearStaticReferences(0);
-          hm.d(269);
+          AchievementIconEntry.d(269);
           tf.a(-1);
           k.clearStaticReferences(true);
           fm.clearStaticReferences(param0);

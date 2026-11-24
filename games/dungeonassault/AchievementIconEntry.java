@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends IntrusiveNode {
+final class AchievementIconEntry extends IntrusiveNode {
     static boolean[] field_m;
     static String field_l;
     boolean field_r;
@@ -170,7 +170,7 @@ final class hm extends IntrusiveNode {
     public static void d(int param0) {
         if (param0 != 269) {
           sa var2 = (sa) null;
-          hm.a((sa) null, 77);
+          AchievementIconEntry.a((sa) null, 77);
         }
         field_m = null;
         field_n = null;
@@ -191,7 +191,7 @@ final class hm extends IntrusiveNode {
           }
           if (param0 != 0) {
             sa var3 = (sa) null;
-            hm.a((sa) null, 35);
+            AchievementIconEntry.a((sa) null, 35);
           }
           bj.field_G = true;
         } catch (RuntimeException runtimeException) {
@@ -199,12 +199,12 @@ final class hm extends IntrusiveNode {
         }
     }
 
-    hm(int param0, boolean param1) {
+    AchievementIconEntry(int param0, boolean param1) {
         this.field_r = param1 ? true : false;
         this.field_i = param0;
     }
 
-    final static int a(boolean param0, byte param1) {
+    final static int updateMembershipSlides(boolean param0, byte param1) {
         int stackIn_10_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_68_0 = 0;

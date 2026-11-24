@@ -544,7 +544,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = RecklessAi.bitLength(127, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = js.a(var11, var10, (byte) 41);
+            var9[var11] = js.reverseLowBits(var11, var10, (byte) 41);
           }
           if (var1 == 0) {
             field_l = var6_ref_float__;

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SneakHintPanel implements MessagePanel {
-    private lw field_b;
-    private waa[] field_c;
+    private SneakHintCharacter field_b;
+    private SneakHintDecoration[] field_c;
     static BufferedSocket field_a;
 
     public static void releaseStatics(byte param0) {
@@ -16,10 +16,10 @@ final class SneakHintPanel implements MessagePanel {
     public final void draw(int param0, int param1, int param2) {
         int var5 = 0;
         int stackIn_8_0 = 0;
-        waa[] var4;
-        waa var6;
+        SneakHintDecoration[] var4;
+        SneakHintDecoration var6;
         int var7;
-        waa[] var8;
+        SneakHintDecoration[] var8;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = this.field_c;
         var4 = var8;
@@ -43,7 +43,7 @@ final class SneakHintPanel implements MessagePanel {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
-          this.field_c = (waa[]) null;
+          this.field_c = (SneakHintDecoration[]) null;
         }
         this.field_b.draw((byte) 74, param0, param2);
     }
@@ -63,13 +63,13 @@ final class SneakHintPanel implements MessagePanel {
     }
 
     public final void update(int param0) {
-        waa[] var2_ref_waa__;
+        SneakHintDecoration[] var2_ref_waa__;
         int var2;
         int var3;
-        waa var4_ref_waa;
+        SneakHintDecoration var4_ref_waa;
         int var4;
         int var5;
-        waa[] var6;
+        SneakHintDecoration[] var6;
         int var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != -7109) {
@@ -121,18 +121,18 @@ final class SneakHintPanel implements MessagePanel {
 
     public final int getWidth(int param0) {
         if (param0 != -8660) {
-          this.field_b = (lw) null;
+          this.field_b = (SneakHintCharacter) null;
         }
         return 140;
     }
 
     public SneakHintPanel() {
         int var1 = 0;
-        this.field_c = new waa[10];
-        this.field_b = new lw();
+        this.field_c = new SneakHintDecoration[10];
+        this.field_b = new SneakHintCharacter();
         this.field_b.setPosition(-112, this.getWidth(-8660) / 2, this.getHeight(false) / 2);
         for (var1 = 0; this.field_c.length > var1; var1++) {
-          this.field_c[var1] = new waa(this.getHeight(false), this.getWidth(-8660));
+          this.field_c[var1] = new SneakHintDecoration(this.getHeight(false), this.getWidth(-8660));
         }
     }
 

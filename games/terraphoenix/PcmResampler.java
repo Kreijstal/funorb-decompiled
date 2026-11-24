@@ -238,7 +238,7 @@ final class PcmResampler {
         if (param0 == param1) {
           return;
         }
-        var3 = ge.a(-1, param1, param0);
+        var3 = ge.greatestCommonDivisor(-1, param1, param0);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_d = new int[param0][14];

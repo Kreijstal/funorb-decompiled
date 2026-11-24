@@ -4,7 +4,7 @@
 final class OpenGlTransparentWaterEffect extends ShaderEffect {
     private HardwareWaterTextures field_f;
     private HardwareOpenGlToolkit field_e;
-    private mf field_d;
+    private ArbAssemblyProgram field_d;
 
     final void enable(int param0, boolean param1) {
         int var3 = 127 / ((param0 - 41) / 62);
@@ -16,7 +16,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void bindTexture(int param0, GpuTexture param1, int param2) {
         try {
           if (param2 != 24595) {
-            this.field_d = (mf) null;
+            this.field_d = (ArbAssemblyProgram) null;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

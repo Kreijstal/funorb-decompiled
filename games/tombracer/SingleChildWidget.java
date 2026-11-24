@@ -232,8 +232,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           GzipInflater.field_d.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-74, false, 120, 8421504, 4210752, false);
           NodeHashTable.field_g = new UiComponent(0L, (UiComponent) null);
           NodeHashTable.field_g.field_w = Player.createScrollbarSprites(114, 1, 3, 6316128, -111, 6316128);
-          lw.field_a = new UiComponent(0L, (UiComponent) null);
-          lw.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup"), 113);
+          SneakHintCharacter.field_a = new UiComponent(0L, (UiComponent) null);
+          SneakHintCharacter.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup"), 113);
           var12 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup_mouseover"), 122);
           var13 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button");
           var14 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_active"), 113);
@@ -279,7 +279,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           S2CStartRoundPacket.field_a = new UiComponent(0L, GpuDataType.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseover");
-          SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, ToolkitSelector.field_a);
+          SimpleBlockBehaviour.field_n = new ContextMenu(SneakHintCharacter.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, ToolkitSelector.field_a);
           AllPlatformsMazeComponent.field_M = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           AllPlatformsMazeComponent.field_M.field_fb = 1;
           AllPlatformsMazeComponent.field_M.field_ob = 1;

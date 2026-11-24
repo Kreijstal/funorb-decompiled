@@ -170,7 +170,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           fieldTemp$1 = SoftwareModelBillboardState.field_d;
           SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d + 1;
           if (fieldTemp$1 > 50) {
-            bsa.field_k = true;
+            RadialSelectionPainter.field_k = true;
             SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d - 50;
             CurveShape.field_l.setSize(TripBeamVisual.field_a, FloatPacketBuffer.field_i);
             CurveShape.field_l.setVisible(true);
@@ -585,7 +585,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (Corpse.field_j == this &&
             !OpenGlDisplayLists.field_b) {
-            bsa.field_k = true;
+            RadialSelectionPainter.field_k = true;
             if (GameFont.field_c &&
               -LoadingStep.field_b + AdjustedWallClock.currentTimeMillis((byte) -107) > 1000L) {
               var2 = param0.getClipBounds();
@@ -713,7 +713,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           RenderableNode.field_k = true;
-          bsa.field_k = true;
+          RadialSelectionPainter.field_k = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -884,7 +884,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           CurveShape.field_l.requestFocus();
           RenderableNode.field_k = true;
           VortexBehaviour.field_n = true;
-          bsa.field_k = true;
+          RadialSelectionPainter.field_k = true;
           ReportAbuseDialog.field_Cb = false;
           LoadingStep.field_b = AdjustedWallClock.currentTimeMillis((byte) -107);
           return;

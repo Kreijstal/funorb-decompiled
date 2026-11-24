@@ -330,7 +330,7 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         var4 = stackIn_6_0;
         if (97 != param0) {
-          stackIn_12_0 = (param0 == mf.field_a) ? 1 : 0;
+          stackIn_12_0 = (param0 == ArbAssemblyProgram.field_a) ? 1 : 0;
         } else {
           stackIn_12_0 = 1;
         }

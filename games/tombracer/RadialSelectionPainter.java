@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bsa implements WidgetPainter {
+final class RadialSelectionPainter implements WidgetPainter {
     private int field_e;
     private int field_b;
     private int field_g;
@@ -18,12 +18,12 @@ final class bsa implements WidgetPainter {
         field_j = null;
         field_i = null;
         if (param0 != -33) {
-          bsa.releaseStatics((byte) -94);
+          RadialSelectionPainter.releaseStatics((byte) -94);
         }
     }
 
     public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
-        rr var14 = null;
+        RadialSelectionWidget var14 = null;
         int var7 = 0;
         int var8 = 0;
         int var13 = 0;
@@ -34,7 +34,7 @@ final class bsa implements WidgetPainter {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          var14 = param0 instanceof rr ? (rr) (param0) : null;
+          var14 = param0 instanceof RadialSelectionWidget ? (RadialSelectionWidget) (param0) : null;
           if (var14 != null) {
           }
           SoftwareRasterizer.fillRectangle(param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, this.field_d);
@@ -50,7 +50,7 @@ final class bsa implements WidgetPainter {
           SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_A * 2.0 / (double)var14.field_B;
           if (param2 != 16777215) {
-            bsa.releaseStatics((byte) -126);
+            RadialSelectionPainter.releaseStatics((byte) -126);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);
@@ -64,7 +64,7 @@ final class bsa implements WidgetPainter {
         }
     }
 
-    bsa(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    RadialSelectionPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_c = param4;
           this.field_e = param6;

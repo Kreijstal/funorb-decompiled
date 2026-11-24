@@ -13,7 +13,7 @@ final class wb extends IntrusiveNode {
     static String field_q;
     int field_w;
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int reverseLowBits(int param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

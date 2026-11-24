@@ -167,7 +167,7 @@ final class PcmResampler {
         if (param0 == param1) {
           return;
         }
-        var3 = qe.a((byte) 26, param0, param1);
+        var3 = qe.greatestCommonDivisor((byte) 26, param0, param1);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_a = new int[param0][14];

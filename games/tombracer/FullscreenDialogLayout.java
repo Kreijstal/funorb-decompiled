@@ -158,7 +158,7 @@ final class FullscreenDialogLayout {
               SpriteTileOperator.field_w[1] = 5;
             }
           } else {
-            var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
+            var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(96, RadialSelectionWidget.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
@@ -170,8 +170,8 @@ final class FullscreenDialogLayout {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            cia.field_a = new String[var4];
-            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, cia.field_a, 0, var4);
+            MovementHintCharacter.field_a = new String[var4];
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, MovementHintCharacter.field_a, 0, var4);
             ToggleMusicChannelCommand.field_o = new String[-var4 + var3_int - 1];
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
@@ -190,8 +190,8 @@ final class FullscreenDialogLayout {
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, OpenGlModelBillboard.field_d, 0, var4);
             C2SActionPacket.field_k = new String[-1 + var3_int - var4];
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
-            if (OpenGlModelBillboard.field_d.length <= cia.field_a.length) {
-              stackIn_58_0 = cia.field_a.length;
+            if (OpenGlModelBillboard.field_d.length <= MovementHintCharacter.field_a.length) {
+              stackIn_58_0 = MovementHintCharacter.field_a.length;
             } else {
               stackIn_58_0 = OpenGlModelBillboard.field_d.length;
             }
@@ -255,7 +255,7 @@ final class FullscreenDialogLayout {
             }
           }
           if (mq.field_a == 2) {
-            var10 = cia.field_a;
+            var10 = MovementHintCharacter.field_a;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

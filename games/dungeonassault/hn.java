@@ -84,7 +84,7 @@ final class hn extends kl {
           this.field_d = true;
         }
         if (no.field_d == 1) {
-          var2 = this.a((byte) 113, lc.field_c, hm.field_k);
+          var2 = this.a((byte) 113, lc.field_c, AchievementIconEntry.field_k);
           if (var2 != -1) {
             this.field_o = var2;
           }

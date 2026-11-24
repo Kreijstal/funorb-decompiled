@@ -179,7 +179,7 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

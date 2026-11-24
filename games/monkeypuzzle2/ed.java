@@ -8,7 +8,7 @@ final class ed {
     static ib field_b;
     static long field_d;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int greatestCommonDivisor(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -44,7 +44,7 @@ final class ed {
         try {
           sf.a(param0.a("", "headers.packvorbis", 30));
           if (param1 < 44) {
-            ed.a(-96, -76, 44);
+            ed.greatestCommonDivisor(-96, -76, 44);
           }
           var2 = sf.a(param0, "jagex logo2.packvorbis", "");
           var2.a();

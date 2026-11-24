@@ -50,7 +50,7 @@ final class wa extends pj implements kd, ke {
     public static void j(int param0) {
         field_Q = null;
         if (param0 != -11179) {
-          wa.$cfr$intArgs$a$b925f3f4834c(75, false);
+          wa.updateMembershipSlidesWithIntGuard(75, false);
         }
         field_O = null;
     }
@@ -411,7 +411,7 @@ final class wa extends pj implements kd, ke {
         }
     }
 
-    final static int a(byte param0, boolean param1) {
+    final static int updateMembershipSlides(byte param0, boolean param1) {
         int stackIn_62_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_72_0 = 0;
@@ -570,7 +570,7 @@ final class wa extends pj implements kd, ke {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$b925f3f4834c(int param0, boolean param1) {
+    final static int updateMembershipSlidesWithIntGuard(int param0, boolean param1) {
         int stackIn_62_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_72_0 = 0;

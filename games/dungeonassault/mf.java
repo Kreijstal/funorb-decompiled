@@ -128,7 +128,7 @@ final class mf {
             }
             var2 = 1;
           }
-          d.field_g.a(-7734, ab.a(-776726687, lc.field_c, hm.field_k), ab.a(-776726687, hj.field_S, eh.field_h));
+          d.field_g.a(-7734, ab.a(-776726687, lc.field_c, AchievementIconEntry.field_k), ab.a(-776726687, hj.field_S, eh.field_h));
           if (d.field_g.c(77)) {
             var1_int = 1;
           }

@@ -1059,7 +1059,7 @@ final class he extends ip {
             var6 = var12.field_y / 2;
             var12.e();
             dc.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
-            tg.field_l.c(jk.a(new String[]{mj.field_f}, hm.field_t, 30496), var6, 60, 16777215, -1);
+            tg.field_l.c(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
             dc.field_e.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
             dc.field_e.c(je.field_l, var6, 180, 16777215, -1);
