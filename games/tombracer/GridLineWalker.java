@@ -21,7 +21,7 @@ final class GridLineWalker {
     private int field_c;
     private int field_n;
 
-    final static void a(byte param0) {
+    final static void resetReflectionChecks(byte param0) {
         if (param0 != 5) {
           field_j = (String) null;
           IntNode.field_g = new IntrusiveDeque();

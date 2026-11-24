@@ -283,7 +283,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.reinsertIntoCollisionGrid(1);
     }
 
-    private final boolean B(byte param0) {
+    private final boolean ignoresRoomVariantFilter(byte param0) {
         if (param0 != -81) {
           this.toString();
           return false;
@@ -1416,7 +1416,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.isRoomVariantActive((byte) 26) ||
-            this.B((byte) -81)) {
+            this.ignoresRoomVariantFilter((byte) -81)) {
             param0.removeFromLayer(9, (Renderable) (this), (byte) -33);
           }
           if (param1 != 9411) {
@@ -2036,7 +2036,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             var6 = (Trap) (this.children.next(123));
           }
           if (param1 != -10425) {
-            discarded$1 = this.B((byte) 57);
+            discarded$1 = this.ignoresRoomVariantFilter((byte) 57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2064,7 +2064,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.isRoomVariantActive((byte) 105) ||
-            this.B((byte) -81)) {
+            this.ignoresRoomVariantFilter((byte) -81)) {
             param0.addToLayer((byte) 4, 9, (Renderable) (this));
           }
           if (!param1) {

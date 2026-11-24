@@ -136,7 +136,7 @@ abstract class MenuScreen extends GameScreen {
               if (this.field_k.isRightPressed(94) &&
                 MusicVolumeControl.getMusicVolume(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 87)) {
                 var6 = 1;
-                EventFactory.a((byte) -117);
+                EventFactory.updateMusicFadeIn((byte) -117);
               }
               if (var6 == 0) {
                 return;

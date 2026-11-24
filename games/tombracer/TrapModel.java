@@ -29,7 +29,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, GameStateM
         this.elevationOffset = param0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isMinusOne(int param0) {
         if (param0 != -1) {
           return false;
         }

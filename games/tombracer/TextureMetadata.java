@@ -37,7 +37,7 @@ final class TextureMetadata {
           MidiVoiceMixer.showReconnectProgress(true);
           Transform3D.field_c = 11;
         } else {
-          if (!TrapModel.b(-1)) {
+          if (!TrapModel.isMinusOne(-1)) {
             MidiVoiceMixer.showReconnectProgress(true);
             Transform3D.field_c = 11;
           }

@@ -58,7 +58,7 @@ final class MonochromeRowCacheEntry extends IntrusiveNode {
           SoftwareRasterizer.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
-        MonochromeRowCacheEntry.a((byte) -71);
+        MonochromeRowCacheEntry.getNativeLibrariesArchive((byte) -71);
         var7Lifetime1 = SoftwareRasterizer.width;
         var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var17 = new Sprite(16, param2);
@@ -101,7 +101,7 @@ final class MonochromeRowCacheEntry extends IntrusiveNode {
         return var2;
     }
 
-    final static ResourceArchive a(byte param0) {
+    final static ResourceArchive getNativeLibrariesArchive(byte param0) {
         int var1 = 79 / ((param0 - 7) / 37);
         return StringListNode.getOrOpenArchive(-94, S2CEventPacket.field_d.field_c);
     }

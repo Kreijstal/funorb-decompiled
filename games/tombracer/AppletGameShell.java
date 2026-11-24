@@ -42,7 +42,7 @@ abstract class AppletGameShell extends GameApplet {
             Puddle.resendRatingTableRequests(7, (byte) -105);
           }
           if (UsernameQueryRequests.field_a[8]) {
-            GridLineWalker.a((byte) 5);
+            GridLineWalker.resetReflectionChecks((byte) 5);
           }
         }
         return var2;
@@ -426,7 +426,7 @@ abstract class AppletGameShell extends GameApplet {
         RoomHeader.field_g = param1;
         SoundEvent.field_j = param0;
         this.initializePacketLengths(16);
-        MirrorMoverLocomotor.f(29320);
+        MirrorMoverLocomotor.onClientServicesInitialized(29320);
     }
 
     final void enableMessageGroup4(byte param0) {
@@ -580,7 +580,7 @@ abstract class AppletGameShell extends GameApplet {
             DropAnimation.closeGameSocket(60);
             TextureMetadata.beginReconnectLogin((byte) -84);
             GraphicsAndAudioMenu.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
-            LineNoiseOperator.c(9033);
+            LineNoiseOperator.onIdleDisconnect(9033);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = 15000L + AdjustedWallClock.currentTimeMillis((byte) -107);
           }

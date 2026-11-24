@@ -83,7 +83,7 @@ final class LineNoiseOperator extends TextureOperator {
         }
     }
 
-    final static void c(int param0) {
+    final static void onIdleDisconnect(int param0) {
         if (param0 != 9033) {
           monthNames = (String[]) null;
         }

@@ -1913,8 +1913,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
         try {
           GraphicsHeap.clampValue(0, 108, this.room.getWidth((byte) -86), this.x);
-          this.room.o(param0 - 66);
-          this.sortDepth = GraphicsHeap.clampValue(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
+          this.room.getRoomGuardMarker(param0 - 66);
+          this.sortDepth = GraphicsHeap.clampValue(0, 73, this.room.getHeight(120), this.y) + this.room.getSortDepthOffset((byte) -51);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
         }

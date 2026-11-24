@@ -17356,6 +17356,14 @@
       "renamedSymbol": "M:FollowCamera.clampToBounds(Z)V"
     },
     {
+      "symbol": "M:ag.a(ZIII)V",
+      "originalName": "a",
+      "to": "nudgeIfRequested",
+      "evidence": "Conditionally invoke existing camera nudge only when Boolean is true,using fixed arguments -41,-19,59,15. The three integer parameters are unused and the observed camera setup passes false. Preserve all unused values and call/exception order;do not use passed camera coordinates as nudge parameters. Complete original-body SHA256 beabd670a57406409cee18bb8e5cc1251c652b1068299fd1252dbe5ecc3604e3. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FollowCamera.nudgeIfRequested(ZIII)V"
+    },
+    {
       "symbol": "M:ag.a(ZZZLjava/lang/String;)V",
       "originalName": "a",
       "to": "openLoginForm",
@@ -19860,6 +19868,14 @@
       "renamedSymbol": "M:FleeLocomotor.releaseStatics(I)V"
     },
     {
+      "symbol": "M:bha.f(I)I",
+      "originalName": "f",
+      "to": "getBooleanReplyPacketLength",
+      "evidence": "Return the one-byte length consumed before the opcode99 Boolean reply in PlayPhase. Preserve wrong-int!=1 createRendererOptions(byte123) call before returning1,and duplicated returns. Do not infer a business protocol name or alter packet parsing,buffer reset,or cleanup self-call. Complete original-body SHA256 19710a663d233256cc251247dfb669438af2f95c6d70acc617d2d5ad0d64dfab. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FleeLocomotor.getBooleanReplyPacketLength(I)I"
+    },
+    {
       "symbol": "M:bi.a(Lha;I)V",
       "originalName": "a",
       "to": "blitSoftwareRasterRegion",
@@ -20098,6 +20114,14 @@
       "evidence": "Hook called after a texture operator is decoded so it can build its lookup tables. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LineNoiseOperator.onDecoded(B)V"
+    },
+    {
+      "symbol": "M:bk.c(I)V",
+      "originalName": "c",
+      "to": "onIdleDisconnect",
+      "evidence": "Idle disconnect hook called after closeGameSocket,reconnect setup and login response handling. Nominal9033 is a no-op. Preserve wrong-int static month-name-array nulling and every caller ordering;do not add socket or UI behavior. Complete original-body SHA256 cab1236148e9c628ed4991f9793469796fc245e8058f89ff75871ad79b87d083. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LineNoiseOperator.onIdleDisconnect(I)V"
     },
     {
       "symbol": "M:bk.c(II)[I",
@@ -21978,6 +22002,14 @@
       "evidence": "Picks the next player in standings order who finished the course, or finishes when rewards or players run out.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CommonChooseReward.advanceToNextChooser(I)V"
+    },
+    {
+      "symbol": "M:cfa.e(I)Lcn;",
+      "originalName": "e",
+      "to": "getRendererResourceArchive",
+      "evidence": "Open the renderer ResourceArchive using archive ID8. ToolkitSelector stores its second archive in ClientResourceBootstrap.field_a and passes it through the renderer factory. Preserve wrong-int!=-1 recursive self-call e(11) BEFORE archive lookup,including nontermination,and nominal getOrOpenArchive(false,field_M.field_c). Do not guess a narrower asset category. Complete original-body SHA256 446b71488de20cc3122fb0daad4886ee52007404d1261edf2ff0dbd581754c2b. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonChooseReward.getRendererResourceArchive(I)LResourceArchive;"
     },
     {
       "symbol": "M:cfa.f(I)Z",
@@ -26996,6 +27028,14 @@
       "renamedSymbol": "M:TrapModel.getRenderX(B)I"
     },
     {
+      "symbol": "M:dg.b(I)Z",
+      "originalName": "b",
+      "to": "isMinusOne",
+      "evidence": "Return exactly whether the supplied full integer equals minus one. Existing reconnect and login-flow callers pass-1. Preserve both returns and all integer values;do not turn the predicate into an assumed login feature flag. Complete original-body SHA256 60c00e19f08e3597209de0b81ef3a16e56407aa35a6873f85fe3ab78cb24f8b3. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrapModel.isMinusOne(I)Z"
+    },
+    {
       "symbol": "M:dg.b(ILuw;)V",
       "originalName": "b",
       "to": "addToScene",
@@ -28044,6 +28084,14 @@
       "renamedSymbol": "M:ReflectionCheckResponseSender.sendReflectionCheckResponses(Z)V"
     },
     {
+      "symbol": "M:ds.a(B)V",
+      "originalName": "a",
+      "to": "onRoundBoundary",
+      "evidence": "Match statistics hook at round boundaries:called after markRoundLosers and before startRound. Nominal74/108 are no-ops. Preserve byte<42 addBladeDeath(-107,24),including invalid-index and partial-update behavior;do not clear statistics. Complete original-body SHA256 84b8d4a1fcde9822e77371722ed746e6311ab39e178df08e0d664d14572a8a12. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchStatistics.onRoundBoundary(B)V"
+    },
+    {
       "symbol": "M:ds.a(BZ)V",
       "originalName": "a",
       "to": "drawDialogOverlay",
@@ -28322,6 +28370,14 @@
       "evidence": "Stores a value in one of the nine player effect slots.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerSimulation.setEffectSlot(II)V"
+    },
+    {
+      "symbol": "M:dt.b(Z)I",
+      "originalName": "b",
+      "to": "getStandingsDepthOffset",
+      "evidence": "Read the simulation addend used by RaceStandings before player sort depth. The only explicit write is58 in setFinished for int<=35;the normal default is zero. Preserve Boolean-true static String nulling before field read,duplicated branches,overflow in unchanged caller and every guard value. Complete original-body SHA256 9226ee35481ce353981345bd55409178e5d56a813f13f20ff9ed76ecc6d5d360. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerSimulation.getStandingsDepthOffset(Z)I"
     },
     {
       "symbol": "M:dt.b(ZI)I",
@@ -33580,6 +33636,14 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.requestClipboardContents(I)LAsyncRequest;"
     },
     {
+      "symbol": "M:fj.a(I)V",
+      "originalName": "a",
+      "to": "onViewportTick",
+      "evidence": "Viewport tick hook invoked after interpolating viewport edges and before HUD.tick. The body only evaluates -10/((int-61)/54). Preserve the unused local,integer overflow,truncating division and divide-by-zero behavior across the full domain;do not add rendering or state changes. Complete original-body SHA256 deaa84c204579e73fabbd9884430c75b54996d3d13dde877a7950967fbc4adf0. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RoomViewRenderer.onViewportTick(I)V"
+    },
+    {
       "symbol": "M:fj.a(II)V",
       "originalName": "a",
       "to": "setZoomOverride",
@@ -34570,6 +34634,14 @@
       "evidence": "Lets every TrapModel re-register its tile occupancy, recursing into children.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Trap.refreshModelOccupancy(I)V"
+    },
+    {
+      "symbol": "M:fsa.B(B)Z",
+      "originalName": "B",
+      "to": "ignoresRoomVariantFilter",
+      "evidence": "Room-variant filter bypass query used by both addToScene and removeFromScene before layer9 operations. Currently returns false in all cases. Preserve byte!=-81 toString call before false,including its side effects and exceptions;do not enable the bypass. Complete original-body SHA256 bd928f3c215f0e57a0969a2f3233d1fcf147c72deb94218eced5d7d11c15e473. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Trap.ignoresRoomVariantFilter(B)Z"
     },
     {
       "symbol": "M:fsa.B(I)V",
@@ -51020,6 +51092,14 @@
       "renamedSymbol": "M:Room.assignSwitchableIds(I)V"
     },
     {
+      "symbol": "M:la.n(B)I",
+      "originalName": "n",
+      "to": "getSortDepthOffset",
+      "evidence": "Read the room addend used by Player.updateSortDepth after clamping player Y. The private field has no explicit Java writes in the pinned full class and defaults to zero; do not invent progress updates. Preserve byte>-36 early42 before field access,all values and unused guard behavior. Complete original-body SHA256 bb50ec53f2088fdd3f86eba049b69078bbd552f0f0a6c9ce41ed826be1896c2a. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.getSortDepthOffset(B)I"
+    },
+    {
       "symbol": "M:la.n(I)[Lfsa;",
       "originalName": "n",
       "to": "getAllTraps",
@@ -51034,6 +51114,14 @@
       "evidence": "True when an active variant is set.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Room.hasActiveVariant(B)Z"
+    },
+    {
+      "symbol": "M:la.o(I)I",
+      "originalName": "o",
+      "to": "getRoomGuardMarker",
+      "evidence": "Read the room guard marker. Player.updateSortDepth calls this for its side effects and discards the result; the only explicit field writes are2 in wrong-guard getVariant and71 in wrong-guard scene rebuild. Preserve int!=8 findComponent(true,88,35) before reading the field,including exceptions;do not treat the result as an X coordinate. Complete original-body SHA256 48326b3bc7c2f00e00db77a0901f43e4181a949e72b86c3141ef695e3422017f. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Room.getRoomGuardMarker(I)I"
     },
     {
       "symbol": "M:la.p(B)I",
@@ -52266,6 +52354,14 @@
       "evidence": "Returns the centre y.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RoomRegion.getY(B)I"
+    },
+    {
+      "symbol": "M:lka.a(B)V",
+      "originalName": "a",
+      "to": "updateMusicFadeIn",
+      "evidence": "Delegate to the existing music fade-in updater with byte63. Preserve byte>=-33 recursive self-call with byte116 BEFORE the otherwise duplicated delegate,including nontermination and stack overflow;do not repair guards or inline the delegate. Complete original-body SHA256 335bd86b792261bd926bef5ac423fd3949486b7185e91626a840d60caabad431. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:EventFactory.updateMusicFadeIn(B)V"
     },
     {
       "symbol": "M:lka.a(ILkh;I)Lbs;",
@@ -55874,6 +55970,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MonochromeCacheSentinelState.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:nf.a(B)V",
+      "originalName": "a",
+      "to": "resetReflectionChecks",
+      "evidence": "Replace the reflection-check queue with a new IntrusiveDeque. Queue producer constructs ReflectionCheck and appends it;both consumers cast entries to ReflectionCheck. Preserve wrong-byte!=5 static String nulling BEFORE allocation and publication,duplicated branches,identity and allocation failure effects;do not unlink old entries or reinterpret as an archive queue. Complete original-body SHA256 d4727375474d393c5aea58497cc103cd38bc993171d577f2e01536451533df48. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GridLineWalker.resetReflectionChecks(B)V"
     },
     {
       "symbol": "M:nf.a(I)V",
@@ -71724,6 +71828,14 @@
       "renamedSymbol": "M:ListTracksCommand.invoke([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:tba.a(B)Lcn;",
+      "originalName": "a",
+      "to": "getNativeLibrariesArchive",
+      "evidence": "Open the native-libraries ResourceArchive using archive ID0. ToolkitSelector passes the result as its first private-constructor argument to BridgeModel.initNativeLibraries and the native library index checks. Preserve leading79/((byte-7)/37),then getOrOpenArchive(-94,field_d.field_c),including arithmetic/null/cache exceptions and lookup order. Complete original-body SHA256 1afcfd40d173820b6657d6f45cb557092c8835a1b842333cb760324a574aba53. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MonochromeRowCacheEntry.getNativeLibrariesArchive(B)LResourceArchive;"
+    },
+    {
       "symbol": "M:tba.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -81234,6 +81346,14 @@
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MirrorMoverLocomotor.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ws.f(I)V",
+      "originalName": "f",
+      "to": "onClientServicesInitialized",
+      "evidence": "Hook at the end of AppletGameShell.initializeSharedServices after packet lengths initialize. Nominal29320 is a no-op;preserve int!=29320 releaseStatics(-56),all cleanup side effects and exceptions. Do not add initialization. Complete original-body SHA256 8eff764719a340d57fc82b88c539bc2430824ad7de5988caa1d20c4c7a5dac79. Naming only.15complete original bodies,all26compiler-bound callers,227field declarations/223owned,14supporting classes and26purpose witnesses reviewed. Preserve descriptors,all full integer and byte domains,unused guards,visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,floating-point/cast order,volatile reads/writes,allocation/call/exception order,aliases/partial writes and diagnostics. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MirrorMoverLocomotor.onClientServicesInitialized(I)V"
     },
     {
       "symbol": "M:wsa.a(BLuia;I)V",
@@ -265924,7 +266044,7 @@
     },
     {
       "symbol": "L:fj.a(I)V#0",
-      "renamedSymbol": "L:RoomViewRenderer.a(I)V#0",
+      "renamedSymbol": "L:RoomViewRenderer.onViewportTick(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -516141,7 +516261,7 @@
     },
     {
       "symbol": "L:tba.a(B)Lcn;#0",
-      "renamedSymbol": "L:MonochromeRowCacheEntry.a(B)LResourceArchive;#0",
+      "renamedSymbol": "L:MonochromeRowCacheEntry.getNativeLibrariesArchive(B)LResourceArchive;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -592217,9 +592337,9 @@
     },
     {
       "symbol": "M:ag.a(ZIII)V",
-      "renamedSymbol": "M:FollowCamera.a(ZIII)V",
+      "renamedSymbol": "M:FollowCamera.nudgeIfRequested(ZIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nudgeIfRequested",
       "declaration": {
         "file": "ag.java",
         "start": 6420,
@@ -596331,9 +596451,9 @@
     },
     {
       "symbol": "M:bha.f(I)I",
-      "renamedSymbol": "M:FleeLocomotor.f(I)I",
+      "renamedSymbol": "M:FleeLocomotor.getBooleanReplyPacketLength(I)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getBooleanReplyPacketLength",
       "declaration": {
         "file": "bha.java",
         "start": 10219,
@@ -596716,9 +596836,9 @@
     },
     {
       "symbol": "M:bk.c(I)V",
-      "renamedSymbol": "M:LineNoiseOperator.c(I)V",
+      "renamedSymbol": "M:LineNoiseOperator.onIdleDisconnect(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "onIdleDisconnect",
       "declaration": {
         "file": "bk.java",
         "start": 2511,
@@ -599763,9 +599883,9 @@
     },
     {
       "symbol": "M:cfa.e(I)Lcn;",
-      "renamedSymbol": "M:CommonChooseReward.e(I)LResourceArchive;",
+      "renamedSymbol": "M:CommonChooseReward.getRendererResourceArchive(I)LResourceArchive;",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getRendererResourceArchive",
       "declaration": {
         "file": "cfa.java",
         "start": 4152,
@@ -607276,9 +607396,9 @@
     },
     {
       "symbol": "M:dg.b(I)Z",
-      "renamedSymbol": "M:TrapModel.b(I)Z",
+      "renamedSymbol": "M:TrapModel.isMinusOne(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isMinusOne",
       "declaration": {
         "file": "dg.java",
         "start": 838,
@@ -608970,9 +609090,9 @@
     },
     {
       "symbol": "M:ds.a(B)V",
-      "renamedSymbol": "M:MatchStatistics.a(B)V",
+      "renamedSymbol": "M:MatchStatistics.onRoundBoundary(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onRoundBoundary",
       "declaration": {
         "file": "ds.java",
         "start": 2833,
@@ -609377,9 +609497,9 @@
     },
     {
       "symbol": "M:dt.b(Z)I",
-      "renamedSymbol": "M:PlayerSimulation.b(Z)I",
+      "renamedSymbol": "M:PlayerSimulation.getStandingsDepthOffset(Z)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getStandingsDepthOffset",
       "declaration": {
         "file": "dt.java",
         "start": 6595,
@@ -617253,9 +617373,9 @@
     },
     {
       "symbol": "M:fj.a(I)V",
-      "renamedSymbol": "M:RoomViewRenderer.a(I)V",
+      "renamedSymbol": "M:RoomViewRenderer.onViewportTick(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onViewportTick",
       "declaration": {
         "file": "fj.java",
         "start": 7707,
@@ -618925,9 +619045,9 @@
     },
     {
       "symbol": "M:fsa.B(B)Z",
-      "renamedSymbol": "M:Trap.B(B)Z",
+      "renamedSymbol": "M:Trap.ignoresRoomVariantFilter(B)Z",
       "originalName": "B",
-      "renamedName": "B",
+      "renamedName": "ignoresRoomVariantFilter",
       "declaration": {
         "file": "fsa.java",
         "start": 9048,
@@ -648988,9 +649108,9 @@
     },
     {
       "symbol": "M:la.n(B)I",
-      "renamedSymbol": "M:Room.n(B)I",
+      "renamedSymbol": "M:Room.getSortDepthOffset(B)I",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "getSortDepthOffset",
       "declaration": {
         "file": "la.java",
         "start": 51556,
@@ -649021,9 +649141,9 @@
     },
     {
       "symbol": "M:la.o(I)I",
-      "renamedSymbol": "M:Room.o(I)I",
+      "renamedSymbol": "M:Room.getRoomGuardMarker(I)I",
       "originalName": "o",
-      "renamedName": "o",
+      "renamedName": "getRoomGuardMarker",
       "declaration": {
         "file": "la.java",
         "start": 31594,
@@ -650957,9 +651077,9 @@
     },
     {
       "symbol": "M:lka.a(B)V",
-      "renamedSymbol": "M:EventFactory.a(B)V",
+      "renamedSymbol": "M:EventFactory.updateMusicFadeIn(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMusicFadeIn",
       "declaration": {
         "file": "lka.java",
         "start": 1605,
@@ -656831,9 +656951,9 @@
     },
     {
       "symbol": "M:nf.a(B)V",
-      "renamedSymbol": "M:GridLineWalker.a(B)V",
+      "renamedSymbol": "M:GridLineWalker.resetReflectionChecks(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetReflectionChecks",
       "declaration": {
         "file": "nf.java",
         "start": 542,
@@ -682230,9 +682350,9 @@
     },
     {
       "symbol": "M:tba.a(B)Lcn;",
-      "renamedSymbol": "M:MonochromeRowCacheEntry.a(B)LResourceArchive;",
+      "renamedSymbol": "M:MonochromeRowCacheEntry.getNativeLibrariesArchive(B)LResourceArchive;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getNativeLibrariesArchive",
       "declaration": {
         "file": "tba.java",
         "start": 2949,
@@ -697443,9 +697563,9 @@
     },
     {
       "symbol": "M:ws.f(I)V",
-      "renamedSymbol": "M:MirrorMoverLocomotor.f(I)V",
+      "renamedSymbol": "M:MirrorMoverLocomotor.onClientServicesInitialized(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "onClientServicesInitialized",
       "declaration": {
         "file": "ws.java",
         "start": 2240,
@@ -702404,7 +702524,7 @@
     },
     {
       "symbol": "P:ag.a(ZIII)V#0",
-      "renamedSymbol": "P:FollowCamera.a(ZIII)V#0",
+      "renamedSymbol": "P:FollowCamera.nudgeIfRequested(ZIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -702415,7 +702535,7 @@
     },
     {
       "symbol": "P:ag.a(ZIII)V#1",
-      "renamedSymbol": "P:FollowCamera.a(ZIII)V#1",
+      "renamedSymbol": "P:FollowCamera.nudgeIfRequested(ZIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -702426,7 +702546,7 @@
     },
     {
       "symbol": "P:ag.a(ZIII)V#2",
-      "renamedSymbol": "P:FollowCamera.a(ZIII)V#2",
+      "renamedSymbol": "P:FollowCamera.nudgeIfRequested(ZIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -702437,7 +702557,7 @@
     },
     {
       "symbol": "P:ag.a(ZIII)V#3",
-      "renamedSymbol": "P:FollowCamera.a(ZIII)V#3",
+      "renamedSymbol": "P:FollowCamera.nudgeIfRequested(ZIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -712722,7 +712842,7 @@
     },
     {
       "symbol": "P:bha.f(I)I#0",
-      "renamedSymbol": "P:FleeLocomotor.f(I)I#0",
+      "renamedSymbol": "P:FleeLocomotor.getBooleanReplyPacketLength(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -713371,7 +713491,7 @@
     },
     {
       "symbol": "P:bk.c(I)V#0",
-      "renamedSymbol": "P:LineNoiseOperator.c(I)V#0",
+      "renamedSymbol": "P:LineNoiseOperator.onIdleDisconnect(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -719476,7 +719596,7 @@
     },
     {
       "symbol": "P:cfa.e(I)Lcn;#0",
-      "renamedSymbol": "P:CommonChooseReward.e(I)LResourceArchive;#0",
+      "renamedSymbol": "P:CommonChooseReward.getRendererResourceArchive(I)LResourceArchive;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -735635,7 +735755,7 @@
     },
     {
       "symbol": "P:dg.b(I)Z#0",
-      "renamedSymbol": "P:TrapModel.b(I)Z#0",
+      "renamedSymbol": "P:TrapModel.isMinusOne(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -739111,7 +739231,7 @@
     },
     {
       "symbol": "P:ds.a(B)V#0",
-      "renamedSymbol": "P:MatchStatistics.a(B)V#0",
+      "renamedSymbol": "P:MatchStatistics.onRoundBoundary(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -739991,7 +740111,7 @@
     },
     {
       "symbol": "P:dt.b(Z)I#0",
-      "renamedSymbol": "P:PlayerSimulation.b(Z)I#0",
+      "renamedSymbol": "P:PlayerSimulation.getStandingsDepthOffset(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -756414,7 +756534,7 @@
     },
     {
       "symbol": "P:fj.a(I)V#0",
-      "renamedSymbol": "P:RoomViewRenderer.a(I)V#0",
+      "renamedSymbol": "P:RoomViewRenderer.onViewportTick(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -759901,7 +760021,7 @@
     },
     {
       "symbol": "P:fsa.B(B)Z#0",
-      "renamedSymbol": "P:Trap.B(B)Z#0",
+      "renamedSymbol": "P:Trap.ignoresRoomVariantFilter(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -832688,7 +832808,7 @@
     },
     {
       "symbol": "P:la.n(B)I#0",
-      "renamedSymbol": "P:Room.n(B)I#0",
+      "renamedSymbol": "P:Room.getSortDepthOffset(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -832721,7 +832841,7 @@
     },
     {
       "symbol": "P:la.o(I)I#0",
-      "renamedSymbol": "P:Room.o(I)I#0",
+      "renamedSymbol": "P:Room.getRoomGuardMarker(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -837462,7 +837582,7 @@
     },
     {
       "symbol": "P:lka.a(B)V#0",
-      "renamedSymbol": "P:EventFactory.a(B)V#0",
+      "renamedSymbol": "P:EventFactory.updateMusicFadeIn(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -850046,7 +850166,7 @@
     },
     {
       "symbol": "P:nf.a(B)V#0",
-      "renamedSymbol": "P:GridLineWalker.a(B)V#0",
+      "renamedSymbol": "P:GridLineWalker.resetReflectionChecks(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -910238,7 +910358,7 @@
     },
     {
       "symbol": "P:tba.a(B)Lcn;#0",
-      "renamedSymbol": "P:MonochromeRowCacheEntry.a(B)LResourceArchive;#0",
+      "renamedSymbol": "P:MonochromeRowCacheEntry.getNativeLibrariesArchive(B)LResourceArchive;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -941203,7 +941323,7 @@
     },
     {
       "symbol": "P:ws.f(I)V#0",
-      "renamedSymbol": "P:MirrorMoverLocomotor.f(I)V#0",
+      "renamedSymbol": "P:MirrorMoverLocomotor.onClientServicesInitialized(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -966756,7 +966876,7 @@
       "original": "ag.java",
       "renamed": "FollowCamera.java",
       "inputSha256": "2ac327ac89a0a2fa10fee2d813c6a43058a9277cffa331be83ad255a34a94875",
-      "outputSha256": "7c44cea4fd59ebf69bd565b6be6dbe504debd05c6dcbc4b7d2253ce3d5cc2d18",
+      "outputSha256": "4685540d39d2ec59329152cd6f82e47a93a2aaede81841d1eae9fcb0e7e0bfdf",
       "edits": [
         {
           "start": 50,
@@ -967429,6 +967549,13 @@
           "symbol": "F:ag.field_h:I",
           "original": "field_h",
           "renamed": "y"
+        },
+        {
+          "start": 6420,
+          "end": 6421,
+          "symbol": "M:ag.a(ZIII)V",
+          "original": "a",
+          "renamed": "nudgeIfRequested"
         },
         {
           "start": 6513,
@@ -996120,7 +996247,7 @@
       "original": "bha.java",
       "renamed": "FleeLocomotor.java",
       "inputSha256": "7273ebb8357707ef7ac4467036a21451587e2c302b7bdce324cc53208fe5d445",
-      "outputSha256": "4fa6216b66954b477848c0c224228197b7123aae3d3f41b7f5e9c4d6ae2e36ab",
+      "outputSha256": "8d16fd7fbd32ede5823569de29c0d74a8d3f0c3d29c1428e549a78e24c9376e2",
       "edits": [
         {
           "start": 50,
@@ -997110,6 +997237,13 @@
           "renamed": "FleeLocomotor"
         },
         {
+          "start": 9378,
+          "end": 9379,
+          "symbol": "M:bha.f(I)I",
+          "original": "f",
+          "renamed": "getBooleanReplyPacketLength"
+        },
+        {
           "start": 9480,
           "end": 9481,
           "symbol": "M:bha.a(ILfsa;)V",
@@ -997192,6 +997326,13 @@
           "symbol": "M:bha.b(I)V",
           "original": "b",
           "renamed": "applyConstraint"
+        },
+        {
+          "start": 10219,
+          "end": 10220,
+          "symbol": "M:bha.f(I)I",
+          "original": "f",
+          "renamed": "getBooleanReplyPacketLength"
         },
         {
           "start": 10272,
@@ -999238,7 +999379,7 @@
       "original": "bk.java",
       "renamed": "LineNoiseOperator.java",
       "inputSha256": "33c3921d56a82bf94888948efc3a19dc8f9bf46f3413ac6fb802d7c2c3e74594",
-      "outputSha256": "5d98ebd8d360682fd617d7dc9d61b5b3b0a53da74f9977962546b612def12550",
+      "outputSha256": "d4f3e77e25c2667985c4dcee9784521f4a33e4af0820d8745fda4ebb4262d463",
       "edits": [
         {
           "start": 71,
@@ -999400,6 +999541,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2511,
+          "end": 2512,
+          "symbol": "M:bk.c(I)V",
+          "original": "c",
+          "renamed": "onIdleDisconnect"
         },
         {
           "start": 2567,
@@ -1018665,7 +1018813,7 @@
       "original": "cfa.java",
       "renamed": "CommonChooseReward.java",
       "inputSha256": "c762f9c7d29a905c8f5a6020be03bd184a9b32c8ba76523463736f2b8a5094fe",
-      "outputSha256": "dc107722be663e500aa2eaa81b1410aa030f8c20b24c7cbf92f4753dd1a691bc",
+      "outputSha256": "ec404141eedea6b8b2ba871b086a1987db1bc898ac070329388084ea32d6b390",
       "edits": [
         {
           "start": 50,
@@ -1019319,11 +1019467,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 4152,
+          "end": 4153,
+          "symbol": "M:cfa.e(I)Lcn;",
+          "original": "e",
+          "renamed": "getRendererResourceArchive"
+        },
+        {
           "start": 4206,
           "end": 4209,
           "symbol": "C:cfa",
           "original": "cfa",
           "renamed": "CommonChooseReward"
+        },
+        {
+          "start": 4210,
+          "end": 4211,
+          "symbol": "M:cfa.e(I)Lcn;",
+          "original": "e",
+          "renamed": "getRendererResourceArchive"
         },
         {
           "start": 4234,
@@ -1065901,7 +1066063,7 @@
       "original": "dg.java",
       "renamed": "TrapModel.java",
       "inputSha256": "1d795992e33753a7469df2c8acda1b00ee413d8530d0fc9bd5d1ab3d21101e56",
-      "outputSha256": "8ccc15f4294721ec94e979fad63e1034dea3a921bd4a4ef4fe6fa2aa0d12757f",
+      "outputSha256": "3485fda015c59480058c5a161c11d526474475502cc1ac6c12b7e7ecdbc9b8c8",
       "edits": [
         {
           "start": 53,
@@ -1066056,6 +1066218,13 @@
           "symbol": "F:dg.field_f:I",
           "original": "field_f",
           "renamed": "elevationOffset"
+        },
+        {
+          "start": 838,
+          "end": 839,
+          "symbol": "M:dg.b(I)Z",
+          "original": "b",
+          "renamed": "isMinusOne"
         },
         {
           "start": 965,
@@ -1070897,7 +1071066,7 @@
       "original": "di.java",
       "renamed": "ToolkitSelector.java",
       "inputSha256": "5b8858e57aef003d7e889bfaff2edddb3b2b8b66be3d73e2e10e6f1428d498b2",
-      "outputSha256": "ed32290cddb42eec6fa1e4bf025ff62840713262918e81deb4cd364d45f11827",
+      "outputSha256": "871d64344cd0631052c000146ef6aa28ceee6654b12312e7e9f02d4130106dbe",
       "edits": [
         {
           "start": 50,
@@ -1070998,11 +1071167,25 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 1720,
+          "end": 1721,
+          "symbol": "M:tba.a(B)Lcn;",
+          "original": "a",
+          "renamed": "getNativeLibrariesArchive"
+        },
+        {
           "start": 1734,
           "end": 1737,
           "symbol": "C:cfa",
           "original": "cfa",
           "renamed": "CommonChooseReward"
+        },
+        {
+          "start": 1738,
+          "end": 1739,
+          "symbol": "M:cfa.e(I)Lcn;",
+          "original": "e",
+          "renamed": "getRendererResourceArchive"
         },
         {
           "start": 1753,
@@ -1079793,7 +1079976,7 @@
       "original": "ds.java",
       "renamed": "MatchStatistics.java",
       "inputSha256": "f8299fdafc37fdb4a37035acd1e99e8b8e455335eb0b8f9ac84b2c3f45c72e1c",
-      "outputSha256": "615f9b657143a9ee34c35e26c5d27172c96faba9262d659dd3bbad135000f781",
+      "outputSha256": "63195feef5da75682272c4e9b982b35c1e0f7ad86267c238830725418acd55c9",
       "edits": [
         {
           "start": 50,
@@ -1080172,6 +1080355,13 @@
           "symbol": "F:ds.field_h:[I",
           "original": "field_h",
           "renamed": "fallDeaths"
+        },
+        {
+          "start": 2833,
+          "end": 2834,
+          "symbol": "M:ds.a(B)V",
+          "original": "a",
+          "renamed": "onRoundBoundary"
         },
         {
           "start": 2892,
@@ -1080558,7 +1080748,7 @@
       "original": "dt.java",
       "renamed": "PlayerSimulation.java",
       "inputSha256": "f7a719decc9f30c3175be67a2cd8bdff15a4f9e12b03b98ee29e0f5856dbe596",
-      "outputSha256": "d0fb4c44ebd0018d5448bd33001f1374f3dd1ac0bc5eeb266a04f99cc7095e9f",
+      "outputSha256": "9bb3918e6d663c0ebc0456b6a148ca7dc3c42baa81aefeb27702b59716a0eb61",
       "edits": [
         {
           "start": 50,
@@ -1080839,6 +1081029,13 @@
           "symbol": "M:dt.f(II)Z",
           "original": "f",
           "renamed": "isEffectActive"
+        },
+        {
+          "start": 3371,
+          "end": 3372,
+          "symbol": "M:dt.b(Z)I",
+          "original": "b",
+          "renamed": "getStandingsDepthOffset"
         },
         {
           "start": 3400,
@@ -1081168,6 +1081365,13 @@
           "symbol": "F:dt.field_a:Z",
           "original": "field_a",
           "renamed": "finished"
+        },
+        {
+          "start": 6595,
+          "end": 6596,
+          "symbol": "M:dt.b(Z)I",
+          "original": "b",
+          "renamed": "getStandingsDepthOffset"
         },
         {
           "start": 6767,
@@ -1085310,7 +1085514,7 @@
       "original": "dw.java",
       "renamed": "TextureMetadata.java",
       "inputSha256": "e2e6f0646ee758a067c97679e76756a2ce569a8520cf12b73b47f8058b21007c",
-      "outputSha256": "477bff136d412cc5f4e75fe780201cbcb1d0c4ee676dd1699348fb26b66c5b90",
+      "outputSha256": "ef043e8c110ec0d4a06d768e846cb54fa26025ba4990268b24e784ea55a9b5ac",
       "edits": [
         {
           "start": 50,
@@ -1085381,6 +1085585,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "TrapModel"
+        },
+        {
+          "start": 785,
+          "end": 786,
+          "symbol": "M:dg.b(I)Z",
+          "original": "b",
+          "renamed": "isMinusOne"
         },
         {
           "start": 806,
@@ -1125982,7 +1126193,7 @@
       "original": "ff.java",
       "renamed": "MatchState.java",
       "inputSha256": "cc83681dac90aa5b7b2608dfb6f3e4f122a9a32da309f948c5d0ba66fdddbe2e",
-      "outputSha256": "f453632f86f1905b5ec584c9d225d37c6b8b2966337ee582353b850da7f7768c",
+      "outputSha256": "203b3eab88ff22a0c0f433d8f1510a890b972b6bf9709dee9da891f5c45a27c2",
       "edits": [
         {
           "start": 71,
@@ -1126641,6 +1126852,13 @@
           "symbol": "F:ff.field_D:Lds;",
           "original": "field_D",
           "renamed": "statistics"
+        },
+        {
+          "start": 4428,
+          "end": 4429,
+          "symbol": "M:ds.a(B)V",
+          "original": "a",
+          "renamed": "onRoundBoundary"
         },
         {
           "start": 4460,
@@ -1127544,6 +1127762,13 @@
           "symbol": "F:ff.field_D:Lds;",
           "original": "field_D",
           "renamed": "statistics"
+        },
+        {
+          "start": 11405,
+          "end": 11406,
+          "symbol": "M:ds.a(B)V",
+          "original": "a",
+          "renamed": "onRoundBoundary"
         },
         {
           "start": 11435,
@@ -1134648,7 +1134873,7 @@
       "original": "fj.java",
       "renamed": "RoomViewRenderer.java",
       "inputSha256": "ff6a13da7dd267e2066d74d43694ad36ce77b2a265f292c9c3f1feb30af40abb",
-      "outputSha256": "5fe7b69a929a11773f1799063f8e1ff4735fba6015b601713b09de989efc2b0b",
+      "outputSha256": "e58003b574f4c1d3eb01d63cafe5b63d94150a65d95174c0c4b9145f8ecfbce2",
       "edits": [
         {
           "start": 50,
@@ -1135001,6 +1135226,13 @@
           "renamed": "getY"
         },
         {
+          "start": 4769,
+          "end": 4770,
+          "symbol": "M:ag.a(ZIII)V",
+          "original": "a",
+          "renamed": "nudgeIfRequested"
+        },
+        {
           "start": 4852,
           "end": 4853,
           "symbol": "M:gda.a(IIIIII)V",
@@ -1135309,6 +1135541,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 7707,
+          "end": 7708,
+          "symbol": "M:fj.a(I)V",
+          "original": "a",
+          "renamed": "onViewportTick"
+        },
+        {
           "start": 7781,
           "end": 7783,
           "symbol": "M:fj.<init>()V",
@@ -1135321,7 +1135560,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "5bfce9ee1cfc8e885cb466f402991ea23f8c99958f1722062f27d14faebc1a17",
+      "outputSha256": "1d2acc695f67a7b38ee408dfbe321d7900026a88bec38beef33f6beed760430a",
       "edits": [
         {
           "start": 50,
@@ -1138451,6 +1138690,13 @@
           "symbol": "C:bha",
           "original": "bha",
           "renamed": "FleeLocomotor"
+        },
+        {
+          "start": 20749,
+          "end": 20750,
+          "symbol": "M:bha.f(I)I",
+          "original": "f",
+          "renamed": "getBooleanReplyPacketLength"
         },
         {
           "start": 20776,
@@ -1149521,7 +1149767,7 @@
       "original": "fsa.java",
       "renamed": "Trap.java",
       "inputSha256": "1034078d241b213e09e0736d236bee026ca2bd6e138efd3b5b3295df3a02c180",
-      "outputSha256": "aa87b21ca2b31bd205c0d855548addf49c9e87f7aa9680ad9ca011dca495c8d3",
+      "outputSha256": "880dfbd3dba0d8928082d384c8574f0de98aface212127c1d90077cf3ae5111b",
       "edits": [
         {
           "start": 50,
@@ -1150964,6 +1151210,13 @@
           "symbol": "M:fsa.z(I)V",
           "original": "z",
           "renamed": "reinsertIntoCollisionGrid"
+        },
+        {
+          "start": 9048,
+          "end": 9049,
+          "symbol": "M:fsa.B(B)Z",
+          "original": "B",
+          "renamed": "ignoresRoomVariantFilter"
         },
         {
           "start": 9209,
@@ -1155936,6 +1156189,13 @@
           "renamed": "isRoomVariantActive"
         },
         {
+          "start": 44643,
+          "end": 44644,
+          "symbol": "M:fsa.B(B)Z",
+          "original": "B",
+          "renamed": "ignoresRoomVariantFilter"
+        },
+        {
           "start": 44679,
           "end": 44680,
           "symbol": "M:uw.a(ILfo;B)V",
@@ -1158519,6 +1158779,13 @@
           "renamed": "next"
         },
         {
+          "start": 63463,
+          "end": 63464,
+          "symbol": "M:fsa.B(B)Z",
+          "original": "B",
+          "renamed": "ignoresRoomVariantFilter"
+        },
+        {
           "start": 63936,
           "end": 63939,
           "symbol": "C:tba",
@@ -1158559,6 +1158826,13 @@
           "symbol": "M:fsa.A(B)Z",
           "original": "A",
           "renamed": "isRoomVariantActive"
+        },
+        {
+          "start": 64540,
+          "end": 64541,
+          "symbol": "M:fsa.B(B)Z",
+          "original": "B",
+          "renamed": "ignoresRoomVariantFilter"
         },
         {
           "start": 64576,
@@ -1195898,7 +1196172,7 @@
       "original": "hca.java",
       "renamed": "Player.java",
       "inputSha256": "c9618dae84112a3a45470373b6b1e97cc89c5043279566ce57e3cbf95f966f50",
-      "outputSha256": "0adb72f07cced3586a3b3ff5192b48cb99c1d37b10a164c89d383ac132e67aa0",
+      "outputSha256": "a5f5ba66b3fdeb3a037e3fa8bdc782ab66ec2de377ba7dc7d3ace1bacaaec432",
       "edits": [
         {
           "start": 50,
@@ -1202234,6 +1202508,13 @@
           "renamed": "room"
         },
         {
+          "start": 68292,
+          "end": 68293,
+          "symbol": "M:la.o(I)I",
+          "original": "o",
+          "renamed": "getRoomGuardMarker"
+        },
+        {
           "start": 68323,
           "end": 68330,
           "symbol": "F:hca.field_m:I",
@@ -1202281,6 +1202562,13 @@
           "symbol": "F:hca.field_J:Lla;",
           "original": "field_J",
           "renamed": "room"
+        },
+        {
+          "start": 68421,
+          "end": 68422,
+          "symbol": "M:la.n(B)I",
+          "original": "n",
+          "renamed": "getSortDepthOffset"
         },
         {
           "start": 68506,
@@ -1325095,7 +1325383,7 @@
       "original": "kqa.java",
       "renamed": "RaceStandings.java",
       "inputSha256": "987a9ee2469cf110b6a98a49245f9bc73f8b437cdc48b49a785b6521c5d92d49",
-      "outputSha256": "8ecb3d9433f27686ec0bb6b76c306e625c7162133386da7f40e9400b0e83e075",
+      "outputSha256": "2dbdf7aa11d33d0b5966400cb528ca804add3c2b90ea7bd8ada9ba785a36c660",
       "edits": [
         {
           "start": 50,
@@ -1325208,6 +1325496,13 @@
           "symbol": "F:ff.field_G:[Ldt;",
           "original": "field_G",
           "renamed": "simulations"
+        },
+        {
+          "start": 891,
+          "end": 892,
+          "symbol": "M:dt.b(Z)I",
+          "original": "b",
+          "renamed": "getStandingsDepthOffset"
         },
         {
           "start": 907,
@@ -1335420,7 +1335715,7 @@
       "original": "la.java",
       "renamed": "Room.java",
       "inputSha256": "8faa19b96925d404db650c9bd9afd4c1c3c9c8fd6d073e07c5e5d38b07c89e15",
-      "outputSha256": "0ad41079bfd83f401e224ea1d1482299366ff7c6a592b839f14a1a798cc2c629",
+      "outputSha256": "771c023faea0c0126e132a6d7f545eaaa7ee4654247eefe4954e81ab4e4faf3b",
       "edits": [
         {
           "start": 50,
@@ -1340134,6 +1340429,13 @@
           "renamed": "SoundEvent"
         },
         {
+          "start": 31594,
+          "end": 31595,
+          "symbol": "M:la.o(I)I",
+          "original": "o",
+          "renamed": "getRoomGuardMarker"
+        },
+        {
           "start": 31652,
           "end": 31653,
           "symbol": "M:la.a(ZII)Lcsa;",
@@ -1341471,6 +1341773,13 @@
           "renamed": "scene"
         },
         {
+          "start": 43958,
+          "end": 43959,
+          "symbol": "M:la.n(B)I",
+          "original": "n",
+          "renamed": "getSortDepthOffset"
+        },
+        {
           "start": 44426,
           "end": 44429,
           "symbol": "C:tba",
@@ -1342393,6 +1342702,13 @@
           "symbol": "F:la.field_x:I",
           "original": "field_x",
           "renamed": "id"
+        },
+        {
+          "start": 51556,
+          "end": 51557,
+          "symbol": "M:la.n(B)I",
+          "original": "n",
+          "renamed": "getSortDepthOffset"
         },
         {
           "start": 51678,
@@ -1354504,7 +1354820,7 @@
       "original": "lka.java",
       "renamed": "EventFactory.java",
       "inputSha256": "c9aeadf27f192646d4ceb26fc6b78d8394eae03665c350ee407f519750610363",
-      "outputSha256": "f46f2619e7a404bc1427df87dc0c23b2be10821f9482778fc7d183031bae24b3",
+      "outputSha256": "4405c35b5f2d890e705b2d45455668597c4b0c43d61585904bea65d081d019c4",
       "edits": [
         {
           "start": 50,
@@ -1354598,11 +1354914,25 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1605,
+          "end": 1606,
+          "symbol": "M:lka.a(B)V",
+          "original": "a",
+          "renamed": "updateMusicFadeIn"
+        },
+        {
           "start": 1661,
           "end": 1664,
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "EventFactory"
+        },
+        {
+          "start": 1665,
+          "end": 1666,
+          "symbol": "M:lka.a(B)V",
+          "original": "a",
+          "renamed": "updateMusicFadeIn"
         },
         {
           "start": 1690,
@@ -1388359,7 +1388689,7 @@
       "original": "nf.java",
       "renamed": "GridLineWalker.java",
       "inputSha256": "af980c8dcf236ea9a3a0bd87c19f32668483094f1d5cc6a894ab80c8707da0ad",
-      "outputSha256": "c2c05fa6c42617d80196ac620d5214ca16cedc8ac9d3ed1e6611cf32ff14aa27",
+      "outputSha256": "092328b4c9003c1e2ccbd1e9989888fb4c844a05ad5b52e01b14d91d265ae0e4",
       "edits": [
         {
           "start": 50,
@@ -1388367,6 +1388697,13 @@
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "GridLineWalker"
+        },
+        {
+          "start": 542,
+          "end": 543,
+          "symbol": "M:nf.a(B)V",
+          "original": "a",
+          "renamed": "resetReflectionChecks"
         },
         {
           "start": 631,
@@ -1483186,7 +1483523,7 @@
       "original": "qa.java",
       "renamed": "PlayerViewport.java",
       "inputSha256": "0ddd541c0ef09728669f83ac32fbad23bde61a4d0a1ead62aec50ea26af151d0",
-      "outputSha256": "1434e96654992f1fe64b20aac6bcf65653cf75c09b13cc78cb9d4199bcc2d023",
+      "outputSha256": "5529358fa743bbe938879129fc0f484b101da59d06200d9d2b164086e64b0798",
       "edits": [
         {
           "start": 50,
@@ -1484328,6 +1484665,13 @@
           "symbol": "F:qa.field_l:I",
           "original": "field_l",
           "renamed": "bottom"
+        },
+        {
+          "start": 7856,
+          "end": 7857,
+          "symbol": "M:fj.a(I)V",
+          "original": "a",
+          "renamed": "onViewportTick"
         },
         {
           "start": 7914,
@@ -1579027,7 +1579371,7 @@
       "original": "tba.java",
       "renamed": "MonochromeRowCacheEntry.java",
       "inputSha256": "778bf64a60b608300e92e09e511aa241e319924ea927ab93accc55e6ea19d55c",
-      "outputSha256": "db208e84c2602c5b56790ccb26047cad2f621743ddc67b20806755d653de05e2",
+      "outputSha256": "1376aa7f9a29823170ad03ff3207bea373d4446151a5b854bc87dbe48ee63e67",
       "edits": [
         {
           "start": 50,
@@ -1579394,6 +1579738,13 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 1717,
+          "end": 1718,
+          "symbol": "M:tba.a(B)Lcn;",
+          "original": "a",
+          "renamed": "getNativeLibrariesArchive"
+        },
+        {
           "start": 1756,
           "end": 1759,
           "symbol": "C:bea",
@@ -1579721,6 +1580072,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2949,
+          "end": 2950,
+          "symbol": "M:tba.a(B)Lcn;",
+          "original": "a",
+          "renamed": "getNativeLibrariesArchive"
         },
         {
           "start": 3026,
@@ -1604181,7 +1604539,7 @@
       "original": "ug.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "c14868855cae32c8f46fafb70374535ea02ec8d48aa9e32135cff24c4f135673",
-      "outputSha256": "8747bad1317be06773edf5ea9005f115f9ae56e474992b9c4ff85ba2f0cac824",
+      "outputSha256": "36de242d94817325b056024449148c19c949a2ca412643ad667c1f42adb0529c",
       "edits": [
         {
           "start": 53,
@@ -1604357,6 +1604715,13 @@
           "symbol": "C:nf",
           "original": "nf",
           "renamed": "GridLineWalker"
+        },
+        {
+          "start": 1064,
+          "end": 1065,
+          "symbol": "M:nf.a(B)V",
+          "original": "a",
+          "renamed": "resetReflectionChecks"
         },
         {
           "start": 1150,
@@ -1606340,6 +1606705,13 @@
           "renamed": "MirrorMoverLocomotor"
         },
         {
+          "start": 12935,
+          "end": 12936,
+          "symbol": "M:ws.f(I)V",
+          "original": "f",
+          "renamed": "onClientServicesInitialized"
+        },
+        {
           "start": 12967,
           "end": 12968,
           "symbol": "M:ug.g(B)V",
@@ -1606856,6 +1607228,13 @@
           "symbol": "C:bk",
           "original": "bk",
           "renamed": "LineNoiseOperator"
+        },
+        {
+          "start": 18409,
+          "end": 18410,
+          "symbol": "M:bk.c(I)V",
+          "original": "c",
+          "renamed": "onIdleDisconnect"
         },
         {
           "start": 18430,
@@ -1677123,7 +1677502,7 @@
       "original": "wna.java",
       "renamed": "ColourGradientOperator.java",
       "inputSha256": "acebf2aa02f73e58ab1aac3d3f66e04be5d18e81b2faf3e22c6ade8f29de7806",
-      "outputSha256": "0d584659544911d0435e2c50ba42ccfce5c4caf923b92f0c3762f24eca5624e5",
+      "outputSha256": "d304dae47b70a8c642cc771b51f6f434a668c41591215b3b6c453cda83fb467d",
       "edits": [
         {
           "start": 50,
@@ -1677406,6 +1677785,13 @@
           "renamed": "TrapModel"
         },
         {
+          "start": 12834,
+          "end": 12835,
+          "symbol": "M:dg.b(I)Z",
+          "original": "b",
+          "renamed": "isMinusOne"
+        },
+        {
           "start": 12926,
           "end": 12929,
           "symbol": "C:cga",
@@ -1677439,6 +1677825,13 @@
           "symbol": "C:dg",
           "original": "dg",
           "renamed": "TrapModel"
+        },
+        {
+          "start": 13127,
+          "end": 13128,
+          "symbol": "M:dg.b(I)Z",
+          "original": "b",
+          "renamed": "isMinusOne"
         },
         {
           "start": 13216,
@@ -1682004,7 +1682397,7 @@
       "original": "ws.java",
       "renamed": "MirrorMoverLocomotor.java",
       "inputSha256": "7c30841a6ff32c32f9ccd665880a836eee1e24e264244162da490c69f0525fb8",
-      "outputSha256": "71a8ae5cd170391fac181c8ee0c856fb0993e59cfeab74e254f924bf3e5c04a9",
+      "outputSha256": "a86bf8abdd4fd19ce09679b1576dfdeaea92396f123ed31c9a65398dd2653f58",
       "edits": [
         {
           "start": 50,
@@ -1682243,6 +1682636,13 @@
           "symbol": "M:ws.c(I)I",
           "original": "c",
           "renamed": "getTypeId"
+        },
+        {
+          "start": 2240,
+          "end": 2241,
+          "symbol": "M:ws.f(I)V",
+          "original": "f",
+          "renamed": "onClientServicesInitialized"
         },
         {
           "start": 2297,
@@ -1685265,7 +1685665,7 @@
       "original": "wv.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "1f8857dc3d362a84fbf3ab9af26e90d2770eacabc67c8a8e1df01e8be7183658",
-      "outputSha256": "63c8db726b684e28f94176394c2635b0d1f08f718a2079ac880e1ceefac2c309",
+      "outputSha256": "1aee3e1a66efbe968782e4c9d3b3f8342a37bf98400b4c1a033b34c6a7a220c9",
       "edits": [
         {
           "start": 53,
@@ -1685735,6 +1686135,13 @@
           "symbol": "C:lka",
           "original": "lka",
           "renamed": "EventFactory"
+        },
+        {
+          "start": 4597,
+          "end": 4598,
+          "symbol": "M:lka.a(B)V",
+          "original": "a",
+          "renamed": "updateMusicFadeIn"
         },
         {
           "start": 4731,
@@ -1692774,10 +1693181,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "4e85658838b194c9845e6f51619f19866db260e4abc67338892116cd08f8dadd",
+    "rulesSha256": "36c9324e53cc0258e11c9ff8f652e7d878ab33b771678bed42cf1afa577017fe",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "e055b7e863ec8be6f28b9e594d62f2ca00f81bf3c2d83c16ab894d2d13100722",
+    "outputTreeSha256": "f98cf0850b68579cf8f2205dca7980473e3bc2e7ec304ddbac1ac41ec8bd611c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

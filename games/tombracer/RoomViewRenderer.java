@@ -168,7 +168,7 @@ final class RoomViewRenderer {
             var24 = 1600;
             var25 = 4096;
           }
-          var16_ref.a(false, var24 >> 2, var23 >> 2, var22 >> 2);
+          var16_ref.nudgeIfRequested(false, var24 >> 2, var23 >> 2, var22 >> 2);
           var30 = 0;
           var19.setCamera(var22, -var24, -var23, -var25, -var30, 0);
           CurrentGraphicsToolkit.toolkit.setTransform(var19);
@@ -248,7 +248,7 @@ final class RoomViewRenderer {
         return var1;
     }
 
-    final void a(int param0) {
+    final void onViewportTick(int param0) {
         int var2 = -10 / ((param0 - 61) / 54);
     }
 

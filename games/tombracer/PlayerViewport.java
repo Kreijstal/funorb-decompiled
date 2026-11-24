@@ -239,7 +239,7 @@ final class PlayerViewport {
         this.top = this.approach(this.targetTop, 0, this.top);
         this.right = this.approach(this.targetRight, 0, this.right);
         this.bottom = this.approach(this.targetBottom, 0, this.bottom);
-        this.field_n.a(-8);
+        this.field_n.onViewportTick(-8);
         if (param0 >= 77) {
           this.field_d.tick((byte) -21);
           return;

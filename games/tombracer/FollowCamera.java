@@ -200,7 +200,7 @@ final class FollowCamera implements Camera {
         return this.y;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void nudgeIfRequested(boolean param0, int param1, int param2, int param3) {
         if (param0) {
           this.nudge(-41, -19, 59, 15);
         }

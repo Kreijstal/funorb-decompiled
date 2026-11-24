@@ -104,7 +104,7 @@ final class MatchStatistics {
         }
     }
 
-    final void a(byte param0) {
+    final void onRoundBoundary(byte param0) {
         if (param0 < 42) {
           this.addBladeDeath(-107, 24);
         }

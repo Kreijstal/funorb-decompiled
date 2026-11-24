@@ -375,7 +375,7 @@ final class ColourGradientOperator extends TextureOperator {
           if (TextureCoordinateGenerationState.field_a <= 0) {
             return false;
           }
-          if (!TrapModel.b(-1)) {
+          if (!TrapModel.isMinusOne(-1)) {
             return true;
           }
           return false;
@@ -389,7 +389,7 @@ final class ColourGradientOperator extends TextureOperator {
         if (TextureCoordinateGenerationState.field_a <= 0) {
           return false;
         }
-        if (!TrapModel.b(-1)) {
+        if (!TrapModel.isMinusOne(-1)) {
           return true;
         }
         return false;

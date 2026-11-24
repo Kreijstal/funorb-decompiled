@@ -260,7 +260,7 @@ final class FleeLocomotor extends Locomotor {
           field_x = null;
           return;
         }
-        FleeLocomotor.f(-55);
+        FleeLocomotor.getBooleanReplyPacketLength(-55);
         field_B = null;
         field_o = null;
         field_x = null;
@@ -293,7 +293,7 @@ final class FleeLocomotor extends Locomotor {
         }
     }
 
-    final static int f(int param0) {
+    final static int getBooleanReplyPacketLength(int param0) {
         if (param0 != 1) {
           FleeLocomotor.createRendererOptions((byte) 123);
           return 1;

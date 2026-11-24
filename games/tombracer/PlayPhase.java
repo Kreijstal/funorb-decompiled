@@ -580,7 +580,7 @@ final class PlayPhase extends MatchPhase {
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                LegacyRidgedWaterNoise.ensureGamePacketBytes(FleeLocomotor.f(1), -1);
+                LegacyRidgedWaterNoise.ensureGamePacketBytes(FleeLocomotor.getBooleanReplyPacketLength(1), -1);
                 RendererMode.field_b = new Boolean(ToolkitSelector.readBoolean(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {

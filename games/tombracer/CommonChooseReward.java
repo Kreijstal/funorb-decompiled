@@ -163,9 +163,9 @@ final class CommonChooseReward implements BitDecodableMarker {
         return this.finished;
     }
 
-    final static ResourceArchive e(int param0) {
+    final static ResourceArchive getRendererResourceArchive(int param0) {
         if (param0 != -1) {
-          CommonChooseReward.e(11);
+          CommonChooseReward.getRendererResourceArchive(11);
           return TooltipVisibility.getOrOpenArchive(false, FullscreenFailureDialog.field_M.field_c);
         }
         return TooltipVisibility.getOrOpenArchive(false, FullscreenFailureDialog.field_M.field_c);

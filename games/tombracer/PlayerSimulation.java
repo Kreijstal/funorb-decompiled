@@ -99,7 +99,7 @@ final class PlayerSimulation {
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
         if (param1 != 10915) {
-          this.b(false);
+          this.getStandingsDepthOffset(false);
           if (this.hasOwnEffect(param0, -1)) {
             return true;
           }
@@ -219,7 +219,7 @@ final class PlayerSimulation {
         return this.finished;
     }
 
-    final int b(boolean param0) {
+    final int getStandingsDepthOffset(boolean param0) {
         if (param0) {
           field_n = (String) null;
           return this.field_l;

@@ -80,7 +80,7 @@ final class MirrorMoverLocomotor extends Locomotor {
         return 4;
     }
 
-    final static void f(int param0) {
+    final static void onClientServicesInitialized(int param0) {
         if (param0 != 29320) {
           MirrorMoverLocomotor.releaseStatics(-56);
         }

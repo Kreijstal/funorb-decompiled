@@ -969,7 +969,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
         this.soundQueue.enqueue(param4 ^ -112, new SoundEvent(param2, param1, param0, param3));
     }
 
-    final int o(int param0) {
+    final int getRoomGuardMarker(int param0) {
         if (param0 != 8) {
           this.findComponent(true, 88, 35);
         }
@@ -1331,7 +1331,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
             param0.addToScene(param1 - 33556136, this.scene);
           }
           if (param1 != 33554432) {
-            this.n((byte) -3);
+            this.getSortDepthOffset((byte) -3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1558,7 +1558,7 @@ final class Room implements SwitchableScope, Renderable, GameStateMarker {
         return "Room(courseIndex:" + this.courseIndex + ",id:" + this.id + ",diff:" + 1 + ")";
     }
 
-    final int n(byte param0) {
+    final int getSortDepthOffset(byte param0) {
         if (param0 > -36) {
           return 42;
         }

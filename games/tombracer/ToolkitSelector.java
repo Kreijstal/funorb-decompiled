@@ -55,7 +55,7 @@ final class ToolkitSelector {
     }
 
     ToolkitSelector(TextureProvider param0, ToolkitCandidate[] param1) {
-        this(MonochromeRowCacheEntry.a((byte) 98), CommonChooseReward.e(-1), param0, ComponentTypeNames.field_c, param1);
+        this(MonochromeRowCacheEntry.getNativeLibrariesArchive((byte) 98), CommonChooseReward.getRendererResourceArchive(-1), param0, ComponentTypeNames.field_c, param1);
     }
 
     final boolean ensureToolkitForActiveCanvas(int param0) {
