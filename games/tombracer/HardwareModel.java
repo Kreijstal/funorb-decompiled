@@ -609,13 +609,13 @@ final class HardwareModel extends ToolkitModel {
                         default:
                           break;
                         case 3:
-                          WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
+                          WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
                           var23 = RoomComponentFactory.field_a[1];
                           var22_float = RoomComponentFactory.field_a[0];
-                          WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
+                          WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
                           var24 = RoomComponentFactory.field_a[0];
                           var25 = RoomComponentFactory.field_a[1];
-                          WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
+                          WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var34], param1.field_b[var34], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
                           var27 = RoomComponentFactory.field_a[1];
                           var26 = RoomComponentFactory.field_a[0];
                           if ((1 & var39) == 0) {

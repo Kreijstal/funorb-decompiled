@@ -23,7 +23,7 @@ final class RasterizerOperator extends TextureOperator {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 107) {
-            this.a(80, (int[][]) null);
+            this.rasterizeShapes(80, (int[][]) null);
           }
           if (param2 == 0) {
             this.field_p = new RasterShape[param1.readUnsignedByte(255)];
@@ -67,7 +67,7 @@ final class RasterizerOperator extends TextureOperator {
         }
     }
 
-    private final void a(int param0, int[][] param1) {
+    private final void rasterizeShapes(int param0, int[][] param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -189,7 +189,7 @@ final class RasterizerOperator extends TextureOperator {
         int[] var4 = this.monochromeCache.getRow((byte) 107, param1);
         int[] var3 = var4;
         if (this.monochromeCache.rowMissed) {
-          this.a(-8883, this.monochromeCache.getAllRows(0));
+          this.rasterizeShapes(-8883, this.monochromeCache.getAllRows(0));
         }
         return var4;
     }
@@ -217,7 +217,7 @@ final class RasterizerOperator extends TextureOperator {
           var5 = ArchiveNetworkClient.textureHeight;
           var29 = new int[var5][var4];
           var30 = this.colourCache.getAllRows((byte) -98);
-          this.a(-8883, var29);
+          this.rasterizeShapes(-8883, var29);
           for (var8 = 0; var8 < ArchiveNetworkClient.textureHeight; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];

@@ -109,7 +109,7 @@ final class HorizontalGradientOperator extends TextureOperator {
         super(0, true);
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blendInterpolatedColourSpan(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var16 = 0;
         int[] var17 = null;
         RuntimeException stackIn_10_0 = null;
@@ -128,7 +128,7 @@ final class HorizontalGradientOperator extends TextureOperator {
         try {
           if (param5 >= -107) {
             var17 = (int[]) null;
-            HorizontalGradientOperator.a(30, -67, (int[]) null, -70, -115, -54, -31, -19, 111, 23);
+            HorizontalGradientOperator.blendInterpolatedColourSpan(30, -67, (int[]) null, -70, -115, -54, -31, -19, 111, 23);
           }
           param6--;
           while (param6 >= 0) {

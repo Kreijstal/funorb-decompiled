@@ -107,8 +107,8 @@ final class CrossedSineBandsOperator extends TextureOperator {
             var10Lifetime2 = stackIn_29_0;
             stackIn_32_0 = var12;
             stackIn_32_1 = var5;
-            if (!this.a(var8Lifetime2, var7Lifetime2, (byte) 84) &&
-              !this.a(var9Lifetime2, (byte) -128, var10Lifetime2)) {
+            if (!this.isInsideSumDiagonalBand(var8Lifetime2, var7Lifetime2, (byte) 84) &&
+              !this.isInsideDifferenceDiagonalBand(var9Lifetime2, (byte) -128, var10Lifetime2)) {
               stackIn_33_2 = 0;
             } else {
               stackIn_33_2 = 4096;
@@ -159,7 +159,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             this.field_p = param1.readUnsignedShort(param0 ^ 23);
           }
           if (param0 != 107) {
-            discarded$0 = this.a(3, 43, (byte) 18);
+            discarded$0 = this.isInsideSumDiagonalBand(3, 43, (byte) 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -416,7 +416,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         ByteArrayCopies.field_a = ByteArrayCopies.field_a + 1;
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean isInsideDifferenceDiagonalBand(int param0, byte param1, int param2) {
         int var4;
         int var5;
         boolean stackIn_6_0 = false;
@@ -432,7 +432,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         return stackIn_6_0;
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean isInsideSumDiagonalBand(int param0, int param1, byte param2) {
         int var4;
         int var5;
         boolean stackIn_6_0 = false;

@@ -4789,13 +4789,13 @@ final class OpenGlModel extends ToolkitModel {
                         var40 = (float)param1.field_d[var19_int] / 256.0f;
                         switch (var31) {
                           case 3:
-                            WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
+                            WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
                             var22 = HelloCommand.field_p[0];
                             var23 = HelloCommand.field_p[1];
-                            WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
+                            WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
                             var25 = HelloCommand.field_p[1];
                             var24 = HelloCommand.field_p[0];
-                            WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
+                            WaveformOperator.projectSphericalTextureCoordinates(param1.field_p[var34], param1.field_b[var34], var36, var37_int, HelloCommand.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
                             var27 = HelloCommand.field_p[1];
                             var26 = HelloCommand.field_p[0];
                             if ((var39_int & 1) == 0) {

@@ -16,7 +16,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         int[] var3 = var8;
         if (this.monochromeCache.rowMissed) {
           for (var4 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4; var4++) {
-            this.d(var4, param1, -5455);
+            this.mapKaleidoscopeCoordinates(var4, param1, -5455);
             var5 = this.getInputMonochromeRow(0, -70, RewardChoiceSlot.field_e);
             var8[var4] = var5[BlockModel.field_o];
           }
@@ -79,7 +79,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void mapKaleidoscopeCoordinates(int param0, int param1, int param2) {
         int var4;
         int var5;
         float var6;
@@ -176,7 +176,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           var5 = var13[1];
           var6 = var13[2];
           for (var7 = 0; var7 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var7++) {
-            this.d(var7, param0, -5455);
+            this.mapKaleidoscopeCoordinates(var7, param0, -5455);
             var14 = this.getInputColourRow(RewardChoiceSlot.field_e, 0, -1);
             var4[var7] = var14[0][BlockModel.field_o];
             var5[var7] = var14[1][BlockModel.field_o];
@@ -184,7 +184,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           }
         }
         if (param1 != -1) {
-          this.d(68, 15, 61);
+          this.mapKaleidoscopeCoordinates(68, 15, 61);
         }
         return var3;
     }

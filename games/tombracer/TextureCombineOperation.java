@@ -211,14 +211,14 @@ final class TextureCombineOperation {
                         var38 = TriangleRasterizer.viewportWidth - var37 - 1;
                       }
                       if (var37 < 0) {
-                        HorizontalGradientOperator.a(-(var37 * var41) + var29, var25 - var37 * var40, param6, var39, var36Lifetime2, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
+                        HorizontalGradientOperator.blendInterpolatedColourSpan(-(var37 * var41) + var29, var25 - var37 * var40, param6, var39, var36Lifetime2, -116, var38 + var37, var40, -(var39 * var37) + var21, var41);
                       } else {
-                        HorizontalGradientOperator.a(var29, var25, param6, var39, var36Lifetime2 + var37, param4 - 113, var38, var40, var21, var41);
+                        HorizontalGradientOperator.blendInterpolatedColourSpan(var29, var25, param6, var39, var36Lifetime2 + var37, param4 - 113, var38, var40, var21, var41);
                       }
                     } else {
                       if (var37 >= 0 &&
                         TriangleRasterizer.viewportWidth > var37) {
-                        HorizontalGradientOperator.a(var29, var25, param6, 0, var37 + var36Lifetime2, param4 ^ -108, var38, 0, var21, 0);
+                        HorizontalGradientOperator.blendInterpolatedColourSpan(var29, var25, param6, 0, var37 + var36Lifetime2, param4 ^ -108, var38, 0, var21, 0);
                       }
                     }
                   }
@@ -293,7 +293,7 @@ final class TextureCombineOperation {
                 if (var37Lifetime1 == 0) {
                   if (0 <= var36Lifetime1 &&
                     TriangleRasterizer.viewportWidth > var36Lifetime1) {
-                    HorizontalGradientOperator.a(var29, var25, param6, 0, var35Lifetime1 + var36Lifetime1, -112, var37Lifetime1, 0, var21, 0);
+                    HorizontalGradientOperator.blendInterpolatedColourSpan(var29, var25, param6, 0, var35Lifetime1 + var36Lifetime1, -112, var37Lifetime1, 0, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -303,9 +303,9 @@ final class TextureCombineOperation {
                     var37Lifetime1 = TriangleRasterizer.viewportWidth - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 >= 0) {
-                    HorizontalGradientOperator.a(var29, var25, param6, var38Lifetime1, var36Lifetime1 + var35Lifetime1, -123, var37Lifetime1, var39Lifetime1, var21, var40Lifetime1);
+                    HorizontalGradientOperator.blendInterpolatedColourSpan(var29, var25, param6, var38Lifetime1, var36Lifetime1 + var35Lifetime1, -123, var37Lifetime1, var39Lifetime1, var21, var40Lifetime1);
                   } else {
-                    HorizontalGradientOperator.a(var29 - var36Lifetime1 * var40Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, param6, var38Lifetime1, var35Lifetime1, -127, var36Lifetime1 + var37Lifetime1, var39Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var40Lifetime1);
+                    HorizontalGradientOperator.blendInterpolatedColourSpan(var29 - var36Lifetime1 * var40Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, param6, var38Lifetime1, var35Lifetime1, -127, var36Lifetime1 + var37Lifetime1, var39Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var40Lifetime1);
                   }
                 }
               }

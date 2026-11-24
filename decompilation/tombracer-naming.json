@@ -33348,6 +33348,14 @@
       "renamedSymbol": "M:KaleidoscopeOperator.getMonochromeRow(II)[I"
     },
     {
+      "symbol": "M:fl.d(III)V",
+      "originalName": "d",
+      "to": "mapKaleidoscopeCoordinates",
+      "evidence": "Map a texture sample through the eight atan2 angle sectors into the shared source row/column indices consumed by both monochrome and colour row sampling. Preserve float atan2 cast before double threshold comparisons,every inclusive boundary,the original cross-axis width/height arithmetic,both final masks and wrong-guard field store. Complete original-body SHA256 a15468110e39343add04dbcbd5af1d8c0d58a046c05ec07d22004d1184f21a97. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V"
+    },
+    {
       "symbol": "M:fla.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -41180,6 +41188,14 @@
       "renamedSymbol": "M:WaveformOperator.decodeParameter(BLPacketBuffer;I)V"
     },
     {
+      "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+      "originalName": "a",
+      "to": "projectSphericalTextureCoordinates",
+      "evidence": "Subtract the three supplied origin coordinates,apply the supplied3x3float transform,compute vector length and atan2/asin spherical UVs,add the vertical offset and apply the original orientation-dependent quarter-turn/sign transforms. Preserve subtraction overflow,exact expression/FP order,zero-length NaN behavior,early byte-guard return after coordinate subtraction,output index1 before0 writes and aliasing between input matrix/output arrays. Complete original-body SHA256 129aa91dc60f079d46c85967713cba7ec0bca1b67d4cc66e231b0a837ea9389f. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V"
+    },
+    {
       "symbol": "M:ifa.b(B)V",
       "originalName": "b",
       "to": "onDecoded",
@@ -41402,6 +41418,14 @@
       "evidence": "Operators read the parameter with the given index from the PacketBuffer. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RandomBrickOperator.decodeParameter(BLPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
+      "originalName": "a",
+      "to": "drawBevelledBrick",
+      "evidence": "Write the random-brick texture rectangle with original random brightness/bevel width,wrapped horizontal spans,flat interior and symmetric edge ramps. Preserve both random draws/order,all zero/negative sizes,one-time x normalization,masking,division/overflow,product-versus-minimum corner modes,right-before-left assignment order and partial writes on array failures. Complete original-body SHA256 9772e92b21a24960dd5870b71b3c47456fe6cbd81db2678b53ab97d4398efc14. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V"
     },
     {
       "symbol": "M:iia.b(B)V",
@@ -62260,6 +62284,14 @@
       "renamedSymbol": "M:CourseDefinition.releaseStatics(I)V"
     },
     {
+      "symbol": "M:qga.a(II[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blendInterpolatedColourSpan",
+      "evidence": "Blend incremented colour components into consecutive destination pixels;the triangle caller computes each component step and clipping offset. Preserve half-destination contribution,original unusual masks33478545/33423539/33423360,all signed shifts and overflowing adds,pre-decremented count and component-step order. Preserve full-int guard recursion and all invalid-array/negative-count paths;do not replace masks with conventional RGB constants. Complete original-body SHA256 d124cb97a4af8a8ba827cb5f17b62bc529e914727a632d04e8763481f5fee1e7. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V"
+    },
+    {
       "symbol": "M:qga.a(I[Ljava/lang/CharSequence;II)Ljava/lang/String;",
       "originalName": "a",
       "to": "joinRange",
@@ -64690,6 +64722,14 @@
       "evidence": "Operators read the parameter with the given index from the PacketBuffer. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RasterizerOperator.decodeParameter(BLPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:rda.a(I[[I)V",
+      "originalName": "a",
+      "to": "rasterizeShapes",
+      "evidence": "Install the supplied raster target and original clip,then dispatch each decoded shape in order to outline-only,fill-only,or fill-with-outline according to the two colour signs. Preserve no draw when both colours negative,the original asymmetric dimension argument order,guard path,null shape-array behavior,global target/clip writes before iteration and all failure order. Complete original-body SHA256 ae7b28d002b05e44f22ffef727469ecb3abf213798e376de0fc68c3dcc0590bb. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RasterizerOperator.rasterizeShapes(I[[I)V"
     },
     {
       "symbol": "M:rda.b(II)[[I",
@@ -76130,6 +76170,22 @@
       "evidence": "Operators read the parameter with the given index from the PacketBuffer. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CrossedSineBandsOperator.decodeParameter(BLPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:voa.a(IBI)Z",
+      "originalName": "a",
+      "to": "isInsideDifferenceDiagonalBand",
+      "evidence": "Test strict bounds around the difference diagonal,param2-param0,using cosine-derived width whose phase is driven by param2+param0. Preserve exact1047023index mask,255multiplication,all12bit shifts/divisions and overflow,negative-width behavior and wrong-byte-guard field store after the first width division. Complete original-body SHA256 8f6fafcd699f1cee2f96626d5a7dccc45414f54ab41dffd2713b9a97a4ecc364. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z"
+    },
+    {
+      "symbol": "M:voa.a(IIB)Z",
+      "originalName": "a",
+      "to": "isInsideSumDiagonalBand",
+      "evidence": "Test strict bounds around the sum diagonal,param1+param0,using cosine-derived width whose phase is driven by param0-param1. Preserve distinct1048064index mask,255multiplication,all12bit shifts/divisions and overflow,negative-width behavior and wrong-byte-guard field store after both width divisions. Complete original-body SHA256 e4509c8723fdf8f927e2b8f1722562eb7961700639a757c1081ebc51de580458. Naming only. Complete original body and all29bound incoming-call contexts,49field declarations,six supporting classes and two cosine-table/shape-constructor witnesses reviewed. Preserve original descriptors,all full-int domains and unused guards,method visibility/modifiers,field/parameter/local names,literals,integer overflow/shifts/division,float rounding/NaN and cast order,array aliases/partial writes,all allocation/call/exception order and diagnostic formatting. No native/class-name-literal edits;no pixel or whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z"
     },
     {
       "symbol": "M:voa.b(B)V",
@@ -266477,7 +266533,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#0",
-      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#0",
+      "renamedSymbol": "L:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -266488,7 +266544,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#1",
-      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#1",
+      "renamedSymbol": "L:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -266499,7 +266555,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#2",
-      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#2",
+      "renamedSymbol": "L:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -266510,7 +266566,7 @@
     },
     {
       "symbol": "L:fl.d(III)V#3",
-      "renamedSymbol": "L:KaleidoscopeOperator.d(III)V#3",
+      "renamedSymbol": "L:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -319156,7 +319212,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#0",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#0",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -319167,7 +319223,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#1",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#1",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -319178,7 +319234,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#10",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#10",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -319189,7 +319245,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#11",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#11",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -319200,7 +319256,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#12",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#12",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -319211,7 +319267,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#13",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#13",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -319222,7 +319278,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#14",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#14",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -319233,7 +319289,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#15",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#15",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -319244,7 +319300,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#2",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#2",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -319255,7 +319311,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#3",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#3",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -319266,7 +319322,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#4",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#4",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -319277,7 +319333,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#5",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#5",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -319288,7 +319344,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#6",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#6",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#6",
       "originalName": "var11_float",
       "renamedName": "var11_float",
       "declaration": {
@@ -319299,7 +319355,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#7",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#7",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -319310,7 +319366,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#8",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#8",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -319321,7 +319377,7 @@
     },
     {
       "symbol": "L:ifa.a(IIII[FFII[FBI)V#9",
-      "renamedSymbol": "L:WaveformOperator.a(IIII[FFII[FBI)V#9",
+      "renamedSymbol": "L:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -320443,7 +320499,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#0",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#0",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#0",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -320454,7 +320510,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#1",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#1",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -320465,7 +320521,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#10",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#10",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#10",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -320476,7 +320532,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#11",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#11",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#11",
       "originalName": "stackIn_41_2",
       "renamedName": "stackIn_41_2",
       "declaration": {
@@ -320487,7 +320543,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#12",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#12",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#12",
       "originalName": "stackIn_41_3",
       "renamedName": "stackIn_41_3",
       "declaration": {
@@ -320498,7 +320554,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#13",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#13",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#13",
       "originalName": "stackIn_42_4",
       "renamedName": "stackIn_42_4",
       "declaration": {
@@ -320509,7 +320565,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#14",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#14",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#14",
       "originalName": "stackIn_52_0",
       "renamedName": "stackIn_52_0",
       "declaration": {
@@ -320520,7 +320576,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#15",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#15",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#15",
       "originalName": "stackIn_52_1",
       "renamedName": "stackIn_52_1",
       "declaration": {
@@ -320531,7 +320587,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#16",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#16",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#16",
       "originalName": "stackIn_52_2",
       "renamedName": "stackIn_52_2",
       "declaration": {
@@ -320542,7 +320598,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#17",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#17",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#17",
       "originalName": "stackIn_52_3",
       "renamedName": "stackIn_52_3",
       "declaration": {
@@ -320553,7 +320609,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#18",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#18",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#18",
       "originalName": "stackIn_53_4",
       "renamedName": "stackIn_53_4",
       "declaration": {
@@ -320564,7 +320620,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#19",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#19",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#19",
       "originalName": "stackIn_70_0",
       "renamedName": "stackIn_70_0",
       "declaration": {
@@ -320575,7 +320631,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#2",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#2",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#2",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -320586,7 +320642,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#20",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#20",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#20",
       "originalName": "stackIn_70_1",
       "renamedName": "stackIn_70_1",
       "declaration": {
@@ -320597,7 +320653,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#21",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#21",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#21",
       "originalName": "stackIn_71_2",
       "renamedName": "stackIn_71_2",
       "declaration": {
@@ -320608,7 +320664,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#22",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#22",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#22",
       "originalName": "stackIn_73_1",
       "renamedName": "stackIn_73_1",
       "declaration": {
@@ -320619,7 +320675,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#23",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#23",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#23",
       "originalName": "stackIn_74_2",
       "renamedName": "stackIn_74_2",
       "declaration": {
@@ -320630,7 +320686,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#24",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#24",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#24",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -320641,7 +320697,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#25",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#25",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#25",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -320652,7 +320708,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#26",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#26",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#26",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -320663,7 +320719,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#27",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#27",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#27",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -320674,7 +320730,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#28",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#28",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#28",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -320685,7 +320741,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#29",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#29",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#29",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -320696,7 +320752,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#3",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#3",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#3",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -320707,7 +320763,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#30",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#30",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#30",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -320718,7 +320774,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#31",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#31",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#31",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -320729,7 +320785,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#32",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#32",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#32",
       "originalName": "var13_ref_int__",
       "renamedName": "var13_ref_int__",
       "declaration": {
@@ -320740,7 +320796,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#33",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#33",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#33",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -320751,7 +320807,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#34",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#34",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#34",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -320762,7 +320818,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#35",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#35",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#35",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -320773,7 +320829,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#36",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#36",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#36",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -320784,7 +320840,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#37",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#37",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#37",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -320795,7 +320851,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#38",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#38",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#38",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -320806,7 +320862,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#39",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#39",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#39",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -320817,7 +320873,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#4",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#4",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -320828,7 +320884,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#40",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#40",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#40",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -320839,7 +320895,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#41",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#41",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#41",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -320850,7 +320906,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#42",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#42",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#42",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -320861,7 +320917,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#43",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#43",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#43",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -320872,7 +320928,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#44",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#44",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#44",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -320883,7 +320939,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#45",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#45",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#45",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -320894,7 +320950,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#46",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#46",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#46",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -320905,7 +320961,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#5",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#5",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -320916,7 +320972,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#6",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#6",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#6",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -320927,7 +320983,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#7",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#7",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#7",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -320938,7 +320994,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#8",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#8",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#8",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -320949,7 +321005,7 @@
     },
     {
       "symbol": "L:iia.a(II[[IBIILjava/util/Random;)V#9",
-      "renamedSymbol": "L:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#9",
+      "renamedSymbol": "L:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#9",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -453609,7 +453665,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#0",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#0",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#0",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -453620,7 +453676,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#1",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#1",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#1",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -453631,7 +453687,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#10",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#10",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -453642,7 +453698,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#11",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#11",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#11",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -453653,7 +453709,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#12",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#12",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#12",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -453664,7 +453720,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#13",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#13",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#13",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -453675,7 +453731,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#14",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#14",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -453686,7 +453742,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#2",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#2",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -453697,7 +453753,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#3",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#3",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#3",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -453708,7 +453764,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#4",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#4",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#4",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -453719,7 +453775,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#5",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#5",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -453730,7 +453786,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#6",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#6",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -453741,7 +453797,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#7",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#7",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#7",
       "originalName": "var10_ref",
       "renamedName": "var10_ref",
       "declaration": {
@@ -453752,7 +453808,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#8",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#8",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -453763,7 +453819,7 @@
     },
     {
       "symbol": "L:qga.a(II[IIIIIIII)V#9",
-      "renamedSymbol": "L:HorizontalGradientOperator.a(II[IIIIIIII)V#9",
+      "renamedSymbol": "L:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -479019,7 +479075,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#0",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#0",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -479030,7 +479086,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#1",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#1",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -479041,7 +479097,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#10",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#10",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -479052,7 +479108,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#11",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#11",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#11",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -479063,7 +479119,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#12",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#12",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -479074,7 +479130,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#2",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#2",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -479085,7 +479141,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#3",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#3",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -479096,7 +479152,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#4",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#4",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -479107,7 +479163,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#5",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#5",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -479118,7 +479174,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#6",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#6",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -479129,7 +479185,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#7",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#7",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#7",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -479140,7 +479196,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#8",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#8",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#8",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -479151,7 +479207,7 @@
     },
     {
       "symbol": "L:rda.a(I[[I)V#9",
-      "renamedSymbol": "L:RasterizerOperator.a(I[[I)V#9",
+      "renamedSymbol": "L:RasterizerOperator.rasterizeShapes(I[[I)V#9",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -552521,7 +552577,7 @@
     },
     {
       "symbol": "L:voa.a(IBI)Z#0",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IBI)Z#0",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -552532,7 +552588,7 @@
     },
     {
       "symbol": "L:voa.a(IBI)Z#1",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IBI)Z#1",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -552543,7 +552599,7 @@
     },
     {
       "symbol": "L:voa.a(IBI)Z#2",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IBI)Z#2",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -552554,7 +552610,7 @@
     },
     {
       "symbol": "L:voa.a(IIB)Z#0",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IIB)Z#0",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -552565,7 +552621,7 @@
     },
     {
       "symbol": "L:voa.a(IIB)Z#1",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IIB)Z#1",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -552576,7 +552632,7 @@
     },
     {
       "symbol": "L:voa.a(IIB)Z#2",
-      "renamedSymbol": "L:CrossedSineBandsOperator.a(IIB)Z#2",
+      "renamedSymbol": "L:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -615265,9 +615321,9 @@
     },
     {
       "symbol": "M:fl.d(III)V",
-      "renamedSymbol": "M:KaleidoscopeOperator.d(III)V",
+      "renamedSymbol": "M:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "mapKaleidoscopeCoordinates",
       "declaration": {
         "file": "fl.java",
         "start": 2670,
@@ -628245,9 +628301,9 @@
     },
     {
       "symbol": "M:ifa.a(IIII[FFII[FBI)V",
-      "renamedSymbol": "M:WaveformOperator.a(IIII[FFII[FBI)V",
+      "renamedSymbol": "M:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "projectSphericalTextureCoordinates",
       "declaration": {
         "file": "ifa.java",
         "start": 552,
@@ -628674,9 +628730,9 @@
     },
     {
       "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
-      "renamedSymbol": "M:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V",
+      "renamedSymbol": "M:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawBevelledBrick",
       "declaration": {
         "file": "iia.java",
         "start": 439,
@@ -667251,9 +667307,9 @@
     },
     {
       "symbol": "M:qga.a(II[IIIIIIII)V",
-      "renamedSymbol": "M:HorizontalGradientOperator.a(II[IIIIIIII)V",
+      "renamedSymbol": "M:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blendInterpolatedColourSpan",
       "declaration": {
         "file": "qga.java",
         "start": 3516,
@@ -671244,9 +671300,9 @@
     },
     {
       "symbol": "M:rda.a(I[[I)V",
-      "renamedSymbol": "M:RasterizerOperator.a(I[[I)V",
+      "renamedSymbol": "M:RasterizerOperator.rasterizeShapes(I[[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "rasterizeShapes",
       "declaration": {
         "file": "rda.java",
         "start": 2418,
@@ -690384,9 +690440,9 @@
     },
     {
       "symbol": "M:voa.a(IBI)Z",
-      "renamedSymbol": "M:CrossedSineBandsOperator.a(IBI)Z",
+      "renamedSymbol": "M:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isInsideDifferenceDiagonalBand",
       "declaration": {
         "file": "voa.java",
         "start": 13867,
@@ -690395,9 +690451,9 @@
     },
     {
       "symbol": "M:voa.a(IIB)Z",
-      "renamedSymbol": "M:CrossedSineBandsOperator.a(IIB)Z",
+      "renamedSymbol": "M:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isInsideSumDiagonalBand",
       "declaration": {
         "file": "voa.java",
         "start": 14430,
@@ -754844,7 +754900,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#0",
-      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#0",
+      "renamedSymbol": "P:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -754855,7 +754911,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#1",
-      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#1",
+      "renamedSymbol": "P:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -754866,7 +754922,7 @@
     },
     {
       "symbol": "P:fl.d(III)V#2",
-      "renamedSymbol": "P:KaleidoscopeOperator.d(III)V#2",
+      "renamedSymbol": "P:KaleidoscopeOperator.mapKaleidoscopeCoordinates(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -783609,7 +783665,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#0",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#0",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -783620,7 +783676,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#1",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#1",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -783631,7 +783687,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#10",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#10",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -783642,7 +783698,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#2",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#2",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -783653,7 +783709,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#3",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#3",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -783664,7 +783720,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#4",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#4",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -783675,7 +783731,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#5",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#5",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -783686,7 +783742,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#6",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#6",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -783697,7 +783753,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#7",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#7",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -783708,7 +783764,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#8",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#8",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -783719,7 +783775,7 @@
     },
     {
       "symbol": "P:ifa.a(IIII[FFII[FBI)V#9",
-      "renamedSymbol": "P:WaveformOperator.a(IIII[FFII[FBI)V#9",
+      "renamedSymbol": "P:WaveformOperator.projectSphericalTextureCoordinates(IIII[FFII[FBI)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -784687,7 +784743,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#0",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#0",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -784698,7 +784754,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#1",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#1",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -784709,7 +784765,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#2",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#2",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -784720,7 +784776,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#3",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#3",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -784731,7 +784787,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#4",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#4",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -784742,7 +784798,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#5",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#5",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -784753,7 +784809,7 @@
     },
     {
       "symbol": "P:iia.a(II[[IBIILjava/util/Random;)V#6",
-      "renamedSymbol": "P:RandomBrickOperator.a(II[[IBIILjava/util/Random;)V#6",
+      "renamedSymbol": "P:RandomBrickOperator.drawBevelledBrick(II[[IBIILjava/util/Random;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -877197,7 +877253,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#0",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#0",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -877208,7 +877264,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#1",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#1",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -877219,7 +877275,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#2",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#2",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -877230,7 +877286,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#3",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#3",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -877241,7 +877297,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#4",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#4",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -877252,7 +877308,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#5",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#5",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -877263,7 +877319,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#6",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#6",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -877274,7 +877330,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#7",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#7",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -877285,7 +877341,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#8",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#8",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -877296,7 +877352,7 @@
     },
     {
       "symbol": "P:qga.a(II[IIIIIIII)V#9",
-      "renamedSymbol": "P:HorizontalGradientOperator.a(II[IIIIIIII)V#9",
+      "renamedSymbol": "P:HorizontalGradientOperator.blendInterpolatedColourSpan(II[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -888131,7 +888187,7 @@
     },
     {
       "symbol": "P:rda.a(I[[I)V#0",
-      "renamedSymbol": "P:RasterizerOperator.a(I[[I)V#0",
+      "renamedSymbol": "P:RasterizerOperator.rasterizeShapes(I[[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -888142,7 +888198,7 @@
     },
     {
       "symbol": "P:rda.a(I[[I)V#1",
-      "renamedSymbol": "P:RasterizerOperator.a(I[[I)V#1",
+      "renamedSymbol": "P:RasterizerOperator.rasterizeShapes(I[[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -928589,7 +928645,7 @@
     },
     {
       "symbol": "P:voa.a(IBI)Z#0",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IBI)Z#0",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -928600,7 +928656,7 @@
     },
     {
       "symbol": "P:voa.a(IBI)Z#1",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IBI)Z#1",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -928611,7 +928667,7 @@
     },
     {
       "symbol": "P:voa.a(IBI)Z#2",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IBI)Z#2",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideDifferenceDiagonalBand(IBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -928622,7 +928678,7 @@
     },
     {
       "symbol": "P:voa.a(IIB)Z#0",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IIB)Z#0",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -928633,7 +928689,7 @@
     },
     {
       "symbol": "P:voa.a(IIB)Z#1",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IIB)Z#1",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -928644,7 +928700,7 @@
     },
     {
       "symbol": "P:voa.a(IIB)Z#2",
-      "renamedSymbol": "P:CrossedSineBandsOperator.a(IIB)Z#2",
+      "renamedSymbol": "P:CrossedSineBandsOperator.isInsideSumDiagonalBand(IIB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -1135782,7 +1135838,7 @@
       "original": "fl.java",
       "renamed": "KaleidoscopeOperator.java",
       "inputSha256": "a687ba25b8449b1b830add7126ac7d0ef530f89283a0833cc8a1c803fb46d79e",
-      "outputSha256": "dbf120960654f35e176128b841034c2a20d1aa278aa1cb83f3414274c12d5ef1",
+      "outputSha256": "cc5a6ba06c96a3521464687705277218e75aa546ef6fb6aa3d17ca072ef69549",
       "edits": [
         {
           "start": 50,
@@ -1135862,6 +1135918,13 @@
           "renamed": "textureWidth"
         },
         {
+          "start": 559,
+          "end": 560,
+          "symbol": "M:fl.d(III)V",
+          "original": "d",
+          "renamed": "mapKaleidoscopeCoordinates"
+        },
+        {
           "start": 607,
           "end": 608,
           "symbol": "M:ci.c(III)[I",
@@ -1135902,6 +1135965,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2670,
+          "end": 2671,
+          "symbol": "M:fl.d(III)V",
+          "original": "d",
+          "renamed": "mapKaleidoscopeCoordinates"
         },
         {
           "start": 2908,
@@ -1136296,6 +1136366,13 @@
           "renamed": "textureWidth"
         },
         {
+          "start": 6339,
+          "end": 6340,
+          "symbol": "M:fl.d(III)V",
+          "original": "d",
+          "renamed": "mapKaleidoscopeCoordinates"
+        },
+        {
           "start": 6388,
           "end": 6389,
           "symbol": "M:ci.a(III)[[I",
@@ -1136329,6 +1136406,13 @@
           "symbol": "C:boa",
           "original": "boa",
           "renamed": "BlockModel"
+        },
+        {
+          "start": 6619,
+          "end": 6620,
+          "symbol": "M:fl.d(III)V",
+          "original": "d",
+          "renamed": "mapKaleidoscopeCoordinates"
         },
         {
           "start": 6683,
@@ -1172611,7 +1172695,7 @@
       "original": "gja.java",
       "renamed": "HardwareModel.java",
       "inputSha256": "e8ec92bea08367d86b514720b6118bbe540714c99e72b84a81da5309bce6fd80",
-      "outputSha256": "229ef00ca6350825b64bf57f9240d73bdf8295977f2d25451cd833cf5f13a274",
+      "outputSha256": "2f2dad4b5f278e3996bd25a428257bb441a3e63404df67b24fa333bada3feec6",
       "edits": [
         {
           "start": 69,
@@ -1173149,6 +1173233,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 24464,
+          "end": 24465,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 24538,
           "end": 24540,
           "symbol": "C:rn",
@@ -1173177,6 +1173268,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 24752,
+          "end": 24753,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 24826,
           "end": 24828,
           "symbol": "C:rn",
@@ -1173203,6 +1173301,13 @@
           "symbol": "C:ifa",
           "original": "ifa",
           "renamed": "WaveformOperator"
+        },
+        {
+          "start": 25034,
+          "end": 25035,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
         },
         {
           "start": 25100,
@@ -1223564,7 +1223669,7 @@
       "original": "ica.java",
       "renamed": "TextureCombineOperation.java",
       "inputSha256": "10c39104315be2dc11a78d33f367d38d74c96655b58cddb3053f9b0ee99a1b20",
-      "outputSha256": "1b76ed1025e0f7cc1bc3417aa6b12fb62e363df7ea496ed8ce92b4e0945719de",
+      "outputSha256": "8f177e84967489257ea8a0f9d39e6f7051a98451c95b585c90a4d37c916beb45",
       "edits": [
         {
           "start": 50,
@@ -1223693,11 +1223798,25 @@
           "renamed": "HorizontalGradientOperator"
         },
         {
+          "start": 8299,
+          "end": 8300,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
+        },
+        {
           "start": 8498,
           "end": 8501,
           "symbol": "C:qga",
           "original": "qga",
           "renamed": "HorizontalGradientOperator"
+        },
+        {
+          "start": 8502,
+          "end": 8503,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
         },
         {
           "start": 8717,
@@ -1223719,6 +1223838,13 @@
           "symbol": "C:qga",
           "original": "qga",
           "renamed": "HorizontalGradientOperator"
+        },
+        {
+          "start": 8768,
+          "end": 8769,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
         },
         {
           "start": 8983,
@@ -1223798,6 +1223924,13 @@
           "renamed": "HorizontalGradientOperator"
         },
         {
+          "start": 11890,
+          "end": 11891,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
+        },
+        {
           "start": 12262,
           "end": 12265,
           "symbol": "C:uoa",
@@ -1223833,11 +1223966,25 @@
           "renamed": "HorizontalGradientOperator"
         },
         {
+          "start": 12472,
+          "end": 12473,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
+        },
+        {
           "start": 12654,
           "end": 12657,
           "symbol": "C:qga",
           "original": "qga",
           "renamed": "HorizontalGradientOperator"
+        },
+        {
+          "start": 12658,
+          "end": 12659,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
         },
         {
           "start": 13009,
@@ -1225494,7 +1225641,7 @@
       "original": "ifa.java",
       "renamed": "WaveformOperator.java",
       "inputSha256": "0a76a993a0ffb7ac31ceaefae8c83b32f212df8213c38766d9825c7c0c82deff",
-      "outputSha256": "d0b8bbe3efbcca347a1592910d8844c478832f51d6cb736f41bce9c8acf5704f",
+      "outputSha256": "62d975017c2fa33152eb9a987f8ce8ef2e9f2c5c3104ef7229c93e73871f11e4",
       "edits": [
         {
           "start": 50,
@@ -1225551,6 +1225698,13 @@
           "symbol": "M:ifa.<init>()V",
           "original": "ifa",
           "renamed": "WaveformOperator"
+        },
+        {
+          "start": 552,
+          "end": 553,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
         },
         {
           "start": 3508,
@@ -1225649,6 +1225803,13 @@
           "symbol": "C:ifa",
           "original": "ifa",
           "renamed": "WaveformOperator"
+        },
+        {
+          "start": 5963,
+          "end": 5964,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
         },
         {
           "start": 6090,
@@ -1227467,7 +1227628,7 @@
       "original": "iia.java",
       "renamed": "RandomBrickOperator.java",
       "inputSha256": "a077fe80a3953562dc97f1fb6af55766f4a4298afe1dddac44b2e44b977a738c",
-      "outputSha256": "5668a868fceaddc7962e43a91be639c810ed14dd763188116532a670ee1148f8",
+      "outputSha256": "45ac32739b902b7f1c6ba1a21887acf86c319cbe6c571a3a18c3c832ec515dce",
       "edits": [
         {
           "start": 71,
@@ -1227489,6 +1227650,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 439,
+          "end": 440,
+          "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
+          "original": "a",
+          "renamed": "drawBevelledBrick"
         },
         {
           "start": 2005,
@@ -1228563,6 +1228731,13 @@
           "renamed": "textureWidth"
         },
         {
+          "start": 17123,
+          "end": 17124,
+          "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
+          "original": "a",
+          "renamed": "drawBevelledBrick"
+        },
+        {
           "start": 17340,
           "end": 17342,
           "symbol": "B:iia.c(II)[I#0",
@@ -1228611,6 +1228786,20 @@
           "symbol": "F:ns.field_g:I",
           "original": "field_g",
           "renamed": "textureWidth"
+        },
+        {
+          "start": 18165,
+          "end": 18166,
+          "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
+          "original": "a",
+          "renamed": "drawBevelledBrick"
+        },
+        {
+          "start": 18311,
+          "end": 18312,
+          "symbol": "M:iia.a(II[[IBIILjava/util/Random;)V",
+          "original": "a",
+          "renamed": "drawBevelledBrick"
         },
         {
           "start": 18883,
@@ -1392694,7 +1392883,7 @@
       "original": "np.java",
       "renamed": "OpenGlModel.java",
       "inputSha256": "5c26c219b1c9559daf84b741364270a1c179b3624bd58c480cf97220eeb9060b",
-      "outputSha256": "5c630c6ee87d0febf87dc68715b5fe0260a0b7982433a1118589e63d334ed5db",
+      "outputSha256": "305923119ce57391909abb4a05d9944ecbccbe70820a4a33f6ed16034a9a3404",
       "edits": [
         {
           "start": 50,
@@ -1398037,6 +1398226,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 191476,
+          "end": 191477,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 191550,
           "end": 191553,
           "symbol": "C:dia",
@@ -1398065,6 +1398261,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 191783,
+          "end": 191784,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 191857,
           "end": 191860,
           "symbol": "C:dia",
@@ -1398091,6 +1398294,13 @@
           "symbol": "C:ifa",
           "original": "ifa",
           "renamed": "WaveformOperator"
+        },
+        {
+          "start": 192090,
+          "end": 192091,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
         },
         {
           "start": 192156,
@@ -1480290,7 +1480500,7 @@
       "original": "qga.java",
       "renamed": "HorizontalGradientOperator.java",
       "inputSha256": "1eff81148507ce31ab6226e3f51e752a0d69ed147a7bae948536685083d38df2",
-      "outputSha256": "aaa8c5b37d4b4eb13b7907c65823f70c85986831a848365ca251785702f6dc0f",
+      "outputSha256": "9c6a78ce13d0fc99a679d78ac7588ff8e48b8bda1768fd63ad94876b09d8db61",
       "edits": [
         {
           "start": 50,
@@ -1480426,11 +1480636,25 @@
           "renamed": "HorizontalGradientOperator"
         },
         {
+          "start": 3516,
+          "end": 3517,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
+        },
+        {
           "start": 4226,
           "end": 4229,
           "symbol": "C:qga",
           "original": "qga",
           "renamed": "HorizontalGradientOperator"
+        },
+        {
+          "start": 4230,
+          "end": 4231,
+          "symbol": "M:qga.a(II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blendInterpolatedColourSpan"
         },
         {
           "start": 4599,
@@ -1513725,7 +1513949,7 @@
       "original": "rda.java",
       "renamed": "RasterizerOperator.java",
       "inputSha256": "4dcd6843604c9a62def04fc9a0e5b971f33ba197073814cd23ef55ccf45a6278",
-      "outputSha256": "acdf8fc1b5eaf3787945f6e5003bebeca1a7ab8095bb8fddcc041e770687c204",
+      "outputSha256": "5f0f2aece649102eb8e966d1fd64624d27a76d821bddbeb5afef42bd5486658c",
       "edits": [
         {
           "start": 69,
@@ -1513761,6 +1513985,13 @@
           "symbol": "C:uia",
           "original": "uia",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 705,
+          "end": 706,
+          "symbol": "M:rda.a(I[[I)V",
+          "original": "a",
+          "renamed": "rasterizeShapes"
         },
         {
           "start": 800,
@@ -1513894,6 +1514125,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2418,
+          "end": 2419,
+          "symbol": "M:rda.a(I[[I)V",
+          "original": "a",
+          "renamed": "rasterizeShapes"
         },
         {
           "start": 2528,
@@ -1514232,6 +1514470,13 @@
           "renamed": "rowMissed"
         },
         {
+          "start": 6287,
+          "end": 6288,
+          "symbol": "M:rda.a(I[[I)V",
+          "original": "a",
+          "renamed": "rasterizeShapes"
+        },
+        {
           "start": 6301,
           "end": 6308,
           "symbol": "F:ci.field_i:Lmv;",
@@ -1514314,6 +1514559,13 @@
           "symbol": "M:fk.a(B)[[[I",
           "original": "a",
           "renamed": "getAllRows"
+        },
+        {
+          "start": 7092,
+          "end": 7093,
+          "symbol": "M:rda.a(I[[I)V",
+          "original": "a",
+          "renamed": "rasterizeShapes"
         },
         {
           "start": 7141,
@@ -1642361,7 +1642613,7 @@
       "original": "voa.java",
       "renamed": "CrossedSineBandsOperator.java",
       "inputSha256": "1ac33ef3db826490e20e9cae7356e521dc4e16b7f4319c76f312abfd9c859656",
-      "outputSha256": "64cc7be88f735ce792be6dfff6b848691659498f1691ae64515899c7fb9c068c",
+      "outputSha256": "c0ffb22dbec531cc76493a1d875ddf7b8fb54fc4d0f85ce64189ad2eb6693095",
       "edits": [
         {
           "start": 50,
@@ -1642455,6 +1642707,20 @@
           "renamed": "textureColumnCoords"
         },
         {
+          "start": 3327,
+          "end": 3328,
+          "symbol": "M:voa.a(IIB)Z",
+          "original": "a",
+          "renamed": "isInsideSumDiagonalBand"
+        },
+        {
+          "start": 3393,
+          "end": 3394,
+          "symbol": "M:voa.a(IBI)Z",
+          "original": "a",
+          "renamed": "isInsideDifferenceDiagonalBand"
+        },
+        {
           "start": 3665,
           "end": 3666,
           "symbol": "M:voa.a(BLuia;I)V",
@@ -1642516,6 +1642782,13 @@
           "symbol": "M:uia.d(I)I",
           "original": "d",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 5041,
+          "end": 5042,
+          "symbol": "M:voa.a(IIB)Z",
+          "original": "a",
+          "renamed": "isInsideSumDiagonalBand"
         },
         {
           "start": 5547,
@@ -1643407,11 +1643680,25 @@
           "renamed": "ByteArrayCopies"
         },
         {
+          "start": 13867,
+          "end": 13868,
+          "symbol": "M:voa.a(IBI)Z",
+          "original": "a",
+          "renamed": "isInsideDifferenceDiagonalBand"
+        },
+        {
           "start": 14051,
           "end": 14053,
           "symbol": "C:lm",
           "original": "lm",
           "renamed": "ColourFillOperator"
+        },
+        {
+          "start": 14430,
+          "end": 14431,
+          "symbol": "M:voa.a(IIB)Z",
+          "original": "a",
+          "renamed": "isInsideSumDiagonalBand"
         },
         {
           "start": 14614,
@@ -1677841,7 +1678128,7 @@
       "original": "ww.java",
       "renamed": "Model.java",
       "inputSha256": "28d3be394b72783da33d6c98af6dcfcd4ec808fb67e748b1271640aceda528d3",
-      "outputSha256": "de6bd7fd764c4ef616d9b96ea3d30107472a61d53f169fb0596e08a100e8dca3",
+      "outputSha256": "1bf1d7c9caf4feb62924953e8877485fb1464403a9f73801798e0167750f8afe",
       "edits": [
         {
           "start": 50,
@@ -1681424,6 +1681711,13 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 182614,
+          "end": 182615,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 182851,
           "end": 182854,
           "symbol": "C:ifa",
@@ -1681431,11 +1681725,25 @@
           "renamed": "WaveformOperator"
         },
         {
+          "start": 182855,
+          "end": 182856,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
+        },
+        {
           "start": 183092,
           "end": 183095,
           "symbol": "C:ifa",
           "original": "ifa",
           "renamed": "WaveformOperator"
+        },
+        {
+          "start": 183096,
+          "end": 183097,
+          "symbol": "M:ifa.a(IIII[FFII[FBI)V",
+          "original": "a",
+          "renamed": "projectSphericalTextureCoordinates"
         },
         {
           "start": 186103,
@@ -1682032,10 +1682340,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "b885ccd317fe48f88bc05859ce4fdc6f3edf33bf311db402de64d6be466f4975",
+    "rulesSha256": "c3a7266e643d382eaa37d564710e0c9c5e0667942703233091a8824519ab1110",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "bf750128b6e51701c415f998bf33b55020986c8b982d40017cb29c36eebdfaa6",
+    "outputTreeSha256": "23222535e6617a7f5b7edbda71807b3e8019bb15b6937ed22183897929ae737c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

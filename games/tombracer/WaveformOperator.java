@@ -25,7 +25,7 @@ final class WaveformOperator extends TextureOperator {
         this.field_t = 1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, float[] param4, float param5, int param6, int param7, float[] param8, byte param9, int param10) {
+    final static void projectSphericalTextureCoordinates(int param0, int param1, int param2, int param3, float[] param4, float param5, int param6, int param7, float[] param8, byte param9, int param10) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -169,7 +169,7 @@ final class WaveformOperator extends TextureOperator {
         var3 = var13;
         if (param0 != 1) {
           var12 = (float[]) null;
-          WaveformOperator.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
+          WaveformOperator.projectSphericalTextureCoordinates(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
         }
         if (this.monochromeCache.rowMissed) {
           var4 = FractalNoiseSliceAccumulator.textureRowCoords[param1];

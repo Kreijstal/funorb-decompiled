@@ -18,7 +18,7 @@ final class RandomBrickOperator extends TextureOperator {
     static UiComponent field_r;
     private int field_t;
 
-    private final void a(int param0, int param1, int[][] param2, byte param3, int param4, int param5, Random param6) {
+    private final void drawBevelledBrick(int param0, int param1, int[][] param2, byte param3, int param4, int param5, Random param6) {
         int var17 = 0;
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
@@ -479,7 +479,7 @@ final class RandomBrickOperator extends TextureOperator {
                             var34 = Math.max(var30, var36);
                             var35 = Math.min(var29_int, var37);
                           }
-                          this.a(-var33 + var22, var7 + var34, var4, (byte) -86, -var34 + var35, var33, var21);
+                          this.drawBevelledBrick(-var33 + var22, var7 + var34, var4, (byte) -86, -var34 + var35, var33, var21);
                         }
                       }
                     }
@@ -511,11 +511,11 @@ final class RandomBrickOperator extends TextureOperator {
               var45[0] = var8;
               var45[1] = var25;
               var26[2] = var22 + var24;
-              this.a(var24, var8 + var6, var46, (byte) -99, var23, var22, var21);
+              this.drawBevelledBrick(var24, var8 + var6, var46, (byte) -99, var23, var22, var21);
               var8 = var25;
               continue;
             }
-            this.a(var24, var8 + var6, var46, (byte) -81, var23, var22, var21);
+            this.drawBevelledBrick(var24, var8 + var6, var46, (byte) -81, var23, var22, var21);
             if (var10 != 0) {
               break;
             }
