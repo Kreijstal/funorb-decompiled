@@ -204,7 +204,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             this.sendLeaveMatch(1);
           }
         } else {
-          if (TextWidgetPainter.a(80)) {
+          if (TextWidgetPainter.isGuestMode(80)) {
             GameClock.field_b = OpenGlShaderProgram.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
             stackIn_8_0 = !(this.getTrackedScore((byte) 19) <= 0);
             SignedBitReader.field_c = stackIn_8_0;
@@ -355,7 +355,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             this.actionHoldTicks[var15_int] = 5;
           }
           this.pingTimes = new int[var14_int];
-          if (MatchState.h(1)) {
+          if (MatchState.areRoomDefinitionsLoaded(1)) {
             if (!this.field_D) {
               var15 = new StatReportingObserverFactory();
             } else {
@@ -1462,7 +1462,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
           !this.isScoreInvalidated((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
           MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, HiscorePlayerEntry.field_b, ListTracksCommand.field_o, ChatTarget.field_a, Transform3D.field_b, new int[]{this.field_j});
-          if (!TextWidgetPainter.a(66)) {
+          if (!TextWidgetPainter.isGuestMode(66)) {
             QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
           }
         }

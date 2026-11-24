@@ -340,7 +340,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         SingleChildWidget.field_v.drawLeft(63 + param1, false, MazeSearchNode.field_i.toUpperCase(), 65, -14279929, -1);
         this.drawAchievementGrid(-119, param1);
         this.drawAchievementDetails(param1, (byte) -22);
-        if (TextWidgetPainter.a(7)) {
+        if (TextWidgetPainter.isGuestMode(7)) {
           TooltipRenderer.field_p.drawCentred(-1, -1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -14345466, 405 + param1, AccountNameResolver.field_h);
         }
         if (param2 >= -9) {

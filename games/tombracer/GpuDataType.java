@@ -18,7 +18,7 @@ final class GpuDataType {
     static String field_d;
     static int textureWidthMask;
 
-    final static boolean a(byte param0) {
+    final static boolean isFullscreenDialogOpen(byte param0) {
         int var1 = -97 / ((param0 - 0) / 40);
         return SoundEffectArchive.field_a;
     }

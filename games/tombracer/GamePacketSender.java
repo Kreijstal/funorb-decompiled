@@ -26,7 +26,7 @@ final class GamePacketSender {
         RuntimeException decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          if (TextWidgetPainter.a(38)) {
+          if (TextWidgetPainter.isGuestMode(38)) {
             return;
           }
           var9 = CollisionGridEntryNodeBase.field_k;

@@ -22,7 +22,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           return;
         }
         if (!MazeSolver.field_e &&
-          !TextWidgetPainter.a(109)) {
+          !TextWidgetPainter.isGuestMode(109)) {
           ModelTextureProjectionData.setLoadingProgress(100.0f, WindZoneBehaviour.field_u, -75);
           C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 111);
           return;
@@ -110,7 +110,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         if (SnakePitTile.hasVisibleDialog(stackIn_3_0)) {
           this.updateScreen(param0, false);
         } else {
-          if (!GpuDataType.a((byte) 127)) {
+          if (!GpuDataType.isFullscreenDialogOpen((byte) 127)) {
             if (PlayPhase.beginReconnectGracePeriod(105)) {
               stackIn_46_1 = -85;
               stackIn_47_2 = (null != ColourRowCacheEntry.field_f);
@@ -175,7 +175,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
               var3 = CourseLayoutFactory.pollMenuAction(107);
               if (var3 != 2) {
                 if (var3 == 3) {
-                  StringCursor.a(-30600, true);
+                  StringCursor.enterFullscreen(-30600, true);
                   this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {
@@ -295,7 +295,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           }
         } else {
           if (!MazeSolver.field_e) {
-            if (!TextWidgetPainter.a(84)) {
+            if (!TextWidgetPainter.isGuestMode(84)) {
               if (OpenGlCubeTexture.field_l.isReadyToStart(-127)) {
                 MazeSolver.field_e = true;
                 this.onLoadingComplete(24230);
@@ -308,7 +308,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             this.tickScreen(true);
           }
         }
-        if (!TextWidgetPainter.a(66)) {
+        if (!TextWidgetPainter.isGuestMode(66)) {
           while (true) {
             var5 = (QueuedFixedRequest) (RotaterMountComponent.field_H.removeFirst(119));
             if (var5 == null) {

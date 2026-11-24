@@ -14,14 +14,14 @@ final class LegacyOpenGlFontMask extends aa {
         }
         if (FixedPointSegmentIntersection.field_a != ObjectList.field_c) {
           if (PcmSamplePlayback.field_i == ObjectList.field_c) {
-            if (!TextWidgetPainter.a(23)) {
+            if (!TextWidgetPainter.isGuestMode(23)) {
               if (MandelbrotOperator.field_o != null) {
                 QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
               }
               AccountRegistrationLauncher.closeSelectionMenu(-116);
               if (FlagSet.field_c) {
                 FlagSet.field_c = false;
-                StringCursor.a(-30600, false);
+                StringCursor.enterFullscreen(-30600, false);
               }
             }
             ObjectList.field_c = DottedRectangleRenderer.field_c;

@@ -141,9 +141,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isGuestMode(int param0) {
         if (param0 <= 2) {
-          TextWidgetPainter.a(3);
+          TextWidgetPainter.isGuestMode(3);
         }
         return HorizontalGradientOperator.field_m;
     }
@@ -483,7 +483,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 119) {
-            TextWidgetPainter.a(-113);
+            TextWidgetPainter.isGuestMode(-113);
           }
           stackIn_3_0 = this.textX(param0, 0, param1, -3);
           return stackIn_3_0;

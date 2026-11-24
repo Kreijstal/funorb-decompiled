@@ -95,9 +95,9 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         return var1;
     }
 
-    final static boolean h(int param0) {
+    final static boolean isNameEntryPopupOpen(int param0) {
         if (param0 != 9807) {
-          HardwareTurbulentWaterNoise.h(127);
+          HardwareTurbulentWaterNoise.isNameEntryPopupOpen(127);
         }
         return GameSocketTraffic.field_a != null ? true : false;
     }

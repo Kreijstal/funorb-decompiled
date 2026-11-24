@@ -124,7 +124,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         return var1;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawLobbyOverlayAndDateTooltip(boolean param0, int param1) {
         if (param1 != -16838) {
           return;
         }

@@ -107,13 +107,13 @@ abstract class AppletGameShell extends GameApplet {
               Cp1252ByteEncoder.field_b = null;
               PressureSwitchBehaviour.field_s = null;
             }
-            var12 = VoronoiNoiseOperator.e((byte) 78);
+            var12 = VoronoiNoiseOperator.pollAvailabilityReply((byte) 78);
             if (var12 != null) {
               ScoreSubmission.a(2753, var12.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = OpenGlRectangleTexture.pollRegistration(CourseLayoutFactory.b(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.a(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
+            var5Lifetime1 = OpenGlRectangleTexture.pollRegistration(CourseLayoutFactory.getPendingNewsletterOptIn(69), QueuedKeyedRequest.getPendingRegistrationAge(false), ArchiveRequest.getRegistrationEmailOrQueryName(false), this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 105), MatchOverlayQueue.getPendingAccountPassword(0), (byte) 53);
             if (var5Lifetime1 != -1) {
               TextureTransformMode.completeAccountRegistrationResponse(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, Cp1252ByteEncoder.field_b);
               PressureSwitchBehaviour.field_s = null;
@@ -129,7 +129,7 @@ abstract class AppletGameShell extends GameApplet {
             if (param1) {
               TrackingCrusherComponent.field_G = false;
             } else {
-              var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 81), false);
+              var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) 81), false);
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   StatReportingObserverFactory.field_b = QuickChatPhraseSource.field_g;
@@ -316,7 +316,7 @@ abstract class AppletGameShell extends GameApplet {
         if (TrackingCrusherComponent.field_G) {
           return -1;
         }
-        int var2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) -118), true);
+        int var2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.getPendingAccountPassword(0), 50, this.field_u, AccountRequestUsernameSelector.getAccountRequestUsername((byte) -118), true);
         if (var2 == -1) {
           return -1;
         }
@@ -523,12 +523,12 @@ abstract class AppletGameShell extends GameApplet {
         if (param0 <= 89) {
           AppletGameShell.resetConnectionStatics(-80);
         }
-        if (QuickChatPhraseDefinition.c((byte) 49)) {
+        if (QuickChatPhraseDefinition.isLoginInterfaceReady((byte) 49)) {
           discarded$1 = this.pollLoginResponse((byte) -72, false, null != ColourRowCacheEntry.field_f ? true : false);
         } else {
           if (QueuedFixedRequest.field_f < 10) {
           } else {
-            if (!LegacyOpenGlSpriteTexture.i(250)) {
+            if (!LegacyOpenGlSpriteTexture.isLogoAnimationComplete(250)) {
               PressureSwitchComponent.C(-5);
             } else {
               if (0 == Transform3D.field_c) {
@@ -574,8 +574,8 @@ abstract class AppletGameShell extends GameApplet {
         if (HeapIndexArray.e(540800)) {
           var3 = ByteGameMessageSender.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
-            !(OpacityWidget.g((byte) 118) <= var3) &&
-            !(var3 >= DateOfBirthPanel.b(false))) {
+            !(OpacityWidget.getKeyboardIdleTicks((byte) 118) <= var3) &&
+            !(var3 >= DateOfBirthPanel.getMouseIdleTicks(false))) {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
@@ -711,7 +711,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (null == ScoreStandings.field_c) {
             ScoreStandings.field_c = GraphicsAndAudioMenu.getPcmStreamMixer((byte) -91);
-            TextureOperator.field_k = GameSocketState.c(-93);
+            TextureOperator.field_k = GameSocketState.getRequestedSoundEffectBufferSize(-93);
           }
           MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;

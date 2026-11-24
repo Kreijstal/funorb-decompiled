@@ -20,7 +20,7 @@ final class RatingTable extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawSlidingLobbyPanels(boolean param0, int param1) {
         UiComponent stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_7_2 = false;

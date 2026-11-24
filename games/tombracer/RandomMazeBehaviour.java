@@ -722,7 +722,7 @@ final class RandomMazeBehaviour extends Behaviour {
     }
 
     final static void b(int param0) {
-        if (!GpuDataType.a((byte) 105)) {
+        if (!GpuDataType.isFullscreenDialogOpen((byte) 105)) {
           return;
         }
         FullscreenDialogLayout.buildFullscreenDialog(param0, false, 4);

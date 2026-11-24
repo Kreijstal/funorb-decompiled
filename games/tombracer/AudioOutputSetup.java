@@ -15,7 +15,7 @@ final class AudioOutputSetup {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!TextWidgetPainter.a(76) &&
+          if (!TextWidgetPainter.isGuestMode(76) &&
             !param0.isMenuBackgroundDemo(-25319)) {
             if (param1.getId((byte) -82) < 0) {
               return;

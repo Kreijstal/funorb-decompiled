@@ -107,7 +107,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         return GzipInflater.field_c;
     }
 
-    final static boolean i(int param0) {
+    final static boolean isLogoAnimationComplete(int param0) {
         if (param0 != 250) {
           return true;
         }

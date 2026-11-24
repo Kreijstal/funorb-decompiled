@@ -257,7 +257,7 @@ final class TooltipRenderer {
           this.field_o = -1;
           var4.createStateLayer(0, (byte) 41).withTextColour(15658734, -2147483648).setSprites(2, FadingDialog.createFrameSprites(8947848, 1, 10066329, 7829367));
           var4.createStateLayer(1, (byte) 98).setSprites(2, FadingDialog.createFrameSprites(11184810, 1, 10066329, 13421772));
-          var4.createStateLayer(3, (byte) 42).setSprites(2, FadingDialog.createFrameSprites(8947848, 1, 7829367, 10066329)).c(-1, 1).setHorizontalOffset(1, 1);
+          var4.createStateLayer(3, (byte) 42).setSprites(2, FadingDialog.createFrameSprites(8947848, 1, 7829367, 10066329)).setContentXOffset(-1, 1).setHorizontalOffset(1, 1);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -265,8 +265,8 @@ final class TooltipRenderer {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.createStateLayer(4, (byte) 127).a(-2, true).setSprites(2, var5);
-          var4.createStateLayer(5, (byte) 107).setSprites(2, FormFieldRow.b(65793, 2, 0, 0, 0)).a(-2, true).withTextColour(-1, -2147483648);
+          var4.createStateLayer(4, (byte) 127).setPaintBeforeMerge(-2, true).setSprites(2, var5);
+          var4.createStateLayer(5, (byte) 107).setSprites(2, FormFieldRow.b(65793, 2, 0, 0, 0)).setPaintBeforeMerge(-2, true).withTextColour(-1, -2147483648);
           this.field_u = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.field_l = 0;
@@ -280,7 +280,7 @@ final class TooltipRenderer {
           var8 = new StatefulWidgetPainter();
           var17.copyTo(var8, -107);
           var8.createStateLayer(0, (byte) 65).setSprites(2, FadingDialog.createFrameSprites(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).withShadowColour((byte) 7, -1);
-          var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
+          var8.createStateLayer(4, (byte) 87).setPaintBeforeMerge(-2, true).setSprites(2, var5);
           this.field_e = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];

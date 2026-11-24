@@ -28,7 +28,7 @@ final class DialogOverlayDrawing {
           IntQueue.a((byte) -125);
           var1 = 1;
           if (PlayPhase.beginReconnectGracePeriod(89)) {
-            if (GpuDataType.a((byte) -87)) {
+            if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
               if (MessagePage.a(125)) {
                 var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2) {
@@ -52,10 +52,10 @@ final class DialogOverlayDrawing {
           }
           return var1 != 0;
         }
-        if (!GpuDataType.a((byte) -115)) {
+        if (!GpuDataType.isFullscreenDialogOpen((byte) -115)) {
           if (!ResizingDialog.isSelectionMenuOpen(true)) {
             if (PlayPhase.beginReconnectGracePeriod(89)) {
-              if (GpuDataType.a((byte) -87)) {
+              if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
                 if (!MessagePage.a(125)) {
                   return var1 != 0;
                 }
@@ -83,7 +83,7 @@ final class DialogOverlayDrawing {
           var1 = 1;
           OpenGlModel.drawSelectionMenu(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
-            if (GpuDataType.a((byte) -87)) {
+            if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
               if (!MessagePage.a(125)) {
                 return var1 != 0;
               }
@@ -110,7 +110,7 @@ final class DialogOverlayDrawing {
         var1 = 1;
         TurbulenceNoise3D.drawFullscreenDialog(-1226152383);
         if (PlayPhase.beginReconnectGracePeriod(89)) {
-          if (GpuDataType.a((byte) -87)) {
+          if (GpuDataType.isFullscreenDialogOpen((byte) -87)) {
             if (!MessagePage.a(125)) {
               return var1 != 0;
             }

@@ -8,7 +8,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
     static String[] boulderDeathMessages;
     static byte[] field_b;
 
-    final static boolean b(int param0) {
+    final static boolean getPendingNewsletterOptIn(int param0) {
         if (param0 <= 27) {
           field_b = (byte[]) null;
           return IntNode.field_j;

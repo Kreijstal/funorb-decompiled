@@ -109,7 +109,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -103) {
-          RoomComponentFactory.a(8);
+          RoomComponentFactory.isChatInputTransitionPending(8);
         }
         field_a = null;
     }
@@ -822,7 +822,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isChatInputTransitionPending(int param0) {
         if (param0 != 27) {
           field_b = 58;
         }

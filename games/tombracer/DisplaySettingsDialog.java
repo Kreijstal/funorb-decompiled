@@ -150,7 +150,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
           this.field_M = stackIn_31_1;
           stackIn_34_0 = (!GridWidgetContainer.canResizeViewport((byte) 97)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(TextWidgetPainter.a(56));
+          stackIn_37_1 = !(TextWidgetPainter.isGuestMode(56));
           this.field_Y = stackIn_37_1;
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
@@ -647,15 +647,15 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
               if (null != this.field_ab) {
                 var2 = this.field_ab.getSelectedIndex((byte) 123);
                 if (var2 < 0) {
-                  StringCursor.a(-30600, true);
+                  StringCursor.enterFullscreen(-30600, true);
                   this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
                   OpenGlSceneLight.field_o.setDisplayMode(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
-                  StringCursor.a(-30600, true);
+                  StringCursor.enterFullscreen(-30600, true);
                   this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
                 }
               } else {
-                StringCursor.a(-30600, true);
+                StringCursor.enterFullscreen(-30600, true);
                 this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
               }
             }
@@ -717,7 +717,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
             }
           }
           if (!this.field_Y &&
-            !TextWidgetPainter.a(127)) {
+            !TextWidgetPainter.isGuestMode(127)) {
             this.h(-8266);
             this.field_z.pushDialog(new DisplaySettingsDialog(this.field_z), 109);
           }

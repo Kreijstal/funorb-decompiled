@@ -238,13 +238,13 @@ final class RotaterMountComponent extends PrefabComponent {
           return (LoginTextValue) null;
         }
         if (var1 == null) {
-          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.isUsernameQueryPending(32));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+          return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.isUsernameQueryPending(32));
         }
-        return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.a(32));
+        return new LoginTextValue(AccountRequestUsernameSelector.getAccountRequestUsername((byte) 94), CollisionGrid.isUsernameQueryPending(32));
     }
 
     static {

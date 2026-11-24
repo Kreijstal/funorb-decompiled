@@ -33,15 +33,15 @@ final class MultiplayerLoginMenu extends MenuScreen {
         return this.firstItemY;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isGuestOrNonMember(boolean param0) {
         if (param0) {
           field_r = (ArchiveId) null;
-          if (!TextWidgetPainter.a(47)) {
+          if (!TextWidgetPainter.isGuestMode(47)) {
             return ReportAbuseDialog.field_ub <= 0 ? true : false;
           }
           return true;
         }
-        if (TextWidgetPainter.a(47)) {
+        if (TextWidgetPainter.isGuestMode(47)) {
           return true;
         }
         if (ReportAbuseDialog.field_ub > 0) {

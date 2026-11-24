@@ -229,9 +229,9 @@ final class MatchOverlayQueue {
         }
     }
 
-    final static String a(int param0) {
+    final static String getPendingAccountPassword(int param0) {
         if (param0 != 0) {
-          MatchOverlayQueue.a(117);
+          MatchOverlayQueue.getPendingAccountPassword(117);
         }
         if (PlayerResultRow.accountRequestPending == LegacyOpenGlTexture.registrationRequestState) {
           return ConstraintLocomotor.field_p;
@@ -277,7 +277,7 @@ final class MatchOverlayQueue {
     }
 
     final void updateCurrent(byte param0) {
-        if (TextWidgetPainter.a(param0 ^ -48) ||
+        if (TextWidgetPainter.isGuestMode(param0 ^ -48) ||
           !OpenGlCubeTexture.field_l.isReadyToStart(param0 - 60)) {
           return;
         }

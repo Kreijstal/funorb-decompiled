@@ -10,7 +10,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     int[] field_m;
     static String field_p;
 
-    final static boolean c(byte param0) {
+    final static boolean isLoginInterfaceReady(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 49) {
           QuickChatPhraseDefinition.releaseStatics((byte) 74);

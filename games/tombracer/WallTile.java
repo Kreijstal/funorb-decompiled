@@ -584,7 +584,7 @@ final class WallTile implements Renderable {
             }
             MidiVoiceMixer.drawAwtLoadingBar((byte) 108, MidiPatch.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, ArchiveIndex.getLoadingPercent(7), var3_int != 0);
           } else {
-            if (!LegacyOpenGlSpriteTexture.i(250)) {
+            if (!LegacyOpenGlSpriteTexture.isLogoAnimationComplete(250)) {
               SoftwareRasterizer.clear();
               FullscreenFailureDialog.drawLoadingAnimation(320, 240, (byte) 113);
               LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param1);

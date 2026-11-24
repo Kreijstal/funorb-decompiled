@@ -369,7 +369,7 @@ final class ColourGradientOperator extends TextureOperator {
           if (QueuedFixedRequest.field_f < 20) {
             return true;
           }
-          if (!QuickChatPhraseDefinition.c((byte) 49)) {
+          if (!QuickChatPhraseDefinition.isLoginInterfaceReady((byte) 49)) {
             return true;
           }
           if (TextureCoordinateGenerationState.field_a <= 0) {
@@ -383,7 +383,7 @@ final class ColourGradientOperator extends TextureOperator {
         if (QueuedFixedRequest.field_f < 20) {
           return true;
         }
-        if (!QuickChatPhraseDefinition.c((byte) 49)) {
+        if (!QuickChatPhraseDefinition.isLoginInterfaceReady((byte) 49)) {
           return true;
         }
         if (TextureCoordinateGenerationState.field_a <= 0) {

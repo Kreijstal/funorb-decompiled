@@ -617,11 +617,11 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         this.field_N.field_n = ((var3 - var2) * this.field_O >> 16) + var2;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawLobbyModalOverlays(boolean param0, boolean param1) {
         if (GasTrapComponent.isDialogOpen((byte) -98)) {
           param1 = false;
         }
-        FacePointLocomotor.a(param1, (byte) 88);
+        FacePointLocomotor.drawLobbyPopupLayers(param1, (byte) 88);
         ArchiveIndex.drawDimmedOverlay(23713);
         if (!param0) {
           ScrollControlWidget.releaseStatics((byte) 92);

@@ -16,7 +16,7 @@ final class DrawOfferMenu extends MenuScreen {
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        if (!TextWidgetPainter.a(54)) {
+        if (!TextWidgetPainter.isGuestMode(54)) {
           if (!SecondaryNodeDequeIterator.field_a.field_D) {
             this.setItems(22174, IntrusiveDequeCursor.field_e);
           } else {

@@ -210,7 +210,7 @@ abstract class MenuScreen extends GameScreen {
           if (param0 != 28) {
             return true;
           }
-          stackIn_5_0 = TextWidgetPainter.a(param1 ^ -30555);
+          stackIn_5_0 = TextWidgetPainter.isGuestMode(param1 ^ -30555);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -454,7 +454,7 @@ abstract class MenuScreen extends GameScreen {
             }
             if (3 == var7 &&
               var8 == 0) {
-              if (!TextWidgetPainter.a(27)) {
+              if (!TextWidgetPainter.isGuestMode(27)) {
                 LegacyOpenGlBloomEffect.d(30785);
               } else {
                 ConstrainToRectangleLocomotor.showMenuScreen(param1, 11, (byte) 106);
@@ -954,7 +954,7 @@ abstract class MenuScreen extends GameScreen {
           if (param0 >= 0 &&
             param0 < this.items.length &&
             28 == this.items[param0].field_g) {
-            stackIn_13_0 = TextWidgetPainter.a(83);
+            stackIn_13_0 = TextWidgetPainter.isGuestMode(83);
             return stackIn_13_0;
           }
           return true;

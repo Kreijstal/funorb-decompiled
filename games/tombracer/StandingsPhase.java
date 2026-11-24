@@ -84,7 +84,7 @@ final class StandingsPhase extends MatchPhase {
           this.field_p[0].field_i = SwitchLinkList.getCanvasHeight(0) - 25;
           this.field_p[0].finishDropAnimation(false);
           if (!this.screen.field_D &&
-            !TextWidgetPainter.a(43)) {
+            !TextWidgetPainter.isGuestMode(43)) {
             this.field_p[0].field_e = PlainScoringObserverFactory.field_d.toUpperCase();
             FacePlayerLocomotor.field_p = ConsoleWindow.getOrRequestHiscoreTable(3, this.screen.getCourseId(-1), 0, 10, 1);
           }

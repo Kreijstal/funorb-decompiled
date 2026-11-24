@@ -148,13 +148,13 @@ final class MembersUpsellMenu extends MenuScreen {
           var10 = (CourseMapPath) (this.field_q.next(121));
         }
         if (LegacyOpenGlNormalMapGenerator.field_e == null &&
-          !TextWidgetPainter.a(param0 + 119)) {
+          !TextWidgetPainter.isGuestMode(param0 + 119)) {
           return;
         }
         var3 = 0;
         for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
           if (HardwareLightingArrays.isCourseAvailable((byte) 6, var4)) {
-            if (MultiplayerLoginMenu.b(false) &&
+            if (MultiplayerLoginMenu.isGuestOrNonMember(false) &&
               !MatchHud.field_g[var4]) {
               var3 = 1;
               FloatPacketBuffer.field_k[var4].draw(LobbyPlayerEntry.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
@@ -185,7 +185,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var7 = this.field_r - (100 - SwitchLinkList.getCanvasHeight(param0 + 28));
         PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
         SocketConnector.drawWrappedText(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, HardwareVertexNormalAccumulator.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
-        if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
+        if (MultiplayerLoginMenu.isGuestOrNonMember(false) && (TextWidgetPainter.isGuestMode(62) ||
           LegacyOpenGlNormalMapGenerator.field_e.field_a ||
           var3 != 0)) {
           var7Lifetime1 = SwitchLinkList.getCanvasHeight(0) / 2 + this.field_r;
@@ -194,11 +194,11 @@ final class MembersUpsellMenu extends MenuScreen {
           CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
           CurrentGraphicsToolkit.toolkit.drawRectOutlineAlpha(var7Lifetime1 - (var5Lifetime1 >> 1), -(var4Lifetime2 >> 1) + var6, var5Lifetime1, var4Lifetime2, -1442774783, (byte) -75);
           CurrentGraphicsToolkit.toolkit.drawRectOutlineAlpha(var7Lifetime1 - (var5Lifetime1 >> 1) + 1, 1 - (var4Lifetime2 >> 1) + var6, -2 + var5Lifetime1, var4Lifetime2 - 2, -1426063361, (byte) -128);
-          if (!TextWidgetPainter.a(42) &&
+          if (!TextWidgetPainter.isGuestMode(42) &&
             var3 != 0) {
             var8 = ByteStorage.field_c;
           } else {
-            if (!TextWidgetPainter.a(109)) {
+            if (!TextWidgetPainter.isGuestMode(109)) {
               var8 = DivisionMazeGenerator.field_d;
             } else {
               var8 = IdChatTarget.field_f;

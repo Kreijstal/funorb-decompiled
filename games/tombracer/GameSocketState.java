@@ -6,9 +6,9 @@ final class GameSocketState {
     static Sprite field_b;
     static Sprite field_a;
 
-    final static int c(int param0) {
+    final static int getRequestedSoundEffectBufferSize(int param0) {
         if (param0 > -86) {
-          GameSocketState.c(114);
+          GameSocketState.getRequestedSoundEffectBufferSize(114);
           return BeamShooterBehaviour.field_p;
         }
         return BeamShooterBehaviour.field_p;

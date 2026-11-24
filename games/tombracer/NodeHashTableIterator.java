@@ -90,9 +90,9 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
     }
 
-    final static void a(int param0, boolean param1) {
-        DemoCourseGenerator.a(0, param1);
-        ScrollControlWidget.a(true, param1);
+    final static void drawLobbyAndModalOverlays(int param0, boolean param1) {
+        DemoCourseGenerator.drawLobbyPanels(0, param1);
+        ScrollControlWidget.drawLobbyModalOverlays(true, param1);
         if (param0 != -1) {
           return;
         }

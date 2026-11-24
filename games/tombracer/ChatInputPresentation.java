@@ -108,7 +108,7 @@ final class ChatInputPresentation {
                   var6 = 1;
                 }
               }
-              if (RoomComponentFactory.a(27)) {
+              if (RoomComponentFactory.isChatInputTransitionPending(27)) {
                 stackIn_67_0 = ": ";
               } else {
                 stackIn_67_0 = "<img=3>: ";
@@ -129,7 +129,7 @@ final class ChatInputPresentation {
                 var4 = "<col=999999>" + var4 + RendererMode.field_a + "</col>";
               }
               var9 = PlatformBehaviour.field_s.stringWidth(var4);
-              if (!RoomComponentFactory.a(27)) {
+              if (!RoomComponentFactory.isChatInputTransitionPending(27)) {
                 if (CharacterChoiceFactory.field_g.field_o &&
                   var9 > AgeValidator.field_j - CharacterChoiceFactory.field_g.field_q) {
                   if (DropdownButtonPainter.field_g) {

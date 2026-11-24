@@ -33,7 +33,7 @@ final class LevelSelectOverlay implements ShellListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 78 % ((-55 - param0) / 60);
-          stackIn_7_0 = (MultiplayerLoginMenu.b(false)) && (AnimatedLight.findRoomDefinition(false, param1).field_d);
+          stackIn_7_0 = (MultiplayerLoginMenu.isGuestOrNonMember(false)) && (AnimatedLight.findRoomDefinition(false, param1).field_d);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,7 +238,7 @@ final class LevelSelectOverlay implements ShellListener {
             var3.clear(0);
             stackIn_18_0 = 22;
             stackIn_18_1 = ComponentTargetList.field_e;
-            stackIn_19_2 = !(MultiplayerLoginMenu.b(false));
+            stackIn_19_2 = !(MultiplayerLoginMenu.isGuestOrNonMember(false));
             var4Lifetime1 = MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(stackIn_18_0, stackIn_18_1, stackIn_19_2);
             if (param0 != 1) {
               this.field_b = (int[]) null;

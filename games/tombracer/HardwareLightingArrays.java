@@ -19,7 +19,7 @@ final class HardwareLightingArrays {
         if (param0 != 6) {
           HardwareLightingArrays.isCourseAvailable((byte) 65, -116);
         }
-        if (TextWidgetPainter.a(114)) {
+        if (TextWidgetPainter.isGuestMode(114)) {
           return false;
         }
         if (LegacyOpenGlNormalMapGenerator.field_e == null) {

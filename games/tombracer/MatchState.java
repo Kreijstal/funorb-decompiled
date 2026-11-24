@@ -97,7 +97,7 @@ final class MatchState implements BitDecodableMarker {
         field_N = null;
         field_p = null;
         if (param0 != 0) {
-          MatchState.h(88);
+          MatchState.areRoomDefinitionsLoaded(88);
         }
         field_j = null;
     }
@@ -379,7 +379,7 @@ final class MatchState implements BitDecodableMarker {
         return stackIn_6_0;
     }
 
-    final static boolean h(int param0) {
+    final static boolean areRoomDefinitionsLoaded(int param0) {
         if (param0 != 1) {
           field_w = 88;
         }

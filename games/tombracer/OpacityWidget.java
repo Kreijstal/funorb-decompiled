@@ -279,7 +279,7 @@ final class OpacityWidget extends SingleChildWidget {
         return SwitchableId.hasTuhstatbutCookie((byte) 108, ToolkitSelector.getApplet(31));
     }
 
-    final static int g(byte param0) {
+    final static int getKeyboardIdleTicks(byte param0) {
         if (param0 < 66) {
           OpacityWidget.hasTuhstatbutCookie(79);
           return MotionTrackingModel.field_p;

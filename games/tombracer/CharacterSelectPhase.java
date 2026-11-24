@@ -303,7 +303,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param1 >= -29) {
           field_s = (UiComponent) null;
         }
-        if (!TextWidgetPainter.a(119) &&
+        if (!TextWidgetPainter.isGuestMode(119) &&
           LegacyOpenGlNormalMapGenerator.field_e != null) {
           boolean decompiledFrameRemainder0 = true;
           if (!ToolkitSelector.field_g[param0] && (!ToolkitSelector.field_f[param0] &&

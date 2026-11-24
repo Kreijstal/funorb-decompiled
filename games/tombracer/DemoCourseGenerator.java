@@ -96,18 +96,18 @@ final class DemoCourseGenerator extends CourseGenerator {
         return var2;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawLobbyPanels(int param0, boolean param1) {
         if (GasTrapComponent.isDialogOpen((byte) -73)) {
           param1 = false;
         }
-        RatingTable.a(param1, param0);
+        RatingTable.drawSlidingLobbyPanels(param1, param0);
         if (!GameEvent.field_g) {
-          C2SActionPacket.a(param1, -16838);
+          C2SActionPacket.drawLobbyOverlayAndDateTooltip(param1, -16838);
           return;
         }
         SoftwareRasterizer.darkenRectangle(ModelCodecAndSocialPanelState.field_e.field_a.field_qb, ModelCodecAndSocialPanelState.field_e.field_a.field_T, ModelCodecAndSocialPanelState.field_e.field_a.field_G, ModelCodecAndSocialPanelState.field_e.field_a.field_t);
         ModelCodecAndSocialPanelState.field_e.field_a.drawFullScreen(121, param1);
-        C2SActionPacket.a(param1, -16838);
+        C2SActionPacket.drawLobbyOverlayAndDateTooltip(param1, -16838);
     }
 
     static {

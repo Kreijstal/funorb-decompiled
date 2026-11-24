@@ -7,13 +7,13 @@ final class StringCursor {
     private static String[] field_a;
     private String text;
 
-    final static void a(int param0, boolean param1) {
+    final static void enterFullscreen(int param0, boolean param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == -30600) {
           if (ReportAbuseDialog.field_ub <= 0) {
-            if (TextWidgetPainter.a(9)) {
+            if (TextWidgetPainter.isGuestMode(9)) {
               var2 = 0;
             } else {
               var2 = 1;
@@ -43,9 +43,9 @@ final class StringCursor {
             }
           }
         } else {
-          StringCursor.a(118, false);
+          StringCursor.enterFullscreen(118, false);
           if (ReportAbuseDialog.field_ub <= 0) {
-            if (TextWidgetPainter.a(9)) {
+            if (TextWidgetPainter.isGuestMode(9)) {
               var2 = 0;
               if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {

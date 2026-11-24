@@ -50,7 +50,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer c(int param0, int param1) {
+    final WidgetStyleLayer setContentXOffset(int param0, int param1) {
         if (param0 == -1) {
           this.field_d = param1;
           return this;
@@ -73,7 +73,7 @@ final class WidgetStyleLayer {
     final WidgetStyleLayer withShadowColour(byte param0, int param1) {
         this.field_l = param1;
         if (param0 != 7) {
-          this.a(50, false);
+          this.setPaintBeforeMerge(50, false);
           return this;
         }
         return this;
@@ -248,7 +248,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer a(int param0, boolean param1) {
+    final WidgetStyleLayer setPaintBeforeMerge(int param0, boolean param1) {
         if (param0 == -2) {
           this.field_g = param1 ? true : false;
           return this;

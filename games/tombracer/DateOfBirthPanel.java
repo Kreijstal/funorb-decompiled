@@ -57,7 +57,7 @@ final class DateOfBirthPanel extends ArrayWidgetGroup implements ButtonListener 
         }
     }
 
-    final static int b(boolean param0) {
+    final static int getMouseIdleTicks(boolean param0) {
         if (param0) {
           DateOfBirthPanel.releaseStatics(-7);
           return MatchScoringObserver.field_h;

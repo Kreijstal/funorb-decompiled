@@ -297,7 +297,7 @@ final class RatingsScreen extends DropInMenuScreen {
           if (!param0) {
             return;
           }
-          if (TextWidgetPainter.a(111)) {
+          if (TextWidgetPainter.isGuestMode(111)) {
             this.field_w = 1;
             return;
           }
@@ -325,7 +325,7 @@ final class RatingsScreen extends DropInMenuScreen {
         if (!param0) {
           return;
         }
-        if (TextWidgetPainter.a(111)) {
+        if (TextWidgetPainter.isGuestMode(111)) {
           this.field_w = 1;
           return;
         }

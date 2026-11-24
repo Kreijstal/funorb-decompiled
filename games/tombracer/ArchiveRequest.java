@@ -6,7 +6,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     boolean field_l;
     boolean field_k;
 
-    final static String a(boolean param0) {
+    final static String getRegistrationEmailOrQueryName(boolean param0) {
         if (param0) {
           ArchiveRequest.hasFlag2048(-49, 62, -28);
           if (LegacyOpenGlTexture.registrationRequestState == PlayerResultRow.accountRequestPending) {

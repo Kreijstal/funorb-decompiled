@@ -90,7 +90,7 @@ final class PbufferEntry extends DualLinkNode {
           QueuedByteShortRequest.addShellListenerFirst(HelloCommand.field_o, 19711);
           QueuedByteShortRequest.addShellListenerFirst(ShellListenerProvider.getSharedShellListener((byte) 124), 19711);
         }
-        if (TextWidgetPainter.a(83)) {
+        if (TextWidgetPainter.isGuestMode(83)) {
           UrlDownloadRequest.startTutorial((byte) -59);
         }
     }

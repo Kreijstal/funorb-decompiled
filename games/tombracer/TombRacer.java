@@ -1055,7 +1055,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         UnlockEntry var4;
         this.field_E = this.field_E + 1;
         if (null == LegacyOpenGlNormalMapGenerator.field_e &&
-          !TextWidgetPainter.a(114)) {
+          !TextWidgetPainter.isGuestMode(114)) {
           CollisionGridEntryNodeBase.field_k.writeCipheredOpcode(75, -2988);
         }
         if (null != LegacyOpenGlNormalMapGenerator.field_e &&
@@ -1064,7 +1064,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
           SpriteTileOperator.field_t != SecondaryNodeDequeIterator.field_a) {
           var4 = LegacyOpenGlNormalMapGenerator.field_e.pollPendingUpdate(43);
           stackIn_10_0 = !param0;
-          if (!MultiplayerLoginMenu.b(stackIn_10_0) ||
+          if (!MultiplayerLoginMenu.isGuestOrNonMember(stackIn_10_0) ||
             !var4.isNotYetOwned(1)) {
             this.field_D = new UnlockOverlay(SecondaryNodeDequeIterator.field_a, var4);
           }

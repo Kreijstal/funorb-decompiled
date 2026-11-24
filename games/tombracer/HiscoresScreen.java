@@ -38,7 +38,7 @@ final class HiscoresScreen extends DropInMenuScreen {
         if (!param0) {
           return;
         }
-        if (TextWidgetPainter.a(8)) {
+        if (TextWidgetPainter.isGuestMode(8)) {
           this.field_E = 1;
           return;
         }

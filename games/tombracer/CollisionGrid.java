@@ -339,7 +339,7 @@ final class CollisionGrid {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isUsernameQueryPending(int param0) {
         if (param0 != 32) {
           CollisionGrid.releaseStatics(-128);
         }

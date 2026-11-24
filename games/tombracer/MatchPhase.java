@@ -36,7 +36,7 @@ abstract class MatchPhase {
         if (param1 != 100) {
           field_e = (int[]) null;
         }
-        if (TextWidgetPainter.a(84) ||
+        if (TextWidgetPainter.isGuestMode(84) ||
           param2.isMenuBackgroundDemo(param1 - 25419)) {
           return;
         }

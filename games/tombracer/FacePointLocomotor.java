@@ -119,7 +119,7 @@ final class FacePointLocomotor extends Locomotor {
         return 10;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawLobbyPopupLayers(boolean param0, byte param1) {
         if (ProjectionMode.field_a > 0 &&
           LegacyOpenGlBloomEffect.field_o) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, LobbyOverlayAndDateValidationState.field_e.field_A);

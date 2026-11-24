@@ -88,7 +88,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_5_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_5_4 = 13;
               stackIn_5_5 = 61;
-              stackIn_6_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+              stackIn_6_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
               QuickChatMenuLayout.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
@@ -100,7 +100,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_20_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_20_4 = 13;
               stackIn_20_5 = 61;
-              stackIn_21_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+              stackIn_21_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
               QuickChatMenuLayout.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_21_6, -1, 15, var4 != 0, 11, param1);
             }
           }
@@ -115,7 +115,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
                 stackIn_70_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
                 stackIn_70_4 = 13;
                 stackIn_70_5 = 61;
-                stackIn_71_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+                stackIn_71_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
                 QuickChatMenuLayout.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4, stackIn_70_5, stackIn_71_6, -1, 15, var4 != 0, 11, param1);
               }
             } else {
@@ -127,7 +127,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
                 stackIn_85_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
                 stackIn_85_4 = 13;
                 stackIn_85_5 = 61;
-                stackIn_86_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+                stackIn_86_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
                 QuickChatMenuLayout.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_86_6, -1, 15, var4 != 0, 11, param1);
               }
             }
@@ -154,7 +154,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_38_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_38_4 = 13;
               stackIn_38_5 = 61;
-              stackIn_39_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+              stackIn_39_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
               QuickChatMenuLayout.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
@@ -166,7 +166,7 @@ final class MultiplayerLobbyScreen extends GameScreen {
               stackIn_53_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_53_4 = 13;
               stackIn_53_5 = 61;
-              stackIn_54_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
+              stackIn_54_6 = (50 >= DateOfBirthPanel.getMouseIdleTicks(false)) ? false : true;
               QuickChatMenuLayout.a(stackIn_53_0, stackIn_53_1, stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_54_6, -1, 15, var4 != 0, 11, param1);
             }
           }

@@ -130,7 +130,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         }
     }
 
-    final static Boolean e(byte param0) {
+    final static Boolean pollAvailabilityReply(byte param0) {
         Boolean var1 = RendererMode.field_b;
         RendererMode.field_b = null;
         if (param0 <= 57) {
