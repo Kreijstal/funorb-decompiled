@@ -191,7 +191,7 @@ final class CampaignProgress {
         if (param0 != 2000) {
           return;
         }
-        ArmiesOfGielinor.b(0, param1);
+        ArmiesOfGielinor.drawRootInterface(0, param1);
     }
 
     public CampaignProgress() {

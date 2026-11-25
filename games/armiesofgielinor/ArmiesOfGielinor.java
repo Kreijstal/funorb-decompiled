@@ -88,7 +88,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           stackIn_11_2 = (FixedQuaternion.fullscreenCanvas != null);
           this.advanceSharedClient(stackIn_10_1, stackIn_11_2);
           if (TextLineLayout.field_l) {
-            this.p(17);
+            this.createGameArchives(17);
             TextLineLayout.field_l = false;
           }
           NanoGameClock.field_n = NanoGameClock.field_n + 1;
@@ -99,7 +99,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             this.advanceAccountUi((byte) 4);
             if (PopupPresentation.requiresAccountUi(31337)) {
               if (AccountRequestResult.a((byte) 105)) {
-                discarded$0 = this.c(-100, false);
+                discarded$0 = this.loadClientResources(-100, false);
               }
               return;
             }
@@ -107,9 +107,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           boolean decompiledFrameRemainder0 = true;
           if (!DelayedPacket.field_q) {
             AccountFlowUpdateSupport.advanceAccountFlow(MouseWheelSource.field_d, (byte) -73);
-            decompiledFrameRemainder0 = !(!this.c(102, true));
+            decompiledFrameRemainder0 = !(!this.loadClientResources(102, true));
             if (decompiledFrameRemainder0) {
-              this.r(-66);
+              this.initializeGameUi(-66);
               DelayedPacket.field_q = true;
               decompiledFrameRemainder0 = (var11 != 0);
             }
@@ -119,7 +119,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               if (!SessionTransitionSupport.markReconnectExpected(-83)) {
                 if (DefeatPlayerConsoleCommand.e((byte) 89)) {
                   if (~UnitAnimationSelectionSupport.field_f != ~UnitAnimationSelectionSupport.field_e) {
-                    this.d(0, false);
+                    this.advanceGameUi(0, false);
                     decompiledFrameRemainder0 = (var11 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -127,12 +127,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (1 == var2_int) {
                       TileableNoiseGenerator.a(0, 0);
                     }
-                    this.d(0, true);
+                    this.advanceGameUi(0, true);
                     decompiledFrameRemainder0 = (var11 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  this.d(0, false);
+                  this.advanceGameUi(0, false);
                   if (var11 != 0) {
                     stackIn_61_1 = 42;
                     stackIn_62_2 = (null != FixedQuaternion.fullscreenCanvas);
@@ -146,7 +146,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                         CampaignResult.a((java.applet.Applet) (this), (byte) -3);
                       }
                     }
-                    this.d(0, true);
+                    this.advanceGameUi(0, true);
                     DropdownSelector.f((byte) -67);
                   }
                 }
@@ -163,7 +163,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     CampaignResult.a((java.applet.Applet) (this), (byte) -3);
                   }
                 }
-                this.d(0, true);
+                this.advanceGameUi(0, true);
                 if (var11 != 0) {
                   DropdownSelector.f((byte) -67);
                 }
@@ -652,7 +652,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final boolean q(int param0) {
+    private final boolean ensureSceneArchivesReady(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -700,7 +700,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final void d(int param0, boolean param1) {
+    private final void advanceGameUi(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         int stackIn_97_0 = 0;
         int stackIn_98_1 = 0;
@@ -940,7 +940,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             this.tickClient((byte) -98);
           }
           if (ChatInputDispatchSupport.field_a == -3) {
-            this.a(false, (byte) -62);
+            this.startLocalMatch(false, (byte) -62);
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime1 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
@@ -965,7 +965,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             SocketFactory.field_h = true;
           }
           if (ChatInputDispatchSupport.field_a == -8) {
-            this.a(true, (byte) -67);
+            this.startLocalMatch(true, (byte) -67);
             FullscreenFocusCanvas.gameplayController.k((byte) -113);
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime3 = SpriteDropdownControl.field_s ? 1 : 0;
@@ -973,7 +973,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             SocketFactory.field_h = true;
           }
           if (ChatInputDispatchSupport.field_a == -9) {
-            this.a(true, (byte) -90);
+            this.startLocalMatch(true, (byte) -90);
             FullscreenFocusCanvas.gameplayController.startEquipmentTutorial((byte) 60);
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime4 = SpriteDropdownControl.field_s ? 1 : 0;
@@ -1056,7 +1056,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             AnimationSkeleton.field_t.draw(0, 0);
             GradientUiRenderer.drawCenteredGradientText(ManaEvent.field_A, 320, 200, ConsoleValue.field_b, false);
           }
-          this.c(false);
+          this.drawAchievementNotification(false);
           if (null != ToggleTurnSkipConsoleCommand.debugConsole) {
             ToggleTurnSkipConsoleCommand.debugConsole.drawConsole(89);
           }
@@ -1103,7 +1103,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    public static void s(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -1125,7 +1125,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
 
     final void finishShutdown(byte obfuscationGuard) {
         try {
-          ArmiesOfGielinor.s(3);
+          ArmiesOfGielinor.releaseStatics(3);
           AchievementNotification.releaseStatics(-112);
           NodeDeque.releaseStatics(obfuscationGuard + 322);
           ResourceArchive.releaseStatics(obfuscationGuard + 71);
@@ -1692,7 +1692,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final void p(int param0) {
+    private final void createGameArchives(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1763,7 +1763,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void startLocalMatch(boolean param0, byte param1) {
         GameplayController stackIn_20_0;
         GameplayController stackIn_20_1;
         boolean stackIn_20_2;
@@ -1890,7 +1890,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final boolean c(int param0, boolean param1) {
+    private final boolean loadClientResources(int param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1965,7 +1965,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                               AiInfluenceMap.field_f.ensureAllGroupsAvailable(-27927)) {
                                               if (MusicPatchUsage.backgroundArchive.ensureIndex((byte) 82) &&
                                                 MusicPatchUsage.backgroundArchive.ensureAllGroupsAvailable(-27927)) {
-                                                if (!this.q(-46)) {
+                                                if (!this.ensureSceneArchivesReady(-46)) {
                                                   return false;
                                                 }
                                                 if (!param1) {
@@ -2162,7 +2162,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               AiInfluenceMap.field_f = null;
               return false;
             }
-            if (!this.o(11672)) {
+            if (!this.initializeSceneResources(11672)) {
               return false;
             }
             ModalDialog.a(0);
@@ -2345,7 +2345,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final void r(int param0) {
+    private final void initializeGameUi(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -2378,7 +2378,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    final static void b(int param0, boolean param1) {
+    final static void drawRootInterface(int param0, boolean param1) {
         RuntimeException runtimeException = null;
         BirthDateChatEnableForm var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2399,7 +2399,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final boolean o(int param0) {
+    private final boolean initializeSceneResources(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2444,7 +2444,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void drawAchievementNotification(boolean param0) {
         AchievementNotification var2 = null;
         int var3 = 0;
         int var4 = 0;

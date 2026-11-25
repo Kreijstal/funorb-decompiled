@@ -9,7 +9,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ArmiesOfGielinor.a(ZB)V#0"
+      "renamedSymbol": "B:ArmiesOfGielinor.startLocalMatch(ZB)V#0"
     },
     {
       "symbol": "B:a.a(IIII)I#0",
@@ -71188,6 +71188,14 @@
       "renamedSymbol": "M:ArmiesOfGielinor.initializeClient(Z)V"
     },
     {
+      "symbol": "M:ArmiesOfGielinor.a(ZB)V",
+      "originalName": "a",
+      "to": "startLocalMatch",
+      "evidence": "ArmiesOfGielinor.java: Pending UI commands -3,-8,-9 create normal local match or paired tutorial players. Clears campaign/score request first; tutorial names fall back to guest and computer, theme selection precedes late byte guard. Keep player-coat length from configured player count even with two tutorial names, shared local-coat aliases, controller options and final music selection. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.startLocalMatch(ZB)V"
+    },
+    {
       "symbol": "M:ArmiesOfGielinor.a([BZ)Ltu;",
       "originalName": "a",
       "to": "createBinaryBitmapFont",
@@ -71204,12 +71212,84 @@
       "renamedSymbol": "M:ArmiesOfGielinor.shutdownClient(B)V"
     },
     {
+      "symbol": "M:ArmiesOfGielinor.b(IZ)V",
+      "originalName": "b",
+      "to": "drawRootInterface",
+      "evidence": "ArmiesOfGielinor.java: CampaignProgress static rendering caller draws the retained ClientUiComponent root and optional birth-date/chat enable overlay at root screen coordinates. Root is created by MusicTrackSelectionSupport and owns social/interface children. Keep draw-before-overlay ordering, all bool/int domains and late nonzero guard clearing field_H. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.drawRootInterface(IZ)V"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.c(IZ)Z",
+      "originalName": "c",
+      "to": "loadClientResources",
+      "evidence": "ArmiesOfGielinor.java: Tick caller repeatedly advances sequential availability and decode stages for fonts, sounds, music, sprites, maps, campaigns, models and animations. Completed flag returns before guard division; false boolean only checks readiness. Preserve all progress captions, archive indexes/groups and literal asset names, repeated readiness calls, staged archive release, unused loads, shared raster/pixel aliases and restoration, array loops, palette math and exception ordering. Caller sets completion flag. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.loadClientResources(IZ)Z"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.c(Z)V",
+      "originalName": "c",
+      "to": "drawAchievementNotification",
+      "evidence": "ArmiesOfGielinor.java: Render caller draws first queued AchievementNotification with slide-in below80ticks, hold through229 and slide-out from230. Draws frame, quarter-size icon and title; removal remains in UI advance at335ticks. Preserve initial boolean field_L clear, deque peek, obfuscation branches, all arithmetic and font metrics. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.drawAchievementNotification(Z)V"
+    },
+    {
       "symbol": "M:ArmiesOfGielinor.d(B)V",
       "originalName": "d",
       "to": "finishShutdown",
       "evidence": "iv.java: Final cleanup hook after listener/canvas/platform-task shutdown. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArmiesOfGielinor.finishShutdown(B)V"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+      "originalName": "d",
+      "to": "advanceGameUi",
+      "evidence": "ArmiesOfGielinor.java: Tick caller advances game/menu/tutorial/sandbox input, console filtering, chat/spectator handling, transitions, achievement queue and pending match commands. Boolean suppresses only first input section. Preserve input polling and all network writes, quadratic chat interpolation and integer domains,335tick notification removal,16frame session transitions, late nonzero-int recursive tick, campaign quicksave deletion only command-10, and local/tutorial/cancel command order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.advanceGameUi(IZ)V"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.o(I)Z",
+      "originalName": "o",
+      "to": "initializeSceneResources",
+      "evidence": "ArmiesOfGielinor.java: Post-resource loader performs staged97/98/99percent model initialization/archive18 release/animation initialization, returning false after each stage. QuickChatCategoryRepository helper builds unit and other meshes from archive12; CoatOfArms helper loads sequences from17 and resolves frame/skeleton archives14/15. Preserve nullable stage predicates, render-before-release, late wrong guard shutdownClient, all cleanup/failure order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.initializeSceneResources(I)Z"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.p(I)V",
+      "originalName": "p",
+      "to": "createGameArchives",
+      "evidence": "ArmiesOfGielinor.java: Initial tick consumes initial asset archive then creates game archive providers3..23. Supplied integer is functional archive ID used for animation sequence archive, canonical17; it is not a guard. Preserve full signed-int domain, exact IDs/provider flags, assignment/cleanup order and exceptions. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.createGameArchives(I)V"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.q(I)Z",
+      "originalName": "q",
+      "to": "ensureSceneArchivesReady",
+      "evidence": "ArmiesOfGielinor.java: Resource loader checks index then all-group readiness sequentially for archives12,18,15,14,17 and reports67percent failure caption for first unavailable archive. Preserve short circuit and repeated field reads, wrong guard return after first two successful archives, full signed-int domain and call/failure order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.r(I)V",
+      "originalName": "r",
+      "to": "initializeGameUi",
+      "evidence": "ArmiesOfGielinor.java: After resource loading, builds spell menu/instructions/setup and29TutorialController instances, sets initial UI state16 and tick rate50, selects menu music and initializes two dialog style presets. Preserve all allocations/font metrics/frame aliases and exact arguments, obfuscation early return, and late wrong guard font clear. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.initializeGameUi(I)V"
+    },
+    {
+      "symbol": "M:ArmiesOfGielinor.s(I)V",
+      "originalName": "s",
+      "to": "releaseStatics",
+      "evidence": "ArmiesOfGielinor.java: Shutdown caller passes3 and releases retained buffers, caption, font, palette and name tables. Preserve L/H/J clear order, late wrong guard invoking font factory with null before I/N clears, and failure partial state. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, locks, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArmiesOfGielinor.releaseStatics(I)V"
     },
     {
       "symbol": "M:a.a(IILbv;)Ljd;",
@@ -159783,7 +159863,7 @@
   "symbols": [
     {
       "symbol": "B:ArmiesOfGielinor.a(ZB)V#0",
-      "renamedSymbol": "B:ArmiesOfGielinor.a(ZB)V#0",
+      "renamedSymbol": "B:ArmiesOfGielinor.startLocalMatch(ZB)V#0",
       "originalName": "L7",
       "renamedName": "regionExit1",
       "declaration": {
@@ -223968,7 +224048,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#0",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -223979,7 +224059,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#1",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -223990,7 +224070,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#10",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#10",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#10",
       "originalName": "stackIn_21_8",
       "renamedName": "stackIn_21_8",
       "declaration": {
@@ -224001,7 +224081,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#11",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#11",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#11",
       "originalName": "stackIn_24_9",
       "renamedName": "stackIn_24_9",
       "declaration": {
@@ -224012,7 +224092,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#12",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#12",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#12",
       "originalName": "stackIn_24_10",
       "renamedName": "stackIn_24_10",
       "declaration": {
@@ -224023,7 +224103,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#13",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#13",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#13",
       "originalName": "stackIn_24_11",
       "renamedName": "stackIn_24_11",
       "declaration": {
@@ -224034,7 +224114,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#14",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#14",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#14",
       "originalName": "stackIn_24_12",
       "renamedName": "stackIn_24_12",
       "declaration": {
@@ -224045,7 +224125,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#15",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#15",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#15",
       "originalName": "stackIn_24_13",
       "renamedName": "stackIn_24_13",
       "declaration": {
@@ -224056,7 +224136,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#16",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#16",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#16",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -224067,7 +224147,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#17",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#17",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#17",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -224078,7 +224158,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#18",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#18",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#18",
       "originalName": "stackIn_25_14",
       "renamedName": "stackIn_25_14",
       "declaration": {
@@ -224089,7 +224169,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#19",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#19",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#19",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -224100,7 +224180,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#2",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -224111,7 +224191,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#20",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#20",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#20",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -224122,7 +224202,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#21",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#21",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#21",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -224133,7 +224213,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#22",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#22",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#22",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -224144,7 +224224,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#23",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#23",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#23",
       "originalName": "var4_ref_String",
       "renamedName": "var4_ref_String",
       "declaration": {
@@ -224155,7 +224235,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#24",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#24",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#24",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -224166,7 +224246,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#25",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#25",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#25",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -224177,7 +224257,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#26",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#26",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#26",
       "originalName": "stackIn_21_0Lifetime1",
       "renamedName": "stackIn_21_0Lifetime1",
       "declaration": {
@@ -224188,7 +224268,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#27",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#27",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#27",
       "originalName": "stackIn_21_1Lifetime1",
       "renamedName": "stackIn_21_1Lifetime1",
       "declaration": {
@@ -224199,7 +224279,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#28",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#28",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#28",
       "originalName": "stackIn_25_0Lifetime1",
       "renamedName": "stackIn_25_0Lifetime1",
       "declaration": {
@@ -224210,7 +224290,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#29",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#29",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#29",
       "originalName": "stackIn_25_1Lifetime1",
       "renamedName": "stackIn_25_1Lifetime1",
       "declaration": {
@@ -224221,7 +224301,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#3",
       "originalName": "stackIn_20_3",
       "renamedName": "stackIn_20_3",
       "declaration": {
@@ -224232,7 +224312,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#30",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#30",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#30",
       "originalName": "stackIn_21_0Lifetime1Lifetime1",
       "renamedName": "stackIn_21_0Lifetime1Lifetime1",
       "declaration": {
@@ -224243,7 +224323,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#31",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#31",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#31",
       "originalName": "stackIn_21_1Lifetime1Lifetime1",
       "renamedName": "stackIn_21_1Lifetime1Lifetime1",
       "declaration": {
@@ -224254,7 +224334,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#32",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#32",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#32",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -224265,7 +224345,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#33",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#33",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#33",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -224276,7 +224356,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#4",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#4",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#4",
       "originalName": "stackIn_20_4",
       "renamedName": "stackIn_20_4",
       "declaration": {
@@ -224287,7 +224367,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#5",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#5",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#5",
       "originalName": "stackIn_20_5",
       "renamedName": "stackIn_20_5",
       "declaration": {
@@ -224298,7 +224378,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#6",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#6",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#6",
       "originalName": "stackIn_20_6",
       "renamedName": "stackIn_20_6",
       "declaration": {
@@ -224309,7 +224389,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#7",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#7",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#7",
       "originalName": "stackIn_20_7",
       "renamedName": "stackIn_20_7",
       "declaration": {
@@ -224320,7 +224400,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#8",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#8",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#8",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -224331,7 +224411,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.a(ZB)V#9",
-      "renamedSymbol": "L:ArmiesOfGielinor.a(ZB)V#9",
+      "renamedSymbol": "L:ArmiesOfGielinor.startLocalMatch(ZB)V#9",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -224474,7 +224554,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.b(IZ)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.b(IZ)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawRootInterface(IZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -224485,7 +224565,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.b(IZ)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.b(IZ)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawRootInterface(IZ)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -224496,7 +224576,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.b(IZ)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.b(IZ)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawRootInterface(IZ)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -224507,7 +224587,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.b(IZ)V#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.b(IZ)V#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawRootInterface(IZ)V#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -224518,7 +224598,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -224529,7 +224609,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -224540,7 +224620,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#10",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#10",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#10",
       "originalName": "var6_array2",
       "renamedName": "var6_array2",
       "declaration": {
@@ -224551,7 +224631,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#11",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#11",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#11",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -224562,7 +224642,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#12",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#12",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#12",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -224573,7 +224653,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#13",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#13",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -224584,7 +224664,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#14",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#14",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#14",
       "originalName": "var7_ref",
       "renamedName": "var7_ref",
       "declaration": {
@@ -224595,7 +224675,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#15",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#15",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -224606,7 +224686,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#16",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#16",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#16",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -224617,7 +224697,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#17",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#17",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#17",
       "originalName": "var8_array",
       "renamedName": "var8_array",
       "declaration": {
@@ -224628,7 +224708,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#18",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#18",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#18",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -224639,7 +224719,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#19",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#19",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#19",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -224650,7 +224730,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -224661,7 +224741,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#20",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#20",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#20",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -224672,7 +224752,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#21",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#21",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#21",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -224683,7 +224763,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#22",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#22",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#22",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -224694,7 +224774,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#23",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#23",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#23",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -224705,7 +224785,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#24",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#24",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -224716,7 +224796,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#25",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#25",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -224727,7 +224807,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#26",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#26",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -224738,7 +224818,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#27",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#27",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#27",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -224749,7 +224829,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#28",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#28",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#28",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -224760,7 +224840,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -224771,7 +224851,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#4",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#4",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#4",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -224782,7 +224862,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#5",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#5",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -224793,7 +224873,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#6",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#6",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#6",
       "originalName": "var5_array",
       "renamedName": "var5_array",
       "declaration": {
@@ -224804,7 +224884,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#7",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#7",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#7",
       "originalName": "var5_array2",
       "renamedName": "var5_array2",
       "declaration": {
@@ -224815,7 +224895,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#8",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#8",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -224826,7 +224906,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(IZ)Z#9",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(IZ)Z#9",
+      "renamedSymbol": "L:ArmiesOfGielinor.loadClientResources(IZ)Z#9",
       "originalName": "var6_array",
       "renamedName": "var6_array",
       "declaration": {
@@ -224837,7 +224917,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -224848,7 +224928,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -224859,7 +224939,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -224870,7 +224950,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -224881,7 +224961,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#4",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#4",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -224892,7 +224972,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#5",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#5",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -224903,7 +224983,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.c(Z)V#6",
-      "renamedSymbol": "L:ArmiesOfGielinor.c(Z)V#6",
+      "renamedSymbol": "L:ArmiesOfGielinor.drawAchievementNotification(Z)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -224925,7 +225005,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -224936,7 +225016,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#1",
       "originalName": "stackIn_97_0",
       "renamedName": "stackIn_97_0",
       "declaration": {
@@ -224947,7 +225027,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#10",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#10",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -224958,7 +225038,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#11",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#11",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -224969,7 +225049,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#12",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#12",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -224980,7 +225060,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#13",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#13",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -224991,7 +225071,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#14",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#14",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -225002,7 +225082,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#15",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#15",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#15",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -225013,7 +225093,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#16",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#16",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#16",
       "originalName": "var3_intLifetime2",
       "renamedName": "var3_intLifetime2",
       "declaration": {
@@ -225024,7 +225104,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#17",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#17",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#17",
       "originalName": "var3_intLifetime3",
       "renamedName": "var3_intLifetime3",
       "declaration": {
@@ -225035,7 +225115,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#18",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#18",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#18",
       "originalName": "var3_intLifetime4",
       "renamedName": "var3_intLifetime4",
       "declaration": {
@@ -225046,7 +225126,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#19",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#19",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#19",
       "originalName": "decompiledFrameRemainder4",
       "renamedName": "decompiledFrameRemainder4",
       "declaration": {
@@ -225057,7 +225137,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#2",
       "originalName": "stackIn_98_1",
       "renamedName": "stackIn_98_1",
       "declaration": {
@@ -225068,7 +225148,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#20",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#20",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#20",
       "originalName": "decompiledFrameRemainder3",
       "renamedName": "decompiledFrameRemainder3",
       "declaration": {
@@ -225079,7 +225159,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#21",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#21",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#21",
       "originalName": "decompiledFrameCompleted1",
       "renamedName": "decompiledFrameCompleted1",
       "declaration": {
@@ -225090,7 +225170,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#22",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#22",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#22",
       "originalName": "decompiledFrameRemainder2",
       "renamedName": "decompiledFrameRemainder2",
       "declaration": {
@@ -225101,7 +225181,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#23",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#23",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#23",
       "originalName": "decompiledFrameRemainder1",
       "renamedName": "decompiledFrameRemainder1",
       "declaration": {
@@ -225112,7 +225192,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#24",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#24",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#24",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -225123,7 +225203,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#25",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#25",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#25",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -225134,7 +225214,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#26",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#26",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#26",
       "originalName": "decompiledSharedTail0",
       "renamedName": "decompiledSharedTail0",
       "declaration": {
@@ -225145,7 +225225,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#27",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#27",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#27",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225156,7 +225236,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#3",
       "originalName": "stackIn_102_2",
       "renamedName": "stackIn_102_2",
       "declaration": {
@@ -225167,7 +225247,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#4",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#4",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#4",
       "originalName": "stackIn_196_0",
       "renamedName": "stackIn_196_0",
       "declaration": {
@@ -225178,7 +225258,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#5",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#5",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#5",
       "originalName": "stackIn_196_1",
       "renamedName": "stackIn_196_1",
       "declaration": {
@@ -225189,7 +225269,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#6",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#6",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#6",
       "originalName": "stackIn_197_2",
       "renamedName": "stackIn_197_2",
       "declaration": {
@@ -225200,7 +225280,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#7",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#7",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225211,7 +225291,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#8",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#8",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#8",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -225222,7 +225302,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.d(IZ)V#9",
-      "renamedSymbol": "L:ArmiesOfGielinor.d(IZ)V#9",
+      "renamedSymbol": "L:ArmiesOfGielinor.advanceGameUi(IZ)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -225244,7 +225324,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.o(I)Z#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.o(I)Z#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeSceneResources(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225255,7 +225335,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.o(I)Z#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.o(I)Z#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeSceneResources(I)Z#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225266,7 +225346,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.o(I)Z#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.o(I)Z#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeSceneResources(I)Z#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225277,7 +225357,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.p(I)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.p(I)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.createGameArchives(I)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225288,7 +225368,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.p(I)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.p(I)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.createGameArchives(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225299,7 +225379,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.p(I)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.p(I)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.createGameArchives(I)V#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225310,7 +225390,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.q(I)Z#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.q(I)Z#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225321,7 +225401,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.q(I)Z#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.q(I)Z#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225332,7 +225412,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.q(I)Z#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.q(I)Z#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225343,7 +225423,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.r(I)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.r(I)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeGameUi(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -225354,7 +225434,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.r(I)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.r(I)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeGameUi(I)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -225365,7 +225445,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.r(I)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.r(I)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeGameUi(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -225376,7 +225456,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.r(I)V#3",
-      "renamedSymbol": "L:ArmiesOfGielinor.r(I)V#3",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeGameUi(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225387,7 +225467,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.r(I)V#4",
-      "renamedSymbol": "L:ArmiesOfGielinor.r(I)V#4",
+      "renamedSymbol": "L:ArmiesOfGielinor.initializeGameUi(I)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225398,7 +225478,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.s(I)V#0",
-      "renamedSymbol": "L:ArmiesOfGielinor.s(I)V#0",
+      "renamedSymbol": "L:ArmiesOfGielinor.releaseStatics(I)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225409,7 +225489,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.s(I)V#1",
-      "renamedSymbol": "L:ArmiesOfGielinor.s(I)V#1",
+      "renamedSymbol": "L:ArmiesOfGielinor.releaseStatics(I)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -225420,7 +225500,7 @@
     },
     {
       "symbol": "L:ArmiesOfGielinor.s(I)V#2",
-      "renamedSymbol": "L:ArmiesOfGielinor.s(I)V#2",
+      "renamedSymbol": "L:ArmiesOfGielinor.releaseStatics(I)V#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -529339,9 +529419,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.a(ZB)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.a(ZB)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.startLocalMatch(ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startLocalMatch",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 58838,
@@ -529372,9 +529452,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.b(IZ)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.b(IZ)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.drawRootInterface(IZ)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawRootInterface",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 90161,
@@ -529383,9 +529463,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.c(IZ)Z",
-      "renamedSymbol": "M:ArmiesOfGielinor.c(IZ)Z",
+      "renamedSymbol": "M:ArmiesOfGielinor.loadClientResources(IZ)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "loadClientResources",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 63107,
@@ -529394,9 +529474,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.c(Z)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.c(Z)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.drawAchievementNotification(Z)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawAchievementNotification",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 92457,
@@ -529416,9 +529496,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.d(IZ)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.d(IZ)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.advanceGameUi(IZ)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "advanceGameUi",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 26405,
@@ -529438,9 +529518,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.o(I)Z",
-      "renamedSymbol": "M:ArmiesOfGielinor.o(I)Z",
+      "renamedSymbol": "M:ArmiesOfGielinor.initializeSceneResources(I)Z",
       "originalName": "o",
-      "renamedName": "o",
+      "renamedName": "initializeSceneResources",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 90974,
@@ -529449,9 +529529,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.p(I)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.p(I)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.createGameArchives(I)V",
       "originalName": "p",
-      "renamedName": "p",
+      "renamedName": "createGameArchives",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 56093,
@@ -529460,9 +529540,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.q(I)Z",
-      "renamedSymbol": "M:ArmiesOfGielinor.q(I)Z",
+      "renamedSymbol": "M:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z",
       "originalName": "q",
-      "renamedName": "q",
+      "renamedName": "ensureSceneArchivesReady",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 24506,
@@ -529471,9 +529551,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.r(I)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.r(I)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.initializeGameUi(I)V",
       "originalName": "r",
-      "renamedName": "r",
+      "renamedName": "initializeGameUi",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 88371,
@@ -529482,9 +529562,9 @@
     },
     {
       "symbol": "M:ArmiesOfGielinor.s(I)V",
-      "renamedSymbol": "M:ArmiesOfGielinor.s(I)V",
+      "renamedSymbol": "M:ArmiesOfGielinor.releaseStatics(I)V",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "ArmiesOfGielinor.java",
         "start": 40421,
@@ -582381,7 +582461,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.a(ZB)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.a(ZB)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.startLocalMatch(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582392,7 +582472,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.a(ZB)V#1",
-      "renamedSymbol": "P:ArmiesOfGielinor.a(ZB)V#1",
+      "renamedSymbol": "P:ArmiesOfGielinor.startLocalMatch(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -582436,7 +582516,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.b(IZ)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.b(IZ)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.drawRootInterface(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582447,7 +582527,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.b(IZ)V#1",
-      "renamedSymbol": "P:ArmiesOfGielinor.b(IZ)V#1",
+      "renamedSymbol": "P:ArmiesOfGielinor.drawRootInterface(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -582458,7 +582538,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.c(IZ)Z#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.c(IZ)Z#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.loadClientResources(IZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582469,7 +582549,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.c(IZ)Z#1",
-      "renamedSymbol": "P:ArmiesOfGielinor.c(IZ)Z#1",
+      "renamedSymbol": "P:ArmiesOfGielinor.loadClientResources(IZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -582480,7 +582560,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.c(Z)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.c(Z)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.drawAchievementNotification(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582502,7 +582582,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.d(IZ)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.d(IZ)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.advanceGameUi(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582513,7 +582593,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.d(IZ)V#1",
-      "renamedSymbol": "P:ArmiesOfGielinor.d(IZ)V#1",
+      "renamedSymbol": "P:ArmiesOfGielinor.advanceGameUi(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -582524,7 +582604,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.o(I)Z#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.o(I)Z#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.initializeSceneResources(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582535,7 +582615,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.p(I)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.p(I)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.createGameArchives(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582546,7 +582626,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.q(I)Z#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.q(I)Z#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.ensureSceneArchivesReady(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582557,7 +582637,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.r(I)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.r(I)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.initializeGameUi(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -582568,7 +582648,7 @@
     },
     {
       "symbol": "P:ArmiesOfGielinor.s(I)V#0",
-      "renamedSymbol": "P:ArmiesOfGielinor.s(I)V#0",
+      "renamedSymbol": "P:ArmiesOfGielinor.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -715023,7 +715103,7 @@
       "original": "ArmiesOfGielinor.java",
       "renamed": "ArmiesOfGielinor.java",
       "inputSha256": "5dc18e9d91f377f97b4a752fd07b762c9ad0b241cfac5ed3e4138c3c9af9a048",
-      "outputSha256": "d9de2df44ff77a322d6ab52ae00c68be0997859ced5a966b9d4d67f7961eaf5d",
+      "outputSha256": "067c238394eca8d95fb23fe05d6e5f85ad2dd6be6dbb51ae0d7bf648bc69155b",
       "edits": [
         {
           "start": 103,
@@ -715250,6 +715330,13 @@
           "renamed": "TextLineLayout"
         },
         {
+          "start": 2589,
+          "end": 2590,
+          "symbol": "M:ArmiesOfGielinor.p(I)V",
+          "original": "p",
+          "renamed": "createGameArchives"
+        },
+        {
           "start": 2608,
           "end": 2610,
           "symbol": "C:ts",
@@ -715320,6 +715407,13 @@
           "renamed": "AccountRequestResult"
         },
         {
+          "start": 2905,
+          "end": 2906,
+          "symbol": "M:ArmiesOfGielinor.c(IZ)Z",
+          "original": "c",
+          "renamed": "loadClientResources"
+        },
+        {
           "start": 3052,
           "end": 3054,
           "symbol": "C:qu",
@@ -715346,6 +715440,20 @@
           "symbol": "C:el",
           "original": "el",
           "renamed": "MouseWheelSource"
+        },
+        {
+          "start": 3156,
+          "end": 3157,
+          "symbol": "M:ArmiesOfGielinor.c(IZ)Z",
+          "original": "c",
+          "renamed": "loadClientResources"
+        },
+        {
+          "start": 3235,
+          "end": 3236,
+          "symbol": "M:ArmiesOfGielinor.r(I)V",
+          "original": "r",
+          "renamed": "initializeGameUi"
         },
         {
           "start": 3257,
@@ -715397,6 +715505,13 @@
           "renamed": "UnitAnimationSelectionSupport"
         },
         {
+          "start": 3577,
+          "end": 3578,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
+        },
+        {
           "start": 3754,
           "end": 3756,
           "symbol": "C:ba",
@@ -715409,6 +715524,20 @@
           "symbol": "C:vf",
           "original": "vf",
           "renamed": "TileableNoiseGenerator"
+        },
+        {
+          "start": 3888,
+          "end": 3889,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
+        },
+        {
+          "start": 4072,
+          "end": 4073,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
         },
         {
           "start": 4204,
@@ -715458,6 +715587,13 @@
           "symbol": "C:ho",
           "original": "ho",
           "renamed": "CampaignResult"
+        },
+        {
+          "start": 4663,
+          "end": 4664,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
         },
         {
           "start": 4695,
@@ -715514,6 +715650,13 @@
           "symbol": "C:ho",
           "original": "ho",
           "renamed": "CampaignResult"
+        },
+        {
+          "start": 5264,
+          "end": 5265,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
         },
         {
           "start": 5328,
@@ -719324,6 +719467,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 24506,
+          "end": 24507,
+          "symbol": "M:ArmiesOfGielinor.q(I)Z",
+          "original": "q",
+          "renamed": "ensureSceneArchivesReady"
+        },
+        {
           "start": 24647,
           "end": 24649,
           "symbol": "C:ki",
@@ -719672,6 +719822,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 26405,
+          "end": 26406,
+          "symbol": "M:ArmiesOfGielinor.d(IZ)V",
+          "original": "d",
+          "renamed": "advanceGameUi"
         },
         {
           "start": 26565,
@@ -720640,6 +720797,13 @@
           "renamed": "ChatInputDispatchSupport"
         },
         {
+          "start": 34856,
+          "end": 34857,
+          "symbol": "M:ArmiesOfGielinor.a(ZB)V",
+          "original": "a",
+          "renamed": "startLocalMatch"
+        },
+        {
           "start": 34890,
           "end": 34892,
           "symbol": "C:rd",
@@ -720801,6 +720965,13 @@
           "renamed": "ChatInputDispatchSupport"
         },
         {
+          "start": 35718,
+          "end": 35719,
+          "symbol": "M:ArmiesOfGielinor.a(ZB)V",
+          "original": "a",
+          "renamed": "startLocalMatch"
+        },
+        {
           "start": 35751,
           "end": 35753,
           "symbol": "C:rd",
@@ -720855,6 +721026,13 @@
           "symbol": "C:jt",
           "original": "jt",
           "renamed": "ChatInputDispatchSupport"
+        },
+        {
+          "start": 36007,
+          "end": 36008,
+          "symbol": "M:ArmiesOfGielinor.a(ZB)V",
+          "original": "a",
+          "renamed": "startLocalMatch"
         },
         {
           "start": 36040,
@@ -721424,6 +721602,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 38729,
+          "end": 38730,
+          "symbol": "M:ArmiesOfGielinor.c(Z)V",
+          "original": "c",
+          "renamed": "drawAchievementNotification"
+        },
+        {
           "start": 38761,
           "end": 38763,
           "symbol": "C:oa",
@@ -721767,6 +721952,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 40421,
+          "end": 40422,
+          "symbol": "M:ArmiesOfGielinor.s(I)V",
+          "original": "s",
+          "renamed": "releaseStatics"
+        },
+        {
           "start": 40684,
           "end": 40685,
           "symbol": "M:ArmiesOfGielinor.a([BZ)Ltu;",
@@ -721800,6 +721992,13 @@
           "symbol": "P:ArmiesOfGielinor.d(B)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 41155,
+          "end": 41156,
+          "symbol": "M:ArmiesOfGielinor.s(I)V",
+          "original": "s",
+          "renamed": "releaseStatics"
         },
         {
           "start": 41171,
@@ -729306,6 +729505,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 56093,
+          "end": 56094,
+          "symbol": "M:ArmiesOfGielinor.p(I)V",
+          "original": "p",
+          "renamed": "createGameArchives"
+        },
+        {
           "start": 56242,
           "end": 56243,
           "symbol": "C:a",
@@ -729782,6 +729988,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 58838,
+          "end": 58839,
+          "symbol": "M:ArmiesOfGielinor.a(ZB)V",
+          "original": "a",
+          "renamed": "startLocalMatch"
+        },
+        {
           "start": 58879,
           "end": 58881,
           "symbol": "C:ic",
@@ -730209,6 +730422,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 63107,
+          "end": 63108,
+          "symbol": "M:ArmiesOfGielinor.c(IZ)Z",
+          "original": "c",
+          "renamed": "loadClientResources"
         },
         {
           "start": 63324,
@@ -730839,6 +731059,13 @@
           "symbol": "M:kl.d(I)Z",
           "original": "d",
           "renamed": "ensureAllGroupsAvailable"
+        },
+        {
+          "start": 66460,
+          "end": 66461,
+          "symbol": "M:ArmiesOfGielinor.q(I)Z",
+          "original": "q",
+          "renamed": "ensureSceneArchivesReady"
         },
         {
           "start": 66809,
@@ -733009,6 +733236,13 @@
           "symbol": "C:ir",
           "original": "ir",
           "renamed": "AiInfluenceMap"
+        },
+        {
+          "start": 77854,
+          "end": 77855,
+          "symbol": "M:ArmiesOfGielinor.o(I)Z",
+          "original": "o",
+          "renamed": "initializeSceneResources"
         },
         {
           "start": 77920,
@@ -736189,6 +736423,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 88371,
+          "end": 88372,
+          "symbol": "M:ArmiesOfGielinor.r(I)V",
+          "original": "r",
+          "renamed": "initializeGameUi"
+        },
+        {
           "start": 88559,
           "end": 88566,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -736679,6 +736920,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 90161,
+          "end": 90162,
+          "symbol": "M:ArmiesOfGielinor.b(IZ)V",
+          "original": "b",
+          "renamed": "drawRootInterface"
+        },
+        {
           "start": 90251,
           "end": 90253,
           "symbol": "C:wr",
@@ -736754,6 +737002,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 90974,
+          "end": 90975,
+          "symbol": "M:ArmiesOfGielinor.o(I)Z",
+          "original": "o",
+          "renamed": "initializeSceneResources"
         },
         {
           "start": 91123,
@@ -736992,6 +737247,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 92457,
+          "end": 92458,
+          "symbol": "M:ArmiesOfGielinor.c(Z)V",
+          "original": "c",
+          "renamed": "drawAchievementNotification"
         },
         {
           "start": 92485,
@@ -876168,7 +876430,7 @@
       "original": "cm.java",
       "renamed": "CampaignProgress.java",
       "inputSha256": "fef2defda031e687ddfd53f7947f8cfaf22ff3e371f1f49b0e24d16a8b1ea0cf",
-      "outputSha256": "2e551cb213d30d22a9e8c18b851734d2bc1738b963fc147c07da00db1f28f83e",
+      "outputSha256": "11f05dc54a3884021e34610f30a5c7a0f8909e78a9fb83ba8b99cb28a3c9a60f",
       "edits": [
         {
           "start": 50,
@@ -877541,6 +877803,13 @@
           "symbol": "M:je.b(ZI)V",
           "original": "b",
           "renamed": "draw"
+        },
+        {
+          "start": 6056,
+          "end": 6057,
+          "symbol": "M:ArmiesOfGielinor.b(IZ)V",
+          "original": "b",
+          "renamed": "drawRootInterface"
         },
         {
           "start": 6088,
@@ -1910154,10 +1910423,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "cc3cc704d014221f143604547b5c866e940f2df9b28c83b299c2a03de3305600",
+    "rulesSha256": "332e567e1fa948babb73d05bf1a6558684fcb5f5f33706ad2f46475c4ea8698d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "389c782302d5f93b5d1bf8336db1888aba5e354281620f4a8a259cceffaefd4b",
+    "outputTreeSha256": "753b75a8121a61dbf97b79e1ceb28a8a9a6caead034cb57be2b4cb7d0d426a10",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
