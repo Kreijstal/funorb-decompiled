@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
             var60 = var44.field_p;
             FullscreenFocusCanvas.a(0, 0, var60, 12, LobbyRoomInteractionSupport.field_h);
           } else {
-            MusicEnvelope.a((byte) -97);
+            MusicEnvelope.compactFaceDepthBuckets((byte) -97);
           }
           var54 = new int[param5.field_e];
           var49 = var54;

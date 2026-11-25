@@ -19,7 +19,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, AnimatedPanel param1) {
+    final static void resetPanelVerticalBounds(boolean param0, AnimatedPanel param1) {
         AnimatedPanel var4 = null;
         AnimatedPanel var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;

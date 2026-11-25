@@ -132,7 +132,7 @@ final class SoundEffectDefinition {
     }
 
     final static void openChatPanelOverlay(byte param0) {
-        ToggleButton.a(SpriteState.field_u, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, VictoryChecker.field_d, 0);
+        ToggleButton.openChatPanelOverlay(SpriteState.field_u, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, VictoryChecker.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }
 

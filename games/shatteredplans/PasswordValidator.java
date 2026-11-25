@@ -101,7 +101,7 @@ final class PasswordValidator extends TextFieldValidator {
             var5 = TextReplacementEntry.field_b[var4_int];
             if (var5 != null) {
               if (var5.field_rb != 0) {
-                TutorialAi.a(var4_int, -127, var5);
+                TutorialAi.openChatFilterMenu(var4_int, -127, var5);
               }
               var6 = SpriteResourceSupport.getChatChannelFilter(-7019, var4_int);
               DerelictMapReader.field_d[var4_int].field_pb = BoundsRect.field_m[var6];

@@ -57,7 +57,7 @@ final class ProductionContent implements MenuContent {
         }
     }
 
-    final static void a(GraphicsSettings param0, int param1) {
+    final static void setGraphicsSettings(GraphicsSettings param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

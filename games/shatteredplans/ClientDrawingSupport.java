@@ -230,7 +230,7 @@ final class ClientDrawingSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 63) {
-            stackIn_4_0 = PanelNode.a(param1, 0, param1.length, (byte) 28);
+            stackIn_4_0 = PanelNode.concatenateRange(param1, 0, param1.length, (byte) 28);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

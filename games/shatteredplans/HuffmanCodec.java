@@ -11,7 +11,7 @@ final class HuffmanCodec {
     private byte[] field_h;
     private int[] field_g;
 
-    final static void a(boolean param0, int param1) {
+    final static void requestFullscreen(boolean param0, int param1) {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;

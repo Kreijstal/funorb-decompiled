@@ -6,7 +6,7 @@ class PanelNode extends DualLinkNode {
     static TutorialScene field_q;
     static String[] field_p;
 
-    final static String a(CharSequence[] param0, int param1, int param2, byte param3) {
+    final static String concatenateRange(CharSequence[] param0, int param1, int param2, byte param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$3 = null;

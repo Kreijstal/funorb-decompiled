@@ -103,7 +103,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
               LobbyOptionSupport.field_f.writeByte(16, (byte) -69);
               LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 1;
               var9 = LobbyOptionSupport.field_f.position;
-              GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              GarrisonTask.writeEncryptedAccountPayload(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               LobbyOptionSupport.field_f.patchLengthByte(LobbyOptionSupport.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
@@ -116,7 +116,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
               ProgressDialog.field_cb.writeMarkedString((byte) 95, var14);
               ProgressDialog.field_cb.writeMarkedString((byte) 95, var8);
               var15 = (CharSequence) ((Object) param5);
-              ProgressDialog.field_cb.writeMarkedString((byte) 95, QuaternaryLinkNode.a(var15, (byte) 53));
+              ProgressDialog.field_cb.writeMarkedString((byte) 95, QuaternaryLinkNode.normalizeAsciiAccountName(var15, (byte) 53));
               ProgressDialog.field_cb.writeShort(param0, 255);
               ProgressDialog.field_cb.writeByte(param1, (byte) -108);
               ProgressDialog.field_cb.writeByte(var9, (byte) -60);
@@ -128,7 +128,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 var11_ref_String = "";
               }
               LobbyOptionSupport.field_f.writeString(var11_ref_String, (byte) 0);
-              GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              GarrisonTask.writeEncryptedAccountPayload(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               LobbyOptionSupport.field_f.patchLengthShort(-549342136, -var10 + LobbyOptionSupport.field_f.position);
             }
             ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);

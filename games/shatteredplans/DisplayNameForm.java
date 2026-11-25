@@ -100,7 +100,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         if (!this.isFormValid(-60)) {
           return;
         }
-        IntNode.a(8192, this.field_H.field_s);
+        IntNode.requestDisplayNameChange(8192, this.field_H.field_s);
     }
 
     final static void l(int param0) {

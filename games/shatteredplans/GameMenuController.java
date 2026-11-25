@@ -1848,7 +1848,7 @@ final class GameMenuController {
                 SingleChildWidget.decreaseMusicVolumeStep(!param2);
               }
               if (this.field_d.isRightPressed(-77)) {
-                MapGenerationException.a(11615);
+                MapGenerationException.increaseMusicVolume(11615);
               }
             }
           }
@@ -2120,13 +2120,13 @@ final class GameMenuController {
         }
         var2 = 85 / ((-27 - param0) / 45);
         if (2 == TextReplacementEntry.field_j) {
-          ProductionContent.a(ClientRenderSupport.createHighGraphicsSettings(0), 1);
+          ProductionContent.setGraphicsSettings(ClientRenderSupport.createHighGraphicsSettings(0), 1);
         }
         if (TextReplacementEntry.field_j == 3) {
-          ProductionContent.a(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
+          ProductionContent.setGraphicsSettings(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
         }
         if (TextReplacementEntry.field_j == 4) {
-          ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 67), 1);
+          ProductionContent.setGraphicsSettings(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 67), 1);
         }
         if (GameRules.field_c == 6) {
           this.handleInstructionKeys(170);
@@ -2320,7 +2320,7 @@ final class GameMenuController {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;
                                         StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                                        HuffmanCodec.a(var5 != 0, -1);
+                                        HuffmanCodec.requestFullscreen(var5 != 0, -1);
                                       }
                                       break regionExit1;
                                     }

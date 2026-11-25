@@ -222,7 +222,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           MenuInputState.field_a.field_Eb <= MenuInputState.field_a.field_Lb) {
           GalaxyMapLayoutSupport.field_a.field_zb.field_z = SoundPlayback.field_j;
           MenuList.field_v.field_s = false;
-          MatchingTextValidator.a(false, GalaxyMapLayoutSupport.field_a.field_xb);
+          MatchingTextValidator.resetPanelVerticalBounds(false, GalaxyMapLayoutSupport.field_a.field_xb);
         } else {
           MenuList.field_v.field_s = true;
           GalaxyMapLayoutSupport.field_a.field_zb.field_z = null;

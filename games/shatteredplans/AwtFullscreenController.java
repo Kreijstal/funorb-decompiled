@@ -31,7 +31,7 @@ final class AwtFullscreenController {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(true, param0);
+        this.setFullscreenWindow(true, param0);
         if (0 == param4) {
           var6 = this.field_b.getRefreshRate();
           var7 = this.field_a.getDisplayModes();
@@ -63,14 +63,14 @@ final class AwtFullscreenController {
           }
           this.field_b = null;
         }
-        this.a(true, (java.awt.Frame) null);
+        this.setFullscreenWindow(true, (java.awt.Frame) null);
     }
 
-    private final void a(boolean param0, java.awt.Frame param1) {
+    private final void setFullscreenWindow(boolean param0, java.awt.Frame param1) {
         java.awt.Frame var4;
         if (!param0) {
           var4 = (java.awt.Frame) null;
-          this.a(true, (java.awt.Frame) null);
+          this.setFullscreenWindow(true, (java.awt.Frame) null);
         }
         this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
     }

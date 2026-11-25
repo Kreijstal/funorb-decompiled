@@ -93,7 +93,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
         }
     }
 
-    final static void a(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, int param4) {
+    final static void openChatPanelOverlay(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

@@ -30,7 +30,7 @@ final class MusicEnvelope {
         field_g = null;
     }
 
-    final static void a(byte param0) {
+    final static void compactFaceDepthBuckets(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -40,7 +40,7 @@ final class MusicEnvelope {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != -97) {
-            MusicEnvelope.a((byte) 75);
+            MusicEnvelope.compactFaceDepthBuckets((byte) 75);
           }
           var1_int = IntroLoadingSupport.field_b[0];
           for (var2 = 1; var2 < IntroLoadingSupport.field_b.length; var2++) {

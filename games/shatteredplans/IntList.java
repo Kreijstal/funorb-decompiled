@@ -41,7 +41,7 @@ final class IntList {
         this.set(param1, this.field_b + 1, -23);
     }
 
-    public static void a(int param0) {
+    public static void clearIntListStatics(int param0) {
         field_a = null;
         if (param0 == 19568) {
           field_j = null;
@@ -50,7 +50,7 @@ final class IntList {
           field_d = null;
           return;
         }
-        IntList.a(38);
+        IntList.clearIntListStatics(38);
         field_j = null;
         field_c = null;
         field_f = null;

@@ -97,7 +97,7 @@ final class GradientMenuLabel extends MenuComponent {
           }
           var6 = stackIn_7_0;
           if (Bzip2State.field_r == 0) {
-            var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
+            var7 = DualLinkDeque.wrapMenuText(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = 3 + var7;
             StarLinkPlanner.field_c = new String[var8];
             ClientClockSupport.field_d = new int[var8];
@@ -119,7 +119,7 @@ final class GradientMenuLabel extends MenuComponent {
             if (1 != Bzip2State.field_r) {
               throw new IllegalArgumentException();
             }
-            var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
+            var7 = DualLinkDeque.wrapMenuText(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = var7 + 2;
             StarLinkPlanner.field_c = new String[var8];
             ClientClockSupport.field_d = new int[var8];

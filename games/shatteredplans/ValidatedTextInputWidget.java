@@ -65,7 +65,7 @@ final class ValidatedTextInputWidget extends TextFieldWidget implements Validata
         return this.field_V;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void layoutChatPanelAtY(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         NodeHashTableIterator.field_f = param0;
@@ -79,7 +79,7 @@ final class ValidatedTextInputWidget extends TextFieldWidget implements Validata
           SocketArchiveNetworkClient.layoutQuickChatMenu(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
           return;
         }
-        ValidatedTextInputWidget.a(-2, (byte) -122);
+        ValidatedTextInputWidget.layoutChatPanelAtY(-2, (byte) -122);
         SocketArchiveNetworkClient.layoutQuickChatMenu(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
@@ -92,7 +92,7 @@ final class ValidatedTextInputWidget extends TextFieldWidget implements Validata
         field_S = null;
         field_J = null;
         if (param0 != 5) {
-          ValidatedTextInputWidget.a(-11, (byte) -25);
+          ValidatedTextInputWidget.layoutChatPanelAtY(-11, (byte) -25);
         }
     }
 

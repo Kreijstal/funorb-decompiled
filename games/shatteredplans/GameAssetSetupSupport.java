@@ -52,7 +52,7 @@ final class GameAssetSetupSupport {
         try {
           AccountRequestState.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
           IconTextPanel.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
-          SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
+          SecondaryNodeHashTable.field_f = MessageKind.loadSpriteByName(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
           RandomAccessCacheFile.pushLegacyRasterState(-110);
@@ -76,7 +76,7 @@ final class GameAssetSetupSupport {
             IsaacRandom.field_b[var9_int] = var20;
           }
           OpacityWidget.popLegacyRasterState(0);
-          IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
+          IntList.field_c = MessageKind.loadSpriteByName(true, param0, "", "menu_hex");
           AlternateLoginCredentials.field_r = SpriteResourceSupport.loadSpriteByName(2, param0, "", "instr_mainview");
           NodeSequence.field_d = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "instr_starframe");
           HighscoreResponseSupport.loadSpriteSetByName(-100, "", param0, "zoomicons");
@@ -100,8 +100,8 @@ final class GameAssetSetupSupport {
           ArchiveIndex.field_p = var22[2];
           Player.field_a = GraphicsSettings.loadSpriteSetByName("icon_circles", param6 + 8, "", param0);
           ObjectList.field_d = GraphicsSettings.loadSpriteSetByName("production_icons", 0, "", param0);
-          IntValueWriteRequest.field_i = MessageKind.a(true, param0, "", "production_button");
-          AccountHandshakeSupport.field_a = MessageKind.a(true, param0, "", "production_button_down");
+          IntValueWriteRequest.field_i = MessageKind.loadSpriteByName(true, param0, "", "production_button");
+          AccountHandshakeSupport.field_a = MessageKind.loadSpriteByName(true, param0, "", "production_button_down");
           ClientPacketFlushSupport.field_b = GraphicsSettings.loadSpriteSetByName("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = GraphicsSettings.loadSpriteSetByName("faction_icons", 0, "", param0);
           NodeSequence.field_b = GraphicsSettings.loadSpriteSetByName("faction_icons_large", 0, "", param0);
@@ -117,39 +117,39 @@ final class GameAssetSetupSupport {
           var26_ref = NodeSequence.field_b[2];
           NodeSequence.field_b[2] = NodeSequence.field_b[4];
           NodeSequence.field_b[4] = var26_ref;
-          IntArrayReadRequest.field_j = MessageKind.a(true, param0, "", "ready_button");
-          LobbyUiSupport.field_a = MessageKind.a(true, param0, "", "ready_button_down");
-          ResizingDialog.field_W = MessageKind.a(true, param0, "", "shine_left");
-          DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
-          VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
-          SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
+          IntArrayReadRequest.field_j = MessageKind.loadSpriteByName(true, param0, "", "ready_button");
+          LobbyUiSupport.field_a = MessageKind.loadSpriteByName(true, param0, "", "ready_button_down");
+          ResizingDialog.field_W = MessageKind.loadSpriteByName(true, param0, "", "shine_left");
+          DerelictMapReader.field_g = MessageKind.loadSpriteByName(true, param0, "", "shine_right");
+          VictoryChecker.field_h = MessageKind.loadSpriteByName(true, param0, "", "shine_mid");
+          SpriteState.field_q = MessageKind.loadSpriteByName(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.pushLegacyRasterState(-116);
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.drawColourised(0, 0, 2105376);
           OpacityWidget.popLegacyRasterState(0);
-          NameSuggestionsPanel.field_H = MessageKind.a(true, param0, "", "planet_burnt");
-          StarSoundState.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
-          NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
-          MenuTransitionSupport.field_a = MessageKind.a(true, param0, "", "planet_exotic");
-          BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
-          TextReplacementContext.field_c = MessageKind.a(true, param0, "", "planet_ringed");
-          InvalidMapConnectionException.field_d = MessageKind.a(true, param0, "", "planet_rock");
-          IntArrayReadRequest.field_k = MessageKind.a(true, param0, "", "alien_miner");
-          IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
-          CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
+          NameSuggestionsPanel.field_H = MessageKind.loadSpriteByName(true, param0, "", "planet_burnt");
+          StarSoundState.field_j = MessageKind.loadSpriteByName(true, param0, "", "planet_scorchedearth");
+          NetworkArchiveRequest.field_x = MessageKind.loadSpriteByName(true, param0, "", "planet_earthlike");
+          MenuTransitionSupport.field_a = MessageKind.loadSpriteByName(true, param0, "", "planet_exotic");
+          BytePayloadNode.field_k = MessageKind.loadSpriteByName(true, param0, "", "planet_gas");
+          TextReplacementContext.field_c = MessageKind.loadSpriteByName(true, param0, "", "planet_ringed");
+          InvalidMapConnectionException.field_d = MessageKind.loadSpriteByName(true, param0, "", "planet_rock");
+          IntArrayReadRequest.field_k = MessageKind.loadSpriteByName(true, param0, "", "alien_miner");
+          IntrusiveNodeHashTable.field_h = MessageKind.loadSpriteByName(true, param0, "", "alien_ship");
+          CanvasResizeController.field_t = MessageKind.loadSpriteByName(true, param0, "", "alien_base");
           GradientMenuLabel.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
           LoginResultSupport.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
           ClientRasterSupport.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
           AccountValidationText.field_e = SpriteResourceSupport.loadSpriteByName(2, param0, "", "chevron");
-          TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
+          TextFieldWidget.field_L = MessageKind.loadSpriteByName(true, param0, "", "warning");
           AlignedMenuLabel.field_G = SpriteResourceSupport.loadSpriteByName(2, param0, "", "hammer");
           AccountFieldValue.field_e = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "beaker");
-          UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
-          SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
-          ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
-          MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
-          ReflectionCheck.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
-          StatusMessagePanel.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
+          UiWidget.field_t = MessageKind.loadSpriteByName(true, param0, "", "factionring");
+          SpriteState.field_y = MessageKind.loadSpriteByName(true, param0, "", "factionringtag");
+          ArrayWidgetGroup.field_z = MessageKind.loadSpriteByName(true, param0, "", "factionringcentre");
+          MatchingTextValidator.field_p = MessageKind.loadSpriteByName(true, param0, "", "arrowship");
+          ReflectionCheck.field_o = MessageKind.loadSpriteByName(true, param0, "", "arrowshipdamaged");
+          StatusMessagePanel.field_F = MessageKind.loadSpriteByName(true, param0, "", "fleetsarrowship");
           FleetTrailPoint.field_i = GraphicsSettings.loadSpriteSetByName("fleetbuttons", 0, "", param0);
           StarAbandonedEvent.field_r = GraphicsSettings.loadSpriteSetByName("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
@@ -192,8 +192,8 @@ final class GameAssetSetupSupport {
           GarrisonTask.field_s.field_B[23] = 1207959552;
           GarrisonTask.field_s.field_B[21] = -10066330;
           for (var13_int = 0; LobbyPlayerEntry.field_Nb.length > var13_int; var13_int++) {
-            LobbyPlayerEntry.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
-            TextHotspotWidget.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
+            LobbyPlayerEntry.field_Nb[var13_int] = MessageKind.loadSpriteByName(true, param0, "", "res_side_" + var13_int);
+            TextHotspotWidget.field_L[var13_int] = MessageKind.loadSpriteByName(true, param0, "", "res_low_" + var13_int);
           }
           MenuLabel.field_y = GraphicsSettings.loadSpriteSetByName("defnet_anim_small", 0, "", param0);
           for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {

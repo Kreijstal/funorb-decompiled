@@ -69,7 +69,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         AccountNoticeKind.field_b = 2458760;
         ValidationMessageWidget.field_P = 2458760;
         StarAnnotation.field_n = 2805974;
-        ProductionContent.a(ClientRenderSupport.createHighGraphicsSettings(0), 1);
+        ProductionContent.setGraphicsSettings(ClientRenderSupport.createHighGraphicsSettings(0), 1);
         this.allowOpcodeGroups(false, true, -2839, true, true, false, false);
         SliderWidget.field_K = TaskAi.field_a;
         HighscoreResponseSupport.field_a[71] = 4;
@@ -222,7 +222,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                       if (3 == var3) {
                         BattleContribution.field_s = false;
                         StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                        HuffmanCodec.a(true, -1);
+                        HuffmanCodec.requestFullscreen(true, -1);
                       } else {
                         if (var3 != 4) {
                           this.b(false, true);
@@ -1041,7 +1041,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         DateInputWidget.clearStatics((byte) -113);
         RichTextLayout.clearStatics((byte) 36);
         DirectByteArrayStorage.a((byte) 104);
-        IntList.a(19568);
+        IntList.clearIntListStatics(19568);
         DraggableWidget.clearStatics(-950540796);
         DropTargetWidget.clearDropTargetStatics((byte) 111);
         IterableNodeHashTable.clearStatics(-1215);
@@ -1163,7 +1163,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 if (BattleContribution.field_s) {
                   BattleContribution.field_s = false;
                   StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
-                  HuffmanCodec.a(false, -1);
+                  HuffmanCodec.requestFullscreen(false, -1);
                 }
                 if (AccountStatusDialog.field_ob) {
                   MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -6, (byte) 96, false);
@@ -1285,7 +1285,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           var5 = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var6 = -(NodeHashTableIterator.field_h * NodeHashTableIterator.field_h) + var5;
           var7 = 120 * var6 / var5 + Player.field_z;
-          ValidatedTextInputWidget.a(var7, (byte) -47);
+          ValidatedTextInputWidget.layoutChatPanelAtY(var7, (byte) -47);
           if (HorizontalGradientComponent.field_v > 0) {
             HorizontalGradientComponent.field_v = HorizontalGradientComponent.field_v - 1;
           }

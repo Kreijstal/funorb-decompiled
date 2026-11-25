@@ -53,12 +53,12 @@ final class TextLayoutLine {
         field_d = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isDefaultChatInputActive(byte param0) {
         if (!MeshData.field_h) {
           return false;
         }
         if (param0 <= 94) {
-          TextLayoutLine.a((byte) 11);
+          TextLayoutLine.isDefaultChatInputActive((byte) 11);
           if (ProductionContent.field_h == 0) {
             return true;
           }

@@ -2591,7 +2591,7 @@ final class GameScreen {
             this.field_v = false;
           }
           if (400 > IconTextPanel.field_Cb.stringWidth(param2)) {
-            var4.field_f.a(param1, param2, 16777215);
+            var4.field_f.setTextAndAlignment(param1, param2, 16777215);
             var4.field_f.moveTo((byte) 64, 15, -(3 * IconTextPanel.field_Cb.field_J / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
             if (!ShatteredPlansClient.field_F) {
               return;
@@ -2599,7 +2599,7 @@ final class GameScreen {
           }
           var5 = param2.indexOf(" ", param2.length() / 2);
           var6 = param2.substring(0, var5) + "<br>" + param2.substring(var5 + 1);
-          var4.field_f.a(param1, var6, 16777215);
+          var4.field_f.setTextAndAlignment(param1, var6, 16777215);
           var4.field_f.moveTo((byte) 50, 15, -(IconTextPanel.field_Cb.field_J * 5 / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

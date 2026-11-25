@@ -291,7 +291,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             1 != ClientInputSupport.field_b) {
             ClientLobbyResources.field_a.field_s = false;
             ClientLobbyResources.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
-            MatchingTextValidator.a(false, ClientLobbyResources.field_a.field_Eb);
+            MatchingTextValidator.resetPanelVerticalBounds(false, ClientLobbyResources.field_a.field_Eb);
             return;
           }
           ClientLobbyResources.field_a.field_Db.field_zb.field_z = null;

@@ -2743,7 +2743,7 @@ final class GameSession implements AiHost {
             FleetTrailPoint.field_p[81] &&
             TextReplacementEntry.field_j == 16) {
             GameMenuController.field_e = true;
-            ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
+            ProductionContent.setGraphicsSettings(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
             this.field_s[this.field_h] = (PlayerAi) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
             var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {

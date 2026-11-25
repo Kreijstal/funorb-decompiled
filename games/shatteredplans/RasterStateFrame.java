@@ -31,7 +31,7 @@ final class RasterStateFrame extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawChamferedGradientButton(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
@@ -68,7 +68,7 @@ final class RasterStateFrame extends IntrusiveNode {
           SoftwareRasterizer.drawHorizontalLine(param8 + param0, param7, -param8 + param3, 16777215);
           SoftwareRasterizer.drawHorizontalLine(param0, param4 + (param7 - 1), 1 - param8 + param3, 16777215);
           if (param2 != -22466) {
-            RasterStateFrame.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
+            RasterStateFrame.drawChamferedGradientButton(73, -126, -112, 94, -98, 98, 92, 119, -99);
           }
           for (var9_intLifetime1 = 1; var9_intLifetime1 < -1 + param4; var9_intLifetime1++) {
             var10Lifetime1 = param7 + var9_intLifetime1;

@@ -63,7 +63,7 @@ final class SoundPlayback extends IntrusiveNode {
           BirthDateConfirmationForm.field_C = param2;
           BoundsRect.field_j = true;
           if (BirthDateConfirmationForm.field_C == 0) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 3 + var3_int;
             InvalidMapConnectionException.field_f = new String[var4];
             MenuTextResources.field_a = new int[var4];
@@ -82,7 +82,7 @@ final class SoundPlayback extends IntrusiveNode {
             MenuTextResources.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
           } else if (BirthDateConfirmationForm.field_C == 1) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 2 + var3_int;
             InvalidMapConnectionException.field_f = new String[var4];
             MenuTextResources.field_a = new int[var4];
@@ -100,9 +100,9 @@ final class SoundPlayback extends IntrusiveNode {
           } else if (BirthDateConfirmationForm.field_C != 2) {
             if (BirthDateConfirmationForm.field_C == 3) {
               if (ValidatedTextInputWidget.field_W.field_w) {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BirthDateValidator.field_k, TextHotspotWidget.field_K, 3);
+                var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, BirthDateValidator.field_k, TextHotspotWidget.field_K, 3);
               } else {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, TextHotspotWidget.field_K, 3);
+                var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, TextHotspotWidget.field_K, 3);
               }
               var4 = 2 + var3_int;
               InvalidMapConnectionException.field_f = new String[var4];
@@ -119,7 +119,7 @@ final class SoundPlayback extends IntrusiveNode {
               MenuTextResources.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == BirthDateConfirmationForm.field_C) {
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, TextHotspotWidget.field_K, 3);
+              var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, TextHotspotWidget.field_K, 3);
               var4 = var3_int + 2;
               InvalidMapConnectionException.field_f = new String[var4];
               MenuTextResources.field_a = new int[var4];
@@ -138,7 +138,7 @@ final class SoundPlayback extends IntrusiveNode {
               if (BirthDateConfirmationForm.field_C != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, TextHotspotWidget.field_K, 3);
+              var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, TextHotspotWidget.field_K, 3);
               var4 = 3 + var3_int;
               InvalidMapConnectionException.field_f = new String[var4];
               MenuTextResources.field_a = new int[var4];
@@ -158,7 +158,7 @@ final class SoundPlayback extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
@@ -175,7 +175,7 @@ final class SoundPlayback extends IntrusiveNode {
             QuickChatMenuSupport.field_b = new String[-1 + (var3_int - var4)];
             ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, QuickChatMenuSupport.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.wrapMenuText(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
                 continue;

@@ -24,12 +24,12 @@ final class GarrisonTask extends AiTask {
         return param0 & param1;
     }
 
-    final static void a(int param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
+    final static void writeEncryptedAccountPayload(int param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           RandomAccessCacheFile.a(param2, param1, 0, 0, param4, param3.payload, param3.position);
           if (param0 != 25050) {
             java.math.BigInteger var6 = (java.math.BigInteger) null;
-            GarrisonTask.a(43, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
+            GarrisonTask.writeEncryptedAccountPayload(43, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "co.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

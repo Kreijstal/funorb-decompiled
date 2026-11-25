@@ -13,13 +13,13 @@ final class IntNode extends IntrusiveNode {
     static int[] field_i;
     static LobbyRoomEntry field_p;
 
-    final static void a(int param0, String param1) {
+    final static void requestDisplayNameChange(int param0, String param1) {
         try {
           ClientRasterSupport.setClientStatusText(param1, (byte) -70);
           ByteArrayNode.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;
-            IntNode.a(62, (String) null);
+            IntNode.requestDisplayNameChange(62, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

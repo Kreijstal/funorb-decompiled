@@ -128,7 +128,7 @@ final class TutorialAi extends LegacyAi {
         field_u = null;
         if (param0) {
           AnimatedPanel var2 = (AnimatedPanel) null;
-          TutorialAi.a(40, -110, (AnimatedPanel) null);
+          TutorialAi.openChatFilterMenu(40, -110, (AnimatedPanel) null);
         }
         field_v = null;
     }
@@ -211,7 +211,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    final static void a(int param0, int param1, AnimatedPanel param2) {
+    final static void openChatFilterMenu(int param0, int param1, AnimatedPanel param2) {
         PlayerContextMenuController var11 = null;
         Sprite var12 = null;
         String var13 = null;

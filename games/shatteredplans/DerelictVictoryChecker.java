@@ -181,7 +181,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         return var5;
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2) {
+    final static void writeSessionCookie(byte param0, java.applet.Applet param1, String param2) {
         try {
           String var3 = null;
           String var4 = null;
@@ -233,7 +233,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           }
           if (param1 != -109) {
             var5 = (String) null;
-            DerelictVictoryChecker.a((byte) 83, (java.applet.Applet) null, (String) null);
+            DerelictVictoryChecker.writeSessionCookie((byte) 83, (java.applet.Applet) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

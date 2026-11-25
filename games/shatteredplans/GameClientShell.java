@@ -605,7 +605,7 @@ abstract class GameClientShell extends GameApplet {
           return;
         }
         String var2 = DerelictMapGenerator.readInboundString(param0);
-        DerelictVictoryChecker.a((byte) 112, GameScreen.getHostApplet((byte) 126), var2);
+        DerelictVictoryChecker.writeSessionCookie((byte) 112, GameScreen.getHostApplet((byte) 126), var2);
     }
 
     private final void allowOpcode5(byte param0) {

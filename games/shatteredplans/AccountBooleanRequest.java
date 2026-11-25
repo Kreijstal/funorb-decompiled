@@ -316,7 +316,7 @@ final class AccountBooleanRequest {
           }
           SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
-            !TextLayoutLine.a((byte) 95) &&
+            !TextLayoutLine.isDefaultChatInputActive((byte) 95) &&
             null == MenuInputState.field_a &&
             IntNode.field_p == null) {
             if (!HighscoreResponseSupport.field_b) {
@@ -329,7 +329,7 @@ final class AccountBooleanRequest {
             var7.field_j.addItem(param1 + 1, 20, var8);
           }
           if (1 == param0.field_n &&
-            !TextLayoutLine.a((byte) 111) &&
+            !TextLayoutLine.isDefaultChatInputActive((byte) 111) &&
             null != MenuInputState.field_a &&
             param0.field_g == MenuInputState.field_a.getRoomId(-101)) {
             if (!HighscoreResponseSupport.field_b) {

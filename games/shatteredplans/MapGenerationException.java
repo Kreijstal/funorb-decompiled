@@ -10,7 +10,7 @@ final class MapGenerationException extends Exception {
         super(param0);
     }
 
-    final static void a(int param0) {
+    final static void increaseMusicVolume(int param0) {
         if (param0 != 11615) {
           return;
         }

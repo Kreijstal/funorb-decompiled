@@ -7,7 +7,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
     static String field_v;
     static int field_w;
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String normalizeAsciiAccountName(CharSequence param0, byte param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -80,7 +80,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
         field_v = null;
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
-          QuaternaryLinkNode.a((CharSequence) null, (byte) 57);
+          QuaternaryLinkNode.normalizeAsciiAccountName((CharSequence) null, (byte) 57);
         }
     }
 

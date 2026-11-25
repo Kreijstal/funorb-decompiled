@@ -100,7 +100,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static AccountRequestResult a(int param0) {
+    final static AccountRequestResult pollAccountRequestResult(int param0) {
         if (AccountCreationDialog.field_Fb == PrivateChatMessage.field_l) {
           throw new IllegalStateException();
         }
@@ -111,14 +111,14 @@ final class MusicPatch extends IntrusiveNode {
         if (param0 == 65536) {
           return null;
         }
-        MusicPatch.a(-98);
+        MusicPatch.pollAccountRequestResult(-98);
         return null;
     }
 
     public static void clearStatics(int param0) {
         field_l = null;
         if (param0 != 59114) {
-          MusicPatch.a(7);
+          MusicPatch.pollAccountRequestResult(7);
         }
         field_o = null;
     }

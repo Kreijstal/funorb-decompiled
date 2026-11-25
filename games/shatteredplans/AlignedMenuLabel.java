@@ -33,7 +33,7 @@ final class AlignedMenuLabel extends MenuLabel {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setTextAndAlignment(int param0, String param1, int param2) {
         try {
           if (param2 != 16777215) {
             this.field_B = 50;

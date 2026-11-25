@@ -101,7 +101,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          DerelictVictoryChecker.a((byte) 28, param1, "");
+          DerelictVictoryChecker.writeSessionCookie((byte) 28, param1, "");
           ChatPanelLayoutSupport.reloadGamePage(param1, (byte) -127);
           if (param0 != 0) {
             AccountCreationDialog.clearStatics(13);
@@ -124,7 +124,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
           return super.animate((byte) 30);
         }
-        AccountRequestResult var2_ref_kj = MusicPatch.a(65536);
+        AccountRequestResult var2_ref_kj = MusicPatch.pollAccountRequestResult(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);

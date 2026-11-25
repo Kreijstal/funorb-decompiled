@@ -226,7 +226,7 @@ final class LoginRequestSupport {
           if (DraggableWidget.field_H != null) {
             LobbyOptionSupport.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
           }
-          GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+          GarrisonTask.writeEncryptedAccountPayload(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
           LobbyOptionSupport.field_f.patchLengthShort(-549342136, LobbyOptionSupport.field_f.position - var5_int);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
           return;

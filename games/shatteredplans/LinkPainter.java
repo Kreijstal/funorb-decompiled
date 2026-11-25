@@ -198,7 +198,7 @@ final class LinkPainter implements WidgetPainter {
             } else {
               ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
             }
-            MatchingTextValidator.a(!param0, ClientPacketFlushSupport.field_a.field_Eb);
+            MatchingTextValidator.resetPanelVerticalBounds(!param0, ClientPacketFlushSupport.field_a.field_Eb);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
