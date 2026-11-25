@@ -207,7 +207,7 @@ final class ContextActionMenu extends AnimatedPanel {
     final int pollAction(boolean param0, byte param1) {
         int var3 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.a(param0, -20429);
+        this.updatePointerState(param0, -20429);
         if (!param0) {
           return -2;
         }

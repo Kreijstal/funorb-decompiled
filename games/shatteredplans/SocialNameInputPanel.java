@@ -432,7 +432,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
         StringBuilder discarded$3 = null;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.a(param1, -20429);
+        this.updatePointerState(param1, -20429);
         if (!param1) {
           if (param0 >= -42) {
             SocialNameInputPanel.closeQuickChatMenus((byte) -50);

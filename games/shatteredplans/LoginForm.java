@@ -18,7 +18,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
     static String field_M;
     static int field_O;
 
-    final void a(int param0, String param1) {
+    final void setUsernameAndClearPassword(int param0, String param1) {
         TextFieldWidget var3 = null;
         String var4 = null;
         if (param0 != 16311) {
@@ -34,7 +34,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         }
     }
 
-    final static void k(int param0) {
+    final static void updateDrawOfferCaption(int param0) {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if ((PasswordInputPainter.field_x.field_P.field_y & 1 << PasswordInputPainter.field_x.field_h) != 0) {
@@ -86,7 +86,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         }
     }
 
-    final static CoverageBitmapFont a(String param0, String param1, Archive param2, Archive param3, byte param4) {
+    final static CoverageBitmapFont loadCoverageBitmapFontByName(String param0, String param1, Archive param2, Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -150,14 +150,14 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         }
     }
 
-    private final void a(int param0) {
+    private final void trySubmitLogin(int param0) {
         if (DialPainter.isForcedLoginMode(1) ||
           !(this.field_H.field_s.length() <= 0) &&
           !(0 >= this.field_R.field_s.length())) {
           BoundsRect.a((byte) 81, this.field_R.field_s, this.field_H.field_s);
         }
         if (param0 > -126) {
-          this.a(-6);
+          this.trySubmitLogin(-6);
         }
     }
 
@@ -183,11 +183,11 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             this.field_R.focusFirst((byte) -21, (UiWidget) (this));
           }
           if (this.field_R == param1) {
-            this.a(param0 - 4468);
+            this.trySubmitLogin(param0 - 4468);
           }
           if (param0 != 4340) {
             var4 = (Archive) null;
-            LoginForm.a((String) null, (String) null, (Archive) null, (Archive) null, (byte) -106);
+            LoginForm.loadCoverageBitmapFontByName((String) null, (String) null, (Archive) null, (Archive) null, (byte) -106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -394,10 +394,10 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
               }
             }
           } else {
-            this.a(-127);
+            this.trySubmitLogin(-127);
           }
           if (param1 != 6) {
-            this.l(-45);
+            this.clearCredentials(-45);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -424,7 +424,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         field_G = null;
     }
 
-    final String d(boolean param0) {
+    final String getUsername(boolean param0) {
         if (param0) {
           return (String) null;
         }
@@ -434,7 +434,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         return this.field_H.field_s;
     }
 
-    final void l(int param0) {
+    final void clearCredentials(int param0) {
         if (param0 != 8) {
           return;
         }

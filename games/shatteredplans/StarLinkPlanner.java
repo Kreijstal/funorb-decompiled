@@ -103,7 +103,7 @@ final class StarLinkPlanner {
             var13_intLifetime1 = var25.size(0);
             var5.field_v = new StarLink[var13_intLifetime1];
             var25.copyToArray((byte) -105, var5.field_v);
-            RandomAccessCacheFile.a(false, var13_intLifetime1, var5.field_v);
+            RandomAccessCacheFile.sortOrderablesPrefix(false, var13_intLifetime1, var5.field_v);
           }
           if (!param0) {
             var7 = var5.field_A + (int)(Math.cos(-0.2617993877991494) * 200.0);

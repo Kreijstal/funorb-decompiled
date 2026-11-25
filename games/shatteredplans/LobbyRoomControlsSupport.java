@@ -251,13 +251,13 @@ final class LobbyRoomControlsSupport {
           }
           stackIn_70_0 = SocialListPanel.field_xb;
           stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_70_0).updatePointerState(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
           stackIn_76_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_75_0).updatePointerState(stackIn_76_1, -20429);
           stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_80_0).updatePointerState(stackIn_81_1, -20429);
           DiplomacyNotice.field_h.field_d.handleTabClicks(false);
           if (IntNode.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;

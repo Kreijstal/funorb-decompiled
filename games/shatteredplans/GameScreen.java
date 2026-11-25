@@ -4289,7 +4289,7 @@ final class GameScreen {
           this.field_E.a(30 * BattleExplosionVisual.field_o, true, (byte) -115, param0);
           stackIn_40_1 = (var9Lifetime1 == this.field_E.field_xb.field_db + this.field_E.field_xb.field_w);
           this.field_v = stackIn_40_1;
-          this.field_O.a(true, -20429);
+          this.field_O.updatePointerState(true, -20429);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

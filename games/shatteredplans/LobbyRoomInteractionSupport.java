@@ -446,13 +446,13 @@ final class LobbyRoomInteractionSupport {
           }
           stackIn_159_0 = SocialListPanel.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_159_0).updatePointerState(stackIn_160_1, -20429);
           stackIn_164_0 = IntrusiveDeque.field_g;
           stackIn_165_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_164_0).updatePointerState(stackIn_165_1, -20429);
           stackIn_169_0 = MouseInputHandler.field_d;
           stackIn_170_1 = (param1) && (!param4) && (IntrusiveNodeHashTable.field_e);
-          ((AnimatedPanel) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_169_0).updatePointerState(stackIn_170_1, -20429);
           DiplomacyNotice.field_h.field_d.handleTabClicks(false);
           if (param0 != 23) {
             stackIn_172_0 = null;

@@ -436,7 +436,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (var9 != 0) {
               TiledNineSlicePainter.field_b = true;
               PasswordInputPainter.field_x = var13;
-              LoginForm.k(8);
+              LoginForm.updateDrawOfferCaption(8);
               RematchMenuSupport.updateRematchCaption(-2);
               SoundEffectDefinition.openChatPanelOverlay((byte) -98);
             } else {
@@ -1441,7 +1441,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         if (!TutorialAi.field_x ||
           !Wormhole.field_i) {
-          AnimatedPanel.a(VictoryChecker.isCaretBlinkOn(30), (byte) 111);
+          AnimatedPanel.drawClientAndLobbyOverlays(VictoryChecker.isCaretBlinkOn(30), (byte) 111);
         }
         if (FullscreenFocusCanvas.field_b > 0) {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);

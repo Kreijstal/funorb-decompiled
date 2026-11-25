@@ -437,9 +437,9 @@ final class DiskCacheWorker implements Runnable {
           ClientContextMenuSupport.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.decodeLogoAudio(param2 - 1102, param3);
           AccountCreationDialog.loadLogoMeshes(param2 ^ 902, param3);
-          AnimatedPanel.a(param3, (byte) 56);
+          AnimatedPanel.loadIntroFinalFrame(param3, (byte) 56);
           ReflectionCheck.initializeMeshRasterizer((byte) -47);
-          UrlLoader.b((byte) -112);
+          UrlLoader.renderIntroLogoSilhouette((byte) -112);
           LobbyOptionSupport.field_j = -ClientContextMenuSupport.field_c + 0;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

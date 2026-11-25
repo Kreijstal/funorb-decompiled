@@ -45,7 +45,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(boolean param0, int param1, Orderable[] param2) {
+    final static void sortOrderablesPrefix(boolean param0, int param1, Orderable[] param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -85,7 +85,7 @@ final class RandomAccessCacheFile {
 
     final void close(int param0) throws IOException {
         if (param0 != 10) {
-          RandomAccessCacheFile.a(-125, 93);
+          RandomAccessCacheFile.initializeChatHistory(-125, 93);
         }
         if (this.field_d != null) {
           this.field_d.close();
@@ -93,7 +93,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(java.math.BigInteger param0, PacketBuffer param1, int param2, int param3, java.math.BigInteger param4, byte[] param5, int param6) {
+    final static void writeRsaXteaPayload(java.math.BigInteger param0, PacketBuffer param1, int param2, int param3, java.math.BigInteger param4, byte[] param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -189,7 +189,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void initializeChatHistory(int param0, int param1) {
         PlayerOverlaySupport.field_b = new int[3];
         UiSpriteSupport.field_d = new ChatHistoryEntry[param1 * 15];
         DebouncedValidator.field_g = 0;
@@ -238,7 +238,7 @@ final class RandomAccessCacheFile {
         DirectByteArrayStorage.field_f[field_k] = SoftwareRasterizer.field_i;
         TooltipSupport.field_b[field_k] = SoftwareRasterizer.field_l;
         if (param0 >= -103) {
-          RandomAccessCacheFile.a(109, 107);
+          RandomAccessCacheFile.initializeChatHistory(109, 107);
         }
         AccountStatusSupport.field_c[field_k] = SoftwareRasterizer.field_a;
         DebouncedValidator.field_d[field_k] = SoftwareRasterizer.field_f;

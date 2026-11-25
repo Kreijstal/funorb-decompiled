@@ -17,7 +17,7 @@ final class UrlLoader implements Runnable {
     static boolean field_d;
     private PlatformTask field_i;
 
-    final static void a(byte param0) {
+    final static void readPlayerRankingResponse(byte param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -161,7 +161,7 @@ final class UrlLoader implements Runnable {
         this.field_a = null;
     }
 
-    final static void b(byte param0) {
+    final static void renderIntroLogoSilhouette(byte param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -202,7 +202,7 @@ final class UrlLoader implements Runnable {
         field_j = (int[]) null;
     }
 
-    final static ByteArrayNode a(byte[] param0, byte param1, int param2) {
+    final static ByteArrayNode queueByteArrayWriteRequest(byte[] param0, byte param1, int param2) {
         ByteArrayNode var3 = null;
         RuntimeException var3_ref = null;
         ByteArrayNode stackIn_3_0 = null;
@@ -277,7 +277,7 @@ final class UrlLoader implements Runnable {
         }
     }
 
-    final PacketBuffer a(boolean param0) {
+    final PacketBuffer getResultBuffer(boolean param0) {
         if (3 == this.field_h) {
           return this.field_k;
         }
@@ -287,7 +287,7 @@ final class UrlLoader implements Runnable {
         return (PacketBuffer) null;
     }
 
-    final synchronized boolean b(int param0) {
+    final synchronized boolean pollLoad(int param0) {
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         IOException var2 = null;

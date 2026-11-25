@@ -61,7 +61,7 @@ class AnimatedPanel extends PanelNode {
     int field_ab;
     boolean field_L;
 
-    final static String a(String param0, byte param1, String param2, String param3) {
+    final static String replaceLiteralText(String param0, byte param1, String param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -148,7 +148,7 @@ class AnimatedPanel extends PanelNode {
         }
     }
 
-    final static GameState a(int param0, int param1, String[] param2, GameRules param3, int param4, int param5) {
+    final static GameState createGeneratedGameState(int param0, int param1, String[] param2, GameRules param3, int param4, int param5) {
         try {
           GameState stackIn_17_0 = null;
           RuntimeException stackIn_22_0 = null;
@@ -177,7 +177,7 @@ class AnimatedPanel extends PanelNode {
             var7 = param2.length;
             var8 = var7 * StripedProgressWidget.field_J[param5];
             if (param1 != 50) {
-              AnimatedPanel.a(false, (byte) 41);
+              AnimatedPanel.drawClientAndLobbyOverlays(false, (byte) 41);
             }
             var9 = 0;
             while (50 > var9) {
@@ -260,7 +260,7 @@ class AnimatedPanel extends PanelNode {
           }
         }
         if (param1 >= -56) {
-          this.a(false, false, true, 31, 106, -74, false, -100, false, false, -72);
+          this.drawRecursive(false, false, true, 31, 106, -74, false, -100, false, false, -72);
         }
         if (null != this.field_M) {
           var4 = (AnimatedPanel) (this.field_M.startForward(0));
@@ -330,15 +330,15 @@ class AnimatedPanel extends PanelNode {
     }
 
     final void drawFullRaster(boolean param0, int param1) {
-        this.a(false, true, false, 0, 0, -2147483648, false, SoftwareRasterizer.field_k, false, param0, SoftwareRasterizer.field_b);
+        this.drawRecursive(false, true, false, 0, 0, -2147483648, false, SoftwareRasterizer.field_k, false, param0, SoftwareRasterizer.field_b);
         int var3 = 114 % ((param1 - 25) / 62);
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawClientAndLobbyOverlays(boolean param0, byte param1) {
         ClientOverlayDrawSupport.drawSharedClientOverlays(param0, (byte) -27);
         if (param1 <= 107) {
           GameRules var3 = (GameRules) null;
-          AnimatedPanel.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
+          AnimatedPanel.createGeneratedGameState(46, -4, (String[]) null, (GameRules) null, -66, -4);
         }
         LobbyPlayerEntry.drawSharedUiOverlays(0, param0);
     }
@@ -402,7 +402,7 @@ class AnimatedPanel extends PanelNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    private final void updateAnimationAndPointerState(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         boolean stackIn_34_1 = false;
         boolean stackIn_39_1 = false;
         int var7;
@@ -484,7 +484,7 @@ class AnimatedPanel extends PanelNode {
         if (null != this.field_M) {
           var14 = (AnimatedPanel) (this.field_M.startReverse(3725));
           while (var14 != null) {
-            var14.a(this.field_B, this.field_N, this.field_K, param3, -93, this.field_mb);
+            var14.updateAnimationAndPointerState(this.field_B, this.field_N, this.field_K, param3, -93, this.field_mb);
             var14 = (AnimatedPanel) (this.field_M.nextReverse(-125));
           }
         }
@@ -518,7 +518,7 @@ class AnimatedPanel extends PanelNode {
         }
     }
 
-    final static void f(int param0) {
+    final static void clearLoadingAwtResources(int param0) {
         TextLayoutLine.field_a = null;
         if (param0 > -40) {
           field_R = (String) null;
@@ -650,7 +650,7 @@ class AnimatedPanel extends PanelNode {
             this.field_ib = stackIn_101_1;
           }
           if (param1) {
-            this.a(true, -124);
+            this.updatePointerState(true, -124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -681,7 +681,7 @@ class AnimatedPanel extends PanelNode {
         this.field_S = 0;
     }
 
-    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, Archive param7, Archive param8, int param9, Archive param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
+    final static void initializeLobbyUi(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, Archive param7, Archive param8, int param9, Archive param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -801,16 +801,16 @@ class AnimatedPanel extends PanelNode {
         return this.measureWidth(2147483647, (byte) -93);
     }
 
-    final void a(boolean param0, int param1) {
+    final void updatePointerState(boolean param0, int param1) {
         ClientRenderSupport.field_c = !param0 ? true : false;
         ProxySocketConnector.field_j = !param0 ? true : false;
         if (param1 != -20429) {
           this.field_z = (String) null;
         }
-        this.a(0, 0, SoftwareRasterizer.field_b, true, -98, SoftwareRasterizer.field_k);
+        this.updateAnimationAndPointerState(0, 0, SoftwareRasterizer.field_b, true, -98, SoftwareRasterizer.field_k);
     }
 
-    private final void a(boolean param0, boolean param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
+    private final void drawRecursive(boolean param0, boolean param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
         boolean stackIn_7_0 = false;
         int var12;
         int var13;
@@ -841,7 +841,7 @@ class AnimatedPanel extends PanelNode {
         SoftwareRasterizer.intersectClip(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
-          AnimatedPanel.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
+          AnimatedPanel.initializeLobbyUi((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
         }
         if (!this.field_H) {
           param6 = this.field_bb;
@@ -986,14 +986,14 @@ class AnimatedPanel extends PanelNode {
         if (null != this.field_M) {
           var23_ref = (AnimatedPanel) (this.field_M.startForward(0));
           while (var23_ref != null) {
-            var23_ref.a(this.field_ib, param1, param2, this.field_B + var19, var20 + this.field_N, -2147483648, param6, this.field_mb, param8, param9, this.field_K);
+            var23_ref.drawRecursive(this.field_ib, param1, param2, this.field_B + var19, var20 + this.field_N, -2147483648, param6, this.field_mb, param8, param9, this.field_K);
             var23_ref = (AnimatedPanel) (this.field_M.nextForward((byte) -71));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
-    final static void a(Archive param0, byte param1) {
+    final static void loadIntroFinalFrame(Archive param0, byte param1) {
         Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1004,7 +1004,7 @@ class AnimatedPanel extends PanelNode {
           ChatAndSocialPanel.pushRasterState(false);
           if (param1 <= 22) {
             GameRules var5 = (GameRules) null;
-            AnimatedPanel.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);
+            AnimatedPanel.createGeneratedGameState(-15, 122, (String[]) null, (GameRules) null, -98, -12);
           }
           PlacementOrder.field_q = new Sprite(var3, 3 * var4 / 4);
           PlacementOrder.field_q.bindAsRenderTarget();

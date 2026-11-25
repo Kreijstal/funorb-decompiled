@@ -733,7 +733,7 @@ final class MapView extends MapViewState {
         if (!QuickChatPhraseDefinition.field_t) {
           return;
         }
-        SectorCacheStore.field_f.a(param1, -20429);
+        SectorCacheStore.field_f.updatePointerState(param1, -20429);
         var4 = DerelictMapReader.field_h.hasPointerInteraction(param2) ? 1 : 0;
         if (LobbyCommandSupport.field_d != 0 &&
           var4 == 0) {
@@ -744,7 +744,7 @@ final class MapView extends MapViewState {
           DerelictMapReader.field_h.pollMenuInput(param0, param3, (byte) -108);
         }
         if (var4 != 0) {
-          SectorCacheStore.field_f.a(param1, -20429);
+          SectorCacheStore.field_f.updatePointerState(param1, -20429);
         }
         var5 = DerelictMapReader.field_h.getOpenMenuWidth(false) + DerelictMapReader.field_h.field_B;
         if (var5 > 640) {

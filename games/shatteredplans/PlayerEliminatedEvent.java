@@ -78,11 +78,11 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
             }
           }
           OrderableInsertionSupport.field_b = ValidationMessageWidget.field_Q;
-          AnimatedPanel.a(IntList.field_j, LabeledChildWidget.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+          AnimatedPanel.initializeLobbyUi(IntList.field_j, LabeledChildWidget.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           StatefulWidgetTheme.field_y = SpriteResourceSupport.loadSpriteByName(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;
           UnderageAccountInfoPanel.field_D = ChatMessage.field_c;
-          RandomAccessCacheFile.a(115, 200);
+          RandomAccessCacheFile.initializeChatHistory(115, 200);
           RecklessAi.a(-94, param2, param1);
           PointsVictoryChecker.initializePromotionResources(param0, 0, 0, (byte) -3, OpacityWidget.field_B, 16777215);
           return;

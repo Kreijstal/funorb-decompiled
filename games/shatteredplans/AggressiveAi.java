@@ -783,7 +783,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 if (var22 != null) {
                   var22 = "<col=A00000>" + (String) (var22);
-                  var33 = AnimatedPanel.a((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
+                  var33 = AnimatedPanel.replaceLiteralText((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
                   if (var21 == null) {
                     var21 = var33;
                   } else {

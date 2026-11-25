@@ -921,7 +921,7 @@ final class GameSession implements AiHost {
           if (BufferedCacheFile.field_e == 62) {
             this.field_P.field_y = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14832);
             if (this == PasswordInputPainter.field_x) {
-              LoginForm.k(8);
+              LoginForm.updateDrawOfferCaption(8);
             }
             return true;
           }
@@ -4239,11 +4239,11 @@ final class GameSession implements AiHost {
               this.field_P = AudioService.createTutorialGameState(param3, param5, param2, -22379, 4);
               PacketBuffer.initializeTutorialState(-126, this);
               if (var13 != 0) {
-                this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
+                this.field_P = AnimatedPanel.createGeneratedGameState(param2, 50, param5, param3, param4, 2);
                 this.field_P = PopupPlacementSupport.createGameState(param4, param2, -27579, param5, param3);
               }
             } else {
-              this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
+              this.field_P = AnimatedPanel.createGeneratedGameState(param2, 50, param5, param3, param4, 2);
               if (var13 != 0) {
                 this.field_P = PopupPlacementSupport.createGameState(param4, param2, -27579, param5, param3);
               }

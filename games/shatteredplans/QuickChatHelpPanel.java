@@ -22,7 +22,7 @@ final class QuickChatHelpPanel extends AnimatedPanel {
 
     final boolean updateAndCheckDismissed(boolean param0, int param1) {
         boolean stackIn_9_0 = false;
-        this.a(true, -20429);
+        this.updatePointerState(true, -20429);
         if (param1 != -1) {
           return true;
         }

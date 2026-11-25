@@ -466,7 +466,7 @@ final class PlayerReportPanel extends AnimatedPanel {
         boolean stackIn_16_1 = false;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.a(param0, -20429);
+        this.updatePointerState(param0, -20429);
         if (null != this.field_Bb) {
           this.field_Bb.field_z = this.field_xb.toString();
           this.field_Bb.field_hb = (this.field_K - this.field_Bb.field_nb.stringWidth(this.field_Bb.field_z)) / 2;

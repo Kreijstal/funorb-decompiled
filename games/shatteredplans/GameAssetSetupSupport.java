@@ -50,8 +50,8 @@ final class GameAssetSetupSupport {
         int var15_intLifetime1;
         int var15_intLifetime2;
         try {
-          AccountRequestState.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
-          IconTextPanel.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
+          AccountRequestState.field_b = LoginForm.loadCoverageBitmapFontByName("font", "", param0, param4, (byte) 89);
+          IconTextPanel.field_Cb = LoginForm.loadCoverageBitmapFontByName("smallfont", "", param0, param4, (byte) 111);
           SecondaryNodeHashTable.field_f = MessageKind.loadSpriteByName(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;

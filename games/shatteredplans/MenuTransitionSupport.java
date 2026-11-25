@@ -141,7 +141,7 @@ final class MenuTransitionSupport {
           var1 = var2;
           var2[0] = (byte) 0;
           var2[1] = (byte)StringNode.field_j;
-          UrlLoader.a(var2, (byte) -78, 6);
+          UrlLoader.queueByteArrayWriteRequest(var2, (byte) -78, 6);
           HorizontalGradientComponent.field_A = StringNode.field_j;
           return;
         }
@@ -159,7 +159,7 @@ final class MenuTransitionSupport {
         var1Lifetime1 = var2Lifetime1;
         var2Lifetime1[0] = (byte) 0;
         var2Lifetime1[1] = (byte)StringNode.field_j;
-        UrlLoader.a(var2Lifetime1, (byte) -78, 6);
+        UrlLoader.queueByteArrayWriteRequest(var2Lifetime1, (byte) -78, 6);
         HorizontalGradientComponent.field_A = StringNode.field_j;
     }
 

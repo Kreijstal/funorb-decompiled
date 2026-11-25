@@ -237,7 +237,7 @@ abstract class Dialog extends WidgetContainer {
     final static String l(int param0) {
         String var1 = "";
         if (null != TutorialStageSupport.field_e) {
-          var1 = TutorialStageSupport.field_e.d(false);
+          var1 = TutorialStageSupport.field_e.getUsername(false);
         }
         if (param0 == var1.length()) {
           var1 = SpriteResourceSupport.getLocalPlayerName(-106);

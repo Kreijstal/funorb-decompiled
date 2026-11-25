@@ -144,8 +144,8 @@ abstract class GameClientShell extends GameApplet {
               if (GraphicsSettings.field_g == null) {
                 GraphicsSettings.field_g = new UrlLoader(ValidatedTextInputWidget.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (GraphicsSettings.field_g.b(10000)) {
-                var12 = GraphicsSettings.field_g.a(true);
+              if (GraphicsSettings.field_g.pollLoad(10000)) {
+                var12 = GraphicsSettings.field_g.getResultBuffer(true);
                 if (var12 == null) {
                   var9 = (String) null;
                   AccountCreationForm.a((String) null, true);
@@ -237,7 +237,7 @@ abstract class GameClientShell extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      UrlLoader.a((byte) 67);
+                      UrlLoader.readPlayerRankingResponse((byte) 67);
                     } else {
                       if (var2 == 7) {
                         this.b(false);
@@ -521,7 +521,7 @@ abstract class GameClientShell extends GameApplet {
         if (DefensiveAi.field_p == 3 &&
           ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, StringList.field_f, GalaxyMap.field_g) &&
           PopupPlacementSupport.preloadArchive(GalaxyMap.field_g, 0)) {
-          AnimatedPanel.f(-98);
+          AnimatedPanel.clearLoadingAwtResources(-98);
           GameScreen.drawOverlaysUnlessGuardMatches(28164);
           DerelictMapGenerator.field_r = LobbyUiSetupSupport.field_c;
           UiTextSupport.field_a = false;
