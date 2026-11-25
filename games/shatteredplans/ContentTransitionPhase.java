@@ -64,7 +64,7 @@ final class ContentTransitionPhase {
               ContentTransitionPhase.clearStatics(-14);
             }
             if (TertiaryLinkNode.field_o != null) {
-              TertiaryLinkNode.field_o.e(param0 - 16363);
+              TertiaryLinkNode.field_o.close(param0 - 16363);
             }
             if (BattleSnapshot.field_w != null) {
               BattleSnapshot.field_w.shutdown((byte) -122);

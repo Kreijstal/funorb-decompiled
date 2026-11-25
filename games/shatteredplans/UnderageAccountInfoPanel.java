@@ -267,12 +267,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           NodeHashTableIterator.a(0, "endturn");
           if (2 == TextReplacementEntry.field_a.field_P.field_g.field_e.length) {
             if (QuickChatHelpSupport.field_d == TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_y) {
-              if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
+              if (SocketArchiveNetworkClient.markTutorialEventSeen("combatSuccess", -116)) {
                 DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
                 if (var5 != 0) {
                   var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
-                    SocketArchiveNetworkClient.a("combatFailed", -116)) {
+                    SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
                     DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
                   }
                 }
@@ -280,7 +280,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             } else {
               var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
-                SocketArchiveNetworkClient.a("combatFailed", -116)) {
+                SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
                 DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
               }
             }

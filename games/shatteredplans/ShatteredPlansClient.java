@@ -767,7 +767,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ArchiveLoadProgress.clearStatics(param0 ^ -24161);
         FullscreenFocusCanvas.clearStatics(-1314558012);
         CanvasResizeController.clearStatics(false);
-        ArchiveNetworkClient.a(16967);
+        ArchiveNetworkClient.clearArchiveNetworkStatics(16967);
         DiskCacheWorker.clearStatics(true);
         ArchiveSourceManager.clearStatics((byte) 124);
         BufferedCacheFile.clearStatics(false);

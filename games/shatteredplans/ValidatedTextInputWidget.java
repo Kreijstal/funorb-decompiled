@@ -76,11 +76,11 @@ final class ValidatedTextInputWidget extends TextFieldWidget implements Validata
         }
         DateValidationSupport.field_c.setTarget(640, 120, (byte) 66, param0, NotificationEntry.field_h);
         if (param1 <= -35) {
-          SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
+          SocketArchiveNetworkClient.layoutQuickChatMenu(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
           return;
         }
         ValidatedTextInputWidget.a(-2, (byte) -122);
-        SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
+        SocketArchiveNetworkClient.layoutQuickChatMenu(DerelictMapGenerator.field_m - 24, 0, DateValidationSupport.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
     public static void clearStatics(int param0) {

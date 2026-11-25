@@ -21,35 +21,35 @@ abstract class ArchiveNetworkClient {
     volatile int field_p;
     NetworkArchiveRequest field_l;
 
-    abstract void b(byte param0);
+    abstract void resetAfterValidationFailure(byte param0);
 
-    abstract void e(int param0);
+    abstract void close(int param0);
 
-    final int a(byte param0) {
+    final int getPriorityRequestCount(byte param0) {
         if (param0 == 0) {
           return this.field_h.size((byte) 123) + this.field_j.size((byte) 83);
         }
-        this.c(-35);
+        this.isPriorityQueueFull(-35);
         return this.field_h.size((byte) 123) + this.field_j.size((byte) 83);
     }
 
-    abstract void a(byte param0, boolean param1, Object param2);
+    abstract void attachSocket(byte param0, boolean param1, Object param2);
 
-    final int b(int param0) {
+    final int getPrefetchRequestCount(int param0) {
         if (param0 != -5205) {
           return -48;
         }
         return this.field_m.size((byte) -111) + this.field_f.size((byte) -109);
     }
 
-    abstract boolean d(int param0);
+    abstract boolean pollNetwork(int param0);
 
-    final boolean c(byte param0) {
+    final boolean isPrefetchQueueFull(byte param0) {
         int var2 = -70 % ((47 - param0) / 56);
-        return this.b(-5205) >= 20 ? true : false;
+        return this.getPrefetchRequestCount(-5205) >= 20 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void drawAntialiasedLineQ4(int param0, int param1, int param2, byte param3, int param4, int param5) {
         if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 != 0) {
           return;
         }
@@ -61,21 +61,21 @@ abstract class ArchiveNetworkClient {
         SecondaryNodeHashTable.a(param5, param4, 80, param2, param1, param0);
     }
 
-    final NetworkArchiveRequest a(boolean param0, int param1, byte param2, int param3, int param4) {
+    final NetworkArchiveRequest enqueueRequest(boolean param0, int param1, byte param2, int param3, int param4) {
         long var6 = ((long)param1 << 32) + (long)param4;
         NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_w = param2;
         var8.field_q = param0 ? true : false;
         var8.field_l = var6;
         if (param3 != -2057056416) {
-          this.c(-16);
+          this.isPriorityQueueFull(-16);
           if (param0) {
-            if (!(this.a((byte) 0) < 20)) {
+            if (!(this.getPriorityRequestCount((byte) 0) < 20)) {
               throw new RuntimeException();
             }
             this.field_h.addLast(var8, 32);
           } else {
-            if (!(this.b(-5205) < 20)) {
+            if (!(this.getPrefetchRequestCount(-5205) < 20)) {
               throw new RuntimeException();
             }
             this.field_m.addLast(var8, 32);
@@ -83,12 +83,12 @@ abstract class ArchiveNetworkClient {
           return var8;
         }
         if (param0) {
-          if (!(this.a((byte) 0) < 20)) {
+          if (!(this.getPriorityRequestCount((byte) 0) < 20)) {
             throw new RuntimeException();
           }
           this.field_h.addLast(var8, 32);
         } else {
-          if (!(this.b(-5205) < 20)) {
+          if (!(this.getPrefetchRequestCount(-5205) < 20)) {
             throw new RuntimeException();
           }
           this.field_m.addLast(var8, 32);
@@ -96,14 +96,14 @@ abstract class ArchiveNetworkClient {
         return var8;
     }
 
-    final boolean c(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 != 27356) {
           return false;
         }
-        return this.a((byte) 0) >= 20 ? true : false;
+        return this.getPriorityRequestCount((byte) 0) >= 20 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearArchiveNetworkStatics(int param0) {
         field_g = null;
         if (param0 == 16967) {
           field_e = null;
@@ -111,7 +111,7 @@ abstract class ArchiveNetworkClient {
           field_o = null;
           return;
         }
-        ArchiveNetworkClient.a(-27);
+        ArchiveNetworkClient.clearArchiveNetworkStatics(-27);
         field_e = null;
         field_r = null;
         field_o = null;
@@ -138,7 +138,7 @@ abstract class ArchiveNetworkClient {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c3a94e747ff6(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawAntialiasedLineQ4(int param0, int param1, int param2, int param3, int param4, int param5) {
         if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 != 0) {
           return;
         }

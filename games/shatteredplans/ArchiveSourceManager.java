@@ -179,10 +179,10 @@ final class ArchiveSourceManager {
           return true;
         }
         if (null == this.field_c) {
-          if (this.field_e.c(27356)) {
+          if (this.field_e.isPriorityQueueFull(27356)) {
             return false;
           }
-          this.field_c = this.field_e.a(true, 255, (byte) 0, -2057056416, 255);
+          this.field_c = this.field_e.enqueueRequest(true, 255, (byte) 0, -2057056416, 255);
         }
         if (this.field_c.field_u) {
           return false;
@@ -227,8 +227,8 @@ final class ArchiveSourceManager {
           this.field_j = param3;
           this.field_e = param0;
           this.field_g = param2;
-          if (!this.field_e.c(27356)) {
-            this.field_c = this.field_e.a(true, 255, (byte) 0, -2057056416, 255);
+          if (!this.field_e.isPriorityQueueFull(27356)) {
+            this.field_c = this.field_e.enqueueRequest(true, 255, (byte) 0, -2057056416, 255);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

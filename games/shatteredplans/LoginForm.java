@@ -388,7 +388,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
                   if (this.field_D) {
                     WeightedLruCache.b((byte) -125);
                   } else {
-                    SocketArchiveNetworkClient.h(30252);
+                    SocketArchiveNetworkClient.requestLoginBackAction(30252);
                   }
                 }
               }

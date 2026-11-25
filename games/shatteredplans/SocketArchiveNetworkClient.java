@@ -10,7 +10,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     private BufferedSocket field_v;
     static String field_u;
 
-    final static void a(int param0, int param1, int[] param2, int param3) {
+    final static void fillPolygonAlpha(int param0, int param1, int[] param2, int param3) {
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -43,7 +43,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean pollNetwork(int param0) {
         try {
           int var2_int = 0;
           int stackIn_44_0 = 0;
@@ -90,8 +90,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             }
           }
           if (null == this.field_v) {
-            if (this.a((byte) 0) == 0 &&
-              0 == this.b(-5205)) {
+            if (this.getPriorityRequestCount((byte) 0) == 0 &&
+              0 == this.getPrefetchRequestCount(-5205)) {
               return true;
             }
             return false;
@@ -248,8 +248,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_v = null;
             this.field_a = this.field_a + 1;
             this.field_p = -2;
-            if (this.a((byte) 0) == 0 &&
-              0 == this.b(-5205)) {
+            if (this.getPriorityRequestCount((byte) 0) == 0 &&
+              0 == this.getPrefetchRequestCount(-5205)) {
               return true;
             }
             return false;
@@ -261,7 +261,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatMenu(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SectorCacheStore.field_f.setTarget(param4, param0, (byte) 46, param1, param5);
         if (DerelictMapReader.field_h != null) {
           DerelictMapReader.field_h.a(-1, param2, param0, -ConquestVictoryChecker.field_m + param2, param6, param0);
@@ -271,7 +271,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final void a(byte param0, boolean param1, Object param2) {
+    final void attachSocket(byte param0, boolean param1, Object param2) {
         try {
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
@@ -297,8 +297,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_v = null;
             }
             this.field_v = (BufferedSocket) (param2);
-            this.g(-20189);
-            this.a(param1, 3);
+            this.sendProtocolSetup(-20189);
+            this.sendConnectionState(param1, 3);
             this.field_l = null;
             this.field_q.position = 0;
             while (true) {
@@ -361,7 +361,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final void b(byte param0) {
+    final void resetAfterValidationFailure(byte param0) {
         try {
           this.field_v.close(param0 + 209);
         } catch (Exception exception) {
@@ -375,7 +375,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         this.field_d = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final void e(int param0) {
+    final void close(int param0) {
         if (param0 != -16363) {
           field_s = (String) null;
         }
@@ -392,7 +392,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         field_w = null;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void sendConnectionState(boolean param0, int param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_5_0 = null;
@@ -436,7 +436,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean markTutorialEventSeen(String param0, int param1) {
         StringNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -472,7 +472,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    private final void g(int param0) {
+    private final void sendProtocolSetup(int param0) {
         try {
           IOException iOException = null;
           int[] var4 = null;
@@ -488,7 +488,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_c.writeShort(0, 255);
             if (param0 != -20189) {
               var4 = (int[]) null;
-              SocketArchiveNetworkClient.a(88, -57, (int[]) null, 10);
+              SocketArchiveNetworkClient.fillPolygonAlpha(88, -57, (int[]) null, 10);
             }
             this.field_v.write(this.field_c.payload.length, 0, this.field_c.payload, -13976);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -511,7 +511,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static void h(int param0) {
+    final static void requestLoginBackAction(int param0) {
         TutorialTextSupport.setPendingUiAction((byte) -127, 4);
         if (param0 != 30252) {
           field_u = (String) null;

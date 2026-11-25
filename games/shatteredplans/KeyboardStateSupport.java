@@ -218,7 +218,7 @@ final class KeyboardStateSupport {
             } else {
               stackIn_29_5 = param4;
             }
-            ArchiveNetworkClient.$cfr$intArgs$a$c3a94e747ff6(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
+            ArchiveNetworkClient.drawAntialiasedLineQ4(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
             var19 = var21;
             var20 = var22;
             var9_int++;
@@ -234,7 +234,7 @@ final class KeyboardStateSupport {
           } else {
             stackIn_33_5 = param7;
           }
-          ArchiveNetworkClient.$cfr$intArgs$a$c3a94e747ff6(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
+          ArchiveNetworkClient.drawAntialiasedLineQ4(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

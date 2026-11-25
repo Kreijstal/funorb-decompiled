@@ -821,7 +821,7 @@ final class MapView extends MapViewState {
             } else {
               stackIn_15_0 = this.field_Z[var6.field_p].field_g;
             }
-            SocketArchiveNetworkClient.a(stackIn_15_0, 18117, this.field_D[var6.field_p], 160);
+            SocketArchiveNetworkClient.fillPolygonAlpha(stackIn_15_0, 18117, this.field_D[var6.field_p], 160);
             var12 = new Player[var4.field_q.length];
             var27 = new int[var4.field_q.length];
             for (var14_int = 0; var14_int < var12.length; var14_int++) {
@@ -1312,7 +1312,7 @@ final class MapView extends MapViewState {
           }
           var5 = stackIn_3_0;
           var5 = SolVictoryChecker.blendColours(var5, 0, -80, -(this.field_eb[param1.field_p] * 160 / param2) + 160);
-          SocketArchiveNetworkClient.a(var5, 18117, this.field_D[param1.field_p], 160);
+          SocketArchiveNetworkClient.fillPolygonAlpha(var5, 18117, this.field_D[param1.field_p], 160);
           if (this.field_T == -1) {
             this.drawStarTerritory(param1, false);
           }
@@ -2086,12 +2086,12 @@ final class MapView extends MapViewState {
           var6 = var10;
           if (var6 != null) {
             if (this.field_z[var3_int] == 1) {
-              SocketArchiveNetworkClient.a(((16711422 & var5) >> 1) + 16384 + ((var5 & 16579836) >> 2), 18117, var11, 192);
+              SocketArchiveNetworkClient.fillPolygonAlpha(((16711422 & var5) >> 1) + 16384 + ((var5 & 16579836) >> 2), 18117, var11, 192);
             } else {
               if (this.field_z[var3_int] == 2) {
-                SocketArchiveNetworkClient.a((var5 >> 1 & 8355711) + 4210752 + ((var5 & 16579836) >> 2), 18117, var11, 192);
+                SocketArchiveNetworkClient.fillPolygonAlpha((var5 >> 1 & 8355711) + 4210752 + ((var5 & 16579836) >> 2), 18117, var11, 192);
               } else {
-                SocketArchiveNetworkClient.a((9408399 & var5) << 1, 18117, var11, 128);
+                SocketArchiveNetworkClient.fillPolygonAlpha((9408399 & var5) << 1, 18117, var11, 128);
               }
             }
             if (var4 == this.field_B &&
@@ -2831,7 +2831,7 @@ final class MapView extends MapViewState {
               }
               var8 = QuickChatCategoryRegistry.a(var8 / 2, 25, var6, var8, 0);
             }
-            SocketArchiveNetworkClient.a(0, 18117, this.field_D[var7], 64);
+            SocketArchiveNetworkClient.fillPolygonAlpha(0, 18117, this.field_D[var7], 64);
           }
           var4 = (StarAnnotation) (this.field_ab.nextForward((byte) -71));
         }

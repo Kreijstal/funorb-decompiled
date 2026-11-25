@@ -79,7 +79,7 @@ final class IsaacRandom {
             if (4 != ServerIntArrayRequest.field_i) {
               return -1;
             }
-            TertiaryLinkNode.field_o.a((byte) 90, AccountHandshakeSupport.field_c, LobbyOptionSupport.field_a);
+            TertiaryLinkNode.field_o.attachSocket((byte) 90, AccountHandshakeSupport.field_c, LobbyOptionSupport.field_a);
             LobbyOptionSupport.field_a = null;
             ServerIntArrayRequest.field_i = 0;
             AccountCreationDialog.field_Gb = null;

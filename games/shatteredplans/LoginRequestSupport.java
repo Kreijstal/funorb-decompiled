@@ -103,7 +103,7 @@ final class LoginRequestSupport {
             return;
           }
           if (MeshData.hasTutorialFlag(0, "unplaced")) {
-            if (SocketArchiveNetworkClient.a("unplaced", -126)) {
+            if (SocketArchiveNetworkClient.markTutorialEventSeen("unplaced", -126)) {
               DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("unplaced", -21502));
             }
           } else {
