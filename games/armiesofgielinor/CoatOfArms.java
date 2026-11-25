@@ -125,7 +125,7 @@ final class CoatOfArms {
           }
           SingleChildWidgetContainer.a(param1, StructureTerrainSupport.animationSequencesByGroup, param2, (byte) 126);
           SingleChildWidgetContainer.a(param1, AccountNameFoldingSupport.field_a, param2, (byte) 126);
-          MovementPresentation.c(param3 ^ -11757);
+          MovementPresentation.buildUnitAnimationVariants(param3 ^ -11757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

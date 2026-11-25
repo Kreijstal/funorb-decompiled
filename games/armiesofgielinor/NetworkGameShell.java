@@ -90,7 +90,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (this.errorReported) {
           return -1;
         }
-        if (!MovementPresentation.j(-11)) {
+        if (!MovementPresentation.needsSessionReconnect(-11)) {
           return -1;
         }
         if (MaskedTextEntryPainter.field_C) {
@@ -553,7 +553,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (hadResourceFailure != 0 &&
             ModalDialogHost.field_K == 0 &&
             11 == SoundCache.field_b &&
-            !MovementPresentation.j(-11)) {
+            !MovementPresentation.needsSessionReconnect(-11)) {
             DualLinkedNode.e(112);
           }
           if (ModalDialogHost.field_K != -1 &&
@@ -607,7 +607,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if ((ModalDialogHost.field_K != -1 &&
           ModalDialogHost.field_K != 0 ||
-          MovementPresentation.j(-11)) &&
+          MovementPresentation.needsSessionReconnect(-11)) &&
           FullscreenStatusToken.field_a <= MonotonicClockSupport.monotonicMillis(74)) {
           MaskedTextEntryPainter.field_C = false;
           if (ModalDialogHost.field_K != -1 &&
@@ -617,7 +617,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
         }
         if (ModalDialogHost.field_K == 0 &&
-          !MovementPresentation.j(-11)) {
+          !MovementPresentation.needsSessionReconnect(-11)) {
           ArchiveMasterIndex.field_a = false;
         }
         if (StrongCacheEntry.field_E == 0 &&

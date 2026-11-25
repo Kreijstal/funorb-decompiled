@@ -35,7 +35,7 @@ final class MovementPresentation implements EventPresentation {
         return false;
     }
 
-    private final void h(int param0) {
+    private final void configureMovementTiming(int param0) {
         if (this.presenter.event.eventKind != 7) {
           this.field_f = SpriteButtonPainter.field_z[AccountNameSelectionSupport.field_d];
         } else {
@@ -47,7 +47,7 @@ final class MovementPresentation implements EventPresentation {
         this.durationFrames = this.pathLength * this.field_f;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, byte[] param4, int param5) {
+    final static void sendCreateGameRequest(int param0, int param1, int param2, boolean param3, byte[] param4, int param5) {
         CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -123,13 +123,13 @@ final class MovementPresentation implements EventPresentation {
                 }
               }
               var10.claimUnitModel(var10.unit, obfuscationGuard - 45);
-              this.a(var17, true, var4);
+              this.setMovementPath(var17, true, var4);
               this.advanceFrame(var10, (byte) -94);
             }
           } else {
             var8 = (MoveEvent) (event);
             var4 = this.field_t * var8.startY + var8.startX;
-            this.a(var8.pathDirections, true, var4);
+            this.setMovementPath(var8.pathDirections, true, var4);
             if (null == var8.unit) {
               var8.unit = this.battlefield.getUnitAt(var8.startY, true, var8.startX);
             }
@@ -161,7 +161,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    final static void c(int param0) {
+    final static void buildUnitAnimationVariants(int param0) {
         int var4 = 0;
         String[][][] var1 = null;
         RuntimeException var1_ref = null;
@@ -198,7 +198,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    private final void d(byte param0) {
+    private final void initializeFirstPathEdge(byte param0) {
         this.field_e[0] = this.field_d[0];
         this.field_e[1] = this.field_d[1];
         if (0 >= this.pathLength) {
@@ -207,7 +207,7 @@ final class MovementPresentation implements EventPresentation {
         int var2 = this.pathDirections[0];
         this.field_k[1] = 0;
         this.field_k[0] = 0;
-        this.a(var2, 96);
+        this.setDirectionDelta(var2, 96);
         if (param0 <= 24) {
           return;
         }
@@ -217,11 +217,11 @@ final class MovementPresentation implements EventPresentation {
 
     public final void drawOverlayLayer(byte obfuscationGuard) {
         if (obfuscationGuard != -52) {
-          MovementPresentation.c(101);
+          MovementPresentation.buildUnitAnimationVariants(101);
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean advancePathIndex(boolean param0) {
         if (param0) {
           this.field_b = (int[]) null;
         }
@@ -237,18 +237,18 @@ final class MovementPresentation implements EventPresentation {
           this.field_k[1] = 0;
           this.field_k[0] = 0;
           this.field_a = (-(this.field_f * this.pathIndex) + this.elapsedFrames << 8) / this.field_f;
-          this.a(this.pathDirections[this.pathIndex], 126);
+          this.setDirectionDelta(this.pathDirections[this.pathIndex], 126);
           this.field_n[0] = this.field_e[0] + this.field_k[0];
           this.field_n[1] = this.field_k[1] + this.field_e[1];
           return true;
         }
-        this.i(-14628);
+        this.recomputePathEdge(-14628);
         this.pathIndex = var2;
         this.field_a = (-(this.field_f * this.pathIndex) + this.elapsedFrames << 8) / this.field_f;
         return true;
     }
 
-    private final void a(int param0, int param1) {
+    private final void setDirectionDelta(int param0, int param1) {
         if (param0 == 1) {
           this.field_k[1] = -1;
         }
@@ -270,7 +270,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String formatErrorTrace(int param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;
@@ -378,7 +378,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    private final int e(byte param0) {
+    private final int getPathFacingAngle(byte param0) {
         if (this.pathDirections == null ||
           this.pathDirections.length < 1) {
           return -1;
@@ -403,7 +403,7 @@ final class MovementPresentation implements EventPresentation {
         return var3;
     }
 
-    private final void e(int param0) {
+    private final void interpolateScreenPosition(int param0) {
         int var2 = this.field_m[0] - this.field_c[0];
         var2 = this.field_a * var2 >> 8;
         int var3 = this.field_m[1] - this.field_c[param0];
@@ -418,7 +418,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    private final void i(int param0) {
+    private final void recomputePathEdge(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_n[0] = this.field_d[0];
@@ -426,10 +426,10 @@ final class MovementPresentation implements EventPresentation {
         this.field_k[0] = 0;
         this.field_k[1] = 0;
         if (param0 != -14628) {
-          this.e(87);
+          this.interpolateScreenPosition(87);
         }
         for (var2 = 0; var2 <= this.pathIndex; var2++) {
-          this.a(this.pathDirections[this.pathIndex], 104);
+          this.setDirectionDelta(this.pathDirections[this.pathIndex], 104);
           this.field_n[0] = this.field_n[0] + this.field_k[0];
           this.field_n[1] = this.field_n[1] + this.field_k[1];
         }
@@ -437,9 +437,9 @@ final class MovementPresentation implements EventPresentation {
         this.field_e[1] = -this.field_k[1] + this.field_n[1];
     }
 
-    private final void f(byte param0) {
+    private final void calculatePathEnd(byte param0) {
         this.pathIndex = this.pathLength - 1;
-        this.i(-14628);
+        this.recomputePathEdge(-14628);
         if (param0 > -79) {
           this.field_k = (int[]) null;
         }
@@ -464,7 +464,7 @@ final class MovementPresentation implements EventPresentation {
         return this.durationFrames <= this.elapsedFrames ? true : false;
     }
 
-    private final void a(boolean param0, GameEvent param1) {
+    private final void updatePresenterTileIndex(boolean param0, GameEvent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -473,9 +473,9 @@ final class MovementPresentation implements EventPresentation {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.presenter.tileIndex = this.f(-4923);
+          this.presenter.tileIndex = this.getTileEndpointSelector(-4923);
           if (!param0) {
-            MovementPresentation.j(101);
+            MovementPresentation.needsSessionReconnect(101);
           }
           var3_int = 0;
           var4 = 0;
@@ -504,7 +504,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean needsSessionReconnect(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -11) {
           return false;
@@ -563,7 +563,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    private final void a(int[] param0, boolean param1, int param2) {
+    private final void setMovementPath(int[] param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -574,13 +574,13 @@ final class MovementPresentation implements EventPresentation {
           this.pathLength = this.pathDirections.length;
           this.field_d[1] = param2 / this.field_t;
           this.field_d[0] = -(this.field_d[1] * this.field_t) + param2;
-          this.f((byte) -116);
-          this.h(-7432);
+          this.calculatePathEnd((byte) -116);
+          this.configureMovementTiming(-7432);
           this.pathIndex = 0;
           if (!param1) {
             return;
           }
-          this.d((byte) 56);
+          this.initializeFirstPathEdge((byte) 56);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -606,18 +606,18 @@ final class MovementPresentation implements EventPresentation {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(false)) {
+          if (this.advancePathIndex(false)) {
             ImageProducerSurface.a(event.unit.unitType, 0, 32);
           }
           if (event == null) {
             return;
           }
-          this.a(true, event);
-          this.d(22);
-          this.e(1);
+          this.updatePresenterTileIndex(true, event);
+          this.projectPathEdge(22);
+          this.interpolateScreenPosition(1);
           this.presenter.screenX = this.field_b[0];
           this.presenter.screenY = this.field_b[1];
-          var3_int = this.e((byte) -69);
+          var3_int = this.getPathFacingAngle((byte) -69);
           var4 = event.unit;
           if (event.eventKind != 7) {
             var4.modelAnimationIndex = 1;
@@ -642,7 +642,7 @@ final class MovementPresentation implements EventPresentation {
         }
     }
 
-    private final int f(int param0) {
+    private final int getTileEndpointSelector(int param0) {
         int var2;
         int var3;
         if (null != this.pathDirections &&
@@ -669,7 +669,7 @@ final class MovementPresentation implements EventPresentation {
         return -1;
     }
 
-    private final void d(int param0) {
+    private final void projectPathEdge(int param0) {
         if (param0 <= 12) {
           this.presenter = (EventPresenter) null;
         }

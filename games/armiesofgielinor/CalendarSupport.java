@@ -171,7 +171,7 @@ final class CalendarSupport {
             TextCursor.field_d != LobbyControlResources.field_e[0]) {
             TextCursor.field_d = LobbyControlResources.field_e[0];
           }
-          MovementPresentation.a(param3, TextCursor.field_d, 0, true, DeployEvent.field_F, 5623);
+          MovementPresentation.sendCreateGameRequest(param3, TextCursor.field_d, 0, true, DeployEvent.field_F, 5623);
         }
         if (LinkButtonPainter.field_g.pressedButton != 0) {
           WhirlpoolHasher.field_g = false;

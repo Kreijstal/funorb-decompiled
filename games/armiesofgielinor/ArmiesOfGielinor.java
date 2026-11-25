@@ -558,7 +558,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             stackIn_348_0 = 0;
           }
           var2_intLifetime2 = stackIn_348_0;
-          if (MovementPresentation.j(-11)) {
+          if (MovementPresentation.needsSessionReconnect(-11)) {
             var3Lifetime1 = this.pollGameConnection((byte) -116);
             if (var3Lifetime1 == 0 ||
               var3Lifetime1 == 1) {
@@ -614,7 +614,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               ScrollContainer.field_Qb) {
               var4Lifetime1 = 1;
             }
-            if (!MovementPresentation.j(-11)) {
+            if (!MovementPresentation.needsSessionReconnect(-11)) {
               var4Lifetime1 = 0;
             }
             if (var4Lifetime1 != 0) {
