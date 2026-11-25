@@ -82,7 +82,7 @@ final class QuicksaveRequestSupport {
               }
             }
             AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
-            VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+            VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
             KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
           }
@@ -118,7 +118,7 @@ final class QuicksaveRequestSupport {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
               AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
-              VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+              VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
               KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
             }
@@ -203,7 +203,7 @@ final class QuicksaveRequestSupport {
           }
         }
         AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
-        VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+        VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
         KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
     }
 
@@ -228,7 +228,7 @@ final class QuicksaveRequestSupport {
         }
         if (!DamageEvent.isGuestSession(81)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 81);
-          bu.storedQuicksave = null;
+          UnitRecordWriter.storedQuicksave = null;
         }
     }
 

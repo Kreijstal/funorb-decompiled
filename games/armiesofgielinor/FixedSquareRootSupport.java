@@ -61,14 +61,14 @@ final class FixedSquareRootSupport {
             }
           }
           value = value << (var2 << 1);
-          return jn.field_f[value - 32768] >> var2;
+          return GradientSpanBlendSupport.field_f[value - 32768] >> var2;
         }
         if (value < 131072) {
           if (obfuscationGuard == -129) {
-            return jn.field_f[-32768 + value];
+            return GradientSpanBlendSupport.field_f[-32768 + value];
           }
           FixedSquareRootSupport.a(105);
-          return jn.field_f[-32768 + value];
+          return GradientSpanBlendSupport.field_f[-32768 + value];
         }
         if (33554432 <= value) {
           if (value >= 536870912) {
@@ -84,7 +84,7 @@ final class FixedSquareRootSupport {
           }
         }
         value = value >> (var2Lifetime1 << 1);
-        return jn.field_f[value - 32768] << var2Lifetime1;
+        return GradientSpanBlendSupport.field_f[value - 32768] << var2Lifetime1;
     }
 
     static {

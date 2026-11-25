@@ -664,7 +664,7 @@ final class InstructionsPanel {
             } else {
               SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param6.getUnitCategory(0)].draw(43, 32);
-              sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
+              AccountHandshakeStateSupport.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
             }
           }
           ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
@@ -850,7 +850,7 @@ final class InstructionsPanel {
           GradientUiRenderer.drawRightAlignedGradientText(var15, IgnoreListLookupSupport.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
         var2Lifetime3 = this.field_F.first;
-        var9 = qk.a(this.pageCount, -2823, this.pageIndex);
+        var9 = PaginationTextSupport.formatPageLabel(this.pageCount, -2823, this.pageIndex);
         GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
@@ -2350,7 +2350,7 @@ final class InstructionsPanel {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (SpectateRoomRequestSupport.connectionState == sg.field_a) {
+            if (SpectateRoomRequestSupport.connectionState == AccountHandshakeStateSupport.field_a) {
               if (param5) {
                 var10 = (String) null;
                 CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, ReflectionCheckRequest.field_o);
@@ -2435,7 +2435,7 @@ final class InstructionsPanel {
                   MonotonicClockSupport.field_d = true;
                 }
                 stackIn_63_0 = ((16 & var7) != 0);
-                c.field_c = stackIn_63_0;
+                UnitAirAttackSupport.field_c = stackIn_63_0;
                 if (LineOfSightGrid.field_a) {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
@@ -2448,7 +2448,7 @@ final class InstructionsPanel {
                 }
               } else {
                 stackIn_45_0 = ((16 & var7) != 0);
-                c.field_c = stackIn_45_0;
+                UnitAirAttackSupport.field_c = stackIn_45_0;
                 if (LineOfSightGrid.field_a) {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);

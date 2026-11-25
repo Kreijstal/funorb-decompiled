@@ -27,7 +27,7 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param1 < 71) {
             field_f = (BinaryBitmapFont) null;
           }
-          var2 = new PalettedBitmapFont(param0, BattleCameraTargetTransform.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          var2 = new PalettedBitmapFont(param0, BattleCameraTargetTransform.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, UnitAirAttackSupport.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;

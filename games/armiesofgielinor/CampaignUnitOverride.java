@@ -44,7 +44,7 @@ final class CampaignUnitOverride {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                qk.field_e = param1;
+                PaginationTextSupport.field_e = param1;
                 var2 = NodeIterator.a(param0 + 132, "loginm3");
                 if (null != var2) {
                   ValidationState.field_a = uu.a(var2, (byte) -118);
@@ -119,7 +119,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "ticketing_gotowebsite");
                 if (null != var2) {
-                  c.field_a = uu.a(var2, (byte) 5);
+                  UnitAirAttackSupport.field_a = uu.a(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(50, "ticketing_waitingformessages");
                 if (null != var2) {
@@ -255,7 +255,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_lobby_name_add");
                 if (var2 != null) {
-                  lm.field_a = uu.a(var2, (byte) 94);
+                  LobbyControlResources.field_a = uu.a(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_name_rm");
                 if (var2 != null) {
@@ -929,7 +929,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "ra_intro");
                 if (var2 != null) {
-                  ii.field_c = uu.a(var2, (byte) 100);
+                  AccountFlowUpdateSupport.field_c = uu.a(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "ra_intro_no_name");
                 if (var2 != null) {
@@ -1975,7 +1975,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "menu");
                 if (var2 != null) {
-                  gp.field_c = uu.a(var2, (byte) 61);
+                  GuestSavePrompts.field_c = uu.a(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(param0 + 132, "selectlevel");
                 if (var2 != null) {
@@ -2046,7 +2046,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "previous");
                 if (null != var2) {
-                  hq.field_d = uu.a(var2, (byte) -118);
+                  ClientNetworkBootstrap.field_d = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "prev");
                 if (null != var2) {
@@ -2554,7 +2554,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_drawn");
                 if (var2 != null) {
-                  hq.field_c = uu.a(var2, (byte) 34);
+                  ClientNetworkBootstrap.field_c = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "benefits_fullscreen");
                 if (null != var2) {
@@ -2654,7 +2654,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_accept_beforeaccept");
                 if (null != var2) {
-                  c.field_d = uu.a(var2, (byte) -126);
+                  UnitAirAttackSupport.field_d = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "fs_button_accept");
                 if (null != var2) {
@@ -2856,31 +2856,31 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,1");
                 if (null != var2) {
-                  gp.field_d[1] = uu.a(var2, (byte) 76);
+                  GuestSavePrompts.field_d[1] = uu.a(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin2,2");
                 if (null != var2) {
-                  gp.field_d[2] = uu.a(var2, (byte) -108);
+                  GuestSavePrompts.field_d[2] = uu.a(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,3");
                 if (var2 != null) {
-                  gp.field_d[3] = uu.a(var2, (byte) 96);
+                  GuestSavePrompts.field_d[3] = uu.a(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,4");
                 if (null != var2) {
-                  gp.field_d[4] = uu.a(var2, (byte) -123);
+                  GuestSavePrompts.field_d[4] = uu.a(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,5");
                 if (null != var2) {
-                  gp.field_d[5] = uu.a(var2, (byte) -127);
+                  GuestSavePrompts.field_d[5] = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,6");
                 if (null != var2) {
-                  gp.field_d[6] = uu.a(var2, (byte) 100);
+                  GuestSavePrompts.field_d[6] = uu.a(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "mustlogin2,7");
                 if (null != var2) {
-                  gp.field_d[7] = uu.a(var2, (byte) 37);
+                  GuestSavePrompts.field_d[7] = uu.a(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "mustlogin3,1");
                 if (null != var2) {
@@ -3030,7 +3030,7 @@ final class CampaignUnitOverride {
                 if (var2 != null) {
                   uu.a(var2, (byte) 27);
                 }
-                qk.field_e = null;
+                PaginationTextSupport.field_e = null;
             }
             void run() {
                 var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;

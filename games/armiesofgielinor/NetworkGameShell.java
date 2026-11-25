@@ -33,7 +33,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         ConsoleExpression.field_m = this.languageId;
         ChannelFadeTimeConsoleCommand.b(ConsoleExpression.field_m, 1);
-        hq.a(serviceId, 5000, this.secondaryGamePort, 5000, launchFlag, ConsoleExpression.field_m, this.serverNumber, 0, this.primaryGamePort, this.memberLaunch, this.serverHost, IntPair.field_m, this.instanceId, this.gameCrc);
+        ClientNetworkBootstrap.initializeNetworkContext(serviceId, 5000, this.secondaryGamePort, 5000, launchFlag, ConsoleExpression.field_m, this.serverNumber, 0, this.primaryGamePort, this.memberLaunch, this.serverHost, IntPair.field_m, this.instanceId, this.gameCrc);
         qf.a(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = jk.b(68);
@@ -382,7 +382,7 @@ abstract class NetworkGameShell extends GameAppletShell {
               if (SoundCache.field_b == 0) {
                 discardedUiResult = this.processAccountUiAction(false, false, (byte) -92);
               } else {
-                ii.a(MouseWheelSource.field_d, (byte) -89);
+                AccountFlowUpdateSupport.advanceAccountFlow(MouseWheelSource.field_d, (byte) -89);
               }
             }
           }

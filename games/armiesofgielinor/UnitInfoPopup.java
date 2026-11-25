@@ -108,7 +108,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             } else {
               SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param0.getUnitCategory(0)].draw(43, 32);
-              sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
+              AccountHandshakeStateSupport.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
             }
           }
           ProgressMessageDialog.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
@@ -128,7 +128,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           var12 = this.unit.f(param2 + 11);
           if (var12 != -1) {
             PreparedAction.drawHorizontalThreeSliceWithOpacity(-this.fadeOffset + 32 << 3, true, var9Lifetime1, QuickChatMenuCloseSupport.field_b, 40, var10 + 60);
-            ii.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
+            AccountFlowUpdateSupport.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

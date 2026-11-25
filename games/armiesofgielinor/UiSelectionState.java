@@ -140,7 +140,7 @@ final class UiSelectionState {
         stackIn_12_0 = ((OwnerChangeEvent.field_B &&
           ClientUiNode.field_w &&
           UnitAnimationPreview.field_h &&
-          ve.field_b &&
+          SentenceCaseSupport.field_b &&
           mv.field_b) ||
           DamageEvent.isGuestSession(105));
         return stackIn_12_0;
@@ -205,7 +205,7 @@ final class UiSelectionState {
           if (UnitLossCondition.field_f.pressedButton != 0) {
             Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, SpellDefinitionTable.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, (String) null, 0L);
           }
-          var9 = AccountRequestState.updateChatHistoryRows(jn.field_d, MusicPatchNode.field_l, (byte) 127, param1);
+          var9 = AccountRequestState.updateChatHistoryRows(GradientSpanBlendSupport.field_d, MusicPatchNode.field_l, (byte) 127, param1);
           if (var9 != null) {
             UnitAnimationSelectionSupport.openChatMessageContextMenu(0, var9);
           }

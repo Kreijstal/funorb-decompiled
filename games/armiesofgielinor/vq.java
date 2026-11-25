@@ -205,7 +205,7 @@ final class vq {
             }
             TileMetadata.field_h[1] = 0;
             MusicPatchNode.field_G = new int[2];
-            AnimationFrameSet.field_v[0] = c.field_d;
+            AnimationFrameSet.field_v[0] = UnitAirAttackSupport.field_d;
             AnimationFrameSet.field_v[1] = DualNodeDeque.field_e;
             MusicPatchNode.field_G[1] = 2;
             AnimationFrameSet.field_v[5] = "";

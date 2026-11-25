@@ -223,7 +223,7 @@ final class SpellCastErrorSupport {
                 return stackIn_69_0;
               }
               if (!battlefield.arePlayersAllied(var7.ownerPlayer, -16985, actingPlayer)) {
-                stackIn_73_0 = gp.field_a;
+                stackIn_73_0 = GuestSavePrompts.field_a;
                 return stackIn_73_0;
               }
               var8Lifetime2 = spellId;

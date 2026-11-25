@@ -830,7 +830,7 @@ final class TutorialController {
           GradientUiRenderer.drawCenteredGradientText(MapRepository.field_f, IgnoreListLookupSupport.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           GradientUiRenderer.drawCenteredGradientText(TextLineLayout.field_g, IgnoreListLookupSupport.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           GradientUiRenderer.drawCenteredGradientText(MonotonicClockSupport.field_c, IgnoreListLookupSupport.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          GradientUiRenderer.drawCenteredGradientText(hq.field_c, IgnoreListLookupSupport.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(ClientNetworkBootstrap.field_c, IgnoreListLookupSupport.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           var4 = var4 + (8 + PowerOfTwoSupport.field_n.maxAscent);
           var6 = -100 / ((15 - param0) / 42);
           if (!AnimationFrameSet.field_z.field_l) {
@@ -2288,7 +2288,7 @@ final class TutorialController {
           if (1 == param1) {
             stackIn_7_1 = bt.field_b;
           } else {
-            stackIn_7_1 = lm.field_f;
+            stackIn_7_1 = LobbyControlResources.field_f;
           }
           stackIn_8_0 = EmailCheckResult.a(stackIn_6_0, stackIn_7_1, new String[]{Integer.toString(param1)});
           return stackIn_8_0;
@@ -2796,7 +2796,7 @@ final class TutorialController {
                 if (var6 == QuickChatMenuDisplaySupport.field_a) {
                   TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, var4Lifetime1 - 20, 256);
                 }
-                if (~var6 == ~lm.field_c) {
+                if (~var6 == ~LobbyControlResources.field_c) {
                   TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, -20 + var4Lifetime1, 128);
                 }
                 if (!DebouncedValidator.a(var6, var5, 1)) {
@@ -2827,7 +2827,7 @@ final class TutorialController {
           if (stackIn_40_0 != -1) {
             stackIn_44_0 = QuickChatMenuDisplaySupport.field_a;
           } else {
-            stackIn_44_0 = lm.field_c;
+            stackIn_44_0 = LobbyControlResources.field_c;
           }
           var6 = stackIn_44_0;
           if (var6 == -1) {
@@ -3384,7 +3384,7 @@ final class TutorialController {
               }
               if (this.tutorialStage == 25 &&
                 itemIndex > -1) {
-                var3_int = var3_int + (NineSliceFrame.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1);
+                var3_int = var3_int + (NineSliceFrame.field_e.getParagraphHeight(AccountRsaBufferSupport.field_a, 500, 0) >> 1);
               }
               if (19 == this.tutorialStage &&
                 -1 < itemIndex) {
@@ -3876,11 +3876,11 @@ final class TutorialController {
               var3 = ManaStarParticle.field_u;
               if ((var4 != 0) &&
                 (FullscreenFocusCanvas.gameplayController.battlefield.campaignMission != null)) {
-                var3 = jn.field_a;
+                var3 = GradientSpanBlendSupport.field_a;
               }
             } else {
               if (FullscreenFocusCanvas.gameplayController.battlefield.campaignMission != null) {
-                var3 = jn.field_a;
+                var3 = GradientSpanBlendSupport.field_a;
               }
             }
           }
@@ -3960,7 +3960,7 @@ final class TutorialController {
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 SpriteSheetDecoder.field_n = null;
                 GlobalSpell.field_h = 256;
-                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + PreferencesWriteRequest.field_q]);
+                this.a((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + PreferencesWriteRequest.field_q]);
                 return;
               }
               var2_int++;
@@ -4008,9 +4008,9 @@ final class TutorialController {
                 var6 = "";
                 var6Lifetime1 = DisplaySettingsDialog.field_cb[var5];
                 var7 = AlphaWidgetContainer.field_M[var5];
-                this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
+                this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], SentenceCaseSupport.toSentenceCase((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
-                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[PreferencesWriteRequest.field_q + 1]);
+                this.a((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[PreferencesWriteRequest.field_q + 1]);
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(100, ClientUiNode.field_v[12]);
               return;
@@ -4130,7 +4130,7 @@ final class TutorialController {
           }
           this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31), 0);
           QuickChatMenuDisplaySupport.field_a = -1;
-          lm.field_c = -1;
+          LobbyControlResources.field_c = -1;
           ManaStarParticle.field_p = fallbackIndex;
           GradientFrame.field_m = fallbackIndex;
           GradientFrame.field_h = NanoGameClock.field_n;
@@ -5365,7 +5365,7 @@ final class TutorialController {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY);
+          LobbyControlResources.field_c = this.d(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY);
           if (1 == DeployEvent.pointerPressButton) {
             RadialSummonMenu.playDefaultSoundWithIntGuard(94, ClientUiNode.field_v[2]);
             var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
@@ -5693,9 +5693,9 @@ final class TutorialController {
             }
             if (decompiledFrameRemainder0) {
               var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
-              var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (NineSliceFrame.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1));
+              var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (NineSliceFrame.field_e.getParagraphHeight(AccountRsaBufferSupport.field_a, 500, 0) >> 1));
               GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-              GradientUiRenderer.drawWrappedCenteredSolidText(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
+              GradientUiRenderer.drawWrappedCenteredSolidText(AccountRsaBufferSupport.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = LoginCredentialStagingSupport.field_b[this.tutorialStage];
               stackIn_180_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
               stackIn_180_2 = this;

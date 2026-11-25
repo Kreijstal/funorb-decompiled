@@ -307,12 +307,12 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
     }
 
     final static void a(int param0, byte param1) {
-        qk.field_d = (param0 << 16) / 150;
-        qk.field_c = param0 * 400 / 150;
+        PaginationTextSupport.field_d = (param0 << 16) / 150;
+        PaginationTextSupport.field_c = param0 * 400 / 150;
         if (param1 != 122) {
           return;
         }
-        qk.field_a = param0 * 100 / 150;
+        PaginationTextSupport.field_a = param0 * 100 / 150;
     }
 
     private final void applySelectedMode(int obfuscationGuard) {

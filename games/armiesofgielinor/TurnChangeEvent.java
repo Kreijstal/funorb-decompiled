@@ -19,7 +19,7 @@ final class TurnChangeEvent extends GameEvent {
         if (param0 != -112) {
           return;
         }
-        ListMissionsConsoleCommand.b(ImageProducerSurface.field_n[0].canvasWidth, jn.field_c, MusicPatchNode.field_l, AccountIdentifierStatus.field_c, jn.field_d, 1);
+        ListMissionsConsoleCommand.b(ImageProducerSurface.field_n[0].canvasWidth, GradientSpanBlendSupport.field_c, MusicPatchNode.field_l, AccountIdentifierStatus.field_c, GradientSpanBlendSupport.field_d, 1);
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

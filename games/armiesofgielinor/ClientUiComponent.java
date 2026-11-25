@@ -559,19 +559,19 @@ class ClientUiComponent extends ClientUiNode {
           }
           AnimationSequence.a(stackIn_4_0, -106);
           DebugConsole.field_w.setLayout(-40 + BitmapTextWidgetPainter.field_a.height - 2, (byte) -125, 0, BitmapTextWidgetPainter.field_a.width, 0);
-          PrintVictoryConditionsConsoleCommand.field_E.setBounds(jn.field_d, -20500, BitCountSupport.field_c.width, 0, 0);
+          PrintVictoryConditionsConsoleCommand.field_E.setBounds(GradientSpanBlendSupport.field_d, -20500, BitCountSupport.field_c.width, 0, 0);
           stackIn_6_0 = MatchingTextValidator.field_l;
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
           stackIn_6_3 = BitCountSupport.field_c.width;
           if (GrowableIntArray.field_c) {
-            stackIn_7_4 = 2 + jn.field_c + 42;
+            stackIn_7_4 = 2 + GradientSpanBlendSupport.field_c + 42;
           } else {
             stackIn_7_4 = 0;
           }
-          ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (BitCountSupport.field_c.width - jn.field_c - 2));
-          bu.field_a.setLayout(0, false, BitCountSupport.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + BitCountSupport.field_c.height)));
+          ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + GradientSpanBlendSupport.field_d, 0);
+          SpellCastEvent.field_D.setBounds(18, -20500, 42 + GradientSpanBlendSupport.field_c, 2 + GradientSpanBlendSupport.field_d, -40 + (BitCountSupport.field_c.width - GradientSpanBlendSupport.field_c - 2));
+          UnitRecordWriter.field_a.setLayout(0, false, BitCountSupport.field_c.width, 2, GradientSpanBlendSupport.field_c, 20 + (2 + GradientSpanBlendSupport.field_d), -20 + (-2 + (-GradientSpanBlendSupport.field_d + BitCountSupport.field_c.height)));
           SocialListPanel.field_Lb.setBounds(40, -20500, BitmapTextWidgetPainter.field_a.width, BitmapTextWidgetPainter.field_a.height - 40, 0);
           AccountRegistrationForm.field_F.setBounds(30, -20500, PasswordLengthSupport.field_c.width, 0, 0);
           if (param0 < 13) {
@@ -579,7 +579,7 @@ class ClientUiComponent extends ClientUiNode {
           }
           MusicPatchUsage.gameOptionsGrid.setBounds(-2 + PasswordLengthSupport.field_c.height - 70, -20500, PasswordLengthSupport.field_c.width, 30, 0);
           var2_int = 3 + NineSliceSpriteSupport.gameOptionCount;
-          if (2 > lm.field_e.length) {
+          if (2 > LobbyControlResources.field_e.length) {
             var2_int--;
           }
           if (param1) {
@@ -597,7 +597,7 @@ class ClientUiComponent extends ClientUiNode {
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + NineSliceSpriteSupport.gameOptionCount > var6; var6++) {
             if ((var6 != 1 ||
-              !(lm.field_e.length < 2)) && (3 != var6 ||
+              !(LobbyControlResources.field_e.length < 2)) && (3 != var6 ||
               !(1 >= BoundedFile.field_h))) {
               if (!param1 &&
                 var6 == 3) {

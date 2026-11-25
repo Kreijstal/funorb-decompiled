@@ -54,7 +54,7 @@ final class BattleCameraTargetTransform {
           DisplacedUnitMarker.field_t[0] = ByteArrayPoolSupport.field_g;
           DisplacedUnitMarker.field_t[1] = UnitUnlockPreviewModel.field_e;
           DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
-          DisplacedUnitMarker.field_t[7] = gp.field_c;
+          DisplacedUnitMarker.field_t[7] = GuestSavePrompts.field_c;
           DisplacedUnitMarker.field_t[3] = ResourceClientErrorSupport.field_d;
           DisplacedUnitMarker.field_t[53] = ModalDialogHost.field_P;
           DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
@@ -65,7 +65,7 @@ final class BattleCameraTargetTransform {
           DisplacedUnitMarker.field_t[2] = ClientConnectionState.field_b;
           DisplacedUnitMarker.field_t[5] = PointerInputHandler.field_d;
           DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
-          DisplacedUnitMarker.field_t[22] = hq.field_d;
+          DisplacedUnitMarker.field_t[22] = ClientNetworkBootstrap.field_d;
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
           DisplacedUnitMarker.field_t[28] = NetworkGameShell.field_s;
           DisplacedUnitMarker.field_t[19] = s.field_b;
@@ -89,7 +89,7 @@ final class BattleCameraTargetTransform {
           DisplacedUnitMarker.field_t[36] = StripedProgressWidget.field_G;
           DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;
           DisplacedUnitMarker.field_t[35] = AccountRequestResult.field_j;
-          DisplacedUnitMarker.field_t[47] = qk.field_f;
+          DisplacedUnitMarker.field_t[47] = PaginationTextSupport.field_f;
           DisplacedUnitMarker.field_t[51] = RatingLeaderboardRequest.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
           DisplacedUnitMarker.field_t[44] = ArchiveMasterIndex.field_g;
@@ -140,7 +140,7 @@ final class BattleCameraTargetTransform {
           LoginCredentialStagingSupport.field_b[3] = QuickChatCategoryMenuSupport.field_g;
           LoginCredentialStagingSupport.field_b[11] = DiskCacheRequest.field_J;
           LoginCredentialStagingSupport.field_b[19] = PlayerProfile.field_e;
-          LoginCredentialStagingSupport.field_b[9] = jn.field_e;
+          LoginCredentialStagingSupport.field_b[9] = GradientSpanBlendSupport.field_e;
           LoginCredentialStagingSupport.field_b[20] = CorpseConditionMarker.field_x;
           CheckMarkWidgetPainter.field_a[10] = EmailCheckResult.a(4800, CheckMarkWidgetPainter.field_a[10], new String[]{Integer.toString(20)});
           EmailValidator.battleHintMessages = new String[6];
@@ -244,9 +244,9 @@ final class BattleCameraTargetTransform {
         try {
           AnimationSequence.a(PreparedAction.field_r, param0 + 114);
           if (NumericDateInputWidget.roomSetup != null) {
-            var15 = lm.field_b;
+            var15 = LobbyControlResources.field_b;
             var17 = var15;
-            lm.field_b.height = 0;
+            LobbyControlResources.field_b.height = 0;
             var17.width = 0;
             var5 = FixedSquareRootSupport.field_d;
             FixedSquareRootSupport.field_d.height = 0;
@@ -258,22 +258,22 @@ final class BattleCameraTargetTransform {
             var7 = (2 + PasswordLengthSupport.field_c.width) / 2;
             MarkerSliderWidget.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
             FixedSquareRootSupport.field_d.setBounds(40, param0 ^ -20499, -var7 + PasswordLengthSupport.field_c.width, -40 + PasswordLengthSupport.field_c.height, var7);
-            if (lm.field_e.length == 1 &&
-              lm.field_e[0] == 2) {
+            if (LobbyControlResources.field_e.length == 1 &&
+              LobbyControlResources.field_e[0] == 2) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (lm.field_e.length > var10) {
+                if (LobbyControlResources.field_e.length > var10) {
                   stackIn_10_0 = ((CoatOfArms.field_d[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    lm.field_e[var10] != 2) {
+                    LobbyControlResources.field_e[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;

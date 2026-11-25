@@ -34,7 +34,7 @@ final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
         if (obfuscationGuard) {
           return -112;
         }
-        return ii.campaignPacketWord1;
+        return AccountFlowUpdateSupport.campaignPacketWord1;
     }
 
     final static void attachKeyboard(int obfuscationGuard, java.awt.Component component) {

@@ -155,8 +155,8 @@ final class AchievementNotification extends IntrusiveNode {
         try {
           stackIn_3_0 = CipherPacketBuffer.field_x;
           stackIn_3_1 = param1;
-          stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
-          stackIn_3_3 = jn.field_d * 2 + 4;
+          stackIn_3_2 = param3 * (8 + 4 * GradientSpanBlendSupport.field_d);
+          stackIn_3_3 = GradientSpanBlendSupport.field_d * 2 + 4;
           stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.contextMenuScrollContainer);
           var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
           var8 = CipherPacketBuffer.field_x.content.children;
@@ -365,12 +365,12 @@ final class AchievementNotification extends IntrusiveNode {
                 }
               }
               if (var12.field_Yb.text == null) {
-                var12.field_Xb.setBounds(jn.field_d, -20500, 68, var31, 0);
+                var12.field_Xb.setBounds(GradientSpanBlendSupport.field_d, -20500, 68, var31, 0);
               } else {
-                var12.field_Yb.setBounds(jn.field_d, -20500, 68, var31, 0);
+                var12.field_Yb.setBounds(GradientSpanBlendSupport.field_d, -20500, 68, var31, 0);
               }
               var12.ownerNameComponent.text = BitmapFont.truncateWithEllipsis(var12.ownerNameComponent.font, var32, 78);
-              var12.ownerNameComponent.setBounds(jn.field_d, -20500, 78, var31, 70);
+              var12.ownerNameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 78, var31, 70);
               if (var12.ownerNameComponent.heldButtonMatches &&
                 !var12.ownerNameComponent.text.equals(var32)) {
                 DialogMessagePane.field_I = var32;
@@ -378,19 +378,19 @@ final class AchievementNotification extends IntrusiveNode {
               var12.playerCountComponent.text = Integer.toString(var12.playerCount);
               if (!var12.allowsAdmissionRequests) {
                 var12.playerCountComponent.horizontalAlignment = 1;
-                var12.playerCountComponent.setBounds(jn.field_d, -20500, 48, var31, 150);
+                var12.playerCountComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 48, var31, 150);
               } else {
                 var12.playerCountComponent.horizontalAlignment = 2;
                 var12.capacityComponent.text = "/" + var12.playerCapacity;
                 var33_int = (-var12.capacityComponent.font.textWidth("/") + 348) / 2;
-                var12.playerCountComponent.setBounds(jn.field_d, -20500, -150 + var33_int, var31, 150);
-                var12.capacityComponent.setBounds(jn.field_d, -20500, 198 - var33_int, var31, var33_int);
+                var12.playerCountComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, -150 + var33_int, var31, 150);
+                var12.capacityComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 198 - var33_int, var31, var33_int);
               }
               var12.ratingComponent.text = Integer.toString(var12.displayRating);
-              var12.ratingComponent.setBounds(jn.field_d, param0 - 20500, 48, var31, 200);
+              var12.ratingComponent.setBounds(GradientSpanBlendSupport.field_d, param0 - 20500, 48, var31, 200);
               stackIn_72_0 = (!GrowableIntArray.field_c) ? 200 : 250;
               var33_intLifetime1 = stackIn_72_0;
-              var12.optionIconContainer.setBounds(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
+              var12.optionIconContainer.setBounds(GradientSpanBlendSupport.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
               var34_int = MusicPatch.field_n;
               if ((1 << RasterViewportResizeHandler.field_c & var14Lifetime1) != 0) {
                 var50_ref = PowerOfTwoSupport.field_p[var12.gameType];
@@ -417,7 +417,7 @@ final class AchievementNotification extends IntrusiveNode {
                 var34_int = var34_int + (var51_ref.canvasWidth + MusicPatch.field_n);
               }
               if ((1 << PrintVictoryConditionsConsoleCommand.field_I & var14Lifetime1) != 0) {
-                var52_ref = lm.field_h[var12.spectatorMode - 1];
+                var52_ref = LobbyControlResources.field_h[var12.spectatorMode - 1];
                 var12.spectatorIcon.sprite = var52_ref;
                 var12.spectatorIcon.setBounds(var12.optionIconContainer.height, -20500, var52_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var52_ref.canvasWidth + MusicPatch.field_n);
@@ -473,8 +473,8 @@ final class AchievementNotification extends IntrusiveNode {
                   var12.field_Rb.text = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Rb.setBounds(jn.field_d, -20500, -365 + var12.width, var31, 365);
-              var31 = var31 + jn.field_d;
+              var12.field_Rb.setBounds(GradientSpanBlendSupport.field_d, -20500, -365 + var12.width, var31, 365);
+              var31 = var31 + GradientSpanBlendSupport.field_d;
               if (var12.playerNames != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -487,18 +487,18 @@ final class AchievementNotification extends IntrusiveNode {
                 var38 = var37.toString();
                 var12.field_Pb.text = var38;
                 var39Lifetime1 = var12.field_Pb.font.getLineCount(var38, var12.width - var12.field_Pb.textHorizontalPadding * 2);
-                var12.field_Pb.setBounds(var39Lifetime1 * jn.field_d, -20500, var12.width, var31, 0);
-                var31 = var31 + jn.field_d * var39Lifetime1;
+                var12.field_Pb.setBounds(var39Lifetime1 * GradientSpanBlendSupport.field_d, -20500, var12.width, var31, 0);
+                var31 = var31 + GradientSpanBlendSupport.field_d * var39Lifetime1;
               }
               if (var12.invitationReceived) {
                 var12.field_Ib.text = EmailCheckResult.a(4800, ToastMessage.field_n, new String[]{var32});
-                var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
-                var31 = var31 + jn.field_d;
+                var12.field_Ib.setBounds(GradientSpanBlendSupport.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
+                var31 = var31 + GradientSpanBlendSupport.field_d;
               }
               if (var12.joinRequestSent) {
                 var12.field_sc.text = EmailCheckResult.a(4800, GameplayController.field_A, new String[]{var32});
-                var12.field_sc.setBounds(jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var31, MusicPatchNode.field_l);
-                var31 = var31 + jn.field_d;
+                var12.field_sc.setBounds(GradientSpanBlendSupport.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var31, MusicPatchNode.field_l);
+                var31 = var31 + GradientSpanBlendSupport.field_d;
               }
             }
             var33 = LeaderEscortCondition.a(var12.notificationCode, 6, var32);
@@ -506,8 +506,8 @@ final class AchievementNotification extends IntrusiveNode {
               var34_intLifetime1 = var12.field_Wb.font.getLineCount(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
               var12.field_Wb.text = var33;
               var12.field_Wb.textOpacity = var12.notificationTicks * 256 / RegistrationAgreementPane.lobbyNotificationDuration;
-              var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - MusicPatchNode.field_l * 2, var31, MusicPatchNode.field_l);
-              var31 = var31 + var34_intLifetime1 * jn.field_d;
+              var12.field_Wb.setBounds(GradientSpanBlendSupport.field_d * var34_intLifetime1, -20500, var12.width - MusicPatchNode.field_l * 2, var31, MusicPatchNode.field_l);
+              var31 = var31 + var34_intLifetime1 * GradientSpanBlendSupport.field_d;
             }
             if (var7_int == 0) {
               var12.pendingHeightDelta = var31 - var12.height;

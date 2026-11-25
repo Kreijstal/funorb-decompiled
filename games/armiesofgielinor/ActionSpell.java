@@ -111,10 +111,10 @@ final class ActionSpell extends Spell {
               } else {
                 if (1 == mutationVariant) {
                   BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                 } else {
                   if (mutationVariant == 2) {
-                    ii.campaignPacketWord1 = ii.campaignPacketWord1 + 1;
+                    AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + 1;
                     ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 1;
                   } else {
                     if (mutationVariant != 3) {
@@ -124,7 +124,7 @@ final class ActionSpell extends Spell {
                             if (7 != mutationVariant) {
                               throw new IllegalStateException("");
                             }
-                            ii.campaignPacketWord1 = ii.campaignPacketWord1 - ScreenWipeTransition.campaignPacketWord2;
+                            AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - ScreenWipeTransition.campaignPacketWord2;
                             BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 - 1;
                           } else {
                             ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + BirthDateChatEnableForm.campaignPacketWord3;
@@ -135,12 +135,12 @@ final class ActionSpell extends Spell {
                           ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
                         }
                       } else {
-                        ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
+                        AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                         BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
                       }
                     } else {
                       ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + BattleTutorial.pointerPressX;
-                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.pointerPressX;
+                      AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + BattleTutorial.pointerPressX;
                     }
                   }
                 }

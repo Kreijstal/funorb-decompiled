@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sg {
+final class AccountHandshakeStateSupport {
     static ClientConnectionState field_a;
     static IndexedSprite[] field_b;
     static NineSliceFrame field_c;

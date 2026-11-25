@@ -111,7 +111,7 @@ final class BattleGraphicsAssets {
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         LobbyPlayer.cannotMoveSprites = MapLayout.loadIndexedSpritesByName("cantmove", -28106, "basic", this.basicArchive);
         MusicTrackSelectionSupport.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
-        hq.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
+        ClientNetworkBootstrap.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
         TileableNoiseGenerator.smokeSprites = DropdownSelectorPainter.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
         SetCoatConsoleCommand.kalphiteSprites = DropdownSelectorPainter.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
         for (spriteIndex = obfuscationGuard; SetCoatConsoleCommand.kalphiteSprites.length > spriteIndex; spriteIndex++) {

@@ -162,7 +162,7 @@ final class ConsoleTokenCursor {
                     }
                   }
                 } else {
-                  if (var15 != lm.field_e[param7]) {
+                  if (var15 != LobbyControlResources.field_e[param7]) {
                     break scanLoop1;
                   }
                 }
@@ -193,7 +193,7 @@ final class ConsoleTokenCursor {
               param0 = param0 + (255 & ReloadPageSupport.field_b[param3]);
             } else {
               var11 = 0;
-              while (!(var11 >= lm.field_e.length)) {
+              while (!(var11 >= LobbyControlResources.field_e.length)) {
                 if ((CoatOfArms.field_d[var11 / 8] & 1 << (var11 & 7)) == 0) {
                   var11++;
                   continue;
@@ -209,7 +209,7 @@ final class ConsoleTokenCursor {
             if (param3 != -1) {
               stackIn_51_0 = -1 + var9.length;
             } else {
-              stackIn_51_0 = lm.field_e.length;
+              stackIn_51_0 = LobbyControlResources.field_e.length;
             }
             if (stackIn_51_0 <= var12) {
               if (var11Lifetime1 == 0) {
@@ -234,7 +234,7 @@ final class ConsoleTokenCursor {
               TeleportAction.field_B[param3] = (byte)var12;
             }
             if (param3 == -1 &&
-              lm.field_e.length == 1) {
+              LobbyControlResources.field_e.length == 1) {
               var13 = 1;
             } else {
               var14 = var9[1 + var12];
@@ -251,7 +251,7 @@ final class ConsoleTokenCursor {
                 var13 = stackIn_75_0;
               } else {
                 if (param3 == -1) {
-                  stackIn_66_0 = (ToggleWidget.currentRoom.playerCapacity != lm.field_e[var12]) ? 0 : 1;
+                  stackIn_66_0 = (ToggleWidget.currentRoom.playerCapacity != LobbyControlResources.field_e[var12]) ? 0 : 1;
                 } else {
                   stackIn_66_0 = ((ToggleWidget.currentRoom.gameOptions[param3] & 255) != var12) ? 0 : 1;
                 }

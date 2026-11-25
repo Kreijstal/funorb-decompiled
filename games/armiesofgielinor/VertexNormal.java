@@ -126,8 +126,8 @@ final class VertexNormal {
           }
           stackIn_40_0 = (ScrollContainer) (param4);
           stackIn_40_1 = param2;
-          stackIn_40_2 = param0 * (8 + jn.field_d * 4);
-          stackIn_40_3 = jn.field_d * 2 + 4;
+          stackIn_40_2 = param0 * (8 + GradientSpanBlendSupport.field_d * 4);
+          stackIn_40_3 = GradientSpanBlendSupport.field_d * 2 + 4;
           stackIn_41_4 = (param4 == PointerInputHandler.contextMenuScrollContainer);
           stackIn_44_0 = (!((ScrollContainer) (Object) stackIn_40_0).updateContentLayout(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
@@ -218,7 +218,7 @@ final class VertexNormal {
               var12.admissionButton.selectedTextColour = var24_int;
               var12.admissionButton.heldPressTextColour = var24_int;
               var12.admissionButton.matchedButtonTextColour = var24_int;
-              if (bu.field_a != param4) {
+              if (UnitRecordWriter.field_a != param4) {
                 if (var12.invitationSent) {
                   var12.nameComponent.text = EmailCheckResult.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
                   var12.cancelRejectButton.text = ManaStarParticle.field_s;
@@ -242,21 +242,21 @@ final class VertexNormal {
                 ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (null != var12.admissionButton.text) {
                   var26 = var12.admissionButton.getPreferredWidth(104) + MusicPatchNode.field_l * 2;
-                  var12.admissionButton.setBounds(jn.field_d, -20500, var26, var19, var25_int);
+                  var12.admissionButton.setBounds(GradientSpanBlendSupport.field_d, -20500, var26, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (var12.cancelRejectButton.text != null) {
-                  if (bu.field_a != param4) {
+                  if (UnitRecordWriter.field_a != param4) {
                     var26Lifetime2 = var12.cancelRejectButton.getPreferredWidth(param1 - 328) + MusicPatchNode.field_l * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.cancelRejectButton.setBounds(jn.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
+                  var12.cancelRejectButton.setBounds(GradientSpanBlendSupport.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
               stackIn_96_0 = var12.nameComponent;
-              stackIn_96_1 = jn.field_d;
+              stackIn_96_1 = GradientSpanBlendSupport.field_d;
               stackIn_96_2 = -20500;
               stackIn_96_3 = -var25_int + var12.width;
               if (GrowableIntArray.field_c) {
@@ -266,7 +266,7 @@ final class VertexNormal {
               }
               ((ClientUiComponent) (Object) stackIn_96_0).setBounds(stackIn_96_1, stackIn_96_2, stackIn_96_3 - stackIn_97_4, var19, var25_int);
               var12.ratingComponent.text = Integer.toString(var12.rating);
-              var12.ratingComponent.setBounds(jn.field_d, -20500, 40, var19, var12.width - 40);
+              var12.ratingComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 40, var19, var12.width - 40);
               if (var12.nameComponent.heldButtonMatches &&
                 var22 != 0) {
                 DialogMessagePane.field_I = var12.displayName;
@@ -281,7 +281,7 @@ final class VertexNormal {
                   DialogMessagePane.field_I = DeployRequest.field_v[var12.chatIconId];
                 }
               }
-              var19 = var19 + jn.field_d;
+              var19 = var19 + GradientSpanBlendSupport.field_d;
             }
             var23 = s.a(false, var20, var12.notificationCode);
             var24 = var23;
@@ -292,8 +292,8 @@ final class VertexNormal {
               var24_intLifetime1 = var12.field_fc.font.getLineCount(var23, -MusicPatchNode.field_l + (var12.width - MusicPatchNode.field_l));
               var12.field_fc.textOpacity = var12.notificationTicks * 256 / RegistrationAgreementPane.lobbyNotificationDuration;
               var12.field_fc.text = var23;
-              var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var19, MusicPatchNode.field_l);
-              var19 = var19 + jn.field_d * var24_intLifetime1;
+              var12.field_fc.setBounds(var24_intLifetime1 * GradientSpanBlendSupport.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var19, MusicPatchNode.field_l);
+              var19 = var19 + GradientSpanBlendSupport.field_d * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.pendingHeightDelta = var19 - var12.height;
@@ -444,7 +444,7 @@ final class VertexNormal {
                     }
                   }
                 }
-                if (param4 == bu.field_a &&
+                if (param4 == UnitRecordWriter.field_a &&
                   ToggleWidget.isCurrentRoomOwner(false)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + IterableDualNodeDeque.field_d + (String) (var25);
@@ -458,7 +458,7 @@ final class VertexNormal {
                     var24Lifetime2 = var34 + "<br>" + MusicCrossfadeStream.field_u + (String) (var25);
                   }
                 }
-                if (param4 == bu.field_a &&
+                if (param4 == UnitRecordWriter.field_a &&
                   !ToggleWidget.isCurrentRoomOwner(false)) {
                   var27 = ToggleWidget.currentRoom.ownerName;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + EmailCheckResult.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});

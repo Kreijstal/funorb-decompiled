@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd {
+final class AccountRsaBufferSupport {
     static PacketBuffer field_b;
     static String field_a;
     private static String field_z;
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard != 256) {
-          vd.releaseStatics(-28);
+          AccountRsaBufferSupport.releaseStatics(-28);
           field_a = null;
           field_b = null;
           return;

@@ -18,13 +18,13 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
     final static CampaignQuicksave getStoredQuicksave(int obfuscationGuard) {
         if (obfuscationGuard <= 78) {
           DropTargetWidgetContainer.releaseStatics(-59);
-          if (null != bu.storedQuicksave) {
-            return bu.storedQuicksave;
+          if (null != UnitRecordWriter.storedQuicksave) {
+            return UnitRecordWriter.storedQuicksave;
           }
           return null;
         }
-        if (null != bu.storedQuicksave) {
-          return bu.storedQuicksave;
+        if (null != UnitRecordWriter.storedQuicksave) {
+          return UnitRecordWriter.storedQuicksave;
         }
         return null;
     }

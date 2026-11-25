@@ -135,8 +135,8 @@ final class MembershipExpansionScreen {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_l = this.field_l + 65536;
-          while (RasterViewportResizeHandler.multiplyFixed16(-101, qk.field_d, this.field_l) >= 65536) {
-            this.field_l = this.field_l - qk.field_d;
+          while (RasterViewportResizeHandler.multiplyFixed16(-101, PaginationTextSupport.field_d, this.field_l) >= 65536) {
+            this.field_l = this.field_l - PaginationTextSupport.field_d;
             this.field_f = this.field_f + 1;
           }
           if (param1 > -95) {
@@ -149,23 +149,23 @@ final class MembershipExpansionScreen {
           }
           if (var3_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (qk.field_c > this.field_p) {
+            if (PaginationTextSupport.field_c > this.field_p) {
               this.field_p = this.field_p + 1;
-              if (this.field_p > qk.field_a && (null == this.field_i ||
+              if (this.field_p > PaginationTextSupport.field_a && (null == this.field_i ||
                 this.field_i[this.field_n] == null)) {
                 this.field_p = this.field_p - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (qk.field_c <= this.field_p &&
+                if (PaginationTextSupport.field_c <= this.field_p &&
                   this.field_i[(this.field_n + 1) % var3_int] == null) {
                   this.field_p = this.field_p - 1;
                 }
               }
             }
-            if (this.field_p >= qk.field_c) {
+            if (this.field_p >= PaginationTextSupport.field_c) {
               this.field_q = this.field_n;
-              this.field_p = this.field_p - qk.field_c;
+              this.field_p = this.field_p - PaginationTextSupport.field_c;
               if (this.field_s) {
                 this.field_n = this.field_n + 1;
                 if (var3_int <= this.field_n) {
@@ -178,7 +178,7 @@ final class MembershipExpansionScreen {
                 }
               }
             }
-            if (this.field_p > qk.field_a) {
+            if (this.field_p > PaginationTextSupport.field_a) {
               this.field_s = true;
             }
           }
@@ -190,27 +190,27 @@ final class MembershipExpansionScreen {
               if (9 < BattleTutorial.pointerPressX &&
                 82 > BattleTutorial.pointerPressX) {
                 var4 = 1;
-                this.field_p = qk.field_c;
+                this.field_p = PaginationTextSupport.field_c;
                 this.field_s = false;
               }
               if (558 < BattleTutorial.pointerPressX &&
                 631 > BattleTutorial.pointerPressX) {
                 var4 = 1;
-                this.field_p = qk.field_c;
+                this.field_p = PaginationTextSupport.field_c;
                 this.field_s = true;
               }
             }
             if (var4 == 0 &&
-              this.field_p > qk.field_a &&
+              this.field_p > PaginationTextSupport.field_a &&
               257 < TeleportAction.pointerPressY &&
               290 > TeleportAction.pointerPressY) {
               if (AiPlanningStrategy.pointerX > 9 &&
                 AiPlanningStrategy.pointerX < 82) {
-                this.field_p = qk.field_a;
+                this.field_p = PaginationTextSupport.field_a;
               }
               if (558 < AiPlanningStrategy.pointerX &&
                 631 > AiPlanningStrategy.pointerX) {
-                this.field_p = qk.field_a;
+                this.field_p = PaginationTextSupport.field_a;
               }
             }
           }
@@ -513,11 +513,11 @@ final class MembershipExpansionScreen {
           } else {
             var6.draw(9, 58);
           }
-          if (this.field_p < qk.field_a) {
+          if (this.field_p < PaginationTextSupport.field_a) {
             var7 = this.field_i[this.field_q];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
-              var3 = this.field_p * (var7.canvasWidth + 60) / qk.field_a;
+              var3 = this.field_p * (var7.canvasWidth + 60) / PaginationTextSupport.field_a;
               var4 = var3 - 30;
               if (!this.field_s) {
                 DebouncedValidator.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);

@@ -18,7 +18,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
 
     BirthDateChatEnableForm(int x, int y, int width, int height) {
         super(x, y, width, height, (WidgetPainter) null);
-        this.dateInput = new NumericDateInputWidget(new TextEntryWidgetPainter(10000536), c.field_c, 0, 0, 140, 25);
+        this.dateInput = new NumericDateInputWidget(new TextEntryWidgetPainter(10000536), UnitAirAttackSupport.field_c, 0, 0, 140, 25);
         this.dateInput.setDateValidator((byte) -101, new DateOfBirthValidator());
         this.submitButton = new InteractiveWidget(ProgressMessageDialog.field_kb, (WidgetListener) (this));
         this.children = new Widget[]{(Widget) ((Object) this.dateInput), (Widget) ((Object) this.submitButton)};

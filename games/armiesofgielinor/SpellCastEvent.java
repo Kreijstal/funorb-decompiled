@@ -59,7 +59,7 @@ final class SpellCastEvent extends GameEvent {
           if (param0 != 15) {
             field_E = (CommunityTabGroup) null;
           }
-          InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
+          InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + LobbyControlResources.field_g;
           var2 = InstructionsPanel.field_r;
           for (var3 = 0; SpriteScrollBar.field_h.length > var3; var3++) {
             var4 = DirectByteStorage.field_k[var3];

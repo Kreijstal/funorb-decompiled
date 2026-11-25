@@ -50,7 +50,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
           packetAlias.position = encodedSheet.length - 2;
           AchievementUnlockRequest.decodedSpriteCount = packetAlias.readUnsignedShort((byte) -104);
           BattleCameraTargetTransform.decodedSpriteOffsetXs = new int[AchievementUnlockRequest.decodedSpriteCount];
-          c.decodedSpriteHeights = new int[AchievementUnlockRequest.decodedSpriteCount];
+          UnitAirAttackSupport.decodedSpriteHeights = new int[AchievementUnlockRequest.decodedSpriteCount];
           CampaignMenuButton.decodedSpriteOffsetYs = new int[AchievementUnlockRequest.decodedSpriteCount];
           MapTile.decodedSpriteHasAlpha = new boolean[AchievementUnlockRequest.decodedSpriteCount];
           ClippedWidgetContainer.decodedSpriteWidths = new int[AchievementUnlockRequest.decodedSpriteCount];
@@ -70,7 +70,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
             ClippedWidgetContainer.decodedSpriteWidths[widthIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           for (heightIndex = 0; heightIndex < AchievementUnlockRequest.decodedSpriteCount; heightIndex++) {
-            c.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
+            UnitAirAttackSupport.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           if (obfuscationGuard != -1) {
             field_n = (UnitUnlockPreviewModel) null;
@@ -86,7 +86,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
           packetAlias.position = 0;
           for (spriteIndex = 0; spriteIndex < AchievementUnlockRequest.decodedSpriteCount; spriteIndex++) {
             spriteWidth = ClippedWidgetContainer.decodedSpriteWidths[spriteIndex];
-            spriteHeight = c.decodedSpriteHeights[spriteIndex];
+            spriteHeight = UnitAirAttackSupport.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteHeight * spriteWidth;
             var20 = new byte[pixelCount];
             var18 = var20;

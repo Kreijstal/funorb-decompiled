@@ -167,9 +167,9 @@ final class CalendarSupport {
           }
         }
         if (VineGrowthAction.field_x.pressedButton != 0) {
-          if (lm.field_e.length == 1 &&
-            TextCursor.field_d != lm.field_e[0]) {
-            TextCursor.field_d = lm.field_e[0];
+          if (LobbyControlResources.field_e.length == 1 &&
+            TextCursor.field_d != LobbyControlResources.field_e[0]) {
+            TextCursor.field_d = LobbyControlResources.field_e[0];
           }
           MovementPresentation.a(param3, TextCursor.field_d, 0, true, DeployEvent.field_F, 5623);
         }

@@ -112,7 +112,7 @@ final class SphinxActionRequest extends ActionRequest {
           LeapYearSupport.field_b = 11;
           MusicPatchNode.field_l = 4;
           MusicPatch.field_n = 2;
-          jn.field_d = 15;
+          GradientSpanBlendSupport.field_d = 15;
           var7 = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "largefont");
           ReloadPageSupport.field_a = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "generalfont");
           LeaderEscortCondition.field_f = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "chatfont");
@@ -122,14 +122,14 @@ final class SphinxActionRequest extends ActionRequest {
           var8 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var8.font = (BitmapFont) ((Object) var7);
           var8.textColour = 16777215;
-          var8.textLineSpacing = jn.field_d;
+          var8.textLineSpacing = GradientSpanBlendSupport.field_d;
           var8.verticalAlignment = 1;
           var9 = var8;
           var9.horizontalAlignment = 1;
           var10 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var10.textColour = 16777215;
           var10.font = (BitmapFont) ((Object) ReloadPageSupport.field_a);
-          var10.textLineSpacing = jn.field_d;
+          var10.textLineSpacing = GradientSpanBlendSupport.field_d;
           var10.verticalAlignment = 1;
           var11 = var10;
           var11.horizontalAlignment = 1;
@@ -162,7 +162,7 @@ final class SphinxActionRequest extends ActionRequest {
           CampaignLookupSupport.field_e.skinSprites = SetCoatConsoleCommand.a(false, 2039583, -20600, 30, true, 3815994);
           PasswordLoginCredentials.field_h = new ClientUiComponent(0L, (ClientUiComponent) null);
           PasswordLoginCredentials.field_h.font = (BitmapFont) ((Object) ReloadPageSupport.field_a);
-          PasswordLoginCredentials.field_h.textLineSpacing = jn.field_d;
+          PasswordLoginCredentials.field_h.textLineSpacing = GradientSpanBlendSupport.field_d;
           PasswordLoginCredentials.field_h.verticalAlignment = 1;
           PasswordLoginCredentials.field_h.textColour = 13421772;
           DualLinkedNode.field_k = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
@@ -175,7 +175,7 @@ final class SphinxActionRequest extends ActionRequest {
           }
           DualLinkedNode.field_k.matchedButtonTextColour = 16777215;
           var15 = new ClientUiComponent(0L, DualLinkedNode.field_k);
-          var15.textLineSpacing = jn.field_d;
+          var15.textLineSpacing = GradientSpanBlendSupport.field_d;
           var15.textColour = 16777215;
           var15.font = (BitmapFont) ((Object) var7);
           SoundEffectPreloadSupport.field_e = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
@@ -189,7 +189,7 @@ final class SphinxActionRequest extends ActionRequest {
           IsaacRandom.field_i = new ClientUiComponent(0L, IconLabelControl.field_Lb);
           IsaacRandom.field_i.applyStyle(0, DualLinkedNode.field_k);
           var16 = DropdownSelectorPainter.loadRgbSpritesByName("button_mouseover", (byte) -128, param1, "lobby");
-          AnimationSequence.field_h = new ContextActionMenu(FocusProxyWidget.field_N, var12, PasswordLoginCredentials.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, jn.field_d);
+          AnimationSequence.field_h = new ContextActionMenu(FocusProxyWidget.field_N, var12, PasswordLoginCredentials.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, GradientSpanBlendSupport.field_d);
           TextEntryWidgetPainter.field_u = new ClientUiComponent(0L, DualLinkedNode.field_k);
           TextEntryWidgetPainter.field_u.skinSprites = var13;
           TextEntryWidgetPainter.field_u.heldPressOffsetX = 1;

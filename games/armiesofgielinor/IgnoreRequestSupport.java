@@ -105,7 +105,7 @@ final class IgnoreRequestSupport {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var1 = new RgbSprite[AchievementUnlockRequest.decodedSpriteCount];
         for (var2 = 0; AchievementUnlockRequest.decodedSpriteCount > var2; var2++) {
-          var3 = c.decodedSpriteHeights[var2] * ClippedWidgetContainer.decodedSpriteWidths[var2];
+          var3 = UnitAirAttackSupport.decodedSpriteHeights[var2] * ClippedWidgetContainer.decodedSpriteWidths[var2];
           var20 = AnimationPlayer.decodedSpriteIndices[var2];
           if (!MapTile.decodedSpriteHasAlpha[var2]) {
             var9 = new int[var3];
@@ -113,7 +113,7 @@ final class IgnoreRequestSupport {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = MovementPresentation.decodedSpritePalette[ProceduralMapSupport.bitwiseAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
+            var1[var2] = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], UnitAirAttackSupport.decodedSpriteHeights[var2], var21);
           } else {
             var22 = CampaignMenuEntry.decodedSpriteAlphas[var2];
             var16 = new int[var3];
@@ -122,7 +122,7 @@ final class IgnoreRequestSupport {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = AccountRegistrationDialog.bitwiseOr(MovementPresentation.decodedSpritePalette[ProceduralMapSupport.bitwiseAnd((int) var20[var7], 255)], ProceduralMapSupport.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], UnitAirAttackSupport.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {

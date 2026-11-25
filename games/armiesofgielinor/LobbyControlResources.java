@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm {
+final class LobbyControlResources {
     static AccountRequestState nameCheckComplete;
     static int[] field_e;
     static RgbSprite[] field_h;

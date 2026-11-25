@@ -143,7 +143,7 @@ final class ViewportManager {
     final boolean canResize(byte obfuscationGuard) {
         if (obfuscationGuard != 103) {
           this.advanceViewport(-97);
-          if (this.minimumHeapMiB > hq.maximumHeapMiB) {
+          if (this.minimumHeapMiB > ClientNetworkBootstrap.maximumHeapMiB) {
             return false;
           }
           if (LoginForm.memberEntitlementValue > 0) {
@@ -151,7 +151,7 @@ final class ViewportManager {
           }
           return false;
         }
-        if (this.minimumHeapMiB > hq.maximumHeapMiB) {
+        if (this.minimumHeapMiB > ClientNetworkBootstrap.maximumHeapMiB) {
           return false;
         }
         if (LoginForm.memberEntitlementValue > 0) {
@@ -188,7 +188,7 @@ final class ViewportManager {
           if (LoginForm.memberEntitlementValue <= 0) {
             return false;
           }
-          if (this.minimumHeapMiB > hq.maximumHeapMiB) {
+          if (this.minimumHeapMiB > ClientNetworkBootstrap.maximumHeapMiB) {
             return true;
           }
           return false;
@@ -196,7 +196,7 @@ final class ViewportManager {
         if (LoginForm.memberEntitlementValue <= 0) {
           return false;
         }
-        if (this.minimumHeapMiB > hq.maximumHeapMiB) {
+        if (this.minimumHeapMiB > ClientNetworkBootstrap.maximumHeapMiB) {
           return true;
         }
         return false;
@@ -217,7 +217,7 @@ final class ViewportManager {
             return;
           }
           this.resizeCountdown = this.resizeIntervalTicks;
-          if (this.minimumHeapMiB > hq.maximumHeapMiB) {
+          if (this.minimumHeapMiB > ClientNetworkBootstrap.maximumHeapMiB) {
             this.resizeEnabled = false;
           } else {
             if (obfuscationGuard != 0) {

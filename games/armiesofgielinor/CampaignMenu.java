@@ -870,7 +870,7 @@ final class CampaignMenu {
             field_q = (String) null;
           }
           SpriteSheetDecoder.field_k = param3;
-          sg.field_c = param1;
+          AccountHandshakeStateSupport.field_c = param1;
           SpectateRoomRequestSupport.field_b = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1516,7 +1516,7 @@ final class CampaignMenu {
             ValidationStatusIcon.campaignPacketWord0 = 2297;
             ScreenWipeTransition.campaignPacketWord2 = 72584621;
             BirthDateChatEnableForm.campaignPacketWord3 = 224;
-            ii.campaignPacketWord1 = 4452;
+            AccountFlowUpdateSupport.campaignPacketWord1 = 4452;
             var2 = CampaignLookupSupport.getCampaign(this.campaignIndex, (byte) -125).missions;
             var3_int = 0;
             while (true) {
@@ -1574,7 +1574,7 @@ final class CampaignMenu {
                     boolean decompiledSharedTail0 = !(CampaignLookupSupport.heldKeys[81]);
                     if (!decompiledSharedTail0) {
                       ScreenWipeTransition.campaignPacketWord2 = 72584621;
-                      ii.campaignPacketWord1 = 4452;
+                      AccountFlowUpdateSupport.campaignPacketWord1 = 4452;
                       BirthDateChatEnableForm.campaignPacketWord3 = 224;
                       ValidationStatusIcon.campaignPacketWord0 = 2297;
                       UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
@@ -1587,13 +1587,13 @@ final class CampaignMenu {
                         || var6 == 3
                         ) ? var6 : -1) {
                         case 0:
-                          ii.campaignPacketWord1 = ii.campaignPacketWord1 - 12;
+                          AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - 12;
                           ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - 3;
                           if (var7 == 0) {
                             break;
                           }
                         case 1:
-                          ii.campaignPacketWord1 = ii.campaignPacketWord1 + 3;
+                          AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + 3;
                           ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 12;
                           if (var7 == 0) {
                             break;
@@ -1604,7 +1604,7 @@ final class CampaignMenu {
                             break;
                           }
                         case 3:
-                          ii.campaignPacketWord1 = ii.campaignPacketWord1 - 9;
+                          AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - 9;
                           if (var7 == 0) {
                             break;
                           }

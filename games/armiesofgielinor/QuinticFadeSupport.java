@@ -13,7 +13,7 @@ final class QuinticFadeSupport {
         if (SpriteScrollBar.nameCheckResultConsumed == ChannelBaseVolumeConsoleCommand.field_L) {
           throw new IllegalStateException();
         }
-        if (lm.nameCheckComplete == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (LobbyControlResources.nameCheckComplete == ChannelBaseVolumeConsoleCommand.field_L) {
           ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
           return SoundCache.field_a;
         }

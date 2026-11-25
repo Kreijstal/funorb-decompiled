@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii {
+final class AccountFlowUpdateSupport {
     static RgbSprite[] field_a;
     static int campaignPacketWord1;
     static String field_c;
@@ -14,7 +14,7 @@ final class ii {
         field_a = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void advanceAccountFlow(int param0, byte param1) {
         et.pollAccountFlowAction(-3);
         int var2 = -1 % ((param1 - 16) / 39);
     }

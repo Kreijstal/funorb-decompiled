@@ -23,7 +23,7 @@ final class AccountNameCheckSupport {
             pendingResult = null;
             return (AccountRequestResult) (pendingResult);
           }
-          if (EffectsGainSupport.accountNameCheckState == lm.nameCheckComplete &&
+          if (EffectsGainSupport.accountNameCheckState == LobbyControlResources.nameCheckComplete &&
             name.equals(AgeValidator.requestedAccountName)) {
             EffectsGainSupport.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
             completedResult = EmailValidator.accountNameCheckResult;

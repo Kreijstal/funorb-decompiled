@@ -52,24 +52,24 @@ abstract class CacheEntry extends DualLinkedNode {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (SpectateRoomRequestSupport.connectionState == sg.field_a) {
+          if (SpectateRoomRequestSupport.connectionState == AccountHandshakeStateSupport.field_a) {
             EmailValidator.outgoingPacket.position = 0;
             CampaignMenu.field_s = null;
             if (param0 != null) {
               var9 = 0;
-              vd.field_b.position = 0;
+              AccountRsaBufferSupport.field_b.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              vd.field_b.writeInt((byte) -108, CampaignMenuButton.connectionRandom.nextInt());
-              vd.field_b.writeInt((byte) -52, CampaignMenuButton.connectionRandom.nextInt());
-              vd.field_b.writeNullCircumfixedString(var14, 413740432);
-              vd.field_b.writeNullCircumfixedString(var8, 413740432);
+              AccountRsaBufferSupport.field_b.writeInt((byte) -108, CampaignMenuButton.connectionRandom.nextInt());
+              AccountRsaBufferSupport.field_b.writeInt((byte) -52, CampaignMenuButton.connectionRandom.nextInt());
+              AccountRsaBufferSupport.field_b.writeNullCircumfixedString(var14, 413740432);
+              AccountRsaBufferSupport.field_b.writeNullCircumfixedString(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
-              vd.field_b.writeNullCircumfixedString(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
-              vd.field_b.writeShort(true, param4);
-              vd.field_b.writeByte(1, param3);
-              vd.field_b.writeByte(param2 + 20033, var9);
+              AccountRsaBufferSupport.field_b.writeNullCircumfixedString(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
+              AccountRsaBufferSupport.field_b.writeShort(true, param4);
+              AccountRsaBufferSupport.field_b.writeByte(1, param3);
+              AccountRsaBufferSupport.field_b.writeByte(param2 + 20033, var9);
               EmailValidator.outgoingPacket.writeByte(param2 + 20033, 18);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
               var10 = EmailValidator.outgoingPacket.position;
@@ -78,20 +78,20 @@ abstract class CacheEntry extends DualLinkedNode {
                 var11_ref_String = "";
               }
               EmailValidator.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
-              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.writeShortLengthPrefix(0, -var10 + EmailValidator.outgoingPacket.position);
             } else {
-              vd.field_b.position = 0;
-              vd.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
-              vd.field_b.writeInt((byte) -54, CampaignMenuButton.connectionRandom.nextInt());
-              stackIn_10_0 = vd.field_b;
+              AccountRsaBufferSupport.field_b.position = 0;
+              AccountRsaBufferSupport.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
+              AccountRsaBufferSupport.field_b.writeInt((byte) -54, CampaignMenuButton.connectionRandom.nextInt());
+              stackIn_10_0 = AccountRsaBufferSupport.field_b;
               if (!param1.isCheckPending((byte) 125)) {
                 stackIn_11_1 = "";
               } else {
                 stackIn_11_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_10_0).writeNullCircumfixedString(stackIn_11_1, param2 ^ -413754288);
-              stackIn_13_0 = vd.field_b;
+              stackIn_13_0 = AccountRsaBufferSupport.field_b;
               if (param5.isCheckPending((byte) -111)) {
                 stackIn_14_1 = var8;
               } else {
@@ -101,7 +101,7 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByte(1, 16);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
               var9 = EmailValidator.outgoingPacket.position;
-              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.writeByteLengthPrefix(EmailValidator.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);

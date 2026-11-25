@@ -30,7 +30,7 @@ final class BufferedFile {
         if (0 > param3) {
           return true;
         }
-        if (!(ve.field_a[param0][param3] >= 0)) {
+        if (!(SentenceCaseSupport.field_a[param0][param3] >= 0)) {
           return false;
         }
         if (param2) {
@@ -42,10 +42,10 @@ final class BufferedFile {
         if (param1 < MouseWheelSource.field_f[param0][param3]) {
           return false;
         }
-        if (ve.field_a[param0][param3] < 0) {
+        if (SentenceCaseSupport.field_a[param0][param3] < 0) {
           return false;
         }
-        if (ve.field_a[param0][param3] != (param5 & ve.field_a[param0][param3])) {
+        if (SentenceCaseSupport.field_a[param0][param3] != (param5 & SentenceCaseSupport.field_a[param0][param3])) {
           return false;
         }
         return true;

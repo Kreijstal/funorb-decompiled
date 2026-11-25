@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c {
+final class UnitAirAttackSupport {
     static String field_a;
     static String field_f;
     static String field_b;
@@ -18,7 +18,7 @@ final class c {
         int var1 = 14 / ((17 - obfuscationGuard) / 45);
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean canUnitTypeAttackFlying(int param0, byte param1) {
         int var2 = -3 % ((23 - param1) / 60);
         if (WhirlpoolHasher.unitDefinitions[param0][0] == 4) {
           return true;

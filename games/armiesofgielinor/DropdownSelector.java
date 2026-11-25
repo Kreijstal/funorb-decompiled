@@ -277,7 +277,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 69);
             SpellCastErrorSupport.field_a = true;
           }
-          if (!ve.field_b &&
+          if (!SentenceCaseSupport.field_b &&
             !LoginCredentials.field_c) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 75);
             LoginCredentials.field_c = true;

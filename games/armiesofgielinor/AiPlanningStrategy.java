@@ -47,8 +47,8 @@ abstract class AiPlanningStrategy {
         try {
           stackIn_4_0 = ListMissionsConsoleCommand.field_E.scrollContainer;
           stackIn_4_1 = enableCapture;
-          stackIn_4_2 = (jn.field_d * 3 + 6) * visibleRows;
-          stackIn_4_3 = 2 + jn.field_d;
+          stackIn_4_2 = (GradientSpanBlendSupport.field_d * 3 + 6) * visibleRows;
+          stackIn_4_3 = 2 + GradientSpanBlendSupport.field_d;
           stackIn_5_4 = (ListMissionsConsoleCommand.field_E.scrollContainer == PointerInputHandler.contextMenuScrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = ListMissionsConsoleCommand.field_E.listContent.children;
@@ -113,7 +113,7 @@ abstract class AiPlanningStrategy {
                     var7.previousNameComponent.matchedButtonTextColour = var11;
                     var7.previousNameComponent.sprite = NodeHashIterator.field_e;
                     var12 = 1;
-                    var7.previousNameComponent.setBounds(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
+                    var7.previousNameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
                   }
                   var7.locationComponent.selectedTextColour = var11;
                   var7.nameComponent.selectedTextColour = var11;
@@ -136,7 +136,7 @@ abstract class AiPlanningStrategy {
                     stackIn_45_1 = BitmapFont.truncateWithEllipsis(var7.nameComponent.font, var7.displayName, var14);
                   }
                   stackIn_44_0.text = stackIn_45_1;
-                  var7.nameComponent.setBounds(jn.field_d, -20500, var14, var9, var13);
+                  var7.nameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var14, var9, var13);
                   stackIn_48_0 = var7.locationComponent;
                   if (null != var7.locationLabel) {
                     stackIn_49_1 = var7.locationLabel;
@@ -144,10 +144,10 @@ abstract class AiPlanningStrategy {
                     stackIn_49_1 = BattleTutorial.field_i;
                   }
                   stackIn_48_0.text = stackIn_49_1;
-                  var7.locationComponent.setBounds(jn.field_d, -20500, 80, var9, -80 + var7.width);
+                  var7.locationComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 80, var9, -80 + var7.width);
                   stackIn_53_0 = (var7.nameComponent.text.equals(var7.displayName)) ? 0 : 1;
                   var15 = stackIn_53_0;
-                  var9 = var9 + jn.field_d;
+                  var9 = var9 + GradientSpanBlendSupport.field_d;
                   if (var3_int == 0) {
                     var7.pendingHeightDelta = var9 - var7.height;
                   }
@@ -319,7 +319,7 @@ abstract class AiPlanningStrategy {
         RuntimeException var4_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          EffectsGainSupport.accountNameCheckState = lm.nameCheckComplete;
+          EffectsGainSupport.accountNameCheckState = LobbyControlResources.nameCheckComplete;
           if (param3 != 255) {
             if (param3 >= 100 &&
               param3 <= 105) {

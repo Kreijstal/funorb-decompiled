@@ -155,7 +155,7 @@ abstract class TileableNoiseGenerator {
           boolean decompiledFrameRemainder0 = true;
           roomOptionsChanged = 0;
           if (filterMode) {
-            decompiledFrameRemainder1 = !(lm.field_e.length < 2);
+            decompiledFrameRemainder1 = !(LobbyControlResources.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (filterMode) {
                 stackIn_22_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
@@ -197,7 +197,7 @@ abstract class TileableNoiseGenerator {
                 DialogMessagePane.field_I = ActionSpell.field_f;
               }
             }
-            decompiledFrameRemainder1 = !(lm.field_e.length < 2);
+            decompiledFrameRemainder1 = !(LobbyControlResources.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (filterMode) {
                 stackIn_55_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
@@ -220,7 +220,7 @@ abstract class TileableNoiseGenerator {
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (filterMode) ? -1 : 0;
-            for (optionIndex = stackIn_64_0; optionIndex < lm.field_e.length; optionIndex++) {
+            for (optionIndex = stackIn_64_0; optionIndex < LobbyControlResources.field_e.length; optionIndex++) {
               if (choiceState != 0) {
                 stackIn_72_0 = (ResourceProtocolClient.field_c != optionIndex) ? 1 : 0;
               } else {
@@ -230,7 +230,7 @@ abstract class TileableNoiseGenerator {
               if (controlsEditable != 0 &&
                 0 != LogoMesh.field_k[1][optionIndex + 1].pressedButton) {
                 if (!filterMode) {
-                  choiceValue = lm.field_e[optionIndex];
+                  choiceValue = LobbyControlResources.field_e[optionIndex];
                   if (choiceValue != room.playerCapacity) {
                     room.playerCapacity = choiceValue;
                     roomOptionsChanged = 1;
@@ -248,14 +248,14 @@ abstract class TileableNoiseGenerator {
                 }
               }
               if (!filterMode) {
-                choiceValue = lm.field_e[optionIndex];
+                choiceValue = LobbyControlResources.field_e[optionIndex];
                 stackIn_100_0 = LogoMesh.field_k[1][optionIndex + 1];
                 stackIn_101_1 = (choiceValue == room.playerCapacity);
                 stackIn_100_0.selected = stackIn_101_1;
               } else {
                 if (optionIndex == -1) {
                   LogoMesh.field_k[1][1 + optionIndex].selected = true;
-                  for (choiceValue = 0; choiceValue < lm.field_e.length; choiceValue++) {
+                  for (choiceValue = 0; choiceValue < LobbyControlResources.field_e.length; choiceValue++) {
                     dupTemp$0 = LogoMesh.field_k[1][optionIndex + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.selected;

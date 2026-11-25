@@ -88,7 +88,7 @@ final class ChatMessage {
         this.channelId = MatchConditionEntry.decodedChatChannel;
         this.channelLabel = BestScoreStrategy.decodedChatChannelLabel;
         this.systemMessage = DualNodeDeque.decodedChatSystemMessage;
-        this.accountName = gp.decodedChatAccountName;
+        this.accountName = GuestSavePrompts.decodedChatAccountName;
         this.displayName = RegistrationAgreementPane.decodedChatDisplayName;
         this.contextId = DisplaySettingsDialog.decodedChatContextId;
         this.privateMessageIdLow24 = FloorModSupport.decodedPrivateMessageIdLow24;

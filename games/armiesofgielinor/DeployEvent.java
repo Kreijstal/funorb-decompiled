@@ -193,8 +193,8 @@ final class DeployEvent extends GameEvent {
           }
           stackIn_5_0 = TaggedMapData.field_g.scrollContainer;
           stackIn_5_1 = enableCapture;
-          stackIn_5_2 = (2 + jn.field_d) * (3 * visibleRows);
-          stackIn_5_3 = jn.field_d + 2;
+          stackIn_5_2 = (2 + GradientSpanBlendSupport.field_d) * (3 * visibleRows);
+          stackIn_5_3 = GradientSpanBlendSupport.field_d + 2;
           stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.scrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.listContent.children;
@@ -220,13 +220,13 @@ final class DeployEvent extends GameEvent {
               var7 = 1;
             }
             var6.width = TaggedMapData.field_g.listContent.width;
-            var6.nameComponent.setBounds(jn.field_d, -20500, var6.width, 0, 0);
+            var6.nameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var6.width, 0, 0);
             var8 = 0;
             if (null != var6.previousDisplayName &&
               !var6.previousDisplayName.equals("")) {
               var6.previousNameComponent.sprite = NodeHashIterator.field_e;
               var6.previousNameComponent.matchedButtonTextColour = 16737894;
-              var6.previousNameComponent.setBounds(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
+              var6.previousNameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
               var8 = 1;
             }
             var9 = 0;
@@ -244,9 +244,9 @@ final class DeployEvent extends GameEvent {
             stackIn_21_0.text = stackIn_22_1;
             stackIn_25_0 = (var6.nameComponent.text.equals(var6.displayName)) ? 0 : 1;
             var11 = stackIn_25_0;
-            var6.nameComponent.setBounds(jn.field_d, -20500, var10, 0, var9);
+            var6.nameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var10, 0, var9);
             if (var3_int == 0) {
-              var6.pendingHeightDelta = -var6.height + jn.field_d;
+              var6.pendingHeightDelta = -var6.height + GradientSpanBlendSupport.field_d;
             }
             if (var7 != 0) {
               TaggedMapData.field_g.listContent.positionAfter(var6, true, 2, (ClientUiComponent) (var5));

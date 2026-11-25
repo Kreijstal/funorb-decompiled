@@ -437,7 +437,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
           this.content = new ClientUiComponent(0L, (ClientUiComponent) null);
           this.addChild(this.content, 106);
           if (targetName != null) {
-            this.instructions = new ClientUiComponent(0L, textStyle, ii.field_c);
+            this.instructions = new ClientUiComponent(0L, textStyle, AccountFlowUpdateSupport.field_c);
             this.instructions.horizontalAlignment = 1;
             this.instructions.textColour = 11184810;
             this.content.addChild(this.instructions, 116);
@@ -568,16 +568,16 @@ final class ReportAbuseDialog extends ClientUiComponent {
             this.title.setBounds(24, -20500, 13 + (var19 + 13), 0, 0);
             this.closeButton.setBounds(15, -20500, 15, 5, -20 + this.title.width);
             var21 = 10;
-            this.instructions.setBounds(jn.field_d * 2, -20500, var19, var21, 13);
-            var21 = var21 + jn.field_d * 2;
-            this.helpText.setBounds(2 * jn.field_d, -20500, var19, var21, 13);
-            var21 = var21 + (10 + 2 * jn.field_d);
-            this.targetNameComponent.setBounds(jn.field_d, -20500, 0, var21, 0);
-            var21 = var21 + (10 + jn.field_d);
+            this.instructions.setBounds(GradientSpanBlendSupport.field_d * 2, -20500, var19, var21, 13);
+            var21 = var21 + GradientSpanBlendSupport.field_d * 2;
+            this.helpText.setBounds(2 * GradientSpanBlendSupport.field_d, -20500, var19, var21, 13);
+            var21 = var21 + (10 + 2 * GradientSpanBlendSupport.field_d);
+            this.targetNameComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, 0, var21, 0);
+            var21 = var21 + (10 + GradientSpanBlendSupport.field_d);
             if (null != this.muteControl) {
               var20Lifetime3 = this.muteControl.measureRowWidth(93, 4);
-              this.muteControl.setLayout((byte) 120, var21, 4, jn.field_d, 13 + (-var20Lifetime3 + var19) / 2, var20Lifetime3);
-              var21 = var21 + (10 + jn.field_d);
+              this.muteControl.setLayout((byte) 120, var21, 4, GradientSpanBlendSupport.field_d, 13 + (-var20Lifetime3 + var19) / 2, var20Lifetime3);
+              var21 = var21 + (10 + GradientSpanBlendSupport.field_d);
             }
             var28[0].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 13);
             var28[1].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + var16Lifetime2);
@@ -599,8 +599,8 @@ final class ReportAbuseDialog extends ClientUiComponent {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.instructions.font.getLineCount(this.instructions.text, var15_int);
-          this.instructions.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
-          var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
+          this.instructions.setBounds(GradientSpanBlendSupport.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
+          var16Lifetime1 = var16Lifetime1 + GradientSpanBlendSupport.field_d * var17Lifetime1;
           this.content.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
           this.content.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, this.content.height, 2105376, 3, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;

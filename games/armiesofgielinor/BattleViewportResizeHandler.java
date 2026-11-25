@@ -33,7 +33,7 @@ final class BattleViewportResizeHandler extends RasterViewportResizeHandler {
           while (encodedName != 0L) {
             previousValue = encodedName;
             encodedName = encodedName / 37L;
-            characterCode = hq.base37Alphabet[(int)(previousValue - 37L * encodedName)];
+            characterCode = ClientNetworkBootstrap.base37Alphabet[(int)(previousValue - 37L * encodedName)];
             if (characterCode == 95) {
               nextCharacterIndex = reversedName.length() - 1;
               reversedName.setCharAt(nextCharacterIndex, Character.toUpperCase(reversedName.charAt(nextCharacterIndex)));

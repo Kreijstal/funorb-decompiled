@@ -271,14 +271,14 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
               if (!param2.movementSpent &&
                 param2.attacksRemaining != 0) {
                 StandardContentDialog.field_ob.drawTransparent(11 + param4, param6 + (-36 + param7));
-                ii.field_a[2].drawTransparent(11 + param4, -36 + (param6 + param7));
+                AccountFlowUpdateSupport.field_a[2].drawTransparent(11 + param4, -36 + (param6 + param7));
                 if ((var17Lifetime2 != 0)) {
                   StandardContentDialog.field_ob.drawAdditive(11 + param4, param7 - (-param6 + 36), 128);
                 }
                 break regionExit1;
               }
               StandardContentDialog.field_ob.drawWithBrightness(param4 + 11, param7 + param6 - 36, 128);
-              ii.field_a[2].drawWithBrightness(param4 + 11, param7 + param6 - 36, 128);
+              AccountFlowUpdateSupport.field_a[2].drawWithBrightness(param4 + 11, param7 + param6 - 36, 128);
             } else {
               if (param2.unitType != 72) {
                 if (param2.unitType == 17) {
@@ -288,13 +288,13 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                     if (!param2.movementSpent &&
                       param2.attacksRemaining != 0) {
                       StandardContentDialog.field_ob.drawTransparent(11 + param4, param7 - 36 + param6);
-                      ii.field_a[1].drawTransparent(param4 + 11, param7 + param6 - 36);
+                      AccountFlowUpdateSupport.field_a[1].drawTransparent(param4 + 11, param7 + param6 - 36);
                       if ((var17Lifetime2 != 0)) {
                         StandardContentDialog.field_ob.drawAdditive(11 + param4, -36 - (-param6 - param7), 128);
                       }
                     } else {
                       StandardContentDialog.field_ob.drawWithBrightness(param4 + 11, param6 - 36 + param7, 128);
-                      ii.field_a[1].drawWithBrightness(11 + param4, param6 - 36 + param7, 128);
+                      AccountFlowUpdateSupport.field_a[1].drawWithBrightness(11 + param4, param6 - 36 + param7, 128);
                     }
                     break regionExit1;
                   }
@@ -308,13 +308,13 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                     param2.attacksRemaining != 0 &&
                     var19 == 0) {
                     StandardContentDialog.field_ob.drawTransparent(param4 + 11, param7 + (param6 - 36));
-                    ii.field_a[4].drawTransparent(param4 + 11, param7 + param6 - 36);
+                    AccountFlowUpdateSupport.field_a[4].drawTransparent(param4 + 11, param7 + param6 - 36);
                     if ((var17Lifetime2 != 0)) {
                       StandardContentDialog.field_ob.drawAdditive(11 + param4, param7 + (-36 + param6), 128);
                     }
                   } else {
                     StandardContentDialog.field_ob.drawWithBrightness(11 + param4, param6 + (-36 + param7), 128);
-                    ii.field_a[4].drawWithBrightness(11 + param4, -36 + param6 + param7, 128);
+                    AccountFlowUpdateSupport.field_a[4].drawWithBrightness(11 + param4, -36 + param6 + param7, 128);
                   }
                   break regionExit1;
                 }
@@ -327,7 +327,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                     param2.attacksRemaining != 0 &&
                     var19Lifetime1 == 0) {
                     StandardContentDialog.field_ob.drawTransparent(param4 + 11, -36 + (param6 + param7));
-                    ii.field_a[0].drawTransparent(11 + param4, -36 + param6 + param7);
+                    AccountFlowUpdateSupport.field_a[0].drawTransparent(11 + param4, -36 + param6 + param7);
                     if (var17Lifetime2 != 0) {
                       StandardContentDialog.field_ob.drawAdditive(param4 + 11, -36 + param6 + param7, 128);
                       break regionExit1;
@@ -336,7 +336,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                     return;
                   }
                   StandardContentDialog.field_ob.drawWithBrightness(11 + param4, param6 - 36 + param7, 128);
-                  ii.field_a[0].drawWithBrightness(11 + param4, param7 - 36 + param6, 128);
+                  AccountFlowUpdateSupport.field_a[0].drawWithBrightness(11 + param4, param7 - 36 + param6, 128);
                   break regionExit1;
                 }
                 StandardContentDialog.field_ob.drawWithBrightness(11 + param4, -36 - (-param6 - param7), 128);
@@ -344,14 +344,14 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                 if (!param2.movementSpent &&
                   0 != param2.attacksRemaining) {
                   StandardContentDialog.field_ob.drawTransparent(11 + param4, param7 - (-param6 + 36));
-                  ii.field_a[3].drawTransparent(param4 + 11, param6 - (36 - param7));
+                  AccountFlowUpdateSupport.field_a[3].drawTransparent(param4 + 11, param6 - (36 - param7));
                   if ((var17Lifetime2 != 0)) {
                     StandardContentDialog.field_ob.drawAdditive(param4 + 11, param6 + (-36 + param7), 128);
                   }
                   break regionExit1;
                 }
                 StandardContentDialog.field_ob.drawWithBrightness(11 + param4, param6 + (-36 + param7), 128);
-                ii.field_a[3].drawWithBrightness(param4 + 11, param7 - (-param6 + 36), 128);
+                AccountFlowUpdateSupport.field_a[3].drawWithBrightness(param4 + 11, param7 - (-param6 + 36), 128);
               }
             }
           }

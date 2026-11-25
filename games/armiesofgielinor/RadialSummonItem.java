@@ -25,7 +25,7 @@ final class RadialSummonItem {
           return (String) null;
         }
         if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
-          return qk.field_b;
+          return PaginationTextSupport.field_b;
         }
         return LocalCoatSupport.loginPassword;
     }

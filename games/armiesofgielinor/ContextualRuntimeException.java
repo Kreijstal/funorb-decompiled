@@ -25,7 +25,7 @@ final class ContextualRuntimeException extends RuntimeException {
         if (param0 != -85) {
           return;
         }
-        lm.field_g = param2;
+        LobbyControlResources.field_g = param2;
         bt.field_g = param1;
     }
 
@@ -47,7 +47,7 @@ final class ContextualRuntimeException extends RuntimeException {
         try {
           NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
           ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, CampaignLookupSupport.field_g, LoginKind.field_b, AnimationFrameSet.field_y);
-          TaggedMapData.field_g = new SocialListPanel(0L, CampaignLookupSupport.field_g, lm.field_a, ArchiveIndex.field_u);
+          TaggedMapData.field_g = new SocialListPanel(0L, CampaignLookupSupport.field_g, LobbyControlResources.field_a, ArchiveIndex.field_u);
           AiWeightProfile.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
           CalendarSupport.field_c = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           CalendarSupport.field_c.horizontalAlignment = 1;

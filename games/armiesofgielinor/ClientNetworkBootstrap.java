@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hq {
+final class ClientNetworkBootstrap {
     static char[] base37Alphabet;
     static IndexedSprite[] surroundTileSprites;
     static String field_c;
@@ -21,7 +21,7 @@ final class hq {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, String param10, PlatformTaskService param11, long param12, int param13) {
+    final static void initializeNetworkContext(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, String param10, PlatformTaskService param11, long param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -57,7 +57,7 @@ final class hq {
             if (param7 == 0) {
               return;
             }
-            hq.a(58, -109, 31, 35, false, 42, -98, -22, -122, true, (String) null, (PlatformTaskService) null, -46L, 85);
+            ClientNetworkBootstrap.initializeNetworkContext(58, -109, 31, 35, false, 42, -98, -22, -122, true, (String) null, (PlatformTaskService) null, -46L, 85);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

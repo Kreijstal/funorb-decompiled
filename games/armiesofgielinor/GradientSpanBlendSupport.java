@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn {
+final class GradientSpanBlendSupport {
     static int field_c;
     static int[] field_f;
     static int field_d;
@@ -11,7 +11,7 @@ final class jn {
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard > -94) {
-          jn.releaseStatics(84);
+          GradientSpanBlendSupport.releaseStatics(84);
         }
         field_a = null;
         field_f = null;
@@ -19,7 +19,7 @@ final class jn {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9) {
+    final static void blendHalfGradientSpan(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;

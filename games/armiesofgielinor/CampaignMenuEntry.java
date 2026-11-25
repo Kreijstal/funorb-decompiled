@@ -114,7 +114,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         RuntimeException var4 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ChannelBaseVolumeConsoleCommand.field_L = lm.nameCheckComplete;
+          ChannelBaseVolumeConsoleCommand.field_L = LobbyControlResources.nameCheckComplete;
           if (param1 != -14) {
             CampaignMenuEntry.releaseStatics(7);
           }

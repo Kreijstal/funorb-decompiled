@@ -107,11 +107,11 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             if (var5_int > 0) {
               boolean decompiledSharedTail0 = (FloorModSupport.floorModWithOffset(param0 + param1, 1, 2) != 0);
               if (!decompiledSharedTail0) {
-                hq.surroundTileSprites[0].draw(param2, param3);
+                ClientNetworkBootstrap.surroundTileSprites[0].draw(param2, param3);
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.surroundTileSprites[(ConsoleExpression.field_p[FloorModSupport.floorModWithOffset(param1, 1, ResourceRequest.field_y) + FloorModSupport.floorModWithOffset(param0, 1, ConsoleParseException.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
+                ClientNetworkBootstrap.surroundTileSprites[(ConsoleExpression.field_p[FloorModSupport.floorModWithOffset(param1, 1, ResourceRequest.field_y) + FloorModSupport.floorModWithOffset(param0, 1, ConsoleParseException.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);

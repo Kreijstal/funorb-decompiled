@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gp {
+final class GuestSavePrompts {
     static String[] field_d;
     static java.awt.Image field_e;
     static String decodedChatAccountName;
@@ -18,7 +18,7 @@ final class gp {
           field_c = null;
           return;
         }
-        gp.releaseStatics((byte) 10);
+        GuestSavePrompts.releaseStatics((byte) 10);
         field_a = null;
         field_c = null;
     }

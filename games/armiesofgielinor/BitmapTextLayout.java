@@ -355,8 +355,8 @@ final class BitmapTextLayout extends TextLayout {
         CachedArchiveProvider.field_p = SoftwareRaster.height;
         AlphaWidgetContainer.d(false);
         SpellCastEvent.field_E.setLayout(-2 + NumericDateInputWidget.field_T.height - 40, (byte) -124, 0, NumericDateInputWidget.field_T.width, 0);
-        ReloadPageSupport.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
-        int var1 = 2 + jn.field_d;
+        ReloadPageSupport.field_g.setBounds(GradientSpanBlendSupport.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
+        int var1 = 2 + GradientSpanBlendSupport.field_d;
         IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!GrowableIntArray.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !GrowableIntArray.field_c ? 0 : var1, 0);
         AudioShutdownSupport.a((byte) 91);
         EventPresenterFactory.field_d.setBounds(40, -20500, NumericDateInputWidget.field_T.width, NumericDateInputWidget.field_T.height - 40, 0);
@@ -369,7 +369,7 @@ final class BitmapTextLayout extends TextLayout {
         int var2 = !GrowableIntArray.field_c ? 200 : 250;
         SphinxActionRequest.field_A.setBounds(30, -20500, -var2 + 363, 5, var2 + 5);
         ModalDialog.field_K.setBounds(30, -20500, -370 + (-5 + SpectateRoomRequestSupport.field_i.width), 5, 370);
-        CipherPacketBuffer.field_x.setLayout(5, param0, LobbyPlayer.field_Lb.width - 5 - 5, 2, jn.field_c, 37, -32 + (LobbyPlayer.field_Lb.height - 5 - 5));
+        CipherPacketBuffer.field_x.setLayout(5, param0, LobbyPlayer.field_Lb.width - 5 - 5, 2, GradientSpanBlendSupport.field_c, 37, -32 + (LobbyPlayer.field_Lb.height - 5 - 5));
         int var3 = (SpectateRoomRequestSupport.field_i.width + 2) / 2;
         ViewportManager.field_d.setBounds(40, -20500, var3 - 2, SpectateRoomRequestSupport.field_i.height - 40, 0);
         if (!GrowableIntArray.field_c) {
@@ -382,34 +382,34 @@ final class BitmapTextLayout extends TextLayout {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        vd.field_b.position = 0;
-        vd.field_b.writeByte(1, 12);
-        vd.field_b.writeInt((byte) -128, CampaignMenuButton.connectionRandom.nextInt());
-        vd.field_b.writeInt((byte) -75, CampaignMenuButton.connectionRandom.nextInt());
+        AccountRsaBufferSupport.field_b.position = 0;
+        AccountRsaBufferSupport.field_b.writeByte(1, 12);
+        AccountRsaBufferSupport.field_b.writeInt((byte) -128, CampaignMenuButton.connectionRandom.nextInt());
+        AccountRsaBufferSupport.field_b.writeInt((byte) -75, CampaignMenuButton.connectionRandom.nextInt());
         if (obfuscationGuard == 30) {
-          vd.field_b.writeByte(1, day);
-          vd.field_b.writeByte(1, monthIndex);
-          vd.field_b.writeShort(true, year);
-          vd.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
+          AccountRsaBufferSupport.field_b.writeByte(1, day);
+          AccountRsaBufferSupport.field_b.writeByte(1, monthIndex);
+          AccountRsaBufferSupport.field_b.writeShort(true, year);
+          AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
           fieldTemp$0 = EmailValidator.outgoingPacket.position + 1;
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
           var4 = fieldTemp$0;
-          EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, obfuscationGuard + 69);
+          EmailValidator.outgoingPacket.writeBytes(AccountRsaBufferSupport.field_b.payload, 0, AccountRsaBufferSupport.field_b.position, obfuscationGuard + 69);
           EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4 + EmailValidator.outgoingPacket.position, obfuscationGuard + 5900);
           return;
         }
         ResourceArchive var5 = (ResourceArchive) null;
         BitmapTextLayout.a(81, (ResourceArchive) null, -36, 38);
-        vd.field_b.writeByte(1, day);
-        vd.field_b.writeByte(1, monthIndex);
-        vd.field_b.writeShort(true, year);
-        vd.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
+        AccountRsaBufferSupport.field_b.writeByte(1, day);
+        AccountRsaBufferSupport.field_b.writeByte(1, monthIndex);
+        AccountRsaBufferSupport.field_b.writeShort(true, year);
+        AccountRsaBufferSupport.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
         EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
         int fieldTemp$1 = EmailValidator.outgoingPacket.position + 1;
         EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, obfuscationGuard + 69);
+        EmailValidator.outgoingPacket.writeBytes(AccountRsaBufferSupport.field_b.payload, 0, AccountRsaBufferSupport.field_b.position, obfuscationGuard + 69);
         EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + EmailValidator.outgoingPacket.position, obfuscationGuard + 5900);
     }
 

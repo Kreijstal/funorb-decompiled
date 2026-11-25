@@ -50,10 +50,10 @@ final class NodeHashIterator implements Iterator {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (gp.field_e == null) {
-                gp.field_e = IndexedSpriteBase.field_b.createImage(304, 34);
+              if (GuestSavePrompts.field_e == null) {
+                GuestSavePrompts.field_e = IndexedSpriteBase.field_b.createImage(304, 34);
               }
-              var10 = gp.field_e.getGraphics();
+              var10 = GuestSavePrompts.field_e.getGraphics();
               var10.setColor(param1);
               if (param0 != -5790) {
                 return;
@@ -66,7 +66,7 @@ final class NodeHashIterator implements Iterator {
               var10.setFont(BattleCharacter.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - 6 * param2.length()) / 2, 22);
-              var9.drawImage(gp.field_e, -152 + CalendarSupport.viewportWidth / 2, DateValiditySupport.viewportHeight / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(GuestSavePrompts.field_e, -152 + CalendarSupport.viewportWidth / 2, DateValiditySupport.viewportHeight / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

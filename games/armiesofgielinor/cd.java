@@ -83,7 +83,7 @@ final class cd {
     }
 
     final static void releaseStatics(int param0) {
-        gp.field_e = null;
+        GuestSavePrompts.field_e = null;
         if (param0 != 12) {
           field_b = (String) null;
           BattleCharacter.field_g = null;

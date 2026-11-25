@@ -14,7 +14,7 @@ final class IndexedDecodedSpriteSupport {
     }
 
     final static IndexedSprite buildFirstDecodedIndexedSprite(int obfuscationGuard) {
-        IndexedSprite var1 = new IndexedSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[obfuscationGuard], AnimationPlayer.decodedSpriteIndices[0], MovementPresentation.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], UnitAirAttackSupport.decodedSpriteHeights[obfuscationGuard], AnimationPlayer.decodedSpriteIndices[0], MovementPresentation.decodedSpritePalette);
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 99);
         return var1;
     }

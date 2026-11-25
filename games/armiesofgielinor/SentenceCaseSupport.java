@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve {
+final class SentenceCaseSupport {
     static int[][] field_a;
     static boolean field_b;
 
-    final static String a(byte param0, String param1) {
+    final static String toSentenceCase(byte param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         char[] var3 = null;

@@ -98,9 +98,9 @@ final class CommunityTabGroup {
         hasSeparateAccountName = separateAccountName;
         RegistrationAgreementPane.decodedChatDisplayName = packet.readNullTerminatedString(1);
         if (hasSeparateAccountName == 0) {
-          gp.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
+          GuestSavePrompts.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
         } else {
-          gp.decodedChatAccountName = packet.readNullTerminatedString(1);
+          GuestSavePrompts.decodedChatAccountName = packet.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.decodedChatChannel == 1) {
           DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
@@ -122,7 +122,7 @@ final class CommunityTabGroup {
           try {
             phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
-            if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
+            if (GuestSavePrompts.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;
@@ -198,11 +198,11 @@ final class CommunityTabGroup {
           CommunityTabGroup.decodeChatMessageWithIntGuard(-115, true);
         }
         this.tabs.setLayout(width, y, x, var7, 0, var6, height);
-        CalendarSupport.field_c.setBounds(jn.field_d, -20500, AiWeightProfile.field_d.width, 0, 0);
-        AdaptiveMidiPcmStream.field_kb.setBounds(18, -20500, -2 + (-2 + AiWeightProfile.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
-        ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (AiWeightProfile.field_d.width - jn.field_c));
-        ListMissionsConsoleCommand.field_E.setLayout(0, jn.field_c, 2, 20, AiWeightProfile.field_d.width, 20 + (2 + jn.field_d), -2 + (AiWeightProfile.field_d.height - jn.field_d) - 20, (byte) -92);
-        TaggedMapData.field_g.layoutControls((byte) -110, jn.field_c, 20, 2);
+        CalendarSupport.field_c.setBounds(GradientSpanBlendSupport.field_d, -20500, AiWeightProfile.field_d.width, 0, 0);
+        AdaptiveMidiPcmStream.field_kb.setBounds(18, -20500, -2 + (-2 + AiWeightProfile.field_d.width + (-GradientSpanBlendSupport.field_c - 80)), 2 + GradientSpanBlendSupport.field_d, 0);
+        ek.field_a.setBounds(18, -20500, 82 + GradientSpanBlendSupport.field_c, GradientSpanBlendSupport.field_d + 2, -82 + (AiWeightProfile.field_d.width - GradientSpanBlendSupport.field_c));
+        ListMissionsConsoleCommand.field_E.setLayout(0, GradientSpanBlendSupport.field_c, 2, 20, AiWeightProfile.field_d.width, 20 + (2 + GradientSpanBlendSupport.field_d), -2 + (AiWeightProfile.field_d.height - GradientSpanBlendSupport.field_d) - 20, (byte) -92);
+        TaggedMapData.field_g.layoutControls((byte) -110, GradientSpanBlendSupport.field_c, 20, 2);
     }
 
     CommunityTabGroup(String firstTabLabel, ClientUiComponent firstPanel) {
@@ -264,9 +264,9 @@ final class CommunityTabGroup {
         hasSeparateAccountName = separateAccountName;
         RegistrationAgreementPane.decodedChatDisplayName = packet.readNullTerminatedString(1);
         if (hasSeparateAccountName == 0) {
-          gp.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
+          GuestSavePrompts.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
         } else {
-          gp.decodedChatAccountName = packet.readNullTerminatedString(1);
+          GuestSavePrompts.decodedChatAccountName = packet.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.decodedChatChannel == 1) {
           DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
@@ -288,7 +288,7 @@ final class CommunityTabGroup {
           try {
             phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
-            if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
+            if (GuestSavePrompts.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;

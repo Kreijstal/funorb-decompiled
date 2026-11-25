@@ -44,7 +44,7 @@ final class DelayedPacket extends IntrusiveNode {
         ValidationStatusIcon.campaignPacketWord0 = 2297;
         ScreenWipeTransition.campaignPacketWord2 = 72584621;
         BirthDateChatEnableForm.campaignPacketWord3 = 224;
-        ii.campaignPacketWord1 = 4452;
+        AccountFlowUpdateSupport.campaignPacketWord1 = 4452;
         int turnsTaken = controller.battlefield.playerTurnCounts[controller.controlledPlayerId];
         int damageTaken = controller.battlefield.damageTakenByPlayer[controller.controlledPlayerId];
         UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
@@ -59,7 +59,7 @@ final class DelayedPacket extends IntrusiveNode {
         int mutationVariant = mutationSelector;
         if (0 == mutationVariant) {
           ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - damageDelta;
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - turnDelta;
+          AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - turnDelta;
           return "Done.";
         }
         if (mutationVariant != 1) {
@@ -70,10 +70,10 @@ final class DelayedPacket extends IntrusiveNode {
           if (mutationVariant != 3) {
             throw new IllegalStateException("");
           }
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - (-damageDelta + turnDelta);
+          AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - (-damageDelta + turnDelta);
           return "Done.";
         }
-        ii.campaignPacketWord1 = ii.campaignPacketWord1 + damageDelta;
+        AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + damageDelta;
         ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + turnDelta;
         return "Done.";
     }

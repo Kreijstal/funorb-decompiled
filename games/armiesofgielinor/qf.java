@@ -26,7 +26,7 @@ final class qf {
         vq.field_d = param2;
         vq.field_c = param8;
         ek.field_e = param4;
-        hq.field_e = param0;
+        ClientNetworkBootstrap.field_e = param0;
         IgnoreListLookupSupport.field_c = param1;
         if (param3 < 9) {
           return;

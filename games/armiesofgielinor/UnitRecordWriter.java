@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bu {
+final class UnitRecordWriter {
     static ScrollContainer field_a;
     static RgbSprite[] field_c;
     static CampaignQuicksave storedQuicksave;
 
-    final static void a(int param0, Unit param1, int param2, PacketBuffer param3) {
+    final static void writeUnitRecord(int param0, Unit param1, int param2, PacketBuffer param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

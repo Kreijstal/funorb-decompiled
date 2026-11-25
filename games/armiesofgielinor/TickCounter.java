@@ -1299,7 +1299,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "SAVE_AND_QUIT");
                 if (null != var2) {
-                  jn.field_a = uu.a(var2, (byte) -110);
+                  GradientSpanBlendSupport.field_a = uu.a(var2, (byte) -110);
                 }
                 var2 = DropdownSelectorPainter.a(false, "PLAY_CAMPAIGN");
                 if (null != var2) {
@@ -1603,7 +1603,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "STATUS_VAMPIRE");
                 if (var2 != null) {
-                  c.field_f = uu.a(var2, (byte) 98);
+                  UnitAirAttackSupport.field_f = uu.a(var2, (byte) 98);
                 }
                 var2 = DropdownSelectorPainter.a(false, "STATUS_MITOSE");
                 if (var2 != null) {
@@ -3179,7 +3179,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_CAMPAIGNS");
                 if (var2 != null) {
-                  qk.field_f = uu.a(var2, (byte) 14);
+                  PaginationTextSupport.field_f = uu.a(var2, (byte) 14);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_NEWGAME");
                 if (var2 != null) {
@@ -3307,7 +3307,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_GAME_ACHIEVEMENTS");
                 if (null != var2) {
-                  jn.field_e = uu.a(var2, (byte) -95);
+                  GradientSpanBlendSupport.field_e = uu.a(var2, (byte) -95);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_INVITE_LOGIN");
                 if (var2 != null) {
@@ -3351,7 +3351,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_RESTART_QUESTION");
                 if (null != var2) {
-                  vd.field_a = uu.a(var2, (byte) 127);
+                  AccountRsaBufferSupport.field_a = uu.a(var2, (byte) 127);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_PRESTIGE");
                 if (null != var2) {
@@ -3621,7 +3621,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "SPELLBOOK_RUNES");
                 if (null != var2) {
-                  lm.field_f = uu.a(var2, (byte) -120);
+                  LobbyControlResources.field_f = uu.a(var2, (byte) -120);
                 }
                 var2 = DropdownSelectorPainter.a(false, "SPELLBOOK_RUNE");
                 if (null != var2) {
@@ -4871,7 +4871,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREEN_TONICS");
                 if (null != var2) {
-                  c.field_b = uu.a(var2, (byte) -114);
+                  UnitAirAttackSupport.field_b = uu.a(var2, (byte) -114);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREEN_TOXINS");
                 if (null != var2) {
@@ -5067,7 +5067,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_NOTALLY");
                 if (var2 != null) {
-                  gp.field_a = uu.a(var2, (byte) 11);
+                  GuestSavePrompts.field_a = uu.a(var2, (byte) 11);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_NOTMINE");
                 if (var2 != null) {

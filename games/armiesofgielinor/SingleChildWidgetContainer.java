@@ -298,7 +298,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         var21 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           DeployEvent.field_F = param5;
-          lm.field_e = param11;
+          LobbyControlResources.field_e = param11;
           GridWidgetContainer.field_M = param10;
           VerticalScrollbar.field_Mb = param6;
           LoginCredentialStagingSupport.field_a = param4;
@@ -306,13 +306,13 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LocalAccountNameSupport.field_f = param12;
           BoundedFile.field_h = param14;
           MusicPatchNode.field_r = param0;
-          jn.field_b = param8;
+          GradientSpanBlendSupport.field_b = param8;
           TextLayout.field_a = param9;
           TextCursor.field_d = param2;
           PowerOfTwoSupport.field_p = DropdownSelectorPainter.loadRgbSpritesByName("gameprivacy", (byte) -128, param7, "lobby");
           ResourceProtocolClient.field_d = DropdownSelectorPainter.loadRgbSpritesByName("ratedgame", (byte) -125, param7, "lobby");
           ChatMessage.field_g = DropdownSelectorPainter.loadRgbSpritesByName("opentome", (byte) -124, param7, "lobby");
-          lm.field_h = DropdownSelectorPainter.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
+          LobbyControlResources.field_h = DropdownSelectorPainter.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = ProxySocketFactory.field_i;
           ResourceRequest.field_u[3] = ek.field_f;
@@ -394,13 +394,13 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           PrintVictoryConditionsConsoleCommand.field_E.horizontalAlignment = 1;
           MatchingTextValidator.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, AiWeightProfile.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, CampaignLookupSupport.field_e, PcmPlayerService.ratingLabel);
-          bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
+          UnitRecordWriter.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           BitCountSupport.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
           BitCountSupport.field_c.addChild(MatchingTextValidator.field_l, 83);
           if (GrowableIntArray.field_c) {
             BitCountSupport.field_c.addChild(SpellCastEvent.field_D, 107);
           }
-          BitCountSupport.field_c.addChild(bu.field_a, 109);
+          BitCountSupport.field_c.addChild(UnitRecordWriter.field_a, 109);
           SocialListPanel.field_Lb = new ClientUiComponent(0L, AccountRegistrationForm.field_M, DeployAction.field_v.toUpperCase());
           AccountRegistrationForm.field_F = new ClientUiComponent(0L, SummonAction.field_y);
           MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
@@ -412,17 +412,17 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           for (var17_int = 0; var17_int < 5; var17_int++) {
             LogoMesh.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
-          if (lm.field_e.length >= 2) {
+          if (LobbyControlResources.field_e.length >= 2) {
             KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, IntroSequence.field_h);
-            array$0 = new IconTextComponent[1 + lm.field_e.length];
+            array$0 = new IconTextComponent[1 + LobbyControlResources.field_e.length];
             LogoMesh.field_k[1] = array$0;
             LogoMesh.field_k[1][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
-            for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              LogoMesh.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+            for (var17_intLifetime1 = 0; LobbyControlResources.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
+              LogoMesh.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(LobbyControlResources.field_e[var17_intLifetime1]));
             }
           }
           KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GameEvent.field_p);
-          LogoMesh.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], QuickChatShortcutSupport.field_b)};
+          LogoMesh.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, LobbyControlResources.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, LobbyControlResources.field_h[1], QuickChatShortcutSupport.field_b)};
           if (BoundedFile.field_h > 1) {
             KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, IconLabelControl.field_Lb, AnimationFrameSet.field_u);
             array$1 = new IconTextComponent[1 + BoundedFile.field_h];
@@ -438,11 +438,11 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             LogoMesh.field_k[var17_intLifetime3 + 4] = array$2;
             LogoMesh.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var18 = 0; var18 < (MusicPatchNode.field_r[var17_intLifetime3] & 255); var18++) {
-              if (jn.field_b == null) {
+              if (GradientSpanBlendSupport.field_b == null) {
                 var19_ref = null;
               } else {
-                if (jn.field_b[var17_intLifetime3] != null) {
-                  var19_ref = jn.field_b[var17_intLifetime3][var18];
+                if (GradientSpanBlendSupport.field_b[var17_intLifetime3] != null) {
+                  var19_ref = GradientSpanBlendSupport.field_b[var17_intLifetime3][var18];
                 } else {
                   var19_ref = null;
                 }
@@ -472,7 +472,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               }
             }
           }
-          lm.field_b = new ClientUiComponent(0L, ConsoleValue.field_a);
+          LobbyControlResources.field_b = new ClientUiComponent(0L, ConsoleValue.field_a);
           FixedSquareRootSupport.field_d = new ClientUiComponent(0L, ConsoleValue.field_a);
           MarkerSliderWidget.field_N = new ClientUiComponent(0L, SoundEffectPreloadSupport.field_e);
           MarkerSliderWidget.field_N.applyStyle(0, PasswordLoginCredentials.field_h);
@@ -489,7 +489,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           MusicPatchUsage.gameOptionsGrid.addChild(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
-              !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
+              !(2 > LobbyControlResources.field_e.length)) && (var18Lifetime2 != 3 ||
               !(BoundedFile.field_h <= 1))) {
               MusicPatchUsage.gameOptionsGrid.addChild(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
               for (var19 = 0; var19 < LogoMesh.field_k[var18Lifetime2].length; var19++) {
@@ -499,7 +499,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               }
             }
           }
-          PasswordLengthSupport.field_c.addChild(lm.field_b, 77);
+          PasswordLengthSupport.field_c.addChild(LobbyControlResources.field_b, 77);
           PasswordLengthSupport.field_c.addChild(FixedSquareRootSupport.field_d, 69);
           PasswordLengthSupport.field_c.addChild(MarkerSliderWidget.field_N, 91);
           MusicTrackSelectionSupport.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());

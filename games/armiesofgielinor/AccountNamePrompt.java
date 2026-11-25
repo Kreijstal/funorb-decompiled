@@ -397,10 +397,10 @@ final class AccountNamePrompt extends ClientUiComponent {
           this.inputComponent.blinkTextSuffix = "|";
           this.nameBuffer = new StringBuilder(12);
           var9_int = this.instructionsComponent.getPreferredWidth(122);
-          this.instructionsComponent.setBounds(jn.field_d, -20500, var9_int, 3, 5);
-          this.inputComponent.setBounds(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
+          this.instructionsComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var9_int, 3, 5);
+          this.inputComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var9_int, 3 + GradientSpanBlendSupport.field_d, 5);
           var10 = var9_int + 5 + 5;
-          var11 = 3 + (2 * jn.field_d + 3);
+          var11 = 3 + (2 * GradientSpanBlendSupport.field_d + 3);
           var12 = ArchiveLoadSequence.a(anchorX, anchorWidth, var10, -1);
           var13 = PasswordLengthSupport.a(var11, 0, anchorY, anchorHeight);
           this.setBounds(var11, -20500, var10, var13, var12);

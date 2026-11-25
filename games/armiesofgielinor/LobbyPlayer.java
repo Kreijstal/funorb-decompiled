@@ -151,7 +151,7 @@ final class LobbyPlayer extends ClientUiComponent {
         }
         try {
           quicksave = new CampaignQuicksave(campaignIndex, missionId, battlefield, damageTaken, unitLossCount > 0 ? true : false);
-          bu.storedQuicksave = quicksave;
+          UnitRecordWriter.storedQuicksave = quicksave;
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 80);
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
           if (obfuscationGuard != -80) {

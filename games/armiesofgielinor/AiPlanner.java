@@ -784,7 +784,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var9 = var9 + this.field_n[var6][var11][tileIndex];
           var10 = var10 + this.field_K[var11][tileIndex];
           if (var11 != 4 ||
-            c.a(unitType, (byte) -69)) {
+            UnitAirAttackSupport.canUnitTypeAttackFlying(unitType, (byte) -69)) {
             var7 = var7 + this.field_n[var6][var11][tileIndex] * (float)DropdownSelectorPainter.matchupDamagePercent[var6][var11] * this.weights[28];
           }
           if (var6 != 4 ||

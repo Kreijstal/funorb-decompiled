@@ -229,7 +229,7 @@ final class TelepopEvent extends GameEvent {
                     if (var38 == 0) {
                       if (0 <= var37 &&
                         TriangleRasterizer.clipWidth > var37) {
-                        jn.a(var29, var21, 0, 33423424, var37 + var36Lifetime2, var38, var25, param0, 0, 0);
+                        GradientSpanBlendSupport.blendHalfGradientSpan(var29, var21, 0, 33423424, var37 + var36Lifetime2, var38, var25, param0, 0, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -239,9 +239,9 @@ final class TelepopEvent extends GameEvent {
                         var38 = TriangleRasterizer.clipWidth - (var37 + 1);
                       }
                       if (var37 >= 0) {
-                        jn.a(var29, var21, var39, 33423424, var36Lifetime2 + var37, var38, var25, param0, var40, var41);
+                        GradientSpanBlendSupport.blendHalfGradientSpan(var29, var21, var39, 33423424, var36Lifetime2 + var37, var38, var25, param0, var40, var41);
                       } else {
-                        jn.a(var29 - var37 * var41, -(var37 * var39) + var21, var39, 33423424, var36Lifetime2, var37 + var38, var25 - var40 * var37, param0, var40, var41);
+                        GradientSpanBlendSupport.blendHalfGradientSpan(var29 - var37 * var41, -(var37 * var39) + var21, var39, 33423424, var36Lifetime2, var37 + var38, var25 - var40 * var37, param0, var40, var41);
                       }
                     }
                   }
@@ -390,14 +390,14 @@ final class TelepopEvent extends GameEvent {
                     var37Lifetime1 = -var36Lifetime1 + (TriangleRasterizer.clipWidth - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    jn.a(var29, var21, var38Lifetime1, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, var39Lifetime1, var40Lifetime1);
+                    GradientSpanBlendSupport.blendHalfGradientSpan(var29, var21, var38Lifetime1, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, var39Lifetime1, var40Lifetime1);
                   } else {
-                    jn.a(-(var36Lifetime1 * var40Lifetime1) + var29, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, 33423424, var35Lifetime1, var36Lifetime1 + var37Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, param0, var39Lifetime1, var40Lifetime1);
+                    GradientSpanBlendSupport.blendHalfGradientSpan(-(var36Lifetime1 * var40Lifetime1) + var29, -(var36Lifetime1 * var38Lifetime1) + var21, var38Lifetime1, 33423424, var35Lifetime1, var36Lifetime1 + var37Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, param0, var39Lifetime1, var40Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < TriangleRasterizer.clipWidth) {
-                    jn.a(var29, var21, 0, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, 0, 0);
+                    GradientSpanBlendSupport.blendHalfGradientSpan(var29, var21, 0, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, 0, 0);
                   }
                 }
               }

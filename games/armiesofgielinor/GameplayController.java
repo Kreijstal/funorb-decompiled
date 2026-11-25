@@ -1569,12 +1569,12 @@ final class GameplayController {
                 ) ? mutationVariant : -1) {
                 case 0:
                   ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - turnDelta;
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - damageDelta;
                   if (var15 == 0) {
                     break;
                   }
                 case 1:
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + turnDelta;
                   ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + damageDelta;
                   if (var15 == 0) {
                     break;
@@ -1585,7 +1585,7 @@ final class GameplayController {
                     break;
                   }
                 case 3:
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - (damageDelta - turnDelta);
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - (damageDelta - turnDelta);
                   if (var15 == 0) {
                     break;
                   }
@@ -2327,7 +2327,7 @@ final class GameplayController {
               stackIn_92_0 = 18;
               return stackIn_92_0;
             }
-            if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -121)) {
+            if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -121)) {
               stackIn_97_0 = 4;
               return stackIn_97_0;
             }
@@ -4145,11 +4145,11 @@ final class GameplayController {
               stackIn_32_0 = 0;
             }
             var2_int = stackIn_32_0;
-            var3 = SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
+            var3 = SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
-            WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
+            WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, UnitRecordWriter.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
               TrianglePulse.field_d.drawScaledAdditive(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
@@ -6167,7 +6167,7 @@ final class GameplayController {
                       decompiledFrameRemainder11 = (var20 != 0);
                     }
                     if (decompiledFrameRemainder11) {
-                      if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -123) &&
+                      if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -123) &&
                         !this.battlefield.field_X &&
                         this.battlefield.currentPlayer == this.controlledPlayerId &&
                         !this.field_bc) {
@@ -6561,7 +6561,7 @@ final class GameplayController {
                         }
                         if (this.selectedUnit.meleeLifeSteal) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, -((3 & var16) * 30) + 487, -((var16 & 3) * 30) + 517, 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
-                            var2 = c.field_f;
+                            var2 = UnitAirAttackSupport.field_f;
                           }
                           var16++;
                         }
@@ -9371,7 +9371,7 @@ final class GameplayController {
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - damageDelta;
                   ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 - turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
@@ -9380,7 +9380,7 @@ final class GameplayController {
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
                   ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + damageDelta;
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
@@ -9391,7 +9391,7 @@ final class GameplayController {
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
-                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - (damageDelta - turnDelta);
+                  AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - (damageDelta - turnDelta);
                   decompiledFrameRemainder4 = (var14 == 0);
                 }
                 if (decompiledFrameRemainder4) {
@@ -9427,25 +9427,25 @@ final class GameplayController {
                 }
               case 1:
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
+                AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
               case 2:
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + 1;
+                AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + 1;
                 ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 3:
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.pointerPressX;
+                AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + BattleTutorial.pointerPressX;
                 ValidationStatusIcon.campaignPacketWord0 = ValidationStatusIcon.campaignPacketWord0 + BattleTutorial.pointerPressX;
                 if (var14 == 0) {
                   return;
                 }
               case 4:
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
+                AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 + ScreenWipeTransition.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
@@ -9462,7 +9462,7 @@ final class GameplayController {
                   return;
                 }
               case 7:
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 - ScreenWipeTransition.campaignPacketWord2;
+                AccountFlowUpdateSupport.campaignPacketWord1 = AccountFlowUpdateSupport.campaignPacketWord1 - ScreenWipeTransition.campaignPacketWord2;
                 BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 - 1;
                 if (var14 == 0) {
                   return;
@@ -12192,7 +12192,7 @@ final class GameplayController {
           this.field_E = stackIn_4_1;
           ProxySocketFactory.field_j = null;
           this.encodedTurnCheckpoint = 996394;
-          ii.campaignPacketWord1 = 4452;
+          AccountFlowUpdateSupport.campaignPacketWord1 = 4452;
           ValidationStatusIcon.campaignPacketWord0 = 2297;
           ScreenWipeTransition.campaignPacketWord2 = 72584621;
           BirthDateChatEnableForm.campaignPacketWord3 = 224;

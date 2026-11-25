@@ -351,15 +351,15 @@ final class PasswordValidator extends TextFieldValidator {
               param3 += 30;
               var12 = null;
               if (MouseWheelSource.field_f[AccountRegistrationForm.field_X][var9_int] <= UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param7 ^ -40)) {
-                if (ve.field_a[AccountRegistrationForm.field_X][var9_int] < 0) {
+                if (SentenceCaseSupport.field_a[AccountRegistrationForm.field_X][var9_int] < 0) {
                   var12 = "Unavailable to lowly players";
                 } else {
-                  if ((ve.field_a[AccountRegistrationForm.field_X][var9_int] & 504) != 504) {
+                  if ((SentenceCaseSupport.field_a[AccountRegistrationForm.field_X][var9_int] & 504) != 504) {
                     var13Lifetime1 = 0;
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (16 > var18) {
-                      if (0 != (1 << var18 & ve.field_a[AccountRegistrationForm.field_X][var9_int])) {
+                      if (0 != (1 << var18 & SentenceCaseSupport.field_a[AccountRegistrationForm.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
                           var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), FixedSquareRootSupport.field_a[var18]});

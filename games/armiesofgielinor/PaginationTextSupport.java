@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qk {
+final class PaginationTextSupport {
     static String field_f;
     static ResourceArchive field_e;
     static int field_a;
@@ -9,7 +9,7 @@ final class qk {
     static String field_b;
     static int field_c;
 
-    final static String a(int param0, int param1, int param2) {
+    final static String formatPageLabel(int param0, int param1, int param2) {
         if (param1 == -2823) {
           return 1 + param2 + ArrayWidgetContainer.field_I + param0;
         }

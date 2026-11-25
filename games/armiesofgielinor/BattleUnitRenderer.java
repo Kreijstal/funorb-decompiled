@@ -252,7 +252,7 @@ final class BattleUnitRenderer {
             MusicCrossfadeStream.field_z = param4;
             ChannelBaseVolumeConsoleCommand.field_L = SocketFactory.nameCheckPending;
             RadialSummonMenu.field_e = param0;
-            qk.field_b = param2;
+            PaginationTextSupport.field_b = param2;
           } else {
             var9.showUnavailable((byte) -119);
           }

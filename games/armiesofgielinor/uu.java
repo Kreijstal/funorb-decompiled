@@ -77,8 +77,8 @@ final class uu {
           if (ToggleWidget.currentRoom != null) {
             boolean decompiledFrameRemainder1 = true;
             SocialListPanel.field_Lb.inputEnabled = true;
-            lm.field_b.height = 0;
-            var22 = lm.field_b;
+            LobbyControlResources.field_b.height = 0;
+            var22 = LobbyControlResources.field_b;
             var26 = var22;
             var26.width = 0;
             FixedSquareRootSupport.field_d.height = 0;
@@ -98,19 +98,19 @@ final class uu {
             if (decompiledFrameRemainder1) {
               AccountRegistrationForm.field_F.text = DualNodeHashTable.field_f.toUpperCase();
               var9 = (2 + PasswordLengthSupport.field_c.width) / 2;
-              lm.field_b.setBounds(40, -20500, var9 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
+              LobbyControlResources.field_b.setBounds(40, -20500, var9 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
               if (ToggleWidget.currentRoom.playerCapacity > ToggleWidget.currentRoom.playerCount) {
-                lm.field_b.text = TickCounter.field_d.toUpperCase();
-                lm.field_b.inputEnabled = true;
+                LobbyControlResources.field_b.text = TickCounter.field_d.toUpperCase();
+                LobbyControlResources.field_b.inputEnabled = true;
                 if (var19 != 0) {
-                  lm.field_b.text = TelefragEvent.field_y.toUpperCase();
-                  lm.field_b.inputEnabled = false;
+                  LobbyControlResources.field_b.text = TelefragEvent.field_y.toUpperCase();
+                  LobbyControlResources.field_b.inputEnabled = false;
                 }
               } else {
-                lm.field_b.text = TelefragEvent.field_y.toUpperCase();
-                lm.field_b.inputEnabled = false;
+                LobbyControlResources.field_b.text = TelefragEvent.field_y.toUpperCase();
+                LobbyControlResources.field_b.inputEnabled = false;
               }
-              lm.field_b.skinSprites = ConsoleValue.field_a.skinSprites;
+              LobbyControlResources.field_b.skinSprites = ConsoleValue.field_a.skinSprites;
               if (0 < AnimationPlayer.pendingJoinRequestCount) {
                 boolean decompiledSharedTail0 = (1 != AnimationPlayer.pendingJoinRequestCount);
                 if (!decompiledSharedTail0) {
@@ -122,9 +122,9 @@ final class uu {
                 }
                 if (0 == (16 & KeyboardInputListener.field_b) &&
                   !ChannelGainProfile.field_f) {
-                  lm.field_b.skinSprites = ConsoleValue.field_a.matchedButtonSkinSprites;
+                  LobbyControlResources.field_b.skinSprites = ConsoleValue.field_a.matchedButtonSkinSprites;
                 }
-                lm.field_b.text = lm.field_b.text + "<br>" + var10_ref_String;
+                LobbyControlResources.field_b.text = LobbyControlResources.field_b.text + "<br>" + var10_ref_String;
               }
               FixedSquareRootSupport.field_d.setBounds(40, -20500, -var9 + PasswordLengthSupport.field_c.width, PasswordLengthSupport.field_c.height - 40, var9);
               FixedSquareRootSupport.field_d.text = ArchiveProvider.field_b.toUpperCase();
@@ -284,7 +284,7 @@ final class uu {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = bu.field_a.content.children;
+                var17 = UnitRecordWriter.field_a.content.children;
                 var18_ref = (LobbyPlayer) (var17.first((byte) 110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -436,7 +436,7 @@ final class uu {
             if (SocialListPanel.field_Lb.pressedButton != 0) {
               PointerInputHandler.writeRoomAdmissionCancellation(69, ToggleWidget.currentRoom.getRoomId((byte) -68), param2);
             }
-            if (lm.field_b.pressedButton != 0) {
+            if (LobbyControlResources.field_b.pressedButton != 0) {
               ChannelGainProfile.field_f = true;
             }
             if (0 != FixedSquareRootSupport.field_d.pressedButton) {

@@ -14,7 +14,7 @@ final class CampaignRewardPreview {
 
     final static void a(int param0, Unit param1, PacketBuffer param2) {
         try {
-          bu.a(0, param1, 2, param2);
+          UnitRecordWriter.writeUnitRecord(0, param1, 2, param2);
           if (param0 != 29712) {
             field_f = (long[]) null;
           }

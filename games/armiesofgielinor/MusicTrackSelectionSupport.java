@@ -23,16 +23,16 @@ final class MusicTrackSelectionSupport {
         try {
           CombatEvent.field_L[0] = CampaignMenuButton.connectionRandom.nextInt();
           CombatEvent.field_L[1] = CampaignMenuButton.connectionRandom.nextInt();
-          vd.field_b.position = 0;
+          AccountRsaBufferSupport.field_b.position = 0;
           CombatEvent.field_L[3] = (int)TextLineLayout.field_h;
           CombatEvent.field_L[2] = (int)(TextLineLayout.field_h >> 32);
-          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[0]);
-          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
-          vd.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
-          vd.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
-          PaletteRegionMap.a(vd.field_b, (byte) -84);
-          vd.field_b.writeShort(true, param4);
-          param2.writeCredentials(vd.field_b, -11436);
+          AccountRsaBufferSupport.field_b.writeInt((byte) -69, CombatEvent.field_L[0]);
+          AccountRsaBufferSupport.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
+          AccountRsaBufferSupport.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
+          AccountRsaBufferSupport.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
+          PaletteRegionMap.a(AccountRsaBufferSupport.field_b, (byte) -84);
+          AccountRsaBufferSupport.field_b.writeShort(true, param4);
+          param2.writeCredentials(AccountRsaBufferSupport.field_b, -11436);
           EmailValidator.outgoingPacket.position = 0;
           if (!param1) {
             EmailValidator.outgoingPacket.writeByte(1, 16);
@@ -67,7 +67,7 @@ final class MusicTrackSelectionSupport {
           if (DropdownSelector.field_P != null) {
             EmailValidator.outgoingPacket.writeNullCircumfixedString(DropdownSelector.field_P, 413740432);
           }
-          IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+          IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
           EmailValidator.outgoingPacket.writeShortLengthPrefix(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
