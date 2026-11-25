@@ -34,7 +34,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
         return false;
     }
 
-    int getPassCount(int param0) {
+    int getColourPrecision(int param0) {
         if (param0 != 13727) {
           this.initialize((byte) 63);
           return 0;

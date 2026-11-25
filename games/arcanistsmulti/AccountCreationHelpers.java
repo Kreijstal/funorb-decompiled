@@ -196,7 +196,7 @@ final class AccountCreationHelpers {
               var39 = -989921025 & var35 * var30 >>> 8 | (var36 * var30 & 16711858) >>> 8;
               var37 = var37 + 65793 * var31;
               var39 = var39 + var33 * 65793;
-              SceneTabStrip.drawMeshQuad(255 & var37 >> 8, var24, 255 & var38 >> 8, var23, -109, var37 >> 16, var27, var38 >> 16, 255 & var37, var22, var39 >> 16, var25, var26, (var39 & 65321) >> 8, 255 & var39, 255 & var38);
+              SceneTabStrip.drawInterpolatedColourTriangle(255 & var37 >> 8, var24, 255 & var38 >> 8, var23, -109, var37 >> 16, var27, var38 >> 16, 255 & var37, var22, var39 >> 16, var25, var26, (var39 & 65321) >> 8, 255 & var39, 255 & var38);
             }
             var44++;
           }

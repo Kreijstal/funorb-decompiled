@@ -24310,10 +24310,10 @@
     {
       "symbol": "M:tn.a(IIIIIIIIIIIIIIII)V",
       "originalName": "a",
-      "to": "drawMeshQuad",
-      "evidence": "Splits a quad into two triangles for the mesh triangle rasterizer.",
+      "to": "drawInterpolatedColourTriangle",
+      "evidence": "Correct the earlier quad interpretation to a single interpolated-colour triangle. Six mutually exclusive branches sort three vertex Y coordinates param3/6/11and permute corresponding X/colour components into exactly one drawMeshTriangle call. Preserve every argument permutation,guard byte constants109/127/97/89/95,software pixel-array binding and full signed int domains. Late intparam4>=-104recursive self-call occurs after rasterization and retains its arguments/stack-overflow/partial-pixel behavior. Do not move the guard,split into two triangles or infer equivalence to another game. Complete original-body SHA256 98584da0b15ddb3c53ee7b5fe444959c7a918772ba110c0ca3272efdd625378d. Previous reviewed name drawMeshQuad. Reviewed semantic name correction only,zero new naming gain. Complete original bodies and compiler-bound callers reviewed;retain all descriptors,modifiers,integer/Boolean domains,guards,literals,aliases,allocation/call/exception order and partial state. No native or class-name-literal edits;no runtime/pixel equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V"
+      "renamedSymbol": "M:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V"
     },
     {
       "symbol": "M:tn.f(B)V",
@@ -267862,7 +267862,7 @@
     },
     {
       "symbol": "L:tn.a(IIIIIIIIIIIIIIII)V#0",
-      "renamedSymbol": "L:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#0",
+      "renamedSymbol": "L:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#0",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -318000,9 +318000,9 @@
     },
     {
       "symbol": "M:tn.a(IIIIIIIIIIIIIIII)V",
-      "renamedSymbol": "M:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V",
+      "renamedSymbol": "M:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "drawMeshQuad",
+      "renamedName": "drawInterpolatedColourTriangle",
       "declaration": {
         "file": "tn.java",
         "start": 6306,
@@ -397629,7 +397629,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#0",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#0",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397640,7 +397640,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#1",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#1",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397651,7 +397651,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#10",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#10",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -397662,7 +397662,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#11",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#11",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -397673,7 +397673,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#12",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#12",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -397684,7 +397684,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#13",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#13",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -397695,7 +397695,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#14",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#14",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -397706,7 +397706,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#15",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#15",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -397717,7 +397717,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#2",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#2",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397728,7 +397728,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#3",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#3",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -397739,7 +397739,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#4",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#4",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -397750,7 +397750,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#5",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#5",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -397761,7 +397761,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#6",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#6",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -397772,7 +397772,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#7",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#7",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -397783,7 +397783,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#8",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#8",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -397794,7 +397794,7 @@
     },
     {
       "symbol": "P:tn.a(IIIIIIIIIIIIIIII)V#9",
-      "renamedSymbol": "P:SceneTabStrip.drawMeshQuad(IIIIIIIIIIIIIIII)V#9",
+      "renamedSymbol": "P:SceneTabStrip.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -464144,7 +464144,7 @@
       "original": "cj.java",
       "renamed": "AccountCreationHelpers.java",
       "inputSha256": "b35137cb88221e25cd14b0c002ec990830c114346ef5d23429f93dc6531fbd1e",
-      "outputSha256": "b3f304eceba9225d737d8341e1ddce501347235ef89dd0943dbe0da6a95c072b",
+      "outputSha256": "f020607a6a4fc8484271b2dceb892fa9553192ca3f691eb4cf1a898a452b3b00",
       "edits": [
         {
           "start": 50,
@@ -464438,7 +464438,7 @@
           "end": 7041,
           "symbol": "M:tn.a(IIIIIIIIIIIIIIII)V",
           "original": "a",
-          "renamed": "drawMeshQuad"
+          "renamed": "drawInterpolatedColourTriangle"
         },
         {
           "start": 7907,
@@ -894446,7 +894446,7 @@
       "original": "tn.java",
       "renamed": "SceneTabStrip.java",
       "inputSha256": "45c22fed593c9423f78fd5d76947601000ca9f90acfe2db6a2180232dfdb5160",
-      "outputSha256": "4d039d50bfda3c4a1efff0a89c63be5c32029e8a6a673c9236b63c31f248eec4",
+      "outputSha256": "5bc79894b97178389c2efe6874f5dc38053ffe210b5579964dcd365426b16415",
       "edits": [
         {
           "start": 50,
@@ -894719,7 +894719,7 @@
           "end": 6307,
           "symbol": "M:tn.a(IIIIIIIIIIIIIIII)V",
           "original": "a",
-          "renamed": "drawMeshQuad"
+          "renamed": "drawInterpolatedColourTriangle"
         },
         {
           "start": 6653,
@@ -894859,7 +894859,7 @@
           "end": 7923,
           "symbol": "M:tn.a(IIIIIIIIIIIIIIII)V",
           "original": "a",
-          "renamed": "drawMeshQuad"
+          "renamed": "drawInterpolatedColourTriangle"
         }
       ]
     },
@@ -929412,10 +929412,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/arcanistsmulti"
     },
-    "rulesSha256": "a811527f51cee5329bc640a8b50550d1ac7508b2023921bd0bc718d7d95da9dd",
+    "rulesSha256": "de72f900c9df6b508279dbbb3a047fd6f2a07d903c0873a740d561f85252221f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
-    "outputTreeSha256": "613c20fbc6eafa43c3329eafed027fb2176be4c820d6603b273a6b3034032500",
+    "outputTreeSha256": "bfdc588d6cc33f375e9730c16195729d341eeb356566ef8dca1480ef78af6474",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -189,7 +189,7 @@ final class DisplayModeInfo {
               var38 = var38 + 65793 * var32;
               var39 = var30 * var35 >>> 8 & 1140785407 | (16711738 & var36 * var30) >>> 8;
               var39 = var39 + var33 * 65793;
-              CourseStartPacket.drawMeshQuad(var25, (65365 & var39) >> 8, var37 >> 16, var38 >> 16, var24, var38 >> 8 & 255, var26, 117, var22, var39 & 255, var39 >> 16, var37 >> 8 & 255, var23, 255 & var38, var27, 255 & var37);
+              CourseStartPacket.drawInterpolatedColourTriangle(var25, (65365 & var39) >> 8, var37 >> 16, var38 >> 16, var24, var38 >> 8 & 255, var26, 117, var22, var39 & 255, var39 >> 16, var37 >> 8 & 255, var23, 255 & var38, var27, 255 & var37);
             }
           }
           return;

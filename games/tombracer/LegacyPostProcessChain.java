@@ -338,7 +338,7 @@ final class LegacyPostProcessChain {
           this.field_f = false;
         }
         while (var9 != null) {
-          var6 = var9.getPassCount(13727);
+          var6 = var9.getColourPrecision(13727);
           if (var6 > var3) {
             var3 = var6;
           }

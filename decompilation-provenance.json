@@ -10545,17 +10545,17 @@
       "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
       "sources": {
         "files": 363,
-        "sha256": "613c20fbc6eafa43c3329eafed027fb2176be4c820d6603b273a6b3034032500"
+        "sha256": "bfdc588d6cc33f375e9730c16195729d341eeb356566ef8dca1480ef78af6474"
       },
       "dictionary": {
         "path": "decompilation/arcanistsmulti-naming.json",
-        "sha256": "e11b513a22505aa816f0656a3f4862cd103215220d50f7a8a425e1e53ff56a60"
+        "sha256": "e4d4d47ab3d0826319672c188879ef5ab770627c46b9ce8085a6437e13f6cdb9"
       },
       "readingGuide": {
         "path": "games/arcanistsmulti/README.md",
         "sha256": "293484fc1b24af272332d96260c0ee21411f04932e986034bab071b6d2c39335"
       },
-      "rulesSha256": "a811527f51cee5329bc640a8b50550d1ac7508b2023921bd0bc718d7d95da9dd",
+      "rulesSha256": "de72f900c9df6b508279dbbb3a047fd6f2a07d903c0873a740d561f85252221f",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
@@ -11092,17 +11092,17 @@
       "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
       "sources": {
         "files": 1090,
-        "sha256": "1cadac5c82e47513eb30d038b5a1f561fda0bf0ddcf881984cc16296fef7a2e8"
+        "sha256": "3459e27a10dd72d96fd3ff44b44f8dabe358f7adb0d6d2f2589e823879d303f5"
       },
       "dictionary": {
         "path": "decompilation/tombracer-naming.json",
-        "sha256": "8e038175c65c9089036d26a8eb39a5bf30008bf909b1d6dfbdaba2edac6b285b"
+        "sha256": "1de88cc519fb92065483a03158ad963cad76a0db2e9d3842618e6e3ba63c8c10"
       },
       "readingGuide": {
         "path": "games/tombracer/README.md",
         "sha256": "1f081c753c00f6268ac4449abd8003bca3cd1f6e2c0e1d8e4e904c8288f520e9"
       },
-      "rulesSha256": "55260ad6f99da8160b52ef6721fcb7f4bc40ef672f397f8c0a435ef19b493a46",
+      "rulesSha256": "6cc1ea326bb815bf00ec130c70a21db3c4114baeab4a120ec65b30ac711797b5",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11643,7 +11643,7 @@
         },
         "publishedSources": {
           "files": 363,
-          "sha256": "613c20fbc6eafa43c3329eafed027fb2176be4c820d6603b273a6b3034032500"
+          "sha256": "bfdc588d6cc33f375e9730c16195729d341eeb356566ef8dca1480ef78af6474"
         }
       },
       "armiesofgielinor": {
@@ -13347,7 +13347,7 @@
         },
         "publishedSources": {
           "files": 1090,
-          "sha256": "1cadac5c82e47513eb30d038b5a1f561fda0bf0ddcf881984cc16296fef7a2e8"
+          "sha256": "3459e27a10dd72d96fd3ff44b44f8dabe358f7adb0d6d2f2589e823879d303f5"
         }
       },
       "torchallenge": {

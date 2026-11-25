@@ -259,7 +259,7 @@ final class ComponentTargetList {
             }
             return var9.reverse().toString();
           }
-          ComponentTargetList.getTopDialogId(true);
+          ComponentTargetList.getTopDialogX(true);
           var10 = 0;
           scanLoop2: while (true) {
             var11 = (int)param3;
@@ -319,7 +319,7 @@ final class ComponentTargetList {
               }
               return var9.reverse().toString();
             }
-            ComponentTargetList.getTopDialogId(true);
+            ComponentTargetList.getTopDialogX(true);
             var10 = 0;
             scanLoop4: while (true) {
               var11 = (int)param3;
@@ -371,7 +371,7 @@ final class ComponentTargetList {
             return var9.reverse().toString();
           }
         }
-        ComponentTargetList.getTopDialogId(true);
+        ComponentTargetList.getTopDialogX(true);
         var10 = 0;
         while (true) {
           var11 = (int)param3;
@@ -536,7 +536,7 @@ final class ComponentTargetList {
         }
     }
 
-    final static int getTopDialogId(boolean param0) {
+    final static int getTopDialogX(boolean param0) {
         if (param0) {
           ComponentTargetList.ensureRandomizedHsvPalette((byte) -68);
           if (!SnakePitTile.hasVisibleDialog(param0)) {

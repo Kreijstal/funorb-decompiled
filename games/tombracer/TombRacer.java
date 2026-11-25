@@ -188,7 +188,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
               CurrentGraphicsToolkit.toolkit.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
               CurrentGraphicsToolkit.toolkit.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
-              var5 = ComponentTargetList.getTopDialogId(false);
+              var5 = ComponentTargetList.getTopDialogX(false);
               var6 = PlantComponent.getTopDialogY(-1);
               var7 = PillarComponent.getTopDialogWidth(param2 - 7128);
               var8 = ConsoleCloseParenthesisKind.getTopDialogHeight((byte) 124);

@@ -183,7 +183,7 @@ final class SceneTabStrip extends SceneWidget {
         return !AlternateUsernameCredentials.field_p ? true : false;
     }
 
-    final static void drawMeshQuad(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawInterpolatedColourTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         if (param3 >= param11) {
@@ -208,7 +208,7 @@ final class SceneTabStrip extends SceneWidget {
           }
         }
         if (param4 >= -104) {
-          SceneTabStrip.drawMeshQuad(78, 61, 0, 49, 79, 33, -47, -19, -85, 33, 87, 86, -90, -40, 8, -120);
+          SceneTabStrip.drawInterpolatedColourTriangle(78, 61, 0, 49, 79, 33, -47, -19, -85, 33, 87, 86, -90, -40, 8, -120);
         }
     }
 

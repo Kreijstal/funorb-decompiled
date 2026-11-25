@@ -23694,10 +23694,10 @@
     {
       "symbol": "M:cm.a(IIIIIIIIIIIIIIII)V",
       "originalName": "a",
-      "to": "drawMeshQuad",
-      "evidence": "Static sixteen-coordinate quad draw; body matches arcanistsmulti drawMeshQuad.",
+      "to": "drawInterpolatedColourTriangle",
+      "evidence": "Correct the earlier quad interpretation to a single interpolated-colour triangle. Six mutually exclusive branches sort three vertex Y coordinates param0/12/14and permute their X/colour components into one rasterizer call. Preserve full signed domains,all comparisons/permutations,software pixel-array binding,intparam7<=49 static CourseDefinition-array nulling before sorting and all call/exception order. No triangle math or raster behavior changes. Complete original-body SHA256 6b1b6691b56041fc869f340aa122522bab0c949259f4344c4a933ee83720edb7. Previous reviewed name drawMeshQuad. Reviewed semantic name correction only,zero new naming gain. Complete original bodies and compiler-bound callers reviewed;retain all descriptors,modifiers,integer/Boolean domains,guards,literals,aliases,allocation/call/exception order and partial state. No native or class-name-literal edits;no runtime/pixel equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V"
+      "renamedSymbol": "M:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V"
     },
     {
       "symbol": "M:cm.a(ILht;IZ)V",
@@ -32470,10 +32470,10 @@
     {
       "symbol": "M:f.a(Z)I",
       "originalName": "a",
-      "to": "getTopDialogId",
-      "evidence": "Returns the id of the top visible dialog or -1.",
+      "to": "getTopDialogX",
+      "evidence": "Correct the earlier dialog-ID interpretation to X coordinate. The returned UiWidget.field_i feeds the left/right clip coordinates alongside independent Y,width,height getters. Widget construction/setBounds and the Y getter confirm coordinate roles. Preserve Boolean true HSV-palette call before visibility check,repeated top-dialog queries,all -1sentinels and original null/guard behavior. Complete original-body SHA256 09eb9efb261c89ed2ae0dfb2aa148fba34fdd2714385283197c3fca872238104. Previous reviewed name getTopDialogId. Reviewed semantic name correction only,zero new naming gain. Complete original bodies and compiler-bound callers reviewed;retain all descriptors,modifiers,integer/Boolean domains,guards,literals,aliases,allocation/call/exception order and partial state. No native or class-name-literal edits;no runtime/pixel equivalence claim.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ComponentTargetList.getTopDialogId(Z)I"
+      "renamedSymbol": "M:ComponentTargetList.getTopDialogX(Z)I"
     },
     {
       "symbol": "M:f.b(B)V",
@@ -59518,10 +59518,10 @@
     {
       "symbol": "M:oga.b(I)I",
       "originalName": "b",
-      "to": "getPassCount",
-      "evidence": "Number of passes; the base returns 0 and bloom returns 1.",
+      "to": "getColourPrecision",
+      "evidence": "Correct the earlier render-pass interpretation to colour-buffer precision. LegacyPostProcessChain takes the maximum of this result to choose internal colour texture format6408/34842/34836,and separately sums getRenderPassCount. Base nominal result0and wrong-int!=13727 initialize(byte63) before returning0remain unchanged. Rename the complete override family together;do not change visibility or descriptor. Complete original-body SHA256 448e103cdf44332dbeedf2cd05a53873a44211c60ca4c3639ccf8bc6d647eac4. Previous reviewed name getPassCount. Reviewed semantic name correction only,zero new naming gain. Complete original bodies and compiler-bound callers reviewed;retain all descriptors,modifiers,integer/Boolean domains,guards,literals,aliases,allocation/call/exception order and partial state. No native or class-name-literal edits;no runtime/pixel equivalence claim. Complete bloom override body SHA256 4c23d442e317b744058ccdc6055182e65c993e22956af1017be7f78016f09fb1. Same colour-precision override family. Bloom returns1for int13727and-92for every other int. Preserve full signed guard domain and final modifier;do not replace its wrong-guard result with the base default or confuse this with actual render-pass count.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getPassCount(I)I"
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getColourPrecision(I)I"
     },
     {
       "symbol": "M:oga.c(B)Z",
@@ -77014,10 +77014,10 @@
     {
       "symbol": "M:uv.b(I)I",
       "originalName": "b",
-      "to": "getPassCount",
-      "evidence": "Number of passes; the base returns 0 and bloom returns 1. Resolved override family.",
+      "to": "getColourPrecision",
+      "evidence": "Correct the earlier render-pass interpretation to colour-buffer precision. LegacyPostProcessChain takes the maximum of this result to choose internal colour texture format6408/34842/34836,and separately sums getRenderPassCount. Base nominal result0and wrong-int!=13727 initialize(byte63) before returning0remain unchanged. Rename the complete override family together;do not change visibility or descriptor. Complete original-body SHA256 448e103cdf44332dbeedf2cd05a53873a44211c60ca4c3639ccf8bc6d647eac4. Previous reviewed name getPassCount. Reviewed semantic name correction only,zero new naming gain. Complete original bodies and compiler-bound callers reviewed;retain all descriptors,modifiers,integer/Boolean domains,guards,literals,aliases,allocation/call/exception order and partial state. No native or class-name-literal edits;no runtime/pixel equivalence claim. Complete bloom override body SHA256 4c23d442e317b744058ccdc6055182e65c993e22956af1017be7f78016f09fb1. Same colour-precision override family. Bloom returns1for int13727and-92for every other int. Preserve full signed guard domain and final modifier;do not replace its wrong-guard result with the base default or confuse this with actual render-pass count. Resolved override family.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:LegacyOpenGlBloomEffect.getPassCount(I)I"
+      "renamedSymbol": "M:LegacyOpenGlBloomEffect.getColourPrecision(I)I"
     },
     {
       "symbol": "M:uv.b(Z)Llqa;",
@@ -217849,7 +217849,7 @@
     },
     {
       "symbol": "L:cm.a(IIIIIIIIIIIIIIII)V#0",
-      "renamedSymbol": "L:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#0",
+      "renamedSymbol": "L:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#0",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -602728,9 +602728,9 @@
     },
     {
       "symbol": "M:cm.a(IIIIIIIIIIIIIIII)V",
-      "renamedSymbol": "M:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V",
+      "renamedSymbol": "M:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "drawMeshQuad",
+      "renamedName": "drawInterpolatedColourTriangle",
       "declaration": {
         "file": "cm.java",
         "start": 1035,
@@ -615928,9 +615928,9 @@
     },
     {
       "symbol": "M:f.a(Z)I",
-      "renamedSymbol": "M:ComponentTargetList.getTopDialogId(Z)I",
+      "renamedSymbol": "M:ComponentTargetList.getTopDialogX(Z)I",
       "originalName": "a",
-      "renamedName": "getTopDialogId",
+      "renamedName": "getTopDialogX",
       "declaration": {
         "file": "f.java",
         "start": 16907,
@@ -662579,9 +662579,9 @@
     },
     {
       "symbol": "M:oga.b(I)I",
-      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getPassCount(I)I",
+      "renamedSymbol": "M:LegacyOpenGlPostProcessEffect.getColourPrecision(I)I",
       "originalName": "b",
-      "renamedName": "getPassCount",
+      "renamedName": "getColourPrecision",
       "declaration": {
         "file": "oga.java",
         "start": 795,
@@ -690398,9 +690398,9 @@
     },
     {
       "symbol": "M:uv.b(I)I",
-      "renamedSymbol": "M:LegacyOpenGlBloomEffect.getPassCount(I)I",
+      "renamedSymbol": "M:LegacyOpenGlBloomEffect.getColourPrecision(I)I",
       "originalName": "b",
-      "renamedName": "getPassCount",
+      "renamedName": "getColourPrecision",
       "declaration": {
         "file": "uv.java",
         "start": 11719,
@@ -725312,7 +725312,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#0",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#0",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -725323,7 +725323,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#1",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#1",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -725334,7 +725334,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#10",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#10",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -725345,7 +725345,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#11",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#11",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -725356,7 +725356,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#12",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#12",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -725367,7 +725367,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#13",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#13",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -725378,7 +725378,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#14",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#14",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -725389,7 +725389,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#15",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#15",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -725400,7 +725400,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#2",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#2",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -725411,7 +725411,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#3",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#3",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -725422,7 +725422,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#4",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#4",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -725433,7 +725433,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#5",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#5",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -725444,7 +725444,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#6",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#6",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -725455,7 +725455,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#7",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#7",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -725466,7 +725466,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#8",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#8",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -725477,7 +725477,7 @@
     },
     {
       "symbol": "P:cm.a(IIIIIIIIIIIIIIII)V#9",
-      "renamedSymbol": "P:CourseStartPacket.drawMeshQuad(IIIIIIIIIIIIIIII)V#9",
+      "renamedSymbol": "P:CourseStartPacket.drawInterpolatedColourTriangle(IIIIIIIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -753065,7 +753065,7 @@
     },
     {
       "symbol": "P:f.a(Z)I#0",
-      "renamedSymbol": "P:ComponentTargetList.getTopDialogId(Z)I#0",
+      "renamedSymbol": "P:ComponentTargetList.getTopDialogX(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -863076,7 +863076,7 @@
     },
     {
       "symbol": "P:oga.b(I)I#0",
-      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.getPassCount(I)I#0",
+      "renamedSymbol": "P:LegacyOpenGlPostProcessEffect.getColourPrecision(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -925886,7 +925886,7 @@
     },
     {
       "symbol": "P:uv.b(I)I#0",
-      "renamedSymbol": "P:LegacyOpenGlBloomEffect.getPassCount(I)I#0",
+      "renamedSymbol": "P:LegacyOpenGlBloomEffect.getColourPrecision(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -944403,7 +944403,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "a0bfae0f1bb7e1bb988daca2b500f0d2053488de8c36c2b8fac977cc23f6e60d",
+      "outputSha256": "103b96443a8a83ccf0c6e3a0c436e7da7f052a709525920e17ea04f0e0819549",
       "edits": [
         {
           "start": 96,
@@ -945628,7 +945628,7 @@
           "end": 6180,
           "symbol": "M:f.a(Z)I",
           "original": "a",
-          "renamed": "getTopDialogId"
+          "renamed": "getTopDialogX"
         },
         {
           "start": 6210,
@@ -1035245,7 +1035245,7 @@
       "original": "cm.java",
       "renamed": "CourseStartPacket.java",
       "inputSha256": "d5612b385f76a29639a022f24130241c8fba948495a68272467ae689b1a8f263",
-      "outputSha256": "35def611f3bd3c0a436b44a67459f3ff86820dba7951374c6a8c63e5ad36953a",
+      "outputSha256": "52d0fa2cb087b4ff54e40c9ca3715de90b497eb334b68580cfe2c273f66cbf17",
       "edits": [
         {
           "start": 50,
@@ -1035357,7 +1035357,7 @@
           "end": 1036,
           "symbol": "M:cm.a(IIIIIIIIIIIIIIII)V",
           "original": "a",
-          "renamed": "drawMeshQuad"
+          "renamed": "drawInterpolatedColourTriangle"
         },
         {
           "start": 1348,
@@ -1053873,7 +1053873,7 @@
       "original": "cw.java",
       "renamed": "LegacyPostProcessChain.java",
       "inputSha256": "d11dfd12e224a76be8f4d63fa0973eef1bc4b4fd659a81f842b64a3d6f3a7f87",
-      "outputSha256": "ea75f1cae7a85f3107fcea76a9b27bbadadfa075c3f36a1a5497177bfd54f3b4",
+      "outputSha256": "d4506de6cc72339e5b395014b6418a2aae2e4c1c98c9c98c209da21661056331",
       "edits": [
         {
           "start": 50,
@@ -1054727,7 +1054727,7 @@
           "end": 12001,
           "symbol": "M:oga.b(I)I",
           "original": "b",
-          "renamed": "getPassCount"
+          "renamed": "getColourPrecision"
         },
         {
           "start": 12105,
@@ -1070732,7 +1070732,7 @@
       "original": "dh.java",
       "renamed": "DisplayModeInfo.java",
       "inputSha256": "439eeece976f1f906aa5b36c63863c6a683f17b90330e68db5ab5ee30c1d56ae",
-      "outputSha256": "525bb8508e59c2538f0035025921a866eee27659bc3b73c0e5fc08229e5154a7",
+      "outputSha256": "a8891f62ac66967b235f26779979c88698eabae38b487d5910fb4ded08670025",
       "edits": [
         {
           "start": 50,
@@ -1070970,7 +1070970,7 @@
           "end": 6759,
           "symbol": "M:cm.a(IIIIIIIIIIIIIIII)V",
           "original": "a",
-          "renamed": "drawMeshQuad"
+          "renamed": "drawInterpolatedColourTriangle"
         },
         {
           "start": 7504,
@@ -1117454,7 +1117454,7 @@
       "original": "f.java",
       "renamed": "ComponentTargetList.java",
       "inputSha256": "4ab0ac011e015e8932ebb10f4f2bb6c1592be49b9cc06cb1b799f60b158f1ea3",
-      "outputSha256": "95410e36f630ad37a62394d037b244a57fba4a9dc82fc5e5c6fed1721a561ae6",
+      "outputSha256": "d991e6bbbb79529313bf428182af40aaec613994f5fb4c2820c32654c233bd3a",
       "edits": [
         {
           "start": 71,
@@ -1117911,7 +1117911,7 @@
           "end": 7887,
           "symbol": "M:f.a(Z)I",
           "original": "a",
-          "renamed": "getTopDialogId"
+          "renamed": "getTopDialogX"
         },
         {
           "start": 7926,
@@ -1117957,7 +1117957,7 @@
           "end": 9703,
           "symbol": "M:f.a(Z)I",
           "original": "a",
-          "renamed": "getTopDialogId"
+          "renamed": "getTopDialogX"
         },
         {
           "start": 9746,
@@ -1117987,7 +1117987,7 @@
           "end": 11323,
           "symbol": "M:f.a(Z)I",
           "original": "a",
-          "renamed": "getTopDialogId"
+          "renamed": "getTopDialogX"
         },
         {
           "start": 11874,
@@ -1118136,7 +1118136,7 @@
           "end": 16908,
           "symbol": "M:f.a(Z)I",
           "original": "a",
-          "renamed": "getTopDialogId"
+          "renamed": "getTopDialogX"
         },
         {
           "start": 16959,
@@ -1422668,7 +1422668,7 @@
       "original": "oga.java",
       "renamed": "LegacyOpenGlPostProcessEffect.java",
       "inputSha256": "696671fd6f33e7daf9f056520d5dab8e6098ffdaa396291bd9835de6eeddbd8a",
-      "outputSha256": "59a1967078f8e8e0aacf9a81d4434863ad85a37ed0be5c4efcae3f7d3ccb8ac0",
+      "outputSha256": "d27cc98ae4dc7667cb7f9619394e8f269f639ee2603c8529eba5a0e5ba9e8cc9",
       "edits": [
         {
           "start": 53,
@@ -1422864,7 +1422864,7 @@
           "end": 796,
           "symbol": "M:oga.b(I)I",
           "original": "b",
-          "renamed": "getPassCount"
+          "renamed": "getColourPrecision"
         },
         {
           "start": 857,
@@ -1634423,7 +1634423,7 @@
       "original": "uv.java",
       "renamed": "LegacyOpenGlBloomEffect.java",
       "inputSha256": "0759259ed9147122e8e5e4ad487af82df601319f68d50d0f36bfeb1fe7f7fc2a",
-      "outputSha256": "ad90f1175bdce66728885d0ae305ba8fb937ef423d8ba0d91930157c8d1fa093",
+      "outputSha256": "0b75b5fae924d3ba88046e4161f5b684a6185580cd5ee8234ec0f77c5395bfe9",
       "edits": [
         {
           "start": 50,
@@ -1635025,7 +1635025,7 @@
           "end": 11720,
           "symbol": "M:uv.b(I)I",
           "original": "b",
-          "renamed": "getPassCount"
+          "renamed": "getColourPrecision"
         },
         {
           "start": 11840,
@@ -1695131,10 +1695131,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "55260ad6f99da8160b52ef6721fcb7f4bc40ef672f397f8c0a435ef19b493a46",
+    "rulesSha256": "6cc1ea326bb815bf00ec130c70a21db3c4114baeab4a120ec65b30ac711797b5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "1cadac5c82e47513eb30d038b5a1f561fda0bf0ddcf881984cc16296fef7a2e8",
+    "outputTreeSha256": "3459e27a10dd72d96fd3ff44b44f8dabe358f7adb0d6d2f2589e823879d303f5",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -298,7 +298,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         }
     }
 
-    final int getPassCount(int param0) {
+    final int getColourPrecision(int param0) {
         if (param0 != 13727) {
           return -92;
         }
