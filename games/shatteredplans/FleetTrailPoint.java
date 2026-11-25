@@ -31,7 +31,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           if (Wormhole.field_j != AccountNoticeKind.field_f) {
             return false;
           }
-          var2_long = pr.currentTimeMillis(14274);
+          var2_long = ClientClockSupport.currentTimeMillis(14274);
           if (0 != ArchiveRequest.field_o &&
             ArchiveNetworkClient.field_b < 0) {
             var4_ref_sk = (sk) (ClientRuntimeState.field_h.startForward(0));
@@ -287,8 +287,8 @@ final class FleetTrailPoint extends IntrusiveNode {
           stackIn_6_3 = (wg.field_a.field_Db == DerelictVictoryChecker.field_l);
           var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
           var4 = wg.field_a.field_Eb.field_M;
-          if (2 != po.field_b &&
-            1 != po.field_b) {
+          if (2 != ClientInputSupport.field_b &&
+            1 != ClientInputSupport.field_b) {
             wg.field_a.field_s = false;
             wg.field_a.field_Db.field_zb.field_z = tb.field_c;
             MatchingTextValidator.a(false, wg.field_a.field_Eb);

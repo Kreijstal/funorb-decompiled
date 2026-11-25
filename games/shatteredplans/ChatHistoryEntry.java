@@ -30,7 +30,7 @@ final class ChatHistoryEntry {
           if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
             return 1;
           }
-          if (po.field_b == 2) {
+          if (ClientInputSupport.field_b == 2) {
             if (DebouncedValidator.a(-30106, this.field_b)) {
               return 1;
             }
@@ -47,7 +47,7 @@ final class ChatHistoryEntry {
         if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
           return 1;
         }
-        if (po.field_b == 2) {
+        if (ClientInputSupport.field_b == 2) {
           if (DebouncedValidator.a(-30106, this.field_b)) {
             return 1;
           }

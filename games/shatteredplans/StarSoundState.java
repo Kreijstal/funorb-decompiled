@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qe extends IntrusiveNode {
+class StarSoundState extends IntrusiveNode {
     static String field_l;
     Star field_h;
     SoundPlayback field_i;
@@ -17,10 +17,10 @@ class qe extends IntrusiveNode {
         field_k = null;
     }
 
-    qe() {
+    StarSoundState() {
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isLeapYear(byte param0, int param1) {
         if (param0 != -65) {
           return true;
         }
@@ -42,7 +42,7 @@ class qe extends IntrusiveNode {
         return true;
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasActiveModalDialog(int param0) {
         if (param0 < 89) {
           return true;
         }

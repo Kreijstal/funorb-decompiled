@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConquestVictoryChecker extends VictoryChecker {
-    static qf field_l;
+    static SoundEffectDefinition field_l;
     static String field_o;
     static int field_m;
     static String field_p;
@@ -48,18 +48,18 @@ final class ConquestVictoryChecker extends VictoryChecker {
         field_o = null;
     }
 
-    final static qf a(byte param0, int param1, String param2) {
+    final static SoundEffectDefinition a(byte param0, int param1, String param2) {
         RuntimeException var3 = null;
-        qf stackIn_3_0 = null;
+        SoundEffectDefinition stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -92) {
-            field_l = (qf) null;
+            field_l = (SoundEffectDefinition) null;
           }
-          stackIn_3_0 = new qf(LobbyPlayerEntry.field_Sb.a("", param2, -22888), param1);
+          stackIn_3_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.a("", param2, -22888), param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

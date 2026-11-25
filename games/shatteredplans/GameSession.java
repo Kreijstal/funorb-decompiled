@@ -878,7 +878,7 @@ final class GameSession implements AiHost {
                 var9.patchLengthShort(param0 - 549356895, var9.position - var10);
                 if (!AchievementProgress.field_g) {
                   ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);
-                  q.g(-112);
+                  TabbedPanel.closeClientSocket(-112);
                 }
                 this.field_j = true;
                 if (var11 != 0) {
@@ -1249,7 +1249,7 @@ final class GameSession implements AiHost {
           }
           if (stackIn_94_0 != 0) {
             GameKeyHandler.a(-29901, (Throwable) null, var6.toString());
-            q.g(-118);
+            TabbedPanel.closeClientSocket(-118);
           }
           stackIn_98_0Lifetime1 = -13;
           stackIn_98_1Lifetime1 = (param1 - 35) / 40;

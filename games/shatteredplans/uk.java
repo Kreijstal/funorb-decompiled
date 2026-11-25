@@ -30,7 +30,7 @@ final class uk {
             field_b = (Sprite[]) null;
           }
           if (param1.name.equalsIgnoreCase("Sol")) {
-            stackIn_6_0 = qe.field_j;
+            stackIn_6_0 = StarSoundState.field_j;
             return stackIn_6_0;
           }
           var2_int = param1.field_B;

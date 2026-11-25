@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj {
+final class TutorialTextSupport {
     static int field_g;
     static byte[] field_f;
     static String field_c;
@@ -10,7 +10,7 @@ final class qj {
     static int field_b;
     static String field_d;
 
-    final static void a(sq param0, int param1) {
+    final static void buildTutorialTextSprites(sq param0, int param1) {
         int var8 = 0;
         Sprite[] array$0 = null;
         Sprite[] array$1 = null;
@@ -110,7 +110,7 @@ final class qj {
 
     public static void clearStatics(byte param0) {
         if (param0 != -20) {
-          qj.clearStatics((byte) 115);
+          TutorialTextSupport.clearStatics((byte) 115);
         }
         field_d = null;
         field_a = null;
@@ -118,7 +118,7 @@ final class qj {
         field_f = null;
     }
 
-    final static boolean a(boolean param0, CharSequence param1, CharSequence param2) {
+    final static boolean startsWithIgnoreCase(boolean param0, CharSequence param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -143,7 +143,7 @@ final class qj {
           var5 = 0;
           if (!param0) {
             var9 = (CharSequence) null;
-            qj.a(true, (CharSequence) null, (CharSequence) null);
+            TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) null, (CharSequence) null);
           }
           while (var5 < var4) {
             var6 = param2.charAt(var5);
@@ -176,11 +176,11 @@ final class qj {
         }
     }
 
-    final static void b(byte param0) {
+    final static void checkInitializationGuard(byte param0) {
         int var1 = -31 / ((param0 + 8) / 53);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void setPendingUiAction(byte param0, int param1) {
         if (param0 != -127) {
           return;
         }
@@ -200,7 +200,7 @@ final class qj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -63) {
-            qj.clearStatics((byte) 55);
+            TutorialTextSupport.clearStatics((byte) 55);
           }
           var3 = FleetMove.readStar(param1, param2, 20);
           var4 = param2.readUnsignedShort(-20976);

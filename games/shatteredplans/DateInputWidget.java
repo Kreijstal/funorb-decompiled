@@ -112,7 +112,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           while (var6 < var3) {
             var7 = param0.charAt(var6);
             if (BattleContribution.a(0, (char) var7)) {
-              var8 = os.a((char) var7, -31024);
+              var8 = RoundedMenuPanel.normalizeAccountCharacter((char) var7, -31024);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

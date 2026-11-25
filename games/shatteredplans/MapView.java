@@ -2305,8 +2305,8 @@ final class MapView extends MapViewState {
                 boolean decompiledFrameRemainder0 = true;
                 if (var4.field_u >= 0) {
                   if (var4.field_u != 0) {
-                    scanLoop1: while (!(40 > qf.a((byte) 12, 40 + var4.field_u, this.field_l))) {
-                      var5 = qf.a((byte) 36, var4.field_u, this.field_l);
+                    scanLoop1: while (!(40 > SoundEffectDefinition.randomBelow((byte) 12, 40 + var4.field_u, this.field_l))) {
+                      var5 = SoundEffectDefinition.randomBelow((byte) 36, var4.field_u, this.field_l);
                       var6 = 0;
                       while (true) {
                         if (var4.field_q.length <= var6) {

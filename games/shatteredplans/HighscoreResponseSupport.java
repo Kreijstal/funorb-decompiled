@@ -69,7 +69,7 @@ final class HighscoreResponseSupport {
               break;
             }
             if (var4 == null) {
-              q.g(-125);
+              TabbedPanel.closeClientSocket(-125);
               return;
             }
             var5 = var27.readUnsignedByte(-77);
@@ -164,13 +164,13 @@ final class HighscoreResponseSupport {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                q.g(-112);
+                TabbedPanel.closeClientSocket(-112);
                 return;
               }
             }
             if (decompiledFrameRemainder0) {
               GameKeyHandler.a(-29901, (Throwable) null, "HS1: " + Dialog.a(16738));
-              q.g(-100);
+              TabbedPanel.closeClientSocket(-100);
             }
           }
           if (param0 <= 94) {

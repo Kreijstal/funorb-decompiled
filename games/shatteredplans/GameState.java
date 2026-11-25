@@ -198,7 +198,7 @@ final class GameState {
                   }
                 }
                 this.field_L.setSeed((long)(1 + var10.field_x ^ param2));
-                var11Lifetime2 = qf.a((byte) 81, var6Lifetime1Lifetime1, this.field_L);
+                var11Lifetime2 = SoundEffectDefinition.randomBelow((byte) 81, var6Lifetime1Lifetime1, this.field_L);
                 var12Lifetime2 = 0;
                 while (4 > var12Lifetime2) {
                   if (var21[var12Lifetime2] <= var11Lifetime2) {
@@ -271,7 +271,7 @@ final class GameState {
                     }
                   }
                   this.field_L.setSeed((long)(1 + var10Lifetime1.field_x ^ param2));
-                  var11Lifetime1 = qf.a((byte) 81, var6Lifetime2, this.field_L);
+                  var11Lifetime1 = SoundEffectDefinition.randomBelow((byte) 81, var6Lifetime2, this.field_L);
                   var12Lifetime1 = 0;
                   while (true) {
                     if (4 <= var12Lifetime1) {
@@ -327,7 +327,7 @@ final class GameState {
                   }
                 }
                 this.field_L.setSeed((long)(1 + var10Lifetime1.field_x ^ param2));
-                var11Lifetime1Lifetime2 = qf.a((byte) 81, var6Lifetime2Lifetime1, this.field_L);
+                var11Lifetime1Lifetime2 = SoundEffectDefinition.randomBelow((byte) 81, var6Lifetime2Lifetime1, this.field_L);
                 for (var12Lifetime1Lifetime1 = 0; 4 > var12Lifetime1Lifetime1; var12Lifetime1Lifetime1++) {
                   if (var21Lifetime1[var12Lifetime1Lifetime1] <= var11Lifetime1Lifetime2) {
                     var11Lifetime1Lifetime2 = var11Lifetime1Lifetime2 - var21Lifetime1[var12Lifetime1Lifetime1];
@@ -1195,7 +1195,7 @@ final class GameState {
     }
 
     final static void a(int param0) {
-        NetworkArchiveRequest.field_z = pr.currentTimeMillis(14274);
+        NetworkArchiveRequest.field_z = ClientClockSupport.currentTimeMillis(14274);
         DropTargetWidget.field_C = 0;
         if (param0 != -5883) {
           GameState.clearStatics((byte) 95);
@@ -1531,7 +1531,7 @@ final class GameState {
               var5Lifetime1 = -191 + var4_int;
               param0 = param0 - 3 * var5Lifetime1;
               for (var6 = 0; var5Lifetime1 > var6; var6++) {
-                this.field_q.addLast((byte) -113, qj.readPlacementOrder((byte) -85, this, param2));
+                this.field_q.addLast((byte) -113, TutorialTextSupport.readPlacementOrder((byte) -85, this, param2));
               }
               continue;
             }
@@ -1575,9 +1575,9 @@ final class GameState {
           for (var4_int = 0; var4_int < 4; var4_int++) {
             param0.field_G[var4_int] = 1;
           }
-          dupTemp$0 = qf.a((byte) 109, 4, param2);
+          dupTemp$0 = SoundEffectDefinition.randomBelow((byte) 109, 4, param2);
           param0.field_G[dupTemp$0] = param0.field_G[dupTemp$0] + 1;
-          dupTemp$1 = qf.a((byte) 38, 4, param2);
+          dupTemp$1 = SoundEffectDefinition.randomBelow((byte) 38, 4, param2);
           param0.field_G[dupTemp$1] = param0.field_G[dupTemp$1] + 1;
           param0.field_L = 1;
         } catch (RuntimeException runtimeException) {
@@ -2317,7 +2317,7 @@ final class GameState {
           if (var6Lifetime1 == 0) {
             throw new RuntimeException();
           }
-          var7 = var5[qf.a((byte) 11, this.field_H[var3], this.field_L)];
+          var7 = var5[SoundEffectDefinition.randomBelow((byte) 11, this.field_H[var3], this.field_L)];
           if (this.field_r > this.field_K[var3]) {
             dupTemp$0 = this.field_K[var3];
             var9[dupTemp$0] = var9[dupTemp$0] + 1;
@@ -3237,7 +3237,7 @@ final class GameState {
               if (var8 != 0) {
                 this.field_L.setSeed((long)(param1 ^ var20.field_p));
                 for (var12 = 0; var12 < var20.field_Q; var12++) {
-                  dupTemp$3 = var6[qf.a((byte) 78, var8, this.field_L)];
+                  dupTemp$3 = var6[SoundEffectDefinition.randomBelow((byte) 78, var8, this.field_L)];
                   dupTemp$3.field_x = dupTemp$3.field_x + 1;
                 }
               }
@@ -3280,14 +3280,14 @@ final class GameState {
                 this.field_L.setSeed((long)(param1 ^ var11.field_p));
                 if (param0 == null) {
                   for (var12Lifetime1 = 0; var12Lifetime1 < var11.field_x; var12Lifetime1++) {
-                    dupTemp$1 = var6[qf.a((byte) 27, var8Lifetime1, this.field_L)];
+                    dupTemp$1 = var6[SoundEffectDefinition.randomBelow((byte) 27, var8Lifetime1, this.field_L)];
                     dupTemp$1.field_x = dupTemp$1.field_x + 1;
                   }
                 } else {
                   var16 = new int[var8Lifetime1];
                   var28 = var16;
                   for (var13Lifetime1Lifetime1 = 0; var11.field_x > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-                    var14 = qf.a((byte) 115, var8Lifetime1, this.field_L);
+                    var14 = SoundEffectDefinition.randomBelow((byte) 115, var8Lifetime1, this.field_L);
                     var16[var14] = var16[var14] + 1;
                     dupTemp$0 = var6[var14];
                     dupTemp$0.field_x = dupTemp$0.field_x + 1;

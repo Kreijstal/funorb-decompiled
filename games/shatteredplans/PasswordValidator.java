@@ -108,8 +108,8 @@ final class PasswordValidator extends TextFieldValidator {
               DiplomacyNotice.field_n[var4_int].field_z = SettingsCookieSupport.field_d[var6];
             }
           }
-          if (pr.field_c.field_rb != 0) {
-            DialogRoot.field_G = new PlayerReportPanel(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
+          if (ClientClockSupport.field_c.field_rb != 0) {
+            DialogRoot.field_G = new PlayerReportPanel(ClientClockSupport.field_c.field_B, ClientClockSupport.field_c.field_N, ClientClockSupport.field_c.field_K, ClientClockSupport.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, ClientInputSupport.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
@@ -313,7 +313,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_37_0;
           }
           if (va.a(var6, -1, var5)) {
-            stackIn_27_0 = po.field_e;
+            stackIn_27_0 = ClientInputSupport.field_e;
             return stackIn_27_0;
           }
           if (ChatMessage.a(var5, (byte) -53, var6)) {
@@ -323,7 +323,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (!Bzip2State.a(var5, 127, var6)) {
             return AccountValidationText.field_b;
           }
-          stackIn_35_0 = po.field_e;
+          stackIn_35_0 = ClientInputSupport.field_e;
           return stackIn_35_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

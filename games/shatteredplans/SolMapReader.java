@@ -123,7 +123,7 @@ final class SolMapReader implements MapGenerator {
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var1 = 52 / ((param0 + 16) / 49);
-        var2 = pr.currentTimeMillis(14274);
+        var2 = ClientClockSupport.currentTimeMillis(14274);
         var4 = var2 - NetworkArchiveRequest.field_z;
         if (var4 > 30000L) {
           DropTargetWidget.field_C = 0;

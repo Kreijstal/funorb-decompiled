@@ -210,7 +210,7 @@ abstract class Dialog extends WidgetContainer {
           LobbyOptionSupport.field_f.h(1, 255);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);
         }
-        q.g(-107);
+        TabbedPanel.closeClientSocket(-107);
         if (param0 < 56) {
           field_J = (String[][]) null;
         }

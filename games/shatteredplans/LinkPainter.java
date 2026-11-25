@@ -187,10 +187,10 @@ final class LinkPainter implements WidgetPainter {
           }
           boolean decompiledFrameRemainder0 = true;
           var5 = null;
-          if (2 != po.field_b) {
+          if (2 != ClientInputSupport.field_b) {
             OpacityWidget.field_A.field_s = false;
             RecklessAi.field_p.field_z = IsaacBackedRandom.field_d;
-            if (po.field_b == 1) {
+            if (ClientInputSupport.field_b == 1) {
               ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = GameSession.field_X;
               if (var19 != 0) {
                 ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = tb.field_c;
@@ -394,7 +394,7 @@ final class LinkPainter implements WidgetPainter {
               var3 != 0) {
               GameClientShell.field_z = GameApplet.field_h;
             }
-            GameClientShell.field_z = ClientDrawingSupport.concatenateAll(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
+            GameClientShell.field_z = ClientDrawingSupport.concatenateAll(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ClientClockSupport.field_b)});
           }
           DateInputWidget.field_G.closeStatusDialog((byte) -104);
           ClientUiLoadingSupport.showConnectionProgressDialog(7655);

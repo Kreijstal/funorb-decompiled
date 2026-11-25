@@ -93,7 +93,7 @@ class MenuLabel extends MenuComponent {
         }
     }
 
-    final static SoundPlayback a(qf param0, int param1) {
+    final static SoundPlayback a(SoundEffectDefinition param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         SoundPlayback stackIn_3_0 = null;
@@ -163,10 +163,10 @@ class MenuLabel extends MenuComponent {
     final static void a(String param0, int param1, byte param2) {
         try {
           if (param2 < 74) {
-            qf var4 = (qf) null;
-            MenuLabel.a((qf) null, 124);
+            SoundEffectDefinition var4 = (SoundEffectDefinition) null;
+            MenuLabel.a((SoundEffectDefinition) null, 124);
           }
-          ClientOverlayDrawSupport.field_g = po.field_f;
+          ClientOverlayDrawSupport.field_g = ClientInputSupport.field_f;
           SolMapReader.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

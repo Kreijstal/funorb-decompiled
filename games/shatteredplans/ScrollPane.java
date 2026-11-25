@@ -5,7 +5,7 @@ final class ScrollPane extends AnimatedPanel {
     AnimatedPanel field_xb;
     static String[][] field_Db;
     static String field_Bb;
-    static qf field_yb;
+    static SoundEffectDefinition field_yb;
     ScrollBar field_Ab;
     AnimatedPanel field_zb;
     static String field_Cb;

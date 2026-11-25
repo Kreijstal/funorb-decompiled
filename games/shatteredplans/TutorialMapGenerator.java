@@ -782,7 +782,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("error_js5crc", 511);
                 if (null != var2) {
-                  po.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("error_js5io", 511);
                 if (null != var2) {
@@ -838,7 +838,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("ticketing_gotowebsite", 511);
                 if (var2 != null) {
-                  pr.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_waitingformessages", 511);
                 if (var2 != null) {
@@ -1134,7 +1134,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("unable_to_send_message_password_a", 511);
                 if (var2 != null) {
-                  pr.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_send_message_password_b", 511);
                 if (var2 != null) {
@@ -1486,7 +1486,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("thisisrunescapeclan", 511);
                 if (null != var2) {
-                  po.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("thisisrunescapeclan_notowner", 511);
                 if (null != var2) {
@@ -1666,11 +1666,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_0_1", 511);
                 if (var2 != null) {
-                  qj.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialTextSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_2", 511);
                 if (var2 != null) {
-                  qf.field_b = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectDefinition.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_3", 511);
                 if (null != var2) {
@@ -1704,7 +1704,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_1_3", 511);
                 if (null != var2) {
-                  pl.field_a = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatHelpPanelSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_4", 511);
                 if (var2 != null) {
@@ -1868,7 +1868,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("connectionrestored", 511);
                 if (var2 != null) {
-                  pr.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("warning_ifyouquit", 511);
                 if (null != var2) {
@@ -2340,7 +2340,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsname", 511);
                 if (var2 != null) {
-                  po.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsemail", 511);
                 if (var2 != null) {
@@ -3110,7 +3110,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferdraw", 511);
                 if (var2 != null) {
-                  pl.field_b = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatHelpPanelSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youresigned", 511);
                 if (null != var2) {
@@ -3182,7 +3182,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("click_to_quickchat", 511);
                 if (null != var2) {
-                  qj.field_c = IterableNodeHashTable.a(var2, 17746);
+                  TutorialTextSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("autorespond", 511);
                 if (var2 != null) {

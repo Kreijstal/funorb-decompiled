@@ -92,7 +92,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         for (var5 = 0; var5 < 4; var5++) {
           var4.field_G[var5] = -5;
         }
-        var4.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(65 + qf.a((byte) 114, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 30, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 24, 26, var13.field_j))) + "-" + 5;
+        var4.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(65 + SoundEffectDefinition.randomBelow((byte) 114, 26, var13.field_j))) + String.valueOf((char)(65 + SoundEffectDefinition.randomBelow((byte) 30, 26, var13.field_j))) + String.valueOf((char)(65 + SoundEffectDefinition.randomBelow((byte) 24, 26, var13.field_j))) + "-" + 5;
         var4.field_x = 30;
         var4.field_B = 8;
         var4.field_u = true;
@@ -198,7 +198,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
               stackIn_38_1 = 6;
             }
             stackIn_37_0.field_B = stackIn_38_1;
-            var10.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(qf.a((byte) 46, 26, var13.field_j) + 65)) + String.valueOf((char)(qf.a((byte) 20, 26, var13.field_j) + 65)) + String.valueOf((char)(65 + qf.a((byte) 5, 26, var13.field_j))) + "-" + 2;
+            var10.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(SoundEffectDefinition.randomBelow((byte) 46, 26, var13.field_j) + 65)) + String.valueOf((char)(SoundEffectDefinition.randomBelow((byte) 20, 26, var13.field_j) + 65)) + String.valueOf((char)(65 + SoundEffectDefinition.randomBelow((byte) 5, 26, var13.field_j))) + "-" + 2;
             var10.field_x = 15;
           }
         }
@@ -226,7 +226,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = q.a((byte) -123, param1.charAt(var4)) + (var3 << 5) - var3;
+            var3 = TabbedPanel.charToCp1252((byte) -123, param1.charAt(var4)) + (var3 << 5) - var3;
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;

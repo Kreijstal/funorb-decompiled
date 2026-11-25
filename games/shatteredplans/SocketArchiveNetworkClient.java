@@ -5,7 +5,7 @@ import java.io.*;
 
 final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static String field_s;
-    static qf field_w;
+    static SoundEffectDefinition field_w;
     static String field_t;
     private BufferedSocket field_v;
     static String field_u;
@@ -72,7 +72,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           NetworkArchiveRequest var2Lifetime1;
           var16 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_v != null) {
-            var2_long = pr.currentTimeMillis(14274);
+            var2_long = ClientClockSupport.currentTimeMillis(14274);
             var4 = (int)(-this.field_k + var2_long);
             this.field_k = var2_long;
             if (var4 > 200) {
@@ -339,7 +339,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             this.field_n = 0;
-            this.field_k = pr.currentTimeMillis(14274);
+            this.field_k = ClientClockSupport.currentTimeMillis(14274);
             var4_int = 50 % ((-11 - param0) / 48);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
@@ -512,7 +512,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     }
 
     final static void h(int param0) {
-        qj.a((byte) -127, 4);
+        TutorialTextSupport.setPendingUiAction((byte) -127, 4);
         if (param0 != 30252) {
           field_u = (String) null;
         }

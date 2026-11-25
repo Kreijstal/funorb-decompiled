@@ -12,18 +12,18 @@ final class GameScreen {
     private int field_x;
     private ToggleButton field_N;
     private ToggleButton field_db;
-    private os field_k;
+    private RoundedMenuPanel field_k;
     private String[] field_ab;
-    private os field_F;
+    private RoundedMenuPanel field_F;
     private int field_D;
     private ScrollPane field_E;
     private int[][] field_G;
     private int field_u;
-    private os field_M;
+    private RoundedMenuPanel field_M;
     private int[][] field_q;
     static Sprite field_R;
     private boolean field_Y;
-    private os field_V;
+    private RoundedMenuPanel field_V;
     private boolean field_I;
     private MenuWindow field_J;
     static String field_L;
@@ -35,8 +35,8 @@ final class GameScreen {
     private boolean field_v;
     private MenuWindow field_e;
     private String[][] field_l;
-    private os field_m;
-    private os field_lb;
+    private RoundedMenuPanel field_m;
+    private RoundedMenuPanel field_lb;
     private int[][] field_C;
     static AnimatedPanel field_h;
     private String field_r;
@@ -51,7 +51,7 @@ final class GameScreen {
     ToggleButton field_X;
     ToggleButton field_d;
     private ToggleButton field_mb;
-    private os field_K;
+    private RoundedMenuPanel field_K;
     private Sprite field_eb;
     private boolean[] field_z;
     private ToggleButton field_f;
@@ -397,7 +397,7 @@ final class GameScreen {
         int var3Lifetime1;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (qj.a(true, (CharSequence) ((Object) "stage"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "stage"), (CharSequence) ((Object) param0))) {
             var2_int = Integer.parseInt(param0.substring(6));
             TutorialStageSupport.advanceTutorialStage(-92, var2_int);
             TextReplacementEntry.field_a.refreshMapView(2);
@@ -485,7 +485,7 @@ final class GameScreen {
             }
             return;
           }
-          if (qj.a(true, (CharSequence) ((Object) "enable"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "enable"), (CharSequence) ((Object) param0))) {
             var2_ref = param0.substring(7).trim();
             if (var2_ref.endsWith("Button")) {
               TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_ref, true, param1 - 15023);
@@ -496,23 +496,23 @@ final class GameScreen {
             }
             return;
           }
-          if (qj.a(true, (CharSequence) ((Object) "disable"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "disable"), (CharSequence) ((Object) param0))) {
             var2_refLifetime1 = param0.substring(8).trim();
             if (var2_refLifetime1.endsWith("Button")) {
               TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime1, false, param1 ^ -15009);
             }
           }
-          if (qj.a(true, (CharSequence) ((Object) "hide"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "hide"), (CharSequence) ((Object) param0))) {
             var2_refLifetime2 = param0.substring(4).trim();
             TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime2, false, (byte) 31);
             return;
           }
-          if (qj.a(true, (CharSequence) ((Object) "show"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "show"), (CharSequence) ((Object) param0))) {
             var2_refLifetime3 = param0.substring(4).trim();
             TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime3, true, (byte) 31);
             return;
           }
-          if (qj.a(true, (CharSequence) ((Object) "highlight"), (CharSequence) ((Object) param0))) {
+          if (TutorialTextSupport.startsWithIgnoreCase(true, (CharSequence) ((Object) "highlight"), (CharSequence) ((Object) param0))) {
             var2_refLifetime4 = param0.substring(10).trim();
             if (var2_refLifetime4.equalsIgnoreCase("wormholes")) {
               WhirlpoolHasher.field_g = true;
@@ -1713,10 +1713,10 @@ final class GameScreen {
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
           rs.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = qe.field_j.field_z + rs.field_Cb.stringWidth("= " + vs.field_a);
-          SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, qe.field_j.field_w + 10, 5, 0, 128);
-          qe.field_j.draw(param0 + (param3 - var6) / 2, rs.field_Cb.field_J + (param2 + 20));
-          rs.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + qe.field_j.field_z), 25 + rs.field_Cb.field_J + (qe.field_j.field_w / 2 + param2), 16777215, param1);
+          var6 = StarSoundState.field_j.field_z + rs.field_Cb.stringWidth("= " + vs.field_a);
+          SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, StarSoundState.field_j.field_w + 10, 5, 0, 128);
+          StarSoundState.field_j.draw(param0 + (param3 - var6) / 2, rs.field_Cb.field_J + (param2 + 20));
+          rs.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + StarSoundState.field_j.field_z), 25 + rs.field_Cb.field_J + (StarSoundState.field_j.field_w / 2 + param2), 16777215, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -2475,7 +2475,7 @@ final class GameScreen {
             return stackIn_12_0;
           }
           if (param1 > -112) {
-            this.field_K = (os) null;
+            this.field_K = (RoundedMenuPanel) null;
           }
           if (param0.startsWith("diplomacy")) {
             stackIn_20_0 = this.field_J.field_s;
@@ -3854,7 +3854,7 @@ final class GameScreen {
                         (1 << var5 & var3.field_y) == 0) {
                         var6_ref = null;
                       } else {
-                        var6_ref = pl.field_b;
+                        var6_ref = QuickChatHelpPanelSupport.field_b;
                       }
                     }
                   }
@@ -5110,7 +5110,7 @@ final class GameScreen {
             this.field_bb.field_o = AccountCreationDialog.field_Bb;
             this.field_y.addLast((byte) -113, this.field_bb);
           }
-          this.field_K = new os(590, 480 - rs.field_Cb.field_J, 60, 2 * rs.field_Cb.field_J);
+          this.field_K = new RoundedMenuPanel(590, 480 - rs.field_Cb.field_J, 60, 2 * rs.field_Cb.field_J);
           this.field_y.addFirst(this.field_K, 0);
           this.field_N = new ToggleButton(595, 480 - StarAbandonedEvent.field_r[3].field_w, StarAbandonedEvent.field_r[3].field_z, StarAbandonedEvent.field_r[3].field_w, -1, StarAbandonedEvent.field_r[3], (String) null, 0, -1, StarAbandonedEvent.field_r[0], (String) null, 0);
           if ((32 & StringNode.field_j) != 0) {
@@ -5138,7 +5138,7 @@ final class GameScreen {
           this.field_K.addChild(this.field_N, 8);
           this.field_K.addChild(this.field_X, 8);
           this.field_K.addChild(this.field_d, 8);
-          this.field_V = new os(3, 480, 10 + rs.field_Cb.stringWidth(ByteArrayNode.field_l), 2 * rs.field_Cb.field_J);
+          this.field_V = new RoundedMenuPanel(3, 480, 10 + rs.field_Cb.stringWidth(ByteArrayNode.field_l), 2 * rs.field_Cb.field_J);
           this.field_f = new ToggleButton(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, ByteArrayNode.field_l, 16777215, -1, (Sprite) null, DualLinkDeque.field_d, 16777215);
           this.field_V.addChild(this.field_f, 8);
           this.field_y.addFirst(this.field_V, 0);
@@ -5194,10 +5194,10 @@ final class GameScreen {
             this.field_p = new int[]{32, 0, 0, 0};
             this.field_z = new boolean[this.field_s.field_P.field_r + 1];
             this.field_B = new IntrusiveDeque();
-            this.field_F = new os(0, 410, 128, 21);
-            this.field_lb = new os(0, 410, 128, 21);
-            this.field_m = new os(0, 410, 128, 21);
-            this.field_M = new os(0, 410, 128, 21);
+            this.field_F = new RoundedMenuPanel(0, 410, 128, 21);
+            this.field_lb = new RoundedMenuPanel(0, 410, 128, 21);
+            this.field_m = new RoundedMenuPanel(0, 410, 128, 21);
+            this.field_M = new RoundedMenuPanel(0, 410, 128, 21);
             this.field_B.addLast((byte) -113, this.field_F);
             this.field_B.addLast((byte) -113, this.field_lb);
             this.field_B.addLast((byte) -113, this.field_m);
@@ -5206,7 +5206,7 @@ final class GameScreen {
             this.field_F.addChild(this.field_hb, 8);
             this.field_gb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 16777215, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 2805974);
             this.field_lb.addChild(this.field_gb, 8);
-            this.field_db = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, po.field_a.toUpperCase(), 16777215, -1, (Sprite) null, po.field_a.toUpperCase(), 2805974);
+            this.field_db = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, ClientInputSupport.field_a.toUpperCase(), 16777215, -1, (Sprite) null, ClientInputSupport.field_a.toUpperCase(), 2805974);
             this.field_m.addChild(this.field_db, 8);
             this.field_a = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, ListContent.field_a.toUpperCase(), 16777215, -1, (Sprite) null, ListContent.field_a.toUpperCase(), 2805974);
             this.field_M.addChild(this.field_a, 8);

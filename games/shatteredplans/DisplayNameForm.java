@@ -111,12 +111,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         FullscreenFocusCanvas.field_f[16] = MidiPcmStream.field_o;
         FullscreenFocusCanvas.field_f[18] = TutorialStageSupport.field_a;
         FullscreenFocusCanvas.field_f[4] = RichTextLayout.field_o;
-        FullscreenFocusCanvas.field_f[9] = qj.field_a;
+        FullscreenFocusCanvas.field_f[9] = TutorialTextSupport.field_a;
         FullscreenFocusCanvas.field_f[15] = Archive.field_h;
         if (param0 == 1062) {
           FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
-          FullscreenFocusCanvas.field_f[19] = pl.field_a;
-          FullscreenFocusCanvas.field_f[5] = qf.field_b;
+          FullscreenFocusCanvas.field_f[19] = QuickChatHelpPanelSupport.field_a;
+          FullscreenFocusCanvas.field_f[5] = SoundEffectDefinition.field_b;
           FullscreenFocusCanvas.field_f[13] = OpacityWidget.field_G;
           FullscreenFocusCanvas.field_f[17] = ArchiveIndex.field_g;
           FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
@@ -124,8 +124,8 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
         DisplayNameForm.l(-42);
         FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
-        FullscreenFocusCanvas.field_f[19] = pl.field_a;
-        FullscreenFocusCanvas.field_f[5] = qf.field_b;
+        FullscreenFocusCanvas.field_f[19] = QuickChatHelpPanelSupport.field_a;
+        FullscreenFocusCanvas.field_f[5] = SoundEffectDefinition.field_b;
         FullscreenFocusCanvas.field_f[13] = OpacityWidget.field_G;
         FullscreenFocusCanvas.field_f[17] = ArchiveIndex.field_g;
         FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;

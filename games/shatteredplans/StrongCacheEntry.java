@@ -335,9 +335,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var14 = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-97, "lobby", param4, "tab_active"), 82);
           IntrusiveDequeSequence.field_g = new AnimatedPanel(0L, var8);
           IntrusiveDequeSequence.field_g.field_F = var14;
-          po.field_d = new AnimatedPanel(0L, (AnimatedPanel) null);
-          po.field_d.field_pb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton");
-          po.field_d.field_fb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton_mouseover");
+          ClientInputSupport.field_d = new AnimatedPanel(0L, (AnimatedPanel) null);
+          ClientInputSupport.field_d.field_pb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton");
+          ClientInputSupport.field_d.field_fb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton_mouseover");
           DiplomacyRowSupport.field_b = new AnimatedPanel(0L, var8);
           DiplomacyRowSupport.field_b.field_F = ArchiveSourceManager.a(true, 2039583, true, 40, 3815994, (byte) -47);
           SliderWidget.field_N = new AnimatedPanel(0L, var10);

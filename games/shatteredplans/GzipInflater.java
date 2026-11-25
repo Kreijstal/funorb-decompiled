@@ -92,27 +92,27 @@ final class GzipInflater {
               field_i = 92;
             }
             if (2 == var2) {
-              if (po.field_b == 1) {
-                po.field_b = 2;
+              if (ClientInputSupport.field_b == 1) {
+                ClientInputSupport.field_b = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (2 == po.field_b) {
-                po.field_b = 1;
+              if (2 == ClientInputSupport.field_b) {
+                ClientInputSupport.field_b = 1;
               }
               return;
             }
             if (var2 != 4) {
               GameKeyHandler.a(-29901, (Throwable) null, "F1: " + Dialog.a(16738));
-              q.g(-101);
+              TabbedPanel.closeClientSocket(-101);
               return;
             }
-            po.field_b = 1;
+            ClientInputSupport.field_b = 1;
             var3 = var1.readString(-1);
             QuickChatPhraseRegistry.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-71);
-            os.a(-82, var4);
+            RoundedMenuPanel.readChatFilterSettings(-82, var4);
             return;
           }
           if (BattleEvent.field_q == null) {

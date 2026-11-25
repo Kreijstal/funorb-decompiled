@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends qe {
+final class so extends StarSoundState {
     static AnimatedPanel field_v;
     static RasterBuffer field_q;
     int field_u;

@@ -8,20 +8,20 @@ final class SoundEffectSupport {
     static String field_c;
     static int field_a;
 
-    final static qf loadSoundEffectDefinition(int param0, int param1, String param2) {
+    final static SoundEffectDefinition loadSoundEffectDefinition(int param0, int param1, String param2) {
         RuntimeException var3 = null;
-        qf stackIn_2_0 = null;
-        qf stackIn_4_0 = null;
+        SoundEffectDefinition stackIn_2_0 = null;
+        SoundEffectDefinition stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 128) {
-            stackIn_4_0 = new qf(LobbyPlayerEntry.field_Sb.a(param0 + 27988, param2, ""), param1);
+            stackIn_4_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.a(param0 + 27988, param2, ""), param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (qf) null;
+          stackIn_2_0 = (SoundEffectDefinition) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

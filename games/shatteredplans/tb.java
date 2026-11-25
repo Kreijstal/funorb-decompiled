@@ -100,7 +100,7 @@ final class tb {
           PairedIntSortSupport.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
           sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
-          qf.field_e = new AnimatedPanel(0L, rs.field_Eb);
+          SoundEffectDefinition.field_e = new AnimatedPanel(0L, rs.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
           GameSession.field_e = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, FleetTrailPoint.field_j);
           WeightedCacheEntry.field_t = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, QuickChatMenu.field_Lb);
@@ -126,16 +126,16 @@ final class tb {
           LinkPainter.field_b = new AnimatedPanel(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           AchievementProgress.field_i = new AnimatedPanel(0L, (AnimatedPanel) null);
           AchievementProgress.field_i.addChild(param13 ^ -7962, sg.field_zb);
-          AchievementProgress.field_i.addChild(4, qf.field_e);
-          qf.field_e.addChild(4, BattleSnapshot.field_y);
-          qf.field_e.addChild(4, GameSession.field_e);
-          qf.field_e.addChild(param13 ^ -7962, WeightedCacheEntry.field_t);
+          AchievementProgress.field_i.addChild(4, SoundEffectDefinition.field_e);
+          SoundEffectDefinition.field_e.addChild(4, BattleSnapshot.field_y);
+          SoundEffectDefinition.field_e.addChild(4, GameSession.field_e);
+          SoundEffectDefinition.field_e.addChild(param13 ^ -7962, WeightedCacheEntry.field_t);
           if (AccountStatusDialog.field_pb) {
-            qf.field_e.addChild(4, ta.field_d);
+            SoundEffectDefinition.field_e.addChild(4, ta.field_d);
           }
-          qf.field_e.addChild(4, IsaacBackedRandom.field_c);
-          qf.field_e.addChild(4, AccountHandshakeSupport.field_b);
-          qf.field_e.addChild(4, SingleChildWidget.field_y);
+          SoundEffectDefinition.field_e.addChild(4, IsaacBackedRandom.field_c);
+          SoundEffectDefinition.field_e.addChild(4, AccountHandshakeSupport.field_b);
+          SoundEffectDefinition.field_e.addChild(4, SingleChildWidget.field_y);
           if (AccountStatusDialog.field_pb) {
             AchievementProgress.field_i.addChild(4, ServerIntArrayRequest.field_m);
           }

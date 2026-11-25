@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class os extends MenuComponent {
+final class RoundedMenuPanel extends MenuComponent {
     MenuContent field_v;
     static Sprite[] field_u;
 
-    final static char a(char param0, int param1) {
+    final static char normalizeAccountCharacter(char param0, int param1) {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -94,7 +94,7 @@ final class os extends MenuComponent {
         return '_';
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void writeSpectateRequest(int param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = LobbyOptionSupport.field_f;
         var3.h(param1, 255);
         var3.writeByte(3, (byte) -68);
@@ -105,11 +105,11 @@ final class os extends MenuComponent {
         var3.writeShort(param0, 255);
     }
 
-    os(int param0, int param1, int param2, int param3) {
+    RoundedMenuPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
     }
 
-    final static AccountBooleanRequest a(int param0, String param1) {
+    final static AccountBooleanRequest getAccountBooleanRequest(int param0, String param1) {
         RuntimeException var2 = null;
         AccountBooleanRequest stackIn_2_0 = null;
         AccountBooleanRequest stackIn_7_0 = null;
@@ -142,7 +142,7 @@ final class os extends MenuComponent {
         }
     }
 
-    final static String a(byte param0, int param1, String param2, String param3) {
+    final static String requestRemoveIgnore(byte param0, int param1, String param2, String param3) {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
@@ -164,7 +164,7 @@ final class os extends MenuComponent {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }
-          if (po.field_b != 2) {
+          if (ClientInputSupport.field_b != 2) {
             stackIn_7_0 = MenuWindow.field_C;
             return stackIn_7_0;
           }
@@ -208,7 +208,7 @@ final class os extends MenuComponent {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void readChatFilterSettings(int param0, int param1) {
         QuickChatMenu.field_Bb = (50 & param1) >> 4;
         if (QuickChatMenu.field_Bb > 2) {
           QuickChatMenu.field_Bb = 2;
@@ -216,7 +216,7 @@ final class os extends MenuComponent {
         sq.field_a = param1 >> 2 & 3;
         if (param0 >= -76) {
           String var3 = (String) null;
-          os.a(-15, (String) null);
+          RoundedMenuPanel.getAccountBooleanRequest(-15, (String) null);
         }
         ul.field_Hb = 3 & param1;
         if (!(2 >= sq.field_a)) {

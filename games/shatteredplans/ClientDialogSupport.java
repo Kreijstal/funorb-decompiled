@@ -36,7 +36,7 @@ final class ClientDialogSupport {
             stackIn_2_0 = tm.field_j;
             return stackIn_2_0;
           }
-          if (po.field_b != 2) {
+          if (ClientInputSupport.field_b != 2) {
             stackIn_5_0 = AccountInputSupport.field_c;
             return stackIn_5_0;
           }

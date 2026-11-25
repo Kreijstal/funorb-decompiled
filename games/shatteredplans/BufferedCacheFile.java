@@ -570,19 +570,19 @@ final class BufferedCacheFile {
                   stackIn_21_0 = param0;
                   stackIn_21_1 = 611;
                 }
-                q.g(stackIn_21_0 ^ stackIn_21_1);
+                TabbedPanel.closeClientSocket(stackIn_21_0 ^ stackIn_21_1);
                 return;
               }
             }
             GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + Dialog.a(16738));
-            q.g(-113);
+            TabbedPanel.closeClientSocket(-113);
             if (var8 == 0) {
               return;
             }
           }
           var4 = (rk) (Bzip2State.field_J.startForward(0));
           if (var4 == null) {
-            q.g(-108);
+            TabbedPanel.closeClientSocket(-108);
             return;
           }
           var5 = TextInputPainter.field_t - var1.position;
@@ -745,7 +745,7 @@ final class BufferedCacheFile {
             null != param2.field_p) {
             EmailValidator.e(param0 ^ -97);
           }
-          qj.field_e = 0;
+          TutorialTextSupport.field_e = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_u)))) {
@@ -800,7 +800,7 @@ final class BufferedCacheFile {
                           dupTemp$0 = param2.field_p[var8];
                           uo.field_h[dupTemp$0] = uo.field_h[dupTemp$0] + 1;
                         }
-                        qj.field_e = qj.field_e + 1;
+                        TutorialTextSupport.field_e = TutorialTextSupport.field_e + 1;
                         break;
                       }
                     }
@@ -897,7 +897,7 @@ final class BufferedCacheFile {
             null != param2.field_p) {
             EmailValidator.e(param0 ^ -97);
           }
-          qj.field_e = 0;
+          TutorialTextSupport.field_e = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_u)))) {
@@ -952,7 +952,7 @@ final class BufferedCacheFile {
                           dupTemp$0 = param2.field_p[var8];
                           uo.field_h[dupTemp$0] = uo.field_h[dupTemp$0] + 1;
                         }
-                        qj.field_e = qj.field_e + 1;
+                        TutorialTextSupport.field_e = TutorialTextSupport.field_e + 1;
                         break;
                       }
                     }

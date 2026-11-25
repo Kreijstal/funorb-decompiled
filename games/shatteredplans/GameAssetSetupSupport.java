@@ -128,7 +128,7 @@ final class GameAssetSetupSupport {
           SpriteState.field_q.drawColourised(0, 0, 2105376);
           OpacityWidget.popLegacyRasterState(0);
           NameSuggestionsPanel.field_H = MessageKind.a(true, param0, "", "planet_burnt");
-          qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
+          StarSoundState.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
           NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
           ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
           BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
@@ -240,10 +240,10 @@ final class GameAssetSetupSupport {
             }
           }
           AllianceExpiredEvent.field_k = new Sprite(16, 10);
-          pr.field_a = new Sprite(18, 12);
+          ClientClockSupport.field_a = new Sprite(18, 12);
           RasterTargetSupport.pushSpriteRenderTarget(AllianceExpiredEvent.field_k, 98);
           GradientMenuLabel.field_y.drawHalfSize(0, 0);
-          pr.field_a.bindAsRenderTarget();
+          ClientClockSupport.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.drawColourised(1, 1, 8421504);
           HuffmanCodec.field_b = new Sprite(10, 12);
           HuffmanCodec.field_b.bindAsRenderTarget();
@@ -267,7 +267,7 @@ final class GameAssetSetupSupport {
           LobbyRoomEntry.field_Vb.bindAsRenderTarget();
           AlignedMenuLabel.field_G.drawColourised(1, 1, 8421504);
           OpacityWidget.popLegacyRasterState(0);
-          pr.field_a.addOutline(16777215);
+          ClientClockSupport.field_a.addOutline(16777215);
           HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
             GameAssetSetupSupport.clearStatics(-23);

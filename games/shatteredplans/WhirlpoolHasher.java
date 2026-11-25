@@ -268,7 +268,7 @@ final class WhirlpoolHasher {
           if (param2) {
             return;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < qj.field_e; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < TutorialTextSupport.field_e; var13Lifetime1++) {
             var14Lifetime1 = ResizingDialog.field_M[var13Lifetime1];
             var15Lifetime1 = param5.field_s[var14Lifetime1];
             var16 = param5.field_i[var14Lifetime1];

@@ -272,8 +272,8 @@ final class ClientDrawingSupport {
           LobbyCommandSupport.field_c > 0) {
           fieldTemp$3 = LobbyCommandSupport.field_c - 1;
           LobbyCommandSupport.field_c = LobbyCommandSupport.field_c - 1;
-          var2_ref_byte__ = qf.field_d[fieldTemp$3];
-          qf.field_d[LobbyCommandSupport.field_c] = null;
+          var2_ref_byte__ = SoundEffectDefinition.field_d[fieldTemp$3];
+          SoundEffectDefinition.field_d[LobbyCommandSupport.field_c] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
@@ -354,7 +354,7 @@ final class ClientDrawingSupport {
             }
             var15 = (ServerIntArrayRequest) (SolMapGenerator.field_o.startForward(0));
             if (var15 == null) {
-              q.g(-112);
+              TabbedPanel.closeClientSocket(-112);
               return;
             }
             var15.field_l = false;
@@ -367,7 +367,7 @@ final class ClientDrawingSupport {
           if (var2 == 1) {
             var12 = (FourIntSubmissionRequest) (rs.field_Bb.startForward(0));
             if (var12 == null) {
-              q.g(-100);
+              TabbedPanel.closeClientSocket(-100);
               return;
             }
             var12.unlink((byte) -108);
@@ -375,7 +375,7 @@ final class ClientDrawingSupport {
             if (var2 == 2) {
               var16_ref = (ServerIntArrayRequest) (SolMapGenerator.field_o.startForward(0));
               if (var16_ref == null) {
-                q.g(-120);
+                TabbedPanel.closeClientSocket(-120);
                 return;
               }
               var16_ref.field_k = HighscoreResponseSupport.newEightIntArray(-116);
@@ -385,7 +385,7 @@ final class ClientDrawingSupport {
               var16_ref.unlink((byte) -89);
             } else {
               GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
-              q.g(-125);
+              TabbedPanel.closeClientSocket(-125);
             }
           }
           return;

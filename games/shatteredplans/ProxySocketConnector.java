@@ -486,7 +486,7 @@ final class ProxySocketConnector extends SocketConnector {
         we.field_f.drawAdditive(var1, -60 + var2, 256);
         var1 = -62;
         var2 = -(FleetTrailPoint.field_m * 40 / 800) + 200;
-        q.field_Cb.draw(var1, var2);
+        TabbedPanel.field_Cb.draw(var1, var2);
         var1 = -120;
         var2 = -(FleetTrailPoint.field_m * 150 / 800) + 300;
         EmailSyntaxValidator.field_o.draw(var1, var2);

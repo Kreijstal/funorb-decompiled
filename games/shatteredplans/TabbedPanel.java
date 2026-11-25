@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends AnimatedPanel {
+final class TabbedPanel extends AnimatedPanel {
     private AnimatedPanel[] field_xb;
     static int[] field_Ab;
     private AnimatedPanel[] field_Db;
@@ -10,7 +10,7 @@ final class q extends AnimatedPanel {
     int field_zb;
     static int field_Bb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final void setTabBounds(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         if (param5) {
           this.field_xb = (AnimatedPanel[]) null;
         }
@@ -18,7 +18,7 @@ final class q extends AnimatedPanel {
         this.field_hb = param4;
         this.field_K = param0;
         this.field_db = param1;
-        this.a(-4783, param3, param6);
+        this.layoutTabs(-4783, param3, param6);
     }
 
     public static void clearStatics(byte param0) {
@@ -27,7 +27,7 @@ final class q extends AnimatedPanel {
         field_Ab = null;
     }
 
-    final void f(boolean param0) {
+    final void handleTabClicks(boolean param0) {
         int var2 = 0;
         AnimatedPanel dupTemp$0 = null;
         AnimatedPanel dupTemp$1 = null;
@@ -50,7 +50,7 @@ final class q extends AnimatedPanel {
         }
     }
 
-    q(long param0, AnimatedPanel param1, String[] param2, AnimatedPanel param3, AnimatedPanel[] param4, int param5) {
+    TabbedPanel(long param0, AnimatedPanel param1, String[] param2, AnimatedPanel param3, AnimatedPanel[] param4, int param5) {
         super(param0, (AnimatedPanel) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -119,7 +119,7 @@ final class q extends AnimatedPanel {
         }
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte charToCp1252(byte param0, char param1) {
         int var2;
         int var3;
         {
@@ -194,7 +194,7 @@ final class q extends AnimatedPanel {
         return (byte) 6;
     }
 
-    final static void g(int param0) {
+    final static void closeClientSocket(int param0) {
         if (param0 > -95) {
           field_Cb = (Sprite) null;
         }
@@ -204,7 +204,7 @@ final class q extends AnimatedPanel {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         AnimatedPanel dupTemp$0 = null;
         int var4;
         int var5;

@@ -132,11 +132,11 @@ final class WeightedLruCache {
         }
     }
 
-    final static os a(byte param0) {
+    final static RoundedMenuPanel a(byte param0) {
         SpriteButton var2 = null;
         AlignedMenuLabel var3 = null;
         AlignedMenuLabel var4 = null;
-        TextFieldWidget.field_E = new os(5, 5, 500, 45);
+        TextFieldWidget.field_E = new RoundedMenuPanel(5, 5, 500, 45);
         StatusContent var1 = new StatusContent();
         TextFieldWidget.field_E.field_v = (MenuContent) ((Object) var1);
         if (param0 == 69) {
@@ -150,7 +150,7 @@ final class WeightedLruCache {
           TextFieldWidget.field_E.addChild(var4, param0 ^ 77);
           return TextFieldWidget.field_E;
         }
-        return (os) null;
+        return (RoundedMenuPanel) null;
     }
 
     private final void removeEntry(WeightedCacheEntry param0, byte param1) {

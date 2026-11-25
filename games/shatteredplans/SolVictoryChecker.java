@@ -435,7 +435,7 @@ final class SolVictoryChecker extends VictoryChecker {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  q.g(-118);
+                  TabbedPanel.closeClientSocket(-118);
                   BufferedSocket.field_j = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -526,7 +526,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (Wormhole.field_j == Player.field_l &&
               uc.d((byte) -33)) {
-              q.g(-114);
+              TabbedPanel.closeClientSocket(-114);
               if (BufferedCacheFile.field_e == 7 &&
                 !BufferedSocket.field_j) {
                 BufferedSocket.field_j = true;

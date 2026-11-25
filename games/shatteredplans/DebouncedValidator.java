@@ -48,7 +48,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isEmpty(16647)) {
           return null;
         }
-        if (pr.currentTimeMillis(14274) < (this.field_b + 350L)) {
+        if (ClientClockSupport.currentTimeMillis(14274) < (this.field_b + 350L)) {
           return null;
         }
         return this.computeMessage((byte) 125);
@@ -100,7 +100,7 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     public final void notifyChanged(int param0) {
-        this.field_b = pr.currentTimeMillis(14274);
+        this.field_b = ClientClockSupport.currentTimeMillis(14274);
         int var2 = -57 / ((param0 + 1) / 58);
     }
 
@@ -109,7 +109,7 @@ abstract class DebouncedValidator implements ValidationSource {
           return IntrusiveDequeSequence.field_i;
         }
         int var2 = -29 / ((-80 - param0) / 35);
-        if (!(this.field_b + 350L <= pr.currentTimeMillis(14274))) {
+        if (!(this.field_b + 350L <= ClientClockSupport.currentTimeMillis(14274))) {
           return TertiaryListSequence.field_h;
         }
         return this.computeState(false);

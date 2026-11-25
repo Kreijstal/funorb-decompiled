@@ -30,7 +30,7 @@ final class TerritoryResourcePanelSupport {
             var1Lifetime1.unlinkSecondary(16);
             var1Lifetime1 = CipherPacketBuffer.field_m.nextInTraversal((byte) -107);
           }
-          po.field_b = 0;
+          ClientInputSupport.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "an.B(" + param0 + ')');
         }

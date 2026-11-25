@@ -460,7 +460,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1 <= 109) {
             MidiPcmStream.a((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
-          var9 = pr.currentTimeMillis(14274);
+          var9 = ClientClockSupport.currentTimeMillis(14274);
           var11 = null;
           var12 = (LobbyRoomEntry) (var8.startForward(0));
           while (var12 != null) {
@@ -877,7 +877,7 @@ final class MidiPcmStream extends PcmStream {
                 if (var12.field_Ab && (!var12.field_mc ||
                   !var12.field_cc &&
                   !var12.field_Jb)) {
-                  os.a(var12.getRoomId(-121), param4, true);
+                  RoundedMenuPanel.writeSpectateRequest(var12.getRoomId(-121), param4, true);
                   decompiledFrameRemainder0 = false;
                 }
                 else {

@@ -125,7 +125,7 @@ final class ChatPanelLayoutSupport {
               var11++;
               var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + QuickChatParameterType.field_d) + 3 - 2;
               if (5 <= var12) {
-                pr.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
+                ClientClockSupport.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
               } else {
                 TextReplacementEntry.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
                 tb.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);

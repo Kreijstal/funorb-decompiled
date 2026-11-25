@@ -84,9 +84,9 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (3 == var4) {
-            if (qj.field_g != -1 &&
-              qj.field_g != 0) {
-              qj.field_g = -1;
+            if (TutorialTextSupport.field_g != -1 &&
+              TutorialTextSupport.field_g != 0) {
+              TutorialTextSupport.field_g = -1;
               IsaacBackedRandom.a(116);
             }
             if (param0) {
@@ -202,7 +202,7 @@ abstract class GameClientShell extends GameApplet {
         SliderPainter.field_j = param6;
         CombinedTerritory.field_B = param7;
         this.initialiseOpcodeLengths((byte) 64);
-        qj.b((byte) -120);
+        TutorialTextSupport.checkInitializationGuard((byte) -120);
     }
 
     private final void allowOpcode1(byte param0) {
@@ -261,7 +261,7 @@ abstract class GameClientShell extends GameApplet {
                                 return;
                               }
                               GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
-                              q.g(-107);
+                              TabbedPanel.closeClientSocket(-107);
                               return;
                             }
                             stackIn_32_0 = (var2 == 12);
@@ -287,7 +287,7 @@ abstract class GameClientShell extends GameApplet {
           return;
         }
         GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + Dialog.a(16738));
-        q.g(-127);
+        TabbedPanel.closeClientSocket(-127);
     }
 
     public static void clearStatics(int param0) {
@@ -349,7 +349,7 @@ abstract class GameClientShell extends GameApplet {
     private final static void f(byte param0) {
         uq var1 = (uq) (IsaacRandom.field_d.startForward(0));
         if (var1 == null) {
-          q.g(-110);
+          TabbedPanel.closeClientSocket(-110);
           return;
         }
         CipherPacketBuffer var2 = sa.field_a;
@@ -398,45 +398,45 @@ abstract class GameClientShell extends GameApplet {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
           if (this.field_y ||
             !(var3 >= MutableIntPairNode.getKeyboardIdleTicks(-26918)) &&
-            !(po.b(123) <= var3)) {
+            !(ClientInputSupport.getMouseIdleTicks(123) <= var3)) {
             this.field_y = false;
-            q.g(-113);
+            TabbedPanel.closeClientSocket(-113);
             IntrusiveNode.b(-11);
             AccountStatusSupport.showLoginResult((byte) -124, 2, IntNode.field_n);
             ClientException.b(false);
             StripedProgressWidget.field_B = true;
-            SecondaryNodeDequeIterator.field_b = 15000L + pr.currentTimeMillis(14274);
+            SecondaryNodeDequeIterator.field_b = 15000L + ClientClockSupport.currentTimeMillis(14274);
           }
         }
-        if (-1 == qj.field_g ||
-          qj.field_g == 0) {
-          stackIn_24_0 = (qj.field_g != -1) ? 0 : 1;
+        if (-1 == TutorialTextSupport.field_g ||
+          TutorialTextSupport.field_g == 0) {
+          stackIn_24_0 = (TutorialTextSupport.field_g != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          qj.field_g = ValidationState.a(-95);
+          TutorialTextSupport.field_g = ValidationState.a(-95);
           if (var3Lifetime1 != 0 &&
-            qj.field_g == 0 &&
+            TutorialTextSupport.field_g == 0 &&
             SoundPlayback.field_i == 11 &&
             !ArchiveRequest.f(-11)) {
             LinkPainter.c(86);
           }
-          if (qj.field_g != -1 &&
-            qj.field_g != 0) {
-            SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
+          if (TutorialTextSupport.field_g != -1 &&
+            TutorialTextSupport.field_g != 0) {
+            SecondaryNodeDequeIterator.field_b = ClientClockSupport.currentTimeMillis(14274) + 15000L;
           }
         }
-        if (-1 != qj.field_g &&
-          qj.field_g != 0) {
+        if (-1 != TutorialTextSupport.field_g &&
+          TutorialTextSupport.field_g != 0) {
           if (DefensiveAi.field_p >= 10) {
             if (SoundPlayback.field_i >= 10) {
               IntrusiveNode.b(-11);
-              if (3 != qj.field_g) {
-                if (4 == qj.field_g) {
+              if (3 != TutorialTextSupport.field_g) {
+                if (4 == TutorialTextSupport.field_g) {
                   AccountStatusSupport.showLoginResult((byte) -124, 256, sa.field_e);
                 } else {
-                  if (qj.field_g == 2) {
+                  if (TutorialTextSupport.field_g == 2) {
                     AccountStatusSupport.showLoginResult((byte) -125, 256, ArchiveNetworkClient.field_r);
                   } else {
-                    if (qj.field_g != 5) {
+                    if (TutorialTextSupport.field_g != 5) {
                       AccountStatusSupport.showLoginResult((byte) -127, 256, StarAbandonedEvent.field_n);
                     } else {
                       AccountStatusSupport.showLoginResult((byte) -126, 5, PasswordInputPainter.field_w);
@@ -444,17 +444,17 @@ abstract class GameClientShell extends GameApplet {
                   }
                 }
               } else {
-                AccountStatusSupport.showLoginResult((byte) -126, 256, po.field_g);
+                AccountStatusSupport.showLoginResult((byte) -126, 256, ClientInputSupport.field_g);
               }
               StripedProgressWidget.field_B = true;
             }
           } else {
-            if (3 != qj.field_g) {
-              if (4 == qj.field_g) {
+            if (3 != TutorialTextSupport.field_g) {
+              if (4 == TutorialTextSupport.field_g) {
                 this.fail((byte) -120, "js5io");
               } else {
-                if (qj.field_g != 2) {
-                  if (5 != qj.field_g) {
+                if (TutorialTextSupport.field_g != 2) {
+                  if (5 != TutorialTextSupport.field_g) {
                     this.fail((byte) -110, "js5connect");
                   } else {
                     this.fail((byte) -85, "outofdate");
@@ -468,18 +468,18 @@ abstract class GameClientShell extends GameApplet {
             }
           }
         }
-        if ((qj.field_g != -1 &&
-          qj.field_g != 0 ||
+        if ((TutorialTextSupport.field_g != -1 &&
+          TutorialTextSupport.field_g != 0 ||
           ArchiveRequest.f(-11)) &&
-          SecondaryNodeDequeIterator.field_b <= pr.currentTimeMillis(14274)) {
+          SecondaryNodeDequeIterator.field_b <= ClientClockSupport.currentTimeMillis(14274)) {
           StripedProgressWidget.field_B = false;
-          if (-1 != qj.field_g &&
-            qj.field_g != 0) {
-            qj.field_g = -1;
+          if (-1 != TutorialTextSupport.field_g &&
+            TutorialTextSupport.field_g != 0) {
+            TutorialTextSupport.field_g = -1;
             IsaacBackedRandom.a(112);
           }
         }
-        if (qj.field_g == 0 &&
+        if (TutorialTextSupport.field_g == 0 &&
           !ArchiveRequest.f(-11)) {
           GameSpriteResources.field_f = false;
         }
@@ -681,7 +681,7 @@ abstract class GameClientShell extends GameApplet {
         if (var2 == 0 ||
           var2 == 1) {
           if (11 == SoundPlayback.field_i &&
-            0 == qj.field_g) {
+            0 == TutorialTextSupport.field_g) {
             LinkPainter.c(60);
           }
           return var2;
@@ -692,7 +692,7 @@ abstract class GameClientShell extends GameApplet {
         IntrusiveNode.b(-11);
         AccountStatusSupport.showLoginResult((byte) -126, var2, DiplomacyRowSupport.field_c);
         StripedProgressWidget.field_B = true;
-        SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
+        SecondaryNodeDequeIterator.field_b = ClientClockSupport.currentTimeMillis(14274) + 15000L;
         return var2;
     }
 

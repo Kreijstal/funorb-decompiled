@@ -76,7 +76,7 @@ abstract class ByteArrayStorage {
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
-              StripedProgressWidget.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.a(2, ClientClockSupport.field_e, 0, (String) null, (String) null, -16169);
               var15 = (String) null;
               var14 = (String) null;
               StripedProgressWidget.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);

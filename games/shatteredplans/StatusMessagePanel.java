@@ -296,7 +296,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             if (var7 == -1) {
               this.field_K.closeStatusDialog((byte) -104);
             } else {
-              qj.a((byte) -127, this.field_N[var6_int]);
+              TutorialTextSupport.setPendingUiAction((byte) -127, this.field_N[var6_int]);
             }
             break;
           }

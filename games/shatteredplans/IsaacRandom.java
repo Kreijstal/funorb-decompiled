@@ -59,11 +59,11 @@ final class IsaacRandom {
               var2.writeInt(11135, sg.field_Cb);
               LobbyOptionSupport.field_a.write(13, 0, var2.payload, -13976);
               ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
-              SocialListPanel.field_Cb = 30000L + pr.currentTimeMillis(14274);
+              SocialListPanel.field_Cb = 30000L + ClientClockSupport.currentTimeMillis(14274);
             }
             if (ServerIntArrayRequest.field_i == 3) {
               if (LobbyOptionSupport.field_a.available(-1) <= 0) {
-                if (SocialListPanel.field_Cb < pr.currentTimeMillis(14274)) {
+                if (SocialListPanel.field_Cb < ClientClockSupport.currentTimeMillis(14274)) {
                   stackIn_31_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, -2);
                   return stackIn_31_0;
                 }

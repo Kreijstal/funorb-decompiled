@@ -80,7 +80,7 @@ final class SolMapGenerator extends StandardMapGenerator {
                   }
                 } else {
                   var12 = 0;
-                  var11Lifetime1 = qf.a((byte) 47, 6, param0);
+                  var11Lifetime1 = SoundEffectDefinition.randomBelow((byte) 47, 6, param0);
                   for (var13 = 0; param8 > var13; var13++) {
                     if (var11Lifetime1 <= var13) {
                       var12 = 1;
@@ -143,7 +143,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         int var9 = 0;
         int var13 = ShatteredPlansClient.field_F ? 1 : 0;
         int var8Lifetime1;
-        os.field_u = HighscoreResponseSupport.loadSpriteSetByName(-115, "commonui", param1, "frame_top");
+        RoundedMenuPanel.field_u = HighscoreResponseSupport.loadSpriteSetByName(-115, "commonui", param1, "frame_top");
         IntrusiveNode.field_d = HighscoreResponseSupport.loadSpriteSetByName(-125, "commonui", param1, "frame_bottom");
         GradientMenuLabel.field_v = SpriteResourceSupport.loadSpriteByName(2, param1, "commonui", "jagex_logo_grey");
         AttackTask.field_q = HighscoreResponseSupport.loadSpriteSetByName(-80, "commonui", param1, "button");

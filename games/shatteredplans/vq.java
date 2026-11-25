@@ -178,7 +178,7 @@ final class vq {
             stackIn_7_0 = QuaternaryNodeList.field_f;
             return stackIn_7_0;
           }
-          if (po.field_b != 2) {
+          if (ClientInputSupport.field_b != 2) {
             stackIn_10_0 = SliderPainter.field_d;
             return stackIn_10_0;
           }

@@ -65,7 +65,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          ClientRuntimeState.field_a = pr.currentTimeMillis(14274) + 4000L;
+          ClientRuntimeState.field_a = ClientClockSupport.currentTimeMillis(14274) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kf.stop()");
         }
@@ -352,7 +352,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != ClientRuntimeState.field_a) {
-                    stackIn_97_0 = compareLongValues(ClientRuntimeState.field_a, pr.currentTimeMillis(14274));
+                    stackIn_97_0 = compareLongValues(ClientRuntimeState.field_a, ClientClockSupport.currentTimeMillis(14274));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_97_0 <= 0)) {
@@ -648,7 +648,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !PlayerContextMenuController.field_a) {
             TextReplacementEntry.field_e = true;
             if (VictoryChecker.field_a &&
-              pr.currentTimeMillis(14274) - PointsVictoryChecker.field_m > 1000L) {
+              ClientClockSupport.currentTimeMillis(14274) - PointsVictoryChecker.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < ArchiveSourceManager.field_h) {
@@ -812,7 +812,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2 = null;
         java.awt.Insets var6 = null;
         try {
-          var2_long = pr.currentTimeMillis(param0 ^ 14328);
+          var2_long = ClientClockSupport.currentTimeMillis(param0 ^ 14328);
           var4 = PairedIntSortSupport.field_b[TextLayout.field_a];
           PairedIntSortSupport.field_b[TextLayout.field_a] = var2_long;
           TextLayout.field_a = 1 + TextLayout.field_a & 31;
@@ -857,7 +857,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          ClientRuntimeState.field_a = pr.currentTimeMillis(14274);
+          ClientRuntimeState.field_a = ClientClockSupport.currentTimeMillis(14274);
           ClientOverlayDrawSupport.sleep((byte) -108, 5000L);
           ResizingDialog.field_S = null;
           this.terminate(-113, false);
@@ -920,7 +920,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = pr.currentTimeMillis(14274);
+          var2_long = ClientClockSupport.currentTimeMillis(14274);
           var4 = LobbyRoomEntry.field_Cb[PlayerEliminatedEvent.field_j];
           LobbyRoomEntry.field_Cb[PlayerEliminatedEvent.field_j] = var2_long;
           if (0L != var4 &&
@@ -1093,7 +1093,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           FourIntSubmissionRequest.field_q = true;
           TextReplacementEntry.field_e = true;
           IntrusiveDeque.field_c = false;
-          PointsVictoryChecker.field_m = pr.currentTimeMillis(14274);
+          PointsVictoryChecker.field_m = ClientClockSupport.currentTimeMillis(14274);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

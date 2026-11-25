@@ -239,7 +239,7 @@ final class TutorialStageSupport {
               TextReplacementEntry.field_a.field_Y.updatePlayerList(TextReplacementEntry.field_a.field_P.field_v, 1);
               uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
-            qj.a(WeightedLruCache.field_g, -1);
+            TutorialTextSupport.buildTutorialTextSprites(WeightedLruCache.field_g, -1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -269,7 +269,7 @@ final class TutorialStageSupport {
               TextReplacementEntry.field_e = false;
               var3_int = 1;
             }
-            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, po.field_h);
+            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, ClientInputSupport.field_h);
           } else {
             if (!UiTextSupport.hasLogoIntroFinished(250)) {
               SoftwareRasterizer.clear();

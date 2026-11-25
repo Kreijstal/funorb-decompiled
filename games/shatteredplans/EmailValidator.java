@@ -152,7 +152,7 @@ final class EmailValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_t)) {
-            var3 = os.a(202, param1);
+            var3 = RoundedMenuPanel.getAccountBooleanRequest(202, param1);
             if (!var3.isComplete(14)) {
               stackIn_8_0 = TutorialConditionalText.field_d;
               return stackIn_8_0;

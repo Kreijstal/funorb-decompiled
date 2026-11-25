@@ -75,7 +75,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
           var3_int = 0;
           var4 = vo.field_b;
           while (StarLinkPlanner.field_c.length > var3_int) {
-            var5 = pr.field_d[var3_int];
+            var5 = ClientClockSupport.field_d[var3_int];
             if (0 <= var5) {
               var6 = UiTextSupport.measureMenuLabel(true, StarLinkPlanner.field_c[var3_int], true);
               var4 = var4 + LobbyOptionSupport.field_e;

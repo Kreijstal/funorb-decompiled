@@ -39,7 +39,7 @@ final class uo {
           }
           if (UniformNineSliceFactory.field_b != -1) {
             var1_int = UniformNineSliceFactory.field_b;
-            qj.a((byte) -127, -1);
+            TutorialTextSupport.setPendingUiAction((byte) -127, -1);
             stackIn_12_0 = var1_int;
             return stackIn_12_0;
           }
@@ -435,7 +435,7 @@ final class uo {
               }
             }
             if (sf.field_e != 0L) {
-              var9 = (int)(sf.field_e - pr.currentTimeMillis(14274));
+              var9 = (int)(sf.field_e - ClientClockSupport.currentTimeMillis(14274));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -453,7 +453,7 @@ final class uo {
           stackIn_169_0 = MouseInputHandler.field_d;
           stackIn_170_1 = (param1) && (!param4) && (IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
-          DiplomacyNotice.field_h.field_d.f(false);
+          DiplomacyNotice.field_h.field_d.handleTabClicks(false);
           if (param0 != 23) {
             stackIn_172_0 = null;
             field_c = (String) (stackIn_172_0);

@@ -20,7 +20,7 @@ final class QuickChatCategoryRegistry {
     }
 
     final static void a(java.awt.Canvas param0, boolean param1) {
-        pr.a((java.awt.Component) ((Object) param0), -9194);
+        ClientClockSupport.attachKeyboardInput((java.awt.Component) ((Object) param0), -9194);
         if (param1) {
           return;
         }

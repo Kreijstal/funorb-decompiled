@@ -20,14 +20,14 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
         StatusMessagePanel var2Lifetime1;
         if (param0 == -7011) {
           this.field_yb.a(4210752, 2121792, -27855);
-          var2 = new StatusMessagePanel(this, this.field_ub, pr.field_f);
+          var2 = new StatusMessagePanel(this, this.field_ub, ClientClockSupport.field_f);
           var2.addActionButton(StarLinkPlanner.field_a, (byte) 112, 15);
           this.setContent(var2, param0 + 6907);
           return;
         }
         this.field_tb = false;
         this.field_yb.a(4210752, 2121792, -27855);
-        var2Lifetime1 = new StatusMessagePanel(this, this.field_ub, pr.field_f);
+        var2Lifetime1 = new StatusMessagePanel(this, this.field_ub, ClientClockSupport.field_f);
         var2Lifetime1.addActionButton(StarLinkPlanner.field_a, (byte) 112, 15);
         this.setContent(var2Lifetime1, param0 + 6907);
     }
@@ -83,7 +83,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
             CipherPacketBuffer.a("tochangedisplayname.ws", GameScreen.getHostApplet((byte) 126), (byte) 63);
             return;
           }
-          qj.a((byte) -127, 3);
+          TutorialTextSupport.setPendingUiAction((byte) -127, 3);
           this.closeStatusDialog((byte) -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -17,12 +17,12 @@ final class AllianceExpiredEvent extends IntrusiveNode {
         int var3 = var2.position;
         var2.writeByte(2, (byte) -99);
         var2.writeBytes(0, SpriteResourceSupport.field_c.length, SpriteResourceSupport.field_c, 22186);
-        var2.writeByte(qj.field_b, (byte) -114);
+        var2.writeByte(TutorialTextSupport.field_b, (byte) -114);
         if (param1 <= 64) {
           return;
         }
         var2.writeByte(RecklessAi.field_q, (byte) -58);
-        var2.writeBytes(0, qj.field_f.length, qj.field_f, 22186);
+        var2.writeBytes(0, TutorialTextSupport.field_f.length, TutorialTextSupport.field_f, 22186);
         var2.patchLengthByte(var2.position - var3, (byte) 126);
     }
 

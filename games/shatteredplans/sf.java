@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sf {
-    static qf field_g;
+    static SoundEffectDefinition field_g;
     static long field_e;
     int field_c;
     static AnimatedPanel field_f;
@@ -33,7 +33,7 @@ final class sf {
           TutorialStageSupport.field_f = new boolean[param1];
           CheckboxWidgetPainter.field_c = new int[param1];
           GameScreen.field_c = new int[param1];
-          q.field_Ab = new int[param1];
+          TabbedPanel.field_Ab = new int[param1];
           if (param0 < 123) {
             field_e = 41L;
           }

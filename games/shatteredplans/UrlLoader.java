@@ -54,7 +54,7 @@ final class UrlLoader implements Runnable {
             break;
           }
           if (var3 == null) {
-            q.g(-119);
+            TabbedPanel.closeClientSocket(-119);
             return;
           }
           var4 = -122 % ((14 - param0) / 34);

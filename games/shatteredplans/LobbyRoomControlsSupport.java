@@ -258,7 +258,7 @@ final class LobbyRoomControlsSupport {
           stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
-          DiplomacyNotice.field_h.field_d.f(false);
+          DiplomacyNotice.field_h.field_d.handleTabClicks(false);
           if (IntNode.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {

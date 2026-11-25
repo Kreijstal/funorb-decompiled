@@ -286,7 +286,7 @@ final class LobbyOptionSupport {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0)) {
               for (var10_intLifetime2 = 0; var16.length - 1 > var10_intLifetime2; var10_intLifetime2++) {
-                if ((qj.field_f[(var10_intLifetime2 + param4) / 8] & 1 << (7 & param4 + var10_intLifetime2)) == 0) {
+                if ((TutorialTextSupport.field_f[(var10_intLifetime2 + param4) / 8] & 1 << (7 & param4 + var10_intLifetime2)) == 0) {
                   continue;
                 }
                 var9 = 0;

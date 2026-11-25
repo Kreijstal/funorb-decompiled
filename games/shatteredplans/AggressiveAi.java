@@ -328,7 +328,7 @@ final class AggressiveAi extends StandardAi {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
                 DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_b, 4371, new String[]{MenuInputState.field_a.field_Xb});
               } else {
-                DualLinkDequeSequence.field_k = po.field_c;
+                DualLinkDequeSequence.field_k = ClientInputSupport.field_c;
               }
             }
           }
@@ -511,7 +511,7 @@ final class AggressiveAi extends StandardAi {
               var30 = ByteArrayNode.field_p[3][var7Lifetime3];
               if (var4_int != 0 &&
                 var30.field_rb != 0) {
-                qj.field_b = var7Lifetime3;
+                TutorialTextSupport.field_b = var7Lifetime3;
               }
               if (var30.field_v &&
                 var7Lifetime3 > 0) {
@@ -529,7 +529,7 @@ final class AggressiveAi extends StandardAi {
               stackIn_161_1 = (var4_int != 0);
               stackIn_160_0.field_s = stackIn_161_1;
               stackIn_163_0 = var30;
-              stackIn_164_1 = (qj.field_b == var7Lifetime3);
+              stackIn_164_1 = (TutorialTextSupport.field_b == var7Lifetime3);
               stackIn_163_0.field_bb = stackIn_164_1;
             }
           }
@@ -650,10 +650,10 @@ final class AggressiveAi extends StandardAi {
                 if (param1) {
                   if (var10 == -1) {
                     for (var19 = var7Lifetime4; var19 < var31.length + (var7Lifetime4 - 1); var19++) {
-                      qj.field_f[var19 / 8] = (byte)we.intAnd((int) qj.field_f[var19 / 8], ~(1 << we.intAnd(var19, 7)));
+                      TutorialTextSupport.field_f[var19 / 8] = (byte)we.intAnd((int) TutorialTextSupport.field_f[var19 / 8], ~(1 << we.intAnd(var19, 7)));
                     }
                   } else {
-                    qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) qj.field_f[(var10 + var7Lifetime4) / 8], 1 << we.intAnd(var10 + var7Lifetime4, 7));
+                    TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], 1 << we.intAnd(var10 + var7Lifetime4, 7));
                   }
                 } else {
                   if (var17Lifetime1 == 0 &&
@@ -665,7 +665,7 @@ final class AggressiveAi extends StandardAi {
               }
               if (param1 &&
                 var17Lifetime1 != 0) {
-                qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.intAnd((int) qj.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.intAnd(7, var7Lifetime4 + var10)));
+                TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.intAnd((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.intAnd(7, var7Lifetime4 + var10)));
               }
               if (var10 >= 0 &&
                 var18.field_v) {
@@ -802,13 +802,13 @@ final class AggressiveAi extends StandardAi {
                   while (var28 < -1 + (var31.length + var7Lifetime4)) {
                     stackIn_337_0 = var18;
                     stackIn_337_1 = var18.field_bb;
-                    stackIn_338_2 = ((qj.field_f[var28 / 8] & 1 << (var28 & 7)) == 0);
+                    stackIn_338_2 = ((TutorialTextSupport.field_f[var28 / 8] & 1 << (var28 & 7)) == 0);
                     stackIn_337_0.field_bb = stackIn_337_1 & stackIn_338_2;
                     var28++;
                   }
                 } else {
                   stackIn_340_0 = var18;
-                  stackIn_340_1 = qj.field_f[(var7Lifetime4 + var10) / 8];
+                  stackIn_340_1 = TutorialTextSupport.field_f[(var7Lifetime4 + var10) / 8];
                   stackIn_340_2 = 1;
                   stackIn_340_3 = 7 & var10 + var7Lifetime4;
                   stackIn_343_1 = ((stackIn_340_1 & stackIn_340_2 << stackIn_340_3) != 0);

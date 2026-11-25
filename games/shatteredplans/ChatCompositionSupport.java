@@ -242,7 +242,7 @@ final class ChatCompositionSupport {
               if ((decompiledSharedTail0) &&
                 (HighscoreResponseSupport.field_b)) {
                 var6 = "";
-                var5 = "<col=999999>" + var5 + qj.field_c + "</col>";
+                var5 = "<col=999999>" + var5 + TutorialTextSupport.field_c + "</col>";
               }
               var10 = QuickChatHelpSupport.field_f.stringWidth(var5);
               if (!BattleEvent.a((byte) 110)) {
@@ -251,7 +251,7 @@ final class ChatCompositionSupport {
                   if (LoginMethodPreference.field_g) {
                     var1 = "Broken!";
                   } else {
-                    var1 = qj.field_c;
+                    var1 = TutorialTextSupport.field_c;
                   }
                 }
                 if (uq.field_j.field_rb != 0 &&

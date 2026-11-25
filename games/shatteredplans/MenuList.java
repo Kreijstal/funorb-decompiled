@@ -98,7 +98,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
             MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             GameSpriteResources.field_a = BytePayloadNode.field_h;
             var13 = (sq) null;
-            qj.a((sq) null, -1);
+            TutorialTextSupport.buildTutorialTextSprites((sq) null, -1);
             return;
           }
           sj.a(-31560);
@@ -145,7 +145,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           SliderPainter.field_b = var3 + var5;
           GameSpriteResources.field_a = var3;
           MenuButton.field_B = var2_int;
-          qj.a(param1, param0 ^ -1546006978);
+          TutorialTextSupport.buildTutorialTextSprites(param1, param0 ^ -1546006978);
           if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
             uq.field_m.a("", 27275, "tabresizehint");
           }

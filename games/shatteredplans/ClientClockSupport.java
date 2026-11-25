@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pr {
+final class ClientClockSupport {
     static int[] field_d;
     static String field_e;
     static Sprite field_a;
@@ -10,7 +10,7 @@ final class pr {
     static int field_g;
     static String field_f;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardInput(java.awt.Component param0, int param1) {
         try {
           if (param1 != -9194) {
             field_c = (AnimatedPanel) null;
@@ -23,7 +23,7 @@ final class pr {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseClientClockStatics(int param0) {
         field_e = null;
         field_a = null;
         if (param0 == 21455) {
@@ -44,7 +44,7 @@ final class pr {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != 14274) {
-          pr.currentTimeMillis(81);
+          ClientClockSupport.currentTimeMillis(81);
           var1 = System.currentTimeMillis();
           if (VerticalMenuSlider.field_z > var1) {
             NumericDateInputWidget.field_N = NumericDateInputWidget.field_N + (-var1 + VerticalMenuSlider.field_z);

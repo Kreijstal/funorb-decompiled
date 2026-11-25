@@ -206,7 +206,7 @@ final class Star extends DualLinkNode {
           for (var5 = 0; var12.length > var5; var5++) {
             var4 = var4 + var12[var5];
           }
-          var4 = qf.a((byte) 126, var4, param0);
+          var4 = SoundEffectDefinition.randomBelow((byte) 126, var4, param0);
           var9 = 0;
           var5Lifetime1 = var9;
           while (true) {

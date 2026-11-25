@@ -109,7 +109,7 @@ final class sj {
                 }
                 var7_int++;
               }
-              var6_ref = QuickChatCategoryRegistry.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
+              var6_ref = QuickChatCategoryRegistry.a(TutorialTextSupport.field_d, 4371, new String[]{(String) (var6_ref)});
               if (1 != var5_intLifetime2) {
                 var6_ref = (String) (var6_ref) + ClientRasterSupport.field_f;
               } else {

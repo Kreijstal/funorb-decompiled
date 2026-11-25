@@ -515,7 +515,7 @@ final class DialogRoot extends SingleChildWidget {
         CachedArchiveSource.d(18);
         QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
-        qf.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
+        SoundEffectDefinition.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
         BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);
         GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);
         WeightedCacheEntry.field_t.setTarget(48, 30, (byte) 61, 5, 155);
@@ -523,7 +523,7 @@ final class DialogRoot extends SingleChildWidget {
         int var2 = !AccountStatusDialog.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
         AccountHandshakeSupport.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
-        SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
+        SingleChildWidget.field_y.a(-5 + SoundEffectDefinition.field_e.field_K - 5, 37, 5, 2, -125, -5 + (SoundEffectDefinition.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
         if (param0 < 93) {
           field_C = -10;
         }

@@ -127,7 +127,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (0L <= param0) {
-                var7Lifetime4 = var9 + "; Expires=" + QuickChatMenu.a(pr.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + QuickChatMenu.a(ClientClockSupport.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

@@ -141,7 +141,7 @@ final class BytePayloadNode extends IntrusiveNode {
             var10_int = var10_int + (AccountBooleanRequest.field_e[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
-          qj.field_f = new byte[var10_int];
+          TutorialTextSupport.field_f = new byte[var10_int];
           if (null == param7.field_M) {
             param7.field_M = new IntrusiveDeque();
           }

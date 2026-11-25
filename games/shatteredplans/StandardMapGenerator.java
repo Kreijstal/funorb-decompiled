@@ -14,7 +14,7 @@ class StandardMapGenerator implements MapGenerator {
     int field_c;
     private int field_k;
     int field_b;
-    static qf field_l;
+    static SoundEffectDefinition field_l;
     static String field_g;
     int field_a;
 
@@ -242,7 +242,7 @@ class StandardMapGenerator implements MapGenerator {
             }
             var3 = 0;
             if (param1 >= -127) {
-              field_l = (qf) null;
+              field_l = (SoundEffectDefinition) null;
             }
             for (var4 = 0; var4 < var17.field_l; var4++) {
               if (null != var13.field_q[var4]) {
@@ -530,7 +530,7 @@ class StandardMapGenerator implements MapGenerator {
           param1.field_e = new Star[this.field_d];
           if (this.field_k < 50) {
             while (var5Lifetime1 < this.field_d) {
-              var6_intLifetime1 = qf.a((byte) 110, this.field_f.length, param1.field_j);
+              var6_intLifetime1 = SoundEffectDefinition.randomBelow((byte) 110, this.field_f.length, param1.field_j);
               if (null != this.field_f[var6_intLifetime1]) {
                 continue;
               }
@@ -539,7 +539,7 @@ class StandardMapGenerator implements MapGenerator {
             }
           } else {
             while (var4Lifetime1 > this.field_d) {
-              var6_intLifetime1 = qf.a((byte) 55, this.field_f.length, param1.field_j);
+              var6_intLifetime1 = SoundEffectDefinition.randomBelow((byte) 55, this.field_f.length, param1.field_j);
               if (null != this.field_f[var6_intLifetime1]) {
                 continue;
               }
@@ -610,7 +610,7 @@ class StandardMapGenerator implements MapGenerator {
               var5.field_G[var6] = 1;
             }
             for (var6Lifetime1 = 0; 2 > var6Lifetime1; var6Lifetime1++) {
-              dupTemp$1 = qf.a((byte) 124, 4, param0.field_j);
+              dupTemp$1 = SoundEffectDefinition.randomBelow((byte) 124, 4, param0.field_j);
               var5.field_G[dupTemp$1] = var5.field_G[dupTemp$1] + 1;
             }
           }
@@ -659,7 +659,7 @@ class StandardMapGenerator implements MapGenerator {
             StandardMapGenerator.attachInputListeners((java.awt.Canvas) null, (byte) 94);
           }
           while (var4_intLifetime1 < 2) {
-            dupTemp$2 = qf.a((byte) 44, 4, param2);
+            dupTemp$2 = SoundEffectDefinition.randomBelow((byte) 44, 4, param2);
             param0.field_G[dupTemp$2] = param0.field_G[dupTemp$2] + 1;
             var4_intLifetime1++;
           }
@@ -745,7 +745,7 @@ class StandardMapGenerator implements MapGenerator {
               var19[var10] = param0;
             }
             for (var10 = 0; param4 > var10; var10++) {
-              dupTemp$1 = qf.a((byte) 61, 4, param3.field_j);
+              dupTemp$1 = SoundEffectDefinition.randomBelow((byte) 61, 4, param3.field_j);
               var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
             }
             var10 = 0;
@@ -783,7 +783,7 @@ class StandardMapGenerator implements MapGenerator {
                     throw new MapGenerationException("Insufficient resources to give production to each star. Close: " + param1 + ", Far: " + param6 + ", Minimum: " + param0 + ", Extra: " + param4 + ".");
                   }
                   do {
-                    var13 = qf.a((byte) 55, 4, param3.field_j);
+                    var13 = SoundEffectDefinition.randomBelow((byte) 55, 4, param3.field_j);
                   } while (var19[var13] == 0);
                   dupTemp$0 = param3.field_e[var20[var12]].field_G;
                   dupTemp$0[var13] = dupTemp$0[var13] + 1;
@@ -798,14 +798,14 @@ class StandardMapGenerator implements MapGenerator {
                 while (0 < var10) {
                   var13 = var11[ClientPacketFlushSupport.randomInclusive((byte) -12, var12, -1 + param6, param3.field_j)];
                   var14 = param3.field_e[var13];
-                  var15 = qf.a((byte) 107, 4, param3.field_j);
-                  if (qf.a((byte) 51, 2, param3.field_j) != 0) {
+                  var15 = SoundEffectDefinition.randomBelow((byte) 107, 4, param3.field_j);
+                  if (SoundEffectDefinition.randomBelow((byte) 51, 2, param3.field_j) != 0) {
                     while (0 == var14.field_G[var15]) {
-                      var15 = qf.a((byte) 11, 4, param3.field_j);
+                      var15 = SoundEffectDefinition.randomBelow((byte) 11, 4, param3.field_j);
                     }
                   }
                   while (0 == var19[var15]) {
-                    var15 = qf.a((byte) 111, 4, param3.field_j);
+                    var15 = SoundEffectDefinition.randomBelow((byte) 111, 4, param3.field_j);
                   }
                   var14.field_G[var15] = var14.field_G[var15] + 1;
                   var10--;
@@ -862,13 +862,13 @@ class StandardMapGenerator implements MapGenerator {
               var6 = var6 + var5.field_G[var7];
             }
             if (var6 == 0) {
-              var7Lifetime1 = qf.a((byte) 63, 100, param0.field_j);
-              var8 = qf.a((byte) 78, 4, param0.field_j);
-              var9 = qf.a((byte) 66, 3, param0.field_j);
+              var7Lifetime1 = SoundEffectDefinition.randomBelow((byte) 63, 100, param0.field_j);
+              var8 = SoundEffectDefinition.randomBelow((byte) 78, 4, param0.field_j);
+              var9 = SoundEffectDefinition.randomBelow((byte) 66, 3, param0.field_j);
               if (var9 == var8) {
                 var9 = 3;
               }
-              var10 = qf.a((byte) 32, 2, param0.field_j);
+              var10 = SoundEffectDefinition.randomBelow((byte) 32, 2, param0.field_j);
               if (var10 == var8 ||
                 var10 == var9) {
                 if (var8 != 2 &&
@@ -1102,7 +1102,7 @@ class StandardMapGenerator implements MapGenerator {
           for (var15Lifetime1 = var14Lifetime1; var15Lifetime1 < param8; var15Lifetime1++) {
             var16 = -1;
             while (var16 == -1) {
-              var16 = var12[qf.a((byte) 63, var11Lifetime1, param0)];
+              var16 = var12[SoundEffectDefinition.randomBelow((byte) 63, var11Lifetime1, param0)];
               var17 = 0;
               while (var15Lifetime1 > var17) {
                 if (~var29[var17] == ~var16) {

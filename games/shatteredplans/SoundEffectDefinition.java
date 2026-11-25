@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qf {
+final class SoundEffectDefinition {
     int field_a;
     PcmSample field_f;
     static byte[][] field_d;
@@ -21,7 +21,7 @@ final class qf {
         field_e = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleOverlayInput(int param0, int param1, int param2, int param3) {
         if (DerelictVictoryChecker.field_m == null) {
           if (DialogRoot.field_G != null &&
             DialogRoot.field_G.pollReportIdleState(0)) {
@@ -30,7 +30,7 @@ final class qf {
             return true;
           }
           if (param0 != 0) {
-            qf.a(-33, 11, -33, 82);
+            SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
           }
           if (DefendTask.d(97)) {
             return true;
@@ -46,7 +46,7 @@ final class qf {
         }
         if (DialogRoot.field_G == null) {
           if (param0 != 0) {
-            qf.a(-33, 11, -33, 82);
+            SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
           }
           if (DefendTask.d(97)) {
             return true;
@@ -70,7 +70,7 @@ final class qf {
           }
           return false;
         }
-        qf.a(-33, 11, -33, 82);
+        SoundEffectDefinition.handleOverlayInput(-33, 11, -33, 82);
         if (DefendTask.d(97)) {
           return true;
         }
@@ -80,7 +80,7 @@ final class qf {
         return true;
     }
 
-    final static void a(byte param0) {
+    final static void initializeIntro(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
         ValidationState.field_a = vc.a((byte) -39, 50);
         NetworkArchiveRequest.field_C = (BitmapFont) ((Object) rs.field_Cb);
@@ -95,7 +95,7 @@ final class qf {
         FocusableWidget.f((byte) -123);
     }
 
-    final static int a(byte param0, int param1, Random param2) {
+    final static int randomBelow(byte param0, int param1, Random param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -104,7 +104,7 @@ final class qf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 0) {
-            qf.a(119, 68, -5, 5);
+            SoundEffectDefinition.handleOverlayInput(119, 68, -5, 5);
           }
           stackIn_3_0 = TaskAi.randomBelow(param1, param2, -11);
           return stackIn_3_0;
@@ -122,7 +122,7 @@ final class qf {
         }
     }
 
-    qf(PcmSample param0, int param1) {
+    SoundEffectDefinition(PcmSample param0, int param1) {
         try {
           this.field_a = param1;
           this.field_f = param0;
@@ -131,7 +131,7 @@ final class qf {
         }
     }
 
-    final static void b(byte param0) {
+    final static void openChatPanelOverlay(byte param0) {
         ToggleButton.a(SpriteState.field_u, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, VictoryChecker.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }

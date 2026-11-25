@@ -243,7 +243,7 @@ final class SoundPlayback extends IntrusiveNode {
               }
               stackIn_52_0[stackIn_52_1] = stackIn_55_2;
             }
-            MusicPatch.field_p = pr.currentTimeMillis(14274);
+            MusicPatch.field_p = ClientClockSupport.currentTimeMillis(14274);
           }
           GameState.field_l.field_b = ShatteredPlansClient.field_E.length;
           var3_intLifetime1 = 0;
@@ -328,7 +328,7 @@ final class SoundPlayback extends IntrusiveNode {
           return;
         }
         try {
-          qj.a((byte) -127, 12);
+          TutorialTextSupport.setPendingUiAction((byte) -127, 12);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

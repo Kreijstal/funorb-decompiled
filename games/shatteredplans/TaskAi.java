@@ -67,7 +67,7 @@ final class TaskAi implements Ai {
           if (!this.field_y[var4]) {
             var2 = var3.field_i - var3.field_n.field_x;
             if (0 < var2) {
-              q.field_Ab[var3.field_n.field_p] = 0;
+              TabbedPanel.field_Ab[var3.field_n.field_p] = 0;
               if (var3.field_n.field_x <= var3.field_n.field_N) {
                 if (var2 > this.field_i[var4]) {
                   var3.field_n.field_J = var3.field_n.field_J + this.field_i[var4];
@@ -140,7 +140,7 @@ final class TaskAi implements Ai {
                 this.a(var4, 100, var6);
               }
             } else {
-              q.field_Ab[var3.field_n.field_p] = var3.field_n.field_x - var3.field_i;
+              TabbedPanel.field_Ab[var3.field_n.field_p] = var3.field_n.field_x - var3.field_i;
               this.field_n[var4] = this.field_n[var4] - (-var3.field_n.field_N + var3.field_i);
               if (this.field_n[var4] < 0) {
                 this.a(var4, -52, var6);
@@ -174,9 +174,9 @@ final class TaskAi implements Ai {
           var7 = var4[var6];
           if (var7.field_y == this.field_w &&
             var7.field_x > var7.field_N) {
-            q.field_Ab[var7.field_p] = var7.field_x - var7.field_N;
-            if (var7.field_J < q.field_Ab[var7.field_p]) {
-              throw new RuntimeException(var7.name + ": available=" + q.field_Ab[var7.field_p] + ", garrison_next=" + var7.field_J);
+            TabbedPanel.field_Ab[var7.field_p] = var7.field_x - var7.field_N;
+            if (var7.field_J < TabbedPanel.field_Ab[var7.field_p]) {
+              throw new RuntimeException(var7.name + ": available=" + TabbedPanel.field_Ab[var7.field_p] + ", garrison_next=" + var7.field_J);
             }
             var3_ref = (Territory) (this.field_w.field_i.startForward(0));
             var8 = 0;
@@ -186,14 +186,14 @@ final class TaskAi implements Ai {
                 continue;
               }
               var8 = 1;
-              this.field_n[var2] = this.field_n[var2] + q.field_Ab[var7.field_p];
+              this.field_n[var2] = this.field_n[var2] + TabbedPanel.field_Ab[var7.field_p];
               break;
             }
             if (var8 == 0) {
               throw new RuntimeException("Star owned by " + this.field_w.name + " is not in any of its Territories: " + var7.name);
             }
           } else {
-            q.field_Ab[var7.field_p] = 0;
+            TabbedPanel.field_Ab[var7.field_p] = 0;
           }
         }
         if (this.field_m.field_o.field_i) {
@@ -233,12 +233,12 @@ final class TaskAi implements Ai {
           var5_ref_wf = var3_ref_wf__[var4_int];
           if (var5_ref_wf instanceof DefendTask) {
             var2 = var5_ref_wf.field_n.field_p;
-            if (GameScreen.field_c[var2] < q.field_Ab[var2]) {
-              q.field_Ab[var2] = q.field_Ab[var2] - GameScreen.field_c[var2];
+            if (GameScreen.field_c[var2] < TabbedPanel.field_Ab[var2]) {
+              TabbedPanel.field_Ab[var2] = TabbedPanel.field_Ab[var2] - GameScreen.field_c[var2];
               GameScreen.field_c[var2] = 0;
             } else {
-              GameScreen.field_c[var2] = GameScreen.field_c[var2] - q.field_Ab[var2];
-              q.field_Ab[var2] = 0;
+              GameScreen.field_c[var2] = GameScreen.field_c[var2] - TabbedPanel.field_Ab[var2];
+              TabbedPanel.field_Ab[var2] = 0;
             }
           }
         }
@@ -253,17 +253,17 @@ final class TaskAi implements Ai {
                 var8 = var6.field_n.field_R.firstStar(param0 ^ 23379);
                 while (var8 != null) {
                   if (var6.field_n != var8 &&
-                    0 != q.field_Ab[var8.field_p] && (var3 != 0 ||
+                    0 != TabbedPanel.field_Ab[var8.field_p] && (var3 != 0 ||
                     !TutorialStageSupport.field_f[var8.field_p])) {
-                    if (GameScreen.field_c[var2Lifetime1] < q.field_Ab[var8.field_p]) {
+                    if (GameScreen.field_c[var2Lifetime1] < TabbedPanel.field_Ab[var8.field_p]) {
                       this.moveFleets(GameScreen.field_c[var2Lifetime1], (byte) 102, var6.field_n, var8);
-                      q.field_Ab[var8.field_p] = q.field_Ab[var8.field_p] - GameScreen.field_c[var2Lifetime1];
+                      TabbedPanel.field_Ab[var8.field_p] = TabbedPanel.field_Ab[var8.field_p] - GameScreen.field_c[var2Lifetime1];
                       GameScreen.field_c[var2Lifetime1] = 0;
                       break regionExit1;
                     }
-                    this.moveFleets(q.field_Ab[var8.field_p], (byte) 114, var6.field_n, var8);
-                    GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - q.field_Ab[var8.field_p];
-                    q.field_Ab[var8.field_p] = 0;
+                    this.moveFleets(TabbedPanel.field_Ab[var8.field_p], (byte) 114, var6.field_n, var8);
+                    GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - TabbedPanel.field_Ab[var8.field_p];
+                    TabbedPanel.field_Ab[var8.field_p] = 0;
                   }
                   var8 = var6.field_n.field_R.nextStar(-23410);
                 }
@@ -321,7 +321,7 @@ final class TaskAi implements Ai {
         DerelictMapReader.field_f = false;
         for (var2 = 0; var2 < this.field_x; var2++) {
           TutorialStageSupport.field_f[var2] = false;
-          q.field_Ab[var2] = 0;
+          TabbedPanel.field_Ab[var2] = 0;
           GameScreen.field_c[var2] = 0;
           CheckboxWidgetPainter.field_c[var2] = 0;
         }
@@ -849,7 +849,7 @@ final class TaskAi implements Ai {
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
         ((AnimatedPanel) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
-        Archive.field_g.field_d.f(false);
+        Archive.field_g.field_d.handleTabClicks(false);
         if (0 != QuickChatMenu.field_Ab.field_rb) {
           GzipInflater.field_d = true;
         }
@@ -1078,14 +1078,14 @@ final class TaskAi implements Ai {
               stackIn_4_1 = this.field_w;
               boolean decompiledFrameRemainder1 = true;
               if (stackIn_4_0 == stackIn_4_1 &&
-                q.field_Ab[param1[var11].field_p] != 0) {
+                TabbedPanel.field_Ab[param1[var11].field_p] != 0) {
                 boolean decompiledFrameRemainder0 = true;
                 boolean decompiledFrameCompleted0 = true;
                 var7 = 0;
                 if ((!param0) &&
                   (decompiledFrameRemainder1 = (!(param0) ||
                   var7 == 1))) {
-                  var8 = q.field_Ab[param1[var11].field_p];
+                  var8 = TabbedPanel.field_Ab[param1[var11].field_p];
                   var10 = null;
                   if (var8 > param4) {
                     var8 = param4;
@@ -1116,7 +1116,7 @@ final class TaskAi implements Ai {
                   decompiledFrameRemainder1 = (!(param0) ||
                     var7 == 1);
                   if (decompiledFrameRemainder1) {
-                    var8 = q.field_Ab[param1[var11].field_p];
+                    var8 = TabbedPanel.field_Ab[param1[var11].field_p];
                     var10Lifetime1 = null;
                     if (var8 > param4) {
                       var8 = param4;
@@ -1141,7 +1141,7 @@ final class TaskAi implements Ai {
                   }
                   this.moveFleets(var8, (byte) 115, param2, param1[var11]);
                   dupTemp$0 = param1[var11].field_p;
-                  q.field_Ab[dupTemp$0] = q.field_Ab[dupTemp$0] - var8;
+                  TabbedPanel.field_Ab[dupTemp$0] = TabbedPanel.field_Ab[dupTemp$0] - var8;
                   var6_int = var6_int + var8;
                   this.field_n[var9] = this.field_n[var9] - var8;
                   if (var6_int == param4) {
@@ -1462,7 +1462,7 @@ final class TaskAi implements Ai {
           var7 = param2.firstStar(18229);
           while (var7 != null) {
             GameScreen.field_c[var7.field_p] = 0;
-            q.field_Ab[var7.field_p] = 0;
+            TabbedPanel.field_Ab[var7.field_p] = 0;
             var7.field_J = var7.field_x;
             var8 = 0;
             for (var9 = 0; var9 < 4; var9++) {
@@ -2177,12 +2177,12 @@ final class TaskAi implements Ai {
           if (0 > GameScreen.field_c[var2]) {
             throw new RuntimeException(this.field_m.field_g.field_e[var2].name + " has " + GameScreen.field_c[var2] + " fleets assigned to garrison it!");
           }
-          if (GameScreen.field_c[var2] < q.field_Ab[var2]) {
-            q.field_Ab[var2] = q.field_Ab[var2] - GameScreen.field_c[var2];
+          if (GameScreen.field_c[var2] < TabbedPanel.field_Ab[var2]) {
+            TabbedPanel.field_Ab[var2] = TabbedPanel.field_Ab[var2] - GameScreen.field_c[var2];
             GameScreen.field_c[var2] = 0;
           } else {
-            GameScreen.field_c[var2] = GameScreen.field_c[var2] - q.field_Ab[var2];
-            q.field_Ab[var2] = 0;
+            GameScreen.field_c[var2] = GameScreen.field_c[var2] - TabbedPanel.field_Ab[var2];
+            TabbedPanel.field_Ab[var2] = 0;
           }
           var3 = (GarrisonTask) (this.field_l.nextForward((byte) -71));
         }
@@ -2205,21 +2205,21 @@ final class TaskAi implements Ai {
               var6 = var3Lifetime1.field_n.field_R.firstStar(18229);
               while (var6 != null) {
                 if (var6 != var3Lifetime1.field_n &&
-                  q.field_Ab[var6.field_p] != 0) {
+                  TabbedPanel.field_Ab[var6.field_p] != 0) {
                   if (var4Lifetime1 == 0 &&
                     TutorialStageSupport.field_f[var6.field_p]) {
                     var6 = var3Lifetime1.field_n.field_R.nextStar(-23410);
                     continue;
                   }
-                  if (q.field_Ab[var6.field_p] >= GameScreen.field_c[var2Lifetime1]) {
+                  if (TabbedPanel.field_Ab[var6.field_p] >= GameScreen.field_c[var2Lifetime1]) {
                     this.moveFleets(GameScreen.field_c[var2Lifetime1], (byte) 102, var3Lifetime1.field_n, var6);
-                    q.field_Ab[var6.field_p] = q.field_Ab[var6.field_p] - GameScreen.field_c[var2Lifetime1];
+                    TabbedPanel.field_Ab[var6.field_p] = TabbedPanel.field_Ab[var6.field_p] - GameScreen.field_c[var2Lifetime1];
                     GameScreen.field_c[var2Lifetime1] = 0;
                     break scanLoop1;
                   }
-                  this.moveFleets(q.field_Ab[var6.field_p], (byte) 103, var3Lifetime1.field_n, var6);
-                  GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - q.field_Ab[var6.field_p];
-                  q.field_Ab[var6.field_p] = 0;
+                  this.moveFleets(TabbedPanel.field_Ab[var6.field_p], (byte) 103, var3Lifetime1.field_n, var6);
+                  GameScreen.field_c[var2Lifetime1] = GameScreen.field_c[var2Lifetime1] - TabbedPanel.field_Ab[var6.field_p];
+                  TabbedPanel.field_Ab[var6.field_p] = 0;
                 }
                 var6 = var3Lifetime1.field_n.field_R.nextStar(-23410);
               }
@@ -2617,7 +2617,7 @@ final class TaskAi implements Ai {
           for (var9 = 0; var9 < var23.length; var9++) {
             if (var35[var9] != -1) {
               dupTemp$0 = var35[var9];
-              var8[dupTemp$0] = var8[dupTemp$0] + q.field_Ab[var23[var9].field_p];
+              var8[dupTemp$0] = var8[dupTemp$0] + TabbedPanel.field_Ab[var23[var9].field_p];
             }
           }
           var9Lifetime1 = 0;
@@ -2732,7 +2732,7 @@ final class TaskAi implements Ai {
             while (var13Lifetime1 != 0) {
               var13Lifetime1 = 0;
               for (var15Lifetime1 = 0; var15Lifetime1 < -1 + var29.length; var15Lifetime1++) {
-                if (q.field_Ab[var29[var15Lifetime1].field_p] > q.field_Ab[var12[var15Lifetime1 + 1].field_p]) {
+                if (TabbedPanel.field_Ab[var29[var15Lifetime1].field_p] > TabbedPanel.field_Ab[var12[var15Lifetime1 + 1].field_p]) {
                   var14 = var29[var15Lifetime1];
                   var19Lifetime1 = var14;
                   var19Lifetime1 = var14;

@@ -102,7 +102,7 @@ final class ByteArrayReadRequest extends IntrusiveNode {
         if (param0 == 0) {
           if (FleetTrailPoint.field_m == 0) {
             sg.a(true, false, 0, AccountCreationForm.field_P, NetworkArchiveRequest.field_C);
-            sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
+            sg.a(true, false, 700, SoundEffectDefinition.field_c, NetworkArchiveRequest.field_C);
           }
           fieldTemp$1 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
@@ -114,7 +114,7 @@ final class ByteArrayReadRequest extends IntrusiveNode {
         field_m = (Archive) null;
         if (FleetTrailPoint.field_m == 0) {
           sg.a(true, false, 0, AccountCreationForm.field_P, NetworkArchiveRequest.field_C);
-          sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
+          sg.a(true, false, 700, SoundEffectDefinition.field_c, NetworkArchiveRequest.field_C);
         }
         fieldTemp$0 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

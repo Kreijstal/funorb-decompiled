@@ -12,12 +12,12 @@ final class ClientRasterSupport {
     final static void showConnectionWaitDialog(byte param0) {
         if (param0 <= -49) {
           ClientUiLoadingSupport.showConnectionProgressDialog(7655);
-          qj.a((byte) -127, 4);
+          TutorialTextSupport.setPendingUiAction((byte) -127, 4);
           return;
         }
         ClientRasterSupport.isSecondVectorLonger(-77, 49, 26, true, 104);
         ClientUiLoadingSupport.showConnectionProgressDialog(7655);
-        qj.a((byte) -127, 4);
+        TutorialTextSupport.setPendingUiAction((byte) -127, 4);
     }
 
     final static void setClientStatusText(String param0, byte param1) {

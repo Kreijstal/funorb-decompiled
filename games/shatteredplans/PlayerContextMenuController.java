@@ -134,7 +134,7 @@ final class PlayerContextMenuController {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new PlayerReportPanel(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new PlayerReportPanel(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, ClientInputSupport.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -157,7 +157,7 @@ final class PlayerContextMenuController {
                   ServerIntArrayRequest.setChatChannelFilter((byte) -96, param2, 2, this.field_l);
                 } else {
                   if (param0 == 14) {
-                    po.a(54);
+                    ClientInputSupport.resetChatChannel(54);
                   } else {
                     if (20 == param0) {
                       ClientException.a(true);
@@ -221,7 +221,7 @@ final class PlayerContextMenuController {
         if (7 != param0) {
           return false;
         }
-        var7 = os.a((byte) 117, param1, this.field_h, this.field_k);
+        var7 = RoundedMenuPanel.requestRemoveIgnore((byte) 117, param1, this.field_h, this.field_k);
         if (var7 != null) {
           var5Lifetime3 = (String) null;
           StripedProgressWidget.a(2, var7, 0, this.field_k, (String) null, -16169);
@@ -241,7 +241,7 @@ final class PlayerContextMenuController {
         String var7 = null;
         try {
           if (this.field_k != null && (~this.field_b != ~UsernameAvailabilityValidator.field_p ||
-            param1 == 2) && po.field_b == 2) {
+            param1 == 2) && ClientInputSupport.field_b == 2) {
             var7 = this.getDisplayName(-121);
             var4 = var7;
             var5 = NodeSequence.a((byte) -90, this.field_k);
@@ -576,7 +576,7 @@ final class PlayerContextMenuController {
             return true;
           }
           if (param2 == 10) {
-            os.a(this.field_f, param0, true);
+            RoundedMenuPanel.writeSpectateRequest(this.field_f, param0, true);
             return true;
           }
           if (param2 == 15) {
@@ -608,7 +608,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param2 == 10) {
-          os.a(this.field_f, param0, true);
+          RoundedMenuPanel.writeSpectateRequest(this.field_f, param0, true);
           return true;
         }
         if (param2 == 15) {

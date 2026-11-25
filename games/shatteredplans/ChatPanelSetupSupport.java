@@ -149,9 +149,9 @@ final class ChatPanelSetupSupport {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            pr.field_c = new AnimatedPanel(0L, param0);
-            pr.field_c.field_z = TooltipSupport.field_c;
-            tg.field_c.addChild(4, pr.field_c);
+            ClientClockSupport.field_c = new AnimatedPanel(0L, param0);
+            ClientClockSupport.field_c.field_z = TooltipSupport.field_c;
+            tg.field_c.addChild(4, ClientClockSupport.field_c);
             stackIn_34_0 = DirectByteArrayStorage.b((byte) -121) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&

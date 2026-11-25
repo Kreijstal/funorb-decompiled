@@ -90,7 +90,7 @@ final class ClientException extends RuntimeException {
             return;
           }
           for (var3 = 0; StarLinkPlanner.field_c.length > var3; var3++) {
-            var4 = pr.field_d[var3];
+            var4 = ClientClockSupport.field_d[var3];
             if (0 > var4) {
               var5 = ProductionContent.field_j;
             } else {

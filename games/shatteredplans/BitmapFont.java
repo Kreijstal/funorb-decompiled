@@ -228,7 +228,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(q.a((byte) -124, (char) var8) & 255);
+              var8 = (char)(TabbedPanel.charToCp1252((byte) -124, (char) var8) & 255);
               if (this.field_M != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_M[(var5 << 8) + var8];
@@ -458,7 +458,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(q.a((byte) -124, (char) var8) & 255);
+              var8 = (char)(TabbedPanel.charToCp1252((byte) -124, (char) var8) & 255);
               var9 = this.field_I[var8];
               var10 = this.field_y[var8];
               var11 = this.field_C[var8];
@@ -720,7 +720,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_B.append((char) var14);
-                var14 = (char)(q.a((byte) -83, (char) var14) & 255);
+                var14 = (char)(TabbedPanel.charToCp1252((byte) -83, (char) var14) & 255);
                 var4 = var4 + this.field_y[var14];
                 if (this.field_M != null &&
                   var10 != 0) {
@@ -843,7 +843,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(q.a((byte) -79, (char) var7) & 255);
+              var7 = (char)(TabbedPanel.charToCp1252((byte) -79, (char) var7) & 255);
               var4 = var4 + this.field_y[var7];
               if (this.field_M != null &&
                 var3 != 0) {
@@ -1106,7 +1106,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_y[q.a((byte) -80, param0) & 255];
+        return this.field_y[TabbedPanel.charToCp1252((byte) -80, param0) & 255];
     }
 
     static {

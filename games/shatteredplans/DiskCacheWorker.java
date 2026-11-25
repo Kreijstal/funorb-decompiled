@@ -52,21 +52,21 @@ final class DiskCacheWorker implements Runnable {
           DefendTask.field_s.drawSilhouette(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
         }
         va.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
-        q.field_Cb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
+        TabbedPanel.field_Cb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
         EmailSyntaxValidator.field_o = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
         RoundedFrameSupport.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
-        var1_int = q.field_Cb.field_z;
-        var2 = q.field_Cb.field_w + 60;
+        var1_int = TabbedPanel.field_Cb.field_z;
+        var2 = TabbedPanel.field_Cb.field_w + 60;
         IntNode.field_h = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
-          IntNode.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
+          IntNode.field_h.field_B[var3 + var1_int * 60] = TabbedPanel.field_Cb.field_B[var3];
         }
         var1_int = EmailSyntaxValidator.field_o.field_z;
-        IntNode.field_h.field_o = q.field_Cb.field_o;
-        IntNode.field_h.field_t = q.field_Cb.field_t;
-        IntNode.field_h.field_x = -60 + q.field_Cb.field_x;
+        IntNode.field_h.field_o = TabbedPanel.field_Cb.field_o;
+        IntNode.field_h.field_t = TabbedPanel.field_Cb.field_t;
+        IntNode.field_h.field_x = -60 + TabbedPanel.field_Cb.field_x;
         var2 = 60 + EmailSyntaxValidator.field_o.field_w;
-        IntNode.field_h.field_p = 60 + q.field_Cb.field_p;
+        IntNode.field_h.field_p = 60 + TabbedPanel.field_Cb.field_p;
         we.field_f = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
           we.field_f.field_B[var1_int * 60 + var3] = EmailSyntaxValidator.field_o.field_B[var3];
@@ -275,7 +275,7 @@ final class DiskCacheWorker implements Runnable {
         BirthDateConfirmationForm.field_Q = 0;
         GameRules.field_c = PlayerRankingRequest.field_o;
         if (PlayerRankingRequest.field_o == -3) {
-          qf.a((byte) -126);
+          SoundEffectDefinition.initializeIntro((byte) -126);
         }
         if (0 == PlayerRankingRequest.field_o &&
           !ValidationState.field_b.a(PaddedContentDialog.field_nb, (byte) -23)) {

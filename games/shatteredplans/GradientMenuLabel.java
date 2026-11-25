@@ -100,9 +100,9 @@ final class GradientMenuLabel extends MenuComponent {
             var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = 3 + var7;
             StarLinkPlanner.field_c = new String[var8];
-            pr.field_d = new int[var8];
+            ClientClockSupport.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
-              pr.field_d[var9] = -1;
+              ClientClockSupport.field_d[var9] = -1;
             }
             Player.field_y = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
@@ -110,10 +110,10 @@ final class GradientMenuLabel extends MenuComponent {
             }
             StarLinkPlanner.field_c[var8 - 3] = "";
             StarLinkPlanner.field_c[-2 + var8] = var6;
-            pr.field_d[var8 - 2] = 0;
+            ClientClockSupport.field_d[var8 - 2] = 0;
             Player.field_y[0] = 1;
             StarLinkPlanner.field_c[-1 + var8] = ChatHistoryEntry.field_i;
-            pr.field_d[-1 + var8] = 1;
+            ClientClockSupport.field_d[-1 + var8] = 1;
             Player.field_y[1] = 2;
           } else {
             if (1 != Bzip2State.field_r) {
@@ -122,9 +122,9 @@ final class GradientMenuLabel extends MenuComponent {
             var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = var7 + 2;
             StarLinkPlanner.field_c = new String[var8];
-            pr.field_d = new int[var8];
+            ClientClockSupport.field_d = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
-              pr.field_d[var9] = -1;
+              ClientClockSupport.field_d[var9] = -1;
             }
             Player.field_y = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
@@ -132,15 +132,15 @@ final class GradientMenuLabel extends MenuComponent {
             }
             StarLinkPlanner.field_c[-2 + var8] = "";
             StarLinkPlanner.field_c[var8 - 1] = ChatHistoryEntry.field_i;
-            pr.field_d[-1 + var8] = 0;
+            ClientClockSupport.field_d[-1 + var8] = 0;
             Player.field_y[0] = 2;
           }
           AccountStatusDialog.field_nb.field_b = Player.field_y.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; StarLinkPlanner.field_c.length > var8Lifetime1; var8Lifetime1++) {
-            stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
+            stackIn_29_0 = !(ClientClockSupport.field_d[var8Lifetime1] < 0);
             var9Lifetime1 = UiTextSupport.measureMenuLabel(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
-            if (pr.field_d[var8Lifetime1] != -1) {
+            if (ClientClockSupport.field_d[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + 2 * LobbyOptionSupport.field_g;
             }
             if (var7Lifetime1 < var9Lifetime1) {
@@ -152,7 +152,7 @@ final class GradientMenuLabel extends MenuComponent {
           DiskCacheWorker.field_b = (LobbyOptionSupport.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
-            if (pr.field_d[var8Lifetime2] >= 0) {
+            if (ClientClockSupport.field_d[var8Lifetime2] >= 0) {
               stackIn_41_1 = vh.field_b;
             } else {
               stackIn_41_1 = MenuButton.field_A;

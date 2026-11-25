@@ -85,7 +85,7 @@ final class QuaternaryListSequence extends NodeSequence {
                 var9Lifetime1++;
                 break;
               }
-              var11 = qf.a((byte) 76, var27[var9Lifetime1], param5);
+              var11 = SoundEffectDefinition.randomBelow((byte) 76, var27[var9Lifetime1], param5);
               var12Lifetime1 = 0;
               scanLoop1: while (true) {
                 if (var27[var9Lifetime1] > var12Lifetime1) {
@@ -222,18 +222,18 @@ final class QuaternaryListSequence extends NodeSequence {
                 break;
               }
               if (var4 == null) {
-                q.g(-118);
+                TabbedPanel.closeClientSocket(-118);
                 return;
               }
               var4.unlink((byte) -122);
               return;
             }
             GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
-            q.g(-108);
+            TabbedPanel.closeClientSocket(-108);
           } else {
             var3_ref_ld = (ByteArrayReadRequest) (SectorCacheStore.field_d.startForward(0));
             if (var3_ref_ld == null) {
-              q.g(-96);
+              TabbedPanel.closeClientSocket(-96);
               return;
             }
             var4_int = var8.readUnsignedByte(param0 - 2);
@@ -248,7 +248,7 @@ final class QuaternaryListSequence extends NodeSequence {
             }
             var8.position = var8.position + 4;
             if (!var8.verifyChecksum((byte) 104)) {
-              q.g(param0 + 17);
+              TabbedPanel.closeClientSocket(param0 + 17);
               return;
             }
             var3_ref_ld.field_l = true;

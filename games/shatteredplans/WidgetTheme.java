@@ -51,7 +51,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
-        pl.clearStatics(param0, (byte) -26);
+        QuickChatHelpPanelSupport.clearStatics(param0, (byte) -26);
         MapView.a(param3, param0, param2, param1);
     }
 
@@ -297,10 +297,10 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     final static void a(int param0) {
         if (param0 != 0) {
           WidgetTheme.clearStatics((byte) 47);
-          qj.a((byte) -127, 17);
+          TutorialTextSupport.setPendingUiAction((byte) -127, 17);
           return;
         }
-        qj.a((byte) -127, 17);
+        TutorialTextSupport.setPendingUiAction((byte) -127, 17);
     }
 
     public final int getTextX(int param0, UiWidget param1, int param2) {
@@ -413,7 +413,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }
-          if (2 != po.field_b) {
+          if (2 != ClientInputSupport.field_b) {
             stackIn_6_0 = StandardAi.field_f;
             return stackIn_6_0;
           }

@@ -4,7 +4,7 @@
 final class us {
     static boolean field_c;
     static Sprite field_a;
-    static qf field_d;
+    static SoundEffectDefinition field_d;
     static String field_e;
     static int field_b;
 
@@ -102,7 +102,7 @@ final class us {
           var1.field_c = 2;
           return var1;
         }
-        field_d = (qf) null;
+        field_d = (SoundEffectDefinition) null;
         var1.field_f = true;
         var1.field_c = 2;
         return var1;

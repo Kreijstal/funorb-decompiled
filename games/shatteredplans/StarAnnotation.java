@@ -31,20 +31,20 @@ final class StarAnnotation extends IntrusiveNode {
             var2_int = wg.field_f.available(-1);
             if (var2_int <= 0) {
               if (var2_int < 0) {
-                q.g(-114);
+                TabbedPanel.closeClientSocket(-114);
                 return false;
               }
               if (wh.a(18) <= 30000L) {
                 return false;
               }
-              q.g(-114);
+              TabbedPanel.closeClientSocket(-114);
               return false;
             }
             if (var2_int > param1 - sa.field_a.position) {
               var2_int = param1 - sa.field_a.position;
             }
             wg.field_f.readFully(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
-            IntrusiveDeque.field_e = pr.currentTimeMillis(14274);
+            IntrusiveDeque.field_e = ClientClockSupport.currentTimeMillis(14274);
             sa.field_a.position = sa.field_a.position + var2_int;
             if (sa.field_a.position < param1) {
               return false;
@@ -54,7 +54,7 @@ final class StarAnnotation extends IntrusiveNode {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            q.g(-117);
+            TabbedPanel.closeClientSocket(-117);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

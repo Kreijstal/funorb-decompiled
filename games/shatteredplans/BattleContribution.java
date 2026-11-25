@@ -120,7 +120,7 @@ final class BattleContribution extends IntrusiveNode {
         sr.field_F = null;
         SliderPainter.field_e = null;
         DefensiveAi.field_r = null;
-        q.field_Cb = null;
+        TabbedPanel.field_Cb = null;
         ClientRuntimeState.field_c = null;
         MessageKind.field_b = null;
         EmailSyntaxValidator.field_o = null;

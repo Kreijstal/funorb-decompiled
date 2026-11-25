@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl {
+final class QuickChatHelpPanelSupport {
     static String field_a;
     static String field_b;
 
@@ -29,7 +29,7 @@ final class pl {
     public static void clearStatics(int param0) {
         field_a = null;
         if (param0 != 7526) {
-          pl.clearStatics(false, (byte) -123);
+          QuickChatHelpPanelSupport.clearStatics(false, (byte) -123);
           field_b = null;
           return;
         }

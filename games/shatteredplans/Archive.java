@@ -930,7 +930,7 @@ final class Archive {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!qe.a(116)) {
+          if (!StarSoundState.hasActiveModalDialog(116)) {
             if (null != NameSuggestionsPanel.field_K &&
               NameSuggestionsPanel.field_K.field_c) {
               BufferedCacheFile.c(0);

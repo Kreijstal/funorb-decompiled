@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class po {
+final class ClientInputSupport {
     static String field_a;
     static java.awt.Color field_h;
     static String field_g;
@@ -11,7 +11,7 @@ final class po {
     static int field_b;
     static int field_f;
 
-    final static int b(int param0) {
+    final static int getMouseIdleTicks(int param0) {
         int var1 = -92 % ((56 - param0) / 58);
         return ql.field_q;
     }
@@ -26,7 +26,7 @@ final class po {
         field_g = null;
     }
 
-    final static void a(int param0) {
+    final static void resetChatChannel(int param0) {
         ProductionContent.field_h = 0;
         int var1 = 42 % ((param0 - 4) / 47);
         sr.field_h = true;

@@ -138,7 +138,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[0] = AccountNoticeKind.field_e;
           QuickChatPhraseRegistry.field_g[9] = SecondaryNodeHashTable.field_a;
           QuickChatPhraseRegistry.field_g[7] = DialWidget.field_J;
-          QuickChatPhraseRegistry.field_g[11] = qe.field_l;
+          QuickChatPhraseRegistry.field_g[11] = StarSoundState.field_l;
           QuickChatPhraseRegistry.field_g[3] = DialogRoot.field_D;
           QuickChatPhraseRegistry.field_g[14] = ss.field_d;
           QuickChatPhraseRegistry.field_g[5] = ClientException.field_g;

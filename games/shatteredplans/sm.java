@@ -119,16 +119,16 @@ final class sm {
           this.field_f = false;
         }
         if (0 != var2) {
-          pr.field_g = pr.field_g - var2;
+          ClientClockSupport.field_g = ClientClockSupport.field_g - var2;
           DefendTask.field_w = DefendTask.field_w - var2;
-          if (pr.field_g < 0) {
-            pr.field_g = 0;
+          if (ClientClockSupport.field_g < 0) {
+            ClientClockSupport.field_g = 0;
           }
           if (DefendTask.field_w < 0) {
             DefendTask.field_w = 0;
           }
-          if (GradientMenuLabel.field_A < pr.field_g) {
-            pr.field_g = GradientMenuLabel.field_A;
+          if (GradientMenuLabel.field_A < ClientClockSupport.field_g) {
+            ClientClockSupport.field_g = GradientMenuLabel.field_A;
           }
           if (GradientMenuLabel.field_A < DefendTask.field_w) {
             DefendTask.field_w = GradientMenuLabel.field_A;
@@ -234,7 +234,7 @@ final class sm {
         int var14_intLifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         if (MapGenerationException.field_b != 0) {
-          stackIn_3_0 = QuickChatCategoryRegistry.a(pr.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0);
+          stackIn_3_0 = QuickChatCategoryRegistry.a(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0);
         } else {
           stackIn_3_0 = DefendTask.field_w;
         }
@@ -435,7 +435,7 @@ final class sm {
           MapGenerationException.field_b = MapGenerationException.field_b + 1;
           if (fieldTemp$0 == 32) {
             MapGenerationException.field_b = 0;
-            pr.field_g = DefendTask.field_w;
+            ClientClockSupport.field_g = DefendTask.field_w;
           }
         }
         if (ClientRasterSupport.field_b == null) {
@@ -963,7 +963,7 @@ final class sm {
           fieldTemp$1 = ArrayWidgetGroup.field_A + 1;
           ArrayWidgetGroup.field_A = ArrayWidgetGroup.field_A + 1;
           if (32 <= fieldTemp$1) {
-            SecondaryNodeDeque.field_d = q.field_Bb;
+            SecondaryNodeDeque.field_d = TabbedPanel.field_Bb;
             ArrayWidgetGroup.field_A = 0;
           }
         }
@@ -989,12 +989,12 @@ final class sm {
           }
           var3 = stackIn_31_0;
         }
-        if (q.field_Bb != var3) {
+        if (TabbedPanel.field_Bb != var3) {
           if (ArrayWidgetGroup.field_A != 0) {
-            SecondaryNodeDeque.field_d = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, q.field_Bb, 0);
+            SecondaryNodeDeque.field_d = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
           }
           ArrayWidgetGroup.field_A = 1;
-          q.field_Bb = var3;
+          TabbedPanel.field_Bb = var3;
         }
     }
 
@@ -1702,7 +1702,7 @@ final class sm {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         WidgetTheme.field_s = param1;
-        pr.field_g = 0 != MapGenerationException.field_b ? QuickChatCategoryRegistry.a(pr.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
+        ClientClockSupport.field_g = 0 != MapGenerationException.field_b ? QuickChatCategoryRegistry.a(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
           this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
@@ -2069,9 +2069,9 @@ final class sm {
           }
         }
         if (ArrayWidgetGroup.field_A != 0) {
-          var21 = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, q.field_Bb, 0);
+          var21 = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
         } else {
-          var21 = q.field_Bb;
+          var21 = TabbedPanel.field_Bb;
         }
         var21 = QuickChatCategoryRegistry.a(0, 32, ByteArrayStorage.field_b, var21, 0);
         if (var21 > 20) {
@@ -2442,7 +2442,7 @@ final class sm {
                                                 ta.a(PlayerRankingRequest.field_o, -7, (byte) 96, var5 != 0);
                                               }
                                               if (MusicEnvelope.field_d) {
-                                                os.a(0, 11, true);
+                                                RoundedMenuPanel.writeSpectateRequest(0, 11, true);
                                               }
                                             }
                                           }

@@ -18,7 +18,7 @@ final class TextReplacementEntry {
           TextReplacementEntry.writeCancelMatchmakingRequest(-75, true);
         }
         if (param2 == 1 &&
-          qe.a((byte) -65, param1)) {
+          StarSoundState.isLeapYear((byte) -65, param1)) {
           return 29;
         }
         return WhirlpoolHasher.field_b[param2];

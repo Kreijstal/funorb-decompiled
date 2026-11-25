@@ -46,7 +46,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    final static SoundPlayback a(int param0, qf param1, int param2) {
+    final static SoundPlayback a(int param0, SoundEffectDefinition param1, int param2) {
         RuntimeException var3 = null;
         SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -230,7 +230,7 @@ final class DialWidget extends FocusableWidget {
                 var8_ref_mj = new LobbyPlayerEntry(var20, var21, var3_long);
                 ShatteredPlansClient.field_H.put(var3_long, var8_ref_mj, true);
               }
-              var8_ref_mj.field_zb = pr.currentTimeMillis(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
+              var8_ref_mj.field_zb = ClientClockSupport.currentTimeMillis(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
               var8_ref_mj.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var10 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
               var8_ref_mj.field_Fb = var10 >> 1;
@@ -376,7 +376,7 @@ final class DialWidget extends FocusableWidget {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     if (var3Lifetime5 != 0) {
-                      sf.field_e = pr.currentTimeMillis(14274) + (long)var3Lifetime5;
+                      sf.field_e = ClientClockSupport.currentTimeMillis(14274) + (long)var3Lifetime5;
                       return;
                     }
                     sf.field_e = 0L;
@@ -392,7 +392,7 @@ final class DialWidget extends FocusableWidget {
                     return;
                   }
                   GameKeyHandler.a(-29901, (Throwable) null, "L1: " + Dialog.a(16738));
-                  q.g(-115);
+                  TabbedPanel.closeClientSocket(-115);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(127);
@@ -494,10 +494,10 @@ final class DialWidget extends FocusableWidget {
           for (var3Lifetime2 = 0; var3Lifetime2 < SpriteResourceSupport.field_c.length; var3Lifetime2++) {
             SpriteResourceSupport.field_c[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
           }
-          qj.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-82);
+          TutorialTextSupport.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-82);
           RecklessAi.field_q = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-54);
-          for (var3Lifetime3 = 0; qj.field_f.length > var3Lifetime3; var3Lifetime3++) {
-            qj.field_f[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
+          for (var3Lifetime3 = 0; TutorialTextSupport.field_f.length > var3Lifetime3; var3Lifetime3++) {
+            TutorialTextSupport.field_f[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

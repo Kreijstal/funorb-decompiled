@@ -625,7 +625,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("TEXT_INTRO4_END", 112);
                 if (var2 != null) {
-                  qf.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectDefinition.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_skipintro", 121);
                 if (var2 != null) {
@@ -1415,7 +1415,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_shortfall1", 127);
                 if (var2 != null) {
-                  qj.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TutorialTextSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_shortfall2a", 104);
                 if (var2 != null) {
@@ -1555,7 +1555,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_systems", 114);
                 if (var2 != null) {
-                  po.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_overview", 114);
                 if (null != var2) {
@@ -1652,7 +1652,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_defences_failed", 123);
                 if (null != var2) {
-                  qe.field_l = IterableNodeHashTable.a(var2, 17746);
+                  StarSoundState.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_efficiency", 103);
                 if (null != var2) {

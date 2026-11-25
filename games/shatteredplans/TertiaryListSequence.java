@@ -5,7 +5,7 @@ final class TertiaryListSequence extends NodeSequence {
     static MouseInputHandler field_j;
     private TertiaryNodeList field_i;
     static ValidationState field_h;
-    static qf field_m;
+    static SoundEffectDefinition field_m;
     static int field_k;
     static IntrusiveDeque field_f;
     static long field_l;
@@ -109,7 +109,7 @@ final class TertiaryListSequence extends NodeSequence {
         field_m = null;
         field_h = null;
         if (param0 != 0) {
-          field_m = (qf) null;
+          field_m = (SoundEffectDefinition) null;
         }
     }
 

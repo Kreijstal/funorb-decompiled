@@ -53,7 +53,7 @@ final class MenuButton extends MenuComponent {
     final static void f(int param0) {
         FleetMove.field_C = false;
         TertiaryNodeList.field_b = false;
-        qj.a((byte) -127, param0);
+        TutorialTextSupport.setPendingUiAction((byte) -127, param0);
         PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
         MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;
     }

@@ -132,9 +132,9 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               LobbyOptionSupport.field_f.patchLengthShort(-549342136, -var10 + LobbyOptionSupport.field_f.position);
             }
             ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
-            Wormhole.field_j = qe.field_k;
+            Wormhole.field_j = StarSoundState.field_k;
           }
-          if (Wormhole.field_j == qe.field_k &&
+          if (Wormhole.field_j == StarSoundState.field_k &&
             StarAnnotation.a(110, 1)) {
             var9Lifetime1 = sa.field_a.readUnsignedByte(-83);
             sa.field_a.position = 0;
@@ -146,7 +146,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               if (var9Lifetime1 == 248) {
                 PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 125), true);
                 DiplomacyRowSupport.field_c = ClientCapabilitySupport.field_b;
-                q.g(-125);
+                TabbedPanel.closeClientSocket(-125);
                 BufferedSocket.field_j = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
@@ -172,7 +172,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 for (var12 = 0; var11 > var12; var12++) {
                   HighscoreResponseSupport.field_e[var12] = sa.field_a.readMarkedString((byte) -126);
                 }
-                q.g(-113);
+                TabbedPanel.closeClientSocket(-113);
                 BufferedSocket.field_j = false;
                 stackIn_47_0 = 100 + var11;
                 return stackIn_47_0;
@@ -189,7 +189,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             } else {
               DiplomacyRowSupport.field_c = sa.field_a.readString(-1);
             }
-            q.g(-99);
+            TabbedPanel.closeClientSocket(-99);
             BufferedSocket.field_j = false;
             stackIn_56_0 = BufferedCacheFile.field_e;
             return stackIn_56_0;
