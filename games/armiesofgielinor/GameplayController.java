@@ -4068,7 +4068,7 @@ final class GameplayController {
           this.unitRenderer = null;
           BitLengthSupport.field_b = null;
           ProgressMessageDialog.modelProjectionCamera = null;
-          ConsoleParseException.b(param0 ^ -112);
+          ConsoleParseException.clearBattleState(param0 ^ -112);
           if (param0 != 111) {
             this.field_hb = 66;
           }
@@ -7441,7 +7441,7 @@ final class GameplayController {
           }
           var8 = stackIn_7_0;
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
-          CampaignUnitOverride.a(IgnoreListLookupSupport.a(true, param1), IgnoreListLookupSupport.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
+          CampaignUnitOverride.pushRasterClip(IgnoreListLookupSupport.a(true, param1), IgnoreListLookupSupport.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
           stackIn_10_0 = this.battlefield.playerCoats[var6_int];
           stackIn_10_1 = IgnoreListLookupSupport.a(true, 13 + param1);
           stackIn_10_2 = var7;
@@ -8981,7 +8981,7 @@ final class GameplayController {
               if (!this.field_a) {
                 var3 = this.battlefield.getBlockedPortalFailureTurnsRemaining(-1);
                 if (var3 > 0) {
-                  MusicPatchEnvelope.a(this.field_Nb, EmailCheckResult.formatTemplate(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
+                  MusicPatchEnvelope.appendWrappedToastMessages(this.field_Nb, EmailCheckResult.formatTemplate(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
               }
             }
@@ -9227,7 +9227,7 @@ final class GameplayController {
               regionExit2: {
                 regionExit3: {
                   regionExit4: {
-                    var6 = BattleUnitRenderer.b(1);
+                    var6 = BattleUnitRenderer.getCameraY(1);
                     var5 = var5 / 2;
                     var7 = var3 * (var5 + (20 * this.battlefield.mapWidth - var6)) / 40;
                     var8 = var3 * (-(20 * this.battlefield.mapHeight) + (var5 + var6)) / 40;
@@ -11591,7 +11591,7 @@ final class GameplayController {
               }
             } else {
               var9 = IconTextComponent.l(param0 ^ 26138);
-              stackIn_111_0 = BattleUnitRenderer.b(param0 - 1);
+              stackIn_111_0 = BattleUnitRenderer.getCameraY(param0 - 1);
             }
             var10 = stackIn_111_0;
             var11 = var3 * var9 / 40;
@@ -12311,7 +12311,7 @@ final class GameplayController {
           }
           if ((decompiledFrameCompleted3) &&
             (decompiledFrameCompleted2)) {
-            DropdownArrowPainter.a(false);
+            DropdownArrowPainter.refreshPlayerGlowSprites(false);
           }
           if (decompiledFrameCompleted3) {
             stackIn_66_0 = this;

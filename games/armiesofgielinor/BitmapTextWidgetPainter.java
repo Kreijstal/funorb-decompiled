@@ -115,7 +115,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
               nextLineTop = layout.lines[1 + lineIndex].top;
             }
             caretBottom = textTop + Math.min(contentHeight, Math.min(lineBottom, nextLineTop));
-            CampaignUnitOverride.a(originX + widget.x, widget.x + originX + widget.width, widget.height + (widget.y + originY), widget.y + originY, (byte) 100);
+            CampaignUnitOverride.pushRasterClip(originX + widget.x, widget.x + originX + widget.width, widget.height + (widget.y + originY), widget.y + originY, (byte) 100);
             ReloadPageSupport.field_c.drawLine(this.caretColour, caretBottom, absoluteX, (byte) 101, caretTop, absoluteX);
             QuickChatPhraseRepository.popRasterState(-18862);
           }
@@ -524,7 +524,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
           }
           firstLine = layoutAlias.getLineIndex(obfuscationGuard ^ -21259, firstIndex);
           lastLine = layoutAlias.getLineIndex(obfuscationGuard ^ -21259, lastIndex);
-          CampaignUnitOverride.a(originX + widget.x, widget.width + (originX + widget.x), widget.height + (originY + widget.y), widget.y + originY, (byte) 116);
+          CampaignUnitOverride.pushRasterClip(originX + widget.x, widget.width + (originX + widget.x), widget.height + (originY + widget.y), widget.y + originY, (byte) 116);
           for (lineIndex = firstLine; lastLine >= lineIndex; lineIndex++) {
             line = layout.lines[lineIndex];
             if (~lineIndex != ~firstLine) {
@@ -605,7 +605,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
             this.shadowColour = -74;
           }
           boolean drawAsSingleLine = true;
-          CampaignUnitOverride.a(widget.x + originX, widget.width + originX + widget.x, widget.height + (widget.y + originY), widget.y + originY, (byte) 91);
+          CampaignUnitOverride.pushRasterClip(widget.x + originX, widget.width + originX + widget.x, widget.height + (widget.y + originY), widget.y + originY, (byte) 91);
           contentWidth = this.getContentWidth(103, widget);
           contentHeight = this.getContentHeight(-99, widget);
           if (!this.wrapped) {

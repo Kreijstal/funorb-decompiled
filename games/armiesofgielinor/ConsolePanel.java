@@ -112,7 +112,7 @@ abstract class ConsolePanel implements ConsolePanelMarker {
     private final ClientUiComponent createSelectionStyle(byte obfuscationGuard, int colour) {
         int guardRemainder = -63 % ((obfuscationGuard + 36) / 61);
         ClientUiComponent style = new ClientUiComponent(0L, (ClientUiComponent) null);
-        style.skinSprites = BitmapTextLayout.b(colour, 5);
+        style.skinSprites = BitmapTextLayout.createSolidCenterFrameSprites(colour, 5);
         return style;
     }
 

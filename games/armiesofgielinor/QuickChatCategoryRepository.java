@@ -11,7 +11,7 @@ final class QuickChatCategoryRepository {
     static String field_g;
     static boolean guestSession;
 
-    final static void a(boolean param0, int param1) {
+    final static void drawDimmedGameDialogHost(boolean param0, int param1) {
         NineSliceSpriteSupport.a(param0, true, param1 ^ -81);
         if (param1 != -5) {
           field_g = (String) null;
@@ -34,8 +34,8 @@ final class QuickChatCategoryRepository {
         return null;
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
-        TextSplitSupport.a(param0, 0, "");
+    final static void clearSessionAndMaybeReload(java.applet.Applet param0, boolean param1) {
+        TextSplitSupport.setSessionCookie(param0, 0, "");
         if (!param1) {
           return;
         }
@@ -430,7 +430,7 @@ final class QuickChatCategoryRepository {
         return category;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadUnitModels(int param0, ResourceArchive param1) {
         ModelMeshBase[] array$0 = null;
         MeshData stackIn_23_0 = null;
         RuntimeException stackIn_36_0 = null;

@@ -28,7 +28,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
     public static void releaseStatics(int obfuscationGuard) {
         decodedSpriteAlphas = (byte[][]) null;
         if (obfuscationGuard != -101) {
-          CampaignMenuEntry.a(-99, -40, -126, (byte) 12, -104);
+          CampaignMenuEntry.createTwoToneFrameSprites(-99, -40, -126, (byte) 12, -104);
         }
         field_E = null;
         field_u = null;
@@ -102,7 +102,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(String param0, int param1, String[] param2, int param3) {
+    final static void handleAccountCreationResponse(String param0, int param1, String[] param2, int param3) {
         int var5 = 0;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -150,7 +150,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void updateLogoRotationTransform(byte param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -184,7 +184,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           var4 = 1;
         }
         if (param0 != -116) {
-          CampaignMenuEntry.a((byte) 74, 85);
+          CampaignMenuEntry.updateLogoRotationTransform((byte) 74, 85);
         }
         if (param1 == 5) {
           var4 = -1;
@@ -221,7 +221,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         PasswordLengthSupport.field_a = AccountNameSelectionSupport.createRotationTransform(-125, var4 * var2, var2 * var5);
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
+    final static RgbSprite[] createTwoToneFrameSprites(int param0, int param1, int param2, byte param3, int param4) {
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
         RgbSprite dupTemp$0 = SocialListEntry.a(false, param2, param1);

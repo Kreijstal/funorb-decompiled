@@ -39,7 +39,7 @@ final class DualNodeIterator implements Iterator {
           if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param3, param0, param1)) {
             return null;
           }
-          stackIn_6_0 = LeaderEscortCondition.a(param4.getFile((byte) 58, param1, param3), 126);
+          stackIn_6_0 = LeaderEscortCondition.buildDecodedPalettedFont(param4.getFile((byte) 58, param1, param3), 126);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

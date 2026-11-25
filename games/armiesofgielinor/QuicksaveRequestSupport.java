@@ -9,7 +9,7 @@ final class QuicksaveRequestSupport {
           QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
           ClientUiComponent.c(param9, -120);
           if (ModalDialogHost.field_J > 0) {
-            CalendarSupport.a(param0, param9, 117, param5);
+            CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
           }
           MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
           MarkerSliderWidget.field_N.horizontalAlignment = 1;
@@ -36,7 +36,7 @@ final class QuicksaveRequestSupport {
               QuickChatCategory.field_u = (-640 + NineSliceSpriteSupport.field_c) / 2;
               ClientUiComponent.c(param9, -120);
               if (ModalDialogHost.field_J > 0) {
-                CalendarSupport.a(param0, param9, 117, param5);
+                CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
               MarkerSliderWidget.field_N.horizontalAlignment = 1;
@@ -60,7 +60,7 @@ final class QuicksaveRequestSupport {
               QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
               ClientUiComponent.c(param9, -120);
               if (ModalDialogHost.field_J > 0) {
-                CalendarSupport.a(param0, param9, 117, param5);
+                CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
               MarkerSliderWidget.field_N.horizontalAlignment = 1;
@@ -97,7 +97,7 @@ final class QuicksaveRequestSupport {
               }
               ClientUiComponent.c(param9, -120);
               if (ModalDialogHost.field_J > 0) {
-                CalendarSupport.a(param0, param9, 117, param5);
+                CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
               MarkerSliderWidget.field_N.horizontalAlignment = 1;
@@ -125,14 +125,14 @@ final class QuicksaveRequestSupport {
             if (NumericDateInputWidget.roomSetup != null) {
               ClientUiComponent.a(108, true);
             } else {
-              BitmapTextLayout.b(false);
+              BitmapTextLayout.layoutLobbyPanels(false);
             }
           }
           if (!param9) {
             QuickChatCategory.field_u = (-640 + NineSliceSpriteSupport.field_c) / 2;
             ClientUiComponent.c(param9, -120);
             if (ModalDialogHost.field_J > 0) {
-              CalendarSupport.a(param0, param9, 117, param5);
+              CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
             }
             MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
             MarkerSliderWidget.field_N.horizontalAlignment = 1;
@@ -156,7 +156,7 @@ final class QuicksaveRequestSupport {
             QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
             ClientUiComponent.c(param9, -120);
             if (ModalDialogHost.field_J > 0) {
-              CalendarSupport.a(param0, param9, 117, param5);
+              CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
               MarkerSliderWidget.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {

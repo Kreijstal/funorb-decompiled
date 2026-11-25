@@ -308,7 +308,7 @@ final class MapLayout extends IntrusiveNode {
           }
           var4_int = archive.getGroupId(groupName, 110);
           var5 = archive.getFileId((byte) -74, var4_int, fileName);
-          stackIn_4_0 = BitmapTextLayout.a(var5, archive, 0, var4_int);
+          stackIn_4_0 = BitmapTextLayout.loadIndexedSpritesById(var5, archive, 0, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

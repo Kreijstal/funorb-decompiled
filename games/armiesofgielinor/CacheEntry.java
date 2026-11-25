@@ -78,7 +78,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 var11_ref_String = "";
               }
               EmailValidator.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
-              IconLabelControl.a(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.writeRsaXteaEncryptedBuffer(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.writeShortLengthPrefix(0, -var10 + EmailValidator.outgoingPacket.position);
             } else {
               AccountRsaBufferSupport.field_b.position = 0;
@@ -101,7 +101,7 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByte(1, 16);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
               var9 = EmailValidator.outgoingPacket.position;
-              IconLabelControl.a(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.writeRsaXteaEncryptedBuffer(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.writeByteLengthPrefix(EmailValidator.outgoingPacket.position - var9, 5930);
             }
             SessionIoSupport.flushSessionPacketsWithIntGuard(54, -1);

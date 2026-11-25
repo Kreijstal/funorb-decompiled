@@ -102,7 +102,7 @@ final class UnitAnimationSelectionSupport {
           }
           SpriteDropdownMenu.openClientContextMenu((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, message.channelId, message.accountName, message.accountId);
           if (message.channelId == 0 &&
-            !CalendarSupport.a(false) &&
+            !CalendarSupport.isTextChatActive(false) &&
             null == ToggleWidget.currentRoom &&
             NumericDateInputWidget.roomSetup == null) {
             if (!MonotonicClockSupport.field_d) {
@@ -115,7 +115,7 @@ final class UnitAnimationSelectionSupport {
             var7.menu.addTextAction(20, var8, (byte) -115);
           }
           if (1 == message.channelId &&
-            !CalendarSupport.a(false) &&
+            !CalendarSupport.isTextChatActive(false) &&
             ToggleWidget.currentRoom != null &&
             message.contextId == ToggleWidget.currentRoom.getRoomId((byte) -88)) {
             if (!MonotonicClockSupport.field_d) {

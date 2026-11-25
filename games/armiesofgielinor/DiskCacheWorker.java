@@ -243,7 +243,7 @@ final class DiskCacheWorker implements Runnable {
         } else {
           var7 = CampaignMenu.field_q;
         }
-        ConsoleParseException.a(param2, (byte) 46, param3, param6, param4, param0, param5, var7);
+        ConsoleParseException.updateChatEntryOverlay(param2, (byte) 46, param3, param6, param4, param0, param5, var7);
     }
 
     final static void reportCampaignTurn(boolean isLocalTurn, int obfuscationGuard, int turnsTaken, CampaignMission mission) {

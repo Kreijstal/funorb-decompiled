@@ -501,7 +501,7 @@ final class AchievementNotification extends IntrusiveNode {
                 var31 = var31 + GradientSpanBlendSupport.field_d;
               }
             }
-            var33 = LeaderEscortCondition.a(var12.notificationCode, 6, var32);
+            var33 = LeaderEscortCondition.getRoomNotificationText(var12.notificationCode, 6, var32);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Wb.font.getLineCount(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
               var12.field_Wb.text = var33;

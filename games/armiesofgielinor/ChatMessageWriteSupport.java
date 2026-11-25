@@ -5,7 +5,7 @@ final class ChatMessageWriteSupport {
     static RgbSprite field_a;
     static boolean field_b;
 
-    final static RgbSprite[] a(int param0, RgbSprite param1) {
+    final static RgbSprite[] createCenterOnlyFrameSprites(int param0, RgbSprite param1) {
         RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         PacketBuffer var3 = null;
@@ -18,7 +18,7 @@ final class ChatMessageWriteSupport {
         try {
           if (param0 != 17) {
             var3 = (PacketBuffer) null;
-            ChatMessageWriteSupport.a(-86, true, 3, (PacketBuffer) null, -126);
+            ChatMessageWriteSupport.writeSessionHandshakeRecord(-86, true, 3, (PacketBuffer) null, -126);
           }
           var4 = new RgbSprite[9];
           var2 = var4;
@@ -39,7 +39,7 @@ final class ChatMessageWriteSupport {
         }
     }
 
-    final static AntialiasedBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
+    final static AntialiasedBitmapFont loadAntialiasedFontByName(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -94,7 +94,7 @@ final class ChatMessageWriteSupport {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
+    final static void writeSessionHandshakeRecord(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
         if (param1) {
           return;
         }
@@ -117,7 +117,7 @@ final class ChatMessageWriteSupport {
           CipherPacketBuffer packetAlias = packet;
           if (obfuscationGuard > -71) {
             String var8 = (String) null;
-            ChatMessageWriteSupport.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -14, (String) null);
+            ChatMessageWriteSupport.loadAntialiasedFontByName((String) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -14, (String) null);
           }
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;

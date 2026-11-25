@@ -404,7 +404,7 @@ final class BattleCameraTargetTransform {
               if (SpellCastAction.field_s) {
                 ManaEvent.a((byte) 69, param3);
               } else {
-                DropdownArrowPainter.a(param3, -8006);
+                DropdownArrowPainter.sendLobbyGameFilters(param3, -8006);
               }
             }
             TileableNoiseGenerator.updateRoomOptionControls(1, true, param3, NumericDateInputWidget.roomSetup);

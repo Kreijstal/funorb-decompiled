@@ -139,7 +139,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           return;
         }
         String sessionText = UnitModelPreview.readIncomingNullTerminatedString((byte) 61);
-        TextSplitSupport.a(CombatEvent.d((byte) 47), 0, sessionText);
+        TextSplitSupport.setSessionCookie(CombatEvent.d((byte) 47), 0, sessionText);
     }
 
     private final void enableOpcode4(int obfuscationGuard) {
@@ -233,7 +233,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (2 == actionCode) {
             actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.getLoginPassword(-1));
             if (actionTwoResult != -1) {
-              CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
+              CampaignMenuEntry.handleAccountCreationResponse(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
               CampaignLookupSupport.field_b = null;
             }
@@ -263,7 +263,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (actionCode == 4) {
             if (BestScoreStrategy.field_l) {
-              QuickChatCategoryRepository.a(CombatEvent.d((byte) -116), true);
+              QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.d((byte) -116), true);
             } else {
               QuickChatCategoryRepository.guestSession = true;
               SoundCache.field_b = 10;
@@ -280,7 +280,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             DialWidget.openServerListPage(CombatEvent.d((byte) 53), -126);
           }
           if (actionCode == 8) {
-            QuickChatCategoryRepository.a(CombatEvent.d((byte) -120), true);
+            QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.d((byte) -120), true);
           }
           if (9 == actionCode) {
             SpectateRoomRequestSupport.a(CombatEvent.d((byte) 48), 11982);
@@ -430,7 +430,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                       this.handleBrowserNavigationPacket(16433);
                       break regionExit1;
                     case 18:
-                      MusicPatchEnvelope.b((byte) 119);
+                      MusicPatchEnvelope.readChatRestrictions((byte) 119);
                       break regionExit1;
                     default:
                       LoginCredentials.a((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.formatPacketDiagnostic(false));
@@ -693,7 +693,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (StrongCacheEntry.field_E == 11) {
           if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
             !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
-            CalendarSupport.a((byte) -24, 0.0f, StatefulWidgetPainter.a(IgnoreListLookupSupport.field_b, true, LobbyPlayer.field_Jb, RegionAnchor.field_o));
+            CalendarSupport.setLoadingProgress((byte) -24, 0.0f, StatefulWidgetPainter.a(IgnoreListLookupSupport.field_b, true, LobbyPlayer.field_Jb, RegionAnchor.field_o));
             loadingStageContinuation = false;
           }
           else {
@@ -710,7 +710,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (null != CombatPresentation.field_G) {
             loaderReadyFlag = (!CombatPresentation.field_G.pollLoading(2189)) ? 0 : 1;
             resourcesReady = loaderReadyFlag;
-            CalendarSupport.a((byte) -24, CombatPresentation.field_G.fraction, CombatPresentation.field_G.caption);
+            CalendarSupport.setLoadingProgress((byte) -24, CombatPresentation.field_G.fraction, CombatPresentation.field_G.caption);
           }
           if (resourcesReady != 0) {
             StrongCacheEntry.field_E = 20;

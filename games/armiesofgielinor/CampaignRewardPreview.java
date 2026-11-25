@@ -79,7 +79,7 @@ final class CampaignRewardPreview {
           } else {
             if (-1 == rewardSpellId) {
               if (manaBonusPercent > 0) {
-                this.title = TextSplitSupport.a(6609, ClientStateChecksumSupport.field_b, "<MANA>", Integer.toString(manaBonusPercent));
+                this.title = TextSplitSupport.replaceLiteralSubstring(6609, ClientStateChecksumSupport.field_b, "<MANA>", Integer.toString(manaBonusPercent));
                 this.description = SummonRequest.field_D;
               } else {
                 this.title = null;

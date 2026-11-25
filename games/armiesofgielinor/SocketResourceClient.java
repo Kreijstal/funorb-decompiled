@@ -25,7 +25,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
         var2.writeCipheredOpcode(32161, param1);
         var2.writeByte(1, 2);
         var2.writeByte(param0 - 895, 4);
-        var2.writeByte(1, LeaderEscortCondition.f(3));
+        var2.writeByte(1, LeaderEscortCondition.packChatFilters(3));
         if (param0 != 896) {
           field_s = (String) null;
         }

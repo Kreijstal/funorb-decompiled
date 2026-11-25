@@ -134,7 +134,7 @@ final class BoundedFile {
                                 SoftwareRaster.clearPixels();
                               } else {
                                 if (-6 == param0) {
-                                  SphinxActionRequest.e(0);
+                                  SphinxActionRequest.drawSharedUnitViewer(0);
                                 } else {
                                   if (-7 == param0) {
                                     NodeHashIterator.b((byte) -90);

@@ -141,7 +141,7 @@ final class CampaignMenu {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ConsoleParseException.b(-1);
+          ConsoleParseException.clearBattleState(-1);
           if (FullscreenFocusCanvas.gameplayController != null) {
             FullscreenFocusCanvas.gameplayController.releaseBattleResources(111);
           }
@@ -338,7 +338,7 @@ final class CampaignMenu {
             GradientUiRenderer.drawCenteredSolidText(var3, IgnoreListLookupSupport.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
             var4 = IgnoreListLookupSupport.a(true, 359);
             var5 = MatchConditionEntry.a(85, (byte) 94);
-            CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
+            CampaignUnitOverride.pushRasterClip(var4, var4 + 236, var5 + 200, var5, (byte) 83);
             boolean decompiledSharedTail0 = (this.selectedCampaignEntry == null ||
               this.selectedCampaignEntry.entryId != -1);
             if (!decompiledSharedTail0) {
@@ -450,7 +450,7 @@ final class CampaignMenu {
         try {
           var5_int = IgnoreListLookupSupport.a(true, -15 + param2.left);
           var6 = MatchConditionEntry.a(19 + param2.top, (byte) 94);
-          CampaignUnitOverride.a(IgnoreListLookupSupport.a(true, param2.left), IgnoreListLookupSupport.a(true, param2.width + param2.left), MatchConditionEntry.a(param2.top + param2.height, (byte) 94), MatchConditionEntry.a(param2.top, (byte) 94), (byte) 125);
+          CampaignUnitOverride.pushRasterClip(IgnoreListLookupSupport.a(true, param2.left), IgnoreListLookupSupport.a(true, param2.width + param2.left), MatchConditionEntry.a(param2.top + param2.height, (byte) 94), MatchConditionEntry.a(param2.top, (byte) 94), (byte) 125);
           var7 = 54;
           var8 = 128;
           var9 = -1;

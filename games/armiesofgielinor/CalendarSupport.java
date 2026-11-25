@@ -10,7 +10,7 @@ final class CalendarSupport {
     static int viewportWidth;
     static String field_g;
 
-    final static void a(byte param0, float param1, String param2) {
+    final static void setLoadingProgress(byte param0, float param1, String param2) {
         try {
           if (param0 != -24) {
             field_a = (ModelMeshBase[]) null;
@@ -38,7 +38,7 @@ final class CalendarSupport {
         return 111;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isTextChatActive(boolean param0) {
         if (!ClientStateChecksumSupport.textChatActive) {
           return false;
         }
@@ -66,7 +66,7 @@ final class CalendarSupport {
         field_c = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void updateLobbyPanels(boolean param0, boolean param1, int param2, int param3) {
         ClientUiComponent stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         boolean stackIn_8_2 = false;

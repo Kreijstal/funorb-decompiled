@@ -19,7 +19,7 @@ final class IconLabelControl extends ClientUiComponent {
         this.layoutContent(obfuscationGuard ^ 120, iconTextGap);
     }
 
-    final static void a(int param0, LogoMesh param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static void drawLitLogoMesh(int param0, LogoMesh param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         int stackIn_18_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_21_1 = 0;
@@ -245,7 +245,7 @@ final class IconLabelControl extends ClientUiComponent {
         return new AccountIdentifierStatus(CombatPresentation.getAccountNameIdentifier(-4938), AccountNameCheckStatusSupport.isAccountNameCheckPending(false));
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
+    final static void writeRsaXteaEncryptedBuffer(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           if (param2 != 26) {
             field_Lb = (ClientUiComponent) null;
@@ -276,7 +276,7 @@ final class IconLabelControl extends ClientUiComponent {
         this.labelComponent.setBounds(this.height, obfuscationGuard - 20500, this.width - var3, obfuscationGuard, var3);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void setOptionalLoginString(String param0, byte param1) {
         if (param1 >= -59) {
           return;
         }

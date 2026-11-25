@@ -86,7 +86,7 @@ final class StripedProgressWidget extends Widget {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           rightX = x + this.width;
-          CampaignUnitOverride.a(this.rightCapMask.pixelWidth + x, -this.rightCapMask.pixelWidth + rightX, y + this.height, y, (byte) 87);
+          CampaignUnitOverride.pushRasterClip(this.rightCapMask.pixelWidth + x, -this.rightCapMask.pixelWidth + rightX, y + this.height, y, (byte) 87);
           tileX = -this.stripeOffset + x;
           guardQuotient = -123 / ((obfuscationGuard + 26) / 40);
           while (tileX < rightX) {
@@ -205,7 +205,7 @@ final class StripedProgressWidget extends Widget {
         int widgetY = originY + this.y;
         this.drawStripeTexture(-77, widgetY, this.stripeTextures[0], widgetX);
         if (65536 > this.filledFraction) {
-          CampaignUnitOverride.a((this.width * this.filledFraction >> 16) + widgetX, widgetX + this.width, this.height + widgetY, widgetY, (byte) 74);
+          CampaignUnitOverride.pushRasterClip((this.width * this.filledFraction >> 16) + widgetX, widgetX + this.width, this.height + widgetY, widgetY, (byte) 74);
           this.drawStripeTexture(-103, widgetY, this.stripeTextures[1], widgetX);
           QuickChatPhraseRepository.popRasterState(-18862);
         }

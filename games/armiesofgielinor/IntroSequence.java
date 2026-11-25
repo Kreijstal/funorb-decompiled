@@ -364,7 +364,7 @@ final class IntroSequence {
             if (LabeledWidgetContainer.field_N == 2) {
               FriendLookupSupport.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), SelectionMenuLayoutSupport.field_c);
               var2 = new PacketBuffer(13);
-              ChatMessageWriteSupport.a(ClientNetworkBootstrap.field_e, false, MoveAttackRequest.field_x, var2, AccountNameSelectionSupport.field_e);
+              ChatMessageWriteSupport.writeSessionHandshakeRecord(ClientNetworkBootstrap.field_e, false, MoveAttackRequest.field_x, var2, AccountNameSelectionSupport.field_e);
               var2.writeByte(1, 15);
               var2.writeInt((byte) -124, SelectionMenuLayoutSupport.field_d);
               FriendLookupSupport.field_g.write(var2.payload, (byte) 20, 0, 13);

@@ -8,7 +8,7 @@ final class TextSplitSupport {
     static String[] field_d;
     static String[] field_c;
 
-    final static void a(java.applet.Applet param0, int param1, String param2) {
+    final static void setSessionCookie(java.applet.Applet param0, int param1, String param2) {
         try {
           String var3 = null;
           String var4 = null;
@@ -46,7 +46,7 @@ final class TextSplitSupport {
         }
     }
 
-    final static String a(int param0, String param1, String param2, String param3) {
+    final static String replaceLiteralSubstring(int param0, String param1, String param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -232,7 +232,7 @@ final class TextSplitSupport {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

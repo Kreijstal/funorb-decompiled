@@ -26,7 +26,7 @@ final class MusicPatchEnvelope {
         return AnimationSkeleton.effectsMixer;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= 84) {
           field_k = null;
           field_h = null;
@@ -42,7 +42,7 @@ final class MusicPatchEnvelope {
         field_a = null;
     }
 
-    final static void a(NodeDeque param0, String param1, int param2, boolean param3) {
+    final static void appendWrappedToastMessages(NodeDeque param0, String param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         String[] var5 = null;
@@ -196,7 +196,7 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static void b(byte param0) {
+    final static void readChatRestrictions(byte param0) {
         NodeIterator.field_a = false;
         MonotonicClockSupport.field_d = ByteStorage.incomingPacket.readUnsignedByte(0) == 0 ? true : false;
         if (param0 < 70) {

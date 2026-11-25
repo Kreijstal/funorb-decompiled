@@ -681,7 +681,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
           age = Integer.parseInt(this.ageInput.text);
         } catch (NumberFormatException parseFailure) {
         }
-        return BattleUnitRenderer.a(this.emailOptInToggle.active, this, this.passwordInput.text, this.emailInput.text, age, (byte) -110, this.nameInput.text);
+        return BattleUnitRenderer.beginAccountRegistration(this.emailOptInToggle.active, this, this.passwordInput.text, this.emailInput.text, age, (byte) -110, this.nameInput.text);
     }
 
     static {

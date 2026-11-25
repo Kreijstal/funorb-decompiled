@@ -91,7 +91,7 @@ final class StatefulWidgetPainter extends BitmapTextWidgetPainter {
             stackIn_3_0 = null;
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
-          CampaignUnitOverride.a(originX + widget.x, widget.width + (widget.x + originX), widget.y + (originY + widget.height), originY + widget.y, (byte) 72);
+          CampaignUnitOverride.pushRasterClip(originX + widget.x, widget.width + (widget.x + originX), widget.y + (originY + widget.height), originY + widget.y, (byte) 72);
           if (obfuscationGuard >= -79) {
             return;
           }

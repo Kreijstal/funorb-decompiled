@@ -1148,10 +1148,10 @@ final class MatchSetupPanel {
             } else {
               if (var14 != param3) {
                 if (var12_int == var14) {
-                  BattleUnitRenderer.a(EditableTextField.field_Vb[var14][0] + param8, 7829367, (byte) -80, SectorCacheStore.field_j[var14][param2[var14]], param10 + EditableTextField.field_Vb[var14][1]);
+                  BattleUnitRenderer.drawIndexedSpriteHalo(EditableTextField.field_Vb[var14][0] + param8, 7829367, (byte) -80, SectorCacheStore.field_j[var14][param2[var14]], param10 + EditableTextField.field_Vb[var14][1]);
                 }
               } else {
-                BattleUnitRenderer.a(EditableTextField.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][1] + param10);
+                BattleUnitRenderer.drawIndexedSpriteHalo(EditableTextField.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][1] + param10);
               }
               if (!param4) {
                 IndexedSpriteColourSupport.drawIndexedSpriteGrayscaleTint(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);

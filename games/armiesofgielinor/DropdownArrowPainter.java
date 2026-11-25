@@ -6,7 +6,7 @@ final class DropdownArrowPainter implements WidgetPainter {
     static boolean field_a;
     static String[] field_c;
 
-    final static void a(boolean param0) {
+    final static void refreshPlayerGlowSprites(boolean param0) {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -30,7 +30,7 @@ final class DropdownArrowPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendLobbyGameFilters(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.position = var2.position + 1;
@@ -46,7 +46,7 @@ final class DropdownArrowPainter implements WidgetPainter {
         var2.writeByteLengthPrefix(-var3 + var2.position, 5930);
     }
 
-    final static void a(int param0) {
+    final static void initializeLogoHighlightLookup(int param0) {
         int var1_int = 0;
         int var2 = 0;
         double var3 = 0.0;

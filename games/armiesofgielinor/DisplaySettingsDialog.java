@@ -458,7 +458,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
             FullscreenFocusCanvas.gameplayController = null;
             QuickChatMenuDisplaySupport.field_j = false;
             SectorCacheStore.field_a = null;
-            ConsoleParseException.b(-1);
+            ConsoleParseException.clearBattleState(-1);
           }
           if (AccountNameFoldingSupport.field_c) {
             PointerInputHandler.field_f = null;

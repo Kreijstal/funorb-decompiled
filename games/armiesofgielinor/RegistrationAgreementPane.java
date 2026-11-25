@@ -167,7 +167,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           DualNodeDeque.a((byte) -124, param0);
           FriendLookupSupport.loadLogoMeshes(-93, param0);
           GzipDecoder.a(32381, param0);
-          DropdownArrowPainter.a(54);
+          DropdownArrowPainter.initializeLogoHighlightLookup(54);
           SpriteDropdownMenu.buildLogoGlowSprite(true);
           if (param1 <= 70) {
             String var5 = (String) null;

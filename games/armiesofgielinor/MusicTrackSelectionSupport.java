@@ -67,7 +67,7 @@ final class MusicTrackSelectionSupport {
           if (DropdownSelector.field_P != null) {
             EmailValidator.outgoingPacket.writeNullCircumfixedString(DropdownSelector.field_P, 413740432);
           }
-          IconLabelControl.a(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
+          IconLabelControl.writeRsaXteaEncryptedBuffer(QuickChatSetupSupport.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, AccountRsaBufferSupport.field_b, EmailValidator.outgoingPacket);
           EmailValidator.outgoingPacket.writeShortLengthPrefix(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
           SessionIoSupport.flushSessionPacketsWithIntGuard(29, -1);
           return;

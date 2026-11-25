@@ -588,7 +588,7 @@ abstract class TileableNoiseGenerator {
                 }
                 if (restrictionMessage != null) {
                   restrictionMessage = "<col=A00000>" + (String) (restrictionMessage);
-                  formattedRestrictionMessage = TextSplitSupport.a(6609, (String) (restrictionMessage), "<br>", "<br><col=A00000>");
+                  formattedRestrictionMessage = TextSplitSupport.replaceLiteralSubstring(6609, (String) (restrictionMessage), "<br>", "<br><col=A00000>");
                   if (tooltip != null) {
                     tooltip = (String) (tooltip) + "<br>" + formattedRestrictionMessage;
                   } else {

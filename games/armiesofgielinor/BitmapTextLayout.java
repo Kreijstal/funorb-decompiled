@@ -150,7 +150,7 @@ final class BitmapTextLayout extends TextLayout {
         TextLineLayout lineAlias = null;
         if (obfuscationGuard != -31932) {
           ResourceArchive guardArchive = (ResourceArchive) null;
-          BitmapTextLayout.a(-2, (ResourceArchive) null, 6, -12);
+          BitmapTextLayout.loadIndexedSpritesById(-2, (ResourceArchive) null, 6, -12);
         }
         if (text == null) {
           this.lines = null;
@@ -175,7 +175,7 @@ final class BitmapTextLayout extends TextLayout {
         }
     }
 
-    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSpritesById(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_5_0 = null;
@@ -350,7 +350,7 @@ final class BitmapTextLayout extends TextLayout {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void layoutLobbyPanels(boolean param0) {
         NineSliceSpriteSupport.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
         AlphaWidgetContainer.d(false);
@@ -400,7 +400,7 @@ final class BitmapTextLayout extends TextLayout {
           return;
         }
         ResourceArchive var5 = (ResourceArchive) null;
-        BitmapTextLayout.a(81, (ResourceArchive) null, -36, 38);
+        BitmapTextLayout.loadIndexedSpritesById(81, (ResourceArchive) null, -36, 38);
         AccountRsaBufferSupport.field_b.writeByte(1, day);
         AccountRsaBufferSupport.field_b.writeByte(1, monthIndex);
         AccountRsaBufferSupport.field_b.writeShort(true, year);
@@ -413,7 +413,7 @@ final class BitmapTextLayout extends TextLayout {
         EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + EmailValidator.outgoingPacket.position, obfuscationGuard + 5900);
     }
 
-    final static RgbSprite[] b(int param0, int param1) {
+    final static RgbSprite[] createSolidCenterFrameSprites(int param0, int param1) {
         RgbSprite[] var3 = null;
         RgbSprite[] var2 = null;
         if (param1 == 5) {

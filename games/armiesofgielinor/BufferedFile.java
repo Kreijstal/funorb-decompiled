@@ -236,7 +236,7 @@ final class BufferedFile {
         if (param2 != 1) {
           BufferedFile.releaseStatics((byte) 15);
         }
-        return CampaignMenuEntry.a(param1, 1, param0, (byte) 58, param3);
+        return CampaignMenuEntry.createTwoToneFrameSprites(param1, 1, param0, (byte) 58, param3);
     }
 
     final void readFully(int destinationOffset, byte[] destination, byte obfuscationGuard, int length) throws IOException {

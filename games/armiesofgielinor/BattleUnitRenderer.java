@@ -31,7 +31,7 @@ final class BattleUnitRenderer {
         return true;
     }
 
-    final static int b(int param0) {
+    final static int getCameraY(int param0) {
         if (param0 != 1) {
           return 66;
         }
@@ -124,7 +124,7 @@ final class BattleUnitRenderer {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, IndexedSprite param3, int param4) {
+    final static void drawIndexedSpriteHalo(int param0, int param1, byte param2, IndexedSprite param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -201,7 +201,7 @@ final class BattleUnitRenderer {
           unit.modelVisible = this.isTileVisible((byte) -81, tileIndex);
           if (obfuscationGuard <= 42) {
             var5 = (String) null;
-            BattleUnitRenderer.a(false, (AccountRegistrationForm) null, (String) null, (String) null, -91, (byte) -105, (String) null);
+            BattleUnitRenderer.beginAccountRegistration(false, (AccountRegistrationForm) null, (String) null, (String) null, -91, (byte) -105, (String) null);
           }
           if (!unit.modelVisible) {
             if (!unit.presentationOwnsModel) {
@@ -225,7 +225,7 @@ final class BattleUnitRenderer {
         }
     }
 
-    final static boolean a(boolean param0, AccountRegistrationForm param1, String param2, String param3, int param4, byte param5, String param6) {
+    final static boolean beginAccountRegistration(boolean param0, AccountRegistrationForm param1, String param2, String param3, int param4, byte param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         AccountRegistrationDialog var9 = null;

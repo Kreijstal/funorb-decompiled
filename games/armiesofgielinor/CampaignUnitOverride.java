@@ -8,7 +8,7 @@ final class CampaignUnitOverride {
     static String field_c;
     static int[] field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_d = null;
           field_c = null;
@@ -3064,7 +3064,7 @@ final class CampaignUnitOverride {
         decompiledBody.run();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void pushRasterClip(int param0, int param1, int param2, int param3, byte param4) {
         try {
           ConsoleTextNode.pushRasterState((byte) -56);
           SoftwareRaster.intersectClip(param0, param3, param1, param2);
@@ -3076,7 +3076,7 @@ final class CampaignUnitOverride {
         }
     }
 
-    final static void a(int param0, RgbSprite param1) {
+    final static void padSpriteToFourPixelGrid(int param0, RgbSprite param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_15_0 = 0;

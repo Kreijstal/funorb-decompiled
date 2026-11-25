@@ -12,7 +12,7 @@ final class LeaderEscortCondition implements MatchCondition {
     static int field_i;
     static String field_g;
 
-    final static PalettedBitmapFont a(byte[] param0, int param1) {
+    final static PalettedBitmapFont buildDecodedPalettedFont(byte[] param0, int param1) {
         PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         PalettedBitmapFont stackIn_6_0 = null;
@@ -45,7 +45,7 @@ final class LeaderEscortCondition implements MatchCondition {
         }
     }
 
-    final static int f(int param0) {
+    final static int packChatFilters(int param0) {
         if (param0 != 3) {
           field_i = -52;
         }
@@ -75,7 +75,7 @@ final class LeaderEscortCondition implements MatchCondition {
         }
     }
 
-    final static String a(int param0, int param1, String param2) {
+    final static String getRoomNotificationText(int param0, int param1, String param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -145,7 +145,7 @@ final class LeaderEscortCondition implements MatchCondition {
         field_f = null;
         field_g = null;
         if (obfuscationGuard != 25931) {
-          LeaderEscortCondition.f(-9);
+          LeaderEscortCondition.packChatFilters(-9);
         }
     }
 

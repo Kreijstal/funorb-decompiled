@@ -66,7 +66,7 @@ final class LineOfSightGrid {
 
     final static void appendBattleLogLine(byte param0, String param1, NodeDeque param2) {
         try {
-          MusicPatchEnvelope.a(param2, param1, 0, false);
+          MusicPatchEnvelope.appendWrappedToastMessages(param2, param1, 0, false);
           if (param0 != -80) {
             field_m = true;
           }
@@ -718,7 +718,7 @@ final class LineOfSightGrid {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void appendBattleLogLineWithIntGuard(int param0, String param1, NodeDeque param2) {
         try {
-          MusicPatchEnvelope.a(param2, param1, 0, false);
+          MusicPatchEnvelope.appendWrappedToastMessages(param2, param1, 0, false);
           if (param0 != -80) {
             field_m = true;
           }

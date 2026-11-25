@@ -192,7 +192,7 @@ final class WidgetTheme {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        CampaignUnitOverride.a(param4, param1, param0, param2, (byte) 83);
+        CampaignUnitOverride.pushRasterClip(param4, param1, param0, param2, (byte) 83);
         int var6 = 26 / ((param3 + 48) / 53);
     }
 
@@ -267,8 +267,8 @@ final class WidgetTheme {
           var6.horizontalAlignment = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.horizontalAlignment = 0;
-          var7.setFrameSprites(-128, BitmapTextLayout.b(8947848, 5));
-          var7.createStateStyle(1, (byte) -85).setFrameSprites(BitmapTextLayout.b(11184810, 5), 67).setTextColour(2236962, (byte) -127);
+          var7.setFrameSprites(-128, BitmapTextLayout.createSolidCenterFrameSprites(8947848, 5));
+          var7.createStateStyle(1, (byte) -85).setFrameSprites(BitmapTextLayout.createSolidCenterFrameSprites(11184810, 5), 67).setTextColour(2236962, (byte) -127);
           this.field_i = (WidgetPainter) ((Object) new CheckBoxWidgetPainter(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);

@@ -7,7 +7,7 @@ final class ConsoleParseException extends Exception {
     int sourceOffset;
     static String field_a;
 
-    final static void b(int param0) {
+    final static void clearBattleState(int param0) {
         ProgressMessageDialog.field_lb = null;
         CipherPacketBuffer.currentBattlefield = null;
         ConsoleExpression.field_p = null;
@@ -17,7 +17,7 @@ final class ConsoleParseException extends Exception {
         ResourceArchive.field_a = null;
         CampaignMenuEntry.field_u = null;
         if (param0 != -1) {
-          ConsoleParseException.b(95);
+          ConsoleParseException.clearBattleState(95);
         }
     }
 
@@ -25,7 +25,7 @@ final class ConsoleParseException extends Exception {
         this.sourceOffset = sourceOffset;
     }
 
-    final static void a(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6, String param7) {
+    final static void updateChatEntryOverlay(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6, String param7) {
         if (param1 <= 24) {
           return;
         }
@@ -61,7 +61,7 @@ final class ConsoleParseException extends Exception {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_c = 83;

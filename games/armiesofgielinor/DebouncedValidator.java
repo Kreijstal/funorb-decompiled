@@ -174,7 +174,7 @@ abstract class DebouncedValidator implements ValidationSource {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_pu = CampaignMenuButton.field_a[var3];
             var4_ref_pu.calculateBounds(-3831);
-            CampaignMenuEntry.a((byte) -116, var3);
+            CampaignMenuEntry.updateLogoRotationTransform((byte) -116, var3);
             var5 = var4_ref_pu.field_L + var4_ref_pu.field_p >> 1;
             var6 = var4_ref_pu.field_H + var4_ref_pu.field_P >> 1;
             var7 = var4_ref_pu.field_D + var4_ref_pu.field_J >> 1;
@@ -219,12 +219,12 @@ abstract class DebouncedValidator implements ValidationSource {
             }
             var21[var16] = -2147483648;
             var17 = CampaignMenuButton.field_a[var16];
-            CampaignMenuEntry.a((byte) -116, var16);
+            CampaignMenuEntry.updateLogoRotationTransform((byte) -116, var16);
             for (var18 = 0; var18 < 3; var18++) {
               PasswordLengthSupport.field_a[var18] = PasswordLengthSupport.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }
             MapRepository.a(var17, true, true, false, false, PasswordLengthSupport.field_a, ActionRequest.field_t);
-            IconLabelControl.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
+            IconLabelControl.drawLitLogoMesh(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

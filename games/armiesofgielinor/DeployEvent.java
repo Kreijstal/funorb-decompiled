@@ -36,7 +36,7 @@ final class DeployEvent extends GameEvent {
         NumericDateInputWidget.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
         NumericDateInputWidget.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
         NumericDateInputWidget.field_T.addChild(EventPresenterFactory.field_d, 39);
-        BitmapTextLayout.b(false);
+        BitmapTextLayout.layoutLobbyPanels(false);
     }
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {

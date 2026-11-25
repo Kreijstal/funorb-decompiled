@@ -9,7 +9,7 @@ final class SphinxActionRequest extends ActionRequest {
     private ActionRequest delegatedRequest;
     static ModalDialogHost field_v;
 
-    final static void a(int param0, byte param1) {
+    final static void sendQueuedRequestPackets(int param0, byte param1) {
         int var3 = 0;
         AlphaDecodedSpriteSupport var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -32,7 +32,7 @@ final class SphinxActionRequest extends ActionRequest {
         }
     }
 
-    final static void a(IndexedSprite[] param0, ResourceArchive param1, int param2, int[] param3, ResourceArchive param4) {
+    final static void initializeLobbyUiStyles(IndexedSprite[] param0, ResourceArchive param1, int param2, int[] param3, ResourceArchive param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
@@ -271,10 +271,10 @@ final class SphinxActionRequest extends ActionRequest {
           var17 = DropdownSelectorPainter.loadRgbSpritesByName("checkbox", (byte) -124, param1, "lobby");
           ArrayWidgetContainer.field_H = new IconLabelControl(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
           AccountRegistrationDialog.field_Cb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          AccountRegistrationDialog.field_Cb.skinSprites = ChatMessageWriteSupport.a(17, GameplayController.loadRgbSpriteByName("slideregion", (byte) 51, "lobby", param1));
-          AccountRegistrationDialog.field_Cb.matchedButtonSkinSprites = ChatMessageWriteSupport.a(17, GameplayController.loadRgbSpriteByName("slideregion_mouseover", (byte) 51, "lobby", param1));
-          AccountRegistrationDialog.field_Cb.heldPressSkinSprites = ChatMessageWriteSupport.a(17, GameplayController.loadRgbSpriteByName("slideregion_mouseheld", (byte) 51, "lobby", param1));
-          AccountRegistrationDialog.field_Cb.disabledSkinSprites = ChatMessageWriteSupport.a(17, GameplayController.loadRgbSpriteByName("slideregion_disabled", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.skinSprites = ChatMessageWriteSupport.createCenterOnlyFrameSprites(17, GameplayController.loadRgbSpriteByName("slideregion", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.matchedButtonSkinSprites = ChatMessageWriteSupport.createCenterOnlyFrameSprites(17, GameplayController.loadRgbSpriteByName("slideregion_mouseover", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.heldPressSkinSprites = ChatMessageWriteSupport.createCenterOnlyFrameSprites(17, GameplayController.loadRgbSpriteByName("slideregion_mouseheld", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.disabledSkinSprites = ChatMessageWriteSupport.createCenterOnlyFrameSprites(17, GameplayController.loadRgbSpriteByName("slideregion_disabled", (byte) 51, "lobby", param1));
           SoundEffectPreloadSupport.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           SoundEffectPreloadSupport.field_c.skinSprites = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("dragbar", (byte) -126, param1, "lobby"));
           SoundEffectPreloadSupport.field_c.matchedButtonSkinSprites = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("dragbar_mouseover", (byte) -127, param1, "lobby"));
@@ -363,7 +363,7 @@ final class SphinxActionRequest extends ActionRequest {
         keyStateEvents = null;
     }
 
-    final static void e(int param0) {
+    final static void drawSharedUnitViewer(int param0) {
         TurnEffectEvent.field_z.drawViewer((byte) -115);
         if (param0 != 0) {
           SphinxActionRequest.releaseStatics(64);
@@ -390,7 +390,7 @@ final class SphinxActionRequest extends ActionRequest {
           this.unlink(44);
           if (obfuscationGuard <= 31) {
             var4 = (ResourceArchive) null;
-            SphinxActionRequest.a((IndexedSprite[]) null, (ResourceArchive) null, 4, (int[]) null, (ResourceArchive) null);
+            SphinxActionRequest.initializeLobbyUiStyles((IndexedSprite[]) null, (ResourceArchive) null, 4, (int[]) null, (ResourceArchive) null);
           }
           var5 = battlefield.getUnitAt(this.sphinxY, true, this.sphinxX);
           if (var5 == null) {
