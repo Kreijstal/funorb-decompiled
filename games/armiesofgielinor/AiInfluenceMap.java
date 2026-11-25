@@ -792,9 +792,9 @@ final class AiInfluenceMap {
                 var3.field_s = SpectateRoomRequestSupport.field_e;
                 var3.field_k = UnitUnlockPreviewModel.field_d;
                 var3.field_m = Bzip2State.field_m;
-                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, UnitUnlockPreviewModel.field_d, (byte) 127, var6_intLifetime1);
+                DisplaySettingsDialog.appendRatingLeaderboardEntry(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, UnitUnlockPreviewModel.field_d, (byte) 127, var6_intLifetime1);
               } else {
-                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, UnitUnlockPreviewModel.field_d, (byte) 125, var6_intLifetime1);
+                DisplaySettingsDialog.appendRatingLeaderboardEntry(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, UnitUnlockPreviewModel.field_d, (byte) 125, var6_intLifetime1);
               }
             }
             ArchiveIndex.a(var5, 0);

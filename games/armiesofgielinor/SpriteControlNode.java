@@ -7,7 +7,7 @@ abstract class SpriteControlNode extends IntrusiveNode {
     static int field_n;
     static int lastQuickChatChannel;
 
-    final static boolean a(int param0, int param1, int param2, byte param3) {
+    final static boolean processSharedChatKey(int param0, int param1, int param2, byte param3) {
         if (NodeIterator.field_a) {
           return BestScoreStrategy.field_i.processKeyInput(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
         }
@@ -35,7 +35,7 @@ abstract class SpriteControlNode extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeInstructionsTutorialStage(int param0) {
         MoveEvent.instructionsPanel = new InstructionsPanel();
         MoveEvent.instructionsPanel.initializePanel(111);
         IntPair var1 = MoveEvent.instructionsPanel.getPanelStart((byte) 126);
@@ -94,7 +94,7 @@ abstract class SpriteControlNode extends IntrusiveNode {
     SpriteControlNode() {
     }
 
-    final static boolean a(int param0, BinaryBitmapFont param1, int param2, RgbSprite[] param3, String param4, int param5) {
+    final static boolean isPointerOnEndTurnButton(int param0, BinaryBitmapFont param1, int param2, RgbSprite[] param3, String param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

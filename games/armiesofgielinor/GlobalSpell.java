@@ -25,7 +25,7 @@ final class GlobalSpell extends Spell {
         super(spellId);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean markReconnectExpected(boolean param0) {
         if (param0) {
           field_h = -8;
           return SessionTransitionSupport.markReconnectExpected(-111);
@@ -73,7 +73,7 @@ final class GlobalSpell extends Spell {
           if (obfuscationGuard == 26123) {
             return;
           }
-          GlobalSpell.a(false);
+          GlobalSpell.markReconnectExpected(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,10 +89,10 @@ final class GlobalSpell extends Spell {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSharedInterfaceAndOverlays(int param0, boolean param1) {
         CampaignProgress.a(2000, param1);
         if (param0 >= -21) {
-          GlobalSpell.a(-83, true);
+          GlobalSpell.drawSharedInterfaceAndOverlays(-83, true);
           LocalAccountSupport.drawSharedUiOverlays(-10820, param1);
           return;
         }

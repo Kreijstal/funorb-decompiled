@@ -26,7 +26,7 @@ final class PaletteRegionMap {
         if (11 == SoundCache.field_b) {
           AnimationFrameSet.d((byte) -13);
         }
-        SpellCastRequest.a(ArchiveMasterIndex.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
+        SpellCastRequest.drawProgressDialog(ArchiveMasterIndex.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {
           return;
         }

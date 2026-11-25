@@ -9,7 +9,7 @@ final class NodeIterator {
     private IntrusiveNode cursor;
     static RgbSprite[] field_b;
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] loadLocalizedTextBytes(int param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -99,7 +99,7 @@ final class NodeIterator {
         return var2;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean processSharedInteractionKey(int param0, int param1, int param2, int param3) {
         if (null == FullscreenMembershipDialog.activeContextMenu) {
           if (null != Spell.field_b &&
             Spell.field_b.isWaitingForChoice(18585)) {
@@ -122,7 +122,7 @@ final class NodeIterator {
             if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
               return true;
             }
-            if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
+            if (!SpriteControlNode.processSharedChatKey(param1, param0, param2, (byte) 28)) {
               return false;
             }
             return true;
@@ -136,7 +136,7 @@ final class NodeIterator {
             if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
               return true;
             }
-            if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
+            if (!SpriteControlNode.processSharedChatKey(param1, param0, param2, (byte) 28)) {
               return false;
             }
             return true;
@@ -146,7 +146,7 @@ final class NodeIterator {
         if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
           return true;
         }
-        if (SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
+        if (SpriteControlNode.processSharedChatKey(param1, param0, param2, (byte) 28)) {
           return true;
         }
         return false;

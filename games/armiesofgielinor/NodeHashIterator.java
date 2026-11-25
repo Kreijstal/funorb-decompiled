@@ -22,7 +22,7 @@ final class NodeHashIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    final static void a(int param0, java.awt.Color param1, String param2, boolean param3, int param4) {
+    final static void drawAwtLoadingBar(int param0, java.awt.Color param1, String param2, boolean param3, int param4) {
         Exception var5 = null;
         RuntimeException var5_ref = null;
         java.awt.Graphics var9 = null;
@@ -115,7 +115,7 @@ final class NodeHashIterator implements Iterator {
         }
     }
 
-    final static void b(byte param0) {
+    final static void clearAndDrawCombatSandbox(byte param0) {
         SoftwareRaster.clearPixels();
         if (param0 != -90) {
           field_i = (QuickChatCommandDefinition) null;
@@ -169,7 +169,7 @@ final class NodeHashIterator implements Iterator {
         return false;
     }
 
-    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
+    final static void setAnimationArchives(byte param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           FriendLookupSupport.animationFramesArchive = param2;
           PortalLossCondition.animationSkeletonsArchive = param1;

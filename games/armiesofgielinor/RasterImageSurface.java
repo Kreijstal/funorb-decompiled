@@ -98,7 +98,7 @@ abstract class RasterImageSurface {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAsciiAlphanumeric(char param0, int param1) {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
@@ -170,7 +170,7 @@ abstract class RasterImageSurface {
         return stackIn_50_0;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawBattlefieldTileLayers(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0) {
           return;
         }
@@ -187,7 +187,7 @@ abstract class RasterImageSurface {
           return;
         }
         int var6 = param4 + param5 * ResourceRequest.field_y;
-        int var7 = RegionAnchor.a(16711680, param5, var6, param4);
+        int var7 = RegionAnchor.getTileOverlayColour(16711680, param5, var6, param4);
         int var8 = 255 - (var7 >>> 24 & 220487423);
         var7 = var7 & 16777215;
         QuickChatMenu.a(param2, var7, var6, param4, param1, var8, -116, param5);

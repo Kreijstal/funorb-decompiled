@@ -166,12 +166,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         currentBattlefield = null;
         field_u = null;
         if (obfuscationGuard != -97) {
-          CipherPacketBuffer.a(true, -32, -99, 30);
+          CipherPacketBuffer.changeSharedUiStage(true, -32, -99, 30);
           return;
         }
     }
 
-    final void a(int param0, byte[] param1, boolean param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, boolean param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -205,7 +205,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void changeSharedUiStage(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var4Lifetime1;
         if (param1 == ChatInputDispatchSupport.field_a) {
@@ -250,7 +250,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (!MusicCrossfadeStream.a(param1, true)) {
                   if (ChatInputDispatchSupport.field_a == 16) {
                     RasterState.a((byte) 111);
-                    TextLineLayout.a((byte) -41);
+                    TextLineLayout.initializeBasicBattleGraphics((byte) -41);
                     ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                   }
                   ChatInputDispatchSupport.field_a = param1;
@@ -289,7 +289,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 }
                 if (ChatInputDispatchSupport.field_a == 16) {
                   RasterState.a((byte) 111);
-                  TextLineLayout.a((byte) -41);
+                  TextLineLayout.initializeBasicBattleGraphics((byte) -41);
                   ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                 }
                 ChatInputDispatchSupport.field_a = param1;
@@ -334,7 +334,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         if (ChatInputDispatchSupport.field_a == 16) {
           RasterState.a((byte) 111);
-          TextLineLayout.a((byte) -41);
+          TextLineLayout.initializeBasicBattleGraphics((byte) -41);
           ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
         }
         ChatInputDispatchSupport.field_a = param1;

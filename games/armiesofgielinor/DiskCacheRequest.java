@@ -33,7 +33,7 @@ final class DiskCacheRequest extends ResourceRequest {
             field_G = (RgbSprite[]) null;
           }
           var5 = archive.getFileId((byte) -107, var4_int, fileName);
-          stackIn_3_0 = PacketBuffer.a(-1, var4_int, archive, var5);
+          stackIn_3_0 = PacketBuffer.loadSpriteWithOptionalAlphaById(-1, var4_int, archive, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

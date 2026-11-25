@@ -137,7 +137,7 @@ final class BoundedFile {
                                   SphinxActionRequest.drawSharedUnitViewer(0);
                                 } else {
                                   if (-7 == param0) {
-                                    NodeHashIterator.b((byte) -90);
+                                    NodeHashIterator.clearAndDrawCombatSandbox((byte) -90);
                                   } else {
                                     if (!param2) {
                                       AchievementNotification.field_m.drawPixels(FixedSquareRootSupport.field_b.width / 2 - AchievementNotification.field_m.canvasWidth / 2, -(AchievementNotification.field_m.canvasHeight / 2) + FixedSquareRootSupport.field_b.height / 2);

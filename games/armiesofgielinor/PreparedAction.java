@@ -11,7 +11,7 @@ abstract class PreparedAction extends IntrusiveNode {
     int actingPlayer;
     static RgbSprite field_p;
 
-    final static void a(String[][] param0, String[] param1, int param2, int param3) {
+    final static void initializeUnitAnimationVariants(String[][] param0, String[] param1, int param2, int param3) {
         int var5 = 0;
         int[] array$1 = null;
         int var4_int = 0;
@@ -81,7 +81,7 @@ abstract class PreparedAction extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, ViewportManager param1) {
+    final static void installViewportManager(byte param0, ViewportManager param1) {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

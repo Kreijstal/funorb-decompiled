@@ -63,25 +63,25 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         }
         if (param6 >= param4) {
           if (param2 > param6) {
-            ManaEvent.a(param6, param4, param7, param2, param1, param5, SoftwareRaster.pixels, param3, (byte) 20);
+            ManaEvent.rasterizeHalfBlendTriangle(param6, param4, param7, param2, param1, param5, SoftwareRaster.pixels, param3, (byte) 20);
             return;
           }
           if (param4 >= param2) {
-            ManaEvent.a(param4, param2, param1, param6, param3, param5, SoftwareRaster.pixels, param7, (byte) 20);
+            ManaEvent.rasterizeHalfBlendTriangle(param4, param2, param1, param6, param3, param5, SoftwareRaster.pixels, param7, (byte) 20);
             return;
           }
-          ManaEvent.a(param2, param4, param1, param6, param7, param5, SoftwareRaster.pixels, param3, (byte) 20);
+          ManaEvent.rasterizeHalfBlendTriangle(param2, param4, param1, param6, param7, param5, SoftwareRaster.pixels, param3, (byte) 20);
           return;
         }
         if (param2 > param4) {
-          ManaEvent.a(param4, param6, param7, param2, param3, param5, SoftwareRaster.pixels, param1, (byte) 20);
+          ManaEvent.rasterizeHalfBlendTriangle(param4, param6, param7, param2, param3, param5, SoftwareRaster.pixels, param1, (byte) 20);
           return;
         }
         if (param6 >= param2) {
-          ManaEvent.a(param6, param2, param3, param4, param1, param5, SoftwareRaster.pixels, param7, (byte) 20);
+          ManaEvent.rasterizeHalfBlendTriangle(param6, param2, param3, param4, param1, param5, SoftwareRaster.pixels, param7, (byte) 20);
           return;
         }
-        ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.pixels, param1, (byte) 20);
+        ManaEvent.rasterizeHalfBlendTriangle(param2, param6, param3, param4, param7, param5, SoftwareRaster.pixels, param1, (byte) 20);
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {

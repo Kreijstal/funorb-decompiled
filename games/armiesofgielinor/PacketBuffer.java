@@ -322,7 +322,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
+    final static void sortLeaderboardEntryIndices(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_24_0 = 0;
@@ -375,8 +375,8 @@ class PacketBuffer extends IntrusiveNode {
                 }
               }
             }
-            PacketBuffer.a(param0, param1, false, var9, var8, param5, param6);
-            PacketBuffer.a(var8, var10, param2, param3, param4, param5, param6);
+            PacketBuffer.sortLeaderboardEntryIndices(param0, param1, false, var9, var8, param5, param6);
+            PacketBuffer.sortLeaderboardEntryIndices(var8, var10, param2, param3, param4, param5, param6);
             return;
           }
           for (var7_intLifetime1 = -1 + param4; var7_intLifetime1 > param0; var7_intLifetime1--) {
@@ -397,7 +397,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void i(byte param0) {
+    final static void closeSharedInteractionUi(byte param0) {
         FixInvisibleUnitsConsoleCommand.g(76);
         ImageProducerSurface.d(-1);
         Spell.field_b = null;
@@ -412,7 +412,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.payload[fieldTemp$0];
     }
 
-    final static RgbSprite a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static RgbSprite loadSpriteWithOptionalAlphaById(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RgbSprite stackIn_5_0 = null;

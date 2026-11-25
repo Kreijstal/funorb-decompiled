@@ -45,2988 +45,2988 @@ final class CampaignUnitOverride {
             }
             void loadLoginLobbyAndGameOptionText() throws java.lang.RuntimeException {
                 PaginationTextSupport.field_e = param1;
-                var2 = NodeIterator.a(param0 + 132, "loginm3");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "loginm3");
                 if (null != var2) {
                   ValidationState.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "loginm2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "loginm2");
                 if (null != var2) {
                   DamageEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
-                var2 = NodeIterator.a(50, "loginm1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loginm1");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "idlemessage20min");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "idlemessage20min");
                 if (var2 != null) {
                   LobbyPlayer.field_bc = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "error_js5crc");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "error_js5crc");
                 if (var2 != null) {
                   AlternateKeyedLoginCredentials.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(param0 + 132, "error_js5io");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "error_js5io");
                 if (null != var2) {
                   CampaignMenu.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(50, "error_js5connect_full");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "error_js5connect_full");
                 if (null != var2) {
                   ResourceArchive.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "error_js5connect");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "error_js5connect");
                 if (var2 != null) {
                   AccountRequestState.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "login_gameupdated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_gameupdated");
                 if (null != var2) {
                   DropdownSelectorPainter.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "create_unable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_unable");
                 if (null != var2) {
                   CampaignMission.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "create_ineligible");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_ineligible");
                 if (null != var2) {
                   ResourceProtocolClient.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "usernameprompt");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "usernameprompt");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "passwordprompt");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "passwordprompt");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "andagainprompt");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "andagainprompt");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(50, "ticketing_read");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ticketing_read");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 71);
                 }
-                var2 = NodeIterator.a(param0 + 132, "ticketing_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "ticketing_ignore");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(param0 + 132, "ticketing_oneunread");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "ticketing_oneunread");
                 if (var2 != null) {
                   TrianglePulse.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 42);
                 }
-                var2 = NodeIterator.a(50, "ticketing_xunread");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ticketing_xunread");
                 if (null != var2) {
                   StandardContentDialog.field_nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "ticketing_gotowebsite");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "ticketing_gotowebsite");
                 if (null != var2) {
                   UnitAirAttackSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
-                var2 = NodeIterator.a(50, "ticketing_waitingformessages");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ticketing_waitingformessages");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mu_chat_on");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mu_chat_on");
                 if (var2 != null) {
                   QuickChatPhrase.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_friends");
                 if (null != var2) {
                   IterableDualNodeDeque.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 90);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_off");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_off");
                 if (var2 != null) {
                   GameUiOverlaySupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_lobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_lobby");
                 if (null != var2) {
                   ClientConnectionState.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_public");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_public");
                 if (null != var2) {
                   NetworkGameShell.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_ignore");
                 if (null != var2) {
                   FriendRequestSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 42);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mu_chat_tips");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mu_chat_tips");
                 if (var2 != null) {
                   TeleportAction.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_game");
                 if (var2 != null) {
                   GridWidgetContainer.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_private");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_private");
                 if (null != var2) {
                   NineSliceSpriteSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
-                var2 = NodeIterator.a(50, "mu_x_entered_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_entered_game");
                 if (null != var2) {
                   GrowthEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
-                var2 = NodeIterator.a(50, "mu_x_joined_your_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_joined_your_game");
                 if (var2 != null) {
                   CommunityTabGroup.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
-                var2 = NodeIterator.a(50, "mu_x_entered_other_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_entered_other_game");
                 if (var2 != null) {
                   IterableNodeHashTable.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(50, "mu_x_left_lobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_left_lobby");
                 if (null != var2) {
                   DropdownOptionList.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mu_x_lost_con");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mu_x_lost_con");
                 if (var2 != null) {
                   FixInvisibleUnitsConsoleCommand.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
-                var2 = NodeIterator.a(50, "mu_x_cannot_join_full");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_cannot_join_full");
                 if (null != var2) {
                   MatchingTextValidator.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "mu_x_cannot_join_inprogress");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_cannot_join_inprogress");
                 if (var2 != null) {
                   AlphaWidgetContainer.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 77);
                 }
-                var2 = NodeIterator.a(50, "mu_x_declined_invite");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_declined_invite");
                 if (null != var2) {
                   AccountNamePrompt.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(50, "mu_x_withdrew_request");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_withdrew_request");
                 if (var2 != null) {
                   Spell.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 52);
                 }
-                var2 = NodeIterator.a(50, "mu_x_removed");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_removed");
                 if (null != var2) {
                   DirectByteStorage.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 52);
                 }
-                var2 = NodeIterator.a(50, "mu_x_dropped_out");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_x_dropped_out");
                 if (null != var2) {
                   EventPresenterFactory.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "mu_entered_other_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_entered_other_game");
                 if (var2 != null) {
                   TileableNoiseGenerator.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "mu_game_is_full");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_game_is_full");
                 if (var2 != null) {
                   ChatMessage.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
-                var2 = NodeIterator.a(50, "mu_game_has_started");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_game_has_started");
                 if (null != var2) {
                   ClippedWidgetContainer.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "mu_you_declined_invite");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_you_declined_invite");
                 if (null != var2) {
                   GameUiOverlaySupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
-                var2 = NodeIterator.a(50, "mu_invite_withdrawn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_invite_withdrawn");
                 if (null != var2) {
                   SoundEffectPreloadSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
-                var2 = NodeIterator.a(50, "mu_request_declined");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_request_declined");
                 if (var2 != null) {
                   SharedUiLoadingSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "mu_request_withdrawn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_request_withdrawn");
                 if (var2 != null) {
                   BitReversalSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "mu_all_players_have_left");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_all_players_have_left");
                 if (null != var2) {
                   ActionSpell.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_name");
                 if (var2 != null) {
                   AiWeightProfile.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_rating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_rating");
                 if (var2 != null) {
                   PcmPlayerService.ratingLabel = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_friend_add");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_friend_add");
                 if (null != var2) {
                   LoginKind.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_friend_rm");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_friend_rm");
                 if (var2 != null) {
                   AnimationFrameSet.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mu_lobby_name_add");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mu_lobby_name_add");
                 if (var2 != null) {
                   LobbyControlResources.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_name_rm");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_name_rm");
                 if (var2 != null) {
                   ArchiveIndex.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "mu_lobby_location");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_lobby_location");
                 if (null != var2) {
                   SingleChildWidgetContainer.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_all_games");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_all_games");
                 if (null != var2) {
                   NineSliceFrame.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_status");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_status");
                 if (null != var2) {
                   IntrusiveNode.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mu_gamelist_owner");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mu_gamelist_owner");
                 if (null != var2) {
                   LoginCredentialStagingSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_players");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_players");
                 if (var2 != null) {
                   DropdownSelectorPainter.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_avg_rating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_avg_rating");
                 if (var2 != null) {
                   InteractiveWidget.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_options");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_options");
                 if (null != var2) {
                   ArrayWidgetContainer.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 111);
                 }
-                var2 = NodeIterator.a(50, "mu_gamelist_elapsed_time");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gamelist_elapsed_time");
                 if (null != var2) {
                   RevivalEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
-                var2 = NodeIterator.a(50, "mu_play_rated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_play_rated");
                 if (var2 != null) {
                   QuickChatCategoryMenuSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 123);
                 }
-                var2 = NodeIterator.a(50, "mu_create_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_create_unrated");
                 if (null != var2) {
                   CampaignMenuEntry.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 95);
                 }
-                var2 = NodeIterator.a(50, "mu_options");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_options");
                 if (null != var2) {
                   EffectPresentation.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 49);
                 }
-                var2 = NodeIterator.a(50, "mu_options_whocanjoin");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_options_whocanjoin");
                 if (null != var2) {
                   LogoFaceSortSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "mu_options_players");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_options_players");
                 if (null != var2) {
                   IntroSequence.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(50, "mu_options_dontmind");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_options_dontmind");
                 if (var2 != null) {
                   QuinticFadeSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mu_options_allow_spectate");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mu_options_allow_spectate");
                 if (null != var2) {
                   GameEvent.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
-                var2 = NodeIterator.a(50, "mu_options_ratedgametype");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_options_ratedgametype");
                 if (var2 != null) {
                   AnimationFrameSet.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 38);
                 }
-                var2 = NodeIterator.a(50, "yes");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "yes");
                 if (var2 != null) {
                   QuickChatShortcutSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "no");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "no");
                 if (var2 != null) {
                   LeaderEscortCondition.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "mu_invite_players");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_invite_players");
                 if (var2 != null) {
                   TickCounter.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "close");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "close");
                 if (var2 != null) {
                   ConsoleCommand.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(50, "add_x_to_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "add_x_to_friends");
                 if (var2 != null) {
                   TileableNoiseGenerator.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
-                var2 = NodeIterator.a(50, "add_x_to_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "add_x_to_ignore");
                 if (null != var2) {
                   ToastMessage.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
-                var2 = NodeIterator.a(50, "rm_x_from_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rm_x_from_friends");
                 if (var2 != null) {
                   AccountNameSelectionForm.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "rm_x_from_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rm_x_from_ignore");
                 if (var2 != null) {
                   ToggleTurnSkipConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "send_pm_to_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "send_pm_to_x");
                 if (null != var2) {
                   MusicPatchNode.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "send_qc_to_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "send_qc_to_x");
                 if (null != var2) {
                   DeployRequest.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
-                var2 = NodeIterator.a(50, "send_pm");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "send_pm");
                 if (null != var2) {
                   BitCountSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "invite_accept_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "invite_accept_xs_game");
                 if (null != var2) {
                   ByteStorage.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
-                var2 = NodeIterator.a(50, "invite_decline_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "invite_decline_xs_game");
                 if (var2 != null) {
                   DialWidgetPainter.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "join_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "join_xs_game");
                 if (null != var2) {
                   RasterViewportResizeHandler.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 122);
                 }
-                var2 = NodeIterator.a(50, "join_request_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "join_request_xs_game");
                 if (null != var2) {
                   CampaignResult.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 2);
                 }
-                var2 = NodeIterator.a(50, "join_withdraw_request_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "join_withdraw_request_xs_game");
                 if (var2 != null) {
                   PasswordLoginCredentials.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(50, "mu_gameopt_kick_x_from_this_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
                   DraggableWidgetContainer.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mu_gameopt_withdraw_invite_to_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
                   AccountRegistrationDialog.field_zb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "mu_gameopt_accept_x_into_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
                   ManaStarParticle.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "mu_gameopt_reject_x_from_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
                   SelectionMenuLayoutSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
-                var2 = NodeIterator.a(50, "mu_gameopt_invite_x_to_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_gameopt_invite_x_to_game");
                 if (null != var2) {
                   ValidationStatusWidget.field_W = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "report_x_for_abuse");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "report_x_for_abuse");
                 if (var2 != null) {
                   IterableDualNodeDeque.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_a");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "unable_to_send_message_password_a");
                 if (null != var2) {
                   KingBlackDragonEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_b");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "unable_to_send_message_password_b");
                 if (var2 != null) {
                   ContextualRuntimeException.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_lobby_show_all");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_lobby_show_all");
                 if (var2 != null) {
                   EmailValidator.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_lobby_friends_only");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_lobby_friends_only");
                 if (null != var2) {
                   ValidationStatusWidget.field_S = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_lobby_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_lobby_friends");
                 if (var2 != null) {
                   PreferencesWriteRequest.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_lobby_hide");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_lobby_hide");
                 if (null != var2) {
                   MapRepository.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_game_show_all");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_game_show_all");
                 if (var2 != null) {
                   ChannelGainProfile.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_game_friends_only");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_game_friends_only");
                 if (var2 != null) {
                   FriendLookupSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 40);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mu_chat_game_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mu_chat_game_friends");
                 if (var2 != null) {
                   AnimationFrameSetCacheEntry.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_game_hide");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_game_hide");
                 if (var2 != null) {
                   BoundedUrlRequest.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_pm_show_all");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_pm_show_all");
                 if (var2 != null) {
                   SocketResourceClient.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_pm_friends_only");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_pm_friends_only");
                 if (var2 != null) {
                   SummonRequest.field_C = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_pm_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_pm_friends");
                 if (null != var2) {
                   FriendLookupSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "mu_chat_invisible_and_silent_mode");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
                   ScrollWidgetContainer.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "you_have_been_removed_from_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
                   ActionSpell.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
-                var2 = NodeIterator.a(50, "your_rating_is_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "your_rating_is_x");
                 if (null != var2) {
                   AttackEvent.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 18);
                 }
-                var2 = NodeIterator.a(50, "you_are_on_x_server");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_are_on_x_server");
                 if (var2 != null) {
                   DisplayModeOptionPainter.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "rated_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rated_game");
                 if (var2 != null) {
                   LobbyRoomControlSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unrated_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unrated_game");
                 if (null != var2) {
                   CampaignProgress.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "rated_game_tips");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rated_game_tips");
                 if (var2 != null) {
                   AiActionCandidate.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "searching_for_opponent_singular");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "searching_for_opponent_singular");
                 if (null != var2) {
                   PreparedAction.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
-                var2 = NodeIterator.a(50, "searching_for_opponents_plural");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "searching_for_opponents_plural");
                 if (null != var2) {
                   SoundCache.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 114);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "find_opponent_singular");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "find_opponent_singular");
                 if (null != var2) {
                   DropdownSelectorPainter.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "find_opponents_plural");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "find_opponents_plural");
                 if (var2 != null) {
                   DefeatPlayerWithMetricsConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "rated_game_tips_setup_singular");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rated_game_tips_setup_singular");
                 if (var2 != null) {
                   SpectateRoomRequestSupport.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 105);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "rated_game_tips_setup_plural");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "rated_game_tips_setup_plural");
                 if (var2 != null) {
                   ConsoleCommand.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "waiting_to_start_hint");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waiting_to_start_hint");
                 if (var2 != null) {
                   ScreenWipeTransition.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
-                var2 = NodeIterator.a(50, "your_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "your_game");
                 if (var2 != null) {
                   DualNodeHashTable.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 10);
                 }
-                var2 = NodeIterator.a(50, "game_full");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "game_full");
                 if (var2 != null) {
                   TelefragEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
-                var2 = NodeIterator.a(50, "join_requests_one");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "join_requests_one");
                 if (null != var2) {
                   TileableNoiseGenerator.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "join_requests_many");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "join_requests_many");
                 if (null != var2) {
                   UnitSpell.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
-                var2 = NodeIterator.a(50, "xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "xs_game");
                 if (var2 != null) {
                   CampaignMenu.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "waiting_for_x_to_start_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waiting_for_x_to_start_game");
                 if (null != var2) {
                   GiveTileConsoleCommand.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
-                var2 = NodeIterator.a(50, "game_options_changed");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "game_options_changed");
                 if (null != var2) {
                   CorpseConditionMarker.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "players_x_of_y");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "players_x_of_y");
                 if (null != var2) {
                   DialWidget.field_T = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "message_lobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "message_lobby");
                 if (null != var2) {
                   SharedUiLoadingSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(param0 + 132, "quickchat_lobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "quickchat_lobby");
                 if (null != var2) {
                   FixedQuaternion.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "message_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "message_game");
                 if (null != var2) {
                   CampaignMenu.field_q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
-                var2 = NodeIterator.a(50, "message_team");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "message_team");
                 if (null != var2) {
                   QuickChatCategoryMenuSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "quickchat_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "quickchat_game");
                 if (var2 != null) {
                   CampaignMenuEntry.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "kick");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "kick");
                 if (var2 != null) {
                   LogoMaterial.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(param0 + 132, "inviting_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "inviting_x");
                 if (null != var2) {
                   AiPlanningStrategy.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "x_wants_to_join");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "x_wants_to_join");
                 if (var2 != null) {
                   DeployEvent.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 90);
                 }
-                var2 = NodeIterator.a(50, "accept");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "accept");
                 if (var2 != null) {
                   LeaderEscortCondition.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "reject");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "reject");
                 if (var2 != null) {
                   SpellConfirmationDialog.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "invite");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "invite");
                 if (var2 != null) {
                   LogoMaterial.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(50, "status_concluded");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "status_concluded");
                 if (null != var2) {
                   ValidationStatusIcon.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "status_spectate");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "status_spectate");
                 if (null != var2) {
                   HelloConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(param0 + 132, "status_playing");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "status_playing");
                 if (null != var2) {
                   RasterImageSurface.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "status_join");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "status_join");
                 if (null != var2) {
                   WidgetTheme.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "status_private");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "status_private");
                 if (null != var2) {
                   ClientUiComponent.field_zb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "status_full");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "status_full");
                 if (var2 != null) {
                   AnimationFrameSet.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "players_in_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "players_in_game");
                 if (var2 != null) {
                   ImageProducerSurface.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "you_are_invited_to_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_are_invited_to_xs_game");
                 if (var2 != null) {
                   ToastMessage.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
-                var2 = NodeIterator.a(50, "asking_to_join_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "asking_to_join_xs_game");
                 if (var2 != null) {
                   GameplayController.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "who_can_join");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "who_can_join");
                 if (null != var2) {
                   ToggleWidget.field_P = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
-                var2 = NodeIterator.a(50, "you_can_join");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_can_join");
                 if (null != var2) {
                   AttackEvent.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
-                var2 = NodeIterator.a(50, "you_can_ask_to_join");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_can_ask_to_join");
                 if (null != var2) {
                   StructureGlowRenderer.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
-                var2 = NodeIterator.a(50, "you_cannot_join_in_progress");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_cannot_join_in_progress");
                 if (var2 != null) {
                   SummonRequest.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
-                var2 = NodeIterator.a(param0 + 132, "you_can_spectate");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "you_can_spectate");
                 if (null != var2) {
                   BitmapTextLayout.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "you_can_not_spectate");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "you_can_not_spectate");
                 if (var2 != null) {
                   FriendLookupSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "spectate_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "spectate_xs_game");
                 if (null != var2) {
                   SectorCacheStore.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "hide_players_in_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hide_players_in_xs_game");
                 if (null != var2) {
                   EventPresenterFactory.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 3);
                 }
-                var2 = NodeIterator.a(50, "show_players_in_xs_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "show_players_in_xs_game");
                 if (var2 != null) {
                   PrivateTextRecipientSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "connecting_to_friend_server_twoline");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "connecting_to_friend_server_twoline");
                 if (null != var2) {
                   TeleportAction.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "loading");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading");
                 if (null != var2) {
                   ConsoleParseException.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
-                var2 = NodeIterator.a(50, "offline");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "offline");
                 if (var2 != null) {
                   BattleTutorial.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "multiconst_invite_only");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "multiconst_invite_only");
                 if (null != var2) {
                   AttackEvent.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
-                var2 = NodeIterator.a(50, "multiconst_clan");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "multiconst_clan");
                 if (null != var2) {
                   ProxySocketFactory.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 9);
                 }
-                var2 = NodeIterator.a(50, "multiconst_friends");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "multiconst_friends");
                 if (null != var2) {
                   AccountRegistrationForm.field_L = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "multiconst_similar_rating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "multiconst_similar_rating");
                 if (null != var2) {
                   AccountNameSelectionSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
-                var2 = NodeIterator.a(50, "multiconst_open");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "multiconst_open");
                 if (var2 != null) {
                   MusicPatch.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 83);
                 }
-                var2 = NodeIterator.a(50, "no_options_available");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "no_options_available");
                 if (null != var2) {
                   QuickChatCategory.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "reportabuse");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reportabuse");
                 if (var2 != null) {
                   CampaignMenu.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "presstabtochat");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "presstabtochat");
                 if (null != var2) {
                   VerticalScrollbar.field_Tb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "pressf10toquickchat");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pressf10toquickchat");
                 if (var2 != null) {
                   TabbedPanel.field_Lb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "dob_chatdisabled");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "dob_chatdisabled");
                 if (null != var2) {
                   ReflectionCheckRequest.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(param0 + 132, "dob_enterforchat");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "dob_enterforchat");
                 if (null != var2) {
                   QuickChatMenu.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "tab_hidechattemporarily");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "tab_hidechattemporarily");
                 if (var2 != null) {
                   Bzip2State.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
-                var2 = NodeIterator.a(param0 + 132, "esc_cancelprivatemessage");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "esc_cancelprivatemessage");
                 if (var2 != null) {
                   LogoMaterial.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
-                var2 = NodeIterator.a(50, "esc_cancelthisline");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "esc_cancelthisline");
                 if (null != var2) {
                   FixedQuaternion.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "privatequickchat_from_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "privatequickchat_from_x");
                 if (var2 != null) {
                   SpectateRoomRequestSupport.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "privatequickchat_to_x");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "privatequickchat_to_x");
                 if (var2 != null) {
                   LabeledWidgetContainer.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(param0 + 132, "privatechat_blankarea_explanation");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "privatechat_blankarea_explanation");
                 if (null != var2) {
                   MusicPatchPcmStream.field_q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "publicchat_unavailable_ratedgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
                   DraggableWidgetContainer.field_K = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
-                var2 = NodeIterator.a(param0 + 132, "privatechat_friend_offline");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "privatechat_friend_offline");
                 if (var2 != null) {
                   ContentTransitionDialog.field_gb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
-                var2 = NodeIterator.a(50, "privatechat_friend_notlisted");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "privatechat_friend_notlisted");
                 if (var2 != null) {
                   DiskCacheWorker.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "chatviewscrolledup");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "chatviewscrolledup");
                 if (var2 != null) {
                   CacheEntry.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "thisisrunescapeclan");
                 if (var2 != null) {
                   ActionSpell.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan_notowner");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "thisisrunescapeclan_notowner");
                 if (null != var2) {
                   FriendRequestSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
-                var2 = NodeIterator.a(50, "runescapeclan");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "runescapeclan");
                 if (var2 != null) {
                   AiInfluenceMap.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "rated_membersonly");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rated_membersonly");
                 if (null != var2) {
                   CoatOfArmsOverlaySupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 23);
                 }
-                var2 = NodeIterator.a(50, "gameopt_membersonly");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_membersonly");
                 if (var2 != null) {
                   LocalAccountNameSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(50, "gameopt_1moreratedgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_1moreratedgame");
                 if (null != var2) {
                   LoginAndTutorialSetupSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
-                var2 = NodeIterator.a(50, "gameopt_moreratedgames");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_moreratedgames");
                 if (var2 != null) {
                   ByteStorage.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_needrating");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_needrating");
                 if (null != var2) {
                   AnimationSequence.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "gameopt_unratedonly");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "gameopt_unratedonly");
                 if (var2 != null) {
                   TaggedMapData.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "gameopt_notunlocked");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_notunlocked");
                 if (null != var2) {
                   ParasiteEvent.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "gameopt_cannotbecombined1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_cannotbecombined1");
                 if (null != var2) {
                   AlphanumericTextSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "gameopt_cannotbecombined2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_cannotbecombined2");
                 if (null != var2) {
                   AudioShutdownSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "gameopt_playernotmember");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_playernotmember");
                 if (var2 != null) {
                   TickCounter.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "gameopt_younotmember");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "gameopt_younotmember");
                 if (var2 != null) {
                   LeapYearSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "gameopt_playerneedsrating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_playerneedsrating");
                 if (var2 != null) {
                   MusicTrackSelectionSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
-                var2 = NodeIterator.a(50, "gameopt_youneedrating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_youneedrating");
                 if (var2 != null) {
                   MonotonicClockSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "gameopt_playerneedsratedgames");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
                   AccountNamePrompt.field_Ib = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 3);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "gameopt_youneedratedgames");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "gameopt_youneedratedgames");
                 if (var2 != null) {
                   GlobalSpell.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "gameopt_playerneeds1ratedgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
                   BattlefieldTheme.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_youneed1ratedgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
                   FullscreenMembershipDialog.field_Y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "gameopt_playerhasntunlocked");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_playerhasntunlocked");
                 if (null != var2) {
                   LoginKind.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_youhaventunlocked");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_youhaventunlocked");
                 if (var2 != null) {
                   EventPresenter.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
-                var2 = NodeIterator.a(50, "gameopt_trychanging1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_trychanging1");
                 if (var2 != null) {
                   DualNodeHashTable.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
-                var2 = NodeIterator.a(50, "gameopt_trychanging2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_trychanging2");
                 if (var2 != null) {
                   IterableDualNodeDeque.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_needchanging1");
                 if (null != var2) {
                   BufferedFile.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 41);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_needchanging2");
                 if (null != var2) {
                   MusicCrossfadeStream.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "gameopt_mightchange");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_mightchange");
                 if (null != var2) {
                   DirectByteStorage.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(50, "gameopt_playersdontqualify");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_playersdontqualify");
                 if (null != var2) {
                   ResourceArchive.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 46);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "gameopt_playersdontqualify_selectgametab");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
                   Battlefield.field_pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "gameopt_unselectedoptions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_unselectedoptions");
                 if (null != var2) {
                   FullscreenFocusCanvas.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "gameopt_pleaseselectoption1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
                   TeamRoster.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
-                var2 = NodeIterator.a(50, "gameopt_pleaseselectoption2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_pleaseselectoption2");
                 if (null != var2) {
                   MaskedTextEntryPainter.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 93);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_badnumplayers");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_badnumplayers");
                 if (var2 != null) {
                   QuickChatCategoryMenuSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(param0 + 132, "gameopt_inviteplayers_or_trychanging1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
                   ClientRecoverySupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "gameopt_inviteplayers_or_trychanging2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
                   LobbyRoom.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(50, "gameopt_novalidcombos");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_novalidcombos");
                 if (var2 != null) {
                   MarkerSliderPainter.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
             }
             void loadAbuseRegistrationAndResourceStatusText() throws java.lang.RuntimeException {
-                var2 = NodeIterator.a(50, "gameopt_pleasetrychanging");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameopt_pleasetrychanging");
                 if (null != var2) {
                   SpectateRoomRequestSupport.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "ra_title");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ra_title");
                 if (null != var2) {
                   DebugConsole.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "ra_mutethisplayer");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ra_mutethisplayer");
                 if (var2 != null) {
                   SpellCastAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "ra_suggestmute");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "ra_suggestmute");
                 if (null != var2) {
                   SetCoatConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "ra_intro");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "ra_intro");
                 if (var2 != null) {
                   AccountFlowUpdateSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(50, "ra_intro_no_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ra_intro_no_name");
                 if (var2 != null) {
                   FixInvisibleUnitsConsoleCommand.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "ra_explanation");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ra_explanation");
                 if (null != var2) {
                   TextFieldValidator.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
-                var2 = NodeIterator.a(50, "rule_pillar_0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_pillar_0");
                 if (var2 != null) {
                   LeapYearSupport.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "rule_0_0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_0_0");
                 if (var2 != null) {
                   MapHeaderSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "rule_0_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_0_1");
                 if (null != var2) {
                   GiveTileConsoleCommand.field_E = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rule_0_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rule_0_2");
                 if (var2 != null) {
                   ClientConnectionState.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "rule_0_3");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "rule_0_3");
                 if (var2 != null) {
                   QuickChatMenuDisplaySupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "rule_0_4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_0_4");
                 if (null != var2) {
                   AnimationSkeleton.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 8);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rule_0_5");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rule_0_5");
                 if (var2 != null) {
                   IntrusiveNode.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "rule_pillar_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_pillar_1");
                 if (null != var2) {
                   SpellCastAction.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "rule_1_0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_1_0");
                 if (null != var2) {
                   ContentTransitionStage.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "rule_1_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_1_1");
                 if (var2 != null) {
                   GameClock.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 87);
                 }
-                var2 = NodeIterator.a(50, "rule_1_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_1_2");
                 if (var2 != null) {
                   ResizableModalDialog.field_Q = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rule_1_3");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rule_1_3");
                 if (null != var2) {
                   MidiPcmStream.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "rule_1_4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_1_4");
                 if (var2 != null) {
                   MatchSetupPanel.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
-                var2 = NodeIterator.a(50, "rule_pillar_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_pillar_2");
                 if (null != var2) {
                   FriendRequestSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "rule_2_0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_2_0");
                 if (var2 != null) {
                   EffectPresentation.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "rule_2_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_2_1");
                 if (null != var2) {
                   HuffmanCodec.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "rule_2_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rule_2_2");
                 if (null != var2) {
                   LoginMethod.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "createafreeaccount");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "createafreeaccount");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(50, "cancel");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "cancel");
                 if (null != var2) {
                   ManaStarParticle.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(50, "pleaselogintoplay");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleaselogintoplay");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "pleaselogin");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleaselogin");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
-                var2 = NodeIterator.a(50, "pleaselogin_member");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleaselogin_member");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
-                var2 = NodeIterator.a(param0 + 132, "invaliduserorpass");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "invaliduserorpass");
                 if (var2 != null) {
                   PowerOfTwoSupport.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "pleasetryagain");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleasetryagain");
                 if (null != var2) {
                   SummonAction.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 125);
                 }
-                var2 = NodeIterator.a(50, "pleasereenterpass");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleasereenterpass");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(50, "playfreeversion");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "playfreeversion");
                 if (var2 != null) {
                   IconTextComponent.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "reloadgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reloadgame");
                 if (var2 != null) {
                   QuickChatCommandDefinition.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "toserverlist");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "toserverlist");
                 if (var2 != null) {
                   SoundPlaybackHandle.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "tocustomersupport");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "tocustomersupport");
                 if (null != var2) {
                   CombatEvent.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(50, "changedisplayname");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "changedisplayname");
                 if (var2 != null) {
                   BattleTutorial.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 63);
                 }
-                var2 = NodeIterator.a(50, "returntohomepage");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntohomepage");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "justplay");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "justplay");
                 if (var2 != null) {
                   MarkerSliderWidget.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "justplay_excl");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "justplay_excl");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 14);
                 }
-                var2 = NodeIterator.a(50, "login");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login");
                 if (null != var2) {
                   ResourceRequest.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(param0 + 132, "goback");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "goback");
                 if (null != var2) {
                   ContentTransitionDialog.field_Y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 67);
                 }
-                var2 = NodeIterator.a(50, "otheroptions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "otheroptions");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "proceed");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "proceed");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 43);
                 }
-                var2 = NodeIterator.a(50, "connectingtoserver");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "connectingtoserver");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "pleasewait");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "pleasewait");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "logging_in");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "logging_in");
                 if (var2 != null) {
                   MapLayout.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 62);
                 }
-                var2 = NodeIterator.a(50, "reconnect");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
-                var2 = NodeIterator.a(50, "backtoerror");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "backtoerror");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "pleasecheckinternet");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleasecheckinternet");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "attemptingtoreconnect");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "attemptingtoreconnect");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 46);
                 }
-                var2 = NodeIterator.a(50, "connectionlost_reconnecting");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "connectionlost_reconnecting");
                 if (null != var2) {
                   CachedArchiveProvider.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 80);
                 }
-                var2 = NodeIterator.a(50, "connectionlost_withreason");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "connectionlost_withreason");
                 if (null != var2) {
                   KeyedLoginCredentials.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "passwordverificationrequired");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "passwordverificationrequired");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "invalidpass");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "invalidpass");
                 if (var2 != null) {
                   ConsoleTextNode.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
-                var2 = NodeIterator.a(50, "retry");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "retry");
                 if (null != var2) {
                   RegionAnchor.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "back");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "back");
                 if (null != var2) {
                   ViewportManager.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 11);
                 }
-                var2 = NodeIterator.a(param0 + 132, "exitfullscreenmode");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "exitfullscreenmode");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "quittowebsite");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quittowebsite");
                 if (var2 != null) {
                   DateValiditySupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "connectionrestored");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "connectionrestored");
                 if (null != var2) {
                   QuickChatCategory.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 + 132, "warning_ifyouquit");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "warning_ifyouquit");
                 if (var2 != null) {
                   VineGrowthAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
-                var2 = NodeIterator.a(50, "warning_ifyouquitorleavepage");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "warning_ifyouquitorleavepage");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "resubscribe_withoutlosing_fs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "resubscribe_withoutlosing_fs");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
-                var2 = NodeIterator.a(50, "resubscribe_withoutlosing");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "resubscribe_withoutlosing");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(50, "customersupport_withoutlosing_fs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "customersupport_withoutlosing_fs");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "customersupport_withoutlosing");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "customersupport_withoutlosing");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(50, "js5help_withoutlosing_fs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "js5help_withoutlosing_fs");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 36);
                 }
-                var2 = NodeIterator.a(50, "js5help_withoutlosing");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "js5help_withoutlosing");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 55);
                 }
-                var2 = NodeIterator.a(param0 + 132, "checkinternet_withoutlosing_fs");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "checkinternet_withoutlosing_fs");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
-                var2 = NodeIterator.a(50, "checkinternet_withoutlosing");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "checkinternet_withoutlosing");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
-                var2 = NodeIterator.a(50, "create_intro");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_intro");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
-                var2 = NodeIterator.a(50, "create_sameaccounttip_unnamed");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_sameaccounttip_unnamed");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 51);
                 }
-                var2 = NodeIterator.a(50, "dateofbirthprompt");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "dateofbirthprompt");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
-                var2 = NodeIterator.a(50, "fetchingcountrylist");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fetchingcountrylist");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
-                var2 = NodeIterator.a(50, "countryprompt");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "countryprompt");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "countrylisterror");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "countrylisterror");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "theonlypersonalquestions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "theonlypersonalquestions");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "create_submittingdata");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_submittingdata");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 124);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "check");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "check");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(50, "create_pleasechooseausername");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_pleasechooseausername");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_usernameblurb");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_usernameblurb");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
-                var2 = NodeIterator.a(50, "checkingavailability");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "checkingavailability");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
-                var2 = NodeIterator.a(50, "checking");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "checking");
                 if (var2 != null) {
                   LocalAccountNameSupport.validationPendingText = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "create_namealreadytaken");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_namealreadytaken");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 36);
                 }
-                var2 = NodeIterator.a(50, "create_sameaccounttip_named");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_sameaccounttip_named");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "create_nosuggestions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_nosuggestions");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_alternativelygoback");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_alternativelygoback");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_available");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_available");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_willnowshowtermsandconditions");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_willnowshowtermsandconditions");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "fetchingterms");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fetchingterms");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
-                var2 = NodeIterator.a(50, "termserror");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "termserror");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "create_iagree");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_iagree");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "create_idisagree");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_idisagree");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
-                var2 = NodeIterator.a(50, "create_pleasescrolldowntoaccept");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_pleasescrolldowntoaccept");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_linkaddress");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_linkaddress");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "openinpopupwindow");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "openinpopupwindow");
                 if (var2 != null) {
                   DiskCacheRequest.field_I = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "create");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create");
                 if (null != var2) {
                   SessionTransitionSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
-                var2 = NodeIterator.a(50, "create_pleasechooseapassword");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_pleasechooseapassword");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "create_passwordblurb");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_passwordblurb");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "create_nevergivepassword");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_nevergivepassword");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(param0 + 132, "creatingyouraccount");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "creatingyouraccount");
                 if (var2 != null) {
                   AccountRequestState.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_youmustaccept");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_youmustaccept");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "create_passwordsdifferent");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_passwordsdifferent");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 32);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_success");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_success");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "day");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "day");
                 if (null != var2) {
                   MusicPatchNode.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
-                var2 = NodeIterator.a(50, "month");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "month");
                 if (var2 != null) {
                   BitCountSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
-                var2 = NodeIterator.a(param0 + 132, "year");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "year");
                 if (null != var2) {
                   BattleTutorial.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
-                var2 = NodeIterator.a(50, "monthnames,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,0");
                 if (var2 != null) {
                   ViewportManager.field_q[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "monthnames,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,1");
                 if (var2 != null) {
                   ViewportManager.field_q[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
-                var2 = NodeIterator.a(50, "monthnames,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,2");
                 if (var2 != null) {
                   ViewportManager.field_q[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "monthnames,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,3");
                 if (var2 != null) {
                   ViewportManager.field_q[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "monthnames,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,4");
                 if (null != var2) {
                   ViewportManager.field_q[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "monthnames,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,5");
                 if (var2 != null) {
                   ViewportManager.field_q[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
-                var2 = NodeIterator.a(50, "monthnames,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,6");
                 if (var2 != null) {
                   ViewportManager.field_q[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 123);
                 }
-                var2 = NodeIterator.a(param0 + 132, "monthnames,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "monthnames,7");
                 if (var2 != null) {
                   ViewportManager.field_q[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
-                var2 = NodeIterator.a(50, "monthnames,8");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,8");
                 if (var2 != null) {
                   ViewportManager.field_q[8] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 122);
                 }
-                var2 = NodeIterator.a(50, "monthnames,9");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,9");
                 if (null != var2) {
                   ViewportManager.field_q[9] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "monthnames,10");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "monthnames,10");
                 if (var2 != null) {
                   ViewportManager.field_q[10] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 33);
                 }
-                var2 = NodeIterator.a(50, "monthnames,11");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "monthnames,11");
                 if (var2 != null) {
                   ViewportManager.field_q[11] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "create_welcome");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_welcome");
                 if (null != var2) {
                   AccountCreationInfoText.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "create_u13_welcome");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_u13_welcome");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "create_createanaccount");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_createanaccount");
                 if (null != var2) {
                   PreferencesWriteRequest.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "create_username");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_username");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
-                var2 = NodeIterator.a(50, "create_displayname");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_displayname");
                 if (var2 != null) {
                   MusicPatchEnvelope.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "create_password");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_password");
                 if (null != var2) {
                   FriendLookupSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "create_password_confirm");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_password_confirm");
                 if (null != var2) {
                   TilePosition.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
-                var2 = NodeIterator.a(50, "create_email");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_email");
                 if (var2 != null) {
                   FullscreenMembershipDialog.field_X = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(50, "create_email_confirm");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_email_confirm");
                 if (null != var2) {
                   TrianglePulse.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
-                var2 = NodeIterator.a(50, "create_age");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_age");
                 if (null != var2) {
                   AccountRegistrationForm.field_S = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "create_u13_email");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_u13_email");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_u13_email_confirm");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_u13_email_confirm");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(50, "create_dob");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_dob");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 38);
                 }
-                var2 = NodeIterator.a(50, "create_country");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_country");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "create_alternatives_header");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alternatives_header");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
-                var2 = NodeIterator.a(50, "create_alternatives_select");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alternatives_select");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "create_suggestions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_suggestions");
                 if (null != var2) {
                   ArchiveLoadStep.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 12);
                 }
-                var2 = NodeIterator.a(50, "create_more_suggestions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_more_suggestions");
                 if (null != var2) {
                   LoginKind.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 57);
                 }
-                var2 = NodeIterator.a(50, "create_select_alternative");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_select_alternative");
                 if (null != var2) {
                   ModalDialog.field_J = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 19);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_optin_news");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_optin_news");
                 if (var2 != null) {
                   IterableDualNodeDeque.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
-                var2 = NodeIterator.a(50, "create_agreeterms");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_agreeterms");
                 if (null != var2) {
                   StateChangeEvent.field_D = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
-                var2 = NodeIterator.a(50, "create_u13terms");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_u13terms");
                 if (var2 != null) {
                   MidiPcmStream.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(param0 + 132, "login_username_email");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "login_username_email");
                 if (null != var2) {
                   AlphaWidgetContainer.field_J = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "login_username");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_username");
                 if (null != var2) {
                   DualNodeDeque.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
-                var2 = NodeIterator.a(50, "login_email");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_email");
                 if (var2 != null) {
                   DeployAction.field_t = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(50, "login_username_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_username_tooltip");
                 if (var2 != null) {
                   SpellCastErrorSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "login_password_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_password_tooltip");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 39);
                 }
-                var2 = NodeIterator.a(50, "login_login_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_login_tooltip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(param0 + 132, "login_create_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "login_create_tooltip");
                 if (var2 != null) {
                   SessionIoSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "login_justplay_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_justplay_tooltip");
                 if (var2 != null) {
                   CombatSandbox.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
-                var2 = NodeIterator.a(50, "login_back_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_back_tooltip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 21);
                 }
-                var2 = NodeIterator.a(param0 + 132, "login_no_displayname");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "login_no_displayname");
                 if (null != var2) {
                   BattleTutorial.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_username_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_username_tooltip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "create_username_hint");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_username_hint");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 25);
                 }
-                var2 = NodeIterator.a(50, "create_displayname_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_displayname_tooltip");
                 if (var2 != null) {
                   DualLinkedNode.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
-                var2 = NodeIterator.a(50, "create_displayname_hint");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_displayname_hint");
                 if (var2 != null) {
                   ScrollContainer.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 40);
                 }
-                var2 = NodeIterator.a(50, "create_password_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_password_tooltip");
                 if (null != var2) {
                   CachedArchiveProvider.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 87);
                 }
-                var2 = NodeIterator.a(50, "create_password_hint");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_password_hint");
                 if (null != var2) {
                   TurnEffectEvent.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "create_password_confirm_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_password_confirm_tooltip");
                 if (var2 != null) {
                   WeightedScoreStrategy.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 21);
                 }
-                var2 = NodeIterator.a(50, "create_email_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_email_tooltip");
                 if (var2 != null) {
                   NodeIterator.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "create_email_confirm_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_email_confirm_tooltip");
                 if (var2 != null) {
                   AccountNamePrompt.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_age_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_age_tooltip");
                 if (var2 != null) {
                   StrongCacheEntry.field_A = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
-                var2 = NodeIterator.a(50, "create_optin_news_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_optin_news_tooltip");
                 if (var2 != null) {
                   FullscreenFocusCanvas.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(50, "create_u13_email_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_u13_email_tooltip");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(50, "create_u13_email_confirm_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_u13_email_confirm_tooltip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "create_dob_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_dob_tooltip");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_country_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_country_tooltip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 85);
                 }
-                var2 = NodeIterator.a(50, "create_optin_tooltip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_optin_tooltip");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 89);
                 }
-                var2 = NodeIterator.a(50, "create_continue");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_continue");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
-                var2 = NodeIterator.a(50, "create_username_unavailable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_username_unavailable");
                 if (null != var2) {
                   AccountNamePrompt.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 11);
                 }
-                var2 = NodeIterator.a(50, "create_username_available");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_username_available");
                 if (null != var2) {
                   BoundedUrlRequest.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "create_alert_namelength");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_namelength");
                 if (null != var2) {
                   LogoMesh.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "create_alert_namechars");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_namechars");
                 if (null != var2) {
                   ByteArrayPoolSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "create_alert_nameleadingspace");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_nameleadingspace");
                 if (var2 != null) {
                   AccountRegistrationForm.field_U = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 103);
                 }
-                var2 = NodeIterator.a(50, "create_alert_doublespace");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_doublespace");
                 if (var2 != null) {
                   LineOfSightGrid.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_alert_passchars");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_alert_passchars");
                 if (null != var2) {
                   CommunityTabGroup.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
-                var2 = NodeIterator.a(50, "create_alert_passrepeated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_passrepeated");
                 if (var2 != null) {
                   CampaignMenu.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "create_alert_passlength");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_passlength");
                 if (null != var2) {
                   SocialListPanel.field_Pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "create_alert_passcontainsname");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_passcontainsname");
                 if (null != var2) {
                   SpellCastErrorSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "create_alert_passcontainsemail");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_passcontainsemail");
                 if (var2 != null) {
                   SoundCache.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_alert_passcontainsname_partial");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_alert_passcontainsname_partial");
                 if (null != var2) {
                   ClientRecoverySupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "create_alert_checkname");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_checkname");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(param0 + 132, "create_alert_invalidemail");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "create_alert_invalidemail");
                 if (null != var2) {
                   ArmiesOfGielinor.field_H = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "create_alert_email_unavailable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_email_unavailable");
                 if (null != var2) {
                   QuickChatHelpDialog.field_Ib = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_alert_invaliddate");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_alert_invaliddate");
                 if (var2 != null) {
                   StateChangeEvent.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
-                var2 = NodeIterator.a(50, "create_alert_invalidage");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_invalidage");
                 if (null != var2) {
                   AchievementNotification.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "create_alert_yearrange");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_alert_yearrange");
                 if (var2 != null) {
                   CampaignMenu.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "create_alert_mismatch");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "create_alert_mismatch");
                 if (var2 != null) {
                   BitmapTextLayout.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "create_passwordvalid");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_passwordvalid");
                 if (var2 != null) {
                   ChannelGainProfile.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "create_emailvalid");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_emailvalid");
                 if (var2 != null) {
                   CampaignRewardPreview.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "create_account_success");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "create_account_success");
                 if (null != var2) {
                   PasswordLoginCredentials.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "invalid_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "invalid_name");
                 if (null != var2) {
                   SectorCacheStore.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
-                var2 = NodeIterator.a(50, "cannot_add_yourself");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "cannot_add_yourself");
                 if (null != var2) {
                   MoveAttackRequest.field_F = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unable_to_add_friend");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unable_to_add_friend");
                 if (null != var2) {
                   GameAppletShell.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "unable_to_add_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unable_to_add_ignore");
                 if (var2 != null) {
                   TextHotspotRegion.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "unable_to_delete_friend");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unable_to_delete_friend");
                 if (null != var2) {
                   PopupPresentation.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 17);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unable_to_delete_ignore");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unable_to_delete_ignore");
                 if (var2 != null) {
                   EffectPresentation.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(param0 + 132, "friendlistfull");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "friendlistfull");
                 if (var2 != null) {
                   MapLayout.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "friendlistdupe");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "friendlistdupe");
                 if (var2 != null) {
                   ReportAbuseDialog.field_Ob = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
-                var2 = NodeIterator.a(50, "friendnotfound");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "friendnotfound");
                 if (null != var2) {
                   TaggedMapData.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
-                var2 = NodeIterator.a(50, "ignorelistfull");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ignorelistfull");
                 if (var2 != null) {
                   SharedUiLoadingSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "ignorelistdupe");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ignorelistdupe");
                 if (null != var2) {
                   TextLineLayout.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
-                var2 = NodeIterator.a(50, "ignorenotfound");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ignorenotfound");
                 if (null != var2) {
                   CacheEntry.field_x = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "removeignorefirst");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "removeignorefirst");
                 if (null != var2) {
                   ProjectileEffect.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(50, "removefriendfirst");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "removefriendfirst");
                 if (var2 != null) {
                   PopupPresentation.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(param0 + 132, "enterfriend_add");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "enterfriend_add");
                 if (null != var2) {
                   GameAppletShell.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "enterfriend_del");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "enterfriend_del");
                 if (var2 != null) {
                   IgnoreRequestSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "enterignore_add");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "enterignore_add");
                 if (null != var2) {
                   AchievementUnlockRequest.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "enterignore_del");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "enterignore_del");
                 if (null != var2) {
                   StandardContentDialog.field_kb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 81);
                 }
-                var2 = NodeIterator.a(param0 + 132, "text_removed_from_game");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "text_removed_from_game");
                 if (null != var2) {
                   ContextualRuntimeException.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "text_lobby_pleaselogin_free");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
                   SpellMenuGroup.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "opengl");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "opengl");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "sse");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "sse");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "purejava");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "purejava");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(param0 + 132, "waitingfor_graphics");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "waitingfor_graphics");
                 if (null != var2) {
                   TileMetadata.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_models");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_models");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_fonts");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_fonts");
                 if (var2 != null) {
                   LeapYearSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_soundeffects");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_soundeffects");
                 if (var2 != null) {
                   ResourceProtocolClient.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "waitingfor_music");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "waitingfor_music");
                 if (var2 != null) {
                   PacketBuffer.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(param0 + 132, "waitingfor_instruments");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "waitingfor_instruments");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(param0 + 132, "waitingfor_levels");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "waitingfor_levels");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 92);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_extradata");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_extradata");
                 if (var2 != null) {
                   ProgressDialog.field_eb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "waitingfor_languages");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "waitingfor_languages");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_textures");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_textures");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 106);
                 }
-                var2 = NodeIterator.a(50, "waitingfor_animations");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "waitingfor_animations");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
-                var2 = NodeIterator.a(50, "loading_graphics");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_graphics");
                 if (null != var2) {
                   Battlefield.field_nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "loading_models");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_models");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "loading_fonts");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_fonts");
                 if (null != var2) {
                   QuickChatPhraseRepository.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(param0 + 132, "loading_soundeffects");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "loading_soundeffects");
                 if (null != var2) {
                   PointerCaptureSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
             }
             void loadMenusMatchAndDisplayText() throws java.lang.RuntimeException {
-                var2 = NodeIterator.a(50, "loading_music");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_music");
                 if (null != var2) {
                   LeapYearSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
-                var2 = NodeIterator.a(50, "loading_instruments");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_instruments");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "loading_levels");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_levels");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(50, "loading_extradata");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_extradata");
                 if (var2 != null) {
                   DateInputWidget.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
-                var2 = NodeIterator.a(50, "loading_languages");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_languages");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
-                var2 = NodeIterator.a(50, "loading_textures");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_textures");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
-                var2 = NodeIterator.a(50, "loading_animations");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "loading_animations");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
-                var2 = NodeIterator.a(50, "unpacking_graphics");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_graphics");
                 if (var2 != null) {
                   SectorCacheStore.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "unpacking_models");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_models");
                 if (null != var2) {
                   AiPlanner.field_R = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "unpacking_soundeffects");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "unpacking_soundeffects");
                 if (var2 != null) {
                   AccountNameCharacterSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "unpacking_music");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_music");
                 if (var2 != null) {
                   LabeledWidgetContainer.field_M = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "unpacking_levels");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_levels");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
-                var2 = NodeIterator.a(param0 + 132, "unpacking_languages");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "unpacking_languages");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "unpacking_animations");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_animations");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "unpacking_toolkit");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unpacking_toolkit");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
-                var2 = NodeIterator.a(50, "instructions");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "instructions");
                 if (null != var2) {
                   PointerInputHandler.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "tutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "tutorial");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(param0 + 132, "playtutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "playtutorial");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(50, "sound_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "sound_colon");
                 if (var2 != null) {
                   AiWeightProfile.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "music_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "music_colon");
                 if (null != var2) {
                   InstructionsPanel.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "fullscreen");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fullscreen");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "screensize");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "screensize");
                 if (null != var2) {
                   AiInfluenceMap.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 39);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "highscores");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "highscores");
                 if (var2 != null) {
                   AlphaDecodedSpriteSupport.field_o = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 126);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rankings");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rankings");
                 if (var2 != null) {
                   MouseWheelSource.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 10);
                 }
-                var2 = NodeIterator.a(50, "achievements");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "achievements");
                 if (var2 != null) {
                   LobbyNotificationSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "achievementsthisgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "achievementsthisgame");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(param0 + 132, "achievementsthissession");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "achievementsthissession");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "watchintroduction");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "watchintroduction");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "quit");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quit");
                 if (null != var2) {
                   InstructionsPanel.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
-                var2 = NodeIterator.a(50, "login_createaccount");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "login_createaccount");
                 if (null != var2) {
                   NodeHashIterator.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
-                var2 = NodeIterator.a(param0 + 132, "tohighscores");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "tohighscores");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "returntomainmenu");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntomainmenu");
                 if (var2 != null) {
                   PasswordLoginCredentials.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "returntopausemenu");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntopausemenu");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "returntooptionsmenu_notpaused");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntooptionsmenu_notpaused");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "mainmenu");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mainmenu");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(param0 + 132, "pausemenu");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "pausemenu");
                 if (null != var2) {
                   ScrollWidgetContainer.field_U = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
-                var2 = NodeIterator.a(50, "optionsmenu_notpaused");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "optionsmenu_notpaused");
                 if (var2 != null) {
                   ClientStateChecksumSupport.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "menu");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "menu");
                 if (var2 != null) {
                   GuestSavePrompts.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(param0 + 132, "selectlevel");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "selectlevel");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "nextlevel");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "nextlevel");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "startgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "startgame");
                 if (var2 != null) {
                   ArchiveProvider.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
-                var2 = NodeIterator.a(50, "newgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "newgame");
                 if (null != var2) {
                   NetworkResourceRequest.field_G = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "resumegame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "resumegame");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "resumetutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "resumetutorial");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "skip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "skip");
                 if (null != var2) {
                   StateChangeEvent.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 33);
                 }
-                var2 = NodeIterator.a(50, "skiptutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "skiptutorial");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "skipending");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "skipending");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(param0 + 132, "restartlevel");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "restartlevel");
                 if (var2 != null) {
                   GameEvent.field_u = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 4);
                 }
-                var2 = NodeIterator.a(50, "endtest");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "endtest");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 9);
                 }
-                var2 = NodeIterator.a(50, "endgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "endgame");
                 if (var2 != null) {
                   PreparedAction.field_k = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
-                var2 = NodeIterator.a(param0 + 132, "endtutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "endtutorial");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "ok");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ok");
                 if (var2 != null) {
                   LineOfSightGrid.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
                 if (param0 != -82) {
                   field_c = (String) null;
                 }
-                var2 = NodeIterator.a(50, "on");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "on");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "off");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "off");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
-                var2 = NodeIterator.a(50, "previous");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "previous");
                 if (null != var2) {
                   ClientNetworkBootstrap.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "prev");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "prev");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 82);
                 }
-                var2 = NodeIterator.a(50, "next");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "next");
                 if (null != var2) {
                   ClientConnectionState.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 101);
                 }
-                var2 = NodeIterator.a(50, "graphics_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_colon");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "hotseatmultiplayer");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "hotseatmultiplayer");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "entermultiplayerlobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "entermultiplayerlobby");
                 if (var2 != null) {
                   UnitUnlockPreviewModel.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "singleplayergame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "singleplayergame");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "returntogame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntogame");
                 if (var2 != null) {
                   ClientConnectionState.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
-                var2 = NodeIterator.a(50, "endgameresign");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "endgameresign");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "offerdraw");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "offerdraw");
                 if (null != var2) {
                   LobbyRoomControlSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "canceldraw");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "canceldraw");
                 if (null != var2) {
                   ContextActionMenu.field_Jb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 69);
                 }
-                var2 = NodeIterator.a(50, "acceptdraw");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "acceptdraw");
                 if (null != var2) {
                   MatchSetupPanel.field_O = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "resign");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "resign");
                 if (null != var2) {
                   TilePosition.field_p = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "returntolobby");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "returntolobby");
                 if (null != var2) {
                   DeployAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 86);
                 }
-                var2 = NodeIterator.a(50, "cont");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "cont");
                 if (null != var2) {
                   ProgressMessageDialog.field_kb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "continue_spectating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "continue_spectating");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "messages");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "messages");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "graphics_fastest");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "graphics_fastest");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "graphics_medium");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_medium");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 24);
                 }
-                var2 = NodeIterator.a(50, "graphics_best");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_best");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(50, "graphics_directx");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_directx");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "graphics_opengl");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_opengl");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "graphics_java");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_java");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(50, "graphics_quality_high");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_quality_high");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "graphics_quality_low");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_quality_low");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 50);
                 }
-                var2 = NodeIterator.a(50, "graphics_mode");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_mode");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
-                var2 = NodeIterator.a(50, "graphics_quality");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_quality");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 25);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mode");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mode");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "quality");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "quality");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(50, "keys");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "keys");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
-                var2 = NodeIterator.a(param0 + 132, "objective");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "objective");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "currentobjective");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "currentobjective");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 119);
                 }
-                var2 = NodeIterator.a(50, "pressescforpausemenu");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pressescforpausemenu");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "pressescforpausemenuortoskiptutorial");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pressescforpausemenuortoskiptutorial");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
-                var2 = NodeIterator.a(param0 + 132, "pressescforoptionsmenu_doesntpause");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "pressescforoptionsmenu_doesntpause");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 78);
                 }
-                var2 = NodeIterator.a(50, "pressescforoptionsmenu_doesntpause_short");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pressescforoptionsmenu_doesntpause_short");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 7);
                 }
-                var2 = NodeIterator.a(50, "powerups");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "powerups");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "latestlevel_suffix");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "latestlevel_suffix");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unreachedlevel_name");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_cannotplayreason");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unreachedlevel_cannotplayreason");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 116);
                 }
-                var2 = NodeIterator.a(50, "unreachedlevel_cannotplayreason_shorter");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unreachedlevel_cannotplayreason_shorter");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(50, "unreachedworld_cannotplayreason");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unreachedworld_cannotplayreason");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
-                var2 = NodeIterator.a(50, "memberslevel_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "memberslevel_name");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
-                var2 = NodeIterator.a(50, "memberslevel_cannotplayreason");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "memberslevel_cannotplayreason");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 99);
                 }
-                var2 = NodeIterator.a(50, "membersworld_cannotplayreason");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "membersworld_cannotplayreason");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "unreachedlevel_createtip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unreachedlevel_createtip");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "unreachedlevel_createtip_line1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "unreachedlevel_createtip_line1");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "unreachedlevel_createtip_line2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "unreachedlevel_createtip_line2");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -109);
                 }
-                var2 = NodeIterator.a(param0 + 132, "unreachedlevel_logintip");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "unreachedlevel_logintip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "memberslevel_logintip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "memberslevel_logintip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "displayname_none");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "displayname_none");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 91);
                 }
-                var2 = NodeIterator.a(param0 + 132, "levelxofy1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "levelxofy1");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(50, "levelxofy2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "levelxofy2");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -103);
                 }
-                var2 = NodeIterator.a(50, "levelxofy");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "levelxofy");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(50, "ingame_level");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ingame_level");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(50, "mouseoveranicon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mouseoveranicon");
                 if (var2 != null) {
                   StructureTerrainSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
-                var2 = NodeIterator.a(50, "notyetachieved");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "notyetachieved");
                 if (null != var2) {
                   QuickChatCategoryRepository.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "achieved");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "achieved");
                 if (null != var2) {
                   AccountRequestResult.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "orbpoints");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "orbpoints");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "orbcoins");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "orbcoins");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "orbpoints_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "orbpoints_colon");
                 if (var2 != null) {
                   FullscreenFocusCanvas.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "orbcoins_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "orbcoins_colon");
                 if (null != var2) {
                   DiskCacheWorker.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 113);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "achieved_colon_description");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "achieved_colon_description");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 83);
                 }
-                var2 = NodeIterator.a(param0 + 132, "secretachievement");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "secretachievement");
                 if (null != var2) {
                   UnitCycler.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "no_highscores");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "no_highscores");
                 if (null != var2) {
                   SessionTransitionSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 98);
                 }
-                var2 = NodeIterator.a(50, "hs_name");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_name");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(param0 + 132, "hs_level");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "hs_level");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 109);
                 }
-                var2 = NodeIterator.a(50, "hs_fromlevel");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_fromlevel");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "hs_tolevel");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_tolevel");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "hs_score");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_score");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "hs_end");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_end");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "ingame_score");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "ingame_score");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "score_colon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "score_colon");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mp_leavegame");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mp_leavegame");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 2);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mp_offerrematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mp_offerrematch");
                 if (var2 != null) {
                   IgnoreListLookupSupport.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 78);
                 }
-                var2 = NodeIterator.a(50, "mp_offerrematch_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_offerrematch_unrated");
                 if (var2 != null) {
                   BoundedUrlRequest.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 47);
                 }
-                var2 = NodeIterator.a(50, "mp_acceptrematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_acceptrematch");
                 if (null != var2) {
                   BitmapTextWidgetPainter.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mp_acceptrematch_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mp_acceptrematch_unrated");
                 if (null != var2) {
                   field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "mp_cancelrematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_cancelrematch");
                 if (var2 != null) {
                   LeapYearSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -99);
                 }
-                var2 = NodeIterator.a(50, "mp_cancelrematch_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_cancelrematch_unrated");
                 if (var2 != null) {
                   TurnSkipToggleSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 64);
                 }
-                var2 = NodeIterator.a(50, "mp_rematchnewgame");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_rematchnewgame");
                 if (var2 != null) {
                   AccountNameCheckSupport.field_b = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 28);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mp_rematchnewgame_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mp_rematchnewgame_unrated");
                 if (null != var2) {
                   TabbedPanel.field_Nb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 4);
                 }
-                var2 = NodeIterator.a(50, "mp_x_wantstodraw");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_wantstodraw");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "mp_x_offersrematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_offersrematch");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "mp_x_offersrematch_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_offersrematch_unrated");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 107);
                 }
-                var2 = NodeIterator.a(50, "mp_youofferrematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_youofferrematch");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "mp_youofferrematch_unrated");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_youofferrematch_unrated");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -125);
                 }
-                var2 = NodeIterator.a(50, "mp_youofferdraw");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_youofferdraw");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mp_youresigned");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mp_youresigned");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 126);
                 }
-                var2 = NodeIterator.a(50, "mp_youresigned_rematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_youresigned_rematch");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 7);
                 }
-                var2 = NodeIterator.a(50, "mp_x_hasresignedandleft");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_hasresignedandleft");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 12);
                 }
-                var2 = NodeIterator.a(50, "mp_x_hasresigned_rematch");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_hasresigned_rematch");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -119);
                 }
-                var2 = NodeIterator.a(50, "mp_x_hasresigned");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_hasresigned");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 88);
                 }
-                var2 = NodeIterator.a(50, "mp_x_hasleft");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_hasleft");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
-                var2 = NodeIterator.a(50, "mp_x_haswon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_haswon");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
-                var2 = NodeIterator.a(50, "mp_youhavewon");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_youhavewon");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 16);
                 }
-                var2 = NodeIterator.a(50, "mp_gamedrawn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_gamedrawn");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "mp_timeremaining");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_timeremaining");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "mp_x_turn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_x_turn");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "mp_yourturn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_yourturn");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
-                var2 = NodeIterator.a(50, "gameover");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "gameover");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "mp_hidechat");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_hidechat");
                 if (null != var2) {
                   CalendarSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -100);
                 }
-                var2 = NodeIterator.a(50, "mp_showchat_nounread");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_showchat_nounread");
                 if (null != var2) {
                   StandardContentDialog.field_pb = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mp_showchat_unread1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mp_showchat_unread1");
                 if (var2 != null) {
                   CacheEntry.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "mp_showchat_unread2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mp_showchat_unread2");
                 if (null != var2) {
                   MovementPlanner.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "click_to_quickchat");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "click_to_quickchat");
                 if (var2 != null) {
                   DisplayModeOptionPainter.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 65);
                 }
-                var2 = NodeIterator.a(50, "autorespond");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "autorespond");
                 if (null != var2) {
                   EmailConfirmationValidator.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
-                var2 = NodeIterator.a(50, "quickchat_help");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_help");
                 if (var2 != null) {
                   GameEvent.quickChatHelpTitle = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -111);
                 }
-                var2 = NodeIterator.a(50, "quickchat_help_title");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_help_title");
                 if (null != var2) {
                   BattlefieldTheme.quickChatHelpSubtitle = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -115);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_help,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_help,0");
                 if (var2 != null) {
                   AiUnitPlanner.quickChatShortcutDescriptions[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_help,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_help,1");
                 if (null != var2) {
                   AiUnitPlanner.quickChatShortcutDescriptions[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -102);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_help,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_help,2");
                 if (var2 != null) {
                   AiUnitPlanner.quickChatShortcutDescriptions[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 84);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_help,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_help,3");
                 if (var2 != null) {
                   AiUnitPlanner.quickChatShortcutDescriptions[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_help,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_help,4");
                 if (var2 != null) {
                   AiUnitPlanner.quickChatShortcutDescriptions[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "quickchat_shortcut_help,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "quickchat_shortcut_help,5");
                 if (var2 != null) {
                   AiUnitPlanner.quickChatShortcutDescriptions[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 56);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,3");
                 if (null != var2) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 95);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,4");
                 if (null != var2) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "quickchat_shortcut_keys,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
                   LoginAndTutorialSetupSupport.quickChatShortcutLabels[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(param0 + 132, "keychar_the_character_under_questionmark");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
                   LogoFaceSortSupport.field_a = ArchiveLoadStep.decodeSingleByteCharacter(-121, var2[0]);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rating_noratings");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rating_noratings");
                 if (null != var2) {
                   AccountRequestResult.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 102);
                 }
-                var2 = NodeIterator.a(50, "rating_rating");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_rating");
                 if (null != var2) {
                   CampaignQuicksave.field_i = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 117);
                 }
-                var2 = NodeIterator.a(param0 + 132, "rating_played");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "rating_played");
                 if (var2 != null) {
                   MapRepository.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(50, "rating_won");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_won");
                 if (var2 != null) {
                   TextLineLayout.field_g = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
-                var2 = NodeIterator.a(50, "rating_lost");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_lost");
                 if (var2 != null) {
                   MonotonicClockSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "rating_drawn");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_drawn");
                 if (var2 != null) {
                   ClientNetworkBootstrap.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "benefits_fullscreen");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "benefits_fullscreen");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "benefits_noadverts");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "benefits_noadverts");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "benefits_price");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "benefits_price");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 22);
                 }
-                var2 = NodeIterator.a(50, "members_expansion_benefits,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "members_expansion_benefits,0");
                 if (null != var2) {
                   IgnoreListLookupSupport.field_e[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 112);
                 }
-                var2 = NodeIterator.a(50, "members_expansion_benefits,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "members_expansion_benefits,1");
                 if (var2 != null) {
                   IgnoreListLookupSupport.field_e[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "members_expansion_benefits,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "members_expansion_benefits,2");
                 if (var2 != null) {
                   IgnoreListLookupSupport.field_e[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -101);
                 }
-                var2 = NodeIterator.a(50, "members_expansion_price_top");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "members_expansion_price_top");
                 if (var2 != null) {
                   LocalizedUrlSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
-                var2 = NodeIterator.a(50, "members_expansion_price_bottom");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "members_expansion_price_bottom");
                 if (var2 != null) {
                   AnimationFrameSet.field_B = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "reconnect_lost_seq,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_lost_seq,0");
                 if (null != var2) {
                   QuickChatMenu.field_Lb[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 121);
                 }
-                var2 = NodeIterator.a(50, "reconnect_lost_seq,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_lost_seq,1");
                 if (null != var2) {
                   QuickChatMenu.field_Lb[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "reconnect_lost_seq,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_lost_seq,2");
                 if (var2 != null) {
                   QuickChatMenu.field_Lb[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "reconnect_lost_seq,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_lost_seq,3");
                 if (var2 != null) {
                   QuickChatMenu.field_Lb[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "reconnect_lost");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_lost");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "reconnect_restored");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_restored");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 59);
                 }
-                var2 = NodeIterator.a(50, "reconnect_please_check");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_please_check");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(50, "reconnect_wait");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_wait");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -97);
                 }
-                var2 = NodeIterator.a(50, "reconnect_retry");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_retry");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 75);
                 }
-                var2 = NodeIterator.a(50, "reconnect_resume");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_resume");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "reconnect_or");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_or");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 48);
                 }
-                var2 = NodeIterator.a(50, "reconnect_exitfs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_exitfs");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
-                var2 = NodeIterator.a(50, "reconnect_exitfs_quit");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_exitfs_quit");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 108);
                 }
-                var2 = NodeIterator.a(50, "reconnect_quit");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_quit");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 68);
                 }
-                var2 = NodeIterator.a(50, "reconnect_check_fs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_check_fs");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 44);
                 }
-                var2 = NodeIterator.a(50, "reconnect_check_nonfs");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "reconnect_check_nonfs");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "fs_accept_beforeaccept");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_accept_beforeaccept");
                 if (null != var2) {
                   UnitAirAttackSupport.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(50, "fs_button_accept");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_button_accept");
                 if (null != var2) {
                   DualNodeDeque.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "fs_accept_afteraccept");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "fs_accept_afteraccept");
                 if (null != var2) {
                   ByteArrayPoolSupport.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -106);
                 }
-                var2 = NodeIterator.a(50, "fs_button_cancel");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_button_cancel");
                 if (var2 != null) {
                   WeightedScoreStrategy.field_m = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "fs_accept_aftercancel");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "fs_accept_aftercancel");
                 if (null != var2) {
                   TextLineLayout.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
-                var2 = NodeIterator.a(50, "fs_accept_countdown_sing");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_accept_countdown_sing");
                 if (null != var2) {
                   IgnoreListLookupSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 65);
                 }
-                var2 = NodeIterator.a(50, "fs_accept_countdown_pl");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_accept_countdown_pl");
                 if (var2 != null) {
                   SummonAction.field_v = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
-                var2 = NodeIterator.a(50, "fs_nonmember");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_nonmember");
                 if (var2 != null) {
                   SummonRequest.field_z = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -126);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "fs_button_close");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "fs_button_close");
                 if (null != var2) {
                   PasswordLengthSupport.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 74);
                 }
-                var2 = NodeIterator.a(50, "fs_button_members");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_button_members");
                 if (var2 != null) {
                   ClientContextMenu.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 34);
                 }
-                var2 = NodeIterator.a(50, "fs_unavailable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_unavailable");
                 if (null != var2) {
                   FullscreenStatusDialog.field_ab = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 70);
                 }
-                var2 = NodeIterator.a(50, "fs_unavailable_try_signed_applet");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
                   NodeHashIterator.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "fs_focus");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_focus");
                 if (null != var2) {
                   MoveAttackRequest.field_y = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "fs_focus_or_resolution");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "fs_focus_or_resolution");
                 if (var2 != null) {
                   FullscreenStatusDialog.field_W = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "fs_timeout");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "fs_timeout");
                 if (null != var2) {
                   SessionIoSupport.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(50, "fs_button_tryagain");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "fs_button_tryagain");
                 if (var2 != null) {
                   MembershipExpansionScreen.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 73);
                 }
-                var2 = NodeIterator.a(50, "graphics_ui_fs_countdown");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_ui_fs_countdown");
                 if (null != var2) {
                   FullscreenDisplayMode.field_d = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 29);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mb_caption_title");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mb_caption_title");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 5);
                 }
-                var2 = NodeIterator.a(50, "mb_including_gamename");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mb_including_gamename");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "mb_full_access_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mb_full_access_1");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mb_full_access_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mb_full_access_2");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "mb_achievement_count_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mb_achievement_count_1");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "mb_achievement_count_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mb_achievement_count_2");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 81);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mb_exclusive_1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mb_exclusive_1");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mb_exclusive_2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mb_exclusive_2");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -112);
                 }
-                var2 = NodeIterator.a(50, "me_extra_benefits");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "me_extra_benefits");
                 if (var2 != null) {
                   UnitModelPreview.field_h = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 72);
                 }
-                var2 = NodeIterator.a(50, "hs_friend_tip");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_friend_tip");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -107);
                 }
-                var2 = NodeIterator.a(50, "hs_friend_tip_multi");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "hs_friend_tip_multi");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 105);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "hs_mode_name,0");
                 if (var2 != null) {
                   AccountNamePrompt.field_Pb[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 60);
                 }
             }
             void loadLeaderboardDisplayAndMembershipText() throws java.lang.RuntimeException {
-                var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "hs_mode_name,1");
                 if (var2 != null) {
                   AccountNamePrompt.field_Pb[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -120);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "hs_mode_name,2");
                 if (null != var2) {
                   AccountNamePrompt.field_Pb[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 55);
                 }
-                var2 = NodeIterator.a(50, "rating_mode_name,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_mode_name,0");
                 if (var2 != null) {
                   DelayedPacket.field_s[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "rating_mode_name,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "rating_mode_name,1");
                 if (null != var2) {
                   DelayedPacket.field_s[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 61);
                 }
-                var2 = NodeIterator.a(50, "rating_mode_long_name,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_mode_long_name,0");
                 if (var2 != null) {
                   ConsoleCommand.field_C[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "rating_mode_long_name,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "rating_mode_long_name,1");
                 if (null != var2) {
                   ConsoleCommand.field_C[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fixed_size");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "graphics_config_fixed_size");
                 if (var2 != null) {
                   AlternateKeyedLoginCredentials.field_j = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -118);
                 }
-                var2 = NodeIterator.a(50, "graphics_config_resizable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_config_resizable");
                 if (null != var2) {
                   Unit.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 23);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fullscreen");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "graphics_config_fullscreen");
                 if (null != var2) {
                   MembershipExpansionScreen.field_e = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 30);
                 }
-                var2 = NodeIterator.a(50, "graphics_config_done");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_config_done");
                 if (var2 != null) {
                   VineGrowthAction.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 20);
                 }
-                var2 = NodeIterator.a(param0 + 132, "graphics_config_apply");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "graphics_config_apply");
                 if (null != var2) {
                   NineSliceFrame.field_f = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(param0 + 132, "graphics_config_title");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "graphics_config_title");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -98);
                 }
-                var2 = NodeIterator.a(50, "graphics_config_instruction");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "graphics_config_instruction");
                 if (var2 != null) {
                   GameEvent.field_l = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(param0 + 132, "graphics_config_need_memory");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "graphics_config_need_memory");
                 if (null != var2) {
                   ViewportManager.field_w = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
-                var2 = NodeIterator.a(50, "pleasewait_dotdotdot");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "pleasewait_dotdotdot");
                 if (var2 != null) {
                   SpriteSliceAndBlendSupport.field_c = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "serviceunavailable");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "serviceunavailable");
                 if (var2 != null) {
                   SocketResourceClient.field_s = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 15);
                 }
-                var2 = NodeIterator.a(50, "createtouse");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "createtouse");
                 if (null != var2) {
                   PasswordLoginCredentials.field_n = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 79);
                 }
-                var2 = NodeIterator.a(50, "achievementsoffline");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "achievementsoffline");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 58);
                 }
-                var2 = NodeIterator.a(param0 + 132, "warning");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "warning");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -124);
                 }
-                var2 = NodeIterator.a(50, "DEFAULT_PLAYER_NAME");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
                   HighscoreAccountEntry.field_a = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -116);
                 }
-                var2 = NodeIterator.a(50, "mustlogin1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin1");
                 if (null != var2) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -121);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,1");
                 if (null != var2) {
                   GuestSavePrompts.field_d[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 76);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mustlogin2,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mustlogin2,2");
                 if (null != var2) {
                   GuestSavePrompts.field_d[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,3");
                 if (var2 != null) {
                   GuestSavePrompts.field_d[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 96);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,4");
                 if (null != var2) {
                   GuestSavePrompts.field_d[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -123);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,5");
                 if (null != var2) {
                   GuestSavePrompts.field_d[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,6");
                 if (null != var2) {
                   GuestSavePrompts.field_d[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(50, "mustlogin2,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin2,7");
                 if (null != var2) {
                   GuestSavePrompts.field_d[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 37);
                 }
-                var2 = NodeIterator.a(50, "mustlogin3,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin3,1");
                 if (null != var2) {
                   DeployAction.field_y[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -94);
                 }
-                var2 = NodeIterator.a(50, "mustlogin3,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin3,2");
                 if (null != var2) {
                   DeployAction.field_y[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -95);
                 }
-                var2 = NodeIterator.a(50, "mustlogin3,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin3,3");
                 if (null != var2) {
                   DeployAction.field_y[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -96);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mustlogin3,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mustlogin3,4");
                 if (var2 != null) {
                   DeployAction.field_y[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 94);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mustlogin3,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mustlogin3,5");
                 if (var2 != null) {
                   DeployAction.field_y[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -117);
                 }
-                var2 = NodeIterator.a(50, "mustlogin3,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin3,6");
                 if (var2 != null) {
                   DeployAction.field_y[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -128);
                 }
-                var2 = NodeIterator.a(50, "mustlogin3,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin3,7");
                 if (null != var2) {
                   DeployAction.field_y[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 54);
                 }
-                var2 = NodeIterator.a(50, "discard");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "discard");
                 if (var2 != null) {
                   ConsolePanel.field_r = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 103);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mustlogin4,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mustlogin4,1");
                 if (null != var2) {
                   StateChangeMarker.field_s[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 115);
                 }
-                var2 = NodeIterator.a(50, "mustlogin4,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin4,2");
                 if (null != var2) {
                   StateChangeMarker.field_s[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mustlogin4,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mustlogin4,3");
                 if (null != var2) {
                   StateChangeMarker.field_s[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -110);
                 }
-                var2 = NodeIterator.a(50, "mustlogin4,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin4,4");
                 if (var2 != null) {
                   StateChangeMarker.field_s[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 26);
                 }
-                var2 = NodeIterator.a(50, "mustlogin4,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin4,5");
                 if (var2 != null) {
                   StateChangeMarker.field_s[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "mustlogin4,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin4,6");
                 if (var2 != null) {
                   StateChangeMarker.field_s[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -104);
                 }
-                var2 = NodeIterator.a(50, "mustlogin4,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin4,7");
                 if (var2 != null) {
                   StateChangeMarker.field_s[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -113);
                 }
-                var2 = NodeIterator.a(50, "mustlogin_notloggedin");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin_notloggedin");
                 if (null != var2) {
                   ValidationStatusWidget.field_V = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "mustlogin_alternate,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin_alternate,1");
                 if (var2 != null) {
                   EventPresenterFactory.field_b[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 120);
                 }
-                var2 = NodeIterator.a(50, "mustlogin_alternate,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin_alternate,2");
                 if (var2 != null) {
                   EventPresenterFactory.field_b[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 69);
                 }
-                var2 = NodeIterator.a(param0 + 132, "mustlogin_alternate,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 + 132, "mustlogin_alternate,3");
                 if (null != var2) {
                   EventPresenterFactory.field_b[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 66);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mustlogin_alternate,4");
                 if (var2 != null) {
                   EventPresenterFactory.field_b[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "mustlogin_alternate,5");
                 if (null != var2) {
                   EventPresenterFactory.field_b[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -93);
                 }
-                var2 = NodeIterator.a(50, "mustlogin_alternate,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin_alternate,6");
                 if (null != var2) {
                   EventPresenterFactory.field_b[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -108);
                 }
-                var2 = NodeIterator.a(50, "mustlogin_alternate,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "mustlogin_alternate,7");
                 if (null != var2) {
                   EventPresenterFactory.field_b[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 77);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,0");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,0");
                 if (var2 != null) {
                   AnimationSequence.field_c[0] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 13);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,1");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,1");
                 if (null != var2) {
                   AnimationSequence.field_c[1] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -105);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,2");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,2");
                 if (var2 != null) {
                   AnimationSequence.field_c[2] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 6);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,3");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,3");
                 if (null != var2) {
                   AnimationSequence.field_c[3] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 127);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,4");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,4");
                 if (null != var2) {
                   AnimationSequence.field_c[4] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 45);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,5");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,5");
                 if (null != var2) {
                   AnimationSequence.field_c[5] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -122);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,6");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,6");
                 if (null != var2) {
                   AnimationSequence.field_c[6] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 62);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,7");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,7");
                 if (null != var2) {
                   AnimationSequence.field_c[7] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -127);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,8");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,8");
                 if (var2 != null) {
                   AnimationSequence.field_c[8] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 100);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,9");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,9");
                 if (var2 != null) {
                   AnimationSequence.field_c[9] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -114);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,10");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,10");
                 if (var2 != null) {
                   AnimationSequence.field_c[10] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) -92);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,11");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,11");
                 if (var2 != null) {
                   AnimationSequence.field_c[11] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 118);
                 }
-                var2 = NodeIterator.a(50, "subscription_cost_monthly,12");
+                var2 = NodeIterator.loadLocalizedTextBytes(50, "subscription_cost_monthly,12");
                 if (var2 != null) {
                   AnimationSequence.field_c[12] = LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 67);
                 }
-                var2 = NodeIterator.a(param0 ^ -100, "sentence_separator");
+                var2 = NodeIterator.loadLocalizedTextBytes(param0 ^ -100, "sentence_separator");
                 if (var2 != null) {
                   LobbyRoomControlSupport.decodeTextBytes(var2, (byte) 27);
                 }

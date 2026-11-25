@@ -32,7 +32,7 @@ final class AccountNameCharacterSupport {
           if (Character.isISOControl(character)) {
             return false;
           }
-          if (RasterImageSurface.a(character, -31000)) {
+          if (RasterImageSurface.isAsciiAlphanumeric(character, -31000)) {
             return true;
           }
           var12 = VerticalScrollbar.field_Nb;

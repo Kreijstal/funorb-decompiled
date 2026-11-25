@@ -60,7 +60,7 @@ final class IntroSequence {
         }
         if (this.field_n <= 0) {
           if (this.field_i.length <= this.field_c) {
-            CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
+            CipherPacketBuffer.changeSharedUiStage(false, 0, 1, ChatInputDispatchSupport.field_a);
           }
           if (this.field_g != 0) {
             if (1 == this.field_g) {
@@ -210,7 +210,7 @@ final class IntroSequence {
             var8Lifetime1Lifetime1 = stackIn_48_0;
             MaskedTextEntryPainter.field_y.drawWithOpacity(this.toScreenX(-(int)this.field_k + 3002, 4592), this.toScreenY((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
-              CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(false, 0, 1, ChatInputDispatchSupport.field_a);
             }
           } else {
             SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1105, param0 + 4336))), this.toScreenY((byte) -73, 119) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
@@ -354,7 +354,7 @@ final class IntroSequence {
             }
             if (LabeledWidgetContainer.field_N == 1) {
               if (2 == AccountRegistrationForm.field_R.status) {
-                stackIn_13_0 = OwnerChangeEvent.a(-1, (byte) 101);
+                stackIn_13_0 = OwnerChangeEvent.handleResourceConnectionFailure(-1, (byte) 101);
                 return stackIn_13_0;
               }
               if (1 == AccountRegistrationForm.field_R.status) {
@@ -374,13 +374,13 @@ final class IntroSequence {
             if (3 == LabeledWidgetContainer.field_N) {
               if (FriendLookupSupport.field_g.available((byte) 43) <= 0) {
                 if (MonotonicClockSupport.monotonicMillis(97) > UnitInfoPopup.field_s) {
-                  stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
+                  stackIn_30_0 = OwnerChangeEvent.handleResourceConnectionFailure(-2, (byte) 101);
                   return stackIn_30_0;
                 }
               } else {
                 var1_int = FriendLookupSupport.field_g.readByte(70);
                 if (var1_int != 0) {
-                  stackIn_25_0 = OwnerChangeEvent.a(var1_int, (byte) 101);
+                  stackIn_25_0 = OwnerChangeEvent.handleResourceConnectionFailure(var1_int, (byte) 101);
                   return stackIn_25_0;
                 }
                 LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
@@ -403,7 +403,7 @@ final class IntroSequence {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return OwnerChangeEvent.a(-3, (byte) 101);
+            return OwnerChangeEvent.handleResourceConnectionFailure(-3, (byte) 101);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -10,7 +10,7 @@ final class SpellCastAction extends PreparedAction {
     static boolean field_t;
     static boolean field_s;
 
-    final static void b(int param0, int param1) {
+    final static void setSharedChatPanelPosition(int param0, int param1) {
         if (param0 != 8) {
           return;
         }
@@ -29,7 +29,7 @@ final class SpellCastAction extends PreparedAction {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, int param3) {
+    final static byte[] computeWhirlpoolDigest(int param0, int param1, byte[] param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
@@ -93,7 +93,7 @@ final class SpellCastAction extends PreparedAction {
         try {
           if (param1 < 51) {
             var6 = (String) null;
-            SpellCastAction.a((java.applet.Applet) null, 31, (String) null, false);
+            SpellCastAction.openExternalUrl((java.applet.Applet) null, 31, (String) null, false);
           }
           var3 = ContentTransitionDialog.unitAnimationSlotNames[param0];
           var4 = IgnoreListLookupSupport.charToString(true, '_');
@@ -114,7 +114,7 @@ final class SpellCastAction extends PreparedAction {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1, String param2, boolean param3) {
+    final static void openExternalUrl(java.applet.Applet param0, int param1, String param2, boolean param3) {
         try {
           int var4_int = 0;
           if (PlatformTaskService.lowercaseOsName.startsWith("win") &&
@@ -151,7 +151,7 @@ final class SpellCastAction extends PreparedAction {
         keyEventCharacters = null;
         field_y = null;
         if (obfuscationGuard != -4541) {
-          SpellCastAction.b(-26, 75);
+          SpellCastAction.setSharedChatPanelPosition(-26, 75);
         }
     }
 

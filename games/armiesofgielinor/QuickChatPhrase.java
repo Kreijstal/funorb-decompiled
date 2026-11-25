@@ -13,7 +13,7 @@ final class QuickChatPhrase extends DualLinkedNode {
     private int[] commandIds;
     static String field_x;
 
-    final static void a(int param0, MusicTrack param1) {
+    final static void setMusicTrackWithDefaultGain(int param0, MusicTrack param1) {
         try {
           DropTargetWidgetContainer.a((byte) -93, true, param1);
           if (param0 != 2) {
@@ -70,7 +70,7 @@ final class QuickChatPhrase extends DualLinkedNode {
         return var4.missions[missionIndex];
     }
 
-    final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, ResourceArchive param5, ResourceArchive param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, IndexedSprite[] param13, ResourceArchive param14, String[][] param15, RgbSprite[][] param16) {
+    final static void initializeSharedUiAssets(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, ResourceArchive param5, ResourceArchive param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, IndexedSprite[] param13, ResourceArchive param14, String[][] param15, RgbSprite[][] param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

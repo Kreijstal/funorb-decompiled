@@ -46,7 +46,7 @@ final class OwnerChangeEvent extends GameEvent {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int handleResourceConnectionFailure(int param0, byte param1) {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         LabeledWidgetContainer.field_N = 0;
         AccountRegistrationForm.field_R = null;
@@ -55,7 +55,7 @@ final class OwnerChangeEvent extends GameEvent {
         LeaderEscortCondition.field_i = ClientRecoverySupport.field_a;
         ScrollWidgetContainer.field_T.errorCount = ScrollWidgetContainer.field_T.errorCount + 1;
         if (param1 != 101) {
-          OwnerChangeEvent.a(-88, (byte) -45);
+          OwnerChangeEvent.handleResourceConnectionFailure(-88, (byte) -45);
           if (param0 == 51) {
             ScrollWidgetContainer.field_T.errorCode = 2;
             ClientRecoverySupport.field_a = var2;
@@ -225,7 +225,7 @@ final class OwnerChangeEvent extends GameEvent {
         return -1;
     }
 
-    final static void a(int param0, String param1) {
+    final static void advanceTooltipState(int param0, String param1) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;

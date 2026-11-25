@@ -8,7 +8,7 @@ final class NineSliceSpriteSupport {
     static int gameOptionCount;
 
     final static void a(boolean param0, boolean param1) {
-        GlobalSpell.a(-47, param0);
+        GlobalSpell.drawSharedInterfaceAndOverlays(-47, param0);
         if (param1) {
           NineSliceSpriteSupport.releaseStatics((byte) 89);
           DraggableWidgetContainer.a(param0, true);

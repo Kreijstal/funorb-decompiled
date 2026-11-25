@@ -7,7 +7,7 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
     static long field_E;
     static String field_G;
 
-    final static boolean e(byte param0) {
+    final static boolean isMessageDialogOpen(byte param0) {
         if (param0 <= 84) {
           return false;
         }
@@ -18,7 +18,7 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    final static void h(int param0) {
+    final static void drawMessageDialog(int param0) {
         int var2 = 0;
         int var1 = SummonRequest.getMessageDialogWidth(true);
         int var2Lifetime1;

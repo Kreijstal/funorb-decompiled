@@ -8,7 +8,7 @@ final class ManaEvent extends GameEvent {
     int manaTypeCode;
     static String[] field_y;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, byte param8) {
+    final static void rasterizeHalfBlendTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, byte param8) {
         RuntimeException stackIn_81_0 = null;
         StringBuilder stackIn_81_1 = null;
         String stackIn_82_2 = null;
@@ -218,7 +218,7 @@ final class ManaEvent extends GameEvent {
         return var3;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void writeCancelGameSearchRequest(byte param0, int param1) {
         CipherPacketBuffer var2 = null;
         if (param0 == 69) {
           var2 = EmailValidator.outgoingPacket;
@@ -233,7 +233,7 @@ final class ManaEvent extends GameEvent {
         int dupTemp$0 = 0;
         try {
           if (obfuscationGuard != -26661) {
-            ManaEvent.a((byte) 14, 105);
+            ManaEvent.writeCancelGameSearchRequest((byte) 14, 105);
           }
           if (0 > battlefield.localPlayer &&
             this.playerId >= 0 &&
@@ -295,7 +295,7 @@ final class ManaEvent extends GameEvent {
         this.playerId = playerId;
     }
 
-    final static RgbSprite a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RgbSprite loadRgbSpriteById(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

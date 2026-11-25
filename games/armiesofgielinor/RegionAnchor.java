@@ -9,7 +9,7 @@ final class RegionAnchor extends IntrusiveNode {
     int row;
     static ResourceArchive field_o;
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int getTileOverlayColour(int param0, int param1, int param2, int param3) {
         int stackIn_52_0 = 0;
         int stackIn_62_0 = 0;
         int stackIn_126_0 = 0;
@@ -241,7 +241,7 @@ final class RegionAnchor extends IntrusiveNode {
         field_k = null;
         field_n = null;
         if (!obfuscationGuard) {
-          RegionAnchor.a(-107, -22, -114, 71);
+          RegionAnchor.getTileOverlayColour(-107, -22, -114, 71);
         }
     }
 
@@ -259,7 +259,7 @@ final class RegionAnchor extends IntrusiveNode {
           }
           var3 = new Unit();
           if (obfuscationGuard <= 31) {
-            RegionAnchor.a(96, (byte) -94);
+            RegionAnchor.writeUnlockMaskReadRequest(96, (byte) -94);
           }
           NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_6_0 = var3;
@@ -278,7 +278,7 @@ final class RegionAnchor extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void writeUnlockMaskReadRequest(int param0, byte param1) {
         if (param1 != -32) {
           field_m = (RgbSprite[]) null;
         }

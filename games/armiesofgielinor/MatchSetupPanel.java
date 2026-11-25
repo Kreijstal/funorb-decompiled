@@ -947,7 +947,7 @@ final class MatchSetupPanel {
               return;
             }
             if (PowerOfTwoSupport.keyCode == 13) {
-              CipherPacketBuffer.a(true, 0, 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(true, 0, 1, ChatInputDispatchSupport.field_a);
               if (null != VerticalScrollbar.field_Rb.combatPresentation) {
                 VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
                 VerticalScrollbar.field_Rb.combatPresentation.field_A = null;

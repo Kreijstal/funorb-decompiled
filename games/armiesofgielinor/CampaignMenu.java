@@ -1465,13 +1465,13 @@ final class CampaignMenu {
             if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               QuickChatPhraseRepository.a(27875)) {
               PaletteRegionMap.field_i = CalendarSupport.field_g;
-              CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(false, 11, obfuscationGuard ^ 1, ChatInputDispatchSupport.field_a);
               return;
             }
             this.rebuildMissionEntries(var2.campaignIndex, 53);
             var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
             QuickChatCategoryMenuSupport.activeCampaignMission = var3;
-            CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
+            CipherPacketBuffer.changeSharedUiStage(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
               this.openCampaign(this.selectedCampaignEntry.entryId, true);
             }
@@ -1658,14 +1658,14 @@ final class CampaignMenu {
                   var2 = DropTargetWidgetContainer.getStoredQuicksave(86);
                   var3 = QuickChatPhrase.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
                   QuickChatCategoryMenuSupport.activeCampaignMission = (CampaignMission) (var3);
-                  CipherPacketBuffer.a(true, -11, 1, 0);
+                  CipherPacketBuffer.changeSharedUiStage(true, -11, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
                   null != this.field_j &&
                   this.field_j.containsPointer((byte) 121)) {
                   this.resumeQuicksave(-2);
                   QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
-                  CipherPacketBuffer.a(true, -10, 1, 0);
+                  CipherPacketBuffer.changeSharedUiStage(true, -10, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
                   this.field_o != null &&
@@ -1680,7 +1680,7 @@ final class CampaignMenu {
                   this.field_h.containsPointer((byte) 86)) {
                   this.resumeQuicksave(-2);
                   QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
-                  CipherPacketBuffer.a(true, -10, 1, 0);
+                  CipherPacketBuffer.changeSharedUiStage(true, -10, 1, 0);
                 }
                 if (DeployEvent.pointerPressButton == 1 &&
                   this.field_f != null &&
@@ -1780,7 +1780,7 @@ final class CampaignMenu {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(91);
           if (null == var2) {
             QuickChatCategoryMenuSupport.activeCampaignMission = this.selectedMissionEntry.mission;
-            CipherPacketBuffer.a(true, -10, 1, 0);
+            CipherPacketBuffer.changeSharedUiStage(true, -10, 1, 0);
             if (var4 != 0) {
               if (this.selectedMissionEntry.entryId == var2.missionId &&
                 var2.campaignIndex == this.campaignIndex) {
@@ -2034,7 +2034,7 @@ final class CampaignMenu {
           if (!BoundedFile.a(campaignIndex, 11906) &&
             QuickChatPhraseRepository.a(27875)) {
             PaletteRegionMap.field_i = CalendarSupport.field_g;
-            CipherPacketBuffer.a(false, 11, 1, ChatInputDispatchSupport.field_a);
+            CipherPacketBuffer.changeSharedUiStage(false, 11, 1, ChatInputDispatchSupport.field_a);
             return;
           }
           if (null == QuickChatSetupSupport.field_g) {
@@ -2071,12 +2071,12 @@ final class CampaignMenu {
                   this.viewMode == 3) {
                   this.viewMode = 1;
                   if (var6 != 0) {
-                    CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
+                    CipherPacketBuffer.changeSharedUiStage(false, 0, 1, ChatInputDispatchSupport.field_a);
                     this.setViewMode(0, (byte) 42);
                   }
                 }
               } else {
-                CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
+                CipherPacketBuffer.changeSharedUiStage(false, 0, 1, ChatInputDispatchSupport.field_a);
                 if (var6 != 0) {
                   this.setViewMode(0, (byte) 42);
                 }
@@ -2412,12 +2412,12 @@ final class CampaignMenu {
                 this.selectedCampaignEntry = (CampaignMenuEntry) (this.campaignEntries.get(-19, (long)this.selectedCampaignEntry.entryId));
                 break;
               }
-              CipherPacketBuffer.a(true, 21, 1, 0);
+              CipherPacketBuffer.changeSharedUiStage(true, 21, 1, 0);
               if (var16 != 0) {
-                CipherPacketBuffer.a(true, 22, 1, 21);
+                CipherPacketBuffer.changeSharedUiStage(true, 22, 1, 21);
               }
             } else {
-              CipherPacketBuffer.a(true, 22, 1, 21);
+              CipherPacketBuffer.changeSharedUiStage(true, 22, 1, 21);
             }
           }
           if (obfuscationGuard != 42) {

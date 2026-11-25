@@ -7,7 +7,7 @@ final class LocalCoatSupport {
     static String loginPassword;
     static CoatOfArms localCoat;
 
-    public static void a(byte param0) {
+    public static void releaseLocalCoatStatics(byte param0) {
         field_c = null;
         localCoat = null;
         loginPassword = null;
@@ -23,7 +23,7 @@ final class LocalCoatSupport {
           AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, EmailValidator.outgoingPacket, localCoat.colourIndices);
           return;
         }
-        LocalCoatSupport.a((byte) 9, -104);
+        LocalCoatSupport.resendUnlockRequests((byte) 9, -104);
         EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 71);
         AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, EmailValidator.outgoingPacket, localCoat.colourIndices);
     }
@@ -102,7 +102,7 @@ final class LocalCoatSupport {
         return SoundCache.formatOrdinalForLanguage(param2, 0, (byte) -123, param0);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendUnlockRequests(byte param0, int param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -117,7 +117,7 @@ final class LocalCoatSupport {
           }
           var2 = LabeledWidgetContainer.field_O.first((byte) 116);
           while (var2 != null) {
-            RegionAnchor.a(param1, (byte) -32);
+            RegionAnchor.writeUnlockMaskReadRequest(param1, (byte) -32);
             var2 = LabeledWidgetContainer.field_O.next((byte) 123);
           }
           if (param0 == 33) {

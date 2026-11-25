@@ -9,7 +9,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
     static String field_h;
     static BirthDateChatEnableForm field_i;
 
-    final static boolean a(boolean param0) {
+    final static boolean tryAcquireQuickChatSend(boolean param0) {
         long var1;
         long var3;
         int var5;
@@ -172,7 +172,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendRatingLeaderboardRequests(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         RatingLeaderboardRequest var4 = null;
@@ -187,7 +187,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
           if (param1 == 1742) {
             return;
           }
-          BestScoreStrategy.a(true);
+          BestScoreStrategy.tryAcquireQuickChatSend(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

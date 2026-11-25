@@ -290,32 +290,32 @@ abstract class GameEvent extends IntrusiveNode {
           var4 = SelectionMenuLayoutSupport.readBooleanBit(param1, -2) ? 1 : 0;
           var6 = new LogoMesh();
           var6.field_O = (short)param1.readBits(61, 16);
-          var6.field_z = SpellCastRequest.a(var6.field_z, 16, param1, 10064);
-          var6.field_y = SpellCastRequest.a(var6.field_y, 16, param1, 10064);
-          var6.field_o = SpellCastRequest.a(var6.field_o, 16, param1, 10064);
+          var6.field_z = SpellCastRequest.readPackedShortArray(var6.field_z, 16, param1, 10064);
+          var6.field_y = SpellCastRequest.readPackedShortArray(var6.field_y, 16, param1, 10064);
+          var6.field_o = SpellCastRequest.readPackedShortArray(var6.field_o, 16, param1, 10064);
           var6.field_q = (short)param1.readBits(107, 16);
-          var6.field_c = SpellCastRequest.a(var6.field_c, 16, param1, 10064);
-          var6.field_j = SpellCastRequest.a(var6.field_j, 16, param1, 10064);
-          var6.field_e = SpellCastRequest.a(var6.field_e, 16, param1, 10064);
+          var6.field_c = SpellCastRequest.readPackedShortArray(var6.field_c, 16, param1, 10064);
+          var6.field_j = SpellCastRequest.readPackedShortArray(var6.field_j, 16, param1, 10064);
+          var6.field_e = SpellCastRequest.readPackedShortArray(var6.field_e, 16, param1, 10064);
           if (var3 != 0) {
             var6.field_t = (short)param1.readBits(-100, 16);
-            var6.field_l = SpellCastRequest.a(var6.field_l, 16, param1, 10064);
-            var6.field_f = SpellCastRequest.a(var6.field_f, 16, param1, 10064);
-            var6.field_x = SpellCastRequest.a(var6.field_x, 16, param1, 10064);
-            var6.field_w = SpellCastRequest.a(var6.field_w, 16, param1, 10064);
-            var6.field_Q = SpellCastRequest.a(var6.field_Q, 16, param1, 10064);
-            var6.field_d = SpellCastRequest.a(var6.field_d, 16, param1, 10064);
+            var6.field_l = SpellCastRequest.readPackedShortArray(var6.field_l, 16, param1, 10064);
+            var6.field_f = SpellCastRequest.readPackedShortArray(var6.field_f, 16, param1, 10064);
+            var6.field_x = SpellCastRequest.readPackedShortArray(var6.field_x, 16, param1, 10064);
+            var6.field_w = SpellCastRequest.readPackedShortArray(var6.field_w, 16, param1, 10064);
+            var6.field_Q = SpellCastRequest.readPackedShortArray(var6.field_Q, 16, param1, 10064);
+            var6.field_d = SpellCastRequest.readPackedShortArray(var6.field_d, 16, param1, 10064);
           }
           if (var4 != 0) {
             param1.readBits(-102, 16);
-            var6.field_r = SpellCastRequest.a(var6.field_r, 16, param1, 10064);
-            var6.field_s = SpellCastRequest.a(var6.field_s, 16, param1, 10064);
-            var6.field_A = SpellCastRequest.a(var6.field_A, 16, param1, 10064);
-            var6.field_i = SpellCastRequest.a(var6.field_i, 16, param1, 10064);
-            var6.field_b = SpellCastRequest.a(var6.field_b, 16, param1, 10064);
+            var6.field_r = SpellCastRequest.readPackedShortArray(var6.field_r, 16, param1, 10064);
+            var6.field_s = SpellCastRequest.readPackedShortArray(var6.field_s, 16, param1, 10064);
+            var6.field_A = SpellCastRequest.readPackedShortArray(var6.field_A, 16, param1, 10064);
+            var6.field_i = SpellCastRequest.readPackedShortArray(var6.field_i, 16, param1, 10064);
+            var6.field_b = SpellCastRequest.readPackedShortArray(var6.field_b, 16, param1, 10064);
           }
           if (SelectionMenuLayoutSupport.readBooleanBit(param1, -2)) {
-            var6.field_u = SpellCastRequest.a(var6.field_u, 16, param1, 10064);
+            var6.field_u = SpellCastRequest.readPackedShortArray(var6.field_u, 16, param1, 10064);
           }
           if (SelectionMenuLayoutSupport.readBooleanBit(param1, -2)) {
             var6.field_K = AccountRegistrationForm.readPackedOffsetByteArray(16, param1, var6.field_K, (byte) -122);

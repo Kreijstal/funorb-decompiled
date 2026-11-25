@@ -28,6 +28,6 @@ final class PaginationTextSupport {
 
     static {
         field_f = "Single-Player";
-        DisplaySettingsDialog.a(50, (byte) 122);
+        DisplaySettingsDialog.configureMembershipAnimationTiming(50, (byte) 122);
     }
 }

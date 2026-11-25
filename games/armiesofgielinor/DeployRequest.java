@@ -60,13 +60,13 @@ final class DeployRequest extends ActionRequest {
         if (param0 == -1) {
           var2 = new SpriteSheetDecoder();
           LabeledWidgetContainer.field_O.addLast((byte) -119, (IntrusiveNode) (var2));
-          RegionAnchor.a(param1, (byte) -32);
+          RegionAnchor.writeUnlockMaskReadRequest(param1, (byte) -32);
           return var2;
         }
         field_w = (String) null;
         var2Lifetime1 = new SpriteSheetDecoder();
         LabeledWidgetContainer.field_O.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
-        RegionAnchor.a(param1, (byte) -32);
+        RegionAnchor.writeUnlockMaskReadRequest(param1, (byte) -32);
         return var2Lifetime1;
     }
 

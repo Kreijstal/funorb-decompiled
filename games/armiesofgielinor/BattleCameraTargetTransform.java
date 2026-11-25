@@ -402,7 +402,7 @@ final class BattleCameraTargetTransform {
             }
             if (FixedSquareRootSupport.field_d.pressedButton != 0) {
               if (SpellCastAction.field_s) {
-                ManaEvent.a((byte) 69, param3);
+                ManaEvent.writeCancelGameSearchRequest((byte) 69, param3);
               } else {
                 DropdownArrowPainter.sendLobbyGameFilters(param3, -8006);
               }

@@ -2327,7 +2327,7 @@ final class GameplayController {
               stackIn_92_0 = 18;
               return stackIn_92_0;
             }
-            if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -121)) {
+            if (SpriteControlNode.isPointerOnEndTurnButton(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -121)) {
               stackIn_97_0 = 4;
               return stackIn_97_0;
             }
@@ -4145,7 +4145,7 @@ final class GameplayController {
               stackIn_32_0 = 0;
             }
             var2_int = stackIn_32_0;
-            var3 = SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
+            var3 = SpriteControlNode.isPointerOnEndTurnButton(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
@@ -5283,7 +5283,7 @@ final class GameplayController {
               }
             }
             var3 = var2_int;
-            CipherPacketBuffer.a(false, var3, 1, 0);
+            CipherPacketBuffer.changeSharedUiStage(false, var3, 1, 0);
             return;
           }
           if (PowerOfTwoSupport.keyCode == 9 &&
@@ -6167,7 +6167,7 @@ final class GameplayController {
                       decompiledFrameRemainder11 = (var20 != 0);
                     }
                     if (decompiledFrameRemainder11) {
-                      if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -123) &&
+                      if (SpriteControlNode.isPointerOnEndTurnButton(67, DateInputWidget.field_E, this.field_Fb, UnitRecordWriter.field_c, GrowthEvent.field_I, -123) &&
                         !this.battlefield.field_X &&
                         this.battlefield.currentPlayer == this.controlledPlayerId &&
                         !this.field_bc) {
@@ -8204,7 +8204,7 @@ final class GameplayController {
             }
             if (param0 == 19) {
               if (this.field_lb) {
-                CipherPacketBuffer.a(true, -5, 1, ChatInputDispatchSupport.field_a);
+                CipherPacketBuffer.changeSharedUiStage(true, -5, 1, ChatInputDispatchSupport.field_a);
                 if (var16 == 0) {
                   return;
                 }
@@ -11683,7 +11683,7 @@ final class GameplayController {
             GameplayController.releaseStatics(45);
           }
           var5 = param3.getFileId((byte) -115, var4_int, param0);
-          stackIn_4_0 = ManaEvent.a(var4_int, var5, param1 ^ -9074, param3);
+          stackIn_4_0 = ManaEvent.loadRgbSpriteById(var4_int, var5, param1 ^ -9074, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11998,19 +11998,19 @@ final class GameplayController {
                 stackIn_12_0 = (this.field_Yb != 2) ? var3_int : 18;
                 var4 = stackIn_12_0;
                 var5 = param1 ? 1 : 0;
-                CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
+                CipherPacketBuffer.changeSharedUiStage(var5 != 0, var4, 1, 0);
                 if (var6 != 0) {
                   if (MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 124) ||
                     null != PointerInputHandler.field_f) {
                     var4 = param1 ? 1 : 0;
-                    CipherPacketBuffer.a(var4 != 0, 10, 1, 0);
+                    CipherPacketBuffer.changeSharedUiStage(var4 != 0, 10, 1, 0);
                     var4 = var3_int;
                     var5 = param1 ? 1 : 0;
-                    CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
+                    CipherPacketBuffer.changeSharedUiStage(var5 != 0, var4, 1, 0);
                   } else {
                     var4 = var3_int;
                     var5 = param1 ? 1 : 0;
-                    CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
+                    CipherPacketBuffer.changeSharedUiStage(var5 != 0, var4, 1, 0);
                   }
                 }
               } else {
@@ -12018,13 +12018,13 @@ final class GameplayController {
                   null == PointerInputHandler.field_f);
                 if (!decompiledSharedTail1) {
                   var4 = param1 ? 1 : 0;
-                  CipherPacketBuffer.a(var4 != 0, 10, 1, 0);
+                  CipherPacketBuffer.changeSharedUiStage(var4 != 0, 10, 1, 0);
                   decompiledSharedTail1 = (var6 != 0);
                 }
                 if (decompiledSharedTail1) {
                   var4 = var3_int;
                   var5 = param1 ? 1 : 0;
-                  CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
+                  CipherPacketBuffer.changeSharedUiStage(var5 != 0, var4, 1, 0);
                 }
               }
               decompiledFrameRemainder0 = (var6 != 0);

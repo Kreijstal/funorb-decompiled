@@ -362,7 +362,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.index.groupDigests != null &&
                   null != this.index.groupDigests[param1]) {
                   var27 = this.index.groupDigests[param1];
-                  var28 = SpellCastAction.a(param0 ^ -18424, -2 + var18.length, var18, 0);
+                  var28 = SpellCastAction.computeWhirlpoolDigest(param0 ^ -18424, -2 + var18.length, var18, 0);
                   for (var9 = 0; var9 < 64; var9++) {
                     if (~var27[var9] != ~var28[var9]) {
                       throw new RuntimeException();
@@ -413,7 +413,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 this.index.groupDigests[param1] != null) {
                 var29 = this.index.groupDigests[param1];
-                var30 = SpellCastAction.a(-18423, -2 + var18.length, var18, 0);
+                var30 = SpellCastAction.computeWhirlpoolDigest(-18423, -2 + var18.length, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {

@@ -251,11 +251,11 @@ final class ArchiveIndex {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          PacketBuffer.a(0, LoginForm.field_T, false, PasswordLengthSupport.field_e, EmailConfirmationValidator.field_p, param0, true);
+          PacketBuffer.sortLeaderboardEntryIndices(0, LoginForm.field_T, false, PasswordLengthSupport.field_e, EmailConfirmationValidator.field_p, param0, true);
           for (var2_int = param1; EmailConfirmationValidator.field_p > var2_int; var2_int++) {
             SpriteControlNode.field_m[param0 + var2_int] = var2_int;
           }
-          PacketBuffer.a(param0, IgnoreRequestSupport.field_e, false, ToastMessage.field_k, EmailConfirmationValidator.field_p + param0, param0 + param0, false);
+          PacketBuffer.sortLeaderboardEntryIndices(param0, IgnoreRequestSupport.field_e, false, ToastMessage.field_k, EmailConfirmationValidator.field_p + param0, param0 + param0, false);
           if (param0 < EmailConfirmationValidator.field_p) {
             EmailConfirmationValidator.field_p = param0;
           }
@@ -315,7 +315,7 @@ final class ArchiveIndex {
             if (64 != expectedDigest.length) {
               throw new RuntimeException();
             }
-            this.indexDigest = SpellCastAction.a(-18423, encodedIndex.length, encodedIndex, 0);
+            this.indexDigest = SpellCastAction.computeWhirlpoolDigest(-18423, encodedIndex.length, encodedIndex, 0);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (this.indexDigest[var4_int] != expectedDigest[var4_int]) {
                 throw new RuntimeException();

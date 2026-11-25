@@ -5,7 +5,7 @@ final class SpellCastRequest extends ActionRequest {
     private Spell spell;
     private int selectionMode;
 
-    final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, int param3) {
+    final static short[] readPackedShortArray(short[] param0, int param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -67,7 +67,7 @@ final class SpellCastRequest extends ActionRequest {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void playLoadedSoundAtVolume(int param0, byte param1, int param2) {
         if (MonotonicClockSupport.field_a == null) {
           return;
         }
@@ -84,7 +84,7 @@ final class SpellCastRequest extends ActionRequest {
         }
     }
 
-    final static void a(boolean param0, float param1, String param2, int param3) {
+    final static void drawProgressDialog(boolean param0, float param1, String param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -101,7 +101,7 @@ final class SpellCastRequest extends ActionRequest {
           if (param3 == -1) {
             return;
           }
-          SpellCastRequest.a(-96, (byte) 21, 26);
+          SpellCastRequest.playLoadedSoundAtVolume(-96, (byte) 21, 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class SpellCastRequest extends ActionRequest {
           this.unlink(-104);
           if (obfuscationGuard <= 31) {
             var4 = (String) null;
-            SpellCastRequest.a(true, -1.1208561658859253f, (String) null, -70);
+            SpellCastRequest.drawProgressDialog(true, -1.1208561658859253f, (String) null, -70);
           }
           this.spell.prepareEffect((byte) -37, battlefield);
           stackIn_3_0 = new SpellCastAction(this.spell, this.selectionMode, this.actingPlayer);

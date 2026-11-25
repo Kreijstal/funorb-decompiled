@@ -520,7 +520,7 @@ final class ResourceArchive {
               return;
             }
             if (13 == PowerOfTwoSupport.keyCode) {
-              CipherPacketBuffer.a(true, 0, param0 + 20194, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(true, 0, param0 + 20194, ChatInputDispatchSupport.field_a);
             }
             if (12 == PowerOfTwoSupport.keyCode) {
               stackIn_17_0 = !(CoatOfArms.field_e);

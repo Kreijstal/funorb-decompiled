@@ -189,8 +189,8 @@ abstract class NetworkGameShell extends GameAppletShell {
         int navigationFlag = (flags & 1) != 0 ? 1 : 0;
         int textLength = DropdownSelectorPainter.packetPayloadLength - 1;
         byte[] encodedUrl = new byte[textLength];
-        ByteStorage.incomingPacket.a(textLength, encodedUrl, false, 0);
-        SpellCastAction.a(CombatEvent.d((byte) -125), 87, LobbyRoomControlSupport.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
+        ByteStorage.incomingPacket.readCipheredBytes(textLength, encodedUrl, false, 0);
+        SpellCastAction.openExternalUrl(CombatEvent.d((byte) -125), 87, LobbyRoomControlSupport.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
         if (obfuscationGuard != 16433) {
           this.dispatchSharedPacket(-76);
         }

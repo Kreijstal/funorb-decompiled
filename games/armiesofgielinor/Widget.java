@@ -320,12 +320,12 @@ class Widget extends IntrusiveNode {
                     if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                       if (ProgressMessageDialog.pointerButton != 0) {
                         LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                        OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                       if (LobbyRoom.field_Ob == 0) {
                         LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                        OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -342,19 +342,19 @@ class Widget extends IntrusiveNode {
                         this.blur(1);
                       }
                       LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                      OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                      OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                       return param0;
                     }
                     param0 = false;
                   }
                   if (ProgressMessageDialog.pointerButton != 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (LobbyRoom.field_Ob == 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -367,22 +367,22 @@ class Widget extends IntrusiveNode {
                   }
                   if (var7 == 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (var5 == 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (DeployEvent.pointerPressButton == 0) {
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   this.blur(1);
                   LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                  OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, HighscoreAccountEntry.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
@@ -393,7 +393,7 @@ class Widget extends IntrusiveNode {
                     if (ProgressMessageDialog.pointerButton == 0) {
                       if (LobbyRoom.field_Ob == 0) {
                         LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                        OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -410,12 +410,12 @@ class Widget extends IntrusiveNode {
                         DeployEvent.pointerPressButton != 0) {
                         this.blur(1);
                         LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                        OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                     }
                     LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                    OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   this.blur(1);
@@ -431,7 +431,7 @@ class Widget extends IntrusiveNode {
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -450,7 +450,7 @@ class Widget extends IntrusiveNode {
               DeployEvent.pointerPressButton != 0) {
               this.blur(1);
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
           }
@@ -473,12 +473,12 @@ class Widget extends IntrusiveNode {
               }
               if (ProgressMessageDialog.pointerButton != 0) {
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -496,7 +496,7 @@ class Widget extends IntrusiveNode {
                 this.blur(1);
               }
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (var5 != 0) {
@@ -505,12 +505,12 @@ class Widget extends IntrusiveNode {
             if (DeployEvent.pointerPressButton == 0) {
               if (ProgressMessageDialog.pointerButton != 0) {
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -528,19 +528,19 @@ class Widget extends IntrusiveNode {
                 this.blur(1);
               }
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
               if (var5 == 0) {
                 if (ProgressMessageDialog.pointerButton != 0) {
                   LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                  OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 if (LobbyRoom.field_Ob == 0) {
                   LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                  OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -557,7 +557,7 @@ class Widget extends IntrusiveNode {
                   this.blur(1);
                 }
                 LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+                OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               this.blur(1);
@@ -569,12 +569,12 @@ class Widget extends IntrusiveNode {
             }
             if (ProgressMessageDialog.pointerButton != 0) {
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (LobbyRoom.field_Ob == 0) {
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
@@ -587,7 +587,7 @@ class Widget extends IntrusiveNode {
             }
             if (var7 == 0) {
               LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+              OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
           }
@@ -597,7 +597,7 @@ class Widget extends IntrusiveNode {
           }
         }
         LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
-        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
+        OwnerChangeEvent.advanceTooltipState(param1 ^ 6225, this.getTooltipText(21384));
         return param0;
     }
 

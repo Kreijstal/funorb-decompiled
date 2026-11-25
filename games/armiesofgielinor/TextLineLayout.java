@@ -36,7 +36,7 @@ final class TextLineLayout {
           }
           return -1 + this.caretXs.length;
         }
-        TextLineLayout.a((String) null, 64, -17, 10, 101, -122, -53, 45, 110);
+        TextLineLayout.layoutChatEntryOverlay((String) null, 64, -17, 10, 101, -122, -53, 45, 110);
         for (guardedCaretIndex = 1; this.caretXs.length > guardedCaretIndex; guardedCaretIndex++) {
           if ((this.caretXs[guardedCaretIndex] + this.caretXs[-1 + guardedCaretIndex] >> 1) > x) {
             return -1 + guardedCaretIndex;
@@ -45,7 +45,7 @@ final class TextLineLayout {
         return -1 + this.caretXs.length;
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void layoutChatEntryOverlay(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -67,7 +67,7 @@ final class TextLineLayout {
           var11 = SessionTransitionSupport.field_e.getPreferredWidth(param7 ^ 15717);
           SessionTransitionSupport.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
           if (param7 != 15676) {
-            TextLineLayout.b(-109);
+            TextLineLayout.releaseTextLineStatics(-109);
           }
           DateOfBirthValidator.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
@@ -80,7 +80,7 @@ final class TextLineLayout {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeBasicBattleGraphics(byte param0) {
         LinkButtonPainter.field_f = new BattleGraphicsAssets(AchievementUnlockRequest.field_l);
         if (param0 < -36) {
           LinkButtonPainter.field_f.selectTheme(0, 0);
@@ -237,7 +237,7 @@ final class TextLineLayout {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseTextLineStatics(int param0) {
         additionalSoundHandles = null;
         currentSpellMenu = null;
         field_k = null;

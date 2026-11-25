@@ -44,7 +44,7 @@ final class ConsoleParseException extends Exception {
           if (!ClientStateChecksumSupport.textChatActive) {
             return;
           }
-          TextLineLayout.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
+          TextLineLayout.layoutChatEntryOverlay(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
           UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
             if (ResourceClientSetupSupport.field_e.pressedButton != 0) {

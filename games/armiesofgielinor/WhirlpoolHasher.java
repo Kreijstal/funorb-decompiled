@@ -16,7 +16,7 @@ final class WhirlpoolHasher {
     private long[] roundTemporary;
     private byte[] inputBlock;
 
-    final static void d(int param0) {
+    final static void updateRematchMenuText(int param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (FullscreenFocusCanvas.gameplayController.field_u) {
@@ -141,7 +141,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendScoreRequests(int param0, int param1) {
         int var3 = 0;
         ScoreSubmissionRequest var4 = null;
         ScoreLeaderboardRequest var5 = null;
@@ -332,7 +332,7 @@ final class WhirlpoolHasher {
             this.inputBlock[lengthPaddingIndex] = (byte) 0;
           }
           if (!obfuscationGuard) {
-            WhirlpoolHasher.a(54, 79);
+            WhirlpoolHasher.resendScoreRequests(54, 79);
           }
           ArrayBlockSupport.copyBytes(this.bitLength, 0, this.inputBlock, 32, 32);
           this.compressBlock(-11);

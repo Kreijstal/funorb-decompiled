@@ -306,7 +306,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void configureMembershipAnimationTiming(int param0, byte param1) {
         PaginationTextSupport.field_d = (param0 << 16) / 150;
         PaginationTextSupport.field_c = param0 * 400 / 150;
         if (param1 != 122) {
@@ -359,7 +359,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void appendRatingLeaderboardEntry(int param0, int param1, int param2, int param3, byte param4, int param5) {
         DropdownOptionList.field_R[EmailConfirmationValidator.field_p] = param5;
         SpriteControlNode.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
         NumericDateInputWidget.field_U[EmailConfirmationValidator.field_p] = param2;
@@ -380,7 +380,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           ToastMessage.field_k = var7;
         }
         if (param4 <= 120) {
-          DisplaySettingsDialog.i((byte) 86);
+          DisplaySettingsDialog.clearInactiveClientState((byte) 86);
         }
         if (IgnoreRequestSupport.field_e < var7) {
           IgnoreRequestSupport.field_e = var7;
@@ -431,7 +431,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         field_cb = null;
     }
 
-    final static void i(byte param0) {
+    final static void clearInactiveClientState(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int[] var1 = null;
         RuntimeException var1_ref = null;
@@ -487,13 +487,13 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
             AccountNameFoldingSupport.field_c = false;
           }
           if (AiUnitPlanner.field_t) {
-            PacketBuffer.i((byte) -97);
+            PacketBuffer.closeSharedInteractionUi((byte) -97);
             LogoMesh.clearLobbyState(-112);
             LocalAccountSupport.clearSocialLists(-120);
             AiUnitPlanner.field_t = false;
           }
           if (param0 < 120) {
-            DisplaySettingsDialog.a(-43, 103, -36, -123, (byte) 96, -93);
+            DisplaySettingsDialog.appendRatingLeaderboardEntry(-43, 103, -36, -123, (byte) 96, -93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -718,7 +718,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
             var5 = this.classicModeButton;
           }
           if (obfuscationGuard != -12215) {
-            DisplaySettingsDialog.i((byte) 84);
+            DisplaySettingsDialog.clearInactiveClientState((byte) 84);
           }
           var6 = keyCode;
           switch (var6) {

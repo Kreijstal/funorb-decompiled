@@ -104,7 +104,7 @@ final class QuickChatShortcutSupport {
             }
             if (SpriteControlNode.lastQuickChatChannel != 2) {
               if (SpriteControlNode.lastQuickChatChannel == 2) {
-                if (!BestScoreStrategy.a(true)) {
+                if (!BestScoreStrategy.tryAcquireQuickChatSend(true)) {
                   return true;
                 }
                 var4 = (String) null;
@@ -124,7 +124,7 @@ final class QuickChatShortcutSupport {
               }
             }
           }
-          if (BestScoreStrategy.a(true)) {
+          if (BestScoreStrategy.tryAcquireQuickChatSend(true)) {
             var4Lifetime4 = (String) null;
             ChatMessageWriteSupport.writeChatMessage(MonotonicClockSupport.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
@@ -156,7 +156,7 @@ final class QuickChatShortcutSupport {
           }
           if (SpriteControlNode.lastQuickChatChannel != 2) {
             if (SpriteControlNode.lastQuickChatChannel == 2) {
-              if (!BestScoreStrategy.a(true)) {
+              if (!BestScoreStrategy.tryAcquireQuickChatSend(true)) {
                 return true;
               }
               var4Lifetime1 = (String) null;
@@ -175,7 +175,7 @@ final class QuickChatShortcutSupport {
               return false;
             }
           }
-          if (BestScoreStrategy.a(true)) {
+          if (BestScoreStrategy.tryAcquireQuickChatSend(true)) {
             var4Lifetime1Lifetime1 = (String) null;
             ChatMessageWriteSupport.writeChatMessage(MonotonicClockSupport.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
@@ -196,7 +196,7 @@ final class QuickChatShortcutSupport {
         }
         if (SpriteControlNode.lastQuickChatChannel != 2) {
           if (SpriteControlNode.lastQuickChatChannel == 2) {
-            if (!BestScoreStrategy.a(true)) {
+            if (!BestScoreStrategy.tryAcquireQuickChatSend(true)) {
               return true;
             }
             var4Lifetime2 = (String) null;
@@ -215,7 +215,7 @@ final class QuickChatShortcutSupport {
             return false;
           }
         }
-        if (!BestScoreStrategy.a(true)) {
+        if (!BestScoreStrategy.tryAcquireQuickChatSend(true)) {
           return true;
         }
         var4Lifetime3 = (String) null;

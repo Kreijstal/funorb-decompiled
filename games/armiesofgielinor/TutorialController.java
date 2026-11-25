@@ -278,7 +278,7 @@ final class TutorialController {
                 stackIn_70_3 = MatchConditionEntry.a(19, (byte) 94);
               }
               if (IterableDualNodeDeque.isPointerInBounds(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(QuickChatMenuCloseSupport.field_b[0].pixelHeight + 19, (byte) 94))) {
-                CipherPacketBuffer.a(true, -9, 1, 0);
+                CipherPacketBuffer.changeSharedUiStage(true, -9, 1, 0);
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[2]);
                 return;
               }
@@ -1294,7 +1294,7 @@ final class TutorialController {
                                                                                                                       }
                                                                                                                       IntrusiveNode.field_h = false;
                                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                                      CipherPacketBuffer.a(var6 != 0, 5, 1, 0);
+                                                                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 5, 1, 0);
                                                                                                                       if (var9 == 0) {
                                                                                                                         return;
                                                                                                                       }
@@ -1324,7 +1324,7 @@ final class TutorialController {
                                                                                                                                               MoveEvent.campaignMenu.resetCampaignList(false);
                                                                                                                                               this.selectionState.selectedIndex = -1;
                                                                                                                                               var6 = param0 ? 1 : 0;
-                                                                                                                                              CipherPacketBuffer.a(var6 != 0, 21, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, 21, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                               if (var9 == 0) {
                                                                                                                                                 return;
                                                                                                                                               }
@@ -1364,7 +1364,7 @@ final class TutorialController {
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                                                          CipherPacketBuffer.a(var6 != 0, -4, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, -4, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                           if (var9 == 0) {
                                                                                                                                             return;
                                                                                                                                           }
@@ -1397,13 +1397,13 @@ final class TutorialController {
                                                                                                                                       }
                                                                                                                                       if (this.tutorialStage != 2) {
                                                                                                                                         var6 = param0 ? 1 : 0;
-                                                                                                                                        CipherPacketBuffer.a(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                                        CipherPacketBuffer.changeSharedUiStage(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                         if (var9 == 0) {
                                                                                                                                           return;
                                                                                                                                         }
                                                                                                                                       }
                                                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                                                      CipherPacketBuffer.a(var6 != 0, 17, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 17, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                       if (var9 == 0) {
                                                                                                                                         return;
                                                                                                                                       }
@@ -1433,7 +1433,7 @@ final class TutorialController {
                                                                                                                                     return;
                                                                                                                                   }
                                                                                                                                   var6 = param0 ? 1 : 0;
-                                                                                                                                  CipherPacketBuffer.a(var6 != 0, -1, 1, 0);
+                                                                                                                                  CipherPacketBuffer.changeSharedUiStage(var6 != 0, -1, 1, 0);
                                                                                                                                   if (var9 == 0) {
                                                                                                                                     return;
                                                                                                                                   }
@@ -1469,7 +1469,7 @@ final class TutorialController {
                                                                                                                               }
                                                                                                                               TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
-                                                                                                                              CipherPacketBuffer.a(var6 != 0, 0, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, 0, 1, ChatInputDispatchSupport.field_a);
                                                                                                                               if (var9 == 0) {
                                                                                                                                 return;
                                                                                                                               }
@@ -1495,7 +1495,7 @@ final class TutorialController {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                                          CipherPacketBuffer.a(var6 != 0, 0, param1 + 1, ChatInputDispatchSupport.field_a);
+                                                                                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, 0, param1 + 1, ChatInputDispatchSupport.field_a);
                                                                                                                           AccountNameFoldingSupport.field_c = true;
                                                                                                                           if (var9 == 0) {
                                                                                                                             return;
@@ -1520,7 +1520,7 @@ final class TutorialController {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                                      CipherPacketBuffer.a(var6 != 0, 8, param1 ^ 1, ChatInputDispatchSupport.field_a);
+                                                                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 8, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                                                                                       if (var9 == 0) {
                                                                                                                         return;
                                                                                                                       }
@@ -1542,7 +1542,7 @@ final class TutorialController {
                                                                                                                     return;
                                                                                                                   }
                                                                                                                   var6 = param0 ? 1 : 0;
-                                                                                                                  CipherPacketBuffer.a(var6 != 0, 24, 1, ChatInputDispatchSupport.field_a);
+                                                                                                                  CipherPacketBuffer.changeSharedUiStage(var6 != 0, 24, 1, ChatInputDispatchSupport.field_a);
                                                                                                                   if (var9 == 0) {
                                                                                                                     return;
                                                                                                                   }
@@ -1562,7 +1562,7 @@ final class TutorialController {
                                                                                                                 return;
                                                                                                               }
                                                                                                               var6 = param0 ? 1 : 0;
-                                                                                                              CipherPacketBuffer.a(var6 != 0, -10, 1, 0);
+                                                                                                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, -10, 1, 0);
                                                                                                               if (var9 == 0) {
                                                                                                                 return;
                                                                                                               }
@@ -1580,7 +1580,7 @@ final class TutorialController {
                                                                                                             return;
                                                                                                           }
                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                          CipherPacketBuffer.a(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
+                                                                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
                                                                                                           if (var9 == 0) {
                                                                                                             return;
                                                                                                           }
@@ -1599,7 +1599,7 @@ final class TutorialController {
                                                                                                       SocketFactory.field_h = false;
                                                                                                       FullscreenFocusCanvas.gameplayController.requestRematch(-128);
                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                      CipherPacketBuffer.a(var6 != 0, -5, 1, ChatInputDispatchSupport.field_a);
+                                                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, -5, 1, ChatInputDispatchSupport.field_a);
                                                                                                       if (var9 == 0) {
                                                                                                         return;
                                                                                                       }
@@ -1618,7 +1618,7 @@ final class TutorialController {
                                                                                                   }
                                                                                                   DebugConsole.field_y = 0;
                                                                                                   var6 = param0 ? 1 : 0;
-                                                                                                  CipherPacketBuffer.a(var6 != 0, 7, 1, ChatInputDispatchSupport.field_a);
+                                                                                                  CipherPacketBuffer.changeSharedUiStage(var6 != 0, 7, 1, ChatInputDispatchSupport.field_a);
                                                                                                   if (var9 == 0) {
                                                                                                     return;
                                                                                                   }
@@ -1636,7 +1636,7 @@ final class TutorialController {
                                                                                               PreferencesWriteRequest.field_q = -1;
                                                                                               this.rebuildUnitDescriptionSprite((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
-                                                                                              CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
+                                                                                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, 12, 1, 0);
                                                                                               if (var9 == 0) {
                                                                                                 return;
                                                                                               }
@@ -1647,7 +1647,7 @@ final class TutorialController {
                                                                                           }
                                                                                           if (QuickChatPhraseRepository.a(27875)) {
                                                                                             var6 = param0 ? 1 : 0;
-                                                                                            CipherPacketBuffer.a(var6 != 0, 15, 1, ChatInputDispatchSupport.field_a);
+                                                                                            CipherPacketBuffer.changeSharedUiStage(var6 != 0, 15, 1, ChatInputDispatchSupport.field_a);
                                                                                             if (var9 == 0) {
                                                                                               return;
                                                                                             }
@@ -1656,7 +1656,7 @@ final class TutorialController {
                                                                                           SetCoatConsoleCommand.field_F = -1;
                                                                                           this.rebuildUnitDescriptionSprite((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
-                                                                                          CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
+                                                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, 12, 1, 0);
                                                                                           if (var9 == 0) {
                                                                                             return;
                                                                                           }
@@ -1666,7 +1666,7 @@ final class TutorialController {
                                                                                         }
                                                                                         if (!DamageEvent.isGuestSession(param1 + 89)) {
                                                                                           var6 = param0 ? 1 : 0;
-                                                                                          CipherPacketBuffer.a(var6 != 0, 13, 1, ChatInputDispatchSupport.field_a);
+                                                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, 13, 1, ChatInputDispatchSupport.field_a);
                                                                                           if (var9 == 0) {
                                                                                             return;
                                                                                           }
@@ -1680,7 +1680,7 @@ final class TutorialController {
                                                                                         return;
                                                                                       }
                                                                                       var6 = param0 ? 1 : 0;
-                                                                                      CipherPacketBuffer.a(var6 != 0, 20, 1, 0);
+                                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 20, 1, 0);
                                                                                       if (var9 == 0) {
                                                                                         return;
                                                                                       }
@@ -1696,7 +1696,7 @@ final class TutorialController {
                                                                                       BattleUnitRenderer.field_a = null;
                                                                                     }
                                                                                     var6 = param0 ? 1 : 0;
-                                                                                    CipherPacketBuffer.a(var6 != 0, 13, param1 + 1, ChatInputDispatchSupport.field_a);
+                                                                                    CipherPacketBuffer.changeSharedUiStage(var6 != 0, 13, param1 + 1, ChatInputDispatchSupport.field_a);
                                                                                     if (var9 == 0) {
                                                                                       return;
                                                                                     }
@@ -1716,7 +1716,7 @@ final class TutorialController {
                                                                                   }
                                                                                   var6 = DualNodeDeque.field_c;
                                                                                   var7 = param0 ? 1 : 0;
-                                                                                  CipherPacketBuffer.a(var7 != 0, var6, 1, ChatInputDispatchSupport.field_a);
+                                                                                  CipherPacketBuffer.changeSharedUiStage(var7 != 0, var6, 1, ChatInputDispatchSupport.field_a);
                                                                                   if (var9 == 0) {
                                                                                     return;
                                                                                   }
@@ -1725,7 +1725,7 @@ final class TutorialController {
                                                                                   return;
                                                                                 }
                                                                                 var6 = param0 ? 1 : 0;
-                                                                                CipherPacketBuffer.a(var6 != 0, 6, 1, ChatInputDispatchSupport.field_a);
+                                                                                CipherPacketBuffer.changeSharedUiStage(var6 != 0, 6, 1, ChatInputDispatchSupport.field_a);
                                                                                 if (var9 == 0) {
                                                                                   return;
                                                                                 }
@@ -1734,7 +1734,7 @@ final class TutorialController {
                                                                                 return;
                                                                               }
                                                                               var6 = param0 ? 1 : 0;
-                                                                              CipherPacketBuffer.a(var6 != 0, 14, 1, ChatInputDispatchSupport.field_a);
+                                                                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, 14, 1, ChatInputDispatchSupport.field_a);
                                                                               if (var9 == 0) {
                                                                                 return;
                                                                               }
@@ -1778,7 +1778,7 @@ final class TutorialController {
                                                                         return;
                                                                       }
                                                                       var6 = param0 ? 1 : 0;
-                                                                      CipherPacketBuffer.a(var6 != 0, 0, param1 ^ 1, ChatInputDispatchSupport.field_a);
+                                                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 0, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                                       if (var9 == 0) {
                                                                         return;
                                                                       }
@@ -1908,7 +1908,7 @@ final class TutorialController {
                                                             }
                                                             FullscreenFocusCanvas.gameplayController.requestResign((byte) 69);
                                                             var6 = param0 ? 1 : 0;
-                                                            CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
+                                                            CipherPacketBuffer.changeSharedUiStage(var6 != 0, -1, param1 ^ 1, 0);
                                                             if (var9 == 0) {
                                                               return;
                                                             }
@@ -1918,7 +1918,7 @@ final class TutorialController {
                                                           }
                                                           FullscreenFocusCanvas.gameplayController.requestRematch(122);
                                                           var6 = param0 ? 1 : 0;
-                                                          CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
+                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, -1, param1 ^ 1, 0);
                                                           if (var9 == 0) {
                                                             return;
                                                           }
@@ -1928,7 +1928,7 @@ final class TutorialController {
                                                         }
                                                         FullscreenFocusCanvas.gameplayController.requestReturnToLobby((byte) 108);
                                                         var6 = param0 ? 1 : 0;
-                                                        CipherPacketBuffer.a(var6 != 0, -1, 1, 0);
+                                                        CipherPacketBuffer.changeSharedUiStage(var6 != 0, -1, 1, 0);
                                                         if (var9 == 0) {
                                                           return;
                                                         }
@@ -1940,12 +1940,12 @@ final class TutorialController {
                                                         boolean decompiledSharedTail0 = !(!FullscreenFocusCanvas.gameplayController.battlefield.field_X);
                                                         if (!decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
-                                                          CipherPacketBuffer.a(var6 != 0, 19, param1 ^ 1, ChatInputDispatchSupport.field_a);
+                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, 19, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                           decompiledSharedTail0 = (var9 != 0);
                                                         }
                                                         if (decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
-                                                          CipherPacketBuffer.a(var6 != 0, -5, param1 ^ 1, ChatInputDispatchSupport.field_a);
+                                                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, -5, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                         }
                                                       }
                                                       if (!ModalDialogHost.field_H) {
@@ -1961,7 +1961,7 @@ final class TutorialController {
                                                       return;
                                                     }
                                                     var6 = param0 ? 1 : 0;
-                                                    CipherPacketBuffer.a(var6 != 0, 25, 1, ChatInputDispatchSupport.field_a);
+                                                    CipherPacketBuffer.changeSharedUiStage(var6 != 0, 25, 1, ChatInputDispatchSupport.field_a);
                                                     if (var9 == 0) {
                                                       return;
                                                     }
@@ -2045,7 +2045,7 @@ final class TutorialController {
                                           return;
                                         }
                                         var6 = param0 ? 1 : 0;
-                                        CipherPacketBuffer.a(var6 != 0, 23, 1, ChatInputDispatchSupport.field_a);
+                                        CipherPacketBuffer.changeSharedUiStage(var6 != 0, 23, 1, ChatInputDispatchSupport.field_a);
                                         if (var9 == 0) {
                                           return;
                                         }
@@ -2054,7 +2054,7 @@ final class TutorialController {
                                         return;
                                       }
                                       var6 = param0 ? 1 : 0;
-                                      CipherPacketBuffer.a(var6 != 0, 26, 1, ChatInputDispatchSupport.field_a);
+                                      CipherPacketBuffer.changeSharedUiStage(var6 != 0, 26, 1, ChatInputDispatchSupport.field_a);
                                       if (var9 == 0) {
                                         return;
                                       }
@@ -2063,7 +2063,7 @@ final class TutorialController {
                                       return;
                                     }
                                     var6 = param0 ? 1 : 0;
-                                    CipherPacketBuffer.a(var6 != 0, 27, 1, ChatInputDispatchSupport.field_a);
+                                    CipherPacketBuffer.changeSharedUiStage(var6 != 0, 27, 1, ChatInputDispatchSupport.field_a);
                                     if (var9 == 0) {
                                       return;
                                     }
@@ -2072,7 +2072,7 @@ final class TutorialController {
                                     return;
                                   }
                                   var6 = param0 ? 1 : 0;
-                                  CipherPacketBuffer.a(var6 != 0, 28, 1, ChatInputDispatchSupport.field_a);
+                                  CipherPacketBuffer.changeSharedUiStage(var6 != 0, 28, 1, ChatInputDispatchSupport.field_a);
                                   if (var9 == 0) {
                                     return;
                                   }
@@ -2089,7 +2089,7 @@ final class TutorialController {
                                 return;
                               }
                               var6 = param0 ? 1 : 0;
-                              CipherPacketBuffer.a(var6 != 0, -8, 1, 0);
+                              CipherPacketBuffer.changeSharedUiStage(var6 != 0, -8, 1, 0);
                               if (var9 == 0) {
                                 return;
                               }
@@ -2099,7 +2099,7 @@ final class TutorialController {
                             }
                             IntrusiveNode.field_h = true;
                             var6 = param0 ? 1 : 0;
-                            CipherPacketBuffer.a(var6 != 0, -3, 1, 0);
+                            CipherPacketBuffer.changeSharedUiStage(var6 != 0, -3, 1, 0);
                             if (var9 == 0) {
                               return;
                             }
@@ -2108,7 +2108,7 @@ final class TutorialController {
                             return;
                           }
                           var6 = param0 ? 1 : 0;
-                          CipherPacketBuffer.a(var6 != 0, -3, 1, 0);
+                          CipherPacketBuffer.changeSharedUiStage(var6 != 0, -3, 1, 0);
                           if (var9 == 0) {
                             return;
                           }
@@ -2220,7 +2220,7 @@ final class TutorialController {
                 }
                 ReportAbuseDialog.initializeTutorialUnitViewer(14737632);
                 var6 = param0 ? 1 : 0;
-                CipherPacketBuffer.a(var6 != 0, -6, 1, ChatInputDispatchSupport.field_a);
+                CipherPacketBuffer.changeSharedUiStage(var6 != 0, -6, 1, ChatInputDispatchSupport.field_a);
                 if (var9 == 0) {
                   return;
                 }
@@ -2230,7 +2230,7 @@ final class TutorialController {
               }
               NameSuggestionList.a(-28541);
               var6 = param0 ? 1 : 0;
-              CipherPacketBuffer.a(var6 != 0, -7, 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(var6 != 0, -7, 1, ChatInputDispatchSupport.field_a);
               if (var9 == 0) {
                 return;
               }
@@ -2240,7 +2240,7 @@ final class TutorialController {
             }
             this.rebuildSpellDescriptionSprite((byte) 93, RasterViewportResizeHandler.field_d, TextLineLayout.currentSpellMenu);
             var6Lifetime2 = param0 ? 1 : 0;
-            CipherPacketBuffer.a(var6Lifetime2 != 0, 18, 1, 0);
+            CipherPacketBuffer.changeSharedUiStage(var6Lifetime2 != 0, 18, 1, 0);
             if (var9 == 0) {
               return;
             }
@@ -4587,7 +4587,7 @@ final class TutorialController {
           }
           if (this.tutorialStage == 15) {
             stackIn_10_0 = CampaignLookupSupport.field_a;
-            stackIn_11_1 = !(GlobalSpell.a(false));
+            stackIn_11_1 = !(GlobalSpell.markReconnectExpected(false));
             var2_int = ((MembershipExpansionScreen) (Object) stackIn_10_0).advanceFrame(stackIn_11_1, -121);
             if (var2_int == 3) {
               if (null != FixedQuaternion.fullscreenCanvas) {
@@ -4596,10 +4596,10 @@ final class TutorialController {
               QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.d((byte) 65));
             }
             if (var2_int == 1) {
-              CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(false, 0, 1, ChatInputDispatchSupport.field_a);
             }
             if (var2_int == 2) {
-              CipherPacketBuffer.a(true, 0, 1, ChatInputDispatchSupport.field_a);
+              CipherPacketBuffer.changeSharedUiStage(true, 0, 1, ChatInputDispatchSupport.field_a);
             }
             return;
           }
@@ -4629,12 +4629,12 @@ final class TutorialController {
                     this.tutorialStage != 3 &&
                     this.tutorialStage != 4);
                   if (!decompiledSharedTail0) {
-                    CipherPacketBuffer.a(false, -1, 1, 0);
+                    CipherPacketBuffer.changeSharedUiStage(false, -1, 1, 0);
                     decompiledSharedTail0 = (var4 != 0);
                   }
                   if ((decompiledSharedTail0) && (ChatInputDispatchSupport.field_a != 10 &&
                     22 != ChatInputDispatchSupport.field_a)) {
-                    CipherPacketBuffer.a(false, DualNodeDeque.field_c, 1, DualNodeDeque.field_c);
+                    CipherPacketBuffer.changeSharedUiStage(false, DualNodeDeque.field_c, 1, DualNodeDeque.field_c);
                   }
                 }
                 if (PowerOfTwoSupport.keyCode == 11 &&
@@ -4912,7 +4912,7 @@ final class TutorialController {
             0 <= FullscreenFocusCanvas.gameplayController.controlledPlayerId &&
             FullscreenFocusCanvas.gameplayController.battlefield != null &&
             FullscreenFocusCanvas.gameplayController.battlefield.field_X) {
-            CipherPacketBuffer.a(false, 3, 1, 0);
+            CipherPacketBuffer.changeSharedUiStage(false, 3, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
