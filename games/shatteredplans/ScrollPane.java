@@ -334,7 +334,7 @@ final class ScrollPane extends AnimatedPanel {
           BufferedCacheFile.b(-128);
           if (SolVictoryChecker.field_m != 0) {
             if (1 == SolVictoryChecker.field_m) {
-              MapView.a((byte) 119);
+              MapView.tickIntroGlowScene((byte) 119);
             } else {
               if (2 != SolVictoryChecker.field_m) {
                 if (SolVictoryChecker.field_m == 3) {

@@ -41,9 +41,9 @@ final class MapView extends MapViewState {
           return;
         }
         try {
-          this.b(param0, true);
-          this.e(param0, -29952);
-          this.b(param0, -29496);
+          this.drawStarResources(param0, true);
+          this.drawProjectGlows(param0, -29952);
+          this.drawStarHud(param0, -29496);
           if (this.field_I < 1024.0f) {
             this.drawProjectIcons(param0, 10);
           }
@@ -52,7 +52,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void f(int param0) {
+    private final void drawStarsAndOrders(int param0) {
         Star[] var2;
         int var2_int;
         int var3;
@@ -113,7 +113,7 @@ final class MapView extends MapViewState {
               var19.field_q <= 480 &&
               var19.field_o >= 0 &&
               var19.field_i >= 0) {
-              this.b(0, var18);
+              this.drawStarBackdrop(0, var18);
               this.a(-91, var18);
               if (this.field_I < 330.0f &&
                 var18.field_u) {
@@ -127,7 +127,7 @@ final class MapView extends MapViewState {
               var20 = var2Lifetime1[var3Lifetime1];
               var24 = var20;
               var24 = var20;
-              this.a(false, var20, param0 ^ -29268);
+              this.drawIncomingFleetOrders(false, var20, param0 ^ -29268);
             }
           }
           var21 = this.field_O.field_e;
@@ -152,11 +152,11 @@ final class MapView extends MapViewState {
             var2Lifetime3 = this.field_O.field_e;
             for (var3Lifetime3 = 0; var2Lifetime3.length > var3Lifetime3; var3Lifetime3++) {
               var24 = var2Lifetime3[var3Lifetime3];
-              this.a(true, var24, 127);
+              this.drawIncomingFleetOrders(true, var24, 127);
             }
           }
-          this.h(param0 - 29253);
-          this.i(param0 ^ 29261);
+          this.drawStarLinks(param0 - 29253);
+          this.drawSelectedFleetControls(param0 ^ 29261);
         } else {
           var2_int = 0;
           var9 = this.field_O.field_e;
@@ -182,13 +182,13 @@ final class MapView extends MapViewState {
               480 >= var12.field_q &&
               var12.field_o >= 0 &&
               var12.field_i >= 0) {
-              this.a(param0 ^ 24563, var11Lifetime1, var2_int);
+              this.drawDistantStar(param0 ^ 24563, var11Lifetime1, var2_int);
               if (var11Lifetime1.field_u) {
                 this.drawStarSprite(var11Lifetime1, (byte) 99);
               }
             }
           }
-          this.h(-90);
+          this.drawStarLinks(-90);
           var3_ref_ln__Lifetime2 = this.field_O.field_e;
           for (var4Lifetime2 = 0; var4Lifetime2 < var3_ref_ln__Lifetime2.length; var4Lifetime2++) {
             var13 = var3_ref_ln__Lifetime2[var4Lifetime2];
@@ -216,10 +216,10 @@ final class MapView extends MapViewState {
               var16.field_q <= 480 &&
               0 <= var16.field_o &&
               var16.field_i >= 0) {
-              this.a(false, var15Lifetime3, -128);
+              this.drawIncomingFleetOrders(false, var15Lifetime3, -128);
             }
           }
-          this.i(92);
+          this.drawSelectedFleetControls(92);
         }
     }
 
@@ -348,7 +348,7 @@ final class MapView extends MapViewState {
               var24 = (double)(var17 - var15) / var20;
               var18 = var16 - (int)(var22 * (this.field_Jb * 150.0));
               var19 = -(int)(this.field_Jb * 150.0 * var24) + var17;
-              var26 = this.a(var18, var34, var35, var15, var24, (byte) -55, var19, var14, var22);
+              var26 = this.reserveIncomingFleetAnchor(var18, var34, var35, var15, var24, (byte) -55, var19, var14, var22);
               var19Lifetime1 = var9[2 * var26 + 1];
               var18Lifetime1 = var9[var26 * 2];
               if ((this.field_I < 700.0f &&
@@ -405,7 +405,7 @@ final class MapView extends MapViewState {
         field_sb = null;
     }
 
-    private final void i(int param0) {
+    private final void drawSelectedFleetControls(int param0) {
         int var9_int = 0;
         int var2;
         int var3;
@@ -453,7 +453,7 @@ final class MapView extends MapViewState {
         var24 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 92) {
           var25 = (Star) null;
-          this.b((Star) null, -92);
+          this.drawStarHud((Star) null, -92);
         }
         if (this.field_rb == null) {
           return;
@@ -518,7 +518,7 @@ final class MapView extends MapViewState {
                 var5 = var15 - (int)(var19_double * (150.0 * this.field_Jb));
                 var21 = (double)(var16 - var14) / var17_double;
                 var6 = var16 - (int)(this.field_Jb * 150.0 * var21);
-                var23 = this.a(var5, var28, var29, var14, var21, (byte) -52, var6, var13_int, var19_double);
+                var23 = this.reserveIncomingFleetAnchor(var5, var28, var29, var14, var21, (byte) -52, var6, var13_int, var19_double);
                 var5 = var8_ref_int__[var23 * 2];
                 var6 = var8_ref_int__[var23 * 2 + 1];
                 if (var3_ref_mgLifetime1 == this.field_rb) {
@@ -703,7 +703,7 @@ final class MapView extends MapViewState {
             var3.field_i.setVolume((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
             var3 = (BattleExplosionVisual) (this.field_Y.nextForward((byte) -71));
           }
-          this.a(-3, param0);
+          this.tickReplay(-3, param0);
           this.field_o.tick((byte) -26);
           if (param1 <= 43) {
             return;
@@ -727,7 +727,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void pollQuickChatMenu(int param0, boolean param1, boolean param2, int param3) {
         int var4;
         int var5;
         if (!QuickChatCategoryDefinition.field_t) {
@@ -868,7 +868,7 @@ final class MapView extends MapViewState {
             var19 = var19 / var12.length;
             var23 = (int)((double)this.field_J[var6.field_p] + 0.5 * (double)var18Lifetime1);
             for (var24 = 0; var14.length > var24; var24++) {
-              this.a(var14[var24], var23, var19, var18Lifetime1, 121, var20 + var24 * var19, var4);
+              this.drawBattleFleetBar(var14[var24], var23, var19, var18Lifetime1, 121, var20 + var24 * var19, var4);
             }
             if (this.field_I < 700.0f) {
               var28 = 0;
@@ -1004,7 +1004,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(boolean param0, Star param1, int param2) {
+    private final void drawIncomingFleetOrders(boolean param0, Star param1, int param2) {
         RuntimeException stackIn_87_0 = null;
         StringBuilder stackIn_87_1 = null;
         String stackIn_88_2 = null;
@@ -1165,7 +1165,7 @@ final class MapView extends MapViewState {
               var20 = -(int)(150.0 * this.field_Jb * var24) + var16Lifetime1;
               var26 = (double)(-var15Lifetime1 + var17Lifetime1) / var22;
               var21 = var17Lifetime1 - (int)(var26 * (150.0 * this.field_Jb));
-              var28 = this.a(var20, var36, var37, var15Lifetime1, var26, (byte) -28, var21, var14Lifetime1, var24);
+              var28 = this.reserveIncomingFleetAnchor(var20, var36, var37, var15Lifetime1, var26, (byte) -28, var21, var14Lifetime1, var24);
               var20Lifetime1 = var9[2 * var28];
               var21Lifetime1 = var9[2 * var28 + 1];
               var22Lifetime1 = Math.sqrt((double)((var20Lifetime1 - var14Lifetime1) * (-var14Lifetime1 + var20Lifetime1) + (var21Lifetime1 - var15Lifetime1) * (-var15Lifetime1 + var21Lifetime1)));
@@ -1291,7 +1291,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(int param0, Star param1, int param2) {
+    private final void drawDistantStar(int param0, Star param1, int param2) {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -1314,9 +1314,9 @@ final class MapView extends MapViewState {
           var5 = SolVictoryChecker.blendColours(var5, 0, -80, -(this.field_eb[param1.field_p] * 160 / param2) + 160);
           SocketArchiveNetworkClient.a(var5, 18117, this.field_D[param1.field_p], 160);
           if (this.field_T == -1) {
-            this.a(param1, false);
+            this.drawStarTerritory(param1, false);
           }
-          this.e(param1, -29952);
+          this.drawProjectGlows(param1, -29952);
           if (param1.field_B >= 6) {
             this.a(-86, param1);
             var6 = IconTextPanel.field_Cb.stringWidth(Integer.toString(this.field_eb[param1.field_p])) + 1;
@@ -1403,7 +1403,7 @@ final class MapView extends MapViewState {
             return;
           }
           if (!param3) {
-            this.a(75, 11, (byte) -71);
+            this.drawAbandonmentEffects(75, 11, (byte) -71);
           }
           var5 = (FleetVisual) (param0.startForward(0));
           while (var5 != null) {
@@ -1562,7 +1562,7 @@ final class MapView extends MapViewState {
         OpacityWidget.popLegacyRasterState(0);
     }
 
-    private final void a(boolean param0, Star param1) {
+    private final void drawStarGlow(boolean param0, Star param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -1612,18 +1612,18 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void b(int param0, Star param1) {
+    private final void drawStarBackdrop(int param0, Star param1) {
         try {
           if (~this.field_T == param0) {
-            this.a(param1, false);
+            this.drawStarTerritory(param1, false);
           }
-          this.a(false, param1);
+          this.drawStarGlow(false, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, int[] param1, boolean[] param2, int param3, double param4, byte param5, int param6, int param7, double param8) {
+    private final int reserveIncomingFleetAnchor(int param0, int[] param1, boolean[] param2, int param3, double param4, byte param5, int param6, int param7, double param8) {
         int stackIn_37_0 = 0;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
@@ -1744,7 +1744,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void b(Star param0, boolean param1) {
+    private final void drawStarResources(Star param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         double var5_double = 0.0;
@@ -1929,7 +1929,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void drawAbandonmentEffects(int param0, int param1, byte param2) {
         Star[] var4;
         int var5;
         int var6;
@@ -2023,7 +2023,7 @@ final class MapView extends MapViewState {
         this.drawFleetVisuals(this.field_hb, true, true, true);
     }
 
-    private final void a(Star param0, boolean param1) {
+    private final void drawStarTerritory(Star param0, boolean param1) {
         int stackIn_21_0 = 0;
         boolean stackIn_26_0 = false;
         RuntimeException stackIn_47_0 = null;
@@ -2078,7 +2078,7 @@ final class MapView extends MapViewState {
           var5 = stackIn_21_0;
           if (param1) {
             var9 = (DualLinkDeque) null;
-            MapView.a((byte) 73, (DualLinkDeque) null);
+            MapView.createDualLinkDequeSequence((byte) 73, (DualLinkDeque) null);
           }
           stackIn_26_0 = !param1;
           var11 = SpriteStripButtonPainter.a(stackIn_26_0, this.field_Qb[param0.field_p]);
@@ -2129,7 +2129,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void b(Star param0, int param1) {
+    private final void drawStarHud(Star param0, int param1) {
         int var3_int = 0;
         Player var4 = null;
         int var5 = 0;
@@ -2149,7 +2149,7 @@ final class MapView extends MapViewState {
           }
           var5 = stackIn_3_0;
           if (param1 != -29496) {
-            this.b(88, 27, -65);
+            this.drawOwnershipChanges(88, 27, -65);
           }
           if (!(this.field_I < 330.0f)) {
             if (!(this.field_I < 1024.0f)) {
@@ -2208,7 +2208,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void drawFleetTrails(byte param0, IntrusiveDeque param1) {
+    private final void updateFleetTrailPoints(byte param0, IntrusiveDeque param1) {
         int var4 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -2267,7 +2267,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(int param0, IntrusiveDeque param1) {
+    private final void tickReplay(int param0, IntrusiveDeque param1) {
         int fieldTemp$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_11_0 = 0;
@@ -2344,7 +2344,7 @@ final class MapView extends MapViewState {
                 var4 = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
               if (this.field_t < 200) {
-                this.drawFleetTrails((byte) -116, this.field_v);
+                this.updateFleetTrailPoints((byte) -116, this.field_v);
               }
               var5Lifetime1 = 200;
               this.field_t = this.field_t + var3_int;
@@ -2357,7 +2357,7 @@ final class MapView extends MapViewState {
               if (this.field_T != 2) {
                 if (this.field_T == 3) {
                   if (this.field_t < 200) {
-                    this.drawFleetTrails((byte) -110, this.field_hb);
+                    this.updateFleetTrailPoints((byte) -110, this.field_hb);
                   }
                   this.field_t = this.field_t + var3_int;
                   if (this.field_t >= 200) {
@@ -2375,7 +2375,7 @@ final class MapView extends MapViewState {
             }
           } else {
             if (this.field_t < 200) {
-              this.drawFleetTrails((byte) -117, this.field_c);
+              this.updateFleetTrailPoints((byte) -117, this.field_c);
             }
             if (this.field_W == 0) {
               stackIn_11_0 = 0;
@@ -2393,7 +2393,7 @@ final class MapView extends MapViewState {
           }
           if (param0 != -3) {
             var11 = (Star) null;
-            this.a((Star) null, false);
+            this.drawStarTerritory((Star) null, false);
           }
           var4_ref = (FleetTrailPoint) (this.field_V.startForward(0));
           while (var4_ref != null) {
@@ -2419,7 +2419,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(Player param0, int param1, int param2, int param3, int param4, int param5, BattleSnapshot param6) {
+    private final void drawBattleFleetBar(Player param0, int param1, int param2, int param3, int param4, int param5, BattleSnapshot param6) {
         int stackIn_3_0 = 0;
         int[] stackIn_10_0 = null;
         int stackIn_11_1 = 0;
@@ -2663,8 +2663,8 @@ final class MapView extends MapViewState {
           if (param3 != 12114) {
             this.field_Bb = true;
           }
-          this.f(29201);
-          this.d(true);
+          this.drawStarsAndOrders(29201);
+          this.drawReplayEffects(true);
           if (param2) {
             var7_int = 510 & RasterStateFrame.field_n << 3;
             if (var7_int >= 256) {
@@ -2769,7 +2769,7 @@ final class MapView extends MapViewState {
           }
         }
         if (param2 < 99) {
-          MapView.a(43, true, true, 77);
+          MapView.pollQuickChatMenu(43, true, true, 77);
         }
         if (null != this.field_p) {
           var4 = this.findFleetNear(this.field_p, param1, param0, -1);
@@ -2880,7 +2880,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawRetreatFleets(int param0, int param1, int param2) {
         FleetMove discarded$0 = null;
         if (param2 != 150) {
           discarded$0 = this.findFleetAt(112, 127, (byte) 21);
@@ -2889,7 +2889,7 @@ final class MapView extends MapViewState {
         this.drawFleetVisuals(this.field_v, true, true, true);
     }
 
-    private final void d(boolean param0) {
+    private final void drawReplayEffects(boolean param0) {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
         int var2;
@@ -2908,7 +2908,7 @@ final class MapView extends MapViewState {
         int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
-          this.b((byte) 104);
+          this.selectHoveredFleet((byte) 104);
         }
         var2 = this.field_o.getAreaHeight((byte) 14) >> 1;
         var5 = (BattleExplosionVisual) (this.field_Y.startForward(0));
@@ -2950,20 +2950,20 @@ final class MapView extends MapViewState {
         } else {
           if (this.field_T != 1) {
             if (this.field_T == 2) {
-              this.b(320, var2, 123);
+              this.drawOwnershipChanges(320, var2, 123);
             } else {
               if (this.field_T == 3) {
-                this.a(320, var2, (byte) -93);
+                this.drawAbandonmentEffects(320, var2, (byte) -93);
               }
             }
           } else {
-            this.a(var2, 320, 150);
+            this.drawRetreatFleets(var2, 320, 150);
             this.drawBattleSummaries((byte) 82, var2, 320);
           }
         }
     }
 
-    final void b(byte param0) {
+    final void selectHoveredFleet(byte param0) {
         int var2 = 83 % ((param0 - 16) / 58);
         this.field_tb[0] = this.field_nb[0];
         this.field_tb[1] = this.field_nb[1];
@@ -2974,7 +2974,7 @@ final class MapView extends MapViewState {
         this.field_ub[0] = this.field_nb[0];
     }
 
-    private final void h(int param0) {
+    private final void drawStarLinks(int param0) {
         int var7 = 0;
         int var10 = 0;
         Star stackIn_18_0 = null;
@@ -3154,7 +3154,7 @@ final class MapView extends MapViewState {
         this.field_p = this.findStarAt(param2, false, param3);
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void drawOwnershipChanges(int param0, int param1, int param2) {
         Star[] var4;
         int var5;
         int var7;
@@ -3273,7 +3273,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final static void a(byte param0) {
+    final static void tickIntroGlowScene(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         IntroGlowPoint[] var1 = null;
@@ -3350,7 +3350,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    private final void e(Star param0, int param1) {
+    private final void drawProjectGlows(Star param0, int param1) {
         Star stackIn_22_0 = null;
         Star stackIn_22_1 = null;
         Star stackIn_29_0 = null;
@@ -3461,7 +3461,7 @@ final class MapView extends MapViewState {
             var7Lifetime2 = 24;
           }
           if (param1 != -29952) {
-            this.b(109, 84, 125);
+            this.drawOwnershipChanges(109, 84, 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3599,7 +3599,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final static NodeSequence a(byte param0, DualLinkDeque param1) {
+    final static NodeSequence createDualLinkDequeSequence(byte param0, DualLinkDeque param1) {
         RuntimeException var2 = null;
         NodeSequence stackIn_2_0 = null;
         DualLinkDequeSequence stackIn_4_0 = null;

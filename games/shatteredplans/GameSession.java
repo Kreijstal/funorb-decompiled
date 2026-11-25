@@ -1581,7 +1581,7 @@ final class GameSession implements AiHost {
           var2.position = var2.position + 2;
           var3 = var2.position;
           var2.writeByte(this.field_P.field_O, (byte) -109);
-          AchievementProgress.a(MapView.a((byte) 81, this.field_o), -256, MapView.a((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
+          AchievementProgress.a(MapView.createDualLinkDequeSequence((byte) 81, this.field_o), -256, MapView.createDualLinkDequeSequence((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
           this.field_v.clear((byte) 112);
@@ -1731,7 +1731,7 @@ final class GameSession implements AiHost {
           if (decompiledFrameRemainder1) {
             if (AllianceExpiredEvent.field_n == 1 &&
               param1 != this.field_z.field_rb) {
-              this.field_z.b((byte) -127);
+              this.field_z.selectHoveredFleet((byte) -127);
             }
             boolean decompiledFrameRemainder0 = true;
             if (AllianceExpiredEvent.field_n != 1 ||
@@ -1760,7 +1760,7 @@ final class GameSession implements AiHost {
                   this.field_z.field_nb[1] = -1;
                   this.field_z.field_nb[0] = -1;
                   this.field_z.field_S = null;
-                  this.field_z.b((byte) -51);
+                  this.field_z.selectHoveredFleet((byte) -51);
                 }
                 decompiledFrameRemainder0 = (var7 != 0);
               }
@@ -1772,7 +1772,7 @@ final class GameSession implements AiHost {
                 this.field_z.field_nb[1] = -1;
                 this.field_z.field_S = null;
                 this.field_z.field_nb[0] = -1;
-                this.field_z.b((byte) -74);
+                this.field_z.selectHoveredFleet((byte) -74);
                 decompiledFrameRemainder0 = (var7 != 0);
               }
             }

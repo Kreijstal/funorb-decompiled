@@ -52,7 +52,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
         QuickChatHelpPanelSupport.pollQuickChatHelpPanel(param0, (byte) -26);
-        MapView.a(param3, param0, param2, param1);
+        MapView.pollQuickChatMenu(param3, param0, param2, param1);
     }
 
     public final void drawCaret(int param0, int param1, int param2, int param3, UiWidget param4) {
