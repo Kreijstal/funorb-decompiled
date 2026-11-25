@@ -139,7 +139,7 @@ final class StarLinkPlanner {
               }
             }
             StatusContent.removeEmptyCandidateLinks(var6, -24925);
-            ValidationIndicator.a(var6, true);
+            ValidationIndicator.orderCandidateBorderLinks(var6, true);
             var15 = new ObjectList();
             var16_ref = (CandidateLink) (var6.startForward(param1 ^ 1));
             while (var16_ref != null) {

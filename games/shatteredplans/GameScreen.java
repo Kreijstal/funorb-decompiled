@@ -5077,7 +5077,7 @@ final class GameScreen {
           this.field_J = FleetMove.createDiplomacyWindow(28, this.field_s.field_P.field_r);
           this.buildDiplomacyPanel(6);
           this.field_y.addLast((byte) -113, this.field_J);
-          this.field_cb = DisplayModeInfo.a(this.field_s.field_P.field_r, -1);
+          this.field_cb = DisplayModeInfo.createFleetInfoWindow(this.field_s.field_P.field_r, -1);
           this.field_y.addLast((byte) -113, this.field_cb);
           var2_int = this.field_s.field_P.field_x.resultsPanelHeight(false);
           if (var2_int > 0) {

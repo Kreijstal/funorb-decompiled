@@ -344,7 +344,7 @@ final class ScrollPane extends AnimatedPanel {
                     ByteArrayReadRequest.advanceClosingIntroText(0);
                   } else {
                     if (SolVictoryChecker.field_m == 5) {
-                      DisplayModeInfo.a((byte) -72);
+                      DisplayModeInfo.advanceIntroFinalScene((byte) -72);
                     }
                   }
                 }

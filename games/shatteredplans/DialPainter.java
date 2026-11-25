@@ -19,14 +19,14 @@ final class DialPainter implements WidgetPainter {
     private int field_b;
     static String field_a;
 
-    final static boolean c(int param0) {
+    final static boolean isAccountChoiceMenuOpen(int param0) {
         if (param0 != 0) {
           return true;
         }
         return TurnEventLog.field_b;
     }
 
-    final static void a(byte param0, String param1, long param2) {
+    final static void openPrivateQuickChat(byte param0, String param1, long param2) {
         CharSequence var5 = null;
         try {
           LoginRequestSupport.field_a = param1;
@@ -43,7 +43,7 @@ final class DialPainter implements WidgetPainter {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isForcedLoginMode(int param0) {
         if (param0 != 1) {
           DialPainter.addRectangleBrightness(-46, -90, 61, -9, 124, 49);
         }
@@ -148,7 +148,7 @@ final class DialPainter implements WidgetPainter {
             SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_m);
           }
           if (param4 != 12) {
-            DialPainter.a(-18);
+            DialPainter.isForcedLoginMode(-18);
           }
           SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_H * 2.0 / (double)var14.field_F;

@@ -16,7 +16,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static void a(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
+    final static void drawAwtLoadingProgress(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -104,7 +104,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void darkenPixelsByMask(int[] param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$1 = 0;
@@ -187,7 +187,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void sendPixelsToConsumer(int param0) {
         if (this.field_o == null) {
           return;
         }
@@ -206,11 +206,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.field_c = new int[param0 * param3 + 1];
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_b = param1.createImage((java.awt.image.ImageProducer) (this));
-          this.b(88);
+          this.sendPixelsToConsumer(88);
           param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.b(111);
+          this.sendPixelsToConsumer(111);
           param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.b(49);
+          this.sendPixelsToConsumer(49);
           param1.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
           this.bindAsRenderTarget((byte) 109);
           if (param2 > -91) {
@@ -244,7 +244,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (param0 != -134) {
             var3 = (java.awt.Color) null;
-            ImageProducerRasterBuffer.a((String) null, -93, true, -3, (java.awt.Color) null);
+            ImageProducerRasterBuffer.drawAwtLoadingProgress((String) null, -93, true, -3, (java.awt.Color) null);
           }
           if (param1.equals("I")) {
             stackIn_9_0 = Integer.TYPE;
@@ -293,7 +293,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public static void clearStatics(int param0) {
         if (param0 != 6) {
           int[] var2 = (int[]) null;
-          ImageProducerRasterBuffer.a((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
+          ImageProducerRasterBuffer.darkenPixelsByMask((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
         }
         field_p = null;
         field_l = null;
@@ -348,7 +348,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final void paint(java.awt.Graphics param0, int param1, byte param2, int param3) {
         try {
-          this.b(101);
+          this.sendPixelsToConsumer(101);
           if (param2 >= -56) {
             ImageProducerRasterBuffer.clearStatics(-40);
           }

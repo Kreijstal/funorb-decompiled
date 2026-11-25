@@ -163,7 +163,7 @@ final class MapStateReader {
           var9 = param2.readUnsignedShort(param6 - 20969);
           var10 = param2.readUnsignedShort(param6 - 20969);
           var11 = param2.readUnsignedShort(-20976);
-          var12 = ValidationIndicator.a(-33, var9);
+          var12 = ValidationIndicator.hexColumnsForMapWidth(-33, var9);
           var13 = SpriteWipeSupport.hexRowsForMapHeight(var10, -109);
           if (param6 != -7) {
             var27 = (Star) null;

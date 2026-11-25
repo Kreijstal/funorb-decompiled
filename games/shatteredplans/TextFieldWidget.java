@@ -135,7 +135,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    private final void j(byte param0) {
+    private final void updateCaretScroll(byte param0) {
         TextLayout var3;
         int var4;
         int var5;
@@ -357,7 +357,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean hasStatusButtonSetting(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -416,7 +416,7 @@ class TextFieldWidget extends FocusableWidget {
         int var6 = 0;
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.j((byte) -59);
+          this.updateCaretScroll((byte) -59);
           if (1 == this.field_o) {
             if (this.field_p instanceof WidgetMetrics) {
               var5 = (WidgetMetrics) ((Object) this.field_p);
@@ -500,7 +500,7 @@ class TextFieldWidget extends FocusableWidget {
         return this.field_s.substring(var2, var3);
     }
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isDecimalInteger(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -551,7 +551,7 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    final static BinaryBitmapFont a(int param0, String param1, Archive param2, Archive param3, String param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFontByName(int param0, String param1, Archive param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

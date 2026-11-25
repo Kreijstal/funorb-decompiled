@@ -145,7 +145,7 @@ final class PlayerContextMenuController {
           FocusableWidget.openPrivateChatInput(-125, this.field_b, this.field_k);
         } else {
           if (param0 == 18) {
-            DialPainter.a((byte) 49, this.field_k, this.field_b);
+            DialPainter.openPrivateQuickChat((byte) 49, this.field_k, this.field_b);
           } else {
             if (param0 == 11) {
               ServerIntArrayRequest.setChatChannelFilter((byte) 49, param2, 0, this.field_l);

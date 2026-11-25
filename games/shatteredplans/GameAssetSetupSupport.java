@@ -275,7 +275,7 @@ final class GameAssetSetupSupport {
           ReflectionQueueSupport.field_f.addOutline(16777215);
           LobbyPlayerEntry.field_Kb.addOutline(16777215);
           LobbyRoomEntry.field_Vb.addOutline(16777215);
-          AccountRequestResult.field_f = ValidationIndicator.a((byte) 111, 80);
+          AccountRequestResult.field_f = ValidationIndicator.createBeakerAnimationFrames((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.createRoundedNineSlice(5592405, (byte) 41, 13882323, 10);
           IntHashIndex.field_b = SpriteResourceSupport.loadSpriteByName(param6 + 10, param2, "basic", "orbcoin");

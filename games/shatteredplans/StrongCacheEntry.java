@@ -302,9 +302,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           DateValidationSupport.field_a = 4;
           UniformNineSliceFactory.field_c = 15;
           TextLayout.field_b = 2;
-          var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
-          ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
-          ContextActionMenu.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
+          var7 = TextFieldWidget.loadBinaryBitmapFontByName(115, "largefont", param4, param2, "lobby");
+          ImageProducerRasterBuffer.field_p = TextFieldWidget.loadBinaryBitmapFontByName(117, "generalfont", param4, param2, "lobby");
+          ContextActionMenu.field_xb = TextFieldWidget.loadBinaryBitmapFontByName(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
           ImageProducerRasterBuffer.field_p.a(var5, var24);
           ContextActionMenu.field_xb.a(var5, var24);

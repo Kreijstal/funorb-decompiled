@@ -13,7 +13,7 @@ final class IsolationistAi extends StandardAi {
         super(param0, param1, param2, 6);
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
+    final static void updateLobbyUi(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
         BattleExplosionVisual.updateLobbyUi(0, param8, 16777215, param9, param2, param6, param11, param5, param0, param4, param10, param1, param7, param3);
     }
 
@@ -116,7 +116,7 @@ final class IsolationistAi extends StandardAi {
           this.field_b[var2] = this.scorePlayer(0, 0, this.field_g.field_v[var2]);
         }
         if (param0 != -18484) {
-          IsolationistAi.a(-92, true, -31, false, 87, 112, -41, 4, true, false, 96, false);
+          IsolationistAi.updateLobbyUi(-92, true, -31, false, 87, 112, -41, 4, true, false, 96, false);
         }
     }
 
@@ -134,7 +134,7 @@ final class IsolationistAi extends StandardAi {
         return new int[]{17, 18};
     }
 
-    final static String a(boolean param0, ChatHistoryEntry param1) {
+    final static String formatChatPrefix(boolean param0, ChatHistoryEntry param1) {
         String stackIn_3_0 = null;
         String stackIn_34_0 = null;
         Object stackIn_37_0 = null;

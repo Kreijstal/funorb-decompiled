@@ -11,14 +11,14 @@ final class ValidationIndicator extends FocusableWidget {
     static String field_D;
     static AnimatedPanel field_I;
 
-    final static int a(int param0, int param1) {
+    final static int hexColumnsForMapWidth(int param0, int param1) {
         if (param0 >= -21) {
           return 83;
         }
         return (param1 - 100) / 200;
     }
 
-    final static void a(IntrusiveDeque param0, boolean param1) throws MapGenerationException {
+    final static void orderCandidateBorderLinks(IntrusiveDeque param0, boolean param1) throws MapGenerationException {
         RuntimeException runtimeException = null;
         CandidateLink var3 = null;
         CandidateLink var4 = null;
@@ -147,7 +147,7 @@ final class ValidationIndicator extends FocusableWidget {
         }
     }
 
-    final static Sprite[] a(byte param0, int param1) {
+    final static Sprite[] createBeakerAnimationFrames(byte param0, int param1) {
         int var5 = 0;
         double var6 = 0.0;
         double var8 = 0.0;

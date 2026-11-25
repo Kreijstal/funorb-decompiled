@@ -10372,6 +10372,30 @@
       "renamedSymbol": "M:HuffmanCodec.decode([B[BIIII)I"
     },
     {
+      "symbol": "M:fn.a(I)[I",
+      "originalName": "a",
+      "to": "listDisplayModes",
+      "evidence": "Enumerate DirectDraw modes twice through unchanged callbackEnumModes:count then fill flattened width,height,bitdepth,refresh-rate array. Complete controller source and task dispatcher excerpt read. Preserve shared static count/buffer,all callback/API names,wrong-int DirectDraw null assignment between passes and partial state on failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MicrosoftDisplayController.listDisplayModes(I)[I"
+    },
+    {
+      "symbol": "M:fn.a(ILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "exitFullscreen",
+      "evidence": "Restore display mode then reset frame cooperative level8only for guard0. Complete controller and task dispatcher read. Preserve native method names,frame identity,guard behavior and restore-before-cooperative ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MicrosoftDisplayController.exitFullscreen(ILjava/awt/Frame;)V"
+    },
+    {
+      "symbol": "M:fn.a(Ljava/awt/Frame;IIIII)V",
+      "originalName": "a",
+      "to": "enterFullscreen",
+      "evidence": "Perform retained frame visibility,Win32 window style,DirectDraw cooperative/display mode,bounds/front/focus sequence. Complete controller and dispatcher read. Preserve emitted null WComponentPeer/getHwnd path without inventing peer lookup,all API/callback names,argument order,full int domains and partial frame/native state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V"
+    },
+    {
       "symbol": "M:fo.a(B)Ll;",
       "originalName": "a",
       "to": "generate",
@@ -10812,6 +10836,30 @@
       "renamedSymbol": "M:ImageProducerRasterBuffer.paint(Ljava/awt/Graphics;IBI)V"
     },
     {
+      "symbol": "M:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V",
+      "originalName": "a",
+      "to": "drawAwtLoadingProgress",
+      "evidence": "Draw original cached AWT loading bar and text with optional background clear/default colour,offscreen image path,direct fallback and outer repaint catch. Complete loading caller read. Preserve Helvetica font,304x34image,unclamped progress,six-pixel text estimate,param3only in offscreen border,graphics lifetime and exact Exception boundaries. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V"
+    },
+    {
+      "symbol": "M:ge.a([II[IIIIIIII)V",
+      "originalName": "a",
+      "to": "darkenPixelsByMask",
+      "evidence": "Multiply destination RGBby low byte of supplied mask for raw mask values other than0and255,using original row/index steps. Complete clipping caller read. Preserve raw-value skip tests before masking,signed/overflow channel arithmetic,intOr/intAnd helpers,aliased arrays,partial index writes and late guard cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ge.b(I)V",
+      "originalName": "b",
+      "to": "sendPixelsToConsumer",
+      "evidence": "Send retained pixel buffer to current ImageConsumer and signal imageComplete2. Complete allocation/paint callers and consumer registration helpers read. Preserve synchronized modifier,repeated live consumer reads,null early return and guard<23startProduction(null)before setPixels;no consumer caching or added disposal. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.sendPixelsToConsumer(I)V"
+    },
+    {
       "symbol": "M:gf.a()V",
       "originalName": "a",
       "to": "resetClip",
@@ -11132,12 +11180,28 @@
       "renamedSymbol": "M:SoundEffectSupport.readClientBytePreference([BB)V"
     },
     {
+      "symbol": "M:gh.a()V",
+      "originalName": "a",
+      "to": "buildPatchUsage",
+      "evidence": "Lazily scan MIDI events in original track/time order and build per-bank/program128note usage masks for positive-velocity note-ons,with channel9initial patch128. Complete preparePatches caller read. Preserve partial early cache publication,bank masks,shared channel arrays,event reader order and no rollback on parse failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicTrack.buildPatchUsage()V"
+    },
+    {
       "symbol": "M:gh.a(Lbc;Ljava/lang/String;Ljava/lang/String;)Lgh;",
       "originalName": "a",
       "to": "load",
       "evidence": "Loads the named music bytes from the archive and wraps them in a MusicTrack.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MusicTrack.load(LArchive;Ljava/lang/String;Ljava/lang/String;)LMusicTrack;"
+    },
+    {
+      "symbol": "M:gh.b()V",
+      "originalName": "b",
+      "to": "clearPatchUsage",
+      "evidence": "Release only retained patch/note usage map after sample preparation succeeds. Complete preparePatches caller read. Preserve MIDI byte data and all other fields. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicTrack.clearPatchUsage()V"
     },
     {
       "symbol": "M:gi.a(I)V",
@@ -11210,6 +11274,30 @@
       "evidence": "Returns the ValidationState for the current input, using the waiting and empty tokens while it is changing.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidationSource.getState(I)LValidationState;"
+    },
+    {
+      "symbol": "M:gl.a(B)V",
+      "originalName": "a",
+      "to": "advanceIntroFinalScene",
+      "evidence": "Increment retained intro frame and request scene-1at postincrement value350. Intro phase5caller and request helper read. Preserve signed overflow,exact equality,repeated frame store and byte>-29static cleanup that follows possible scene request. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayModeInfo.advanceIntroFinalScene(B)V"
+    },
+    {
+      "symbol": "M:gl.a(I)V",
+      "originalName": "a",
+      "to": "clearDisplayModeStatics",
+      "evidence": "Clear three retained static references for int>85;other ints recurse with80before those writes. Disposal caller window read. Preserve recursive nontermination for invalid guards and exact clear order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayModeInfo.clearDisplayModeStatics(I)V"
+    },
+    {
+      "symbol": "M:gl.a(II)Lqh;",
+      "originalName": "a",
+      "to": "createFleetInfoWindow",
+      "evidence": "Allocate/retain Fleet Info window sized by supplied row count,append close button and MenuList,and retain list in window. Constructor caller and actual title initializer read. Preserve default-locale uppercase,int overflow/geometry,guard forwarded into button/child insertion and partial publication/allocation order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;"
     },
     {
       "symbol": "M:gm.a(B)V",
@@ -11380,6 +11468,22 @@
       "renamedSymbol": "M:TextFieldWidget.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+      "originalName": "a",
+      "to": "isDecimalInteger",
+      "evidence": "Delegate to original boolean radix10integer validator with leading-plus enabled. Complete validator and age consumer read. Preserve sign/overflow/empty/null/CharSequence behavior,int-derived helper guard and non0static panel clear before delegation;no parsing result substituted. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z"
+    },
+    {
+      "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
+      "originalName": "a",
+      "to": "loadBinaryBitmapFontByName",
+      "evidence": "Resolve glyph group/file names in first supplied archive then load paired metrics/glyph font via complete loader. Incoming UI setup windows read. Preserve archive argument permutation,lookups before guard>=94test,null on other guards and decoder global cleanup/exception order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;"
+    },
+    {
       "symbol": "M:go.a(ILjava/lang/String;Z)V",
       "originalName": "a",
       "to": "setText",
@@ -11434,6 +11538,22 @@
       "evidence": "Calls the TextFieldListener when the listener is one.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldWidget.notifyTextChanged(I)V"
+    },
+    {
+      "symbol": "M:go.j(B)V",
+      "originalName": "j",
+      "to": "updateCaretScroll",
+      "evidence": "Update retained horizontal caret offset using current text layout,inner width and half-line-height margin,or reset offsets on original branches. Complete hover caller and character-position helper read. Preserve flag/painter early exits,wrong-byte return after layout calculation,all offset arithmetic and clamps/call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.updateCaretScroll(B)V"
+    },
+    {
+      "symbol": "M:go.j(I)Z",
+      "originalName": "j",
+      "to": "hasStatusButtonSetting",
+      "evidence": "For guard0query original host status-button setting helper on applet,otherwise false. Complete helper read. Preserve cached flag,cookie/JavaScript Throwable handling,host parameter fallback and no host access on non0guard. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.hasStatusButtonSetting(I)Z"
     },
     {
       "symbol": "M:go.k(B)V",
@@ -11852,6 +11972,22 @@
       "renamedSymbol": "M:IsolationistAi.scorePlayer(IILPlayer;)I"
     },
     {
+      "symbol": "M:hg.a(IZIZIIIIZZIZ)V",
+      "originalName": "a",
+      "to": "updateLobbyUi",
+      "evidence": "Forward lobby UI state to retained full update helper with fixed0and white colour plus original argument permutation. Complete updateLobby caller and discarded AI guard caller read. Preserve every input bit/int,bool routing and existing helper execution order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V"
+    },
+    {
+      "symbol": "M:hg.a(ZLnf;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "formatChatPrefix",
+      "evidence": "Build retained chat sender/channel prefix including rank images,private direction and lobby/game/named channel tags. Complete incoming window and exact74line body read. Preserve true-flag null before message access,null sender concatenation,system-message branches,local channel globals and placeholder call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:hg.b(I)[I",
       "originalName": "b",
       "to": "broadcastPhrases",
@@ -12196,12 +12332,28 @@
       "renamedSymbol": "M:ValidationIndicator.clearStatics(B)V"
     },
     {
+      "symbol": "M:hl.a(BI)[Lbi;",
+      "originalName": "a",
+      "to": "createBeakerAnimationFrames",
+      "evidence": "Generate supplied number of60x30frames by drawing four retained beaker sprites on240x120scratch target along original phase/depth ellipse,then quarter downsample. Asset producer and caller excerpts read. Preserve preallocation raster push,zero/negative counts,byte guard,integer/FP/cast order,frame identity and no finally restoration. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;"
+    },
+    {
       "symbol": "M:hl.a(BLvg;)Z",
       "originalName": "a",
       "to": "focusFirst",
       "evidence": "Request focus on first eligible widget:containers traverse retained child order,FocusableWidget checks eligibility,blurs supplied root,sets focus and notifies listener;default/rejected leaf implementations return false. All8complete current bodies and caller windows reviewed;correct former pure-containment alias. Identifier-only: preserve descriptors/modifiers and complete override closure, full primitive domains and int companions, all guards/recursion, literals, array/queue aliases, allocations, RNG/clock/locks, raster state, signed overflow/casts/FP, partial state and call/exception order. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidationIndicator.focusFirst(BLUiWidget;)Z"
+    },
+    {
+      "symbol": "M:hl.a(II)I",
+      "originalName": "a",
+      "to": "hexColumnsForMapWidth",
+      "evidence": "For guard<-21return(width-100)/200;other guards return83. Map decoder width/height reader and hex-row counterpart caller read. Preserve arbitrary signed width,overflow and Java truncation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationIndicator.hexColumnsForMapWidth(II)I"
     },
     {
       "symbol": "M:hl.a(IIII)V",
@@ -12218,6 +12370,14 @@
       "evidence": "Tests the pointer against the widget bounds and notifies the HoverListener when the flag changes. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ValidationIndicator.updateHover(IILUiWidget;B)V"
+    },
+    {
+      "symbol": "M:hl.a(Lpf;Z)V",
+      "originalName": "a",
+      "to": "orderCandidateBorderLinks",
+      "evidence": "Move candidate links into boundary traversal order,validate next/previous linkage and replace original deque sentinel with temporary deque sentinel. Complete star-link planner read. Preserve empty input behavior,detached-node movement,unclipped-edge fallback,exact errors,partial source deque/sentinel/iterator state and false-flag cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V"
     },
     {
       "symbol": "M:hl.c(Z)Ljava/lang/String;",
@@ -12532,6 +12692,22 @@
       "renamedSymbol": "M:StandardMapGenerator.fillMissingResources(LGalaxyMap;I)V"
     },
     {
+      "symbol": "M:i.a(BLjava/lang/String;J)V",
+      "originalName": "a",
+      "to": "openPrivateQuickChat",
+      "evidence": "Retain recipient name,target mode2,normalized name and long recipient ID,then install root Quick Chat menu. Complete chat action consumer read. Preserve write/helper order,null normalization,unrestricted long and late byte<15calendar clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V"
+    },
+    {
+      "symbol": "M:i.a(I)Z",
+      "originalName": "a",
+      "to": "isForcedLoginMode",
+      "evidence": "Return retained forced-login flag used to bypass credential requirement in submit flow. Complete login submit consumer,flag reset helper and forced-form entry excerpt read. Preserve non1discarded rectangle-brightness call before flag read and exact boolean state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialPainter.isForcedLoginMode(I)Z"
+    },
+    {
       "symbol": "M:i.a(IIIIII)V",
       "originalName": "a",
       "to": "addRectangleBrightness",
@@ -12556,6 +12732,14 @@
       "renamedSymbol": "M:DialPainter.clearStatics(I)V"
     },
     {
+      "symbol": "M:i.c(I)Z",
+      "originalName": "c",
+      "to": "isAccountChoiceMenuOpen",
+      "evidence": "Return retained account-choice flag for guard0,otherwise true. Complete choice-menu producer/reset helper and incoming client windows read. Preserve arbitrary guard values and no extra menu-state queries. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialPainter.isAccountChoiceMenuOpen(I)Z"
+    },
+    {
       "symbol": "M:ia.a(I)V",
       "originalName": "a",
       "to": "clearReplay",
@@ -12564,12 +12748,28 @@
       "renamedSymbol": "M:MapViewState.clearReplay(I)V"
     },
     {
+      "symbol": "M:ia.a(II)Z",
+      "originalName": "a",
+      "to": "isWormholeAnnotationSlotFree",
+      "evidence": "Return false if retained annotation deque contains type3with supplied slot ID,otherwise true. Complete wormhole annotation creator read. Preserve head/iterator capture before non-4camera reset,early return/casts and no added slot-domain restriction. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MapViewState.isWormholeAnnotationSlotFree(II)Z"
+    },
+    {
       "symbol": "M:ia.a(IILln;)Z",
       "originalName": "a",
       "to": "isSlotFree",
       "evidence": "Returns true when no annotation uses the same star and slot.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MapViewState.isSlotFree(IILStar;)Z"
+    },
+    {
+      "symbol": "M:ia.a(ILln;)V",
+      "originalName": "a",
+      "to": "drawStarTypeSprite",
+      "evidence": "Draw retained star-type sprite at projected star position with original square scale formula. Complete sprite selector and map caller windows read. Preserve supplied guard field_Xclear,Sol special sprite,field_zused for both axes,all float/cast/order and null/index failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MapViewState.drawStarTypeSprite(ILStar;)V"
     },
     {
       "symbol": "M:ia.a(ILln;F)V",
@@ -12676,6 +12876,14 @@
       "renamedSymbol": "M:MapViewState.setDisplayState([IZ[LTerritory;[LPlayer;Z)V"
     },
     {
+      "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
+      "originalName": "a",
+      "to": "setPlanningReachability",
+      "evidence": "Retain two planning distance arrays and two reachability flags used by map highlight rendering,then optionally project stars. Producer/renderer excerpts read. Preserve exact four array identities/assignment order,ignored other arrays,arbitrary int guard and projection after partial state writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V"
+    },
+    {
       "symbol": "M:ia.b(I)V",
       "originalName": "b",
       "to": "scrollBackground",
@@ -12706,6 +12914,14 @@
       "evidence": "Clears the focused territory and centres the camera on the middle of the map.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MapViewState.resetCamera(Z)V"
+    },
+    {
+      "symbol": "M:ia.d(I)V",
+      "originalName": "d",
+      "to": "refreshStarResourceOrder",
+      "evidence": "Ensure outer per-star cache capacity then compute descending resource-value index order for each star starting at supplied index. Complete sorting helper and resource constructor excerpt read. Preserve cache growth without shrink,star-index addressing,new per-star arrays,stable helper ties,arbitrary start int and partial cache updates. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MapViewState.refreshStarResourceOrder(I)V"
     },
     {
       "symbol": "M:ia.e(I)V",
@@ -136026,7 +136242,7 @@
     },
     {
       "symbol": "L:fn.a(I)[I#0",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(I)[I#0",
+      "renamedSymbol": "L:MicrosoftDisplayController.listDisplayModes(I)[I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136037,7 +136253,7 @@
     },
     {
       "symbol": "L:fn.a(I)[I#1",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(I)[I#1",
+      "renamedSymbol": "L:MicrosoftDisplayController.listDisplayModes(I)[I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136048,7 +136264,7 @@
     },
     {
       "symbol": "L:fn.a(I)[I#2",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(I)[I#2",
+      "renamedSymbol": "L:MicrosoftDisplayController.listDisplayModes(I)[I#2",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -136059,7 +136275,7 @@
     },
     {
       "symbol": "L:fn.a(I)[I#3",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(I)[I#3",
+      "renamedSymbol": "L:MicrosoftDisplayController.listDisplayModes(I)[I#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -136070,7 +136286,7 @@
     },
     {
       "symbol": "L:fn.a(Ljava/awt/Frame;IIIII)V#0",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#0",
+      "renamedSymbol": "L:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -136081,7 +136297,7 @@
     },
     {
       "symbol": "L:fn.a(Ljava/awt/Frame;IIIII)V#1",
-      "renamedSymbol": "L:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#1",
+      "renamedSymbol": "L:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -141251,7 +141467,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#0",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#0",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -141262,7 +141478,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#1",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#1",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -141273,7 +141489,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#10",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#10",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -141284,7 +141500,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#11",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#11",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -141295,7 +141511,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#12",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#12",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -141306,7 +141522,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#13",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#13",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -141317,7 +141533,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#14",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#14",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#14",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -141328,7 +141544,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#15",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#15",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#15",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -141339,7 +141555,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#2",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#2",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#2",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -141350,7 +141566,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#3",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#3",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#3",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -141361,7 +141577,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#4",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#4",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#4",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -141372,7 +141588,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#5",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#5",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -141383,7 +141599,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#6",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#6",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -141394,7 +141610,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#7",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#7",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#7",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -141405,7 +141621,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#8",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#8",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -141416,7 +141632,7 @@
     },
     {
       "symbol": "L:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#9",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#9",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -141427,7 +141643,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#0",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -141438,7 +141654,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#1",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -141449,7 +141665,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#10",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#10",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -141460,7 +141676,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#11",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#11",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -141471,7 +141687,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#12",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#12",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -141482,7 +141698,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#13",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#13",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -141493,7 +141709,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#2",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#2",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#2",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -141504,7 +141720,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#3",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#3",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -141515,7 +141731,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#4",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#4",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -141526,7 +141742,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#5",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#5",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#5",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -141537,7 +141753,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#6",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#6",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#6",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -141548,7 +141764,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#7",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#7",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#7",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -141559,7 +141775,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#8",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#8",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -141570,7 +141786,7 @@
     },
     {
       "symbol": "L:ge.a([II[IIIIIIII)V#9",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a([II[IIIIIIII)V#9",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#9",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -141592,7 +141808,7 @@
     },
     {
       "symbol": "L:ge.b(I)V#0",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.b(I)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.sendPixelsToConsumer(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -148313,7 +148529,7 @@
     },
     {
       "symbol": "L:gh.a()V#0",
-      "renamedSymbol": "L:MusicTrack.a()V#0",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -148324,7 +148540,7 @@
     },
     {
       "symbol": "L:gh.a()V#1",
-      "renamedSymbol": "L:MusicTrack.a()V#1",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -148335,7 +148551,7 @@
     },
     {
       "symbol": "L:gh.a()V#10",
-      "renamedSymbol": "L:MusicTrack.a()V#10",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -148346,7 +148562,7 @@
     },
     {
       "symbol": "L:gh.a()V#11",
-      "renamedSymbol": "L:MusicTrack.a()V#11",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -148357,7 +148573,7 @@
     },
     {
       "symbol": "L:gh.a()V#12",
-      "renamedSymbol": "L:MusicTrack.a()V#12",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -148368,7 +148584,7 @@
     },
     {
       "symbol": "L:gh.a()V#13",
-      "renamedSymbol": "L:MusicTrack.a()V#13",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -148379,7 +148595,7 @@
     },
     {
       "symbol": "L:gh.a()V#14",
-      "renamedSymbol": "L:MusicTrack.a()V#14",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#14",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -148390,7 +148606,7 @@
     },
     {
       "symbol": "L:gh.a()V#15",
-      "renamedSymbol": "L:MusicTrack.a()V#15",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#15",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -148401,7 +148617,7 @@
     },
     {
       "symbol": "L:gh.a()V#16",
-      "renamedSymbol": "L:MusicTrack.a()V#16",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -148412,7 +148628,7 @@
     },
     {
       "symbol": "L:gh.a()V#17",
-      "renamedSymbol": "L:MusicTrack.a()V#17",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#17",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -148423,7 +148639,7 @@
     },
     {
       "symbol": "L:gh.a()V#18",
-      "renamedSymbol": "L:MusicTrack.a()V#18",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -148434,7 +148650,7 @@
     },
     {
       "symbol": "L:gh.a()V#19",
-      "renamedSymbol": "L:MusicTrack.a()V#19",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#19",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -148445,7 +148661,7 @@
     },
     {
       "symbol": "L:gh.a()V#2",
-      "renamedSymbol": "L:MusicTrack.a()V#2",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -148456,7 +148672,7 @@
     },
     {
       "symbol": "L:gh.a()V#20",
-      "renamedSymbol": "L:MusicTrack.a()V#20",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#20",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -148467,7 +148683,7 @@
     },
     {
       "symbol": "L:gh.a()V#21",
-      "renamedSymbol": "L:MusicTrack.a()V#21",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#21",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -148478,7 +148694,7 @@
     },
     {
       "symbol": "L:gh.a()V#22",
-      "renamedSymbol": "L:MusicTrack.a()V#22",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#22",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -148489,7 +148705,7 @@
     },
     {
       "symbol": "L:gh.a()V#23",
-      "renamedSymbol": "L:MusicTrack.a()V#23",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#23",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -148500,7 +148716,7 @@
     },
     {
       "symbol": "L:gh.a()V#3",
-      "renamedSymbol": "L:MusicTrack.a()V#3",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -148511,7 +148727,7 @@
     },
     {
       "symbol": "L:gh.a()V#4",
-      "renamedSymbol": "L:MusicTrack.a()V#4",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -148522,7 +148738,7 @@
     },
     {
       "symbol": "L:gh.a()V#5",
-      "renamedSymbol": "L:MusicTrack.a()V#5",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -148533,7 +148749,7 @@
     },
     {
       "symbol": "L:gh.a()V#6",
-      "renamedSymbol": "L:MusicTrack.a()V#6",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -148544,7 +148760,7 @@
     },
     {
       "symbol": "L:gh.a()V#7",
-      "renamedSymbol": "L:MusicTrack.a()V#7",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -148555,7 +148771,7 @@
     },
     {
       "symbol": "L:gh.a()V#8",
-      "renamedSymbol": "L:MusicTrack.a()V#8",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -148566,7 +148782,7 @@
     },
     {
       "symbol": "L:gh.a()V#9",
-      "renamedSymbol": "L:MusicTrack.a()V#9",
+      "renamedSymbol": "L:MusicTrack.buildPatchUsage()V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -148962,7 +149178,7 @@
     },
     {
       "symbol": "L:gl.a(B)V#0",
-      "renamedSymbol": "L:DisplayModeInfo.a(B)V#0",
+      "renamedSymbol": "L:DisplayModeInfo.advanceIntroFinalScene(B)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -148973,7 +149189,7 @@
     },
     {
       "symbol": "L:gl.a(II)Lqh;#0",
-      "renamedSymbol": "L:DisplayModeInfo.a(II)LMenuWindow;#0",
+      "renamedSymbol": "L:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -148984,7 +149200,7 @@
     },
     {
       "symbol": "L:gl.a(II)Lqh;#1",
-      "renamedSymbol": "L:DisplayModeInfo.a(II)LMenuWindow;#1",
+      "renamedSymbol": "L:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -150964,7 +151180,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#0",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#0",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -150975,7 +151191,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#1",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#1",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -150986,7 +151202,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#2",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#2",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -150997,7 +151213,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#3",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#3",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -151008,7 +151224,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#4",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#4",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -151019,7 +151235,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#5",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#5",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -151030,7 +151246,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/CharSequence;)Z#6",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#6",
+      "renamedSymbol": "L:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151041,7 +151257,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#0",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#0",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -151052,7 +151268,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#1",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#1",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -151063,7 +151279,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#10",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#10",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#10",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -151074,7 +151290,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#11",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#11",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#11",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -151085,7 +151301,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#12",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#12",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#12",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -151096,7 +151312,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#13",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#13",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#13",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -151107,7 +151323,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#14",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#14",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -151118,7 +151334,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#15",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#15",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151129,7 +151345,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#2",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#2",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -151140,7 +151356,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#3",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#3",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -151151,7 +151367,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#4",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#4",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -151162,7 +151378,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#5",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#5",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -151173,7 +151389,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#6",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#6",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#6",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -151184,7 +151400,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#7",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#7",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#7",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -151195,7 +151411,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#8",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#8",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#8",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -151206,7 +151422,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#9",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#9",
+      "renamedSymbol": "L:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#9",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -151393,7 +151609,7 @@
     },
     {
       "symbol": "L:go.j(B)V#0",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#0",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151404,7 +151620,7 @@
     },
     {
       "symbol": "L:go.j(B)V#1",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#1",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151415,7 +151631,7 @@
     },
     {
       "symbol": "L:go.j(B)V#2",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#2",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -151426,7 +151642,7 @@
     },
     {
       "symbol": "L:go.j(B)V#3",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#3",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -151437,7 +151653,7 @@
     },
     {
       "symbol": "L:go.j(B)V#4",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#4",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -151448,7 +151664,7 @@
     },
     {
       "symbol": "L:go.j(B)V#5",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#5",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -151459,7 +151675,7 @@
     },
     {
       "symbol": "L:go.j(B)V#6",
-      "renamedSymbol": "L:TextFieldWidget.j(B)V#6",
+      "renamedSymbol": "L:TextFieldWidget.updateCaretScroll(B)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -154836,7 +155052,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -154847,7 +155063,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#1",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -154858,7 +155074,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#10",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#10",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -154869,7 +155085,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#2",
       "originalName": "stackIn_37_0",
       "renamedName": "stackIn_37_0",
       "declaration": {
@@ -154880,7 +155096,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#3",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -154891,7 +155107,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#4",
       "originalName": "stackIn_38_2",
       "renamedName": "stackIn_38_2",
       "declaration": {
@@ -154902,7 +155118,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -154913,7 +155129,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -154924,7 +155140,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -154935,7 +155151,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -154946,7 +155162,7 @@
     },
     {
       "symbol": "L:hg.a(ZLnf;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -161502,7 +161718,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#0",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#0",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -161513,7 +161729,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#1",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#1",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -161524,7 +161740,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#10",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#10",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -161535,7 +161751,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#11",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#11",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161546,7 +161762,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#2",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#2",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -161557,7 +161773,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#3",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#3",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -161568,7 +161784,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#4",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#4",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -161579,7 +161795,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#5",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#5",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -161590,7 +161806,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#6",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#6",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -161601,7 +161817,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#7",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#7",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#7",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -161612,7 +161828,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#8",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#8",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#8",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -161623,7 +161839,7 @@
     },
     {
       "symbol": "L:hl.a(BI)[Lbi;#9",
-      "renamedSymbol": "L:ValidationIndicator.a(BI)[LSprite;#9",
+      "renamedSymbol": "L:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -161821,7 +162037,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#0",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#0",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -161832,7 +162048,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#1",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#1",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -161843,7 +162059,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#10",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#10",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#10",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -161854,7 +162070,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#11",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#11",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -161865,7 +162081,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#2",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#2",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161876,7 +162092,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#3",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#3",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -161887,7 +162103,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#4",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#4",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -161898,7 +162114,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#5",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#5",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -161909,7 +162125,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#6",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#6",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#6",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -161920,7 +162136,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#7",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#7",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#7",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -161931,7 +162147,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#8",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#8",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#8",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -161942,7 +162158,7 @@
     },
     {
       "symbol": "L:hl.a(Lpf;Z)V#9",
-      "renamedSymbol": "L:ValidationIndicator.a(LIntrusiveDeque;Z)V#9",
+      "renamedSymbol": "L:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -166771,7 +166987,7 @@
     },
     {
       "symbol": "L:i.a(BLjava/lang/String;J)V#0",
-      "renamedSymbol": "L:DialPainter.a(BLjava/lang/String;J)V#0",
+      "renamedSymbol": "L:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -166782,7 +166998,7 @@
     },
     {
       "symbol": "L:i.a(BLjava/lang/String;J)V#1",
-      "renamedSymbol": "L:DialPainter.a(BLjava/lang/String;J)V#1",
+      "renamedSymbol": "L:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167101,7 +167317,7 @@
     },
     {
       "symbol": "L:ia.a(II)Z#0",
-      "renamedSymbol": "L:MapViewState.a(II)Z#0",
+      "renamedSymbol": "L:MapViewState.isWormholeAnnotationSlotFree(II)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -167112,7 +167328,7 @@
     },
     {
       "symbol": "L:ia.a(II)Z#1",
-      "renamedSymbol": "L:MapViewState.a(II)Z#1",
+      "renamedSymbol": "L:MapViewState.isWormholeAnnotationSlotFree(II)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167211,7 +167427,7 @@
     },
     {
       "symbol": "L:ia.a(ILln;)V#0",
-      "renamedSymbol": "L:MapViewState.a(ILStar;)V#0",
+      "renamedSymbol": "L:MapViewState.drawStarTypeSprite(ILStar;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -167222,7 +167438,7 @@
     },
     {
       "symbol": "L:ia.a(ILln;)V#1",
-      "renamedSymbol": "L:MapViewState.a(ILStar;)V#1",
+      "renamedSymbol": "L:MapViewState.drawStarTypeSprite(ILStar;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -167233,7 +167449,7 @@
     },
     {
       "symbol": "L:ia.a(ILln;)V#2",
-      "renamedSymbol": "L:MapViewState.a(ILStar;)V#2",
+      "renamedSymbol": "L:MapViewState.drawStarTypeSprite(ILStar;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -168630,7 +168846,7 @@
     },
     {
       "symbol": "L:ia.a([I[I[I[Z[Z[I[I[II)V#0",
-      "renamedSymbol": "L:MapViewState.a([I[I[I[Z[Z[I[I[II)V#0",
+      "renamedSymbol": "L:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -168740,7 +168956,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#0",
-      "renamedSymbol": "L:MapViewState.d(I)V#0",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -168751,7 +168967,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#1",
-      "renamedSymbol": "L:MapViewState.d(I)V#1",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -168762,7 +168978,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#2",
-      "renamedSymbol": "L:MapViewState.d(I)V#2",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -168773,7 +168989,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#3",
-      "renamedSymbol": "L:MapViewState.d(I)V#3",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -168784,7 +169000,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#4",
-      "renamedSymbol": "L:MapViewState.d(I)V#4",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -168795,7 +169011,7 @@
     },
     {
       "symbol": "L:ia.d(I)V#5",
-      "renamedSymbol": "L:MapViewState.d(I)V#5",
+      "renamedSymbol": "L:MapViewState.refreshStarResourceOrder(I)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -332244,9 +332460,9 @@
     },
     {
       "symbol": "M:fn.a(I)[I",
-      "renamedSymbol": "M:MicrosoftDisplayController.a(I)[I",
+      "renamedSymbol": "M:MicrosoftDisplayController.listDisplayModes(I)[I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "listDisplayModes",
       "declaration": {
         "file": "fn.java",
         "start": 230,
@@ -332255,9 +332471,9 @@
     },
     {
       "symbol": "M:fn.a(ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:MicrosoftDisplayController.a(ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:MicrosoftDisplayController.exitFullscreen(ILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "exitFullscreen",
       "declaration": {
         "file": "fn.java",
         "start": 1320,
@@ -332266,9 +332482,9 @@
     },
     {
       "symbol": "M:fn.a(Ljava/awt/Frame;IIIII)V",
-      "renamedSymbol": "M:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V",
+      "renamedSymbol": "M:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enterFullscreen",
       "declaration": {
         "file": "fn.java",
         "start": 1564,
@@ -333212,9 +333428,9 @@
     },
     {
       "symbol": "M:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V",
-      "renamedSymbol": "M:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAwtLoadingProgress",
       "declaration": {
         "file": "ge.java",
         "start": 527,
@@ -333223,9 +333439,9 @@
     },
     {
       "symbol": "M:ge.a([II[IIIIIIII)V",
-      "renamedSymbol": "M:ImageProducerRasterBuffer.a([II[IIIIIIII)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "darkenPixelsByMask",
       "declaration": {
         "file": "ge.java",
         "start": 4629,
@@ -333245,9 +333461,9 @@
     },
     {
       "symbol": "M:ge.b(I)V",
-      "renamedSymbol": "M:ImageProducerRasterBuffer.b(I)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.sendPixelsToConsumer(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "sendPixelsToConsumer",
       "declaration": {
         "file": "ge.java",
         "start": 8338,
@@ -333828,9 +334044,9 @@
     },
     {
       "symbol": "M:gh.a()V",
-      "renamedSymbol": "M:MusicTrack.a()V",
+      "renamedSymbol": "M:MusicTrack.buildPatchUsage()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "buildPatchUsage",
       "declaration": {
         "file": "gh.java",
         "start": 342,
@@ -333850,9 +334066,9 @@
     },
     {
       "symbol": "M:gh.b()V",
-      "renamedSymbol": "M:MusicTrack.b()V",
+      "renamedSymbol": "M:MusicTrack.clearPatchUsage()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "clearPatchUsage",
       "declaration": {
         "file": "gh.java",
         "start": 3189,
@@ -333960,9 +334176,9 @@
     },
     {
       "symbol": "M:gl.a(B)V",
-      "renamedSymbol": "M:DisplayModeInfo.a(B)V",
+      "renamedSymbol": "M:DisplayModeInfo.advanceIntroFinalScene(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceIntroFinalScene",
       "declaration": {
         "file": "gl.java",
         "start": 1128,
@@ -333971,9 +334187,9 @@
     },
     {
       "symbol": "M:gl.a(I)V",
-      "renamedSymbol": "M:DisplayModeInfo.a(I)V",
+      "renamedSymbol": "M:DisplayModeInfo.clearDisplayModeStatics(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearDisplayModeStatics",
       "declaration": {
         "file": "gl.java",
         "start": 252,
@@ -333982,9 +334198,9 @@
     },
     {
       "symbol": "M:gl.a(II)Lqh;",
-      "renamedSymbol": "M:DisplayModeInfo.a(II)LMenuWindow;",
+      "renamedSymbol": "M:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFleetInfoWindow",
       "declaration": {
         "file": "gl.java",
         "start": 518,
@@ -334268,9 +334484,9 @@
     },
     {
       "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
-      "renamedSymbol": "M:TextFieldWidget.a(ILjava/lang/CharSequence;)Z",
+      "renamedSymbol": "M:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isDecimalInteger",
       "declaration": {
         "file": "go.java",
         "start": 16676,
@@ -334279,9 +334495,9 @@
     },
     {
       "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
-      "renamedSymbol": "M:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;",
+      "renamedSymbol": "M:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadBinaryBitmapFontByName",
       "declaration": {
         "file": "go.java",
         "start": 18784,
@@ -334367,9 +334583,9 @@
     },
     {
       "symbol": "M:go.j(B)V",
-      "renamedSymbol": "M:TextFieldWidget.j(B)V",
+      "renamedSymbol": "M:TextFieldWidget.updateCaretScroll(B)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "updateCaretScroll",
       "declaration": {
         "file": "go.java",
         "start": 4764,
@@ -334378,9 +334594,9 @@
     },
     {
       "symbol": "M:go.j(I)Z",
-      "renamedSymbol": "M:TextFieldWidget.j(I)Z",
+      "renamedSymbol": "M:TextFieldWidget.hasStatusButtonSetting(I)Z",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "hasStatusButtonSetting",
       "declaration": {
         "file": "go.java",
         "start": 12005,
@@ -335126,9 +335342,9 @@
     },
     {
       "symbol": "M:hg.a(IZIZIIIIZZIZ)V",
-      "renamedSymbol": "M:IsolationistAi.a(IZIZIIIIZZIZ)V",
+      "renamedSymbol": "M:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateLobbyUi",
       "declaration": {
         "file": "hg.java",
         "start": 330,
@@ -335137,9 +335353,9 @@
     },
     {
       "symbol": "M:hg.a(ZLnf;)Ljava/lang/String;",
-      "renamedSymbol": "M:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;",
+      "renamedSymbol": "M:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "formatChatPrefix",
       "declaration": {
         "file": "hg.java",
         "start": 4751,
@@ -335797,9 +336013,9 @@
     },
     {
       "symbol": "M:hl.a(BI)[Lbi;",
-      "renamedSymbol": "M:ValidationIndicator.a(BI)[LSprite;",
+      "renamedSymbol": "M:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createBeakerAnimationFrames",
       "declaration": {
         "file": "hl.java",
         "start": 4973,
@@ -335819,9 +336035,9 @@
     },
     {
       "symbol": "M:hl.a(II)I",
-      "renamedSymbol": "M:ValidationIndicator.a(II)I",
+      "renamedSymbol": "M:ValidationIndicator.hexColumnsForMapWidth(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "hexColumnsForMapWidth",
       "declaration": {
         "file": "hl.java",
         "start": 289,
@@ -335852,9 +336068,9 @@
     },
     {
       "symbol": "M:hl.a(Lpf;Z)V",
-      "renamedSymbol": "M:ValidationIndicator.a(LIntrusiveDeque;Z)V",
+      "renamedSymbol": "M:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "orderCandidateBorderLinks",
       "declaration": {
         "file": "hl.java",
         "start": 443,
@@ -336435,9 +336651,9 @@
     },
     {
       "symbol": "M:i.a(BLjava/lang/String;J)V",
-      "renamedSymbol": "M:DialPainter.a(BLjava/lang/String;J)V",
+      "renamedSymbol": "M:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openPrivateQuickChat",
       "declaration": {
         "file": "i.java",
         "start": 602,
@@ -336446,9 +336662,9 @@
     },
     {
       "symbol": "M:i.a(I)Z",
-      "renamedSymbol": "M:DialPainter.a(I)Z",
+      "renamedSymbol": "M:DialPainter.isForcedLoginMode(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isForcedLoginMode",
       "declaration": {
         "file": "i.java",
         "start": 1214,
@@ -336490,9 +336706,9 @@
     },
     {
       "symbol": "M:i.c(I)Z",
-      "renamedSymbol": "M:DialPainter.c(I)Z",
+      "renamedSymbol": "M:DialPainter.isAccountChoiceMenuOpen(I)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isAccountChoiceMenuOpen",
       "declaration": {
         "file": "i.java",
         "start": 471,
@@ -336523,9 +336739,9 @@
     },
     {
       "symbol": "M:ia.a(II)Z",
-      "renamedSymbol": "M:MapViewState.a(II)Z",
+      "renamedSymbol": "M:MapViewState.isWormholeAnnotationSlotFree(II)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isWormholeAnnotationSlotFree",
       "declaration": {
         "file": "ia.java",
         "start": 32073,
@@ -336545,9 +336761,9 @@
     },
     {
       "symbol": "M:ia.a(ILln;)V",
-      "renamedSymbol": "M:MapViewState.a(ILStar;)V",
+      "renamedSymbol": "M:MapViewState.drawStarTypeSprite(ILStar;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawStarTypeSprite",
       "declaration": {
         "file": "ia.java",
         "start": 15457,
@@ -336699,9 +336915,9 @@
     },
     {
       "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
-      "renamedSymbol": "M:MapViewState.a([I[I[I[Z[Z[I[I[II)V",
+      "renamedSymbol": "M:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPlanningReachability",
       "declaration": {
         "file": "ia.java",
         "start": 10398,
@@ -336754,9 +336970,9 @@
     },
     {
       "symbol": "M:ia.d(I)V",
-      "renamedSymbol": "M:MapViewState.d(I)V",
+      "renamedSymbol": "M:MapViewState.refreshStarResourceOrder(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "refreshStarResourceOrder",
       "declaration": {
         "file": "ia.java",
         "start": 21021,
@@ -387442,7 +387658,7 @@
     },
     {
       "symbol": "P:fn.a(I)[I#0",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(I)[I#0",
+      "renamedSymbol": "P:MicrosoftDisplayController.listDisplayModes(I)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -387453,7 +387669,7 @@
     },
     {
       "symbol": "P:fn.a(ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:MicrosoftDisplayController.exitFullscreen(ILjava/awt/Frame;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -387464,7 +387680,7 @@
     },
     {
       "symbol": "P:fn.a(ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:MicrosoftDisplayController.exitFullscreen(ILjava/awt/Frame;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -387475,7 +387691,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#0",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#0",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -387486,7 +387702,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#1",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#1",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -387497,7 +387713,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#2",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#2",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -387508,7 +387724,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#3",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#3",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -387519,7 +387735,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#4",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#4",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -387530,7 +387746,7 @@
     },
     {
       "symbol": "P:fn.a(Ljava/awt/Frame;IIIII)V#5",
-      "renamedSymbol": "P:MicrosoftDisplayController.a(Ljava/awt/Frame;IIIII)V#5",
+      "renamedSymbol": "P:MicrosoftDisplayController.enterFullscreen(Ljava/awt/Frame;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -390005,7 +390221,7 @@
     },
     {
       "symbol": "P:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#0",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390016,7 +390232,7 @@
     },
     {
       "symbol": "P:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#1",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390027,7 +390243,7 @@
     },
     {
       "symbol": "P:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#2",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#2",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -390038,7 +390254,7 @@
     },
     {
       "symbol": "P:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#3",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#3",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -390049,7 +390265,7 @@
     },
     {
       "symbol": "P:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V#4",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(Ljava/lang/String;IZILjava/awt/Color;)V#4",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawAwtLoadingProgress(Ljava/lang/String;IZILjava/awt/Color;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -390060,7 +390276,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#0",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390071,7 +390287,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#1",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390082,7 +390298,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#2",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#2",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -390093,7 +390309,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#3",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#3",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -390104,7 +390320,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#4",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#4",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -390115,7 +390331,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#5",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#5",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -390126,7 +390342,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#6",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#6",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -390137,7 +390353,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#7",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#7",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -390148,7 +390364,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#8",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#8",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -390159,7 +390375,7 @@
     },
     {
       "symbol": "P:ge.a([II[IIIIIIII)V#9",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a([II[IIIIIIII)V#9",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.darkenPixelsByMask([II[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -390181,7 +390397,7 @@
     },
     {
       "symbol": "P:ge.b(I)V#0",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.b(I)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.sendPixelsToConsumer(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392975,7 +393191,7 @@
     },
     {
       "symbol": "P:gl.a(B)V#0",
-      "renamedSymbol": "P:DisplayModeInfo.a(B)V#0",
+      "renamedSymbol": "P:DisplayModeInfo.advanceIntroFinalScene(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392986,7 +393202,7 @@
     },
     {
       "symbol": "P:gl.a(I)V#0",
-      "renamedSymbol": "P:DisplayModeInfo.a(I)V#0",
+      "renamedSymbol": "P:DisplayModeInfo.clearDisplayModeStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392997,7 +393213,7 @@
     },
     {
       "symbol": "P:gl.a(II)Lqh;#0",
-      "renamedSymbol": "P:DisplayModeInfo.a(II)LMenuWindow;#0",
+      "renamedSymbol": "P:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393008,7 +393224,7 @@
     },
     {
       "symbol": "P:gl.a(II)Lqh;#1",
-      "renamedSymbol": "P:DisplayModeInfo.a(II)LMenuWindow;#1",
+      "renamedSymbol": "P:DisplayModeInfo.createFleetInfoWindow(II)LMenuWindow;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393789,7 +394005,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/CharSequence;)Z#0",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#0",
+      "renamedSymbol": "P:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393800,7 +394016,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/CharSequence;)Z#1",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/CharSequence;)Z#1",
+      "renamedSymbol": "P:TextFieldWidget.isDecimalInteger(ILjava/lang/CharSequence;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393811,7 +394027,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#0",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#0",
+      "renamedSymbol": "P:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393822,7 +394038,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#1",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#1",
+      "renamedSymbol": "P:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393833,7 +394049,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#2",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#2",
+      "renamedSymbol": "P:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -393844,7 +394060,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#3",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#3",
+      "renamedSymbol": "P:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -393855,7 +394071,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;#4",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#4",
+      "renamedSymbol": "P:TextFieldWidget.loadBinaryBitmapFontByName(ILjava/lang/String;LArchive;LArchive;Ljava/lang/String;)LBinaryBitmapFont;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -393965,7 +394181,7 @@
     },
     {
       "symbol": "P:go.j(B)V#0",
-      "renamedSymbol": "P:TextFieldWidget.j(B)V#0",
+      "renamedSymbol": "P:TextFieldWidget.updateCaretScroll(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393976,7 +394192,7 @@
     },
     {
       "symbol": "P:go.j(I)Z#0",
-      "renamedSymbol": "P:TextFieldWidget.j(I)Z#0",
+      "renamedSymbol": "P:TextFieldWidget.hasStatusButtonSetting(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -395252,7 +395468,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#0",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#0",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -395263,7 +395479,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#1",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#1",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -395274,7 +395490,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#10",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#10",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -395285,7 +395501,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#11",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#11",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -395296,7 +395512,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#2",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#2",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -395307,7 +395523,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#3",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#3",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -395318,7 +395534,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#4",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#4",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -395329,7 +395545,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#5",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#5",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -395340,7 +395556,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#6",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#6",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -395351,7 +395567,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#7",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#7",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -395362,7 +395578,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#8",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#8",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -395373,7 +395589,7 @@
     },
     {
       "symbol": "P:hg.a(IZIZIIIIZZIZ)V#9",
-      "renamedSymbol": "P:IsolationistAi.a(IZIZIIIIZZIZ)V#9",
+      "renamedSymbol": "P:IsolationistAi.updateLobbyUi(IZIZIIIIZZIZ)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -395384,7 +395600,7 @@
     },
     {
       "symbol": "P:hg.a(ZLnf;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -395395,7 +395611,7 @@
     },
     {
       "symbol": "P:hg.a(ZLnf;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:IsolationistAi.a(ZLChatHistoryEntry;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:IsolationistAi.formatChatPrefix(ZLChatHistoryEntry;)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397353,7 +397569,7 @@
     },
     {
       "symbol": "P:hl.a(BI)[Lbi;#0",
-      "renamedSymbol": "P:ValidationIndicator.a(BI)[LSprite;#0",
+      "renamedSymbol": "P:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397364,7 +397580,7 @@
     },
     {
       "symbol": "P:hl.a(BI)[Lbi;#1",
-      "renamedSymbol": "P:ValidationIndicator.a(BI)[LSprite;#1",
+      "renamedSymbol": "P:ValidationIndicator.createBeakerAnimationFrames(BI)[LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397397,7 +397613,7 @@
     },
     {
       "symbol": "P:hl.a(II)I#0",
-      "renamedSymbol": "P:ValidationIndicator.a(II)I#0",
+      "renamedSymbol": "P:ValidationIndicator.hexColumnsForMapWidth(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397408,7 +397624,7 @@
     },
     {
       "symbol": "P:hl.a(II)I#1",
-      "renamedSymbol": "P:ValidationIndicator.a(II)I#1",
+      "renamedSymbol": "P:ValidationIndicator.hexColumnsForMapWidth(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397507,7 +397723,7 @@
     },
     {
       "symbol": "P:hl.a(Lpf;Z)V#0",
-      "renamedSymbol": "P:ValidationIndicator.a(LIntrusiveDeque;Z)V#0",
+      "renamedSymbol": "P:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397518,7 +397734,7 @@
     },
     {
       "symbol": "P:hl.a(Lpf;Z)V#1",
-      "renamedSymbol": "P:ValidationIndicator.a(LIntrusiveDeque;Z)V#1",
+      "renamedSymbol": "P:ValidationIndicator.orderCandidateBorderLinks(LIntrusiveDeque;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -398970,7 +399186,7 @@
     },
     {
       "symbol": "P:i.a(BLjava/lang/String;J)V#0",
-      "renamedSymbol": "P:DialPainter.a(BLjava/lang/String;J)V#0",
+      "renamedSymbol": "P:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398981,7 +399197,7 @@
     },
     {
       "symbol": "P:i.a(BLjava/lang/String;J)V#1",
-      "renamedSymbol": "P:DialPainter.a(BLjava/lang/String;J)V#1",
+      "renamedSymbol": "P:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -398992,7 +399208,7 @@
     },
     {
       "symbol": "P:i.a(BLjava/lang/String;J)V#2",
-      "renamedSymbol": "P:DialPainter.a(BLjava/lang/String;J)V#2",
+      "renamedSymbol": "P:DialPainter.openPrivateQuickChat(BLjava/lang/String;J)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -399003,7 +399219,7 @@
     },
     {
       "symbol": "P:i.a(I)Z#0",
-      "renamedSymbol": "P:DialPainter.a(I)Z#0",
+      "renamedSymbol": "P:DialPainter.isForcedLoginMode(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399146,7 +399362,7 @@
     },
     {
       "symbol": "P:i.c(I)Z#0",
-      "renamedSymbol": "P:DialPainter.c(I)Z#0",
+      "renamedSymbol": "P:DialPainter.isAccountChoiceMenuOpen(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399168,7 +399384,7 @@
     },
     {
       "symbol": "P:ia.a(II)Z#0",
-      "renamedSymbol": "P:MapViewState.a(II)Z#0",
+      "renamedSymbol": "P:MapViewState.isWormholeAnnotationSlotFree(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399179,7 +399395,7 @@
     },
     {
       "symbol": "P:ia.a(II)Z#1",
-      "renamedSymbol": "P:MapViewState.a(II)Z#1",
+      "renamedSymbol": "P:MapViewState.isWormholeAnnotationSlotFree(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399223,7 +399439,7 @@
     },
     {
       "symbol": "P:ia.a(ILln;)V#0",
-      "renamedSymbol": "P:MapViewState.a(ILStar;)V#0",
+      "renamedSymbol": "P:MapViewState.drawStarTypeSprite(ILStar;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399234,7 +399450,7 @@
     },
     {
       "symbol": "P:ia.a(ILln;)V#1",
-      "renamedSymbol": "P:MapViewState.a(ILStar;)V#1",
+      "renamedSymbol": "P:MapViewState.drawStarTypeSprite(ILStar;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399652,7 +399868,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#0",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#0",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399663,7 +399879,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#1",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#1",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399674,7 +399890,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#2",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#2",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -399685,7 +399901,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#3",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#3",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -399696,7 +399912,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#4",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#4",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -399707,7 +399923,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#5",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#5",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -399718,7 +399934,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#6",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#6",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -399729,7 +399945,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#7",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#7",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -399740,7 +399956,7 @@
     },
     {
       "symbol": "P:ia.a([I[I[I[Z[Z[I[I[II)V#8",
-      "renamedSymbol": "P:MapViewState.a([I[I[I[Z[Z[I[I[II)V#8",
+      "renamedSymbol": "P:MapViewState.setPlanningReachability([I[I[I[Z[Z[I[I[II)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -399795,7 +400011,7 @@
     },
     {
       "symbol": "P:ia.d(I)V#0",
-      "renamedSymbol": "P:MapViewState.d(I)V#0",
+      "renamedSymbol": "P:MapViewState.refreshStarResourceOrder(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -459848,7 +460064,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "6af6b217fd70619fad9466f67e8f7b3daab8df05e70d5ec3c0e61f15c1ddfc0d",
+      "outputSha256": "779ab2cb5918a3f466df0aed7c88c833130e06e766418cca79cdb408a44d525d",
       "edits": [
         {
           "start": 86,
@@ -460661,6 +460877,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "DialPainter"
+        },
+        {
+          "start": 6297,
+          "end": 6298,
+          "symbol": "M:i.c(I)Z",
+          "original": "c",
+          "renamed": "isAccountChoiceMenuOpen"
         },
         {
           "start": 6364,
@@ -468428,6 +468651,13 @@
           "renamed": "DisplayModeInfo"
         },
         {
+          "start": 33812,
+          "end": 33813,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "clearDisplayModeStatics"
+        },
+        {
           "start": 33839,
           "end": 33841,
           "symbol": "C:er",
@@ -472402,6 +472632,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "DialPainter"
+        },
+        {
+          "start": 47617,
+          "end": 47618,
+          "symbol": "M:i.c(I)Z",
+          "original": "c",
+          "renamed": "isAccountChoiceMenuOpen"
         },
         {
           "start": 47657,
@@ -499169,7 +499406,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "40b441dc52d8cac0a95769c97a1828955db57fe866ea5d553400d96f66bbacd5",
+      "outputSha256": "8e06cd0cc9a9b51ba76a7812ef16b99a8ee68aec8684f17e66733e821e44e3c5",
       "edits": [
         {
           "start": 50,
@@ -499809,6 +500046,13 @@
           "renamed": "IsolationistAi"
         },
         {
+          "start": 5563,
+          "end": 5564,
+          "symbol": "M:hg.a(IZIZIIIIZZIZ)V",
+          "original": "a",
+          "renamed": "updateLobbyUi"
+        },
+        {
           "start": 5751,
           "end": 5753,
           "symbol": "C:sm",
@@ -500388,7 +500632,7 @@
       "original": "cg.java",
       "renamed": "OpacityWidget.java",
       "inputSha256": "cda0d8116778e9c5b6a074208577ec1de1b7219639d67831d41a604d8275e933",
-      "outputSha256": "1533230c6e14142f3d21d67e12d69b2a9fabef18bbc4f5f291dd4c3121081797",
+      "outputSha256": "bd847395eae2f40382097cdb0d9addee2168ffb41070b013aeff2e64991c3f21",
       "edits": [
         {
           "start": 50,
@@ -500746,6 +500990,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 4419,
+          "end": 4420,
+          "symbol": "M:go.j(I)Z",
+          "original": "j",
+          "renamed": "hasStatusButtonSetting"
         },
         {
           "start": 4501,
@@ -503361,7 +503612,7 @@
       "original": "ck.java",
       "renamed": "GameAssetSetupSupport.java",
       "inputSha256": "59719f0315e8d99b2db60702fc77f74ed0b563d31dd2ef793727c26cf2316a34",
-      "outputSha256": "021068c7d87f587f1f4aeaed8df6d50a6b502a33784cdcfb874c6f52164db4ca",
+      "outputSha256": "39b869c583913f0144497e06f68ab94ce5eca8677919e025548cc62d0c498b5a",
       "edits": [
         {
           "start": 50,
@@ -506001,6 +506252,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "ValidationIndicator"
+        },
+        {
+          "start": 12347,
+          "end": 12348,
+          "symbol": "M:hl.a(BI)[Lbi;",
+          "original": "a",
+          "renamed": "createBeakerAnimationFrames"
         },
         {
           "start": 12376,
@@ -553047,7 +553305,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "ed620d26a7d9007ef3a985bb7d092369c9eb70d503dd1103d2f805e62098f835",
+      "outputSha256": "eb1650ca2c51f130d6029fbfc66b8fcea95ee75ba7cb8c3387104f2106642391",
       "edits": [
         {
           "start": 50,
@@ -553503,6 +553761,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "DialPainter"
+        },
+        {
+          "start": 4282,
+          "end": 4283,
+          "symbol": "M:i.a(BLjava/lang/String;J)V",
+          "original": "a",
+          "renamed": "openPrivateQuickChat"
         },
         {
           "start": 4389,
@@ -558764,7 +559029,7 @@
       "original": "fn.java",
       "renamed": "MicrosoftDisplayController.java",
       "inputSha256": "52c1eabdcf77b9eb3b99c4b674014562d172c0b5b704e40089754f0bcf10119b",
-      "outputSha256": "19a0b4675b6d3f9e686e74c703fa45bf4becaf0b5991ddc70d18efcea096680a",
+      "outputSha256": "5d0adf1f295dec48dd71ed0c4bf5dd023bbb6735d1c341d2a100d850903398a7",
       "edits": [
         {
           "start": 50,
@@ -558772,6 +559037,27 @@
           "symbol": "C:fn",
           "original": "fn",
           "renamed": "MicrosoftDisplayController"
+        },
+        {
+          "start": 230,
+          "end": 231,
+          "symbol": "M:fn.a(I)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
+          "start": 1320,
+          "end": 1321,
+          "symbol": "M:fn.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
+        },
+        {
+          "start": 1564,
+          "end": 1565,
+          "symbol": "M:fn.a(Ljava/awt/Frame;IIIII)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
         },
         {
           "start": 2204,
@@ -560052,7 +560338,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "834bdf12371e3f5779f99da13fc5b4d7942dccedab984db91455921bec814d4f",
+      "outputSha256": "8ad0e87ff2a3b1a65888d2d0a02969b701cb8f7cdab1134eaddfad6f9dd3f2ab",
       "edits": [
         {
           "start": 50,
@@ -560524,6 +560810,13 @@
           "renamed": "MusicPatch"
         },
         {
+          "start": 8452,
+          "end": 8453,
+          "symbol": "M:gh.a()V",
+          "original": "a",
+          "renamed": "buildPatchUsage"
+        },
+        {
           "start": 8683,
           "end": 8685,
           "symbol": "C:be",
@@ -560620,6 +560913,13 @@
           "symbol": "M:ti.a(Z)Loh;",
           "original": "a",
           "renamed": "nextInTraversal"
+        },
+        {
+          "start": 9562,
+          "end": 9563,
+          "symbol": "M:gh.b()V",
+          "original": "b",
+          "renamed": "clearPatchUsage"
         },
         {
           "start": 10598,
@@ -564913,7 +565213,7 @@
       "original": "ge.java",
       "renamed": "ImageProducerRasterBuffer.java",
       "inputSha256": "f3bd003c31bb4fb5df4d3abd17c7aa77357e4057a2808176009f469d5b46d61f",
-      "outputSha256": "babdfbcc93fbc1cc81f1b4b1084eb241d91ae6636ef84a506029d15649ffca12",
+      "outputSha256": "20cb4d27ebcbdc17ed45878badfcd29065fb1401e9aaac56efcf9a957566bbdc",
       "edits": [
         {
           "start": 71,
@@ -564949,6 +565249,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 527,
+          "end": 528,
+          "symbol": "M:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V",
+          "original": "a",
+          "renamed": "drawAwtLoadingProgress"
         },
         {
           "start": 1141,
@@ -565126,6 +565433,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 4629,
+          "end": 4630,
+          "symbol": "M:ge.a([II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "darkenPixelsByMask"
+        },
+        {
           "start": 5691,
           "end": 5693,
           "symbol": "C:ee",
@@ -565238,11 +565552,39 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 8338,
+          "end": 8339,
+          "symbol": "M:ge.b(I)V",
+          "original": "b",
+          "renamed": "sendPixelsToConsumer"
+        },
+        {
           "start": 8779,
           "end": 8780,
           "symbol": "M:ge.a(ILjava/awt/Component;BI)V",
           "original": "a",
           "renamed": "allocate"
+        },
+        {
+          "start": 9208,
+          "end": 9209,
+          "symbol": "M:ge.b(I)V",
+          "original": "b",
+          "renamed": "sendPixelsToConsumer"
+        },
+        {
+          "start": 9314,
+          "end": 9315,
+          "symbol": "M:ge.b(I)V",
+          "original": "b",
+          "renamed": "sendPixelsToConsumer"
+        },
+        {
+          "start": 9421,
+          "end": 9422,
+          "symbol": "M:ge.b(I)V",
+          "original": "b",
+          "renamed": "sendPixelsToConsumer"
         },
         {
           "start": 9527,
@@ -565280,6 +565622,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 10727,
+          "end": 10728,
+          "symbol": "M:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V",
+          "original": "a",
+          "renamed": "drawAwtLoadingProgress"
+        },
+        {
           "start": 12175,
           "end": 12176,
           "symbol": "C:r",
@@ -565306,6 +565655,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 12435,
+          "end": 12436,
+          "symbol": "M:ge.a([II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "darkenPixelsByMask"
         },
         {
           "start": 13475,
@@ -565355,6 +565711,13 @@
           "symbol": "M:ge.a(Ljava/awt/Graphics;IBI)V",
           "original": "a",
           "renamed": "paint"
+        },
+        {
+          "start": 14570,
+          "end": 14571,
+          "symbol": "M:ge.b(I)V",
+          "original": "b",
+          "renamed": "sendPixelsToConsumer"
         },
         {
           "start": 14621,
@@ -566428,7 +566791,7 @@
       "original": "gh.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "d78a1d984514ccf8a1cefeaafb565908e7e640a24911df12a166a6a535c81b51",
-      "outputSha256": "e173065e2e42609bbd19e265f6974178daadd40b4fbb5c31bf41ae458e53add1",
+      "outputSha256": "4ef418dd53e81da6d4637231925e27ba617ab07a7a08416419a33f185626fcf5",
       "edits": [
         {
           "start": 50,
@@ -566492,6 +566855,13 @@
           "symbol": "C:ob",
           "original": "ob",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 342,
+          "end": 343,
+          "symbol": "M:gh.a()V",
+          "original": "a",
+          "renamed": "buildPatchUsage"
         },
         {
           "start": 396,
@@ -566625,6 +566995,13 @@
           "symbol": "M:pi.e(I)V",
           "original": "e",
           "renamed": "savePosition"
+        },
+        {
+          "start": 3189,
+          "end": 3190,
+          "symbol": "M:gh.b()V",
+          "original": "b",
+          "renamed": "clearPatchUsage"
         },
         {
           "start": 3243,
@@ -569106,7 +569483,7 @@
       "original": "gl.java",
       "renamed": "DisplayModeInfo.java",
       "inputSha256": "3fe0040e1abe723114efa7b34d206110d49d454ea59012d86a6503f2dbde057b",
-      "outputSha256": "af41d65b3ee49ec7932b52958549de1a258ccf5d54351655427c6fbb785c9f16",
+      "outputSha256": "41e5e1fe2670a04909db59367ba3cf93b4df02cdfcba7ba5246203b2598b9d46",
       "edits": [
         {
           "start": 50,
@@ -569123,6 +569500,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 252,
+          "end": 253,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "clearDisplayModeStatics"
+        },
+        {
           "start": 409,
           "end": 411,
           "symbol": "C:gl",
@@ -569130,11 +569514,25 @@
           "renamed": "DisplayModeInfo"
         },
         {
+          "start": 412,
+          "end": 413,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "clearDisplayModeStatics"
+        },
+        {
           "start": 515,
           "end": 517,
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 518,
+          "end": 519,
+          "symbol": "M:gl.a(II)Lqh;",
+          "original": "a",
+          "renamed": "createFleetInfoWindow"
         },
         {
           "start": 554,
@@ -569291,6 +569689,13 @@
           "renamed": "ReflectionCheck"
         },
         {
+          "start": 1128,
+          "end": 1129,
+          "symbol": "M:gl.a(B)V",
+          "original": "a",
+          "renamed": "advanceIntroFinalScene"
+        },
+        {
           "start": 1171,
           "end": 1173,
           "symbol": "C:di",
@@ -569331,6 +569736,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "DisplayModeInfo"
+        },
+        {
+          "start": 1342,
+          "end": 1343,
+          "symbol": "M:gl.a(I)V",
+          "original": "a",
+          "renamed": "clearDisplayModeStatics"
         }
       ]
     },
@@ -572553,7 +572965,7 @@
       "original": "go.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "5390bf948886f70478332f30ccfa9c87a67fe4bc76c42823d15566ed553b9c2a",
-      "outputSha256": "efa55d8a06cb74b7af274ebd1d0bc000d5d7c4d6d0914df689b66933cf220367",
+      "outputSha256": "755c731289fde2f14ae2f294c1f6dc498693ec7a5d8742c2b1c4a09cd54eb1d8",
       "edits": [
         {
           "start": 44,
@@ -572806,6 +573218,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4764,
+          "end": 4765,
+          "symbol": "M:go.j(B)V",
+          "original": "j",
+          "renamed": "updateCaretScroll"
         },
         {
           "start": 4789,
@@ -573172,6 +573591,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 12005,
+          "end": 12006,
+          "symbol": "M:go.j(I)Z",
+          "original": "j",
+          "renamed": "hasStatusButtonSetting"
+        },
+        {
           "start": 12097,
           "end": 12099,
           "symbol": "C:js",
@@ -573303,6 +573729,13 @@
           "symbol": "M:kg.a(IILvg;B)V",
           "original": "a",
           "renamed": "updateHover"
+        },
+        {
+          "start": 13667,
+          "end": 13668,
+          "symbol": "M:go.j(B)V",
+          "original": "j",
+          "renamed": "updateCaretScroll"
         },
         {
           "start": 13757,
@@ -573445,6 +573878,13 @@
           "renamed": "insertText"
         },
         {
+          "start": 16676,
+          "end": 16677,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
+        },
+        {
           "start": 17035,
           "end": 17037,
           "symbol": "C:os",
@@ -573506,6 +573946,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "BinaryBitmapFont"
+        },
+        {
+          "start": 18784,
+          "end": 18785,
+          "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
+          "original": "a",
+          "renamed": "loadBinaryBitmapFontByName"
         },
         {
           "start": 18813,
@@ -577423,7 +577870,7 @@
       "original": "hg.java",
       "renamed": "IsolationistAi.java",
       "inputSha256": "6e0af2d905846f3bf84593472aef08894cec23b0aa3d70281272dabe07f75f2e",
-      "outputSha256": "1425d8c1945c22c9a8cc83e31a3e097bd62800e6752e9727bf7c5b7e53c59e0e",
+      "outputSha256": "71fab0b1cca05f10fe3ece09c69334bf77948a133117a83e42d9c16b6bf2664f",
       "edits": [
         {
           "start": 50,
@@ -577480,6 +577927,13 @@
           "symbol": "C:mn",
           "original": "mn",
           "renamed": "AiHost"
+        },
+        {
+          "start": 330,
+          "end": 331,
+          "symbol": "M:hg.a(IZIZIIIIZZIZ)V",
+          "original": "a",
+          "renamed": "updateLobbyUi"
         },
         {
           "start": 508,
@@ -577608,6 +578062,13 @@
           "renamed": "IsolationistAi"
         },
         {
+          "start": 4349,
+          "end": 4350,
+          "symbol": "M:hg.a(IZIZIIIIZZIZ)V",
+          "original": "a",
+          "renamed": "updateLobbyUi"
+        },
+        {
           "start": 4456,
           "end": 4457,
           "symbol": "M:hg.c(Z)V",
@@ -577620,6 +578081,13 @@
           "symbol": "M:hg.b(I)[I",
           "original": "b",
           "renamed": "broadcastPhrases"
+        },
+        {
+          "start": 4751,
+          "end": 4752,
+          "symbol": "M:hg.a(ZLnf;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatChatPrefix"
         },
         {
           "start": 4769,
@@ -584495,7 +584963,7 @@
       "original": "hl.java",
       "renamed": "ValidationIndicator.java",
       "inputSha256": "0bd0dd64298ac933565258bdc29b6ad79c8d18c7ab0e48a7c32a4496d91c2f20",
-      "outputSha256": "cbd90dffd5003a61a375766773940738acdaa4c071362123016d0b2b7afb2afd",
+      "outputSha256": "167c49fb4051a72dda55e0646c1c7e8547c948c895d344b5d43332f65c2528f0",
       "edits": [
         {
           "start": 50,
@@ -584538,6 +585006,20 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "symbol": "M:hl.a(II)I",
+          "original": "a",
+          "renamed": "hexColumnsForMapWidth"
+        },
+        {
+          "start": 443,
+          "end": 444,
+          "symbol": "M:hl.a(Lpf;Z)V",
+          "original": "a",
+          "renamed": "orderCandidateBorderLinks"
         },
         {
           "start": 445,
@@ -584797,6 +585279,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 4973,
+          "end": 4974,
+          "symbol": "M:hl.a(BI)[Lbi;",
+          "original": "a",
+          "renamed": "createBeakerAnimationFrames"
         },
         {
           "start": 5241,
@@ -588466,7 +588955,7 @@
       "original": "i.java",
       "renamed": "DialPainter.java",
       "inputSha256": "8aef1a049de4964761da5246a3f428b1d77a813b082334f1118b5f97ed395a25",
-      "outputSha256": "fec23b6edcbc76308c37b79490dd082f81aabae9c03b9bdf59da252dadafd736",
+      "outputSha256": "591ae2a28c5bd7c3d5887bc75bfa820ed2aacc9198ac4f8b376ead331d785687",
       "edits": [
         {
           "start": 71,
@@ -588504,11 +588993,25 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 471,
+          "end": 472,
+          "symbol": "M:i.c(I)Z",
+          "original": "c",
+          "renamed": "isAccountChoiceMenuOpen"
+        },
+        {
           "start": 562,
           "end": 563,
           "symbol": "C:k",
           "original": "k",
           "renamed": "TurnEventLog"
+        },
+        {
+          "start": 602,
+          "end": 603,
+          "symbol": "M:i.a(BLjava/lang/String;J)V",
+          "original": "a",
+          "renamed": "openPrivateQuickChat"
         },
         {
           "start": 705,
@@ -588579,6 +589082,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1214,
+          "end": 1215,
+          "symbol": "M:i.a(I)Z",
+          "original": "a",
+          "renamed": "isForcedLoginMode"
         },
         {
           "start": 1267,
@@ -588791,6 +589301,13 @@
           "renamed": "DialPainter"
         },
         {
+          "start": 4996,
+          "end": 4997,
+          "symbol": "M:i.a(I)Z",
+          "original": "a",
+          "renamed": "isForcedLoginMode"
+        },
+        {
           "start": 5026,
           "end": 5028,
           "symbol": "C:gf",
@@ -588873,7 +589390,7 @@
       "original": "ia.java",
       "renamed": "MapViewState.java",
       "inputSha256": "3c8ecb141a6cb969686e369882208e461c1491aac124d573669379b149af81d1",
-      "outputSha256": "d2627e690ffe275b65b5b1fb401833cb045fa3f744c852c489920d996bb722f3",
+      "outputSha256": "05a90ec4995c59dea2ccca17a83965ebdddecf7e28853c9c512eb77e1874ca79",
       "edits": [
         {
           "start": 74,
@@ -589401,6 +589918,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 10398,
+          "end": 10399,
+          "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
+          "original": "a",
+          "renamed": "setPlanningReachability"
+        },
+        {
           "start": 10727,
           "end": 10728,
           "symbol": "M:ia.a(Z)V",
@@ -589455,6 +589979,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "GalaxyMap"
+        },
+        {
+          "start": 11891,
+          "end": 11892,
+          "symbol": "M:ia.a(II)Z",
+          "original": "a",
+          "renamed": "isWormholeAnnotationSlotFree"
         },
         {
           "start": 11929,
@@ -589602,6 +590133,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 15457,
+          "end": 15458,
+          "symbol": "M:ia.a(ILln;)V",
+          "original": "a",
+          "renamed": "drawStarTypeSprite"
         },
         {
           "start": 15471,
@@ -589917,6 +590455,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 21021,
+          "end": 21022,
+          "symbol": "M:ia.d(I)V",
+          "original": "d",
+          "renamed": "refreshStarResourceOrder"
         },
         {
           "start": 21067,
@@ -590512,6 +591057,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "BoundsRect"
+        },
+        {
+          "start": 32073,
+          "end": 32074,
+          "symbol": "M:ia.a(II)Z",
+          "original": "a",
+          "renamed": "isWormholeAnnotationSlotFree"
         },
         {
           "start": 32166,
@@ -614512,7 +615064,7 @@
       "original": "kf.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a4098c3daad888d3277bbb28abdc6623e2cd1f5d96da28762e1d8698913bb778",
-      "outputSha256": "79ecb41be42b2d4bc86dce8f3c3f9483e04462435efc9c488c4a26094235c74f",
+      "outputSha256": "1b2b11e8c0eb06d25511e55a224a8574d094038167541c3e915d4335fea54ccb",
       "edits": [
         {
           "start": 60,
@@ -614849,6 +615401,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 10273,
+          "end": 10274,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
         },
         {
           "start": 10339,
@@ -619736,7 +620295,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "b441ccdf7869aeca37d940d2ffaa9b949b4a260af53d36d5adeaf8688c9424a1",
+      "outputSha256": "091012b104ee83b5d14b5ce6dd7471fc0f710248b0693dc75df77fd8ed9752cc",
       "edits": [
         {
           "start": 50,
@@ -620529,6 +621088,13 @@
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 21224,
+          "end": 21225,
+          "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
+          "original": "a",
+          "renamed": "setPlanningReachability"
         },
         {
           "start": 21800,
@@ -626999,6 +627565,20 @@
           "renamed": "setDisplayState"
         },
         {
+          "start": 137389,
+          "end": 137390,
+          "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
+          "original": "a",
+          "renamed": "setPlanningReachability"
+        },
+        {
+          "start": 137536,
+          "end": 137537,
+          "symbol": "M:ia.d(I)V",
+          "original": "d",
+          "renamed": "refreshStarResourceOrder"
+        },
+        {
           "start": 137563,
           "end": 137564,
           "symbol": "M:km.a(Lfs;I)V",
@@ -627512,6 +628092,13 @@
           "symbol": "M:dc.b(I)V",
           "original": "b",
           "renamed": "recomputePlayerTotals"
+        },
+        {
+          "start": 145786,
+          "end": 145787,
+          "symbol": "M:ia.a([I[I[I[Z[Z[I[I[II)V",
+          "original": "a",
+          "renamed": "setPlanningReachability"
         },
         {
           "start": 145962,
@@ -629291,7 +629878,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "da9e70f2dd08704f4a92acd93a0f4d240c25dd199394b0cff1597656f37d5be8",
+      "outputSha256": "72d5a21bb3c9a38610742315329f337093df0a86bdc58dbf6357eb14ce72e48d",
       "edits": [
         {
           "start": 50,
@@ -641756,6 +642343,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "DisplayModeInfo"
+        },
+        {
+          "start": 196096,
+          "end": 196097,
+          "symbol": "M:gl.a(II)Lqh;",
+          "original": "a",
+          "renamed": "createFleetInfoWindow"
         },
         {
           "start": 196156,
@@ -654455,7 +655049,7 @@
       "original": "m.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "492546d3d7eaeeb255e29a66044fcc133b8f66fb639c6dfa84303195c9c498b2",
-      "outputSha256": "3956272883b314c0bb377a66276d022b418960feb5df91cfb8209ed5049c0a10",
+      "outputSha256": "f991ba7ca1e38c1e4b6bfcb37f029fa7487aec641f9f4e12d62f32f2224d2f8e",
       "edits": [
         {
           "start": 50,
@@ -655263,6 +655857,13 @@
           "renamed": "TextFieldWidget"
         },
         {
+          "start": 11198,
+          "end": 11199,
+          "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
+          "original": "a",
+          "renamed": "loadBinaryBitmapFontByName"
+        },
+        {
           "start": 11254,
           "end": 11256,
           "symbol": "C:ge",
@@ -655277,6 +655878,13 @@
           "renamed": "TextFieldWidget"
         },
         {
+          "start": 11270,
+          "end": 11271,
+          "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
+          "original": "a",
+          "renamed": "loadBinaryBitmapFontByName"
+        },
+        {
           "start": 11328,
           "end": 11330,
           "symbol": "C:ul",
@@ -655289,6 +655897,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 11345,
+          "end": 11346,
+          "symbol": "M:go.a(ILjava/lang/String;Lbc;Lbc;Ljava/lang/String;)Lhh;",
+          "original": "a",
+          "renamed": "loadBinaryBitmapFontByName"
         },
         {
           "start": 11431,
@@ -659189,7 +659804,7 @@
       "original": "mb.java",
       "renamed": "AgeValidator.java",
       "inputSha256": "ef5781174717942f6ec6a941acbd845707a430f4eb5cd5206ec3e08b751bf33f",
-      "outputSha256": "dbf244c3b6f843294f201edfe122f1bbf00041d217acfaed8c4b7e11ba5bc56c",
+      "outputSha256": "f1f1495764281e3a6f348569e38a0e7860c1bfc7e5d0fd6fa69343cb57e312cf",
       "edits": [
         {
           "start": 50,
@@ -659505,6 +660120,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 8087,
+          "end": 8088,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
         },
         {
           "start": 8127,
@@ -670366,7 +670988,7 @@
       "original": "nh.java",
       "renamed": "PointsVictoryChecker.java",
       "inputSha256": "32c8c0a94f0ae7f21a38491eb1fc5bf18d6fe3f042e029f6d9668a5ceac0128f",
-      "outputSha256": "bca10a652b866fe3eac83f579781bcfa1076dbba3163114322d9c6792337dac8",
+      "outputSha256": "3e2ca1cd1374d22cfe316a29ba1400dd3060b7f12d29e4a7cc6b0c6b1742c10e",
       "edits": [
         {
           "start": 50,
@@ -670437,6 +671059,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 1164,
+          "end": 1165,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
         },
         {
           "start": 1216,
@@ -672525,7 +673154,7 @@
       "original": "no.java",
       "renamed": "TutorialStageSupport.java",
       "inputSha256": "7e0f6b53e5ba790bcadf77b34d0f251f41bd0696681787c7f6e480594a4bd751",
-      "outputSha256": "f85d5112854381350aa243947a2e5a38d169b148e442f8bd1802fd4549dc5a22",
+      "outputSha256": "13d02ada347cf74649344c45a62db2ef8b64d33c7189999272bfb94351696a8e",
       "edits": [
         {
           "start": 50,
@@ -673499,6 +674128,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 11116,
+          "end": 11117,
+          "symbol": "M:ge.a(Ljava/lang/String;IZILjava/awt/Color;)V",
+          "original": "a",
+          "renamed": "drawAwtLoadingProgress"
         },
         {
           "start": 11118,
@@ -697020,7 +697656,7 @@
       "original": "qb.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "bb202855c095af43bd02ebe3f2a23a483131a4a971b9ac73aeea64f18d25286e",
-      "outputSha256": "2e7efadc770d762421f22a8d2fb47e7000c120c3caa6ee04dff1f75bd82fca06",
+      "outputSha256": "c5235df13c33f3af88a48bac776b743be941423a137e5d736865b61f73b0a014",
       "edits": [
         {
           "start": 69,
@@ -697402,12 +698038,33 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 9732,
+          "end": 9733,
+          "symbol": "M:fn.a(I)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
           "start": 10086,
           "end": 10088,
           "symbol": "C:ic",
           "original": "ic",
           "renamed": "AwtFullscreenController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 10453,
+          "end": 10454,
+          "symbol": "M:fn.a(Ljava/awt/Frame;IIIII)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
+        },
+        {
+          "start": 10721,
+          "end": 10722,
+          "symbol": "M:fn.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "exitFullscreen"
         },
         {
           "start": 10834,
@@ -712039,7 +712696,7 @@
       "original": "re.java",
       "renamed": "QuickChatPhraseRegistry.java",
       "inputSha256": "72352cbd9118ce76895a4d5aa67e65ebdad5ed6b119e7fa2267d646f4998e13f",
-      "outputSha256": "cd2f911d6169166ffb2bfab4f9ecd6dfcf9e7bda6c59f13806d373521a79e2d9",
+      "outputSha256": "da746929df69640aa59b7c3d7c455cc503e8626046234eb6452310f81050366a",
       "edits": [
         {
           "start": 50,
@@ -712217,6 +712874,13 @@
           "renamed": "TextFieldWidget"
         },
         {
+          "start": 2611,
+          "end": 2612,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
+        },
+        {
           "start": 2916,
           "end": 2918,
           "symbol": "C:ma",
@@ -712257,6 +712921,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 3898,
+          "end": 3899,
+          "symbol": "M:go.a(ILjava/lang/CharSequence;)Z",
+          "original": "a",
+          "renamed": "isDecimalInteger"
         },
         {
           "start": 4200,
@@ -713674,7 +714345,7 @@
       "original": "ri.java",
       "renamed": "LoginForm.java",
       "inputSha256": "8f8b5ad2325108553cf90f8769ad363cad3625c04ae8063cfde58de11a16a5fc",
-      "outputSha256": "2b2e7703435fd78bd3d45a875c1b4e06f671e13526ff3224c2a38ee431016a77",
+      "outputSha256": "65556a99a4874367a5cf20957dd0ae1ccedd61b16d5926b4281a9eda1ee7009b",
       "edits": [
         {
           "start": 50,
@@ -713997,6 +714668,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "DialPainter"
+        },
+        {
+          "start": 5432,
+          "end": 5433,
+          "symbol": "M:i.a(I)Z",
+          "original": "a",
+          "renamed": "isForcedLoginMode"
         },
         {
           "start": 5552,
@@ -726849,7 +727527,7 @@
       "original": "sh.java",
       "renamed": "SolMapReader.java",
       "inputSha256": "0740a169845de1d7a06ce0018f7b5d52f33cdd49b6a3d4176d832ef40b2d1d4e",
-      "outputSha256": "b437029a1c1152ad3505ea81ccfc6ca74208b9ba52c772230006e75f1a2a456e",
+      "outputSha256": "be3229ba4fea59d47e177608fdb7d05e03b751661abd5e8f6da45d979268d9bd",
       "edits": [
         {
           "start": 50,
@@ -727354,6 +728032,13 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "IsolationistAi"
+        },
+        {
+          "start": 6282,
+          "end": 6283,
+          "symbol": "M:hg.a(ZLnf;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatChatPrefix"
         },
         {
           "start": 6336,
@@ -743205,7 +743890,7 @@
       "original": "so.java",
       "renamed": "BattleExplosionVisual.java",
       "inputSha256": "08bb2afb87f3b83b5655cddbe46333b393e92286064676bf7ea034e75547a620",
-      "outputSha256": "18b593f1393197a382017fb16e830e2191ad558692e1556b92c78ab628f81890",
+      "outputSha256": "67e10b5ca5b29e1abd81446dcfc8fdc37406feaefd3d3465b871e6efbdebe0ce",
       "edits": [
         {
           "start": 50,
@@ -743353,6 +744038,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 2035,
+          "end": 2036,
+          "symbol": "M:ge.a([II[IIIIIIII)V",
+          "original": "a",
+          "renamed": "darkenPixelsByMask"
         },
         {
           "start": 2059,
@@ -745590,7 +746282,7 @@
       "original": "t.java",
       "renamed": "StarLinkPlanner.java",
       "inputSha256": "af80c8d7bd0221b06baab1bfa3253974ea5918a7154a909be96e94152cd0f34d",
-      "outputSha256": "f8b264ec052221ebe933021664d1d79157831aff92e36ecd2d44223985b4da49",
+      "outputSha256": "3e66c70af320d5bf565f6b79a43998537b1280f8b8168b00b4d39877365eef31",
       "edits": [
         {
           "start": 50,
@@ -746074,6 +746766,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "ValidationIndicator"
+        },
+        {
+          "start": 4802,
+          "end": 4803,
+          "symbol": "M:hl.a(Lpf;Z)V",
+          "original": "a",
+          "renamed": "orderCandidateBorderLinks"
         },
         {
           "start": 4841,
@@ -761115,7 +761814,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "6970158671b0a2a05f24678504e6969ede06064ccb85a3ea22837527b8426ebc",
+      "outputSha256": "ad41011ca08d969ce0c3a900794c570c94d7343390cb24474de83864fdd0f8ce",
       "edits": [
         {
           "start": 71,
@@ -761543,6 +762242,13 @@
           "symbol": "M:tr.b(ILln;)V",
           "original": "b",
           "renamed": "drawStarBackdrop"
+        },
+        {
+          "start": 3116,
+          "end": 3117,
+          "symbol": "M:ia.a(ILln;)V",
+          "original": "a",
+          "renamed": "drawStarTypeSprite"
         },
         {
           "start": 3228,
@@ -763645,6 +764351,13 @@
           "renamed": "drawProjectGlows"
         },
         {
+          "start": 53304,
+          "end": 53305,
+          "symbol": "M:ia.a(ILln;)V",
+          "original": "a",
+          "renamed": "drawStarTypeSprite"
+        },
+        {
           "start": 53339,
           "end": 53341,
           "symbol": "C:rs",
@@ -763678,6 +764391,13 @@
           "symbol": "F:ln.field_I:Ljava/lang/String;",
           "original": "field_I",
           "renamed": "name"
+        },
+        {
+          "start": 53661,
+          "end": 53662,
+          "symbol": "M:ia.a(ILln;)V",
+          "original": "a",
+          "renamed": "drawStarTypeSprite"
         },
         {
           "start": 53739,
@@ -771684,7 +772404,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "3d87fe1ca1b3dadb2b9d63ed0a2576454fed8f711f3e5d6101a29fd1f147dc90",
+      "outputSha256": "77c2ccbfe1b4d9bd251f68a81419bef8c902b37a70c8be2d4ff927eefb7e0637",
       "edits": [
         {
           "start": 50,
@@ -772525,6 +773245,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "DisplayModeInfo"
+        },
+        {
+          "start": 12762,
+          "end": 12763,
+          "symbol": "M:gl.a(B)V",
+          "original": "a",
+          "renamed": "advanceIntroFinalScene"
         },
         {
           "start": 12876,
@@ -775998,7 +776725,7 @@
       "original": "uk.java",
       "renamed": "MapStateReader.java",
       "inputSha256": "8a15653ee05403f474fdc3a45c7a1aabd2b09d19cd3fdc2992ad7d20354d7f9a",
-      "outputSha256": "02ad3550a71611d46f2584bdbf6f53605abb39c87251d0e8584957752d8fb30b",
+      "outputSha256": "5eb44ea05e7e7eaac76ba907f8fa4b9c863890b54d595455014bddfc7de42df1",
       "edits": [
         {
           "start": 50,
@@ -776482,6 +777209,13 @@
           "symbol": "C:hl",
           "original": "hl",
           "renamed": "ValidationIndicator"
+        },
+        {
+          "start": 5235,
+          "end": 5236,
+          "symbol": "M:hl.a(II)I",
+          "original": "a",
+          "renamed": "hexColumnsForMapWidth"
         },
         {
           "start": 5267,
@@ -814681,10 +815415,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "81c52a47929141beddfaa23628faf06d565982fac77921cd2c3f00938ee840a3",
+    "rulesSha256": "0144130bf9a424997c32f9b4db9cd930fcef795810cff9836349cde390ffa339",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "e95456fb94e25bfc193f1509f54024377b03a6d848227846559416a2be281673",
+    "outputTreeSha256": "2cf5ebdad1cebb7f236e38f3653434f9ae11b09c9d41df598c5b9bdc46fcc024",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -114,7 +114,7 @@ final class MapView extends MapViewState {
               var19.field_o >= 0 &&
               var19.field_i >= 0) {
               this.drawStarBackdrop(0, var18);
-              this.a(-91, var18);
+              this.drawStarTypeSprite(-91, var18);
               if (this.field_I < 330.0f &&
                 var18.field_u) {
                 this.drawStarSprite(var18, (byte) 101);
@@ -1318,7 +1318,7 @@ final class MapView extends MapViewState {
           }
           this.drawProjectGlows(param1, -29952);
           if (param1.field_B >= 6) {
-            this.a(-86, param1);
+            this.drawStarTypeSprite(-86, param1);
             var6 = IconTextPanel.field_Cb.stringWidth(Integer.toString(this.field_eb[param1.field_p])) + 1;
             if (var6 < 10) {
               var6 = 10;
@@ -1326,7 +1326,7 @@ final class MapView extends MapViewState {
             SoftwareRasterizer.fillCircleAlpha(this.field_i[param1.field_p] - 1, -1 + this.field_J[param1.field_p], var6, 0, 128);
           }
           if (param1.name.equalsIgnoreCase("sol")) {
-            this.a(-71, param1);
+            this.drawStarTypeSprite(-71, param1);
           }
           if (param0 != 11746) {
             this.drawBattleSummaries((byte) -83, -5, -104);

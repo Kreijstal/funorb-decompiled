@@ -306,7 +306,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(int[] param0, int[] param1, int[] param2, boolean[] param3, boolean[] param4, int[] param5, int[] param6, int[] param7, int param8) {
+    final void setPlanningReachability(int[] param0, int[] param1, int[] param2, boolean[] param3, boolean[] param4, int[] param5, int[] param6, int[] param7, int param8) {
         try {
           this.field_a = param2;
           this.field_U = param5;
@@ -337,7 +337,7 @@ abstract class MapViewState {
           }
           var5_int = 0;
           while (true) {
-            if (this.a(-4, var5_int) &&
+            if (this.isWormholeAnnotationSlotFree(-4, var5_int) &&
               this.isSlotFree(var5_int, 0, param3) &&
               this.isSlotFree(var5_int, 0, param1)) {
               this.field_ab.addLast((byte) -113, new StarAnnotation(param3, param0, 3, var5_int));
@@ -430,7 +430,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(int param0, Star param1) {
+    final void drawStarTypeSprite(int param0, Star param1) {
         Sprite var4 = null;
         Sprite var5 = null;
         try {
@@ -574,7 +574,7 @@ abstract class MapViewState {
         }
     }
 
-    final void d(int param0) {
+    final void refreshStarResourceOrder(int param0) {
         int var3 = 0;
         Star var4 = null;
         int[] var5 = null;
@@ -859,7 +859,7 @@ abstract class MapViewState {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isWormholeAnnotationSlotFree(int param0, int param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         StarAnnotation var3 = (StarAnnotation) (this.field_ab.startForward(0));
         if (param0 != -4) {

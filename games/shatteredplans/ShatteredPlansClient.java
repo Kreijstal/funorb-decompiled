@@ -194,7 +194,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     }
                     this.b(false, true);
                   } else {
-                    if (DialPainter.c(0)) {
+                    if (DialPainter.isAccountChoiceMenuOpen(0)) {
                       var2 = 1;
                       if (~ClientOverlayDrawSupport.field_c != ~ClientOverlayDrawSupport.field_g) {
                         this.b(false, false);
@@ -985,7 +985,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         NanoFrameTimer.clearStatics((byte) 78);
         ImageProducerRasterBuffer.clearStatics(6);
         ClientRenderSupport.clearStatics(param0 ^ -24069);
-        DisplayModeInfo.a(param0 + 24155);
+        DisplayModeInfo.clearDisplayModeStatics(param0 + 24155);
         WhirlpoolHasher.clearStatics(0);
         StarLinkPlanner.clearStatics((byte) -11);
         LobbyUiSupport.clearStatics((byte) -81);
@@ -1455,7 +1455,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             stackIn_71_1 = (null != NameSuggestionsPanel.field_K) || (MusicPatch.field_i);
             Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
           } else {
-            if (!DialPainter.c(0)) {
+            if (!DialPainter.isAccountChoiceMenuOpen(0)) {
               if (!this.field_G.isEmpty(27)) {
                 var3_ref_he = (IntNode) (this.field_G.startForward(param0 ^ 1));
                 var4 = AwtEventQueueSupport.field_a[var3_ref_he.field_k];

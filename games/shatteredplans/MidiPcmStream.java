@@ -249,7 +249,7 @@ final class MidiPcmStream extends PcmStream {
         MusicPatch var13 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          param1.a();
+          param1.buildPatchUsage();
           if (param2 <= 12) {
             this.field_s = (int[]) null;
           }
@@ -282,7 +282,7 @@ final class MidiPcmStream extends PcmStream {
             var8 = (BytePayloadNode) (param1.field_i.nextInTraversal(false));
           }
           if (var6_int != 0) {
-            param1.b();
+            param1.clearPatchUsage();
           }
           stackIn_20_0 = var6_int;
           return stackIn_20_0 != 0;

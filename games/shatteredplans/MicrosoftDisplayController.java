@@ -6,7 +6,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
     private static int[] field_b;
     private com.ms.directX.DirectDraw field_a;
 
-    final int[] a(int param0) {
+    final int[] listDisplayModes(int param0) {
         int[] var3 = null;
         int[] var2 = null;
         int[] var3Lifetime1;
@@ -33,7 +33,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         return var3Lifetime1;
     }
 
-    final void a(int param0, java.awt.Frame param1) {
+    final void exitFullscreen(int param0, java.awt.Frame param1) {
         this.field_a.restoreDisplayMode();
         if (param0 != 0) {
           return;
@@ -41,7 +41,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
     }
 
-    final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
+    final void enterFullscreen(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
         param0.setVisible(true);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();

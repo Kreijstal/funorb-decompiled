@@ -151,7 +151,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
     }
 
     private final void a(int param0) {
-        if (DialPainter.a(1) ||
+        if (DialPainter.isForcedLoginMode(1) ||
           !(this.field_H.field_s.length() <= 0) &&
           !(0 >= this.field_R.field_s.length())) {
           BoundsRect.a((byte) 81, this.field_R.field_s, this.field_H.field_s);

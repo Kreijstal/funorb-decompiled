@@ -11,20 +11,20 @@ final class DisplayModeInfo {
     int field_g;
     int field_d;
 
-    public static void a(int param0) {
+    public static void clearDisplayModeStatics(int param0) {
         if (param0 > 85) {
           field_h = null;
           field_b = null;
           field_a = null;
           return;
         }
-        DisplayModeInfo.a(80);
+        DisplayModeInfo.clearDisplayModeStatics(80);
         field_h = null;
         field_b = null;
         field_a = null;
     }
 
-    final static MenuWindow a(int param0, int param1) {
+    final static MenuWindow createFleetInfoWindow(int param0, int param1) {
         ReflectionCheck.field_k = new MenuWindow(0, -((4 + GradientMenuLabel.field_y.field_o) * param0) + 479 - 28, 200, (GradientMenuLabel.field_y.field_o + 4) * param0 + 28, ChatPanelSetupSupport.field_a.toUpperCase());
         MenuButton var2 = new MenuButton(184 + ReflectionCheck.field_k.field_k, 2 + ReflectionCheck.field_k.field_t, 11, 11, param1, (Sprite) null, "X", 16711680);
         var2.field_h = ReflectionCheck.field_k;
@@ -35,14 +35,14 @@ final class DisplayModeInfo {
         return ReflectionCheck.field_k;
     }
 
-    final static void a(byte param0) {
+    final static void advanceIntroFinalScene(byte param0) {
         int fieldTemp$0 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 == 350) {
           ArchiveRequest.requestIntroScene(-1, (byte) -114);
         }
         if (param0 > -29) {
-          DisplayModeInfo.a(66);
+          DisplayModeInfo.clearDisplayModeStatics(66);
           return;
         }
     }

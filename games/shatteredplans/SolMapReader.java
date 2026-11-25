@@ -216,7 +216,7 @@ final class SolMapReader implements MapGenerator {
             } else {
               if (null != var8_ref_nf.field_j) {
               }
-              var10 = IsolationistAi.a(param0, var8_ref_nf);
+              var10 = IsolationistAi.formatChatPrefix(param0, var8_ref_nf);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_nf.field_k);
               var12 = ResizingDialog.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);

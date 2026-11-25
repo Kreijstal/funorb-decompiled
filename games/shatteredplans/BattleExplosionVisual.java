@@ -62,7 +62,7 @@ final class BattleExplosionVisual extends StarSoundState {
           }
           if (0 < var7 &&
             var6 > 0) {
-            ImageProducerRasterBuffer.a(param3.field_B, var5, SoftwareRasterizer.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
+            ImageProducerRasterBuffer.darkenPixelsByMask(param3.field_B, var5, SoftwareRasterizer.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
             return;
           }
           return;

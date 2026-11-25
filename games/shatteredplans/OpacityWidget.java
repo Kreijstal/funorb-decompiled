@@ -125,7 +125,7 @@ final class OpacityWidget extends SingleChildWidget {
           }
           var8 = new AccountCreationDialog(ByteArrayStorage.field_e, param5);
           ByteArrayStorage.field_e.addDialog(true, var8);
-          if (TextFieldWidget.j(0)) {
+          if (TextFieldWidget.hasStatusButtonSetting(0)) {
             var8.f(false);
             return true;
           }

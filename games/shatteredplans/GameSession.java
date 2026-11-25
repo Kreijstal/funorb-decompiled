@@ -545,7 +545,7 @@ final class GameSession implements AiHost {
             }
 
           }
-          this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
+          this.field_z.setPlanningReachability(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3580,8 +3580,8 @@ final class GameSession implements AiHost {
             do {
               if (var2.length <= var3_int) {
                 this.field_z.setDisplayState(this.field_C, param0, this.field_l, this.field_R, false);
-                this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
-                this.field_z.d(0);
+                this.field_z.setPlanningReachability(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
+                this.field_z.refreshStarResourceOrder(0);
                 this.updateProjectedGarrisons(this.field_n, -83);
                 break;
               }
@@ -3801,7 +3801,7 @@ final class GameSession implements AiHost {
             this.field_t = new int[var2_intLifetime1];
             this.field_U = new int[var2_intLifetime1];
             this.field_P.recomputePlayerTotals(-99);
-            this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
+            this.field_z.setPlanningReachability(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
           }
           if (this.field_h < 0) {
             GameMenuController.field_e = false;

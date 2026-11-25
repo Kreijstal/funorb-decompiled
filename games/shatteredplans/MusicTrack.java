@@ -13,7 +13,7 @@ final class MusicTrack extends IntrusiveNode {
         return new MusicTrack(new PacketBuffer(var3));
     }
 
-    final void a() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;
@@ -112,7 +112,7 @@ final class MusicTrack extends IntrusiveNode {
         }
     }
 
-    final void b() {
+    final void clearPatchUsage() {
         this.field_i = null;
     }
 
