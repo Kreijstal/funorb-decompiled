@@ -54,8 +54,8 @@ final class AccountRequestResult {
             var9 = -(var8 >>> 24 & 2102808831) + 255;
             var8 = var8 & 16777215;
             if (!param0) {
-              QuickChatShortcutSupport.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
-              ResizableModalDialog.b(param3, param5, param2 + 128, param1, var6_int, param4);
+              QuickChatShortcutSupport.drawSpecialTerrainTransitionCorners((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
+              ResizableModalDialog.drawBattlefieldShadows(param3, param5, param2 + 128, param1, var6_int, param4);
             }
             IntrusiveNode.drawMovementAndSpellRangeOutline(78, param5, param3, param4 + 19, var6_int, param1 + 39);
             AttackRangeOverlaySupport.drawAttackRangeOverlay(var6_int, param4 + 19, 39 + param1, -125, param5, param3);

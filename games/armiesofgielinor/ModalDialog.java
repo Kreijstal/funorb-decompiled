@@ -176,7 +176,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           var4 = (ResourceArchive) null;
           ModalDialog.loadMusicPatch((ResourceArchive) null, -105, true);
         }
-        stackIn_13_0 = (param1) && (ToastMessage.c((byte) -103)) && (var2 == 0);
+        stackIn_13_0 = (param1) && (ToastMessage.isCaretBlinkVisible((byte) -103)) && (var2 == 0);
         NineSliceSpriteSupport.drawSharedInterfaceAndDialogs(stackIn_13_0, false);
         if (null != FullscreenFocusCanvas.gameplayController) {
           FullscreenFocusCanvas.gameplayController.drawBattleFrame(0, param1);
@@ -194,7 +194,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           var3 = stackIn_22_0;
           stackIn_25_0 = false;
           stackIn_25_1 = var3;
-          stackIn_26_2 = (param1) && (ToastMessage.c((byte) -103));
+          stackIn_26_2 = (param1) && (ToastMessage.isCaretBlinkVisible((byte) -103));
           RevivalEvent.drawChatInputAndTooltip(stackIn_25_0, stackIn_25_1, stackIn_26_2);
         }
     }

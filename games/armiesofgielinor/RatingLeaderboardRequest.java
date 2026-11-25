@@ -20,7 +20,7 @@ final class RatingLeaderboardRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawTileSmoke(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_10_0 = 0;
         RgbSprite stackIn_16_0 = null;
         int stackIn_16_1 = 0;

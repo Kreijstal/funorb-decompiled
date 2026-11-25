@@ -6,7 +6,7 @@ final class FloorModSupport {
     static HighscoreAccountEntry[] field_b;
     static int socialListState;
 
-    final static boolean a(MeshData param0, int param1) {
+    final static boolean hasTallMeshVertices(MeshData param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

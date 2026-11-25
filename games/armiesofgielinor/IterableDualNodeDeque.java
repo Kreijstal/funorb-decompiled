@@ -72,7 +72,7 @@ final class IterableDualNodeDeque implements Iterable {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAccountNameNormalizationCharacter(char param0, int param1) {
         if (param1 == -3904) {
           if (Character.isISOControl(param0)) {
             return false;
@@ -125,7 +125,7 @@ final class IterableDualNodeDeque implements Iterable {
         field_a = null;
         field_c = null;
         if (obfuscationGuard != 19345) {
-          IterableDualNodeDeque.a('`', -95);
+          IterableDualNodeDeque.isAccountNameNormalizationCharacter('`', -95);
         }
     }
 

@@ -115,7 +115,7 @@ final class AccountNameCharacterSupport {
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void writeSettingsCookie(String param0, java.applet.Applet param1, boolean param2) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;

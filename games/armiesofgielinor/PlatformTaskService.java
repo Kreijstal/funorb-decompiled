@@ -437,7 +437,7 @@ final class PlatformTaskService implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = TurnSkipToggleSupport.a((String) (var8.objectArgument), (byte) 102, var8.integerArgument).openSocket(111);
+                      var8.result = TurnSkipToggleSupport.createProxySocketFactory((String) (var8.objectArgument), (byte) 102, var8.integerArgument).openSocket(111);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

@@ -1073,7 +1073,7 @@ final class Battlefield {
           field_q = (String) null;
         }
         int var3 = param0;
-        if (ScrollControlWidget.c(0, param1) &&
+        if (ScrollControlWidget.isMageUnitType(0, param1) &&
           param0 == 3) {
           var3 = 3;
         }

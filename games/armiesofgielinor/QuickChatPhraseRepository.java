@@ -26,7 +26,7 @@ final class QuickChatPhraseRepository {
         field_a = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasNoPaidMembership(int param0) {
         if (param0 != 27875) {
           field_d = (ClientUiComponent) null;
           if (!DamageEvent.isGuestSession(81)) {

@@ -358,7 +358,7 @@ final class BitmapTextLayout extends TextLayout {
         ReloadPageSupport.field_g.setBounds(GradientSpanBlendSupport.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + GradientSpanBlendSupport.field_d;
         IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!GrowableIntArray.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !GrowableIntArray.field_c ? 0 : var1, 0);
-        AudioShutdownSupport.a((byte) 91);
+        AudioShutdownSupport.layoutLobbyPlayerListHeader((byte) 91);
         EventPresenterFactory.field_d.setBounds(40, -20500, NumericDateInputWidget.field_T.width, NumericDateInputWidget.field_T.height - 40, 0);
         ClientContextMenu.field_n.setBounds(30, -20500, SpectateRoomRequestSupport.field_i.width, 0, 0);
         LobbyPlayer.field_Lb.setBounds(-30 + (-40 + SpectateRoomRequestSupport.field_i.height) - 2, -20500, SpectateRoomRequestSupport.field_i.width, 30, 0);

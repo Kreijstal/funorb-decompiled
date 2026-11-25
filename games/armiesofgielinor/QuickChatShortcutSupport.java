@@ -5,7 +5,7 @@ final class QuickChatShortcutSupport {
     static String field_b;
     static String field_a;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawSpecialTerrainTransitionCorners(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = -78 % ((-51 - param0) / 33);
         int var8 = CampaignMenuEntry.field_u[param6];
         if (9 != var8) {

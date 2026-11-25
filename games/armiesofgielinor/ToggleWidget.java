@@ -58,7 +58,7 @@ final class ToggleWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawLayeredFoliageSprites(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var10 = 0;
         boolean stackIn_13_0 = false;
         boolean stackIn_14_1 = false;

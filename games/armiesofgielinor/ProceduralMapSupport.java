@@ -25,7 +25,7 @@ final class ProceduralMapSupport {
 
     final static String getLocalAccountNameOrEmpty(boolean param0) {
         if (!param0) {
-          ProceduralMapSupport.a(true);
+          ProceduralMapSupport.releaseProceduralMapSupportStatics(true);
           if (null != StructureGlowRenderer.localAccountName) {
             return StructureGlowRenderer.localAccountName;
           }
@@ -56,7 +56,7 @@ final class ProceduralMapSupport {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseProceduralMapSupportStatics(boolean param0) {
         if (!param0) {
           validationInvalid = null;
           field_b = null;

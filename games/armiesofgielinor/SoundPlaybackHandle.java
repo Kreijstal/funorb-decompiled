@@ -87,11 +87,11 @@ final class SoundPlaybackHandle extends IntrusiveNode {
         field_p = null;
         if (param0 >= -33) {
           AlphaDecodedSpriteSupport var2 = (AlphaDecodedSpriteSupport) null;
-          SoundPlaybackHandle.a(54, (AlphaDecodedSpriteSupport) null, -6);
+          SoundPlaybackHandle.writeByteShortRequest(54, (AlphaDecodedSpriteSupport) null, -6);
         }
     }
 
-    final static void a(int param0, AlphaDecodedSpriteSupport param1, int param2) {
+    final static void writeByteShortRequest(int param0, AlphaDecodedSpriteSupport param1, int param2) {
         CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;

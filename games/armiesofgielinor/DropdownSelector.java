@@ -265,7 +265,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
             if (OwnerChangeEvent.field_B) {
               UpkeepEvent.snapDialogsAndFreezeProgress(-78);
-              DialWidget.b(true);
+              DialWidget.configureTutorialStageWidgets(true);
               if (ClientContextMenu.field_a == 9 &&
                 !MusicPatch.hasAnyUnlockMaskBits(ReportAbuseDialog.field_Nb, (byte) 116)) {
                 ClientContextMenu.field_a = 0;
@@ -598,7 +598,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
     }
 
     private final void openDropdown(int obfuscationGuard) {
-        int var2 = this.optionList.a((byte) -126);
+        int var2 = this.optionList.getPreferredDropdownHeight((byte) -126);
         int var3 = var2;
         int var4 = 0;
         if (this.maximumDropdownHeight < var3) {

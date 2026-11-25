@@ -96,26 +96,26 @@ final class SpriteScrollBar {
           if (this.orientation == 0) {
             var4 = this.length;
             var5 = this.thickness;
-            return ChatMessage.a(pointerY, this.x, this.y, pointerX, var4, (byte) -107, var5);
+            return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, var4, (byte) -107, var5);
           }
           if (this.orientation != 1) {
             return false;
           }
           var4Lifetime3 = this.thickness;
           var5Lifetime3 = this.length;
-          return ChatMessage.a(pointerY, this.x, this.y, pointerX, var4Lifetime3, (byte) -107, var5Lifetime3);
+          return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, var4Lifetime3, (byte) -107, var5Lifetime3);
         }
         if (this.orientation == 0) {
           var4Lifetime1 = this.length;
           var5Lifetime1 = this.thickness;
-          return ChatMessage.a(pointerY, this.x, this.y, pointerX, var4Lifetime1, (byte) -107, var5Lifetime1);
+          return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, var4Lifetime1, (byte) -107, var5Lifetime1);
         }
         if (this.orientation != 1) {
           return false;
         }
         var4Lifetime2 = this.thickness;
         var5Lifetime2 = this.length;
-        return ChatMessage.a(pointerY, this.x, this.y, pointerX, var4Lifetime2, (byte) -107, var5Lifetime2);
+        return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, var4Lifetime2, (byte) -107, var5Lifetime2);
     }
 
     private final boolean containsArrow(int arrowIndex, int pointerY, int pointerX, int obfuscationGuard) {
@@ -124,7 +124,7 @@ final class SpriteScrollBar {
         int var7 = this.getArrowY(obfuscationGuard, arrowIndex);
         int var8 = this.arrowSprites[0].canvasWidth;
         int var9 = this.arrowSprites[0].canvasHeight;
-        var5 = ChatMessage.a(pointerY, var6, var7, pointerX, var8, (byte) -110, var9) ? 1 : 0;
+        var5 = ChatMessage.containsPointInclusive(pointerY, var6, var7, pointerX, var8, (byte) -110, var9) ? 1 : 0;
         return var5 != 0;
     }
 

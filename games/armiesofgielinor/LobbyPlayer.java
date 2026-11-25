@@ -120,11 +120,11 @@ final class LobbyPlayer extends ClientUiComponent {
         }
     }
 
-    final static void d(byte param0) {
+    final static void reopenStagedAccountLogin(byte param0) {
         String var2 = (String) null;
         MonotonicClockSupport.showLoginWithDescription(GameUiOverlaySupport.field_e, 640, (String) null);
         if (param0 != -24) {
-          LobbyPlayer.d((byte) -75);
+          LobbyPlayer.reopenStagedAccountLogin((byte) -75);
         }
     }
 

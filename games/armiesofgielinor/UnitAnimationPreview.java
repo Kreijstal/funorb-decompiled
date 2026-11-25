@@ -250,7 +250,7 @@ final class UnitAnimationPreview {
         field_m = null;
     }
 
-    final static ClientUiComponent d(byte param0) {
+    final static ClientUiComponent getLobbyPlayerScrollContent(byte param0) {
         if (param0 < 69) {
           UnitAnimationPreview.releaseStatics((byte) 50);
           return MapTile.field_f.content;

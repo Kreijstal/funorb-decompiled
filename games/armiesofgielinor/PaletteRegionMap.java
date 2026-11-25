@@ -24,7 +24,7 @@ final class PaletteRegionMap {
 
     final static void drawLoadingCanvas(byte param0, java.awt.Canvas param1) {
         if (11 == SoundCache.field_b) {
-          AnimationFrameSet.d((byte) -13);
+          AnimationFrameSet.applyAnimationFrameSetupGuard((byte) -13);
         }
         SpellCastRequest.drawProgressDialog(ArchiveMasterIndex.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {

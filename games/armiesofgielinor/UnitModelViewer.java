@@ -422,7 +422,7 @@ final class UnitModelViewer {
           this.initializePreview(3);
           this.selectUnit(initialUnitType, (byte) 39);
           this.layoutControls(0, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.height, 0);
-          BitReversalSupport.a(false);
+          BitReversalSupport.initializePreviewRasterPalette(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

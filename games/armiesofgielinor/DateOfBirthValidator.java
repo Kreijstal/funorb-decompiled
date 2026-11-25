@@ -38,7 +38,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
         field_i = null;
         if (param0) {
           String var2 = (String) null;
-          DateOfBirthValidator.a((String) null, (byte) -81);
+          DateOfBirthValidator.validateEmailDomainLabel((String) null, (byte) -81);
         }
     }
 
@@ -79,7 +79,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
         return StateChangeEvent.field_z;
     }
 
-    final static ProceduralMapSupport a(String param0, byte param1) {
+    final static ProceduralMapSupport validateEmailDomainLabel(String param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -125,7 +125,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
             return null;
           }
           var6 = (String) null;
-          DateOfBirthValidator.a((String) null, (byte) -62);
+          DateOfBirthValidator.validateEmailDomainLabel((String) null, (byte) -62);
           stackIn_26_0 = null;
           return (ProceduralMapSupport) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

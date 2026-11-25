@@ -236,7 +236,7 @@ final class RadialSummonMenu {
         try {
           var8_int = -39 / ((-87 - param5) / 33);
           var9 = new EventPresenter(param4, param1, param7, param0, param6, param3, param2);
-          if (var9.b(param6, param3, true)) {
+          if (var9.initializeTilePopupPresentation(param6, param3, true)) {
             stackIn_4_0 = var9;
             return stackIn_4_0;
           }

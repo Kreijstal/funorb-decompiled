@@ -177,7 +177,7 @@ final class MoveEvent extends GameEvent {
           if (param1) {
             MoveEvent.releaseMoveEventStatics(90);
           }
-          AccountNameFoldingSupport.a("commonui", "dropdown", param2, 24914);
+          AccountNameFoldingSupport.loadIndexedSpriteByName("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.loadIndexedSpritesByName("screen_options", -28106, "commonui", param2);
           ToggleTurnSkipConsoleCommand.field_H = new IndexedSprite[4];
           HuffmanCodec.field_e = new IndexedSprite[4];

@@ -65,7 +65,7 @@ final class DialWidget extends InteractiveWidget {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void configureTutorialStageWidgets(boolean param0) {
         if (param0) {
           SummonRequest.replaceTutorialStageItems((byte) 52, NetworkGameShell.field_y, 6);
           SummonRequest.replaceTutorialStageItems((byte) 33, UnitAnimationPreview.field_r, 26);
@@ -76,7 +76,7 @@ final class DialWidget extends InteractiveWidget {
           SummonRequest.replaceTutorialStageItems((byte) 78, UnitAnimationPreview.field_r, 28);
           MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
           SummonRequest.replaceTutorialStageItems((byte) 45, LogoMesh.field_B, 9);
-          if (!QuickChatPhraseRepository.a(27875)) {
+          if (!QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
             SummonRequest.replaceTutorialStageItems((byte) 54, ScreenWipeTransition.field_b, 1);
             SummonRequest.replaceTutorialStageItems((byte) 91, GameEvent.field_t, 24);
             SummonRequest.replaceTutorialStageItems((byte) 101, FriendRequestSupport.field_f, 17);
@@ -96,7 +96,7 @@ final class DialWidget extends InteractiveWidget {
         SummonRequest.replaceTutorialStageItems((byte) 78, UnitAnimationPreview.field_r, 28);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
         SummonRequest.replaceTutorialStageItems((byte) 45, LogoMesh.field_B, 9);
-        if (!QuickChatPhraseRepository.a(27875)) {
+        if (!QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
           SummonRequest.replaceTutorialStageItems((byte) 54, ScreenWipeTransition.field_b, 1);
           SummonRequest.replaceTutorialStageItems((byte) 91, GameEvent.field_t, 24);
           SummonRequest.replaceTutorialStageItems((byte) 101, FriendRequestSupport.field_f, 17);

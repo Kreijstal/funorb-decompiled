@@ -148,7 +148,7 @@ final class LocalizedUrlSupport {
         responsePhraseIds = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void drawTileInteractionOverlays(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         EventPresenter var4 = null;
         int var5 = 0;

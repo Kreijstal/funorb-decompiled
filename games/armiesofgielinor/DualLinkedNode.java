@@ -112,7 +112,7 @@ class DualLinkedNode extends IntrusiveNode {
         this.secondaryKey = key;
     }
 
-    final static void e(int param0) {
+    final static void finishSessionReconnect(int param0) {
         int var1;
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -136,7 +136,7 @@ class DualLinkedNode extends IntrusiveNode {
           ResourceClientSetupSupport.showRecoveryProgress(56);
           return;
         }
-        DualLinkedNode.e(75);
+        DualLinkedNode.finishSessionReconnect(75);
         ManaStarParticle.field_n = false;
         BestScoreStrategy.field_h = null;
         if (GrowableIntArray.field_i) {

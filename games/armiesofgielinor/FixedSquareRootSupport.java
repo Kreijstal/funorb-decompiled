@@ -25,7 +25,7 @@ final class FixedSquareRootSupport {
         validationChecking = null;
     }
 
-    final static int a(int param0) {
+    final static int getMessageDialogHeight(int param0) {
         if (param0 != 25213) {
           return -16;
         }
@@ -67,7 +67,7 @@ final class FixedSquareRootSupport {
           if (obfuscationGuard == -129) {
             return GradientSpanBlendSupport.field_f[-32768 + value];
           }
-          FixedSquareRootSupport.a(105);
+          FixedSquareRootSupport.getMessageDialogHeight(105);
           return GradientSpanBlendSupport.field_f[-32768 + value];
         }
         if (33554432 <= value) {

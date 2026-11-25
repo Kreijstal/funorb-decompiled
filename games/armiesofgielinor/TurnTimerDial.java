@@ -193,7 +193,7 @@ final class TurnTimerDial {
         }
     }
 
-    final static void a(int param0, SoundCache param1) {
+    final static void preloadGroupedBattleSounds(int param0, SoundCache param1) {
         int var3 = 0;
         PcmSample[] array$0 = null;
         int var4 = 0;

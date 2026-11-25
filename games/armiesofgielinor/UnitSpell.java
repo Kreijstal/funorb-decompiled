@@ -480,7 +480,7 @@ final class UnitSpell extends Spell {
         return 4;
     }
 
-    final static void a(int param0, int param1, ScoreSubmissionRequest param2) {
+    final static void enqueueScoreSubmission(int param0, int param1, ScoreSubmissionRequest param2) {
         try {
           if (param1 != 1) {
             ViewportResizeListener var4 = (ViewportResizeListener) null;

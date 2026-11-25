@@ -44,7 +44,7 @@ final class ChatMessage {
         return 2;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static boolean containsPointInclusive(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var7 = param1;
         if (var7 > param3) {
           return false;
@@ -73,7 +73,7 @@ final class ChatMessage {
         field_t = null;
         field_i = null;
         if (obfuscationGuard != 0) {
-          ChatMessage.a(-123, 18, -64, -107, -63, (byte) 82, 91);
+          ChatMessage.containsPointInclusive(-123, 18, -64, -107, -63, (byte) 82, 91);
         }
     }
 

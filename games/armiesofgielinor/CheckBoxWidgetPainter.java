@@ -18,7 +18,7 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
     static boolean[] acceptedPacketOpcodes;
     private int textShadow;
 
-    final static ResourceArchive a(int param0, boolean param1, int param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive openCachedResourceArchive(int param0, boolean param1, int param2, boolean param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -69,7 +69,7 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
     public static void releaseStatics(byte obfuscationGuard) {
         acceptedPacketOpcodes = null;
         if (obfuscationGuard > -36) {
-          CheckBoxWidgetPainter.a(-28, true, 82, false, false, -112);
+          CheckBoxWidgetPainter.openCachedResourceArchive(-28, true, 82, false, false, -112);
         }
     }
 

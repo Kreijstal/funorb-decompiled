@@ -10,7 +10,7 @@ final class ProxySocketFactory extends SocketFactory {
     static RgbSprite field_j;
     private java.net.ProxySelector field_l;
 
-    final static void b(byte param0) {
+    final static void initializeSharedChatEditor(byte param0) {
         UiSelectionState.initializeChatEditor(0);
         if (param0 != 16) {
           ProxySocketFactory.releaseStatics(-107);
@@ -124,7 +124,7 @@ final class ProxySocketFactory extends SocketFactory {
         field_k = (int[][]) null;
         field_i = null;
         if (obfuscationGuard < 32) {
-          ProxySocketFactory.b((byte) -90);
+          ProxySocketFactory.initializeSharedChatEditor((byte) -90);
         }
         field_j = null;
     }

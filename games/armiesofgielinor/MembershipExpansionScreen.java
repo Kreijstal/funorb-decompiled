@@ -417,7 +417,7 @@ final class MembershipExpansionScreen {
             AlphaWidgetContainer.field_H.ensureIndex((byte) 82) &&
             AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
             AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "pump32")) {
-            UnitLossCondition.field_a = AccountNameFoldingSupport.a("members_expansion_screen", "frame", AchievementUnlockRequest.field_p, 24914);
+            UnitLossCondition.field_a = AccountNameFoldingSupport.loadIndexedSpriteByName("members_expansion_screen", "frame", AchievementUnlockRequest.field_p, 24914);
             ByteStorage.field_d = GameplayController.loadRgbSpriteByName("arrow", (byte) 51, "members_expansion_screen", AchievementUnlockRequest.field_p);
             VerticalScrollbar.field_Sb = DropdownArrowPainter.loadBinaryBitmapFontByName("arialish12", AchievementUnlockRequest.field_p, AlphaWidgetContainer.field_H, (byte) -53, "");
             EmailConfirmationValidator.field_n = ChatMessageWriteSupport.loadAntialiasedFontByName("", AchievementUnlockRequest.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");

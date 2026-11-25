@@ -1645,7 +1645,7 @@ final class TutorialController {
                                                                                           if (!this.selectionState.hasActivationInput((byte) 79)) {
                                                                                             return;
                                                                                           }
-                                                                                          if (QuickChatPhraseRepository.a(27875)) {
+                                                                                          if (QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
                                                                                             var6 = param0 ? 1 : 0;
                                                                                             CipherPacketBuffer.changeSharedUiStage(var6 != 0, 15, 1, ChatInputDispatchSupport.field_a);
                                                                                             if (var9 == 0) {
@@ -1993,12 +1993,12 @@ final class TutorialController {
                                                   this.tutorialStage != 28) {
                                                   return;
                                                 }
-                                                TileableNoiseGenerator.a(0, this.tutorialStage);
+                                                TileableNoiseGenerator.selectTutorialStage(0, this.tutorialStage);
                                                 if (var9 == 0) {
                                                   return;
                                                 }
                                               }
-                                              TileableNoiseGenerator.a(0, 9);
+                                              TileableNoiseGenerator.selectTutorialStage(0, 9);
                                               if (var9 == 0) {
                                                 return;
                                               }
@@ -2250,7 +2250,7 @@ final class TutorialController {
             this.selectionState.hasActivationInput((byte) 121)) {
             var6Lifetime1 = -55 + var4_int;
             if (var6Lifetime1 > 1 &&
-              QuickChatPhraseRepository.a(param1 + 27875) &&
+              QuickChatPhraseRepository.hasNoPaidMembership(param1 + 27875) &&
               var9 == 0) {
               return;
             }

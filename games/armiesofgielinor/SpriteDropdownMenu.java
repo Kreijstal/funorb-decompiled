@@ -929,7 +929,7 @@ final class SpriteDropdownMenu {
         int guardQuotient = -30 / ((obfuscationGuard + 89) / 32);
         int contentWidth = this.getContentWidth(1);
         for (optionIndex = this.visibleStartIndex; this.visibleEndIndex > optionIndex; optionIndex++) {
-          if (ChatMessage.a(pointerY, contentLeft, rowTop, pointerX, contentWidth, (byte) -101, rowHeight)) {
+          if (ChatMessage.containsPointInclusive(pointerY, contentLeft, rowTop, pointerX, contentWidth, (byte) -101, rowHeight)) {
             return optionIndex;
           }
           rowTop = rowTop + rowHeight;

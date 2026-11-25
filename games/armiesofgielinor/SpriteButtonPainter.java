@@ -138,11 +138,11 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
         }
     }
 
-    final static ResourceArchive a(int param0, boolean param1) {
+    final static ResourceArchive openDefaultResourceArchive(int param0, boolean param1) {
         if (!param1) {
           SpriteButtonPainter.sleepMillis(-81L, -76);
         }
-        return CheckBoxWidgetPainter.a(param0, true, 1, false, false, 1);
+        return CheckBoxWidgetPainter.openCachedResourceArchive(param0, true, 1, false, false, 1);
     }
 
     public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {

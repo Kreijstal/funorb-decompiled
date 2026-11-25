@@ -308,7 +308,7 @@ final class SpriteDropdownControl extends SpriteControlNode {
 
     final boolean containsPointer(int pointerX, int obfuscationGuard, int pointerY) {
         int var4 = -56 % ((17 - obfuscationGuard) / 60);
-        return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) -99, this.height);
+        return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, this.width, (byte) -99, this.height);
     }
 
     final void enableInput(int obfuscationGuard) {

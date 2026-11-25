@@ -45,7 +45,7 @@ final class BitReversalSupport {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void initializePreviewRasterPalette(boolean param0) {
         TriangleRasterizer.useRasterClip();
         if (param0) {
           return;

@@ -2781,7 +2781,7 @@ final class CombatPresentation implements EventPresentation {
             this.field_C = 65;
           }
           var2_intLifetime1 = var4 >> 1;
-          var3Lifetime1 = SocialListPanel.k(-104) + (var5 >> 1);
+          var3Lifetime1 = SocialListPanel.getSocialListTextBaselineOffset(-104) + (var5 >> 1);
           GradientUiRenderer.drawCenteredSolidText(TickCounter.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
           if (this.battlefield != null &&
             this.battlefield.playerCoats != null) {
@@ -3892,7 +3892,7 @@ final class CombatPresentation implements EventPresentation {
           if (param0 != 54) {
             return;
           }
-          this.field_A = GameClock.a(param1, 8806);
+          this.field_A = GameClock.loadThemeBackground(param1, 8806);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

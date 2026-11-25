@@ -23,7 +23,7 @@ final class ToggleTurnSkipConsoleCommand extends ConsoleCommand {
         field_F = null;
     }
 
-    final static void h(int param0) {
+    final static void drawOpenDialogsForClientFrame(int param0) {
         if (param0 != 2) {
           field_H = (IndexedSprite[]) null;
           ContextActionMenu.drawOpenGameDialogs(true, (byte) -113);

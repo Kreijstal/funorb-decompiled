@@ -136,10 +136,10 @@ final class SpriteFramedLabel {
 
     final boolean containsPointer(int pointerY, int obfuscationGuard, int pointerX) {
         if (obfuscationGuard == 0) {
-          return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
+          return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
         }
         this.y = 33;
-        return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
+        return ChatMessage.containsPointInclusive(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
     }
 
     private final void setText(byte obfuscationGuard, String text) {

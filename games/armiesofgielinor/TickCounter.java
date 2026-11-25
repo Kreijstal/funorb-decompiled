@@ -5749,7 +5749,7 @@ final class TickCounter {
                     if (var11 <= -1) {
                       break regionExit1;
                     }
-                    LoginCredentialStagingSupport.a(7816226, 21 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 - 30);
+                    LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, 21 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 - 30);
                   }
                   if (var10 != 1 ||
                     var13 != 0) {
@@ -5766,7 +5766,7 @@ final class TickCounter {
                           if (var11 <= -1) {
                             break regionExit1;
                           }
-                          LoginCredentialStagingSupport.a(7816226, 20 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + 10);
+                          LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, 20 + param7, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + 10);
                           if (var13 == 0) {
                             break regionExit1;
                           }
@@ -5797,7 +5797,7 @@ final class TickCounter {
                     }
                     QuickChatCategoryMenuSupport.activeStructureSprites[var9_int % 2 + 11].drawFadedToColour(param7, -50 + param3, param0, param8);
                     if (var11 > -1) {
-                      LoginCredentialStagingSupport.a(7816226, param7 + 22, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + var12);
+                      LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, param7 + 22, var11, param4 + ProxyAuthenticationRequiredException.field_b, param3 + var12);
                     }
                   }}}
             }

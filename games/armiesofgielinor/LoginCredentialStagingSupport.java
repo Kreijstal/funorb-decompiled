@@ -6,7 +6,7 @@ final class LoginCredentialStagingSupport {
     static String[] field_b;
     static String field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawAnimatedPlayerFlag(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -28,7 +28,7 @@ final class LoginCredentialStagingSupport {
           if (param0 == 7816226) {
             return;
           }
-          LoginCredentialStagingSupport.a(37, 108, -63, 105, -25);
+          LoginCredentialStagingSupport.drawAnimatedPlayerFlag(37, 108, -63, 105, -25);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -182,7 +182,7 @@ final class UiSelectionState {
           if (TurnTimerDial.field_d <= 0) {
             return;
           }
-          MonotonicClockSupport.a(-68);
+          MonotonicClockSupport.layoutAnimatedChatAndQuickChat(-68);
           CombatEvent.field_I.updateInput(true, param3);
           if (BestScoreStrategy.field_i != null) {
             if (NodeIterator.field_a) {

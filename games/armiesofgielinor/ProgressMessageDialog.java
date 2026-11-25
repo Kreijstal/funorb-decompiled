@@ -117,7 +117,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             return;
           }
           if (this.field_sb) {
-            LobbyPlayer.d((byte) -24);
+            LobbyPlayer.reopenStagedAccountLogin((byte) -24);
             return;
           }
           return;
@@ -130,7 +130,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         if (!this.field_sb) {
           return;
         }
-        LobbyPlayer.d((byte) -24);
+        LobbyPlayer.reopenStagedAccountLogin((byte) -24);
     }
 
     public static void releaseStatics(int obfuscationGuard) {
@@ -231,7 +231,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           if (UpkeepEvent.chatTextBuffer.length() <= 0) {
             return true;
           }
-          PortalLossCondition.a(' ', -1 + UpkeepEvent.chatTextBuffer.length(), UpkeepEvent.chatTextBuffer, true);
+          PortalLossCondition.resizeStringBuilder(' ', -1 + UpkeepEvent.chatTextBuffer.length(), UpkeepEvent.chatTextBuffer, true);
           return true;
         }
         var4 = DualNodeDeque.typedCharacter;
@@ -260,7 +260,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
             if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-              PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+              PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
             }
             return true;
           }
@@ -268,7 +268,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) <= var5Lifetime1) {
             return true;
           }
-          PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+          PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           return true;
         }
         var7 = "";
@@ -276,7 +276,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var51 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var51);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
         }
@@ -288,7 +288,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var54 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
         }
@@ -297,7 +297,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime1);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
         }
@@ -306,7 +306,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var53 = var52 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var53);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
         }
@@ -314,7 +314,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime2);
         if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
-          PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
+          PortalLossCondition.resizeStringBuilder(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
         }
         return true;
     }

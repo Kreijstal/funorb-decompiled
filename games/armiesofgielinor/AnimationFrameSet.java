@@ -100,9 +100,9 @@ final class AnimationFrameSet extends DualLinkedNode {
         this.groupId = groupId;
     }
 
-    final static void d(byte param0) {
+    final static void applyAnimationFrameSetupGuard(byte param0) {
         if (param0 != -13) {
-          AnimationFrameSet.d((byte) 11);
+          AnimationFrameSet.applyAnimationFrameSetupGuard((byte) 11);
         }
     }
 

@@ -21,7 +21,7 @@ class TextEntryWidgetPainter extends BitmapTextWidgetPainter {
         this(ArmiesOfGielinor.field_J, textColour);
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeSingleOneByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param1);
         if (param0 < -99) {
@@ -48,7 +48,7 @@ class TextEntryWidgetPainter extends BitmapTextWidgetPainter {
           if (obfuscationGuard <= -79) {
             return;
           }
-          TextEntryWidgetPainter.a(-66, -37);
+          TextEntryWidgetPainter.writeSingleOneByteRequest(-66, -37);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

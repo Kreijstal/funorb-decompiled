@@ -3863,7 +3863,7 @@ final class GameplayController {
               stackIn_288_1 = (this.field_Q) || !(this.eventPresenters.isEmpty(false)) || !(this.battlefield.pendingEvents.isEmpty(false)) || (this.field_bb);
               this.field_mb = stackIn_288_1;
               this.unitRenderer.refreshUnitModels(this.battlefield.mapWidth, (byte) 98, this.battlefield.mapHeight, this.battlefield.tiles);
-              PointerInputHandler.a(4);
+              PointerInputHandler.advanceSharedBattleAnimation(4);
               break;
             }
             if (!this.field_K &&
@@ -5580,7 +5580,7 @@ final class GameplayController {
           if (50 == PowerOfTwoSupport.keyCode &&
             this.field_lb &&
             this.field_E) {
-            ProxyAuthenticationRequiredException.a(0, this.battlefield, true);
+            ProxyAuthenticationRequiredException.reportBattlefieldStateDump(0, this.battlefield, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -10217,7 +10217,7 @@ final class GameplayController {
           GradientUiRenderer.drawHollowGradientFrame(param3 + 0, -76 - (-param5 - param0), 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           SoftwareRaster.fillRectangleBlended(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
-            LoginCredentialStagingSupport.a(7816226, -8 + param3, param4.ownerPlayer, NanoGameClock.field_n, -52 + param5 + param0);
+            LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, -8 + param3, param4.ownerPlayer, NanoGameClock.field_n, -52 + param5 + param0);
           }
           SoftwareRaster.fillRectangleBlended(param3 + 37, param0 + param5 - 70, 265, 25, 0, 128);
           var9 = param4.getDisplayName((byte) 124).toLowerCase();

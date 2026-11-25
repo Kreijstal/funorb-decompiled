@@ -56,7 +56,7 @@ final class EditableTextField extends ClientUiComponent {
 
     final void clearText(boolean resizePolicy) {
         try {
-          PortalLossCondition.a(' ', 0, this.textBuffer, resizePolicy);
+          PortalLossCondition.resizeStringBuilder(' ', 0, this.textBuffer, resizePolicy);
           this.caretIndex = 0;
           this.selectionAnchor = 0;
           this.textComponent.text = this.textBuffer.toString();
@@ -282,7 +282,7 @@ final class EditableTextField extends ClientUiComponent {
             this.selectionAnchor = selectionStart;
             this.caretIndex = selectionStart;
             retainedSuffix = this.textBuffer.toString().substring(selectionEnd, this.textBuffer.length());
-            PortalLossCondition.a(' ', selectionStart, this.textBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', selectionStart, this.textBuffer, true);
             discarded$0 = this.textBuffer.append(retainedSuffix);
             this.textComponent.text = this.textBuffer.toString();
           }
@@ -322,7 +322,7 @@ final class EditableTextField extends ClientUiComponent {
             discarded$0 = this.textBuffer.append(text);
           } else {
             retainedSuffix = this.textBuffer.toString().substring(this.caretIndex, this.textBuffer.length());
-            PortalLossCondition.a(' ', this.caretIndex, this.textBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', this.caretIndex, this.textBuffer, true);
             discarded$1 = this.textBuffer.append(text);
             discarded$2 = this.textBuffer.append(retainedSuffix);
           }
@@ -406,7 +406,7 @@ final class EditableTextField extends ClientUiComponent {
               !(this.textBuffer.length() >= this.maximumLength)) {
               if (this.caretIndex != this.textBuffer.length()) {
                 retainedSuffix = this.textBuffer.toString().substring(this.caretIndex, this.textBuffer.length());
-                PortalLossCondition.a(' ', this.caretIndex, this.textBuffer, true);
+                PortalLossCondition.resizeStringBuilder(' ', this.caretIndex, this.textBuffer, true);
                 discarded$0 = this.textBuffer.append(typedCharacter);
                 discarded$1 = this.textBuffer.append(retainedSuffix);
               } else {

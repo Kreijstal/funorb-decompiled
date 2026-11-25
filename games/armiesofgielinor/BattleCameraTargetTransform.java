@@ -398,7 +398,7 @@ final class BattleCameraTargetTransform {
           DebugConsole.field_w.tabs.advanceTabSelection(10000);
           if (null != NumericDateInputWidget.roomSetup) {
             if (0 != SocialListPanel.field_Lb.pressedButton) {
-              TextEntryWidgetPainter.a(-127, param3);
+              TextEntryWidgetPainter.writeSingleOneByteRequest(-127, param3);
             }
             if (FixedSquareRootSupport.field_d.pressedButton != 0) {
               if (SpellCastAction.field_s) {

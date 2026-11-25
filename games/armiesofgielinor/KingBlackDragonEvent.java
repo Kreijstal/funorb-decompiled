@@ -43,7 +43,7 @@ final class KingBlackDragonEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final static void drawStationaryUnitModel(int param0, int param1, int param2, boolean param3, int param4) {
         int stackIn_3_0 = 0;
         RgbSprite stackIn_15_0;
         int stackIn_15_1;

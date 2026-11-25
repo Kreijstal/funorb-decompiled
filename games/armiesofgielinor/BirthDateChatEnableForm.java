@@ -35,7 +35,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         this.submitButton.setBounds(10 + ((-controlGroupWidth + this.width >> 1) + 140), 100, 2 + (-30 + this.height + 20 >> 1), 8192, 30);
     }
 
-    final static void a(byte param0, String param1) {
+    final static void showBlockingLobbyNotice(byte param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

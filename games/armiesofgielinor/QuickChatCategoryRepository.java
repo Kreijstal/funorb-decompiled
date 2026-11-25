@@ -467,7 +467,7 @@ final class QuickChatCategoryRepository {
               if (76 == var3) {
                 PasswordLengthSupport.field_d = var10;
               }
-              if (FloorModSupport.a(var10, -17900)) {
+              if (FloorModSupport.hasTallMeshVertices(var10, -17900)) {
                 DiskCacheRequest.unitProjectionVariants[var3] = true;
               }
               if (null != var10.faceRenderTypes) {

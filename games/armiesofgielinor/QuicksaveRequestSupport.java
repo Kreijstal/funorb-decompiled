@@ -27,7 +27,7 @@ final class QuicksaveRequestSupport {
           } else {
             IconTextComponent.field_Kb.inputEnabled = true;
             MapTile.field_f.viewport.text = null;
-            VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+            VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
           }
         } else {
           if (SoftwareRaster.width == NineSliceSpriteSupport.field_c &&
@@ -54,7 +54,7 @@ final class QuicksaveRequestSupport {
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
@@ -78,11 +78,11 @@ final class QuicksaveRequestSupport {
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
               }
             }
             AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
-            VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
+            VertexNormal.updateLobbyPlayerList(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
             KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
           }
@@ -115,10 +115,10 @@ final class QuicksaveRequestSupport {
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
               }
               AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
-              VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
+              VertexNormal.updateLobbyPlayerList(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
               KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
             }
@@ -150,7 +150,7 @@ final class QuicksaveRequestSupport {
             } else {
               IconTextComponent.field_Kb.inputEnabled = true;
               MapTile.field_f.viewport.text = null;
-              VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+              VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
             QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
@@ -173,7 +173,7 @@ final class QuicksaveRequestSupport {
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
@@ -187,7 +187,7 @@ final class QuicksaveRequestSupport {
               if (!ChannelGainProfile.field_f) {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
               } else {
                 if (ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                   MapTile.field_f.viewport.text = TelefragEvent.field_y;
@@ -196,14 +196,14 @@ final class QuicksaveRequestSupport {
                 } else {
                   IconTextComponent.field_Kb.inputEnabled = true;
                   MapTile.field_f.viewport.text = null;
-                  VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                  VertexNormal.updateLobbyPlayerList(param1, 255, param3, param5, MapTile.field_f);
                 }
               }
             }
           }
         }
         AchievementNotification.updateLobbyRoomRows(0, param3, param6, param1, param2, param4, param5);
-        VertexNormal.a(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
+        VertexNormal.updateLobbyPlayerList(param1, param7 ^ -256, param3, param5, UnitRecordWriter.field_a);
         KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
     }
 

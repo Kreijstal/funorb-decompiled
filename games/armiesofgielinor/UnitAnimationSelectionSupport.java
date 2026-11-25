@@ -50,7 +50,7 @@ final class UnitAnimationSelectionSupport {
         return StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[unitType]][BestScoreStrategy.unitAnimationVariants[unitType][0][0]];
     }
 
-    final static void a(boolean param0) {
+    final static void closeClientConnections(boolean param0) {
         StructureTerrainSupport.exitFullscreen(-111);
         if (IndexedSpriteBase.field_b != null) {
           DateValiditySupport.detachCanvasInput(IndexedSpriteBase.field_b, 23678);

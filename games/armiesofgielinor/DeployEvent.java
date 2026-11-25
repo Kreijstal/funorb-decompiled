@@ -23,7 +23,7 @@ final class DeployEvent extends GameEvent {
         field_y = null;
     }
 
-    final static void h(int param0) {
+    final static void initializeLobbyTabs(int param0) {
         GlobalSpell.field_f = new ClientUiComponent(0L, (ClientUiComponent) null);
         if (GrowableIntArray.field_c) {
           GlobalSpell.field_f.addChild(ReloadPageSupport.field_g, 84);
@@ -86,7 +86,7 @@ final class DeployEvent extends GameEvent {
 
     final static LobbyPlayer getLobbyPlayer(byte obfuscationGuard, long accountId) {
         if (obfuscationGuard != 121) {
-          DeployEvent.h(23);
+          DeployEvent.initializeLobbyTabs(23);
         }
         return (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.get((byte) -27, accountId));
     }

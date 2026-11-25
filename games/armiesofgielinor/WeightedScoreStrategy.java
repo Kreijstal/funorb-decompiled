@@ -18,7 +18,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         }
         MeshData var8 = new MeshData(PasswordLengthSupport.field_d, true, false, true, true);
         MeshData var2 = var8;
-        int var3 = VineGrowthAction.b(param1 + 20938, param0);
+        int var3 = VineGrowthAction.rgbToPackedHsl(param1 + 20938, param0);
         int var4 = 127;
         for (var5 = 0; var5 < var2.faceColors.length; var5++) {
           var6 = (var4 & var8.faceColors[var5]) - 16;

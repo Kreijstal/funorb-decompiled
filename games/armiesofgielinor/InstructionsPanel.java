@@ -178,7 +178,7 @@ final class InstructionsPanel {
           PointerCaptureSupport.drawTerrainCategoryPreview(param1, param0, var7, 27066, true, param3, true, var6);
           PointerCaptureSupport.drawTerrainCategoryPreview(param1, param0, var7, 27066, true, param3, false, var6);
           if (param2 == 3) {
-            ToggleWidget.a(true, true, param1, param0, param3, 1, param4 ^ 0);
+            ToggleWidget.drawLayeredFoliageSprites(true, true, param1, param0, param3, 1, param4 ^ 0);
           }
           if (param2 == 2) {
             this.drawFoliageIllustration(param3, (byte) 85, 1, true, param1, param0);
@@ -503,7 +503,7 @@ final class InstructionsPanel {
               QuickChatCategoryMenuSupport.activeStructureSprites[8].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(-50 + param1, (byte) 94));
               if (param2 > -1 &&
                 param2 < FriendRequestSupport.field_c.length) {
-                LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 21), param2, var7, MatchConditionEntry.toInterfaceY(-30 + param1, (byte) 94));
+                LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 21), param2, var7, MatchConditionEntry.toInterfaceY(-30 + param1, (byte) 94));
               }
             } else {
               if (0 != var8) {
@@ -514,7 +514,7 @@ final class InstructionsPanel {
                   QuickChatCategoryMenuSupport.activeStructureSprites[11].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
                     FriendRequestSupport.field_c.length > param2) {
-                    LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 20), param2, var7, MatchConditionEntry.toInterfaceY(param1 - 20, (byte) 94));
+                    LoginCredentialStagingSupport.drawAnimatedPlayerFlag(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 20), param2, var7, MatchConditionEntry.toInterfaceY(param1 - 20, (byte) 94));
                     UnitCycler.drawPlayerGlowColumn(IgnoreListLookupSupport.toInterfaceX(true, param0 + 15), param2, 11, 127, MatchConditionEntry.toInterfaceY(21 + param1, (byte) 94));
                   }
                 }
@@ -525,7 +525,7 @@ final class InstructionsPanel {
                 QuickChatCategoryMenuSupport.activeStructureSprites[0].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
                   FriendRequestSupport.field_c.length > param2) {
-                  LoginCredentialStagingSupport.a(param3 + 7841939, IgnoreListLookupSupport.toInterfaceX(true, 20 + param0), param2, var7, MatchConditionEntry.toInterfaceY(10 + param1, (byte) 94));
+                  LoginCredentialStagingSupport.drawAnimatedPlayerFlag(param3 + 7841939, IgnoreListLookupSupport.toInterfaceX(true, 20 + param0), param2, var7, MatchConditionEntry.toInterfaceY(10 + param1, (byte) 94));
                 }
               }
             }
@@ -2474,7 +2474,7 @@ final class InstructionsPanel {
               }
               RasterViewportResizeHandler.field_b = false;
               if (var6 != null) {
-                AccountNameCharacterSupport.a(var6, CombatEvent.getClientApplet((byte) -117), false);
+                AccountNameCharacterSupport.writeSettingsCookie(var6, CombatEvent.getClientApplet((byte) -117), false);
               }
               if (LoginForm.memberEntitlementValue <= 0 &&
                 !LineOfSightGrid.field_m) {

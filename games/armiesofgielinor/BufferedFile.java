@@ -185,7 +185,7 @@ final class BufferedFile {
           if (!MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
             return null;
           }
-          stackIn_7_0 = IntegerPowerSupport.a(param2.getFile((byte) 103, param4, param1), 0);
+          stackIn_7_0 = IntegerPowerSupport.createDecodedAntialiasedFont(param2.getFile((byte) 103, param4, param1), 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

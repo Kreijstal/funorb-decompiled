@@ -137,7 +137,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         }
     }
 
-    final static void a(int param0) {
+    final static void advanceSharedBattleAnimation(int param0) {
         if (param0 == 4) {
           PaletteRegionMap.field_g.advance(-99);
           ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b + 1;

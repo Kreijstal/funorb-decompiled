@@ -110,7 +110,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (ModalDialogHost.field_K != 0) {
             return connectionResult;
           }
-          DualLinkedNode.e(116);
+          DualLinkedNode.finishSessionReconnect(116);
           return connectionResult;
         }
         if (connectionResult != 1) {
@@ -118,13 +118,13 @@ abstract class NetworkGameShell extends GameAppletShell {
             this.reportGameError("reconnect", (byte) -81);
           }
           ClientRecoverySupport.enterReconnectState(-11);
-          KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
+          KeyedLoginCredentials.showSessionLoginResult(BitmapTextWidgetPainter.field_r, 10, connectionResult);
           MaskedTextEntryPainter.field_C = true;
           FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(-111) + 15000L;
         } else {
           if (SoundCache.field_b == 11 &&
             ModalDialogHost.field_K == 0) {
-            DualLinkedNode.e(116);
+            DualLinkedNode.finishSessionReconnect(116);
           }
         }
         return connectionResult;
@@ -250,11 +250,11 @@ abstract class NetworkGameShell extends GameAppletShell {
               connectionResult = InstructionsPanel.advanceSessionLogin((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
               if (connectionResult != -1) {
                 if (connectionResult != 0) {
-                  KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
+                  KeyedLoginCredentials.showSessionLoginResult(BitmapTextWidgetPainter.field_r, 10, connectionResult);
                   BitmapTextWidgetPainter.field_r = null;
                 } else {
                   StructureTerrainSupport.field_b = ReflectionCheckRequest.field_o;
-                  DualLinkedNode.e(112);
+                  DualLinkedNode.finishSessionReconnect(112);
                   QuickChatCategoryRepository.guestSession = false;
                   SoundCache.field_b = 10;
                 }
@@ -283,7 +283,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.getClientApplet((byte) -120), true);
           }
           if (9 == actionCode) {
-            SpectateRoomRequestSupport.a(CombatEvent.getClientApplet((byte) 48), 11982);
+            SpectateRoomRequestSupport.openSupportPage(CombatEvent.getClientApplet((byte) 48), 11982);
           }
           if (10 == actionCode) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 17);
@@ -539,7 +539,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             this.forceDisconnect = false;
             TextSplitSupport.closeSessionSocket((byte) -126);
             ClientRecoverySupport.enterReconnectState(-11);
-            KeyedLoginCredentials.a(LobbyPlayer.field_bc, 10, 2);
+            KeyedLoginCredentials.showSessionLoginResult(LobbyPlayer.field_bc, 10, 2);
             ResourceClientSetupSupport.applyChatHintResetGuard(56);
             MaskedTextEntryPainter.field_C = true;
             FullscreenStatusToken.field_a = 15000L + MonotonicClockSupport.monotonicMillis(-49);
@@ -554,7 +554,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ModalDialogHost.field_K == 0 &&
             11 == SoundCache.field_b &&
             !MovementPresentation.needsSessionReconnect(-11)) {
-            DualLinkedNode.e(112);
+            DualLinkedNode.finishSessionReconnect(112);
           }
           if (ModalDialogHost.field_K != -1 &&
             ModalDialogHost.field_K != 0) {
@@ -588,18 +588,18 @@ abstract class NetworkGameShell extends GameAppletShell {
                 if (ModalDialogHost.field_K != 4) {
                   if (ModalDialogHost.field_K != 2) {
                     if (ModalDialogHost.field_K == 5) {
-                      KeyedLoginCredentials.a(DropdownSelectorPainter.field_f, 10, 5);
+                      KeyedLoginCredentials.showSessionLoginResult(DropdownSelectorPainter.field_f, 10, 5);
                     } else {
-                      KeyedLoginCredentials.a(AccountRequestState.field_a, 10, 256);
+                      KeyedLoginCredentials.showSessionLoginResult(AccountRequestState.field_a, 10, 256);
                     }
                   } else {
-                    KeyedLoginCredentials.a(ResourceArchive.field_d, 10, 256);
+                    KeyedLoginCredentials.showSessionLoginResult(ResourceArchive.field_d, 10, 256);
                   }
                 } else {
-                  KeyedLoginCredentials.a(CampaignMenu.field_k, 10, 256);
+                  KeyedLoginCredentials.showSessionLoginResult(CampaignMenu.field_k, 10, 256);
                 }
               } else {
-                KeyedLoginCredentials.a(AlternateKeyedLoginCredentials.field_k, 10, 256);
+                KeyedLoginCredentials.showSessionLoginResult(AlternateKeyedLoginCredentials.field_k, 10, 256);
               }
               MaskedTextEntryPainter.field_C = true;
             }
@@ -626,7 +626,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if (StrongCacheEntry.field_E == 1) {
           if (ConsoleExpression.field_m != 0) {
-            IconTextComponent.field_Nb = SpriteButtonPainter.a(TerrainScatterSupport.field_n, true);
+            IconTextComponent.field_Nb = SpriteButtonPainter.openDefaultResourceArchive(TerrainScatterSupport.field_n, true);
           }
           DisplayModeOptionPainter.field_u = DamageEvent.createResourceArchive(1, ChatMessage.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.createResourceArchive(1, ModalDialog.field_E, (byte) 122, false, true);
@@ -685,7 +685,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if (StrongCacheEntry.field_E == 10) {
           if (0 != ConsoleExpression.field_m) {
-            RegionAnchor.field_o = SpriteButtonPainter.a(BitmapTextWidgetPainter.field_p, true);
+            RegionAnchor.field_o = SpriteButtonPainter.openDefaultResourceArchive(BitmapTextWidgetPainter.field_p, true);
           }
           StrongCacheEntry.field_E = 11;
         }

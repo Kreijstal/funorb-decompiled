@@ -1863,7 +1863,7 @@ class BattleTutorial {
     }
 
     private final void clearMapHighlights(byte param0) {
-        IndexedSpriteBase.b(13829);
+        IndexedSpriteBase.clearTileHighlights(13829);
         if (param0 != -34) {
           this.field_s = false;
         }

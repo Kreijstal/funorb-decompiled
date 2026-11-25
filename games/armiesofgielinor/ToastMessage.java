@@ -12,7 +12,7 @@ final class ToastMessage extends IntrusiveNode {
     static int field_k;
     private String field_r;
 
-    final static boolean c(byte param0) {
+    final static boolean isCaretBlinkVisible(byte param0) {
         int var1 = 52 / ((-9 - param0) / 42);
         if (!PrivateTextRecipientSupport.hasFocusOrFullscreen(false)) {
           return false;
@@ -90,7 +90,7 @@ final class ToastMessage extends IntrusiveNode {
           ((ToastMessage) (this.next)).advance((byte) 66);
         }
         if (obfuscationGuard != 66) {
-          ToastMessage.c((byte) -116);
+          ToastMessage.isCaretBlinkVisible((byte) -116);
         }
         if (this.field_l > this.field_m) {
           return;

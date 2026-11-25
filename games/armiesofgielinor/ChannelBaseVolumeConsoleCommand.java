@@ -25,18 +25,18 @@ final class ChannelBaseVolumeConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void showPendingMembershipNotice(byte param0) {
         String var2 = null;
         if (PopupPresentation.field_e != null) {
           var2 = PopupPresentation.field_e;
           String var1 = var2;
-          BirthDateChatEnableForm.a((byte) 68, EmailCheckResult.formatTemplate(4800, ActionSpell.field_l, new String[]{var2}));
+          BirthDateChatEnableForm.showBlockingLobbyNotice((byte) 68, EmailCheckResult.formatTemplate(4800, ActionSpell.field_l, new String[]{var2}));
           PopupPresentation.field_e = null;
         }
         if (param0 <= -127) {
           return;
         }
-        ChannelBaseVolumeConsoleCommand.e((byte) 28);
+        ChannelBaseVolumeConsoleCommand.showPendingMembershipNotice((byte) 28);
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {

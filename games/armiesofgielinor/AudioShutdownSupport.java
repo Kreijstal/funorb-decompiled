@@ -6,7 +6,7 @@ final class AudioShutdownSupport {
     static int field_c;
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void layoutLobbyPlayerListHeader(byte param0) {
         StripedProgressWidget.field_F.setBounds(18, -20500, IconTextComponent.field_Kb.width - (!GrowableIntArray.field_c ? 0 : 40 + (GradientSpanBlendSupport.field_c + 4)), 0, 0);
         CampaignProgress.field_a.setBounds(18, -20500, GradientSpanBlendSupport.field_c + 42, 0, -2 + (IconTextComponent.field_Kb.width - GradientSpanBlendSupport.field_c - 40));
         MapTile.field_f.setLayout(0, false, IconTextComponent.field_Kb.width, 2, GradientSpanBlendSupport.field_c, 20, IconTextComponent.field_Kb.height - 20);

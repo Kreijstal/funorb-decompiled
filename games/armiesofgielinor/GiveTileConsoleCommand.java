@@ -63,7 +63,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
             return false;
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!IterableDualNodeDeque.a(param0.charAt(var4), -3904)) {
+            if (!IterableDualNodeDeque.isAccountNameNormalizationCharacter(param0.charAt(var4), -3904)) {
               return false;
             }
           }
@@ -82,7 +82,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void updateLobbySharedInput(int param0, boolean param1) {
         int var2;
         int stackIn_6_0 = 0;
         boolean stackIn_8_0 = false;

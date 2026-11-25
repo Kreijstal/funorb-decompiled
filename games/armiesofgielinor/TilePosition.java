@@ -75,7 +75,7 @@ final class TilePosition extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void blockAccountRegistration(byte param0, java.applet.Applet param1) {
         String var3 = null;
         long var4 = 0L;
         NodeDeque.field_a = true;

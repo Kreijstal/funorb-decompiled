@@ -66,7 +66,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           if (PowerOfTwoSupport.keyCode == 85 &&
             this.nameBuffer.length() > 0) {
-            PortalLossCondition.a(' ', -1 + this.nameBuffer.length(), this.nameBuffer, true);
+            PortalLossCondition.resizeStringBuilder(' ', -1 + this.nameBuffer.length(), this.nameBuffer, true);
           }
           if (NameSuggestionList.canAppendAccountNameCharacter(false, (CharSequence) ((Object) this.nameBuffer), DualNodeDeque.typedCharacter)) {
             discarded$1 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
@@ -285,7 +285,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           return false;
         }
-        PortalLossCondition.a(' ', this.nameBuffer.length() - 1, this.nameBuffer, true);
+        PortalLossCondition.resizeStringBuilder(' ', this.nameBuffer.length() - 1, this.nameBuffer, true);
         if (this.nameBuffer.length() >= 12) {
           if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {

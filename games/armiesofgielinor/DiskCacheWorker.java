@@ -32,7 +32,7 @@ final class DiskCacheWorker implements Runnable {
           }
           var7 = new AccountIdentifierStatus(param1);
           var8 = new AccountIdentifierStatus(param2);
-          stackIn_4_0 = CacheEntry.a(param6, var7, -20032, param5, param4, var8, param3);
+          stackIn_4_0 = CacheEntry.pollAccountIdentifiersAndRegistration(param6, var7, -20032, param5, param4, var8, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,7 +339,7 @@ final class DiskCacheWorker implements Runnable {
           EquipmentBattleTutorial.field_y = FixedSquareRootSupport.field_b.height;
         }
         if (!(TurnTimerDial.field_d <= 0)) {
-          MonotonicClockSupport.a(-67);
+          MonotonicClockSupport.layoutAnimatedChatAndQuickChat(-67);
         }
     }
 

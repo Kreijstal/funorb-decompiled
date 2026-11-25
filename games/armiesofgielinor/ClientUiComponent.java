@@ -109,7 +109,7 @@ class ClientUiComponent extends ClientUiNode {
                 } else {
                   if (AudioShutdownSupport.field_c > ModalDialogHost.field_J) {
                     if (ModalDialogHost.field_J == 0) {
-                      DeployEvent.h(14570);
+                      DeployEvent.initializeLobbyTabs(14570);
                     }
                     ModalDialogHost.field_J = ModalDialogHost.field_J + 1;
                   }
@@ -680,7 +680,7 @@ class ClientUiComponent extends ClientUiNode {
           LoginForm.field_K.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, LoginForm.field_K.height, 1, 3, 8421504);
           IconTextComponent.field_Kb.setBounds(LoginForm.field_K.height - 36, -20500, LoginForm.field_K.width - 10, 5, 5);
           ConsolePanel.field_m.setBounds(24, -20500, 80, -24 + LoginForm.field_K.height - 5, (LoginForm.field_K.width - 80) / 2);
-          AudioShutdownSupport.a((byte) 120);
+          AudioShutdownSupport.layoutLobbyPlayerListHeader((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -14,7 +14,7 @@ final class NanoGameClock extends GameClock {
     private long[] sampleDeltasNanos;
     static String field_k;
 
-    final static void b(int param0) {
+    final static void clearChatHistory(int param0) {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {

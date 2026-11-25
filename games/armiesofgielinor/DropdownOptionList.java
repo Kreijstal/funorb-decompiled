@@ -52,7 +52,7 @@ final class DropdownOptionList extends FocusProxyWidget {
         }
     }
 
-    final int a(byte param0) {
+    final int getPreferredDropdownHeight(byte param0) {
         if (param0 == -126) {
           return null != this.options ? (1 + this.options.length * 2) * this.rowHeight >> 1 : 200;
         }

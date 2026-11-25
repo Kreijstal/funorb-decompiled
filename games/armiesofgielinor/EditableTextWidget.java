@@ -185,7 +185,7 @@ class EditableTextWidget extends InteractiveWidget {
               var5 = ActionRequest.field_m[param1][var4];
               var6 = ArrayWidgetContainer.loadUntexturedMesh(var5, param2 ^ -32697, var9);
               if (var6 != null) {
-                if (FloorModSupport.a(var6, -17900)) {
+                if (FloorModSupport.hasTallMeshVertices(var6, -17900)) {
                   DiskCacheRequest.unitProjectionVariants[param1] = true;
                 }
                 if (null != var6.faceRenderTypes) {

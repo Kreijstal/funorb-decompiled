@@ -21,7 +21,7 @@ final class PortalLossCondition implements MatchCondition {
         instructionParagraphs = (String[][][][]) null;
     }
 
-    final static StringBuilder a(char param0, int param1, StringBuilder param2, boolean param3) {
+    final static StringBuilder resizeStringBuilder(char param0, int param1, StringBuilder param2, boolean param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

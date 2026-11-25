@@ -54,7 +54,7 @@ final class IntKeyLookup {
         }
         if (obfuscationGuard < 102) {
           BattlefieldTheme[] var4 = (BattlefieldTheme[]) null;
-          IntKeyLookup.a((BattlefieldTheme[]) null, (byte) -34);
+          IntKeyLookup.finishBattlefieldThemeLoad((BattlefieldTheme[]) null, (byte) -34);
         }
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 103);
         return var1;
@@ -83,7 +83,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static void a(BattlefieldTheme[] param0, byte param1) {
+    final static void finishBattlefieldThemeLoad(BattlefieldTheme[] param0, byte param1) {
         int var3 = 0;
         BattlefieldTheme[] var2 = null;
         int var4 = 0;

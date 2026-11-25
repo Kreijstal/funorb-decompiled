@@ -314,7 +314,7 @@ final class EventPresenter extends IntrusiveNode {
         return;
     }
 
-    final boolean b(int param0, int param1, boolean param2) {
+    final boolean initializeTilePopupPresentation(int param0, int param1, boolean param2) {
         int var4 = 0;
         if (24 != this.event.eventKind) {
           this.presentationActive = true;

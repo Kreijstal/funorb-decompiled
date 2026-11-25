@@ -158,9 +158,9 @@ final class CampaignMenu {
           var2_int = 0;
           while (3 > var2_int) {
             var3 = "campaign_map" + (var2_int + 1);
-            QuickChatSetupSupport.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, AchievementUnlockRequest.field_l, 24914);
-            QuickChatSetupSupport.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", AchievementUnlockRequest.field_l, 24914);
-            QuickChatSetupSupport.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][0] = AccountNameFoldingSupport.loadIndexedSpriteByName("campaign", var3, AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][1] = AccountNameFoldingSupport.loadIndexedSpriteByName("campaign", var3 + "_areas", AchievementUnlockRequest.field_l, 24914);
+            QuickChatSetupSupport.field_g[var2_int][2] = AccountNameFoldingSupport.loadIndexedSpriteByName("campaign", var3 + "_full", AchievementUnlockRequest.field_l, 24914);
             var2_int++;
             if (var4 != 0) {
               return;
@@ -1463,7 +1463,7 @@ final class CampaignMenu {
           if (this.selectedCampaignEntry.entryId == -1) {
             var2 = DropTargetWidgetContainer.getStoredQuicksave(obfuscationGuard + 86);
             if (!BoundedFile.isFreeCampaign(var2.campaignIndex, obfuscationGuard + 11906) &&
-              QuickChatPhraseRepository.a(27875)) {
+              QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
               PaletteRegionMap.field_i = CalendarSupport.field_g;
               CipherPacketBuffer.changeSharedUiStage(false, 11, obfuscationGuard ^ 1, ChatInputDispatchSupport.field_a);
               return;
@@ -2032,7 +2032,7 @@ final class CampaignMenu {
         RuntimeException var3 = null;
         try {
           if (!BoundedFile.isFreeCampaign(campaignIndex, 11906) &&
-            QuickChatPhraseRepository.a(27875)) {
+            QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
             PaletteRegionMap.field_i = CalendarSupport.field_g;
             CipherPacketBuffer.changeSharedUiStage(false, 11, 1, ChatInputDispatchSupport.field_a);
             return;
@@ -2366,7 +2366,7 @@ final class CampaignMenu {
                   var11.statusText = var14;
                   var11.description = var12.description;
                   if (!var12.campaign.isFreeCampaign((byte) -45) &&
-                    QuickChatPhraseRepository.a(27875)) {
+                    QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
                     var11.selectable = false;
                     var11.statusText = CalendarSupport.field_g + " (" + var11.statusText + ")";
                   }

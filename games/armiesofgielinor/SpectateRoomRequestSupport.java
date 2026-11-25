@@ -39,7 +39,7 @@ final class SpectateRoomRequestSupport {
         var3.writeShort(true, roomId);
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSupportPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

@@ -179,7 +179,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     }
 
     final static void markAccountCreationBlocked(boolean param0) {
-        TilePosition.a((byte) -99, CombatEvent.getClientApplet((byte) -111));
+        TilePosition.blockAccountRegistration((byte) -99, CombatEvent.getClientApplet((byte) -111));
         if (param0) {
           cachedConsoleSource = (String) null;
         }

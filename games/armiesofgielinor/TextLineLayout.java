@@ -169,7 +169,7 @@ final class TextLineLayout {
             stackIn_4_11 = false;
             stackIn_4_12 = 4;
             stackIn_4_13 = 0;
-            if (!QuickChatPhraseRepository.a(27875)) {
+            if (!QuickChatPhraseRepository.hasNoPaidMembership(27875)) {
               stackIn_4_0Lifetime1 = null;
               stackIn_4_1Lifetime1 = null;
               if (BufferedSocket.field_j >= 2) {

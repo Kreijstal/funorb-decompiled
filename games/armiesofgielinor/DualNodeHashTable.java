@@ -12,7 +12,7 @@ final class DualNodeHashTable {
     private int iterationBucket;
     private DualLinkedNode lookupCursor;
 
-    static long a(long param0, long param1) {
+    static long orLongs(long param0, long param1) {
         return param0 | param1;
     }
 

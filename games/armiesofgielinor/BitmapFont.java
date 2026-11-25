@@ -186,7 +186,7 @@ abstract class BitmapFont extends DualLinkedNode {
         if (text == null) {
           return 0;
         }
-        PortalLossCondition.a(' ', 0, wrapBuffer, true);
+        PortalLossCondition.resizeStringBuilder(' ', 0, wrapBuffer, true);
         lineWidth = 0;
         lineStart = 0;
         breakPosition = -1;

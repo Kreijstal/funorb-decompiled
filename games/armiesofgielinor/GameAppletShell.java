@@ -431,7 +431,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 PaletteRegionMap.drawLoadingCanvas((byte) 111, param2);
                 if (var4 != 0) {
                   SoftwareRaster.clearPixels();
-                  TaggedMapData.a(240, 320, -121);
+                  TaggedMapData.drawAnimatedLogo(240, 320, -121);
                   ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
                   var3_int = 0;
                   if (MaskedTextEntryPainter.redrawRequested) {
@@ -443,7 +443,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
             } else {
               SoftwareRaster.clearPixels();
-              TaggedMapData.a(240, 320, -121);
+              TaggedMapData.drawAnimatedLogo(240, 320, -121);
               ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;

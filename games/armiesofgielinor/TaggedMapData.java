@@ -14,7 +14,7 @@ final class TaggedMapData implements TaggedFieldReader {
     int mapTheme;
     static String field_h;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawAnimatedLogo(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;

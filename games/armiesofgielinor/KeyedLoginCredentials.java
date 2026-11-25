@@ -36,12 +36,12 @@ class KeyedLoginCredentials extends LoginCredentials {
         field_d = null;
     }
 
-    final static void a(String param0, int param1, int param2) {
+    final static void showSessionLoginResult(String param0, int param1, int param2) {
         int var3_int = 0;
         try {
           if (param1 != 10) {
             String var4 = (String) null;
-            KeyedLoginCredentials.a((String) null, -77, -29);
+            KeyedLoginCredentials.showSessionLoginResult((String) null, -77, -29);
           }
           DeployAction.field_A = false;
           ManaStarParticle.field_n = false;

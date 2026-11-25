@@ -9,7 +9,7 @@ abstract class CacheEntry extends DualLinkedNode {
     static String field_x;
     static String field_y;
 
-    final static int a(String param0, AccountIdentifierStatus param1, int param2, int param3, int param4, AccountIdentifierStatus param5, boolean param6) {
+    final static int pollAccountIdentifiersAndRegistration(String param0, AccountIdentifierStatus param1, int param2, int param3, int param4, AccountIdentifierStatus param5, boolean param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
         PacketBuffer stackIn_10_0 = null;
@@ -117,7 +117,7 @@ abstract class CacheEntry extends DualLinkedNode {
               CampaignLookupSupport.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                TilePosition.a((byte) -99, CombatEvent.getClientApplet((byte) -127));
+                TilePosition.blockAccountRegistration((byte) -99, CombatEvent.getClientApplet((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
                 TextSplitSupport.closeSessionSocket((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
@@ -126,7 +126,7 @@ abstract class CacheEntry extends DualLinkedNode {
               }
               if (var9Lifetime1 == 99) {
                 ConsoleTokenCursor.receivePacketBytes(-81, ChannelFadeTimeConsoleCommand.getRegistrationChoiceByteCount(1));
-                CampaignMenu.field_s = new Boolean(IndexedDecodedSpriteSupport.a((byte) -76, ByteStorage.incomingPacket));
+                CampaignMenu.field_s = new Boolean(IndexedDecodedSpriteSupport.readBooleanByte((byte) -76, ByteStorage.incomingPacket));
                 ByteStorage.incomingPacket.position = 0;
               } else {
                 DropdownSelectorPainter.packetPayloadLength = -1;
@@ -157,7 +157,7 @@ abstract class CacheEntry extends DualLinkedNode {
             if (MusicCrossfadeStream.deliveredOpcode == 255) {
               var9_ref_String = ByteStorage.incomingPacket.readOptionalString((byte) -85);
               if (var9_ref_String != null) {
-                AccountNameCharacterSupport.a(var9_ref_String, CombatEvent.getClientApplet((byte) -5), false);
+                AccountNameCharacterSupport.writeSettingsCookie(var9_ref_String, CombatEvent.getClientApplet((byte) -5), false);
               }
             } else {
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);

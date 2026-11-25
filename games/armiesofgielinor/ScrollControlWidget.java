@@ -382,7 +382,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
         this.positionThumbY(16695);
     }
 
-    final static boolean c(int param0, int param1) {
+    final static boolean isMageUnitType(int param0, int param1) {
         if (param0 != 0) {
           ScrollControlWidget.releaseStatics(106);
           if (!(param1 < WhirlpoolHasher.unitDefinitions.length)) {

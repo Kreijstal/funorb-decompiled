@@ -21,10 +21,10 @@ final class DamageEvent extends GameEvent {
 
     final static ResourceArchive createResourceArchive(int param0, int param1, byte param2, boolean param3, boolean param4) {
         if (param2 >= 98) {
-          return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
+          return CheckBoxWidgetPainter.openCachedResourceArchive(param1, param4, 1, false, param3, param0);
         }
         field_z = (String) null;
-        return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
+        return CheckBoxWidgetPainter.openCachedResourceArchive(param1, param4, 1, false, param3, param0);
     }
 
     final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
@@ -114,7 +114,7 @@ final class DamageEvent extends GameEvent {
           }
           ClientContextMenu.initializeChatAndQuickChatUi(param13, 2, param5, param8);
           ClientStateChecksumSupport.initializeAbuseOffenceDescriptions(param10 + 13099);
-          DeployEvent.h(14570);
+          DeployEvent.initializeLobbyTabs(14570);
           TurnChangeEvent.layoutSharedChatAndQuickChat((byte) -112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

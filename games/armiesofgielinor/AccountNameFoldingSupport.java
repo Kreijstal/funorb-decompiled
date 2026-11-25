@@ -248,7 +248,7 @@ final class AccountNameFoldingSupport {
         return '_';
     }
 
-    final static IndexedSprite a(String param0, String param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite loadIndexedSpriteByName(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

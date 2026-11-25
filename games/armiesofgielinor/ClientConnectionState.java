@@ -92,7 +92,7 @@ final class ClientConnectionState {
             return stackIn_2_0;
           }
           var4 = (String) null;
-          stackIn_4_0 = CacheEntry.a((String) null, param2, -20032, 0, 0, param1, false);
+          stackIn_4_0 = CacheEntry.pollAccountIdentifiersAndRegistration((String) null, param2, -20032, 0, 0, param1, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,9 +176,9 @@ final class ClientConnectionState {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            whirlpoolRoundTables[0][var0] = DualNodeHashTable.a(var12, DualNodeHashTable.a(DualNodeHashTable.a(var8 << 16, DualNodeHashTable.a(DualNodeHashTable.a(var2 << 32, DualNodeHashTable.a(var6 << 40, DualNodeHashTable.a(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
+            whirlpoolRoundTables[0][var0] = DualNodeHashTable.orLongs(var12, DualNodeHashTable.orLongs(DualNodeHashTable.orLongs(var8 << 16, DualNodeHashTable.orLongs(DualNodeHashTable.orLongs(var2 << 32, DualNodeHashTable.orLongs(var6 << 40, DualNodeHashTable.orLongs(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                whirlpoolRoundTables[var14][var0] = DualNodeHashTable.a(whirlpoolRoundTables[-1 + var14][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
+                whirlpoolRoundTables[var14][var0] = DualNodeHashTable.orLongs(whirlpoolRoundTables[-1 + var14][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
@@ -187,7 +187,7 @@ final class ClientConnectionState {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            whirlpoolRoundConstants[var15] = BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.xorLongs(ArchiveLoadStep.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.xorLongs(ArchiveLoadStep.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.xorLongs(ArchiveLoadStep.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.xorLongs(ArchiveLoadStep.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), ArchiveLoadStep.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
+            whirlpoolRoundConstants[var15] = BufferedFile.xorLongs(ArchiveLoadStep.andLongs(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.xorLongs(ArchiveLoadStep.andLongs(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), ArchiveLoadStep.andLongs(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
             var15++;
         }
     }

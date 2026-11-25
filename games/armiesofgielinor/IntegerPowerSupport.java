@@ -9,7 +9,7 @@ final class IntegerPowerSupport {
     static String field_a;
     static String field_f;
 
-    final static AntialiasedBitmapFont a(byte[] param0, int param1) {
+    final static AntialiasedBitmapFont createDecodedAntialiasedFont(byte[] param0, int param1) {
         AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         AntialiasedBitmapFont stackIn_5_0 = null;

@@ -19,7 +19,7 @@ abstract class TileableNoiseGenerator {
 
     abstract void accumulateOctave(int octave, int sample12, int obfuscationGuard);
 
-    final static void a(int param0, int param1) {
+    final static void selectTutorialStage(int param0, int param1) {
         ClientContextMenu.field_a = param1;
         if (param0 != 0) {
           field_f = -108;

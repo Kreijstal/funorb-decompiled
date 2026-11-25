@@ -25,7 +25,7 @@ final class MonotonicClockSupport {
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutAnimatedChatAndQuickChat(int param0) {
         int var1 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
         int var2 = -(TurnTimerDial.field_d * TurnTimerDial.field_d) + var1;
         int var3 = UnitAnimationPreview.field_l + var2 * (-UnitAnimationPreview.field_l + EquipmentBattleTutorial.field_y) / var1;

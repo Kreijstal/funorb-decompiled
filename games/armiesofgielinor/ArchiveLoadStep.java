@@ -30,7 +30,7 @@ final class ArchiveLoadStep {
         field_a = null;
     }
 
-    static long a(long param0, long param1) {
+    static long andLongs(long param0, long param1) {
         return param0 & param1;
     }
 

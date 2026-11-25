@@ -279,7 +279,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         int var2 = -52 % ((69 - obfuscationGuard) / 50);
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawBattlefieldShadows(int param0, int param1, int param2, int param3, int param4, int param5) {
         RgbSprite stackIn_43_0;
         int stackIn_43_1;
         int stackIn_43_2;

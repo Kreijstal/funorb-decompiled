@@ -18,7 +18,7 @@ final class SphinxActionRequest extends ActionRequest {
         try {
           var4 = (AlphaDecodedSpriteSupport) (ArchiveIndex.field_o.first((byte) 121));
           while (var4 != null) {
-            SoundPlaybackHandle.a(param0, var4, -17006);
+            SoundPlaybackHandle.writeByteShortRequest(param0, var4, -17006);
             var4 = (AlphaDecodedSpriteSupport) (ArchiveIndex.field_o.next((byte) 123));
           }
           if (param1 <= 33) {

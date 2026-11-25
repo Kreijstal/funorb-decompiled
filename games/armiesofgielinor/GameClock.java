@@ -35,7 +35,7 @@ abstract class GameClock {
         field_f = null;
     }
 
-    final static RgbSprite a(int param0, int param1) {
+    final static RgbSprite loadThemeBackground(int param0, int param1) {
         BattlefieldTheme var2 = null;
         BattlefieldTheme var2Lifetime1;
         if (param1 != 8806) {

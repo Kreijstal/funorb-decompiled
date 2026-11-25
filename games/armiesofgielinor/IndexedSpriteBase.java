@@ -12,7 +12,7 @@ abstract class IndexedSpriteBase {
     static long field_c;
     static java.awt.Canvas field_b;
 
-    final static void b(int param0) {
+    final static void clearTileHighlights(int param0) {
         if (param0 != 13829) {
           field_c = 27L;
           ProgressMessageDialog.field_lb = null;
@@ -54,7 +54,7 @@ abstract class IndexedSpriteBase {
         field_a = null;
         field_b = null;
         if (obfuscationGuard != 18347) {
-          IndexedSpriteBase.b(-3);
+          IndexedSpriteBase.clearTileHighlights(-3);
         }
     }
 

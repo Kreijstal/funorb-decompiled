@@ -35,7 +35,7 @@ final class PrivateTextRecipientSupport {
           if (QuickChatMenuDisplaySupport.field_e[param5].terrainType == 3) {
             PasswordLoginCredentials.drawFoliageLayerWithIntGuard(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
-          KingBlackDragonEvent.a(1, param5, param4, false, param0);
+          KingBlackDragonEvent.drawStationaryUnitModel(1, param5, param4, false, param0);
           var10_ref_vb = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 122));
           while (var10_ref_vb != null) {
             if (~param5 == ~var10_ref_vb.tileIndex) {
@@ -77,7 +77,7 @@ final class PrivateTextRecipientSupport {
           if ((2 & var10Lifetime1) == 0) {
             return;
           }
-          RatingLeaderboardRequest.a(894, var9_int, ProxyAuthenticationRequiredException.field_b, param4, param0);
+          RatingLeaderboardRequest.drawTileSmoke(894, var9_int, ProxyAuthenticationRequiredException.field_b, param4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

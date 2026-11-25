@@ -8,7 +8,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int field_b;
     static int field_a;
 
-    final static void a(int param0, Battlefield param1, boolean param2) {
+    final static void reportBattlefieldStateDump(int param0, Battlefield param1, boolean param2) {
         int var3_int = param1.localPlayer;
         int var4 = param1.computeStateChecksum(true, var3_int);
         System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(RadialSummonMenu.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.computeStateChecksum(true, var3_int), 16) + " ---");

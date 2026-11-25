@@ -58,7 +58,7 @@ final class VineGrowthAction extends PreparedAction {
         field_w = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int rgbToPackedHsl(int param0, int param1) {
         double var2;
         double var4;
         double var6;

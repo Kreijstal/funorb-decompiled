@@ -101,7 +101,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
                 this.displayModes[retainedModeSlot] = unfilteredModes[sourceModeIndex];
               }
             }
-            SpellConfirmationDialog.a(this.displayModes, 1680474497);
+            SpellConfirmationDialog.sortFullscreenModesBySize(this.displayModes, 1680474497);
           }
           fullscreenModesAvailable = !(this.displayModes.length <= 0);
           this.hasFullscreenModes = fullscreenModesAvailable;

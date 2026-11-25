@@ -27,7 +27,7 @@ final class SocialListPanel extends ClientUiComponent {
           this.layoutControls((byte) -110, scrollbarWidth, buttonHeight, gap);
           return;
         }
-        SocialListPanel.k(17);
+        SocialListPanel.getSocialListTextBaselineOffset(17);
         this.width = width;
         this.x = x;
         this.y = y;
@@ -70,7 +70,7 @@ final class SocialListPanel extends ClientUiComponent {
         }
     }
 
-    final static int k(int param0) {
+    final static int getSocialListTextBaselineOffset(int param0) {
         if (param0 <= -38) {
           return NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent + (-(NineSliceFrame.field_e.maxAscent >> 1) + (NineSliceFrame.field_e.xHeight >> 2) + 3);
         }

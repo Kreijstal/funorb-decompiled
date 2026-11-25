@@ -49,10 +49,10 @@ final class RasterState extends IntrusiveNode {
             if (param2 != 0) {
               if (param2 != 1) {
                 if (param2 != 2) {
-                  LocalizedUrlSupport.a(false, param3, param5, var7);
+                  LocalizedUrlSupport.drawTileInteractionOverlays(false, param3, param5, var7);
                 } else {
-                  QuickChatShortcutSupport.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
-                  ResizableModalDialog.b(param0, param1, 0, param5, var7, param3);
+                  QuickChatShortcutSupport.drawSpecialTerrainTransitionCorners((byte) -7, param0, param3, param5, var9, var8, var7, param1);
+                  ResizableModalDialog.drawBattlefieldShadows(param0, param1, 0, param5, var7, param3);
                   IntrusiveNode.drawMovementAndSpellRangeOutline(62, param1, param0, 19 + param3, var7, 39 + param5);
                   AttackRangeOverlaySupport.drawAttackRangeOverlay(var7, 19 + param3, param5 + 39, -118, param1, param0);
                   TickCounter.drawTileStructuresAndEffects(var9, false, param0, param3, var7, 0, param1, param5, var8);

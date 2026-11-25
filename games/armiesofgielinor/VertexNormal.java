@@ -11,7 +11,7 @@ final class VertexNormal {
     int z;
     int contributions;
 
-    final static void a(int param0, int param1, boolean param2, int param3, ScrollContainer param4) {
+    final static void updateLobbyPlayerList(int param0, int param1, boolean param2, int param3, ScrollContainer param4) {
         int var27_int = 0;
         ScrollContainer stackIn_40_0;
         boolean stackIn_40_1;

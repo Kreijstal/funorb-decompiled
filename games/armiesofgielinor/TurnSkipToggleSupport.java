@@ -5,7 +5,7 @@ final class TurnSkipToggleSupport {
     static String field_a;
     static String field_b;
 
-    final static SocketFactory a(String param0, byte param1, int param2) {
+    final static SocketFactory createProxySocketFactory(String param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ProxySocketFactory var4 = null;
