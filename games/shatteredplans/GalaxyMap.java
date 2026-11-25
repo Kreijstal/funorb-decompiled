@@ -339,7 +339,7 @@ final class GalaxyMap {
           var4 = var8;
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
-            im.writePlayer(var6.field_t, param1, 9555);
+            PlayerOverlaySupport.writePlayer(var6.field_t, param1, 9555);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

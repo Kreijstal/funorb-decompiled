@@ -97,7 +97,7 @@ final class ClientException extends RuntimeException {
               if (var4 == AccountStatusDialog.field_nb.field_c) {
                 var5 = wo.field_a;
               } else {
-                var5 = ih.field_b;
+                var5 = AccountNoticeKind.field_b;
               }
             }
             var6 = StarLinkPlanner.field_c[var3];

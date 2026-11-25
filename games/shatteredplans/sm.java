@@ -76,7 +76,7 @@ final class sm {
           return;
         }
         var2 = 0;
-        if (je.field_d != 0) {
+        if (LobbyCommandSupport.field_d != 0) {
           var3 = this.b(107, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (0 <= var3) {
             this.d(4, var3);
@@ -96,7 +96,7 @@ final class sm {
             }
           }
         } else {
-          if (je.field_d != 0) {
+          if (LobbyCommandSupport.field_d != 0) {
             if (-2 != BattleContribution.field_o) {
               if (BattleContribution.field_o == -3) {
                 this.a(1, (byte) -57);
@@ -1257,7 +1257,7 @@ final class sm {
                 }
                 for (var16_int = 0; var16_int < 6; var16_int++) {
                   var17_int = (-var15 + var16_int * 8192) / 6;
-                  var18_int = (20 * je.sine(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
+                  var18_int = (20 * LobbyCommandSupport.sine(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
                   var19 = (20 * IntrusiveNode.cosine(var17_int, -122) >> 12) + (40 + param0 << 4);
                   SoftwareRasterizer.addRadialGlowQ4(var18_int, var19, 64, 255, DropTargetWidget.field_F);
                 }
@@ -1360,7 +1360,7 @@ final class sm {
                 var15 = 125;
                 var16 = new String[16];
                 var17 = wg.field_e.a(5607, ListContent.field_d);
-                var18 = wg.field_e.a(5607, jb.field_h);
+                var18 = wg.field_e.a(5607, ClientOverlayDrawSupport.field_h);
                 var19Lifetime1 = rs.field_Cb.wrapText(var17, new int[]{var14}, var16);
                 var20Lifetime1 = rs.field_Cb.wrapText(var18, new int[]{var15}, var16);
                 stackIn_96_0 = (var20Lifetime1 < var19Lifetime1) ? var19Lifetime1 : var20Lifetime1;
@@ -1434,7 +1434,7 @@ final class sm {
                 var9Lifetime3Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
                 this.a(15 + param3, 20, 1, param0 + (rs.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
-                var40 = jb.field_f;
+                var40 = ClientOverlayDrawSupport.field_f;
                 var5 = var40;
                 var5 = var40;
                 var9Lifetime3Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
@@ -1596,7 +1596,7 @@ final class sm {
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!StripedProgressWidget.field_Q &&
-          !is.field_a) {
+          !ArchiveConnectionRetrySupport.field_a) {
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j != 13) {
               this.k(23);
@@ -1666,7 +1666,7 @@ final class sm {
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
-        if (je.field_d == 0) {
+        if (LobbyCommandSupport.field_d == 0) {
         } else {
           var2 = this.findHexAt(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (var2 == TerritoryResourcePanelSupport.field_c) {

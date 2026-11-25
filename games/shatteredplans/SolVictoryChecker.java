@@ -456,7 +456,7 @@ final class SolVictoryChecker extends VictoryChecker {
               var6 = sa.field_a.readNullableString(1910283844);
               var7 = sa.field_a.readUnsignedByte(-123);
               if ((var7 & 1) != 0) {
-                ij.a(24);
+                ProjectsWindowSupport.cacheClientSeedBytes(24);
               }
               stackIn_44_0 = (0 != (16 & var7));
               va.field_j = stackIn_44_0;
@@ -485,7 +485,7 @@ final class SolVictoryChecker extends VictoryChecker {
               var11 = (CharSequence) ((Object) Star.field_o);
               ArchiveIndex.field_d = DateInputWidget.a(var11, true);
               CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
-              Wormhole.field_j = ih.field_f;
+              Wormhole.field_j = AccountNoticeKind.field_f;
               if (mq.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
                 if (mq.field_c.getKind((byte) 123) == oi.field_b) {
                   ObjectList.field_f.saveBrowserPreference(GameScreen.getHostApplet((byte) 126), true);

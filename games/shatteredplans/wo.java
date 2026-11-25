@@ -38,15 +38,15 @@ final class wo {
               param0 <= 105) {
               var8 = param2;
               jp.a(var8, false);
-              ij.field_a = DialogRoot.a(param2, (byte) -89);
+              ProjectsWindowSupport.field_a = DialogRoot.a(param2, (byte) -89);
               return;
             }
-            ij.field_a = GameAssetSetupSupport.createStatusResult(param3, param0, param1 - 35);
+            ProjectsWindowSupport.field_a = GameAssetSetupSupport.createStatusResult(param3, param0, param1 - 35);
             return;
           }
           stackIn_6_0 = 93;
           stackIn_7_1 = !(jm.field_t >= 13);
-          ij.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
+          ProjectsWindowSupport.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           jp.a((String[]) null, false);
           return;

@@ -454,7 +454,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThread(true, 5, (Runnable) (this));
           while (var2.field_d == 0) {
-            jb.sleep((byte) -107, 10L);
+            ClientOverlayDrawSupport.sleep((byte) -107, 10L);
           }
           if (var2.field_d == 2) {
             throw new RuntimeException();

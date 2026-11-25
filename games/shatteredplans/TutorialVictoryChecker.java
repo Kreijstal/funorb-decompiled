@@ -38,11 +38,11 @@ final class TutorialVictoryChecker extends VictoryChecker {
           ClientSessionSupport.field_c = ClientSessionSupport.field_c + (param0.readUnsignedShort(-20976) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(-120);
           ClientSessionSupport.field_c = ClientSessionSupport.field_c + (var2_intLifetime1 >> 6);
-          ig.field_d = 2064384 & var2_intLifetime1 << 15;
-          ig.field_d = ig.field_d + (param0.readUnsignedByte(-122) << 7);
+          ClientUiLoadingSupport.field_d = 2064384 & var2_intLifetime1 << 15;
+          ClientUiLoadingSupport.field_d = ClientUiLoadingSupport.field_d + (param0.readUnsignedByte(-122) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-127);
           Bzip2State.field_L = (1 & var2_intLifetime2) << 16;
-          ig.field_d = ig.field_d + (var2_intLifetime2 >> 1);
+          ClientUiLoadingSupport.field_d = ClientUiLoadingSupport.field_d + (var2_intLifetime2 >> 1);
           Bzip2State.field_L = Bzip2State.field_L + param0.readUnsignedShort(-20976);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb {
+final class ClientOverlayDrawSupport {
     static int field_c;
     static String field_e;
     static int field_d;
@@ -21,14 +21,14 @@ final class jb {
         field_h = null;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawSharedClientOverlays(boolean param0, byte param1) {
         ta.a(param0, 121);
         if (param1 != -27) {
-          jb.clearStatics(11);
-          im.a(true, param0);
+          ClientOverlayDrawSupport.clearStatics(11);
+          PlayerOverlaySupport.drawInterfaceOverlays(true, param0);
           return;
         }
-        im.a(true, param0);
+        PlayerOverlaySupport.drawInterfaceOverlays(true, param0);
     }
 
     final static void sleep(byte param0, long param1) {

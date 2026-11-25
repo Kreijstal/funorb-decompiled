@@ -214,7 +214,7 @@ final class HighscoreResponseSupport {
           LobbyRoomControlsSupport.field_b = AllianceExpiredEvent.field_i;
           UrlLoader.field_d = kh.field_Lb;
           kh.field_Lb = false;
-          je.field_d = vh.field_c;
+          LobbyCommandSupport.field_d = vh.field_c;
           PointsVictoryChecker.field_p = ArchiveSource.field_c;
           SliderWidget.field_P = TertiaryNodeList.field_e;
           vh.field_c = 0;
@@ -223,8 +223,8 @@ final class HighscoreResponseSupport {
 
     final static void detachKeyboardInput(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(im.field_c);
-          param0.removeFocusListener(im.field_c);
+          param0.removeKeyListener(PlayerOverlaySupport.field_c);
+          param0.removeFocusListener(PlayerOverlaySupport.field_c);
           if (param1 != 18014) {
             HighscoreResponseSupport.getSharedPcmMixer(-12);
           }

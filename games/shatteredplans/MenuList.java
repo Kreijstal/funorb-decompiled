@@ -88,13 +88,13 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (is.field_b) {
+          if (ArchiveConnectionRetrySupport.field_b) {
             return;
           }
           PanelNode.field_q = param1;
           if (param1 == null) {
             SliderPainter.field_b = DerelictMapGenerator.field_q;
-            jb.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
+            ClientOverlayDrawSupport.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             oi.field_a = BytePayloadNode.field_h;
             var13 = (sq) null;
@@ -141,7 +141,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           if ((param1.field_n & 1) != 0) {
             var2_int = var2_int - var4;
           }
-          jb.field_d = var4 + var2_int;
+          ClientOverlayDrawSupport.field_d = var4 + var2_int;
           SliderPainter.field_b = var3 + var5;
           oi.field_a = var3;
           MenuButton.field_B = var2_int;
@@ -154,8 +154,8 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           }
           DerelictMapGenerator.field_q = SliderPainter.field_b;
           BytePayloadNode.field_h = oi.field_a;
-          TargetedChatMessage.field_j = jb.field_d + MenuButton.field_B >> 1;
-          ArchiveRequest.field_r = jb.field_d + MenuButton.field_B >> 1;
+          TargetedChatMessage.field_j = ClientOverlayDrawSupport.field_d + MenuButton.field_B >> 1;
+          ArchiveRequest.field_r = ClientOverlayDrawSupport.field_d + MenuButton.field_B >> 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

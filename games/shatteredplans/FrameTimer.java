@@ -40,7 +40,7 @@ abstract class FrameTimer {
     final int a(long param0, int param1) {
         long var4 = this.a(0);
         if (var4 > 0L) {
-          jb.sleep((byte) -115, var4);
+          ClientOverlayDrawSupport.sleep((byte) -115, var4);
         }
         if (param1 == -1) {
           return this.a(18907, param0);

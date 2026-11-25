@@ -385,7 +385,7 @@ final class js {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           BytePayloadNode.field_h = oi.field_a;
-          TargetedChatMessage.field_j = jb.field_d;
+          TargetedChatMessage.field_j = ClientOverlayDrawSupport.field_d;
           ListContent.field_g = false;
           WhirlpoolHasher.field_g = false;
           DerelictMapGenerator.field_q = SliderPainter.field_b;

@@ -90,11 +90,11 @@ abstract class ByteArrayStorage {
             }
             if (SpriteResourceSupport.getChatChannelFilter(-7019, var5) == 2) {
               ServerIntArrayRequest.setChatChannelFilter((byte) 91, param0, 1, var5);
-              ih.a(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
+              AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
               MusicVoice.c(param2);
               return true;
             }
-            ih.a(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
+            AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
             MusicVoice.c(param2);
           }
           return true;
@@ -130,7 +130,7 @@ abstract class ByteArrayStorage {
         var18 = var16;
         if (ProductionContent.field_h == 2) {
           var61 = (CharSequence) ((Object) LoginRequestSupport.field_a);
-          var20 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
+          var20 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{AccountNoticeKind.formatBase37Name(var61, -117)});
           var8 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var16});
           var9 = QuickChatHelpSupport.field_f.stringWidth(var20);
           var10 = QuickChatHelpSupport.field_f.stringWidth(var8);
@@ -153,7 +153,7 @@ abstract class ByteArrayStorage {
             return true;
           }
           if (null == np.field_a) {
-            if (!je.field_e) {
+            if (!LobbyCommandSupport.field_e) {
               if (null == np.field_a) {
                 var47 = var7 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var47);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig {
+final class ClientUiLoadingSupport {
     static String field_b;
     static GzipInflater field_a;
     static int[] field_c;
@@ -16,7 +16,7 @@ final class ig {
         }
     }
 
-    final static boolean a(Archive param0, int param1, Archive param2, Archive param3) {
+    final static boolean areCommonUiArchivesReady(Archive param0, int param1, Archive param2, Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -71,7 +71,7 @@ final class ig {
         }
     }
 
-    final static void a(int param0) {
+    final static void showConnectionProgressDialog(int param0) {
         ByteArrayStorage.field_e.deactivateAll(81);
         if (param0 != 7655) {
           return;

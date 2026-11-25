@@ -269,19 +269,19 @@ final class lr {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param0 == 100 &&
-          je.field_c > 0) {
-          fieldTemp$3 = je.field_c - 1;
-          je.field_c = je.field_c - 1;
+          LobbyCommandSupport.field_c > 0) {
+          fieldTemp$3 = LobbyCommandSupport.field_c - 1;
+          LobbyCommandSupport.field_c = LobbyCommandSupport.field_c - 1;
           var2_ref_byte__ = qf.field_d[fieldTemp$3];
-          qf.field_d[je.field_c] = null;
+          qf.field_d[LobbyCommandSupport.field_c] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          ik.field_j > 0) {
-          fieldTemp$4 = ik.field_j - 1;
-          ik.field_j = ik.field_j - 1;
+          MutableIntPairNode.field_j > 0) {
+          fieldTemp$4 = MutableIntPairNode.field_j - 1;
+          MutableIntPairNode.field_j = MutableIntPairNode.field_j - 1;
           var2_ref_byte__Lifetime1 = mj.field_Bb[fieldTemp$4];
-          mj.field_Bb[ik.field_j] = null;
+          mj.field_Bb[MutableIntPairNode.field_j] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&

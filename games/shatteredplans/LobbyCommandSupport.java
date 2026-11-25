@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je {
+final class LobbyCommandSupport {
     static Sprite field_f;
     static boolean field_e;
     static Sprite field_b;
@@ -50,7 +50,7 @@ final class je {
         return stackIn_5_0;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void writeReturnToLobbyRequest(byte param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param1, 255);
         if (param0 > 32) {
@@ -58,12 +58,12 @@ final class je {
           var2.writeByte(1, (byte) -93);
           return;
         }
-        je.sine(-116, (byte) -104);
+        LobbyCommandSupport.sine(-116, (byte) -104);
         var2.writeByte(1, (byte) -104);
         var2.writeByte(1, (byte) -93);
     }
 
-    public static void a(int param0) {
+    public static void releaseLobbyCommandStatics(int param0) {
         if (param0 == 1) {
           field_b = null;
           field_f = null;

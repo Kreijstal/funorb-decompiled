@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im {
+final class PlayerOverlaySupport {
     static GameKeyHandler field_c;
     static String field_a;
     static int[] field_b;
@@ -15,7 +15,7 @@ final class im {
         field_a = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawInterfaceOverlays(boolean param0, boolean param1) {
         if (param0) {
           if (WeightedLruCache.a(-128)) {
             param1 = false;
@@ -55,7 +55,7 @@ final class im {
             return;
           }
           var4 = (PacketBuffer) null;
-          im.writePlayer((Player) null, (PacketBuffer) null, -30);
+          PlayerOverlaySupport.writePlayer((Player) null, (PacketBuffer) null, -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class im {
         }
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String validateAccountName(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;

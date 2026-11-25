@@ -496,7 +496,7 @@ final class kh extends AnimatedPanel {
           return -89;
         }
         if (param0 &&
-          je.field_d != 0 &&
+          LobbyCommandSupport.field_d != 0 &&
           0 == this.field_rb) {
           return -1;
         }

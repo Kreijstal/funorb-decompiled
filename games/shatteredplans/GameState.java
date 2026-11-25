@@ -1133,7 +1133,7 @@ final class GameState {
           }
           var8 = param0.requestDisplayModes(12);
           while (0 == var8.field_d) {
-            jb.sleep((byte) -100, 10L);
+            ClientOverlayDrawSupport.sleep((byte) -100, 10L);
           }
           if (var8.field_d == 2) {
             stackIn_10_0 = new DisplayModeInfo[]{};

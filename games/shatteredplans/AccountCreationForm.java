@@ -531,7 +531,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);
           var6Lifetime6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var12), rs.field_Cb, new int[]{var4 - 40});
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
-          var13 = jb.field_f;
+          var13 = ClientOverlayDrawSupport.field_f;
           var6Lifetime6Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
           var14 = ArchiveNetworkClient.field_o;
           var5 = var5 + ((4 * var6Lifetime6Lifetime2 + 3) * var3 >> 2);

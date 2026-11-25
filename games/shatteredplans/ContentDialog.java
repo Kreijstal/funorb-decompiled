@@ -129,7 +129,7 @@ abstract class ContentDialog extends ResizingDialog {
           return;
         }
         this.field_Z = 0;
-        this.field_ab = je.field_a;
+        this.field_ab = LobbyCommandSupport.field_a;
         if (param0 <= -100) {
           this.installContent(-125, this.field_ib);
           this.field_eb.alpha = 0;
@@ -166,7 +166,7 @@ abstract class ContentDialog extends ResizingDialog {
           var2Lifetime1Lifetime1 = -108 % ((param0 + 23) / 52);
           return super.animate((byte) 81);
         }
-        if (this.field_ab != je.field_a) {
+        if (this.field_ab != LobbyCommandSupport.field_a) {
           var2Lifetime2 = -108 % ((param0 + 23) / 52);
           return super.animate((byte) 81);
         }
@@ -220,7 +220,7 @@ abstract class ContentDialog extends ResizingDialog {
 
     final void finishAnimations(int param0) {
         if (null != this.field_ab) {
-          if (this.field_ab != je.field_a) {
+          if (this.field_ab != LobbyCommandSupport.field_a) {
             this.centre(12 + this.field_db + this.field_ib.field_n, 12 + this.field_ib.field_x, (byte) -109);
             this.installContent(-107, this.field_ib);
           }

@@ -176,7 +176,7 @@ final class IsolationistAi extends StandardAi {
             }
           } else {
             if (param1.field_n == 0 &&
-              je.field_e) {
+              LobbyCommandSupport.field_e) {
               var3 = "[" + MessageKind.field_a + "] ";
             }
             if (param1.field_n == 1) {

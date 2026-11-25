@@ -335,7 +335,7 @@ class AnimatedPanel extends PanelNode {
     }
 
     final static void a(boolean param0, byte param1) {
-        jb.a(param0, (byte) -27);
+        ClientOverlayDrawSupport.drawSharedClientOverlays(param0, (byte) -27);
         if (param1 <= 107) {
           GameRules var3 = (GameRules) null;
           AnimatedPanel.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
@@ -458,7 +458,7 @@ class AnimatedPanel extends PanelNode {
         var13 = 0;
         if (!us.field_c &&
           param3 &&
-          je.field_d != 0 &&
+          LobbyCommandSupport.field_d != 0 &&
           SoftwareRasterizer.field_i <= PointsVictoryChecker.field_p &&
           SoftwareRasterizer.field_l > PointsVictoryChecker.field_p &&
           SliderWidget.field_P >= SoftwareRasterizer.field_a &&
@@ -466,10 +466,10 @@ class AnimatedPanel extends PanelNode {
           this.field_Q = -this.field_B + PointsVictoryChecker.field_p;
           var13 = 1;
           this.field_X = -this.field_N + SliderWidget.field_P;
-          this.field_rb = je.field_d;
-          this.field_ub = je.field_d;
+          this.field_rb = LobbyCommandSupport.field_d;
+          this.field_ub = LobbyCommandSupport.field_d;
         } else {
-          if (je.field_d != 0) {
+          if (LobbyCommandSupport.field_d != 0) {
             this.field_ub = 0;
           }
           this.field_rb = 0;

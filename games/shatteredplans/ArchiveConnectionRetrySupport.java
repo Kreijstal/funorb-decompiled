@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class is {
+final class ArchiveConnectionRetrySupport {
     static boolean field_b;
     static boolean field_a;
     private static String field_z;
 
-    final static int a(byte param0, int param1) {
+    final static int handleArchiveConnectionFailure(byte param0, int param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         ServerIntArrayRequest.field_i = 0;
         AccountCreationDialog.field_Gb = null;
         js.field_a = null;
         if (param0 != -94) {
-          is.a((byte) -54, 83);
+          ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -54, 83);
         }
         int var2 = IntList.field_i;
         IntList.field_i = StatusMessagePanel.field_D;

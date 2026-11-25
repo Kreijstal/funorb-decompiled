@@ -450,7 +450,7 @@ final class SecondaryNodeHashTable {
     final static MenuWindow a(int param0, boolean param1) {
         MenuButton var2 = null;
         MenuList var3 = null;
-        tq.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
+        tq.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, AccountNoticeKind.field_a.toUpperCase());
         if (param1) {
           var2 = new MenuButton(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
           var2.field_h = tq.field_j;

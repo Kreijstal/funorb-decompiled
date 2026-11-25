@@ -53,9 +53,9 @@ final class ProxySocketConnector extends SocketConnector {
               var10 = var12;
               var6 = var10;
               if (var3 != 1) {
-                var7 = ig.field_a;
+                var7 = ClientUiLoadingSupport.field_a;
                 synchronized (var7) {
-                  ig.field_a.a(var12, var9, 5591);
+                  ClientUiLoadingSupport.field_a.a(var12, var9, 5591);
                 }
               } else {
                 Bzip2Decoder.decompress(var12, var5_int, param0, var4, 9);

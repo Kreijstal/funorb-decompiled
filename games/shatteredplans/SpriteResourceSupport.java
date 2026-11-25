@@ -166,12 +166,12 @@ final class SpriteResourceSupport {
         AccountFieldValue.field_d = param0;
         if (param2 == 26883) {
           QuickChatCategoryDefinition.field_v = param1;
-          je.field_g = param3;
+          LobbyCommandSupport.field_g = param3;
           return;
         }
         field_b = 22;
         QuickChatCategoryDefinition.field_v = param1;
-        je.field_g = param3;
+        LobbyCommandSupport.field_g = param3;
     }
 
     static {

@@ -10,11 +10,11 @@ final class TertiaryNodeList {
     static int field_f;
     private TertiaryLinkNode field_a;
 
-    final static ik a(int param0, int param1, int param2) {
-        ik var3 = InvalidMapConnectionException.b((byte) -103);
-        var3.a(param2, (byte) 38, param1);
+    final static MutableIntPairNode a(int param0, int param1, int param2) {
+        MutableIntPairNode var3 = InvalidMapConnectionException.b((byte) -103);
+        var3.setPair(param2, (byte) 38, param1);
         if (param0 != 0) {
-          return (ik) null;
+          return (MutableIntPairNode) null;
         }
         return var3;
     }

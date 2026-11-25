@@ -128,7 +128,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             var3_int = param0.length;
             this.field_G = new String[var3_int];
             for (var4_int = param1; var3_int > var4_int; var4_int++) {
-              this.field_G[var4_int] = ih.a((CharSequence) ((Object) param0[var4_int]), 68).replace(' ', ' ');
+              this.field_G[var4_int] = AccountNoticeKind.formatBase37Name((CharSequence) ((Object) param0[var4_int]), 68).replace(' ', ' ');
             }
             var4 = new LinkPainter(StatefulWidgetTheme.field_u, 0, 1);
             this.field_I = new FocusableWidget[var3_int + 1];

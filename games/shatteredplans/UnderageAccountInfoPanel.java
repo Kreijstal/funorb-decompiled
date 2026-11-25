@@ -6,7 +6,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
     private TextHotspotWidget field_G;
     static String[] field_J;
     private AccountCreationDialog field_I;
-    static ih field_E;
+    static AccountNoticeKind field_E;
     static int[][] field_D;
     static int field_K;
     static String field_F;
@@ -578,7 +578,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
 
     static {
         field_J = new String[]{"Overview", "Glossary I", "Glossary II", "Tactical Display", "System HUD", "Controls I", "Controls II", "Animations", "Projects", "Game Types", "Classic Rules"};
-        field_E = new ih();
+        field_E = new AccountNoticeKind();
         field_K = 15;
         field_F = "No more fleets available here.";
     }

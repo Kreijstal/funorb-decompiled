@@ -166,7 +166,7 @@ class MenuLabel extends MenuComponent {
             qf var4 = (qf) null;
             MenuLabel.a((qf) null, 124);
           }
-          jb.field_g = po.field_f;
+          ClientOverlayDrawSupport.field_g = po.field_f;
           SolMapReader.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

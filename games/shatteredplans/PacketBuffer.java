@@ -681,7 +681,7 @@ class PacketBuffer extends IntrusiveNode {
           uq.field_m = new rl(wg.field_e);
           ClientContextMenuSupport.field_a = new IntrusiveDeque();
           StellarBombEvent.field_h = new IntrusiveDeque();
-          is.field_b = false;
+          ArchiveConnectionRetrySupport.field_b = false;
           GameClientShell.field_u = false;
           SliderWidget.field_L = false;
           ImageProducerRasterBuffer.field_i = 0;

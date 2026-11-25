@@ -397,7 +397,7 @@ abstract class GameClientShell extends GameApplet {
         if (DirectByteArrayStorage.b((byte) -117)) {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
           if (this.field_y ||
-            !(var3 >= ik.a(-26918)) &&
+            !(var3 >= MutableIntPairNode.getKeyboardIdleTicks(-26918)) &&
             !(po.b(123) <= var3)) {
             this.field_y = false;
             q.g(-113);
@@ -519,7 +519,7 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (DefensiveAi.field_p == 3 &&
-          ig.a(LinkPainter.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
+          ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
           uq.a(GalaxyMap.field_g, 0)) {
           AnimatedPanel.f(-98);
           GameScreen.c(28164);
@@ -832,7 +832,7 @@ abstract class GameClientShell extends GameApplet {
             field_o = (String) null;
           }
           while (var11.field_d == 0) {
-            jb.sleep((byte) -122, 10L);
+            ClientOverlayDrawSupport.sleep((byte) -122, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_e);
           if (var7 == null) {

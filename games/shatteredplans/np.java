@@ -152,14 +152,14 @@ final class np {
         this.field_h = 0;
         this.field_i = 0;
         this.field_g = 0;
-        if (0 == je.field_d) {
+        if (0 == LobbyCommandSupport.field_d) {
           if (~this.field_n != param0 &&
             0 != AllianceExpiredEvent.field_n) {
             if (0 >= this.field_k) {
               this.field_k = ProgressDialog.field_Y;
               this.field_h = this.field_n;
               this.field_k = this.field_k - 1;
-              if (je.field_d == 0 &&
+              if (LobbyCommandSupport.field_d == 0 &&
                 0 == AllianceExpiredEvent.field_n) {
                 this.field_n = 0;
               }
@@ -186,7 +186,7 @@ final class np {
             }
             this.field_k = this.field_k - 1;
           }
-          if (je.field_d == 0) {
+          if (LobbyCommandSupport.field_d == 0) {
             if (0 != AllianceExpiredEvent.field_n) {
               if (this.field_n == 0) {
                 if (!this.field_e &&
@@ -245,12 +245,12 @@ final class np {
         }
         this.field_k = BattleContribution.field_j;
         this.field_c = param1;
-        this.field_h = je.field_d;
-        this.field_g = je.field_d;
-        this.field_n = je.field_d;
+        this.field_h = LobbyCommandSupport.field_d;
+        this.field_g = LobbyCommandSupport.field_d;
+        this.field_n = LobbyCommandSupport.field_d;
         this.field_e = true;
         if (~this.field_n == param0) {
-          if (je.field_d == 0) {
+          if (LobbyCommandSupport.field_d == 0) {
             if (0 != AllianceExpiredEvent.field_n) {
               if (this.field_n == 0) {
                 if (!this.field_e &&
@@ -309,7 +309,7 @@ final class np {
         }
         if (0 == AllianceExpiredEvent.field_n) {
           boolean decompiledFrameRemainder0 = true;
-          if (je.field_d == 0) {
+          if (LobbyCommandSupport.field_d == 0) {
             if (0 != AllianceExpiredEvent.field_n) {
               if (this.field_n != 0) {
                 return;
@@ -350,7 +350,7 @@ final class np {
           this.field_k = ProgressDialog.field_Y;
           this.field_h = this.field_n;
           this.field_k = this.field_k - 1;
-          if (je.field_d != 0) {
+          if (LobbyCommandSupport.field_d != 0) {
             if (this.field_n == 0) {
               if (!this.field_e &&
                 !UrlLoader.field_d) {
@@ -397,7 +397,7 @@ final class np {
           return;
         }
         this.field_k = this.field_k - 1;
-        if (je.field_d == 0) {
+        if (LobbyCommandSupport.field_d == 0) {
           if (0 != AllianceExpiredEvent.field_n) {
             if (this.field_n == 0) {
               if (!this.field_e &&

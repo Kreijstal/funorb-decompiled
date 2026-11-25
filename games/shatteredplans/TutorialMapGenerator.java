@@ -1106,7 +1106,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("join_withdraw_request_xs_game", 511);
                 if (null != var2) {
-                  im.field_a = IterableNodeHashTable.a(var2, 17746);
+                  PlayerOverlaySupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_kick_x_from_this_game", 511);
                 if (null != var2) {
@@ -2356,7 +2356,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invalidemail", 511);
                 if (var2 != null) {
-                  ig.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientUiLoadingSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_email_unavailable", 511);
                 if (var2 != null) {

@@ -46,23 +46,23 @@ final class ChatCompositionSupport {
         }
     }
 
-    final static void collectPolygonScanlineEdges(ik[] param0, int param1) {
+    final static void collectPolygonScanlineEdges(MutableIntPairNode[] param0, int param1) {
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
-        ik stackIn_22_0 = null;
+        MutableIntPairNode stackIn_22_0 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ik[] var2 = null;
-        ik var2_ref = null;
+        MutableIntPairNode[] var2 = null;
+        MutableIntPairNode var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3_int = 0;
-        ik[] var3 = null;
-        ik var4_ref_ik = null;
+        MutableIntPairNode[] var3 = null;
+        MutableIntPairNode var4_ref_ik = null;
         int var4 = 0;
         int var5_int = 0;
-        ik var5 = null;
+        MutableIntPairNode var5 = null;
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -210,7 +210,7 @@ final class ChatCompositionSupport {
             } else {
               if (var7 == 0) {
                 if (np.field_a == null &&
-                  je.field_e) {
+                  LobbyCommandSupport.field_e) {
                   var5 = "[" + MessageKind.field_a + "] ";
                 }
                 if (null != np.field_a) {

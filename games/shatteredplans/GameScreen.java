@@ -461,7 +461,7 @@ final class GameScreen {
             stackIn_48_0 = param0.equalsIgnoreCase("block") ? 1 : 0;
           }
           if (stackIn_48_0 != 0) {
-            is.field_b = true;
+            ArchiveConnectionRetrySupport.field_b = true;
             return;
           }
           if (param0.equalsIgnoreCase("capture1")) {
@@ -688,7 +688,7 @@ final class GameScreen {
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameCompleted2)) {
                 var8_int = this.field_s.field_n.field_k;
-                var5.setLabel((byte) -83, 9386040, QuickChatCategoryRegistry.a(jb.field_e, 4371, new String[]{Integer.toString(param1.field_f[this.field_s.field_n.field_x])}));
+                var5.setLabel((byte) -83, 9386040, QuickChatCategoryRegistry.a(ClientOverlayDrawSupport.field_e, 4371, new String[]{Integer.toString(param1.field_f[this.field_s.field_n.field_x])}));
                 var7.field_o = null;
                 var9 = (MenuComponent) (var7.field_l.startForward(0));
                 while (var9 != null) {
@@ -2321,7 +2321,7 @@ final class GameScreen {
           if (null != this.field_nb &&
             this.field_nb.field_A &&
             this.field_g.field_s) {
-            je.field_f.drawColourised(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
+            LobbyCommandSupport.field_f.drawColourised(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
           }
           var3 = (MenuComponent) (this.field_y.startReverse(3725));
           boolean decompiledNaturalLoopExit0 = false;
@@ -2900,7 +2900,7 @@ final class GameScreen {
             var8 = var8 + SliderPainter.field_k;
           }
           rs.field_Cb.drawString(var8.toUpperCase(), 10 + var4, rs.field_Cb.field_J + var5, 16777215, -1);
-          ij.a(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + NodeSequence.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
+          ProjectsWindowSupport.drawPlainHexagonPanel(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + NodeSequence.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
           var10 = 0;
           if (null != this.field_s.field_n) {
             var10 = this.field_s.field_n.field_x;
@@ -3241,7 +3241,7 @@ final class GameScreen {
             return true;
           }
           if (this.field_u != 0) {
-            if (je.field_d != 0) {
+            if (LobbyCommandSupport.field_d != 0) {
               boolean decompiledSharedTail3 = !(32 > this.field_u);
               if (!decompiledSharedTail3) {
                 this.field_u = -this.field_u + 60000;
@@ -5071,7 +5071,7 @@ final class GameScreen {
           this.field_e = RoundedFrameSupport.a((byte) 112);
           this.field_y.addLast((byte) -113, this.field_e);
           if (this.field_s.field_n != null) {
-            this.field_j = ij.b((byte) 127);
+            this.field_j = ProjectsWindowSupport.createProjectsWindow((byte) 127);
             this.field_y.addLast((byte) -113, this.field_j);
           }
           this.field_J = FleetMove.d(28, this.field_s.field_P.field_r);
@@ -5097,7 +5097,7 @@ final class GameScreen {
           this.field_W = new ToggleButton(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
           this.field_W.field_o = wm.field_a;
           this.field_y.addLast((byte) -113, this.field_W);
-          this.field_mb = new ToggleButton(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, je.field_b, (String) null, 0);
+          this.field_mb = new ToggleButton(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, LobbyCommandSupport.field_b, (String) null, 0);
           this.field_mb.field_o = StarLinkPlanner.field_b;
           this.field_y.addLast((byte) -113, this.field_mb);
           if (this.field_nb != null) {

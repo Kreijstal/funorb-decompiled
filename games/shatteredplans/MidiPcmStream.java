@@ -1089,7 +1089,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        ij.a(3974311, param4, true, param2, param0, param1);
+        ProjectsWindowSupport.drawPlainHexagonPanel(3974311, param4, true, param2, param0, param1);
         if (param3 > -57) {
           MidiPcmStream.a((IndexedSprite[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
         }

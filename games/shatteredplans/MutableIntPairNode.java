@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends IntrusiveNode {
+final class MutableIntPairNode extends IntrusiveNode {
     int field_k;
     static int field_j;
     int field_i;
     static boolean field_h;
 
-    final static int[] a(int[] param0, int param1, byte param2) {
+    final static int[] sortedIndices(int[] param0, int param1, byte param2) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -57,7 +57,7 @@ final class ik extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setPair(int param0, byte param1, int param2) {
         this.field_i = param0;
         this.field_k = param2;
         if (param1 < 7) {
@@ -65,17 +65,17 @@ final class ik extends IntrusiveNode {
         }
     }
 
-    ik() {
+    MutableIntPairNode() {
     }
 
-    final static mj a(int param0, long param1) {
+    final static mj findRoomMember(int param0, long param1) {
         if (param0 > -87) {
           return (mj) null;
         }
         return (mj) (SpriteStripButtonPainter.field_w.get(65280, param1));
     }
 
-    final static int a(int param0) {
+    final static int getKeyboardIdleTicks(int param0) {
         if (param0 != -26918) {
           return 113;
         }

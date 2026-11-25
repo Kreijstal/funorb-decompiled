@@ -11,12 +11,12 @@ final class oo {
 
     final static void a(byte param0) {
         if (param0 <= -49) {
-          ig.a(7655);
+          ClientUiLoadingSupport.showConnectionProgressDialog(7655);
           qj.a((byte) -127, 4);
           return;
         }
         oo.a(-77, 49, 26, true, 104);
-        ig.a(7655);
+        ClientUiLoadingSupport.showConnectionProgressDialog(7655);
         qj.a((byte) -127, 4);
     }
 

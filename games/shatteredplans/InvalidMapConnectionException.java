@@ -528,14 +528,14 @@ final class InvalidMapConnectionException extends Exception {
         super(param0);
     }
 
-    final static ik b(byte param0) {
+    final static MutableIntPairNode b(byte param0) {
         if (MouseInputHandler.field_c.isEmpty(69)) {
-          return new ik();
+          return new MutableIntPairNode();
         }
         if (param0 != -103) {
           InvalidMapConnectionException.b((byte) -5);
         }
-        return (ik) (MouseInputHandler.field_c.pollFirst(44));
+        return (MutableIntPairNode) (MouseInputHandler.field_c.pollFirst(44));
     }
 
     static {

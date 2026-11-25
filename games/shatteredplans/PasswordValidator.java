@@ -235,7 +235,7 @@ final class PasswordValidator extends TextFieldValidator {
         Throwable var2 = null;
         boolean stackIn_9_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = im.field_c;
+        var1 = PlayerOverlaySupport.field_c;
         synchronized (var1) {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
@@ -350,7 +350,7 @@ final class PasswordValidator extends TextFieldValidator {
         Throwable var2 = null;
         boolean stackIn_9_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = im.field_c;
+        var1 = PlayerOverlaySupport.field_c;
         synchronized (var1) {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;

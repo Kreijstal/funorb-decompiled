@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih {
+final class AccountNoticeKind {
     static PacketBuffer field_c;
     static int field_d;
     static int field_b;
@@ -10,7 +10,7 @@ final class ih {
     static String field_a;
     static String field_e;
 
-    final static void a(String param0, int param1, int param2, int param3, String param4, int param5) {
+    final static void writeChatMessageRequest(String param0, int param1, int param2, int param3, String param4, int param5) {
         CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
@@ -34,7 +34,7 @@ final class ih {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String formatBase37Name(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -80,7 +80,7 @@ final class ih {
         throw new IllegalStateException();
     }
 
-    final static boolean b(int param0) {
+    final static boolean hasSocialNameDialog(int param0) {
         int var1 = 1 % ((-61 - param0) / 56);
         return ProxyAuthenticationRequiredException.field_e != null ? true : false;
     }

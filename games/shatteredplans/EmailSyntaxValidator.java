@@ -18,7 +18,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
-            stackIn_2_0 = ig.field_b;
+            stackIn_2_0 = ClientUiLoadingSupport.field_b;
             return stackIn_2_0;
           }
           if (param0) {

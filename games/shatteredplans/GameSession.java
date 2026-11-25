@@ -706,7 +706,7 @@ final class GameSession implements AiHost {
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (je.field_d == 2 &&
+          if (LobbyCommandSupport.field_d == 2 &&
             !this.field_y) {
             this.field_Z = param1;
             this.field_y = true;
@@ -1324,7 +1324,7 @@ final class GameSession implements AiHost {
             decompiledSharedTail1 = (var11 != 0);
           }
           if (decompiledSharedTail1) {
-            if (je.field_d == 1) {
+            if (LobbyCommandSupport.field_d == 1) {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
             this.handleMapPointer(-3587, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
@@ -3387,7 +3387,7 @@ final class GameSession implements AiHost {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_n == param0) {
-            var4 = QuickChatCategoryRegistry.a(jb.field_a, 4371, new String[]{param2.name});
+            var4 = QuickChatCategoryRegistry.a(ClientOverlayDrawSupport.field_a, 4371, new String[]{param2.name});
             this.field_H.addFirst(new n(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {

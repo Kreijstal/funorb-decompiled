@@ -16,8 +16,8 @@ final class pr {
             field_c = (AnimatedPanel) null;
           }
           param0.setFocusTraversalKeysEnabled(false);
-          param0.addKeyListener(im.field_c);
-          param0.addFocusListener(im.field_c);
+          param0.addKeyListener(PlayerOverlaySupport.field_c);
+          param0.addFocusListener(PlayerOverlaySupport.field_c);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

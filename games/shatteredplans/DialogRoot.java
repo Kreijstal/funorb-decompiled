@@ -160,7 +160,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, ik param1, boolean param2, ik param3) {
+    final static void a(int param0, MutableIntPairNode param1, boolean param2, MutableIntPairNode param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

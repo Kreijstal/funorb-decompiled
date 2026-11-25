@@ -50,7 +50,7 @@ final class PlayerContextMenuController {
           return;
         }
         var7 = ta.a(-77, this.field_b);
-        var4 = ik.a(-115, this.field_b);
+        var4 = MutableIntPairNode.findRoomMember(-115, this.field_b);
         var5 = this.getDisplayName(param1 ^ 16744);
         if (var4 != null) {
           if (!np.field_a.field_Ab ||
@@ -494,7 +494,7 @@ final class PlayerContextMenuController {
           if (var6.field_cc) {
             this.field_j.a(1, 2, QuickChatCategoryRegistry.a(ta.field_c, 4371, new String[]{var3}));
             if (var6.field_Yb) {
-              this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
+              this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
             }
             return;
           }
@@ -503,13 +503,13 @@ final class PlayerContextMenuController {
             if (!var6.field_Ab) {
               this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
+                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
               }
               return;
             }
             if (!var6.field_cc) {
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
+                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
               }
               return;
             }
@@ -551,7 +551,7 @@ final class PlayerContextMenuController {
             return;
           }
         }
-        this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
+        this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
     }
 
     private final boolean handleLobbyAction(int param0, int param1, int param2) {

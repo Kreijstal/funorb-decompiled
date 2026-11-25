@@ -26,7 +26,7 @@ final class QuickChatHelpPanel extends AnimatedPanel {
         if (param1 != -1) {
           return true;
         }
-        stackIn_9_0 = ((je.field_d != 0 &&
+        stackIn_9_0 = ((LobbyCommandSupport.field_d != 0 &&
           this.field_rb == 0) ||
           this.field_xb.field_rb != 0);
         return stackIn_9_0;

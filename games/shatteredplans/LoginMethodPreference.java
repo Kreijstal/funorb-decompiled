@@ -3,7 +3,7 @@
  */
 final class LoginMethodPreference {
     private String value;
-    static ih field_f;
+    static AccountNoticeKind field_f;
     static Sprite field_a;
     static boolean field_g;
     static String[] field_d;
@@ -97,7 +97,7 @@ final class LoginMethodPreference {
         if (param0 == -2612) {
           return;
         }
-        field_f = (ih) null;
+        field_f = (AccountNoticeKind) null;
     }
 
     final boolean matches(byte param0, String param1) {
@@ -137,7 +137,7 @@ final class LoginMethodPreference {
     static {
         field_g = true;
         field_d = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
-        field_f = new ih();
+        field_f = new AccountNoticeKind();
         field_e = new int[]{4153215, 6258463, 16768768, 8323199};
         field_c = new int[]{9};
     }

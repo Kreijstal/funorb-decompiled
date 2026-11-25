@@ -735,7 +735,7 @@ final class MapView extends MapViewState {
         }
         SectorCacheStore.field_f.a(param1, -20429);
         var4 = DerelictMapReader.field_h.f(param2) ? 1 : 0;
-        if (je.field_d != 0 &&
+        if (LobbyCommandSupport.field_d != 0 &&
           var4 == 0) {
           ProgressDialog.f(false);
           param1 = false;
@@ -1748,25 +1748,25 @@ final class MapView extends MapViewState {
         int var3_int = 0;
         int var4 = 0;
         double var5_double = 0.0;
-        ik[] var5 = null;
+        MutableIntPairNode[] var5 = null;
         int var6 = 0;
         int var9 = 0;
         ArgbSprite var10 = null;
         ArgbSprite var11 = null;
         ArgbSprite var12 = null;
         ArgbSprite var13 = null;
-        ik[] var14 = null;
-        ik[] var15 = null;
-        ik[] var16 = null;
-        ik[] var17 = null;
+        MutableIntPairNode[] var14 = null;
+        MutableIntPairNode[] var15 = null;
+        MutableIntPairNode[] var16 = null;
+        MutableIntPairNode[] var17 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ik[] var5Lifetime1;
-        ik[] var5Lifetime2;
-        ik[] var5Lifetime3;
+        MutableIntPairNode[] var5Lifetime1;
+        MutableIntPairNode[] var5Lifetime2;
+        MutableIntPairNode[] var5Lifetime3;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
@@ -1784,7 +1784,7 @@ final class MapView extends MapViewState {
               if (this.field_I < 1024.0f) {
                 SoftwareRasterizer.fillCircleAlpha(this.field_i[var3_int], this.field_J[var3_int], 25, 0, 128);
                 if (param0.field_G[0] != 0) {
-                  var14 = new ik[2 + 2 * param0.field_G[0]];
+                  var14 = new MutableIntPairNode[2 + 2 * param0.field_G[0]];
                   var5 = var14;
                   var5[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
                   var5[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 / 2 << 4, -(int)((double)var4 * ProjectsContent.field_e) + this.field_i[var3_int] << 4);
@@ -1795,7 +1795,7 @@ final class MapView extends MapViewState {
                   qn.a(var14, SoundPlayback.field_k[0], param1);
                 }
                 if (param0.field_G[1] != 0) {
-                  var15 = new ik[2 + 2 * param0.field_G[1]];
+                  var15 = new MutableIntPairNode[2 + 2 * param0.field_G[1]];
                   var5Lifetime1 = var15;
                   var5Lifetime1[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
                   var5Lifetime1[1] = TertiaryNodeList.a(0, var4 + this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
@@ -1806,7 +1806,7 @@ final class MapView extends MapViewState {
                   qn.a(var15, SoundPlayback.field_k[1], true);
                 }
                 if (param0.field_G[2] != 0) {
-                  var16 = new ik[2 + param0.field_G[2] * 2];
+                  var16 = new MutableIntPairNode[2 + param0.field_G[2] * 2];
                   var5Lifetime2 = var16;
                   var5Lifetime2[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
                   var5Lifetime2[1] = TertiaryNodeList.a(0, this.field_J[var3_int] + var4 << 4, this.field_i[var3_int] << 4);
@@ -1817,7 +1817,7 @@ final class MapView extends MapViewState {
                   qn.a(var16, SoundPlayback.field_k[2], param1);
                 }
                 if (param0.field_G[3] != 0) {
-                  var17 = new ik[2 * param0.field_G[3] + 2];
+                  var17 = new MutableIntPairNode[2 * param0.field_G[3] + 2];
                   var5Lifetime3 = var17;
                   var5Lifetime3[0] = TertiaryNodeList.a(0, this.field_J[var3_int] << 4, this.field_i[var3_int] << 4);
                   var5Lifetime3[1] = TertiaryNodeList.a(0, var4 / 2 + this.field_J[var3_int] << 4, (int)(ProjectsContent.field_e * (double)var4) + this.field_i[var3_int] << 4);

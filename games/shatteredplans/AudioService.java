@@ -151,7 +151,7 @@ final class AudioService implements Runnable {
                   var2.service();
                 }
               }
-              jb.sleep((byte) -98, 10L);
+              ClientOverlayDrawSupport.sleep((byte) -98, 10L);
               var5 = (Object) null;
               ud.a(-106, this.field_c, (Object) null);
             }

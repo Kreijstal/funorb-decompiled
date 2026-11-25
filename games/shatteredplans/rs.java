@@ -68,16 +68,16 @@ final class rs extends AnimatedPanel {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (im.field_c == null) {
+        if (PlayerOverlaySupport.field_c == null) {
           if (param0 < -70) {
             return;
           }
           field_Db = (MenuComponent) null;
           return;
         }
-        var1 = im.field_c;
+        var1 = PlayerOverlaySupport.field_c;
         synchronized (var1) {
-          im.field_c = null;
+          PlayerOverlaySupport.field_c = null;
         }
         if (param0 >= -70) {
           field_Db = (MenuComponent) null;

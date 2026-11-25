@@ -70,7 +70,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
           if (param1 != 39) {
             field_D = -63;
           }
-          if (je.field_d != 1) {
+          if (LobbyCommandSupport.field_d != 1) {
             if (AllianceExpiredEvent.field_n != 1) {
               if (null != ContentDialog.field_bb &&
                 uq.field_i >= 5) {

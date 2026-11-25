@@ -217,7 +217,7 @@ final class ul extends AnimatedPanel {
           }
         }
         int var4 = 82 % ((26 - param1) / 42);
-        if (je.field_d != 0) {
+        if (LobbyCommandSupport.field_d != 0) {
           return -1;
         }
         return this.field_Bb;

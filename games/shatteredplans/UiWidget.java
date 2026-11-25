@@ -105,7 +105,7 @@ class UiWidget extends IntrusiveNode {
         var5 = this.isFocused(1) ? 1 : 0;
         if (!param1) {
           if (var5 != 0 &&
-            je.field_d != 0) {
+            LobbyCommandSupport.field_d != 0) {
             this.blur((byte) 21);
           }
         } else {
@@ -113,8 +113,8 @@ class UiWidget extends IntrusiveNode {
             var5 != 0) {
             this.a(0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, this, param2, param0, so.field_o);
           }
-          if (je.field_d != 0) {
-            if (!this.handlePress(je.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
+          if (LobbyCommandSupport.field_d != 0) {
+            if (!this.handlePress(LobbyCommandSupport.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
               if (var5 != 0) {
                 this.blur((byte) -126);
               }

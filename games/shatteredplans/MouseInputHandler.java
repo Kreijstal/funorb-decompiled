@@ -185,14 +185,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (!SolMapReader.b(57)) {
                 return true;
               }
-              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
               return true;
             }
             if (var3 != 0) {
               return false;
             }
             if (SolMapReader.b(57)) {
-              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }
@@ -201,7 +201,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return false;
           }
           if (SolMapReader.b(57)) {
-            ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+            AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
           }
           return true;
         }
@@ -224,7 +224,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                   return false;
                 }
                 if (SolMapReader.b(57)) {
-                  ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+                  AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
                 }
                 return true;
               }
@@ -235,7 +235,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               return false;
             }
             if (SolMapReader.b(57)) {
-              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }

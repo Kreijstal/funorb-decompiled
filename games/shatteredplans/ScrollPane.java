@@ -372,7 +372,7 @@ final class ScrollPane extends AnimatedPanel {
               }
             }
           }
-          if (je.field_d != 0) {
+          if (LobbyCommandSupport.field_d != 0) {
             if (540 <= PointsVictoryChecker.field_p &&
               PointsVictoryChecker.field_p < 620 &&
               440 <= SliderWidget.field_P &&

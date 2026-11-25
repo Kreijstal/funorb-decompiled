@@ -12,7 +12,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
         }
     }
 
-    AccountNoticeDialog(DialogRoot param0, ih param1) {
+    AccountNoticeDialog(DialogRoot param0, AccountNoticeKind param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;

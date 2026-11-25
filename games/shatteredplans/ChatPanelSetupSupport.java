@@ -65,7 +65,7 @@ final class ChatPanelSetupSupport {
           QuickChatHelpSupport.field_f = param9;
           BufferedSocket.field_q[0] = 16764000;
           BoundsRect.field_k = param11;
-          je.field_e = param8;
+          LobbyCommandSupport.field_e = param8;
           BufferedSocket.field_q[2] = 9474303;
           BufferedSocket.field_q[3] = 16736511;
           IntroTextLine.field_l[1] = 6356832;
@@ -114,14 +114,14 @@ final class ChatPanelSetupSupport {
             if (var20 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_34_0 == ~var18) {
-                if (!je.field_e) {
+                if (!LobbyCommandSupport.field_e) {
                   stackIn_16_0 = MapView.field_Fb;
                 } else {
                   stackIn_16_0 = MessageKind.field_a;
                 }
                 var19 = stackIn_16_0;
               } else if (var18 != 1 ||
-                !je.field_e) {
+                !LobbyCommandSupport.field_e) {
                 decompiledFrameRemainder0 = (2 == var18);
                 if (decompiledFrameRemainder0) {
                   var19 = CellVertex.field_e;

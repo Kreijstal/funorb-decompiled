@@ -336,7 +336,7 @@ final class DialWidget extends FocusableWidget {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(26);
                     var26 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
-                    var7 = ik.a(-121, var3_longLifetime2);
+                    var7 = MutableIntPairNode.findRoomMember(-121, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new mj(var26, var27, var3_longLifetime2);
                       SpriteStripButtonPainter.field_w.put(var3_longLifetime2, var7, true);
@@ -356,7 +356,7 @@ final class DialWidget extends FocusableWidget {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(105);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-120);
-                    var28 = ik.a(-101, var3_longLifetime2);
+                    var28 = MutableIntPairNode.findRoomMember(-101, var3_longLifetime2);
                     if (var28 != null) {
                       if (0 != var5Lifetime1) {
                         var28.field_Gb = ks.field_i;

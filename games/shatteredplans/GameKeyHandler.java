@@ -18,7 +18,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (im.field_c != null) {
+          if (PlayerOverlaySupport.field_c != null) {
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -62,7 +62,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         int var3Lifetime1;
         try {
-          if (null != im.field_c) {
+          if (null != PlayerOverlaySupport.field_c) {
             of.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -123,7 +123,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != im.field_c) {
+          if (null != PlayerOverlaySupport.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -221,7 +221,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
-              jb.sleep((byte) -106, 1L);
+              ClientOverlayDrawSupport.sleep((byte) -106, 1L);
             }
             if (var4.field_d == 1) {
               var5 = (DataInputStream) (var4.field_e);
@@ -250,7 +250,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (im.field_c == null) {
+          if (PlayerOverlaySupport.field_c == null) {
             return;
           }
           qn.field_c = -1;

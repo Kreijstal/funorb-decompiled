@@ -90,11 +90,11 @@ final class GameAssetSetupSupport {
           AlignedMenuLabel.field_D = var21[0];
           Wormhole.field_h = var21[3];
           DiskArchiveRequest.field_x = var21[2];
-          je.field_b = var21[1];
+          LobbyCommandSupport.field_b = var21[1];
           StarAbandonedEvent.field_k = var21[4];
           var22 = va.a("hud_icons_nobase", 0, "", param0);
           NodeHashTableIterator.field_b = var22[0];
-          je.field_f = var22[4];
+          LobbyCommandSupport.field_f = var22[4];
           us.field_a = var22[3];
           GameKeyHandler.field_b = var22[1];
           ArchiveIndex.field_p = var22[2];

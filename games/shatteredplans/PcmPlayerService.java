@@ -356,7 +356,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_f.field_b = true;
             while (field_f.field_a) {
-              jb.sleep((byte) -100, 50L);
+              ClientOverlayDrawSupport.sleep((byte) -100, 50L);
             }
             field_f = null;
           }

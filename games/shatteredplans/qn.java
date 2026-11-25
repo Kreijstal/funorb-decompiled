@@ -36,7 +36,7 @@ final class qn {
         }
     }
 
-    final static void a(ik[] param0, int param1, boolean param2) {
+    final static void a(MutableIntPairNode[] param0, int param1, boolean param2) {
         try {
           NameSuggestionsPanel.resetPolygonScanlineBuckets(26987);
           ChatCompositionSupport.collectPolygonScanlineEdges(param0, 0);

@@ -397,7 +397,7 @@ final class LinkPainter implements WidgetPainter {
             GameClientShell.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
           }
           DateInputWidget.field_G.closeStatusDialog((byte) -104);
-          ig.a(7655);
+          ClientUiLoadingSupport.showConnectionProgressDialog(7655);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

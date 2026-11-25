@@ -439,7 +439,7 @@ final class jp extends AnimatedPanel {
           }
           this.field_zb.field_z = this.field_Db.toString();
           if (param1 &&
-            je.field_d != 0 &&
+            LobbyCommandSupport.field_d != 0 &&
             0 == this.field_rb) {
             this.field_Ab = 1;
           }
@@ -452,7 +452,7 @@ final class jp extends AnimatedPanel {
               if (!param1) {
                 return this.field_Ab;
               }
-              if (je.field_d == 0) {
+              if (LobbyCommandSupport.field_d == 0) {
                 return this.field_Ab;
               }
               if (0 != this.field_rb) {
@@ -466,7 +466,7 @@ final class jp extends AnimatedPanel {
             if (!param1) {
               return this.field_Ab;
             }
-            if (je.field_d == 0) {
+            if (LobbyCommandSupport.field_d == 0) {
               return this.field_Ab;
             }
             if (0 != this.field_rb) {

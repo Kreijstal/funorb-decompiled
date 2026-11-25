@@ -348,7 +348,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.createCanvas(0);
                 so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, nn.field_b);
                 this.initialise(-1);
-                oe.field_d = ij.b(115);
+                oe.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != oe.field_a) {
@@ -603,7 +603,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = ValidatedTextInputWidget.field_W.requestThread(true, 1, (Runnable) (this));
               while (true) {
                 if (0 == var8.field_d) {
-                  jb.sleep((byte) -120, 10L);
+                  ClientOverlayDrawSupport.sleep((byte) -120, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -858,7 +858,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
         try {
           oe.field_a = pr.currentTimeMillis(14274);
-          jb.sleep((byte) -108, 5000L);
+          ClientOverlayDrawSupport.sleep((byte) -108, 5000L);
           ResizingDialog.field_S = null;
           this.terminate(-113, false);
         } catch (RuntimeException runtimeException) {

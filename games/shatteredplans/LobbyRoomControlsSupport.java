@@ -262,7 +262,7 @@ final class LobbyRoomControlsSupport {
           if (IntNode.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {
-              je.a((byte) 62, param3);
+              LobbyCommandSupport.writeReturnToLobbyRequest((byte) 62, param3);
             }
             if (0 != IntValueWriteRequest.field_j.field_rb) {
               if (!TurnEventLog.field_i) {

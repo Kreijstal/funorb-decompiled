@@ -28,8 +28,8 @@ final class wj extends IntrusiveNode {
             return false;
           }
           PlacementOrder.field_w = FleetVisual.a(param0, LobbyRoomControlsSupport.field_b, (byte) 115, TertiaryListSequence.field_k);
-          if (1 == je.field_d) {
-            jb.field_b = 0;
+          if (1 == LobbyCommandSupport.field_d) {
+            ClientOverlayDrawSupport.field_b = 0;
             SocialListPanel.field_Gb = PointsVictoryChecker.field_p;
             DialogRoot.field_C = SliderWidget.field_P;
             wl.field_f = FleetVisual.a(param0, DialogRoot.field_C, (byte) -41, SocialListPanel.field_Gb);
@@ -37,13 +37,13 @@ final class wj extends IntrusiveNode {
             return stackIn_26_0;
           }
           if (AllianceExpiredEvent.field_n == 1) {
-            jb.field_b = jb.field_b + 1;
+            ClientOverlayDrawSupport.field_b = ClientOverlayDrawSupport.field_b + 1;
             if (rs.field_Db != null) {
               rs.field_Db.b(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, -498);
               return true;
             }
             var2_int = (-TertiaryListSequence.field_k + SocialListPanel.field_Gb) * (SocialListPanel.field_Gb - TertiaryListSequence.field_k) + (-LobbyRoomControlsSupport.field_b + DialogRoot.field_C) * (DialogRoot.field_C - LobbyRoomControlsSupport.field_b);
-            if (5 < jb.field_b &&
+            if (5 < ClientOverlayDrawSupport.field_b &&
               25 < var2_int &&
               wl.field_f != null) {
               VerticalMenuSlider.field_w = wl.field_f.field_k - SocialListPanel.field_Gb;
@@ -53,7 +53,7 @@ final class wj extends IntrusiveNode {
             return false;
           }
           if ((rs.field_Db == null ||
-            !(jb.field_b >= 5)) &&
+            !(ClientOverlayDrawSupport.field_b >= 5)) &&
             TextInputPainter.a(wl.field_f, param0, (byte) 64)) {
             DualLinkDequeSequence.field_h = wl.field_f;
             if (null != DualLinkDequeSequence.field_h) {

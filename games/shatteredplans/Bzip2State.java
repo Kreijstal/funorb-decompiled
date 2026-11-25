@@ -135,7 +135,7 @@ final class Bzip2State {
           oq.field_i[16] = AccountStatusSupport.field_a[1];
           oq.field_i[18] = ul.field_Fb[0];
           oq.field_i[22] = rs.field_zb;
-          QuickChatPhraseRegistry.field_g[0] = ih.field_e;
+          QuickChatPhraseRegistry.field_g[0] = AccountNoticeKind.field_e;
           QuickChatPhraseRegistry.field_g[9] = SecondaryNodeHashTable.field_a;
           QuickChatPhraseRegistry.field_g[7] = DialWidget.field_J;
           QuickChatPhraseRegistry.field_g[11] = qe.field_l;

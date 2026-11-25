@@ -20,7 +20,7 @@ final class RasterTargetSupport {
           RasterTargetSupport.setAccountResponseFlag(true, (byte) -46);
         }
         ProductionContent.field_j = param1;
-        ih.field_b = param0;
+        AccountNoticeKind.field_b = param0;
     }
 
     final static void pushSpriteRenderTarget(Sprite param0, int param1) {

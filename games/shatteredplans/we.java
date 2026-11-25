@@ -65,7 +65,7 @@ final class we {
         RuntimeException var1_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = im.field_c;
+          var1 = PlayerOverlaySupport.field_c;
           synchronized (var1) {
             of.field_e = of.field_e + 1;
             DialogRoot.field_B = MenuButton.field_J;

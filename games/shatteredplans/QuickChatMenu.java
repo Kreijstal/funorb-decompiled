@@ -185,7 +185,7 @@ final class QuickChatMenu extends AnimatedPanel {
                 ServerIntArrayRequest.setChatChannelFilter((byte) 75, param1, 1, var6);
               }
               String var8 = (String) null;
-              ih.a(LoginRequestSupport.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
+              AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
               IntrusiveDequeSequence.a(LoginRequestSupport.field_a, (byte) 123, IntroTextLine.field_k, ProductionContent.field_h, var5);
               jp.g((byte) 119);
               GameState.a(-5883);

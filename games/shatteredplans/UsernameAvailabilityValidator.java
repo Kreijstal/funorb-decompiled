@@ -350,7 +350,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             this.field_n = (String) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = im.a(var5, (byte) -123);
+          var3 = PlayerOverlaySupport.validateAccountName(var5, (byte) -123);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;

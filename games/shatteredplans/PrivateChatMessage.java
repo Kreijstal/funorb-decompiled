@@ -677,7 +677,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("pact_expires", 123);
                 if (var2 != null) {
-                  jb.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlayDrawSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("pact_one_turn", 95);
                 if (null != var2) {
@@ -1111,7 +1111,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_project_energy", 112);
                 if (null != var2) {
-                  jb.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlayDrawSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_project_exotics", 125);
                 if (null != var2) {
@@ -1151,7 +1151,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_animation_project", 111);
                 if (var2 != null) {
-                  jb.field_h = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlayDrawSupport.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_gametype", 99);
                 if (var2 != null) {
@@ -1195,7 +1195,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("msg_signedwithyou", 116);
                 if (null != var2) {
-                  jb.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlayDrawSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("msg_youhavesigned", 108);
                 if (null != var2) {
@@ -1479,7 +1479,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tabname_victory", 113);
                 if (var2 != null) {
-                  ih.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountNoticeKind.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("messages_replay", 100);
                 if (var2 != null) {
@@ -1608,7 +1608,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_max_total_fleet_size", 109);
                 if (null != var2) {
-                  ih.field_e = IterableNodeHashTable.a(var2, 17746);
+                  AccountNoticeKind.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_ships_destroyed", 116);
                 if (var2 != null) {

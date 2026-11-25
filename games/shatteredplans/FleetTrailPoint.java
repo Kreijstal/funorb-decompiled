@@ -28,7 +28,7 @@ final class FleetTrailPoint extends IntrusiveNode {
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (Wormhole.field_j != ih.field_f) {
+          if (Wormhole.field_j != AccountNoticeKind.field_f) {
             return false;
           }
           var2_long = pr.currentTimeMillis(14274);

@@ -44,7 +44,7 @@ final class IsaacRandom {
             }
             if (ServerIntArrayRequest.field_i == 1) {
               if (2 == AccountCreationDialog.field_Gb.field_d) {
-                stackIn_14_0 = is.a((byte) -94, -1);
+                stackIn_14_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, -1);
                 return stackIn_14_0;
               }
               if (AccountCreationDialog.field_Gb.field_d == 1) {
@@ -64,13 +64,13 @@ final class IsaacRandom {
             if (ServerIntArrayRequest.field_i == 3) {
               if (js.field_a.available(-1) <= 0) {
                 if (SocialListPanel.field_Cb < pr.currentTimeMillis(14274)) {
-                  stackIn_31_0 = is.a((byte) -94, -2);
+                  stackIn_31_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, -2);
                   return stackIn_31_0;
                 }
               } else {
                 var1_int = js.field_a.readByte((byte) 127);
                 if (0 != var1_int) {
-                  stackIn_26_0 = is.a((byte) -94, var1_int);
+                  stackIn_26_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, var1_int);
                   return stackIn_26_0;
                 }
                 ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
@@ -88,7 +88,7 @@ final class IsaacRandom {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return is.a((byte) -94, -3);
+            return ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

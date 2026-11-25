@@ -99,7 +99,7 @@ final class WeightedLruCache {
           if (null != DerelictVictoryChecker.field_m) {
             return true;
           }
-          if (ih.b(-124)) {
+          if (AccountNoticeKind.hasSocialNameDialog(-124)) {
             return true;
           }
           if (DialogRoot.field_G != null) {
@@ -113,7 +113,7 @@ final class WeightedLruCache {
         if (null != DerelictVictoryChecker.field_m) {
           return true;
         }
-        if (ih.b(-124)) {
+        if (AccountNoticeKind.hasSocialNameDialog(-124)) {
           return true;
         }
         if (DialogRoot.field_G != null) {

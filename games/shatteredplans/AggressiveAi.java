@@ -334,13 +334,13 @@ final class AggressiveAi extends StandardAi {
           }
           if (nl.field_a.length >= 2) {
             if (param1) {
-              stackIn_44_0 = (ih.field_d != -1) ? 1 : 0;
+              stackIn_44_0 = (AccountNoticeKind.field_d != -1) ? 1 : 0;
             } else {
               stackIn_44_0 = 0;
             }
             var7Lifetime1 = stackIn_44_0;
             if (var7Lifetime1 != 0) {
-              var8 = ih.field_d;
+              var8 = AccountNoticeKind.field_d;
               for (var9_int = 0; var9_int < SpriteResourceSupport.field_c.length; var9_int++) {
                 SpriteResourceSupport.field_c[var9_int] = (byte) 0;
               }
@@ -349,7 +349,7 @@ final class AggressiveAi extends StandardAi {
             stackIn_52_0 = (param1) ? -1 : 0;
             for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {
               if (var7Lifetime1 != 0) {
-                stackIn_60_0 = (var8 != ih.field_d) ? 1 : 0;
+                stackIn_60_0 = (var8 != AccountNoticeKind.field_d) ? 1 : 0;
               } else {
                 stackIn_60_0 = 0;
               }

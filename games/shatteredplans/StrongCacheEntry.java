@@ -100,7 +100,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
             var12_ref = (Territory) (param1[var11Lifetime1].field_i.startForward(0));
             while (var12_ref != null) {
-              im.writePlayer(var12_ref.field_o, param2, 9555);
+              PlayerOverlaySupport.writePlayer(var12_ref.field_o, param2, 9555);
               FleetTrailPoint.writeStar(var12_ref.field_q, false, param2);
               var13 = var12_ref.starCount(89);
               param2.writeByte(var13, (byte) -112);
@@ -126,7 +126,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             var13_ref_lo = param1[var12_intLifetime1].field_m;
             if (var13_ref_lo != null &&
               var13_ref_lo.starCount(122) > 0) {
-              im.writePlayer(param1[var12_intLifetime1], param2, 9555);
+              PlayerOverlaySupport.writePlayer(param1[var12_intLifetime1], param2, 9555);
               FleetTrailPoint.writeStar(var13_ref_lo.field_q, false, param2);
               var14 = var13_ref_lo.starCount(-127);
               param2.writeByte(var14, (byte) -69);
@@ -480,7 +480,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           BattleEvent.field_u.field_U = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "downbutton_mouseheld");
           BattleEvent.field_u.field_ob = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "downbutton_disabled");
           AchievementProgress.field_m = new ScrollBar(0L, sk.field_k, BattleEvent.field_u, sj.field_c, TextFieldValidator.field_l);
-          ih.field_g = new SocialListPanel(0L, (AnimatedPanel) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
+          AccountNoticeKind.field_g = new SocialListPanel(0L, (AnimatedPanel) null, VictoryChecker.field_d, AchievementProgress.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -30,7 +30,7 @@ final class ks {
             if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
-            if (je.field_d == 0) {
+            if (LobbyCommandSupport.field_d == 0) {
               return true;
             }
             if (!param0) {
@@ -62,7 +62,7 @@ final class ks {
             if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
-            if (je.field_d != 0) {
+            if (LobbyCommandSupport.field_d != 0) {
               if (!param0) {
                 return true;
               }
@@ -95,7 +95,7 @@ final class ks {
             if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
-            if (je.field_d != 0) {
+            if (LobbyCommandSupport.field_d != 0) {
               if (!param0) {
                 return true;
               }
@@ -122,7 +122,7 @@ final class ks {
           if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
             return false;
           }
-          if (je.field_d != 0) {
+          if (LobbyCommandSupport.field_d != 0) {
             if (!param0) {
               return true;
             }

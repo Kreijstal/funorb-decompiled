@@ -6,7 +6,7 @@ final class ProgressDialog extends ResizingDialog {
     private String field_gb;
     static String field_X;
     private boolean field_jb;
-    static ih field_Z;
+    static AccountNoticeKind field_Z;
     private String field_eb;
     private boolean field_db;
     private StripedProgressWidget field_bb;
@@ -46,7 +46,7 @@ final class ProgressDialog extends ResizingDialog {
 
     final static boolean isPowerOfTwo(int param0, int param1) {
         if (param1 != 7433) {
-          field_Z = (ih) null;
+          field_Z = (AccountNoticeKind) null;
         }
         return param0 == (-param0 & param0) ? true : false;
     }
@@ -480,7 +480,7 @@ final class ProgressDialog extends ResizingDialog {
         field_hb = "Turn: <%0>";
         field_ib = "Please try again in a few minutes.";
         field_kb = "Pending fleet order";
-        field_Z = new ih();
+        field_Z = new AccountNoticeKind();
         field_cb = new PacketBuffer(256);
         field_ab = new IntrusiveDeque();
         field_Y = 4;

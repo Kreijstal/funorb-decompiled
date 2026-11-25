@@ -125,14 +125,14 @@ final class RandomAccessCacheFile {
           for (var9 = param3; var9 < 4; var9++) {
             var8[var9] = ro.field_b.nextInt();
           }
-          if (null == ih.field_c ||
-            !(ih.field_c.payload.length >= var7_int)) {
-            ih.field_c = new PacketBuffer(var7_int);
+          if (null == AccountNoticeKind.field_c ||
+            !(AccountNoticeKind.field_c.payload.length >= var7_int)) {
+            AccountNoticeKind.field_c = new PacketBuffer(var7_int);
           }
-          ih.field_c.position = 0;
-          ih.field_c.writeBytes(param2, param6, param5, 22186);
-          ih.field_c.padZerosTo(var7_int, (byte) -103);
-          ih.field_c.xteaEncryptAll(var13, param3 ^ 107);
+          AccountNoticeKind.field_c.position = 0;
+          AccountNoticeKind.field_c.writeBytes(param2, param6, param5, 22186);
+          AccountNoticeKind.field_c.padZerosTo(var7_int, (byte) -103);
+          AccountNoticeKind.field_c.xteaEncryptAll(var13, param3 ^ 107);
           if (ContentDialog.field_kb == null ||
             !(ContentDialog.field_kb.payload.length >= 100)) {
             ContentDialog.field_kb = new PacketBuffer(100);
@@ -148,7 +148,7 @@ final class RandomAccessCacheFile {
           ContentDialog.field_kb.writeShort(param6, 255);
           ContentDialog.field_kb.rsaEncrypt(param4, param0, (byte) -86);
           param1.writeBytes(0, ContentDialog.field_kb.position, ContentDialog.field_kb.payload, 22186);
-          param1.writeBytes(0, ih.field_c.position, ih.field_c.payload, param3 ^ 22186);
+          param1.writeBytes(0, AccountNoticeKind.field_c.position, AccountNoticeKind.field_c.payload, param3 ^ 22186);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class RandomAccessCacheFile {
     }
 
     final static void a(int param0, int param1) {
-        im.field_b = new int[3];
+        PlayerOverlaySupport.field_b = new int[3];
         wm.field_d = new nf[param1 * 15];
         DebouncedValidator.field_g = 0;
         TargetedChatMessage.field_i = param1;

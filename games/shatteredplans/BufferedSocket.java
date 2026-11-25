@@ -88,7 +88,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_p != null) {
             while (this.field_p.field_d == 0) {
-              jb.sleep((byte) -111, 1L);
+              ClientOverlayDrawSupport.sleep((byte) -111, 1L);
             }
             if (this.field_p.field_d == 1) {
               try {

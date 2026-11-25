@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij {
+final class ProjectsWindowSupport {
     static kj field_a;
 
-    final static void a(int param0) {
+    final static void cacheClientSeedBytes(int param0) {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
@@ -27,19 +27,19 @@ final class ij {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void drawPlainHexagonPanel(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         LobbyUiSupport.drawHexagonPanel(false, param4, param1, -12394, param5, param3, param0);
         if (!param2) {
           field_a = (kj) null;
         }
     }
 
-    final static FrameTimer b(int param0) {
+    final static FrameTimer createFrameTimer(int param0) {
         int var1 = 55 / ((param0 - 37) / 59);
         return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
-    final static MenuWindow b(byte param0) {
+    final static MenuWindow createProjectsWindow(byte param0) {
         tm.field_k = new MenuWindow(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
         MenuButton var1 = new MenuButton(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = tm.field_k;

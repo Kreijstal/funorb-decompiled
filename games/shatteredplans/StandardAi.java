@@ -71,7 +71,7 @@ class StandardAi implements Ai {
                     }
                     var5_int = var5_int + var10_int;
                     param2 = param2 - var10_int;
-                    ig.field_c[var9_int] = ig.field_c[var9_int] + var11;
+                    ClientUiLoadingSupport.field_c[var9_int] = ClientUiLoadingSupport.field_c[var9_int] + var11;
                     this.c(param2, GuestPlayForm.field_E, -1);
                   }
                 }
@@ -974,7 +974,7 @@ class StandardAi implements Ai {
           var8Lifetime1 = 0;
           if (this.field_l) {
             var9Lifetime1 = this.a(param0, (byte) -58);
-            var7 = ik.a(ValidationState.field_d, this.field_o, (byte) 49);
+            var7 = MutableIntPairNode.sortedIndices(ValidationState.field_d, this.field_o, (byte) 49);
             if (var9Lifetime1 > var6) {
               var9Lifetime1 = var6;
             }
@@ -2000,7 +2000,7 @@ class StandardAi implements Ai {
             if (var6 < var5) {
               ValidationState.field_c[var4_int] = var5 - var6;
             }
-            ig.field_c[var4_int] = ig.field_c[var4_int] + var6;
+            ClientUiLoadingSupport.field_c[var4_int] = ClientUiLoadingSupport.field_c[var4_int] + var6;
           } else {
             ValidationState.field_c[var4_int] = var5;
           }
@@ -2073,7 +2073,7 @@ class StandardAi implements Ai {
           LobbyUiSupport.field_d[var2] = 0;
           ValidationState.field_d[var2] = 0;
           oe.field_i[var2] = 0;
-          ig.field_c[var2] = 0;
+          ClientUiLoadingSupport.field_c[var2] = 0;
           var2++;
         }
     }
@@ -2202,7 +2202,7 @@ class StandardAi implements Ai {
           this.sendWarningChat((Player) null, (byte) -78);
         }
         var4 = 0;
-        var5 = ik.a(ValidationState.field_c, this.field_o, (byte) 49);
+        var5 = MutableIntPairNode.sortedIndices(ValidationState.field_c, this.field_o, (byte) 49);
         for (var6 = 0; var6 < this.field_o; var6++) {
           var7 = var5[-var6 - 1 + this.field_o];
           var8 = ValidationState.field_c[var7];
@@ -2227,7 +2227,7 @@ class StandardAi implements Ai {
                 var10.field_z = var10.field_z + var8;
                 param0 = param0 - var8;
                 var10.field_y.field_J = var10.field_y.field_J - var8;
-                ig.field_c[var7] = ig.field_c[var7] + var8;
+                ClientUiLoadingSupport.field_c[var7] = ClientUiLoadingSupport.field_c[var7] + var8;
               }
             }
             continue;
