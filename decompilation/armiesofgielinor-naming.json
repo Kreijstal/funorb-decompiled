@@ -82156,6 +82156,22 @@
       "renamedSymbol": "M:ChatMessageWriteSupport.writeChatMessage(IIILjava/lang/String;ILjava/lang/String;)V"
     },
     {
+      "symbol": "M:iu.a(B)V",
+      "originalName": "a",
+      "to": "highlightBarbarian",
+      "evidence": "iu.java: Selection tutorial message3highlights tile83occupied by scripted barbarian at3,4. Preserve wrong byte calling clear helper with104first,including its field_s side effect,then shared array alias and highlight helper guard125. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightBarbarian(B)V"
+    },
+    {
+      "symbol": "M:iu.a(I)V",
+      "originalName": "a",
+      "to": "highlightVillages",
+      "evidence": "iu.java: Capture-village message13highlights shared array65,105. Preserve highlight call before intguard5and late expandedPanelHeight30write,all int domains and shared array alias. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightVillages(I)V"
+    },
+    {
       "symbol": "M:iu.a(IB)I",
       "originalName": "a",
       "to": "classifyTerrainInteraction",
@@ -82164,12 +82180,28 @@
       "renamedSymbol": "M:BattleTutorial.classifyTerrainInteraction(IB)I"
     },
     {
+      "symbol": "M:iu.a(II)V",
+      "originalName": "a",
+      "to": "showStandaloneMessage",
+      "evidence": "iu.java: Message-only constructor selects messageId and enters stage34. Preserve intguard13567return before any writes,messageId before setStage and arbitrary message indexes/failures. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.showStandaloneMessage(II)V"
+    },
+    {
       "symbol": "M:iu.a(III)V",
       "originalName": "a",
       "to": "focusCameraOnTile",
       "evidence": "iu.java: Asks the controller to focus the camera on the supplied tile coordinates.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleTutorial.focusCameraOnTile(III)V"
+    },
+    {
+      "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+      "originalName": "a",
+      "to": "wrapBalancedTextLines",
+      "evidence": "iu.java: Shared message/status dialogs split text into roughly balanced-width lines. Measure whole string first;fit-without-br returns original string alias as one line before guard. Otherwise derive target width from ceiling line count and emit trimmed spans at space/hyphen when >=target,explicit lowercase<br>,then tail. Preserve division/overflow/zero-negative widths,output aliases/partial writes,null/failure order,case-sensitive markup and late badguard cleanup. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I"
     },
     {
       "symbol": "M:iu.a(Ljava/lang/String;B)V",
@@ -82186,6 +82218,14 @@
       "evidence": "iu.java: Dispatches the current button mode; mode one toggles expansion, mode five moves to stage 33.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleTutorial.activateButton(Z)V"
+    },
+    {
+      "symbol": "M:iu.b(B)V",
+      "originalName": "b",
+      "to": "highlightEndTurnButton",
+      "evidence": "iu.java: Tutorial messages9,10,14request Endturn;controller.field_jc gates pulsing overlay on Endturn button. Preserve byte<=72early return and sole flag write for other byte values. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightEndTurnButton(B)V"
     },
     {
       "symbol": "M:iu.b(I)V",
@@ -82244,6 +82284,30 @@
       "renamedSymbol": "M:BattleTutorial.queueScriptedSummon(I)V"
     },
     {
+      "symbol": "M:iu.e(B)V",
+      "originalName": "e",
+      "to": "highlightEnemyTower",
+      "evidence": "iu.java: Final open-play objective message21highlights tile316;normal tutorial constructor initializes this tile owner1. Preserve byte<=90early return before array read/shared alias and original highlight-helper guard-91. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightEnemyTower(B)V"
+    },
+    {
+      "symbol": "M:iu.e(I)V",
+      "originalName": "e",
+      "to": "highlightTurnTimer",
+      "evidence": "iu.java: Turn-clock message11sets controller flag consumed by pulsing turnTimerDial overlay. Preserve flag write before intguard31and late message=null mutation for every other int. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightTurnTimer(I)V"
+    },
+    {
+      "symbol": "M:iu.f(B)V",
+      "originalName": "f",
+      "to": "clearMapHighlights",
+      "evidence": "iu.java: Clears shared highlighted tile array through IndexedSpriteBase helper. Preserve clear before byteguard,and false field_s write for every noncanonical byte;do not reset control highlights or other tutorial state. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.clearMapHighlights(B)V"
+    },
+    {
       "symbol": "M:iu.f(I)V",
       "originalName": "f",
       "to": "advancePanelAnimation",
@@ -82252,12 +82316,52 @@
       "renamedSymbol": "M:BattleTutorial.advancePanelAnimation(I)V"
     },
     {
+      "symbol": "M:iu.g(B)V",
+      "originalName": "g",
+      "to": "highlightGodFavourOrbs",
+      "evidence": "iu.java: God-favour explanation message20sets flag consumed by pulsing orbs at bottom of game screen. Preserve guard modulo/division before flag write,full byte domain and arithmetic failures. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightGodFavourOrbs(B)V"
+    },
+    {
+      "symbol": "M:iu.g(I)V",
+      "originalName": "g",
+      "to": "highlightEmptyPortal",
+      "evidence": "iu.java: Capture-empty-portal message12highlights tile166. Preserve initial integer addition/division103/((guard+42)/55),including overflow/zero division,before reading shared highlight array and helper125. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightEmptyPortal(I)V"
+    },
+    {
       "symbol": "M:iu.h(B)V",
       "originalName": "h",
       "to": "draw",
       "evidence": "iu.java: Draws the animated tutorial panel, controls and message.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BattleTutorial.draw(B)V"
+    },
+    {
+      "symbol": "M:iu.i(B)V",
+      "originalName": "i",
+      "to": "completeBattleTutorial",
+      "evidence": "iu.java: Completion message23updates initial tutorial-stage entry25to0through RevivalEvent helper and unlocks achievement0withmask255. Preserve stage update before guard division,achievement after division,full byte failures and original helper calls. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.completeBattleTutorial(B)V"
+    },
+    {
+      "symbol": "M:iu.j(B)V",
+      "originalName": "j",
+      "to": "highlightGameStatusPanel",
+      "evidence": "iu.java: Game Status message26sets flag consumed by flashing game-status box. Preserve wrong byte>-95writing messageId95before flag write and valid setMessage badguard caller effects. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightGameStatusPanel(B)V"
+    },
+    {
+      "symbol": "M:iu.k(B)V",
+      "originalName": "k",
+      "to": "highlightVictoryPointsBar",
+      "evidence": "iu.java: Victory Points message27sets flag consumed by pulsing collected-mana progress bars. Preserve byte>-55early return before controller read and sole flag write otherwise. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTutorial.highlightVictoryPointsBar(B)V"
     },
     {
       "symbol": "M:iv.$cfr$lcmp(JJ)I",
@@ -365097,7 +365201,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#0",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#0",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -365108,7 +365212,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#1",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#1",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -365119,7 +365223,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#10",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#10",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#10",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -365130,7 +365234,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#11",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#11",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#11",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -365141,7 +365245,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#12",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#12",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#12",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -365152,7 +365256,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#13",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#13",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#13",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -365163,7 +365267,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#14",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#14",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -365174,7 +365278,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#15",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#15",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#15",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -365185,7 +365289,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#16",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#16",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#16",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -365196,7 +365300,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#17",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#17",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#17",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -365207,7 +365311,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#18",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#18",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#18",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -365218,7 +365322,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#19",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#19",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#19",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -365229,7 +365333,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#2",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#2",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -365240,7 +365344,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#20",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#20",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#20",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -365251,7 +365355,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#21",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#21",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#21",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -365262,7 +365366,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#22",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#22",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#22",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -365273,7 +365377,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#23",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#23",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#23",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -365284,7 +365388,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#24",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#24",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#24",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -365295,7 +365399,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#25",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#25",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#25",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -365306,7 +365410,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#26",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#26",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#26",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -365317,7 +365421,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#27",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#27",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#27",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -365328,7 +365432,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#3",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#3",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -365339,7 +365443,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#4",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#4",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#4",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -365350,7 +365454,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#5",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#5",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#5",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -365361,7 +365465,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#6",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#6",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#6",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -365372,7 +365476,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#7",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#7",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#7",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -365383,7 +365487,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#8",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#8",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#8",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -365394,7 +365498,7 @@
     },
     {
       "symbol": "L:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#9",
-      "renamedSymbol": "L:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#9",
+      "renamedSymbol": "L:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#9",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -366241,7 +366345,7 @@
     },
     {
       "symbol": "L:iu.g(B)V#0",
-      "renamedSymbol": "L:BattleTutorial.g(B)V#0",
+      "renamedSymbol": "L:BattleTutorial.highlightGodFavourOrbs(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -366252,7 +366356,7 @@
     },
     {
       "symbol": "L:iu.g(I)V#0",
-      "renamedSymbol": "L:BattleTutorial.g(I)V#0",
+      "renamedSymbol": "L:BattleTutorial.highlightEmptyPortal(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -366417,7 +366521,7 @@
     },
     {
       "symbol": "L:iu.i(B)V#0",
-      "renamedSymbol": "L:BattleTutorial.i(B)V#0",
+      "renamedSymbol": "L:BattleTutorial.completeBattleTutorial(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -550436,9 +550540,9 @@
     },
     {
       "symbol": "M:iu.a(B)V",
-      "renamedSymbol": "M:BattleTutorial.a(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightBarbarian(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "highlightBarbarian",
       "declaration": {
         "file": "iu.java",
         "start": 77063,
@@ -550447,9 +550551,9 @@
     },
     {
       "symbol": "M:iu.a(I)V",
-      "renamedSymbol": "M:BattleTutorial.a(I)V",
+      "renamedSymbol": "M:BattleTutorial.highlightVillages(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "highlightVillages",
       "declaration": {
         "file": "iu.java",
         "start": 76464,
@@ -550469,9 +550573,9 @@
     },
     {
       "symbol": "M:iu.a(II)V",
-      "renamedSymbol": "M:BattleTutorial.a(II)V",
+      "renamedSymbol": "M:BattleTutorial.showStandaloneMessage(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showStandaloneMessage",
       "declaration": {
         "file": "iu.java",
         "start": 82033,
@@ -550491,9 +550595,9 @@
     },
     {
       "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
-      "renamedSymbol": "M:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I",
+      "renamedSymbol": "M:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "wrapBalancedTextLines",
       "declaration": {
         "file": "iu.java",
         "start": 85228,
@@ -550524,9 +550628,9 @@
     },
     {
       "symbol": "M:iu.b(B)V",
-      "renamedSymbol": "M:BattleTutorial.b(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightEndTurnButton(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "highlightEndTurnButton",
       "declaration": {
         "file": "iu.java",
         "start": 41820,
@@ -550612,9 +550716,9 @@
     },
     {
       "symbol": "M:iu.e(B)V",
-      "renamedSymbol": "M:BattleTutorial.e(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightEnemyTower(B)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "highlightEnemyTower",
       "declaration": {
         "file": "iu.java",
         "start": 82209,
@@ -550623,9 +550727,9 @@
     },
     {
       "symbol": "M:iu.e(I)V",
-      "renamedSymbol": "M:BattleTutorial.e(I)V",
+      "renamedSymbol": "M:BattleTutorial.highlightTurnTimer(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "highlightTurnTimer",
       "declaration": {
         "file": "iu.java",
         "start": 89297,
@@ -550634,9 +550738,9 @@
     },
     {
       "symbol": "M:iu.f(B)V",
-      "renamedSymbol": "M:BattleTutorial.f(B)V",
+      "renamedSymbol": "M:BattleTutorial.clearMapHighlights(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "clearMapHighlights",
       "declaration": {
         "file": "iu.java",
         "start": 85091,
@@ -550656,9 +550760,9 @@
     },
     {
       "symbol": "M:iu.g(B)V",
-      "renamedSymbol": "M:BattleTutorial.g(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightGodFavourOrbs(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "highlightGodFavourOrbs",
       "declaration": {
         "file": "iu.java",
         "start": 42085,
@@ -550667,9 +550771,9 @@
     },
     {
       "symbol": "M:iu.g(I)V",
-      "renamedSymbol": "M:BattleTutorial.g(I)V",
+      "renamedSymbol": "M:BattleTutorial.highlightEmptyPortal(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "highlightEmptyPortal",
       "declaration": {
         "file": "iu.java",
         "start": 41961,
@@ -550689,9 +550793,9 @@
     },
     {
       "symbol": "M:iu.i(B)V",
-      "renamedSymbol": "M:BattleTutorial.i(B)V",
+      "renamedSymbol": "M:BattleTutorial.completeBattleTutorial(B)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "completeBattleTutorial",
       "declaration": {
         "file": "iu.java",
         "start": 82343,
@@ -550700,9 +550804,9 @@
     },
     {
       "symbol": "M:iu.j(B)V",
-      "renamedSymbol": "M:BattleTutorial.j(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightGameStatusPanel(B)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "highlightGameStatusPanel",
       "declaration": {
         "file": "iu.java",
         "start": 84192,
@@ -550711,9 +550815,9 @@
     },
     {
       "symbol": "M:iu.k(B)V",
-      "renamedSymbol": "M:BattleTutorial.k(B)V",
+      "renamedSymbol": "M:BattleTutorial.highlightVictoryPointsBar(B)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "highlightVictoryPointsBar",
       "declaration": {
         "file": "iu.java",
         "start": 84950,
@@ -635334,7 +635438,7 @@
     },
     {
       "symbol": "P:iu.a(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.a(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightBarbarian(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635345,7 +635449,7 @@
     },
     {
       "symbol": "P:iu.a(I)V#0",
-      "renamedSymbol": "P:BattleTutorial.a(I)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightVillages(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635378,7 +635482,7 @@
     },
     {
       "symbol": "P:iu.a(II)V#0",
-      "renamedSymbol": "P:BattleTutorial.a(II)V#0",
+      "renamedSymbol": "P:BattleTutorial.showStandaloneMessage(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635389,7 +635493,7 @@
     },
     {
       "symbol": "P:iu.a(II)V#1",
-      "renamedSymbol": "P:BattleTutorial.a(II)V#1",
+      "renamedSymbol": "P:BattleTutorial.showStandaloneMessage(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -635433,7 +635537,7 @@
     },
     {
       "symbol": "P:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#0",
-      "renamedSymbol": "P:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#0",
+      "renamedSymbol": "P:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635444,7 +635548,7 @@
     },
     {
       "symbol": "P:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#1",
-      "renamedSymbol": "P:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#1",
+      "renamedSymbol": "P:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -635455,7 +635559,7 @@
     },
     {
       "symbol": "P:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#2",
-      "renamedSymbol": "P:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#2",
+      "renamedSymbol": "P:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -635466,7 +635570,7 @@
     },
     {
       "symbol": "P:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#3",
-      "renamedSymbol": "P:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#3",
+      "renamedSymbol": "P:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -635477,7 +635581,7 @@
     },
     {
       "symbol": "P:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I#4",
-      "renamedSymbol": "P:BattleTutorial.a(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#4",
+      "renamedSymbol": "P:BattleTutorial.wrapBalancedTextLines(ILjava/lang/String;ILBitmapFont;[Ljava/lang/String;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -635521,7 +635625,7 @@
     },
     {
       "symbol": "P:iu.b(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.b(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightEndTurnButton(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635642,7 +635746,7 @@
     },
     {
       "symbol": "P:iu.e(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.e(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightEnemyTower(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635653,7 +635757,7 @@
     },
     {
       "symbol": "P:iu.e(I)V#0",
-      "renamedSymbol": "P:BattleTutorial.e(I)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightTurnTimer(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635664,7 +635768,7 @@
     },
     {
       "symbol": "P:iu.f(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.f(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.clearMapHighlights(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635686,7 +635790,7 @@
     },
     {
       "symbol": "P:iu.g(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.g(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightGodFavourOrbs(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635697,7 +635801,7 @@
     },
     {
       "symbol": "P:iu.g(I)V#0",
-      "renamedSymbol": "P:BattleTutorial.g(I)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightEmptyPortal(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635719,7 +635823,7 @@
     },
     {
       "symbol": "P:iu.i(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.i(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.completeBattleTutorial(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635730,7 +635834,7 @@
     },
     {
       "symbol": "P:iu.j(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.j(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightGameStatusPanel(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635741,7 +635845,7 @@
     },
     {
       "symbol": "P:iu.k(B)V#0",
-      "renamedSymbol": "P:BattleTutorial.k(B)V#0",
+      "renamedSymbol": "P:BattleTutorial.highlightVictoryPointsBar(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1295100,7 +1295204,7 @@
       "original": "iu.java",
       "renamed": "BattleTutorial.java",
       "inputSha256": "c05cb6133cf8147968b413ca4f396b6a0766595cb932167c4c52172dc64f2d31",
-      "outputSha256": "37d8088bab450ebf368202785a1ce1cfd08e52b5e5a752484b7307543972fb1b",
+      "outputSha256": "4622f128b1a8dec56938524ad2d7dbd6bfa02e2ec451307f7cc39852ce82e551",
       "edits": [
         {
           "start": 44,
@@ -1295458,6 +1295562,13 @@
           "symbol": "P:iu.a(Ljava/lang/String;B)V#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1810,
+          "end": 1811,
+          "symbol": "M:iu.j(B)V",
+          "original": "j",
+          "renamed": "highlightGameStatusPanel"
         },
         {
           "start": 2146,
@@ -1297596,11 +1297707,25 @@
           "renamed": "panelWidth"
         },
         {
+          "start": 41820,
+          "end": 41821,
+          "symbol": "M:iu.b(B)V",
+          "original": "b",
+          "renamed": "highlightEndTurnButton"
+        },
+        {
           "start": 41906,
           "end": 41913,
           "symbol": "F:iu.field_q:Lic;",
           "original": "field_q",
           "renamed": "controller"
+        },
+        {
+          "start": 41961,
+          "end": 41962,
+          "symbol": "M:iu.g(I)V",
+          "original": "g",
+          "renamed": "highlightEmptyPortal"
         },
         {
           "start": 42032,
@@ -1297622,6 +1297747,13 @@
           "symbol": "C:sb",
           "original": "sb",
           "renamed": "DateOfBirthValidator"
+        },
+        {
+          "start": 42085,
+          "end": 42086,
+          "symbol": "M:iu.g(B)V",
+          "original": "g",
+          "renamed": "highlightGodFavourOrbs"
         },
         {
           "start": 42161,
@@ -1298032,6 +1298164,13 @@
           "renamed": "buttonMode"
         },
         {
+          "start": 55112,
+          "end": 55113,
+          "symbol": "M:iu.a(B)V",
+          "original": "a",
+          "renamed": "highlightBarbarian"
+        },
+        {
           "start": 55213,
           "end": 55215,
           "symbol": "B:iu.b(II)V#1",
@@ -1298059,6 +1298198,13 @@
           "symbol": "F:iu.field_w:I",
           "original": "field_w",
           "renamed": "buttonMode"
+        },
+        {
+          "start": 56658,
+          "end": 56659,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
         },
         {
           "start": 56758,
@@ -1298214,6 +1298360,13 @@
           "kind": "label"
         },
         {
+          "start": 64392,
+          "end": 64393,
+          "symbol": "M:iu.b(B)V",
+          "original": "b",
+          "renamed": "highlightEndTurnButton"
+        },
+        {
           "start": 64442,
           "end": 64449,
           "symbol": "F:iu.field_w:I",
@@ -1298241,6 +1298394,13 @@
           "original": "L2",
           "renamed": "regionExit2",
           "kind": "label"
+        },
+        {
+          "start": 65509,
+          "end": 65510,
+          "symbol": "M:iu.b(B)V",
+          "original": "b",
+          "renamed": "highlightEndTurnButton"
         },
         {
           "start": 65559,
@@ -1298293,6 +1298453,13 @@
           "renamed": "TutorialController"
         },
         {
+          "start": 66674,
+          "end": 66675,
+          "symbol": "M:iu.e(I)V",
+          "original": "e",
+          "renamed": "highlightTurnTimer"
+        },
+        {
           "start": 66766,
           "end": 66768,
           "symbol": "B:iu.b(II)V#1",
@@ -1298322,6 +1298489,13 @@
           "renamed": "TutorialController"
         },
         {
+          "start": 67660,
+          "end": 67661,
+          "symbol": "M:iu.g(I)V",
+          "original": "g",
+          "renamed": "highlightEmptyPortal"
+        },
+        {
           "start": 67752,
           "end": 67754,
           "symbol": "B:iu.b(II)V#1",
@@ -1298342,6 +1298516,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 68535,
+          "end": 68536,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
         },
         {
           "start": 68636,
@@ -1298371,6 +1298552,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 69456,
+          "end": 69457,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
+        },
+        {
+          "start": 69506,
+          "end": 69507,
+          "symbol": "M:iu.b(B)V",
+          "original": "b",
+          "renamed": "highlightEndTurnButton"
         },
         {
           "start": 69556,
@@ -1298409,6 +1298604,13 @@
           "renamed": "buttonMode"
         },
         {
+          "start": 70362,
+          "end": 70363,
+          "symbol": "M:iu.a(I)V",
+          "original": "a",
+          "renamed": "highlightVillages"
+        },
+        {
           "start": 70453,
           "end": 70455,
           "symbol": "B:iu.b(II)V#1",
@@ -1298429,6 +1298631,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 71050,
+          "end": 71051,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
         },
         {
           "start": 71100,
@@ -1298458,6 +1298667,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 71785,
+          "end": 71786,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
+        },
+        {
+          "start": 71835,
+          "end": 71836,
+          "symbol": "M:iu.b(B)V",
+          "original": "b",
+          "renamed": "highlightEndTurnButton"
         },
         {
           "start": 71884,
@@ -1298496,6 +1298719,13 @@
           "renamed": "buttonMode"
         },
         {
+          "start": 72504,
+          "end": 72505,
+          "symbol": "M:iu.j(B)V",
+          "original": "j",
+          "renamed": "highlightGameStatusPanel"
+        },
+        {
           "start": 72605,
           "end": 72607,
           "symbol": "B:iu.b(II)V#1",
@@ -1298523,6 +1298753,13 @@
           "symbol": "F:iu.field_w:I",
           "original": "field_w",
           "renamed": "buttonMode"
+        },
+        {
+          "start": 73065,
+          "end": 73066,
+          "symbol": "M:iu.k(B)V",
+          "original": "k",
+          "renamed": "highlightVictoryPointsBar"
         },
         {
           "start": 73166,
@@ -1298742,6 +1298979,13 @@
           "renamed": "buttonMode"
         },
         {
+          "start": 75311,
+          "end": 75312,
+          "symbol": "M:iu.g(B)V",
+          "original": "g",
+          "renamed": "highlightGodFavourOrbs"
+        },
+        {
           "start": 75394,
           "end": 75396,
           "symbol": "B:iu.b(II)V#1",
@@ -1298771,6 +1299015,13 @@
           "renamed": "TutorialController"
         },
         {
+          "start": 75558,
+          "end": 75559,
+          "symbol": "M:iu.e(B)V",
+          "original": "e",
+          "renamed": "highlightEnemyTower"
+        },
+        {
           "start": 75638,
           "end": 75640,
           "symbol": "B:iu.b(II)V#1",
@@ -1298791,6 +1299042,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 75756,
+          "end": 75757,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
         },
         {
           "start": 75794,
@@ -1298827,6 +1299085,13 @@
           "symbol": "F:iu.field_w:I",
           "original": "field_w",
           "renamed": "buttonMode"
+        },
+        {
+          "start": 76012,
+          "end": 76013,
+          "symbol": "M:iu.i(B)V",
+          "original": "i",
+          "renamed": "completeBattleTutorial"
         },
         {
           "start": 76083,
@@ -1298913,6 +1299178,13 @@
           "symbol": "F:iu.field_e:Ljava/lang/String;",
           "original": "field_e",
           "renamed": "message"
+        },
+        {
+          "start": 76464,
+          "end": 76465,
+          "symbol": "M:iu.a(I)V",
+          "original": "a",
+          "renamed": "highlightVillages"
         },
         {
           "start": 76488,
@@ -1299151,6 +1299423,20 @@
           "symbol": "F:iu.field_v:Z",
           "original": "field_v",
           "renamed": "enemyWaveSpawned"
+        },
+        {
+          "start": 77063,
+          "end": 77064,
+          "symbol": "M:iu.a(B)V",
+          "original": "a",
+          "renamed": "highlightBarbarian"
+        },
+        {
+          "start": 77125,
+          "end": 77126,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
         },
         {
           "start": 77158,
@@ -1300035,6 +1300321,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 82033,
+          "end": 82034,
+          "symbol": "M:iu.a(II)V",
+          "original": "a",
+          "renamed": "showStandaloneMessage"
+        },
+        {
           "start": 82133,
           "end": 82140,
           "symbol": "F:iu.field_p:I",
@@ -1300047,6 +1300340,13 @@
           "symbol": "M:iu.b(II)V",
           "original": "b",
           "renamed": "setStage"
+        },
+        {
+          "start": 82209,
+          "end": 82210,
+          "symbol": "M:iu.e(B)V",
+          "original": "e",
+          "renamed": "highlightEnemyTower"
         },
         {
           "start": 82290,
@@ -1300068,6 +1300368,13 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "DeployAction"
+        },
+        {
+          "start": 82343,
+          "end": 82344,
+          "symbol": "M:iu.i(B)V",
+          "original": "i",
+          "renamed": "completeBattleTutorial"
         },
         {
           "start": 82368,
@@ -1300117,6 +1300424,13 @@
           "symbol": "P:iu.a(Z)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 82689,
+          "end": 82690,
+          "symbol": "M:iu.a(B)V",
+          "original": "a",
+          "renamed": "highlightBarbarian"
         },
         {
           "start": 82781,
@@ -1300252,6 +1300566,13 @@
           "renamed": "handleInteraction"
         },
         {
+          "start": 84192,
+          "end": 84193,
+          "symbol": "M:iu.j(B)V",
+          "original": "j",
+          "renamed": "highlightGameStatusPanel"
+        },
+        {
           "start": 84252,
           "end": 84259,
           "symbol": "F:iu.field_p:I",
@@ -1300378,6 +1300699,13 @@
           "renamed": "terrainType"
         },
         {
+          "start": 84950,
+          "end": 84951,
+          "symbol": "M:iu.k(B)V",
+          "original": "k",
+          "renamed": "highlightVictoryPointsBar"
+        },
+        {
           "start": 85036,
           "end": 85043,
           "symbol": "F:iu.field_q:Lic;",
@@ -1300385,11 +1300713,25 @@
           "renamed": "controller"
         },
         {
+          "start": 85091,
+          "end": 85092,
+          "symbol": "M:iu.f(B)V",
+          "original": "f",
+          "renamed": "clearMapHighlights"
+        },
+        {
           "start": 85116,
           "end": 85118,
           "symbol": "C:si",
           "original": "si",
           "renamed": "IndexedSpriteBase"
+        },
+        {
+          "start": 85228,
+          "end": 85229,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 85269,
@@ -1300446,6 +1300788,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 89297,
+          "end": 89298,
+          "symbol": "M:iu.e(I)V",
+          "original": "e",
+          "renamed": "highlightTurnTimer"
         },
         {
           "start": 89326,
@@ -1300565,6 +1300914,13 @@
           "symbol": "P:iu.<init>(Lic;I)V#0",
           "original": "param0",
           "renamed": "controller"
+        },
+        {
+          "start": 89937,
+          "end": 89938,
+          "symbol": "M:iu.a(II)V",
+          "original": "a",
+          "renamed": "showStandaloneMessage"
         },
         {
           "start": 89939,
@@ -1397303,7 +1397659,7 @@
       "original": "ld.java",
       "renamed": "MoveAttackAction.java",
       "inputSha256": "0ac4dad0fc9299bb2310523c13496d6b4d0b2fa6046886bb576661bfb3915ef2",
-      "outputSha256": "259958f74ec3cdf09f130b0e53a50823926161a25192bbe1a8ea10396837d22e",
+      "outputSha256": "49607f0557c149c5762165337f0574bdb82fde64c768120346f75151d7f2b644",
       "edits": [
         {
           "start": 50,
@@ -1397467,6 +1397823,13 @@
           "renamed": "BattleTutorial"
         },
         {
+          "start": 1584,
+          "end": 1585,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
+        },
+        {
           "start": 1613,
           "end": 1615,
           "symbol": "C:ej",
@@ -1397591,6 +1397954,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "BattleTutorial"
+        },
+        {
+          "start": 2412,
+          "end": 2413,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 2441,
@@ -1853694,7 +1854064,7 @@
       "original": "vq.java",
       "renamed": "SelectionMenuLayoutSupport.java",
       "inputSha256": "b9bf02fac95b8f7fb8814ee06dd30a79af4e4b8f4bc8e9b832fe8cab23eab538",
-      "outputSha256": "43043531d8fc8ef33f3879145f6386cae7457cc869945d295646e0d7a67dd747",
+      "outputSha256": "4d08341e1e06f712b1f8fcaae246b31f1d0798861b3bc1340d29779ae9c6de92",
       "edits": [
         {
           "start": 50,
@@ -1853765,6 +1854135,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "BattleTutorial"
+        },
+        {
+          "start": 1769,
+          "end": 1770,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 1771,
@@ -1853914,6 +1854291,13 @@
           "renamed": "BattleTutorial"
         },
         {
+          "start": 2540,
+          "end": 2541,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
+        },
+        {
           "start": 2542,
           "end": 2544,
           "symbol": "C:pf",
@@ -1854054,6 +1854438,13 @@
           "renamed": "BattleTutorial"
         },
         {
+          "start": 3273,
+          "end": 3274,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
+        },
+        {
           "start": 3275,
           "end": 3277,
           "symbol": "C:pf",
@@ -1854087,6 +1854478,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "BattleTutorial"
+        },
+        {
+          "start": 3383,
+          "end": 3384,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 3385,
@@ -1854208,6 +1854606,13 @@
           "renamed": "BattleTutorial"
         },
         {
+          "start": 4085,
+          "end": 4086,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
+        },
+        {
           "start": 4087,
           "end": 4089,
           "symbol": "C:pf",
@@ -1854325,6 +1854730,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "BattleTutorial"
+        },
+        {
+          "start": 4857,
+          "end": 4858,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 4859,
@@ -1854467,6 +1854879,13 @@
           "renamed": "BattleTutorial"
         },
         {
+          "start": 5653,
+          "end": 5654,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
+        },
+        {
           "start": 5655,
           "end": 5657,
           "symbol": "C:pf",
@@ -1854591,6 +1855010,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "BattleTutorial"
+        },
+        {
+          "start": 6364,
+          "end": 6365,
+          "symbol": "M:iu.a(ILjava/lang/String;ILka;[Ljava/lang/String;)I",
+          "original": "a",
+          "renamed": "wrapBalancedTextLines"
         },
         {
           "start": 6366,
@@ -1907557,10 +1907983,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "8b94da8bf1a3b4a0d62bfb91727c63eabae855c424e34d06857d9ca82a6e29a5",
+    "rulesSha256": "f2aa196dae521258635bb4ad912449de62f34841490cd70912328be6282b4212",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "4c81b721d04fdd7d59c18bda0f02317ec5b4c7000af87293a5c6050ed212d92b",
+    "outputTreeSha256": "927ad3da5544a4ffd955b2f6a10251c35fa0a578902aaa98fa7dd9adc483f614",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

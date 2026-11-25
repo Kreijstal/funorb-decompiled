@@ -63,7 +63,7 @@ class BattleTutorial {
             }
           }
           if (obfuscationGuard <= 108) {
-            this.j((byte) 81);
+            this.highlightGameStatusPanel((byte) 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -936,19 +936,19 @@ class BattleTutorial {
         }
     }
 
-    private final void b(byte param0) {
+    private final void highlightEndTurnButton(byte param0) {
         if (param0 <= 72) {
           return;
         }
         this.controller.field_jc = true;
     }
 
-    private final void g(int param0) {
+    private final void highlightEmptyPortal(int param0) {
         int var2 = 103 / ((param0 + 42) / 55);
         CoatOfArmsOverlaySupport.setHighlightedMapTiles(DateOfBirthValidator.field_g, 125);
     }
 
-    private final void g(byte param0) {
+    private final void highlightGodFavourOrbs(byte param0) {
         int var2 = -88 % ((param0 - 8) / 48);
         this.controller.field_Ab = true;
     }
@@ -1183,7 +1183,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder3)) {
                               this.message = TutorialController.field_f[3];
                               this.buttonMode = 1;
-                              this.a((byte) -122);
+                              this.highlightBarbarian((byte) -122);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1210,7 +1210,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder4)) {
                               this.message = TutorialController.field_f[4];
                               this.buttonMode = 0;
-                              this.f((byte) -34);
+                              this.clearMapHighlights((byte) -34);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1346,7 +1346,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder12) &&
                               (decompiledFrameRemainder11) &&
                               (decompiledFrameRemainder10)) {
-                              this.b((byte) 113);
+                              this.highlightEndTurnButton((byte) 113);
                               this.buttonMode = 1;
                               this.message = TutorialController.field_f[9];
                               if (var4 == 0) {
@@ -1366,7 +1366,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder13) &&
                               (decompiledFrameRemainder12) &&
                               (decompiledFrameRemainder11)) {
-                              this.b((byte) 111);
+                              this.highlightEndTurnButton((byte) 111);
                               this.buttonMode = 1;
                               this.message = TutorialController.field_f[10];
                               if (var4 == 0) {
@@ -1387,7 +1387,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder12)) {
                               this.buttonMode = 0;
                               this.message = TutorialController.field_f[11];
-                              this.e(31);
+                              this.highlightTurnTimer(31);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1405,7 +1405,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder13)) {
                               this.buttonMode = 1;
                               this.message = TutorialController.field_f[12];
-                              this.g(26);
+                              this.highlightEmptyPortal(26);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1421,7 +1421,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder15) &&
                               (decompiledFrameRemainder14)) {
                               this.message = TutorialController.field_f[8];
-                              this.f((byte) -34);
+                              this.clearMapHighlights((byte) -34);
                               this.field_s = true;
                               this.buttonMode = 0;
                               if (var4 == 0) {
@@ -1438,8 +1438,8 @@ class BattleTutorial {
                               (decompiledFrameRemainder16) &&
                               (decompiledFrameRemainder15)) {
                               this.message = TutorialController.field_f[14];
-                              this.f((byte) -34);
-                              this.b((byte) 120);
+                              this.clearMapHighlights((byte) -34);
+                              this.highlightEndTurnButton((byte) 120);
                               this.buttonMode = 1;
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1455,7 +1455,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder16)) {
                               this.message = TutorialController.field_f[13];
                               this.buttonMode = 1;
-                              this.a(5);
+                              this.highlightVillages(5);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1468,7 +1468,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder18) &&
                               (decompiledFrameRemainder17)) {
                               this.message = TutorialController.field_f[7];
-                              this.f((byte) -34);
+                              this.clearMapHighlights((byte) -34);
                               this.buttonMode = 0;
                               this.field_o = true;
                               if (var4 == 0) {
@@ -1482,8 +1482,8 @@ class BattleTutorial {
                               (decompiledFrameRemainder19) &&
                               (decompiledFrameRemainder18)) {
                               this.message = TutorialController.field_f[14];
-                              this.f((byte) -34);
-                              this.b((byte) 90);
+                              this.clearMapHighlights((byte) -34);
+                              this.highlightEndTurnButton((byte) 90);
                               this.buttonMode = 1;
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1496,7 +1496,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder19)) {
                               this.message = TutorialController.field_f[26];
                               this.buttonMode = 0;
-                              this.j((byte) -119);
+                              this.highlightGameStatusPanel((byte) -119);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1507,7 +1507,7 @@ class BattleTutorial {
                               (decompiledFrameRemainder20)) {
                               this.message = TutorialController.field_f[27];
                               this.buttonMode = 0;
-                              this.k((byte) -120);
+                              this.highlightVictoryPointsBar((byte) -120);
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1558,20 +1558,20 @@ class BattleTutorial {
                       }
                       this.message = TutorialController.field_f[20];
                       this.buttonMode = 0;
-                      this.g((byte) 59);
+                      this.highlightGodFavourOrbs((byte) 59);
                       if (var4 == 0) {
                         break regionExit2;
                       }
                     }
                     this.buttonMode = 0;
                     this.message = TutorialController.field_f[21];
-                    this.e((byte) 115);
+                    this.highlightEnemyTower((byte) 115);
                     if (var4 == 0) {
                       break regionExit2;
                     }
                   }
                   this.message = TutorialController.field_f[22];
-                  this.f((byte) -34);
+                  this.clearMapHighlights((byte) -34);
                   this.buttonMode = 1;
                   if (var4 == 0) {
                     break regionExit2;
@@ -1579,7 +1579,7 @@ class BattleTutorial {
                 }
                 this.message = TutorialController.field_f[23];
                 this.buttonMode = 3;
-                this.i((byte) 44);
+                this.completeBattleTutorial((byte) 44);
                 if (var4 == 0) {
                   break regionExit2;
                 }
@@ -1597,7 +1597,7 @@ class BattleTutorial {
         }
     }
 
-    private final void a(int param0) {
+    private final void highlightVillages(int param0) {
         CoatOfArmsOverlaySupport.setHighlightedMapTiles(IterableNodeHashTable.field_a, 124);
         if (param0 != 5) {
           this.expandedPanelHeight = 30;
@@ -1613,9 +1613,9 @@ class BattleTutorial {
         this.enemyWaveSpawned = true;
     }
 
-    private final void a(byte param0) {
+    private final void highlightBarbarian(byte param0) {
         if (param0 != -122) {
-          this.f((byte) 104);
+          this.clearMapHighlights((byte) 104);
         }
         CoatOfArmsOverlaySupport.setHighlightedMapTiles(StrongCacheEntry.field_D, 125);
     }
@@ -1745,7 +1745,7 @@ class BattleTutorial {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void showStandaloneMessage(int param0, int param1) {
         if (param1 != 13567) {
           return;
         }
@@ -1753,14 +1753,14 @@ class BattleTutorial {
         this.setStage(34, -30659);
     }
 
-    private final void e(byte param0) {
+    private final void highlightEnemyTower(byte param0) {
         if (param0 <= 90) {
           return;
         }
         CoatOfArmsOverlaySupport.setHighlightedMapTiles(DeployAction.field_s, -91);
     }
 
-    private final void i(byte param0) {
+    private final void completeBattleTutorial(byte param0) {
         RevivalEvent.d((byte) 113);
         int var2 = 47 / ((param0 + 75) / 34);
         this.controller.unlockAchievement(0, (byte) 30, 255);
@@ -1772,7 +1772,7 @@ class BattleTutorial {
         int stackIn_18_1 = 0;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard) {
-          this.a((byte) -26);
+          this.highlightBarbarian((byte) -26);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.buttonMode != 0) {
@@ -1823,7 +1823,7 @@ class BattleTutorial {
 
     }
 
-    private final void j(byte param0) {
+    private final void highlightGameStatusPanel(byte param0) {
         if (param0 > -95) {
           this.messageId = 95;
         }
@@ -1855,21 +1855,21 @@ class BattleTutorial {
         return 9;
     }
 
-    private final void k(byte param0) {
+    private final void highlightVictoryPointsBar(byte param0) {
         if (param0 > -55) {
           return;
         }
         this.controller.field_Mb = true;
     }
 
-    private final void f(byte param0) {
+    private final void clearMapHighlights(byte param0) {
         IndexedSpriteBase.b(13829);
         if (param0 != -34) {
           this.field_s = false;
         }
     }
 
-    final static int a(int param0, String param1, int param2, BitmapFont param3, String[] param4) {
+    final static int wrapBalancedTextLines(int param0, String param1, int param2, BitmapFont param3, String[] param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1980,7 +1980,7 @@ class BattleTutorial {
         }
     }
 
-    private final void e(int param0) {
+    private final void highlightTurnTimer(int param0) {
         this.controller.field_ac = true;
         if (param0 != 31) {
           this.message = (String) null;
@@ -2008,7 +2008,7 @@ class BattleTutorial {
         try {
           this.expandedPanelHeight = 40;
           this.controller = controller;
-          this.a(messageId, 13567);
+          this.showStandaloneMessage(messageId, 13567);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ',' + messageId + ')');
         }
