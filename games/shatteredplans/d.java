@@ -6,7 +6,7 @@ import java.util.*;
 
 final class d {
     static String field_c;
-    static am field_a;
+    static SocialListPanel field_a;
     static Sprite[] field_b;
     static Star field_d;
 

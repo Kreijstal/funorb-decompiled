@@ -504,7 +504,7 @@ final class ObjectList {
           ScrollPane var3 = (ScrollPane) null;
           ObjectList.a(-32, 115, (ScrollPane) null, false, 125);
         }
-        AccountStatusDialog.field_xb = ae.field_c[param1];
+        AccountStatusDialog.field_xb = HighscoreResponseSupport.field_c[param1];
     }
 
     final void copyTo(Object[] param0, int param1) {

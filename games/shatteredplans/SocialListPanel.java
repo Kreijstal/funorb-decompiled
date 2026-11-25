@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends AnimatedPanel {
+final class SocialListPanel extends AnimatedPanel {
     static String[] field_Bb;
     AnimatedPanel field_Eb;
     static AnimatedPanel field_xb;
@@ -19,18 +19,18 @@ final class am extends AnimatedPanel {
         field_Ab = null;
         if (param0 != 23880) {
           Sprite var2 = (Sprite) null;
-          am.a(-49, 17, (Sprite) null, -112, 60, 124, (byte) -54);
+          SocialListPanel.copySpriteScanline(-49, 17, (Sprite) null, -112, 60, 124, (byte) -54);
           field_xb = null;
           return;
         }
         field_xb = null;
     }
 
-    am(long param0, am param1, String param2, String param3) {
+    SocialListPanel(long param0, SocialListPanel param1, String param2, String param3) {
         this(param0, param1, param1.field_Db.field_zb, param1.field_Db.field_Ab, param1.field_Fb, param2, param3);
     }
 
-    am(long param0, AnimatedPanel param1, AnimatedPanel param2, ScrollBar param3, AnimatedPanel param4, String param5, String param6) {
+    SocialListPanel(long param0, AnimatedPanel param1, AnimatedPanel param2, ScrollBar param3, AnimatedPanel param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
@@ -47,7 +47,7 @@ final class am extends AnimatedPanel {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutSocialListControls(int param0, int param1, int param2, int param3) {
         int var5 = (this.field_K + param0) / 2;
         int var6 = this.field_mb - param3;
         this.field_Db.a(this.field_K, 0, 0, param0, param2 ^ -126, var6 - param0, param1);
@@ -61,23 +61,23 @@ final class am extends AnimatedPanel {
         this.field_yb.field_mb = param3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
+    final void setSocialListBounds(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
         this.field_db = param1;
         if (param6 < 78) {
           this.field_yb = (AnimatedPanel) null;
           this.field_mb = param0;
           this.field_hb = param7;
           this.field_K = param5;
-          this.a(param3, param2, 0, param4);
+          this.layoutSocialListControls(param3, param2, 0, param4);
           return;
         }
         this.field_mb = param0;
         this.field_hb = param7;
         this.field_K = param5;
-        this.a(param3, param2, 0, param4);
+        this.layoutSocialListControls(param3, param2, 0, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawStackedHexagonPattern(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -106,7 +106,7 @@ final class am extends AnimatedPanel {
         }
     }
 
-    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, byte param6) {
+    final static void copySpriteScanline(int param0, int param1, Sprite param2, int param3, int param4, int param5, byte param6) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var7_int = 0;

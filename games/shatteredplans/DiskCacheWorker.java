@@ -311,7 +311,7 @@ final class DiskCacheWorker implements Runnable {
         if (DiskArchiveRequest.field_A) {
           ProjectsContent.a((byte) -120);
           UsernameAvailabilityValidator.e((byte) -66);
-          an.a(true);
+          TerritoryResourcePanelSupport.clearSocialLists(true);
           DiskArchiveRequest.field_A = false;
         }
     }
@@ -434,13 +434,13 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
-          aj.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
+          ClientContextMenuSupport.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.a(param2 - 1102, param3);
           AccountCreationDialog.a(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
           ReflectionCheck.d((byte) -47);
           UrlLoader.b((byte) -112);
-          js.field_j = -aj.field_c + 0;
+          js.field_j = -ClientContextMenuSupport.field_c + 0;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

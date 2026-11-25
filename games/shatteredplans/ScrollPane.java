@@ -361,10 +361,10 @@ final class ScrollPane extends AnimatedPanel {
             if (TertiaryListSequence.field_k >= 620) {
               ArchiveIndex.field_o = false;
             } else {
-              if (440 > bb.field_b) {
+              if (440 > LobbyRoomControlsSupport.field_b) {
                 ArchiveIndex.field_o = false;
               } else {
-                if (bb.field_b >= 460) {
+                if (LobbyRoomControlsSupport.field_b >= 460) {
                   ArchiveIndex.field_o = false;
                 } else {
                   ArchiveIndex.field_o = true;

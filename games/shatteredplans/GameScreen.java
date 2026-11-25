@@ -1046,7 +1046,7 @@ final class GameScreen {
               }
               var22 = 0;
               if (var21 >= 0) {
-                am.a(var20_int, var18, var14, var22, var21, var19, (byte) -107);
+                SocialListPanel.copySpriteScanline(var20_int, var18, var14, var22, var21, var19, (byte) -107);
                 SoftwareRasterizer.setPixel(-1 + var20_int, var19, 16777215);
                 SoftwareRasterizer.setPixel(var20_int + var21, var19, 16777215);
               }
@@ -1511,9 +1511,9 @@ final class GameScreen {
                 break scanLoop1;
               }
               if (stackIn_40_0 < stackIn_40_1 ||
-                !(var8 <= bb.field_b) ||
+                !(var8 <= LobbyRoomControlsSupport.field_b) ||
                 !(190 + var7 > TertiaryListSequence.field_k) ||
-                !(bb.field_b <= var8 + var10) ||
+                !(LobbyRoomControlsSupport.field_b <= var8 + var10) ||
                 var13 != 0) {
                 var8 = var8 + (var10 + 8);
                 var9++;
@@ -3258,8 +3258,8 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder2 = true;
           if (null == PlacementOrder.field_w &&
-            bb.field_b < tg.field_c.field_db && (null == this.field_O ||
-            !(bb.field_b >= this.field_O.field_db))) {
+            LobbyRoomControlsSupport.field_b < tg.field_c.field_db && (null == this.field_O ||
+            !(LobbyRoomControlsSupport.field_b >= this.field_O.field_db))) {
             stackIn_34_0 = 0;
             decompiledFrameRemainder2 = false;
           }
@@ -3642,11 +3642,11 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 10 + TertiaryListSequence.field_k;
-          var4 = bb.field_b + 20;
+          var4 = LobbyRoomControlsSupport.field_b + 20;
           var5 = rs.field_Cb.stringWidth(param1);
           if (13 + var4 > 480) {
             var3_int = TertiaryListSequence.field_k;
-            var4 = -15 + bb.field_b;
+            var4 = -15 + LobbyRoomControlsSupport.field_b;
           }
           if (10 + (var5 + var3_int) > 639) {
             var3_int = -1 - var5 + 630;
@@ -3823,7 +3823,7 @@ final class GameScreen {
                         }
                       }
                       if (!this.field_s.field_M) {
-                        var6_ref = QuickChatCategoryRegistry.a(bb.field_d, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatCategoryRegistry.a(LobbyRoomControlsSupport.field_d, 4371, new String[]{(String) (var6_ref)});
                       } else {
                         var6_ref = QuickChatCategoryRegistry.a(QuickChatMenu.field_Fb, 4371, new String[]{(String) (var6_ref)});
                       }
@@ -3840,7 +3840,7 @@ final class GameScreen {
                     if (!this.field_s.field_M) {
                       var6_ref = WidgetContainer.field_B;
                     } else {
-                      var6_ref = ae.field_d;
+                      var6_ref = HighscoreResponseSupport.field_d;
                     }
                     break regionExit2;
                   }
@@ -3969,7 +3969,7 @@ final class GameScreen {
             MatchingTextValidator.field_r.bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);
             if (AchievementProgress.field_k) {
-              aq.field_i.draw(10, 10);
+              IntValueWriteRequest.field_i.draw(10, 10);
               var5Lifetime1 = SolVictoryChecker.blendColours(0, 16777215, -96, RasterBuffer.field_f);
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
@@ -4689,7 +4689,7 @@ final class GameScreen {
             if (var5_ref != this.field_s.field_n &&
               (this.field_s.field_P.field_w & 1 << var5_ref.field_x) == 0) {
               if (this.field_s.field_P.field_o.field_i) {
-                var6 = an.a((byte) -76, true, var5_ref.field_m);
+                var6 = TerritoryResourcePanelSupport.createTerritoryResourcePanel((byte) -76, true, var5_ref.field_m);
                 var6.moveTo((byte) 113, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                 this.field_e.field_z.addChild(var6, param0 ^ -15915);
                 decompiledFrameRemainder0 = (var9 != 0);
@@ -4697,12 +4697,12 @@ final class GameScreen {
               if (decompiledFrameRemainder0) {
                 var6_ref = (Territory) (var5_ref.field_i.startForward(0));
                 if (var6_ref != null) {
-                  var7 = an.a((byte) -76, true, var6_ref);
+                  var7 = TerritoryResourcePanelSupport.createTerritoryResourcePanel((byte) -76, true, var6_ref);
                   var7.moveTo((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                   this.field_e.field_z.addChild(var7, 8);
                   var6_ref = (Territory) (var5_ref.field_i.nextForward((byte) -71));
                   while (null != var6_ref) {
-                    var8 = an.a((byte) -76, false, var6_ref);
+                    var8 = TerritoryResourcePanelSupport.createTerritoryResourcePanel((byte) -76, false, var6_ref);
                     var8.moveTo((byte) 51, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                     this.field_e.field_z.addChild(var8, param0 ^ -15915);
                     var6_ref = (Territory) (var5_ref.field_i.nextForward((byte) -71));
@@ -5063,7 +5063,7 @@ final class GameScreen {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_v = true;
         try {
-          MatchingTextValidator.field_r = new Sprite(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
+          MatchingTextValidator.field_r = new Sprite(20 + IntValueWriteRequest.field_i.field_o, IntValueWriteRequest.field_i.field_p + 20);
           kb.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
@@ -5227,7 +5227,7 @@ final class GameScreen {
             this.field_K.field_s = false;
             this.field_V.field_s = false;
             jr.a("continue", 1904, wm.field_e);
-            jr.a("continue2", 1904, aq.field_k);
+            jr.a("continue2", 1904, IntValueWriteRequest.field_k);
             jr.a("continue3", 1904, StatefulWidgetTheme.field_v);
             jr.a("continuekey", 1904, ul.field_Ob);
             jr.a("captureAll", 1904, SecondaryNodeHashTable.field_e);

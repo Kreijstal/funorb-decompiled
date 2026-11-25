@@ -77,17 +77,17 @@ final class nb {
         if (null == DateInputWidget.field_G) {
           var1 = Dialog.l(param0 ^ param0);
           no.field_e = new LoginForm(var1, (String) null, true, false, false);
-          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
-          ae.field_f.setContent(no.field_e, param0 - 18);
-          ae.field_f.finishAnimations(param0 + 7363);
+          ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
+          HighscoreResponseSupport.field_f.setContent(no.field_e, param0 - 18);
+          HighscoreResponseSupport.field_f.finishAnimations(param0 + 7363);
           return;
         }
         DateInputWidget.field_G.closeStatusDialog((byte) -104);
         var1Lifetime1 = Dialog.l(param0 ^ param0);
         no.field_e = new LoginForm(var1Lifetime1, (String) null, true, false, false);
-        ByteArrayStorage.field_e.addDialog(true, ae.field_f);
-        ae.field_f.setContent(no.field_e, param0 - 18);
-        ae.field_f.finishAnimations(param0 + 7363);
+        ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
+        HighscoreResponseSupport.field_f.setContent(no.field_e, param0 - 18);
+        HighscoreResponseSupport.field_f.finishAnimations(param0 + 7363);
     }
 
     final static byte[] a(String param0, int param1) {

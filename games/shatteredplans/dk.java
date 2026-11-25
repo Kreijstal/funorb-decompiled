@@ -29,7 +29,7 @@ final class dk {
         int var9 = 0;
         try {
           var2_int = TertiaryListSequence.field_k;
-          var3 = bb.field_b;
+          var3 = LobbyRoomControlsSupport.field_b;
           var4 = SpriteState.field_u.field_nb.lineCount(param1, 500);
           int var5 = 7 % ((-9 - param0) / 60);
           var6 = SpriteState.field_u.field_nb.maxLineWidth(param1, 500) + 6;

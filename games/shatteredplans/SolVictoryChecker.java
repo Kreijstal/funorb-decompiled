@@ -390,7 +390,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (LegacyAi.field_r == Wormhole.field_j) {
               if (!param2) {
-                mq.field_c = aj.a(param5, false, false, param3);
+                mq.field_c = ClientContextMenuSupport.createLoginCredentials(param5, false, false, param3);
               } else {
                 var10 = (String) null;
                 mq.field_c = dd.a(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
@@ -466,9 +466,9 @@ final class SolVictoryChecker extends VictoryChecker {
                 stackIn_51_0 = ((var7 & 8) != 0);
                 LoginMethodPreference.field_g = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
-                ae.field_b = stackIn_54_0;
+                HighscoreResponseSupport.field_b = stackIn_54_0;
                 if (LoginMethodPreference.field_g) {
-                  ae.field_b = true;
+                  HighscoreResponseSupport.field_b = true;
                 }
               }
               if (StandardAi.field_a) {
@@ -556,9 +556,9 @@ final class SolVictoryChecker extends VictoryChecker {
                 return stackIn_102_0;
               }
               var6_intLifetime2 = of.field_f;
-              of.field_f = bb.field_c;
+              of.field_f = LobbyRoomControlsSupport.field_c;
               BufferedSocket.field_j = true;
-              bb.field_c = var6_intLifetime2;
+              LobbyRoomControlsSupport.field_c = var6_intLifetime2;
             }
             stackIn_104_0 = -1;
             return stackIn_104_0;

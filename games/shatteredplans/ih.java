@@ -5,7 +5,7 @@ final class ih {
     static PacketBuffer field_c;
     static int field_d;
     static int field_b;
-    static am field_g;
+    static SocialListPanel field_g;
     static fg field_f;
     static String field_a;
     static String field_e;

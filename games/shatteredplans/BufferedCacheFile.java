@@ -530,7 +530,7 @@ final class BufferedCacheFile {
         int var3 = 0;
         int var4_int = 0;
         rk var4 = null;
-        aq var5_ref_aq = null;
+        IntValueWriteRequest var5_ref_aq = null;
         int var5 = 0;
         int[] var6 = null;
         int var7 = 0;
@@ -546,7 +546,7 @@ final class BufferedCacheFile {
           if (var2 != 0) {
             if (1 == var2) {
               var4_int = var1.readSignedSmart((byte) -122);
-              var5_ref_aq = (aq) (GameState.field_E.startForward(0));
+              var5_ref_aq = (IntValueWriteRequest) (GameState.field_E.startForward(0));
               while (true) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var5_ref_aq != null) {
@@ -555,7 +555,7 @@ final class BufferedCacheFile {
                   decompiledFrameRemainder0 = (var8 == 0);
                   if ((decompiledFrameRemainder0) && (stackIn_21_0 != stackIn_21_1 ||
                     ~var5_ref_aq.field_l != ~var4_int)) {
-                    var5_ref_aq = (aq) (GameState.field_E.nextForward((byte) -71));
+                    var5_ref_aq = (IntValueWriteRequest) (GameState.field_E.nextForward((byte) -71));
                     continue;
                   }
                 }

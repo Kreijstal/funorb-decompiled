@@ -1026,7 +1026,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_options_whocanjoin", 511);
                 if (null != var2) {
-                  am.field_Ab = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Ab = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_players", 511);
                 if (null != var2) {
@@ -2200,7 +2200,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("login_username", 511);
                 if (null != var2) {
-                  ba.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelSetupSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_email", 511);
                 if (var2 != null) {
@@ -2806,7 +2806,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("acceptdraw", 511);
                 if (null != var2) {
-                  bb.field_a = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomControlsSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resign", 511);
                 if (null != var2) {
@@ -3094,7 +3094,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_x_offersrematch", 511);
                 if (var2 != null) {
-                  bb.field_d = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomControlsSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_offersrematch_unrated", 511);
                 if (null != var2) {
@@ -3106,7 +3106,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferrematch_unrated", 511);
                 if (null != var2) {
-                  ae.field_d = IterableNodeHashTable.a(var2, 17746);
+                  HighscoreResponseSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferdraw", 511);
                 if (var2 != null) {
@@ -3286,15 +3286,15 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,0", 511);
                 if (null != var2) {
-                  ai.field_d[0] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,1", 511);
                 if (null != var2) {
-                  ai.field_d[1] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,2", 511);
                 if (null != var2) {
-                  ai.field_d[2] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_price_top", 511);
                 if (var2 != null) {
@@ -3598,31 +3598,31 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,1", 511);
                 if (null != var2) {
-                  am.field_Bb[1] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,2", 511);
                 if (var2 != null) {
-                  am.field_Bb[2] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,3", 511);
                 if (null != var2) {
-                  am.field_Bb[3] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,4", 511);
                 if (var2 != null) {
-                  am.field_Bb[4] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,5", 511);
                 if (null != var2) {
-                  am.field_Bb[5] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,6", 511);
                 if (null != var2) {
-                  am.field_Bb[6] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,7", 511);
                 if (var2 != null) {
-                  am.field_Bb[7] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("discard", 511);
                 if (var2 != null) {

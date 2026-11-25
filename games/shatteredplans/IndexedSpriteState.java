@@ -18,8 +18,8 @@ abstract class IndexedSpriteState {
         AnimatedPanel var3 = null;
         try {
           BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
-          d.field_a = new am(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
-          wg.field_a = new am(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
+          d.field_a = new SocialListPanel(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
+          wg.field_a = new SocialListPanel(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
           OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;

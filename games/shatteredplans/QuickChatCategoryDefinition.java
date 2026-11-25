@@ -148,7 +148,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 this.field_q = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = param2.readUnsignedShort(-20976);
-                  var7 = aq.a(var6, 0);
+                  var7 = IntValueWriteRequest.findQuickChatParameterType(var6, 0);
                   if (var7 != null) {
                     this.field_w[var5] = var6;
                     array$0 = new int[var7.field_e];

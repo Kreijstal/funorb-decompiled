@@ -107,22 +107,22 @@ abstract class ArchiveSource {
         if (param0 > -63) {
           String var2 = (String) null;
           ArchiveSource.a(-68, (byte) 83, (String) null);
-          if (js.field_j == -aj.field_c + 0) {
+          if (js.field_j == -ClientContextMenuSupport.field_c + 0) {
             js.field_j = js.field_j + 1;
             return;
           }
-          if (250 - aj.field_c != js.field_j) {
+          if (250 - ClientContextMenuSupport.field_c != js.field_j) {
             js.field_j = js.field_j + 1;
             return;
           }
           js.field_j = js.field_j + 1;
           return;
         }
-        if (js.field_j == -aj.field_c + 0) {
+        if (js.field_j == -ClientContextMenuSupport.field_c + 0) {
           js.field_j = js.field_j + 1;
           return;
         }
-        if (250 - aj.field_c != js.field_j) {
+        if (250 - ClientContextMenuSupport.field_c != js.field_j) {
           js.field_j = js.field_j + 1;
           return;
         }

@@ -66,7 +66,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          MessageKind.field_c = TextInputPainter.a(param0, bb.field_b, TertiaryListSequence.field_k, 2);
+          MessageKind.field_c = TextInputPainter.a(param0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, 2);
           if (param1 != 39) {
             field_D = -63;
           }
@@ -78,7 +78,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
                 if (null != PlayerEliminatedEvent.field_h) {
-                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.x + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.y + bb.field_b, -30872);
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.x + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.y + LobbyRoomControlsSupport.field_b, -30872);
                 }
               }
               BattleSnapshot.field_s = null;
@@ -86,18 +86,18 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             } else {
               uq.field_i = uq.field_i + 1;
               if (ContentDialog.field_bb == null) {
-                var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-TertiaryListSequence.field_k + ck.field_e) * (-TertiaryListSequence.field_k + ck.field_e);
+                var2_int = (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) * (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) + (-TertiaryListSequence.field_k + ck.field_e) * (-TertiaryListSequence.field_k + ck.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
                   ContentDialog.field_bb = BattleSnapshot.field_s;
                 }
               }
               if (ContentDialog.field_bb != null) {
-                ContentDialog.field_bb.c(bb.field_b - ContentDialog.field_bb.y, 2, -ContentDialog.field_bb.x + TertiaryListSequence.field_k);
+                ContentDialog.field_bb.c(LobbyRoomControlsSupport.field_b - ContentDialog.field_bb.y, 2, -ContentDialog.field_bb.x + TertiaryListSequence.field_k);
               }
             }
           } else {
-            ba.field_c = SliderWidget.field_P;
+            ChatPanelSetupSupport.field_c = SliderWidget.field_P;
             ck.field_e = PointsVictoryChecker.field_p;
             uq.field_i = 0;
             BattleSnapshot.field_s = TextInputPainter.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);

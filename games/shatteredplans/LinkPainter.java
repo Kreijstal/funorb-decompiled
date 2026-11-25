@@ -289,7 +289,7 @@ final class LinkPainter implements WidgetPainter {
                       if (null != var7.field_xb &&
                         !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
                         !LoginMethodPreference.field_g) {
-                        if (!ae.field_b) {
+                        if (!HighscoreResponseSupport.field_b) {
                           var17 = DerelictVictoryChecker.field_m;
                           var18 = QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
                           var17.field_j.a(1, 8, var18);

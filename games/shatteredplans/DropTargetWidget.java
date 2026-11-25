@@ -25,7 +25,7 @@ final class DropTargetWidget extends SingleChildWidget {
           if (GzipInflater.field_c == -1 &&
             DirectByteArrayStorage.field_n == -1) {
             GzipInflater.field_c = TertiaryListSequence.field_k;
-            DirectByteArrayStorage.field_n = bb.field_b;
+            DirectByteArrayStorage.field_n = LobbyRoomControlsSupport.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
           LinkPainter.field_e = LinkPainter.field_e + 1;

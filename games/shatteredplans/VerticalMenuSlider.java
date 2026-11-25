@@ -135,7 +135,7 @@ final class VerticalMenuSlider extends MenuComponent {
         if (!this.field_s) {
           return;
         }
-        int var4 = bb.field_b - this.field_t;
+        int var4 = LobbyRoomControlsSupport.field_b - this.field_t;
         if (var4 < 5) {
           var4 = 5;
         }

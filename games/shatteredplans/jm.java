@@ -15,8 +15,8 @@ final class jm extends TargetedChatMessage {
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
-          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
+          HighscoreResponseSupport.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
+          ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -54,8 +54,8 @@ final class jm extends TargetedChatMessage {
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
-          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
+          HighscoreResponseSupport.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
+          ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -151,7 +151,7 @@ final class SolMapReader implements MapGenerator {
 
     final static void a(int param0) {
         LoginMethodPreference.field_g = false;
-        ae.field_b = ~sa.field_a.readUnsignedByte(-99) == param0 ? true : false;
+        HighscoreResponseSupport.field_b = ~sa.field_a.readUnsignedByte(-99) == param0 ? true : false;
     }
 
     public static void clearStatics(byte param0) {

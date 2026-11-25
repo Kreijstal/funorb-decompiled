@@ -341,7 +341,7 @@ final class lr {
           var13 = sa.field_a;
           var2 = var13.readUnsignedByte(-100);
           if (var2 == 0) {
-            var11 = ae.a(-128);
+            var11 = HighscoreResponseSupport.newEightIntArray(-128);
             var17 = var11;
             var14 = var17;
             var3 = var14;
@@ -378,7 +378,7 @@ final class lr {
                 q.g(-120);
                 return;
               }
-              var16_ref.field_k = ae.a(-116);
+              var16_ref.field_k = HighscoreResponseSupport.newEightIntArray(-116);
               var16_ref.field_h = var16_ref.field_k[0];
               var16_ref.field_j = true;
               var16_ref.field_l = true;

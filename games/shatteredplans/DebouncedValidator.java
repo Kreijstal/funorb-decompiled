@@ -159,7 +159,7 @@ abstract class DebouncedValidator implements ValidationSource {
     final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, int param3, boolean param4, int param5, int param6, boolean param7) {
         try {
           PcmPlayerService.configure(param5, param7, 10);
-          aj.field_e = PcmPlayerService.create(param1, param0, 0, param6);
+          ClientContextMenuSupport.field_e = PcmPlayerService.create(param1, param0, 0, param6);
           if (param4) {
             java.applet.Applet var9 = (java.applet.Applet) null;
             DebouncedValidator.a(-84, (java.applet.Applet) null);
@@ -170,7 +170,7 @@ abstract class DebouncedValidator implements ValidationSource {
           IsolationistAi.field_q.setSourceStream(jp.field_Bb);
           ValidationState.field_b = param2;
           ValidationState.field_b.a(wm.field_b, 0);
-          aj.field_e.setSourceStream(ValidationState.field_b);
+          ClientContextMenuSupport.field_e.setSourceStream(ValidationState.field_b);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

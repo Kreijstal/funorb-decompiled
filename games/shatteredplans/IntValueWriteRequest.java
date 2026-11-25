@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aq extends IntrusiveNode {
+final class IntValueWriteRequest extends IntrusiveNode {
     static String field_k;
     static Sprite field_i;
     static String field_n;
@@ -12,13 +12,13 @@ final class aq extends IntrusiveNode {
     static int[] field_o;
     static double field_h;
 
-    final static boolean a(int param0, boolean param1, int param2, boolean param3) {
+    final static boolean ranksLeaderboardEntryBefore(int param0, boolean param1, int param2, boolean param3) {
         int var4;
         int var5;
         int var4Lifetime1;
         int var5Lifetime1;
         if (!param1) {
-          aq.a(-82);
+          IntValueWriteRequest.getRegistrationEmailOptIn(-82);
         }
         if (param3) {
           if (GameApplet.field_f[param0] > GameApplet.field_f[param2]) {
@@ -33,8 +33,8 @@ final class aq extends IntrusiveNode {
           if (GameState.field_c[param2] > GameState.field_c[param0]) {
             return false;
           }
-          var4 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
-          var5 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+          var4 = ClientContextMenuSupport.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+          var5 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
           if (var4 < var5) {
             return true;
           }
@@ -55,8 +55,8 @@ final class aq extends IntrusiveNode {
         if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
           return false;
         }
-        var4Lifetime1 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
-        var5Lifetime1 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+        var4Lifetime1 = ClientContextMenuSupport.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+        var5Lifetime1 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }
@@ -75,11 +75,11 @@ final class aq extends IntrusiveNode {
         field_k = null;
         if (param0 < 71) {
           Sprite var2 = (Sprite) null;
-          aq.pushSpriteRaster((byte) 4, (Sprite) null);
+          IntValueWriteRequest.pushSpriteRaster((byte) 4, (Sprite) null);
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean getRegistrationEmailOptIn(int param0) {
         if (param0 < 2) {
           return false;
         }
@@ -96,7 +96,7 @@ final class aq extends IntrusiveNode {
         }
     }
 
-    final static gq a(int param0, int param1) {
+    final static gq findQuickChatParameterType(int param0, int param1) {
         int var3 = 0;
         gq[] var2;
         int var4;
@@ -112,7 +112,7 @@ final class aq extends IntrusiveNode {
         return null;
     }
 
-    private aq() throws Throwable {
+    private IntValueWriteRequest() throws Throwable {
         throw new Error();
     }
 

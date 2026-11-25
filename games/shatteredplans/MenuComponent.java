@@ -152,9 +152,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 <= fb.field_zb.length)) {
               fb.field_zb = new int[param1 * 2];
             }
-            if (null == aj.field_d ||
-              !(param1 <= aj.field_d.length)) {
-              aj.field_d = new int[2 * param1];
+            if (null == ClientContextMenuSupport.field_d ||
+              !(param1 <= ClientContextMenuSupport.field_d.length)) {
+              ClientContextMenuSupport.field_d = new int[2 * param1];
             }
             if (WidgetContainer.field_y == null ||
               !(param1 <= WidgetContainer.field_y.length)) {
@@ -168,9 +168,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
               ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
             }
-            if (null == aq.field_p ||
-              !(aq.field_p.length >= param1)) {
-              aq.field_p = new boolean[2 * param1];
+            if (null == IntValueWriteRequest.field_p ||
+              !(IntValueWriteRequest.field_p.length >= param1)) {
+              IntValueWriteRequest.field_p = new boolean[2 * param1];
             }
           } else {
             QuickChatCategoryRegistry.field_d = new int[param1 * 2];
@@ -182,9 +182,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 <= fb.field_zb.length)) {
               fb.field_zb = new int[param1 * 2];
             }
-            if (null == aj.field_d ||
-              !(param1 <= aj.field_d.length)) {
-              aj.field_d = new int[2 * param1];
+            if (null == ClientContextMenuSupport.field_d ||
+              !(param1 <= ClientContextMenuSupport.field_d.length)) {
+              ClientContextMenuSupport.field_d = new int[2 * param1];
             }
             if (WidgetContainer.field_y == null ||
               !(param1 <= WidgetContainer.field_y.length)) {
@@ -196,21 +196,21 @@ class MenuComponent extends IntrusiveNode {
             }
             if (ProxyAuthenticationRequiredException.field_d == null) {
               ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
-              if (null == aq.field_p ||
-                !(aq.field_p.length >= param1)) {
-                aq.field_p = new boolean[2 * param1];
+              if (null == IntValueWriteRequest.field_p ||
+                !(IntValueWriteRequest.field_p.length >= param1)) {
+                IntValueWriteRequest.field_p = new boolean[2 * param1];
               }
             } else {
               if (param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length) {
-                if (null == aq.field_p ||
-                  !(aq.field_p.length >= param1)) {
-                  aq.field_p = new boolean[2 * param1];
+                if (null == IntValueWriteRequest.field_p ||
+                  !(IntValueWriteRequest.field_p.length >= param1)) {
+                  IntValueWriteRequest.field_p = new boolean[2 * param1];
                 }
               } else {
                 ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
-                if (null == aq.field_p ||
-                  !(aq.field_p.length >= param1)) {
-                  aq.field_p = new boolean[2 * param1];
+                if (null == IntValueWriteRequest.field_p ||
+                  !(IntValueWriteRequest.field_p.length >= param1)) {
+                  IntValueWriteRequest.field_p = new boolean[2 * param1];
                 }
               }
             }
@@ -223,9 +223,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 <= fb.field_zb.length)) {
               fb.field_zb = new int[param1 * 2];
             }
-            if (null == aj.field_d ||
-              !(param1 <= aj.field_d.length)) {
-              aj.field_d = new int[2 * param1];
+            if (null == ClientContextMenuSupport.field_d ||
+              !(param1 <= ClientContextMenuSupport.field_d.length)) {
+              ClientContextMenuSupport.field_d = new int[2 * param1];
             }
             if (WidgetContainer.field_y == null ||
               !(param1 <= WidgetContainer.field_y.length)) {
@@ -239,9 +239,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
               ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
             }
-            if (null == aq.field_p ||
-              !(aq.field_p.length >= param1)) {
-              aq.field_p = new boolean[2 * param1];
+            if (null == IntValueWriteRequest.field_p ||
+              !(IntValueWriteRequest.field_p.length >= param1)) {
+              IntValueWriteRequest.field_p = new boolean[2 * param1];
             }
           } else {
             if (param1 > GameApplet.field_f.length) {
@@ -250,9 +250,9 @@ class MenuComponent extends IntrusiveNode {
                 !(param1 <= fb.field_zb.length)) {
                 fb.field_zb = new int[param1 * 2];
               }
-              if (null == aj.field_d ||
-                !(param1 <= aj.field_d.length)) {
-                aj.field_d = new int[2 * param1];
+              if (null == ClientContextMenuSupport.field_d ||
+                !(param1 <= ClientContextMenuSupport.field_d.length)) {
+                ClientContextMenuSupport.field_d = new int[2 * param1];
               }
               if (WidgetContainer.field_y == null ||
                 !(param1 <= WidgetContainer.field_y.length)) {
@@ -266,18 +266,18 @@ class MenuComponent extends IntrusiveNode {
                 !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
                 ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
               }
-              if (null == aq.field_p ||
-                !(aq.field_p.length >= param1)) {
-                aq.field_p = new boolean[2 * param1];
+              if (null == IntValueWriteRequest.field_p ||
+                !(IntValueWriteRequest.field_p.length >= param1)) {
+                IntValueWriteRequest.field_p = new boolean[2 * param1];
               }
             } else {
               if (null == fb.field_zb ||
                 !(param1 <= fb.field_zb.length)) {
                 fb.field_zb = new int[param1 * 2];
               }
-              if (null == aj.field_d ||
-                !(param1 <= aj.field_d.length)) {
-                aj.field_d = new int[2 * param1];
+              if (null == ClientContextMenuSupport.field_d ||
+                !(param1 <= ClientContextMenuSupport.field_d.length)) {
+                ClientContextMenuSupport.field_d = new int[2 * param1];
               }
               if (WidgetContainer.field_y == null ||
                 !(param1 <= WidgetContainer.field_y.length)) {
@@ -289,21 +289,21 @@ class MenuComponent extends IntrusiveNode {
               }
               if (ProxyAuthenticationRequiredException.field_d == null) {
                 ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
-                if (null == aq.field_p ||
-                  !(aq.field_p.length >= param1)) {
-                  aq.field_p = new boolean[2 * param1];
+                if (null == IntValueWriteRequest.field_p ||
+                  !(IntValueWriteRequest.field_p.length >= param1)) {
+                  IntValueWriteRequest.field_p = new boolean[2 * param1];
                 }
               } else {
                 if (param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length) {
-                  if (null == aq.field_p ||
-                    !(aq.field_p.length >= param1)) {
-                    aq.field_p = new boolean[2 * param1];
+                  if (null == IntValueWriteRequest.field_p ||
+                    !(IntValueWriteRequest.field_p.length >= param1)) {
+                    IntValueWriteRequest.field_p = new boolean[2 * param1];
                   }
                 } else {
                   ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
-                  if (null == aq.field_p ||
-                    !(aq.field_p.length >= param1)) {
-                    aq.field_p = new boolean[2 * param1];
+                  if (null == IntValueWriteRequest.field_p ||
+                    !(IntValueWriteRequest.field_p.length >= param1)) {
+                    IntValueWriteRequest.field_p = new boolean[2 * param1];
                   }
                 }
               }

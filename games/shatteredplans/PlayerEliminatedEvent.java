@@ -74,7 +74,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           var10 = var9;
           for (var7 = 0; var7 < RichTextLayout.field_r.length; var7++) {
             if (RichTextLayout.field_r[var7] != null) {
-              var9[var7] = ae.a(69, "", param5, RichTextLayout.field_r[var7]);
+              var9[var7] = HighscoreResponseSupport.loadSpriteSetByName(69, "", param5, RichTextLayout.field_r[var7]);
             }
           }
           wl.field_b = ValidationMessageWidget.field_Q;

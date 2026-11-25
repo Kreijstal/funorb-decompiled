@@ -24,10 +24,10 @@ final class ks {
             if (TertiaryListSequence.field_k >= ei.field_e) {
               return false;
             }
-            if (ByteArrayNode.field_k > bb.field_b) {
+            if (ByteArrayNode.field_k > LobbyRoomControlsSupport.field_b) {
               return false;
             }
-            if (AttackTask.field_o <= bb.field_b) {
+            if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
             if (je.field_d == 0) {
@@ -58,8 +58,8 @@ final class ks {
           if (TertiaryListSequence.field_k >= ei.field_e) {
             return false;
           }
-          if (ByteArrayNode.field_k <= bb.field_b) {
-            if (AttackTask.field_o <= bb.field_b) {
+          if (ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
+            if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
             if (je.field_d != 0) {
@@ -91,8 +91,8 @@ final class ks {
             return false;
           }
           if (TertiaryListSequence.field_k < ei.field_e &&
-            ByteArrayNode.field_k <= bb.field_b) {
-            if (AttackTask.field_o <= bb.field_b) {
+            ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
+            if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
             }
             if (je.field_d != 0) {
@@ -118,8 +118,8 @@ final class ks {
         }
         if (TertiaryListSequence.field_k >= AccountFieldValue.field_f &&
           TertiaryListSequence.field_k < ei.field_e &&
-          ByteArrayNode.field_k <= bb.field_b) {
-          if (AttackTask.field_o <= bb.field_b) {
+          ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
+          if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
             return false;
           }
           if (je.field_d != 0) {
@@ -319,7 +319,7 @@ final class ks {
             !TextLayoutLine.a((byte) 95) &&
             null == np.field_a &&
             IntNode.field_p == null) {
-            if (!ae.field_b) {
+            if (!HighscoreResponseSupport.field_b) {
               var5 = DerelictVictoryChecker.field_m;
               var6 = GzipInflater.field_h;
               var5.field_j.a(param1 + 1, 14, var6);
@@ -332,7 +332,7 @@ final class ks {
             !TextLayoutLine.a((byte) 111) &&
             null != np.field_a &&
             param0.field_g == np.field_a.g(-101)) {
-            if (!ae.field_b) {
+            if (!HighscoreResponseSupport.field_b) {
               var9 = DerelictVictoryChecker.field_m;
               var10 = MenuLabel.field_z;
               var9.field_j.a(1, 14, var10);

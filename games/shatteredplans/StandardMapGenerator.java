@@ -448,10 +448,10 @@ class StandardMapGenerator implements MapGenerator {
 
     final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
-          ae.a((java.awt.Component) ((Object) param0), 18014);
+          HighscoreResponseSupport.detachKeyboardInput((java.awt.Component) ((Object) param0), 18014);
           Particle.a((byte) 89, (java.awt.Component) ((Object) param0));
-          if (aj.field_b != null) {
-            aj.field_b.detachFrom((java.awt.Component) ((Object) param0), 120);
+          if (ClientContextMenuSupport.field_b != null) {
+            ClientContextMenuSupport.field_b.detachFrom((java.awt.Component) ((Object) param0), 120);
           }
           int var2_int = 84 % ((param1 + 39) / 45);
         } catch (RuntimeException runtimeException) {

@@ -93,7 +93,7 @@ final class PasswordInputPainter extends TextInputPainter {
             java.applet.Applet var4 = (java.applet.Applet) null;
             PasswordInputPainter.setLegacyStatusFlag((java.applet.Applet) null, true);
           }
-          ae.field_f.setContent(no.field_e, 122);
+          HighscoreResponseSupport.field_f.setContent(no.field_e, 122);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ce.O(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae {
+final class HighscoreResponseSupport {
     static PaddedContentDialog field_f;
     static String field_g;
     static String field_d;
@@ -11,14 +11,14 @@ final class ae {
     static boolean field_b;
     static int field_h;
 
-    final static PcmStreamMixer c(int param0) {
+    final static PcmStreamMixer getSharedPcmMixer(int param0) {
         if (param0 != 3) {
           return (PcmStreamMixer) null;
         }
         return jp.field_Bb;
     }
 
-    final static void a(byte param0) {
+    final static void readHighscoreResponse(byte param0) {
         int var8_int = 0;
         int var19 = 0;
         int incrementValue$0 = 0;
@@ -184,7 +184,7 @@ final class ae {
         }
     }
 
-    final static int[] a(int param0) {
+    final static int[] newEightIntArray(int param0) {
         int var1 = 125 % ((-3 - param0) / 43);
         return new int[8];
     }
@@ -201,7 +201,7 @@ final class ae {
         field_d = null;
     }
 
-    final static void b(byte param0) {
+    final static void snapshotMouseInput(byte param0) {
         int var1 = 0;
         Throwable decompiledCaughtException = null;
         Object var2 = null;
@@ -210,8 +210,8 @@ final class ae {
         synchronized (var2) {
           ql.field_q = ql.field_q + 1;
           AllianceExpiredEvent.field_n = v.field_d;
-          TertiaryListSequence.field_k = aj.field_f;
-          bb.field_b = AllianceExpiredEvent.field_i;
+          TertiaryListSequence.field_k = ClientContextMenuSupport.field_f;
+          LobbyRoomControlsSupport.field_b = AllianceExpiredEvent.field_i;
           UrlLoader.field_d = kh.field_Lb;
           kh.field_Lb = false;
           je.field_d = vh.field_c;
@@ -221,12 +221,12 @@ final class ae {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardInput(java.awt.Component param0, int param1) {
         try {
           param0.removeKeyListener(im.field_c);
           param0.removeFocusListener(im.field_c);
           if (param1 != 18014) {
-            ae.c(-12);
+            HighscoreResponseSupport.getSharedPcmMixer(-12);
           }
           qn.field_c = -1;
         } catch (RuntimeException runtimeException) {
@@ -234,7 +234,7 @@ final class ae {
         }
     }
 
-    final static Sprite[] a(int param0, String param1, Archive param2, String param3) {
+    final static Sprite[] loadSpriteSetByName(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

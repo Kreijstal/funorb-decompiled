@@ -260,7 +260,7 @@ final class fc {
             if (var5 != null) {
               if (!Player.a(-68, this.field_k) &&
                 !LoginMethodPreference.field_g) {
-                if (!ae.field_b) {
+                if (!HighscoreResponseSupport.field_b) {
                   this.field_j.a(1, 8, QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
                 this.field_j.a(1, 18, QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var7}));

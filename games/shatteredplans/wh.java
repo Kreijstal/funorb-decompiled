@@ -114,8 +114,8 @@ final class wh {
         RecklessAi.field_p.setTarget(OpacityWidget.field_A.field_K, cr.field_c, (byte) 59, 0, 0);
         BattleSnapshot.field_t.setTarget(-UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + cr.field_c, 0);
         FleetMove.field_F.setTarget(82 + UnderageAccountInfoPanel.field_K, 18, (byte) 117, 2 + cr.field_c, -80 - UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2));
-        d.field_a.a(-22 + (OpacityWidget.field_A.field_mb - cr.field_c), 20 + cr.field_c + 2, UnderageAccountInfoPanel.field_K, 2, 20, OpacityWidget.field_A.field_K, (byte) 123, 0);
-        wg.field_a.a(2, UnderageAccountInfoPanel.field_K, 0, 20);
+        d.field_a.setSocialListBounds(-22 + (OpacityWidget.field_A.field_mb - cr.field_c), 20 + cr.field_c + 2, UnderageAccountInfoPanel.field_K, 2, 20, OpacityWidget.field_A.field_K, (byte) 123, 0);
+        wg.field_a.layoutSocialListControls(2, UnderageAccountInfoPanel.field_K, 0, 20);
         if (param2 == 95) {
           return;
         }

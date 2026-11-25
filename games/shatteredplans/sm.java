@@ -71,7 +71,7 @@ final class sm {
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        BattleContribution.field_o = this.b(-100, TertiaryListSequence.field_k, bb.field_b);
+        BattleContribution.field_o = this.b(-100, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
         if (param0 <= 115) {
           return;
         }
@@ -85,7 +85,7 @@ final class sm {
         if (0 != so.field_o) {
           var2 = so.field_o * -20;
         }
-        if (ai.field_e != 0) {
+        if (LeaderboardSortSupport.field_e != 0) {
           if (AllianceExpiredEvent.field_n != 0) {
             if (BattleContribution.field_o != -2) {
               if (-3 == BattleContribution.field_o) {
@@ -110,10 +110,10 @@ final class sm {
           -1 == BattleContribution.field_o) {
           if (!this.field_f) {
             this.field_f = true;
-            this.field_i = bb.field_b;
+            this.field_i = LobbyRoomControlsSupport.field_b;
           } else {
-            var2 = -this.field_i + bb.field_b;
-            this.field_i = bb.field_b;
+            var2 = -this.field_i + LobbyRoomControlsSupport.field_b;
+            this.field_i = LobbyRoomControlsSupport.field_b;
           }
         } else {
           this.field_f = false;
@@ -864,9 +864,9 @@ final class sm {
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
-        this.field_d.a(this.a(bb.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
+        this.field_d.a(this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
         this.field_h = 0;
-        an.field_c = -1;
+        TerritoryResourcePanelSupport.field_c = -1;
         if (param1 <= 14) {
           this.e((byte) -50);
         }
@@ -954,7 +954,7 @@ final class sm {
         }
         for (var2 = 0; CellVertex.field_j.length > var2; var2++) {
           if (var2 != RasterBuffer.field_e &&
-            an.field_c != var2) {
+            TerritoryResourcePanelSupport.field_c != var2) {
             ql.field_o[var2] = null;
             MapView.field_sb[var2] = null;
           }
@@ -967,10 +967,10 @@ final class sm {
             ArrayWidgetGroup.field_A = 0;
           }
         }
-        if (an.field_c == -1) {
+        if (TerritoryResourcePanelSupport.field_c == -1) {
           stackIn_21_0 = RasterBuffer.field_e;
         } else {
-          stackIn_21_0 = an.field_c;
+          stackIn_21_0 = TerritoryResourcePanelSupport.field_c;
         }
         var2Lifetime1 = stackIn_21_0;
         if (var2Lifetime1 == -1) {
@@ -1121,7 +1121,7 @@ final class sm {
           if (param2 != 1) {
             if (param2 != 2) {
               if (param2 == 3) {
-                if (ai.field_e == 1) {
+                if (LeaderboardSortSupport.field_e == 1) {
                   param3 -= 5;
                 }
                 jm.field_r.drawOpaque(5 + param3, 5 + param0);
@@ -1135,7 +1135,7 @@ final class sm {
                 return;
               }
               if (param2 == 4) {
-                if (ai.field_e == 1) {
+                if (LeaderboardSortSupport.field_e == 1) {
                   param3 -= 5;
                 }
                 var9Lifetime1 = 295 + param3;
@@ -1149,10 +1149,10 @@ final class sm {
                 this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
                 param0 += 150;
                 var12 = 400;
-                if (ai.field_e == 1) {
+                if (LeaderboardSortSupport.field_e == 1) {
                   var12 = 390;
                 }
-                ai.a(true);
+                LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
@@ -1407,7 +1407,7 @@ final class sm {
                 var27 = 5;
                 var28 = param3 + 18;
                 var11Lifetime3 += 10;
-                if (ai.field_e == 0) {
+                if (LeaderboardSortSupport.field_e == 0) {
                   var11Lifetime3 += 20;
                 }
                 if (var9Lifetime2 < 0) {
@@ -1627,7 +1627,7 @@ final class sm {
             this.a(-16084);
           }
           v.a((byte) -128);
-          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, TertiaryListSequence.field_k));
+          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
           if (this.field_d.field_c != -1) {
             this.a(true, this.field_d.field_c, false);
           }
@@ -1662,18 +1662,18 @@ final class sm {
     private final void a(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        RasterBuffer.field_e = this.findHexAt(param0 + 16191, TertiaryListSequence.field_k, bb.field_b);
+        RasterBuffer.field_e = this.findHexAt(param0 + 16191, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
         if (je.field_d == 0) {
         } else {
           var2 = this.findHexAt(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
-          if (var2 == an.field_c) {
-            an.field_c = -1;
+          if (var2 == TerritoryResourcePanelSupport.field_c) {
+            TerritoryResourcePanelSupport.field_c = -1;
           } else {
             if (var2 != -1) {
-              an.field_c = var2;
+              TerritoryResourcePanelSupport.field_c = var2;
             }
           }
         }
@@ -1933,7 +1933,7 @@ final class sm {
           var29 = stackIn_11_0;
           var9_ref_bi = var29;
           if (ByteArrayStorage.field_b == 32) {
-            if (an.field_c == var6) {
+            if (TerritoryResourcePanelSupport.field_c == var6) {
               if (var5 == 0) {
                 stackIn_24_0 = n.field_k;
               } else {
@@ -1955,7 +1955,7 @@ final class sm {
               var10_ref_bi.drawAdditive(var4 - 8, -8 + var3, 256);
             } else {
               if (RasterBuffer.field_e == var6) {
-                if (-1 == an.field_c) {
+                if (-1 == TerritoryResourcePanelSupport.field_c) {
                   var28.drawAdditive(-16 + var4, var3 - 16, var7_int);
                   var29.drawAdditive(var4, var3, 256);
                   var29.drawAdditive(var4, var3, 128);
@@ -1964,7 +1964,7 @@ final class sm {
                   var29.drawAdditive(var4, var3, 256);
                 }
               } else {
-                if (an.field_c == -1) {
+                if (TerritoryResourcePanelSupport.field_c == -1) {
                   var28.drawAdditive(var4 - 16, var3 - 16, var7_int);
                   var29.drawAdditive(var4, var3, 256);
                 } else {
@@ -1989,10 +1989,10 @@ final class sm {
         if (ContentDialog.field_gb == null) {
           ContentDialog.field_gb = new Sprite(256, 256);
         }
-        if (an.field_c == -1) {
+        if (TerritoryResourcePanelSupport.field_c == -1) {
           stackIn_42_0 = RasterBuffer.field_e;
         } else {
-          stackIn_42_0 = an.field_c;
+          stackIn_42_0 = TerritoryResourcePanelSupport.field_c;
         }
         var6 = stackIn_42_0;
         if (var6 != -1) {

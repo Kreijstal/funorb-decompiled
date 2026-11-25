@@ -7,7 +7,7 @@ final class wg {
     static BufferedSocket field_f;
     static boolean field_d;
     static String field_b;
-    static am field_a;
+    static SocialListPanel field_a;
     static String field_c;
     private static String field_z;
 

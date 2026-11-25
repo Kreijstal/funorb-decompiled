@@ -25,7 +25,7 @@ final class DisplayModeInfo {
     }
 
     final static MenuWindow a(int param0, int param1) {
-        ReflectionCheck.field_k = new MenuWindow(0, -((4 + kb.field_y.field_o) * param0) + 479 - 28, 200, (kb.field_y.field_o + 4) * param0 + 28, ba.field_a.toUpperCase());
+        ReflectionCheck.field_k = new MenuWindow(0, -((4 + kb.field_y.field_o) * param0) + 479 - 28, 200, (kb.field_y.field_o + 4) * param0 + 28, ChatPanelSetupSupport.field_a.toUpperCase());
         MenuButton var2 = new MenuButton(184 + ReflectionCheck.field_k.field_k, 2 + ReflectionCheck.field_k.field_t, 11, 11, param1, (Sprite) null, "X", 16711680);
         var2.field_h = ReflectionCheck.field_k;
         ReflectionCheck.field_k.addChild(var2, param1 + 9);

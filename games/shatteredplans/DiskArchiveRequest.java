@@ -76,8 +76,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ba.a(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
-          BoundsRect.field_m = ae.a(93, "lobby", param3, "chatfilter");
+          ChatPanelSetupSupport.initializeSharedChatPanel(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
+          BoundsRect.field_m = HighscoreResponseSupport.loadSpriteSetByName(93, "lobby", param3, "chatfilter");
           jf.field_d[1] = SoundPlayback.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
@@ -130,7 +130,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           WidgetTheme.a(param3, param6, false, param2);
           if (null != DerelictVictoryChecker.field_m &&
             DerelictVictoryChecker.field_m.a(param6, param1, -16, param5, param3)) {
-            ai.a(3);
+            LeaderboardSortSupport.clearActiveContextMenu(3);
             param3 = false;
           }
           ResizingDialog.a(-21, param3, param6);

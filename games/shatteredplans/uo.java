@@ -193,8 +193,8 @@ final class uo {
             var21 = TextFieldWidget.field_I;
             var25 = var21;
             var25.field_K = 0;
-            var6 = aq.field_j;
-            aq.field_j.field_mb = 0;
+            var6 = IntValueWriteRequest.field_j;
+            IntValueWriteRequest.field_j.field_mb = 0;
             var6.field_K = 0;
             DualLinkDequeSequence.field_f.field_mb = 0;
             var7 = DualLinkDequeSequence.field_f;
@@ -229,12 +229,12 @@ final class uo {
                 }
                 TextFieldWidget.field_I.field_z = TextFieldWidget.field_I.field_z + "<br>" + var10_ref_String;
               }
-              aq.field_j.setTarget(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
-              aq.field_j.field_z = MenuList.field_u.toUpperCase();
-              stackIn_20_0 = aq.field_j;
+              IntValueWriteRequest.field_j.setTarget(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
+              IntValueWriteRequest.field_j.field_z = MenuList.field_u.toUpperCase();
+              stackIn_20_0 = IntValueWriteRequest.field_j;
               stackIn_21_1 = (param3) && (sf.field_e == 0L);
               stackIn_20_0.field_s = stackIn_21_1;
-              var8 = aq.field_j;
+              var8 = IntValueWriteRequest.field_j;
               var10 = 2;
               if (UnderageAccountInfoPanel.field_D != null) {
                 if (lr.field_c == null) {
@@ -387,8 +387,8 @@ final class uo {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {
-                    aq.field_j.field_s = false;
-                    if (!(!aq.field_j.field_v)) {
+                    IntValueWriteRequest.field_j.field_s = false;
+                    if (!(!IntValueWriteRequest.field_j.field_v)) {
                       if (n.field_h.field_d.field_zb == 0) {
                         DualLinkDequeSequence.field_k = IntrusiveDequeCursor.field_a;
                       } else {
@@ -400,8 +400,8 @@ final class uo {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                aq.field_j.field_s = false;
-                if (aq.field_j.field_v) {
+                IntValueWriteRequest.field_j.field_s = false;
+                if (IntValueWriteRequest.field_j.field_v) {
                   var11 = null;
                   var12Lifetime2 = 0;
                   for (var13_intLifetime1 = 0; ProductionContent.field_k > var13_intLifetime1; var13_intLifetime1++) {
@@ -444,7 +444,7 @@ final class uo {
             }
             DefendTask.field_x.field_z = QuickChatCategoryRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
           }
-          stackIn_159_0 = am.field_xb;
+          stackIn_159_0 = SocialListPanel.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
           stackIn_164_0 = IntrusiveDeque.field_g;
@@ -462,7 +462,7 @@ final class uo {
             if (0 != DialPainter.field_g.field_rb) {
               NetworkArchiveRequest.a(param2, np.field_a.g(-92), (byte) -2);
             }
-            if (0 != aq.field_j.field_rb) {
+            if (0 != IntValueWriteRequest.field_j.field_rb) {
               DefendTask.field_u = true;
             }
             if (0 != TextFieldWidget.field_I.field_rb) {

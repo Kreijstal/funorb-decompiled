@@ -1399,7 +1399,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_continue2", 112);
                 if (null != var2) {
-                  aq.field_k = IterableNodeHashTable.a(var2, 17746);
+                  IntValueWriteRequest.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_continue3", 110);
                 if (var2 != null) {
@@ -1419,7 +1419,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_shortfall2a", 104);
                 if (var2 != null) {
-                  aq.field_n = IterableNodeHashTable.a(var2, 17746);
+                  IntValueWriteRequest.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_shortfall2b", 119);
                 if (null != var2) {
@@ -1463,7 +1463,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tabname_fleetinfo", 106);
                 if (var2 != null) {
-                  ba.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelSetupSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tabname_diplomacy", 109);
                 if (var2 != null) {
@@ -1656,7 +1656,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_efficiency", 103);
                 if (null != var2) {
-                  am.field_zb = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_zb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_fluidity", 114);
                 if (null != var2) {
@@ -1784,7 +1784,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("track_name_old", 112);
                 if (var2 != null) {
-                  an.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TerritoryResourcePanelSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_showChat", 101);
                 if (null != var2) {

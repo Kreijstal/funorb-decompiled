@@ -477,7 +477,7 @@ class AnimatedPanel extends PanelNode {
         if (AllianceExpiredEvent.field_n == 0) {
           this.field_ub = 0;
         }
-        stackIn_34_1 = (!ProxySocketConnector.field_j) && (SoftwareRasterizer.field_i <= TertiaryListSequence.field_k) && (SoftwareRasterizer.field_l > TertiaryListSequence.field_k) && (SoftwareRasterizer.field_a <= bb.field_b) && (SoftwareRasterizer.field_f > bb.field_b);
+        stackIn_34_1 = (!ProxySocketConnector.field_j) && (SoftwareRasterizer.field_i <= TertiaryListSequence.field_k) && (SoftwareRasterizer.field_l > TertiaryListSequence.field_k) && (SoftwareRasterizer.field_a <= LobbyRoomControlsSupport.field_b) && (SoftwareRasterizer.field_f > LobbyRoomControlsSupport.field_b);
         this.field_v = stackIn_34_1;
         stackIn_39_1 = (this.field_v) && (this.field_ub == AllianceExpiredEvent.field_n) && (param3);
         this.field_L = stackIn_39_1;
@@ -497,7 +497,7 @@ class AnimatedPanel extends PanelNode {
         SoftwareRasterizer.setClip(var9, var10, var11, var12);
         if (this.field_ub != 0 &&
           this.field_P) {
-          this.field_db = -param1 + (bb.field_b - this.field_X);
+          this.field_db = -param1 + (LobbyRoomControlsSupport.field_b - this.field_X);
           this.field_hb = -param0 - this.field_Q + TertiaryListSequence.field_k;
           if (this.field_hb < 0) {
             this.field_hb = 0;

@@ -8,7 +8,7 @@ final class FilledMenuPanel extends MenuComponent {
 
     final static boolean d(byte param0) {
         int var1 = -7 % ((param0 - 76) / 32);
-        return !ae.field_b ? true : false;
+        return !HighscoreResponseSupport.field_b ? true : false;
     }
 
     FilledMenuPanel(int param0, int param1, int param2, int param3, int param4, int param5) {

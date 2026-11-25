@@ -22,7 +22,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ql.field_q = 0;
-          aj.field_f = param0.getX();
+          ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
           kh.field_Lb = true;
           return;
@@ -64,7 +64,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ql.field_q = 0;
-          aj.field_f = param0.getX();
+          ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
           kh.field_Lb = true;
           return;
@@ -86,7 +86,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (TertiaryListSequence.field_j != null) {
             ql.field_q = 0;
-            aj.field_f = param0.getX();
+            ClientContextMenuSupport.field_f = param0.getX();
             AllianceExpiredEvent.field_i = param0.getY();
             kh.field_Lb = true;
           }
@@ -259,7 +259,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           ql.field_q = 0;
-          aj.field_f = -1;
+          ClientContextMenuSupport.field_f = -1;
           AllianceExpiredEvent.field_i = -1;
           kh.field_Lb = true;
           return;

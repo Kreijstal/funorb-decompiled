@@ -146,7 +146,7 @@ final class BattleContribution extends IntrusiveNode {
         int[] var14 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3_int = ai.field_e;
+          var3_int = LeaderboardSortSupport.field_e;
           SectorCacheStore.field_f = new AnimatedPanel(0L, (AnimatedPanel) null);
           if (param0 == null) {
             var10 = (Throwable) null;

@@ -679,7 +679,7 @@ class PacketBuffer extends IntrusiveNode {
           StripedProgressWidget.a((byte) 73, 16777215, 8);
           StripedProgressWidget.a((byte) 112, 16777215, 11);
           uq.field_m = new rl(wg.field_e);
-          aj.field_a = new IntrusiveDeque();
+          ClientContextMenuSupport.field_a = new IntrusiveDeque();
           StellarBombEvent.field_h = new IntrusiveDeque();
           is.field_b = false;
           GameClientShell.field_u = false;

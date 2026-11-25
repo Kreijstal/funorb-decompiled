@@ -141,7 +141,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             if (100 <= var9Lifetime1 &&
               105 >= var9Lifetime1) {
               Wormhole.field_j = TurnEventLog.field_h;
-              ae.field_e = new String[-100 + var9Lifetime1];
+              HighscoreResponseSupport.field_e = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 125), true);
@@ -168,9 +168,9 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               var10Lifetime1 = sa.field_a.readUnsignedShort(-20976);
               sa.field_a.position = 0;
               if (StarAnnotation.a(126, var10Lifetime1)) {
-                var11 = ae.field_e.length;
+                var11 = HighscoreResponseSupport.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ae.field_e[var12] = sa.field_a.readMarkedString((byte) -126);
+                  HighscoreResponseSupport.field_e[var12] = sa.field_a.readMarkedString((byte) -126);
                 }
                 q.g(-113);
                 BufferedSocket.field_j = false;
@@ -206,8 +206,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               return stackIn_63_0;
             }
             var9Lifetime3 = of.field_f;
-            of.field_f = bb.field_c;
-            bb.field_c = var9Lifetime3;
+            of.field_f = LobbyRoomControlsSupport.field_c;
+            LobbyRoomControlsSupport.field_c = var9Lifetime3;
             BufferedSocket.field_j = true;
           }
           stackIn_66_0 = -1;

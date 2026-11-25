@@ -127,7 +127,7 @@ final class MenuWindow extends MenuComponent {
           var5 = SolVictoryChecker.blendColours(var5, 12993090, -128, var6);
         }
         SoftwareRasterizer.fillRoundedRectAlpha(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
-        am.a(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
+        SocialListPanel.drawStackedHexagonPattern(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
         SoftwareRasterizer.drawHorizontalLine(10 + this.field_k, this.field_t, this.field_m - 20, var3);
         SoftwareRasterizer.drawHorizontalLine(10 + this.field_k, this.field_i + this.field_t, -20 + this.field_m, 0);
         SoftwareRasterizer.setClip(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);

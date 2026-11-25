@@ -149,11 +149,11 @@ final class BoundsRect extends IntrusiveNode {
             var4 = (String) null;
             BoundsRect.a((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
           }
-          ai.a(param0, true, 0, wm.field_c, (byte) -60, ef.field_a, us.field_b);
+          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, wm.field_c, (byte) -60, ef.field_a, us.field_b);
           for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
             ProxyAuthenticationRequiredException.field_d[var2_int + param0] = var2_int;
           }
-          ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
+          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
           if (wm.field_c <= param0) {
             return;
           }
@@ -168,7 +168,7 @@ final class BoundsRect extends IntrusiveNode {
 
     final static void a(byte param0, String param1, String param2) {
         try {
-          ai.a(false, -1, param2, param1);
+          LeaderboardSortSupport.openAccountStatusDialog(false, -1, param2, param1);
           int var3_int = 19 % ((param0 - 37) / 41);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

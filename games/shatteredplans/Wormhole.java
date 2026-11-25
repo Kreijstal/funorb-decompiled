@@ -62,13 +62,13 @@ final class Wormhole extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        an.field_b = new AccountCreationForm();
+        TerritoryResourcePanelSupport.field_b = new AccountCreationForm();
         if (param0 > 64) {
-          ae.field_f.setContent(an.field_b, -88);
+          HighscoreResponseSupport.field_f.setContent(TerritoryResourcePanelSupport.field_b, -88);
           return;
         }
         Wormhole.clearStatics(14);
-        ae.field_f.setContent(an.field_b, -88);
+        HighscoreResponseSupport.field_f.setContent(TerritoryResourcePanelSupport.field_b, -88);
     }
 
     static {

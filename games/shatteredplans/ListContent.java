@@ -22,7 +22,7 @@ final class ListContent implements MenuContent {
         if (MouseInputHandler.a(param0 ^ 5, param3, param1)) {
           return true;
         }
-        if (ae.field_b) {
+        if (HighscoreResponseSupport.field_b) {
           return false;
         }
         if (param0 == 4) {

@@ -197,7 +197,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
               var3 = var3 + param2;
             }
-            aj.printError(var3, false);
+            ClientContextMenuSupport.printError(var3, false);
             var7 = nf.replaceAll(":", var3, (byte) 103, "%3a");
             var8 = nf.replaceAll("@", var7, (byte) 121, "%40");
             var9 = nf.replaceAll("&", var8, (byte) 80, "%26");
@@ -343,7 +343,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               GameKeyHandler.a((byte) 38);
             }
             BytePayloadNode.field_l = param13;
-            bb.field_c = param5;
+            LobbyRoomControlsSupport.field_c = param5;
             mk.field_c = param12;
             DualLinkDeque.field_b = param8;
             uk.field_a = param9;

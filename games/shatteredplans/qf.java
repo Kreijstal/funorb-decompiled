@@ -26,7 +26,7 @@ final class qf {
           if (DialogRoot.field_G != null &&
             DialogRoot.field_G.h(0)) {
             DialogRoot.field_G = null;
-            ai.a(3);
+            LeaderboardSortSupport.clearActiveContextMenu(3);
             return true;
           }
           if (param0 != 0) {
@@ -41,7 +41,7 @@ final class qf {
           return false;
         }
         if (DerelictVictoryChecker.field_m.b(true)) {
-          ai.a(param0 + 3);
+          LeaderboardSortSupport.clearActiveContextMenu(param0 + 3);
           return true;
         }
         if (DialogRoot.field_G == null) {
@@ -58,7 +58,7 @@ final class qf {
         }
         if (DialogRoot.field_G.h(0)) {
           DialogRoot.field_G = null;
-          ai.a(3);
+          LeaderboardSortSupport.clearActiveContextMenu(3);
           return true;
         }
         if (param0 == 0) {

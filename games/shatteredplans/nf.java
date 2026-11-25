@@ -224,10 +224,10 @@ final class nf {
           if (var3 != -2) {
             if (var3 != -1) {
               var4 = DialogRoot.field_G.i(-86) ? 1 : 0;
-              bb.a(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.g((byte) -42), var3);
+              LobbyRoomControlsSupport.writePlayerReportRequest(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.g((byte) -42), var3);
             }
             DialogRoot.field_G = null;
-            ai.a(3);
+            LeaderboardSortSupport.clearActiveContextMenu(3);
           }
           var3Lifetime2 = 107 % ((param0 + 29) / 53);
           return;

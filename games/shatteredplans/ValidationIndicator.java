@@ -226,11 +226,11 @@ final class ValidationIndicator extends FocusableWidget {
         if (null != gg.field_e &&
           var9 <= gg.field_e.field_z &&
           gg.field_e.field_w >= var10) {
-          aq.pushSpriteRaster((byte) 90, gg.field_e);
+          IntValueWriteRequest.pushSpriteRaster((byte) 90, gg.field_e);
           SoftwareRasterizer.clear();
         } else {
           gg.field_e = new Sprite(var9, var10);
-          aq.pushSpriteRaster((byte) -107, gg.field_e);
+          IntValueWriteRequest.pushSpriteRaster((byte) -107, gg.field_e);
         }
         var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
         Star.f((byte) -94);

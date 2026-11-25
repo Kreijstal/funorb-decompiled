@@ -61,7 +61,7 @@ final class ProjectsContent implements MenuContent {
     }
 
     final static void a(byte param0) {
-        ai.a(3);
+        LeaderboardSortSupport.clearActiveContextMenu(3);
         if (param0 > -119) {
           return;
         }

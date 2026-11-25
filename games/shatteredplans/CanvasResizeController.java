@@ -158,7 +158,7 @@ final class CanvasResizeController {
             var6 = (BoundsRect) null;
             CanvasResizeController.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
           }
-          stackIn_7_0 = aj.a(1, param4, param1, param2);
+          stackIn_7_0 = ClientContextMenuSupport.containsPointInPolygon(1, param4, param1, param2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

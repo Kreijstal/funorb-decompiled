@@ -35,7 +35,7 @@ final class sn {
         if (js.field_j > 200) {
           var5 = (-js.field_j + 250 << 8) / 50;
         }
-        aq.pushSpriteRaster((byte) -40, SecondaryNodeHashTable.field_i);
+        IntValueWriteRequest.pushSpriteRaster((byte) -40, SecondaryNodeHashTable.field_i);
         wn.c();
         SoftwareRasterizer.clear();
         gq.e(-70);

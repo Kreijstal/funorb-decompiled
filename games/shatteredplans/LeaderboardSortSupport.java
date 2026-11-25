@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai {
+final class LeaderboardSortSupport {
     static int[] field_b;
     static Archive field_c;
     static String[] field_d;
     static int field_a;
     static int field_e;
 
-    final static void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
+    final static void sortLeaderboardEntryIndices(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_25_0 = 0;
@@ -61,15 +61,15 @@ final class ai {
                 ProxyAuthenticationRequiredException.field_d[incrementValue$0] = var12;
               }
             }
-            ai.a(param0, param1, param2, var8, param4, var9, param6);
-            ai.a(param0, param1, var8, param3, (byte) -60, param5, var10);
+            LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, param1, param2, var8, param4, var9, param6);
+            LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, param1, var8, param3, (byte) -60, param5, var10);
             return;
           }
           for (var7_intLifetime1 = param3 - 1; param2 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param2; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = ProxyAuthenticationRequiredException.field_d[var8Lifetime1];
               var10Lifetime1 = ProxyAuthenticationRequiredException.field_d[var8Lifetime1 + 1];
-              if (aq.a(var10Lifetime1, true, var9Lifetime1, param1)) {
+              if (IntValueWriteRequest.ranksLeaderboardEntryBefore(var10Lifetime1, true, var9Lifetime1, param1)) {
                 ProxyAuthenticationRequiredException.field_d[var8Lifetime1] = var10Lifetime1;
                 ProxyAuthenticationRequiredException.field_d[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -88,11 +88,11 @@ final class ai {
         field_c = null;
         field_d = null;
         if (param0 != 1) {
-          ai.clearStatics((byte) 116);
+          LeaderboardSortSupport.clearStatics((byte) 116);
         }
     }
 
-    final static void a(boolean param0) {
+    final static void updateOrbitingGlowOffsets(boolean param0) {
         double var1 = 3.141592653589793 * (double)(RasterStateFrame.field_n % 512) / 256.0;
         int var3 = 16 * (UiWidget.field_t.field_z / 2 - 9);
         ProductionContent.field_c[0] = (int)((double)var3 * Math.sin(var1));
@@ -110,10 +110,10 @@ final class ai {
         }
     }
 
-    final static void a(boolean param0, int param1, String param2, String param3) {
+    final static void openAccountStatusDialog(boolean param0, int param1, String param2, String param3) {
         try {
           if (param1 != -1) {
-            ai.clearStatics((byte) -80);
+            LeaderboardSortSupport.clearStatics((byte) -80);
           }
           AccountCreationDialog.field_Ib = param3;
           MenuWindow.field_B = param2;
@@ -123,7 +123,7 @@ final class ai {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearActiveContextMenu(int param0) {
         if (DerelictVictoryChecker.field_m == null) {
           DerelictVictoryChecker.field_l = null;
           DerelictVictoryChecker.field_m = null;

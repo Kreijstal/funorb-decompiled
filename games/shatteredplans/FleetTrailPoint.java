@@ -75,8 +75,8 @@ final class FleetTrailPoint extends IntrusiveNode {
               return true;
             }
             var4 = ArchiveRequest.field_o;
-            if (0.0 != aq.field_h) {
-              var4 = (int)((double)var4 + Bzip2State.field_u.nextGaussian() * aq.field_h);
+            if (0.0 != IntValueWriteRequest.field_h) {
+              var4 = (int)((double)var4 + Bzip2State.field_u.nextGaussian() * IntValueWriteRequest.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -236,9 +236,9 @@ final class FleetTrailPoint extends IntrusiveNode {
         if (!(Archive.field_b <= 0) ||
           !(PrivateChatMessage.field_k <= 0)) {
           if (null != StatefulWidgetTheme.field_y) {
-            StatefulWidgetTheme.field_y.drawOpaque(am.field_xb.field_hb, 0);
+            StatefulWidgetTheme.field_y.drawOpaque(SocialListPanel.field_xb.field_hb, 0);
           }
-          stackIn_24_0 = am.field_xb;
+          stackIn_24_0 = SocialListPanel.field_xb;
           stackIn_25_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_24_0).drawFullRaster(stackIn_25_1, 123);
           stackIn_28_0 = IntrusiveDeque.field_g;

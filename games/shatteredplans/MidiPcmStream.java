@@ -884,7 +884,7 @@ final class MidiPcmStream extends PcmStream {
                   sq.a(-57, param4, var12.g(-103));
                 }
               } else {
-                aj.a(param6, (byte) -100, var12, var32);
+                ClientContextMenuSupport.openLobbyPlayerContextMenu(param6, (byte) -100, var12, var32);
               }
             }
             var12 = (fb) (var8.nextForward((byte) -71));

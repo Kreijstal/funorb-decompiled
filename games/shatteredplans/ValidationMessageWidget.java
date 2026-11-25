@@ -121,18 +121,18 @@ final class ValidationMessageWidget extends TextHotspotWidget {
             var12 = var20.field_p << 1;
             if (this.field_V == null) {
               this.field_V = new Sprite(var11, var12);
-              aq.pushSpriteRaster((byte) -31, this.field_V);
+              IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_z < var11) {
                 this.field_V = new Sprite(var11, var12);
-                aq.pushSpriteRaster((byte) -31, this.field_V);
+                IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
               } else {
                 if (this.field_V.field_w >= var12) {
-                  aq.pushSpriteRaster((byte) 106, this.field_V);
+                  IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11, var12);
-                  aq.pushSpriteRaster((byte) -31, this.field_V);
+                  IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
                 }
               }
             }
@@ -160,11 +160,11 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime5 &&
             this.field_V.field_w >= var12Lifetime5) {
-            aq.pushSpriteRaster((byte) 106, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
             SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime5, var12Lifetime5);
-            aq.pushSpriteRaster((byte) -31, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
           }
           var19.drawRotatedAbout(112, 144, var19.field_o << 4, var19.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
@@ -188,18 +188,18 @@ final class ValidationMessageWidget extends TextHotspotWidget {
             var12Lifetime1 = var26.field_p << 1;
             if (this.field_V == null) {
               this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
-              aq.pushSpriteRaster((byte) -31, this.field_V);
+              IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_z < var11Lifetime1) {
                 this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
-                aq.pushSpriteRaster((byte) -31, this.field_V);
+                IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
               } else {
                 if (this.field_V.field_w >= var12Lifetime1) {
-                  aq.pushSpriteRaster((byte) 106, this.field_V);
+                  IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
-                  aq.pushSpriteRaster((byte) -31, this.field_V);
+                  IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
                 }
               }
             }
@@ -227,11 +227,11 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime1Lifetime1 &&
             this.field_V.field_w >= var12Lifetime1Lifetime1) {
-            aq.pushSpriteRaster((byte) 106, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
             SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-            aq.pushSpriteRaster((byte) -31, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
           }
           var25.drawRotatedAbout(112, 144, var25.field_o << 4, var25.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
@@ -271,17 +271,17 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           var12Lifetime2 = var31.field_p << 1;
           if (this.field_V == null) {
             this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
-            aq.pushSpriteRaster((byte) -31, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
           } else {
             if (this.field_V.field_z < var11Lifetime2) {
               this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
-              aq.pushSpriteRaster((byte) -31, this.field_V);
+              IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_w < var12Lifetime2) {
                 this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
-                aq.pushSpriteRaster((byte) -31, this.field_V);
+                IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
               } else {
-                aq.pushSpriteRaster((byte) 106, this.field_V);
+                IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
                 SoftwareRasterizer.clear();
               }
             }
@@ -307,11 +307,11 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           if (this.field_V != null &&
             this.field_V.field_z >= var11Lifetime3 &&
             this.field_V.field_w >= var12Lifetime3) {
-            aq.pushSpriteRaster((byte) 106, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
             SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime3, var12Lifetime3);
-            aq.pushSpriteRaster((byte) -31, this.field_V);
+            IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
           }
           var40.drawRotatedAbout(112, 144, var40.field_o << 4, var40.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
@@ -337,11 +337,11 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         if (this.field_V != null &&
           this.field_V.field_z >= var11Lifetime4 &&
           this.field_V.field_w >= var12Lifetime4) {
-          aq.pushSpriteRaster((byte) 106, this.field_V);
+          IntValueWriteRequest.pushSpriteRaster((byte) 106, this.field_V);
           SoftwareRasterizer.clear();
         } else {
           this.field_V = new Sprite(var11Lifetime4, var12Lifetime4);
-          aq.pushSpriteRaster((byte) -31, this.field_V);
+          IntValueWriteRequest.pushSpriteRaster((byte) -31, this.field_V);
         }
         var39.drawRotatedAbout(112, 144, var39.field_o << 4, var39.field_p << 4, -this.field_N << 10, 4096);
         Star.f((byte) -63);

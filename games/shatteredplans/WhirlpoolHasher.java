@@ -120,7 +120,7 @@ final class WhirlpoolHasher {
           }
           if (TaskAi.field_o.field_rb != 0 &&
             !LoginMethodPreference.field_g) {
-            if (ae.field_b) {
+            if (HighscoreResponseSupport.field_b) {
               ClientException.a(true);
             } else {
               sr.field_h = true;
@@ -372,7 +372,7 @@ final class WhirlpoolHasher {
         if (param0 > -95) {
           return;
         }
-        am.a(param3, 3974311, -58, param2, param1, param4);
+        SocialListPanel.drawStackedHexagonPattern(param3, 3974311, -58, param2, param1, param4);
     }
 
     final static void a(boolean param0) {

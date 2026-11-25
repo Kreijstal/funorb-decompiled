@@ -240,7 +240,7 @@ final class bk {
                 decompiledSharedTail0 = (var11 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (ae.field_b)) {
+                (HighscoreResponseSupport.field_b)) {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + qj.field_c + "</col>";
               }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba {
+final class ChatPanelSetupSupport {
     static int field_c;
     static String field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseChatPanelSetupStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -23,7 +23,7 @@ final class ba {
         }
     }
 
-    final static void a(AnimatedPanel param0, AnimatedPanel param1, int param2, AnimatedPanel param3, ScrollBar param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, boolean param8, BitmapFont param9, AnimatedPanel param10, AnimatedPanel param11) {
+    final static void initializeSharedChatPanel(AnimatedPanel param0, AnimatedPanel param1, int param2, AnimatedPanel param3, ScrollBar param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, boolean param8, BitmapFont param9, AnimatedPanel param10, AnimatedPanel param11) {
         String stackIn_16_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_45_0 = null;

@@ -53,7 +53,7 @@ final class ul extends AnimatedPanel {
           SpriteButton.field_u = param1;
         }
         fb.field_zb[wm.field_c] = param2;
-        aj.field_d[wm.field_c] = param3;
+        ClientContextMenuSupport.field_d[wm.field_c] = param3;
         WidgetContainer.field_y[wm.field_c] = param5;
         int var6 = param5 + param3 + param2;
         int var7 = param0 != var6 ? 1000 * param2 / var6 : 0;

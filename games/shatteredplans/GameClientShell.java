@@ -59,15 +59,15 @@ abstract class GameClientShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
-          var4 = sr.a(so.field_o, (byte) 0, param2, ai.field_e);
+          var4 = sr.a(so.field_o, (byte) 0, param2, LeaderboardSortSupport.field_e);
           if (0 == var4) {
             throw new IllegalStateException();
           }
           if (var4 == param1) {
             var5_int = wi.a(CipherPacketBuffer.j((byte) 64), of.a(64), 0);
             if (var5_int != -1) {
-              wo.a(var5_int, (byte) -88, ae.field_e, nl.field_c);
-              ae.field_e = null;
+              wo.a(var5_int, (byte) -88, HighscoreResponseSupport.field_e, nl.field_c);
+              HighscoreResponseSupport.field_e = null;
               nl.field_c = null;
             }
             var11 = DraggableWidget.j(0);
@@ -76,10 +76,10 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), of.a((byte) 42), aq.a(11));
+            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), of.a((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
-              va.a(ae.field_e, (byte) -113, var5_intLifetime1, nl.field_c);
-              ae.field_e = null;
+              va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, nl.field_c);
+              HighscoreResponseSupport.field_e = null;
               nl.field_c = null;
             }
           }
@@ -189,15 +189,15 @@ abstract class GameClientShell extends GameApplet {
         }
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        ai.field_e = this.field_v;
-        ObjectList.a(0, ai.field_e);
-        GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
-        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
+        LeaderboardSortSupport.field_e = this.field_v;
+        ObjectList.a(0, LeaderboardSortSupport.field_e);
+        GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
+        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
-        aj.field_b = OpacityWidget.createMouseWheelHandler(true);
+        ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
         QuickChatCategoryRegistry.a(tm.field_i, false);
         ConquestVictoryChecker.field_k = param2;
-        ai.field_a = param5;
+        LeaderboardSortSupport.field_a = param5;
         ArchiveRequest.field_p = param1;
         SliderPainter.field_j = param6;
         CombinedTerritory.field_B = param7;
@@ -279,7 +279,7 @@ abstract class GameClientShell extends GameApplet {
                 }
               }
             } else {
-              ae.a((byte) 104);
+              HighscoreResponseSupport.readHighscoreResponse((byte) 104);
             }
           } else {
             GameClientShell.f((byte) 24);
@@ -325,25 +325,25 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void initialiseOpcodeLengths(byte param0) {
-        ae.field_a[9] = -1;
-        ae.field_a[10] = -1;
-        ae.field_a[4] = -1;
-        ae.field_a[1] = 16;
-        ae.field_a[6] = -2;
-        ae.field_a[7] = -1;
-        ae.field_a[2] = -2;
+        HighscoreResponseSupport.field_a[9] = -1;
+        HighscoreResponseSupport.field_a[10] = -1;
+        HighscoreResponseSupport.field_a[4] = -1;
+        HighscoreResponseSupport.field_a[1] = 16;
+        HighscoreResponseSupport.field_a[6] = -2;
+        HighscoreResponseSupport.field_a[7] = -1;
+        HighscoreResponseSupport.field_a[2] = -2;
         if (param0 < 62) {
           field_D = 122;
         }
-        ae.field_a[5] = -1;
-        ae.field_a[3] = -1;
-        ae.field_a[11] = -1;
-        ae.field_a[18] = 1;
-        ae.field_a[16] = -1;
-        ae.field_a[8] = -2;
-        ae.field_a[17] = -1;
-        ae.field_a[13] = -1;
-        ae.field_a[12] = -1;
+        HighscoreResponseSupport.field_a[5] = -1;
+        HighscoreResponseSupport.field_a[3] = -1;
+        HighscoreResponseSupport.field_a[11] = -1;
+        HighscoreResponseSupport.field_a[18] = 1;
+        HighscoreResponseSupport.field_a[16] = -1;
+        HighscoreResponseSupport.field_a[8] = -2;
+        HighscoreResponseSupport.field_a[17] = -1;
+        HighscoreResponseSupport.field_a[13] = -1;
+        HighscoreResponseSupport.field_a[12] = -1;
     }
 
     private final static void f(byte param0) {
@@ -386,13 +386,13 @@ abstract class GameClientShell extends GameApplet {
           BoundsRect.field_p.a(true);
         }
         we.a((byte) -59);
-        ae.b((byte) 62);
+        HighscoreResponseSupport.snapshotMouseInput((byte) 62);
         if (!uf.a(false) &&
           SoundPlayback.field_i != 11) {
           Archive.c(-78);
         }
-        if (aj.field_b != null) {
-          so.field_o = aj.field_b.takeRotation(86);
+        if (ClientContextMenuSupport.field_b != null) {
+          so.field_o = ClientContextMenuSupport.field_b.takeRotation(86);
         }
         if (DirectByteArrayStorage.b((byte) -117)) {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
@@ -491,8 +491,8 @@ abstract class GameClientShell extends GameApplet {
           this.i(-82);
         }
         if (1 == DefensiveAi.field_p) {
-          if (ai.field_e != 0) {
-            StarAnnotation.field_j = SoundCache.a(ai.field_a, 124);
+          if (LeaderboardSortSupport.field_e != 0) {
+            StarAnnotation.field_j = SoundCache.a(LeaderboardSortSupport.field_a, 124);
           }
           LinkPainter.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
           tq.field_f = rl.a(-1, true, 1, SliderPainter.field_j, false);
@@ -538,7 +538,7 @@ abstract class GameClientShell extends GameApplet {
             oo.a((byte) -58);
           }
           if (null == AccountStatusDialog.field_rb) {
-            AccountStatusDialog.field_rb = ae.c(3);
+            AccountStatusDialog.field_rb = HighscoreResponseSupport.getSharedPcmMixer(3);
             StripedProgressWidget.field_M = DateInputWidget.a(-123);
           }
           DiskCacheWorker.a(AccountStatusDialog.field_rb, StripedProgressWidget.field_M, 1000, GalaxyMap.field_g);
@@ -550,7 +550,7 @@ abstract class GameClientShell extends GameApplet {
           DefensiveAi.field_p = 10;
         }
         if (DefensiveAi.field_p == 10) {
-          if (ai.field_e != 0) {
+          if (LeaderboardSortSupport.field_e != 0) {
             StandardAi.field_e = SoundCache.a(CombinedTerritory.field_B, 101);
           }
           DefensiveAi.field_p = 11;

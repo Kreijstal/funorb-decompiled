@@ -40,7 +40,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, bb.field_b, 16777215));
+          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215));
           if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }

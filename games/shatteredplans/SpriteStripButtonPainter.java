@@ -92,9 +92,9 @@ final class SpriteStripButtonPainter extends WidgetTheme {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var2_int = param1.length;
-          if (null == ai.field_b ||
-            !(ai.field_b.length >= var2_int * 2)) {
-            ai.field_b = new int[2 * var2_int];
+          if (null == LeaderboardSortSupport.field_b ||
+            !(LeaderboardSortSupport.field_b.length >= var2_int * 2)) {
+            LeaderboardSortSupport.field_b = new int[2 * var2_int];
             en.field_b = new int[var2_int * 2];
           }
           CipherPacketBuffer.field_r = 0;
@@ -113,17 +113,17 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var11 = var4;
                 fieldTemp$18 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$18] = SoftwareRasterizer.field_i;
+                LeaderboardSortSupport.field_b[fieldTemp$18] = SoftwareRasterizer.field_i;
                 fieldTemp$19 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$19] = var9 + (-var8_int + SoftwareRasterizer.field_i) * (-var9 + var11) / (var10 - var8_int);
+                LeaderboardSortSupport.field_b[fieldTemp$19] = var9 + (-var8_int + SoftwareRasterizer.field_i) * (-var9 + var11) / (var10 - var8_int);
               }
               fieldTemp$20 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$20] = var5;
+              LeaderboardSortSupport.field_b[fieldTemp$20] = var5;
               fieldTemp$21 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$21] = var6;
+              LeaderboardSortSupport.field_b[fieldTemp$21] = var6;
             } else {
               if (SoftwareRasterizer.field_i <= var3) {
                 var8_int = var3;
@@ -132,10 +132,10 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var11 = var6;
                 fieldTemp$22 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$22] = SoftwareRasterizer.field_i;
+                LeaderboardSortSupport.field_b[fieldTemp$22] = SoftwareRasterizer.field_i;
                 fieldTemp$23 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$23] = var9 + (var11 - var9) * (SoftwareRasterizer.field_i - var8_int) / (-var8_int + var10);
+                LeaderboardSortSupport.field_b[fieldTemp$23] = var9 + (var11 - var9) * (SoftwareRasterizer.field_i - var8_int) / (-var8_int + var10);
               }
             }
           }
@@ -144,8 +144,8 @@ final class SpriteStripButtonPainter extends WidgetTheme {
             return (int[]) (stackIn_19_0);
           }
           var7 = en.field_b;
-          en.field_b = ai.field_b;
-          ai.field_b = var7;
+          en.field_b = LeaderboardSortSupport.field_b;
+          LeaderboardSortSupport.field_b = var7;
           var2_intLifetime1 = CipherPacketBuffer.field_r;
           CipherPacketBuffer.field_r = 0;
           var5Lifetime1 = en.field_b[var2_intLifetime1 - 2];
@@ -163,17 +163,17 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12 = var4Lifetime1;
                 fieldTemp$12 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$12] = SoftwareRasterizer.field_l;
+                LeaderboardSortSupport.field_b[fieldTemp$12] = SoftwareRasterizer.field_l;
                 fieldTemp$13 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$13] = (var12 - var10Lifetime1) * (-var9Lifetime1 + SoftwareRasterizer.field_l) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
+                LeaderboardSortSupport.field_b[fieldTemp$13] = (var12 - var10Lifetime1) * (-var9Lifetime1 + SoftwareRasterizer.field_l) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
               }
               fieldTemp$14 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$14] = var5Lifetime1;
+              LeaderboardSortSupport.field_b[fieldTemp$14] = var5Lifetime1;
               fieldTemp$15 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$15] = var6Lifetime1;
+              LeaderboardSortSupport.field_b[fieldTemp$15] = var6Lifetime1;
             } else {
               if (var3Lifetime1 < SoftwareRasterizer.field_l) {
                 var9Lifetime1 = var3Lifetime1;
@@ -182,10 +182,10 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12 = var6Lifetime1;
                 fieldTemp$16 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$16] = SoftwareRasterizer.field_l;
+                LeaderboardSortSupport.field_b[fieldTemp$16] = SoftwareRasterizer.field_l;
                 fieldTemp$17 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$17] = var10Lifetime1 + (-var10Lifetime1 + var12) * (SoftwareRasterizer.field_l - var9Lifetime1) / (-var9Lifetime1 + var11Lifetime1);
+                LeaderboardSortSupport.field_b[fieldTemp$17] = var10Lifetime1 + (-var10Lifetime1 + var12) * (SoftwareRasterizer.field_l - var9Lifetime1) / (-var9Lifetime1 + var11Lifetime1);
               }
             }
           }
@@ -196,8 +196,8 @@ final class SpriteStripButtonPainter extends WidgetTheme {
             return null;
           }
           var7Lifetime1 = en.field_b;
-          en.field_b = ai.field_b;
-          ai.field_b = var7Lifetime1;
+          en.field_b = LeaderboardSortSupport.field_b;
+          LeaderboardSortSupport.field_b = var7Lifetime1;
           var2_intLifetime2 = CipherPacketBuffer.field_r;
           CipherPacketBuffer.field_r = 0;
           var5Lifetime2 = en.field_b[var2_intLifetime2 - 2];
@@ -215,17 +215,17 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12Lifetime1 = var4Lifetime2;
                 fieldTemp$6 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$6] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (-var10Lifetime2 + SoftwareRasterizer.field_a) / (var12Lifetime1 - var10Lifetime2);
+                LeaderboardSortSupport.field_b[fieldTemp$6] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (-var10Lifetime2 + SoftwareRasterizer.field_a) / (var12Lifetime1 - var10Lifetime2);
                 fieldTemp$7 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$7] = SoftwareRasterizer.field_a;
+                LeaderboardSortSupport.field_b[fieldTemp$7] = SoftwareRasterizer.field_a;
               }
               fieldTemp$8 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$8] = var5Lifetime2;
+              LeaderboardSortSupport.field_b[fieldTemp$8] = var5Lifetime2;
               fieldTemp$9 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$9] = var6Lifetime2;
+              LeaderboardSortSupport.field_b[fieldTemp$9] = var6Lifetime2;
             } else {
               if (var4Lifetime2 >= SoftwareRasterizer.field_a) {
                 var9Lifetime2 = var3Lifetime2;
@@ -234,10 +234,10 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12Lifetime1 = var6Lifetime2;
                 fieldTemp$10 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$10] = var9Lifetime2 + (SoftwareRasterizer.field_a - var10Lifetime2) * (-var9Lifetime2 + var11Lifetime2) / (-var10Lifetime2 + var12Lifetime1);
+                LeaderboardSortSupport.field_b[fieldTemp$10] = var9Lifetime2 + (SoftwareRasterizer.field_a - var10Lifetime2) * (-var9Lifetime2 + var11Lifetime2) / (-var10Lifetime2 + var12Lifetime1);
                 fieldTemp$11 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$11] = SoftwareRasterizer.field_a;
+                LeaderboardSortSupport.field_b[fieldTemp$11] = SoftwareRasterizer.field_a;
               }
             }
           }
@@ -245,9 +245,9 @@ final class SpriteStripButtonPainter extends WidgetTheme {
             return null;
           }
           var7Lifetime2 = en.field_b;
-          en.field_b = ai.field_b;
+          en.field_b = LeaderboardSortSupport.field_b;
           var2_intLifetime3 = CipherPacketBuffer.field_r;
-          ai.field_b = var7Lifetime2;
+          LeaderboardSortSupport.field_b = var7Lifetime2;
           CipherPacketBuffer.field_r = 0;
           var6Lifetime3 = en.field_b[-1 + var2_intLifetime3];
           var5Lifetime3 = en.field_b[var2_intLifetime3 - 2];
@@ -264,10 +264,10 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12Lifetime2 = var6Lifetime3;
                 fieldTemp$0 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$0] = (SoftwareRasterizer.field_f - var10Lifetime3) * (var11Lifetime3 - var9Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
+                LeaderboardSortSupport.field_b[fieldTemp$0] = (SoftwareRasterizer.field_f - var10Lifetime3) * (var11Lifetime3 - var9Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
                 fieldTemp$1 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$1] = SoftwareRasterizer.field_f;
+                LeaderboardSortSupport.field_b[fieldTemp$1] = SoftwareRasterizer.field_f;
               }
             } else {
               if (SoftwareRasterizer.field_f <= var4Lifetime3) {
@@ -277,17 +277,17 @@ final class SpriteStripButtonPainter extends WidgetTheme {
                 var12Lifetime2 = var4Lifetime3;
                 fieldTemp$2 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$2] = (-var9Lifetime3 + var11Lifetime3) * (SoftwareRasterizer.field_f - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
+                LeaderboardSortSupport.field_b[fieldTemp$2] = (-var9Lifetime3 + var11Lifetime3) * (SoftwareRasterizer.field_f - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
                 fieldTemp$3 = CipherPacketBuffer.field_r;
                 CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-                ai.field_b[fieldTemp$3] = SoftwareRasterizer.field_f;
+                LeaderboardSortSupport.field_b[fieldTemp$3] = SoftwareRasterizer.field_f;
               }
               fieldTemp$4 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$4] = var5Lifetime3;
+              LeaderboardSortSupport.field_b[fieldTemp$4] = var5Lifetime3;
               fieldTemp$5 = CipherPacketBuffer.field_r;
               CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
-              ai.field_b[fieldTemp$5] = var6Lifetime3;
+              LeaderboardSortSupport.field_b[fieldTemp$5] = var6Lifetime3;
             }
           }
           if (CipherPacketBuffer.field_r == 0) {
@@ -297,7 +297,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
           var15 = new int[CipherPacketBuffer.field_r];
           var14 = var15;
           var8 = var14;
-          ArrayOperations.copyInts(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
+          ArrayOperations.copyInts(LeaderboardSortSupport.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
           stackIn_65_0 = var8;
           return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

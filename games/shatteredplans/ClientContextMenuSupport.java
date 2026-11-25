@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj {
+final class ClientContextMenuSupport {
     static MouseWheelInput field_b;
     static PcmPlayerService field_e;
     static int field_c;
@@ -44,7 +44,7 @@ final class aj {
         }
     }
 
-    final static void a(boolean param0, byte param1, fb param2, String param3) {
+    final static void openLobbyPlayerContextMenu(boolean param0, byte param1, fb param2, String param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -109,7 +109,7 @@ final class aj {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int[] param3) {
+    final static boolean containsPointInPolygon(int param0, int param1, int param2, int[] param3) {
         int var7 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -162,7 +162,7 @@ final class aj {
         System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
     }
 
-    final static ChatMessage a(String param0, boolean param1, boolean param2, String param3) {
+    final static ChatMessage createLoginCredentials(String param0, boolean param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;

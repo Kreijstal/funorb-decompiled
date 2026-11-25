@@ -60,7 +60,7 @@ final class OpacityWidget extends SingleChildWidget {
         }
         if (this.alpha != 256) {
           var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
-          aq.pushSpriteRaster((byte) 114, var6);
+          IntValueWriteRequest.pushSpriteRaster((byte) 114, var6);
           this.field_z.drawLayer(param0, param1, 0, 0);
           Star.f((byte) -78);
           var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.alpha);
@@ -134,7 +134,7 @@ final class OpacityWidget extends SingleChildWidget {
           AccountCreationForm.field_G = param4;
           PlayerStats.field_j = param2;
           wh.field_c = null;
-          ae.field_g = param0;
+          HighscoreResponseSupport.field_g = param0;
           jm.field_t = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

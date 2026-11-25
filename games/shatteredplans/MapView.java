@@ -2551,7 +2551,7 @@ final class MapView extends MapViewState {
         int var11Lifetime1;
         this.field_s = param1;
         this.field_mb = param0;
-        ai.a(true);
+        LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
         if (sm.field_e) {
           if (RasterStateFrame.field_n - this.field_L > 30) {
             if (null == this.field_gb) {

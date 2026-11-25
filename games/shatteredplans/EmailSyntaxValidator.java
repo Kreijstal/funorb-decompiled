@@ -60,11 +60,11 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
         sj.field_b = new DisplayNameForm();
         if (param0 == -26049) {
-          ae.field_f.setContent(sj.field_b, -54);
+          HighscoreResponseSupport.field_f.setContent(sj.field_b, -54);
           return;
         }
         field_o = (Sprite) null;
-        ae.field_f.setContent(sj.field_b, -54);
+        HighscoreResponseSupport.field_f.setContent(sj.field_b, -54);
     }
 
     final static void d(int param0) {

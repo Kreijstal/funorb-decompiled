@@ -79,7 +79,7 @@ abstract class Dialog extends WidgetContainer {
           !(ArchiveIndex.field_r.field_w >= this.field_n)) {
           ArchiveIndex.field_r = new Sprite(this.field_x, this.field_n);
         }
-        aq.pushSpriteRaster((byte) 110, ArchiveIndex.field_r);
+        IntValueWriteRequest.pushSpriteRaster((byte) 110, ArchiveIndex.field_r);
         SoftwareRasterizer.clear();
         this.drawFrame(0, 103, 0);
         super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);

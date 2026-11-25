@@ -100,7 +100,7 @@ final class Bzip2State {
         }
         try {
           MidiPcmStream.field_L = rs.field_zb + uq.field_h;
-          RecklessAi.field_r = rs.field_zb + an.field_a;
+          RecklessAi.field_r = rs.field_zb + TerritoryResourcePanelSupport.field_a;
           oq.field_i = new String[33];
           oq.field_i[14] = tm.field_o;
           oq.field_i[0] = wm.field_f;
@@ -146,7 +146,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[4] = CheckboxWidget.field_D;
           QuickChatPhraseRegistry.field_g[6] = ChatMessage.field_f;
           QuickChatPhraseRegistry.field_g[10] = Dialog.field_H;
-          QuickChatPhraseRegistry.field_g[12] = am.field_zb;
+          QuickChatPhraseRegistry.field_g[12] = SocialListPanel.field_zb;
           QuickChatPhraseRegistry.field_g[2] = LinkPainter.field_c;
           QuickChatPhraseRegistry.field_g[15] = DelegatingCanvas.field_c;
           QuickChatPhraseRegistry.field_g[13] = kh.field_Eb;

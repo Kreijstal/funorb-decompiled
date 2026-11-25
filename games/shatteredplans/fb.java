@@ -213,7 +213,7 @@ final class fb extends AnimatedPanel {
         DualLinkDequeSequence.field_f.field_y = 1;
         DualLinkDequeSequence.field_f.field_kb = fg.field_b.field_kb;
         if (Archive.field_b > 0) {
-          bb.a(param5, param0, (byte) -2, param2);
+          LobbyRoomControlsSupport.updateLobbyRoomControls(param5, param0, (byte) -2, param2);
         }
         if (PrivateChatMessage.field_k > 0) {
           uo.a((byte) 23, param0, param2, param7, param5);

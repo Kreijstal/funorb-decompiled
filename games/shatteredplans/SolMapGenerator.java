@@ -143,10 +143,10 @@ final class SolMapGenerator extends StandardMapGenerator {
         int var9 = 0;
         int var13 = ShatteredPlansClient.field_F ? 1 : 0;
         int var8Lifetime1;
-        os.field_u = ae.a(-115, "commonui", param1, "frame_top");
-        IntrusiveNode.field_d = ae.a(-125, "commonui", param1, "frame_bottom");
+        os.field_u = HighscoreResponseSupport.loadSpriteSetByName(-115, "commonui", param1, "frame_top");
+        IntrusiveNode.field_d = HighscoreResponseSupport.loadSpriteSetByName(-125, "commonui", param1, "frame_bottom");
         kb.field_v = id.a(2, param1, "commonui", "jagex_logo_grey");
-        AttackTask.field_q = ae.a(-80, "commonui", param1, "button");
+        AttackTask.field_q = HighscoreResponseSupport.loadSpriteSetByName(-80, "commonui", param1, "button");
         MenuList.field_w = va.a("validation", 0, "commonui", param1);
         EmailValidator.field_x = (BitmapFont) ((Object) LoginForm.a("arezzo12", "commonui", param1, param2, (byte) -17));
         StatefulWidgetTheme.field_u = (BitmapFont) ((Object) LoginForm.a("arezzo14", "commonui", param1, param2, (byte) 90));

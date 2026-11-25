@@ -54,16 +54,16 @@ final class IsaacRandom {
             if (gb.field_i == 2) {
               js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
-              hq.a(ae.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
+              hq.a(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
               js.field_a.write(13, 0, var2.payload, -13976);
               gb.field_i = gb.field_i + 1;
-              am.field_Cb = 30000L + pr.currentTimeMillis(14274);
+              SocialListPanel.field_Cb = 30000L + pr.currentTimeMillis(14274);
             }
             if (gb.field_i == 3) {
               if (js.field_a.available(-1) <= 0) {
-                if (am.field_Cb < pr.currentTimeMillis(14274)) {
+                if (SocialListPanel.field_Cb < pr.currentTimeMillis(14274)) {
                   stackIn_31_0 = is.a((byte) -94, -2);
                   return stackIn_31_0;
                 }

@@ -111,7 +111,7 @@ final class gi {
               DefendTask.a(1, n.a("lose", -21502));
             }
           }
-          aj.field_a.clear(0);
+          ClientContextMenuSupport.field_a.clear(0);
           if (WeightedLruCache.field_g == PanelNode.field_q) {
             ei.field_e = TargetedChatMessage.field_j;
             AccountFieldValue.field_f = ArchiveRequest.field_r;

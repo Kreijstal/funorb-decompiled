@@ -100,7 +100,7 @@ final class ScrollBar extends AnimatedPanel {
           }
           return true;
         }
-        if (this.field_Ab.field_N + this.field_Ab.field_w > bb.field_b) {
+        if (this.field_Ab.field_N + this.field_Ab.field_w > LobbyRoomControlsSupport.field_b) {
           this.field_Hb = 3;
           return true;
         }
@@ -188,7 +188,7 @@ final class ScrollBar extends AnimatedPanel {
           var2Lifetime1 = 125 % ((param0 + 29) / 47);
           return false;
         }
-        if (bb.field_b >= this.field_Ab.field_N + this.field_Ab.field_w + (this.field_Ab.field_mb + this.field_Ab.field_gb)) {
+        if (LobbyRoomControlsSupport.field_b >= this.field_Ab.field_N + this.field_Ab.field_w + (this.field_Ab.field_mb + this.field_Ab.field_gb)) {
           this.field_Hb = 3;
           return true;
         }
@@ -220,7 +220,7 @@ final class ScrollBar extends AnimatedPanel {
           return;
         }
         String var2 = (String) null;
-        PasswordInputPainter.showLoginForm(ae.field_g, (String) null, (byte) 3);
+        PasswordInputPainter.showLoginForm(HighscoreResponseSupport.field_g, (String) null, (byte) 3);
     }
 
     final boolean f(boolean param0) {

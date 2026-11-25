@@ -214,10 +214,10 @@ final class gq {
           var8Lifetime1 = je.sine(var6Lifetime1, (byte) -104) >> 8;
           var9Lifetime1 = IntrusiveNode.cosine(var6Lifetime1, -123) >> 8;
           if (-1 != TertiaryListSequence.field_k &&
-            bb.field_b != -1) {
+            LobbyRoomControlsSupport.field_b != -1) {
             var7Lifetime1 = TertiaryListSequence.field_k - 320;
             var9Lifetime1 = -128;
-            var8Lifetime1 = 240 - bb.field_b;
+            var8Lifetime1 = 240 - LobbyRoomControlsSupport.field_b;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1)));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);

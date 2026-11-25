@@ -43,7 +43,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
           if (PasswordInputPainter.field_x.field_P.field_y == 0) {
             oq.field_i[11] = kd.field_c;
           } else {
-            oq.field_i[11] = bb.field_a;
+            oq.field_i[11] = LobbyRoomControlsSupport.field_a;
           }
         }
         if (param0 != 8) {
@@ -300,7 +300,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             var8 = QuaternaryLinkNode.field_v;
           } else {
             if (ObjectList.field_f == var9) {
-              var8 = ba.field_b;
+              var8 = ChatPanelSetupSupport.field_b;
             }
           }
           dupTemp$0 = new LabeledChildWidget(10, this.field_q, -20 + this.field_x, 25, this.field_H, false, 80, 3, var7, 16777215, var8);

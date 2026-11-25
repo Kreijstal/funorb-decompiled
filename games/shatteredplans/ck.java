@@ -63,7 +63,7 @@ final class ck {
           SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           OpacityWidget.popLegacyRasterState(param6 + 8);
-          HuffmanCodec.field_d = ae.a(101, "", param0, "edge_orbs");
+          HuffmanCodec.field_d = HighscoreResponseSupport.loadSpriteSetByName(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
           RandomAccessCacheFile.a(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
@@ -79,7 +79,7 @@ final class ck {
           IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
           jm.field_r = id.a(2, param0, "", "instr_mainview");
           NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
-          ae.a(-100, "", param0, "zoomicons");
+          HighscoreResponseSupport.loadSpriteSetByName(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
           TurnEventLog.field_d = var9[3];
           MusicCrossfadeStream.field_F = var9[2];
@@ -100,7 +100,7 @@ final class ck {
           ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           ObjectList.field_d = va.a("production_icons", 0, "", param0);
-          aq.field_i = MessageKind.a(true, param0, "", "production_button");
+          IntValueWriteRequest.field_i = MessageKind.a(true, param0, "", "production_button");
           hq.field_a = MessageKind.a(true, param0, "", "production_button_down");
           d.field_b = va.a("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
@@ -281,7 +281,7 @@ final class ck {
           IntHashIndex.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
           ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
-          CellVertex.field_j = ae.a(param6 + 70, "", param0, "achievements");
+          CellVertex.field_j = HighscoreResponseSupport.loadSpriteSetByName(param6 + 70, "", param0, "achievements");
           var14 = CellVertex.field_j.length;
           ql.field_o = new Sprite[var14];
           MapView.field_sb = new Sprite[var14];

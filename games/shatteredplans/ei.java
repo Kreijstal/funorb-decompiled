@@ -171,7 +171,7 @@ final class ei {
             var7 = var13;
             SoftwareRasterizer.saveClip(var15);
             SoftwareRasterizer.fillRoundedRectAlpha(param5, param4, param2, param1, 10, 0, 200);
-            am.a(-10 + param2, param6, param3 ^ 12362, -10 + param1, param5, param4);
+            SocialListPanel.drawStackedHexagonPattern(-10 + param2, param6, param3 ^ 12362, -10 + param1, param5, param4);
             SoftwareRasterizer.drawHorizontalLine(param5 + 10, param4, param2 - 20, 2052949);
             SoftwareRasterizer.drawHorizontalLine(10 + param5, param4 + param1, param2 - 20, 0);
             SoftwareRasterizer.intersectClip(param5, param4, param5 + 10, 10 + param4);
@@ -231,7 +231,7 @@ final class ei {
         if (DefensiveAi.field_p < 2) {
           return 0;
         }
-        if (0 == ai.field_e) {
+        if (0 == LeaderboardSortSupport.field_e) {
           if (!LinkPainter.field_g.isIndexLoaded((byte) 122)) {
             return 20;
           }

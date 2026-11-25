@@ -26,8 +26,8 @@ final class QuickChatCategoryRegistry {
         }
         try {
           WidgetStateStyle.attachMouseListeners((byte) -58, (java.awt.Component) ((Object) param0));
-          if (aj.field_b != null) {
-            aj.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
+          if (ClientContextMenuSupport.field_b != null) {
+            ClientContextMenuSupport.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "re.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

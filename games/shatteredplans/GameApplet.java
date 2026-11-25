@@ -88,8 +88,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 112) {
             return;
           }
-          if (null != aj.field_e) {
-            aj.field_e.close();
+          if (null != ClientContextMenuSupport.field_e) {
+            ClientContextMenuSupport.field_e.close();
           }
           if (null != IsolationistAi.field_q) {
             IsolationistAi.field_q.close();

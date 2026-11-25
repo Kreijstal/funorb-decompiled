@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb {
+final class LobbyRoomControlsSupport {
     static String field_d;
     static int field_c;
     static String field_a;
     static int field_b;
 
-    final static FleetVisual a(int param0, FleetMove param1) {
+    final static FleetVisual createReverseFleetVisual(int param0, FleetMove param1) {
         FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         FleetVisual stackIn_2_0 = null;
@@ -39,21 +39,21 @@ final class bb {
         }
     }
 
-    final static AnimatedPanel a(byte param0) {
+    final static AnimatedPanel getLobbyScrollContent(byte param0) {
         if (param0 != 100) {
-          bb.a(false, false, (byte) 25, -35);
+          LobbyRoomControlsSupport.updateLobbyRoomControls(false, false, (byte) 25, -35);
         }
         return ls.field_a.field_xb;
     }
 
-    final static void a(int param0, long param1, int param2, boolean param3, String param4, int param5) {
+    final static void writePlayerReportRequest(int param0, long param1, int param2, boolean param3, String param4, int param5) {
         int var7_int = 0;
         try {
           js.field_f.h(param2, 255);
           js.field_f.position = js.field_f.position + 1;
           var7_int = js.field_f.position;
           if (param0 < 18) {
-            bb.a(false, true, (byte) -52, -121);
+            LobbyRoomControlsSupport.updateLobbyRoomControls(false, true, (byte) -52, -121);
           }
           js.field_f.writeLong(-16426, param1);
           js.field_f.writeString(param4, (byte) 0);
@@ -73,7 +73,7 @@ final class bb {
         field_a = null;
     }
 
-    final static void a(boolean param0, boolean param1, byte param2, int param3) {
+    final static void updateLobbyRoomControls(boolean param0, boolean param1, byte param2, int param3) {
         int stackIn_13_0 = 0;
         AnimatedPanel stackIn_25_0 = null;
         String stackIn_26_1 = null;
@@ -118,8 +118,8 @@ final class bb {
             var17 = var15;
             TextFieldWidget.field_I.field_mb = 0;
             var17.field_K = 0;
-            var5 = aq.field_j;
-            aq.field_j.field_mb = 0;
+            var5 = IntValueWriteRequest.field_j;
+            IntValueWriteRequest.field_j.field_mb = 0;
             var5.field_K = 0;
             var6 = DualLinkDequeSequence.field_f;
             DualLinkDequeSequence.field_f.field_mb = 0;
@@ -127,7 +127,7 @@ final class bb {
             ArchiveSourceManager.field_f.field_z = ByteArrayStorage.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
             DualLinkDequeSequence.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
-            aq.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
+            IntValueWriteRequest.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
             if (nl.field_a.length == 1 &&
               2 == nl.field_a[0]) {
               var8 = 0;
@@ -157,7 +157,7 @@ final class bb {
                 break;
               }
             }
-            aq.field_j.field_s = true;
+            IntValueWriteRequest.field_j.field_s = true;
             if (TurnEventLog.field_i) {
               DialPainter.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
@@ -183,9 +183,9 @@ final class bb {
                 var9 = (String) (var9) + "...";
               }
               DualLinkDequeSequence.field_f.field_z = (String) (var9);
-              aq.field_j.field_z = fb.field_bc.toUpperCase();
+              IntValueWriteRequest.field_j.field_z = fb.field_bc.toUpperCase();
             } else {
-              stackIn_25_0 = aq.field_j;
+              stackIn_25_0 = IntValueWriteRequest.field_j;
               if (var8 != 0) {
                 stackIn_26_1 = CombinedTerritory.field_A;
               } else {
@@ -198,7 +198,7 @@ final class bb {
               } else {
                 stackIn_29_1 = SpriteStripButtonPainter.field_v;
               }
-              stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
+              stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{IntValueWriteRequest.field_j.field_z});
               DualLinkDequeSequence.field_f.field_z = wg.field_b;
               DialPainter.field_g.field_s = true;
               wg.field_d = true;
@@ -222,8 +222,8 @@ final class bb {
                 }
               }
               if (!wg.field_d) {
-                aq.field_j.field_s = false;
-                if (aq.field_j.field_v) {
+                IntValueWriteRequest.field_j.field_s = false;
+                if (IntValueWriteRequest.field_j.field_v) {
                   var9 = null;
                   if (RasterBuffer.field_h) {
                     var9 = "<col=A00000>" + wl.field_b + "</col>";
@@ -249,7 +249,7 @@ final class bb {
               }
             }
           }
-          stackIn_70_0 = am.field_xb;
+          stackIn_70_0 = SocialListPanel.field_xb;
           stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
@@ -264,7 +264,7 @@ final class bb {
             if (stackIn_83_0 != -1) {
               je.a((byte) 62, param3);
             }
-            if (0 != aq.field_j.field_rb) {
+            if (0 != IntValueWriteRequest.field_j.field_rb) {
               if (!TurnEventLog.field_i) {
                 AllianceExpiredEvent.a(param3, 104);
               } else {

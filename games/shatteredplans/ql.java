@@ -87,7 +87,7 @@ final class ql extends IntrusiveNode {
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         SoundPlayback var1Lifetime1;
         try {
-          aj.field_e.service();
+          ClientContextMenuSupport.field_e.service();
           IsolationistAi.field_q.service();
           if (param0 != -26848) {
             ql.clearStatics((byte) 108);

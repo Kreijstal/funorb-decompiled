@@ -205,7 +205,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             }
             var1_int = 1;
           }
-          AccountStatusDialog.field_nb.a(-1, RoundedFrameSupport.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.a(-15073, bb.field_b, TertiaryListSequence.field_k));
+          AccountStatusDialog.field_nb.a(-1, RoundedFrameSupport.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k));
           if (AccountStatusDialog.field_nb.a((byte) 36)) {
             var1_int = 1;
           }

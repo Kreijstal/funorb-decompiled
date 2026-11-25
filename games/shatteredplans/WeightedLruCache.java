@@ -126,7 +126,7 @@ final class WeightedLruCache {
     }
 
     final static void b(byte param0) {
-        ae.field_f.setContent(new GuestPlayForm(), 127);
+        HighscoreResponseSupport.field_f.setContent(new GuestPlayForm(), 127);
         if (param0 >= -76) {
           WeightedLruCache.a(false);
         }

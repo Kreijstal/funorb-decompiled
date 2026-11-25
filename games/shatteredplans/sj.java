@@ -26,7 +26,7 @@ final class sj {
           if (param0 <= 42) {
             field_a = (int[]) null;
           }
-          an.a(true);
+          TerritoryResourcePanelSupport.clearSocialLists(true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -113,7 +113,7 @@ final class sj {
               if (1 != var5_intLifetime2) {
                 var6_ref = (String) (var6_ref) + oo.field_f;
               } else {
-                var6_ref = (String) (var6_ref) + aq.field_n;
+                var6_ref = (String) (var6_ref) + IntValueWriteRequest.field_n;
                 var7 = var6_ref;
                 var5 = var7;
               }

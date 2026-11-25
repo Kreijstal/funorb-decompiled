@@ -1164,7 +1164,7 @@ final class GameSession implements AiHost {
                       var8.field_r != 0 &&
                       var8.field_h == var8.field_k.field_y) {
                       var9 = new FleetMove(var7_ref_eg.field_p, var8.field_k, var8.field_h, var8.field_r);
-                      var10 = bb.a(-2, var9);
+                      var10 = LobbyRoomControlsSupport.createReverseFleetVisual(-2, var9);
                       this.field_z.field_v.addLast((byte) -113, var10);
                       if (var10.field_x > this.field_z.field_y) {
                         this.field_z.field_y = var10.field_x;
@@ -1327,8 +1327,8 @@ final class GameSession implements AiHost {
             if (je.field_d == 1) {
               this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
-            this.handleMapPointer(-3587, TertiaryListSequence.field_k, bb.field_b);
-            this.field_z.updateHoverTarget(this.field_m, 0, TertiaryListSequence.field_k, bb.field_b);
+            this.handleMapPointer(-3587, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
+            this.field_z.updateHoverTarget(this.field_m, 0, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
@@ -1383,7 +1383,7 @@ final class GameSession implements AiHost {
           if (decompiledFrameRemainder1) {
             if (this.field_G) {
               var6 = -this.field_z.field_db + TertiaryListSequence.field_k;
-              var7 = -this.field_z.field_e + bb.field_b;
+              var7 = -this.field_z.field_e + LobbyRoomControlsSupport.field_b;
               var3 = var3 - this.field_z.field_I * (float)var6 / 300.0f;
               if (0.0f > var3) {
                 var3 = 0.0f;
@@ -1399,7 +1399,7 @@ final class GameSession implements AiHost {
                 var4 = (float)(this.field_P.field_g.field_b - 0);
               }
             }
-            this.field_z.field_e = bb.field_b;
+            this.field_z.field_e = LobbyRoomControlsSupport.field_b;
             this.field_G = true;
             this.field_z.field_db = TertiaryListSequence.field_k;
           }
@@ -1411,7 +1411,7 @@ final class GameSession implements AiHost {
             var6Lifetime1 = 320;
             var7Lifetime1 = this.field_Y.getAreaHeight((byte) 14) / 2;
             var8 = var3 + (float)(TertiaryListSequence.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
-            var9 = (float)(bb.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
+            var9 = (float)(LobbyRoomControlsSupport.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
             if (0 >= so.field_o) {
               var10 = 2 * so.field_o;
               while (var10 < 0) {
@@ -1447,7 +1447,7 @@ final class GameSession implements AiHost {
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
               var3 = var8 - var5 * (float)(-var6Lifetime1 + TertiaryListSequence.field_k) / 300.0f;
-              var4 = var9 - var5 * (float)(bb.field_b - var7Lifetime1) / 300.0f;
+              var4 = var9 - var5 * (float)(LobbyRoomControlsSupport.field_b - var7Lifetime1) / 300.0f;
             }
             if (0.0f > var3) {
               var3 = 0.0f;
@@ -1482,7 +1482,7 @@ final class GameSession implements AiHost {
             (this.field_z.field_S != null)) {
             discarded$0 = this.handleFleetClick((byte) 121, this.field_z.field_S);
           }
-          this.field_z.updateHoverFade(TertiaryListSequence.field_k, bb.field_b, param0 ^ 69);
+          this.field_z.updateHoverFade(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, param0 ^ 69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

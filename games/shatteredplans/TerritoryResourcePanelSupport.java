@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an {
+final class TerritoryResourcePanelSupport {
     static AccountCreationForm field_b;
     static int field_c;
     static AnimatedPanel field_d;
     static String field_a;
 
-    final static void a(boolean param0) {
+    final static void clearSocialLists(boolean param0) {
         DualLinkNode var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         DualLinkNode var1Lifetime1;
@@ -45,7 +45,7 @@ final class an {
         field_b = null;
     }
 
-    final static MenuList a(byte param0, boolean param1, Territory param2) {
+    final static MenuList createTerritoryResourcePanel(byte param0, boolean param1, Territory param2) {
         int var6_int = 0;
         String dupTemp$0 = null;
         MenuList stackIn_13_0 = null;
@@ -81,7 +81,7 @@ final class an {
             var4Lifetime2 = var12 + " (" + param2.field_o.name + ")";
           }
           if (param0 != -76) {
-            an.clearStatics(true);
+            TerritoryResourcePanelSupport.clearStatics(true);
           }
           var5 = new kb(0, 0, 209, param2.field_o.field_k, var4Lifetime2, 16777215, false);
           var13.addChild(var5, 8);
