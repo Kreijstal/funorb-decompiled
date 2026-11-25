@@ -55,7 +55,7 @@ final class AccountNameValidationSupport {
         RuntimeException var3_ref = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = wp.a((byte) -127, param1, param2);
+          var3 = RematchMenuSupport.validateAccountName((byte) -127, param1, param2);
           var4 = 127 % ((-49 - param0) / 45);
           if (var3 != null) {
             stackIn_4_0 = var3;

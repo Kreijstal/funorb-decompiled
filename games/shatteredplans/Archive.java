@@ -376,7 +376,7 @@ final class Archive {
 
     private final synchronized void loadGroup(byte param0, int param1) {
         if (!this.field_j) {
-          this.field_m[param1] = wq.a(false, (byte) -126, this.field_e.a((byte) -120, param1));
+          this.field_m[param1] = HighscorePlayerRecord.wrapByteArray(false, (byte) -126, this.field_e.a((byte) -120, param1));
         } else {
           this.field_m[param1] = this.field_e.a((byte) -112, param1);
         }
@@ -894,7 +894,7 @@ final class Archive {
               if (this.field_k != 0) {
                 var7[var18Lifetime2] = var38[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = wq.a(false, (byte) -127, var38[var17Lifetime3]);
+                var7[var18Lifetime2] = HighscorePlayerRecord.wrapByteArray(false, (byte) -127, var38[var17Lifetime3]);
               }
             }
           } else {
@@ -906,7 +906,7 @@ final class Archive {
             if (0 != this.field_k) {
               var7[var11] = var41;
             } else {
-              var7[var11] = wq.a(false, (byte) -126, var34);
+              var7[var11] = HighscorePlayerRecord.wrapByteArray(false, (byte) -126, var34);
             }
           }
           return true;

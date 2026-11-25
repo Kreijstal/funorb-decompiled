@@ -87,7 +87,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_o.sentinel) {
-            wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
+            RematchMenuSupport.insertBeforeFullInts(-128, param1, param0);
             this.field_m = ((PcmMixerListener) (this.field_o.sentinel.next)).field_h;
             return;
           }
@@ -97,7 +97,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
+        RematchMenuSupport.insertBeforeFullInts(-128, param1, param0);
         this.field_m = ((PcmMixerListener) (this.field_o.sentinel.next)).field_h;
         return;
     }

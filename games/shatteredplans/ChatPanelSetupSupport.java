@@ -158,7 +158,7 @@ final class ChatPanelSetupSupport {
             !LoginMethodPreference.field_g) {
             return;
           }
-          wi.field_c = new BirthDateConfirmationForm(0, 0, 0, 0);
+          RasterSpanFactory.field_c = new BirthDateConfirmationForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

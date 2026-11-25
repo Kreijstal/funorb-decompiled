@@ -179,7 +179,7 @@ final class LobbyUiSetupSupport {
             LobbyUiSetupSupport.clearStatics(-52);
           }
           if (DiplomacyRowSupport.field_a.length >= 2) {
-            QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, wl.field_b);
+            QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, OrderableInsertionSupport.field_b);
             array$0 = new IconLabelPanel[1 + DiplomacyRowSupport.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
             ByteArrayNode.field_p[1][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);

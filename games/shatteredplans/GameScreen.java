@@ -197,7 +197,7 @@ final class GameScreen {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.showStatusText(10, 0, QuickChatCategoryRegistry.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
+              this.showStatusText(10, 0, QuickChatCategoryRegistry.a(RematchMenuSupport.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
               if (var9 == 0) {
                 return;
               }
@@ -727,7 +727,7 @@ final class GameScreen {
                     stackIn_84_0 = this.field_s.field_P.field_v[var10].field_k;
                   }
                   var8_intLifetime1 = stackIn_84_0;
-                  var6_ref_ff__[var9_int].a(-2948, wm.a(var8_intLifetime1, 0));
+                  var6_ref_ff__[var9_int].a(-2948, UiSpriteSupport.createColourisedIcon(var8_intLifetime1, 0));
                   var9_int++;
                 }
                 if (decompiledFrameCompleted0) {
@@ -752,7 +752,7 @@ final class GameScreen {
                   var7.field_o = null;
                   break;
                 }
-                var6_ref_ff__[var9_int].a(-2948, wm.a(-1, 0));
+                var6_ref_ff__[var9_int].a(-2948, UiSpriteSupport.createColourisedIcon(-1, 0));
                 var9_int++;
               } while (var11 == 0);
               var9 = (MenuComponent) (var7.field_l.startForward(0));
@@ -787,7 +787,7 @@ final class GameScreen {
             }
             var6 = stackIn_122_0;
             if (var4 != 0) {
-              var3.field_f[0][var4].a(-2948, wm.a(var6, 0));
+              var3.field_f[0][var4].a(-2948, UiSpriteSupport.createColourisedIcon(var6, 0));
             } else {
               var3.field_f[0][var4].a(-2948, BattleContribution.a(var6, false));
             }
@@ -1520,7 +1520,7 @@ final class GameScreen {
                 continue;
               }
             }
-            wj.a(this.field_B, (byte) -112);
+            MenuPointerSupport.pollMenuPointer(this.field_B, (byte) -112);
             if (DualLinkDequeSequence.field_h != null) {
               var10_ref_Integer = (Integer) (DualLinkDequeSequence.field_h.field_h);
               var11_int = var10_ref_Integer.intValue();
@@ -3272,8 +3272,8 @@ final class GameScreen {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted3 = true;
           var3_int = stackIn_34_0;
-          wj.a(this.field_y, (byte) -99);
-          if (wl.field_f != null) {
+          MenuPointerSupport.pollMenuPointer(this.field_y, (byte) -99);
+          if (OrderableInsertionSupport.field_f != null) {
             var4_ref_vd = (MenuComponent) (this.field_y.startForward(0));
             while (null != var4_ref_vd) {
               stackIn_73_0 = var4_ref_vd instanceof MenuWindow;
@@ -3287,7 +3287,7 @@ final class GameScreen {
               }
               var5 = (MenuWindow) (var4_ref_vd);
               if (var5.field_s &&
-                var5.isOrContains((byte) 43, wl.field_f)) {
+                var5.isOrContains((byte) 43, OrderableInsertionSupport.field_f)) {
                 this.a(62, var5);
                 var5.field_A = false;
                 if (var5 == this.field_e) {
@@ -3332,7 +3332,7 @@ final class GameScreen {
                 this.field_n.setSelected(false);
               }
               if (this.field_cb == var4_ref_qh) {
-                this.field_W.field_o = wm.field_a;
+                this.field_W.field_o = UiSpriteSupport.field_a;
                 this.field_W.setSelected(false);
               }
               if (var4_ref_qh == this.field_nb) {
@@ -3402,11 +3402,11 @@ final class GameScreen {
                 this.field_cb.field_s = true;
                 if (var9 != 0) {
                   this.field_cb.field_s = false;
-                  this.field_W.field_o = wm.field_a;
+                  this.field_W.field_o = UiSpriteSupport.field_a;
                 }
               } else {
                 this.field_cb.field_s = false;
-                this.field_W.field_o = wm.field_a;
+                this.field_W.field_o = UiSpriteSupport.field_a;
               }
               this.field_cb.field_A = false;
               this.field_W.setSelected(false);
@@ -4232,7 +4232,7 @@ final class GameScreen {
           var7 = -1 + DebouncedValidator.field_g;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var7 < 0))) {
-            var8_ref_nf = wm.field_d[var7];
+            var8_ref_nf = UiSpriteSupport.field_d[var7];
             stackIn_21_0 = ~TargetedChatMessage.field_i;
             if (var11 == 0) {
               stackIn_10_0 = (stackIn_21_0 >= ~var5) ? 0 : 1;
@@ -4263,7 +4263,7 @@ final class GameScreen {
           var8 = stackIn_21_0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < DebouncedValidator.field_g)))) {
-            var9_ref_nf = wm.field_d[var8];
+            var9_ref_nf = UiSpriteSupport.field_d[var8];
             if (var11 == 0) {
               if (null != var9_ref_nf.field_j) {
                 this.field_E.field_xb.addChild(4, var9_ref_nf.field_j);
@@ -5095,13 +5095,13 @@ final class GameScreen {
           this.field_n.field_o = IntArrayReadRequest.field_o;
           this.field_y.addLast((byte) -113, this.field_n);
           this.field_W = new ToggleButton(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
-          this.field_W.field_o = wm.field_a;
+          this.field_W.field_o = UiSpriteSupport.field_a;
           this.field_y.addLast((byte) -113, this.field_W);
           this.field_mb = new ToggleButton(HuffmanCodec.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, NotificationEntry.field_r.field_z, NotificationEntry.field_r.field_w, -1, NotificationEntry.field_r, (String) null, 0, -1, LobbyCommandSupport.field_b, (String) null, 0);
           this.field_mb.field_o = StarLinkPlanner.field_b;
           this.field_y.addLast((byte) -113, this.field_mb);
           if (this.field_nb != null) {
-            this.field_g = new ToggleButton(TurnEventLog.field_d.field_z + MusicCrossfadeStream.field_F.field_z + 515, 25, wl.field_d.field_z, wl.field_d.field_w, -1, wl.field_d, (String) null, 0, -1, StarAbandonedEvent.field_k, (String) null, 0);
+            this.field_g = new ToggleButton(TurnEventLog.field_d.field_z + MusicCrossfadeStream.field_F.field_z + 515, 25, OrderableInsertionSupport.field_d.field_z, OrderableInsertionSupport.field_d.field_w, -1, OrderableInsertionSupport.field_d, (String) null, 0, -1, StarAbandonedEvent.field_k, (String) null, 0);
             this.field_g.field_o = TaskAi.field_d;
             this.field_y.addLast((byte) -113, this.field_g);
           }
@@ -5226,7 +5226,7 @@ final class GameScreen {
             this.field_bb.field_s = false;
             this.field_K.field_s = false;
             this.field_V.field_s = false;
-            HighscoreQueryRequest.putTextReplacement("continue", 1904, wm.field_e);
+            HighscoreQueryRequest.putTextReplacement("continue", 1904, UiSpriteSupport.field_e);
             HighscoreQueryRequest.putTextReplacement("continue2", 1904, IntValueWriteRequest.field_k);
             HighscoreQueryRequest.putTextReplacement("continue3", 1904, StatefulWidgetTheme.field_v);
             HighscoreQueryRequest.putTextReplacement("continuekey", 1904, ContextActionMenu.field_Ob);

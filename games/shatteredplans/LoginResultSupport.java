@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wo {
+final class LoginResultSupport {
     static int field_a;
     static Sprite field_b;
 
     public static void clearStatics(byte param0) {
         field_b = null;
         if (param0 != -103) {
-          wo.clearStatics((byte) 30);
+          LoginResultSupport.clearStatics((byte) 30);
         }
     }
 
-    final static void a(int param0, byte param1, String[] param2, String param3) {
+    final static void showLoginResult(int param0, byte param1, String[] param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
@@ -30,7 +30,7 @@ final class wo {
         try {
           if (param1 != -88) {
             var6 = (String) null;
-            wo.a(10, (byte) 112, (String[]) null, (String) null);
+            LoginResultSupport.showLoginResult(10, (byte) 112, (String[]) null, (String) null);
           }
           MatchingTextValidator.field_s = ProjectsContent.field_g;
           if (param0 != 255) {

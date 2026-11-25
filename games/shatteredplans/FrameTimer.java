@@ -87,15 +87,15 @@ abstract class FrameTimer {
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (0 <= param8 &&
-            param7 < wn.field_e) {
+            param7 < RasterViewportState.field_e) {
             if (param3 < 0 &&
               param1 < 0 &&
               param0 < 0) {
               return;
             }
-            if (param3 >= wn.field_c &&
-              param1 >= wn.field_c &&
-              wn.field_c <= param0) {
+            if (param3 >= RasterViewportState.field_c &&
+              param1 >= RasterViewportState.field_c &&
+              RasterViewportState.field_c <= param0) {
               return;
             }
             if (param2 >= -90) {
@@ -161,14 +161,14 @@ abstract class FrameTimer {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = wn.field_h[param7];
+                var16Lifetime2 = RasterViewportState.field_h[param7];
                 while (param7 < param5) {
                   var17 = var9_int >> 16;
-                  if (wn.field_c > var17) {
+                  if (RasterViewportState.field_c > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (var18 != 0) {
-                      if (wn.field_c <= var17 + var18) {
-                        var18 = -1 + wn.field_c - var17;
+                      if (RasterViewportState.field_c <= var17 + var18) {
+                        var18 = -1 + RasterViewportState.field_c - var17;
                       }
                       if (var17 >= 0) {
                         QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
@@ -177,13 +177,13 @@ abstract class FrameTimer {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        var17 < wn.field_c) {
+                        var17 < RasterViewportState.field_c) {
                         QuickChatCategoryDefinition.a(var17 + var16Lifetime2, param6, -1, param4, var18);
                       }
                     }
                   }
                   param7++;
-                  if (wn.field_e <= param7) {
+                  if (RasterViewportState.field_e <= param7) {
                     return;
                   }
                   var10 = var10 + var12;
@@ -212,19 +212,19 @@ abstract class FrameTimer {
               var10 = var10 + var12 * param7;
               param7 = 0;
             }
-            var15Lifetime1 = wn.field_h[param7];
+            var15Lifetime1 = RasterViewportState.field_h[param7];
             while (param8 > param7) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < wn.field_c) {
+              if (var16Lifetime1 < RasterViewportState.field_c) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
-                    wn.field_c > var16Lifetime1) {
+                    RasterViewportState.field_c > var16Lifetime1) {
                     QuickChatCategoryDefinition.a(var15Lifetime1 + var16Lifetime1, param6, -1, param4, var17Lifetime1);
                   }
                 } else {
-                  if (var16Lifetime1 + var17Lifetime1 >= wn.field_c) {
-                    var17Lifetime1 = -1 + wn.field_c - var16Lifetime1;
+                  if (var16Lifetime1 + var17Lifetime1 >= RasterViewportState.field_c) {
+                    var17Lifetime1 = -1 + RasterViewportState.field_c - var16Lifetime1;
                   }
                   if (var16Lifetime1 < 0) {
                     QuickChatCategoryDefinition.a(var15Lifetime1, param6, -1, param4, var17Lifetime1 + var16Lifetime1);
@@ -234,7 +234,7 @@ abstract class FrameTimer {
                 }
               }
               param7++;
-              if (param7 >= wn.field_e) {
+              if (param7 >= RasterViewportState.field_e) {
                 return;
               }
               var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;

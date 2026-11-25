@@ -32,7 +32,7 @@ final class LobbyUiSupport {
           }
           if (var2 != null) {
             stackIn_8_0 = -123;
-            wp.$cfr$intArgs$a$2661ebe01e52(stackIn_8_0, param1, var2);
+            RematchMenuSupport.insertBeforeFullInts(stackIn_8_0, param1, var2);
           } else {
             AccountRequestResult.field_a.addLast((byte) -113, param1);
           }
@@ -78,8 +78,8 @@ final class LobbyUiSupport {
             var2_int++;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < DebouncedValidator.field_g; var2_intLifetime1++) {
-            if (wm.field_d[var2_intLifetime1].field_n == param1.field_n) {
-              dupTemp$3 = wm.field_d[var2_intLifetime1].getFilterPriority((byte) 115);
+            if (UiSpriteSupport.field_d[var2_intLifetime1].field_n == param1.field_n) {
+              dupTemp$3 = UiSpriteSupport.field_d[var2_intLifetime1].getFilterPriority((byte) 115);
               PlayerOverlaySupport.field_b[dupTemp$3] = PlayerOverlaySupport.field_b[dupTemp$3] + 1;
             }
           }
@@ -88,8 +88,8 @@ final class LobbyUiSupport {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < DebouncedValidator.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (wm.field_d[var3].field_n == param1.field_n) {
-              var4 = wm.field_d[var3].getFilterPriority((byte) 115);
+            if (UiSpriteSupport.field_d[var3].field_n == param1.field_n) {
+              var4 = UiSpriteSupport.field_d[var3].getFilterPriority((byte) 115);
               if (TargetedChatMessage.field_i < PlayerOverlaySupport.field_b[var4]) {
                 PlayerOverlaySupport.field_b[var4] = PlayerOverlaySupport.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -98,13 +98,13 @@ final class LobbyUiSupport {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              wm.field_d[incrementValue$2] = wm.field_d[var3];
+              UiSpriteSupport.field_d[incrementValue$2] = UiSpriteSupport.field_d[var3];
             }
           }
           DebouncedValidator.field_g = var2_intLifetime2;
           fieldTemp$1 = DebouncedValidator.field_g;
           DebouncedValidator.field_g = DebouncedValidator.field_g + 1;
-          wm.field_d[fieldTemp$1] = param1;
+          UiSpriteSupport.field_d[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

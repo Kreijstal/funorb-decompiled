@@ -59,7 +59,7 @@ final class RandomAccessCacheFile {
             field_g = -122;
           }
           for (var3_int = 1; var3_int < param1; var3_int++) {
-            wl.a(var3_int, 46, param2);
+            OrderableInsertionSupport.insertIntoSortedPrefix(var3_int, 46, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,7 +191,7 @@ final class RandomAccessCacheFile {
 
     final static void a(int param0, int param1) {
         PlayerOverlaySupport.field_b = new int[3];
-        wm.field_d = new ChatHistoryEntry[param1 * 15];
+        UiSpriteSupport.field_d = new ChatHistoryEntry[param1 * 15];
         DebouncedValidator.field_g = 0;
         TargetedChatMessage.field_i = param1;
         int var2 = -27 % ((param0 + 56) / 49);

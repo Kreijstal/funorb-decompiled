@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wq {
+final class HighscorePlayerRecord {
     boolean field_a;
     static String field_c;
     String field_b;
     String field_d;
 
-    final static Object a(boolean param0, byte param1, byte[] param2) {
+    final static Object wrapByteArray(boolean param0, byte param1, byte[] param2) {
         DirectByteArrayStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteArrayStorage stackIn_6_0 = null;

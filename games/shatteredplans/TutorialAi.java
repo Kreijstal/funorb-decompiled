@@ -267,7 +267,7 @@ final class TutorialAi extends LegacyAi {
             var21 = var12;
             var30 = var21;
             var21Lifetime2 = var12;
-            var13 = wi.field_a;
+            var13 = RasterSpanFactory.field_a;
             var11.field_j.addIconItem(false, var12, var13, 11);
             var14 = DerelictVictoryChecker.field_m;
             var15 = BoundsRect.field_m[1];

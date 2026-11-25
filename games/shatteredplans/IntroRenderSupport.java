@@ -104,7 +104,7 @@ final class IntroRenderSupport {
         }
         try {
           for (var1_int = 0; var1_int < DebouncedValidator.field_g; var1_int++) {
-            wm.field_d[var1_int] = null;
+            UiSpriteSupport.field_d[var1_int] = null;
           }
           DebouncedValidator.field_g = 0;
         } catch (RuntimeException runtimeException) {

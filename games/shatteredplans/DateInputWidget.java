@@ -173,7 +173,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
               var7 = var4.indexOf('>', var5);
               if (var7 != -1) {
                 var8 = var4.substring(5 + var5, var7);
-                var2_int = wm.a((CharSequence) ((Object) var8), 16, (byte) 11);
+                var2_int = UiSpriteSupport.parseInteger((CharSequence) ((Object) var8), 16, (byte) 11);
               }
             }
             var3++;

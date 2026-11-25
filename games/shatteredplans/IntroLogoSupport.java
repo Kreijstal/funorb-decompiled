@@ -36,7 +36,7 @@ final class IntroLogoSupport {
           var5 = (-LobbyOptionSupport.field_j + 250 << 8) / 50;
         }
         IntValueWriteRequest.pushSpriteRaster((byte) -40, SecondaryNodeHashTable.field_i);
-        wn.c();
+        RasterViewportState.syncToRasterClip();
         SoftwareRasterizer.clear();
         QuickChatParameterType.drawLitMeshScene(-70);
         if (var5 < 256) {

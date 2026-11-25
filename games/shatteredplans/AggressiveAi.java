@@ -752,7 +752,7 @@ final class AggressiveAi extends StandardAi {
                   var23 = null;
                   var24 = 0;
                   if (RasterBuffer.field_h) {
-                    var23 = "</col>" + wl.field_b + "<col=A00000>";
+                    var23 = "</col>" + OrderableInsertionSupport.field_b + "<col=A00000>";
                     var26Lifetime1 = var23;
                     var23 = var26Lifetime1;
                     var26Lifetime1Lifetime1 = var23;

@@ -45,7 +45,7 @@ final class IntroLoadingSupport {
           if (param1 != 1500005281) {
             IntroLoadingSupport.clearStatics(66);
           }
-          wj.a(320, param2, param0);
+          MenuPointerSupport.writeFourIntSubmission(320, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

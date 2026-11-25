@@ -84,7 +84,7 @@ final class ClientDrawingSupport {
           }
           stackIn_12_0[stackIn_13_1][0] = var8;
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
-            var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + IconTextPanel.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
+            var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + IconTextPanel.field_Cb.field_J + 3, UiSpriteSupport.createColourisedIcon(-1, param2 - 21));
             var13.addChild(var10, 8);
             var10.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
@@ -443,15 +443,15 @@ final class ClientDrawingSupport {
         var42 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param8 >= 0 &&
-            param4 < wn.field_e) {
+            param4 < RasterViewportState.field_e) {
             if (0 > param3 &&
               param0 < 0 &&
               param14 < 0) {
               return;
             }
-            if (wn.field_c <= param3 &&
-              wn.field_c <= param0 &&
-              param14 >= wn.field_c) {
+            if (RasterViewportState.field_c <= param3 &&
+              RasterViewportState.field_c <= param0 &&
+              param14 >= RasterViewportState.field_c) {
               return;
             }
             if (param2 != -31232) {
@@ -588,22 +588,22 @@ final class ClientDrawingSupport {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = wn.field_h[param4];
+                var36Lifetime2 = RasterViewportState.field_h[param4];
                 while (param4 < param15) {
                   var37 = var17_int >> 16;
-                  if (var37 < wn.field_c) {
+                  if (var37 < RasterViewportState.field_c) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        var37 < wn.field_c) {
+                        var37 < RasterViewportState.field_c) {
                         AudioService.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (wn.field_c <= var38 + var37) {
-                        var38 = -1 + wn.field_c - var37;
+                      if (RasterViewportState.field_c <= var38 + var37) {
+                        var38 = -1 + RasterViewportState.field_c - var37;
                       }
                       if (0 > var37) {
                         AudioService.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
@@ -613,7 +613,7 @@ final class ClientDrawingSupport {
                     }
                   }
                   param4++;
-                  if (wn.field_e <= param4) {
+                  if (RasterViewportState.field_e <= param4) {
                     return;
                   }
                   var21 = var21 + var23;
@@ -675,22 +675,22 @@ final class ClientDrawingSupport {
               var21 = var21 + param4 * var23;
               param4 = 0;
             }
-            var35Lifetime1 = wn.field_h[param4];
+            var35Lifetime1 = RasterViewportState.field_h[param4];
             while (param4 < param8) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < wn.field_c) {
+              if (var36Lifetime1 < RasterViewportState.field_c) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
-                    wn.field_c > var36Lifetime1) {
+                    RasterViewportState.field_c > var36Lifetime1) {
                     AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (var37Lifetime1 + var36Lifetime1 >= wn.field_c) {
-                    var37Lifetime1 = -var36Lifetime1 + (wn.field_c - 1);
+                  if (var37Lifetime1 + var36Lifetime1 >= RasterViewportState.field_c) {
+                    var37Lifetime1 = -var36Lifetime1 + (RasterViewportState.field_c - 1);
                   }
                   if (var36Lifetime1 >= 0) {
                     AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
@@ -700,7 +700,7 @@ final class ClientDrawingSupport {
                 }
               }
               param4++;
-              if (param4 >= wn.field_e) {
+              if (param4 >= RasterViewportState.field_e) {
                 return;
               }
               var25 = var25 + var27;

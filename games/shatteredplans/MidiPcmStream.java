@@ -796,7 +796,7 @@ final class MidiPcmStream extends PcmStream {
                 var31 = var31 + UniformNineSliceFactory.field_c;
               }
               if (var12.field_Yb) {
-                var12.field_Hb.field_z = QuickChatCategoryRegistry.a(wj.field_n, 4371, new String[]{var32});
+                var12.field_Hb.field_z = QuickChatCategoryRegistry.a(MenuPointerSupport.field_n, 4371, new String[]{var32});
                 var12.field_Hb.setTarget(-(2 * DateValidationSupport.field_a) + var12.field_K, UniformNineSliceFactory.field_c, (byte) 91, var31, DateValidationSupport.field_a);
                 var31 = var31 + UniformNineSliceFactory.field_c;
               }

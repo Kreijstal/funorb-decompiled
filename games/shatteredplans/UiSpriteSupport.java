@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm {
+final class UiSpriteSupport {
     static int field_b;
     static String field_a;
     static String field_f;
@@ -9,7 +9,7 @@ final class wm {
     static ChatHistoryEntry[] field_d;
     static String field_e;
 
-    final static Sprite a(int param0, int param1) {
+    final static Sprite createColourisedIcon(int param0, int param1) {
         Sprite var2 = new Sprite(GameState.field_F.field_z, GameState.field_F.field_w);
         RandomAccessCacheFile.a(param1 ^ -110);
         var2.bindAsRenderTarget();
@@ -28,7 +28,7 @@ final class wm {
         }
     }
 
-    final static int a(CharSequence param0, int param1, byte param2) {
+    final static int parseInteger(CharSequence param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -55,7 +55,7 @@ final class wm {
         }
     }
 
-    final static void a(int param0) {
+    final static void closeChatPanelOverlay(int param0) {
         if (param0 != 0) {
           return;
         }

@@ -12,7 +12,7 @@ final class StringList {
     static char[] field_g;
     static MenuWindow field_j;
     static String field_k;
-    static wj field_b;
+    static MenuPointerSupport field_b;
 
     private final int capacityForIndex(int param0, int param1) {
         int var3;

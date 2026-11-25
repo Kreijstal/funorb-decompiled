@@ -928,7 +928,7 @@ final class GameSession implements AiHost {
           if (BufferedCacheFile.field_e == 64) {
             this.field_P.field_e = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14814);
             if (this == PasswordInputPainter.field_x) {
-              wp.a(-2);
+              RematchMenuSupport.updateRematchCaption(-2);
             }
             return true;
           }

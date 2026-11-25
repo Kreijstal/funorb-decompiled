@@ -119,7 +119,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         if (param0 < 96) {
           field_l = (AnimatedPanel) null;
           DateValidationSupport.field_c.drawFullRaster(param1, -43);
-          var2 = wi.field_c;
+          var2 = RasterSpanFactory.field_c;
           if (var2 != null) {
             var2.draw(DateValidationSupport.field_c.field_N, DateValidationSupport.field_c.field_B, (byte) -66);
             return;
@@ -127,7 +127,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
           return;
         }
         DateValidationSupport.field_c.drawFullRaster(param1, -43);
-        var2Lifetime1 = wi.field_c;
+        var2Lifetime1 = RasterSpanFactory.field_c;
         if (var2Lifetime1 == null) {
           return;
         }

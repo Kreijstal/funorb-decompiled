@@ -84,7 +84,7 @@ final class GameAssetSetupSupport {
           TurnEventLog.field_d = var9[3];
           MusicCrossfadeStream.field_F = var9[2];
           HuffmanCodec.field_e = var9[0];
-          wl.field_d = var9[4];
+          OrderableInsertionSupport.field_d = var9[4];
           NotificationEntry.field_r = var9[1];
           var21 = GraphicsSettings.loadSpriteSetByName("hud_icons_red", param6 + 8, "", param0);
           AlignedMenuLabel.field_D = var21[0];
@@ -138,7 +138,7 @@ final class GameAssetSetupSupport {
           IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
           GradientMenuLabel.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
-          wo.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
+          LoginResultSupport.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
           ClientRasterSupport.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
           AccountValidationText.field_e = SpriteResourceSupport.loadSpriteByName(2, param0, "", "chevron");
           TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
@@ -247,7 +247,7 @@ final class GameAssetSetupSupport {
           AllianceExpiredEvent.field_k.drawColourised(1, 1, 8421504);
           HuffmanCodec.field_b = new Sprite(10, 12);
           HuffmanCodec.field_b.bindAsRenderTarget();
-          wo.field_b.drawColourised(1, 1, 8421504);
+          LoginResultSupport.field_b.drawColourised(1, 1, 8421504);
           ReflectionQueueSupport.field_f = new Sprite(12, 12);
           ReflectionQueueSupport.field_f.bindAsRenderTarget();
           ClientRasterSupport.field_a.drawColourised(1, 1, 8421504);

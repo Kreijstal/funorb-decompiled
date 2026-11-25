@@ -209,7 +209,7 @@ final class SoundPlayback extends IntrusiveNode {
               MenuTextResources.field_a[var8] = -1;
             }
             ShatteredPlansClient.field_E = new int[2];
-            InvalidMapConnectionException.field_f[0] = wp.field_b;
+            InvalidMapConnectionException.field_f[0] = RematchMenuSupport.field_b;
             MenuTextResources.field_a[1] = 0;
             InvalidMapConnectionException.field_f[1] = ProxySocketConnector.field_h;
             InvalidMapConnectionException.field_f[2] = ByteArrayReadRequest.field_i;

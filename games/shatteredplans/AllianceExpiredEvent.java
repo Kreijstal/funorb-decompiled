@@ -7,7 +7,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
     static Sprite field_k;
     static int field_n;
     static volatile int field_i;
-    static wq[] field_j;
+    static HighscorePlayerRecord[] field_j;
     static AnimatedPanel field_l;
 
     final static void a(int param0, int param1) {
@@ -46,9 +46,9 @@ final class AllianceExpiredEvent extends IntrusiveNode {
         field_m = "Player names can be up to 12 letters, numbers and underscores";
         field_i = -1;
         field_h = new Sprite(270, 70);
-        field_j = new wq[255];
+        field_j = new HighscorePlayerRecord[255];
         for (var0 = 0; var0 < field_j.length; var0++) {
-          field_j[var0] = new wq();
+          field_j[var0] = new HighscorePlayerRecord();
         }
     }
 }

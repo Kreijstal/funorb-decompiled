@@ -197,7 +197,7 @@ final class SolMapReader implements MapGenerator {
           field_b = -115;
         }
         for (var7 = DebouncedValidator.field_g - 1; 0 <= var7; var7--) {
-          var8_ref_nf = wm.field_d[var7];
+          var8_ref_nf = UiSpriteSupport.field_d[var7];
           var9 = 0;
           if (!LoginMethodPreference.field_g &&
             TargetedChatMessage.field_i > var5) {
@@ -231,7 +231,7 @@ final class SolMapReader implements MapGenerator {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; DebouncedValidator.field_g > var8; var8++) {
-          var9_ref_nf = wm.field_d[var8];
+          var9_ref_nf = UiSpriteSupport.field_d[var8];
           if (null != var9_ref_nf.field_j) {
             DateInputWidget.field_I.field_xb.addChild(4, var9_ref_nf.field_j);
             var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), param3, (byte) 111, var7Lifetime1, param2);

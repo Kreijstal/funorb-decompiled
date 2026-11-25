@@ -393,7 +393,7 @@ final class AccountBooleanRequest {
         field_j = null;
     }
 
-    final static void queueHighscoreSubmission(int param0, wj param1, int param2) {
+    final static void queueHighscoreSubmission(int param0, MenuPointerSupport param1, int param2) {
         try {
           NumericDateInputWidget.field_P.addLast((byte) -113, param1);
           if (param0 != 20) {

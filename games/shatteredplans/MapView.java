@@ -1522,7 +1522,7 @@ final class MapView extends MapViewState {
           }
           this.field_ib[var2].field_o = new Sprite(10, 12);
           this.field_ib[var2].field_o.bindAsRenderTarget();
-          wo.field_b.drawColourised(1, 1, var3);
+          LoginResultSupport.field_b.drawColourised(1, 1, var3);
           this.field_ib[var2].field_p = new Sprite(12, 12);
           this.field_ib[var2].field_p.bindAsRenderTarget();
           ClientRasterSupport.field_a.drawColourised(1, 1, var3);

@@ -90,11 +90,11 @@ final class PasswordValidator extends TextFieldValidator {
           }
           IndexedSpriteState.a(127);
           DateValidationSupport.field_c.a(param3, -20429);
-          if (null != wi.field_c) {
+          if (null != RasterSpanFactory.field_c) {
             if (LoginMethodPreference.field_g) {
-              wi.field_c.a(DateValidationSupport.field_c.field_B, param3, DateValidationSupport.field_c.field_N, (byte) 0);
+              RasterSpanFactory.field_c.a(DateValidationSupport.field_c.field_B, param3, DateValidationSupport.field_c.field_N, (byte) 0);
             } else {
-              wi.field_c = null;
+              RasterSpanFactory.field_c = null;
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {

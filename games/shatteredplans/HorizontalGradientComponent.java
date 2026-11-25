@@ -156,7 +156,7 @@ final class HorizontalGradientComponent extends MenuComponent {
           if (param8 != -87) {
             HorizontalGradientComponent.clearStatics((byte) -47);
           }
-          ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new TiledNineSlicePainter(param10), param2, AccountNoticeKind.field_b, wo.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new TiledNineSlicePainter(param7));
+          ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new TiledNineSlicePainter(param10), param2, AccountNoticeKind.field_b, LoginResultSupport.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new TiledNineSlicePainter(param7));
           GradientMenuLabel.showAccountChoiceMenu(param6, true, param12, param14, param5);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');

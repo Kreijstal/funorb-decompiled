@@ -43,30 +43,30 @@ final class ContextActionMenu extends AnimatedPanel {
     }
 
     final static void appendRankingRow(int param0, int param1, int param2, int param3, int param4, int param5) {
-        QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
-        ProxyAuthenticationRequiredException.field_d[wm.field_c] = wm.field_c;
-        GameApplet.field_f[wm.field_c] = param1;
+        QuickChatCategoryRegistry.field_d[UiSpriteSupport.field_c] = param4;
+        ProxyAuthenticationRequiredException.field_d[UiSpriteSupport.field_c] = UiSpriteSupport.field_c;
+        GameApplet.field_f[UiSpriteSupport.field_c] = param1;
         if (!(ClientRenderSupport.field_b >= param1)) {
           GzipInflater.field_e = param1;
         }
         if (!(ReflectionQueueSupport.field_a <= param1)) {
           SpriteButton.field_u = param1;
         }
-        LobbyRoomEntry.field_zb[wm.field_c] = param2;
-        ClientContextMenuSupport.field_d[wm.field_c] = param3;
-        WidgetContainer.field_y[wm.field_c] = param5;
+        LobbyRoomEntry.field_zb[UiSpriteSupport.field_c] = param2;
+        ClientContextMenuSupport.field_d[UiSpriteSupport.field_c] = param3;
+        WidgetContainer.field_y[UiSpriteSupport.field_c] = param5;
         int var6 = param5 + param3 + param2;
         int var7 = param0 != var6 ? 1000 * param2 / var6 : 0;
-        GameState.field_c[wm.field_c] = var7;
+        GameState.field_c[UiSpriteSupport.field_c] = var7;
         if (var7 <= GzipInflater.field_e) {
-          wm.field_c = wm.field_c + 1;
+          UiSpriteSupport.field_c = UiSpriteSupport.field_c + 1;
           if (!(SpriteButton.field_u <= var7)) {
             SpriteButton.field_u = var7;
           }
           return;
         }
         GzipInflater.field_e = var7;
-        wm.field_c = wm.field_c + 1;
+        UiSpriteSupport.field_c = UiSpriteSupport.field_c + 1;
         if (!(SpriteButton.field_u <= var7)) {
           SpriteButton.field_u = var7;
         }

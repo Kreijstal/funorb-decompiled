@@ -226,10 +226,10 @@ final class TutorialScene {
               }
               break;
             }
-            var7.field_c = wi.a(param1, param6, var7.field_c, param3, param2, param4, -3903);
+            var7.field_c = RasterSpanFactory.acquireRasterSpan(param1, param6, var7.field_c, param3, param2, param4, -3903);
             return;
           }
-          NameSuggestionsPanel.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4, -3903);
+          NameSuggestionsPanel.field_J[param0] = RasterSpanFactory.acquireRasterSpan(param1, param6, var9, param3, param2, param4, -3903);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

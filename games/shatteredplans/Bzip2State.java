@@ -103,7 +103,7 @@ final class Bzip2State {
           RecklessAi.field_r = IconTextPanel.field_zb + TerritoryResourcePanelSupport.field_a;
           TextReplacementEntry.field_i = new String[33];
           TextReplacementEntry.field_i[14] = NotificationEntry.field_o;
-          TextReplacementEntry.field_i[0] = wm.field_f;
+          TextReplacementEntry.field_i[0] = UiSpriteSupport.field_f;
           TextReplacementEntry.field_i[7] = IntroLogoSupport.field_b;
           TextReplacementEntry.field_i[4] = ClientDrawingSupport.field_e;
           TextReplacementEntry.field_i[12] = ArchiveNetworkClient.field_g;

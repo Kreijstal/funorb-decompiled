@@ -95,7 +95,7 @@ final class ClientException extends RuntimeException {
               var5 = ProductionContent.field_j;
             } else {
               if (var4 == AccountStatusDialog.field_nb.field_c) {
-                var5 = wo.field_a;
+                var5 = LoginResultSupport.field_a;
               } else {
                 var5 = AccountNoticeKind.field_b;
               }

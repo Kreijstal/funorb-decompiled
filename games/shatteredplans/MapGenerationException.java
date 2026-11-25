@@ -14,12 +14,12 @@ final class MapGenerationException extends Exception {
         if (param0 != 11615) {
           return;
         }
-        if (wm.field_b >= 224) {
+        if (UiSpriteSupport.field_b >= 224) {
           DiskArchiveRequest.c(-78, 256);
           return;
         }
-        int var1 = wm.field_b % 32;
-        DiskArchiveRequest.c(124, wm.field_b + (32 - var1));
+        int var1 = UiSpriteSupport.field_b % 32;
+        DiskArchiveRequest.c(124, UiSpriteSupport.field_b + (32 - var1));
     }
 
     static {

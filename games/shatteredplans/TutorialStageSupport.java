@@ -71,7 +71,7 @@ final class TutorialStageSupport {
             }
             try {
               GradientMenuLabel.field_x = param1;
-              var3 = wl.field_a.a(117, GradientMenuLabel.field_x, true);
+              var3 = OrderableInsertionSupport.field_a.a(117, GradientMenuLabel.field_x, true);
             } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (MapGenerationException) (Object) decompiledCaughtException;
@@ -313,7 +313,7 @@ final class TutorialStageSupport {
         try {
           var2_int = 0;
           for (var3 = -1 + DebouncedValidator.field_g; var3 >= 0; var3--) {
-            if (param0 != wm.field_d[var3]) {
+            if (param0 != UiSpriteSupport.field_d[var3]) {
               continue;
             }
             var2_int = 1 + var3;
@@ -323,8 +323,8 @@ final class TutorialStageSupport {
             field_e = (LoginForm) null;
           }
           for (var3Lifetime1 = var2_int; var3Lifetime1 < DebouncedValidator.field_g; var3Lifetime1++) {
-            if (null != wm.field_d[var3Lifetime1].field_j) {
-              AccountBooleanRequest.queueClientNotification(param1 ^ -115, false, wm.field_d[var3Lifetime1].field_j.field_z);
+            if (null != UiSpriteSupport.field_d[var3Lifetime1].field_j) {
+              AccountBooleanRequest.queueClientNotification(param1 ^ -115, false, UiSpriteSupport.field_d[var3Lifetime1].field_j.field_z);
             }
           }
           return;

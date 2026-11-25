@@ -121,7 +121,7 @@ final class ChatHistoryEntry {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = QuickChatCategoryRegistry.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = QuickChatCategoryRegistry.a(OrderableInsertionSupport.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
                   var7 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }

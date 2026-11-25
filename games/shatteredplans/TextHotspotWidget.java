@@ -238,7 +238,7 @@ class TextHotspotWidget extends FocusableWidget {
             IntroTextLine.drawIntroGalaxyLayers(param0 - 6373);
           } else {
             if (2 == SolVictoryChecker.field_m) {
-              wj.a(128);
+              MenuPointerSupport.drawIntroPlanetScene(128);
             } else {
               if (SolVictoryChecker.field_m == 3) {
                 ProxySocketConnector.c(8421504);

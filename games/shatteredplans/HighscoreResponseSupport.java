@@ -29,7 +29,7 @@ final class HighscoreResponseSupport {
         int var2 = 0;
         int var3 = 0;
         HighscoreQueryRequest var4 = null;
-        wj var4_ref = null;
+        MenuPointerSupport var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -151,10 +151,10 @@ final class HighscoreResponseSupport {
             if (1 == var2) {
               var3 = var27.readUnsignedShort(-20976);
               var27.readLong(56);
-              var4_ref = (wj) (NumericDateInputWidget.field_P.startForward(0));
+              var4_ref = (MenuPointerSupport) (NumericDateInputWidget.field_P.startForward(0));
               while (var4_ref != null) {
                 if (var4_ref.field_h != var3) {
-                  var4_ref = (wj) (NumericDateInputWidget.field_P.nextForward((byte) -71));
+                  var4_ref = (MenuPointerSupport) (NumericDateInputWidget.field_P.nextForward((byte) -71));
                   continue;
                 }
                 break;

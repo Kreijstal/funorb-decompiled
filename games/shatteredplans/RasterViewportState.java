@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn {
+final class RasterViewportState {
     static int field_c;
     static int field_a;
     static int[] field_h;
@@ -12,11 +12,11 @@ final class wn {
     private static int[] field_b;
     private static int[] field_f;
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setViewportBounds(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_c = param2 - param0;
         field_e = param3 - param1;
-        wn.a();
+        RasterViewportState.updateViewportCentre();
         if (field_h.length < field_e) {
           field_h = new int[LobbyOptionSupport.nextPowerOfTwo(field_e, (byte) 122)];
         }
@@ -27,8 +27,8 @@ final class wn {
         }
     }
 
-    final static void c() {
-        wn.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f);
+    final static void syncToRasterClip() {
+        RasterViewportState.setViewportBounds(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, SoftwareRasterizer.field_f);
     }
 
     public static void clearStatics() {
@@ -39,7 +39,7 @@ final class wn {
         field_f = null;
     }
 
-    private final static void a() {
+    private final static void updateViewportCentre() {
         field_i = field_c / 2;
         field_a = field_e / 2;
     }

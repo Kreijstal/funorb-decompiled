@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi {
+final class RasterSpanFactory {
     static BirthDateConfirmationForm field_c;
     static String field_a;
     static String field_b;
 
-    final static RasterCoverageSpan a(int param0, int param1, RasterCoverageSpan param2, int param3, int param4, int param5, int param6) {
+    final static RasterCoverageSpan acquireRasterSpan(int param0, int param1, RasterCoverageSpan param2, int param3, int param4, int param5, int param6) {
         RasterCoverageSpan var7 = null;
         RuntimeException var7_ref = null;
         RasterCoverageSpan stackIn_2_0 = null;
@@ -44,7 +44,7 @@ final class wi {
         }
     }
 
-    final static void a(int param0, byte param1, TiledNineSlicePainter param2, int param3, TiledNineSlicePainter param4, int param5) {
+    final static void configureMenuRowFrames(int param0, byte param1, TiledNineSlicePainter param2, int param3, TiledNineSlicePainter param4, int param5) {
         try {
           LobbyOptionSupport.field_g = param5;
           LobbyOptionSupport.field_e = param0;
@@ -57,7 +57,7 @@ final class wi {
         }
     }
 
-    final static int a(AccountFieldValue param0, AccountFieldValue param1, int param2) {
+    final static int pollLoginCredentials(AccountFieldValue param0, AccountFieldValue param1, int param2) {
         RuntimeException var3 = null;
         TiledNineSlicePainter var4 = null;
         String var5 = null;
@@ -71,7 +71,7 @@ final class wi {
         try {
           if (param2 != 0) {
             var4 = (TiledNineSlicePainter) null;
-            wi.a(-18, (byte) 102, (TiledNineSlicePainter) null, 64, (TiledNineSlicePainter) null, 60);
+            RasterSpanFactory.configureMenuRowFrames(-18, (byte) 102, (TiledNineSlicePainter) null, 64, (TiledNineSlicePainter) null, 60);
           }
           var5 = (String) null;
           stackIn_3_0 = QuickChatPhraseDefinition.a(0, 0, param0, param1, 120, (String) null, false);
@@ -101,7 +101,7 @@ final class wi {
         field_c = null;
         field_b = null;
         if (param0 < 84) {
-          wi.clearStatics((byte) -48);
+          RasterSpanFactory.clearStatics((byte) -48);
         }
     }
 

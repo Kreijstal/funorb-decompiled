@@ -64,9 +64,9 @@ abstract class GameClientShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == param1) {
-            var5_int = wi.a(CipherPacketBuffer.j((byte) 64), AccountInputSupport.createAccountFieldValue(64), 0);
+            var5_int = RasterSpanFactory.pollLoginCredentials(CipherPacketBuffer.j((byte) 64), AccountInputSupport.createAccountFieldValue(64), 0);
             if (var5_int != -1) {
-              wo.a(var5_int, (byte) -88, HighscoreResponseSupport.field_e, DiplomacyRowSupport.field_c);
+              LoginResultSupport.showLoginResult(var5_int, (byte) -88, HighscoreResponseSupport.field_e, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
               DiplomacyRowSupport.field_c = null;
             }

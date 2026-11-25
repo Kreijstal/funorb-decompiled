@@ -52,7 +52,7 @@ final class BattleEvent extends IntrusiveNode {
         this.field_v.addLast((byte) -113, new BattleContribution(this.field_w, param0, param2, 0));
     }
 
-    final static void a(int param0, wj param1, boolean param2) {
+    final static void a(int param0, MenuPointerSupport param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         CipherPacketBuffer var7 = LobbyOptionSupport.field_f;

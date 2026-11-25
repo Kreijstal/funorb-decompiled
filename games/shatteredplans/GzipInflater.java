@@ -167,7 +167,7 @@ final class GzipInflater {
               }
               stackIn_50_0 = -126;
             }
-            wp.$cfr$intArgs$a$2661ebe01e52(stackIn_50_0, var6Lifetime1, var7_ref);
+            RematchMenuSupport.insertBeforeFullInts(stackIn_50_0, var6Lifetime1, var7_ref);
             if (var9 == 0) {
               return;
             }

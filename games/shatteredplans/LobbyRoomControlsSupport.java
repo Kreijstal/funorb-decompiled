@@ -226,7 +226,7 @@ final class LobbyRoomControlsSupport {
                 if (IntValueWriteRequest.field_j.field_v) {
                   var9 = null;
                   if (RasterBuffer.field_h) {
-                    var9 = "<col=A00000>" + wl.field_b + "</col>";
+                    var9 = "<col=A00000>" + OrderableInsertionSupport.field_b + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;

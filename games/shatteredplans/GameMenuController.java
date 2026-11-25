@@ -151,7 +151,7 @@ final class GameMenuController {
         if (GameRules.field_c != PlayerRankingRequest.field_o &&
           PointsVictoryChecker.a((byte) -76, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -76, PlayerRankingRequest.field_o)) {
-          var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 121, 32);
+          var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 121, 32);
           var4 = (int)((double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]) * var2);
           var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           if (GameRules.field_c == this.field_a) {
@@ -183,7 +183,7 @@ final class GameMenuController {
         }
         if (PlayerRankingRequest.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -126, PlayerRankingRequest.field_o)) {
-          var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 118, 32);
+          var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 118, 32);
           var4 = (int)((-var2 + 1.0) * (double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]));
           var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           var5 = var5 + var4;
@@ -589,7 +589,7 @@ final class GameMenuController {
           if (var5 == 21) {
             stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
-            stackIn_11_0 = wm.field_b * 120 / 256;
+            stackIn_11_0 = UiSpriteSupport.field_b * 120 / 256;
           }
           var11 = stackIn_11_0;
           SoftwareRasterizer.drawRectAlpha(-1 + (var9 + var11), 3 + var10, 3, -6 + var8, var7, param2);
@@ -726,7 +726,7 @@ final class GameMenuController {
         if (param1 != -6469) {
           return;
         }
-        var7 = wm.smoothStep(param2, (byte) 99, 128);
+        var7 = UiSpriteSupport.smoothStep(param2, (byte) 99, 128);
         var9 = (640 - var4) / 2;
         var10 = (int)((double)(TutorialVictoryChecker.field_r[this.field_a] + 80) * (1.0 - var7));
         var11 = var9;
@@ -823,7 +823,7 @@ final class GameMenuController {
               }
               break regionExit1;
             }
-            var8 = wj.field_k;
+            var8 = MenuPointerSupport.field_k;
           }
         }
         var7Lifetime1 = (IconTextPanel.field_Cb.field_J + var3 >> 1) + var5;
@@ -921,7 +921,7 @@ final class GameMenuController {
           if (21 == var4) {
             stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
-            stackIn_11_0 = 120 * wm.field_b / 256;
+            stackIn_11_0 = 120 * UiSpriteSupport.field_b / 256;
           }
           var10 = stackIn_11_0;
           SoftwareRasterizer.drawRect(var10 + (var8 - 1), 3 + var9, 3, -6 + var7, var6);
@@ -1375,7 +1375,7 @@ final class GameMenuController {
                 this.drawInstructionProjectIcon(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
                 var11Lifetime3 = var11Lifetime3 + (IconTextPanel.field_Cb.field_J + var21Lifetime1);
                 var17Lifetime1 = ClientLobbyResources.field_e.expandPlaceholders(5607, LobbyUiSetupSupport.field_b);
-                var18Lifetime1 = ClientLobbyResources.field_e.expandPlaceholders(5607, wq.field_c);
+                var18Lifetime1 = ClientLobbyResources.field_e.expandPlaceholders(5607, HighscorePlayerRecord.field_c);
                 var19Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
                 var20Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
                 stackIn_99_0 = (var20Lifetime1Lifetime1 >= var19Lifetime1Lifetime1) ? var20Lifetime1Lifetime1 : var19Lifetime1Lifetime1;
@@ -2425,7 +2425,7 @@ final class GameMenuController {
                                                               QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             } else {
                                                               TextReplacementEntry.field_i[32] = MidiPcmStream.field_L;
-                                                              PaddedContentDialog.field_nb = wp.field_a;
+                                                              PaddedContentDialog.field_nb = RematchMenuSupport.field_a;
                                                               QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             }
                                                           }
@@ -2820,7 +2820,7 @@ final class GameMenuController {
           PointsVictoryChecker.a((byte) -125, PlayerRankingRequest.field_o)) {
           return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o], 0);
         }
-        double var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);
+        double var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);
         if (this.field_a == GameRules.field_c) {
           var2 = -var2 + 1.0;
         }

@@ -397,8 +397,8 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           }
           var10 = param1[8] * var23Lifetime1 + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - KeyboardStateSupport.field_e;
           var11 = var23Lifetime1 * param1[11] + (var22Lifetime1 * param1[10] + param1[9] * var21Lifetime1) >> 16;
-          var21Lifetime2 = wn.field_i;
-          var22Lifetime2 = wn.field_a;
+          var21Lifetime2 = RasterViewportState.field_i;
+          var22Lifetime2 = RasterViewportState.field_a;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (param6.field_x > var23Lifetime2) {

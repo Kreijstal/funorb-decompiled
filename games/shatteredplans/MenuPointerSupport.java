@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends IntrusiveNode {
+final class MenuPointerSupport extends IntrusiveNode {
     int field_p;
     static String field_n;
     int field_q;
@@ -13,7 +13,7 @@ final class wj extends IntrusiveNode {
     int field_m;
     int field_j;
 
-    final static boolean a(IntrusiveDeque param0, byte param1) {
+    final static boolean pollMenuPointer(IntrusiveDeque param0, byte param1) {
         boolean stackIn_26_0 = false;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -32,8 +32,8 @@ final class wj extends IntrusiveNode {
             ClientOverlayDrawSupport.field_b = 0;
             SocialListPanel.field_Gb = PointsVictoryChecker.field_p;
             DialogRoot.field_C = SliderWidget.field_P;
-            wl.field_f = FleetVisual.a(param0, DialogRoot.field_C, (byte) -41, SocialListPanel.field_Gb);
-            stackIn_26_0 = (null != wl.field_f);
+            OrderableInsertionSupport.field_f = FleetVisual.a(param0, DialogRoot.field_C, (byte) -41, SocialListPanel.field_Gb);
+            stackIn_26_0 = (null != OrderableInsertionSupport.field_f);
             return stackIn_26_0;
           }
           if (AllianceExpiredEvent.field_n == 1) {
@@ -45,17 +45,17 @@ final class wj extends IntrusiveNode {
             var2_int = (-TertiaryListSequence.field_k + SocialListPanel.field_Gb) * (SocialListPanel.field_Gb - TertiaryListSequence.field_k) + (-LobbyRoomControlsSupport.field_b + DialogRoot.field_C) * (DialogRoot.field_C - LobbyRoomControlsSupport.field_b);
             if (5 < ClientOverlayDrawSupport.field_b &&
               25 < var2_int &&
-              wl.field_f != null) {
-              VerticalMenuSlider.field_w = wl.field_f.field_k - SocialListPanel.field_Gb;
-              IconTextPanel.field_Db = wl.field_f;
-              DisplayNameForm.field_D = wl.field_f.field_t - DialogRoot.field_C;
+              OrderableInsertionSupport.field_f != null) {
+              VerticalMenuSlider.field_w = OrderableInsertionSupport.field_f.field_k - SocialListPanel.field_Gb;
+              IconTextPanel.field_Db = OrderableInsertionSupport.field_f;
+              DisplayNameForm.field_D = OrderableInsertionSupport.field_f.field_t - DialogRoot.field_C;
             }
             return false;
           }
           if ((IconTextPanel.field_Db == null ||
             !(ClientOverlayDrawSupport.field_b >= 5)) &&
-            TextInputPainter.a(wl.field_f, param0, (byte) 64)) {
-            DualLinkDequeSequence.field_h = wl.field_f;
+            TextInputPainter.a(OrderableInsertionSupport.field_f, param0, (byte) 64)) {
+            DualLinkDequeSequence.field_h = OrderableInsertionSupport.field_f;
             if (null != DualLinkDequeSequence.field_h) {
               DualLinkDequeSequence.field_h.a(LobbyRoomControlsSupport.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
             }
@@ -63,7 +63,7 @@ final class wj extends IntrusiveNode {
             DualLinkDequeSequence.field_h = null;
           }
           IconTextPanel.field_Db = null;
-          wl.field_f = null;
+          OrderableInsertionSupport.field_f = null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class wj extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void drawIntroPlanetScene(int param0) {
         Sprite stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
@@ -194,11 +194,11 @@ final class wj extends IntrusiveNode {
         field_k = null;
     }
 
-    private wj() throws Throwable {
+    private MenuPointerSupport() throws Throwable {
         throw new Error();
     }
 
-    final static void a(int param0, int param1, FourIntSubmissionRequest param2) {
+    final static void writeFourIntSubmission(int param0, int param1, FourIntSubmissionRequest param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {

@@ -310,7 +310,7 @@ class MenuComponent extends IntrusiveNode {
             }
           }
         }
-        wm.field_c = 0;
+        UiSpriteSupport.field_c = 0;
         if (param2 != 18) {
           MenuComponent.a((byte) 6);
         }

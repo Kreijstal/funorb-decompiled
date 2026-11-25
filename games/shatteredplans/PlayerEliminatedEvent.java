@@ -77,7 +77,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
               var9[var7] = HighscoreResponseSupport.loadSpriteSetByName(69, "", param5, RichTextLayout.field_r[var7]);
             }
           }
-          wl.field_b = ValidationMessageWidget.field_Q;
+          OrderableInsertionSupport.field_b = ValidationMessageWidget.field_Q;
           AnimatedPanel.a(IntList.field_j, LabeledChildWidget.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           StatefulWidgetTheme.field_y = SpriteResourceSupport.loadSpriteByName(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;

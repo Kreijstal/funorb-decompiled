@@ -149,15 +149,15 @@ final class BoundsRect extends IntrusiveNode {
             var4 = (String) null;
             BoundsRect.a((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
           }
-          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, wm.field_c, (byte) -60, ReflectionQueueSupport.field_a, ClientRenderSupport.field_b);
-          for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
+          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, UiSpriteSupport.field_c, (byte) -60, ReflectionQueueSupport.field_a, ClientRenderSupport.field_b);
+          for (var2_int = 0; UiSpriteSupport.field_c > var2_int; var2_int++) {
             ProxyAuthenticationRequiredException.field_d[var2_int + param0] = var2_int;
           }
-          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
-          if (wm.field_c <= param0) {
+          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0 + param0, false, param0, UiSpriteSupport.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
+          if (UiSpriteSupport.field_c <= param0) {
             return;
           }
-          wm.field_c = param0;
+          UiSpriteSupport.field_c = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

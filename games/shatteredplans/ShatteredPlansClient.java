@@ -60,11 +60,11 @@ public final class ShatteredPlansClient extends GameClientShell {
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_u.d(128, (byte) -110, 9);
         var3.field_r.d(128, (byte) -110, 9);
-        var3.field_u.setMasterVolume(598, wm.field_b);
-        var3.field_r.setMasterVolume(param0 ^ -599, wm.field_b);
+        var3.field_u.setMasterVolume(598, UiSpriteSupport.field_b);
+        var3.field_r.setMasterVolume(param0 ^ -599, UiSpriteSupport.field_b);
         DebouncedValidator.a((java.awt.Component) ((Object) NotificationEntry.field_i), ValidatedTextInputWidget.field_W, var3, 1102, false, 22050, 22050, true);
         IterableNodeHashTable.field_b = 2458760;
-        wo.field_a = 2805974;
+        LoginResultSupport.field_a = 2805974;
         ProductionContent.field_j = 2458760;
         AccountNoticeKind.field_b = 2458760;
         ValidationMessageWidget.field_P = 2458760;
@@ -230,7 +230,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                         }
                         else {
                           BattleContribution.field_s = true;
-                          MenuLabel.a(wi.field_b, 0, (byte) 125);
+                          MenuLabel.a(RasterSpanFactory.field_b, 0, (byte) 125);
                         }
                       }
                     }
@@ -306,7 +306,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 MusicEnvelope.field_d = false;
                 TiledNineSlicePainter.field_b = false;
                 DiskArchiveRequest.field_A = true;
-                wm.a(0);
+                UiSpriteSupport.closeChatPanelOverlay(0);
               }
               ArchiveConnectionRetrySupport.field_a = false;
               StripedProgressWidget.field_Q = false;
@@ -367,7 +367,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
                 ImageProducerRasterBuffer.field_n = true;
-                wm.a(0);
+                UiSpriteSupport.closeChatPanelOverlay(0);
               }
               ArchiveConnectionRetrySupport.field_a = false;
               continue;
@@ -437,7 +437,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               TiledNineSlicePainter.field_b = true;
               PasswordInputPainter.field_x = var13;
               LoginForm.k(8);
-              wp.a(-2);
+              RematchMenuSupport.updateRematchCaption(-2);
               SoundEffectDefinition.openChatPanelOverlay((byte) -98);
             } else {
               SecondaryNodeHashTable.field_g = var13;
@@ -514,7 +514,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   MusicEnvelope.field_d = false;
                   TiledNineSlicePainter.field_b = false;
                   EmailValidator.field_p = false;
-                  wm.a(0);
+                  UiSpriteSupport.closeChatPanelOverlay(0);
                 }
                 StripedProgressWidget.field_Q = false;
                 ArchiveConnectionRetrySupport.field_a = false;
@@ -728,7 +728,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         IntNode.clearStatics(23811);
         IntrusiveDeque.clearStatics(0);
         DateValidationSupport.clearStatics(82);
-        wi.clearStatics((byte) 111);
+        RasterSpanFactory.clearStatics((byte) 111);
         TutorialStageSupport.clearStatics(-6);
         MusicCrossfadeStream.clearStatics(param0 ^ 24068);
         SpriteResourceSupport.clearStatics((byte) -77);
@@ -741,7 +741,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         GameKeyHandler.a((byte) -102);
         LobbyRoomInteractionSupport.clearStatics(true);
         SettingsCookieSupport.releaseSettingsCookieStatics((byte) -23);
-        wo.clearStatics((byte) -103);
+        LoginResultSupport.clearStatics((byte) -103);
         GameSoundSetupSupport.clearStatics(256);
         GameClientShell.clearStatics(-38);
         ClientException.clearStatics(108);
@@ -800,7 +800,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         MenuInputState.clearStatics(true);
         PanelNode.clearStatics(false);
         TiledNineSlicePainter.clearStatics(3);
-        wp.clearStatics((byte) -90);
+        RematchMenuSupport.clearStatics((byte) -90);
         HighscoreResponseSupport.clearStatics(-17358);
         AnimatedPanel.clearStatics(-14115);
         LobbyRoomEntry.clearStatics(32);
@@ -882,7 +882,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         SoundTriggerTick.releaseSoundTriggerStatics((byte) 82);
         DualLinkDeque.clearStatics(param0 ^ -8957);
         QuaternaryNodeList.clearStatics(-79);
-        wm.clearStatics(false);
+        UiSpriteSupport.clearStatics(false);
         LobbyRoomDecoder.clearStatics((byte) 99);
         GalaxyMapLayoutSupport.clearStatics(param0 - 4458);
         TutorialVictoryChecker.clearStatics(-124);
@@ -940,7 +940,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         PacketBooleanSupport.clearStatics(-109);
         AccountNoticeDialog.clearStatics(param0 ^ -24069);
         WidgetTheme.clearStatics((byte) -77);
-        wn.clearStatics();
+        RasterViewportState.clearStatics();
         VorbisSample.clearStatics();
         MeshMaterial.clearStatics((byte) 66);
         MeshData.clearStatics((byte) -74);
@@ -968,7 +968,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         Dialog.clearStatics(-1);
         WidgetContainer.clearStatics(param0 ^ -24192);
         IntrusiveDequeCursor.clearStatics(22256);
-        wl.a((byte) 85);
+        OrderableInsertionSupport.releaseOrderableInsertionStatics((byte) 85);
         VorbisFloor1.clearStatics();
         AccountValidationText.clearStatics((byte) -121);
         TutorialOverlaySupport.clearStatics((byte) 127);
@@ -1057,8 +1057,8 @@ public final class ShatteredPlansClient extends GameClientShell {
         NodeHashTableIterator.clearStatics(param0 + 24068);
         SecondaryNodeDequeIterator.a(124);
         HighscoreQueryRequest.clearStatics(1885);
-        wj.clearStatics((byte) 59);
-        wq.clearStatics((byte) -36);
+        MenuPointerSupport.clearStatics((byte) 59);
+        HighscorePlayerRecord.clearStatics((byte) -36);
         PlayerRankingRequest.clearStatics(-47);
         SoundPlayback.clearStatics((byte) -111);
         SoundEffectDefinition.clearStatics(9952);

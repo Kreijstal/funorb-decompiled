@@ -38,7 +38,7 @@ final class ServerRequestRetrySupport {
         try {
           var4 = (FourIntSubmissionRequest) (IconTextPanel.field_Bb.startForward(0));
           while (var4 != null) {
-            wj.a(320, param0, var4);
+            MenuPointerSupport.writeFourIntSubmission(320, param0, var4);
             var4 = (FourIntSubmissionRequest) (IconTextPanel.field_Bb.nextForward((byte) -71));
           }
           if (param1 > -18) {

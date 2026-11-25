@@ -464,7 +464,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
             return;
           }
           if (var2 != null) {
-            wp.$cfr$intArgs$a$2661ebe01e52(-127, param1, var2);
+            RematchMenuSupport.insertBeforeFullInts(-127, param1, var2);
           } else {
             PlayerRankingRequest.field_p.addLast((byte) -113, param1);
           }

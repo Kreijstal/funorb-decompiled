@@ -56,7 +56,7 @@ final class InvalidMapConnectionException extends Exception {
                 var7 = (FleetMove) (param1.field_T.nextForward((byte) -71));
                 continue;
               }
-              wp.$cfr$intArgs$a$2661ebe01e52(-125, var3, var7);
+              RematchMenuSupport.insertBeforeFullInts(-125, var3, var7);
               break;
             }
             if (var7 == null) {

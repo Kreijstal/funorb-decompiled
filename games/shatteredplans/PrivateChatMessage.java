@@ -697,7 +697,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("hint_placement", 123);
                 if (null != var2) {
-                  wp.field_c = IterableNodeHashTable.a(var2, 17746);
+                  RematchMenuSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("hint_defensegrid", 115);
                 if (var2 != null) {
@@ -1139,7 +1139,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_captured", 110);
                 if (var2 != null) {
-                  wq.field_c = IterableNodeHashTable.a(var2, 17746);
+                  HighscorePlayerRecord.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_lost", 124);
                 if (null != var2) {
@@ -1395,7 +1395,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_continue", 114);
                 if (var2 != null) {
-                  wm.field_e = IterableNodeHashTable.a(var2, 17746);
+                  UiSpriteSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_continue2", 112);
                 if (null != var2) {
@@ -1431,7 +1431,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_retreating_multiple", 100);
                 if (null != var2) {
-                  wl.field_c = IterableNodeHashTable.a(var2, 17746);
+                  OrderableInsertionSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_lost_none", 102);
                 if (null != var2) {
@@ -1740,7 +1740,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_skirmish", 119);
                 if (null != var2) {
-                  wm.field_f = IterableNodeHashTable.a(var2, 17746);
+                  UiSpriteSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_totalplayers", 126);
                 if (var2 != null) {
@@ -2034,7 +2034,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipFleetInfoButtonShow", 109);
                 if (var2 != null) {
-                  wm.field_a = IterableNodeHashTable.a(var2, 17746);
+                  UiSpriteSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipVictoryButtonShow", 102);
                 if (null != var2) {

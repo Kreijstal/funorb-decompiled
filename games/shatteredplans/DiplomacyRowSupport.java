@@ -56,7 +56,7 @@ final class DiplomacyRowSupport {
           var11.addChild(var7, 8);
           param0.field_f[var5Lifetime1][0] = var7;
           for (var8_int = 1; param1.length - 1 > var8_int; var8_int++) {
-            var9 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + var8_int * (2 + GameState.field_F.field_z), 3 + IconTextPanel.field_Cb.field_J / 2 + var11.field_i / 2, wm.a(-1, 0));
+            var9 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + var8_int * (2 + GameState.field_F.field_z), 3 + IconTextPanel.field_Cb.field_J / 2 + var11.field_i / 2, UiSpriteSupport.createColourisedIcon(-1, 0));
             var11.addChild(var9, 8);
             param0.field_f[var5Lifetime1][var8_int] = var9;
           }

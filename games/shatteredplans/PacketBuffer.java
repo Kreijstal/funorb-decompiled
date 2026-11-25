@@ -690,7 +690,7 @@ class PacketBuffer extends IntrusiveNode {
           VictoryChecker.field_j = false;
           AchievementProgress.field_k = false;
           LobbyOptionSupport.field_b = new TutorialScene[8];
-          wl.field_a = new TutorialMapGenerator();
+          OrderableInsertionSupport.field_a = new TutorialMapGenerator();
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl {
+final class OrderableInsertionSupport {
     static String field_e;
     static Sprite field_d;
     static String field_b;
@@ -9,7 +9,7 @@ final class wl {
     static TutorialMapGenerator field_a;
     static MenuComponent field_f;
 
-    final static void a(int param0, int param1, Orderable[] param2) {
+    final static void insertIntoSortedPrefix(int param0, int param1, Orderable[] param2) {
         int var4 = 0;
         Orderable var3 = null;
         int var5 = 0;
@@ -49,7 +49,7 @@ final class wl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseOrderableInsertionStatics(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -60,7 +60,7 @@ final class wl {
           return;
         }
         Orderable[] var2 = (Orderable[]) null;
-        wl.a(-6, -65, (Orderable[]) null);
+        OrderableInsertionSupport.insertIntoSortedPrefix(-6, -65, (Orderable[]) null);
         field_c = null;
         field_f = null;
     }

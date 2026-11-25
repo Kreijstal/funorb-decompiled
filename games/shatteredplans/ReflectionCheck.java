@@ -25,7 +25,7 @@ final class ReflectionCheck extends IntrusiveNode {
         int var1_intLifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          wn.c();
+          RasterViewportState.syncToRasterClip();
           KeyboardStateSupport.field_e = 11;
           HorizontalGradientComponent.field_w = new int[260];
           if (param0 != -47) {

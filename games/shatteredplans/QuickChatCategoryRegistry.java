@@ -16,7 +16,7 @@ final class QuickChatCategoryRegistry {
           String[] var6 = (String[]) null;
           QuickChatCategoryRegistry.a((String) null, -43, (String[]) null);
         }
-        return (int)((double)(-param0 + param3) * wm.smoothStep(param2, (byte) 114, param1)) + param0;
+        return (int)((double)(-param0 + param3) * UiSpriteSupport.smoothStep(param2, (byte) 114, param1)) + param0;
     }
 
     final static void a(java.awt.Canvas param0, boolean param1) {

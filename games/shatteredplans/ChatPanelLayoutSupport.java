@@ -108,8 +108,8 @@ final class ChatPanelLayoutSupport {
           var7 = var7 - (param1 + 2);
           OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param1, (byte) 95, 0, param2 + PopupPlacementSupport.field_j.field_K);
           DateInputWidget.field_I.a(485 + param2 - (-2 - param4), 5, 5, 2, -123, -5 + var7, param4);
-          if (wi.field_c != null) {
-            wi.field_c.setBounds(DateInputWidget.field_I.field_db, DateInputWidget.field_I.field_mb, (byte) 117, DateInputWidget.field_I.field_hb, DateInputWidget.field_I.field_K);
+          if (RasterSpanFactory.field_c != null) {
+            RasterSpanFactory.field_c.setBounds(DateInputWidget.field_I.field_db, DateInputWidget.field_I.field_mb, (byte) 117, DateInputWidget.field_I.field_hb, DateInputWidget.field_I.field_K);
           }
           var8 = -var6_int - param2 + DateValidationSupport.field_c.field_K;
           var9 = var8 / 2;

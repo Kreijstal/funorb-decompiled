@@ -244,7 +244,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
           this.field_H = (TextFieldWidget) ((Object) new ValidatedTextInputWidget(param0, (WidgetListener) (this), 100));
           this.field_R = (TextFieldWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_L) {
-            this.field_K = new FocusableWidget(wl.field_e, (WidgetListener) null);
+            this.field_K = new FocusableWidget(OrderableInsertionSupport.field_e, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_D) {

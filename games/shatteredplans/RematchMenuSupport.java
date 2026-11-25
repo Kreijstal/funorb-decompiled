@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp {
+final class RematchMenuSupport {
     static MusicTrack field_a;
     static String field_b;
     static String field_c;
 
-    final static void a(int param0) {
+    final static void updateRematchCaption(int param0) {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (PasswordInputPainter.field_x.field_M) {
@@ -55,7 +55,7 @@ final class wp {
         field_b = null;
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertBefore(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -96,7 +96,7 @@ final class wp {
         }
     }
 
-    final static String a(byte param0, CharSequence param1, boolean param2) {
+    final static String validateAccountName(byte param0, CharSequence param1, boolean param2) {
         int var6 = 0;
         String stackIn_3_0 = null;
         String stackIn_8_0 = null;
@@ -181,7 +181,7 @@ final class wp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$2661ebe01e52(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertBeforeFullInts(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

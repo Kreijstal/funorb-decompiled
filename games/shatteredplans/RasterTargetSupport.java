@@ -15,7 +15,7 @@ final class RasterTargetSupport {
     }
 
     final static void setMenuHighlightColors(int param0, int param1, int param2, byte param3) {
-        wo.field_a = param2;
+        LoginResultSupport.field_a = param2;
         if (param3 <= 22) {
           RasterTargetSupport.setAccountResponseFlag(true, (byte) -46);
         }

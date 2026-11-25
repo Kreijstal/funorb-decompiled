@@ -180,15 +180,15 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         if (!param0) {
           return;
         }
-        if (wm.field_b <= 32) {
+        if (UiSpriteSupport.field_b <= 32) {
           DiskArchiveRequest.c(-127, 0);
           return;
         }
-        int var1 = wm.field_b % 32;
+        int var1 = UiSpriteSupport.field_b % 32;
         if (var1 == 0) {
           var1 = 32;
         }
-        DiskArchiveRequest.c(126, -var1 + wm.field_b);
+        DiskArchiveRequest.c(126, -var1 + UiSpriteSupport.field_b);
     }
 
     private final boolean a(int param0, UiWidget param1) {

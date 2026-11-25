@@ -169,7 +169,7 @@ abstract class DebouncedValidator implements ValidationSource {
           AttackTask.field_t = param3;
           IsolationistAi.field_q.setSourceStream(SocialNameInputPanel.field_Bb);
           ValidationState.field_b = param2;
-          ValidationState.field_b.a(wm.field_b, 0);
+          ValidationState.field_b.a(UiSpriteSupport.field_b, 0);
           ClientContextMenuSupport.field_e.setSourceStream(ValidationState.field_b);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');

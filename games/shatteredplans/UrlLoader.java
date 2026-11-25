@@ -85,7 +85,7 @@ final class UrlLoader implements Runnable {
             dupTemp$1 = new int[2][4 * var6];
             var3.field_m = dupTemp$1;
             var8 = dupTemp$1;
-            var9 = wm.field_c;
+            var9 = UiSpriteSupport.field_c;
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
@@ -169,7 +169,7 @@ final class UrlLoader implements Runnable {
         try {
           var1 = new Sprite(540, 140);
           IntValueWriteRequest.pushSpriteRaster((byte) 117, var1);
-          wn.c();
+          RasterViewportState.syncToRasterClip();
           SoftwareRasterizer.clear();
           LobbyOptionSupport.field_j = 0;
           QuickChatParameterType.drawLitMeshScene(-65);

@@ -16,7 +16,7 @@ final class DialWidget extends FocusableWidget {
         if (DebouncedValidator.field_g == param0) {
           return null;
         }
-        return wm.field_d[DebouncedValidator.field_g - 1];
+        return UiSpriteSupport.field_d[DebouncedValidator.field_g - 1];
     }
 
     final static NodeSequence a(int param0, QuaternaryNodeList param1) {

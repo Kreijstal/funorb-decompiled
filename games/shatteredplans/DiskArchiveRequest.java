@@ -43,7 +43,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             } else {
               stackIn_8_4 = -param0 + param2.field_h;
             }
-            var5 = wi.a(stackIn_7_0, stackIn_7_1, (RasterCoverageSpan) (stackIn_7_2), stackIn_7_3, stackIn_8_4, param2.field_g + param0, param1 - 3903);
+            var5 = RasterSpanFactory.acquireRasterSpan(stackIn_7_0, stackIn_7_1, (RasterCoverageSpan) (stackIn_7_2), stackIn_7_3, stackIn_8_4, param2.field_g + param0, param1 - 3903);
             param2.field_h = param0;
             while (param2.field_c != null) {
               if (!(param2.field_c.field_g >= var5.field_g) ||
@@ -147,7 +147,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void c(int param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
-        wm.field_b = param1;
+        UiSpriteSupport.field_b = param1;
         if (ToggleButton.field_B == null) {
           if (null != ValidationState.field_b) {
             ValidationState.field_b.a(param1, 0);
