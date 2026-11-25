@@ -185,7 +185,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         try {
           SocialNameInputPanel.showLoadingProgress(DerelictMapGenerator.field_r, ContentDialog.field_cb, (byte) 121, GameSpriteResources.field_f);
-          WeightedCacheEntry.a(47, 0, param1, 0);
+          WeightedCacheEntry.paintRasterToCanvas(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

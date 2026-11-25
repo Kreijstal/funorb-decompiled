@@ -14,7 +14,7 @@ final class LoginRequestSupport {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (NodeSequence.a(param0, -31654)) {
+          if (NodeSequence.containsNonAsciiAlphanumeric(param0, -31654)) {
             return false;
           }
           if (IntrusiveDeque.isRepeatedCharacterString(param0, (byte) 24)) {

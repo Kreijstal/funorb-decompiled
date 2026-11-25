@@ -23,7 +23,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (param0 != 16) {
             return false;
           }
-          var4 = NodeSequence.a((byte) -90, param2);
+          var4 = NodeSequence.findFriendByName((byte) -90, param2);
           if (var4 != null &&
             var4.field_xb != null) {
             return true;
@@ -160,7 +160,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               if (MutableIntPairNode.field_h) {
                 return;
               }
-              if (QuaternaryNodeList.b(91)) {
+              if (QuaternaryNodeList.isGameClientReady(91)) {
                 MutableIntPairNode.field_h = this.c(82, false);
               }
               return;
@@ -1253,7 +1253,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
               if (TiledNineSlicePainter.field_b) {
-                if (StatefulWidgetTheme.a(13, -9861, 12, 15)) {
+                if (StatefulWidgetTheme.handleChatKeyInput(13, -9861, 12, 15)) {
                   continue;
                 }
               } else {
@@ -1505,7 +1505,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         if (param0 != 1) {
           this.shutdown(true);
         }
-        WeightedCacheEntry.a(110, 0, (java.awt.Canvas) (var2), 0);
+        WeightedCacheEntry.paintRasterToCanvas(110, 0, (java.awt.Canvas) (var2), 0);
     }
 
     public ShatteredPlansClient() {

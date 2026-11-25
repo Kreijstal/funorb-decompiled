@@ -29,7 +29,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -var3 + (this.position - 1);
         if (var4 != 0) {
-          return StellarBombEvent.a(this.payload, var4, var3, -119);
+          return StellarBombEvent.decodeCp1252(this.payload, var4, var3, -119);
         }
         return "";
     }
@@ -379,7 +379,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return StellarBombEvent.a(this.payload, var3, var2, -116);
+        return StellarBombEvent.decodeCp1252(this.payload, var3, var2, -116);
     }
 
     final int readMedium(int param0) {

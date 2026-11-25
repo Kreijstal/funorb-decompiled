@@ -292,7 +292,7 @@ class UiWidget extends IntrusiveNode {
             this.field_k = stackIn_7_1;
             if (null != this.field_u &&
               this.field_u instanceof HoverListener) {
-              ((HoverListener) (this.field_u)).a(this, (byte) 116, var5_int != 0);
+              ((HoverListener) (this.field_u)).onHoverChanged(this, (byte) 116, var5_int != 0);
             }
           }
           if (param3 != 91) {

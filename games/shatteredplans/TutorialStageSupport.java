@@ -274,11 +274,11 @@ final class TutorialStageSupport {
             if (!UiTextSupport.hasLogoIntroFinished(250)) {
               SoftwareRasterizer.clear();
               IntroLogoSupport.drawIntroLogo(240, 28318, 320);
-              WeightedCacheEntry.a(param1 ^ 37, 0, param2, 0);
+              WeightedCacheEntry.paintRasterToCanvas(param1 ^ 37, 0, param2, 0);
             } else {
               if (SoundPlayback.field_i == 0) {
                 PlayerRankingRequest.drawDialogsWithBackdrop(false, param0, param1 ^ 10);
-                WeightedCacheEntry.a(64, 0, param2, 0);
+                WeightedCacheEntry.paintRasterToCanvas(64, 0, param2, 0);
               } else {
                 ProxySocketConnector.a(param1 ^ 9232, param2);
               }

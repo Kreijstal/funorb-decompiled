@@ -68,7 +68,7 @@ class MenuLabel extends MenuComponent {
               }
               break;
             }
-            var6.add(StellarBombEvent.a(param0, -var3 + var4, var3, -118), -126);
+            var6.add(StellarBombEvent.decodeCp1252(param0, -var3 + var4, var3, -118), -126);
             while (param0.length > var4) {
               if (13 == param0[var4] ||
                 param0[var4] == 10) {

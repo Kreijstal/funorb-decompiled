@@ -48,7 +48,7 @@ final class WeightedLruCache {
           if (var7 == null) {
             return null;
           }
-          var8 = var7.e((byte) -111);
+          var8 = var7.getValue((byte) -111);
           Object var5 = var8;
           if (var8 == null) {
             var7.unlink((byte) -123);
@@ -56,7 +56,7 @@ final class WeightedLruCache {
             this.field_k = this.field_k + var7.field_p;
             return null;
           }
-          if (!var7.e(false)) {
+          if (!var7.requiresStrongPromotion(false)) {
             this.field_c.addLast(var7, 6);
             var7.field_l = 0L;
             return var8;
@@ -72,14 +72,14 @@ final class WeightedLruCache {
         if (var7 == null) {
           return null;
         }
-        Object var9 = var7.e((byte) -111);
+        Object var9 = var7.getValue((byte) -111);
         if (var9 == null) {
           var7.unlink((byte) -123);
           var7.unlinkSecondary(param1 + 16);
           this.field_k = this.field_k + var7.field_p;
           return null;
         }
-        if (!var7.e(false)) {
+        if (!var7.requiresStrongPromotion(false)) {
           this.field_c.addLast(var7, 6);
           var7.field_l = 0L;
           return var9;

@@ -27,7 +27,7 @@ final class OrderableInsertionSupport {
           var6 = param2[param0];
           var3 = var6;
           for (var4 = param0 - 1; var4 >= 0; var4--) {
-            if (param2[var4].a(var3, -101) < 0) {
+            if (param2[var4].compareTo(var3, -101) < 0) {
               param2[var4 + 1] = var6;
               return;
             }

@@ -90,7 +90,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         return -1;
     }
 
-    final static IndexedSprite[] c(boolean param0) {
+    final static IndexedSprite[] createDecodedIndexedSprites(boolean param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[LobbyLayoutSupport.field_c];

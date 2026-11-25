@@ -1051,7 +1051,7 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_K.isRamping()) {
                 this.field_l.field_o.addChild(var3.field_K);
               }
-              var3.d(false);
+              var3.clearVoiceResources(false);
             }
             if (var3.field_E < 0) {
               this.field_N[var3.field_y][var3.field_H] = null;
@@ -1616,7 +1616,7 @@ final class MidiPcmStream extends PcmStream {
           param3.field_p = PcmPlayerService.field_j / 100;
           if (0 <= param3.field_E && (param3.field_K == null ||
             param3.field_K.hasEnded())) {
-            param3.d(false);
+            param3.clearVoiceResources(false);
             param3.unlink((byte) -68);
             if (param3.field_z > 0 &&
               this.field_K[param3.field_y][param3.field_z] == param3) {
@@ -1703,7 +1703,7 @@ final class MidiPcmStream extends PcmStream {
           if (param3.field_K.isRamping()) {
             this.field_l.field_o.addChild(param3.field_K);
           }
-          param3.d(false);
+          param3.clearVoiceResources(false);
           if (param3.field_E >= 0) {
             param3.unlink((byte) -58);
             if (param3.field_z > 0 &&

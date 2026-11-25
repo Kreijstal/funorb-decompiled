@@ -16,7 +16,7 @@ final class ArchiveLoadStep {
         if (20 > DefensiveAi.field_p) {
           return true;
         }
-        if (!QuaternaryNodeList.b(109)) {
+        if (!QuaternaryNodeList.isGameClientReady(109)) {
           return true;
         }
         if (CheckboxPainter.field_n <= 0) {

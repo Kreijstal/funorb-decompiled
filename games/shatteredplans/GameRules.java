@@ -16,7 +16,7 @@ final class GameRules {
     static int field_g;
     int field_b;
 
-    final static Sprite a(Archive param0, int param1, int param2) {
+    final static Sprite loadTurnSprite(Archive param0, int param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         Sprite stackIn_2_0 = null;
@@ -136,11 +136,11 @@ final class GameRules {
         field_d = null;
         if (!param0) {
           Archive var2 = (Archive) null;
-          GameRules.a((Archive) null, -126, 48);
+          GameRules.loadTurnSprite((Archive) null, -126, 48);
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void notifyBrowserResize(int param0, int param1) {
         try {
           try {
             BrowserJavaScriptBridge.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
@@ -150,7 +150,7 @@ final class GameRules {
             return;
           }
           Archive var3 = (Archive) null;
-          GameRules.a((Archive) null, -29, -123);
+          GameRules.loadTurnSprite((Archive) null, -29, -123);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

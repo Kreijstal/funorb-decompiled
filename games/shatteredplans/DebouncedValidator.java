@@ -22,7 +22,7 @@ abstract class DebouncedValidator implements ValidationSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -30106) {
-            stackIn_6_0 = (NodeSequence.a((byte) -90, param1) != null);
+            stackIn_6_0 = (NodeSequence.findFriendByName((byte) -90, param1) != null);
             return stackIn_6_0;
           }
           return false;

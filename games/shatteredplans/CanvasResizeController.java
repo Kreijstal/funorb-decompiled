@@ -129,10 +129,10 @@ final class CanvasResizeController {
           }
         }
         if (VictoryChecker.field_e != var2) {
-          this.field_s.a(var3, var2, -12725);
+          this.field_s.onCanvasResize(var3, var2, -12725);
         } else {
           if (AccountNameValidationSupport.field_b != var3) {
-            this.field_s.a(var3, var2, -12725);
+            this.field_s.onCanvasResize(var3, var2, -12725);
           }
         }
         if (this.field_c > 0) {
@@ -227,13 +227,13 @@ final class CanvasResizeController {
           AccountNameValidationSupport.field_b == this.field_h) {
           return;
         }
-        this.field_s.a(this.field_h, this.field_e, -12725);
+        this.field_s.onCanvasResize(this.field_h, this.field_e, -12725);
     }
 
     final FullscreenFocusCanvas a(int param0) {
         this.field_o = AccountNameValidationSupport.field_b;
         this.field_n = VictoryChecker.field_e;
-        this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
+        this.field_s.onCanvasResize(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;
         FullscreenFocusCanvas var2 = QuickChatCategoryDefinition.createFullscreenCanvas(this.field_k, ValidatedTextInputWidget.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
@@ -243,7 +243,7 @@ final class CanvasResizeController {
     }
 
     final void c(int param0) {
-        this.field_s.a(this.field_o, this.field_n, -12725);
+        this.field_s.onCanvasResize(this.field_o, this.field_n, -12725);
         int var2 = -2 % ((param0 + 68) / 46);
     }
 

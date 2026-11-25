@@ -292,7 +292,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = AccountValidationText.field_b;
             return stackIn_6_0;
           }
-          if (NodeSequence.a(var5, -31654)) {
+          if (NodeSequence.containsNonAsciiAlphanumeric(var5, -31654)) {
             stackIn_10_0 = WeightedLruCache.field_d;
             return stackIn_10_0;
           }

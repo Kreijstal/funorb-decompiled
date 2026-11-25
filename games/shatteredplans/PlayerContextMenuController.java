@@ -244,7 +244,7 @@ final class PlayerContextMenuController {
             param1 == 2) && ClientInputSupport.field_b == 2) {
             var7 = this.getDisplayName(-121);
             var4 = var7;
-            var5 = NodeSequence.a((byte) -90, this.field_k);
+            var5 = NodeSequence.findFriendByName((byte) -90, this.field_k);
             var6 = IntrusiveNodeHashTable.isIgnoredPlayer(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {

@@ -13,7 +13,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
     static BitmapFont field_u;
     private WidgetStateStyle[] stateStyles;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void setMenuTextColours(int param0, int param1, boolean param2, int param3) {
         StarAnnotation.field_n = param3;
         ValidationMessageWidget.field_P = param1;
         IterableNodeHashTable.field_b = param0;
@@ -22,7 +22,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatKeyInput(int param0, int param1, int param2, int param3) {
         if (param1 != -9861) {
           AnimatedPanel var5 = (AnimatedPanel) null;
           StatefulWidgetTheme.createQuickChatCategoryMenu(122, (QuickChatCategoryDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
@@ -56,7 +56,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
           MeshData.field_h = false;
         }
         if (TextReplacementEntry.field_j == 13) {
-          MusicVoice.c(false);
+          MusicVoice.clearChatInput(false);
           var4 = 1;
           MeshData.field_h = false;
         }

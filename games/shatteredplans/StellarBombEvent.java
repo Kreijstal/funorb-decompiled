@@ -9,7 +9,7 @@ final class StellarBombEvent extends IntrusiveNode {
     static IntrusiveDeque field_h;
     int field_i;
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeCp1252(byte[] param0, int param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -73,7 +73,7 @@ final class StellarBombEvent extends IntrusiveNode {
         field_h = null;
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          StellarBombEvent.a((byte[]) null, 50, -16, 91);
+          StellarBombEvent.decodeCp1252((byte[]) null, 50, -16, 91);
         }
     }
 

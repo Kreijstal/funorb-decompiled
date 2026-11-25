@@ -54,7 +54,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param1 != 17746) {
             field_a = (java.awt.Image) null;
           }
-          stackIn_3_0 = StellarBombEvent.a(param0, param0.length, 0, param1 - 17864);
+          stackIn_3_0 = StellarBombEvent.decodeCp1252(param0, param0.length, 0, param1 - 17864);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -150,7 +150,7 @@ abstract class GameClientShell extends GameApplet {
                   var9 = (String) null;
                   AccountCreationForm.a((String) null, true);
                 } else {
-                  var7 = StellarBombEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
+                  var7 = StellarBombEvent.decodeCp1252(var12.payload, var12.position, 0, param1 ^ -128);
                   AccountCreationForm.a(var7, true);
                 }
                 GraphicsSettings.field_g = null;
@@ -627,7 +627,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 > -32) {
           return;
         }
-        if (QuaternaryNodeList.b(94)) {
+        if (QuaternaryNodeList.isGameClientReady(94)) {
           stackIn_12_1 = false;
           stackIn_12_2 = 1;
           if (null == NameSuggestionsPanel.field_K) {

@@ -33,7 +33,7 @@ final class GameSpriteResources {
           Star.field_K = EmailValidator.a(param1, "", "starfield", false);
           AccountRequestState.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            AccountRequestState.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
+            AccountRequestState.field_e[var2_int] = GameRules.loadTurnSprite(param1, var2_int + 1, 1);
           }
           PasswordInputPainter.field_v = EmailValidator.a(param1, "", "win", false);
           QuickChatPhraseDefinition.field_s = EmailValidator.a(param1, "", "lose", false);

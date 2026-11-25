@@ -75,7 +75,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final void d(boolean param0) {
+    final void clearVoiceResources(boolean param0) {
         this.field_A = null;
         this.field_K = null;
         this.field_M = null;
@@ -102,7 +102,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void clearChatInput(boolean param0) {
         if (param0) {
           return;
         }

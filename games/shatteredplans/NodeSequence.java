@@ -8,7 +8,7 @@ abstract class NodeSequence {
     static int field_e;
     static String field_c;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsNonAsciiAlphanumeric(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -44,7 +44,7 @@ abstract class NodeSequence {
         }
     }
 
-    final static SocialListEntry a(byte param0, String param1) {
+    final static SocialListEntry findFriendByName(byte param0, String param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;

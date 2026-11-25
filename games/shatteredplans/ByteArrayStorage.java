@@ -66,11 +66,11 @@ abstract class ByteArrayStorage {
             if (ProductionContent.field_h == 0) {
               return true;
             }
-            MusicVoice.c(false);
+            MusicVoice.clearChatInput(false);
             return true;
           }
           if (OpacityWidget.field_E.length() <= 0) {
-            MusicVoice.c(param2);
+            MusicVoice.clearChatInput(param2);
           } else {
             var4_ref_String = OpacityWidget.field_E.toString();
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
@@ -80,7 +80,7 @@ abstract class ByteArrayStorage {
               var15 = (String) null;
               var14 = (String) null;
               StripedProgressWidget.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
-              MusicVoice.c(param2);
+              MusicVoice.clearChatInput(param2);
               return true;
             }
             var5 = ProductionContent.field_h;
@@ -91,11 +91,11 @@ abstract class ByteArrayStorage {
             if (SpriteResourceSupport.getChatChannelFilter(-7019, var5) == 2) {
               ServerIntArrayRequest.setChatChannelFilter((byte) 91, param0, 1, var5);
               AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
-              MusicVoice.c(param2);
+              MusicVoice.clearChatInput(param2);
               return true;
             }
             AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
-            MusicVoice.c(param2);
+            MusicVoice.clearChatInput(param2);
           }
           return true;
         }

@@ -162,7 +162,7 @@ final class QuaternaryNodeList {
         this.field_c.field_x = this.field_c;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isGameClientReady(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 79) {
           QuaternaryNodeList.clearStatics(25);

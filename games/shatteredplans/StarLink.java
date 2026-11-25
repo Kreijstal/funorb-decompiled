@@ -134,7 +134,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
         }
     }
 
-    public final int a(Orderable param0, int param1) {
+    public final int compareTo(Orderable param0, int param1) {
         RuntimeException var3 = null;
         Orderable var4 = null;
         int stackIn_3_0 = 0;
@@ -145,7 +145,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
         try {
           if (param1 >= -87) {
             var4 = (Orderable) null;
-            this.a((Orderable) null, 77);
+            this.compareTo((Orderable) null, 77);
           }
           stackIn_3_0 = -this.field_l + ((StarLink) (param0)).field_l;
           return stackIn_3_0;

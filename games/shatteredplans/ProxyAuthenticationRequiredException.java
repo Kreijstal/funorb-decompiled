@@ -26,7 +26,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param0 == -20435) {
-            stackIn_7_0 = ConquestVictoryChecker.c(true);
+            stackIn_7_0 = ConquestVictoryChecker.createDecodedIndexedSprites(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite[]) null;

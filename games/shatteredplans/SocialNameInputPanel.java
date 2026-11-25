@@ -535,7 +535,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
         if (DerelictMapReader.field_h != null) {
           DerelictMapReader.field_h.clearSelection(0);
           if (0 != ProductionContent.field_h) {
-            MusicVoice.c(false);
+            MusicVoice.clearChatInput(false);
           }
           ConquestVictoryChecker.field_m = 0;
           if (param0 < 83) {
@@ -546,7 +546,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
           return;
         }
         if (0 != ProductionContent.field_h) {
-          MusicVoice.c(false);
+          MusicVoice.clearChatInput(false);
         }
         ConquestVictoryChecker.field_m = 0;
         if (param0 < 83) {

@@ -10,7 +10,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
     static int[] field_s;
     static AnimatedPanel field_o;
 
-    abstract boolean e(boolean param0);
+    abstract boolean requiresStrongPromotion(boolean param0);
 
     public static void clearStatics(boolean param0) {
         field_t = null;
@@ -28,9 +28,9 @@ abstract class WeightedCacheEntry extends DualLinkNode {
         this.field_p = param0;
     }
 
-    abstract Object e(byte param0);
+    abstract Object getValue(byte param0);
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void paintRasterToCanvas(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;

@@ -9,7 +9,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
     static String field_v;
     private Object field_y;
 
-    final Object e(byte param0) {
+    final Object getValue(byte param0) {
         if (param0 >= -106) {
           field_v = (String) null;
         }
@@ -40,7 +40,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         field_x = null;
     }
 
-    final boolean e(boolean param0) {
+    final boolean requiresStrongPromotion(boolean param0) {
         if (param0) {
           return false;
         }

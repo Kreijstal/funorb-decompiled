@@ -190,7 +190,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + DiskArchiveRequest.field_v.decode(var4, param0.payload, var3_int, 7, param0.position, param1);
-            var5 = StellarBombEvent.a(var4, var3_int, 0, param1 ^ -127);
+            var5 = StellarBombEvent.decodeCp1252(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -136,7 +136,7 @@ final class WhirlpoolHasher {
               if (DirectByteArrayStorage.field_l.field_rb == 0) {
                 return;
               }
-              MusicVoice.c(false);
+              MusicVoice.clearChatInput(false);
               MeshData.field_h = false;
             }
           }
