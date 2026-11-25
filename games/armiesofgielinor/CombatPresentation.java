@@ -3914,7 +3914,7 @@ final class CombatPresentation implements EventPresentation {
             if (null != MatchConditionEntry.field_p) {
               MatchConditionEntry.field_p.a(param0 ^ -24, this.field_t);
             }
-            MembershipExpansionScreen.e(-387);
+            MembershipExpansionScreen.selectActiveBattleMusic(-387);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -37,8 +37,8 @@ final class CampaignMenu {
           if (this.viewMode != 1) {
             if (this.viewMode != 0) {
               if (this.viewMode == 2) {
-                this.e(-25752);
-                this.a((byte) 88);
+                this.drawMissionMap(-25752);
+                this.drawQuicksaveConflictDialog((byte) 88);
                 if (var3 == 0) {
                   return;
                 }
@@ -46,18 +46,18 @@ final class CampaignMenu {
               if (this.viewMode != 3) {
                 return;
               }
-              this.e(-25752);
-              this.d(26);
+              this.drawMissionMap(-25752);
+              this.drawQuicksaveOptionsDialog(26);
               if (var3 == 0) {
                 return;
               }
             }
-            this.h(396);
+            this.drawCampaignList(396);
             if (var3 == 0) {
               return;
             }
           }
-          this.e(-25752);
+          this.drawMissionMap(-25752);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class CampaignMenu {
         }
     }
 
-    final void a(boolean param0) {
+    final void resetCampaignList(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -167,7 +167,7 @@ final class CampaignMenu {
             }
           }
           if (obfuscationGuard > -62) {
-            CampaignMenu.d((byte) -46);
+            CampaignMenu.releaseStatics((byte) -46);
           }
           DeployAction.field_D = new RgbSprite[3];
           DeployAction.field_D[0] = DiskCacheRequest.loadRgbSpriteByName("takenicon_zamorak", "campaign", AchievementUnlockRequest.field_l, false);
@@ -210,7 +210,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void a(byte param0) {
+    private final void drawQuicksaveConflictDialog(byte param0) {
         RuntimeException runtimeException = null;
         CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
@@ -286,7 +286,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void h(int param0) {
+    private final void drawCampaignList(int param0) {
         String stackIn_8_0 = null;
         int stackIn_11_0;
         int stackIn_11_1;
@@ -375,7 +375,7 @@ final class CampaignMenu {
                   stackIn_43_0 = 0;
                 }
                 var4Lifetime1 = stackIn_43_0;
-                this.a((byte) 13, false, var3_ref, var4Lifetime1 != 0);
+                this.drawCampaignEntry((byte) 13, false, var3_ref, var4Lifetime1 != 0);
                 if (var4Lifetime1 != 0) {
                   var2 = var3_ref;
                 }
@@ -404,7 +404,7 @@ final class CampaignMenu {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -426,7 +426,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void a(byte param0, boolean param1, CampaignMenuEntry param2, boolean param3) {
+    private final void drawCampaignEntry(byte param0, boolean param1, CampaignMenuEntry param2, boolean param3) {
         int stackIn_5_0 = 0;
         int stackIn_17_0;
         int stackIn_17_1;
@@ -509,7 +509,7 @@ final class CampaignMenu {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, int param2) {
+    final static void loadCampaignDefinitions(ResourceArchive param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;
@@ -541,7 +541,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void a(int param0, boolean param1, boolean param2, CampaignMenuEntry param3, boolean param4) {
+    private final void drawMissionRegion(int param0, boolean param1, boolean param2, CampaignMenuEntry param3, boolean param4) {
         RuntimeException stackIn_90_0 = null;
         StringBuilder stackIn_90_1 = null;
         String stackIn_91_2 = null;
@@ -678,7 +678,7 @@ final class CampaignMenu {
                       var12 = 1.0f;
                     }
                   }
-                  this.a((RgbSprite) (var8), var11, var10, var7.row, var9, 1, var12, var7.column);
+                  this.drawMissionRewardMarker((RgbSprite) (var8), var11, var10, var7.row, var9, 1, var12, var7.column);
                 }
               }
             }
@@ -698,7 +698,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void d(int param0) {
+    private final void drawQuicksaveOptionsDialog(int param0) {
         RuntimeException runtimeException = null;
         CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
@@ -859,7 +859,7 @@ final class CampaignMenu {
         }
     }
 
-    final static void a(byte param0, NineSliceFrame param1, int param2, int param3) {
+    final static void configureSelectionMenuFrame(byte param0, NineSliceFrame param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -887,7 +887,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawMissionDetails(int param0) {
         String[] array$0 = null;
         int stackIn_26_0 = 0;
         CampaignMenuEntry stackIn_31_0 = null;
@@ -1132,7 +1132,7 @@ final class CampaignMenu {
             var6Lifetime2 = stackIn_70_0;
             var23_ref = var15.createRewardPreview(-1);
             var24 = ProjectileEffect.field_h[2];
-            this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.canvasWidth / 2);
+            this.drawMissionRewardMarker(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.canvasWidth / 2);
             if (var23_ref.description != null &&
               TabbedPanel.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), IgnoreListLookupSupport.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
@@ -1190,7 +1190,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void a(RgbSprite param0, int param1, int param2, int param3, RgbSprite param4, int param5, float param6, int param7) {
+    private final void drawMissionRewardMarker(RgbSprite param0, int param1, int param2, int param3, RgbSprite param4, int param5, float param6, int param7) {
         RuntimeException stackIn_58_0 = null;
         StringBuilder stackIn_58_1 = null;
         String stackIn_59_2 = null;
@@ -1441,7 +1441,7 @@ final class CampaignMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 321) {
-            this.a((byte) -52, true, (CampaignMenuEntry) null, true);
+            this.drawCampaignEntry((byte) -52, true, (CampaignMenuEntry) null, true);
           }
           var3 = (CampaignMenuEntry) (this.missionEntries.get(-128, (long)missionId));
           stackIn_4_0 = var3;
@@ -2054,7 +2054,7 @@ final class CampaignMenu {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void handleKeyInput(int param0, int param1, int param2) {
         int stackIn_46_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -2131,7 +2131,7 @@ final class CampaignMenu {
         }
     }
 
-    private final void e(int param0) {
+    private final void drawMissionMap(int param0) {
         int stackIn_38_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_61_0 = 0;
@@ -2250,7 +2250,7 @@ final class CampaignMenu {
                 }
                 stackIn_71_5 = true;
               }
-              this.a(stackIn_68_1, stackIn_68_2, stackIn_68_3 != 0, stackIn_68_4, stackIn_71_5);
+              this.drawMissionRegion(stackIn_68_1, stackIn_68_2, stackIn_68_3 != 0, stackIn_68_4, stackIn_71_5);
               var5_ref_cq = (CampaignMenuEntry) (this.missionEntries.next((byte) 110));
               continue;
             }
@@ -2290,7 +2290,7 @@ final class CampaignMenu {
           }
           if (stackIn_96_0 == stackIn_96_1 &&
             this.selectedMissionEntry != null) {
-            this.c(param0 + 25772);
+            this.drawMissionDetails(param0 + 25772);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -2343,7 +2343,7 @@ final class CampaignMenu {
               var5Lifetime1 = 45;
               var7 = var5Lifetime1;
               if (this.campaignEntries == null) {
-                this.a(false);
+                this.resetCampaignList(false);
               }
               var8 = var6Lifetime1;
               var9 = 10;

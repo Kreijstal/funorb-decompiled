@@ -369,7 +369,7 @@ final class EventPresenter extends IntrusiveNode {
           this.acknowledged = true;
           this.presentation = null;
           this.event.completeAllPresentations(excludedEventKind + 7);
-          MembershipExpansionScreen.e(-387);
+          MembershipExpansionScreen.selectActiveBattleMusic(-387);
         }
     }
 

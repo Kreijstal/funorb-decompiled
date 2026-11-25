@@ -405,7 +405,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                       ((GameplayController) (var2)).battleGraphicsAssets.selectTheme(((GameplayController) (var2)).battlefield.mapTheme, 0);
                       ((GameplayController) (var2)).field_d = UnitLossCondition.battlefieldThemes[((GameplayController) (var2)).battlefield.mapTheme].musicTrack;
-                      MembershipExpansionScreen.e(-387);
+                      MembershipExpansionScreen.selectActiveBattleMusic(-387);
                       if (((GameplayController) (var2)).battlefield.field_D == 3) {
                         ((GameplayController) (var2)).rebuildSummonMenus(true);
                       }
@@ -1137,7 +1137,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MusicCrossfadeStream.releaseStatics(256);
           GuestSavePrompts.releaseStatics((byte) 115);
           AttackOverlaySupport.releaseStatics(obfuscationGuard ^ 30);
-          CampaignMenu.d((byte) 44);
+          CampaignMenu.releaseStatics((byte) 44);
           BattleGraphicsAssets.releaseStatics((byte) -12);
           SentenceCaseSupport.releaseStatics(1);
           CombatSandbox.releaseStatics((byte) -8);
@@ -1250,7 +1250,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           IntPair.releaseStatics(-10);
           SpellMenuGroup.releaseStatics(-84);
           TutorialLayout.releaseStatics(obfuscationGuard ^ -4368117);
-          MembershipExpansionScreen.b(-8616);
+          MembershipExpansionScreen.releaseStatics(-8616);
           UiSelectionState.releaseStatics((byte) 110);
           PrivateTextRecipientSupport.a(-1);
           SpellCastAction.releaseStatics(-4541);
@@ -1881,7 +1881,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               return;
             }
           }
-          MembershipExpansionScreen.e(-387);
+          MembershipExpansionScreen.selectActiveBattleMusic(-387);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2153,12 +2153,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               return false;
             }
             if (null != InteractiveWidget.field_F) {
-              CampaignMenu.a(InteractiveWidget.field_F, 0, 28);
+              CampaignMenu.loadCampaignDefinitions(InteractiveWidget.field_F, 0, 28);
               InteractiveWidget.field_F = null;
               return false;
             }
             if (AiInfluenceMap.field_f != null) {
-              CampaignMenu.a(AiInfluenceMap.field_f, 1, -85);
+              CampaignMenu.loadCampaignDefinitions(AiInfluenceMap.field_f, 1, -85);
               AiInfluenceMap.field_f = null;
               return false;
             }

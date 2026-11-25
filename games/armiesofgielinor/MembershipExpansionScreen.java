@@ -23,7 +23,7 @@ final class MembershipExpansionScreen {
     static String field_o;
     static String field_j;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           validationValid = null;
           field_o = null;
@@ -31,14 +31,14 @@ final class MembershipExpansionScreen {
           field_e = null;
           field_j = null;
           if (param0 != -8616) {
-            MembershipExpansionScreen.b(85);
+            MembershipExpansionScreen.releaseStatics(85);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oo.E(" + param0 + ')');
         }
     }
 
-    private final void a(String param0, byte param1, IndexedSprite[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
+    private final void initializeScreen(String param0, byte param1, IndexedSprite[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
         String var7 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -119,7 +119,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    final int a(boolean param0, int param1) {
+    final int advanceFrame(boolean param0, int param1) {
         int stackIn_73_0 = 0;
         int stackIn_80_0 = 0;
         int stackIn_84_0 = 0;
@@ -141,7 +141,7 @@ final class MembershipExpansionScreen {
           }
           if (param1 > -95) {
             var7 = (int[]) null;
-            this.a((RgbSprite) null, 114, -82, (String) null, (BitmapFont) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
+            this.drawResampledTextIntoSprite((RgbSprite) null, 114, -82, (String) null, (BitmapFont) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
           }
           var3_int = -1;
           if (this.field_i != null) {
@@ -215,7 +215,7 @@ final class MembershipExpansionScreen {
             }
           }
           if (param0) {
-            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.pointerPressX, TeleportAction.pointerPressY, -387), this.a(AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY, -387));
+            this.field_h.updatePointerSelection(0, this.getButtonAtPoint(BattleTutorial.pointerPressX, TeleportAction.pointerPressY, -387), this.getButtonAtPoint(AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY, -387));
             var4Lifetime1 = 0;
             if (this.field_h.hasActivationInput((byte) 96)) {
               if (0 == this.field_h.selectedIndex) {
@@ -228,7 +228,7 @@ final class MembershipExpansionScreen {
             }
             if (TextFieldValidator.field_h) {
               while (Unit.pollKeyEvent((byte) -71)) {
-                var5 = this.c(127);
+                var5 = this.handleSelectionKey(127);
                 if (0 == var5) {
                   continue;
                 }
@@ -237,7 +237,7 @@ final class MembershipExpansionScreen {
               }
             }
             if (var4Lifetime1 != 0) {
-              this.b((byte) -92);
+              this.openSubscriptionPage((byte) -92);
               stackIn_84_0 = 3;
               return stackIn_84_0;
             }
@@ -251,7 +251,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final void b(byte param0) {
+    private final void openSubscriptionPage(byte param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         RuntimeException var2_ref = null;
@@ -274,7 +274,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final int c(int param0) {
+    private final int handleSelectionKey(int param0) {
         int discarded$1 = 0;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
@@ -284,12 +284,12 @@ final class MembershipExpansionScreen {
         RuntimeException var2 = null;
         try {
           if (param0 <= 126) {
-            discarded$1 = this.c(-121);
+            discarded$1 = this.handleSelectionKey(-121);
           }
           this.field_h.pollNavigationKeys((byte) -120);
           if (this.field_h.hasActivationInput((byte) 73)) {
             if (this.field_h.selectedIndex == 0) {
-              this.b((byte) -95);
+              this.openSubscriptionPage((byte) -95);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
@@ -311,7 +311,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final void a(int[] param0, int param1, String param2, int param3, BitmapFont param4, byte param5, int param6, int param7) {
+    private final void drawGradientParagraph(int[] param0, int param1, String param2, int param3, BitmapFont param4, byte param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -375,7 +375,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    final void a(int param0) {
+    final void drawScreen(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -398,7 +398,7 @@ final class MembershipExpansionScreen {
           }
           var2_intLifetime1 = 0;
           if (param0 < 106) {
-            this.a((byte) -43);
+            this.ensureTextSprites((byte) -43);
           }
           var3Lifetime1 = 299;
           while (var2_intLifetime1 < 2) {
@@ -407,7 +407,7 @@ final class MembershipExpansionScreen {
             var3Lifetime1 += 91;
             var2_intLifetime1++;
           }
-          this.d(1439);
+          this.drawSlideTransition(1439);
           if (null != AchievementUnlockRequest.field_p &&
             AchievementUnlockRequest.field_p.ensureIndex((byte) 82) &&
             AchievementUnlockRequest.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
@@ -427,7 +427,7 @@ final class MembershipExpansionScreen {
             AlphaWidgetContainer.field_H = null;
             AchievementUnlockRequest.field_p = null;
           }
-          this.a((byte) -124);
+          this.ensureTextSprites((byte) -124);
           if (UnitLossCondition.field_a == null) {
             return;
           }
@@ -483,7 +483,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final void d(int param0) {
+    private final void drawSlideTransition(int param0) {
         RuntimeException decompiledCaughtException = null;
         IndexedSprite var2 = null;
         RuntimeException var2_ref = null;
@@ -534,7 +534,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final void a(RgbSprite param0, int param1, int param2, String param3, BitmapFont param4, int[] param5, int param6, int param7, int param8, float param9) {
+    private final void drawResampledTextIntoSprite(RgbSprite param0, int param1, int param2, String param3, BitmapFont param4, int[] param5, int param6, int param7, int param8, float param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -561,10 +561,10 @@ final class MembershipExpansionScreen {
           var13 = new RgbSprite(var11_int, var12);
           CombatSandbox.pushSpriteRasterTarget(var13, 3);
           if (param6 >= -108) {
-            MembershipExpansionScreen.b(-32);
+            MembershipExpansionScreen.releaseStatics(-32);
           }
           param0.drawScaled((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
-          this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
+          this.drawGradientParagraph(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
           CombatSandbox.pushSpriteRasterTarget(param0, 3);
           var13.drawDownscaledAreaAverage(param2, param1, param8, param7);
@@ -611,7 +611,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int getButtonAtPoint(int param0, int param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_22_0 = 0;
@@ -649,7 +649,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    private final void a(byte param0) {
+    private final void ensureTextSprites(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -673,13 +673,13 @@ final class MembershipExpansionScreen {
             var12 = DirectByteStorage.a(var3, var2_int, -60);
             var11 = var12;
             var9 = var11;
-            this.a(var12, 622, this.field_c, 0, EmailConfirmationValidator.field_n, (byte) 66, 47, 0);
+            this.drawGradientParagraph(var12, 622, this.field_c, 0, EmailConfirmationValidator.field_n, (byte) 66, 47, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_m = new RgbSprite(475, 24);
-            this.a(this.field_m, -4, 0, UnitModelPreview.field_h, EmailConfirmationValidator.field_n, var9, -124, 24, 475, 0.75f);
+            this.drawResampledTextIntoSprite(this.field_m, -4, 0, UnitModelPreview.field_h, EmailConfirmationValidator.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
               var8 = (BitmapFont) null;
-              this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
+              this.drawGradientParagraph((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
             }
             var10 = DirectByteStorage.a(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
@@ -688,9 +688,9 @@ final class MembershipExpansionScreen {
             SoftwareRaster.fillVerticalGradient(0, var5.pixelHeight / 2, var5.pixelWidth, var5.pixelHeight, 16306250, 15568919);
             var6 = LocalizedUrlSupport.field_a;
             var7 = AnimationFrameSet.field_B;
-            this.a(var5, -16, 0, var6, EmailConfirmationValidator.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 20, 0, var7, EmailConfirmationValidator.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 12 - EmailConfirmationValidator.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], EmailConfirmationValidator.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
+            this.drawResampledTextIntoSprite(var5, -16, 0, var6, EmailConfirmationValidator.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.drawResampledTextIntoSprite(var5, 20, 0, var7, EmailConfirmationValidator.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.drawResampledTextIntoSprite(var5, 12 - EmailConfirmationValidator.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], EmailConfirmationValidator.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.pushSpriteRasterTarget(this.field_b, 3);
@@ -706,7 +706,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final static void drawTerrainTransitionEdges(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -736,7 +736,7 @@ final class MembershipExpansionScreen {
         }
     }
 
-    final static void e(int param0) {
+    final static void selectActiveBattleMusic(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -780,7 +780,7 @@ final class MembershipExpansionScreen {
         this.field_s = true;
         this.field_f = 0;
         try {
-          this.a(param1, (byte) 71, param2, param0, true, param3);
+          this.initializeScreen(param1, (byte) 71, param2, param0, true, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

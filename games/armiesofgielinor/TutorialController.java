@@ -1321,7 +1321,7 @@ final class TutorialController {
                                                                                                                                                   return;
                                                                                                                                                 }
                                                                                                                                               }
-                                                                                                                                              MoveEvent.campaignMenu.a(false);
+                                                                                                                                              MoveEvent.campaignMenu.resetCampaignList(false);
                                                                                                                                               this.selectionState.selectedIndex = -1;
                                                                                                                                               var6 = param0 ? 1 : 0;
                                                                                                                                               CipherPacketBuffer.a(var6 != 0, 21, 1, ChatInputDispatchSupport.field_a);
@@ -4588,7 +4588,7 @@ final class TutorialController {
           if (this.tutorialStage == 15) {
             stackIn_10_0 = CampaignLookupSupport.field_a;
             stackIn_11_1 = !(GlobalSpell.a(false));
-            var2_int = ((MembershipExpansionScreen) (Object) stackIn_10_0).a(stackIn_11_1, -121);
+            var2_int = ((MembershipExpansionScreen) (Object) stackIn_10_0).advanceFrame(stackIn_11_1, -121);
             if (var2_int == 3) {
               if (null != FixedQuaternion.fullscreenCanvas) {
                 StructureTerrainSupport.b(-99);
@@ -5083,7 +5083,7 @@ final class TutorialController {
           if (ChatInputDispatchSupport.field_a != 7) {
             if (ChatInputDispatchSupport.field_a == 22 ||
               this.tutorialStage == 21) {
-              MoveEvent.campaignMenu.a(PowerOfTwoSupport.keyCode, (int) DualNodeDeque.typedCharacter, 2);
+              MoveEvent.campaignMenu.handleKeyInput(PowerOfTwoSupport.keyCode, (int) DualNodeDeque.typedCharacter, 2);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -5529,7 +5529,7 @@ final class TutorialController {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.tutorialStage == 15) {
-            CampaignLookupSupport.field_a.a(120);
+            CampaignLookupSupport.field_a.drawScreen(120);
             return;
           }
           if (this.tutorialStage != 1 &&
