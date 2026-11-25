@@ -3,7 +3,7 @@
  */
 final class PointerInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static ProgressDialog field_a;
-    static aj field_f;
+    static ScoreSubmissionRequest field_f;
     static String field_e;
     static ScrollContainer contextMenuScrollContainer;
     static String field_d;

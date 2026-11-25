@@ -105,7 +105,7 @@ final class SpellConfirmationDialog {
         int[] var7 = var9;
         var5 = var7;
         GradientUiRenderer.drawGradientFrame(var2 / 2 + 2, -30 + (var3 / 2 + (var4 >> 1)), 98, 30, DisplacedUnitMarker.field_s, var11, 0, 128, true);
-        GradientUiRenderer.drawCenteredSolidText(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
+        GradientUiRenderer.drawCenteredSolidText(RatingLeaderboardRequest.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
         GradientUiRenderer.drawCenteredSolidText(ToggleTurnSkipConsoleCommand.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }
 

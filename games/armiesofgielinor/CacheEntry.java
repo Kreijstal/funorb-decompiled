@@ -117,7 +117,7 @@ abstract class CacheEntry extends DualLinkedNode {
               CampaignLookupSupport.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                tf.a((byte) -99, CombatEvent.d((byte) -127));
+                TilePosition.a((byte) -99, CombatEvent.d((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
                 TextSplitSupport.closeSessionSocket((byte) -128);
                 RasterViewportResizeHandler.field_b = false;

@@ -719,7 +719,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "dob_chatdisabled");
                 if (null != var2) {
-                  dc.field_l = uu.a(var2, (byte) 61);
+                  ReflectionCheckRequest.field_l = uu.a(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(param0 + 132, "dob_enterforchat");
                 if (null != var2) {
@@ -1413,7 +1413,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_password_confirm");
                 if (null != var2) {
-                  tf.field_m = uu.a(var2, (byte) 68);
+                  TilePosition.field_m = uu.a(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "create_email");
                 if (var2 != null) {
@@ -1649,7 +1649,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_invalidage");
                 if (null != var2) {
-                  jg.field_n = uu.a(var2, (byte) -96);
+                  AchievementNotification.field_n = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "create_alert_yearrange");
                 if (var2 != null) {
@@ -1737,7 +1737,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "enterignore_add");
                 if (null != var2) {
-                  iw.field_o = uu.a(var2, (byte) -112);
+                  AchievementUnlockRequest.field_o = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "enterignore_del");
                 if (null != var2) {
@@ -2094,7 +2094,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "resign");
                 if (null != var2) {
-                  tf.field_p = uu.a(var2, (byte) -110);
+                  TilePosition.field_p = uu.a(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "returntolobby");
                 if (null != var2) {

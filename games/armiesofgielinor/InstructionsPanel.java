@@ -2353,7 +2353,7 @@ final class InstructionsPanel {
             if (SpectateRoomRequestSupport.connectionState == sg.field_a) {
               if (param5) {
                 var10 = (String) null;
-                CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, dc.field_o);
+                CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, ReflectionCheckRequest.field_o);
               } else {
                 CampaignRewardPreview.field_g = TabbedPanel.a(false, param4, (byte) 10, param3);
               }
@@ -2414,15 +2414,15 @@ final class InstructionsPanel {
             }
             if (AlternateKeyedLoginCredentials.field_m == SpectateRoomRequestSupport.connectionState &&
               AgeValidator.isPacketPayloadReady(2)) {
-              dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
+              ReflectionCheckRequest.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
               ModalDialog.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
-              tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
+              TilePosition.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
               LoginForm.memberEntitlementValue = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
               var6 = ByteStorage.incomingPacket.readOptionalString((byte) -125);
               var7 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
-                wj.a(0);
+                ScoreLeaderboardRequest.a(0);
               }
               if (!param5) {
                 stackIn_52_0 = ((var7 & 8) != 0);
@@ -2486,7 +2486,7 @@ final class InstructionsPanel {
                 }
               } else {
                 try {
-                  AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -115), "zap", new Object[]{BattleViewportResizeHandler.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
+                  AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -115), "zap", new Object[]{BattleViewportResizeHandler.decodeBase37DisplayName(param0 + 53, ReflectionCheckRequest.field_o)}, 106);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

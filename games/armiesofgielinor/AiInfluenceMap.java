@@ -736,15 +736,15 @@ final class AiInfluenceMap {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void handleRatingLeaderboardResponse(boolean param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
-        nt stackIn_37_0 = null;
+        RatingLeaderboardRequest stackIn_37_0 = null;
         boolean stackIn_38_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        nt var3 = null;
+        RatingLeaderboardRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -765,10 +765,10 @@ final class AiInfluenceMap {
         try {
           var14 = ByteStorage.incomingPacket;
           var2 = var14.readUnsignedByte(0);
-          var3 = (nt) (s.field_a.first((byte) 120));
+          var3 = (RatingLeaderboardRequest) (s.field_a.first((byte) 120));
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (nt) (s.field_a.next((byte) 123));
+              var3 = (RatingLeaderboardRequest) (s.field_a.next((byte) 123));
               continue;
             }
             break;

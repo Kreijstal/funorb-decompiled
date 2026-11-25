@@ -110,16 +110,16 @@ final class ContextualRuntimeException extends RuntimeException {
         this.context = context;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isHeadReflectionCheckReady(int param0) {
         int var2 = 0;
-        dc var1 = null;
+        ReflectionCheckRequest var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        dc var4 = null;
+        ReflectionCheckRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (dc) (DualNodeHashTable.field_e.first((byte) 115));
+          var4 = (ReflectionCheckRequest) (DualNodeHashTable.field_e.first((byte) 115));
           var1 = var4;
           if (var1 == null) {
             return false;

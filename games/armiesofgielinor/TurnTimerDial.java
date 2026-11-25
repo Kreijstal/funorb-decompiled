@@ -3,7 +3,7 @@
  */
 final class TurnTimerDial {
     private int cycleLength;
-    static wj field_a;
+    static ScoreLeaderboardRequest field_a;
     int sweepPosition;
     static String field_b;
     private int[] pixelThresholds;

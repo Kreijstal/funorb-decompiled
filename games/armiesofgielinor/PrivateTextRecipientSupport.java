@@ -77,7 +77,7 @@ final class PrivateTextRecipientSupport {
           if ((2 & var10Lifetime1) == 0) {
             return;
           }
-          nt.a(894, var9_int, ProxyAuthenticationRequiredException.field_b, param4, param0);
+          RatingLeaderboardRequest.a(894, var9_int, ProxyAuthenticationRequiredException.field_b, param4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

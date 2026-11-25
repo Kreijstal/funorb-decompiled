@@ -175,14 +175,14 @@ final class BestScoreStrategy extends AiPlanningStrategy {
     final static void a(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
-        nt var4 = null;
+        RatingLeaderboardRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (nt) (s.field_a.first((byte) 104));
+          var4 = (RatingLeaderboardRequest) (s.field_a.first((byte) 104));
           while (var4 != null) {
-            tf.a(param0, var4, (byte) -64);
-            var4 = (nt) (s.field_a.next((byte) 123));
+            TilePosition.sendRatingLeaderboardRequest(param0, var4, (byte) -64);
+            var4 = (RatingLeaderboardRequest) (s.field_a.next((byte) 123));
           }
           if (param1 == 1742) {
             return;

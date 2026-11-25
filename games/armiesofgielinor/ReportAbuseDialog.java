@@ -449,7 +449,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             this.targetNameComponent.textColour = 16764006;
             this.content.addChild(this.targetNameComponent, 63);
             this.targetNameComponent.blinkTextSuffix = "|";
-            if (!(tf.field_l < 5) ||
+            if (!(TilePosition.field_l < 5) ||
               !(BufferedSocket.field_j < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
@@ -457,7 +457,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
                 stackIn_6_4 = (IconLabelControl) (muteStyle);
-                if (tf.field_l < 7) {
+                if (TilePosition.field_l < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
                   if (BufferedSocket.field_j < 2) {

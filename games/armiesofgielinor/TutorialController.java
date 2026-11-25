@@ -210,7 +210,7 @@ final class TutorialController {
                 ClientContextMenu.field_k == 0) {
                 KingBlackDragonEvent.field_A = 0;
                 TextLineLayout.currentSpellMenu = MidiPcmStream.field_p;
-                wj.field_q = 0;
+                ScoreLeaderboardRequest.field_q = 0;
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(123, ClientUiNode.field_v[2]);
             }
@@ -251,7 +251,7 @@ final class TutorialController {
                         this.a((byte) 96, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                         return;
                       }
-                      wj.field_q = 248;
+                      ScoreLeaderboardRequest.field_q = 248;
                       AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                       RasterViewportResizeHandler.field_d = UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int];
                       MidiPcmStream.field_p = TextHotspotRegion.spellMenuById[RasterViewportResizeHandler.field_d];
@@ -299,7 +299,7 @@ final class TutorialController {
                 if (TabbedPanel.a(MatchConditionEntry.a(212, (byte) 94), IgnoreListLookupSupport.a(true, 165), 20, false)) {
                   if (null != TextLineLayout.currentSpellMenu.parent) {
                     ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
-                    wj.field_q = 248;
+                    ScoreLeaderboardRequest.field_q = 248;
                     KingBlackDragonEvent.field_A = -248;
                     TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
                     this.a((byte) 51, -1, TextLineLayout.currentSpellMenu);
@@ -328,7 +328,7 @@ final class TutorialController {
                     if (stackIn_103_0) {
                       ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
                       TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.children[var4];
-                      wj.field_q = 248;
+                      ScoreLeaderboardRequest.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
                       this.a((byte) 92, -1, TextLineLayout.currentSpellMenu);
                       RadialSummonMenu.playDefaultSoundWithIntGuard(79, MoveAttackRequest.field_v[42]);
@@ -363,7 +363,7 @@ final class TutorialController {
                     }
                     AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                     RasterViewportResizeHandler.field_d = TextLineLayout.currentSpellMenu.spellIds[var4Lifetime3];
-                    wj.field_q = 248;
+                    ScoreLeaderboardRequest.field_q = 248;
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(113, MoveAttackRequest.field_v[45]);
@@ -821,7 +821,7 @@ final class TutorialController {
             return;
           }
           if (null == AnimationFrameSet.field_z) {
-            AnimationFrameSet.field_z = ProjectileEffect.a(0, 120, 10, 7);
+            AnimationFrameSet.field_z = ProjectileEffect.requestRatingLeaderboard(0, 120, 10, 7);
           }
           boolean decompiledFrameRemainder0 = true;
           var4 = 89;
@@ -3483,7 +3483,7 @@ final class TutorialController {
                 var5 = 1;
               }
             }
-            TurnTimerDial.field_a = DeployAction.a(34, var5, 3, 10, 1);
+            TurnTimerDial.field_a = DeployAction.requestScoreLeaderboard(34, var5, 3, 10, 1);
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -3593,9 +3593,9 @@ final class TutorialController {
           MonotonicClockSupport.field_f = null;
           AccountNameSelectionForm.field_F = -1;
           var2_int = KingBlackDragonEvent.field_A;
-          var3 = wj.field_q;
+          var3 = ScoreLeaderboardRequest.field_q;
           if (null == MidiPcmStream.field_p) {
-            var3 = (int)((Math.cos((double)wj.field_q * 3.141592653589793 / 256.0) + 1.0) * 128.0);
+            var3 = (int)((Math.cos((double)ScoreLeaderboardRequest.field_q * 3.141592653589793 / 256.0) + 1.0) * 128.0);
             var2_int = (int)(128.0 * (Math.cos((double)KingBlackDragonEvent.field_A * 3.141592653589793 / 256.0) - 1.0));
             if (KingBlackDragonEvent.field_A > 0) {
               var2_int = -var2_int;
@@ -3848,7 +3848,7 @@ final class TutorialController {
             if (!BitLengthSupport.field_a) {
               stackIn_26_1 = NanoGameClock.field_k;
             } else {
-              stackIn_26_1 = dc.field_s;
+              stackIn_26_1 = ReflectionCheckRequest.field_s;
             }
             var3 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_26_1).toString();
           }
@@ -3950,9 +3950,9 @@ final class TutorialController {
                   return;
                 }
                 MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
-                QuickChatMenuDisplaySupport.field_f = tf.field_k;
+                QuickChatMenuDisplaySupport.field_f = TilePosition.field_k;
                 PreferencesWriteRequest.field_q = -1 + var2_int;
-                tf.field_k = 256;
+                TilePosition.field_k = 256;
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 kq.field_L = 0;
@@ -4193,7 +4193,7 @@ final class TutorialController {
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
           var3 = (int)(128.0 - Math.cos((double)WeightedLruCache.field_d * 3.141592653589793 / 256.0) * 128.0);
-          var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
+          var4 = (int)(128.0 - 128.0 * Math.cos((double)TilePosition.field_k * 3.141592653589793 / 256.0));
           var5 = (int)(-(128.0 * Math.cos((double)QuickChatMenuDisplaySupport.field_f * 3.141592653589793 / 256.0)) + 128.0);
           var6 = -54 / ((-52 - param0) / 42);
           SoftwareRaster.setClip(IgnoreListLookupSupport.a(true, 34), MatchConditionEntry.a(54, (byte) 94), IgnoreListLookupSupport.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
@@ -4619,8 +4619,8 @@ final class TutorialController {
                   RevivalEvent.d((byte) 122);
                   var3_ref_int__ = BoundedFile.field_e;
                   var3_ref_int__[0] = AccountRegistrationDialog.bitwiseOr(var3_ref_int__[0], 2);
-                  ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
-                  UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
+                  ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new AchievementNotification(0)));
+                  UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new AchievementUnlockRequest(0, 255, 0, 0, 0, 0)));
                 }
                 if (PowerOfTwoSupport.keyCode == 13) {
                   boolean decompiledSharedTail0 = (1 != this.tutorialStage &&
@@ -4677,7 +4677,7 @@ final class TutorialController {
                 }
                 if (PowerOfTwoSupport.keyCode == 80 &&
                   this.tutorialStage == 12 &&
-                  tf.field_k == 0) {
+                  TilePosition.field_k == 0) {
                   MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                   TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                   WeightedLruCache.field_d = GlobalSpell.field_h;
@@ -4686,7 +4686,7 @@ final class TutorialController {
                   GlobalSpell.field_h = 256;
                   PreferencesWriteRequest.field_q = PreferencesWriteRequest.field_q % 7;
                   kq.field_L = 0;
-                  tf.field_k = 256;
+                  TilePosition.field_k = 256;
                   SpriteSheetDecoder.field_n = null;
                   QuickChatMenuDisplaySupport.field_f = 0;
                   if (PreferencesWriteRequest.field_q == 6) {
@@ -4768,8 +4768,8 @@ final class TutorialController {
                         KingBlackDragonEvent.field_A = 0;
                       }
                     }
-                    if (0 < wj.field_q) {
-                      wj.field_q = wj.field_q - 16;
+                    if (0 < ScoreLeaderboardRequest.field_q) {
+                      ScoreLeaderboardRequest.field_q = ScoreLeaderboardRequest.field_q - 16;
                     }
                     if (0 > KingBlackDragonEvent.field_A) {
                       stackIn_260_0 = KingBlackDragonEvent.field_A;
@@ -4864,8 +4864,8 @@ final class TutorialController {
                         SpriteSheetDecoder.field_n.a((byte) 118);
                       }
                       var3 = 8;
-                      if (tf.field_k > 0) {
-                        tf.field_k = tf.field_k - var3;
+                      if (TilePosition.field_k > 0) {
+                        TilePosition.field_k = TilePosition.field_k - var3;
                       }
                       if (256 > QuickChatMenuDisplaySupport.field_f) {
                         QuickChatMenuDisplaySupport.field_f = QuickChatMenuDisplaySupport.field_f + var3;
@@ -5932,7 +5932,7 @@ final class TutorialController {
             MidiPcmStream.field_p = param0;
             this.a((byte) 116, -1, param0);
             if (-1 != RasterViewportResizeHandler.field_d) {
-              wj.field_q = 248;
+              ScoreLeaderboardRequest.field_q = 248;
             }
             AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
           }

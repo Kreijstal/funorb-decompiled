@@ -356,7 +356,7 @@ final class MapLayout extends IntrusiveNode {
         int[] var6 = null;
         MapTile[] var7 = null;
         int var8 = 0;
-        tf var9 = null;
+        TilePosition var9 = null;
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
@@ -398,7 +398,7 @@ final class MapLayout extends IntrusiveNode {
           var7 = this.a(var18, 22654, battlefield);
           if (0 <= this.formatVersion) {
             var8 = var4.readUnsignedByte(0);
-            var9 = new tf(0, 0);
+            var9 = new TilePosition(0, 0);
             for (var10 = 0; var8 > var10; var10++) {
               var11 = var4.readUnsignedByte(0);
               var12 = var11;

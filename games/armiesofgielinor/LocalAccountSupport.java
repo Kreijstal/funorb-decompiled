@@ -179,7 +179,7 @@ final class LocalAccountSupport {
           param1 = false;
         }
         TileMetadata.a(5295, param1);
-        jg.a((byte) 102);
+        AchievementNotification.drawQuickChatOverlay((byte) 102);
     }
 
     final static void b(int param0) {

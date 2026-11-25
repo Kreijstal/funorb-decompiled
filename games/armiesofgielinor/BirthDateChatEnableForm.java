@@ -91,7 +91,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         }
     }
 
-    final static void a(byte param0, aj param1, int param2) {
+    final static void sendScoreSubmission(byte param0, ScoreSubmissionRequest param1, int param2) {
         CipherPacketBuffer var8 = null;
         CipherPacketBuffer var9 = null;
         int var4 = 0;
@@ -116,8 +116,8 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
             var8.writeInt((byte) -70, param1.field_l[var5]);
           }
           if (param0 >= -26) {
-            aj var7 = (aj) null;
-            BirthDateChatEnableForm.a((byte) -126, (aj) null, 112);
+            ScoreSubmissionRequest var7 = (ScoreSubmissionRequest) null;
+            BirthDateChatEnableForm.sendScoreSubmission((byte) -126, (ScoreSubmissionRequest) null, 112);
           }
           var9.appendChecksum((byte) -39, var4);
           var9.writeByteLengthPrefix(var9.position - var4, 5930);

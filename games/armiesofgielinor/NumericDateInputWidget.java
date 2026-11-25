@@ -179,7 +179,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     }
 
     final static void b(boolean param0) {
-        tf.a((byte) -99, CombatEvent.d((byte) -111));
+        TilePosition.a((byte) -99, CombatEvent.d((byte) -111));
         if (param0) {
           cachedConsoleSource = (String) null;
         }

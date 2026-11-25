@@ -10,7 +10,7 @@ final class AnimationFrameSet extends DualLinkedNode {
     static int field_E;
     static String field_y;
     static String field_I;
-    static nt field_z;
+    static RatingLeaderboardRequest field_z;
     static String field_u;
     static String[] field_v;
     AnimationFrame[] frames;

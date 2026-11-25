@@ -1618,7 +1618,7 @@ final class GameplayController {
                 if (stackIn_74_0 > stackIn_74_1) {
                   return;
                 }
-                this.a(44, (byte) 30, 211);
+                this.unlockAchievement(44, (byte) 30, 211);
                 return;
               }
             }
@@ -4748,7 +4748,7 @@ final class GameplayController {
         try {
           var2_int = this.battlefield.playerCount;
           SoftwareRaster.clearPixels();
-          jg.field_m.drawPixels(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
+          AchievementNotification.field_m.drawPixels(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
           GradientUiRenderer.drawCenteredTextBackdrop(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(35, (byte) 94));
           GradientUiRenderer.drawCenteredGradientText(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(35, (byte) 94), ConsoleValue.field_b, false);
@@ -5641,10 +5641,10 @@ final class GameplayController {
             }
             if ((decompiledFrameCompleted0) &&
               (var4 != 0)) {
-              jg.field_m.drawWithBrightness(0, 0, 96);
+              AchievementNotification.field_m.drawWithBrightness(0, 0, 96);
             }
           } else {
-            jg.field_m.drawWithBrightness(0, 0, 96);
+            AchievementNotification.field_m.drawWithBrightness(0, 0, 96);
           }
           if (decompiledFrameCompleted0) {
             stackIn_17_0 = param0;
@@ -6927,24 +6927,24 @@ final class GameplayController {
                 var14 = this.camera.screenPosition[1];
                 if (!IterableDualNodeDeque.isPointerInBounds(param0 - 153, 25 + var13, 55 + var13, -8 + var14, 7 + var14)) {
                   if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, var13 + 25, var13 + 55, var14 + 33, var14 + 48)) {
-                    var2 = aj.field_p;
+                    var2 = ScoreSubmissionRequest.field_p;
                     decompiledFrameRemainder6 = (var20 != 0);
                   }
                   if (decompiledFrameRemainder6) {
                     if (IterableDualNodeDeque.isPointerInBounds(-33, -15 + var13, var13 + 15, var14 + 13, 28 + var14)) {
-                      var2 = aj.field_p;
+                      var2 = ScoreSubmissionRequest.field_p;
                       decompiledFrameRemainder6 = (var20 != 0);
                     }
                     if ((decompiledFrameRemainder6) &&
                       (IterableDualNodeDeque.isPointerInBounds(-33, var13 + 65, 95 + var13, var14 + 13, 28 + var14))) {
-                      var2 = aj.field_p;
+                      var2 = ScoreSubmissionRequest.field_p;
                       if (var20 != 0) {
-                        var2 = aj.field_p;
+                        var2 = ScoreSubmissionRequest.field_p;
                       }
                     }
                   }
                 } else {
-                  var2 = aj.field_p;
+                  var2 = ScoreSubmissionRequest.field_p;
                 }
               }
               boolean decompiledFrameRemainder5 = true;
@@ -10086,7 +10086,7 @@ final class GameplayController {
           if (param0 != 34) {
             this.field_rb = false;
           }
-          stackIn_7_0 = (dc.field_o == 2098862971322544L);
+          stackIn_7_0 = (ReflectionCheckRequest.field_o == 2098862971322544L);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11328,7 +11328,7 @@ final class GameplayController {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void unlockAchievement(int param0, byte param1, int param2) {
         int[] var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -11348,9 +11348,9 @@ final class GameplayController {
           var4Lifetime1 = ReportAbuseDialog.field_Nb;
           var5Lifetime1 = param0;
           var4Lifetime1[var5Lifetime1 >> 5] = AccountRegistrationDialog.bitwiseOr(var4Lifetime1[var5Lifetime1 >> 5], 1 << ProceduralMapSupport.bitwiseAnd(31, var5Lifetime1));
-          ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
+          ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new AchievementNotification(param0)));
           if (!this.field_R) {
-            UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(param0, param2, -1, -1, -1, -1)));
+            UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new AchievementUnlockRequest(param0, param2, -1, -1, -1, -1)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

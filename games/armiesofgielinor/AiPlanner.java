@@ -1749,7 +1749,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.weights = new float[62];
           AttackEvent.nextBoundedInt(false, 3, PreferencesWriteRequest.field_n);
           this.battlefield.unitObservers.addLast((byte) -119, (IntrusiveNode) (this));
-          aj.a(this.weights, 117);
+          ScoreSubmissionRequest.initializeAiTuningDefaults(this.weights, 117);
           this.campaignOverrides = campaignOverrides;
           var5_int = 0;
           var6 = (Unit) (this.battlefield.unitsByPlayer[this.playerId].first((byte) 104));

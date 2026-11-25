@@ -38,16 +38,16 @@ final class hq {
             AccountNameNormalizer.field_c = param10;
             BestScoreStrategy.field_l = param9;
             AiPlanningStrategy.field_c = param2;
-            wj.field_n = param11;
+            ScoreLeaderboardRequest.field_n = param11;
             ProceduralMapSupport.field_d = param8;
             LineOfSightGrid.field_a = param4;
             DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;
             WidgetTheme.field_e = param13;
             SpriteDropdownMenu.field_v = param6;
-            if (null != wj.field_n.randomDataFile) {
+            if (null != ScoreLeaderboardRequest.field_n.randomDataFile) {
               try {
-                GameCanvas.field_d = new BufferedFile(wj.field_n.randomDataFile, 64, 0);
+                GameCanvas.field_d = new BufferedFile(ScoreLeaderboardRequest.field_n.randomDataFile, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

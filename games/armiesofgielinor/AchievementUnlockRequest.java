@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iw extends IntrusiveNode {
+final class AchievementUnlockRequest extends IntrusiveNode {
     int field_m;
     static ResourceArchive field_p;
     int field_k;
@@ -24,7 +24,7 @@ final class iw extends IntrusiveNode {
         field_l = null;
     }
 
-    iw(int param0, int param1, int param2, int param3, int param4, int param5) {
+    AchievementUnlockRequest(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_k = param1;
         this.field_t = param4;
         this.field_q = param2;

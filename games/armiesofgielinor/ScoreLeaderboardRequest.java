@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends IntrusiveNode {
+final class ScoreLeaderboardRequest extends IntrusiveNode {
     int[][] field_m;
     static PlatformTaskService field_n;
     int field_p;
@@ -15,17 +15,17 @@ final class wj extends IntrusiveNode {
     public static void a(boolean param0) {
         if (!param0) {
           RgbSprite[] var2 = (RgbSprite[]) null;
-          wj.a(96, (RgbSprite[]) null);
+          ScoreLeaderboardRequest.resetSpriteCanvasBounds(96, (RgbSprite[]) null);
           field_n = null;
           return;
         }
         field_n = null;
     }
 
-    wj() {
+    ScoreLeaderboardRequest() {
     }
 
-    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
+    final static RgbSprite[] resetSpriteCanvasBounds(int param0, RgbSprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RgbSprite var3 = null;

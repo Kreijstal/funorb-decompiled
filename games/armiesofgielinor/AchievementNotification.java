@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jg extends IntrusiveNode {
+final class AchievementNotification extends IntrusiveNode {
     int field_l;
     static RgbSprite field_m;
     static String field_n;
@@ -18,7 +18,7 @@ final class jg extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         if (param2 != 512) {
-          jg.a((byte) 13);
+          AchievementNotification.drawQuickChatOverlay((byte) 13);
         }
         int var5 = AccountRegistrationForm.field_Z[param4][param3];
         if (var5 > -1) {
@@ -33,17 +33,17 @@ final class jg extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawQuickChatOverlay(byte param0) {
         if (BattleTutorial.quickChatMenuVisible) {
           SoftwareRaster.darkenRectangle(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
           OwnerChangeEvent.quickChatMenuHost.draw(false, 20);
         }
         if (param0 != 102) {
-          jg.a(-122, true, false, -112, 41, -27, 39);
+          AchievementNotification.a(-122, true, false, -112, 41, -27, 39);
         }
     }
 
-    jg(int param0) {
+    AchievementNotification(int param0) {
         this.field_l = param0;
     }
 
@@ -612,7 +612,7 @@ final class jg extends IntrusiveNode {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        iw var11 = null;
+        AchievementUnlockRequest var11 = null;
         SpriteSheetDecoder var12 = null;
         CipherPacketBuffer var13 = null;
         SpriteSheetDecoder var14 = null;
@@ -641,7 +641,7 @@ final class jg extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var11 = (iw) (ScreenWipeTransition.field_c.first((byte) 104));
+            var11 = (AchievementUnlockRequest) (ScreenWipeTransition.field_c.first((byte) 104));
             if (var11 == null) {
               TextSplitSupport.closeSessionSocket((byte) -126);
               return;

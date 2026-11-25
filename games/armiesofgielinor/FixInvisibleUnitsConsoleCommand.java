@@ -7,7 +7,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
     static String field_H;
     static String field_F;
 
-    final static void a(byte param0, int param1, iw param2) {
+    final static void sendAchievementUnlock(byte param0, int param1, AchievementUnlockRequest param2) {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
@@ -18,8 +18,8 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           var6.writeByte(param0 ^ 113, 1);
           var6.writeByte(1, param2.field_r);
           if (param0 != 112) {
-            iw var5 = (iw) null;
-            FixInvisibleUnitsConsoleCommand.a((byte) 26, -53, (iw) null);
+            AchievementUnlockRequest var5 = (AchievementUnlockRequest) null;
+            FixInvisibleUnitsConsoleCommand.sendAchievementUnlock((byte) 26, -53, (AchievementUnlockRequest) null);
           }
           var6.writeByte(1, param2.field_k);
           var6.writeInt((byte) -96, param2.field_q);

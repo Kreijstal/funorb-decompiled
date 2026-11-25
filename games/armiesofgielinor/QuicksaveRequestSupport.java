@@ -81,7 +81,7 @@ final class QuicksaveRequestSupport {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             }
-            jg.a(0, param3, param6, param1, param2, param4, param5);
+            AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
             VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
             KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
@@ -117,7 +117,7 @@ final class QuicksaveRequestSupport {
                 MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
-              jg.a(0, param3, param6, param1, param2, param4, param5);
+              AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
               VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
               KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
@@ -202,7 +202,7 @@ final class QuicksaveRequestSupport {
             }
           }
         }
-        jg.a(0, param3, param6, param1, param2, param4, param5);
+        AchievementNotification.a(0, param3, param6, param1, param2, param4, param5);
         VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
         KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
     }

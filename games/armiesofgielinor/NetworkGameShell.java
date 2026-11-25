@@ -253,7 +253,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                   KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
                   BitmapTextWidgetPainter.field_r = null;
                 } else {
-                  StructureTerrainSupport.field_b = dc.field_o;
+                  StructureTerrainSupport.field_b = ReflectionCheckRequest.field_o;
                   DualLinkedNode.e(112);
                   QuickChatCategoryRepository.guestSession = false;
                   SoundCache.field_b = 10;
@@ -408,13 +408,13 @@ abstract class NetworkGameShell extends GameAppletShell {
           regionExit1: {
             switch (opcode) {
               case 2:
-                LeaderEscortCondition.d(9);
+                LeaderEscortCondition.handleHighscoreResponse(9);
                 break;
               case 4:
                 LocalAccountSupport.a((byte) -101);
                 break;
               case 6:
-                AiInfluenceMap.a(true);
+                AiInfluenceMap.handleRatingLeaderboardResponse(true);
                 break;
               case 16:
                 LocalAccountSupport.readLocalAccountName(67);
@@ -444,7 +444,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 MapLayout.acceptReceivedChatMessage(message, -1);
                 break;
               case 8:
-                AgeValidator.a(ByteStorage.incomingPacket, IntPair.field_m, DropdownSelectorPainter.packetPayloadLength, obfuscationGuard - 13);
+                AgeValidator.readReflectionCheckRequest(ByteStorage.incomingPacket, IntPair.field_m, DropdownSelectorPainter.packetPayloadLength, obfuscationGuard - 13);
                 break;
               case 7:
                 this.persistSessionCookie((byte) 127);
@@ -453,7 +453,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 cd.handlePreferencesResponse(obfuscationGuard - 48);
                 break;
               case 3:
-                jg.e(0);
+                AchievementNotification.e(0);
                 break;
               case 1:
                 InstructionsPanel.e(obfuscationGuard - 135);

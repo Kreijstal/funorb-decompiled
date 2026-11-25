@@ -201,12 +201,12 @@ final class pu {
             field_h = (String) null;
           }
           var1 = EmailValidator.outgoingPacket;
-          while (ContextualRuntimeException.a(param0 ^ -13083)) {
+          while (ContextualRuntimeException.isHeadReflectionCheckReady(param0 ^ -13083)) {
             var1.writeCipheredOpcode(32161, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            RasterState.a(param0 ^ 28704, var1);
+            RasterState.writeReflectionCheckResponse(param0 ^ 28704, var1);
             EmailValidator.outgoingPacket.writeByteLengthPrefix(-var2 + var1.position, param0 - 22774);
           }
           return;

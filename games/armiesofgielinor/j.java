@@ -50,7 +50,7 @@ final class j {
           }
           DisplacedUnitMarker.field_t = new String[60];
           DisplacedUnitMarker.field_t[24] = ValidatedTextWidget.field_Y;
-          DisplacedUnitMarker.field_t[11] = tf.field_p;
+          DisplacedUnitMarker.field_t[11] = TilePosition.field_p;
           DisplacedUnitMarker.field_t[0] = ByteArrayPoolSupport.field_g;
           DisplacedUnitMarker.field_t[1] = la.field_e;
           DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
@@ -83,14 +83,14 @@ final class j {
           for (var1_int = 55; 59 > var1_int; var1_int++) {
             DisplacedUnitMarker.field_t[var1_int] = null;
           }
-          DisplacedUnitMarker.field_t[42] = nt.field_p;
+          DisplacedUnitMarker.field_t[42] = RatingLeaderboardRequest.field_p;
           DisplacedUnitMarker.field_t[40] = PreferencesReadRequest.field_l;
           DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
           DisplacedUnitMarker.field_t[36] = StripedProgressWidget.field_G;
           DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;
           DisplacedUnitMarker.field_t[35] = AccountRequestResult.field_j;
           DisplacedUnitMarker.field_t[47] = qk.field_f;
-          DisplacedUnitMarker.field_t[51] = nt.field_p;
+          DisplacedUnitMarker.field_t[51] = RatingLeaderboardRequest.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
           DisplacedUnitMarker.field_t[44] = ArchiveMasterIndex.field_g;
           DisplacedUnitMarker.field_t[37] = GzipDecoder.field_c;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends IntrusiveNode {
+final class ReflectionCheckRequest extends IntrusiveNode {
     static String field_l;
     int field_p;
     int[] field_m;
@@ -18,7 +18,7 @@ final class dc extends IntrusiveNode {
     final static void detachPointerInput(java.awt.Component param0, int param1) {
         try {
           if (param1 > -25) {
-            dc.createAccountSuccessResult(false, false);
+            ReflectionCheckRequest.createAccountSuccessResult(false, false);
           }
           param0.removeMouseListener(BattleCharacter.pointerInputHandler);
           param0.removeMouseMotionListener(BattleCharacter.pointerInputHandler);
@@ -37,7 +37,7 @@ final class dc extends IntrusiveNode {
           var2.requiresAgreement = param0 ? true : false;
           return var2;
         }
-        dc.createAccountSuccessResult(false, false);
+        ReflectionCheckRequest.createAccountSuccessResult(false, false);
         var2Lifetime1 = new AccountRequestResult(true);
         var2Lifetime1.requiresAgreement = param0 ? true : false;
         return var2Lifetime1;
@@ -56,7 +56,7 @@ final class dc extends IntrusiveNode {
         field_n = null;
     }
 
-    dc() {
+    ReflectionCheckRequest() {
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends IntrusiveNode {
+final class ScoreSubmissionRequest extends IntrusiveNode {
     int field_m;
     static String field_p;
     int field_q;
@@ -15,11 +15,11 @@ final class aj extends IntrusiveNode {
     public static void releaseStatics(int obfuscationGuard) {
         field_p = null;
         if (obfuscationGuard <= 69) {
-          aj.releaseStatics(-73);
+          ScoreSubmissionRequest.releaseStatics(-73);
         }
     }
 
-    final static void a(float[] param0, int param1) {
+    final static void initializeAiTuningDefaults(float[] param0, int param1) {
         try {
           param0[40] = 0.5f;
           param0[61] = 30.0f;
@@ -89,7 +89,7 @@ final class aj extends IntrusiveNode {
         }
     }
 
-    private aj() throws Throwable {
+    private ScoreSubmissionRequest() throws Throwable {
         throw new Error();
     }
 

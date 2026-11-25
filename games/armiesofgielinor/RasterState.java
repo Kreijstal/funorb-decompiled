@@ -217,7 +217,7 @@ final class RasterState extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, CipherPacketBuffer param1) {
+    final static void writeReflectionCheckResponse(int param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -246,10 +246,10 @@ final class RasterState extends IntrusiveNode {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          dc var13 = null;
+          ReflectionCheckRequest var13 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          dc var17 = null;
+          ReflectionCheckRequest var17 = null;
           Object var18 = null;
           Object var19 = null;
           java.lang.reflect.Field var20 = null;
@@ -268,7 +268,7 @@ final class RasterState extends IntrusiveNode {
           var23 = null;
           var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            var13 = (dc) (DualNodeHashTable.field_e.first((byte) 125));
+            var13 = (ReflectionCheckRequest) (DualNodeHashTable.field_e.first((byte) 125));
             var17 = var13;
             if (var17 == null) {
               return;

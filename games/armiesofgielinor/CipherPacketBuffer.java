@@ -251,7 +251,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   if (jt.field_a == 16) {
                     RasterState.a((byte) 111);
                     TextLineLayout.a((byte) -41);
-                    ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
+                    ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                   }
                   jt.field_a = param1;
                   if (param2 == 1) {
@@ -290,7 +290,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (jt.field_a == 16) {
                   RasterState.a((byte) 111);
                   TextLineLayout.a((byte) -41);
-                  ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
+                  ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                 }
                 jt.field_a = param1;
                 if (param2 == 1) {
@@ -335,7 +335,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (jt.field_a == 16) {
           RasterState.a((byte) 111);
           TextLineLayout.a((byte) -41);
-          ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
+          ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
         }
         jt.field_a = param1;
         if (param2 == 1) {

@@ -81,7 +81,7 @@ final class TextLineLayout {
     }
 
     final static void a(byte param0) {
-        LinkButtonPainter.field_f = new BattleGraphicsAssets(iw.field_l);
+        LinkButtonPainter.field_f = new BattleGraphicsAssets(AchievementUnlockRequest.field_l);
         if (param0 < -36) {
           LinkButtonPainter.field_f.selectTheme(0, 0);
           LinkButtonPainter.field_f.loadBasicSprites(0);

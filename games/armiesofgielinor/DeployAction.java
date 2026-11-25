@@ -24,7 +24,7 @@ final class DeployAction extends PreparedAction {
         field_D = null;
         field_z = null;
         if (!obfuscationGuard) {
-          DeployAction.a(-31, -19, 87, -24, -42);
+          DeployAction.requestScoreLeaderboard(-31, -19, 87, -24, -42);
         }
     }
 
@@ -64,21 +64,21 @@ final class DeployAction extends PreparedAction {
         }
     }
 
-    final static wj a(int param0, int param1, int param2, int param3, int param4) {
+    final static ScoreLeaderboardRequest requestScoreLeaderboard(int param0, int param1, int param2, int param3, int param4) {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        wj var5 = (wj) (BattleCharacter.field_c.first((byte) 114));
+        ScoreLeaderboardRequest var5 = (ScoreLeaderboardRequest) (BattleCharacter.field_c.first((byte) 114));
         while (var5 != null) {
           if (param1 == var5.field_r) {
             return var5;
           }
-          var5 = (wj) (BattleCharacter.field_c.next((byte) 123));
+          var5 = (ScoreLeaderboardRequest) (BattleCharacter.field_c.next((byte) 123));
         }
-        var5 = new wj();
+        var5 = new ScoreLeaderboardRequest();
         var5.field_p = param4;
         var5.field_k = param3;
         var5.field_r = param1;
         BattleCharacter.field_c.addLast((byte) -119, (IntrusiveNode) (var5));
-        IndentedTextBuilder.a(param2, var5, 0);
+        IndentedTextBuilder.sendScoreLeaderboardRequest(param2, var5, 0);
         if (param0 == 34) {
           return var5;
         }

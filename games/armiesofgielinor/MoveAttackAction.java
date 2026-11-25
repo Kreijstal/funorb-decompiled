@@ -111,7 +111,7 @@ final class MoveAttackAction extends PreparedAction {
             stackIn_38_0 = DualLinkedNode.field_r;
             stackIn_38_1 = ~DirectByteStorage.field_k[var8Lifetime2];
             if (stackIn_38_1 <= -1) {
-              stackIn_41_1 = jg.field_k;
+              stackIn_41_1 = AchievementNotification.field_k;
             } else {
               stackIn_41_1 = OctaveNoiseMap.field_o;
             }

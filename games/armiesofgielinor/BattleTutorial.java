@@ -1763,7 +1763,7 @@ class BattleTutorial {
     private final void i(byte param0) {
         RevivalEvent.d((byte) 113);
         int var2 = 47 / ((param0 + 75) / 34);
-        this.controller.a(0, (byte) 30, 255);
+        this.controller.unlockAchievement(0, (byte) 30, 255);
     }
 
     final void activateButton(boolean obfuscationGuard) {

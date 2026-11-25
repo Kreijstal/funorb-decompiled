@@ -480,14 +480,14 @@ final class UnitSpell extends Spell {
         return 4;
     }
 
-    final static void a(int param0, int param1, aj param2) {
+    final static void a(int param0, int param1, ScoreSubmissionRequest param2) {
         try {
           if (param1 != 1) {
             ViewportResizeListener var4 = (ViewportResizeListener) null;
             UnitSpell.installViewportResizeListener(-25, (ViewportResizeListener) null);
           }
           GameEvent.field_r.addLast((byte) -119, (IntrusiveNode) (param2));
-          BirthDateChatEnableForm.a((byte) -57, param2, param0);
+          BirthDateChatEnableForm.sendScoreSubmission((byte) -57, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

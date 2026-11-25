@@ -175,11 +175,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           boolean decompiledFrameCompleted0 = true;
           if (!DamageEvent.isGuestSession(100)) {
             while (true) {
-              var2 = (iw) (UnitInfoPopup.field_u.popFirst(0));
+              var2 = (AchievementUnlockRequest) (UnitInfoPopup.field_u.popFirst(0));
               if (var2 == null) {
                 break;
               }
-              SingleChildWidgetContainer.a(0, 4, (iw) (var2));
+              SingleChildWidgetContainer.queueAchievementUnlock(0, 4, (AchievementUnlockRequest) (var2));
               if (var11 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -1126,7 +1126,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
     final void finishShutdown(byte obfuscationGuard) {
         try {
           ArmiesOfGielinor.s(3);
-          jg.releaseStatics(-112);
+          AchievementNotification.releaseStatics(-112);
           NodeDeque.releaseStatics(obfuscationGuard + 322);
           ResourceArchive.releaseStatics(obfuscationGuard + 71);
           IndexedDecodedSpriteSupport.releaseStatics(-114);
@@ -1366,7 +1366,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ByteStorage.releaseStatics(9892);
           Bzip2Decoder.releaseSharedState();
           Bzip2State.releaseStatics((byte) 75);
-          dc.a(540);
+          ReflectionCheckRequest.a(540);
           BoundedFile.releaseStatics(-98);
           CheckBoxWidgetPainter.releaseStatics((byte) -100);
           StatefulWidgetPainter.releaseStatics((byte) -120);
@@ -1389,7 +1389,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           FriendLookupSupport.a((byte) -112);
           PcmPlayerService.releaseLabels(-74);
           TaggedMapData.releaseStatics(-91);
-          tf.releaseStatics(false);
+          TilePosition.releaseStatics(false);
           BattleCharacter.releaseStatics(-1);
           CombatViewTransition.releaseStatics((byte) 120);
           CampaignLookupSupport.releaseStatics(111);
@@ -1514,10 +1514,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           mu.releaseStatics(0);
           NodeHashIterator.releaseStatics((byte) 100);
           DualNodeIterator.releaseStatics((byte) -121);
-          wj.a(true);
-          aj.releaseStatics(obfuscationGuard + 155);
+          ScoreLeaderboardRequest.a(true);
+          ScoreSubmissionRequest.releaseStatics(obfuscationGuard + 155);
           ko.releaseStatics(false);
-          nt.releaseStatics((byte) 97);
+          RatingLeaderboardRequest.releaseStatics((byte) 97);
           ChannelGainProfile.releaseStatics(-4740);
           SoundPlaybackHandle.releaseStatics((byte) -75);
           CampaignDefinition.releaseStatics((byte) 9);
@@ -1536,7 +1536,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SocialListEntry.releaseStatics(obfuscationGuard - 4103);
           ArchiveLoadStep.releaseStatics((byte) 120);
           SpriteSheetDecoder.releaseStatics(true);
-          iw.releaseStatics(-25771);
+          AchievementUnlockRequest.releaseStatics(-25771);
           PreferencesReadRequest.releaseStatics((byte) 89);
           PreferencesWriteRequest.releaseStatics((byte) 74);
           ConsoleExpression.releaseStatics(true);
@@ -1703,7 +1703,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             ModalDialog.a(0);
           }
           bt.field_e = SpriteButtonPainter.a(3, true);
-          iw.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
+          AchievementUnlockRequest.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
           UnitAnimationPreview.field_j = SpriteButtonPainter.a(6, true);
           CampaignLookupSupport.field_d = SpriteButtonPainter.a(7, true);
           SpellConfirmationDialog.field_f = SpriteButtonPainter.a(8, true);
@@ -1946,9 +1946,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                             ep.field_b.ensureAllGroupsAvailable(-27927)) {
                             if (SummonAction.field_w.ensureIndex((byte) 82) &&
                               SummonAction.field_w.ensureAllGroupsAvailable(-27927)) {
-                              if (iw.field_l.ensureIndex((byte) 82) &&
-                                iw.field_l.ensureGroupAvailableByName(28979, "basic") &&
-                                iw.field_l.ensureGroupAvailableByName(28979, "campaign")) {
+                              if (AchievementUnlockRequest.field_l.ensureIndex((byte) 82) &&
+                                AchievementUnlockRequest.field_l.ensureGroupAvailableByName(28979, "basic") &&
+                                AchievementUnlockRequest.field_l.ensureGroupAvailableByName(28979, "campaign")) {
                                 if (UnitAnimationPreview.field_j.ensureIndex((byte) 82) &&
                                   UnitAnimationPreview.field_j.ensureGroupAvailableByName(28979, "basic")) {
                                   if (bt.field_e.ensureIndex((byte) 82) &&
@@ -2042,7 +2042,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                 CalendarSupport.a((byte) -24, 52.0f, EmailValidator.a(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", LeapYearSupport.field_f));
                                 return false;
                               }
-                              CalendarSupport.a((byte) -24, 41.0f, EmailValidator.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+                              CalendarSupport.a((byte) -24, 41.0f, EmailValidator.a(AchievementUnlockRequest.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
                               return false;
                             }
                             CalendarSupport.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, LeapYearSupport.field_d, "", PacketBuffer.field_m));
@@ -2171,98 +2171,98 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           CalendarSupport.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.renderClient(0);
           PowerOfTwoSupport.field_n = DropdownArrowPainter.a(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
-          DateInputWidget.field_E = DropdownArrowPainter.a("basic", iw.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
-          TrianglePulse.field_i = ChatMessageWriteSupport.a("introfont", iw.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
-          NineSliceFrame.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, iw.field_l, "basic", -2088);
+          DateInputWidget.field_E = DropdownArrowPainter.a("basic", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
+          TrianglePulse.field_i = ChatMessageWriteSupport.a("introfont", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
+          NineSliceFrame.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, AchievementUnlockRequest.field_l, "basic", -2088);
           GradientUiRenderer.installFont(NineSliceFrame.field_e);
-          GradientUiRenderer.textBackdropSprites = DropdownSelectorPainter.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
-          var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", iw.field_l);
+          GradientUiRenderer.textBackdropSprites = DropdownSelectorPainter.loadRgbSpritesByName("textshadow", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", AchievementUnlockRequest.field_l);
           if (var5_array != null) {
             LineOfSightGrid.a(var5_array, (byte) 110, this);
           }
-          MatchConditionEntry.field_n = AccountNameFoldingSupport.a("basic", "background", iw.field_l, 24914);
-          EventPresenterFactory.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", iw.field_l);
-          MapLayout.loadIndexedSpritesByName("armouricons", -28106, "basic", iw.field_l);
-          ResourceClientErrorSupport.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", iw.field_l);
-          TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
-          DropdownSelector.field_M = DiskCacheRequest.loadRgbSpriteByName("mapbutton", "basic", iw.field_l, false);
-          DiskCacheRequest.loadRgbSpriteByName("endturnbutton", "basic", iw.field_l, false);
-          LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", iw.field_l, false);
-          QuickChatMenuCloseSupport.field_b = ManaStarParticle.a(iw.field_l, "lozenge", (byte) -4, "basic");
-          bu.field_c = DropdownSelectorPainter.loadRgbSpritesByName("endturnlozenge", (byte) -127, iw.field_l, "basic");
-          AgeValidator.field_l = ManaStarParticle.a(iw.field_l, "summonframe", (byte) -4, "basic");
-          EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", iw.field_l, false);
-          ii.field_a = ManaStarParticle.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
-          ByteArrayPoolSupport.field_a = ManaStarParticle.a(iw.field_l, "info_icons", (byte) -4, "basic");
-          ProgressMessageDialog.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", iw.field_l);
-          TextWidthSupport.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", iw.field_l);
-          sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", iw.field_l);
-          CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", iw.field_l, false);
-          MusicPatch.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", iw.field_l, false);
-          AnimationSkeleton.field_t = AccountNameFoldingSupport.a("basic", "turn", iw.field_l, 24914);
-          AttackEvent.field_y = DropdownSelectorPainter.loadRgbSpritesByName("mapsquares", (byte) -127, iw.field_l, "basic");
-          SkeletonLimitMarker.field_s = DropdownSelectorPainter.loadRgbSpritesByName("isomapsquares", (byte) -127, iw.field_l, "basic");
-          SpellMenuGroup.field_h = DropdownSelectorPainter.loadRgbSpritesByName("maprotbutton", (byte) -128, iw.field_l, "basic");
-          TeleportAction.field_w = DropdownSelectorPainter.loadRgbSpritesByName("placeicons", (byte) -124, iw.field_l, "basic");
-          SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", iw.field_l, false);
-          MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
-          BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
-          DraggableWidgetContainer.field_Q = DropdownSelectorPainter.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
-          TaggedMapData.field_f = DropdownSelectorPainter.loadRgbSpritesByName("pathfinder", (byte) -125, iw.field_l, "basic");
-          DeployAction.field_x = ManaStarParticle.a(iw.field_l, "unitheads", (byte) -4, "basic");
-          BattleViewportResizeHandler.field_i = DropdownSelectorPainter.loadRgbSpritesByName("theme_icons", (byte) -127, iw.field_l, "basic");
-          UpkeepEvent.a(iw.field_l, 116);
-          ArrayWidgetContainer.field_F = DropdownSelectorPainter.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
-          MatchConditionRegistry.field_d = DropdownSelectorPainter.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
-          StandardContentDialog.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
-          DraggableWidgetContainer.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
-          UnitAnimationSelectionSupport.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
-          UnitModelPreview.field_d = ManaStarParticle.a(iw.field_l, "godorbs", (byte) -4, "basic");
-          LocalAccountNameSupport.field_c = ManaStarParticle.a(iw.field_l, "godframes", (byte) -4, "basic");
-          GuestPlayConfirmationForm.field_F = ManaStarParticle.a(iw.field_l, "godglows", (byte) -4, "basic");
-          BufferedFile.field_k = ManaStarParticle.a(iw.field_l, "godframeglows", (byte) -4, "basic");
+          MatchConditionEntry.field_n = AccountNameFoldingSupport.a("basic", "background", AchievementUnlockRequest.field_l, 24914);
+          EventPresenterFactory.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", AchievementUnlockRequest.field_l);
+          MapLayout.loadIndexedSpritesByName("armouricons", -28106, "basic", AchievementUnlockRequest.field_l);
+          ResourceClientErrorSupport.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", AchievementUnlockRequest.field_l);
+          TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          DropdownSelector.field_M = DiskCacheRequest.loadRgbSpriteByName("mapbutton", "basic", AchievementUnlockRequest.field_l, false);
+          DiskCacheRequest.loadRgbSpriteByName("endturnbutton", "basic", AchievementUnlockRequest.field_l, false);
+          LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", AchievementUnlockRequest.field_l, false);
+          QuickChatMenuCloseSupport.field_b = ManaStarParticle.a(AchievementUnlockRequest.field_l, "lozenge", (byte) -4, "basic");
+          bu.field_c = DropdownSelectorPainter.loadRgbSpritesByName("endturnlozenge", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          AgeValidator.field_l = ManaStarParticle.a(AchievementUnlockRequest.field_l, "summonframe", (byte) -4, "basic");
+          EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", AchievementUnlockRequest.field_l, false);
+          ii.field_a = ManaStarParticle.a(AchievementUnlockRequest.field_l, "actionbuttons", (byte) -4, "basic");
+          ByteArrayPoolSupport.field_a = ManaStarParticle.a(AchievementUnlockRequest.field_l, "info_icons", (byte) -4, "basic");
+          ProgressMessageDialog.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", AchievementUnlockRequest.field_l);
+          TextWidthSupport.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", AchievementUnlockRequest.field_l);
+          sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", AchievementUnlockRequest.field_l);
+          CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", AchievementUnlockRequest.field_l, false);
+          MusicPatch.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", AchievementUnlockRequest.field_l, false);
+          AnimationSkeleton.field_t = AccountNameFoldingSupport.a("basic", "turn", AchievementUnlockRequest.field_l, 24914);
+          AttackEvent.field_y = DropdownSelectorPainter.loadRgbSpritesByName("mapsquares", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          SkeletonLimitMarker.field_s = DropdownSelectorPainter.loadRgbSpritesByName("isomapsquares", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          SpellMenuGroup.field_h = DropdownSelectorPainter.loadRgbSpritesByName("maprotbutton", (byte) -128, AchievementUnlockRequest.field_l, "basic");
+          TeleportAction.field_w = DropdownSelectorPainter.loadRgbSpritesByName("placeicons", (byte) -124, AchievementUnlockRequest.field_l, "basic");
+          SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", AchievementUnlockRequest.field_l, false);
+          MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          DraggableWidgetContainer.field_Q = DropdownSelectorPainter.loadRgbSpritesByName("silverbar", (byte) -125, AchievementUnlockRequest.field_l, "basic");
+          TaggedMapData.field_f = DropdownSelectorPainter.loadRgbSpritesByName("pathfinder", (byte) -125, AchievementUnlockRequest.field_l, "basic");
+          DeployAction.field_x = ManaStarParticle.a(AchievementUnlockRequest.field_l, "unitheads", (byte) -4, "basic");
+          BattleViewportResizeHandler.field_i = DropdownSelectorPainter.loadRgbSpritesByName("theme_icons", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          UpkeepEvent.a(AchievementUnlockRequest.field_l, 116);
+          ArrayWidgetContainer.field_F = DropdownSelectorPainter.loadRgbSpritesByName("fireball", (byte) -128, AchievementUnlockRequest.field_l, "basic");
+          MatchConditionRegistry.field_d = DropdownSelectorPainter.loadRgbSpritesByName("fortcontrols", (byte) -124, AchievementUnlockRequest.field_l, "basic");
+          StandardContentDialog.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", AchievementUnlockRequest.field_l, false);
+          DraggableWidgetContainer.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", AchievementUnlockRequest.field_l, false);
+          UnitAnimationSelectionSupport.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", AchievementUnlockRequest.field_l, false);
+          UnitModelPreview.field_d = ManaStarParticle.a(AchievementUnlockRequest.field_l, "godorbs", (byte) -4, "basic");
+          LocalAccountNameSupport.field_c = ManaStarParticle.a(AchievementUnlockRequest.field_l, "godframes", (byte) -4, "basic");
+          GuestPlayConfirmationForm.field_F = ManaStarParticle.a(AchievementUnlockRequest.field_l, "godglows", (byte) -4, "basic");
+          BufferedFile.field_k = ManaStarParticle.a(AchievementUnlockRequest.field_l, "godframeglows", (byte) -4, "basic");
           FullscreenMembershipDialog.a((byte) 80, UnitModelPreview.field_d);
           ClientStateChecksumSupport.a(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
           FullscreenMembershipDialog.a((byte) 105, GuestPlayConfirmationForm.field_F);
           FullscreenMembershipDialog.a((byte) 124, BufferedFile.field_k);
-          MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
-          ProjectileEffect.field_h = ManaStarParticle.a(iw.field_l, "summonrings", (byte) -4, "basic");
-          SoundPanSupport.field_b = DropdownSelectorPainter.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
-          AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-          MidiPcmStream.field_H = (ArgbSprite) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
-          CampaignDefinition.field_t = AccountNameFoldingSupport.a("basic", "statboxbg", iw.field_l, 24914);
-          BitReversalSupport.field_e = AccountNameFoldingSupport.a("basic", "popupbg", iw.field_l, 24914);
-          vq.field_b = AccountNameFoldingSupport.a("basic", "gameinfobg", iw.field_l, 24914);
-          MusicPatchUsage.manaStarSprites = DropdownSelectorPainter.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
-          TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
-          ByteArrayPoolSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("overlayicons", (byte) -125, iw.field_l, "basic");
-          mv.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, iw.field_l, "basic");
-          ChatMessageWriteSupport.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);
-          ConsoleTextNode.field_k = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
-          IsaacRandom.field_a = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
-          BattleCharacter.field_h = ManaStarParticle.a(iw.field_l, "trinketicons", (byte) -4, "basic");
-          AttackEvent.field_E = DiskCacheRequest.loadRgbSpriteByName("eye", "basic", iw.field_l, false);
-          BitLengthSupport.field_d = ManaStarParticle.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
-          ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
+          MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", AchievementUnlockRequest.field_l, false);
+          ProjectileEffect.field_h = ManaStarParticle.a(AchievementUnlockRequest.field_l, "summonrings", (byte) -4, "basic");
+          SoundPanSupport.field_b = DropdownSelectorPainter.loadRgbSpritesByName("chatbubbles", (byte) -128, AchievementUnlockRequest.field_l, "basic");
+          AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          MidiPcmStream.field_H = (ArgbSprite) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", AchievementUnlockRequest.field_l, false));
+          CampaignDefinition.field_t = AccountNameFoldingSupport.a("basic", "statboxbg", AchievementUnlockRequest.field_l, 24914);
+          BitReversalSupport.field_e = AccountNameFoldingSupport.a("basic", "popupbg", AchievementUnlockRequest.field_l, 24914);
+          vq.field_b = AccountNameFoldingSupport.a("basic", "gameinfobg", AchievementUnlockRequest.field_l, 24914);
+          MusicPatchUsage.manaStarSprites = DropdownSelectorPainter.loadRgbSpritesByName("manastars", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          ByteArrayPoolSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("overlayicons", (byte) -125, AchievementUnlockRequest.field_l, "basic");
+          mv.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, AchievementUnlockRequest.field_l, "basic");
+          ChatMessageWriteSupport.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          ConsoleTextNode.field_k = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, AchievementUnlockRequest.field_l, "basic");
+          IsaacRandom.field_a = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, AchievementUnlockRequest.field_l, "basic");
+          BattleCharacter.field_h = ManaStarParticle.a(AchievementUnlockRequest.field_l, "trinketicons", (byte) -4, "basic");
+          AttackEvent.field_E = DiskCacheRequest.loadRgbSpriteByName("eye", "basic", AchievementUnlockRequest.field_l, false);
+          BitLengthSupport.field_d = ManaStarParticle.a(AchievementUnlockRequest.field_l, "trinketbuttons", (byte) -4, "basic");
+          ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ChatMessage.field_s.trimTransparentBorder();
-          EmailConfirmationValidator.field_o = DropdownSelectorPainter.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
-          jg.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          EmailConfirmationValidator.field_o = DropdownSelectorPainter.loadRgbSpritesByName("diamondscale", (byte) -128, AchievementUnlockRequest.field_l, "basic");
+          AchievementNotification.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.battlefieldThemes;
           var7_int = 0;
           do {
             if (var6_array.length <= var7_int) {
               BufferedSocket.field_i = new ep(MusicPatchUsage.backgroundArchive);
-              HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
-              MusicPatch.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
-              ChannelBaseVolumeConsoleCommand.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", iw.field_l);
-              EffectPresentation.field_j = CampaignMission.a((byte) -108, "frame_boxes", "basic", iw.field_l);
-              DisplacedUnitMarker.field_s = CampaignMission.a((byte) 89, "frame_button", "basic", iw.field_l);
+              HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", AchievementUnlockRequest.field_l);
+              MusicPatch.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", AchievementUnlockRequest.field_l);
+              ChannelBaseVolumeConsoleCommand.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", AchievementUnlockRequest.field_l);
+              EffectPresentation.field_j = CampaignMission.a((byte) -108, "frame_boxes", "basic", AchievementUnlockRequest.field_l);
+              DisplacedUnitMarker.field_s = CampaignMission.a((byte) 89, "frame_button", "basic", AchievementUnlockRequest.field_l);
               break;
             }
             var8_ref = var6_array[var7_int];
-            var8_ref.setResourceArchives(MusicPatchUsage.backgroundArchive, 0, iw.field_l);
+            var8_ref.setResourceArchives(MusicPatchUsage.backgroundArchive, 0, AchievementUnlockRequest.field_l);
             var7_int++;
           } while (var18 == 0);
           var6_array2 = new int[]{13615618, 10121728};
@@ -2281,15 +2281,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var15 = new int[]{4456448};
           ImageProducerSurface.field_l = jk.a(100, var15, 123, var14);
           GradientUiRenderer.bakeGradientFrameBorders(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
-          SocketResourceClient.a((byte) 125, ManaStarParticle.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
-          IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
-          MarkerSliderWidget.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
-          SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
-          MoveAttackRequest.field_C = DropdownSelectorPainter.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
-          DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
-          DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);
-          DisplayModeOptionPainter.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", iw.field_l, false);
-          DelayedPacket.field_k = MapLayout.loadIndexedSpritesByName("achievements_large", -28106, "basic", iw.field_l);
+          SocketResourceClient.a((byte) 125, ManaStarParticle.a(AchievementUnlockRequest.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", AchievementUnlockRequest.field_l));
+          IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, AchievementUnlockRequest.field_l, "basic");
+          MarkerSliderWidget.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", AchievementUnlockRequest.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", AchievementUnlockRequest.field_l));
+          MoveAttackRequest.field_C = DropdownSelectorPainter.loadRgbSpritesByName("medals", (byte) -127, AchievementUnlockRequest.field_l, "campaign");
+          DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", AchievementUnlockRequest.field_l, false);
+          DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", AchievementUnlockRequest.field_l, false);
+          DisplayModeOptionPainter.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", AchievementUnlockRequest.field_l, false);
+          DelayedPacket.field_k = MapLayout.loadIndexedSpritesByName("achievements_large", -28106, "basic", AchievementUnlockRequest.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
           ChatMessage.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
@@ -2304,14 +2304,14 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var17 = 0;
           do {
             if (!(ArrayWidgetContainer.field_E.length > var17)) {
-              ProjectileEffect.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", iw.field_l);
+              ProjectileEffect.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", AchievementUnlockRequest.field_l);
               break;
             }
-            var16[var17] = DropdownSelectorPainter.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, iw.field_l, "basic");
+            var16[var17] = DropdownSelectorPainter.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, AchievementUnlockRequest.field_l, "basic");
             var17++;
           } while (var18 == 0);
           if (!LabeledWidgetContainer.field_L) {
-            ImageProducerSurface.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
+            ImageProducerSurface.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", AchievementUnlockRequest.field_l);
             QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, ProjectileEffect.field_c, CorpseConditionMarker.field_w, QuinticFadeSupport.field_d, var16);
             la.initializeChatHistory((byte) 30, 200);
             DisplayModeOptionPainter.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
@@ -2413,7 +2413,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             return false;
           }
           if (null != ReportAbuseDialog.field_Lb &&
-            iw.field_l != null) {
+            AchievementUnlockRequest.field_l != null) {
             CalendarSupport.a((byte) -24, 98.0f, AiPlanner.field_R);
             this.renderClient(0);
             ReportAbuseDialog.field_Lb = null;
@@ -2445,7 +2445,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
     }
 
     private final void c(boolean param0) {
-        jg var2 = null;
+        AchievementNotification var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2456,7 +2456,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (param0) {
             field_L = (PacketBuffer) null;
           }
-          var2 = (jg) (ScrollWidgetContainer.field_P.first((byte) 97));
+          var2 = (AchievementNotification) (ScrollWidgetContainer.field_P.first((byte) 97));
           if (null != var2) {
             var4 = IntegerPowerSupport.field_b;
             if (var4 < 80) {

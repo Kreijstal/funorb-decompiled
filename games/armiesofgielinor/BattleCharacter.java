@@ -104,7 +104,7 @@ final class BattleCharacter {
             if (this.field_J % 20 == 0) {
               stackIn_9_0 = this.destinationY;
               stackIn_10_1 = (!this.field_u) ? 1 : -1;
-              jg.a(stackIn_9_0, stackIn_10_1 * this.destinationX, 512, 0, this.unitType);
+              AchievementNotification.a(stackIn_9_0, stackIn_10_1 * this.destinationX, 512, 0, this.unitType);
               this.field_J = this.field_J + AttackEvent.nextBoundedInt(false, 10, PreferencesWriteRequest.field_n);
             }
           } else {
@@ -193,7 +193,7 @@ final class BattleCharacter {
           } else {
             stackIn_57_1 = 1;
           }
-          jg.a(stackIn_56_0, stackIn_57_1 * this.destinationX, 512, 7, this.unitType);
+          AchievementNotification.a(stackIn_56_0, stackIn_57_1 * this.destinationX, 512, 7, this.unitType);
           this.field_B = true;
           this.field_l = true;
         } else {
@@ -206,7 +206,7 @@ final class BattleCharacter {
             } else {
               stackIn_67_2 = -1;
             }
-            jg.a(stackIn_66_0, stackIn_66_1 * stackIn_67_2, 512, 7, this.unitType);
+            AchievementNotification.a(stackIn_66_0, stackIn_66_1 * stackIn_67_2, 512, 7, this.unitType);
             this.field_B = true;
             this.field_l = true;
           }
@@ -221,7 +221,7 @@ final class BattleCharacter {
           } else {
             stackIn_85_2 = 1;
           }
-          jg.a(stackIn_84_0, stackIn_84_1 * stackIn_85_2, 512, 4, this.unitType);
+          AchievementNotification.a(stackIn_84_0, stackIn_84_1 * stackIn_85_2, 512, 4, this.unitType);
           this.field_e = true;
           this.field_B = true;
         } else {
@@ -233,7 +233,7 @@ final class BattleCharacter {
             } else {
               stackIn_81_1 = 1;
             }
-            jg.a(stackIn_80_0, stackIn_81_1 * this.destinationX, 512, 4, this.unitType);
+            AchievementNotification.a(stackIn_80_0, stackIn_81_1 * this.destinationX, 512, 4, this.unitType);
             this.field_e = true;
             this.field_B = true;
           }
@@ -243,18 +243,18 @@ final class BattleCharacter {
           stackIn_90_0 = this.destinationY;
           stackIn_90_1 = this.destinationX;
           stackIn_91_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_90_0, stackIn_90_1 * stackIn_91_2, 512, 3, this.unitType);
+          AchievementNotification.a(stackIn_90_0, stackIn_90_1 * stackIn_91_2, 512, 3, this.unitType);
         }
         if (1 == this.field_J &&
           this.animationState == 2 &&
           this.field_d) {
           stackIn_97_0 = this.destinationY;
           stackIn_98_1 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_97_0, stackIn_98_1 * this.destinationX, 512, 5, this.unitType);
+          AchievementNotification.a(stackIn_97_0, stackIn_98_1 * this.destinationX, 512, 5, this.unitType);
           stackIn_100_0 = this.destinationY;
           stackIn_100_1 = this.destinationX;
           stackIn_101_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_100_0, stackIn_100_1 * stackIn_101_2, 512, 2, this.unitType);
+          AchievementNotification.a(stackIn_100_0, stackIn_100_1 * stackIn_101_2, 512, 2, this.unitType);
         }
         if (1 == this.field_J &&
           2 == this.animationState &&
@@ -262,29 +262,29 @@ final class BattleCharacter {
           stackIn_108_0 = this.destinationY;
           stackIn_108_1 = this.destinationX;
           stackIn_109_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_108_0, stackIn_108_1 * stackIn_109_2, param0 ^ 625, 1, this.unitType);
+          AchievementNotification.a(stackIn_108_0, stackIn_108_1 * stackIn_109_2, param0 ^ 625, 1, this.unitType);
           stackIn_111_0 = this.destinationY;
           stackIn_112_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_111_0, stackIn_112_1 * this.destinationX, 512, 2, this.unitType);
+          AchievementNotification.a(stackIn_111_0, stackIn_112_1 * this.destinationX, 512, 2, this.unitType);
         }
         if (this.field_J == 1 &&
           this.animationState == 5) {
           stackIn_118_0 = this.destinationY;
           stackIn_118_1 = this.destinationX;
           stackIn_119_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_118_0, stackIn_118_1 * stackIn_119_2, param0 ^ 625, 6, this.unitType);
+          AchievementNotification.a(stackIn_118_0, stackIn_118_1 * stackIn_119_2, param0 ^ 625, 6, this.unitType);
         }
         if (1 == this.field_J &&
           this.animationState == 7) {
           stackIn_125_0 = this.destinationY;
           stackIn_126_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_125_0, stackIn_126_1 * this.destinationX, 512, 0, this.unitType);
+          AchievementNotification.a(stackIn_125_0, stackIn_126_1 * this.destinationX, 512, 0, this.unitType);
         }
         if (this.field_J == 1 &&
           this.animationState == 6) {
           stackIn_131_0 = this.destinationY;
           stackIn_132_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_131_0, stackIn_132_1 * this.destinationX, param0 + 399, 5, this.unitType);
+          AchievementNotification.a(stackIn_131_0, stackIn_132_1 * this.destinationX, param0 + 399, 5, this.unitType);
         }
         this.a(param0 ^ -313055231);
         if (var7 != 0) {
@@ -298,7 +298,7 @@ final class BattleCharacter {
                   if (!this.field_B) {
                     stackIn_152_0 = this.destinationY;
                     stackIn_153_1 = (this.field_u) ? -1 : 1;
-                    jg.a(stackIn_152_0, stackIn_153_1 * this.destinationX, 512, 7, this.unitType);
+                    AchievementNotification.a(stackIn_152_0, stackIn_153_1 * this.destinationX, 512, 7, this.unitType);
                     this.field_l = true;
                   }
                 } else {
@@ -306,7 +306,7 @@ final class BattleCharacter {
                     !this.field_B) {
                     stackIn_147_0 = this.destinationY;
                     stackIn_148_1 = (this.field_u) ? -1 : 1;
-                    jg.a(stackIn_147_0, stackIn_148_1 * this.destinationX, param0 ^ 625, 4, this.unitType);
+                    AchievementNotification.a(stackIn_147_0, stackIn_148_1 * this.destinationX, param0 ^ 625, 4, this.unitType);
                     this.field_e = true;
                   }
                 }

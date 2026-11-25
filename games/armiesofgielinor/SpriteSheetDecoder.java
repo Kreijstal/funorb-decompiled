@@ -48,34 +48,34 @@ final class SpriteSheetDecoder extends IntrusiveNode {
           packet = new PacketBuffer(encodedSheet);
           packetAlias = packet;
           packetAlias.position = encodedSheet.length - 2;
-          iw.decodedSpriteCount = packetAlias.readUnsignedShort((byte) -104);
-          j.decodedSpriteOffsetXs = new int[iw.decodedSpriteCount];
-          c.decodedSpriteHeights = new int[iw.decodedSpriteCount];
-          CampaignMenuButton.decodedSpriteOffsetYs = new int[iw.decodedSpriteCount];
-          MapTile.decodedSpriteHasAlpha = new boolean[iw.decodedSpriteCount];
-          ClippedWidgetContainer.decodedSpriteWidths = new int[iw.decodedSpriteCount];
-          AnimationPlayer.decodedSpriteIndices = new byte[iw.decodedSpriteCount][];
-          CampaignMenuEntry.decodedSpriteAlphas = new byte[iw.decodedSpriteCount][];
-          packetAlias.position = -(iw.decodedSpriteCount * 8) - 7 + encodedSheet.length;
+          AchievementUnlockRequest.decodedSpriteCount = packetAlias.readUnsignedShort((byte) -104);
+          j.decodedSpriteOffsetXs = new int[AchievementUnlockRequest.decodedSpriteCount];
+          c.decodedSpriteHeights = new int[AchievementUnlockRequest.decodedSpriteCount];
+          CampaignMenuButton.decodedSpriteOffsetYs = new int[AchievementUnlockRequest.decodedSpriteCount];
+          MapTile.decodedSpriteHasAlpha = new boolean[AchievementUnlockRequest.decodedSpriteCount];
+          ClippedWidgetContainer.decodedSpriteWidths = new int[AchievementUnlockRequest.decodedSpriteCount];
+          AnimationPlayer.decodedSpriteIndices = new byte[AchievementUnlockRequest.decodedSpriteCount][];
+          CampaignMenuEntry.decodedSpriteAlphas = new byte[AchievementUnlockRequest.decodedSpriteCount][];
+          packetAlias.position = -(AchievementUnlockRequest.decodedSpriteCount * 8) - 7 + encodedSheet.length;
           GzipDecoder.decodedSpriteCanvasWidth = packetAlias.readUnsignedShort((byte) -104);
           BirthDateChatEnableForm.decodedSpriteCanvasHeight = packetAlias.readUnsignedShort((byte) -104);
           paletteSize = 1 + (255 & packetAlias.readUnsignedByte(obfuscationGuard + 1));
-          for (offsetXIndex = 0; iw.decodedSpriteCount > offsetXIndex; offsetXIndex++) {
+          for (offsetXIndex = 0; AchievementUnlockRequest.decodedSpriteCount > offsetXIndex; offsetXIndex++) {
             j.decodedSpriteOffsetXs[offsetXIndex] = packet.readUnsignedShort((byte) -104);
           }
-          for (offsetYIndex = 0; offsetYIndex < iw.decodedSpriteCount; offsetYIndex++) {
+          for (offsetYIndex = 0; offsetYIndex < AchievementUnlockRequest.decodedSpriteCount; offsetYIndex++) {
             CampaignMenuButton.decodedSpriteOffsetYs[offsetYIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
-          for (widthIndex = 0; iw.decodedSpriteCount > widthIndex; widthIndex++) {
+          for (widthIndex = 0; AchievementUnlockRequest.decodedSpriteCount > widthIndex; widthIndex++) {
             ClippedWidgetContainer.decodedSpriteWidths[widthIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
-          for (heightIndex = 0; heightIndex < iw.decodedSpriteCount; heightIndex++) {
+          for (heightIndex = 0; heightIndex < AchievementUnlockRequest.decodedSpriteCount; heightIndex++) {
             c.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           if (obfuscationGuard != -1) {
             field_n = (la) null;
           }
-          packetAlias.position = 3 + (-(paletteSize * 3) + (-(8 * iw.decodedSpriteCount) - 7) + encodedSheet.length);
+          packetAlias.position = 3 + (-(paletteSize * 3) + (-(8 * AchievementUnlockRequest.decodedSpriteCount) - 7) + encodedSheet.length);
           MovementPresentation.decodedSpritePalette = new int[paletteSize];
           for (paletteIndex = 1; paletteIndex < paletteSize; paletteIndex++) {
             MovementPresentation.decodedSpritePalette[paletteIndex] = packetAlias.readUnsignedMedium((byte) -13);
@@ -84,7 +84,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
             }
           }
           packetAlias.position = 0;
-          for (spriteIndex = 0; spriteIndex < iw.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < AchievementUnlockRequest.decodedSpriteCount; spriteIndex++) {
             spriteWidth = ClippedWidgetContainer.decodedSpriteWidths[spriteIndex];
             spriteHeight = c.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteHeight * spriteWidth;

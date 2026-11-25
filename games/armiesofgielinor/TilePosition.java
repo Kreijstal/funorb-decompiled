@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf extends IntrusiveNode {
+final class TilePosition extends IntrusiveNode {
     static String field_m;
     int field_n;
     static String field_p;
@@ -9,7 +9,7 @@ final class tf extends IntrusiveNode {
     static int field_l;
     static int field_k;
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4) {
+    final static void halvePixelsAndAddColour(int param0, int param1, int param2, int[] param3, int param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -60,7 +60,7 @@ final class tf extends IntrusiveNode {
         field_m = (String) null;
     }
 
-    final static void a(int param0, nt param1, byte param2) {
+    final static void sendRatingLeaderboardRequest(int param0, RatingLeaderboardRequest param1, byte param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = EmailValidator.outgoingPacket;
@@ -92,7 +92,7 @@ final class tf extends IntrusiveNode {
         }
     }
 
-    tf(int param0, int param1) {
+    TilePosition(int param0, int param1) {
         this.field_o = param1;
         this.field_n = param0;
     }

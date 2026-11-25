@@ -149,7 +149,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
           if (param0 < 30) {
             DisplayModeOptionPainter.releaseStatics(false);
           }
-          iw.field_p = param2;
+          AchievementUnlockRequest.field_p = param2;
           AlphaWidgetContainer.field_H = param1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ps.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -1431,7 +1431,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "ACTION_BARRIER");
                 if (var2 != null) {
-                  aj.field_p = uu.a(var2, (byte) -97);
+                  ScoreSubmissionRequest.field_p = uu.a(var2, (byte) -97);
                 }
                 var2 = DropdownSelectorPainter.a(false, "ACTION_PORTAL");
                 if (var2 != null) {
@@ -3163,7 +3163,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "QUALITY_HIGH");
                 if (var2 != null) {
-                  dc.field_s = uu.a(var2, (byte) -124);
+                  ReflectionCheckRequest.field_s = uu.a(var2, (byte) -124);
                 }
                 var2 = DropdownSelectorPainter.a(false, "QUALITY_LOW");
                 if (null != var2) {
@@ -3367,7 +3367,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_YES");
                 if (null != var2) {
-                  nt.field_p = uu.a(var2, (byte) -105);
+                  RatingLeaderboardRequest.field_p = uu.a(var2, (byte) -105);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_NO");
                 if (null != var2) {

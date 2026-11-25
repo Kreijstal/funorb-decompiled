@@ -154,7 +154,7 @@ final class EffectPresentation implements EventPresentation {
     final static boolean a(boolean param0, int param1) {
         long dupTemp$2 = 0L;
         if (AccountRegistrationForm.field_J == null) {
-          AccountRegistrationForm.field_J = wj.field_n.openSocketAsync(ProceduralMapSupport.field_d, (byte) 120, AccountNameNormalizer.field_c);
+          AccountRegistrationForm.field_J = ScoreLeaderboardRequest.field_n.openSocketAsync(ProceduralMapSupport.field_d, (byte) 120, AccountNameNormalizer.field_c);
         }
         if (param1 == AccountRegistrationForm.field_J.status) {
           return false;

@@ -39,8 +39,8 @@ final class ParasiteEvent extends GameEvent {
         int[] var5 = null;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        RgbSprite[] var1 = new RgbSprite[iw.decodedSpriteCount];
-        for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
+        RgbSprite[] var1 = new RgbSprite[AchievementUnlockRequest.decodedSpriteCount];
+        for (var2 = 0; AchievementUnlockRequest.decodedSpriteCount > var2; var2++) {
           var3 = ClippedWidgetContainer.decodedSpriteWidths[var2] * c.decodedSpriteHeights[var2];
           var4 = AnimationPlayer.decodedSpriteIndices[var2];
           var5 = new int[var3];

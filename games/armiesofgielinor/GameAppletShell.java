@@ -278,7 +278,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           MusicPatchPcmStream.tickTimestampIndex = 1 + MusicPatchPcmStream.tickTimestampIndex & 31;
           focusMonitor = this;
           synchronized (focusMonitor) {
-            AccountNameCharacterSupport.tickFocusSnapshot = wj.canvasFocused;
+            AccountNameCharacterSupport.tickFocusSnapshot = ScoreLeaderboardRequest.canvasFocused;
           }
           this.tickClient((byte) -120);
           return;
@@ -700,7 +700,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wj.canvasFocused = true;
+          ScoreLeaderboardRequest.canvasFocused = true;
           MaskedTextEntryPainter.redrawRequested = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -884,7 +884,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           IndexedSpriteBase.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           IndexedSpriteBase.field_b.requestFocus();
           AccountNameCharacterSupport.tickFocusSnapshot = true;
-          wj.canvasFocused = true;
+          ScoreLeaderboardRequest.canvasFocused = true;
           MaskedTextEntryPainter.redrawRequested = true;
           NineSliceSpriteSupport.canvasRebuildRequested = false;
           AttackEvent.lastCanvasRebuildMillis = MonotonicClockSupport.monotonicMillis(obfuscationGuard + 7);
@@ -903,7 +903,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wj.canvasFocused = false;
+          ScoreLeaderboardRequest.canvasFocused = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

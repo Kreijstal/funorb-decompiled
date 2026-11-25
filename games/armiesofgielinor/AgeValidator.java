@@ -6,7 +6,7 @@ final class AgeValidator extends TextFieldValidator {
     static String requestedAccountName;
     static int[] field_k;
 
-    final static void a(PacketBuffer param0, PlatformTaskService param1, int param2, int param3) {
+    final static void readReflectionCheckRequest(PacketBuffer param0, PlatformTaskService param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -34,7 +34,7 @@ final class AgeValidator extends TextFieldValidator {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          dc var18 = null;
+          ReflectionCheckRequest var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           String var21 = null;
@@ -42,7 +42,7 @@ final class AgeValidator extends TextFieldValidator {
           int var13Lifetime1;
           var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            var18 = new dc();
+            var18 = new ReflectionCheckRequest();
             var18.field_p = param0.readUnsignedByte(0);
             var18.field_q = param0.readInt(1);
             var18.field_m = new int[var18.field_p];
@@ -247,7 +247,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.validateText(-3137, text) != ProceduralMapSupport.validationInvalid) {
             return null;
           }
-          stackIn_5_0 = jg.field_n;
+          stackIn_5_0 = AchievementNotification.field_n;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

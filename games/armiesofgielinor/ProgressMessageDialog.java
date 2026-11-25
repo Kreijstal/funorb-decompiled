@@ -249,7 +249,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         discarded$0 = UpkeepEvent.chatTextBuffer.append((char) var4);
         var5Lifetime1 = 485;
         var17 = mv.localAccountName;
-        var16 = nt.a(param1 - 47, var17);
+        var16 = RatingLeaderboardRequest.a(param1 - 47, var17);
         var18 = var16;
         if (PowerOfTwoSupport.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) RegistrationAgreementPane.chatRecipientName);

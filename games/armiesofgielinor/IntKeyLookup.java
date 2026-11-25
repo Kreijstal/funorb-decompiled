@@ -48,8 +48,8 @@ final class IntKeyLookup {
     final static IndexedSprite[] buildDecodedIndexedSprites(int obfuscationGuard) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[iw.decodedSpriteCount];
-        for (var2 = 0; var2 < iw.decodedSpriteCount; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[AchievementUnlockRequest.decodedSpriteCount];
+        for (var2 = 0; var2 < AchievementUnlockRequest.decodedSpriteCount; var2++) {
           var1[var2] = new IndexedSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], AnimationPlayer.decodedSpriteIndices[var2], MovementPresentation.decodedSpritePalette);
         }
         if (obfuscationGuard < 102) {

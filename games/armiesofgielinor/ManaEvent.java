@@ -114,14 +114,14 @@ final class ManaEvent extends GameEvent {
                         var18 = -var17 + TriangleRasterizer.clipWidth - 1;
                       }
                       if (var17 < 0) {
-                        tf.a(var16Lifetime2, param8 - 1432128883, var17 + var18, param6, param5);
+                        TilePosition.halvePixelsAndAddColour(var16Lifetime2, param8 - 1432128883, var17 + var18, param6, param5);
                       } else {
-                        tf.a(var17 + var16Lifetime2, -1432128863, var18, param6, param5);
+                        TilePosition.halvePixelsAndAddColour(var17 + var16Lifetime2, -1432128863, var18, param6, param5);
                       }
                     } else {
                       if (var17 >= 0 &&
                         TriangleRasterizer.clipWidth > var17) {
-                        tf.a(var16Lifetime2 + var17, -1432128863, var18, param6, param5);
+                        TilePosition.halvePixelsAndAddColour(var16Lifetime2 + var17, -1432128863, var18, param6, param5);
                       }
                     }
                   }
@@ -166,16 +166,16 @@ final class ManaEvent extends GameEvent {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterizer.clipWidth) {
-                    tf.a(var15Lifetime1 + var16Lifetime1, -1432128863, var17Lifetime1, param6, param5);
+                    TilePosition.halvePixelsAndAddColour(var15Lifetime1 + var16Lifetime1, -1432128863, var17Lifetime1, param6, param5);
                   }
                 } else {
                   if (TriangleRasterizer.clipWidth <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = TriangleRasterizer.clipWidth - (var16Lifetime1 + 1);
                   }
                   if (var16Lifetime1 >= 0) {
-                    tf.a(var16Lifetime1 + var15Lifetime1, -1432128863, var17Lifetime1, param6, param5);
+                    TilePosition.halvePixelsAndAddColour(var16Lifetime1 + var15Lifetime1, -1432128863, var17Lifetime1, param6, param5);
                   } else {
-                    tf.a(var15Lifetime1, param8 - 1432128883, var17Lifetime1 + var16Lifetime1, param6, param5);
+                    TilePosition.halvePixelsAndAddColour(var15Lifetime1, param8 - 1432128883, var17Lifetime1 + var16Lifetime1, param6, param5);
                   }
                 }
               }

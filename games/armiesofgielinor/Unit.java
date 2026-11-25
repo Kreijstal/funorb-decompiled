@@ -1008,7 +1008,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           }
           for (var1_int = 0; var1_int < FixedSquareRootSupport.field_a.length; var1_int++) {
             if (DebouncedValidator.a(var1_int, ConsoleTextNode.field_n, 1)) {
-              ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
+              ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new AchievementNotification(var1_int)));
             }
           }
           var18 = BoundedFile.field_e;

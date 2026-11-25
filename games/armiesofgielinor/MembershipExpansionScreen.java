@@ -408,24 +408,24 @@ final class MembershipExpansionScreen {
             var2_intLifetime1++;
           }
           this.d(1439);
-          if (null != iw.field_p &&
-            iw.field_p.ensureIndex((byte) 82) &&
-            iw.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
-            iw.field_p.ensureGroupAvailableByName(28979, "arialish12") &&
-            iw.field_p.ensureGroupAvailableByName(28979, "pump32") &&
+          if (null != AchievementUnlockRequest.field_p &&
+            AchievementUnlockRequest.field_p.ensureIndex((byte) 82) &&
+            AchievementUnlockRequest.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
+            AchievementUnlockRequest.field_p.ensureGroupAvailableByName(28979, "arialish12") &&
+            AchievementUnlockRequest.field_p.ensureGroupAvailableByName(28979, "pump32") &&
             AlphaWidgetContainer.field_H != null &&
             AlphaWidgetContainer.field_H.ensureIndex((byte) 82) &&
             AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
             AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "pump32")) {
-            UnitLossCondition.field_a = AccountNameFoldingSupport.a("members_expansion_screen", "frame", iw.field_p, 24914);
-            ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
-            VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, AlphaWidgetContainer.field_H, (byte) -53, "");
-            EmailConfirmationValidator.field_n = ChatMessageWriteSupport.a("", iw.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
-            UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-            QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", iw.field_p, false);
-            DiskCacheRequest.field_G = ManaStarParticle.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
+            UnitLossCondition.field_a = AccountNameFoldingSupport.a("members_expansion_screen", "frame", AchievementUnlockRequest.field_p, 24914);
+            ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", AchievementUnlockRequest.field_p);
+            VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", AchievementUnlockRequest.field_p, AlphaWidgetContainer.field_H, (byte) -53, "");
+            EmailConfirmationValidator.field_n = ChatMessageWriteSupport.a("", AchievementUnlockRequest.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
+            UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", AchievementUnlockRequest.field_p, false);
+            QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", AchievementUnlockRequest.field_p, false);
+            DiskCacheRequest.field_G = ManaStarParticle.a(AchievementUnlockRequest.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             AlphaWidgetContainer.field_H = null;
-            iw.field_p = null;
+            AchievementUnlockRequest.field_p = null;
           }
           this.a((byte) -124);
           if (UnitLossCondition.field_a == null) {

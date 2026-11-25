@@ -38,7 +38,7 @@ final class TaggedMapData implements TaggedFieldReader {
         if (!(PasswordValidator.field_j <= 200)) {
           var5 = (250 - PasswordValidator.field_j << 8) / 50;
         }
-        CombatSandbox.a(dc.field_n, 3);
+        CombatSandbox.a(ReflectionCheckRequest.field_n, 3);
         TriangleRasterizer.useRasterClip();
         SoftwareRaster.clearPixels();
         DebouncedValidator.e(9);
@@ -51,7 +51,7 @@ final class TaggedMapData implements TaggedFieldReader {
           if (150 <= PasswordValidator.field_j) {
             AccountRequestResult.field_k.drawWithOpacity(var3 + 15, var4 + 10, var5);
           } else {
-            dc.field_n.drawHalfSize(var3, var4);
+            ReflectionCheckRequest.field_n.drawHalfSize(var3, var4);
           }
           var6 = -125 + PasswordValidator.field_j;
           if (var6 > 0) {
@@ -164,7 +164,7 @@ final class TaggedMapData implements TaggedFieldReader {
           }
           return;
         }
-        dc.field_n.drawHalfSize(var3, var4);
+        ReflectionCheckRequest.field_n.drawHalfSize(var3, var4);
         var6Lifetime2 = -125 + PasswordValidator.field_j;
         if (var6Lifetime2 <= 0) {
           var6Lifetime2 = PasswordValidator.field_j - 140;

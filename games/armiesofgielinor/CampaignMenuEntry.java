@@ -120,7 +120,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           }
           if (255 == param3) {
             stackIn_11_0 = !(MusicCrossfadeStream.field_z >= 13);
-            SoundCache.field_a = dc.createAccountSuccessResult(stackIn_11_0, false);
+            SoundCache.field_a = ReflectionCheckRequest.createAccountSuccessResult(stackIn_11_0, false);
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {

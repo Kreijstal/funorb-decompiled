@@ -6,7 +6,7 @@ final class IndentedTextBuilder {
     private StringBuilder builder;
     private boolean atLineStart;
 
-    final static void a(int param0, wj param1, int param2) {
+    final static void sendScoreLeaderboardRequest(int param0, ScoreLeaderboardRequest param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = EmailValidator.outgoingPacket;
@@ -53,7 +53,7 @@ final class IndentedTextBuilder {
 
     private final void appendText(String text, int obfuscationGuard) {
         StringBuilder discarded$12 = null;
-        wj var4 = null;
+        ScoreLeaderboardRequest var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -65,8 +65,8 @@ final class IndentedTextBuilder {
           }
           discarded$12 = this.builder.append(text);
           if (obfuscationGuard != 0) {
-            var4 = (wj) null;
-            IndentedTextBuilder.a(-82, (wj) null, 123);
+            var4 = (ScoreLeaderboardRequest) null;
+            IndentedTextBuilder.sendScoreLeaderboardRequest(-82, (ScoreLeaderboardRequest) null, 123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

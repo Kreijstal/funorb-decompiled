@@ -191,7 +191,7 @@ final class AccountRequestResult {
             PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
             var3 = mv.localAccountName;
-            var3 = nt.a(-121, var3);
+            var3 = RatingLeaderboardRequest.a(-121, var3);
             var4 = "";
             var5 = "|";
             var6 = PowerOfTwoSupport.outgoingChatChannel;
@@ -231,7 +231,7 @@ final class AccountRequestResult {
               var4 = var4 + var3 + var8;
               boolean decompiledSharedTail0 = !(NodeIterator.field_a);
               if (!decompiledSharedTail0) {
-                var4 = "<col=999999>" + var4 + dc.field_l + "</col>";
+                var4 = "<col=999999>" + var4 + ReflectionCheckRequest.field_l + "</col>";
                 var5 = "";
                 decompiledSharedTail0 = (var10 != 0);
               }

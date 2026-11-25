@@ -246,16 +246,16 @@ final class TurnEffectEvent extends GameEvent {
               var5 = TabbedPanel.field_Lb;
               if (var6 != 0) {
                 var5 = VerticalScrollbar.field_Tb;
-                var5 = dc.field_l;
+                var5 = ReflectionCheckRequest.field_l;
               }
             } else {
               var5 = VerticalScrollbar.field_Tb;
               if (var6 != 0) {
-                var5 = dc.field_l;
+                var5 = ReflectionCheckRequest.field_l;
               }
             }
           } else {
-            var5 = dc.field_l;
+            var5 = ReflectionCheckRequest.field_l;
           }
           PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, var5, 112, 0);
           UpkeepEvent.field_z.matchedButtonTextColour = (8355711 & SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;

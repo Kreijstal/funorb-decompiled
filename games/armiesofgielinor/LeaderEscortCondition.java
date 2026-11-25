@@ -149,7 +149,7 @@ final class LeaderEscortCondition implements MatchCondition {
         }
     }
 
-    final static void d(int param0) {
+    final static void handleHighscoreResponse(int param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
@@ -161,8 +161,8 @@ final class LeaderEscortCondition implements MatchCondition {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        aj var4 = null;
-        wj var4_ref = null;
+        ScoreSubmissionRequest var4 = null;
+        ScoreLeaderboardRequest var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -196,10 +196,10 @@ final class LeaderEscortCondition implements MatchCondition {
           var2 = var27.readUnsignedByte(0);
           if (0 == var2) {
             var3 = var27.readUnsignedShort((byte) -104);
-            var4_ref = (wj) (BattleCharacter.field_c.first((byte) 100));
+            var4_ref = (ScoreLeaderboardRequest) (BattleCharacter.field_c.first((byte) 100));
             while (var4_ref != null) {
               if (var4_ref.field_r != var3) {
-                var4_ref = (wj) (BattleCharacter.field_c.next((byte) 123));
+                var4_ref = (ScoreLeaderboardRequest) (BattleCharacter.field_c.next((byte) 123));
                 continue;
               }
               break;
@@ -293,10 +293,10 @@ final class LeaderEscortCondition implements MatchCondition {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort((byte) -104);
             var27.readLong((byte) -2);
-            var4 = (aj) (GameEvent.field_r.first((byte) 99));
+            var4 = (ScoreSubmissionRequest) (GameEvent.field_r.first((byte) 99));
             while (var4 != null) {
               if (var4.field_s != var3Lifetime1) {
-                var4 = (aj) (GameEvent.field_r.next((byte) 123));
+                var4 = (ScoreSubmissionRequest) (GameEvent.field_r.next((byte) 123));
                 continue;
               }
               break;
@@ -327,7 +327,7 @@ final class LeaderEscortCondition implements MatchCondition {
 
     public final boolean isDefeat(int obfuscationGuard) {
         if (obfuscationGuard >= -121) {
-          LeaderEscortCondition.d(68);
+          LeaderEscortCondition.handleHighscoreResponse(68);
         }
         return false;
     }

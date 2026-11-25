@@ -103,8 +103,8 @@ final class IgnoreRequestSupport {
         int[] var21;
         byte[] var22;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var1 = new RgbSprite[iw.decodedSpriteCount];
-        for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
+        var1 = new RgbSprite[AchievementUnlockRequest.decodedSpriteCount];
+        for (var2 = 0; AchievementUnlockRequest.decodedSpriteCount > var2; var2++) {
           var3 = c.decodedSpriteHeights[var2] * ClippedWidgetContainer.decodedSpriteWidths[var2];
           var20 = AnimationPlayer.decodedSpriteIndices[var2];
           if (!MapTile.decodedSpriteHasAlpha[var2]) {

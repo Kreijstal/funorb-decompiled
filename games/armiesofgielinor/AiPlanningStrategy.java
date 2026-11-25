@@ -329,20 +329,20 @@ abstract class AiPlanningStrategy {
               if (var5 != 0) {
                 EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             } else {
               EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
               if (var5 != 0) {
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             }
           } else {
             stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-            EmailValidator.accountNameCheckResult = dc.createAccountSuccessResult(stackIn_18_0, false);
+            EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
             InteractiveWidget.a(-1, (String[]) null);
           }
           if (param0 <= 28) {

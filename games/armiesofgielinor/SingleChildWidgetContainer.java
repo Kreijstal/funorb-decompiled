@@ -110,8 +110,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           this.child.blur(1);
         }
         if (obfuscationGuard != 1) {
-          iw var3 = (iw) null;
-          SingleChildWidgetContainer.a(-28, -106, (iw) null);
+          AchievementUnlockRequest var3 = (AchievementUnlockRequest) null;
+          SingleChildWidgetContainer.queueAchievementUnlock(-28, -106, (AchievementUnlockRequest) null);
         }
     }
 
@@ -286,7 +286,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        iw var22 = null;
+        AchievementUnlockRequest var22 = null;
         ClientUiComponent var24 = null;
         ClientUiComponent var25 = null;
         int var18Lifetime1;
@@ -479,8 +479,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           var17 = MarkerSliderWidget.field_N;
           MarkerSliderWidget.field_N.verticalAlignment = 1;
           if (param13) {
-            var22 = (iw) null;
-            SingleChildWidgetContainer.a(-73, 39, (iw) null);
+            var22 = (AchievementUnlockRequest) null;
+            SingleChildWidgetContainer.queueAchievementUnlock(-73, 39, (AchievementUnlockRequest) null);
           }
           var17.horizontalAlignment = 1;
           PasswordLengthSupport.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
@@ -708,14 +708,14 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         }
     }
 
-    final static void a(int param0, int param1, iw param2) {
+    final static void queueAchievementUnlock(int param0, int param1, AchievementUnlockRequest param2) {
         try {
           if (param0 != 0) {
-            iw var4 = (iw) null;
-            SingleChildWidgetContainer.a(30, -59, (iw) null);
+            AchievementUnlockRequest var4 = (AchievementUnlockRequest) null;
+            SingleChildWidgetContainer.queueAchievementUnlock(30, -59, (AchievementUnlockRequest) null);
           }
           ScreenWipeTransition.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
-          FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, param2);
+          FixInvisibleUnitsConsoleCommand.sendAchievementUnlock((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

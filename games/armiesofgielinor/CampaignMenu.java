@@ -158,9 +158,9 @@ final class CampaignMenu {
           var2_int = 0;
           while (3 > var2_int) {
             var3 = "campaign_map" + (var2_int + 1);
-            mu.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, iw.field_l, 24914);
-            mu.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", iw.field_l, 24914);
-            mu.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", iw.field_l, 24914);
+            mu.field_g[var2_int][0] = AccountNameFoldingSupport.a("campaign", var3, AchievementUnlockRequest.field_l, 24914);
+            mu.field_g[var2_int][1] = AccountNameFoldingSupport.a("campaign", var3 + "_areas", AchievementUnlockRequest.field_l, 24914);
+            mu.field_g[var2_int][2] = AccountNameFoldingSupport.a("campaign", var3 + "_full", AchievementUnlockRequest.field_l, 24914);
             var2_int++;
             if (var4 != 0) {
               return;
@@ -170,9 +170,9 @@ final class CampaignMenu {
             CampaignMenu.d((byte) -46);
           }
           DeployAction.field_D = new RgbSprite[3];
-          DeployAction.field_D[0] = DiskCacheRequest.loadRgbSpriteByName("takenicon_zamorak", "campaign", iw.field_l, false);
-          DeployAction.field_D[1] = DiskCacheRequest.loadRgbSpriteByName("takenicon_saradomin", "campaign", iw.field_l, false);
-          DeployAction.field_D[2] = DiskCacheRequest.loadRgbSpriteByName("takenicon_guthix", "campaign", iw.field_l, false);
+          DeployAction.field_D[0] = DiskCacheRequest.loadRgbSpriteByName("takenicon_zamorak", "campaign", AchievementUnlockRequest.field_l, false);
+          DeployAction.field_D[1] = DiskCacheRequest.loadRgbSpriteByName("takenicon_saradomin", "campaign", AchievementUnlockRequest.field_l, false);
+          DeployAction.field_D[2] = DiskCacheRequest.loadRgbSpriteByName("takenicon_guthix", "campaign", AchievementUnlockRequest.field_l, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nt extends IntrusiveNode {
+final class RatingLeaderboardRequest extends IntrusiveNode {
     int field_q;
     int field_r;
     static String field_p;
@@ -42,7 +42,7 @@ final class nt extends IntrusiveNode {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 894) {
-            nt.releaseStatics((byte) 82);
+            RatingLeaderboardRequest.releaseStatics((byte) 82);
           }
           if (BitLengthSupport.field_a) {
             var5_int = param1 & 3;
@@ -111,7 +111,7 @@ final class nt extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = ResourceArchive.c(tf.field_l, -76, BufferedSocket.field_j);
+          var2_int = ResourceArchive.c(TilePosition.field_l, -76, BufferedSocket.field_j);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -135,7 +135,7 @@ final class nt extends IntrusiveNode {
         }
     }
 
-    nt() {
+    RatingLeaderboardRequest() {
     }
 
     static {
