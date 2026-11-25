@@ -522,7 +522,7 @@ abstract class GameClientShell extends GameApplet {
           ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, StringList.field_f, GalaxyMap.field_g) &&
           PopupPlacementSupport.preloadArchive(GalaxyMap.field_g, 0)) {
           AnimatedPanel.f(-98);
-          GameScreen.c(28164);
+          GameScreen.drawOverlaysUnlessGuardMatches(28164);
           DerelictMapGenerator.field_r = LobbyUiSetupSupport.field_c;
           UiTextSupport.field_a = false;
           DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, StringList.field_f);

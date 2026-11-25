@@ -728,7 +728,7 @@ final class GameSession implements AiHost {
             if (!this.field_T) {
               if (this.field_m != 0) {
                 MenuLabel.a(ClientRenderSupport.field_d, param0 ^ -3671);
-                this.field_Y.a(-76, 0);
+                this.field_Y.setInteractionMode(-76, 0);
                 if (var5 == 0) {
                   return;
                 }
@@ -748,7 +748,7 @@ final class GameSession implements AiHost {
                       this.scheduleOrderSend(param0 + 3587);
                     }
                     var4.unlink((byte) -105);
-                    this.field_Y.c(var4.field_o, 127);
+                    this.field_Y.markProjectReady(var4.field_o, 127);
                   }
                   var4 = (ProjectUse) (this.field_P.field_i.nextForward((byte) -71));
                 }
@@ -1312,7 +1312,7 @@ final class GameSession implements AiHost {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var2_int = 0;
-          boolean decompiledSharedTail1 = !(this.field_Y.a(true, (byte) 63));
+          boolean decompiledSharedTail1 = !(this.field_Y.handlePointerInput(true, (byte) 63));
           if (!decompiledSharedTail1) {
             this.field_T = true;
             var2_int = 1;
@@ -2706,7 +2706,7 @@ final class GameSession implements AiHost {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          this.field_Y.h(-1);
+          this.field_Y.handleKeyInput(-1);
           if (AchievementProgress.field_g &&
             !this.field_f) {
             if ((!FleetTrailPoint.field_p[86] ||
@@ -2914,7 +2914,7 @@ final class GameSession implements AiHost {
                     }
                     this.refreshMapView(2);
                   }
-                  this.field_Y.a(-125, 0);
+                  this.field_Y.setInteractionMode(-125, 0);
                   if (var8 == 0) {
                     return;
                   }
@@ -2930,8 +2930,8 @@ final class GameSession implements AiHost {
                     this.field_z.endReplay(-18641);
                     this.refreshMapView(2);
                     this.queueStarProject(1, this.field_z.field_p, 0);
-                    this.field_Y.a(-122, 0);
-                    this.field_Y.b(1, 2);
+                    this.field_Y.setInteractionMode(-122, 0);
+                    this.field_Y.markProjectQueued(1, 2);
                     if (var8 == 0) {
                       return;
                     }
@@ -2950,8 +2950,8 @@ final class GameSession implements AiHost {
                       this.field_z.endReplay(-18641);
                       this.refreshMapView(2);
                       this.queueProjectUse(41, this.field_z.field_p, this.field_K, 3);
-                      this.field_Y.a(-117, 0);
-                      this.field_Y.b(3, 2);
+                      this.field_Y.setInteractionMode(-117, 0);
+                      this.field_Y.markProjectQueued(3, 2);
                       if (var8 == 0) {
                         return;
                       }
@@ -2962,7 +2962,7 @@ final class GameSession implements AiHost {
                     this.field_z.endReplay(-18641);
                     this.refreshMapView(2);
                     this.field_K = this.field_z.field_p;
-                    this.field_Y.a(-84, 7);
+                    this.field_Y.setInteractionMode(-84, 7);
                     var4 = this.field_P.field_g.field_e;
                     var5_int = 0;
                     while (var5_int < var4.length) {
@@ -3007,8 +3007,8 @@ final class GameSession implements AiHost {
                     this.field_z.endReplay(-18641);
                     this.refreshMapView(2);
                     this.queueStarProject(2, this.field_z.field_p, 0);
-                    this.field_Y.a(-81, 0);
-                    this.field_Y.b(2, 2);
+                    this.field_Y.setInteractionMode(-81, 0);
+                    this.field_Y.markProjectQueued(2, 2);
                   }
                   if (var8 == 0) {
                     return;
@@ -3023,8 +3023,8 @@ final class GameSession implements AiHost {
                 this.field_z.endReplay(-18641);
                 this.refreshMapView(2);
                 this.queueStarProject(0, this.field_z.field_p, 0);
-                this.field_Y.a(-119, 0);
-                this.field_Y.b(0, 2);
+                this.field_Y.setInteractionMode(-119, 0);
+                this.field_Y.markProjectQueued(0, 2);
                 if (var8 == 0) {
                   return;
                 }
@@ -3040,7 +3040,7 @@ final class GameSession implements AiHost {
               }
               this.field_K = this.field_z.field_p;
               MenuLabel.a(ClientRenderSupport.field_d, 74);
-              this.field_Y.a(-107, 1);
+              this.field_Y.setInteractionMode(-107, 1);
               this.field_z.field_z[this.field_K.field_p] = 1;
               var4 = this.field_K.field_D;
               var5_int = 0;
@@ -3254,7 +3254,7 @@ final class GameSession implements AiHost {
           if (stackIn_15_0 != stackIn_15_1) {
             this.field_f = true;
           }
-          this.field_Y.c(param0, 127);
+          this.field_Y.markProjectReady(param0, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3296,12 +3296,12 @@ final class GameSession implements AiHost {
             !WeightedLruCache.a(-114)) {
             this.handleCameraInput(50);
             if (var4 != 0) {
-              this.field_Y.a(false, (byte) 110);
+              this.field_Y.handlePointerInput(false, (byte) 110);
             }
           } else {
-            this.field_Y.a(false, (byte) 110);
+            this.field_Y.handlePointerInput(false, (byte) 110);
           }
-          this.field_Y.h((byte) 122);
+          this.field_Y.tick((byte) 122);
           stackIn_13_0 = this.field_z;
           if (null == this.field_Q) {
             stackIn_14_1 = null;
@@ -3651,7 +3651,7 @@ final class GameSession implements AiHost {
             }
             this.field_z.projectStars(false);
             this.field_Y.refreshAllPanels(106);
-            this.field_Y.a(-73, 0);
+            this.field_Y.setInteractionMode(-73, 0);
             this.field_N = 0;
             break;
           }
@@ -3968,7 +3968,7 @@ final class GameSession implements AiHost {
               if (this.field_c.field_x <= 0) {
                 if (null == this.field_n ||
                   this.field_P.field_o.field_i) {
-                  this.field_Y.a(param1 - 4, 0);
+                  this.field_Y.setInteractionMode(param1 - 4, 0);
                   if (var8 == 0) {
                     break scanLoop1;
                   }
@@ -3988,7 +3988,7 @@ final class GameSession implements AiHost {
                   if (decompiledFrameRemainder0) {
                     if (null != var6) {
                       this.field_c = var6;
-                      this.field_Y.a(-102, 2);
+                      this.field_Y.setInteractionMode(-102, 2);
                       var7 = var6.firstStar(18229);
                       while (null != var7) {
                         this.field_z.field_z[var7.field_p] = 2;
@@ -4006,14 +4006,14 @@ final class GameSession implements AiHost {
                   if (stackIn_58_0 != 0) {
                     NodeHashTableIterator.a(0, "buildships");
                   }
-                  this.field_Y.a(-86, 0);
+                  this.field_Y.setInteractionMode(-86, 0);
                   break;
                 }
                 if (var8 == 0) {
                   break scanLoop1;
                 }
               }
-              this.field_Y.a(-73, 2);
+              this.field_Y.setInteractionMode(-73, 2);
               stackIn_65_0 = this.field_c.firstStar(18229);
             }
             var6_ref = stackIn_65_0;

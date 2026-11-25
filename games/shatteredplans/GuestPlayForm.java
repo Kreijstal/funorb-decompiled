@@ -40,7 +40,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             }
             var2 = 1;
           }
-          GameState.field_l.updatePointerSelection(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215));
+          GameState.field_l.updatePointerSelection(-1, GameScreen.findFullscreenDialogButtonAt(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.findFullscreenDialogButtonAt(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215));
           if (GameState.field_l.isInitiallyActivated((byte) -76)) {
             var1_int = 1;
           }

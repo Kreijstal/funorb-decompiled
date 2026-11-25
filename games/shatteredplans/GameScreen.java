@@ -70,7 +70,7 @@ final class GameScreen {
     private ArgbSprite field_t;
     static int[] field_c;
 
-    final void a(int param0, int param1) {
+    final void setInteractionMode(int param0, int param1) {
         boolean stackIn_10_0 = false;
         StringBuilder stackIn_22_0 = null;
         String stackIn_23_1 = null;
@@ -252,7 +252,7 @@ final class GameScreen {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void beginProjectPlacement(int param0, int param1) {
         int[][] discarded$0 = null;
         Player stackIn_50_0 = null;
         Player stackIn_50_1 = null;
@@ -279,12 +279,12 @@ final class GameScreen {
         try {
           this.field_s.cancelProjects(param0, 24);
           if (param1 != 4705) {
-            discarded$0 = this.j(59);
+            discarded$0 = this.getInterpolatedStatisticsHistory(59);
           }
           var3_int = param0;
           if (var3_int != 0) {
             if (var3_int == 1) {
-              this.a(-103, 4);
+              this.setInteractionMode(-103, 4);
               var3 = this.field_s.field_P.field_g.field_e;
               var4 = 0;
               while (var3.length > var4) {
@@ -301,7 +301,7 @@ final class GameScreen {
               return;
             }
             if (var3_int == 2) {
-              this.a(param1 ^ -4613, 5);
+              this.setInteractionMode(param1 ^ -4613, 5);
               var3Lifetime2 = this.field_s.field_P.field_g.field_e;
               var4Lifetime2 = 0;
               while (var4Lifetime2 < var3Lifetime2.length) {
@@ -336,7 +336,7 @@ final class GameScreen {
               return;
             }
             if (var9 == 0) {
-              this.a(-111, 6);
+              this.setInteractionMode(-111, 6);
               var3Lifetime3 = this.field_s.field_P.field_g.field_e;
               var4Lifetime3 = 0;
               while (true) {
@@ -351,7 +351,7 @@ final class GameScreen {
               }
             }
           }
-          this.a(param1 ^ -4629, 3);
+          this.setInteractionMode(param1 ^ -4629, 3);
           var3Lifetime1 = this.field_s.field_P.field_g.field_e;
           var4Lifetime1 = 0;
           while (var4Lifetime1 < var3Lifetime1.length) {
@@ -852,7 +852,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void drawStatisticsOverlay(byte param0, int param1) {
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_43_0 = 0;
@@ -1026,7 +1026,7 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           var14 = stackIn_48_0;
           var15 = this.field_s.field_P.field_r;
-          var16 = this.j(410);
+          var16 = this.getInterpolatedStatisticsHistory(410);
           var17 = var4 - 40;
           if (this.field_Q == 0 ||
             null == var16) {
@@ -1153,7 +1153,7 @@ final class GameScreen {
           var24_int = 0;
           scanLoop1: while (true) {
             if (var24_int < 4) {
-              this.b(var24_int, var22Lifetime2, var21Lifetime2, 85, var23);
+              this.drawStatisticPanel(var24_int, var22Lifetime2, var21Lifetime2, 85, var23);
               var23++;
               var22Lifetime2 = var22Lifetime2 + (8 + this.field_ob[var24_int]);
               var24_int++;
@@ -1350,7 +1350,7 @@ final class GameScreen {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawStatisticPanel(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -1380,7 +1380,7 @@ final class GameScreen {
           }
           var9 = this.field_ob[param0];
           if (param3 < 43) {
-            this.b(-128);
+            this.refreshChatPanel(-128);
           }
           MidiPcmStream.a(var9, param1, param2, (byte) -63, 190);
           IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.field_g[param4], 10 + param2, param1 + IconTextPanel.field_Cb.field_J, 16777215, -1);
@@ -1469,7 +1469,7 @@ final class GameScreen {
         }
     }
 
-    private final void c(byte param0) {
+    private final void handleStatisticsPointer(byte param0) {
         int stackIn_40_0 = 0;
         int stackIn_40_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1524,7 +1524,7 @@ final class GameScreen {
             if (DualLinkDequeSequence.field_h != null) {
               var10_ref_Integer = (Integer) (DualLinkDequeSequence.field_h.field_h);
               var11_int = var10_ref_Integer.intValue();
-              this.a(var11_int, (byte) -116);
+              this.selectStatisticsCategory(var11_int, (byte) -116);
               if (this.field_hb.isSelected(244874369)) {
                 this.field_hb.toggle((byte) 124);
               }
@@ -1722,7 +1722,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void selectStatisticsCategory(int param0, byte param1) {
         int[] array$0 = null;
         int stackIn_25_0 = 0;
         int stackIn_44_0 = 0;
@@ -1757,10 +1757,10 @@ final class GameScreen {
             if (this.field_kb == 0) {
               this.field_Z = this.field_C;
               if (var15 != 0) {
-                this.field_Z = this.j(410);
+                this.field_Z = this.getInterpolatedStatisticsHistory(410);
               }
             } else {
-              this.field_Z = this.j(410);
+              this.field_Z = this.getInterpolatedStatisticsHistory(410);
             }
             this.field_kb = 1;
             this.field_D = param0;
@@ -1860,7 +1860,7 @@ final class GameScreen {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void markProjectQueued(int param0, int param1) {
         RuntimeException runtimeException = null;
         ProjectsContent var3 = null;
         MenuList var4 = null;
@@ -1875,7 +1875,7 @@ final class GameScreen {
           }
           var4 = var3.field_c[param0];
           if (param1 != 2) {
-            this.a((byte) 43);
+            this.finishTurnIntroduction((byte) 43);
           }
           var4.field_o = CellVertex.field_h;
           var5 = (MenuComponent) (var4.field_l.startForward(param1 - 2));
@@ -1896,7 +1896,7 @@ final class GameScreen {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -2030,7 +2030,7 @@ final class GameScreen {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void markProjectReady(int param0, int param1) {
         RuntimeException runtimeException = null;
         ProjectsContent var3 = null;
         MenuList var4 = null;
@@ -2176,7 +2176,7 @@ final class GameScreen {
         }
     }
 
-    final static void g(int param0) {
+    final static void setFullscreenDialogModeIfOpen(int param0) {
         if (!TutorialScene.isQuickChatMenuOpen(false)) {
           return;
         }
@@ -2187,7 +2187,7 @@ final class GameScreen {
         }
     }
 
-    final void l(int param0) {
+    final void draw(int param0) {
         boolean stackIn_38_0 = false;
         int stackIn_45_0 = 0;
         boolean stackIn_108_0 = false;
@@ -2394,10 +2394,10 @@ final class GameScreen {
             }
           }
           if (this.field_u != 0) {
-            this.k(5512);
+            this.drawTurnIntroduction(5512);
           }
           if (this.field_b != 0) {
-            this.a((byte) 11, this.field_b);
+            this.drawStatisticsOverlay((byte) 11, this.field_b);
           }
           if (PlacementOrder.field_w != null &&
             PlacementOrder.field_w.field_o != null) {
@@ -2616,7 +2616,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(byte param0) {
+    private final void finishTurnIntroduction(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -2644,7 +2644,7 @@ final class GameScreen {
         }
     }
 
-    final void h(int param0) {
+    final void handleKeyInput(int param0) {
         boolean stackIn_16_1 = false;
         int stackIn_37_0 = 0;
         int stackIn_39_0 = 0;
@@ -2763,7 +2763,7 @@ final class GameScreen {
             this.field_f.toggle((byte) 20);
           }
           if (param0 != -1) {
-            GameScreen.c(56);
+            GameScreen.drawOverlaysUnlessGuardMatches(56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2800,7 +2800,7 @@ final class GameScreen {
         }
     }
 
-    private final void m(int param0) {
+    private final void storeAnimationPreferences(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2821,7 +2821,7 @@ final class GameScreen {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawTurnIntroduction(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -2966,7 +2966,7 @@ final class GameScreen {
         }
     }
 
-    final static void c(int param0) {
+    final static void drawOverlaysUnlessGuardMatches(int param0) {
         try {
           if (param0 != 28164) {
             GameScreen.drawOverlays((byte) -86, true);
@@ -2976,7 +2976,7 @@ final class GameScreen {
         }
     }
 
-    private final int[][] j(int param0) {
+    private final int[][] getInterpolatedStatisticsHistory(int param0) {
         int[][] stackIn_5_0 = null;
         int[][] stackIn_17_0 = null;
         int[][] stackIn_22_0 = null;
@@ -3143,28 +3143,28 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_hb.isSelected(244874369)) {
             if (this.field_gb.isSelected(244874369)) {
-              this.a(1, (byte) -128);
+              this.selectStatisticsCategory(1, (byte) -128);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (this.field_db.isSelected(244874369)) {
-                this.a(2, (byte) 21);
+                this.selectStatisticsCategory(2, (byte) 21);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if ((decompiledFrameRemainder0) &&
                 (this.field_a.isSelected(244874369))) {
-                this.a(3, (byte) 29);
+                this.selectStatisticsCategory(3, (byte) 29);
                 if (var5 != 0) {
-                  this.a(0, (byte) 1);
+                  this.selectStatisticsCategory(0, (byte) 1);
                 }
               }
             }
           } else {
-            this.a(0, (byte) 1);
+            this.selectStatisticsCategory(0, (byte) 1);
           }
           if (this.field_s.field_W) {
             UnderageAccountInfoPanel.k(112);
-            this.a((byte) -109);
+            this.finishTurnIntroduction((byte) -109);
             if (var5 == 0) {
               return;
             }
@@ -3181,7 +3181,7 @@ final class GameScreen {
         }
     }
 
-    final boolean a(boolean param0, byte param1) {
+    final boolean handlePointerInput(boolean param0, byte param1) {
         int stackIn_34_0 = 0;
         boolean stackIn_73_0 = false;
         int stackIn_92_0 = 0;
@@ -3237,7 +3237,7 @@ final class GameScreen {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_b != 0) {
-            this.c((byte) -56);
+            this.handleStatisticsPointer((byte) -56);
             return true;
           }
           if (this.field_u != 0) {
@@ -3288,7 +3288,7 @@ final class GameScreen {
               var5 = (MenuWindow) (var4_ref_vd);
               if (var5.field_s &&
                 var5.isOrContains((byte) 43, OrderableInsertionSupport.field_f)) {
-                this.a(62, var5);
+                this.bringWindowToFront(62, var5);
                 var5.field_A = false;
                 if (var5 == this.field_e) {
                   this.field_mb.setSelected(false);
@@ -3345,7 +3345,7 @@ final class GameScreen {
             }
             if (DualLinkDequeSequence.field_h == this.field_mb) {
               if (!this.field_e.field_s) {
-                this.a(93, this.field_e);
+                this.bringWindowToFront(93, this.field_e);
                 this.field_mb.field_o = ClientOverlaySupport.field_b;
                 this.field_e.field_s = true;
                 if (var9 != 0) {
@@ -3369,7 +3369,7 @@ final class GameScreen {
                 decompiledSharedTail2 = (var9 != 0);
               }
               if (decompiledSharedTail2) {
-                this.a(-120, this.field_j);
+                this.bringWindowToFront(-120, this.field_j);
                 this.field_S.field_o = ExternalLinkSupport.field_b;
                 this.field_j.field_s = true;
               }
@@ -3386,7 +3386,7 @@ final class GameScreen {
                 decompiledSharedTail1 = (var9 != 0);
               }
               if (decompiledSharedTail1) {
-                this.a(113, this.field_J);
+                this.bringWindowToFront(113, this.field_J);
                 this.field_n.field_o = ChatAreaLayoutSupport.field_b;
                 this.field_J.field_s = true;
               }
@@ -3397,7 +3397,7 @@ final class GameScreen {
             }
             if (this.field_W == DualLinkDequeSequence.field_h) {
               if (!this.field_cb.field_s) {
-                this.a(-113, this.field_cb);
+                this.bringWindowToFront(-113, this.field_cb);
                 this.field_W.field_o = ArchiveSource.field_d;
                 this.field_cb.field_s = true;
                 if (var9 != 0) {
@@ -3415,7 +3415,7 @@ final class GameScreen {
             }
             if (DualLinkDequeSequence.field_h == this.field_g) {
               if (!this.field_nb.field_s) {
-                this.a(40, this.field_nb);
+                this.bringWindowToFront(40, this.field_nb);
                 this.field_nb.field_s = true;
                 this.field_g.field_o = TaskAi.field_d;
                 if (var9 != 0) {
@@ -3432,7 +3432,7 @@ final class GameScreen {
               return stackIn_147_0 != 0;
             }
             if (DualLinkDequeSequence.field_h == this.field_bb) {
-              this.g((byte) 121);
+              this.handleEndTurnClick((byte) 121);
               stackIn_152_0 = var3_int;
               return stackIn_152_0 != 0;
             }
@@ -3482,7 +3482,7 @@ final class GameScreen {
                 ((MapView) (Object) stackIn_187_0).beginReplayPhase(stackIn_187_1, stackIn_188_2, false);
                 this.field_s.refreshMapView(2);
               }
-              this.m(101);
+              this.storeAnimationPreferences(101);
               stackIn_190_0 = var3_int;
               return stackIn_190_0 != 0;
             }
@@ -3528,7 +3528,7 @@ final class GameScreen {
               } else {
                 this.field_d.field_o = UsernameAvailabilityValidator.field_t;
               }
-              this.m(108);
+              this.storeAnimationPreferences(108);
               stackIn_224_0 = var3_int;
               return stackIn_224_0 != 0;
             }
@@ -3556,7 +3556,7 @@ final class GameScreen {
                     decompiledFrameRemainder3 = false;
                   }
                   else {
-                    this.a(-125, 0);
+                    this.setInteractionMode(-125, 0);
                   }
                 }
                 var5_int++;
@@ -3577,7 +3577,7 @@ final class GameScreen {
                   }
                   if (stackIn_256_0 &&
                     this.field_s.field_n.field_u[var5_intLifetime1] == 5) {
-                    this.d(var5_intLifetime1, 4705);
+                    this.beginProjectPlacement(var5_intLifetime1, 4705);
                   }
                   var5_intLifetime1++;
                 }
@@ -3730,7 +3730,7 @@ final class GameScreen {
         }
     }
 
-    final void h(byte param0) {
+    final void tick(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -3780,7 +3780,7 @@ final class GameScreen {
             if (var3_int >= var2_array.length) {
               if (!this.field_s.field_f &&
                 !this.field_s.field_W) {
-                this.b(15);
+                this.refreshChatPanel(15);
               }
               ProjectsContent.b((byte) -127);
               this.field_V.moveTo((byte) 68, this.field_V.field_k, this.getAreaHeight((byte) 14) - this.field_V.field_i / 2);
@@ -3940,7 +3940,7 @@ final class GameScreen {
               stackIn_125_1 = 60000;
             }
             if (stackIn_125_0 == stackIn_125_1) {
-              this.a((byte) 33);
+              this.finishTurnIntroduction((byte) 33);
             }
             if (this.field_u == 59968) {
               MenuLabel.a(SoundTriggerTick.field_g, 122);
@@ -3961,7 +3961,7 @@ final class GameScreen {
             }
           }
           if (this.field_b != 0) {
-            this.p(3);
+            this.tickStatisticsAnimation(3);
           }
           if (this.field_s.field_W) {
             LoginRequestSupport.updateTutorialSceneTransition(false);
@@ -4004,7 +4004,7 @@ final class GameScreen {
         }
     }
 
-    private final void p(int param0) {
+    private final void tickStatisticsAnimation(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -4201,7 +4201,7 @@ final class GameScreen {
         }
     }
 
-    private final void b(int param0) {
+    private final void refreshChatPanel(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_21_0 = 0;
         boolean stackIn_40_1 = false;
@@ -4298,7 +4298,7 @@ final class GameScreen {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int findFullscreenDialogButtonAt(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -4354,7 +4354,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, MenuWindow param1) {
+    private final void bringWindowToFront(int param0, MenuWindow param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -4744,7 +4744,7 @@ final class GameScreen {
         }
     }
 
-    private final void g(byte param0) {
+    private final void handleEndTurnClick(byte param0) {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4959,7 +4959,7 @@ final class GameScreen {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           this.field_s.field_c = param1;
-          this.a(-83, 2);
+          this.setInteractionMode(-83, 2);
           var4 = (ProductionContent) (this.field_e.field_x);
           if (param0 != -2) {
             this.field_x = 60;

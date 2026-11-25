@@ -145,7 +145,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (null != NameSuggestionsPanel.field_K &&
             NameSuggestionsPanel.field_K.field_c) {
             BufferedCacheFile.c(0);
-            GameScreen.g(4);
+            GameScreen.setFullscreenDialogModeIfOpen(4);
           }
           stackIn_7_1 = (null != NameSuggestionsPanel.field_K);
           this.a(stackIn_7_1, 77);
@@ -733,7 +733,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         MusicCrossfadeStream.clearStatics(param0 ^ 24068);
         SpriteResourceSupport.clearStatics((byte) -77);
         GraphicsSettings.clearStatics(102);
-        GameScreen.d(param0 ^ -24389);
+        GameScreen.clearStatics(param0 ^ -24389);
         InvalidMapConnectionException.clearStatics((byte) 16);
         GameRules.clearStatics(true);
         GalaxyMap.clearStatics((byte) -98);

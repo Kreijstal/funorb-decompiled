@@ -704,7 +704,7 @@ final class MapView extends MapViewState {
             var3 = (BattleExplosionVisual) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);
-          this.field_o.h((byte) -26);
+          this.field_o.tick((byte) -26);
           if (param1 <= 43) {
             return;
           }
@@ -2679,7 +2679,7 @@ final class MapView extends MapViewState {
             OpacityWidget.popLegacyRasterState(param3 - 12114);
             this.field_gb.drawOpaque(0, 0);
           }
-          this.field_o.l(123);
+          this.field_o.draw(123);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tr.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

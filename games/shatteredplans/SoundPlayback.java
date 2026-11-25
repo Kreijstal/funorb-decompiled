@@ -312,7 +312,7 @@ final class SoundPlayback extends IntrusiveNode {
           if (2 == BirthDateConfirmationForm.field_C) {
             GameState.field_l.resetSelection(-1, -1, param0, 99);
           } else {
-            GameState.field_l.resetSelection(GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215), 0, param0, -58);
+            GameState.field_l.resetSelection(GameScreen.findFullscreenDialogButtonAt(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215), 0, param0, -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
