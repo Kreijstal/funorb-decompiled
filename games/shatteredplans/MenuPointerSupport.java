@@ -39,7 +39,7 @@ final class MenuPointerSupport extends IntrusiveNode {
           if (AllianceExpiredEvent.field_n == 1) {
             ClientOverlayDrawSupport.field_b = ClientOverlayDrawSupport.field_b + 1;
             if (IconTextPanel.field_Db != null) {
-              IconTextPanel.field_Db.b(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, -498);
+              IconTextPanel.field_Db.onPointerDrag(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, -498);
               return true;
             }
             var2_int = (-TertiaryListSequence.field_k + SocialListPanel.field_Gb) * (SocialListPanel.field_Gb - TertiaryListSequence.field_k) + (-LobbyRoomControlsSupport.field_b + DialogRoot.field_C) * (DialogRoot.field_C - LobbyRoomControlsSupport.field_b);
@@ -57,7 +57,7 @@ final class MenuPointerSupport extends IntrusiveNode {
             TextInputPainter.containsMenuComponent(OrderableInsertionSupport.field_f, param0, (byte) 64)) {
             DualLinkDequeSequence.field_h = OrderableInsertionSupport.field_f;
             if (null != DualLinkDequeSequence.field_h) {
-              DualLinkDequeSequence.field_h.a(LobbyRoomControlsSupport.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
+              DualLinkDequeSequence.field_h.onPointerClick(LobbyRoomControlsSupport.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
             }
           } else {
             DualLinkDequeSequence.field_h = null;

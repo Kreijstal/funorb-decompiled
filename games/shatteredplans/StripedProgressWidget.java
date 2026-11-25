@@ -23,7 +23,7 @@ final class StripedProgressWidget extends UiWidget {
     private int field_H;
     private int field_F;
 
-    private final Sprite a(int param0, byte param1, int param2) {
+    private final Sprite createStripeTile(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -58,17 +58,17 @@ final class StripedProgressWidget extends UiWidget {
         return var15;
     }
 
-    private final void a(int param0) {
-        this.field_z = new Sprite[]{this.a(this.field_E, (byte) 98, this.field_F), this.a(this.field_A, (byte) 124, this.field_O)};
+    private final void rebuildProgressSprites(int param0) {
+        this.field_z = new Sprite[]{this.createStripeTile(this.field_E, (byte) 98, this.field_F), this.createStripeTile(this.field_A, (byte) 124, this.field_O)};
         if (param0 != -907398527) {
-          StripedProgressWidget.a((byte) 86, -76, 69);
+          StripedProgressWidget.createColourFadeRamp((byte) 86, -76, 69);
         }
-        this.field_R = this.h(61);
+        this.field_R = this.createRoundedEndMask(61);
         this.field_N = this.field_R.flippedCopy();
         this.field_S = new Sprite(this.field_n >> 1, this.field_n);
     }
 
-    final static void a(int param0, String param1, int param2, String param3, String param4, int param5) {
+    final static void appendChatHistoryMessage(int param0, String param1, int param2, String param3, String param4, int param5) {
         ChatHistoryEntry var6 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -117,14 +117,14 @@ final class StripedProgressWidget extends UiWidget {
         if (param2 <= 99) {
           return;
         }
-        this.a(-907398527);
+        this.rebuildProgressSprites(-907398527);
     }
 
     StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    private final void a(Sprite param0, int param1, int param2, int param3) {
+    private final void drawTiledStripWithEndCaps(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -220,15 +220,15 @@ final class StripedProgressWidget extends UiWidget {
         }
         int var5 = param3 + this.field_m;
         int var6 = this.field_q + param2;
-        this.a(this.field_z[0], var6, var5, -1);
+        this.drawTiledStripWithEndCaps(this.field_z[0], var6, var5, -1);
         if (this.field_y < 65536) {
           BufferedSocket.pushIntersectedClip(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
-          this.a(this.field_z[1], var6, var5, -1);
+          this.drawTiledStripWithEndCaps(this.field_z[1], var6, var5, -1);
           Star.popRasterState((byte) -78);
         }
     }
 
-    final static Sprite i(int param0) {
+    final static Sprite createDiplomacyButtonSprite(int param0) {
         int var2 = 0;
         int var1 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -255,7 +255,7 @@ final class StripedProgressWidget extends UiWidget {
         return Star.field_F;
     }
 
-    private final Sprite h(int param0) {
+    private final Sprite createRoundedEndMask(int param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -280,7 +280,7 @@ final class StripedProgressWidget extends UiWidget {
         return var3;
     }
 
-    final static int[] a(byte param0, int param1, int param2) {
+    final static int[] createColourFadeRamp(byte param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -290,7 +290,7 @@ final class StripedProgressWidget extends UiWidget {
         int var5 = param1 & 65280;
         if (param0 <= 23) {
           String var9 = (String) null;
-          StripedProgressWidget.a(27, (String) null, 25, (String) null, (String) null, 0);
+          StripedProgressWidget.appendChatHistoryMessage(27, (String) null, 25, (String) null, (String) null, 0);
         }
         for (var6 = 0; param2 > var6; var6++) {
           var7 = (param2 - var6) * 256 / param2;
@@ -299,7 +299,7 @@ final class StripedProgressWidget extends UiWidget {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setStripeColours(int param0, int param1, int param2) {
         this.field_F = param0;
         if (param2 != -27855) {
           this.field_O = -4;
@@ -307,7 +307,7 @@ final class StripedProgressWidget extends UiWidget {
         this.field_O = (16711422 & param0) >> 1;
         this.field_A = param1 >> 1 & 8355711;
         this.field_E = param1;
-        this.a(-907398527);
+        this.rebuildProgressSprites(-907398527);
     }
 
     public static void clearStatics(int param0) {

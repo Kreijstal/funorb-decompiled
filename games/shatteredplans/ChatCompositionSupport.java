@@ -172,7 +172,7 @@ final class ChatCompositionSupport {
             var2 = FleetTrailPoint.field_k;
           }
           if (ProductionContent.field_h == 2 &&
-            !VerticalMenuSlider.e((byte) 75)) {
+            !VerticalMenuSlider.canMessageCurrentPrivateRecipient((byte) 75)) {
             if (!DebouncedValidator.isFriendPlayer(-30106, IntroGlowPoint.field_k)) {
               var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AccountInputSupport.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               if (var11 != 0) {
@@ -182,7 +182,7 @@ final class ChatCompositionSupport {
               var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
             }
             if (QuickChatPhraseDefinition.field_t) {
-              StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.appendChatHistoryMessage(2, (String) (var2), 0, (String) null, (String) null, -16169);
               ProgressDialog.closeQuickChatMenusIfOpen(false);
             }
           }

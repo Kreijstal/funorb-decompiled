@@ -173,7 +173,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               MutableIntPairNode.field_h = true;
             }
           } else {
-            if (!StrongCacheEntry.f((byte) 122)) {
+            if (!StrongCacheEntry.areClientPreferencesReady((byte) 122)) {
               DialogRoot.f((byte) 125);
             } else {
               if (DisplayModeInfo.field_e) {
@@ -221,7 +221,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     } else {
                       if (3 == var3) {
                         BattleContribution.field_s = false;
-                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
+                        StrongCacheEntry.configureSharedUiSpriteResources(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                         HuffmanCodec.requestFullscreen(true, -1);
                       } else {
                         if (var3 != 4) {
@@ -1162,7 +1162,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 GameSpriteResources.clearAccountChoiceFlag(!param0);
                 if (BattleContribution.field_s) {
                   BattleContribution.field_s = false;
-                  StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
+                  StrongCacheEntry.configureSharedUiSpriteResources(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                   HuffmanCodec.requestFullscreen(false, -1);
                 }
                 if (AccountStatusDialog.field_ob) {
@@ -1389,7 +1389,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
           return;
         }
-        if (!StrongCacheEntry.f((byte) 116)) {
+        if (!StrongCacheEntry.areClientPreferencesReady((byte) 116)) {
           ClientDialogSupport.setLoadingProgress(100.0f, 2, ToggleButton.field_v);
           ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
           return;

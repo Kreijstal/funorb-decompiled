@@ -2274,7 +2274,7 @@ final class GameState {
           return;
         }
         try {
-          StrongCacheEntry.a((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
+          StrongCacheEntry.writeGameState((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dc.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

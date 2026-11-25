@@ -218,7 +218,7 @@ abstract class ResizingDialog extends Dialog {
                 ProxyAuthenticationRequiredException.field_e = null;
               } else {
                 var6 = (String) null;
-                StripedProgressWidget.a(2, (String) (var5), 0, var4, (String) null, -16169);
+                StripedProgressWidget.appendChatHistoryMessage(2, (String) (var5), 0, var4, (String) null, -16169);
                 MapViewState.field_b = -1;
                 ProxyAuthenticationRequiredException.field_e = null;
               }

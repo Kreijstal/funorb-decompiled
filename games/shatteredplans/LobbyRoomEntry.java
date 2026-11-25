@@ -206,7 +206,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
         } else {
           NotificationEntry.field_h = StatefulWidgetTheme.field_t;
         }
-        EmailValidator.a(true, param5);
+        EmailValidator.animateLobbyPanelTransitions(true, param5);
         if (PlacementOrder.field_t > param9) {
           TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }

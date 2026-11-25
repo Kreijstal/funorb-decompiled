@@ -353,10 +353,10 @@ final class ProgressDialog extends ResizingDialog {
             stackIn_8_1 = (param0);
             this.field_jb = stackIn_8_1;
             if (this.field_jb) {
-              this.field_bb.a(4210752, 8405024, -27855);
+              this.field_bb.setStripeColours(4210752, 8405024, -27855);
               this.field_bb.field_L = true;
             } else {
-              this.field_bb.a(4210752, 2113632, -27855);
+              this.field_bb.setStripeColours(4210752, 2113632, -27855);
               if (this.field_db) {
                 this.field_bb.field_L = false;
               }

@@ -283,7 +283,7 @@ final class SolVictoryChecker extends VictoryChecker {
             return;
           }
           if (var6Lifetime1 > 0) {
-            VerticalMenuSlider.a((byte) 84, var5, (int[]) ((Object) this.field_n.clone()));
+            VerticalMenuSlider.sortPairedIntsDescending((byte) 84, var5, (int[]) ((Object) this.field_n.clone()));
           }
           var19 = new MenuLabel[3];
           var7_array = var19;

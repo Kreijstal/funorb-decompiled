@@ -58,7 +58,7 @@ abstract class ByteArrayStorage {
           var3 = 0;
         }
         if (2 == ProductionContent.field_h &&
-          !VerticalMenuSlider.e((byte) 53)) {
+          !VerticalMenuSlider.canMessageCurrentPrivateRecipient((byte) 53)) {
           var3 = 0;
         }
         if (TextReplacementEntry.field_j == 84) {
@@ -76,10 +76,10 @@ abstract class ByteArrayStorage {
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
-              StripedProgressWidget.a(2, ClientClockSupport.field_e, 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.appendChatHistoryMessage(2, ClientClockSupport.field_e, 0, (String) null, (String) null, -16169);
               var15 = (String) null;
               var14 = (String) null;
-              StripedProgressWidget.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.appendChatHistoryMessage(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
               MusicVoice.clearChatInput(param2);
               return true;
             }

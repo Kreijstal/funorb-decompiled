@@ -676,8 +676,8 @@ class PacketBuffer extends IntrusiveNode {
           AccountFieldValue.field_f = -1;
           ByteArrayNode.field_k = -1;
           AttackTask.field_o = -1;
-          StripedProgressWidget.a((byte) 73, 16777215, 8);
-          StripedProgressWidget.a((byte) 112, 16777215, 11);
+          StripedProgressWidget.createColourFadeRamp((byte) 73, 16777215, 8);
+          StripedProgressWidget.createColourFadeRamp((byte) 112, 16777215, 11);
           PopupPlacementSupport.field_m = new TextReplacementContext(ClientLobbyResources.field_e);
           ClientContextMenuSupport.field_a = new IntrusiveDeque();
           StellarBombEvent.field_h = new IntrusiveDeque();

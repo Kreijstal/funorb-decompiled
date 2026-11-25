@@ -30,13 +30,13 @@ final class GameSpriteResources {
         RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          Star.field_K = EmailValidator.a(param1, "", "starfield", false);
+          Star.field_K = EmailValidator.loadImageSpriteByName(param1, "", "starfield", false);
           AccountRequestState.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
             AccountRequestState.field_e[var2_int] = GameRules.loadTurnSprite(param1, var2_int + 1, 1);
           }
-          PasswordInputPainter.field_v = EmailValidator.a(param1, "", "win", false);
-          QuickChatPhraseDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
+          PasswordInputPainter.field_v = EmailValidator.loadImageSpriteByName(param1, "", "win", false);
+          QuickChatPhraseDefinition.field_s = EmailValidator.loadImageSpriteByName(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
             GameSpriteResources.loadGameBackdropSprites((byte) -117, (Archive) null);

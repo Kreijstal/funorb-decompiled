@@ -4868,7 +4868,7 @@ final class GameScreen {
           }
           var9 = this.field_nb.field_z;
           var9.unlinkChildren(0);
-          var10 = EmailValidator.a(param5, true);
+          var10 = EmailValidator.createResultLabelList(param5, true);
           var10.moveTo((byte) 61, var9.field_k, var9.field_y + var9.field_t);
           var9.addChild(var10, 8);
           var11 = 0;

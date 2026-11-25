@@ -446,7 +446,7 @@ final class PointsVictoryChecker extends VictoryChecker {
             var5Lifetime2 = var5Lifetime2 + var8_int;
           }
           if (var5Lifetime2 > 0) {
-            VerticalMenuSlider.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
+            VerticalMenuSlider.sortPairedIntsDescending((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatPhraseRegistry.replaceNumberedPlaceholders(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
           var7 = new Player[this.field_i.length];

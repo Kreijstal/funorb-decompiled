@@ -351,7 +351,7 @@ class MenuComponent extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void onPointerClick(int param0, int param1, int param2) {
         if (param1 != 0) {
           this.field_l = (IntrusiveDeque) null;
         }
@@ -378,7 +378,7 @@ class MenuComponent extends IntrusiveNode {
           this.field_m = param2;
           return;
         }
-        this.b(55, 44, 18);
+        this.onPointerDrag(55, 44, 18);
         this.field_m = param2;
     }
 
@@ -457,7 +457,7 @@ class MenuComponent extends IntrusiveNode {
         this.field_l = new IntrusiveDeque();
     }
 
-    void b(int param0, int param1, int param2) {
+    void onPointerDrag(int param0, int param1, int param2) {
         if (param2 != -498) {
           this.field_p = true;
         }

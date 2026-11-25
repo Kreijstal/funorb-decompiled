@@ -109,7 +109,7 @@ final class SolMapReader implements MapGenerator {
           }
           param0.field_u = var2;
           param0.field_r = var4;
-          param0.field_w = EmailValidator.a((byte) 74, var12);
+          param0.field_w = EmailValidator.sortedIndicesDescending((byte) 74, var12);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

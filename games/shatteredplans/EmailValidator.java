@@ -14,7 +14,7 @@ final class EmailValidator extends TextFieldValidator {
     private String field_t;
     static boolean field_p;
 
-    final static CoverageBitmapFont a(int param0, int param1, Archive param2, Archive param3, int param4) {
+    final static CoverageBitmapFont loadCoverageBitmapFont(int param0, int param1, Archive param2, Archive param3, int param4) {
         RuntimeException var5 = null;
         CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -30,7 +30,7 @@ final class EmailValidator extends TextFieldValidator {
             return null;
           }
           if (param4 > -83) {
-            EmailValidator.e(87);
+            EmailValidator.clearFacePriorityCounts(87);
           }
           stackIn_7_0 = SecondaryNodeHashTable.a(15, param3.getFile(param1, -1, param0));
           return stackIn_7_0;
@@ -57,7 +57,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static MenuList a(MenuLabel[] param0, boolean param1) {
+    final static MenuList createResultLabelList(MenuLabel[] param0, boolean param1) {
         int var3 = 0;
         MenuList var2 = null;
         int var4 = 0;
@@ -180,7 +180,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void animateLobbyPanelTransitions(boolean param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -320,7 +320,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static void e(int param0) {
+    final static void clearFacePriorityCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -333,7 +333,7 @@ final class EmailValidator extends TextFieldValidator {
           var5 = LobbyRoomInteractionSupport.field_h;
           var1 = var5;
           if (param0 <= 92) {
-            EmailValidator.e(20);
+            EmailValidator.clearFacePriorityCounts(20);
           }
           var2 = 0;
           var3 = var5.length;
@@ -355,7 +355,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static Sprite a(Archive param0, String param1, String param2, boolean param3) {
+    final static Sprite loadImageSpriteByName(Archive param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         byte[] var5 = null;
         Object stackIn_3_0 = null;
@@ -390,7 +390,7 @@ final class EmailValidator extends TextFieldValidator {
           var5 = param0.getFileByName(true, param2, param1);
           var4 = var5;
           if (param3) {
-            EmailValidator.a(false, true);
+            EmailValidator.animateLobbyPanelTransitions(false, true);
           }
           stackIn_9_0 = null;
           stackIn_9_1 = null;
@@ -438,7 +438,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static void d(int param0) {
+    final static void tickLobbyEntryExpiry(int param0) {
         RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         LobbyPlayerEntry var1_ref = null;
@@ -451,7 +451,7 @@ final class EmailValidator extends TextFieldValidator {
         try {
           var1_ref = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.startForward(0));
           if (param0 < 4) {
-            EmailValidator.a(true, true);
+            EmailValidator.animateLobbyPanelTransitions(true, true);
           }
           while (var1_ref != null) {
             if (0 < var1_ref.field_Gb) {
@@ -501,7 +501,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static int[] a(byte param0, int[] param1) {
+    final static int[] sortedIndicesDescending(byte param0, int[] param1) {
         int var2_int = 0;
         int[] var3 = null;
         int var4 = 0;
@@ -518,7 +518,7 @@ final class EmailValidator extends TextFieldValidator {
           var2_int = param1.length;
           var3 = new int[var2_int];
           if (param0 != 74) {
-            EmailValidator.e(40);
+            EmailValidator.clearFacePriorityCounts(40);
           }
           var4 = 1;
           while (true) {

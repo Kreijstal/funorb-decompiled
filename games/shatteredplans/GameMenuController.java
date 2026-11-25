@@ -300,10 +300,10 @@ final class GameMenuController {
           var9Lifetime1 = var9Lifetime1 - var13;
           var13 += 21;
           for (var14_int = 0; var14_int <= 16; var14_int++) {
-            IsaacRandom.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
+            IsaacRandom.drawVerticalLineAdditive(var13, var6 - var14_int, param1 + var14_int, 65793, false);
           }
           AccountBooleanRequest.drawAdditiveSteppedLine(-18166, 16, 2458760, -1, var6, param1);
-          IsaacRandom.a(var13, -16 + var6, 16 + param1, 2458760, false);
+          IsaacRandom.drawVerticalLineAdditive(var13, -16 + var6, 16 + param1, 2458760, false);
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = UnderageAccountInfoPanel.field_J[var11];
@@ -321,10 +321,10 @@ final class GameMenuController {
         }
         var11Lifetime1 = var9Lifetime1 + 16;
         for (var12Lifetime1 = 0; var12Lifetime1 <= 16; var12Lifetime1++) {
-          IsaacRandom.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
+          IsaacRandom.drawVerticalLineAdditive(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
         }
         AccountBooleanRequest.drawAdditiveSteppedLine(-18166, 16, 2458760, -1, var6, param1);
-        IsaacRandom.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
+        IsaacRandom.drawVerticalLineAdditive(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
         AccountBooleanRequest.drawAdditiveSteppedLine(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
@@ -2319,7 +2319,7 @@ final class GameMenuController {
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;
-                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
+                                        StrongCacheEntry.configureSharedUiSpriteResources(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                                         HuffmanCodec.requestFullscreen(var5 != 0, -1);
                                       }
                                       break regionExit1;

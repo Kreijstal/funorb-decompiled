@@ -99,7 +99,7 @@ final class GameSession implements AiHost {
             var10 = 0;
             while (var9.length > var10) {
               var11 = var9[var10];
-              StripedProgressWidget.a(1, var4 + var11, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
+              StripedProgressWidget.appendChatHistoryMessage(1, var4 + var11, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
               var10++;
               if (var12 != 0) {
                 return;
@@ -109,7 +109,7 @@ final class GameSession implements AiHost {
               return;
             }
           }
-          StripedProgressWidget.a(1, var4 + param1, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
+          StripedProgressWidget.appendChatHistoryMessage(1, var4 + param1, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

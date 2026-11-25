@@ -326,7 +326,7 @@ final class ScrollPane extends AnimatedPanel {
               if (SolVictoryChecker.field_m != 4) {
                 FleetTrailPoint.field_m = 0;
               } else {
-                IsaacRandom.b(param0 + 1674225223);
+                IsaacRandom.initializeIntroGlowTrail(param0 + 1674225223);
                 FleetTrailPoint.field_m = 0;
               }
             }
@@ -353,7 +353,7 @@ final class ScrollPane extends AnimatedPanel {
               }
             }
           } else {
-            VerticalMenuSlider.d((byte) 44);
+            VerticalMenuSlider.tickIntroLoadingScene((byte) 44);
           }
           if (TertiaryListSequence.field_k < 540) {
             ArchiveIndex.field_o = false;

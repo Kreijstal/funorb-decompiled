@@ -16,12 +16,12 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return this.field_y;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean areClientPreferencesReady(byte param0) {
         Archive var2;
         boolean stackIn_9_0 = false;
         if (param0 < 111) {
           var2 = (Archive) null;
-          StrongCacheEntry.a((byte) -50, (int[]) null, (Archive) null, (IndexedSprite[]) null, (Archive) null);
+          StrongCacheEntry.initializeLobbyStyles((byte) -50, (int[]) null, (Archive) null, (IndexedSprite[]) null, (Archive) null);
         }
         stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
@@ -47,7 +47,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return false;
     }
 
-    final static void a(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, GalaxyMap param8, boolean param9) {
+    final static void writeGameState(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, GalaxyMap param8, boolean param9) {
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
@@ -221,7 +221,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static void a(byte param0, int[] param1, Archive param2, IndexedSprite[] param3, Archive param4) {
+    final static void initializeLobbyStyles(byte param0, int[] param1, Archive param2, IndexedSprite[] param3, Archive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -514,7 +514,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, BitmapFont param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, Sprite[] param19, int param20) {
+    final static void configureSharedUiSpriteResources(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, BitmapFont param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -533,7 +533,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           AgeValidator.configureSharedUiResources(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new TiledNineSlicePainter(param8), new TiledNineSlicePainter(param19), param18, param11, param14, new TiledNineSlicePainter(param5), param15);
           if (param1 != 13421772) {
             var22 = (Sprite[]) null;
-            StrongCacheEntry.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (BitmapFont) null, (BitmapFont) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);
+            StrongCacheEntry.configureSharedUiSpriteResources(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (BitmapFont) null, (BitmapFont) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

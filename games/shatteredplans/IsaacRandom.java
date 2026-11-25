@@ -15,7 +15,7 @@ final class IsaacRandom {
     private int[] field_j;
     static String[] field_h;
 
-    final static int b(byte param0) {
+    final static int pollArchiveConnection(byte param0) {
         try {
           int stackIn_14_0 = 0;
           int stackIn_26_0 = 0;
@@ -240,7 +240,7 @@ final class IsaacRandom {
         this.field_c = 256;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawVerticalLineAdditive(int param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -281,11 +281,11 @@ final class IsaacRandom {
         }
     }
 
-    final static void b(int param0) {
+    final static void initializeIntroGlowTrail(int param0) {
         CachedArchiveSource.field_A = new int[600];
         Territory.field_p = 0;
         if (param0 != 1674225316) {
-          IsaacRandom.b((byte) -95);
+          IsaacRandom.pollArchiveConnection((byte) -95);
         }
         MenuInputState.field_f = new int[600];
     }

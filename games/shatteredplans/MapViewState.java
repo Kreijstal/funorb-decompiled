@@ -587,7 +587,7 @@ abstract class MapViewState {
         Star[] var2 = var7;
         for (var3 = param0; var3 < var7.length; var3++) {
           var4 = var7[var3];
-          var5 = EmailValidator.a((byte) 74, var4.field_G);
+          var5 = EmailValidator.sortedIndicesDescending((byte) 74, var4.field_G);
           this.field_R[var4.field_p] = var5;
         }
     }

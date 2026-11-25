@@ -743,7 +743,7 @@ final class BufferedCacheFile {
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
-            EmailValidator.e(param0 ^ -97);
+            EmailValidator.clearFacePriorityCounts(param0 ^ -97);
           }
           TutorialTextSupport.field_e = 0;
           var8 = 0;
@@ -895,7 +895,7 @@ final class BufferedCacheFile {
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
-            EmailValidator.e(param0 ^ -97);
+            EmailValidator.clearFacePriorityCounts(param0 ^ -97);
           }
           TutorialTextSupport.field_e = 0;
           var8 = 0;

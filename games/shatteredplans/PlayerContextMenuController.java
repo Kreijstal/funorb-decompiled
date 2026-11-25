@@ -197,7 +197,7 @@ final class PlayerContextMenuController {
           var9 = ClientDialogSupport.requestAddFriend(this.field_k, param1, (byte) -119);
           if (var9 != null) {
             var5 = (String) null;
-            StripedProgressWidget.a(2, var9, 0, this.field_k, (String) null, -16169);
+            StripedProgressWidget.appendChatHistoryMessage(2, var9, 0, this.field_k, (String) null, -16169);
           }
           return true;
         }
@@ -207,14 +207,14 @@ final class PlayerContextMenuController {
             return true;
           }
           var5Lifetime1 = (String) null;
-          StripedProgressWidget.a(2, var6, 0, this.field_k, (String) null, -16169);
+          StripedProgressWidget.appendChatHistoryMessage(2, var6, 0, this.field_k, (String) null, -16169);
           return true;
         }
         if (6 == param0) {
           var8 = ReflectionCheckDecoder.requestAddIgnore(2, this.field_k, param1);
           if (var8 != null) {
             var5Lifetime2 = (String) null;
-            StripedProgressWidget.a(2, var8, 0, this.field_k, (String) null, -16169);
+            StripedProgressWidget.appendChatHistoryMessage(2, var8, 0, this.field_k, (String) null, -16169);
           }
           return true;
         }
@@ -224,7 +224,7 @@ final class PlayerContextMenuController {
         var7 = RoundedMenuPanel.requestRemoveIgnore((byte) 117, param1, this.field_h, this.field_k);
         if (var7 != null) {
           var5Lifetime3 = (String) null;
-          StripedProgressWidget.a(2, var7, 0, this.field_k, (String) null, -16169);
+          StripedProgressWidget.appendChatHistoryMessage(2, var7, 0, this.field_k, (String) null, -16169);
         }
         return true;
     }

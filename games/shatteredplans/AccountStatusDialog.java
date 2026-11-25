@@ -19,14 +19,14 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
         StatusMessagePanel var2 = null;
         StatusMessagePanel var2Lifetime1;
         if (param0 == -7011) {
-          this.field_yb.a(4210752, 2121792, -27855);
+          this.field_yb.setStripeColours(4210752, 2121792, -27855);
           var2 = new StatusMessagePanel(this, this.field_ub, ClientClockSupport.field_f);
           var2.addActionButton(StarLinkPlanner.field_a, (byte) 112, 15);
           this.setContent(var2, param0 + 6907);
           return;
         }
         this.field_tb = false;
-        this.field_yb.a(4210752, 2121792, -27855);
+        this.field_yb.setStripeColours(4210752, 2121792, -27855);
         var2Lifetime1 = new StatusMessagePanel(this, this.field_ub, ClientClockSupport.field_f);
         var2Lifetime1.addActionButton(StarLinkPlanner.field_a, (byte) 112, 15);
         this.setContent(var2Lifetime1, param0 + 6907);
@@ -164,7 +164,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
           stackIn_6_1 = (256 == param1);
           this.field_sb = stackIn_6_1;
           this.field_wb = true;
-          this.field_yb.a(4210752, 8405024, -27855);
+          this.field_yb.setStripeColours(4210752, 8405024, -27855);
           var6 = new StatusMessagePanel(this, this.field_ub, param0);
           var4 = var6;
           if (5 == param1) {

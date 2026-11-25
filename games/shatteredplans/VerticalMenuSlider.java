@@ -17,7 +17,7 @@ final class VerticalMenuSlider extends MenuComponent {
     static String field_A;
     private int field_F;
 
-    final void a(int param0, int param1, int param2) {
+    final void onPointerClick(int param0, int param1, int param2) {
         int var4 = 0;
         if (!this.field_s) {
           return;
@@ -67,7 +67,7 @@ final class VerticalMenuSlider extends MenuComponent {
         }
     }
 
-    final static void d(byte param0) {
+    final static void tickIntroLoadingScene(byte param0) {
         int fieldTemp$0 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 < 200) {
@@ -98,7 +98,7 @@ final class VerticalMenuSlider extends MenuComponent {
         field_E = (String) null;
     }
 
-    final static boolean e(byte param0) {
+    final static boolean canMessageCurrentPrivateRecipient(byte param0) {
         int var1 = -36 / ((-32 - param0) / 57);
         return ShatteredPlansClient.a(16, IntroTextLine.field_k, IntroGlowPoint.field_k);
     }
@@ -110,7 +110,7 @@ final class VerticalMenuSlider extends MenuComponent {
         this.field_B = SolVictoryChecker.blendColours(this.field_F, 0, -85, 128);
     }
 
-    final static void a(byte param0, int[] param1, int[] param2) {
+    final static void sortPairedIntsDescending(byte param0, int[] param1, int[] param2) {
         try {
           ClientException.sortPairedIntsDescending(0, -2147483648, param2.length - 1, param1, param2);
           int var3_int = -92 % ((-25 - param0) / 57);
@@ -130,7 +130,7 @@ final class VerticalMenuSlider extends MenuComponent {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void onPointerDrag(int param0, int param1, int param2) {
         int var5 = 0;
         if (!this.field_s) {
           return;

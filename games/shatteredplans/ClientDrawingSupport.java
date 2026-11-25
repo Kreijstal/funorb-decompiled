@@ -55,7 +55,7 @@ final class ClientDrawingSupport {
           stackIn_3_0[stackIn_4_1] = var12;
           var6 = new GradientMenuLabel(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - IconTextPanel.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
           var13.addChild(var6, 8);
-          var7 = new MenuButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, IconTextPanel.field_Cb.field_J, 8421504, StripedProgressWidget.i(0), FullscreenFocusCanvas.field_e, 3375155);
+          var7 = new MenuButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, IconTextPanel.field_Cb.field_J, 8421504, StripedProgressWidget.createDiplomacyButtonSprite(0), FullscreenFocusCanvas.field_e, 3375155);
           var13.addChild(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {

@@ -123,7 +123,7 @@ final class ValidationState {
     final static int a(int param0) {
         ProxyAuthenticationRequiredException.field_c.pollArchiveSources(123);
         if (!TertiaryLinkNode.field_o.pollNetwork(0)) {
-          return IsaacRandom.b((byte) 115);
+          return IsaacRandom.pollArchiveConnection((byte) 115);
         }
         if (param0 < -28) {
           return 0;

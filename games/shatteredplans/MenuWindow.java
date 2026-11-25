@@ -248,7 +248,7 @@ final class MenuWindow extends MenuComponent {
         this.field_i = param1;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void onPointerDrag(int param0, int param1, int param2) {
         int var4 = param0 + VerticalMenuSlider.field_w;
         int var5 = DisplayNameForm.field_D + param1;
         if (param2 != -498) {
