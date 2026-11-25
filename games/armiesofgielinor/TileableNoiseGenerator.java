@@ -634,7 +634,7 @@ abstract class TileableNoiseGenerator {
             if (filterMode) {
               return;
             }
-            AiUnitPlanner.b(5, optionsPacketOpcode);
+            AiUnitPlanner.sendRoomOptionsUpdate(5, optionsPacketOpcode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

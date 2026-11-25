@@ -45,7 +45,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard != -27464) {
-          AiPlanner.b(-7, -126, -85, -67);
+          AiPlanner.handleChatKey(-7, -126, -85, -67);
         }
         field_R = null;
         field_G = null;
@@ -67,7 +67,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           tileX < this.battlefield.mapWidth &&
           tileY < this.battlefield.mapHeight) {
           if (obfuscationGuard != -90) {
-            this.i(104);
+            this.chooseAndExecuteSummon(104);
           }
           var5 = 0.0f;
           var6 = tileY * this.battlefield.mapWidth + tileX;
@@ -227,7 +227,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         this.field_v[tileIndex] = (float)sign * var4;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void addObjectiveInfluence(int param0, int param1, int param2, int param3, int param4) {
         int var11_int = 0;
         int var13 = 0;
         int var6;
@@ -285,7 +285,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean advanceTurn(int param0) {
         int var2;
         MapTile[] var3_ref_ne__;
         int var3;
@@ -302,14 +302,14 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             return false;
           }
           MonotonicClockSupport.monotonicMillis(-128);
-          this.c((byte) -117);
+          this.rebuildInfluenceStep((byte) -117);
           MonotonicClockSupport.monotonicMillis(111);
           return false;
         }
         var2 = this.field_k;
         if (var2 == 0) {
           if (this.field_t >= 30) {
-            this.b(1, 4);
+            this.setPlanningPhase(1, 4);
           }
           return false;
         }
@@ -351,7 +351,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 if (var3 == 0) {
                   this.battlefield.setInactivePlayerMask(0, this.battlefield.inactivePlayerMask | 1 << this.playerId);
                 }
-                this.b(7, param0 ^ -5090);
+                this.setPlanningPhase(7, param0 ^ -5090);
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -362,29 +362,29 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               this.field_w = true;
               this.field_M = (AiUnitPlanner) (this.unitPlanners.first((byte) 122));
               this.field_L = 0;
-              this.b(2, 4);
+              this.setPlanningPhase(2, 4);
             }
           } else {
             this.field_L = 0;
-            this.b(2, 4);
+            this.setPlanningPhase(2, 4);
           }
         } else {
           switch (var2) {
             case 2:
-              this.a(-113, false);
+              this.considerNextEquippedSpell(-113, false);
               break;
             case 3:
               if (this.field_t == 0) {
                 this.sortUnitPlanners(this.unitPlanners, 0);
                 this.field_S = null;
                 this.field_M = (AiUnitPlanner) (this.unitPlanners.first((byte) 127));
-                this.f(0);
+                this.executeNextUnitAction(0);
               } else {
-                this.f(0);
+                this.executeNextUnitAction(0);
               }
               break;
             case 4:
-              this.a(param0 + 4972, true);
+              this.considerNextEquippedSpell(param0 + 4972, true);
               break;
             case 7:
               if (this.field_t < 50) {
@@ -392,13 +392,13 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               }
               return true;
             case 6:
-              this.e(-24236);
+              this.awaitSummonedUnit(-24236);
               break;
             case 5:
-              this.i(0);
+              this.chooseAndExecuteSummon(0);
               break;
             case 8:
-              this.g(-25523);
+              this.refreshNextUnitPriority(-25523);
               break;
             default:
               break;
@@ -409,9 +409,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return false;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void considerNextEquippedSpell(int param0, boolean param1) {
         if (null == this.battlefield.campaignMission) {
-          this.b(param1 ? 5 : 8, 4);
+          this.setPlanningPhase(param1 ? 5 : 8, 4);
           return;
         }
         this.considerEquippedSpell(param1, this.field_L, 23);
@@ -421,7 +421,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         this.field_L = this.field_L + 1;
         if (5 <= this.field_L) {
           this.field_L = 0;
-          this.b(!param1 ? 8 : 5, 4);
+          this.setPlanningPhase(!param1 ? 8 : 5, 4);
         }
     }
 
@@ -451,7 +451,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void c(byte param0) {
+    private final void rebuildInfluenceStep(byte param0) {
         int stackIn_53_0 = 0;
         float[][] stackIn_56_0 = null;
         int var2;
@@ -527,7 +527,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                   if (var4_int != 0) {
                     this.field_s = 8;
                   } else {
-                    this.a(1, -1 + this.field_s, 19551, (Unit) (var3_ref));
+                    this.addUnitInfluenceForCategory(1, -1 + this.field_s, 19551, (Unit) (var3_ref));
                   }
                 } else {
                   this.influenceMap.a(var15, 1, -19545, (Unit) (var3_ref));
@@ -577,12 +577,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 var11 = this.battlefield.tiles[var2Lifetime1];
                 var4_int = var11.getTag((byte) -107);
                 if (var4_int != 0) {
-                  this.a(var4_int, 1, var2Lifetime1, 29);
+                  this.addTileObjectiveInfluence(var4_int, 1, var2Lifetime1, 29);
                 }
                 if (null != var11.occupant) {
                   var4_int = var11.occupant.tag;
                   if (var4_int != 0) {
-                    this.a(3, -14092, var2Lifetime1, var4_int, 1);
+                    this.addObjectiveInfluence(3, -14092, var2Lifetime1, var4_int, 1);
                   }
                 }
               }
@@ -596,10 +596,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var2Lifetime2 = 9 % ((param0 + 68) / 49);
     }
 
-    private final void g(int param0) {
+    private final void refreshNextUnitPriority(int param0) {
         AiUnitPlanner var3 = null;
         if (null == this.field_M) {
-          this.b(3, param0 ^ -25527);
+          this.setPlanningPhase(3, param0 ^ -25527);
           return;
         }
         if (this.field_M.unit.removedFromActivePlay ||
@@ -618,7 +618,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         this.field_M = (AiUnitPlanner) (this.unitPlanners.next((byte) 123));
     }
 
-    private final void a(int param0, Unit param1, int param2) {
+    private final void addUnitInfluenceForAllCategories(int param0, Unit param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -632,7 +632,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             return;
           }
           for (var4_int = 0; var4_int < 8; var4_int++) {
-            this.a(param2, var4_int, 19551, param1);
+            this.addUnitInfluenceForCategory(param2, var4_int, 19551, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -660,7 +660,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    final void a(int param0, int param1, byte param2, boolean param3) {
+    final void updateDebugScoreOverlay(int param0, int param1, byte param2, boolean param3) {
         int var9 = 0;
         Object var5;
         int var6;
@@ -685,12 +685,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.field_o = 0;
           this.field_w = true;
           while (this.field_w) {
-            this.c((byte) 29);
+            this.rebuildInfluenceStep((byte) 29);
           }
         }
         var5 = null;
         if (param2 != 18) {
-          this.f(22);
+          this.executeNextUnitAction(22);
         }
         for (var6 = 0; var6 < PrivateTextRecipientSupport.field_b.length; var6++) {
           PrivateTextRecipientSupport.field_b[var6] = 0.0f;
@@ -808,25 +808,25 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return var4;
     }
 
-    private final void e(int param0) {
+    private final void awaitSummonedUnit(int param0) {
         Unit var2;
         int[] var3;
         if (param0 != -24236) {
           var3 = (int[]) null;
-          this.a((int[]) null, -30, (byte) -27);
+          this.updateStructureInfluenceForTiles((int[]) null, -30, (byte) -27);
         }
         var2 = this.battlefield.getUnitAt(this.field_y, true, this.field_E);
         if (var2 != null) {
           this.activateUnitPlanner(80, var2);
-          this.b(3, param0 + 24240);
+          this.setPlanningPhase(3, param0 + 24240);
         } else {
           if (this.field_t > this.field_B + 100) {
-            this.b(7, 4);
+            this.setPlanningPhase(7, 4);
           }
         }
     }
 
-    private final void a(int[] param0, int param1, byte param2) {
+    private final void updateStructureInfluenceForTiles(int[] param0, int param1, byte param2) {
         int var4_int = 0;
         int var6 = 0;
         AiUnitPlanner discarded$1 = null;
@@ -1202,7 +1202,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           this.influenceMap.a(this.field_A, 1, obfuscationGuard ^ -19465, var3.unit);
           if (6 == this.field_k) {
-            this.b(3, 4);
+            this.setPlanningPhase(3, 4);
             this.field_M = (AiUnitPlanner) (this.unitPlanners.startForwardAt(true, var3));
             this.field_t = 2;
           }
@@ -1221,7 +1221,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void f(int param0) {
+    private final void executeNextUnitAction(int param0) {
         int var2_int;
         float var2;
         int var3;
@@ -1235,14 +1235,14 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             if (!this.field_S.unit.removedFromActivePlay) {
               this.influenceMap.a(this.field_A, 1, -19545, this.field_S.unit);
               if (this.field_S.unit.tag != 0) {
-                this.a(3, -14092, this.battlefield.mapWidth * this.field_S.unit.tileY + this.field_S.unit.tileX, this.field_S.unit.tag, 1);
+                this.addObjectiveInfluence(3, -14092, this.battlefield.mapWidth * this.field_S.unit.tileY + this.field_S.unit.tileX, this.field_S.unit.tag, 1);
               }
             }
             this.field_S.unit.field_X = false;
             var2_int = this.field_S.previousSourceTile;
             var3 = this.field_S.previousTargetTile;
             var4 = this.field_S.previousDestinationTile;
-            this.a(new int[]{var2_int, var3, var4}, -1, (byte) 113);
+            this.updateStructureInfluenceForTiles(new int[]{var2_int, var3, var4}, -1, (byte) 113);
             this.field_S.previousTargetTile = -1;
             this.field_S.previousSourceTile = -1;
             this.field_S.previousDestinationTile = -1;
@@ -1253,9 +1253,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             var8.field_X) {
             this.influenceMap.a(this.field_K, 1, -19545, var8);
             if (var8.tag != 0) {
-              this.a(3, -14092, var8.tileY * this.battlefield.mapWidth + var8.tileX, var8.tag, 1);
+              this.addObjectiveInfluence(3, -14092, var8.tileY * this.battlefield.mapWidth + var8.tileX, var8.tag, 1);
             }
-            this.a(66, var8, 1);
+            this.addUnitInfluenceForAllCategories(66, var8, 1);
             this.influenceMap.a(this.field_n[var7.getUnitCategory(0)], 1, param0 - 19545, var8);
             var8.field_X = false;
           }
@@ -1265,7 +1265,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           return;
         }
         if (null == this.field_M) {
-          this.b(4, param0 + 4);
+          this.setPlanningPhase(4, param0 + 4);
           return;
         }
         this.currentUnitPlanner = this.field_M;
@@ -1274,23 +1274,23 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.influenceMap.a(this.field_A, -1, param0 ^ -19545, this.field_M.unit);
           var3 = this.field_M.unit.tileY * this.battlefield.mapWidth + this.field_M.unit.tileX;
           if (this.field_M.unit.tag != 0) {
-            this.a(3, -14092, var3, this.field_M.unit.tag, -1);
+            this.addObjectiveInfluence(3, -14092, var3, this.field_M.unit.tag, -1);
           }
           var4 = -1;
           var5 = -1;
           var6 = this.field_M.selectedTarget;
           if (var6 != null) {
             this.influenceMap.a(this.field_K, -1, -19545, var6);
-            this.a(77, var6, -1);
+            this.addUnitInfluenceForAllCategories(77, var6, -1);
             var4 = this.battlefield.mapWidth * var6.tileY + var6.tileX;
             if (var6.tag != 0) {
-              this.a(3, -14092, var4, var6.tag, -1);
+              this.addObjectiveInfluence(3, -14092, var4, var6.tag, -1);
             }
           }
           if (this.field_M.selectedAction.hasDestination(0)) {
             var5 = this.field_M.selectedAction.destinationX + this.battlefield.mapWidth * this.field_M.selectedAction.destinationY;
           }
-          this.a(new int[]{var3, var4, var5}, -1, (byte) 98);
+          this.updateStructureInfluenceForTiles(new int[]{var3, var4, var5}, -1, (byte) 98);
           this.field_M.previousTargetTile = var4;
           this.field_M.previousDestinationTile = var5;
           this.field_M.previousSourceTile = var3;
@@ -1315,7 +1315,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         Unit var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.b(0, obfuscationGuard + 127);
+        this.setPlanningPhase(0, obfuscationGuard + 127);
         this.field_q = 0;
         this.field_H.clear(obfuscationGuard ^ -28);
         this.field_O.clear(obfuscationGuard ^ -42);
@@ -1396,15 +1396,15 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void addTileObjectiveInfluence(int param0, int param1, int param2, int param3) {
         if (param3 != 29) {
           AiUnitPlanner var6 = (AiUnitPlanner) null;
           this.getSelectionStrategy((AiUnitPlanner) null, (byte) -87);
         }
-        this.a(0, param3 ^ -14103, param2, param0, param1);
+        this.addObjectiveInfluence(0, param3 ^ -14103, param2, param0, param1);
     }
 
-    private final void i(int param0) {
+    private final void chooseAndExecuteSummon(int param0) {
         int var18 = 0;
         int stackIn_75_0 = 0;
         float var3;
@@ -1589,7 +1589,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (var12 != 0) {
             var13 = var34.selectCandidate((byte) -84);
             if (var13 != null) {
-              this.b(6, 4);
+              this.setPlanningPhase(6, 4);
               this.field_B = this.field_t;
               var14 = var13.executionResult;
               var13.execute((byte) 5, this);
@@ -1601,13 +1601,13 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               }
             }
           }
-          this.b(7, param0 ^ 4);
+          this.setPlanningPhase(7, param0 ^ 4);
         } else {
-          this.b(7, param0 ^ 4);
+          this.setPlanningPhase(7, param0 ^ 4);
         }
     }
 
-    final static boolean b(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatKey(int param0, int param1, int param2, int param3) {
         int var4;
         int stackIn_22_0 = 0;
         if (param2 != -14) {
@@ -1652,7 +1652,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return var4 != 0;
     }
 
-    private final void b(int param0, int param1) {
+    private final void setPlanningPhase(int param0, int param1) {
         this.field_k = param0;
         if (param1 != 4) {
           return;
@@ -1660,7 +1660,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         this.field_t = -1;
     }
 
-    private final void a(int param0, int param1, int param2, Unit param3) {
+    private final void addUnitInfluenceForCategory(int param0, int param1, int param2, Unit param3) {
         float var5_float = 0.0f;
         if (param2 != 19551) {
           return;

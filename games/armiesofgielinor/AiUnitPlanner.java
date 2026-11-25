@@ -477,7 +477,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         return var5;
     }
 
-    private final int a(byte param0, boolean param1) {
+    private final int findReachableNonAlliedStructure(byte param0, boolean param1) {
         int var5 = 0;
         int[] var4;
         int var7;
@@ -514,7 +514,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         return 1000000;
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendRoomOptionsUpdate(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(param0 ^ 32164, param1);
         var2.position = var2.position + 1;
@@ -572,7 +572,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         }
     }
 
-    private final void a(byte param0) {
+    private final void prepareActionMovement(byte param0) {
         MovementPlanner var2 = this.planner.actionMovement;
         var2.prepareForUnit(false, 81, this.planner.playerId, this.unit, -1, -1);
         if (param0 <= 23) {
@@ -580,7 +580,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void addBlockedCaptureInfluence(int param0, int param1) {
         int var4 = 0 / ((param1 - 80) / 41);
         int var3 = param0 % this.planner.battlefield.mapWidth;
         int var5 = param0 / this.planner.battlefield.mapWidth;
@@ -629,13 +629,13 @@ final class AiUnitPlanner extends IntrusiveNode {
           }
         } else {
           this.decisionPriority = 50;
-          this.a((byte) 67);
-          if (this.a((byte) 124, true) != 1000000) {
+          this.prepareActionMovement((byte) 67);
+          if (this.findReachableNonAlliedStructure((byte) 124, true) != 1000000) {
             this.decisionPriority = 300;
           } else {
-            var2 = this.a((byte) 125, false);
+            var2 = this.findReachableNonAlliedStructure((byte) 125, false);
             if (var2 != 1000000) {
-              this.c(var2, 122);
+              this.addBlockedCaptureInfluence(var2, 122);
               this.decisionPriority = 1;
             }
           }

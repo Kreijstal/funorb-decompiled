@@ -3908,7 +3908,7 @@ final class GameplayController {
                   if (this.battlefield.currentPlayer >= 0 &&
                     this.aiPlanners[this.battlefield.currentPlayer] != null &&
                     !this.field_Q) {
-                    var4 = this.aiPlanners[this.battlefield.currentPlayer].h(-5094) ? 1 : 0;
+                    var4 = this.aiPlanners[this.battlefield.currentPlayer].advanceTurn(-5094) ? 1 : 0;
                     if (var4 != 0) {
                       this.r((byte) 125);
                     }
@@ -3921,7 +3921,7 @@ final class GameplayController {
                       if (this.battlefield.currentPlayer >= 0 &&
                         null != this.aiPlanners[this.battlefield.currentPlayer] &&
                         !this.field_Q) {
-                        var4 = this.aiPlanners[this.battlefield.currentPlayer].h(-5094) ? 1 : 0;
+                        var4 = this.aiPlanners[this.battlefield.currentPlayer].advanceTurn(-5094) ? 1 : 0;
                         if (var4 != 0) {
                           this.r((byte) 87);
                         }
@@ -5163,7 +5163,7 @@ final class GameplayController {
         try {
           if (this.aiPlanners.length >= ActionSpell.field_j &&
             this.aiPlanners[ActionSpell.field_j] != null) {
-            this.aiPlanners[ActionSpell.field_j].a(QuickChatSetupSupport.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
+            this.aiPlanners[ActionSpell.field_j].updateDebugScoreOverlay(QuickChatSetupSupport.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
             if (param0 != 0) {
               discarded$0 = this.a((EventPresenter) null, false);
             }

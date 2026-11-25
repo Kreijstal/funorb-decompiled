@@ -41,7 +41,7 @@ final class CameraOverviewTarget extends IntrusiveNode {
         if (param0 != -66) {
           return false;
         }
-        return AiPlanner.b(param3, param2, param0 ^ 76, param1);
+        return AiPlanner.handleChatKey(param3, param2, param0 ^ 76, param1);
     }
 
     final boolean hasStartedHold(byte obfuscationGuard) {
@@ -253,6 +253,6 @@ final class CameraOverviewTarget extends IntrusiveNode {
         if (param0 != -66) {
           return false;
         }
-        return AiPlanner.b(param3, param2, param0 ^ 76, param1);
+        return AiPlanner.handleChatKey(param3, param2, param0 ^ 76, param1);
     }
 }

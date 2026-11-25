@@ -73620,12 +73620,28 @@
       "renamedSymbol": "M:StructureTerrainSupport.isStructureTerrain(II)Z"
     },
     {
+      "symbol": "M:cl.a(B)V",
+      "originalName": "a",
+      "to": "prepareActionMovement",
+      "evidence": "cl.java: Prepares shared actionMovement for this unit and player using original unrestricted target coordinates. Preserve planner reads/helper arguments and badbyte<=23setting decisionPriority=-31after prepare. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiUnitPlanner.prepareActionMovement(B)V"
+    },
+    {
       "symbol": "M:cl.a(BLcl;)Z",
       "originalName": "a",
       "to": "shouldFollow",
       "evidence": "cl.java: Decision ordering by priority then the unit coordinate sum.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiUnitPlanner.shouldFollow(BLAiUnitPlanner;)Z"
+    },
+    {
+      "symbol": "M:cl.a(BZ)I",
+      "originalName": "a",
+      "to": "findReachableNonAlliedStructure",
+      "evidence": "cl.java: Returns first positive-cost reachable nonallied structure tile using ordinary movement costs or costs through own units,with corresponding occupancy rule. Returns1000000when absent. Preserve chosen array alias,iteration bound based on ordinary array,early return order and badbyte float mutation. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I"
     },
     {
       "symbol": "M:cl.a(I)V",
@@ -73658,6 +73674,22 @@
       "evidence": "cl.java: Scores candidate tiles with action or evaluation movement data and stores a selected action.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiUnitPlanner.evaluateActions(ZB)F"
+    },
+    {
+      "symbol": "M:cl.b(II)V",
+      "originalName": "b",
+      "to": "sendRoomOptionsUpdate",
+      "evidence": "cl.java: TileableNoiseGenerator calls subtype5after room options change outside filter mode. Writes caller opcode/current room capacity/gameType+spectatorMode bits/options and length prefix. Preserve arbitrary subtype-derived helper guards,int overflow,shared room re-reads,payload alias and partial packet writes. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiUnitPlanner.sendRoomOptionsUpdate(II)V"
+    },
+    {
+      "symbol": "M:cl.c(II)V",
+      "originalName": "c",
+      "to": "addBlockedCaptureInfluence",
+      "evidence": "cl.java: Called when a nonallied structure is reachable only through own units. Adds weight54scaled capture influence around that structure and this unit source into field_V,which scoreTile conditionally subtracts. Helper true selects squared-distance falloff. Preserve original guard division,float order,template-unit mutations and both additions. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiUnitPlanner.addBlockedCaptureInfluence(II)V"
     },
     {
       "symbol": "M:cl.e(I)Ljd;",
@@ -75924,6 +75956,14 @@
       "renamedSymbol": "M:AiPlanner.releaseStatics(I)V"
     },
     {
+      "symbol": "M:ej.a(IIBZ)V",
+      "originalName": "a",
+      "to": "updateDebugScoreOverlay",
+      "evidence": "ej.java: Optionally rebuilds influence synchronously,clears shared debug scores,selects mode-dependent ally/enemy/capture/objective array or evaluates selected unit,then copies chosen values for tile-colour overlay. Preserve byte guard action reconciliation,reflection array-length access,mode indexing and all cache/side effects. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.updateDebugScoreOverlay(IIBZ)V"
+    },
+    {
       "symbol": "M:ej.a(III)F",
       "originalName": "a",
       "to": "scoreSummoningAtTile",
@@ -75940,12 +75980,52 @@
       "renamedSymbol": "M:AiPlanner.scoreSpellAtTile(IIIB)F"
     },
     {
+      "symbol": "M:ej.a(IIII)V",
+      "originalName": "a",
+      "to": "addTileObjectiveInfluence",
+      "evidence": "ej.java: Adds radius0objective influence using caller objective id,tile and signed count. Preserve badguard29selection-strategy call with null and guard-derived delegate integer before any helper behavior. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.addTileObjectiveInfluence(IIII)V"
+    },
+    {
+      "symbol": "M:ej.a(IIIII)V",
+      "originalName": "a",
+      "to": "addObjectiveInfluence",
+      "evidence": "ej.java: Adds weight55scaled signed objective influence for eight unit categories,at tile or distributed over original exclusive-loop Manhattan perimeter. Preserve objectiveId-1index,length comparison,zero-cell float division,overflow,badguard field mutation and helper traversal order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.addObjectiveInfluence(IIIII)V"
+    },
+    {
+      "symbol": "M:ej.a(IIILjd;)V",
+      "originalName": "a",
+      "to": "addUnitInfluenceForCategory",
+      "evidence": "ej.java: Adds signed effective-strength influence for one evaluation category using current unit category. MovementFlag1scales by weight59. Preserve guard19551early return,null/cast/float order and original exception context. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V"
+    },
+    {
       "symbol": "M:ej.a(ILjd;)V",
       "originalName": "a",
       "to": "activateUnitPlanner",
       "evidence": "ej.java: Registers a planner for an own unit that does not already have one, refreshes its priority and updates the influence map; in state six it also switches to state three and starts at this planner.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiPlanner.activateUnitPlanner(ILUnit;)V"
+    },
+    {
+      "symbol": "M:ej.a(ILjd;I)V",
+      "originalName": "a",
+      "to": "addUnitInfluenceForAllCategories",
+      "evidence": "ej.java: Loops categories0..7and delegates signed unit influence only when first guard>56. Preserve guard before unit dereferences,loop order and unchanged null/exception behavior. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V"
+    },
+    {
+      "symbol": "M:ej.a(IZ)V",
+      "originalName": "a",
+      "to": "considerNextEquippedSpell",
+      "evidence": "ej.java: Advances one of five campaign-equipped spell slots and transitions to summon or priority phase according to boolean. Preserve no-campaign early phase transition,late badguard deque clear and reset after fifth slot. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.considerNextEquippedSpell(IZ)V"
     },
     {
       "symbol": "M:ej.a(IZI)V",
@@ -76004,6 +76084,30 @@
       "renamedSymbol": "M:AiPlanner.considerEquippedSpell(ZII)V"
     },
     {
+      "symbol": "M:ej.a([IIB)V",
+      "originalName": "a",
+      "to": "updateStructureInfluenceForTiles",
+      "evidence": "ej.java: Adjusts structure-capture influence for distinct supplied tile indices while skipping-1. Called with prior source/target/destination tiles. Preserve original duplicate scanning,array alias and repeated reads;badbyte<79registers null planner after updates. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.updateStructureInfluenceForTiles([IIB)V"
+    },
+    {
+      "symbol": "M:ej.b(II)V",
+      "originalName": "b",
+      "to": "setPlanningPhase",
+      "evidence": "ej.java: Always stores new phase;canonical guard4resets phase tick to-1. Preserve partial state when guard differs and full signed integer phase values. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.setPlanningPhase(II)V"
+    },
+    {
+      "symbol": "M:ej.b(IIII)Z",
+      "originalName": "b",
+      "to": "handleChatKey",
+      "evidence": "ej.java: Handles quick-chat help escape,quick-chat keys and text-chat activation/edit/submit/cancel. Preserve all four int domains,font-clear guard,short-circuit permission checks and every flag/text/helper order. Both CameraOverviewTarget byte caller and full-int companion remain separate with unchanged signatures/bodies apart from bound call name. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.handleChatKey(IIII)Z"
+    },
+    {
       "symbol": "M:ej.b(Ljd;B)Lcl;",
       "originalName": "b",
       "to": "registerUnitPlanner",
@@ -76012,12 +76116,60 @@
       "renamedSymbol": "M:AiPlanner.registerUnitPlanner(LUnit;B)LAiUnitPlanner;"
     },
     {
+      "symbol": "M:ej.c(B)V",
+      "originalName": "c",
+      "to": "rebuildInfluenceStep",
+      "evidence": "ej.java: Advances staged influence rebuild:clear grids;iterate player units/categories;reset capture/reservation arrays;rebuild objective maps;mark rebuild finished. Preserve intrusive traversal,ally/enemy branch,Unit.field_Xchanges,late byte arithmetic and first-phase early return. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.rebuildInfluenceStep(B)V"
+    },
+    {
       "symbol": "M:ej.c(Ljd;B)V",
       "originalName": "c",
       "to": "reevaluateUnitActions",
       "evidence": "ej.java: Finds the planner of the supplied unit and asks it to evaluate its actions again.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiPlanner.reevaluateUnitActions(LUnit;B)V"
+    },
+    {
+      "symbol": "M:ej.e(I)V",
+      "originalName": "e",
+      "to": "awaitSummonedUnit",
+      "evidence": "ej.java: Polls unit at pending summon coordinates,activates its planner and phase3when present,otherwise phase7after timeout. Preserve badguard null-array helper call before polling and phase/timer arithmetic. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.awaitSummonedUnit(I)V"
+    },
+    {
+      "symbol": "M:ej.f(I)V",
+      "originalName": "f",
+      "to": "executeNextUnitAction",
+      "evidence": "ej.java: Reconciles previous dirty unit/target influence,then evaluates and executes current unit action,records affected tile indices and advances unless action can repeat. Preserve all signed influence reversals,Float negative-max sentinel tests,dirty flags,guard after previous-unit assignment and evaluation/execute order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.executeNextUnitAction(I)V"
+    },
+    {
+      "symbol": "M:ej.g(I)V",
+      "originalName": "g",
+      "to": "refreshNextUnitPriority",
+      "evidence": "ej.java: Refreshes one unit-planner decision priority per call,unlinking removed/wrong-owner units and ending with phase3. Preserve next-node read before unlink,late badguard influence-map clear,previous-planner assignment and iteration order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.refreshNextUnitPriority(I)V"
+    },
+    {
+      "symbol": "M:ej.h(I)Z",
+      "originalName": "h",
+      "to": "advanceTurn",
+      "evidence": "ej.java: Per-tick AI turn state machine with event wait,even-tick influence rebuild,spells/actions/summon/priority phases and phase7completion after50ticks. Preserve initial tick increment,discarded clock calls,elimination/portal checks,original phase fallthrough/obfuscation branches and int guard effects. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.advanceTurn(I)Z"
+    },
+    {
+      "symbol": "M:ej.i(I)V",
+      "originalName": "i",
+      "to": "chooseAndExecuteSummon",
+      "evidence": "ej.java: Scores summon candidates at owned empty portals with unit/corpse/favour/influence/action values,and selects/executes weighted strategy result. Preserve minimum-positive float seed,all float/double conversions,unlock predicate,temporary mana with two income calls,allocation order,pre-execute result capture and phase6/7early-return behavior. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiPlanner.chooseAndExecuteSummon(I)V"
     },
     {
       "symbol": "M:ek.a(B)V",
@@ -253717,7 +253869,7 @@
     },
     {
       "symbol": "L:cl.a(B)V#0",
-      "renamedSymbol": "L:AiUnitPlanner.a(B)V#0",
+      "renamedSymbol": "L:AiUnitPlanner.prepareActionMovement(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -253805,7 +253957,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#0",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#0",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -253816,7 +253968,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#1",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#1",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -253827,7 +253979,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#2",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#2",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -253838,7 +253990,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#3",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#3",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -253849,7 +254001,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#4",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#4",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -253860,7 +254012,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#5",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#5",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -253871,7 +254023,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#6",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#6",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#6",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -253882,7 +254034,7 @@
     },
     {
       "symbol": "L:cl.a(BZ)I#7",
-      "renamedSymbol": "L:AiUnitPlanner.a(BZ)I#7",
+      "renamedSymbol": "L:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -254993,7 +255145,7 @@
     },
     {
       "symbol": "L:cl.b(II)V#0",
-      "renamedSymbol": "L:AiUnitPlanner.b(II)V#0",
+      "renamedSymbol": "L:AiUnitPlanner.sendRoomOptionsUpdate(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -255004,7 +255156,7 @@
     },
     {
       "symbol": "L:cl.b(II)V#1",
-      "renamedSymbol": "L:AiUnitPlanner.b(II)V#1",
+      "renamedSymbol": "L:AiUnitPlanner.sendRoomOptionsUpdate(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -255015,7 +255167,7 @@
     },
     {
       "symbol": "L:cl.b(II)V#2",
-      "renamedSymbol": "L:AiUnitPlanner.b(II)V#2",
+      "renamedSymbol": "L:AiUnitPlanner.sendRoomOptionsUpdate(II)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -255026,7 +255178,7 @@
     },
     {
       "symbol": "L:cl.c(II)V#0",
-      "renamedSymbol": "L:AiUnitPlanner.c(II)V#0",
+      "renamedSymbol": "L:AiUnitPlanner.addBlockedCaptureInfluence(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -255037,7 +255189,7 @@
     },
     {
       "symbol": "L:cl.c(II)V#1",
-      "renamedSymbol": "L:AiUnitPlanner.c(II)V#1",
+      "renamedSymbol": "L:AiUnitPlanner.addBlockedCaptureInfluence(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -255048,7 +255200,7 @@
     },
     {
       "symbol": "L:cl.c(II)V#2",
-      "renamedSymbol": "L:AiUnitPlanner.c(II)V#2",
+      "renamedSymbol": "L:AiUnitPlanner.addBlockedCaptureInfluence(II)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -255059,7 +255211,7 @@
     },
     {
       "symbol": "L:cl.c(II)V#3",
-      "renamedSymbol": "L:AiUnitPlanner.c(II)V#3",
+      "renamedSymbol": "L:AiUnitPlanner.addBlockedCaptureInfluence(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -277763,7 +277915,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#0",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#0",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -277774,7 +277926,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#1",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#1",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -277785,7 +277937,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#10",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#10",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -277796,7 +277948,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#11",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#11",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -277807,7 +277959,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#12",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#12",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -277818,7 +277970,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#13",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#13",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -277829,7 +277981,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#14",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#14",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -277840,7 +277992,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#15",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#15",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -277851,7 +278003,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#16",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#16",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#16",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -277862,7 +278014,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#17",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#17",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#17",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -277873,7 +278025,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#18",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#18",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#18",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -277884,7 +278036,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#2",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#2",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -277895,7 +278047,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#3",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#3",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#3",
       "originalName": "var6_ref_float____",
       "renamedName": "var6_ref_float____",
       "declaration": {
@@ -277906,7 +278058,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#4",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#4",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#4",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -277917,7 +278069,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#5",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#5",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -277928,7 +278080,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#6",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#6",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -277939,7 +278091,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#7",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#7",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#7",
       "originalName": "var8_array",
       "renamedName": "var8_array",
       "declaration": {
@@ -277950,7 +278102,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#8",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#8",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -277961,7 +278113,7 @@
     },
     {
       "symbol": "L:ej.a(IIBZ)V#9",
-      "renamedSymbol": "L:AiPlanner.a(IIBZ)V#9",
+      "renamedSymbol": "L:AiPlanner.updateDebugScoreOverlay(IIBZ)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -278170,7 +278322,7 @@
     },
     {
       "symbol": "L:ej.a(IIII)V#0",
-      "renamedSymbol": "L:AiPlanner.a(IIII)V#0",
+      "renamedSymbol": "L:AiPlanner.addTileObjectiveInfluence(IIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -278181,7 +278333,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#0",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#0",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#0",
       "originalName": "var11_int",
       "renamedName": "var11_int",
       "declaration": {
@@ -278192,7 +278344,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#1",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#1",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -278203,7 +278355,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#10",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#10",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#10",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -278214,7 +278366,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#2",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#2",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -278225,7 +278377,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#3",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#3",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -278236,7 +278388,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#4",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#4",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -278247,7 +278399,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#5",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#5",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -278258,7 +278410,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#6",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#6",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -278269,7 +278421,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#7",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#7",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -278280,7 +278432,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#8",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#8",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -278291,7 +278443,7 @@
     },
     {
       "symbol": "L:ej.a(IIIII)V#9",
-      "renamedSymbol": "L:AiPlanner.a(IIIII)V#9",
+      "renamedSymbol": "L:AiPlanner.addObjectiveInfluence(IIIII)V#9",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -278302,7 +278454,7 @@
     },
     {
       "symbol": "L:ej.a(IIILjd;)V#0",
-      "renamedSymbol": "L:AiPlanner.a(IIILUnit;)V#0",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#0",
       "originalName": "var5_float",
       "renamedName": "var5_float",
       "declaration": {
@@ -278313,7 +278465,7 @@
     },
     {
       "symbol": "L:ej.a(IIILjd;)V#1",
-      "renamedSymbol": "L:AiPlanner.a(IIILUnit;)V#1",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -278401,7 +278553,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#0",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#0",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -278412,7 +278564,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#1",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#1",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -278423,7 +278575,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#2",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#2",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -278434,7 +278586,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#3",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#3",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -278445,7 +278597,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#4",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#4",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -278456,7 +278608,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#5",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#5",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -278467,7 +278619,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#6",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#6",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -278478,7 +278630,7 @@
     },
     {
       "symbol": "L:ej.a(ILjd;I)V#7",
-      "renamedSymbol": "L:AiPlanner.a(ILUnit;I)V#7",
+      "renamedSymbol": "L:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -279171,7 +279323,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#0",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#0",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -279182,7 +279334,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#1",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#1",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -279193,7 +279345,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#10",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#10",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -279204,7 +279356,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#11",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#11",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -279215,7 +279367,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#2",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#2",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -279226,7 +279378,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#3",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#3",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -279237,7 +279389,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#4",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#4",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -279248,7 +279400,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#5",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#5",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -279259,7 +279411,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#6",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#6",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#6",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -279270,7 +279422,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#7",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#7",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#7",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -279281,7 +279433,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#8",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#8",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#8",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -279292,7 +279444,7 @@
     },
     {
       "symbol": "L:ej.a([IIB)V#9",
-      "renamedSymbol": "L:AiPlanner.a([IIB)V#9",
+      "renamedSymbol": "L:AiPlanner.updateStructureInfluenceForTiles([IIB)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -279303,7 +279455,7 @@
     },
     {
       "symbol": "L:ej.b(IIII)Z#0",
-      "renamedSymbol": "L:AiPlanner.b(IIII)Z#0",
+      "renamedSymbol": "L:AiPlanner.handleChatKey(IIII)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -279314,7 +279466,7 @@
     },
     {
       "symbol": "L:ej.b(IIII)Z#1",
-      "renamedSymbol": "L:AiPlanner.b(IIII)Z#1",
+      "renamedSymbol": "L:AiPlanner.handleChatKey(IIII)Z#1",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -279479,7 +279631,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#0",
-      "renamedSymbol": "L:AiPlanner.c(B)V#0",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#0",
       "originalName": "stackIn_53_0",
       "renamedName": "stackIn_53_0",
       "declaration": {
@@ -279490,7 +279642,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#1",
-      "renamedSymbol": "L:AiPlanner.c(B)V#1",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#1",
       "originalName": "stackIn_56_0",
       "renamedName": "stackIn_56_0",
       "declaration": {
@@ -279501,7 +279653,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#10",
-      "renamedSymbol": "L:AiPlanner.c(B)V#10",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -279512,7 +279664,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#11",
-      "renamedSymbol": "L:AiPlanner.c(B)V#11",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -279523,7 +279675,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#12",
-      "renamedSymbol": "L:AiPlanner.c(B)V#12",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -279534,7 +279686,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#13",
-      "renamedSymbol": "L:AiPlanner.c(B)V#13",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -279545,7 +279697,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#14",
-      "renamedSymbol": "L:AiPlanner.c(B)V#14",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -279556,7 +279708,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#15",
-      "renamedSymbol": "L:AiPlanner.c(B)V#15",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -279567,7 +279719,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#16",
-      "renamedSymbol": "L:AiPlanner.c(B)V#16",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -279578,7 +279730,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#17",
-      "renamedSymbol": "L:AiPlanner.c(B)V#17",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -279589,7 +279741,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#18",
-      "renamedSymbol": "L:AiPlanner.c(B)V#18",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -279600,7 +279752,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#19",
-      "renamedSymbol": "L:AiPlanner.c(B)V#19",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -279611,7 +279763,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#2",
-      "renamedSymbol": "L:AiPlanner.c(B)V#2",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -279622,7 +279774,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#20",
-      "renamedSymbol": "L:AiPlanner.c(B)V#20",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#20",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -279633,7 +279785,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#21",
-      "renamedSymbol": "L:AiPlanner.c(B)V#21",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#21",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -279644,7 +279796,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#3",
-      "renamedSymbol": "L:AiPlanner.c(B)V#3",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#3",
       "originalName": "var2_ref_float__",
       "renamedName": "var2_ref_float__",
       "declaration": {
@@ -279655,7 +279807,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#4",
-      "renamedSymbol": "L:AiPlanner.c(B)V#4",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#4",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -279666,7 +279818,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#5",
-      "renamedSymbol": "L:AiPlanner.c(B)V#5",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279677,7 +279829,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#6",
-      "renamedSymbol": "L:AiPlanner.c(B)V#6",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#6",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -279688,7 +279840,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#7",
-      "renamedSymbol": "L:AiPlanner.c(B)V#7",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -279699,7 +279851,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#8",
-      "renamedSymbol": "L:AiPlanner.c(B)V#8",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#8",
       "originalName": "var5_ref_float____",
       "renamedName": "var5_ref_float____",
       "declaration": {
@@ -279710,7 +279862,7 @@
     },
     {
       "symbol": "L:ej.c(B)V#9",
-      "renamedSymbol": "L:AiPlanner.c(B)V#9",
+      "renamedSymbol": "L:AiPlanner.rebuildInfluenceStep(B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -279820,7 +279972,7 @@
     },
     {
       "symbol": "L:ej.e(I)V#0",
-      "renamedSymbol": "L:AiPlanner.e(I)V#0",
+      "renamedSymbol": "L:AiPlanner.awaitSummonedUnit(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -279831,7 +279983,7 @@
     },
     {
       "symbol": "L:ej.e(I)V#1",
-      "renamedSymbol": "L:AiPlanner.e(I)V#1",
+      "renamedSymbol": "L:AiPlanner.awaitSummonedUnit(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279842,7 +279994,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#0",
-      "renamedSymbol": "L:AiPlanner.f(I)V#0",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -279853,7 +280005,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#1",
-      "renamedSymbol": "L:AiPlanner.f(I)V#1",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -279864,7 +280016,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#2",
-      "renamedSymbol": "L:AiPlanner.f(I)V#2",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279875,7 +280027,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#3",
-      "renamedSymbol": "L:AiPlanner.f(I)V#3",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -279886,7 +280038,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#4",
-      "renamedSymbol": "L:AiPlanner.f(I)V#4",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -279897,7 +280049,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#5",
-      "renamedSymbol": "L:AiPlanner.f(I)V#5",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -279908,7 +280060,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#6",
-      "renamedSymbol": "L:AiPlanner.f(I)V#6",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -279919,7 +280071,7 @@
     },
     {
       "symbol": "L:ej.f(I)V#7",
-      "renamedSymbol": "L:AiPlanner.f(I)V#7",
+      "renamedSymbol": "L:AiPlanner.executeNextUnitAction(I)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -279930,7 +280082,7 @@
     },
     {
       "symbol": "L:ej.g(I)V#0",
-      "renamedSymbol": "L:AiPlanner.g(I)V#0",
+      "renamedSymbol": "L:AiPlanner.refreshNextUnitPriority(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279941,7 +280093,7 @@
     },
     {
       "symbol": "L:ej.g(I)V#1",
-      "renamedSymbol": "L:AiPlanner.g(I)V#1",
+      "renamedSymbol": "L:AiPlanner.refreshNextUnitPriority(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -279952,7 +280104,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#0",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#0",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -279963,7 +280115,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#1",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#1",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#1",
       "originalName": "var3_ref_ne__",
       "renamedName": "var3_ref_ne__",
       "declaration": {
@@ -279974,7 +280126,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#2",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#2",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -279985,7 +280137,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#3",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#3",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -279996,7 +280148,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#4",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#4",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -280007,7 +280159,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#5",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#5",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -280018,7 +280170,7 @@
     },
     {
       "symbol": "L:ej.h(I)Z#6",
-      "renamedSymbol": "L:AiPlanner.h(I)Z#6",
+      "renamedSymbol": "L:AiPlanner.advanceTurn(I)Z#6",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -280029,7 +280181,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#0",
-      "renamedSymbol": "L:AiPlanner.i(I)V#0",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#0",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -280040,7 +280192,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#1",
-      "renamedSymbol": "L:AiPlanner.i(I)V#1",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#1",
       "originalName": "stackIn_75_0",
       "renamedName": "stackIn_75_0",
       "declaration": {
@@ -280051,7 +280203,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#10",
-      "renamedSymbol": "L:AiPlanner.i(I)V#10",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -280062,7 +280214,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#11",
-      "renamedSymbol": "L:AiPlanner.i(I)V#11",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -280073,7 +280225,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#12",
-      "renamedSymbol": "L:AiPlanner.i(I)V#12",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -280084,7 +280236,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#13",
-      "renamedSymbol": "L:AiPlanner.i(I)V#13",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -280095,7 +280247,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#14",
-      "renamedSymbol": "L:AiPlanner.i(I)V#14",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#14",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -280106,7 +280258,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#15",
-      "renamedSymbol": "L:AiPlanner.i(I)V#15",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#15",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -280117,7 +280269,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#16",
-      "renamedSymbol": "L:AiPlanner.i(I)V#16",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#16",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -280128,7 +280280,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#17",
-      "renamedSymbol": "L:AiPlanner.i(I)V#17",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#17",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -280139,7 +280291,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#18",
-      "renamedSymbol": "L:AiPlanner.i(I)V#18",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#18",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -280150,7 +280302,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#19",
-      "renamedSymbol": "L:AiPlanner.i(I)V#19",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#19",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -280161,7 +280313,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#2",
-      "renamedSymbol": "L:AiPlanner.i(I)V#2",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -280172,7 +280324,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#20",
-      "renamedSymbol": "L:AiPlanner.i(I)V#20",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#20",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -280183,7 +280335,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#21",
-      "renamedSymbol": "L:AiPlanner.i(I)V#21",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#21",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -280194,7 +280346,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#22",
-      "renamedSymbol": "L:AiPlanner.i(I)V#22",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#22",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -280205,7 +280357,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#23",
-      "renamedSymbol": "L:AiPlanner.i(I)V#23",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#23",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -280216,7 +280368,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#24",
-      "renamedSymbol": "L:AiPlanner.i(I)V#24",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#24",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -280227,7 +280379,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#25",
-      "renamedSymbol": "L:AiPlanner.i(I)V#25",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#25",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -280238,7 +280390,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#26",
-      "renamedSymbol": "L:AiPlanner.i(I)V#26",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#26",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -280249,7 +280401,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#27",
-      "renamedSymbol": "L:AiPlanner.i(I)V#27",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#27",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -280260,7 +280412,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#28",
-      "renamedSymbol": "L:AiPlanner.i(I)V#28",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#28",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -280271,7 +280423,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#29",
-      "renamedSymbol": "L:AiPlanner.i(I)V#29",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#29",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -280282,7 +280434,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#3",
-      "renamedSymbol": "L:AiPlanner.i(I)V#3",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -280293,7 +280445,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#30",
-      "renamedSymbol": "L:AiPlanner.i(I)V#30",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#30",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -280304,7 +280456,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#31",
-      "renamedSymbol": "L:AiPlanner.i(I)V#31",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#31",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -280315,7 +280467,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#32",
-      "renamedSymbol": "L:AiPlanner.i(I)V#32",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#32",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -280326,7 +280478,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#33",
-      "renamedSymbol": "L:AiPlanner.i(I)V#33",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#33",
       "originalName": "var13_intLifetime1",
       "renamedName": "var13_intLifetime1",
       "declaration": {
@@ -280337,7 +280489,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#34",
-      "renamedSymbol": "L:AiPlanner.i(I)V#34",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#34",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -280348,7 +280500,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#35",
-      "renamedSymbol": "L:AiPlanner.i(I)V#35",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#35",
       "originalName": "var28Lifetime1",
       "renamedName": "var28Lifetime1",
       "declaration": {
@@ -280359,7 +280511,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#36",
-      "renamedSymbol": "L:AiPlanner.i(I)V#36",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#36",
       "originalName": "var28Lifetime2",
       "renamedName": "var28Lifetime2",
       "declaration": {
@@ -280370,7 +280522,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#37",
-      "renamedSymbol": "L:AiPlanner.i(I)V#37",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#37",
       "originalName": "var36Lifetime1",
       "renamedName": "var36Lifetime1",
       "declaration": {
@@ -280381,7 +280533,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#38",
-      "renamedSymbol": "L:AiPlanner.i(I)V#38",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#38",
       "originalName": "var36Lifetime2",
       "renamedName": "var36Lifetime2",
       "declaration": {
@@ -280392,7 +280544,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#4",
-      "renamedSymbol": "L:AiPlanner.i(I)V#4",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -280403,7 +280555,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#5",
-      "renamedSymbol": "L:AiPlanner.i(I)V#5",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -280414,7 +280566,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#6",
-      "renamedSymbol": "L:AiPlanner.i(I)V#6",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -280425,7 +280577,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#7",
-      "renamedSymbol": "L:AiPlanner.i(I)V#7",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -280436,7 +280588,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#8",
-      "renamedSymbol": "L:AiPlanner.i(I)V#8",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#8",
       "originalName": "var13_int",
       "renamedName": "var13_int",
       "declaration": {
@@ -280447,7 +280599,7 @@
     },
     {
       "symbol": "L:ej.i(I)V#9",
-      "renamedSymbol": "L:AiPlanner.i(I)V#9",
+      "renamedSymbol": "L:AiPlanner.chooseAndExecuteSummon(I)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -533260,9 +533412,9 @@
     },
     {
       "symbol": "M:cl.a(B)V",
-      "renamedSymbol": "M:AiUnitPlanner.a(B)V",
+      "renamedSymbol": "M:AiUnitPlanner.prepareActionMovement(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "prepareActionMovement",
       "declaration": {
         "file": "cl.java",
         "start": 22266,
@@ -533282,9 +533434,9 @@
     },
     {
       "symbol": "M:cl.a(BZ)I",
-      "renamedSymbol": "M:AiUnitPlanner.a(BZ)I",
+      "renamedSymbol": "M:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findReachableNonAlliedStructure",
       "declaration": {
         "file": "cl.java",
         "start": 19118,
@@ -533337,9 +533489,9 @@
     },
     {
       "symbol": "M:cl.b(II)V",
-      "renamedSymbol": "M:AiUnitPlanner.b(II)V",
+      "renamedSymbol": "M:AiUnitPlanner.sendRoomOptionsUpdate(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "sendRoomOptionsUpdate",
       "declaration": {
         "file": "cl.java",
         "start": 20200,
@@ -533348,9 +533500,9 @@
     },
     {
       "symbol": "M:cl.c(II)V",
-      "renamedSymbol": "M:AiUnitPlanner.c(II)V",
+      "renamedSymbol": "M:AiUnitPlanner.addBlockedCaptureInfluence(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "addBlockedCaptureInfluence",
       "declaration": {
         "file": "cl.java",
         "start": 22492,
@@ -537539,9 +537691,9 @@
     },
     {
       "symbol": "M:ej.a(IIBZ)V",
-      "renamedSymbol": "M:AiPlanner.a(IIBZ)V",
+      "renamedSymbol": "M:AiPlanner.updateDebugScoreOverlay(IIBZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateDebugScoreOverlay",
       "declaration": {
         "file": "ej.java",
         "start": 21777,
@@ -537572,9 +537724,9 @@
     },
     {
       "symbol": "M:ej.a(IIII)V",
-      "renamedSymbol": "M:AiPlanner.a(IIII)V",
+      "renamedSymbol": "M:AiPlanner.addTileObjectiveInfluence(IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addTileObjectiveInfluence",
       "declaration": {
         "file": "ej.java",
         "start": 48402,
@@ -537583,9 +537735,9 @@
     },
     {
       "symbol": "M:ej.a(IIIII)V",
-      "renamedSymbol": "M:AiPlanner.a(IIIII)V",
+      "renamedSymbol": "M:AiPlanner.addObjectiveInfluence(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addObjectiveInfluence",
       "declaration": {
         "file": "ej.java",
         "start": 7134,
@@ -537594,9 +537746,9 @@
     },
     {
       "symbol": "M:ej.a(IIILjd;)V",
-      "renamedSymbol": "M:AiPlanner.a(IIILUnit;)V",
+      "renamedSymbol": "M:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addUnitInfluenceForCategory",
       "declaration": {
         "file": "ej.java",
         "start": 58370,
@@ -537616,9 +537768,9 @@
     },
     {
       "symbol": "M:ej.a(ILjd;I)V",
-      "renamedSymbol": "M:AiPlanner.a(ILUnit;I)V",
+      "renamedSymbol": "M:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addUnitInfluenceForAllCategories",
       "declaration": {
         "file": "ej.java",
         "start": 20197,
@@ -537627,9 +537779,9 @@
     },
     {
       "symbol": "M:ej.a(IZ)V",
-      "renamedSymbol": "M:AiPlanner.a(IZ)V",
+      "renamedSymbol": "M:AiPlanner.considerNextEquippedSpell(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "considerNextEquippedSpell",
       "declaration": {
         "file": "ej.java",
         "start": 12978,
@@ -537715,9 +537867,9 @@
     },
     {
       "symbol": "M:ej.a([IIB)V",
-      "renamedSymbol": "M:AiPlanner.a([IIB)V",
+      "renamedSymbol": "M:AiPlanner.updateStructureInfluenceForTiles([IIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateStructureInfluenceForTiles",
       "declaration": {
         "file": "ej.java",
         "start": 27075,
@@ -537726,9 +537878,9 @@
     },
     {
       "symbol": "M:ej.b(II)V",
-      "renamedSymbol": "M:AiPlanner.b(II)V",
+      "renamedSymbol": "M:AiPlanner.setPlanningPhase(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setPlanningPhase",
       "declaration": {
         "file": "ej.java",
         "start": 58199,
@@ -537737,9 +537889,9 @@
     },
     {
       "symbol": "M:ej.b(IIII)Z",
-      "renamedSymbol": "M:AiPlanner.b(IIII)Z",
+      "renamedSymbol": "M:AiPlanner.handleChatKey(IIII)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "handleChatKey",
       "declaration": {
         "file": "ej.java",
         "start": 57031,
@@ -537759,9 +537911,9 @@
     },
     {
       "symbol": "M:ej.c(B)V",
-      "renamedSymbol": "M:AiPlanner.c(B)V",
+      "renamedSymbol": "M:AiPlanner.rebuildInfluenceStep(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "rebuildInfluenceStep",
       "declaration": {
         "file": "ej.java",
         "start": 14454,
@@ -537781,9 +537933,9 @@
     },
     {
       "symbol": "M:ej.e(I)V",
-      "renamedSymbol": "M:AiPlanner.e(I)V",
+      "renamedSymbol": "M:AiPlanner.awaitSummonedUnit(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "awaitSummonedUnit",
       "declaration": {
         "file": "ej.java",
         "start": 26596,
@@ -537792,9 +537944,9 @@
     },
     {
       "symbol": "M:ej.f(I)V",
-      "renamedSymbol": "M:AiPlanner.f(I)V",
+      "renamedSymbol": "M:AiPlanner.executeNextUnitAction(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "executeNextUnitAction",
       "declaration": {
         "file": "ej.java",
         "start": 42057,
@@ -537803,9 +537955,9 @@
     },
     {
       "symbol": "M:ej.g(I)V",
-      "renamedSymbol": "M:AiPlanner.g(I)V",
+      "renamedSymbol": "M:AiPlanner.refreshNextUnitPriority(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "refreshNextUnitPriority",
       "declaration": {
         "file": "ej.java",
         "start": 19551,
@@ -537814,9 +537966,9 @@
     },
     {
       "symbol": "M:ej.h(I)Z",
-      "renamedSymbol": "M:AiPlanner.h(I)Z",
+      "renamedSymbol": "M:AiPlanner.advanceTurn(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "advanceTurn",
       "declaration": {
         "file": "ej.java",
         "start": 9324,
@@ -537825,9 +537977,9 @@
     },
     {
       "symbol": "M:ej.i(I)V",
-      "renamedSymbol": "M:AiPlanner.i(I)V",
+      "renamedSymbol": "M:AiPlanner.chooseAndExecuteSummon(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "chooseAndExecuteSummon",
       "declaration": {
         "file": "ej.java",
         "start": 48654,
@@ -593969,7 +594121,7 @@
     },
     {
       "symbol": "P:cl.a(B)V#0",
-      "renamedSymbol": "P:AiUnitPlanner.a(B)V#0",
+      "renamedSymbol": "P:AiUnitPlanner.prepareActionMovement(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -594002,7 +594154,7 @@
     },
     {
       "symbol": "P:cl.a(BZ)I#0",
-      "renamedSymbol": "P:AiUnitPlanner.a(BZ)I#0",
+      "renamedSymbol": "P:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -594013,7 +594165,7 @@
     },
     {
       "symbol": "P:cl.a(BZ)I#1",
-      "renamedSymbol": "P:AiUnitPlanner.a(BZ)I#1",
+      "renamedSymbol": "P:AiUnitPlanner.findReachableNonAlliedStructure(BZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -594145,7 +594297,7 @@
     },
     {
       "symbol": "P:cl.b(II)V#0",
-      "renamedSymbol": "P:AiUnitPlanner.b(II)V#0",
+      "renamedSymbol": "P:AiUnitPlanner.sendRoomOptionsUpdate(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -594156,7 +594308,7 @@
     },
     {
       "symbol": "P:cl.b(II)V#1",
-      "renamedSymbol": "P:AiUnitPlanner.b(II)V#1",
+      "renamedSymbol": "P:AiUnitPlanner.sendRoomOptionsUpdate(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -594167,7 +594319,7 @@
     },
     {
       "symbol": "P:cl.c(II)V#0",
-      "renamedSymbol": "P:AiUnitPlanner.c(II)V#0",
+      "renamedSymbol": "P:AiUnitPlanner.addBlockedCaptureInfluence(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -594178,7 +594330,7 @@
     },
     {
       "symbol": "P:cl.c(II)V#1",
-      "renamedSymbol": "P:AiUnitPlanner.c(II)V#1",
+      "renamedSymbol": "P:AiUnitPlanner.addBlockedCaptureInfluence(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603682,7 +603834,7 @@
     },
     {
       "symbol": "P:ej.a(IIBZ)V#0",
-      "renamedSymbol": "P:AiPlanner.a(IIBZ)V#0",
+      "renamedSymbol": "P:AiPlanner.updateDebugScoreOverlay(IIBZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603693,7 +603845,7 @@
     },
     {
       "symbol": "P:ej.a(IIBZ)V#1",
-      "renamedSymbol": "P:AiPlanner.a(IIBZ)V#1",
+      "renamedSymbol": "P:AiPlanner.updateDebugScoreOverlay(IIBZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603704,7 +603856,7 @@
     },
     {
       "symbol": "P:ej.a(IIBZ)V#2",
-      "renamedSymbol": "P:AiPlanner.a(IIBZ)V#2",
+      "renamedSymbol": "P:AiPlanner.updateDebugScoreOverlay(IIBZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603715,7 +603867,7 @@
     },
     {
       "symbol": "P:ej.a(IIBZ)V#3",
-      "renamedSymbol": "P:AiPlanner.a(IIBZ)V#3",
+      "renamedSymbol": "P:AiPlanner.updateDebugScoreOverlay(IIBZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -603803,7 +603955,7 @@
     },
     {
       "symbol": "P:ej.a(IIII)V#0",
-      "renamedSymbol": "P:AiPlanner.a(IIII)V#0",
+      "renamedSymbol": "P:AiPlanner.addTileObjectiveInfluence(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603814,7 +603966,7 @@
     },
     {
       "symbol": "P:ej.a(IIII)V#1",
-      "renamedSymbol": "P:AiPlanner.a(IIII)V#1",
+      "renamedSymbol": "P:AiPlanner.addTileObjectiveInfluence(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603825,7 +603977,7 @@
     },
     {
       "symbol": "P:ej.a(IIII)V#2",
-      "renamedSymbol": "P:AiPlanner.a(IIII)V#2",
+      "renamedSymbol": "P:AiPlanner.addTileObjectiveInfluence(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603836,7 +603988,7 @@
     },
     {
       "symbol": "P:ej.a(IIII)V#3",
-      "renamedSymbol": "P:AiPlanner.a(IIII)V#3",
+      "renamedSymbol": "P:AiPlanner.addTileObjectiveInfluence(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -603847,7 +603999,7 @@
     },
     {
       "symbol": "P:ej.a(IIIII)V#0",
-      "renamedSymbol": "P:AiPlanner.a(IIIII)V#0",
+      "renamedSymbol": "P:AiPlanner.addObjectiveInfluence(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603858,7 +604010,7 @@
     },
     {
       "symbol": "P:ej.a(IIIII)V#1",
-      "renamedSymbol": "P:AiPlanner.a(IIIII)V#1",
+      "renamedSymbol": "P:AiPlanner.addObjectiveInfluence(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603869,7 +604021,7 @@
     },
     {
       "symbol": "P:ej.a(IIIII)V#2",
-      "renamedSymbol": "P:AiPlanner.a(IIIII)V#2",
+      "renamedSymbol": "P:AiPlanner.addObjectiveInfluence(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603880,7 +604032,7 @@
     },
     {
       "symbol": "P:ej.a(IIIII)V#3",
-      "renamedSymbol": "P:AiPlanner.a(IIIII)V#3",
+      "renamedSymbol": "P:AiPlanner.addObjectiveInfluence(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -603891,7 +604043,7 @@
     },
     {
       "symbol": "P:ej.a(IIIII)V#4",
-      "renamedSymbol": "P:AiPlanner.a(IIIII)V#4",
+      "renamedSymbol": "P:AiPlanner.addObjectiveInfluence(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -603902,7 +604054,7 @@
     },
     {
       "symbol": "P:ej.a(IIILjd;)V#0",
-      "renamedSymbol": "P:AiPlanner.a(IIILUnit;)V#0",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603913,7 +604065,7 @@
     },
     {
       "symbol": "P:ej.a(IIILjd;)V#1",
-      "renamedSymbol": "P:AiPlanner.a(IIILUnit;)V#1",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603924,7 +604076,7 @@
     },
     {
       "symbol": "P:ej.a(IIILjd;)V#2",
-      "renamedSymbol": "P:AiPlanner.a(IIILUnit;)V#2",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603935,7 +604087,7 @@
     },
     {
       "symbol": "P:ej.a(IIILjd;)V#3",
-      "renamedSymbol": "P:AiPlanner.a(IIILUnit;)V#3",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForCategory(IIILUnit;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -603968,7 +604120,7 @@
     },
     {
       "symbol": "P:ej.a(ILjd;I)V#0",
-      "renamedSymbol": "P:AiPlanner.a(ILUnit;I)V#0",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603979,7 +604131,7 @@
     },
     {
       "symbol": "P:ej.a(ILjd;I)V#1",
-      "renamedSymbol": "P:AiPlanner.a(ILUnit;I)V#1",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603990,7 +604142,7 @@
     },
     {
       "symbol": "P:ej.a(ILjd;I)V#2",
-      "renamedSymbol": "P:AiPlanner.a(ILUnit;I)V#2",
+      "renamedSymbol": "P:AiPlanner.addUnitInfluenceForAllCategories(ILUnit;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -604001,7 +604153,7 @@
     },
     {
       "symbol": "P:ej.a(IZ)V#0",
-      "renamedSymbol": "P:AiPlanner.a(IZ)V#0",
+      "renamedSymbol": "P:AiPlanner.considerNextEquippedSpell(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604012,7 +604164,7 @@
     },
     {
       "symbol": "P:ej.a(IZ)V#1",
-      "renamedSymbol": "P:AiPlanner.a(IZ)V#1",
+      "renamedSymbol": "P:AiPlanner.considerNextEquippedSpell(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604199,7 +604351,7 @@
     },
     {
       "symbol": "P:ej.a([IIB)V#0",
-      "renamedSymbol": "P:AiPlanner.a([IIB)V#0",
+      "renamedSymbol": "P:AiPlanner.updateStructureInfluenceForTiles([IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604210,7 +604362,7 @@
     },
     {
       "symbol": "P:ej.a([IIB)V#1",
-      "renamedSymbol": "P:AiPlanner.a([IIB)V#1",
+      "renamedSymbol": "P:AiPlanner.updateStructureInfluenceForTiles([IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604221,7 +604373,7 @@
     },
     {
       "symbol": "P:ej.a([IIB)V#2",
-      "renamedSymbol": "P:AiPlanner.a([IIB)V#2",
+      "renamedSymbol": "P:AiPlanner.updateStructureInfluenceForTiles([IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -604232,7 +604384,7 @@
     },
     {
       "symbol": "P:ej.b(II)V#0",
-      "renamedSymbol": "P:AiPlanner.b(II)V#0",
+      "renamedSymbol": "P:AiPlanner.setPlanningPhase(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604243,7 +604395,7 @@
     },
     {
       "symbol": "P:ej.b(II)V#1",
-      "renamedSymbol": "P:AiPlanner.b(II)V#1",
+      "renamedSymbol": "P:AiPlanner.setPlanningPhase(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604254,7 +604406,7 @@
     },
     {
       "symbol": "P:ej.b(IIII)Z#0",
-      "renamedSymbol": "P:AiPlanner.b(IIII)Z#0",
+      "renamedSymbol": "P:AiPlanner.handleChatKey(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604265,7 +604417,7 @@
     },
     {
       "symbol": "P:ej.b(IIII)Z#1",
-      "renamedSymbol": "P:AiPlanner.b(IIII)Z#1",
+      "renamedSymbol": "P:AiPlanner.handleChatKey(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604276,7 +604428,7 @@
     },
     {
       "symbol": "P:ej.b(IIII)Z#2",
-      "renamedSymbol": "P:AiPlanner.b(IIII)Z#2",
+      "renamedSymbol": "P:AiPlanner.handleChatKey(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -604287,7 +604439,7 @@
     },
     {
       "symbol": "P:ej.b(IIII)Z#3",
-      "renamedSymbol": "P:AiPlanner.b(IIII)Z#3",
+      "renamedSymbol": "P:AiPlanner.handleChatKey(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -604320,7 +604472,7 @@
     },
     {
       "symbol": "P:ej.c(B)V#0",
-      "renamedSymbol": "P:AiPlanner.c(B)V#0",
+      "renamedSymbol": "P:AiPlanner.rebuildInfluenceStep(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604353,7 +604505,7 @@
     },
     {
       "symbol": "P:ej.e(I)V#0",
-      "renamedSymbol": "P:AiPlanner.e(I)V#0",
+      "renamedSymbol": "P:AiPlanner.awaitSummonedUnit(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604364,7 +604516,7 @@
     },
     {
       "symbol": "P:ej.f(I)V#0",
-      "renamedSymbol": "P:AiPlanner.f(I)V#0",
+      "renamedSymbol": "P:AiPlanner.executeNextUnitAction(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604375,7 +604527,7 @@
     },
     {
       "symbol": "P:ej.g(I)V#0",
-      "renamedSymbol": "P:AiPlanner.g(I)V#0",
+      "renamedSymbol": "P:AiPlanner.refreshNextUnitPriority(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604386,7 +604538,7 @@
     },
     {
       "symbol": "P:ej.h(I)Z#0",
-      "renamedSymbol": "P:AiPlanner.h(I)Z#0",
+      "renamedSymbol": "P:AiPlanner.advanceTurn(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604397,7 +604549,7 @@
     },
     {
       "symbol": "P:ej.i(I)V#0",
-      "renamedSymbol": "P:AiPlanner.i(I)V#0",
+      "renamedSymbol": "P:AiPlanner.chooseAndExecuteSummon(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -868097,7 +868249,7 @@
       "original": "cl.java",
       "renamed": "AiUnitPlanner.java",
       "inputSha256": "ea903035a9b9c2d41e000f689d98f12c7f88ded4d68947a5c9453151d855df28",
-      "outputSha256": "a9cd55c88b83f2fc5404c1ec3b5e9808c6c43ace899cb8a7b4f1de39bb9fd729",
+      "outputSha256": "3c11f6ee1bd4057cdb038823592132bcc55194d699b80ae9992666c372d9e1de",
       "edits": [
         {
           "start": 50,
@@ -871789,6 +871941,13 @@
           "renamed": "executionResult"
         },
         {
+          "start": 19118,
+          "end": 19119,
+          "symbol": "M:cl.a(BZ)I",
+          "original": "a",
+          "renamed": "findReachableNonAlliedStructure"
+        },
+        {
           "start": 19219,
           "end": 19221,
           "symbol": "C:nn",
@@ -871934,6 +872093,13 @@
           "symbol": "F:jd.field_O:I",
           "original": "field_O",
           "renamed": "ownerPlayer"
+        },
+        {
+          "start": 20200,
+          "end": 20201,
+          "symbol": "M:cl.b(II)V",
+          "original": "b",
+          "renamed": "sendRoomOptionsUpdate"
         },
         {
           "start": 20236,
@@ -872342,6 +872508,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 22266,
+          "end": 22267,
+          "symbol": "M:cl.a(B)V",
+          "original": "a",
+          "renamed": "prepareActionMovement"
+        },
+        {
           "start": 22291,
           "end": 22293,
           "symbol": "C:nn",
@@ -872396,6 +872569,13 @@
           "symbol": "F:cl.field_y:I",
           "original": "field_y",
           "renamed": "decisionPriority"
+        },
+        {
+          "start": 22492,
+          "end": 22493,
+          "symbol": "M:cl.c(II)V",
+          "original": "c",
+          "renamed": "addBlockedCaptureInfluence"
         },
         {
           "start": 22598,
@@ -872832,11 +873012,39 @@
           "renamed": "decisionPriority"
         },
         {
+          "start": 24176,
+          "end": 24177,
+          "symbol": "M:cl.a(B)V",
+          "original": "a",
+          "renamed": "prepareActionMovement"
+        },
+        {
+          "start": 24209,
+          "end": 24210,
+          "symbol": "M:cl.a(BZ)I",
+          "original": "a",
+          "renamed": "findReachableNonAlliedStructure"
+        },
+        {
           "start": 24260,
           "end": 24267,
           "symbol": "F:cl.field_y:I",
           "original": "field_y",
           "renamed": "decisionPriority"
+        },
+        {
+          "start": 24318,
+          "end": 24319,
+          "symbol": "M:cl.a(BZ)I",
+          "original": "a",
+          "renamed": "findReachableNonAlliedStructure"
+        },
+        {
+          "start": 24394,
+          "end": 24395,
+          "symbol": "M:cl.c(II)V",
+          "original": "c",
+          "renamed": "addBlockedCaptureInfluence"
         },
         {
           "start": 24427,
@@ -961501,7 +961709,7 @@
       "original": "ej.java",
       "renamed": "AiPlanner.java",
       "inputSha256": "6e52113b2d59fa10010314954604c91eea64452b8f6866c4c25baa53a21a9a3d",
-      "outputSha256": "464e45a337c1ba96ef295bfd97a67607bd7338329968b34279d930e4556fe577",
+      "outputSha256": "362537c31f96b68fcf30bfb129552b4a0fd3c2451496c31b6ba30bfd41818479",
       "edits": [
         {
           "start": 71,
@@ -961749,6 +961957,13 @@
           "renamed": "AiPlanner"
         },
         {
+          "start": 1076,
+          "end": 1077,
+          "symbol": "M:ej.b(IIII)Z",
+          "original": "b",
+          "renamed": "handleChatKey"
+        },
+        {
           "start": 1188,
           "end": 1189,
           "symbol": "M:ej.a(IIIB)F",
@@ -961859,6 +962074,13 @@
           "symbol": "P:ej.a(IIIB)F#3",
           "original": "param3",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1697,
+          "end": 1698,
+          "symbol": "M:ej.i(I)V",
+          "original": "i",
+          "renamed": "chooseAndExecuteSummon"
         },
         {
           "start": 1757,
@@ -962652,6 +962874,13 @@
           "renamed": "sign"
         },
         {
+          "start": 7134,
+          "end": 7135,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
+        },
+        {
           "start": 7463,
           "end": 7470,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -962785,6 +963014,13 @@
           "renamed": "weights"
         },
         {
+          "start": 9324,
+          "end": 9325,
+          "symbol": "M:ej.h(I)Z",
+          "original": "h",
+          "renamed": "advanceTurn"
+        },
+        {
           "start": 9366,
           "end": 9368,
           "symbol": "C:ne",
@@ -962841,6 +963077,13 @@
           "renamed": "monotonicMillis"
         },
         {
+          "start": 9772,
+          "end": 9773,
+          "symbol": "M:ej.c(B)V",
+          "original": "c",
+          "renamed": "rebuildInfluenceStep"
+        },
+        {
           "start": 9798,
           "end": 9800,
           "symbol": "C:vi",
@@ -962853,6 +963096,13 @@
           "symbol": "M:vi.b(I)J",
           "original": "b",
           "renamed": "monotonicMillis"
+        },
+        {
+          "start": 9950,
+          "end": 9951,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
         },
         {
           "start": 10141,
@@ -963044,6 +963294,13 @@
           "renamed": "playerId"
         },
         {
+          "start": 11463,
+          "end": 11464,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
           "start": 11766,
           "end": 11768,
           "symbol": "C:cl",
@@ -963063,6 +963320,27 @@
           "symbol": "M:at.e(B)Ltc;",
           "original": "e",
           "renamed": "first"
+        },
+        {
+          "start": 11851,
+          "end": 11852,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 11940,
+          "end": 11941,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 12043,
+          "end": 12044,
+          "symbol": "M:ej.a(IZ)V",
+          "original": "a",
+          "renamed": "considerNextEquippedSpell"
         },
         {
           "start": 12160,
@@ -963100,6 +963378,55 @@
           "renamed": "first"
         },
         {
+          "start": 12304,
+          "end": 12305,
+          "symbol": "M:ej.f(I)V",
+          "original": "f",
+          "renamed": "executeNextUnitAction"
+        },
+        {
+          "start": 12354,
+          "end": 12355,
+          "symbol": "M:ej.f(I)V",
+          "original": "f",
+          "renamed": "executeNextUnitAction"
+        },
+        {
+          "start": 12436,
+          "end": 12437,
+          "symbol": "M:ej.a(IZ)V",
+          "original": "a",
+          "renamed": "considerNextEquippedSpell"
+        },
+        {
+          "start": 12652,
+          "end": 12653,
+          "symbol": "M:ej.e(I)V",
+          "original": "e",
+          "renamed": "awaitSummonedUnit"
+        },
+        {
+          "start": 12723,
+          "end": 12724,
+          "symbol": "M:ej.i(I)V",
+          "original": "i",
+          "renamed": "chooseAndExecuteSummon"
+        },
+        {
+          "start": 12789,
+          "end": 12790,
+          "symbol": "M:ej.g(I)V",
+          "original": "g",
+          "renamed": "refreshNextUnitPriority"
+        },
+        {
+          "start": 12978,
+          "end": 12979,
+          "symbol": "M:ej.a(IZ)V",
+          "original": "a",
+          "renamed": "considerNextEquippedSpell"
+        },
+        {
           "start": 13035,
           "end": 13042,
           "symbol": "F:ej.field_D:Lha;",
@@ -963114,6 +963441,13 @@
           "renamed": "campaignMission"
         },
         {
+          "start": 13069,
+          "end": 13070,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
           "start": 13132,
           "end": 13133,
           "symbol": "M:ej.a(ZII)V",
@@ -963126,6 +963460,13 @@
           "symbol": "C:at",
           "original": "at",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 13352,
+          "end": 13353,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
         },
         {
           "start": 13402,
@@ -963210,6 +963551,13 @@
           "symbol": "P:ej.a(Lcl;B)Lsm;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 14454,
+          "end": 14455,
+          "symbol": "M:ej.c(B)V",
+          "original": "c",
+          "renamed": "rebuildInfluenceStep"
         },
         {
           "start": 14743,
@@ -963387,6 +963735,13 @@
           "renamed": "removedFromActivePlay"
         },
         {
+          "start": 16931,
+          "end": 16932,
+          "symbol": "M:ej.a(IIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForCategory"
+        },
+        {
           "start": 16963,
           "end": 16965,
           "symbol": "C:jd",
@@ -963527,6 +963882,13 @@
           "renamed": "getTag"
         },
         {
+          "start": 18989,
+          "end": 18990,
+          "symbol": "M:ej.a(IIII)V",
+          "original": "a",
+          "renamed": "addTileObjectiveInfluence"
+        },
+        {
           "start": 19076,
           "end": 19083,
           "symbol": "F:ne.field_c:Ljd;",
@@ -963548,11 +963910,32 @@
           "renamed": "tag"
         },
         {
+          "start": 19203,
+          "end": 19204,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
+        },
+        {
+          "start": 19551,
+          "end": 19552,
+          "symbol": "M:ej.g(I)V",
+          "original": "g",
+          "renamed": "refreshNextUnitPriority"
+        },
+        {
           "start": 19575,
           "end": 19577,
           "symbol": "C:cl",
           "original": "cl",
           "renamed": "AiUnitPlanner"
+        },
+        {
+          "start": 19642,
+          "end": 19643,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
         },
         {
           "start": 19718,
@@ -963667,6 +964050,13 @@
           "renamed": "next"
         },
         {
+          "start": 20197,
+          "end": 20198,
+          "symbol": "M:ej.a(ILjd;I)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForAllCategories"
+        },
+        {
           "start": 20211,
           "end": 20213,
           "symbol": "C:jd",
@@ -963679,6 +964069,13 @@
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 20703,
+          "end": 20704,
+          "symbol": "M:ej.a(IIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForCategory"
         },
         {
           "start": 21221,
@@ -963779,6 +964176,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 21777,
+          "end": 21778,
+          "symbol": "M:ej.a(IIBZ)V",
+          "original": "a",
+          "renamed": "updateDebugScoreOverlay"
+        },
+        {
           "start": 21963,
           "end": 21965,
           "symbol": "C:jd",
@@ -963798,6 +964202,20 @@
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 22473,
+          "end": 22474,
+          "symbol": "M:ej.c(B)V",
+          "original": "c",
+          "renamed": "rebuildInfluenceStep"
+        },
+        {
+          "start": 22573,
+          "end": 22574,
+          "symbol": "M:ej.f(I)V",
+          "original": "f",
+          "renamed": "executeNextUnitAction"
         },
         {
           "start": 22620,
@@ -964150,11 +964568,25 @@
           "renamed": "unitType"
         },
         {
+          "start": 26596,
+          "end": 26597,
+          "symbol": "M:ej.e(I)V",
+          "original": "e",
+          "renamed": "awaitSummonedUnit"
+        },
+        {
           "start": 26620,
           "end": 26622,
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "Unit"
+        },
+        {
+          "start": 26727,
+          "end": 26728,
+          "symbol": "M:ej.a([IIB)V",
+          "original": "a",
+          "renamed": "updateStructureInfluenceForTiles"
         },
         {
           "start": 26791,
@@ -964176,6 +964608,27 @@
           "symbol": "M:ej.a(ILjd;)V",
           "original": "a",
           "renamed": "activateUnitPlanner"
+        },
+        {
+          "start": 26907,
+          "end": 26908,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 27014,
+          "end": 27015,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 27075,
+          "end": 27076,
+          "symbol": "M:ej.a([IIB)V",
+          "original": "a",
+          "renamed": "updateStructureInfluenceForTiles"
         },
         {
           "start": 27174,
@@ -965431,6 +965884,13 @@
           "renamed": "unit"
         },
         {
+          "start": 41296,
+          "end": 41297,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
           "start": 41333,
           "end": 41335,
           "symbol": "C:cl",
@@ -965478,6 +965938,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 42057,
+          "end": 42058,
+          "symbol": "M:ej.f(I)V",
+          "original": "f",
+          "renamed": "executeNextUnitAction"
         },
         {
           "start": 42177,
@@ -965548,6 +966015,13 @@
           "symbol": "F:jd.field_E:I",
           "original": "field_E",
           "renamed": "tag"
+        },
+        {
+          "start": 42504,
+          "end": 42505,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
         },
         {
           "start": 42522,
@@ -965634,6 +966108,13 @@
           "renamed": "previousDestinationTile"
         },
         {
+          "start": 42859,
+          "end": 42860,
+          "symbol": "M:ej.a([IIB)V",
+          "original": "a",
+          "renamed": "updateStructureInfluenceForTiles"
+        },
+        {
           "start": 42936,
           "end": 42943,
           "symbol": "F:cl.field_n:I",
@@ -965676,6 +966157,13 @@
           "renamed": "tag"
         },
         {
+          "start": 43275,
+          "end": 43276,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
+        },
+        {
           "start": 43293,
           "end": 43300,
           "symbol": "F:jd.field_w:I",
@@ -965711,6 +966199,13 @@
           "renamed": "tag"
         },
         {
+          "start": 43389,
+          "end": 43390,
+          "symbol": "M:ej.a(ILjd;I)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForAllCategories"
+        },
+        {
           "start": 43422,
           "end": 43429,
           "symbol": "F:ej.field_m:Lir;",
@@ -965723,6 +966218,13 @@
           "symbol": "M:jd.g(I)I",
           "original": "g",
           "renamed": "getUnitCategory"
+        },
+        {
+          "start": 43682,
+          "end": 43683,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
         },
         {
           "start": 43741,
@@ -965809,6 +966311,13 @@
           "renamed": "tag"
         },
         {
+          "start": 44115,
+          "end": 44116,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
+        },
+        {
           "start": 44147,
           "end": 44154,
           "symbol": "F:cl.field_o:Ljd;",
@@ -965835,6 +966344,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 44369,
+          "end": 44370,
+          "symbol": "M:ej.a(ILjd;I)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForAllCategories"
         },
         {
           "start": 44410,
@@ -965870,6 +966386,13 @@
           "symbol": "F:jd.field_E:I",
           "original": "field_E",
           "renamed": "tag"
+        },
+        {
+          "start": 44513,
+          "end": 44514,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
         },
         {
           "start": 44537,
@@ -965933,6 +966456,13 @@
           "symbol": "F:jb.field_q:I",
           "original": "field_q",
           "renamed": "destinationY"
+        },
+        {
+          "start": 44750,
+          "end": 44751,
+          "symbol": "M:ej.a([IIB)V",
+          "original": "a",
+          "renamed": "updateStructureInfluenceForTiles"
         },
         {
           "start": 44820,
@@ -966052,6 +966582,13 @@
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 45498,
+          "end": 45499,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
         },
         {
           "start": 45503,
@@ -966516,6 +967053,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 48402,
+          "end": 48403,
+          "symbol": "M:ej.a(IIII)V",
+          "original": "a",
+          "renamed": "addTileObjectiveInfluence"
+        },
+        {
           "start": 48492,
           "end": 48494,
           "symbol": "C:cl",
@@ -966542,6 +967086,20 @@
           "symbol": "C:cl",
           "original": "cl",
           "renamed": "AiUnitPlanner"
+        },
+        {
+          "start": 48577,
+          "end": 48578,
+          "symbol": "M:ej.a(IIIII)V",
+          "original": "a",
+          "renamed": "addObjectiveInfluence"
+        },
+        {
+          "start": 48654,
+          "end": 48655,
+          "symbol": "M:ej.i(I)V",
+          "original": "i",
+          "renamed": "chooseAndExecuteSummon"
         },
         {
           "start": 48878,
@@ -967447,6 +968005,13 @@
           "renamed": "selectCandidate"
         },
         {
+          "start": 56558,
+          "end": 56559,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
           "start": 56638,
           "end": 56645,
           "symbol": "F:jb.field_r:I",
@@ -967473,6 +968038,27 @@
           "symbol": "F:bw.field_m:[[I",
           "original": "field_m",
           "renamed": "unitDefinitions"
+        },
+        {
+          "start": 56921,
+          "end": 56922,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 56971,
+          "end": 56972,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 57031,
+          "end": 57032,
+          "symbol": "M:ej.b(IIII)Z",
+          "original": "b",
+          "renamed": "handleChatKey"
         },
         {
           "start": 57181,
@@ -967739,6 +968325,20 @@
           "symbol": "F:hf.field_c:Z",
           "original": "field_c",
           "renamed": "textChatActive"
+        },
+        {
+          "start": 58199,
+          "end": 58200,
+          "symbol": "M:ej.b(II)V",
+          "original": "b",
+          "renamed": "setPlanningPhase"
+        },
+        {
+          "start": 58370,
+          "end": 58371,
+          "symbol": "M:ej.a(IIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitInfluenceForCategory"
         },
         {
           "start": 58408,
@@ -1178594,7 +1179194,7 @@
       "original": "ic.java",
       "renamed": "GameplayController.java",
       "inputSha256": "807c18d2e3ff729e80e0e5158ab16fc972b965707919ee846c6d5759e02a1ab6",
-      "outputSha256": "f331c237dff56a5fa4400b11bdc65fa03901cab245870c557ac3e80e0bd193d1",
+      "outputSha256": "323e681961b3433c4a4960785766d1609b7fbba2fd23768337455b9e03c66c9f",
       "edits": [
         {
           "start": 71,
@@ -1196953,6 +1197553,13 @@
           "renamed": "currentPlayer"
         },
         {
+          "start": 152691,
+          "end": 152692,
+          "symbol": "M:ej.h(I)Z",
+          "original": "h",
+          "renamed": "advanceTurn"
+        },
+        {
           "start": 153048,
           "end": 153056,
           "symbol": "F:ic.field_xb:Lha;",
@@ -1197007,6 +1197614,13 @@
           "symbol": "F:ha.field_gb:I",
           "original": "field_gb",
           "renamed": "currentPlayer"
+        },
+        {
+          "start": 153257,
+          "end": 153258,
+          "symbol": "M:ej.h(I)Z",
+          "original": "h",
+          "renamed": "advanceTurn"
         },
         {
           "start": 153462,
@@ -1201921,6 +1202535,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "ActionSpell"
+        },
+        {
+          "start": 201328,
+          "end": 201329,
+          "symbol": "M:ej.a(IIBZ)V",
+          "original": "a",
+          "renamed": "updateDebugScoreOverlay"
         },
         {
           "start": 201330,
@@ -1305798,7 +1306419,7 @@
       "original": "ja.java",
       "renamed": "CameraOverviewTarget.java",
       "inputSha256": "c3dd84de98b9c649df8c899b79b048a4971f43bd3d704268741ddc089205453c",
-      "outputSha256": "719b44a6bfa40ee1942527b69b41ea63fcab4c147c559c08bd3e79bee002070a",
+      "outputSha256": "1979c25b90746ddfc8073d963bf3afc2c50611b5f33a7b9106ab80b7242b6689",
       "edits": [
         {
           "start": 50,
@@ -1306065,6 +1306686,13 @@
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "AiPlanner"
+        },
+        {
+          "start": 1178,
+          "end": 1179,
+          "symbol": "M:ej.b(IIII)Z",
+          "original": "b",
+          "renamed": "handleChatKey"
         },
         {
           "start": 1243,
@@ -1307451,6 +1308079,13 @@
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "AiPlanner"
+        },
+        {
+          "start": 8155,
+          "end": 8156,
+          "symbol": "M:ej.b(IIII)Z",
+          "original": "b",
+          "renamed": "handleChatKey"
         }
       ]
     },
@@ -1826027,7 +1826662,7 @@
       "original": "vf.java",
       "renamed": "TileableNoiseGenerator.java",
       "inputSha256": "b1234778293efd59380bcf623bdd19d135ba91a613eef561ce987d102ddc1f9e",
-      "outputSha256": "a344300aa0d4d6ff3d29606fafc8cdaeb8f2b72b2d3bdccf48c4e6bbfd072334",
+      "outputSha256": "b954cebe1a951c2b66192aa5d43de7ffe5f84a6bf73781031a94ba2d8a352637",
       "edits": [
         {
           "start": 74,
@@ -1831103,6 +1831738,13 @@
           "symbol": "C:cl",
           "original": "cl",
           "renamed": "AiUnitPlanner"
+        },
+        {
+          "start": 23591,
+          "end": 23592,
+          "symbol": "M:cl.b(II)V",
+          "original": "b",
+          "renamed": "sendRoomOptionsUpdate"
         },
         {
           "start": 23596,
@@ -1904695,10 +1905337,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "2df7e9f429d1d055ebf81d49ffdd00d3210ca8a4e9bb15517c5e41faadc1c287",
+    "rulesSha256": "8fce805b54042fa77e635d35672c9e7ccb92b2888db36526d1e5564ee7d4edd4",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "a0a1c4c9cfd6c9199afe50bc86efc54c6041bc9832710afc0c4e65fe31fca920",
+    "outputTreeSha256": "13c0aa8e0ea7e591b19c4b215a2f14e499bd5827b62506899d40a9681fdd0d7e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
