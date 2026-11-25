@@ -190,7 +190,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         int textLength = DropdownSelectorPainter.packetPayloadLength - 1;
         byte[] encodedUrl = new byte[textLength];
         ByteStorage.incomingPacket.a(textLength, encodedUrl, false, 0);
-        SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.a(encodedUrl, (byte) 127), navigationFlag != 0);
+        SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
         if (obfuscationGuard != 16433) {
           this.dispatchSharedPacket(-76);
         }
@@ -642,7 +642,7 @@ abstract class NetworkGameShell extends GameAppletShell {
               IconTextComponent.field_Nb = null;
             } else {
               if (IconTextComponent.field_Nb.ensureGroupAvailableByName(28979, "")) {
-                CampaignUnitOverride.a((byte) -82, IconTextComponent.field_Nb);
+                CampaignUnitOverride.loadCommonClientText((byte) -82, IconTextComponent.field_Nb);
                 IconTextComponent.field_Nb = null;
                 ModalDialog.a(0);
               }

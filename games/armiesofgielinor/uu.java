@@ -455,7 +455,7 @@ final class uu {
         }
     }
 
-    final static String a(byte[] param0, byte param1) {
+    final static String decodeTextBytes(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -492,7 +492,7 @@ final class uu {
         byte[] var3;
         if (!param0) {
           var3 = (byte[]) null;
-          uu.a((byte[]) null, (byte) -92);
+          uu.decodeTextBytes((byte[]) null, (byte) -92);
         }
         if (param1 >= 32 &&
           param1 <= 126) {
