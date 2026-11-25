@@ -344,7 +344,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                GameState.d(22943);
+                GameState.detectMaximumHeapSize(22943);
                 this.createCanvas(0);
                 BattleExplosionVisual.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) NotificationEntry.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);

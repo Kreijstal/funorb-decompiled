@@ -873,7 +873,7 @@ final class GameSession implements AiHost {
                 var9.position = var9.position + 2;
                 var10 = var9.position;
                 if (this.field_h >= 0) {
-                  this.field_P.a(var9, (byte) 68, this.field_n);
+                  this.field_P.writeState(var9, (byte) 68, this.field_n);
                 }
                 var9.patchLengthShort(param0 - 549356895, var9.position - var10);
                 if (!AchievementProgress.field_g) {
@@ -2022,7 +2022,7 @@ final class GameSession implements AiHost {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_P.c(0);
+          this.field_P.resetTerritoryProductionBudgets(0);
           this.field_P.decodeAllianceMatrix(param2, 0);
           if (param0 <= 89) {
             this.field_n = (Player) null;
@@ -3188,7 +3188,7 @@ final class GameSession implements AiHost {
             if (fieldTemp$0 == this.field_P.field_v.length) {
               this.field_n = this.field_P.field_v[0];
               this.field_h = 0;
-              this.field_P.c(0);
+              this.field_P.resetTerritoryProductionBudgets(0);
               this.runTurnAndPrepareReplay(ClientDrawingSupport.nextRandomInt((byte) 27), 79);
               this.field_z.field_d = ClientDrawingSupport.nextRandomInt((byte) 27);
               this.field_P.chooseYearName((byte) 119);

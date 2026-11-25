@@ -375,7 +375,7 @@ final class GameState {
         }
     }
 
-    final static void d(int param0) {
+    final static void detectMaximumHeapSize(int param0) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -424,7 +424,7 @@ final class GameState {
         this.field_n = param0;
     }
 
-    private final void a(boolean param0) {
+    private final void removeUnopposedCombatants(boolean param0) {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -437,7 +437,7 @@ final class GameState {
             var2++;
             continue;
           }
-          this.c(var2, -40);
+          this.removeCombatant(var2, -40);
         }
     }
 
@@ -476,14 +476,14 @@ final class GameState {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void removeCombatant(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var3;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 > -15) {
-          this.b((byte) -59);
+          this.resolveCaptureCompetition((byte) -59);
         }
         var3 = this.field_K[param0];
         this.field_C = this.field_C - 1;
@@ -500,7 +500,7 @@ final class GameState {
         }
     }
 
-    final void c(int param0) {
+    final void resetTerritoryProductionBudgets(int param0) {
         int var3 = 0;
         Player[] var2;
         Player var4;
@@ -606,7 +606,7 @@ final class GameState {
         }
     }
 
-    private final void b(byte param0) {
+    private final void resolveCaptureCompetition(byte param0) {
         int var4 = 0;
         int dupTemp$0 = 0;
         int var2;
@@ -634,7 +634,7 @@ final class GameState {
           dupTemp$0 = this.field_u[var2] - 1;
           this.field_u[var2] = dupTemp$0;
           if (0 == dupTemp$0) {
-            this.c(this.a((byte) 94, var2), -119);
+            this.removeCombatant(this.findCombatantIndex((byte) 94, var2), -119);
           }
         } while (this.field_u[var2] >= 0);
         throw new RuntimeException();
@@ -683,7 +683,7 @@ final class GameState {
           if (param0 != -114) {
             return;
           }
-          this.a(false);
+          this.removeUnopposedCombatants(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -703,7 +703,7 @@ final class GameState {
         this.field_z = true;
         this.field_k = param0;
         if (param1 != 3) {
-          this.c(-66);
+          this.resetTerritoryProductionBudgets(-66);
         }
     }
 
@@ -775,10 +775,10 @@ final class GameState {
           }
           this.applyDefensiveNetAndStellarBombProjects(param2, 82, param3);
           this.resolveAllStarCombats(param1 + 12268, param2, var18, param3, param0);
-          this.a(param2, param0, 14389);
+          this.resolveUnderGarrisonedStars(param2, param0, 14389);
           this.applyTannhauserAndTerraformProjects(param3, param0, 7377, param2);
           this.expireAlliancesAndWormholes(param1, param2);
-          this.e(0);
+          this.recomputeTerritoryEconomy(0);
           this.markDefeatedPlayers(param2, 0);
           this.checkVictory(param1 ^ -6);
           if (param3 != null) {
@@ -900,7 +900,7 @@ final class GameState {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 <= 40) {
-            this.b((byte) 111);
+            this.resolveCaptureCompetition((byte) 111);
           }
           if (!this.field_o.field_h) {
             return;
@@ -1053,7 +1053,7 @@ final class GameState {
         }
     }
 
-    private final void a(Star param0, BattleEvent param1, int param2) {
+    private final void returnSurvivingForeignFleets(Star param0, BattleEvent param1, int param2) {
         FleetMove var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -1194,7 +1194,7 @@ final class GameState {
         return QuickChatCategoryRegistry.a(StringList.field_i, 4371, new String[]{QuickChatCategoryRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
     }
 
-    final static void a(int param0) {
+    final static void resetChatRateLimit(int param0) {
         NetworkArchiveRequest.field_z = ClientClockSupport.currentTimeMillis(14274);
         DropTargetWidget.field_C = 0;
         if (param0 != -5883) {
@@ -1293,12 +1293,12 @@ final class GameState {
             this.detachStarFromTerritory((byte) 122, param1);
           }
           this.updateTerritoryMembership(param2, param1);
-          this.a(param1, false, (byte) 117);
+          this.updateMinimumGarrison(param1, false, (byte) 117);
           var8 = param1.field_D;
           var4 = var8;
           for (var5 = 0; var8.length > var5; var5++) {
             var6 = var8[var5];
-            this.a(var6, false, (byte) 119);
+            this.updateMinimumGarrison(var6, false, (byte) 119);
           }
           param1.field_y.field_m.addStar(-21771, param1);
           if (null == param1.field_y.field_m.field_q) {
@@ -1344,7 +1344,7 @@ final class GameState {
         return var3;
     }
 
-    private final void a(int param0, BattleEvent param1, Star param2) {
+    private final void returnFleetsAfterCapture(int param0, BattleEvent param1, Star param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1570,7 +1570,7 @@ final class GameState {
         try {
           if (param1 <= 100) {
             Player var6 = (Player) null;
-            this.a((PacketBuffer) null, (byte) -70, (Player) null);
+            this.writeState((PacketBuffer) null, (byte) -70, (Player) null);
           }
           for (var4_int = 0; var4_int < 4; var4_int++) {
             param0.field_G[var4_int] = 1;
@@ -1741,10 +1741,10 @@ final class GameState {
                 }
                 this.field_u[var8Lifetime1] = var11Lifetime2;
               }
-              this.a((byte) -124, param1, (BattleEvent) (var9));
+              this.applyCombatLossRetreats((byte) -124, param1, (BattleEvent) (var9));
               if (this.field_u[var8Lifetime1] > 0) {
                 param1.field_x = this.field_u[var8Lifetime1];
-                this.a(param1, (BattleEvent) (var9), -30724);
+                this.returnSurvivingForeignFleets(param1, (BattleEvent) (var9), -30724);
                 if (var9 != null) {
                   ((BattleEvent) (var9)).field_m = param1.field_R;
                   ((BattleEvent) (var9)).field_i = param1.field_y;
@@ -1783,10 +1783,10 @@ final class GameState {
                 }
                 this.field_u[var8Lifetime1] = var11Lifetime2;
               }
-              this.a((byte) -124, param1, (BattleEvent) (var9));
+              this.applyCombatLossRetreats((byte) -124, param1, (BattleEvent) (var9));
               if (this.field_u[var8Lifetime1] > 0) {
                 param1.field_x = this.field_u[var8Lifetime1];
-                this.a(param1, (BattleEvent) (var9), -30724);
+                this.returnSurvivingForeignFleets(param1, (BattleEvent) (var9), -30724);
                 if (var9 != null) {
                   ((BattleEvent) (var9)).field_m = param1.field_R;
                   ((BattleEvent) (var9)).field_i = param1.field_y;
@@ -1832,7 +1832,7 @@ final class GameState {
               this.abandonStar(-21031, param1);
               return;
             }
-            this.b((byte) 15);
+            this.resolveCaptureCompetition((byte) 15);
             var11Lifetime2 = this.field_K[0];
             var15 = this.field_v[var11Lifetime2];
             this.captureStar(var15, param1, 0);
@@ -1845,7 +1845,7 @@ final class GameState {
             if (param2 != null) {
               param2.field_f[var11Lifetime2] = param2.field_f[var11Lifetime2] + 1;
             }
-            this.a(0, (BattleEvent) (var9), param1);
+            this.returnFleetsAfterCapture(0, (BattleEvent) (var9), param1);
             return;
           }
           if (var11Lifetime2 >= 3) {
@@ -2043,8 +2043,8 @@ final class GameState {
             var5.unlink((byte) -118);
             SolMapReader.a(var4_ref, -5);
           }
-          this.a(param2, false, (byte) 125);
-          this.a(param0, false, (byte) 114);
+          this.updateMinimumGarrison(param2, false, (byte) 125);
+          this.updateMinimumGarrison(param0, false, (byte) 114);
           this.field_g.a(param1 ^ 26249);
           this.field_g.computeDistances((byte) 80);
           return;
@@ -2257,19 +2257,19 @@ final class GameState {
         }
     }
 
-    private final void a(Star param0, boolean param1, byte param2) {
+    private final void updateMinimumGarrison(Star param0, boolean param1, byte param2) {
         try {
           QuickChatMenuSupport.updateMinimumGarrison(this.field_o, param1, param0, (byte) -2);
           if (param2 <= 113) {
             BattleEvent var5 = (BattleEvent) null;
-            this.a((Star) null, (BattleEvent) null, 39);
+            this.returnSurvivingForeignFleets((Star) null, (BattleEvent) null, 39);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dc.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(PacketBuffer param0, byte param1, Player param2) {
+    final void writeState(PacketBuffer param0, byte param1, Player param2) {
         if (param1 <= 49) {
           return;
         }
@@ -2325,8 +2325,8 @@ final class GameState {
           dupTemp$1 = this.field_u[var7] - 1;
           this.field_u[var7] = dupTemp$1;
           if (0 == dupTemp$1) {
-            this.c(this.a((byte) 98, var7), -32);
-            this.a(false);
+            this.removeCombatant(this.findCombatantIndex((byte) 98, var7), -32);
+            this.removeUnopposedCombatants(false);
           }
           if (this.field_u[var7] < 0) {
             throw new RuntimeException();
@@ -2342,7 +2342,7 @@ final class GameState {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int findCombatantIndex(byte param0, int param1) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var3 = 0; this.field_C > var3; var3++) {
@@ -2464,8 +2464,8 @@ final class GameState {
                   var4 == var3_ref.field_k.field_R) {
                   this.splitTerritory(80, var4);
                 }
-                this.a(var3_ref.field_n, false, (byte) 123);
-                this.a(var3_ref.field_k, false, (byte) 118);
+                this.updateMinimumGarrison(var3_ref.field_n, false, (byte) 123);
+                this.updateMinimumGarrison(var3_ref.field_k, false, (byte) 118);
                 this.field_g.a(26253);
                 this.field_g.computeDistances((byte) 80);
                 var3_ref.unlink((byte) -101);
@@ -2583,7 +2583,7 @@ final class GameState {
         }
     }
 
-    final void e(int param0) {
+    final void recomputeTerritoryEconomy(int param0) {
         int var3 = 0;
         Player[] var2;
         Player var4;
@@ -3114,7 +3114,7 @@ final class GameState {
         }
     }
 
-    private final void a(TurnEventLog param0, int param1, int param2) {
+    private final void resolveUnderGarrisonedStars(TurnEventLog param0, int param1, int param2) {
         int incrementValue$4 = 0;
         Star dupTemp$3 = null;
         int incrementValue$2 = 0;
@@ -3199,7 +3199,7 @@ final class GameState {
                   var11 = var19Lifetime2;
                   if (var8_ref_ln.field_y == var19Lifetime2.field_y &&
                     !UsernameAvailabilityValidator.field_r[var19Lifetime2.field_p]) {
-                    this.a(var19Lifetime2, true, (byte) 125);
+                    this.updateMinimumGarrison(var19Lifetime2, true, (byte) 125);
                   }
                 }
               }
@@ -3411,7 +3411,7 @@ final class GameState {
         }
     }
 
-    private final void a(byte param0, Star param1, BattleEvent param2) {
+    private final void applyCombatLossRetreats(byte param0, Star param1, BattleEvent param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;

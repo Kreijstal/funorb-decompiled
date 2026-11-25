@@ -203,7 +203,7 @@ class AnimatedPanel extends PanelNode {
                   var15.field_g = var16.generate((byte) -126);
                 }
                 var15.field_g.assignHomeStars(var15.field_v, param3, param1 - 46);
-                var15.e(param1 - 50);
+                var15.recomputeTerritoryEconomy(param1 - 50);
                 var15.recomputePlayerTotals(param1 - 151);
                 stackIn_17_0 = var15;
                 return stackIn_17_0;

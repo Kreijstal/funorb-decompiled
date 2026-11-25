@@ -96,7 +96,7 @@ final class AudioService implements Runnable {
                 return stackIn_3_0;
               }
               var5.field_g.assignHomeStars(var5.field_v, param0, param3 + 22383);
-              var5.e(0);
+              var5.recomputeTerritoryEconomy(0);
               var5.recomputePlayerTotals(-124);
               stackIn_8_0 = var5;
               return stackIn_8_0;

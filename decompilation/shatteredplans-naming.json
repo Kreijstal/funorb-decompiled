@@ -7212,6 +7212,14 @@
       "renamedSymbol": "M:GameState.getYearName(B)Ljava/lang/String;"
     },
     {
+      "symbol": "M:dc.a(BI)I",
+      "originalName": "a",
+      "to": "findCombatantIndex",
+      "evidence": "Search retained dense combatant-id array up to active count and return matching index. Miss invokes original null validate-orders callback for byte<=57then throws RuntimeException; never change to-1. Battle initialization/hostility/removal/simulation flow read; preserve sentinel neutral id and full primitive domains. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.findCombatantIndex(BI)I"
+    },
+    {
       "symbol": "M:dc.a(BLk;Lln;)Z",
       "originalName": "a",
       "to": "tallyShipsAtStar",
@@ -7228,12 +7236,28 @@
       "renamedSymbol": "M:GameState.detachStarFromTerritory(BLStar;)V"
     },
     {
+      "symbol": "M:dc.a(BLln;Leg;)V",
+      "originalName": "a",
+      "to": "applyCombatLossRetreats",
+      "evidence": "Use initial versus surviving per-player fleet totals to record casualties and return half lost fleets to pending origin/defender retreat state, with distinct all-defender-fleets-lost branch. Complete battle resolution and BattleEvent append helpers read. Preserve proportional rounding/division, original-owner predicate, optional event writes, byte guard wormhole callback and queue order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V"
+    },
+    {
       "symbol": "M:dc.a(B[[Z)V",
       "originalName": "a",
       "to": "buildHostilePairs",
       "evidence": "Lists for each candidate the other candidates that are neutral or not allied with it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.buildHostilePairs(B[[Z)V"
+    },
+    {
+      "symbol": "M:dc.a(I)V",
+      "originalName": "a",
+      "to": "resetChatRateLimit",
+      "evidence": "Store client-clock timestamp then zero retained chat rate counter; wrong int clears GameState statics afterward. Quick Chat send caller, timed rate-limit consumer and chat packet caller inspected. Preserve clock-call/write ordering and complete int guard behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.resetChatRateLimit(I)V"
     },
     {
       "symbol": "M:dc.a(IBLob;)V",
@@ -7266,6 +7290,14 @@
       "evidence": "Stores the adjective and noun indices used by the year name.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.setYearNameIndices(IIZ)V"
+    },
+    {
+      "symbol": "M:dc.a(ILeg;Lln;)V",
+      "originalName": "a",
+      "to": "returnFleetsAfterCapture",
+      "evidence": "After selecting/capturing winner, distribute retained pre-capture surviving counts back to incoming fleet origins, subtracting final star garrison for winning owner. Optionally append return contributions to battle event. Preserve original arithmetic/division, predicate/read order, zero-entry logging rule and wrong-int null wormhole callback. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V"
     },
     {
       "symbol": "M:dc.a(ILfs;)V",
@@ -7348,6 +7380,14 @@
       "renamedSymbol": "M:GameState.markDefeatedPlayers(LTurnEventLog;I)V"
     },
     {
+      "symbol": "M:dc.a(Lk;II)V",
+      "originalName": "a",
+      "to": "resolveUnderGarrisonedStars",
+      "evidence": "Mark owned stars below minimum garrison, propagate neighbour minimum changes until original rule-dependent termination, return/distribute pending fleets with deterministic per-star RNG seed, log abandonment and abandon marked stars. Complete211line body and turn phase read. Preserve initial16slot scratch quirks, resize timing, seeded draw count/order, partial global flags, owner aliases, exceptions and final work-array clear. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V"
+    },
+    {
       "symbol": "M:dc.a(Lk;ILse;)V",
       "originalName": "a",
       "to": "applyDefensiveNetAndStellarBombProjects",
@@ -7372,6 +7412,14 @@
       "renamedSymbol": "M:GameState.createTannhauserWormhole(LStar;ILStar;)V"
     },
     {
+      "symbol": "M:dc.a(Lln;Leg;I)V",
+      "originalName": "a",
+      "to": "returnSurvivingForeignFleets",
+      "evidence": "When original star owner survives, return proportional surviving counts of incoming fleets whose owner differs from star owner to their origins, optionally logging nonzero contributions. Preserve original denominator/rounding/overflow, predicate and queue order; wrong int calls processTurn before work. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V"
+    },
+    {
       "symbol": "M:dc.a(Lln;Lln;I)Z",
       "originalName": "a",
       "to": "isWithinMovementRange",
@@ -7386,6 +7434,22 @@
       "evidence": "Stores the flag that the AI messages call a Defensive Net at the star.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.setDefensiveNet(LStar;Z)V"
+    },
+    {
+      "symbol": "M:dc.a(Lln;ZB)V",
+      "originalName": "a",
+      "to": "updateMinimumGarrison",
+      "evidence": "Delegate original rule-aware minimum garrison helper with(rules,bool,star,-2). Complete helper read including disregard-marked-neighbours bool and rule modes. Byte<=113then invokes original null combat helper. Preserve flag forwarding, partial star update and late callback/failure. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.updateMinimumGarrison(LStar;ZB)V"
+    },
+    {
+      "symbol": "M:dc.a(Lob;BLfs;)V",
+      "originalName": "a",
+      "to": "writeState",
+      "evidence": "For byte>49delegate complete state serializer with retained players/map/territories/alliances/projects/wormholes/scores/turn values and supplied player; smaller bytes return before dereferences. Snapshot packet caller inspected. Preserve exact argument order, byte truncation, player/null paths, buffer/cursor and failure ordering. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.writeState(LPacketBuffer;BLPlayer;)V"
     },
     {
       "symbol": "M:dc.a(Lob;Lfs;Z)V",
@@ -7428,12 +7492,28 @@
       "renamedSymbol": "M:GameState.applyTannhauserAndTerraformProjects(LAchievementProgress;IILTurnEventLog;)V"
     },
     {
+      "symbol": "M:dc.a(Z)V",
+      "originalName": "a",
+      "to": "removeUnopposedCombatants",
+      "evidence": "Remove active combatants whose retained hostility-link count iszero, rechecking same dense index after swap. Original hostile-pair builder/simulator read. True bool clears galaxy map first. Preserve array aliases, in-place swap behavior, full null/exception paths and no reordering of links. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.removeUnopposedCombatants(Z)V"
+    },
+    {
       "symbol": "M:dc.a(ZLk;I)V",
       "originalName": "a",
       "to": "applyPlacementsAndIncome",
       "evidence": "Moves placed fleets to their stars, tops up territory stars, logs placements and adds random resource income.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.applyPlacementsAndIncome(ZLTurnEventLog;I)V"
+    },
+    {
+      "symbol": "M:dc.b(B)V",
+      "originalName": "b",
+      "to": "resolveCaptureCompetition",
+      "evidence": "After initial combat leaves allied survivors and no defending garrison, choose max of one RNG int per active player, decrement selected remaining fleet count and remove zero entries until one combatant remains. Capture caller establishes phase. Preserve all random draw counts/order, decrement loop, negative-result failure and wrong-byte initial-array clear. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.resolveCaptureCompetition(B)V"
     },
     {
       "symbol": "M:dc.b(BLln;)I",
@@ -7476,12 +7556,36 @@
       "renamedSymbol": "M:GameState.chooseYearName(B)V"
     },
     {
+      "symbol": "M:dc.c(I)V",
+      "originalName": "c",
+      "to": "resetTerritoryProductionBudgets",
+      "evidence": "Loop players from supplied index and reset per-territory production budget from nonnegative minimum of four accumulated resources, choosing individual/combined territory by original rule flag. Complete budget helper and placement/income consumer read. Preserve arbitrary starting index, allocation/helper guards and partial writes. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.resetTerritoryProductionBudgets(I)V"
+    },
+    {
+      "symbol": "M:dc.c(II)V",
+      "originalName": "c",
+      "to": "removeCombatant",
+      "evidence": "Remove selected dense combatant slot by last-entry swaps across id/hostility arrays, then remove references to removed id from remaining adjacency lists. Preserve original swapped-edge skip caused by increasing loop index, duplicate/self-link behavior and bad-int capture-competition callback before mutation. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.removeCombatant(II)V"
+    },
+    {
       "symbol": "M:dc.d(B)[I",
       "originalName": "d",
       "to": "simulateCombat",
       "evidence": "Repeatedly picks a random hostile pair and removes one ship from the victim, counting kills per player.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.simulateCombat(B)[I"
+    },
+    {
+      "symbol": "M:dc.d(I)V",
+      "originalName": "d",
+      "to": "detectMaximumHeapSize",
+      "evidence": "Reflect Runtime.maxMemory and invoke on getRuntime with original null argument array; on success store1+integer MiB in retained global. Preserve nested Exception/Throwable catch scopes, exact casts/overflow, ignored missing method and wrong-int caption clear. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.detectMaximumHeapSize(I)V"
     },
     {
       "symbol": "M:dc.d(II)V",
@@ -7498,6 +7602,14 @@
       "evidence": "Assigns null to 6 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameState.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:dc.e(I)V",
+      "originalName": "e",
+      "to": "recomputeTerritoryEconomy",
+      "evidence": "For each selected player territory or combined territory, reset production budget then recompute retained minimum resource value, surplus array and resource ordering through complete helpers. Preserve branch-dependent guard expressions, allocation/alias behavior, arbitrary start index, original minima calculations and callback/exception order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameState.recomputeTerritoryEconomy(I)V"
     },
     {
       "symbol": "M:dc.f(I)I",
@@ -101300,7 +101412,7 @@
     },
     {
       "symbol": "L:dc.a(BI)I#0",
-      "renamedSymbol": "L:GameState.a(BI)I#0",
+      "renamedSymbol": "L:GameState.findCombatantIndex(BI)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -101311,7 +101423,7 @@
     },
     {
       "symbol": "L:dc.a(BI)I#1",
-      "renamedSymbol": "L:GameState.a(BI)I#1",
+      "renamedSymbol": "L:GameState.findCombatantIndex(BI)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -101322,7 +101434,7 @@
     },
     {
       "symbol": "L:dc.a(BI)I#2",
-      "renamedSymbol": "L:GameState.a(BI)I#2",
+      "renamedSymbol": "L:GameState.findCombatantIndex(BI)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -101652,7 +101764,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#0",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#0",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#0",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -101663,7 +101775,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#1",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#1",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#1",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -101674,7 +101786,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#10",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#10",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -101685,7 +101797,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#11",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#11",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -101696,7 +101808,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#12",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#12",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -101707,7 +101819,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#13",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#13",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -101718,7 +101830,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#14",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#14",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -101729,7 +101841,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#15",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#15",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -101740,7 +101852,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#16",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#16",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#16",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -101751,7 +101863,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#17",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#17",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#17",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -101762,7 +101874,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#18",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#18",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#18",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -101773,7 +101885,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#19",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#19",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -101784,7 +101896,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#2",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#2",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#2",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -101795,7 +101907,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#3",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#3",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#3",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -101806,7 +101918,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#4",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#4",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#4",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -101817,7 +101929,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#5",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#5",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -101828,7 +101940,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#6",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#6",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#6",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -101839,7 +101951,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#7",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#7",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -101850,7 +101962,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#8",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#8",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#8",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -101861,7 +101973,7 @@
     },
     {
       "symbol": "L:dc.a(BLln;Leg;)V#9",
-      "renamedSymbol": "L:GameState.a(BLStar;LBattleEvent;)V#9",
+      "renamedSymbol": "L:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102620,7 +102732,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#0",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#0",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -102631,7 +102743,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#1",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#1",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -102642,7 +102754,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#10",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#10",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -102653,7 +102765,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#11",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#11",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -102664,7 +102776,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#12",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#12",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -102675,7 +102787,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#13",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#13",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -102686,7 +102798,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#2",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#2",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -102697,7 +102809,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#3",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#3",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -102708,7 +102820,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#4",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#4",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -102719,7 +102831,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#5",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#5",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -102730,7 +102842,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#6",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#6",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102741,7 +102853,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#7",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#7",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#7",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -102752,7 +102864,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#8",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#8",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102763,7 +102875,7 @@
     },
     {
       "symbol": "L:dc.a(ILeg;Lln;)V#9",
-      "renamedSymbol": "L:GameState.a(ILBattleEvent;LStar;)V#9",
+      "renamedSymbol": "L:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -104567,7 +104679,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#0",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#0",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#0",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -104578,7 +104690,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#1",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#1",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#1",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -104589,7 +104701,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#10",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#10",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#10",
       "originalName": "stackIn_89_2",
       "renamedName": "stackIn_89_2",
       "declaration": {
@@ -104600,7 +104712,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#11",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#11",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -104611,7 +104723,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#12",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#12",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#12",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -104622,7 +104734,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#13",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#13",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#13",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -104633,7 +104745,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#14",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#14",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#14",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -104644,7 +104756,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#15",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#15",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#15",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -104655,7 +104767,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#16",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#16",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#16",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -104666,7 +104778,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#17",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#17",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#17",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -104677,7 +104789,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#18",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#18",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#18",
       "originalName": "var8_ref_ln",
       "renamedName": "var8_ref_ln",
       "declaration": {
@@ -104688,7 +104800,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#19",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#19",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#19",
       "originalName": "var9_ref_ln__",
       "renamedName": "var9_ref_ln__",
       "declaration": {
@@ -104699,7 +104811,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#2",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#2",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -104710,7 +104822,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#20",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#20",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#20",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -104721,7 +104833,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#21",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#21",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#21",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -104732,7 +104844,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#22",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#22",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#22",
       "originalName": "var12_ref_ln__",
       "renamedName": "var12_ref_ln__",
       "declaration": {
@@ -104743,7 +104855,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#23",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#23",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#23",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -104754,7 +104866,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#24",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#24",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#24",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -104765,7 +104877,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#25",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#25",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#25",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -104776,7 +104888,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#26",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#26",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#26",
       "originalName": "var14_ref_ln",
       "renamedName": "var14_ref_ln",
       "declaration": {
@@ -104787,7 +104899,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#27",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#27",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#27",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -104798,7 +104910,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#28",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#28",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#28",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -104809,7 +104921,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#29",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#29",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#29",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -104820,7 +104932,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#3",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#3",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#3",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -104831,7 +104943,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#30",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#30",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#30",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -104842,7 +104954,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#31",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#31",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#31",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -104853,7 +104965,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#32",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#32",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#32",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -104864,7 +104976,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#33",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#33",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#33",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -104875,7 +104987,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#34",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#34",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#34",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -104886,7 +104998,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#35",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#35",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#35",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -104897,7 +105009,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#36",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#36",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#36",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -104908,7 +105020,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#37",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#37",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#37",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -104919,7 +105031,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#38",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#38",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#38",
       "originalName": "var12_ref_ln__Lifetime1",
       "renamedName": "var12_ref_ln__Lifetime1",
       "declaration": {
@@ -104930,7 +105042,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#39",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#39",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#39",
       "originalName": "var14_ref_lnLifetime1",
       "renamedName": "var14_ref_lnLifetime1",
       "declaration": {
@@ -104941,7 +105053,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#4",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#4",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#4",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -104952,7 +105064,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#40",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#40",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#40",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -104963,7 +105075,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#41",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#41",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#41",
       "originalName": "var19Lifetime2",
       "renamedName": "var19Lifetime2",
       "declaration": {
@@ -104974,7 +105086,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#42",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#42",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#42",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -104985,7 +105097,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#43",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#43",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#43",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -104996,7 +105108,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#44",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#44",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#44",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -105007,7 +105119,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#45",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#45",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#45",
       "originalName": "var13Lifetime1Lifetime1",
       "renamedName": "var13Lifetime1Lifetime1",
       "declaration": {
@@ -105018,7 +105130,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#46",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#46",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#46",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105029,7 +105141,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#5",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#5",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -105040,7 +105152,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#6",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#6",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#6",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -105051,7 +105163,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#7",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#7",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#7",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -105062,7 +105174,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#8",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#8",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#8",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -105073,7 +105185,7 @@
     },
     {
       "symbol": "L:dc.a(Lk;II)V#9",
-      "renamedSymbol": "L:GameState.a(LTurnEventLog;II)V#9",
+      "renamedSymbol": "L:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#9",
       "originalName": "stackIn_88_1",
       "renamedName": "stackIn_88_1",
       "declaration": {
@@ -105480,7 +105592,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#0",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#0",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -105491,7 +105603,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#1",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#1",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105502,7 +105614,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#10",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#10",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#10",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -105513,7 +105625,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#11",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#11",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -105524,7 +105636,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#12",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#12",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#12",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -105535,7 +105647,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#13",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#13",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105546,7 +105658,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#2",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#2",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -105557,7 +105669,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#3",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#3",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -105568,7 +105680,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#4",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#4",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -105579,7 +105691,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#5",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#5",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -105590,7 +105702,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#6",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#6",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#6",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -105601,7 +105713,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#7",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#7",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#7",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -105612,7 +105724,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#8",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#8",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#8",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -105623,7 +105735,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;Leg;I)V#9",
-      "renamedSymbol": "L:GameState.a(LStar;LBattleEvent;I)V#9",
+      "renamedSymbol": "L:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#9",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -105744,7 +105856,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;ZB)V#0",
-      "renamedSymbol": "L:GameState.a(LStar;ZB)V#0",
+      "renamedSymbol": "L:GameState.updateMinimumGarrison(LStar;ZB)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105755,7 +105867,7 @@
     },
     {
       "symbol": "L:dc.a(Lln;ZB)V#1",
-      "renamedSymbol": "L:GameState.a(LStar;ZB)V#1",
+      "renamedSymbol": "L:GameState.updateMinimumGarrison(LStar;ZB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -105766,7 +105878,7 @@
     },
     {
       "symbol": "L:dc.a(Lob;BLfs;)V#0",
-      "renamedSymbol": "L:GameState.a(LPacketBuffer;BLPlayer;)V#0",
+      "renamedSymbol": "L:GameState.writeState(LPacketBuffer;BLPlayer;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -106646,7 +106758,7 @@
     },
     {
       "symbol": "L:dc.a(Z)V#0",
-      "renamedSymbol": "L:GameState.a(Z)V#0",
+      "renamedSymbol": "L:GameState.removeUnopposedCombatants(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -106657,7 +106769,7 @@
     },
     {
       "symbol": "L:dc.a(Z)V#1",
-      "renamedSymbol": "L:GameState.a(Z)V#1",
+      "renamedSymbol": "L:GameState.removeUnopposedCombatants(Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -107229,7 +107341,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#0",
-      "renamedSymbol": "L:GameState.b(B)V#0",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -107240,7 +107352,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#1",
-      "renamedSymbol": "L:GameState.b(B)V#1",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -107251,7 +107363,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#2",
-      "renamedSymbol": "L:GameState.b(B)V#2",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -107262,7 +107374,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#3",
-      "renamedSymbol": "L:GameState.b(B)V#3",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -107273,7 +107385,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#4",
-      "renamedSymbol": "L:GameState.b(B)V#4",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -107284,7 +107396,7 @@
     },
     {
       "symbol": "L:dc.b(B)V#5",
-      "renamedSymbol": "L:GameState.b(B)V#5",
+      "renamedSymbol": "L:GameState.resolveCaptureCompetition(B)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -107977,7 +108089,7 @@
     },
     {
       "symbol": "L:dc.c(I)V#0",
-      "renamedSymbol": "L:GameState.c(I)V#0",
+      "renamedSymbol": "L:GameState.resetTerritoryProductionBudgets(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -107988,7 +108100,7 @@
     },
     {
       "symbol": "L:dc.c(I)V#1",
-      "renamedSymbol": "L:GameState.c(I)V#1",
+      "renamedSymbol": "L:GameState.resetTerritoryProductionBudgets(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -107999,7 +108111,7 @@
     },
     {
       "symbol": "L:dc.c(I)V#2",
-      "renamedSymbol": "L:GameState.c(I)V#2",
+      "renamedSymbol": "L:GameState.resetTerritoryProductionBudgets(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -108010,7 +108122,7 @@
     },
     {
       "symbol": "L:dc.c(I)V#3",
-      "renamedSymbol": "L:GameState.c(I)V#3",
+      "renamedSymbol": "L:GameState.resetTerritoryProductionBudgets(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -108021,7 +108133,7 @@
     },
     {
       "symbol": "L:dc.c(I)V#4",
-      "renamedSymbol": "L:GameState.c(I)V#4",
+      "renamedSymbol": "L:GameState.resetTerritoryProductionBudgets(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -108032,7 +108144,7 @@
     },
     {
       "symbol": "L:dc.c(II)V#0",
-      "renamedSymbol": "L:GameState.c(II)V#0",
+      "renamedSymbol": "L:GameState.removeCombatant(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -108043,7 +108155,7 @@
     },
     {
       "symbol": "L:dc.c(II)V#1",
-      "renamedSymbol": "L:GameState.c(II)V#1",
+      "renamedSymbol": "L:GameState.removeCombatant(II)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -108054,7 +108166,7 @@
     },
     {
       "symbol": "L:dc.c(II)V#2",
-      "renamedSymbol": "L:GameState.c(II)V#2",
+      "renamedSymbol": "L:GameState.removeCombatant(II)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -108065,7 +108177,7 @@
     },
     {
       "symbol": "L:dc.c(II)V#3",
-      "renamedSymbol": "L:GameState.c(II)V#3",
+      "renamedSymbol": "L:GameState.removeCombatant(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -108208,7 +108320,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#0",
-      "renamedSymbol": "L:GameState.d(I)V#0",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#0",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -108219,7 +108331,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#1",
-      "renamedSymbol": "L:GameState.d(I)V#1",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -108230,7 +108342,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#10",
-      "renamedSymbol": "L:GameState.d(I)V#10",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -108241,7 +108353,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#11",
-      "renamedSymbol": "L:GameState.d(I)V#11",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -108252,7 +108364,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#2",
-      "renamedSymbol": "L:GameState.d(I)V#2",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -108263,7 +108375,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#3",
-      "renamedSymbol": "L:GameState.d(I)V#3",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#3",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -108274,7 +108386,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#4",
-      "renamedSymbol": "L:GameState.d(I)V#4",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -108285,7 +108397,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#5",
-      "renamedSymbol": "L:GameState.d(I)V#5",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -108296,7 +108408,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#6",
-      "renamedSymbol": "L:GameState.d(I)V#6",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -108307,7 +108419,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#7",
-      "renamedSymbol": "L:GameState.d(I)V#7",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -108318,7 +108430,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#8",
-      "renamedSymbol": "L:GameState.d(I)V#8",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -108329,7 +108441,7 @@
     },
     {
       "symbol": "L:dc.d(I)V#9",
-      "renamedSymbol": "L:GameState.d(I)V#9",
+      "renamedSymbol": "L:GameState.detectMaximumHeapSize(I)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -108351,7 +108463,7 @@
     },
     {
       "symbol": "L:dc.e(I)V#0",
-      "renamedSymbol": "L:GameState.e(I)V#0",
+      "renamedSymbol": "L:GameState.recomputeTerritoryEconomy(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -108362,7 +108474,7 @@
     },
     {
       "symbol": "L:dc.e(I)V#1",
-      "renamedSymbol": "L:GameState.e(I)V#1",
+      "renamedSymbol": "L:GameState.recomputeTerritoryEconomy(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -108373,7 +108485,7 @@
     },
     {
       "symbol": "L:dc.e(I)V#2",
-      "renamedSymbol": "L:GameState.e(I)V#2",
+      "renamedSymbol": "L:GameState.recomputeTerritoryEconomy(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -108384,7 +108496,7 @@
     },
     {
       "symbol": "L:dc.e(I)V#3",
-      "renamedSymbol": "L:GameState.e(I)V#3",
+      "renamedSymbol": "L:GameState.recomputeTerritoryEconomy(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -108395,7 +108507,7 @@
     },
     {
       "symbol": "L:dc.e(I)V#4",
-      "renamedSymbol": "L:GameState.e(I)V#4",
+      "renamedSymbol": "L:GameState.recomputeTerritoryEconomy(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -323775,9 +323887,9 @@
     },
     {
       "symbol": "M:dc.a(BI)I",
-      "renamedSymbol": "M:GameState.a(BI)I",
+      "renamedSymbol": "M:GameState.findCombatantIndex(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findCombatantIndex",
       "declaration": {
         "file": "dc.java",
         "start": 89186,
@@ -323808,9 +323920,9 @@
     },
     {
       "symbol": "M:dc.a(BLln;Leg;)V",
-      "renamedSymbol": "M:GameState.a(BLStar;LBattleEvent;)V",
+      "renamedSymbol": "M:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyCombatLossRetreats",
       "declaration": {
         "file": "dc.java",
         "start": 128947,
@@ -323830,9 +323942,9 @@
     },
     {
       "symbol": "M:dc.a(I)V",
-      "renamedSymbol": "M:GameState.a(I)V",
+      "renamedSymbol": "M:GameState.resetChatRateLimit(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetChatRateLimit",
       "declaration": {
         "file": "dc.java",
         "start": 46329,
@@ -323885,9 +323997,9 @@
     },
     {
       "symbol": "M:dc.a(ILeg;Lln;)V",
-      "renamedSymbol": "M:GameState.a(ILBattleEvent;LStar;)V",
+      "renamedSymbol": "M:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "returnFleetsAfterCapture",
       "declaration": {
         "file": "dc.java",
         "start": 51890,
@@ -324006,9 +324118,9 @@
     },
     {
       "symbol": "M:dc.a(Lk;II)V",
-      "renamedSymbol": "M:GameState.a(LTurnEventLog;II)V",
+      "renamedSymbol": "M:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resolveUnderGarrisonedStars",
       "declaration": {
         "file": "dc.java",
         "start": 117350,
@@ -324050,9 +324162,9 @@
     },
     {
       "symbol": "M:dc.a(Lln;Leg;I)V",
-      "renamedSymbol": "M:GameState.a(LStar;LBattleEvent;I)V",
+      "renamedSymbol": "M:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "returnSurvivingForeignFleets",
       "declaration": {
         "file": "dc.java",
         "start": 41241,
@@ -324083,9 +324195,9 @@
     },
     {
       "symbol": "M:dc.a(Lln;ZB)V",
-      "renamedSymbol": "M:GameState.a(LStar;ZB)V",
+      "renamedSymbol": "M:GameState.updateMinimumGarrison(LStar;ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateMinimumGarrison",
       "declaration": {
         "file": "dc.java",
         "start": 86283,
@@ -324094,9 +324206,9 @@
     },
     {
       "symbol": "M:dc.a(Lob;BLfs;)V",
-      "renamedSymbol": "M:GameState.a(LPacketBuffer;BLPlayer;)V",
+      "renamedSymbol": "M:GameState.writeState(LPacketBuffer;BLPlayer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeState",
       "declaration": {
         "file": "dc.java",
         "start": 86751,
@@ -324160,9 +324272,9 @@
     },
     {
       "symbol": "M:dc.a(Z)V",
-      "renamedSymbol": "M:GameState.a(Z)V",
+      "renamedSymbol": "M:GameState.removeUnopposedCombatants(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeUnopposedCombatants",
       "declaration": {
         "file": "dc.java",
         "start": 18065,
@@ -324182,9 +324294,9 @@
     },
     {
       "symbol": "M:dc.b(B)V",
-      "renamedSymbol": "M:GameState.b(B)V",
+      "renamedSymbol": "M:GameState.resolveCaptureCompetition(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resolveCaptureCompetition",
       "declaration": {
         "file": "dc.java",
         "start": 24296,
@@ -324248,9 +324360,9 @@
     },
     {
       "symbol": "M:dc.c(I)V",
-      "renamedSymbol": "M:GameState.c(I)V",
+      "renamedSymbol": "M:GameState.resetTerritoryProductionBudgets(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetTerritoryProductionBudgets",
       "declaration": {
         "file": "dc.java",
         "start": 20782,
@@ -324259,9 +324371,9 @@
     },
     {
       "symbol": "M:dc.c(II)V",
-      "renamedSymbol": "M:GameState.c(II)V",
+      "renamedSymbol": "M:GameState.removeCombatant(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "removeCombatant",
       "declaration": {
         "file": "dc.java",
         "start": 19932,
@@ -324281,9 +324393,9 @@
     },
     {
       "symbol": "M:dc.d(I)V",
-      "renamedSymbol": "M:GameState.d(I)V",
+      "renamedSymbol": "M:GameState.detectMaximumHeapSize(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "detectMaximumHeapSize",
       "declaration": {
         "file": "dc.java",
         "start": 16178,
@@ -324314,9 +324426,9 @@
     },
     {
       "symbol": "M:dc.e(I)V",
-      "renamedSymbol": "M:GameState.e(I)V",
+      "renamedSymbol": "M:GameState.recomputeTerritoryEconomy(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "recomputeTerritoryEconomy",
       "declaration": {
         "file": "dc.java",
         "start": 98109,
@@ -373352,7 +373464,7 @@
     },
     {
       "symbol": "P:dc.a(BI)I#0",
-      "renamedSymbol": "P:GameState.a(BI)I#0",
+      "renamedSymbol": "P:GameState.findCombatantIndex(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373363,7 +373475,7 @@
     },
     {
       "symbol": "P:dc.a(BI)I#1",
-      "renamedSymbol": "P:GameState.a(BI)I#1",
+      "renamedSymbol": "P:GameState.findCombatantIndex(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -373429,7 +373541,7 @@
     },
     {
       "symbol": "P:dc.a(BLln;Leg;)V#0",
-      "renamedSymbol": "P:GameState.a(BLStar;LBattleEvent;)V#0",
+      "renamedSymbol": "P:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373440,7 +373552,7 @@
     },
     {
       "symbol": "P:dc.a(BLln;Leg;)V#1",
-      "renamedSymbol": "P:GameState.a(BLStar;LBattleEvent;)V#1",
+      "renamedSymbol": "P:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -373451,7 +373563,7 @@
     },
     {
       "symbol": "P:dc.a(BLln;Leg;)V#2",
-      "renamedSymbol": "P:GameState.a(BLStar;LBattleEvent;)V#2",
+      "renamedSymbol": "P:GameState.applyCombatLossRetreats(BLStar;LBattleEvent;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -373484,7 +373596,7 @@
     },
     {
       "symbol": "P:dc.a(I)V#0",
-      "renamedSymbol": "P:GameState.a(I)V#0",
+      "renamedSymbol": "P:GameState.resetChatRateLimit(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373627,7 +373739,7 @@
     },
     {
       "symbol": "P:dc.a(ILeg;Lln;)V#0",
-      "renamedSymbol": "P:GameState.a(ILBattleEvent;LStar;)V#0",
+      "renamedSymbol": "P:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373638,7 +373750,7 @@
     },
     {
       "symbol": "P:dc.a(ILeg;Lln;)V#1",
-      "renamedSymbol": "P:GameState.a(ILBattleEvent;LStar;)V#1",
+      "renamedSymbol": "P:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -373649,7 +373761,7 @@
     },
     {
       "symbol": "P:dc.a(ILeg;Lln;)V#2",
-      "renamedSymbol": "P:GameState.a(ILBattleEvent;LStar;)V#2",
+      "renamedSymbol": "P:GameState.returnFleetsAfterCapture(ILBattleEvent;LStar;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -373968,7 +374080,7 @@
     },
     {
       "symbol": "P:dc.a(Lk;II)V#0",
-      "renamedSymbol": "P:GameState.a(LTurnEventLog;II)V#0",
+      "renamedSymbol": "P:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373979,7 +374091,7 @@
     },
     {
       "symbol": "P:dc.a(Lk;II)V#1",
-      "renamedSymbol": "P:GameState.a(LTurnEventLog;II)V#1",
+      "renamedSymbol": "P:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -373990,7 +374102,7 @@
     },
     {
       "symbol": "P:dc.a(Lk;II)V#2",
-      "renamedSymbol": "P:GameState.a(LTurnEventLog;II)V#2",
+      "renamedSymbol": "P:GameState.resolveUnderGarrisonedStars(LTurnEventLog;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -374100,7 +374212,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;Leg;I)V#0",
-      "renamedSymbol": "P:GameState.a(LStar;LBattleEvent;I)V#0",
+      "renamedSymbol": "P:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374111,7 +374223,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;Leg;I)V#1",
-      "renamedSymbol": "P:GameState.a(LStar;LBattleEvent;I)V#1",
+      "renamedSymbol": "P:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374122,7 +374234,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;Leg;I)V#2",
-      "renamedSymbol": "P:GameState.a(LStar;LBattleEvent;I)V#2",
+      "renamedSymbol": "P:GameState.returnSurvivingForeignFleets(LStar;LBattleEvent;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -374188,7 +374300,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;ZB)V#0",
-      "renamedSymbol": "P:GameState.a(LStar;ZB)V#0",
+      "renamedSymbol": "P:GameState.updateMinimumGarrison(LStar;ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374199,7 +374311,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;ZB)V#1",
-      "renamedSymbol": "P:GameState.a(LStar;ZB)V#1",
+      "renamedSymbol": "P:GameState.updateMinimumGarrison(LStar;ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374210,7 +374322,7 @@
     },
     {
       "symbol": "P:dc.a(Lln;ZB)V#2",
-      "renamedSymbol": "P:GameState.a(LStar;ZB)V#2",
+      "renamedSymbol": "P:GameState.updateMinimumGarrison(LStar;ZB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -374221,7 +374333,7 @@
     },
     {
       "symbol": "P:dc.a(Lob;BLfs;)V#0",
-      "renamedSymbol": "P:GameState.a(LPacketBuffer;BLPlayer;)V#0",
+      "renamedSymbol": "P:GameState.writeState(LPacketBuffer;BLPlayer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374232,7 +374344,7 @@
     },
     {
       "symbol": "P:dc.a(Lob;BLfs;)V#1",
-      "renamedSymbol": "P:GameState.a(LPacketBuffer;BLPlayer;)V#1",
+      "renamedSymbol": "P:GameState.writeState(LPacketBuffer;BLPlayer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374243,7 +374355,7 @@
     },
     {
       "symbol": "P:dc.a(Lob;BLfs;)V#2",
-      "renamedSymbol": "P:GameState.a(LPacketBuffer;BLPlayer;)V#2",
+      "renamedSymbol": "P:GameState.writeState(LPacketBuffer;BLPlayer;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -374452,7 +374564,7 @@
     },
     {
       "symbol": "P:dc.a(Z)V#0",
-      "renamedSymbol": "P:GameState.a(Z)V#0",
+      "renamedSymbol": "P:GameState.removeUnopposedCombatants(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374496,7 +374608,7 @@
     },
     {
       "symbol": "P:dc.b(B)V#0",
-      "renamedSymbol": "P:GameState.b(B)V#0",
+      "renamedSymbol": "P:GameState.resolveCaptureCompetition(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374595,7 +374707,7 @@
     },
     {
       "symbol": "P:dc.c(I)V#0",
-      "renamedSymbol": "P:GameState.c(I)V#0",
+      "renamedSymbol": "P:GameState.resetTerritoryProductionBudgets(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374606,7 +374718,7 @@
     },
     {
       "symbol": "P:dc.c(II)V#0",
-      "renamedSymbol": "P:GameState.c(II)V#0",
+      "renamedSymbol": "P:GameState.removeCombatant(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374617,7 +374729,7 @@
     },
     {
       "symbol": "P:dc.c(II)V#1",
-      "renamedSymbol": "P:GameState.c(II)V#1",
+      "renamedSymbol": "P:GameState.removeCombatant(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374639,7 +374751,7 @@
     },
     {
       "symbol": "P:dc.d(I)V#0",
-      "renamedSymbol": "P:GameState.d(I)V#0",
+      "renamedSymbol": "P:GameState.detectMaximumHeapSize(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374683,7 +374795,7 @@
     },
     {
       "symbol": "P:dc.e(I)V#0",
-      "renamedSymbol": "P:GameState.e(I)V#0",
+      "renamedSymbol": "P:GameState.recomputeTerritoryEconomy(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -504348,7 +504460,7 @@
       "original": "dc.java",
       "renamed": "GameState.java",
       "inputSha256": "6080a56f2dfaff26eb61e31c3c1b2746f3c0d343fea377ca2b9dede9f9e07c6d",
-      "outputSha256": "466089fc53e6916f1e4b36c602b3da300435bae4cff5ab8d46231b66c5aec628",
+      "outputSha256": "5489bbeb7c55860dbafca503149bb5ecd2ab97dc625ed501a9324efcc499ffc8",
       "edits": [
         {
           "start": 71,
@@ -504929,6 +505041,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 16178,
+          "end": 16179,
+          "symbol": "M:dc.d(I)V",
+          "original": "d",
+          "renamed": "detectMaximumHeapSize"
+        },
+        {
           "start": 16928,
           "end": 16930,
           "symbol": "C:re",
@@ -504943,11 +505062,25 @@
           "renamed": "setYearNameIndices"
         },
         {
+          "start": 18065,
+          "end": 18066,
+          "symbol": "M:dc.a(Z)V",
+          "original": "a",
+          "renamed": "removeUnopposedCombatants"
+        },
+        {
           "start": 18222,
           "end": 18223,
           "symbol": "C:l",
           "original": "l",
           "renamed": "GalaxyMap"
+        },
+        {
+          "start": 18407,
+          "end": 18408,
+          "symbol": "M:dc.c(II)V",
+          "original": "c",
+          "renamed": "removeCombatant"
         },
         {
           "start": 18456,
@@ -504983,6 +505116,27 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 19932,
+          "end": 19933,
+          "symbol": "M:dc.c(II)V",
+          "original": "c",
+          "renamed": "removeCombatant"
+        },
+        {
+          "start": 20136,
+          "end": 20137,
+          "symbol": "M:dc.b(B)V",
+          "original": "b",
+          "renamed": "resolveCaptureCompetition"
+        },
+        {
+          "start": 20782,
+          "end": 20783,
+          "symbol": "M:dc.c(I)V",
+          "original": "c",
+          "renamed": "resetTerritoryProductionBudgets"
         },
         {
           "start": 20828,
@@ -505209,11 +505363,39 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 24296,
+          "end": 24297,
+          "symbol": "M:dc.b(B)V",
+          "original": "b",
+          "renamed": "resolveCaptureCompetition"
+        },
+        {
+          "start": 25089,
+          "end": 25090,
+          "symbol": "M:dc.c(II)V",
+          "original": "c",
+          "renamed": "removeCombatant"
+        },
+        {
+          "start": 25096,
+          "end": 25097,
+          "symbol": "M:dc.a(BI)I",
+          "original": "a",
+          "renamed": "findCombatantIndex"
+        },
+        {
           "start": 25246,
           "end": 25247,
           "symbol": "M:dc.a(B[[Z)V",
           "original": "a",
           "renamed": "buildHostilePairs"
+        },
+        {
+          "start": 26974,
+          "end": 26975,
+          "symbol": "M:dc.a(Z)V",
+          "original": "a",
+          "renamed": "removeUnopposedCombatants"
         },
         {
           "start": 27457,
@@ -505235,6 +505417,13 @@
           "symbol": "M:dc.a(II)V",
           "original": "a",
           "renamed": "declareWinner"
+        },
+        {
+          "start": 27746,
+          "end": 27747,
+          "symbol": "M:dc.c(I)V",
+          "original": "c",
+          "renamed": "resetTerritoryProductionBudgets"
         },
         {
           "start": 27786,
@@ -505314,6 +505503,13 @@
           "renamed": "resolveAllStarCombats"
         },
         {
+          "start": 30303,
+          "end": 30304,
+          "symbol": "M:dc.a(Lk;II)V",
+          "original": "a",
+          "renamed": "resolveUnderGarrisonedStars"
+        },
+        {
           "start": 30344,
           "end": 30345,
           "symbol": "M:dc.a(Lse;IILk;)V",
@@ -505326,6 +505522,13 @@
           "symbol": "M:dc.a(ILk;)V",
           "original": "a",
           "renamed": "expireAlliancesAndWormholes"
+        },
+        {
+          "start": 30426,
+          "end": 30427,
+          "symbol": "M:dc.e(I)V",
+          "original": "e",
+          "renamed": "recomputeTerritoryEconomy"
         },
         {
           "start": 30447,
@@ -505438,6 +505641,13 @@
           "symbol": "C:qm",
           "original": "qm",
           "renamed": "ProjectUse"
+        },
+        {
+          "start": 34997,
+          "end": 34998,
+          "symbol": "M:dc.b(B)V",
+          "original": "b",
+          "renamed": "resolveCaptureCompetition"
         },
         {
           "start": 35113,
@@ -505839,6 +506049,13 @@
           "renamed": "declareWinner"
         },
         {
+          "start": 41241,
+          "end": 41242,
+          "symbol": "M:dc.a(Lln;Leg;I)V",
+          "original": "a",
+          "renamed": "returnSurvivingForeignFleets"
+        },
+        {
           "start": 41243,
           "end": 41245,
           "symbol": "C:ln",
@@ -506154,6 +506371,13 @@
           "renamed": "ScrollBar"
         },
         {
+          "start": 46329,
+          "end": 46330,
+          "symbol": "M:dc.a(I)V",
+          "original": "a",
+          "renamed": "resetChatRateLimit"
+        },
+        {
           "start": 46353,
           "end": 46355,
           "symbol": "C:tk",
@@ -506315,6 +506539,20 @@
           "renamed": "updateTerritoryMembership"
         },
         {
+          "start": 49977,
+          "end": 49978,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
+          "start": 50166,
+          "end": 50167,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
           "start": 50239,
           "end": 50240,
           "symbol": "M:lo.a(ILln;)V",
@@ -506362,6 +506600,13 @@
           "symbol": "M:we.a(II)I",
           "original": "a",
           "renamed": "intAnd"
+        },
+        {
+          "start": 51890,
+          "end": 51891,
+          "symbol": "M:dc.a(ILeg;Lln;)V",
+          "original": "a",
+          "renamed": "returnFleetsAfterCapture"
         },
         {
           "start": 51904,
@@ -506882,6 +507127,13 @@
           "renamed": "Player"
         },
         {
+          "start": 60640,
+          "end": 60641,
+          "symbol": "M:dc.a(Lob;BLfs;)V",
+          "original": "a",
+          "renamed": "writeState"
+        },
+        {
           "start": 60643,
           "end": 60645,
           "symbol": "C:ob",
@@ -507058,11 +507310,25 @@
           "kind": "label"
         },
         {
+          "start": 67413,
+          "end": 67414,
+          "symbol": "M:dc.a(BLln;Leg;)V",
+          "original": "a",
+          "renamed": "applyCombatLossRetreats"
+        },
+        {
           "start": 67437,
           "end": 67439,
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "BattleEvent"
+        },
+        {
+          "start": 67586,
+          "end": 67587,
+          "symbol": "M:dc.a(Lln;Leg;I)V",
+          "original": "a",
+          "renamed": "returnSurvivingForeignFleets"
         },
         {
           "start": 67597,
@@ -507129,11 +507395,25 @@
           "kind": "label"
         },
         {
+          "start": 69100,
+          "end": 69101,
+          "symbol": "M:dc.a(BLln;Leg;)V",
+          "original": "a",
+          "renamed": "applyCombatLossRetreats"
+        },
+        {
           "start": 69124,
           "end": 69126,
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "BattleEvent"
+        },
+        {
+          "start": 69273,
+          "end": 69274,
+          "symbol": "M:dc.a(Lln;Leg;I)V",
+          "original": "a",
+          "renamed": "returnSurvivingForeignFleets"
         },
         {
           "start": 69284,
@@ -507214,6 +507494,13 @@
           "renamed": "abandonStar"
         },
         {
+          "start": 71109,
+          "end": 71110,
+          "symbol": "M:dc.b(B)V",
+          "original": "b",
+          "renamed": "resolveCaptureCompetition"
+        },
+        {
           "start": 71236,
           "end": 71237,
           "symbol": "M:dc.a(Lfs;Lln;I)V",
@@ -507240,6 +507527,13 @@
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "BattleEvent"
+        },
+        {
+          "start": 71663,
+          "end": 71664,
+          "symbol": "M:dc.a(ILeg;Lln;)V",
+          "original": "a",
+          "renamed": "returnFleetsAfterCapture"
         },
         {
           "start": 71669,
@@ -507662,6 +507956,20 @@
           "renamed": "SolMapReader"
         },
         {
+          "start": 78963,
+          "end": 78964,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
+          "start": 79008,
+          "end": 79009,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
           "start": 79103,
           "end": 79104,
           "symbol": "M:l.b(B)V",
@@ -508080,6 +508388,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 86283,
+          "end": 86284,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
           "start": 86285,
           "end": 86287,
           "symbol": "C:ln",
@@ -508115,6 +508430,13 @@
           "renamed": "BattleEvent"
         },
         {
+          "start": 86479,
+          "end": 86480,
+          "symbol": "M:dc.a(Lln;Leg;I)V",
+          "original": "a",
+          "renamed": "returnSurvivingForeignFleets"
+        },
+        {
           "start": 86482,
           "end": 86484,
           "symbol": "C:ln",
@@ -508141,6 +508463,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 86751,
+          "end": 86752,
+          "symbol": "M:dc.a(Lob;BLfs;)V",
+          "original": "a",
+          "renamed": "writeState"
         },
         {
           "start": 86753,
@@ -508199,6 +508528,27 @@
           "renamed": "randomBelow"
         },
         {
+          "start": 88662,
+          "end": 88663,
+          "symbol": "M:dc.c(II)V",
+          "original": "c",
+          "renamed": "removeCombatant"
+        },
+        {
+          "start": 88669,
+          "end": 88670,
+          "symbol": "M:dc.a(BI)I",
+          "original": "a",
+          "renamed": "findCombatantIndex"
+        },
+        {
+          "start": 88712,
+          "end": 88713,
+          "symbol": "M:dc.a(Z)V",
+          "original": "a",
+          "renamed": "removeUnopposedCombatants"
+        },
+        {
           "start": 88868,
           "end": 88869,
           "symbol": "M:dc.a(Lln;Z)V",
@@ -508225,6 +508575,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 89186,
+          "end": 89187,
+          "symbol": "M:dc.a(BI)I",
+          "original": "a",
+          "renamed": "findCombatantIndex"
         },
         {
           "start": 89481,
@@ -508451,6 +508808,20 @@
           "renamed": "splitTerritory"
         },
         {
+          "start": 93789,
+          "end": 93790,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
+          "start": 93850,
+          "end": 93851,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
+        },
+        {
           "start": 93958,
           "end": 93959,
           "symbol": "M:l.b(B)V",
@@ -508659,6 +509030,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 98109,
+          "end": 98110,
+          "symbol": "M:dc.e(I)V",
+          "original": "e",
+          "renamed": "recomputeTerritoryEconomy"
         },
         {
           "start": 98155,
@@ -509655,6 +510033,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 117350,
+          "end": 117351,
+          "symbol": "M:dc.a(Lk;II)V",
+          "original": "a",
+          "renamed": "resolveUnderGarrisonedStars"
+        },
+        {
           "start": 117352,
           "end": 117353,
           "symbol": "C:k",
@@ -509870,6 +510255,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "UsernameAvailabilityValidator"
+        },
+        {
+          "start": 120305,
+          "end": 120306,
+          "symbol": "M:dc.a(Lln;ZB)V",
+          "original": "a",
+          "renamed": "updateMinimumGarrison"
         },
         {
           "start": 120499,
@@ -510171,6 +510563,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 128947,
+          "end": 128948,
+          "symbol": "M:dc.a(BLln;Leg;)V",
+          "original": "a",
+          "renamed": "applyCombatLossRetreats"
         },
         {
           "start": 128962,
@@ -590170,7 +590569,7 @@
       "original": "jg.java",
       "renamed": "AudioService.java",
       "inputSha256": "e31f555c418a5b174f56cd9daab189c55bae881ffdf782e1f1f440f472f85532",
-      "outputSha256": "d5645c6779fb6ef5b21389cf8ddbede7ecce43f352991fb6dc680587e7ae8440",
+      "outputSha256": "7602d868d008ed1a29483932ad2189de179d509378d8ac388697eca204d842b3",
       "edits": [
         {
           "start": 50,
@@ -590416,6 +590815,13 @@
           "symbol": "M:l.a([Lfs;Lvr;I)V",
           "original": "a",
           "renamed": "assignHomeStars"
+        },
+        {
+          "start": 3659,
+          "end": 3660,
+          "symbol": "M:dc.e(I)V",
+          "original": "e",
+          "renamed": "recomputeTerritoryEconomy"
         },
         {
           "start": 3684,
@@ -604056,7 +604462,7 @@
       "original": "kf.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a4098c3daad888d3277bbb28abdc6623e2cd1f5d96da28762e1d8698913bb778",
-      "outputSha256": "3e80e5f444fe4a3fbe24e56da58dbcbd0c78feb52ee24d60c2259fa5b7a3f090",
+      "outputSha256": "a224b07d89e0666f9341c680cc904a34d5e38381fb5ce7913a76e2e94bd4e9e2",
       "edits": [
         {
           "start": 60,
@@ -604477,6 +604883,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "GameState"
+        },
+        {
+          "start": 12648,
+          "end": 12649,
+          "symbol": "M:dc.d(I)V",
+          "original": "d",
+          "renamed": "detectMaximumHeapSize"
         },
         {
           "start": 12679,
@@ -609203,7 +609616,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "359c7ccfc992cd3ea4091eab6f1696dbcc816843df2870adca5e0e9b3bb385c5",
+      "outputSha256": "c8640fadc93f43fbfba59008819ccaa434b12689f50c12f5d48a53f726c439e8",
       "edits": [
         {
           "start": 50,
@@ -610612,6 +611025,13 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 34217,
+          "end": 34218,
+          "symbol": "M:dc.a(Lob;BLfs;)V",
+          "original": "a",
+          "renamed": "writeState"
         },
         {
           "start": 34290,
@@ -613000,6 +613420,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 78128,
+          "end": 78129,
+          "symbol": "M:dc.c(I)V",
+          "original": "c",
+          "renamed": "resetTerritoryProductionBudgets"
+        },
+        {
           "start": 78157,
           "end": 78158,
           "symbol": "M:dc.b(II)[[Z",
@@ -614811,6 +615238,13 @@
           "symbol": "M:pf.a(B)Loh;",
           "original": "a",
           "renamed": "nextForward"
+        },
+        {
+          "start": 123349,
+          "end": 123350,
+          "symbol": "M:dc.c(I)V",
+          "original": "c",
+          "renamed": "resetTerritoryProductionBudgets"
         },
         {
           "start": 123374,
@@ -690768,7 +691202,7 @@
       "original": "qr.java",
       "renamed": "AnimatedPanel.java",
       "inputSha256": "f219693ef275888de47ae02be33a5e640656d150113bf01898124b153da23b8b",
-      "outputSha256": "aa08054152b3bea6445878b5982537d57c2b7c4c75cf77fe5152fcc06164f1a6",
+      "outputSha256": "dfea5a305d40444ff53deee52d5b59987ceac18c5f4771d1406862a39207cb84",
       "edits": [
         {
           "start": 44,
@@ -691035,6 +691469,13 @@
           "symbol": "M:l.a([Lfs;Lvr;I)V",
           "original": "a",
           "renamed": "assignHomeStars"
+        },
+        {
+          "start": 6586,
+          "end": 6587,
+          "symbol": "M:dc.e(I)V",
+          "original": "e",
+          "renamed": "recomputeTerritoryEconomy"
         },
         {
           "start": 6624,
@@ -786099,7 +786540,7 @@
       "original": "vm.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "a0272fe8e75a3b61c7a9ab38bd067d96019b3a1776cf28d05fc35ee913fdb216",
-      "outputSha256": "218a4829117a7c3c64bda611c62fc7b95c3a1c5e2b3bfc6bbe9d92212063ab80",
+      "outputSha256": "5e14a48b829acc3b133fc31d93d011c38784417d9e203ff6f385f9f3ca1837d5",
       "edits": [
         {
           "start": 71,
@@ -786492,6 +786933,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "GameState"
+        },
+        {
+          "start": 6586,
+          "end": 6587,
+          "symbol": "M:dc.a(I)V",
+          "original": "a",
+          "renamed": "resetChatRateLimit"
         },
         {
           "start": 6631,
@@ -795916,10 +796364,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "7e669161cff3812747c1c8c9b32c70b9380a5505548db7570613a596a8f61b47",
+    "rulesSha256": "64c92a44191893cb5ef589a7b9cb9901fcd5b093c6c3414f4a183149fc5496fc",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "326e780a3de47cb0fcead291dfff26b27a3117714eba24878287af460ca1fbfe",
+    "outputTreeSha256": "737b585d2d1f7ad3dc7a08f7880dfa38edf9cbea3cc29014cb7634109269b152",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

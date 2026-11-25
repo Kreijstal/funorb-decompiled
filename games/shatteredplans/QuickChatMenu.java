@@ -188,7 +188,7 @@ final class QuickChatMenu extends AnimatedPanel {
               AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
               IntrusiveDequeSequence.a(LoginRequestSupport.field_a, (byte) 123, IntroTextLine.field_k, ProductionContent.field_h, var5);
               SocialNameInputPanel.closeQuickChatMenus((byte) 119);
-              GameState.a(-5883);
+              GameState.resetChatRateLimit(-5883);
             } else {
               EmailSyntaxValidator.d(param0 ^ -16705);
               SocialNameInputPanel.closeQuickChatMenus((byte) 119);
