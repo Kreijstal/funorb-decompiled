@@ -25,13 +25,13 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
         if (param0 == 1976460609) {
           var2 = FixedSquareRootSupport.a(param0 - 1976435396);
           AccountHandshakeStateSupport.field_c.drawFrame((byte) -111, var2 + (SpectateRoomRequestSupport.field_b << 1), BattlefieldTheme.field_f - SpriteSheetDecoder.field_k, var1 + (SpriteSheetDecoder.field_k << 1), -SpectateRoomRequestSupport.field_b + InstructionsPanel.field_r);
-          SpellCastEvent.h(15);
+          SpellCastEvent.drawPairedSpriteMenu(15);
           return;
         }
         DefeatPlayerConsoleCommand.releaseStatics(37);
         var2Lifetime1 = FixedSquareRootSupport.a(param0 - 1976435396);
         AccountHandshakeStateSupport.field_c.drawFrame((byte) -111, var2Lifetime1 + (SpectateRoomRequestSupport.field_b << 1), BattlefieldTheme.field_f - SpriteSheetDecoder.field_k, var1 + (SpriteSheetDecoder.field_k << 1), -SpectateRoomRequestSupport.field_b + InstructionsPanel.field_r);
-        SpellCastEvent.h(15);
+        SpellCastEvent.drawPairedSpriteMenu(15);
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {

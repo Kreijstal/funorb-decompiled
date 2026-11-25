@@ -157,7 +157,7 @@ final class ProjectileEffect {
           var9 = -(-(5 * this.remainingTicks) + this.field_g);
         }
         if (param1) {
-          ContextActionMenu.a(false, var4_ref);
+          ContextActionMenu.flattenModelToGroundPlane(false, var4_ref);
         }
         stackIn_22_0 = var4_ref;
         stackIn_22_1 = var5;

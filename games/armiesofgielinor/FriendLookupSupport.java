@@ -196,7 +196,7 @@ final class FriendLookupSupport {
           CampaignMenuButton.field_a = new LogoMesh[var3];
           CampaignParticipant.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            CampaignMenuButton.field_a[var4] = GameEvent.a(-86, var8);
+            CampaignMenuButton.field_a[var4] = GameEvent.readPackedLogoMesh(-86, var8);
           }
           var10.endBitReading(-2);
           var9 = 0;

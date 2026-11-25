@@ -33,7 +33,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static int e(byte param0) {
+    final static int getRegistrationAge(byte param0) {
         if (param0 >= -123) {
           Random var2 = (Random) null;
           DefeatPlayerWithMetricsConsoleCommand.paintTerrainConnection(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
@@ -41,7 +41,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         return MusicCrossfadeStream.field_z;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, RgbSprite param9) {
+    final static void drawDecoratedCoatSprite(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, RgbSprite param9) {
         int var11 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -142,7 +142,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
     public static void releaseStatics(int param0) {
         if (param0 < 114) {
           RgbSprite var2 = (RgbSprite) null;
-          DefeatPlayerWithMetricsConsoleCommand.a(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);
+          DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);
         }
         field_E = null;
     }

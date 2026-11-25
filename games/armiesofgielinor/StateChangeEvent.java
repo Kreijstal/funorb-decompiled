@@ -252,7 +252,7 @@ final class StateChangeEvent extends GameEvent {
             ChannelBaseVolumeConsoleCommand.field_G[var2] = true;
           }
           ChannelBaseVolumeConsoleCommand.field_G[37] = false;
-          ChannelBaseVolumeConsoleCommand.field_G[32] = HelloConsoleCommand.a(0, (byte) -98);
+          ChannelBaseVolumeConsoleCommand.field_G[32] = HelloConsoleCommand.isClientFeatureEnabled(0, (byte) -98);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ')');
         }

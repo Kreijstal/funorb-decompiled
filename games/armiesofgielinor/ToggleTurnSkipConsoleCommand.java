@@ -26,10 +26,10 @@ final class ToggleTurnSkipConsoleCommand extends ConsoleCommand {
     final static void h(int param0) {
         if (param0 != 2) {
           field_H = (IndexedSprite[]) null;
-          ContextActionMenu.a(true, (byte) -113);
+          ContextActionMenu.drawOpenGameDialogs(true, (byte) -113);
           return;
         }
-        ContextActionMenu.a(true, (byte) -113);
+        ContextActionMenu.drawOpenGameDialogs(true, (byte) -113);
     }
 
     final static void selectMusicWithDefaultProfile(int obfuscationGuard, MusicTrack track) {

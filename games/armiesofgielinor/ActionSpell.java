@@ -24,7 +24,7 @@ final class ActionSpell extends Spell {
         field_l = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1, String param2) {
+    final static void openRelativeExternalUrl(java.applet.Applet param0, int param1, String param2) {
         try {
           java.net.URL var3 = null;
           Exception var3_ref = null;
@@ -170,7 +170,7 @@ final class ActionSpell extends Spell {
           if (obfuscationGuard == 4) {
             return;
           }
-          ActionSpell.b(true);
+          ActionSpell.getCurrentYear(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -195,19 +195,19 @@ final class ActionSpell extends Spell {
         FixedSquareRootSupport.field_b = null;
         int[] var4 = (int[]) null;
         SoftwareRaster.setTarget((int[]) null, 0, 0);
-        FixedSquareRootSupport.field_b = StripedProgressWidget.a(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+        FixedSquareRootSupport.field_b = StripedProgressWidget.createRasterImageSurface(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
         FixedSquareRootSupport.field_b.bindRasterTarget(obfuscationGuard - 17900);
         ContextualRuntimeException.setMessageDialogCenter((byte) -85, width / 2, height / 2);
         if (obfuscationGuard == 23505) {
           MeshObject.resizeSharedDialogViewport(-8994, width, height);
           CampaignMission.resizeLoginDialogViewport(height, -22696, width);
-          ContentTransitionDialog.c(width / 2, height / 2, 9);
+          ContentTransitionDialog.setSelectionMenuCenter(width / 2, height / 2, 9);
           return;
         }
         ActionSpell.resizeRasterViewport(-106, -34, -122);
         MeshObject.resizeSharedDialogViewport(-8994, width, height);
         CampaignMission.resizeLoginDialogViewport(height, -22696, width);
-        ContentTransitionDialog.c(width / 2, height / 2, 9);
+        ContentTransitionDialog.setSelectionMenuCenter(width / 2, height / 2, 9);
     }
 
     ActionSpell(int spellId, ActionRequest request) {
@@ -308,11 +308,11 @@ final class ActionSpell extends Spell {
         var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
     }
 
-    final static int b(boolean param0) {
+    final static int getCurrentYear(boolean param0) {
         if (param0) {
           return 1900 + new Date().getYear();
         }
-        ActionSpell.b(false);
+        ActionSpell.getCurrentYear(false);
         return 1900 + new Date().getYear();
     }
 

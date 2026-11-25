@@ -260,7 +260,7 @@ final class TabbedPanel extends ClientUiComponent {
             var8 = (CharSequence) ((Object) param1);
             var4_long = DraggableWidgetContainer.encodeBase37Name(var8, param2 - 10);
           }
-          stackIn_6_0 = CheckMarkWidgetPainter.a((String) (var6), param3, param0, param2 ^ 11, var4_long);
+          stackIn_6_0 = CheckMarkWidgetPainter.createLoginCredentials((String) (var6), param3, param0, param2 ^ 11, var4_long);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

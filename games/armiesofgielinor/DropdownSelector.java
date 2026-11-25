@@ -264,7 +264,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               }
             }
             if (OwnerChangeEvent.field_B) {
-              UpkeepEvent.h(-78);
+              UpkeepEvent.snapDialogsAndFreezeProgress(-78);
               DialWidget.b(true);
               if (ClientContextMenu.field_a == 9 &&
                 !MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
@@ -289,10 +289,10 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
             if (RadialSummonItem.field_f.field_n) {
               if (null != RadialSummonItem.field_f.field_s) {
-                AccountRegistrationDialog.a(RadialSummonItem.field_f.field_s, 1);
+                AccountRegistrationDialog.readGraphicsPreferences(RadialSummonItem.field_f.field_s, 1);
               }
               if (DisplayModeOptionPainter.field_v) {
-                StripedProgressWidget.a(1);
+                StripedProgressWidget.flushGraphicsPreferences(1);
               } else {
                 AccountNameSelectionSupport.field_d = AnimationFrameSet.field_E >> 2 & 3;
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);

@@ -151,7 +151,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         if (!this.isFormValid(-29967)) {
           return;
         }
-        TelepopEvent.a(obfuscationGuard, this.nameInput.text);
+        TelepopEvent.openLoginWithOptionalIdentifier(obfuscationGuard, this.nameInput.text);
     }
 
     final static void drawDottedRectangleOutline(int param0, int param1, int param2, int param3, int param4) {

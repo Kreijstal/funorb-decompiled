@@ -784,7 +784,7 @@ final class AiInfluenceMap {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               LeaderEscortCondition.field_a[var6_int] = var14.readNullTerminatedString(1);
             }
-            DelayedPacket.a(2, var5, var4);
+            DelayedPacket.prepareRatingLeaderboardBuffers(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               ArchiveLoadSequence.readPackedRatingLeaderboardStats(var14, -83);
               if (0 == var6_intLifetime1) {

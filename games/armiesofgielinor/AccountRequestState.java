@@ -41,7 +41,7 @@ final class AccountRequestState {
             return;
           }
           SpellDefinitionTable.setSelectionMenuLineHeights(param11, param19, param5, false, param4);
-          ContentTransitionDialog.c(param0, param2, 56);
+          ContentTransitionDialog.setSelectionMenuCenter(param0, param2, 56);
           ResourceClientSetupSupport.setSelectionMenuSpacing(param6, param10, param7, param12, param15, -125);
           ConsoleCommand.a(param16, (byte) 96, param13, param20);
           AccountNameSelectionSupport.runLayoutSetupGuard(param1, param3, -118, param18);
@@ -259,7 +259,7 @@ final class AccountRequestState {
               CampaignRewardPreview.writeAbuseReport(Spell.field_b.getTargetName(1), var3, Spell.field_b.accountId, 29231, var4 != 0, param1);
             }
             Spell.field_b = null;
-            FixInvisibleUnitsConsoleCommand.g(76);
+            FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
             return;
           }
           return;
@@ -274,7 +274,7 @@ final class AccountRequestState {
             CampaignRewardPreview.writeAbuseReport(Spell.field_b.getTargetName(1), var3Lifetime1, Spell.field_b.accountId, 29231, var4Lifetime1 != 0, param1);
           }
           Spell.field_b = null;
-          FixInvisibleUnitsConsoleCommand.g(76);
+          FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
           return;
         }
     }

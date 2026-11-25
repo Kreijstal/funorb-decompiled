@@ -150,7 +150,7 @@ final class FixedQuaternion {
               return param0;
             }
             param0 = false;
-            FixInvisibleUnitsConsoleCommand.g(76);
+            FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
           }
           AccountRegistrationForm.processSocialListPrompt(param6 ^ -81, param4, param0);
           AccountRequestState.processAbuseReportDialog(0, param2, param0);

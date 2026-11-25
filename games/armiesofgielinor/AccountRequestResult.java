@@ -71,7 +71,7 @@ final class AccountRequestResult {
               UnitCycler.drawPlayerGlowColumn(param1 + 22, var11, ProxyAuthenticationRequiredException.field_b + var6_int, 92, 20 + param4);
             }
             if (var7.hasModifierFlag4((byte) -125)) {
-              GameEvent.a(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);
+              GameEvent.drawPlayerRadialColumn(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);
             }
             PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
@@ -179,7 +179,7 @@ final class AccountRequestResult {
             }
             if (BattleTutorial.quickChatMenuVisible) {
               LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
-              DelayedPacket.e(-3);
+              DelayedPacket.closeQuickChatMenuIfVisible(-3);
             }
           }
           if (null == var2 &&

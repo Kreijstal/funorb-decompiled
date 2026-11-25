@@ -777,7 +777,7 @@ final class Battlefield {
         this.registerUnit(8288, var11);
         if (var11.getUnitCategory(0) != 4) {
         }
-        if (HelloConsoleCommand.a(0, (byte) -98) &&
+        if (HelloConsoleCommand.isClientFeatureEnabled(0, (byte) -98) &&
           this.field_b) {
           if (param2 != 19 &&
             param2 != 21 &&

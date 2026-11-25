@@ -242,7 +242,7 @@ final class BattleCameraTargetTransform {
         int var10Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          AnimationSequence.a(PreparedAction.field_r, param0 + 114);
+          AnimationSequence.positionLobbySidePanels(PreparedAction.field_r, param0 + 114);
           if (NumericDateInputWidget.roomSetup != null) {
             var15 = LobbyControlResources.field_b;
             var17 = var15;

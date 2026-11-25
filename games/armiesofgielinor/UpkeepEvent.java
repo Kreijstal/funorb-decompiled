@@ -8,7 +8,7 @@ final class UpkeepEvent extends GameEvent {
     int field_y;
     static StringBuilder chatTextBuffer;
 
-    final static void h(int param0) {
+    final static void snapDialogsAndFreezeProgress(int param0) {
         ClientRecoverySupport.snapDialogsAndFreezeProgress((byte) -127);
         int var1 = 2 % ((1 - param0) / 51);
     }
@@ -64,7 +64,7 @@ final class UpkeepEvent extends GameEvent {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadCoatOfArmsAssets(ResourceArchive param0, int param1) {
         try {
           SectorCacheStore.field_j = new IndexedSprite[6][];
           BattleViewportResizeHandler.field_h = new RgbSprite[6];
@@ -75,7 +75,7 @@ final class UpkeepEvent extends GameEvent {
           SectorCacheStore.field_j[0] = MapLayout.loadIndexedSpritesByName("coatofarms_bases", -28106, "basic", param0);
           if (param1 <= 20) {
             ResourceArchive var3 = (ResourceArchive) null;
-            UpkeepEvent.a((ResourceArchive) null, 74);
+            UpkeepEvent.loadCoatOfArmsAssets((ResourceArchive) null, 74);
           }
           SectorCacheStore.field_j[1] = MapLayout.loadIndexedSpritesByName("coatofarms_lbarers", -28106, "basic", param0);
           SectorCacheStore.field_j[2] = MapLayout.loadIndexedSpritesByName("coatofarms_rbarers", -28106, "basic", param0);

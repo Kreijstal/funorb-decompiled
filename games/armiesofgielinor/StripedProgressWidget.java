@@ -128,7 +128,7 @@ final class StripedProgressWidget extends Widget {
         }
     }
 
-    final static RasterImageSurface a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterImageSurface createRasterImageSurface(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -243,7 +243,7 @@ final class StripedProgressWidget extends Widget {
         }
     }
 
-    final static void a(int param0) {
+    final static void flushGraphicsPreferences(int param0) {
         if (DamageEvent.isGuestSession(125)) {
           return;
         }

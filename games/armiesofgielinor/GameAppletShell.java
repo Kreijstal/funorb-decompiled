@@ -424,7 +424,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (BitmapTextWidgetPainter.isLogoAnimationFinished(true)) {
               if (SoundCache.field_b == 0) {
                 NineSliceSpriteSupport.a(param1, false, 112);
-                ContentTransitionDialog.a(0, 12, param2, 0);
+                ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -432,7 +432,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (var4 != 0) {
                   SoftwareRaster.clearPixels();
                   TaggedMapData.a(240, 320, -121);
-                  ContentTransitionDialog.a(0, 12, param2, 0);
+                  ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
                   var3_int = 0;
                   if (MaskedTextEntryPainter.redrawRequested) {
                     MaskedTextEntryPainter.redrawRequested = false;
@@ -444,7 +444,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } else {
               SoftwareRaster.clearPixels();
               TaggedMapData.a(240, 320, -121);
-              ContentTransitionDialog.a(0, 12, param2, 0);
+              ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;
                 if (MaskedTextEntryPainter.redrawRequested) {
@@ -609,7 +609,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 AgeValidator.c((byte) -76);
                 this.recreateCanvas((byte) 87);
-                FixedSquareRootSupport.field_b = StripedProgressWidget.a(CalendarSupport.viewportWidth, DateValiditySupport.viewportHeight, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+                FixedSquareRootSupport.field_b = StripedProgressWidget.createRasterImageSurface(CalendarSupport.viewportWidth, DateValiditySupport.viewportHeight, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.initializeClient(false);
                 GameClock.gameClock = DraggableWidgetContainer.createGameClock(false);
                 do {

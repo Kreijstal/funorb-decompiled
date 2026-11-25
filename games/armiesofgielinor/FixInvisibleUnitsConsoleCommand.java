@@ -33,7 +33,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void g(int param0) {
+    final static void closeActiveContextMenu(int param0) {
         if (FullscreenMembershipDialog.activeContextMenu != null) {
           if (FullscreenMembershipDialog.activeContextMenu.sourceComponent == null) {
             FullscreenMembershipDialog.activeContextMenu = null;
@@ -96,7 +96,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
         field_F = null;
     }
 
-    final static void a(Battlefield param0, BattleGraphicsAssets param1, int param2, GameplayController param3) {
+    final static void initializeBattlefieldPresentation(Battlefield param0, BattleGraphicsAssets param1, int param2, GameplayController param3) {
         RgbSprite discarded$1 = null;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;

@@ -32,7 +32,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           musicProfileTransitionMillis = 91;
         }
         ConsoleExpression.field_m = this.languageId;
-        ChannelFadeTimeConsoleCommand.b(ConsoleExpression.field_m, 1);
+        ChannelFadeTimeConsoleCommand.selectLoadingStatusLanguage(ConsoleExpression.field_m, 1);
         ClientNetworkBootstrap.initializeNetworkContext(serviceId, 5000, this.secondaryGamePort, 5000, launchFlag, ConsoleExpression.field_m, this.serverNumber, 0, this.primaryGamePort, this.memberLaunch, this.serverHost, IntPair.field_m, this.instanceId, this.gameCrc);
         ResourceClientSetupSupport.initializeResourceClient(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
@@ -225,13 +225,13 @@ abstract class NetworkGameShell extends GameAppletShell {
               BitmapTextWidgetPainter.field_r = null;
               CampaignLookupSupport.field_b = null;
             }
-            optionalChoice = SpriteDropdownControl.l(-11506);
+            optionalChoice = SpriteDropdownControl.takePendingRegistrationChoice(-11506);
             if (optionalChoice != null) {
               UiSelectionState.setSharedEmailCheckResult((byte) 32, optionalChoice.booleanValue());
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.getLoginPassword(-1));
+            actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.getRegistrationAge((byte) -127), RadialSummonItem.getLoginPassword(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.handleAccountCreationResponse(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -292,7 +292,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ReloadPageSupport.reloadPage((byte) -118, CombatEvent.d((byte) 7));
           }
           if (actionCode == 12) {
-            ActionSpell.a(CombatEvent.d((byte) -123), -69, GridWidgetContainer.getPendingNavigationUrl(-129));
+            ActionSpell.openRelativeExternalUrl(CombatEvent.d((byte) -123), -69, GridWidgetContainer.getPendingNavigationUrl(-129));
           }
           if (actionCode == 13) {
             try {
@@ -628,9 +628,9 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (ConsoleExpression.field_m != 0) {
             IconTextComponent.field_Nb = SpriteButtonPainter.a(TerrainScatterSupport.field_n, true);
           }
-          DisplayModeOptionPainter.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
-          CombatPresentation.field_M = DamageEvent.a(1, ModalDialog.field_E, (byte) 122, false, true);
-          LoginKind.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
+          DisplayModeOptionPainter.field_u = DamageEvent.createResourceArchive(1, ChatMessage.field_c, (byte) 119, false, true);
+          CombatPresentation.field_M = DamageEvent.createResourceArchive(1, ModalDialog.field_E, (byte) 122, false, true);
+          LoginKind.field_g = DamageEvent.createResourceArchive(1, DualLinkedNode.field_t, (byte) 127, false, true);
           PrintVictoryConditionsConsoleCommand.field_K = DisplayModeOptionPainter.field_u;
           StrongCacheEntry.field_E = 2;
           ResourceRequest.field_A = CombatPresentation.field_M;
@@ -679,7 +679,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           DisplayModeOptionPainter.field_u = null;
           CombatPresentation.field_M = null;
           LoginKind.field_g = null;
-          SoundCache.a(-24602, (java.applet.Applet) (this));
+          SoundCache.probeAppletUsername(-24602, (java.applet.Applet) (this));
           ModalDialog.a(0);
           StrongCacheEntry.field_E = 10;
         }

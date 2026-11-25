@@ -17,7 +17,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     static String field_Y;
     static String field_gb;
 
-    final static void c(int param0, int param1, int param2) {
+    final static void setSelectionMenuCenter(int param0, int param1, int param2) {
         if (param2 < 1) {
           field_db = (LoginKind) null;
           InstructionsPanel.field_B = param0;
@@ -203,7 +203,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         return super.snapDialogAnimation(92);
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void paintRasterSurfaceToCanvas(int param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

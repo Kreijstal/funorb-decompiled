@@ -379,7 +379,7 @@ final class UnitModelPreview {
           var20 = var18_ref;
           var18_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
           if (highlighted) {
-            ContextActionMenu.a(false, var20);
+            ContextActionMenu.flattenModelToGroundPlane(false, var20);
           }
           var20.drawPerspective(var7, var8, var9, var12, var13, var14, var15);
           return;
@@ -390,7 +390,7 @@ final class UnitModelPreview {
         ModelMesh var19 = var17_ref;
         var17_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
         if (highlighted) {
-          ContextActionMenu.a(copyVariant, var19);
+          ContextActionMenu.flattenModelToGroundPlane(copyVariant, var19);
         } else {
           var19.drawPerspective(var7, var8, var9, var12, var13, var14, var15);
           return;

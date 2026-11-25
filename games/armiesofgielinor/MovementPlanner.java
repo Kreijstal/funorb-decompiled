@@ -61,7 +61,7 @@ final class MovementPlanner {
             packet.writeByte(1, 0);
             packet.writeByte(1, this.unit.tileX);
             packet.writeByte(1, this.unit.tileY);
-            PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -100);
+            PasswordLengthSupport.writePackedTargetDelta(this.targetDeltaX, this.targetDeltaY, packet, -100);
             stackIn_3_0 = var4_int;
             return stackIn_3_0;
           }
@@ -95,7 +95,7 @@ final class MovementPlanner {
           packet.writeByte(1, this.unit.tileX);
           packet.writeByte(1, this.unit.tileY);
           FriendLookupSupport.writePackedPathDirections((byte) -112, this.pathLength, packet, this.pathDirections);
-          PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -73);
+          PasswordLengthSupport.writePackedTargetDelta(this.targetDeltaX, this.targetDeltaY, packet, -73);
           stackIn_19_0 = var4_intLifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1162,7 +1162,7 @@ final class MovementPlanner {
             packet.writeByte(1, 0);
             packet.writeByte(1, this.unit.tileX);
             packet.writeByte(1, this.unit.tileY);
-            PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, 127);
+            PasswordLengthSupport.writePackedTargetDelta(this.targetDeltaX, this.targetDeltaY, packet, 127);
             stackIn_7_0 = var3_int;
             return stackIn_7_0;
           }
@@ -1190,7 +1190,7 @@ final class MovementPlanner {
           if (!obfuscationGuard) {
             this.resetCosts(-21);
           }
-          PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -78);
+          PasswordLengthSupport.writePackedTargetDelta(this.targetDeltaX, this.targetDeltaY, packet, -78);
           stackIn_20_0 = var3_intLifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

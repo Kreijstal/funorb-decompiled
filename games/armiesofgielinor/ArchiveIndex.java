@@ -307,7 +307,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] encodedIndex, int expectedCrc, byte[] expectedDigest) {
         int var4_int = 0;
         try {
-          this.indexCrc = ValidationStatusWidget.a(encodedIndex, encodedIndex.length, 120);
+          this.indexCrc = ValidationStatusWidget.computePrefixCrc32(encodedIndex, encodedIndex.length, 120);
           if (this.indexCrc != expectedCrc) {
             throw new RuntimeException();
           }

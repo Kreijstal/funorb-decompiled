@@ -68,14 +68,14 @@ final class RasterState extends IntrusiveNode {
                   }
                   PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param3, false, false, var9, param5, var7, param1, var8, param0);
                   if (QuickChatMenuDisplaySupport.field_e[var7].hasModifierFlag4((byte) -115)) {
-                    GameEvent.a(param3 + 20, true, ProxyAuthenticationRequiredException.field_b + var7, QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer, 22 + param5);
+                    GameEvent.drawPlayerRadialColumn(param3 + 20, true, ProxyAuthenticationRequiredException.field_b + var7, QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer, 22 + param5);
                   }
                 }
               } else {
                 if (!BitLengthSupport.field_a) {
                   QuickChatMenu.drawTintedTerrainTileLayers(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
-                ValidationStatusWidget.a(param3, param0, param1, var7, var8, -29403, var9, param5);
+                ValidationStatusWidget.drawTintedTerrainCorners(param3, param0, param1, var7, var8, -29403, var9, param5);
                 if (Unit.field_L) {
                   ChannelBaseVolumeConsoleCommand.field_I.drawTransparent(param5, param3);
                 }

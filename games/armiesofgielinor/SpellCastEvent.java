@@ -35,7 +35,7 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    final static void h(int param0) {
+    final static void drawPairedSpriteMenu(int param0) {
         int var3 = 0;
         String stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
@@ -106,7 +106,7 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void resendPreferencesRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         PreferencesWriteRequest var4 = null;
@@ -173,7 +173,7 @@ final class SpellCastEvent extends GameEvent {
         field_E = null;
         field_A = null;
         if (!obfuscationGuard) {
-          SpellCastEvent.b(-127, -31);
+          SpellCastEvent.resendPreferencesRequests(-127, -31);
         }
         field_D = null;
     }
@@ -355,7 +355,7 @@ final class SpellCastEvent extends GameEvent {
           param2.notifyTutorialInteraction(27, this.spell.spellId, -91);
           var4_int = 0;
           if (param1 >= -84) {
-            SpellCastEvent.b(30, -93);
+            SpellCastEvent.resendPreferencesRequests(30, -93);
           }
           var4_int = var4_int != 0 | this.enqueuePresenter((byte) -39, param2, param0, false) ? 1 : 0;
           if (SpellDefinitionTable.spellDefinitions[this.spell.spellId][3] != 4 &&

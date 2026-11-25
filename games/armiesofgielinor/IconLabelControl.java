@@ -181,7 +181,7 @@ final class IconLabelControl extends ClientUiComponent {
               var32 = var30 & 65280;
               var33 = -1090453760 & var32 * var28 >>> 8 | (var28 * var31 & -16711859) >>> 8;
               var33 = var33 + 65793 * var29;
-              AccountRegistrationDialog.a(-6, var22, var27, var24, var25, 8355711 & var33 >> 1, var23, var26);
+              AccountRegistrationDialog.drawHalfBlendTriangle(-6, var22, var27, var24, var25, 8355711 & var33 >> 1, var23, var26);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];

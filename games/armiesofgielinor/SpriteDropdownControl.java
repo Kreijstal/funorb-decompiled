@@ -100,7 +100,7 @@ final class SpriteDropdownControl extends SpriteControlNode {
         this.menu.disableInput(true);
     }
 
-    final static boolean c(int param0, int param1) {
+    final static boolean hasAtLeastTwoPlayers(int param0, int param1) {
         if (param1 != 2) {
           return true;
         }
@@ -390,7 +390,7 @@ final class SpriteDropdownControl extends SpriteControlNode {
         this.expanded = false;
     }
 
-    final static Boolean l(int param0) {
+    final static Boolean takePendingRegistrationChoice(int param0) {
         if (param0 != -11506) {
           field_G = (String) null;
         }

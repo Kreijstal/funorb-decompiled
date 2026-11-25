@@ -113,7 +113,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           field_rb = (IndexedSprite[]) null;
           this.open = false;
           if (this.field_mb) {
-            AttackEvent.d((byte) 83);
+            AttackEvent.openInGameLoginDialog((byte) 83);
             return;
           }
           if (this.field_sb) {
@@ -124,7 +124,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         }
         this.open = false;
         if (this.field_mb) {
-          AttackEvent.d((byte) 83);
+          AttackEvent.openInGameLoginDialog((byte) 83);
           return;
         }
         if (!this.field_sb) {
@@ -330,7 +330,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             AccountIdentifierStatus.setAccountFlowAction(122, 3);
             this.closeDialog(true);
           } else {
-            ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
+            ActionSpell.openRelativeExternalUrl(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (obfuscationGuard != 11) {
             ProgressMessageDialog.releaseStatics(46);

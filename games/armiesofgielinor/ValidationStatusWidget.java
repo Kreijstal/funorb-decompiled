@@ -20,7 +20,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         return null;
     }
 
-    final static int a(byte[] param0, int param1, int param2) {
+    final static int computePrefixCrc32(byte[] param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -171,7 +171,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 11) {
-            ValidationStatusWidget.a(56, -104, -60, 38, -92, -10, 85, -99);
+            ValidationStatusWidget.drawTintedTerrainCorners(56, -104, -60, 38, -92, -10, 85, -99);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,7 +188,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawTintedTerrainCorners(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = CampaignMenuEntry.field_u[param3];
         if (11 == var8) {
           var8 = 7;

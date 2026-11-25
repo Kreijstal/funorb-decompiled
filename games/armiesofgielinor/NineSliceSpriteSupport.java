@@ -23,11 +23,11 @@ final class NineSliceSpriteSupport {
         }
         if (!param1) {
           SoftwareRaster.clearPixels();
-          DamageEvent.b((byte) 92, param1);
+          DamageEvent.drawSharedAccountDialogs((byte) 92, param1);
           return;
         }
         SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
-        DamageEvent.b((byte) 92, param1);
+        DamageEvent.drawSharedAccountDialogs((byte) 92, param1);
     }
 
     final static void sendPreferencesRead(int param0, int param1) {

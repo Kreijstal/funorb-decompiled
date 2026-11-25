@@ -15,7 +15,7 @@ final class AnimationSequence {
     static String field_l;
     int loopStartFrame;
 
-    final static void b(int param0) {
+    final static void restorePlayerColoursAndPortalModels(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -170,7 +170,7 @@ final class AnimationSequence {
         this(param0, param1, param0.getFileId((byte) 28, param1, param2));
     }
 
-    final static void a(int param0, int param1) {
+    final static void positionLobbySidePanels(int param0, int param1) {
         int var2 = (-640 + NineSliceSpriteSupport.field_c) / 2;
         int var4 = -54 / ((33 - param1) / 47);
         int var3 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;

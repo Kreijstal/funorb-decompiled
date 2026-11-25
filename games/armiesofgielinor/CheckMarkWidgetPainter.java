@@ -17,7 +17,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
         field_a = null;
     }
 
-    final static LoginCredentials a(String param0, String param1, boolean param2, int param3, long param4) {
+    final static LoginCredentials createLoginCredentials(String param0, String param1, boolean param2, int param3, long param4) {
         RuntimeException var6 = null;
         AlternateKeyedLoginCredentials stackIn_6_0 = null;
         PasswordLoginCredentials stackIn_8_0 = null;
@@ -63,7 +63,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void refreshStatusSelectionMenu(boolean param0) {
         if (!ClientConnectionState.isSelectionMenuActive(76)) {
           return;
         }

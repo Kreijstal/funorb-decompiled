@@ -19,7 +19,7 @@ final class DamageEvent extends GameEvent {
         return var3;
     }
 
-    final static ResourceArchive a(int param0, int param1, byte param2, boolean param3, boolean param4) {
+    final static ResourceArchive createResourceArchive(int param0, int param1, byte param2, boolean param3, boolean param4) {
         if (param2 >= 98) {
           return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
         }
@@ -244,7 +244,7 @@ final class DamageEvent extends GameEvent {
         }
     }
 
-    final static void b(byte param0, boolean param1) {
+    final static void drawSharedAccountDialogs(byte param0, boolean param1) {
         KingBlackDragonEvent.field_C.drawAllLayers(0, -122, 0);
         if (param0 != 92) {
           field_z = (String) null;

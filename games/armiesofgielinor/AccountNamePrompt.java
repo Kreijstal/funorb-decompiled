@@ -402,7 +402,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           var10 = var9_int + 5 + 5;
           var11 = 3 + (2 * GradientSpanBlendSupport.field_d + 3);
           var12 = ArchiveLoadSequence.fitPopupX(anchorX, anchorWidth, var10, -1);
-          var13 = PasswordLengthSupport.a(var11, 0, anchorY, anchorHeight);
+          var13 = PasswordLengthSupport.fitPopupY(var11, 0, anchorY, anchorHeight);
           this.setBounds(var11, -20500, var10, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

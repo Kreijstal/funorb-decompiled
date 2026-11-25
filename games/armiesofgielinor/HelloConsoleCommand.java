@@ -4,7 +4,7 @@
 final class HelloConsoleCommand extends ConsoleCommand {
     static String field_E;
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isClientFeatureEnabled(int param0, byte param1) {
         if (param0 == -1) {
           return true;
         }
@@ -15,7 +15,7 @@ final class HelloConsoleCommand extends ConsoleCommand {
         return (ClientStateChecksumSupport.field_a & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
+    final static void drawAdditiveThreeSlice(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
         try {
           if (param2 >= -112) {
             field_E = (String) null;

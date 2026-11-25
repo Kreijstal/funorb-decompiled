@@ -97,7 +97,7 @@ final class SpellCastRequest extends ActionRequest {
           }
           PointerInputHandler.field_a.setProgress(param1, 30, param0, param2);
           SoftwareRaster.clearPixels();
-          DamageEvent.b((byte) 92, true);
+          DamageEvent.drawSharedAccountDialogs((byte) 92, true);
           if (param3 == -1) {
             return;
           }

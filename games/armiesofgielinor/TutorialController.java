@@ -235,7 +235,7 @@ final class TutorialController {
                     if (DeployEvent.pointerPressButton == 2 &&
                       UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int] > -1) {
                       UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int] = -1;
-                      AttackEvent.b(false);
+                      AttackEvent.writeEquippedSpells(false);
                       RadialSummonMenu.playDefaultSoundWithIntGuard(101, MoveAttackRequest.field_v[45]);
                     }
                     if (UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int] > -1) {
@@ -399,7 +399,7 @@ final class TutorialController {
                 while (var4Lifetime1 >= 0) {
                   if (~UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var4Lifetime1] == ~RasterViewportResizeHandler.field_d) {
                     UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var4Lifetime1] = -1;
-                    AttackEvent.b(false);
+                    AttackEvent.writeEquippedSpells(false);
                     return;
                   }
                   var4Lifetime1--;
@@ -417,7 +417,7 @@ final class TutorialController {
               while (var4Lifetime2 < 5) {
                 if (UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var4Lifetime2] == -1) {
                   UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var4Lifetime2] = RasterViewportResizeHandler.field_d;
-                  AttackEvent.b(false);
+                  AttackEvent.writeEquippedSpells(false);
                   return;
                 }
                 var4Lifetime2++;
@@ -1705,7 +1705,7 @@ final class TutorialController {
                                                                                     return;
                                                                                   }
                                                                                   if (18 == ChatInputDispatchSupport.field_a) {
-                                                                                    AttackEvent.b(false);
+                                                                                    AttackEvent.writeEquippedSpells(false);
                                                                                   }
                                                                                   if (ChatInputDispatchSupport.field_a == 13) {
                                                                                     LocalCoatSupport.writeLocalCoat((byte) 90);
@@ -1745,7 +1745,7 @@ final class TutorialController {
                                                                             DisplayModeOptionPainter.field_v = true;
                                                                             stackIn_421_0 = !(BitLengthSupport.field_a);
                                                                             BitLengthSupport.field_a = stackIn_421_0;
-                                                                            StripedProgressWidget.a(param1 ^ 1);
+                                                                            StripedProgressWidget.flushGraphicsPreferences(param1 ^ 1);
                                                                             if (var9 == 0) {
                                                                               return;
                                                                             }
@@ -1756,7 +1756,7 @@ final class TutorialController {
                                                                           stackIn_431_0 = !(SpellDefinitionTable.field_a);
                                                                           SpellDefinitionTable.field_a = stackIn_431_0;
                                                                           DisplayModeOptionPainter.field_v = true;
-                                                                          StripedProgressWidget.a(1);
+                                                                          StripedProgressWidget.flushGraphicsPreferences(1);
                                                                           if (var9 == 0) {
                                                                             return;
                                                                           }
@@ -1769,7 +1769,7 @@ final class TutorialController {
                                                                         if (AccountNameSelectionSupport.field_d == 3) {
                                                                           AccountNameSelectionSupport.field_d = 0;
                                                                         }
-                                                                        StripedProgressWidget.a(1);
+                                                                        StripedProgressWidget.flushGraphicsPreferences(1);
                                                                         if (var9 == 0) {
                                                                           return;
                                                                         }
@@ -5900,7 +5900,7 @@ final class TutorialController {
             if (TabbedPanel.isPointerInsideCircle(MatchConditionEntry.a(98, (byte) 94), IgnoreListLookupSupport.toInterfaceX(true, 350 + 55 * var2_int), 22, false)) {
               UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int] = RasterViewportResizeHandler.field_d;
               RadialSummonMenu.playDefaultSoundWithIntGuard(51, MoveAttackRequest.field_v[44]);
-              AttackEvent.b(false);
+              AttackEvent.writeEquippedSpells(false);
               return;
             }
             var2_int++;

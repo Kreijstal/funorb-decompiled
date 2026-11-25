@@ -41,7 +41,7 @@ final class ContextActionMenu extends ClientUiComponent {
         this(style, style.matchedButtonSkin, style.emptyTextStyle, style.itemTextStyle, style.horizontalPadding, style.itemPadding, style.iconTextGap, style.verticalPadding, style.rowHeight);
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawOpenGameDialogs(boolean param0, byte param1) {
         if (!GameUiOverlaySupport.hasOpenGameDialog(9501)) {
           return;
         }
@@ -51,7 +51,7 @@ final class ContextActionMenu extends ClientUiComponent {
         SphinxActionRequest.field_v.drawAllLayers(0, -118, 0);
         if (param1 >= -111) {
           ModelMesh var3 = (ModelMesh) null;
-          ContextActionMenu.a(false, (ModelMesh) null);
+          ContextActionMenu.flattenModelToGroundPlane(false, (ModelMesh) null);
         }
     }
 
@@ -107,7 +107,7 @@ final class ContextActionMenu extends ClientUiComponent {
         popupWidth = popupWidth + 2 * this.horizontalPadding;
         popupHeight = this.verticalPadding + this.itemCount * this.rowHeight + this.verticalPadding;
         popupX = ArchiveLoadSequence.fitPopupX(anchorX, anchorWidth, popupWidth, -1);
-        popupY = PasswordLengthSupport.a(popupHeight, 0, anchorY, anchorHeight);
+        popupY = PasswordLengthSupport.fitPopupY(popupHeight, 0, anchorY, anchorHeight);
         this.setBounds(popupHeight, -20500, popupWidth, popupY, popupX);
         for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {
           this.items[itemIndex].setLayout(this.rowHeight, this.itemPadding, -30061, -(2 * this.horizontalPadding) + popupWidth, this.rowHeight * itemIndex + this.verticalPadding, this.horizontalPadding, this.iconTextGap);
@@ -161,7 +161,7 @@ final class ContextActionMenu extends ClientUiComponent {
         }
     }
 
-    final static void a(boolean param0, ModelMesh param1) {
+    final static void flattenModelToGroundPlane(boolean param0, ModelMesh param1) {
         int var2_int = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {

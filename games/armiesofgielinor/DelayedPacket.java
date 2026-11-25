@@ -12,7 +12,7 @@ final class DelayedPacket extends IntrusiveNode {
     long releaseAtMillis;
     static String[] field_s;
 
-    final static void e(int param0) {
+    final static void closeQuickChatMenuIfVisible(int param0) {
         if (BattleTutorial.quickChatMenuVisible) {
           QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -93);
           if (param0 == -3) {
@@ -78,7 +78,7 @@ final class DelayedPacket extends IntrusiveNode {
         return "Done.";
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void prepareRatingLeaderboardBuffers(int param0, int param1, int param2) {
         if (DropdownOptionList.field_R == null) {
           DropdownOptionList.field_R = new int[param2 * 2];
           if (NumericDateInputWidget.field_U == null ||

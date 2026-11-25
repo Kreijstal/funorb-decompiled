@@ -23,7 +23,7 @@ final class FriendRequestSupport {
         }
         try {
           var7 = ArchiveLoadSequence.fitPopupX(var2_int, 12, var5, -1);
-          var8 = PasswordLengthSupport.a(var6, 0, var3, 20);
+          var8 = PasswordLengthSupport.fitPopupY(var6, 0, var3, 20);
           SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRaster.fillRectangle(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
           PasswordLoginCredentials.field_h.font.drawParagraph(param1, 3 + var7, -PasswordLoginCredentials.field_h.font.maxAscent + LeapYearSupport.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, GradientSpanBlendSupport.field_d);

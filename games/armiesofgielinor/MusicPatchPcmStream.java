@@ -91,7 +91,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return (dividend + signCorrection) / divisor - signCorrection;
     }
 
-    final static boolean e(int param0) {
+    final static boolean isTextChatAllowed(int param0) {
         if (param0 == -1) {
           return !MonotonicClockSupport.field_d ? true : false;
         }
@@ -162,7 +162,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
           }
           if (obfuscationGuard != 16) {
-            MusicPatchPcmStream.f(119);
+            MusicPatchPcmStream.releaseMusicPatchPcmStreamStatics(119);
           }
           note.stream.skip(frameCount);
           return;
@@ -273,7 +273,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseMusicPatchPcmStreamStatics(int param0) {
         field_q = null;
         if (param0 == 1048575) {
           return;

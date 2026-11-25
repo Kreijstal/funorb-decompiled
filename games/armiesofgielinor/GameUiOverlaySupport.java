@@ -96,7 +96,7 @@ final class GameUiOverlaySupport {
         if (param2) {
           campaigns = (CampaignDefinition[]) null;
           if (PowerOfTwoSupport.keyCode == 13) {
-            DelayedPacket.e(-3);
+            DelayedPacket.closeQuickChatMenuIfVisible(-3);
             return true;
           }
           if (PowerOfTwoSupport.keyCode == 102) {
@@ -112,7 +112,7 @@ final class GameUiOverlaySupport {
           return false;
         }
         if (PowerOfTwoSupport.keyCode == 13) {
-          DelayedPacket.e(-3);
+          DelayedPacket.closeQuickChatMenuIfVisible(-3);
           return true;
         }
         if (PowerOfTwoSupport.keyCode == 102) {

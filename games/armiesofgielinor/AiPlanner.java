@@ -1626,7 +1626,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             if (80 != PowerOfTwoSupport.keyCode) {
               return false;
             }
-            if (!MusicPatchPcmStream.e(-1)) {
+            if (!MusicPatchPcmStream.isTextChatAllowed(-1)) {
               return false;
             }
             ClientStateChecksumSupport.textChatActive = true;
@@ -1634,7 +1634,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           return GameUiOverlaySupport.handleQuickChatKey(param0, param1, false);
         }
-        if (!MusicPatchPcmStream.e(-1)) {
+        if (!MusicPatchPcmStream.isTextChatAllowed(-1)) {
           return false;
         }
         stackIn_22_0 = (!ProgressMessageDialog.b(param3, (byte) -59, param0)) ? 0 : 1;

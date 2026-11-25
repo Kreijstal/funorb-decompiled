@@ -104,7 +104,7 @@ final class NodeIterator {
           if (null != Spell.field_b &&
             Spell.field_b.isWaitingForChoice(18585)) {
             Spell.field_b = null;
-            FixInvisibleUnitsConsoleCommand.g(76);
+            FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
             return true;
           }
           if (param3 != 50) {
@@ -112,7 +112,7 @@ final class NodeIterator {
           }
         } else {
           if (FullscreenMembershipDialog.activeContextMenu.isWaitingForAction((byte) -121)) {
-            FixInvisibleUnitsConsoleCommand.g(76);
+            FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
             return true;
           }
           if (null == Spell.field_b) {
@@ -129,7 +129,7 @@ final class NodeIterator {
           }
           if (Spell.field_b.isWaitingForChoice(18585)) {
             Spell.field_b = null;
-            FixInvisibleUnitsConsoleCommand.g(76);
+            FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
             return true;
           }
           if (param3 == 50) {

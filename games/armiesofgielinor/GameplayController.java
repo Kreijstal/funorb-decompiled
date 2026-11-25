@@ -7237,7 +7237,7 @@ final class GameplayController {
           this.camera = new BattleCamera(this.battlefield.mapWidth, this.battlefield.mapHeight);
           this.unitRenderer = new BattleUnitRenderer(this.camera);
           ProgressMessageDialog.modelProjectionCamera = this.camera;
-          FixInvisibleUnitsConsoleCommand.a(this.battlefield, this.battleGraphicsAssets, 1, this);
+          FixInvisibleUnitsConsoleCommand.initializeBattlefieldPresentation(this.battlefield, this.battleGraphicsAssets, 1, this);
           var2_int = (this.battlefield.mapWidth >> 1) + (this.battlefield.mapWidth >> 1) * this.battlefield.mapWidth;
           if (!param0) {
             this.field_Gb = -93;
@@ -9797,7 +9797,7 @@ final class GameplayController {
                         stackIn_43_6 = false;
                         stackIn_43_7 = FriendRequestSupport.field_c[0][var4];
                         stackIn_44_8 = !((this.battlefield.eliminatedPlayerMask & 1 << var5) <= 0);
-                        DefeatPlayerWithMetricsConsoleCommand.a(stackIn_35_0, stackIn_36_1, stackIn_39_2, stackIn_39_3, stackIn_40_4, stackIn_43_5, stackIn_43_6, stackIn_43_7, stackIn_44_8, this.field_Wb[var5]);
+                        DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(stackIn_35_0, stackIn_36_1, stackIn_39_2, stackIn_39_3, stackIn_40_4, stackIn_43_5, stackIn_43_6, stackIn_43_7, stackIn_44_8, this.field_Wb[var5]);
                         var3 += 30;
                       }
                     } else {
@@ -9810,7 +9810,7 @@ final class GameplayController {
                       stackIn_58_6 = true;
                       stackIn_58_7 = FriendRequestSupport.field_c[0][var4];
                       stackIn_59_8 = !((1 << var5 & this.battlefield.eliminatedPlayerMask) <= 0);
-                      DefeatPlayerWithMetricsConsoleCommand.a(stackIn_50_0, stackIn_51_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_59_8, this.field_Wb[var5]);
+                      DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(stackIn_50_0, stackIn_51_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_59_8, this.field_Wb[var5]);
                       var3 += 60;
                     }
                     var5++;
@@ -9844,7 +9844,7 @@ final class GameplayController {
                         stackIn_86_6 = false;
                         stackIn_86_7 = FriendRequestSupport.field_c[0][var4];
                         stackIn_87_8 = !((this.battlefield.eliminatedPlayerMask & 1 << var6_int) <= 0);
-                        DefeatPlayerWithMetricsConsoleCommand.a(stackIn_78_0, stackIn_79_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, stackIn_86_5, stackIn_86_6, stackIn_86_7, stackIn_87_8, this.field_Wb[var6_int]);
+                        DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(stackIn_78_0, stackIn_79_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, stackIn_86_5, stackIn_86_6, stackIn_86_7, stackIn_87_8, this.field_Wb[var6_int]);
                         var5Lifetime2 += 30;
                       }
                       var6_int++;
@@ -9978,7 +9978,7 @@ final class GameplayController {
                 stackIn_168_6 = false;
                 stackIn_168_7 = FriendRequestSupport.field_c[0][var8Lifetime1];
                 stackIn_169_8 = !((1 << var8Lifetime1 & this.battlefield.eliminatedPlayerMask) <= 0);
-                DefeatPlayerWithMetricsConsoleCommand.a(stackIn_160_0, stackIn_161_1, stackIn_164_2, stackIn_164_3, stackIn_165_4, stackIn_168_5, stackIn_168_6, stackIn_168_7, stackIn_169_8, this.field_Wb[var8Lifetime1]);
+                DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(stackIn_160_0, stackIn_161_1, stackIn_164_2, stackIn_164_3, stackIn_165_4, stackIn_168_5, stackIn_168_6, stackIn_168_7, stackIn_169_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 30;
                   this.drawVictoryProgressBar(var8Lifetime1, 6, 30, 24 + var3Lifetime1, -36 + (-(var9Lifetime1 / 2) + var2_int), (byte) -116);
@@ -9998,7 +9998,7 @@ final class GameplayController {
                 stackIn_191_6 = true;
                 stackIn_191_7 = FriendRequestSupport.field_c[0][var8Lifetime1];
                 stackIn_192_8 = !((1 << var8Lifetime1 & this.battlefield.eliminatedPlayerMask) <= 0);
-                DefeatPlayerWithMetricsConsoleCommand.a(stackIn_183_0, stackIn_184_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, stackIn_191_5, stackIn_191_6, stackIn_191_7, stackIn_192_8, this.field_Wb[var8Lifetime1]);
+                DefeatPlayerWithMetricsConsoleCommand.drawDecoratedCoatSprite(stackIn_183_0, stackIn_184_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, stackIn_191_5, stackIn_191_6, stackIn_191_7, stackIn_192_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 56;
                   this.drawVictoryProgressBar(var8Lifetime1, 8, var9Lifetime1, var3Lifetime1 + 48, var2_int - 36 - var9Lifetime1 / 2, (byte) -116);
@@ -12236,7 +12236,7 @@ final class GameplayController {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameRemainder3 = true;
           var16 = new int[][]{this.field_Y};
-          AnimationSequence.b(-8);
+          AnimationSequence.restorePlayerColoursAndPortalModels(-8);
           var17 = 1.0f;
           if (param13 != null) {
             this.campaignMode = true;

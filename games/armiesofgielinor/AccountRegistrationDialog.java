@@ -56,7 +56,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawHalfBlendTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -6) {
           return;
@@ -186,7 +186,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         return left | right;
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void readGraphicsPreferences(byte[] param0, int param1) {
         if (param1 > param0[0]) {
           return;
         }

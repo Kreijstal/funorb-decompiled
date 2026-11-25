@@ -32,7 +32,7 @@ final class AttackEvent extends GameEvent {
           field_y = null;
           return;
         }
-        AttackEvent.b(false);
+        AttackEvent.writeEquippedSpells(false);
         field_O = null;
         field_K = null;
         field_D = null;
@@ -112,7 +112,7 @@ final class AttackEvent extends GameEvent {
             return stackIn_6_0;
           }
           if (obfuscationGuard) {
-            AttackEvent.b(true);
+            AttackEvent.writeEquippedSpells(true);
           }
           var3_int = -(int)(4294967296L % (long)bound) + -2147483648;
           do {
@@ -134,7 +134,7 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void writeEquippedSpells(boolean param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -156,7 +156,7 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    final static void d(byte param0) {
+    final static void openInGameLoginDialog(byte param0) {
         if (!GrowableIntArray.field_i) {
           throw new IllegalStateException();
         }

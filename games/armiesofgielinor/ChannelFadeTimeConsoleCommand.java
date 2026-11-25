@@ -5,7 +5,7 @@ final class ChannelFadeTimeConsoleCommand extends ConsoleCommand {
     static boolean field_F;
     static String field_E;
 
-    final static int h(int param0) {
+    final static int getRegistrationChoiceByteCount(int param0) {
         if (param0 != 1) {
           field_E = (String) null;
           return 1;
@@ -42,7 +42,7 @@ final class ChannelFadeTimeConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void selectLoadingStatusLanguage(int param0, int param1) {
         BattleUnitRenderer.field_c = NetworkGameShell.field_F[param0];
         IgnoreListLookupSupport.field_b = PasswordLoginCredentials.field_m[param0];
         if (param1 == 1) {

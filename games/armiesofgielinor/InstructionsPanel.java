@@ -2353,7 +2353,7 @@ final class InstructionsPanel {
             if (SpectateRoomRequestSupport.connectionState == AccountHandshakeStateSupport.field_a) {
               if (param5) {
                 var10 = (String) null;
-                CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, ReflectionCheckRequest.field_o);
+                CampaignRewardPreview.field_g = CheckMarkWidgetPainter.createLoginCredentials((String) null, param3, false, 1, ReflectionCheckRequest.field_o);
               } else {
                 CampaignRewardPreview.field_g = TabbedPanel.createLoginCredentials(false, param4, (byte) 10, param3);
               }

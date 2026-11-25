@@ -34,7 +34,7 @@ abstract class GameEvent extends IntrusiveNode {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 1023) {
           var4 = (CipherPacketBuffer) null;
-          GameEvent.a(-38, (CipherPacketBuffer) null);
+          GameEvent.readPackedLogoMesh(-38, (CipherPacketBuffer) null);
         }
         var2 = this.eventKind;
         if (0 == var2) {
@@ -264,7 +264,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2);
 
-    final static LogoMesh a(int param0, CipherPacketBuffer param1) {
+    final static LogoMesh readPackedLogoMesh(int param0, CipherPacketBuffer param1) {
         int var8 = 0;
         LogoMesh stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -359,7 +359,7 @@ abstract class GameEvent extends IntrusiveNode {
         this.presentationComplete = true;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static void drawPlayerRadialColumn(int param0, boolean param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int[] stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;

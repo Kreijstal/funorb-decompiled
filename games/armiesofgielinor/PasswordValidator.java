@@ -471,7 +471,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (DeployEvent.pointerPressButton != 0 &&
           var4 == 0) {
           param1 = false;
-          DelayedPacket.e(-3);
+          DelayedPacket.closeQuickChatMenuIfVisible(-3);
         }
         if (param1) {
           RegistrationAgreementPane.activeQuickChatMenu.advanceMenu(param3, (byte) -42, param2);

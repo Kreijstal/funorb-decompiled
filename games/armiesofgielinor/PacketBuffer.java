@@ -398,7 +398,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void closeSharedInteractionUi(byte param0) {
-        FixInvisibleUnitsConsoleCommand.g(76);
+        FixInvisibleUnitsConsoleCommand.closeActiveContextMenu(76);
         ImageProducerSurface.clearAccountNamePrompt(-1);
         Spell.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);

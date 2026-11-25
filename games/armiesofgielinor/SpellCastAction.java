@@ -14,7 +14,7 @@ final class SpellCastAction extends PreparedAction {
         if (param0 != 8) {
           return;
         }
-        DisplayModeOptionPainter.a(param1, true);
+        DisplayModeOptionPainter.setSharedChatPanelTop(param1, true);
     }
 
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {

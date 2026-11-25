@@ -61,7 +61,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
             this.evaluateState(-41);
           }
           year = this.input.getYear((byte) -77);
-          currentYear = ActionSpell.b(true);
+          currentYear = ActionSpell.getCurrentYear(true);
           if (year >= 1890 &&
             year <= currentYear - 3) {
             if (DateValiditySupport.isValidDate(year, -24375, monthIndex, day)) {
@@ -157,7 +157,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
           day = this.input.getDay(50);
           monthIndex = this.input.getMonthIndex(-26458);
           year = this.input.getYear((byte) -77);
-          currentYear = ActionSpell.b(true);
+          currentYear = ActionSpell.getCurrentYear(true);
           if (year < 1890) {
             tooOldState = ProceduralMapSupport.validationInvalid;
             return tooOldState;

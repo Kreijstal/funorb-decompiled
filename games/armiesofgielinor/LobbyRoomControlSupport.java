@@ -73,7 +73,7 @@ final class LobbyRoomControlSupport {
           if (param3 != 0) {
             LobbyRoomControlSupport.releaseStatics((byte) -86);
           }
-          AnimationSequence.a(InstructionsPanel.field_D, 125);
+          AnimationSequence.positionLobbySidePanels(InstructionsPanel.field_D, 125);
           if (ToggleWidget.currentRoom != null) {
             boolean decompiledFrameRemainder1 = true;
             SocialListPanel.field_Lb.inputEnabled = true;

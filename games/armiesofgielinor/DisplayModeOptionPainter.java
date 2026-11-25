@@ -55,7 +55,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
           field_D = null;
           return;
         }
-        DisplayModeOptionPainter.a(-117, false);
+        DisplayModeOptionPainter.setSharedChatPanelTop(-117, false);
         field_x = null;
         field_z = null;
         field_u = null;
@@ -127,7 +127,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void setSharedChatPanelTop(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         UnitAnimationPreview.field_l = param0;
@@ -144,7 +144,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
         field_z = (String) null;
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
+    final static void setMembershipExpansionArchives(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 < 30) {
             DisplayModeOptionPainter.releaseStatics(false);

@@ -588,7 +588,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             var23 = var19 + 26;
             var24 = 10 + (var17Lifetime5 + (var22 + 24));
             var25 = ArchiveLoadSequence.fitPopupX(anchorX, anchorWidth, var23, -1);
-            var26 = PasswordLengthSupport.a(var24, 0, anchorY, anchorHeight);
+            var26 = PasswordLengthSupport.fitPopupY(var24, 0, anchorY, anchorHeight);
             this.setBounds(var24, -20500, var23, var26, var25);
             return;
           }
@@ -606,7 +606,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = ArchiveLoadSequence.fitPopupX(anchorX, anchorWidth, var18Lifetime1, -1);
-          var21Lifetime1 = PasswordLengthSupport.a(var19Lifetime1, 0, anchorY, anchorHeight);
+          var21Lifetime1 = PasswordLengthSupport.fitPopupY(var19Lifetime1, 0, anchorY, anchorHeight);
           this.setBounds(var19Lifetime1, -20500, var18Lifetime1, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

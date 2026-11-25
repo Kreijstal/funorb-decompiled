@@ -113,7 +113,7 @@ final class SoundCache {
         try {
           if (obfuscationGuard >= -125) {
             var5 = (java.applet.Applet) null;
-            SoundCache.a(-46, (java.applet.Applet) null);
+            SoundCache.probeAppletUsername(-46, (java.applet.Applet) null);
           }
           stackIn_3_0 = this.loadMusicSampleByName((int[]) null, (byte) 115, fileName, groupName);
           return stackIn_3_0;
@@ -202,7 +202,7 @@ final class SoundCache {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseSoundCacheStatics(byte param0) {
         field_a = null;
         field_f = null;
         field_i = null;
@@ -212,7 +212,7 @@ final class SoundCache {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        SoundCache.a(114, (java.applet.Applet) null);
+        SoundCache.probeAppletUsername(114, (java.applet.Applet) null);
         field_d = null;
     }
 
@@ -312,7 +312,7 @@ final class SoundCache {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void probeAppletUsername(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;

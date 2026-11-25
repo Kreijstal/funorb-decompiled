@@ -24,7 +24,7 @@ final class PasswordLengthSupport {
         field_g = null;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int fitPopupY(int param0, int param1, int param2, int param3) {
         if (param0 + param3 + param2 <= SoftwareRaster.height) {
           return param3 + param2;
         }
@@ -66,7 +66,7 @@ final class PasswordLengthSupport {
         }
     }
 
-    final static void a(int param0, int param1, PacketBuffer param2, int param3) {
+    final static void writePackedTargetDelta(int param0, int param1, PacketBuffer param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

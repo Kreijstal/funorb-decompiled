@@ -323,7 +323,7 @@ final class WidgetStateStyle {
           if (!param2) {
             return;
           }
-          HelloConsoleCommand.a(param8, -(var9_int >> 1) + param6, -122, var9_int, param5, 128);
+          HelloConsoleCommand.drawAdditiveThreeSlice(param8, -(var9_int >> 1) + param6, -122, var9_int, param5, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

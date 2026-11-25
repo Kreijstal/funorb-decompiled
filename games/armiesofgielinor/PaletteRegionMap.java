@@ -31,7 +31,7 @@ final class PaletteRegionMap {
           return;
         }
         try {
-          ContentTransitionDialog.a(0, 12, param1, 0);
+          ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

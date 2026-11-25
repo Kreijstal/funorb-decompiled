@@ -557,7 +557,7 @@ class ClientUiComponent extends ClientUiNode {
           } else {
             stackIn_4_0 = InstructionsPanel.field_D;
           }
-          AnimationSequence.a(stackIn_4_0, -106);
+          AnimationSequence.positionLobbySidePanels(stackIn_4_0, -106);
           DebugConsole.field_w.setLayout(-40 + BitmapTextWidgetPainter.field_a.height - 2, (byte) -125, 0, BitmapTextWidgetPainter.field_a.width, 0);
           PrintVictoryConditionsConsoleCommand.field_E.setBounds(GradientSpanBlendSupport.field_d, -20500, BitCountSupport.field_c.width, 0, 0);
           stackIn_6_0 = MatchingTextValidator.field_l;
