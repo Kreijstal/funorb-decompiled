@@ -99,7 +99,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard >= -15) {
           this.memberLaunch = true;
         }
-        connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), true);
+        connectionResult = InstructionsPanel.advanceSessionLogin((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), true);
         if (connectionResult == -1) {
           return -1;
         }
@@ -247,7 +247,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             if (normalUiMode) {
               MaskedTextEntryPainter.field_C = false;
             } else {
-              connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
+              connectionResult = InstructionsPanel.advanceSessionLogin((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.getLoginPassword(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
               if (connectionResult != -1) {
                 if (connectionResult != 0) {
                   KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
@@ -456,7 +456,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 AchievementNotification.e(0);
                 break;
               case 1:
-                InstructionsPanel.e(obfuscationGuard - 135);
+                InstructionsPanel.readQueuedRequestReply(obfuscationGuard - 135);
                 break;
             }
           }

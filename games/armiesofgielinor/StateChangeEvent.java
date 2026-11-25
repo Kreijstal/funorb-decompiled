@@ -238,7 +238,7 @@ final class StateChangeEvent extends GameEvent {
           if (MoveEvent.instructionsPanel == null) {
             MoveEvent.instructionsPanel = new InstructionsPanel();
           }
-          MoveEvent.instructionsPanel.f((byte) 79);
+          MoveEvent.instructionsPanel.initializeInstructionsView((byte) 79);
           if (MoveEvent.matchSetupPanel == null) {
             MoveEvent.matchSetupPanel = new MatchSetupPanel();
           }

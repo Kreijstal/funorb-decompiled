@@ -61,7 +61,7 @@ final class InstructionsPanel {
     private int field_z;
     private int field_E;
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void drawUnitCommandPanelIllustration(int param0, byte param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         boolean discarded$0 = false;
@@ -78,12 +78,12 @@ final class InstructionsPanel {
         }
         var4Lifetime1 = 76;
         if (param1 < 90) {
-          discarded$0 = this.c(60, 20);
+          discarded$0 = this.isColumnGroupArgument(60, 20);
         }
         ArrayWidgetContainer.a(false, true, this.auxiliaryPreviewUnit, 0, IgnoreListLookupSupport.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void drawGodFavourOrbsIllustration(byte param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -157,7 +157,7 @@ final class InstructionsPanel {
         return output;
     }
 
-    private final void c(byte param0) {
+    private final void initializeLeaderPreview(byte param0) {
         this.field_S = null;
         this.field_S = new UnitModelPreview(18);
         if (param0 > -101) {
@@ -165,7 +165,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void d(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawTerrainTypeIllustration(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -181,28 +181,28 @@ final class InstructionsPanel {
             ToggleWidget.a(true, true, param1, param0, param3, 1, param4 ^ 0);
           }
           if (param2 == 2) {
-            this.a(param3, (byte) 85, 1, true, param1, param0);
+            this.drawFoliageIllustration(param3, (byte) 85, 1, true, param1, param0);
           }
           if (param4 != 1) {
             return;
           }
           if (param2 == 8) {
             var8 = 0;
-            this.a(param1, var8, param3, (byte) 114, param0);
+            this.drawStructureIllustrationSprite(param1, var8, param3, (byte) 114, param0);
           }
           if (param2 == 14) {
             var8Lifetime1 = 11;
-            this.a(param1, var8Lifetime1, param3, (byte) 114, param0 - 5);
+            this.drawStructureIllustrationSprite(param1, var8Lifetime1, param3, (byte) 114, param0 - 5);
           }
           if (12 == param2) {
             var8Lifetime2 = 24;
-            this.a(param1, var8Lifetime2, param3, (byte) 114, param0);
+            this.drawStructureIllustrationSprite(param1, var8Lifetime2, param3, (byte) 114, param0);
           }
           return;
         }
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int getMatchupComparisonIconIndex(int param0, byte param1, int param2) {
         int var4 = DropdownSelectorPainter.matchupDamagePercent[param2][param0];
         int var5 = DropdownSelectorPainter.matchupDamagePercent[param0][param2];
         if (var5 < var4) {
@@ -218,7 +218,7 @@ final class InstructionsPanel {
           return 3;
         }
         if (param1 != -6) {
-          this.b(-122);
+          this.advanceCapturePreview(-122);
         }
         return 2;
     }
@@ -257,7 +257,7 @@ final class InstructionsPanel {
         int var5;
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.p(31559);
+        this.resetNavigationState(31559);
         if (previousEnabled) {
           this.previousEnabled = true;
         }
@@ -289,7 +289,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void m(int param0) {
+    private final void releaseCachedPageSprites(int param0) {
         int var2 = 0;
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -341,10 +341,10 @@ final class InstructionsPanel {
             return;
           }
           if (obfuscationGuard >= -73) {
-            this.l(58);
+            this.drawFooter(58);
           }
           illustrationArguments = LocalAccountSupport.instructionIllustrationArguments[this.pageIndex];
-          topY = this.field_T - this.a(true);
+          topY = this.field_T - this.getHeadingHalfAscent(true);
           for (sectionIndex = 0; sectionIndex < sectionTitles.length; sectionIndex++) {
             if (titles != null &&
               rowHeadings != null &&
@@ -386,7 +386,7 @@ final class InstructionsPanel {
         try {
           var9_int = this.field_F.first;
           var10 = topY;
-          var11 = (this.a(true) >> 1) + this.h(-2881);
+          var11 = (this.getHeadingHalfAscent(true) >> 1) + this.getSectionTitleBaselineOffset(-2881);
           var10 = var11 + var10;
           if (obfuscationGuard != -1185705759) {
             this.navigationStart = (IntPair) null;
@@ -396,7 +396,7 @@ final class InstructionsPanel {
             GradientUiRenderer.drawCenteredGradientText(var12, IgnoreListLookupSupport.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
           }
           var13 = topY;
-          var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
+          var11Lifetime1 = this.field_Y - this.field_T + (this.getHeadingHalfAscent(true) >> 1);
           if (var12 != null) {
             var13 = topY + var11Lifetime1;
           }
@@ -445,7 +445,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void drawStructureOwnershipIllustration(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -535,7 +535,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void p(int param0) {
+    private final void resetNavigationState(int param0) {
         this.previousEnabled = false;
         if (param0 != 31559) {
           field_r = -110;
@@ -546,9 +546,9 @@ final class InstructionsPanel {
         this.footerHighlighted = false;
     }
 
-    private final void l(int param0) {
+    private final void drawFooter(int param0) {
         if (param0 > -48) {
-          this.c((byte) -46);
+          this.initializeLeaderPreview((byte) -46);
         }
         int var2 = this.footerStart.first;
         int var3 = this.footerStart.second;
@@ -559,7 +559,7 @@ final class InstructionsPanel {
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
-        int var8 = this.a(21695);
+        int var8 = this.getControlCaptionBaselineOffset(21695);
         var3 = var3 + var8;
         String var9 = this.footerCaption;
         if (var9 == null ||
@@ -572,7 +572,7 @@ final class InstructionsPanel {
         GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
-    final void f(byte param0) {
+    final void initializeInstructionsView(byte param0) {
         boolean discarded$0 = false;
         int var2;
         int var3;
@@ -614,16 +614,16 @@ final class InstructionsPanel {
         this.field_bb = 58;
         this.field_t = 578;
         if (param0 <= 6) {
-          discarded$0 = this.c(66, 56);
+          discarded$0 = this.isColumnGroupArgument(66, 56);
         }
         var2 = this.field_x.second;
-        var3 = this.b((byte) 70);
-        var4 = this.a(true);
+        var3 = this.getHeadingHalfLineHeight((byte) 70);
+        var4 = this.getHeadingHalfAscent(true);
         this.field_m = 583;
         this.field_T = var4 + var2 + (var3 >> 1);
         this.field_i = 56;
         this.field_Y = var2 + var3;
-        this.field_E = this.i(112);
+        this.field_E = this.getParagraphSpacing(112);
         this.field_g = this.field_E;
         this.field_l = 14540255;
         this.field_db = 14;
@@ -632,13 +632,13 @@ final class InstructionsPanel {
         this.illustrationCounter = new TickCounter(256);
         this.secondaryIllustrationCounter = new TickCounter(100);
         this.field_J = new int[4];
-        this.f(-11195);
-        this.i((byte) 28);
-        this.c((byte) -109);
-        this.j((byte) -7);
+        this.initializePortalAnimation(-11195);
+        this.initializeCapturePreview((byte) 28);
+        this.initializeLeaderPreview((byte) -109);
+        this.initializeGuardPreview((byte) -7);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, Unit param5, Unit param6, int param7) {
+    private final void drawUnitPopupCard(int param0, int param1, int param2, int param3, int param4, Unit param5, Unit param6, int param7) {
         int var9_int = 0;
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         SpellConfirmationDialog.field_j.bindAsRasterTarget();
@@ -664,7 +664,7 @@ final class InstructionsPanel {
             } else {
               SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param6.getUnitCategory(0)].draw(43, 32);
-              AccountHandshakeStateSupport.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
+              AccountHandshakeStateSupport.field_b[this.getMatchupComparisonIconIndex(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
             }
           }
           ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
@@ -677,20 +677,20 @@ final class InstructionsPanel {
         }
     }
 
-    private final IntPair b(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair renderGuardIllustration(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != 0 &&
           param2 != 1) {
-          this.c(50, param1, param4);
+          this.drawGuardIllustration(50, param1, param4);
           if (param0 == -2) {
             return null;
           }
-          this.b(-21);
+          this.advanceCapturePreview(-21);
           return null;
         }
-        return this.a(param2, param3, param0 ^ 88);
+        return this.getTileIllustrationBounds(param2, param3, param0 ^ 88);
     }
 
-    private final IntPair a(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair renderUnitPopupIllustration(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -3) {
           this.field_m = 124;
         }
@@ -704,12 +704,12 @@ final class InstructionsPanel {
           return new IntPair(0, 0);
         }
         if (param1 == 2) {
-          this.a(param0, param3, param2, -19556);
+          this.drawUnitPopupIllustration(param0, param3, param2, -19556);
         }
         return null;
     }
 
-    private final void b(int param0) {
+    private final void advanceCapturePreview(int param0) {
         if (null != this.field_s) {
           this.field_s.selectAnimationAndAdvance(0, (byte) -50);
         }
@@ -763,12 +763,12 @@ final class InstructionsPanel {
         return -1;
     }
 
-    private final IntPair a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    private final IntPair renderOwnedTerrainIllustration(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         int discarded$1 = 0;
         int[] var9;
         if (param5 != 0 &&
           param5 != 1) {
-          this.c(param0, param2, -31550, param1, param6);
+          this.drawOwnedTerrainIllustration(param0, param2, -31550, param1, param6);
           if (param4) {
             return null;
           }
@@ -776,10 +776,10 @@ final class InstructionsPanel {
           discarded$1 = this.drawInstructionRows((String[]) null, (String[][]) null, -14, (int[]) null, (int[]) null, (byte) -11, 90);
           return null;
         }
-        return this.a(param5, param3, 110);
+        return this.getTileIllustrationBounds(param5, param3, 110);
     }
 
-    private final void g(byte param0) {
+    private final void drawNavigationBar(byte param0) {
         int[] stackIn_5_0 = null;
         int[] stackIn_12_0 = null;
         int var2;
@@ -811,11 +811,11 @@ final class InstructionsPanel {
         SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
         var6 = this.navigationStart.second;
         if (param0 != 10) {
-          this.j(76);
+          this.advancePortalAnimation(76);
         }
         var7 = this.navigationEnd.second;
         var3Lifetime1 = var6 + var7 >> 1;
-        var8 = this.a(21695);
+        var8 = this.getControlCaptionBaselineOffset(21695);
         var3Lifetime1 = var3Lifetime1 + var8;
         var2Lifetime1 = this.field_bb;
         var13 = this.previousCaption;
@@ -854,14 +854,14 @@ final class InstructionsPanel {
         GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
-    private final int d(int param0) {
+    private final int getBodyLineHeight(int param0) {
         if (param0 != 17) {
           this.getPanelStart((byte) -89);
         }
         return PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.maxAscent;
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void drawGuardIllustration(int param0, int param1, int param2) {
         if (null != this.auxiliaryPreviewModel) {
           this.auxiliaryPreviewModel.setScreenPosition(IgnoreListLookupSupport.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
@@ -897,7 +897,7 @@ final class InstructionsPanel {
         return new IntPair(var2, var4);
     }
 
-    private final IntPair b(int param0, byte param1) {
+    private final IntPair getGodFavourOrbsBounds(int param0, byte param1) {
         int var5 = 0;
         int var3;
         int var4;
@@ -1004,7 +1004,7 @@ final class InstructionsPanel {
         return 1;
     }
 
-    private final void j(byte param0) {
+    private final void initializeGuardPreview(byte param0) {
         this.auxiliaryPreviewModel = null;
         this.auxiliaryPreviewModel = new UnitModelPreview(25);
         if (param0 != -7) {
@@ -1012,14 +1012,14 @@ final class InstructionsPanel {
         }
     }
 
-    private final int a(int param0) {
+    private final int getControlCaptionBaselineOffset(int param0) {
         if (param0 != 21695) {
           return 113;
         }
         return (NineSliceFrame.field_e.xHeight >> 2) - NineSliceFrame.field_e.maxDescent + NineSliceFrame.field_e.baselineHeight + (-(NineSliceFrame.field_e.maxAscent >> 1) + 3);
     }
 
-    private final void a(RgbSprite param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
+    private final void buildGodFavourPageSprite(RgbSprite param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -1138,14 +1138,14 @@ final class InstructionsPanel {
         }
     }
 
-    private final int b(byte param0) {
+    private final int getHeadingHalfLineHeight(byte param0) {
         if (param0 <= 14) {
           this.footerEnd = (IntPair) null;
         }
         return NineSliceFrame.field_e.maxAscent + NineSliceFrame.field_e.maxDescent >> 1;
     }
 
-    private final IntPair a(int param0, int param1, int param2) {
+    private final IntPair getTileIllustrationBounds(int param0, int param1, int param2) {
         int var4;
         if (param0 == 0) {
           return new IntPair(80, param1 * 80 >> 2);
@@ -1157,7 +1157,7 @@ final class InstructionsPanel {
         return null;
     }
 
-    private final RgbSprite b(int param0, int param1) {
+    private final RgbSprite getCachedGodFavourSprite(int param0, int param1) {
         if (null == this.cachedPageSprites) {
           return null;
         }
@@ -1173,26 +1173,26 @@ final class InstructionsPanel {
         return this.cachedPageSprites[param1];
     }
 
-    private final IntPair a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final IntPair renderTerrainTypeIllustration(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 != 0 &&
           param1 != 1) {
-          this.d(param3, param0, param4, param2, 1);
+          this.drawTerrainTypeIllustration(param3, param0, param4, param2, 1);
           if (param5 == 2) {
             return null;
           }
           this.getItemTopY(37, -69);
           return null;
         }
-        return this.e(3, param1);
+        return this.getHalfTileIllustrationBounds(3, param1);
     }
 
-    private final IntPair c(int param0, int param1, int param2, int param3) {
+    private final IntPair renderGodFavourOrbsIllustration(int param0, int param1, int param2, int param3) {
         if (param3 == 0 ||
           param3 == 1) {
-          return this.b(param3, (byte) 16);
+          return this.getGodFavourOrbsBounds(param3, (byte) 16);
         }
         if (2 == param3) {
-          this.a((byte) 116, param0, param1);
+          this.drawGodFavourOrbsIllustration((byte) 116, param0, param1);
         }
         if (param2 < -4) {
           return null;
@@ -1227,7 +1227,7 @@ final class InstructionsPanel {
         return new IntPair(var2, var3);
     }
 
-    private final IntPair a(byte param0, int param1, int param2, RgbSprite param3, int param4, IndexedSprite param5) {
+    private final IntPair renderSpriteIllustration(byte param0, int param1, int param2, RgbSprite param3, int param4, IndexedSprite param5) {
         Object stackIn_4_0 = null;
         IntPair stackIn_8_0 = null;
         IntPair stackIn_15_0 = null;
@@ -1312,7 +1312,7 @@ final class InstructionsPanel {
         }
     }
 
-    final static void e(int param0) {
+    final static void readQueuedRequestReply(int param0) {
         int var2 = 122 % ((param0 + 31) / 56);
         AlphaDecodedSpriteSupport var1 = (AlphaDecodedSpriteSupport) (ArchiveIndex.field_o.first((byte) 126));
         if (var1 == null) {
@@ -1327,19 +1327,19 @@ final class InstructionsPanel {
         var1.unlink(-115);
     }
 
-    private final int i(int param0) {
+    private final int getParagraphSpacing(int param0) {
         int var2 = 32 % ((-32 - param0) / 59);
         return PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.maxAscent;
     }
 
-    private final int h(int param0) {
+    private final int getSectionTitleBaselineOffset(int param0) {
         if (param0 != -2881) {
           return -79;
         }
         return 3 + NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent - (NineSliceFrame.field_e.maxAscent >> 1);
     }
 
-    private final void j(int param0) {
+    private final void advancePortalAnimation(int param0) {
         int var2 = 0;
         AnimationFrameSet var3 = null;
         if (param0 != -302977872) {
@@ -1355,11 +1355,11 @@ final class InstructionsPanel {
           }
           MusicPatch.setCurrentFrameSet(var3, (byte) -34);
         } else {
-          this.f(-11195);
+          this.initializePortalAnimation(-11195);
         }
     }
 
-    private final IntPair a(int param0, int param1, int param2, int param3, RgbSprite param4) {
+    private final IntPair renderHalfSizeRgbIllustration(int param0, int param1, int param2, int param3, RgbSprite param4) {
         Object stackIn_2_0 = null;
         IntPair stackIn_6_0 = null;
         IntPair stackIn_12_0 = null;
@@ -1410,32 +1410,32 @@ final class InstructionsPanel {
     public static void releaseStatics(int obfuscationGuard) {
         field_y = null;
         if (obfuscationGuard >= -20) {
-          InstructionsPanel.e(41);
+          InstructionsPanel.readQueuedRequestReply(41);
         }
         field_gb = null;
         field_c = null;
     }
 
-    private final IntPair a(boolean param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
+    private final IntPair renderCaptureIllustration(boolean param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         if (param4 != 74) {
           this.field_x = (IntPair) null;
         }
         if (param5 != 0 &&
           param5 != 1) {
-          this.a(param1, param6, param7, param0, -1, param3);
+          this.drawCaptureIllustration(param1, param6, param7, param0, -1, param3);
           return null;
         }
-        return this.a(param5, param2, 95);
+        return this.getTileIllustrationBounds(param5, param2, 95);
     }
 
-    private final int h(byte param0) {
+    private final int getPanelTitleBaselineOffset(byte param0) {
         if (param0 >= -90) {
           InstructionsPanel.describeBattleVictoryConditions(117);
         }
         return NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxDescent - (NineSliceFrame.field_e.maxAscent - ((NineSliceFrame.field_e.xHeight >> 1) + 3));
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, int param4) {
+    private final void drawStructureIllustrationSprite(int param0, int param1, int param2, byte param3, int param4) {
         if (QuickChatCategoryMenuSupport.activeStructureSprites != null &&
           param2 >= 0 &&
           QuickChatCategoryMenuSupport.activeStructureSprites.length > param2) {
@@ -1443,7 +1443,7 @@ final class InstructionsPanel {
             param1 >= 0 &&
             QuickChatCategoryMenuSupport.activeStructureSprites.length > param1) {
             if (param3 != 114) {
-              this.j((byte) 86);
+              this.initializeGuardPreview((byte) 86);
             }
             if (null == QuickChatCategoryMenuSupport.activeStructureSprites[param1]) {
               return;
@@ -1455,7 +1455,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, boolean param3, int param4, int param5) {
+    private final void drawFoliageIllustration(int param0, byte param1, int param2, boolean param3, int param4, int param5) {
         int discarded$0 = 0;
         int var10 = 0;
         int var7;
@@ -1473,7 +1473,7 @@ final class InstructionsPanel {
           null != NineSliceFrame.activeFoliageSprites[param0]) {
           if (param1 < 71) {
             var14 = (String) null;
-            discarded$0 = this.a(55, (String[]) null, (String) null, 27, -41, -10, 103, 60, -125);
+            discarded$0 = this.drawInstructionTextRow(55, (String[]) null, (String) null, 27, -41, -10, 103, 60, -125);
           }
           param2 = param2 << 8 | param2;
           var7 = param2 >> 1 ^ param2;
@@ -1510,7 +1510,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final IntPair a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    private final IntPair renderInstructionIllustration(int param0, byte param1, int param2, int param3, int param4, int param5) {
         Object var7;
         Object var8;
         if (param5 != 0 &&
@@ -1525,179 +1525,179 @@ final class InstructionsPanel {
         var8 = null;
         if (this.pageIndex == 0 &&
           param4 == 1) {
-          return this.a(param0, 0, 7, 2, true, param5, param3);
+          return this.renderOwnedTerrainIllustration(param0, 0, 7, 2, true, param5, param3);
         }
         if (this.pageIndex == 2 &&
           4 == param4) {
-          return this.d(param3, param5, param0, 0);
+          return this.renderUnitCommandPanelIllustration(param3, param5, param0, 0);
         }
         if (this.pageIndex == 3 &&
           param4 == 1) {
-          var8 = this.f(0, 0);
+          var8 = this.getUnitCategoryIcon(0, 0);
         } else if (this.pageIndex == 3 &&
           2 == param4) {
-          var8 = this.f(0, 1);
+          var8 = this.getUnitCategoryIcon(0, 1);
         } else if (this.pageIndex == 3 &&
           3 == param4) {
-          var8 = this.f(0, 2);
+          var8 = this.getUnitCategoryIcon(0, 2);
         } else if (3 == this.pageIndex &&
           param4 == 4) {
-          var8 = this.f(0, 3);
+          var8 = this.getUnitCategoryIcon(0, 3);
         } else if (4 == this.pageIndex &&
           param4 == 0) {
-          var8 = this.f(0, 5);
+          var8 = this.getUnitCategoryIcon(0, 5);
         } else if (this.pageIndex == 4 &&
           param4 == 1) {
-          var8 = this.f(0, 4);
+          var8 = this.getUnitCategoryIcon(0, 4);
         } else if (this.pageIndex == 4 &&
           2 == param4) {
-          var8 = this.f(0, 6);
+          var8 = this.getUnitCategoryIcon(0, 6);
         } else if (this.pageIndex == 4 &&
           param4 == 3) {
-          var8 = this.f(0, 7);
+          var8 = this.getUnitCategoryIcon(0, 7);
         } else {
           if (this.pageIndex == 5 &&
             3 == param4) {
-            return this.a(param3, param5, param0, 0, -3);
+            return this.renderUnitPopupIllustration(param3, param5, param0, 0, -3);
           }
           if (5 == this.pageIndex &&
             param4 == 4) {
-            return this.a(param3, param5, param0, 1, -3);
+            return this.renderUnitPopupIllustration(param3, param5, param0, 1, -3);
           }
           if (this.pageIndex == 6 &&
             1 == param4) {
-            return this.a(true, 8, 4, param3, (byte) 74, param5, 0, param0);
+            return this.renderCaptureIllustration(true, 8, 4, param3, (byte) 74, param5, 0, param0);
           }
           if (6 == this.pageIndex &&
             param4 == 2) {
-            return this.a(param0, 0, 9, 4, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, 0, 9, 4, true, param5, param3);
           }
           if (this.pageIndex == 6 &&
             param4 == 3) {
-            return this.a(param0, 0, 7, 4, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, 0, 7, 4, true, param5, param3);
           }
           if (this.pageIndex == 7 &&
             param4 == 1) {
-            return this.a(param0, -1, 8, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, -1, 8, 3, true, param5, param3);
           }
           if (7 == this.pageIndex &&
             param4 == 2) {
-            return this.a(param0, 0, 7, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, 0, 7, 3, true, param5, param3);
           }
           if (this.pageIndex == 7 &&
             param4 == 3) {
-            return this.a(param0, -1, 9, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, -1, 9, 3, true, param5, param3);
           }
           if (8 == this.pageIndex &&
             3 == param4) {
-            return this.c(param3, param0, -116, param5);
+            return this.renderGodFavourOrbsIllustration(param3, param0, -116, param5);
           }
           if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 1) {
-            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[0]);
+            return this.renderHalfSizeRgbIllustration(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[0]);
           }
           if (9 == this.pageIndex &&
             param2 == 0 &&
             2 == param4) {
-            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[2]);
+            return this.renderHalfSizeRgbIllustration(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[2]);
           }
           if (this.pageIndex == 9 &&
             0 == param2 &&
             param4 == 3) {
-            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[1]);
+            return this.renderHalfSizeRgbIllustration(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[1]);
           }
           if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 4) {
-            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[3]);
+            return this.renderHalfSizeRgbIllustration(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[3]);
           }
           if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 0) {
-            return this.a(param3, param5, 0, param0, 0, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 0, 2);
           }
           if (9 == this.pageIndex &&
             param2 == 1 &&
             param4 == 1) {
-            return this.a(param3, param5, 0, param0, 1, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 1, 2);
           }
           if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 2) {
-            return this.a(param3, param5, 0, param0, 4, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 4, 2);
           }
           if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 3) {
-            return this.a(param3, param5, 0, param0, 3, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 3, 2);
           }
           if (this.pageIndex == 10 &&
             param4 == 0) {
-            return this.a(param3, param5, 0, param0, 2, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 2, 2);
           }
           if (10 == this.pageIndex &&
             param4 == 1) {
-            return this.a(param3, param5, 0, param0, 5, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 5, 2);
           }
           if (this.pageIndex == 10 &&
             param4 == 2) {
-            return this.a(param3, param5, 0, param0, 6, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 6, 2);
           }
           if (10 == this.pageIndex &&
             param4 == 3) {
-            return this.a(param3, param5, 0, param0, 8, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 8, 2);
           }
           if (this.pageIndex == 10 &&
             param4 == 4) {
-            return this.a(param3, param5, 0, param0, 12, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 12, 2);
           }
           if (this.pageIndex == 10 &&
             5 == param4) {
-            return this.a(param3, param5, 0, param0, 14, 2);
+            return this.renderTerrainTypeIllustration(param3, param5, 0, param0, 14, 2);
           }
           if (this.pageIndex == 11 &&
             param4 == 1) {
-            return this.a(param0, -1, 8, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, -1, 8, 3, true, param5, param3);
           }
           if (11 == this.pageIndex &&
             param4 == 2) {
-            return this.a(param0, 0, 7, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, 0, 7, 3, true, param5, param3);
           }
           if (11 == this.pageIndex &&
             param4 == 3) {
-            return this.a(param0, -1, 9, 3, true, param5, param3);
+            return this.renderOwnedTerrainIllustration(param0, -1, 9, 3, true, param5, param3);
           }
           if (12 == this.pageIndex &&
             param4 == 1) {
-            var7 = this.b(20255, 0);
+            var7 = this.getCachedGodFavourSprite(20255, 0);
           } else if (this.pageIndex == 12 &&
             2 == param4) {
-            var7 = this.b(20255, 1);
+            var7 = this.getCachedGodFavourSprite(20255, 1);
           } else if (12 == this.pageIndex &&
             param4 == 3) {
-            var7 = this.b(20255, 2);
+            var7 = this.getCachedGodFavourSprite(20255, 2);
           } else if (13 == this.pageIndex &&
             param4 == 1) {
-            var7 = this.b(20255, 0);
+            var7 = this.getCachedGodFavourSprite(20255, 0);
           } else if (13 == this.pageIndex &&
             param4 == 2) {
-            var7 = this.b(20255, 1);
+            var7 = this.getCachedGodFavourSprite(20255, 1);
           } else if (this.pageIndex == 13 &&
             param4 == 3) {
-            var7 = this.b(20255, 2);
+            var7 = this.getCachedGodFavourSprite(20255, 2);
           } else {
             if (this.pageIndex == 16 &&
               param4 == 1) {
-              return this.e(-94, param5, param3, param0, 4);
+              return this.renderLeaderIllustration(-94, param5, param3, param0, 4);
             }
             if (this.pageIndex == 16 &&
               2 == param4) {
-              return this.a(param0, 0, 14, 3, true, param5, param3);
+              return this.renderOwnedTerrainIllustration(param0, 0, 14, 3, true, param5, param3);
             }
             if (this.pageIndex == 16 &&
               param4 == 3) {
-              return this.b(-2, param3, param5, 4, param0);
+              return this.renderGuardIllustration(-2, param3, param5, 4, param0);
             }
             if (DecodedSpriteSupport.field_a != null &&
               this.pageIndex >= 0 &&
@@ -1717,7 +1717,7 @@ final class InstructionsPanel {
           var8 == null) {
           return null;
         }
-        return this.a((byte) 114, param3, param5, (RgbSprite) (var7), param0, (IndexedSprite) (var8));
+        return this.renderSpriteIllustration((byte) 114, param3, param5, (RgbSprite) (var7), param0, (IndexedSprite) (var8));
     }
 
     final int getItemTopY(int obfuscationGuard, int itemIndex) {
@@ -1750,9 +1750,9 @@ final class InstructionsPanel {
         return 1;
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    private final void drawCaptureIllustration(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         IntPair discarded$0 = null;
-        this.c(param2, param0, -31550, !param3 ? param1 : -1, param5);
+        this.drawOwnedTerrainIllustration(param2, param0, -31550, !param3 ? param1 : -1, param5);
         UnitModelPreview var7 = this.field_s;
         if (param3) {
           var7 = this.field_fb;
@@ -1762,14 +1762,14 @@ final class InstructionsPanel {
           var7.drawAtStoredPosition((byte) -72, false);
         }
         if (param4 != -1) {
-          discarded$0 = this.e(-40, -71, -63, -38, 73);
+          discarded$0 = this.renderLeaderIllustration(-40, -71, -63, -38, 73);
         }
         if (param3) {
-          this.a(IgnoreListLookupSupport.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
+          this.drawCaptureProgressBar(IgnoreListLookupSupport.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
         }
     }
 
-    private final void a(int param0, int param1, UnitModelPreview param2, int param3) {
+    private final void drawPreviewModelAt(int param0, int param1, UnitModelPreview param2, int param3) {
         if (param2 == null) {
           return;
         }
@@ -1782,14 +1782,14 @@ final class InstructionsPanel {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isColumnGroupEnd(int param0, int param1) {
         if (param0 != 0) {
-          this.g((byte) -105);
+          this.drawNavigationBar((byte) -105);
         }
         return 0 < param1 ? true : false;
     }
 
-    private final void i(byte param0) {
+    private final void initializeCapturePreview(byte param0) {
         this.field_s = null;
         if (param0 != 28) {
           this.field_l = 29;
@@ -1800,7 +1800,7 @@ final class InstructionsPanel {
         this.progressCounter = new TickCounter(250);
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void drawLeaderIllustration(int param0, int param1, int param2) {
         if (param1 != -31123) {
           this.field_t = -120;
         }
@@ -1811,19 +1811,19 @@ final class InstructionsPanel {
         }
     }
 
-    private final IntPair e(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair renderLeaderIllustration(int param0, int param1, int param2, int param3, int param4) {
         if (param0 >= -35) {
-          this.m(-120);
+          this.releaseCachedPageSprites(-120);
         }
         if (param1 == 0 ||
           param1 == 1) {
-          return this.a(param1, param4, -93);
+          return this.getTileIllustrationBounds(param1, param4, -93);
         }
-        this.b(param3, -31123, param2);
+        this.drawLeaderIllustration(param3, -31123, param2);
         return null;
     }
 
-    private final IndexedSprite f(int param0, int param1) {
+    private final IndexedSprite getUnitCategoryIcon(int param0, int param1) {
         IndexedSprite[] var4 = ProgressMessageDialog.field_rb;
         IndexedSprite[] var3 = var4;
         if (param1 < param0) {
@@ -1835,7 +1835,7 @@ final class InstructionsPanel {
         return var4[param1];
     }
 
-    private final void c(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawOwnedTerrainIllustration(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         if (param2 != -31550) {
           this.getPanelEnd((byte) -64);
@@ -1848,7 +1848,7 @@ final class InstructionsPanel {
         int var8 = QuickChatCategory.field_G[param1];
         PointerCaptureSupport.a(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
         PointerCaptureSupport.a(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
-        this.b(param4, 40 + param0, param3, -25713, param1, var6);
+        this.drawStructureOwnershipIllustration(param4, 40 + param0, param3, -25713, param1, var6);
     }
 
     final int getItemLeftX(int itemIndex, byte obfuscationGuard) {
@@ -1883,7 +1883,7 @@ final class InstructionsPanel {
         return 1;
     }
 
-    private final void b(boolean param0) {
+    private final void rebuildGodFavourPageSprites(boolean param0) {
         int var4_int = 0;
         int var7 = 0;
         int stackIn_28_0 = 0;
@@ -1906,7 +1906,7 @@ final class InstructionsPanel {
         var2 = -1;
         var3 = -1;
         for (var4_int = 0; var4_int < 6; var4_int++) {
-          var5_ref_ft = this.d(var4_int, 1);
+          var5_ref_ft = this.getGodFrameGlowBounds(var4_int, 1);
           if (var3 < 0 &&
             0 <= var5_ref_ft.second) {
             var3 = var5_ref_ft.second;
@@ -1943,7 +1943,7 @@ final class InstructionsPanel {
                 if (this.pageIndex == 13) {
                   var8 = this.cachedPageSprites.length + var7;
                 }
-                this.a(this.cachedPageSprites[var7], var8, 0, var10, -110, 0);
+                this.buildGodFavourPageSprite(this.cachedPageSprites[var7], var8, 0, var10, -110, 0);
               }
               var10.pixels = null;
               var4 = null;
@@ -1955,14 +1955,14 @@ final class InstructionsPanel {
         }
     }
 
-    private final int a(boolean param0) {
+    private final int getHeadingHalfAscent(boolean param0) {
         if (!param0) {
           field_D = 24;
         }
         return NineSliceFrame.field_e.maxAscent >> 1;
     }
 
-    private final IntPair e(int param0, int param1) {
+    private final IntPair getHalfTileIllustrationBounds(int param0, int param1) {
         if (param1 == 0) {
           return new IntPair(40, 20);
         }
@@ -1976,7 +1976,7 @@ final class InstructionsPanel {
         return null;
     }
 
-    private final int a(int[] param0, int param1, int param2) {
+    private final int getColumnGroupSize(int[] param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -2039,7 +2039,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawUnitPopupIllustration(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -2079,39 +2079,39 @@ final class InstructionsPanel {
           if (0 == param1 &&
             this.firstPreviewUnit != null &&
             this.firstPreviewModel != null) {
-            var10 = this.a(param0, 0, param2, param1, -3);
+            var10 = this.renderUnitPopupIllustration(param0, 0, param2, param1, -3);
             if (var10 == null) {
               return;
             }
-            this.a(7 * (var10.second >> 3) + param2, 88, this.firstPreviewModel, (var10.first >> 1) + param0);
+            this.drawPreviewModelAt(7 * (var10.second >> 3) + param2, 88, this.firstPreviewModel, (var10.first >> 1) + param0);
             var6Lifetime1 = WeightedLruCache.terrainDamageTakenPercent[0];
             var7 = 0;
-            this.a(var7, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime1, 110, this.firstPreviewUnit, this.firstPreviewUnit, param2);
+            this.drawUnitPopupCard(var7, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime1, 110, this.firstPreviewUnit, this.firstPreviewUnit, param2);
             return;
           }
           if (1 == param1 &&
             null != this.secondPreviewUnit &&
             null != this.secondPreviewModel) {
-            var9 = this.a(param0, 0, param2, param1, -3);
+            var9 = this.renderUnitPopupIllustration(param0, 0, param2, param1, -3);
             if (var9 == null) {
               return;
             }
-            this.a(7 * (var9.second >> 3) + param2, 57, this.secondPreviewModel, param0 + (var9.first >> 1));
+            this.drawPreviewModelAt(7 * (var9.second >> 3) + param2, 57, this.secondPreviewModel, param0 + (var9.first >> 1));
             var6Lifetime2 = WeightedLruCache.terrainDamageTakenPercent[0];
             var7Lifetime1 = 0;
-            this.a(var7Lifetime1, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime2, 102, this.secondPreviewUnit, this.firstPreviewUnit, param2);
+            this.drawUnitPopupCard(var7Lifetime1, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime2, 102, this.secondPreviewUnit, this.firstPreviewUnit, param2);
           }
           return;
         }
     }
 
-    private final boolean c(int param0, int param1) {
+    private final boolean isColumnGroupArgument(int param0, int param1) {
         IntPair discarded$1 = null;
         RgbSprite var4;
         boolean stackIn_8_0 = false;
         if (param1 != 256) {
           var4 = (RgbSprite) null;
-          discarded$1 = this.a(-114, 69, 36, -82, (RgbSprite) null);
+          discarded$1 = this.renderHalfSizeRgbIllustration(-114, 69, 36, -82, (RgbSprite) null);
         }
         stackIn_8_0 = (param0 == -1) || (param0 == 0) || !(param0 <= 0);
         return stackIn_8_0;
@@ -2127,7 +2127,7 @@ final class InstructionsPanel {
           this.footerEnd = new IntPair(608, 462);
         }
         if (obfuscationGuard <= 98) {
-          this.j(40);
+          this.advancePortalAnimation(40);
         }
         if (null == this.navigationStart) {
           this.navigationStart = new IntPair(44, 386);
@@ -2138,24 +2138,24 @@ final class InstructionsPanel {
         if (this.itemIds == null) {
           this.itemIds = new int[]{22, 8, 23};
         }
-        this.p(31559);
+        this.resetNavigationState(31559);
     }
 
-    private final void g(int param0) {
+    private final void drawPanelTitle(int param0) {
         if (null == this.field_a) {
           return;
         }
         int var2 = this.field_C.second;
-        int var3 = this.h((byte) -117);
+        int var3 = this.getPanelTitleBaselineOffset((byte) -117);
         if (param0 < 105) {
-          this.g((byte) 9);
+          this.drawNavigationBar((byte) 9);
         }
         int var4 = var3 + var2;
         GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
         GradientUiRenderer.drawCenteredGradientText(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
     }
 
-    private final void f(int param0) {
+    private final void initializePortalAnimation(int param0) {
         int var2;
         AnimationSequence var3;
         this.illustrationAnimation = null;
@@ -2249,19 +2249,19 @@ final class InstructionsPanel {
               var16 = illustrationModes[var13];
               var17 = illustrationArguments[var13];
               if (var17 == -1) {
-                var18 = this.a(illustrationArguments, var13, 50);
+                var18 = this.getColumnGroupSize(illustrationArguments, var13, 50);
                 if (var18 >= 0) {
                   var11 = var11 / var18;
                   var12 = 1;
                   var10 = var11 + var9;
                 }
               }
-              var18Lifetime1 = this.a(sectionIndex, var14, var15, var10, 9, var16, var13, topY, var9);
+              var18Lifetime1 = this.drawInstructionTextRow(sectionIndex, var14, var15, var10, 9, var16, var13, topY, var9);
               if (var12 != 0 &&
-                this.c(var17, 256)) {
+                this.isColumnGroupArgument(var17, 256)) {
                 var9 = var9 + var11;
                 var10 = var11 + var10;
-                if (this.a(0, var17)) {
+                if (this.isColumnGroupEnd(0, var17)) {
                   var12 = 0;
                   var9 = this.field_i;
                   var10 = this.field_m;
@@ -2310,7 +2310,7 @@ final class InstructionsPanel {
         }
     }
 
-    final static int a(byte param0, int param1, boolean param2, String param3, String param4, boolean param5) {
+    final static int advanceSessionLogin(byte param0, int param1, boolean param2, String param3, String param4, boolean param5) {
         try {
           int stackIn_4_0 = 0;
           int stackIn_30_0 = 0;
@@ -2599,17 +2599,17 @@ final class InstructionsPanel {
           if (this.secondaryIllustrationCounter.advanceAndCheck(-1)) {
             this.secondaryIllustrationCounter.reset(obfuscationGuard ^ 117);
           }
-          this.j(-302977872);
-          this.b(obfuscationGuard - 62);
+          this.advancePortalAnimation(-302977872);
+          this.advanceCapturePreview(obfuscationGuard - 62);
           this.footerCaption = footerCaption;
           if (this.pageIndex != 12) {
             if (this.pageIndex == 13) {
-              this.b(true);
+              this.rebuildGodFavourPageSprites(true);
             } else {
-              this.m(0);
+              this.releaseCachedPageSprites(0);
             }
           } else {
-            this.b(true);
+            this.rebuildGodFavourPageSprites(true);
           }
           if (obfuscationGuard != 100) {
             this.nextHighlighted = true;
@@ -2629,7 +2629,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final IntPair d(int param0, int param1) {
+    private final IntPair getGodFrameGlowBounds(int param0, int param1) {
         IntPair var3;
         IntPair var4;
         var4 = new IntPair(-1, -1);
@@ -2648,7 +2648,7 @@ final class InstructionsPanel {
         return var3;
     }
 
-    private final int a(int param0, String[] param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final int drawInstructionTextRow(int param0, String[] param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int discarded$0 = 0;
         IntPair discarded$1 = null;
         IntPair discarded$2 = null;
@@ -2692,23 +2692,23 @@ final class InstructionsPanel {
         try {
           var10_int = param8;
           if (param4 != 9) {
-            discarded$0 = this.h(-86);
+            discarded$0 = this.getSectionTitleBaselineOffset(-86);
           }
           var11 = param3;
           var12 = param7;
           var13 = 0;
           var14 = 0;
-          var15 = this.d(17);
+          var15 = this.getBodyLineHeight(17);
           var16 = null;
           var17 = null;
           if (param5 != -1) {
-            var26 = this.a(0, (byte) 80, param0, 0, param6, 0);
+            var26 = this.renderInstructionIllustration(0, (byte) 80, param0, 0, param6, 0);
             var16 = var26;
             if (var26 != null && (!(var26.first >= 0) ||
               !(var26.second >= 0))) {
               var16 = null;
             }
-            var17 = this.a(0, (byte) 73, param0, 0, param6, 1);
+            var17 = this.renderInstructionIllustration(0, (byte) 73, param0, 0, param6, 1);
           }
           if (param5 == 5 &&
             var16 != null &&
@@ -2725,7 +2725,7 @@ final class InstructionsPanel {
             var17 != null) {
             var18 = (-((IntPair) (var16)).first + param3 - param8 >> 1) - ((IntPair) (var17)).first + param8;
             var19 = param7 - ((IntPair) (var17)).second + var13;
-            discarded$1 = this.a(var19, (byte) 46, param0, var18, param6, 2);
+            discarded$1 = this.renderInstructionIllustration(var19, (byte) 46, param0, var18, param6, 2);
             var12 = var12 + ((IntPair) (var16)).second;
           }
           if (param2 != null) {
@@ -2775,7 +2775,7 @@ final class InstructionsPanel {
             if (((IntPair) (var16)).second <= var13) {
               var19Lifetime3 = var19Lifetime3 + (var13 - ((IntPair) (var16)).second >> 1);
             }
-            discarded$2 = this.a(var19Lifetime3, (byte) 52, param0, var18Lifetime3, param6, 2);
+            discarded$2 = this.renderInstructionIllustration(var19Lifetime3, (byte) 52, param0, var18Lifetime3, param6, 2);
             if (this.field_E + var13 < ((IntPair) (var16)).second) {
               var14 = var14 + ((IntPair) (var16)).second;
             } else {
@@ -2789,7 +2789,7 @@ final class InstructionsPanel {
             if (var13 >= ((IntPair) (var16)).second) {
               var19Lifetime3 = var19Lifetime3 + (-((IntPair) (var16)).second + var13 >> 1);
             }
-            discarded$3 = this.a(var19Lifetime3, (byte) 68, param0, var18Lifetime3, param6, 2);
+            discarded$3 = this.renderInstructionIllustration(var19Lifetime3, (byte) 68, param0, var18Lifetime3, param6, 2);
             if (this.field_E + var13 >= ((IntPair) (var16)).second) {
               var14 = var14 + var13;
             } else {
@@ -2821,7 +2821,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3) {
+    private final void drawCaptureProgressBar(int param0, int param1, int param2, boolean param3) {
         int var5;
         int var6;
         int var7;
@@ -2837,7 +2837,7 @@ final class InstructionsPanel {
             var6 = 30;
             param0 = param0 + var5;
             if (param3) {
-              this.c((byte) -78);
+              this.initializeLeaderPreview((byte) -78);
             }
             param2 = param2 + var6;
             var7 = 42;
@@ -2873,18 +2873,18 @@ final class InstructionsPanel {
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
         GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
-        this.g(120);
+        this.drawPanelTitle(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
         GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.drawPageSections(-107);
-        this.l(obfuscationGuard + 19);
-        this.g((byte) 10);
+        this.drawFooter(obfuscationGuard + 19);
+        this.drawNavigationBar((byte) 10);
     }
 
-    private final IntPair d(int param0, int param1, int param2, int param3) {
+    private final IntPair renderUnitCommandPanelIllustration(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           return (IntPair) null;
         }
@@ -2895,7 +2895,7 @@ final class InstructionsPanel {
           return new IntPair(0, 0);
         }
         if (param1 == 2) {
-          this.b(param2, (byte) 127, param0);
+          this.drawUnitCommandPanelIllustration(param2, (byte) 127, param0);
         }
         return null;
     }
