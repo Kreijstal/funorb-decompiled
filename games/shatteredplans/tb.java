@@ -61,7 +61,7 @@ final class tb {
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           QuickChatPhraseDefinition.field_o = param5;
-          mk.field_d = param14;
+          LobbyOptionResources.field_d = param14;
           SoundPlayback.field_l = param11;
           MenuLabel.field_x = param10;
           wa.field_d = param3;
@@ -70,21 +70,21 @@ final class tb {
           nl.field_a = param1;
           UsernameAvailabilityValidator.field_v = param6;
           so.field_r = param12;
-          nb.field_d = param7;
+          GameTextResources.field_d = param7;
           FleetMove.field_A = param8;
           uk.field_b = HighscoreResponseSupport.loadSpriteSetByName(62, "lobby", param4, "gameprivacy");
           CheckboxPainter.field_l = HighscoreResponseSupport.loadSpriteSetByName(83, "lobby", param4, "ratedgame");
           DateInputWidget.field_E = HighscoreResponseSupport.loadSpriteSetByName(-88, "lobby", param4, "opentome");
           LegacyAi.field_s = HighscoreResponseSupport.loadSpriteSetByName(71, "lobby", param4, "allowspectators");
-          mk.field_e = new String[5];
-          mk.field_e[0] = EmailSyntaxValidator.field_p;
-          mk.field_e[4] = QuickChatPhraseDefinition.field_q;
-          mk.field_e[3] = GalaxyMapLayoutSupport.field_b;
-          mk.field_e[1] = SpriteResourceSupport.field_a;
-          mk.field_e[2] = MouseWheelInput.field_e;
+          LobbyOptionResources.field_e = new String[5];
+          LobbyOptionResources.field_e[0] = EmailSyntaxValidator.field_p;
+          LobbyOptionResources.field_e[4] = QuickChatPhraseDefinition.field_q;
+          LobbyOptionResources.field_e[3] = GalaxyMapLayoutSupport.field_b;
+          LobbyOptionResources.field_e[1] = SpriteResourceSupport.field_a;
+          LobbyOptionResources.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
-          sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
+          sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
           GalaxyMapLayoutSupport.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           MenuList.field_v.addChild(param13 ^ -7962, SoundPlayback.field_m);
           if (AccountStatusDialog.field_pb) {
@@ -156,7 +156,7 @@ final class tb {
           DefendTask.field_x = new AnimatedPanel(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
           ClientDrawingSupport.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
-          MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
+          MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
           ro.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.addChild(4, DefendTask.field_x);
           so.field_t.addChild(4, ClientDrawingSupport.field_a);
@@ -173,7 +173,7 @@ final class tb {
           QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
           ByteArrayNode.field_p[0] = new sg[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
+            ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
           }
           if (param13 != -7966) {
             tb.clearStatics(-52);
@@ -188,7 +188,7 @@ final class tb {
             }
           }
           QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, sq.field_s);
-          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[1], IntNode.field_j)};
+          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[0], LobbyRoomDecoder.field_c), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[1], IntNode.field_j)};
           if (FleetMove.field_A > 1) {
             QuickChatCategoryRegistry.field_g[3] = new AnimatedPanel(0L, ObjectList.field_h, QuickChatPhraseRegistry.field_e);
             array$1 = new sg[1 + FleetMove.field_A];
@@ -204,13 +204,13 @@ final class tb {
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
             for (var18 = 0; var18 < (255 & so.field_r[var17_intLifetime3]); var18++) {
-              if (null == nb.field_d) {
+              if (null == GameTextResources.field_d) {
                 var19_ref = null;
               } else {
-                if (null == nb.field_d[var17_intLifetime3]) {
+                if (null == GameTextResources.field_d[var17_intLifetime3]) {
                   var19_ref = null;
                 } else {
-                  var19_ref = nb.field_d[var17_intLifetime3][var18];
+                  var19_ref = GameTextResources.field_d[var17_intLifetime3][var18];
                 }
               }
               if (null != wa.field_d) {

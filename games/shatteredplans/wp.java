@@ -19,7 +19,7 @@ final class wp {
               if ((1 << PasswordInputPainter.field_x.field_P.field_r) - 1 != (1 << PasswordInputPainter.field_x.field_h | PasswordInputPainter.field_x.field_i)) {
                 oq.field_i[13] = uo.field_b;
               } else {
-                oq.field_i[13] = mq.field_a;
+                oq.field_i[13] = TutorialOverlaySupport.field_a;
               }
             }
           }

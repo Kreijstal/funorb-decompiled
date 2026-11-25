@@ -187,7 +187,7 @@ final class vq {
             return stackIn_13_0;
           }
           if (100 <= oi.field_e) {
-            stackIn_17_0 = mi.field_a;
+            stackIn_17_0 = LobbyRoomDecoder.field_a;
             return stackIn_17_0;
           }
           if (DebouncedValidator.a(param0 - 30108, param1)) {

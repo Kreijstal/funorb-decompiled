@@ -5,7 +5,7 @@ final class ProjectsContent implements MenuContent {
     static String field_a;
     MenuLabel[] field_b;
     MenuList[] field_c;
-    static mp field_g;
+    static AccountRequestState field_g;
     static int[] field_f;
     static double field_e;
     static double field_d;
@@ -36,7 +36,7 @@ final class ProjectsContent implements MenuContent {
             }
           }
           if (param0 > -126) {
-            field_g = (mp) null;
+            field_g = (AccountRequestState) null;
           }
           for (var2 = 0; var2 < PlacementEvent.field_l.length; var2++) {
             if (PlacementEvent.field_l[var2] != null) {
@@ -78,7 +78,7 @@ final class ProjectsContent implements MenuContent {
     static {
         field_a = "New Game";
         field_f = new int[]{0, 5, 39, 72, 67, 33};
-        field_g = new mp();
+        field_g = new AccountRequestState();
         field_e = Math.cos(0.5235987755982988);
         field_d = 1.0 / field_e;
     }

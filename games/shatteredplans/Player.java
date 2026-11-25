@@ -43,9 +43,9 @@ final class Player {
             return false;
           }
           if (ProductionContent.field_h == 2 &&
-            null != nd.field_k) {
+            null != IntroGlowPoint.field_k) {
             var3 = (CharSequence) ((Object) param1);
-            if (nd.field_k.equals(DateInputWidget.a(var3, true))) {
+            if (IntroGlowPoint.field_k.equals(DateInputWidget.a(var3, true))) {
               var2_int = -10 % ((param0 + 1) / 38);
               return true;
             }

@@ -441,8 +441,8 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         }
     }
 
-    final static void a(byte param0, mj param1) {
-        mj var2 = null;
+    final static void a(byte param0, LobbyPlayerEntry param1) {
+        LobbyPlayerEntry var2 = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -452,10 +452,10 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           param1.unlink((byte) -127);
-          var2 = (mj) (PlayerRankingRequest.field_p.startForward(param0 + 60));
+          var2 = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.startForward(param0 + 60));
           while (var2 != null) {
-            if (var2.a(param1, param0 ^ -60)) {
-              var2 = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
+            if (var2.sortsBefore(param1, param0 ^ -60)) {
+              var2 = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.nextForward((byte) -71));
               continue;
             }
             break;

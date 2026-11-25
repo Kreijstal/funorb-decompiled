@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd {
+final class IntroGlowPoint {
     int field_a;
     static String field_i;
     static int[] field_d;
@@ -14,7 +14,7 @@ final class nd {
     int field_f;
     int field_j;
 
-    final static sq a(byte param0) {
+    final static sq readTutorialScene(byte param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         sq var1;
@@ -130,7 +130,7 @@ final class nd {
         field_b = null;
     }
 
-    nd(int param0, int param1, int param2) {
+    IntroGlowPoint(int param0, int param1, int param2) {
         this.field_j = param1;
         this.field_f = param2;
         this.field_e = param0;

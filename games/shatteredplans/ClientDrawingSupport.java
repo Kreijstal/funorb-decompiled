@@ -280,8 +280,8 @@ final class ClientDrawingSupport {
           MutableIntPairNode.field_j > 0) {
           fieldTemp$4 = MutableIntPairNode.field_j - 1;
           MutableIntPairNode.field_j = MutableIntPairNode.field_j - 1;
-          var2_ref_byte__Lifetime1 = mj.field_Bb[fieldTemp$4];
-          mj.field_Bb[MutableIntPairNode.field_j] = null;
+          var2_ref_byte__Lifetime1 = LobbyPlayerEntry.field_Bb[fieldTemp$4];
+          LobbyPlayerEntry.field_Bb[MutableIntPairNode.field_j] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&

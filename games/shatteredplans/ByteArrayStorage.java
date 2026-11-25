@@ -110,7 +110,7 @@ abstract class ByteArrayStorage {
           return true;
         }
         var4 = QuickChatHelpSupport.field_h;
-        if (!nb.a((char) var4, 99)) {
+        if (!GameTextResources.isPrintableChatCharacter((char) var4, 99)) {
           if (!param2) {
             return false;
           }

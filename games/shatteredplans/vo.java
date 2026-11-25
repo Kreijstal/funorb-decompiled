@@ -16,7 +16,7 @@ final class vo {
 
     final static void a(Archive param0, Archive param1, int param2) {
         try {
-          mj.field_Sb = new SoundCache(param1, param0);
+          LobbyPlayerEntry.field_Sb = new SoundCache(param1, param0);
           SoundEffectSupport.loadSoundEffectDefinition(param2 + 28, 153, "shatteredplans_menu_open");
           SoundEffectSupport.loadSoundEffectDefinition(128, 153, "shatteredplans_menu_close");
           us.field_d = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_selection");

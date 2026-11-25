@@ -6,7 +6,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static Sprite field_r;
     static String field_q;
     private TextFieldWidget field_n;
-    static mp field_s;
+    static AccountRequestState field_s;
     static String field_o;
     static va field_t;
 

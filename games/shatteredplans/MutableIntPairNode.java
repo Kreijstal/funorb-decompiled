@@ -68,11 +68,11 @@ final class MutableIntPairNode extends IntrusiveNode {
     MutableIntPairNode() {
     }
 
-    final static mj findRoomMember(int param0, long param1) {
+    final static LobbyPlayerEntry findRoomMember(int param0, long param1) {
         if (param0 > -87) {
-          return (mj) null;
+          return (LobbyPlayerEntry) null;
         }
-        return (mj) (SpriteStripButtonPainter.field_w.get(65280, param1));
+        return (LobbyPlayerEntry) (SpriteStripButtonPainter.field_w.get(65280, param1));
     }
 
     final static int getKeyboardIdleTicks(int param0) {

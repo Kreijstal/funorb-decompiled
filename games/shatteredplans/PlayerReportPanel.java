@@ -265,7 +265,7 @@ final class PlayerReportPanel extends AnimatedPanel {
             this.setTarget(var23, var24, (byte) 84, var26, var25);
             return;
           }
-          this.field_Ab = new AnimatedPanel(0L, param8, mk.field_g);
+          this.field_Ab = new AnimatedPanel(0L, param8, LobbyOptionResources.field_g);
           this.field_Ab.field_y = 1;
           this.field_Ab.field_x = 11184810;
           this.field_Cb.addChild(4, this.field_Ab);

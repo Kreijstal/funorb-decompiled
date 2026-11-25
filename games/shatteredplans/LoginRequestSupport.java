@@ -104,11 +104,11 @@ final class LoginRequestSupport {
           }
           if (sr.a(0, "unplaced")) {
             if (SocketArchiveNetworkClient.a("unplaced", -126)) {
-              DefendTask.a(1, n.a("unplaced", -21502));
+              DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("unplaced", -21502));
             }
           } else {
             if (sr.a(0, "losegame")) {
-              DefendTask.a(1, n.a("lose", -21502));
+              DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
             }
           }
           ClientContextMenuSupport.field_a.clear(0);

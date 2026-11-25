@@ -340,7 +340,7 @@ class AnimatedPanel extends PanelNode {
           GameRules var3 = (GameRules) null;
           AnimatedPanel.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
         }
-        mj.a(0, param0);
+        LobbyPlayerEntry.drawSharedUiOverlays(0, param0);
     }
 
     final void layoutChildren(int param0, boolean param1, boolean param2, int param3) {

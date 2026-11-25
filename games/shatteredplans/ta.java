@@ -80,8 +80,8 @@ final class ta {
         }
         FleetTrailPoint.a(false, param0);
         if (WidgetContainer.field_C) {
-          SoftwareRasterizer.clearRect(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
-          n.field_h.field_d.drawFullRaster(param0, -68);
+          SoftwareRasterizer.clearRect(DiplomacyNotice.field_h.field_d.field_hb, DiplomacyNotice.field_h.field_d.field_db, DiplomacyNotice.field_h.field_d.field_K, DiplomacyNotice.field_h.field_d.field_mb);
+          DiplomacyNotice.field_h.field_d.drawFullRaster(param0, -68);
           TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;
@@ -163,9 +163,9 @@ final class ta {
         uc.field_A = StringNode.field_j;
     }
 
-    final static mj a(int param0, long param1) {
+    final static LobbyPlayerEntry a(int param0, long param1) {
         int var3 = -91 % ((59 - param0) / 56);
-        return (mj) (ShatteredPlansClient.field_H.get(65280, param1));
+        return (LobbyPlayerEntry) (ShatteredPlansClient.field_H.get(65280, param1));
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
@@ -177,13 +177,13 @@ final class ta {
         PlayerRankingRequest.field_o = param1;
         MusicPatch.field_m = param0;
         if (PointsVictoryChecker.a((byte) -94, GameRules.field_c)) {
-          mj.field_Hb[GameRules.field_c].a(-30492, PlayerRankingRequest.field_o);
+          LobbyPlayerEntry.field_Hb[GameRules.field_c].a(-30492, PlayerRankingRequest.field_o);
           if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
             var4 = 0;
             if (11 == PlayerRankingRequest.field_o) {
               var4 = -1;
             }
-            mj.field_Hb[PlayerRankingRequest.field_o].a(var4, (byte) 27, param3);
+            LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].a(var4, (byte) 27, param3);
           }
           BirthDateConfirmationForm.field_Q = 0;
           if (param2 != 96) {
@@ -197,7 +197,7 @@ final class ta {
           if (11 == PlayerRankingRequest.field_o) {
             var4Lifetime1 = -1;
           }
-          mj.field_Hb[PlayerRankingRequest.field_o].a(var4Lifetime1, (byte) 27, param3);
+          LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].a(var4Lifetime1, (byte) 27, param3);
         }
         BirthDateConfirmationForm.field_Q = 0;
         if (param2 == 96) {

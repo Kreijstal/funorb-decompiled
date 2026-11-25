@@ -85,17 +85,17 @@ final class QuickChatParameterType {
     }
 
     final static void resetIntroParticlesAndText(int param0) {
-        nd[] var6 = null;
+        IntroGlowPoint[] var6 = null;
         int var2 = 0;
-        nd var3 = null;
-        nd var4 = null;
+        IntroGlowPoint var3 = null;
+        IntroGlowPoint var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 30) {
             QuickChatParameterType.clearStatics(-49);
           }
           var6 = MenuButton.field_C;
-          nd[] var1 = var6;
+          IntroGlowPoint[] var1 = var6;
           for (var2 = 0; var6.length > var2; var2++) {
             var3 = var6[var2];
             var3.field_h = 0;

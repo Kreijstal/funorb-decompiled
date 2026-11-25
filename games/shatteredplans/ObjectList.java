@@ -53,7 +53,7 @@ final class ObjectList {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        mj var12 = null;
+        LobbyPlayerEntry var12 = null;
         int var13 = 0;
         AnimatedPanel var14 = null;
         AnimatedPanel var15 = null;
@@ -146,7 +146,7 @@ final class ObjectList {
           var9Lifetime1 = stackIn_46_0;
           var10 = param2.field_xb.field_M;
           var11 = null;
-          var12 = (mj) (var10.startForward(param1));
+          var12 = (LobbyPlayerEntry) (var10.startForward(param1));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
@@ -209,7 +209,7 @@ final class ObjectList {
               var20 = "<img=" + (ClientException.field_d + (var12.field_Lb - 4)) + ">" + var33;
             }
             var12.field_Ab.field_z = var20;
-            if (!var12.h(-89)) {
+            if (!var12.isSecondaryDetached(-89)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -315,7 +315,7 @@ final class ObjectList {
               param2.field_xb.layoutAfter(2, (AnimatedPanel) (var11), var12, (byte) 126);
             }
             if (var12.field_rb != 0 &&
-              !var12.h(-72)) {
+              !var12.isSecondaryDetached(-72)) {
               if (0 != var12.field_Jb.field_rb) {
                 ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
               } else {
@@ -327,9 +327,9 @@ final class ObjectList {
               }
             }
             if (var12.field_v) {
-              if (var12.h(-121)) {
+              if (var12.isSecondaryDetached(-121)) {
                 var11 = var12;
-                var12 = (mj) (var10.nextForward((byte) -71));
+                var12 = (LobbyPlayerEntry) (var10.nextForward((byte) -71));
                 continue;
               }
               var24Lifetime2 = null;
@@ -356,7 +356,7 @@ final class ObjectList {
                         }
                       }
                     } else {
-                      var24Lifetime2 = QuickChatCategoryRegistry.a(mq.field_b, 4371, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatCategoryRegistry.a(TutorialOverlaySupport.field_b, 4371, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Fb + var7;
@@ -390,7 +390,7 @@ final class ObjectList {
                         }
                       }
                     } else {
-                      var24Lifetime2 = QuickChatCategoryRegistry.a(mk.field_f, 4371, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = QuickChatCategoryRegistry.a(LobbyOptionResources.field_f, 4371, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -480,7 +480,7 @@ final class ObjectList {
               }
             }
             var11 = var12;
-            var12 = (mj) (var10.nextForward((byte) -71));
+            var12 = (LobbyPlayerEntry) (var10.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

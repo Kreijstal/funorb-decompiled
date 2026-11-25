@@ -50,7 +50,7 @@ final class GameAssetSetupSupport {
         int var15_intLifetime1;
         int var15_intLifetime2;
         try {
-          mp.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
+          AccountRequestState.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
           rs.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
           SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
@@ -168,7 +168,7 @@ final class GameAssetSetupSupport {
           GarrisonTask.field_s.field_B[20] = -7303024;
           GarrisonTask.field_s.field_B[3] = 587202559;
           GarrisonTask.field_s.field_B[0] = 0;
-          mj.field_Nb = (Sprite[]) ((Object) new ArgbSprite[6]);
+          LobbyPlayerEntry.field_Nb = (Sprite[]) ((Object) new ArgbSprite[6]);
           GarrisonTask.field_s.field_B[6] = 0;
           GarrisonTask.field_s.field_B[22] = -14013910;
           GarrisonTask.field_s.field_B[29] = 0;
@@ -191,8 +191,8 @@ final class GameAssetSetupSupport {
           GarrisonTask.field_s.field_B[16] = -10658467;
           GarrisonTask.field_s.field_B[23] = 1207959552;
           GarrisonTask.field_s.field_B[21] = -10066330;
-          for (var13_int = 0; mj.field_Nb.length > var13_int; var13_int++) {
-            mj.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
+          for (var13_int = 0; LobbyPlayerEntry.field_Nb.length > var13_int; var13_int++) {
+            LobbyPlayerEntry.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
             TextHotspotWidget.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
           }
           MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
@@ -251,8 +251,8 @@ final class GameAssetSetupSupport {
           ReflectionQueueSupport.field_f = new Sprite(12, 12);
           ReflectionQueueSupport.field_f.bindAsRenderTarget();
           oo.field_a.drawColourised(1, 1, 8421504);
-          mj.field_Kb = new Sprite(12, 12);
-          mj.field_Kb.bindAsRenderTarget();
+          LobbyPlayerEntry.field_Kb = new Sprite(12, 12);
+          LobbyPlayerEntry.field_Kb.bindAsRenderTarget();
           AccountValidationText.field_e.drawColourised(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
           wa.field_b.bindAsRenderTarget();
@@ -273,7 +273,7 @@ final class GameAssetSetupSupport {
             GameAssetSetupSupport.clearStatics(-23);
           }
           ReflectionQueueSupport.field_f.addOutline(16777215);
-          mj.field_Kb.addOutline(16777215);
+          LobbyPlayerEntry.field_Kb.addOutline(16777215);
           LobbyRoomEntry.field_Vb.addOutline(16777215);
           AccountRequestResult.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;

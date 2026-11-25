@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends IntrusiveNode {
+final class DiplomacyNotice extends IntrusiveNode {
     int field_i;
     static wh field_h;
     static double field_p;
@@ -19,7 +19,7 @@ final class n extends IntrusiveNode {
         field_m = null;
         if (param0 != 11209) {
           String var2 = (String) null;
-          n.a((String) null, -73);
+          DiplomacyNotice.findTutorialSceneByTag((String) null, -73);
         }
         field_l = null;
         field_o = null;
@@ -28,7 +28,7 @@ final class n extends IntrusiveNode {
         field_j = null;
     }
 
-    n(Player param0, Player param1, String param2) {
+    DiplomacyNotice(Player param0, Player param1, String param2) {
         try {
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
@@ -36,7 +36,7 @@ final class n extends IntrusiveNode {
         }
     }
 
-    final static sq a(String param0, int param1) {
+    final static sq findTutorialSceneByTag(String param0, int param1) {
         int var3 = 0;
         sq[] var2 = null;
         sq var4 = null;

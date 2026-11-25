@@ -93,13 +93,13 @@ final class wj extends IntrusiveNode {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        nd[] var7 = null;
+        IntroGlowPoint[] var7 = null;
         Particle var7_ref = null;
         int var8 = 0;
         int var9 = 0;
-        nd var9_ref_nd = null;
+        IntroGlowPoint var9_ref_nd = null;
         int var10 = 0;
-        nd[] var11 = null;
+        IntroGlowPoint[] var11 = null;
         int var1_intLifetime1;
         int var1_intLifetime2;
         int var2Lifetime1;

@@ -105,7 +105,7 @@ final class PasswordValidator extends TextFieldValidator {
               }
               var6 = SpriteResourceSupport.getChatChannelFilter(-7019, var4_int);
               DerelictMapReader.field_d[var4_int].field_pb = BoundsRect.field_m[var6];
-              n.field_n[var4_int].field_z = SettingsCookieSupport.field_d[var6];
+              DiplomacyNotice.field_n[var4_int].field_z = SettingsCookieSupport.field_d[var6];
             }
           }
           if (pr.field_c.field_rb != 0) {

@@ -268,12 +268,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
             if (QuickChatHelpSupport.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
-                DefendTask.a(1, n.a("combatSuccess", -21502));
+                DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
                 if (var5 != 0) {
                   var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
                     SocketArchiveNetworkClient.a("combatFailed", -116)) {
-                    DefendTask.a(1, n.a("combatFailed", -21502));
+                    DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
                   }
                 }
               }
@@ -281,7 +281,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
                 SocketArchiveNetworkClient.a("combatFailed", -116)) {
-                DefendTask.a(1, n.a("combatFailed", -21502));
+                DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
               }
             }
             var1Lifetime1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
@@ -292,7 +292,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           }
           if (oq.field_a.field_P.field_z &&
             oq.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
-            DefendTask.a(1, n.a("lose", -21502));
+            DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
           }
           var1_array = oq.field_a.field_P.field_g.field_e;
           var2 = 0;
@@ -455,7 +455,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                   var26Lifetime1 = param6.field_l[var23Lifetime2];
                   TurnEventLog.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
                   MusicCrossfadeStream.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
-                  nb.field_b[var23Lifetime2] = (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
+                  GameTextResources.field_b[var23Lifetime2] = (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param6.field_A[var23Lifetime2];
                   var25Lifetime1 = param6.field_m[var23Lifetime2];
                   var26Lifetime1 = param6.field_Q[var23Lifetime2];

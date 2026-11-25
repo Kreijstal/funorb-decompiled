@@ -870,7 +870,7 @@ final class TaskAi implements Ai {
             nl.field_a[0] != MenuLabel.field_x) {
             MenuLabel.field_x = nl.field_a[0];
           }
-          LobbyUiSupport.writeLobbyOptionPayload(param3, MenuLabel.field_x, mk.field_d, true, false, 0);
+          LobbyUiSupport.writeLobbyOptionPayload(param3, MenuLabel.field_x, LobbyOptionResources.field_d, true, false, 0);
         }
         if (SocketConnector.field_d.field_rb != 0) {
           IntrusiveDequeCursor.field_b = false;

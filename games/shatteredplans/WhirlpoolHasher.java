@@ -379,8 +379,8 @@ final class WhirlpoolHasher {
         if (!param0) {
           return;
         }
-        IsolationistAi.field_t = mp.field_b.stringWidth(oq.field_i[21]);
-        int var1 = mp.field_b.stringWidth(oq.field_i[22]);
+        IsolationistAi.field_t = AccountRequestState.field_b.stringWidth(oq.field_i[21]);
+        int var1 = AccountRequestState.field_b.stringWidth(oq.field_i[22]);
         if (!(var1 <= IsolationistAi.field_t)) {
           IsolationistAi.field_t = var1;
         }

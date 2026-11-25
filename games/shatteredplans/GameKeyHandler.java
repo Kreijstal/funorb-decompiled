@@ -344,7 +344,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             BytePayloadNode.field_l = param13;
             LobbyRoomControlsSupport.field_c = param5;
-            mk.field_c = param12;
+            LobbyOptionResources.field_c = param12;
             DualLinkDeque.field_b = param8;
             uk.field_a = param9;
             AccountFieldValue.field_b = param10;

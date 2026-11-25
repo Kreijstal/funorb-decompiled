@@ -168,7 +168,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
           GzipInflater.field_d = false;
         }
         if (uc.field_B) {
-          uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, 1);
+          uc.a(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 240, 8, IntroGlowPoint.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, 1);
           uc.field_B = false;
         }
     }

@@ -415,7 +415,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           GameScreen.field_h = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
           AllianceExpiredEvent.field_l = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
           AlignedMenuLabel.field_E = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
-          n.field_o = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
+          DiplomacyNotice.field_o = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
           WeightedCacheEntry.field_o = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
           TerritoryResourcePanelSupport.field_d = new AnimatedPanel(0L, SettingsCookieSupport.field_b);
           SettingsCookieSupport.field_b.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(106, "lobby", param4, "smallbutton"), 47);
@@ -447,11 +447,11 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           TerritoryResourcePanelSupport.field_d.field_sb = dupTemp$1;
           TerritoryResourcePanelSupport.field_d.field_vb = dupTemp$1;
           TerritoryResourcePanelSupport.field_d.field_wb = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-114, "lobby", param4, "gameoptionbutton_disabled"), 121);
-          n.field_o.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-117, "lobby", param4, "chatbutton"), 75);
-          n.field_o.field_lb = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(84, "lobby", param4, "chatbutton_mouseover"), 122);
+          DiplomacyNotice.field_o.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-117, "lobby", param4, "chatbutton"), 75);
+          DiplomacyNotice.field_o.field_lb = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(84, "lobby", param4, "chatbutton_mouseover"), 122);
           dupTemp$2 = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(124, "lobby", param4, "chatbutton_active"), 53);
-          n.field_o.field_sb = dupTemp$2;
-          n.field_o.field_vb = dupTemp$2;
+          DiplomacyNotice.field_o.field_sb = dupTemp$2;
+          DiplomacyNotice.field_o.field_vb = dupTemp$2;
           WeightedCacheEntry.field_o.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(74, "lobby", param4, "chatfilterbutton"), 104);
           WeightedCacheEntry.field_o.field_lb = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-95, "lobby", param4, "chatfilterbutton_mouseover"), 101);
           dupTemp$3 = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(91, "lobby", param4, "chatfilterbutton_active"), 77);

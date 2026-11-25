@@ -8,7 +8,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     static PlatformTask field_Gb;
     static int[] field_Cb;
     static AnimatedPanel field_zb;
-    static mp field_Fb;
+    static AccountRequestState field_Fb;
     private AccountCreationForm field_Db;
     private boolean field_Hb;
     static String field_Ab;
@@ -92,7 +92,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           IterableNodeHashTable.b(param1 ^ -49);
           this.closeStatusDialog((byte) -104);
           if (param1 != 6) {
-            field_Fb = (mp) null;
+            field_Fb = (AccountRequestState) null;
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -135,7 +135,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     }
 
     AccountCreationDialog(DialogRoot param0, AccountCreationForm param1) {
-        super(param0, CipherPacketBuffer.field_p, mp.field_a, false, false);
+        super(param0, CipherPacketBuffer.field_p, AccountRequestState.field_a, false, false);
         try {
           this.field_Db = param1;
         } catch (RuntimeException runtimeException) {
@@ -230,6 +230,6 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         field_Bb = "Click to end turn.";
         field_Cb = new int[4];
         field_Ab = "Create a free Account";
-        field_Fb = new mp();
+        field_Fb = new AccountRequestState();
     }
 }

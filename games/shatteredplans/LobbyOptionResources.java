@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk {
+final class LobbyOptionResources {
     static String field_b;
     static byte[] field_d;
     static String field_g;
@@ -11,7 +11,7 @@ final class mk {
     static String[] field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseLobbyOptionResources(byte param0) {
         if (param0 < -20) {
           field_e = null;
           field_b = null;
@@ -21,7 +21,7 @@ final class mk {
           field_g = null;
           return;
         }
-        mk.a((byte) -3);
+        LobbyOptionResources.releaseLobbyOptionResources((byte) -3);
         field_e = null;
         field_b = null;
         field_f = null;

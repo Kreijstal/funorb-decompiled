@@ -1962,15 +1962,15 @@ final class GameSession implements AiHost {
           if (this.field_n != param0) {
             if (param1 == this.field_n) {
               var4 = QuickChatCategoryRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
-              this.field_H.addFirst(new n(param0, (Player) null, var4), 0);
+              this.field_H.addFirst(new DiplomacyNotice(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
                 var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
-                this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
+                this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
               }
             }
           } else {
             var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
-            this.field_H.addFirst(new n(param1, (Player) null, var4), 0);
+            this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
             this.field_s[param1.field_x].sendTurnChat(param0, 7686);
@@ -2743,7 +2743,7 @@ final class GameSession implements AiHost {
             FleetTrailPoint.field_p[81] &&
             oq.field_j == 16) {
             sm.field_e = true;
-            ProductionContent.a(mq.c((byte) 73), 1);
+            ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
             var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {
@@ -3388,28 +3388,28 @@ final class GameSession implements AiHost {
         try {
           if (this.field_n == param0) {
             var4 = QuickChatCategoryRegistry.a(ClientOverlayDrawSupport.field_a, 4371, new String[]{param2.name});
-            this.field_H.addFirst(new n(param0, param2, var4), 0);
+            this.field_H.addFirst(new DiplomacyNotice(param0, param2, var4), 0);
             if (var5 != 0) {
               if (param2 == this.field_n) {
                 var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
-                this.field_H.addFirst(new n(param2, param0, var4), 0);
+                this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
                 var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
-                this.field_H.addFirst(new n(param2, param0, var4), 0);
+                this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               } else {
                 var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
-                this.field_H.addFirst(new n(param2, param0, var4), 0);
+                this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               }
             }
           } else {
             boolean decompiledSharedTail0 = (param2 != this.field_n);
             if (!decompiledSharedTail0) {
               var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
-              this.field_H.addFirst(new n(param2, param0, var4), 0);
+              this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
               var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
-              this.field_H.addFirst(new n(param2, param0, var4), 0);
+              this.field_H.addFirst(new DiplomacyNotice(param2, param0, var4), 0);
             }
           }
           if (this.field_W) {
@@ -3447,14 +3447,14 @@ final class GameSession implements AiHost {
         int fieldTemp$0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        n var2 = null;
+        DiplomacyNotice var2 = null;
         RuntimeException var2_ref = null;
         ProjectUse var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2 = (n) (this.field_H.startForward(0));
+          var2 = (DiplomacyNotice) (this.field_H.startForward(0));
           if (param0) {
             return;
           }
@@ -3467,7 +3467,7 @@ final class GameSession implements AiHost {
               if (stackIn_12_0 == ~fieldTemp$0) {
                 var2.unlink((byte) -85);
               }
-              var2 = (n) (this.field_H.nextForward((byte) -71));
+              var2 = (DiplomacyNotice) (this.field_H.nextForward((byte) -71));
               continue;
             }
             break;

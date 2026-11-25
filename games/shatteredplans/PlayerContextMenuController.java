@@ -16,10 +16,10 @@ final class PlayerContextMenuController {
     String field_k;
 
     final void addInviteActions(boolean param0, int param1) {
-        mj var4;
+        LobbyPlayerEntry var4;
         String var5;
         int var6;
-        mj var7;
+        LobbyPlayerEntry var7;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null == this.field_k) {
           if (param1 == -16661) {

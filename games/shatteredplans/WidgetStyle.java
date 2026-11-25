@@ -320,8 +320,8 @@ final class WidgetStyle {
           var11 = 1;
           if (var8 < var9 ||
             param0.indexOf("<br>") != -1) {
-            if (mp.field_c == null) {
-              mp.field_c = new String[16];
+            if (AccountRequestState.field_c == null) {
+              AccountRequestState.field_c = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -329,11 +329,11 @@ final class WidgetStyle {
               var13 = var9 / var8;
               var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
             }
-            var11Lifetime1 = this.field_h.wrapText(param0, new int[]{var12}, mp.field_c);
+            var11Lifetime1 = this.field_h.wrapText(param0, new int[]{var12}, AccountRequestState.field_c);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_h.stringWidth(mp.field_c[var13Lifetime2]);
+              var14 = this.field_h.stringWidth(AccountRequestState.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

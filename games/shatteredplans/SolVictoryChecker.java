@@ -390,14 +390,14 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (LegacyAi.field_r == Wormhole.field_j) {
               if (!param2) {
-                mq.field_c = ClientContextMenuSupport.createLoginCredentials(param5, false, false, param3);
+                TutorialOverlaySupport.field_c = ClientContextMenuSupport.createLoginCredentials(param5, false, false, param3);
               } else {
                 var10 = (String) null;
-                mq.field_c = ChatMessageFactory.createLoginCredentials(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
+                TutorialOverlaySupport.field_c = ChatMessageFactory.createLoginCredentials(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
               }
               LobbyOptionSupport.field_f.position = 0;
               LobbyOptionSupport.field_f.writeByte(14, (byte) -80);
-              LobbyOptionSupport.field_f.writeByte(mq.field_c.getKind((byte) -73).field_d, (byte) -68);
+              LobbyOptionSupport.field_f.writeByte(TutorialOverlaySupport.field_c.getKind((byte) -73).field_d, (byte) -68);
               ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
               Wormhole.field_j = IntrusiveNodeHashTable.field_i;
             }
@@ -417,7 +417,7 @@ final class SolVictoryChecker extends VictoryChecker {
               StarAnnotation.a(-91, 8)) {
               Dialog.field_I = sa.field_a.readLong(110);
               sa.field_a.position = 0;
-              LoginRequestSupport.writeLoginRequest(param0, param2, param4, -84, mq.field_c);
+              LoginRequestSupport.writeLoginRequest(param0, param2, param4, -84, TutorialOverlaySupport.field_c);
               Wormhole.field_j = IntrusiveNodeHashTable.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -486,8 +486,8 @@ final class SolVictoryChecker extends VictoryChecker {
               ArchiveIndex.field_d = DateInputWidget.a(var11, true);
               CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
               Wormhole.field_j = AccountNoticeKind.field_f;
-              if (mq.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
-                if (mq.field_c.getKind((byte) 123) == oi.field_b) {
+              if (TutorialOverlaySupport.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
+                if (TutorialOverlaySupport.field_c.getKind((byte) 123) == oi.field_b) {
                   ObjectList.field_f.saveBrowserPreference(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {

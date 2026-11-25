@@ -160,11 +160,11 @@ final class LobbyRoomControlsSupport {
             IntValueWriteRequest.field_j.field_s = true;
             if (TurnEventLog.field_i) {
               DialPainter.field_g.field_s = false;
-              IntrusiveNode.field_c.field_z = nb.field_c;
+              IntrusiveNode.field_c.field_z = GameTextResources.field_c;
               if (var8 == 0) {
                 stackIn_57_0 = IntHashIndex.field_c;
               } else {
-                stackIn_57_0 = mp.field_f;
+                stackIn_57_0 = AccountRequestState.field_f;
               }
               var16 = stackIn_57_0;
               var9 = var16;
@@ -258,7 +258,7 @@ final class LobbyRoomControlsSupport {
           stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
-          n.field_h.field_d.f(false);
+          DiplomacyNotice.field_h.field_d.f(false);
           if (IntNode.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {

@@ -67,7 +67,7 @@ final class TutorialAi extends LegacyAi {
         int var13;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 0;
-        var4 = mj.field_yb.firstStar(18229);
+        var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
         if (param1 != -1799) {
           return -61;
         }
@@ -118,7 +118,7 @@ final class TutorialAi extends LegacyAi {
           QuaternaryNodeList.field_b[var4.field_p] = QuaternaryNodeList.field_b[var4.field_p] + var5;
           param0 = param0 - var5;
           var3 = var3 + var5;
-          var4 = mj.field_yb.nextStar(-23410);
+          var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
         }
     }
 
@@ -347,7 +347,7 @@ final class TutorialAi extends LegacyAi {
           this.chooseTargetPlayer(-98);
         }
         var3 = 0;
-        var4 = mj.field_yb.firstStar(18229);
+        var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
         while (var4 != null) {
           var5 = var4.field_p;
           var6 = 0;
@@ -361,7 +361,7 @@ final class TutorialAi extends LegacyAi {
           BirthDateValidator.field_i[var5] = BirthDateValidator.field_i[var5] + var4.field_x;
           QuaternaryNodeList.field_b[var5] = var6;
           var7 = var6 - var4.field_x;
-          var4 = mj.field_yb.nextStar(-23410);
+          var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
           var3 = var3 + var7;
         }
         return var3;

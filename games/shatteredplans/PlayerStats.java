@@ -76,16 +76,16 @@ final class PlayerStats {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        nd[] var4 = null;
+        IntroGlowPoint[] var4 = null;
         Particle var4_ref = null;
         int var5 = 0;
-        nd var7 = null;
+        IntroGlowPoint var7 = null;
         float var8 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
         float var11 = 0.0f;
         int var12 = 0;
-        nd[] var13 = null;
+        IntroGlowPoint[] var13 = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1_int = FleetTrailPoint.field_m * 100 / 1000 - 80;
@@ -138,7 +138,7 @@ final class PlayerStats {
           }
           if (FleetTrailPoint.field_m == 0) {
             sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
-            sg.a(true, true, 800, n.field_l, NetworkArchiveRequest.field_C);
+            sg.a(true, true, 800, DiplomacyNotice.field_l, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

@@ -163,7 +163,7 @@ final class uo {
         int var17_int = 0;
         IntrusiveDeque var17 = null;
         Object var18 = null;
-        mj var18_ref = null;
+        LobbyPlayerEntry var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
         AnimatedPanel var21 = null;
@@ -206,7 +206,7 @@ final class uo {
               DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(QuickChatParameterType.field_a, 4371, new String[]{var9_ref_String});
               var8 = DualLinkDequeSequence.field_f;
             } else {
-              ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
+              ArchiveSourceManager.field_f.field_z = DiplomacyNotice.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
               TextFieldWidget.field_I.setTarget(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
@@ -351,10 +351,10 @@ final class uo {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = ro.field_a.field_xb.field_M;
-                  var18_ref = (mj) (var17.startForward(0));
+                  var18_ref = (LobbyPlayerEntry) (var17.startForward(0));
                   scanLoop3: while (true) {
                     if (var18_ref != null) {
-                      if (!var18_ref.h(-80)) {
+                      if (!var18_ref.isSecondaryDetached(-80)) {
                         if (var11_intLifetime1 != 0 &&
                           !var18_ref.field_Ub) {
                           var16Lifetime1Lifetime1 = 1;
@@ -377,7 +377,7 @@ final class uo {
                           break scanLoop3;
                         }
                       }
-                      var18_ref = (mj) (var17.nextForward((byte) -71));
+                      var18_ref = (LobbyPlayerEntry) (var17.nextForward((byte) -71));
                       continue;
                     }
                     break;
@@ -389,7 +389,7 @@ final class uo {
                   if ((var16Lifetime1Lifetime1 != 0)) {
                     IntValueWriteRequest.field_j.field_s = false;
                     if (!(!IntValueWriteRequest.field_j.field_v)) {
-                      if (n.field_h.field_d.field_zb == 0) {
+                      if (DiplomacyNotice.field_h.field_d.field_zb == 0) {
                         DualLinkDequeSequence.field_k = IntrusiveDequeCursor.field_a;
                       } else {
                         DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(HighscoreQueryRequest.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
@@ -420,7 +420,7 @@ final class uo {
                     if (var12Lifetime2 == 0) {
                       var14 = QuickChatCategoryRegistry.a(UrlLoader.field_f, 4371, new String[]{(String) (var11)});
                     } else {
-                      var14 = mi.field_b + (String) (var11);
+                      var14 = LobbyRoomDecoder.field_b + (String) (var11);
                     }
                   } else {
                     var13_ref = SecondaryNodeDeque.field_e;
@@ -453,7 +453,7 @@ final class uo {
           stackIn_169_0 = MouseInputHandler.field_d;
           stackIn_170_1 = (param1) && (!param4) && (IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
-          n.field_h.field_d.f(false);
+          DiplomacyNotice.field_h.field_d.f(false);
           if (param0 != 23) {
             stackIn_172_0 = null;
             field_c = (String) (stackIn_172_0);

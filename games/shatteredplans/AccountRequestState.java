@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp {
+final class AccountRequestState {
     static CoverageBitmapFont field_b;
     static String field_d;
     static String field_a;
@@ -21,9 +21,9 @@ final class mp {
         field_e = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean pollArchiveIndexReady(boolean param0) {
         if (!param0) {
-          mp.clearStatics(104);
+          AccountRequestState.clearStatics(104);
           return ProxyAuthenticationRequiredException.field_c.b(107);
         }
         return ProxyAuthenticationRequiredException.field_c.b(107);

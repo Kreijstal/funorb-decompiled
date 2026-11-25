@@ -181,7 +181,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = mp.field_b;
+          var2 = AccountRequestState.field_b;
           var3 = ((BitmapFont) ((Object) var2)).stringWidth(param1);
           var4 = ((BitmapFont) ((Object) var2)).field_J + ((BitmapFont) ((Object) var2)).field_q;
           var5 = new Sprite(var3, var4);

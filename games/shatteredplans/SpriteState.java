@@ -22,15 +22,15 @@ abstract class SpriteState extends DualLinkNode {
         PaddedContentDialog.field_nb = wp.field_a;
         PlacementEvent.field_n = MusicTrack.load(param0, "", "shattered_plans_win");
         wh.field_b = MusicTrack.load(param0, "", "shattered_plans_lose");
-        ValidationState.field_b.field_u.preparePatches(param1, sf.field_d, 50, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.preparePatches(param1, wp.field_a, 41, 0, mj.field_Sb);
-        ValidationState.field_b.field_u.preparePatches(param1, LobbyOptionSupport.field_i, 111, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, sf.field_d, 50, 0, LobbyPlayerEntry.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, wp.field_a, 41, 0, LobbyPlayerEntry.field_Sb);
+        ValidationState.field_b.field_u.preparePatches(param1, LobbyOptionSupport.field_i, 111, 0, LobbyPlayerEntry.field_Sb);
         if (param2 < 26) {
           return;
         }
         try {
           ValidationState.field_b.field_u.f(256);
-          mj.field_Sb = null;
+          LobbyPlayerEntry.field_Sb = null;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

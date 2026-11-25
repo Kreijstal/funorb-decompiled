@@ -18,7 +18,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (param0 != -1) {
             field_t = (String) null;
           }
-          mj.field_Hb[param2] = new sm(param2);
+          LobbyPlayerEntry.field_Hb[param2] = new sm(param2);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -78,7 +78,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void e(byte param0) {
-        mj var3 = null;
+        LobbyPlayerEntry var3 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           IntNode.field_p = null;
@@ -103,10 +103,10 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           SpriteStripButtonPainter.field_w = null;
           if (ShatteredPlansClient.field_H != null) {
-            var3 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -102));
+            var3 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.startTraversal((byte) -102));
             while (var3 != null) {
               var3.unlinkSecondary(16);
-              var3 = (mj) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
+              var3 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
             }
             ShatteredPlansClient.field_H = null;
           }
@@ -224,7 +224,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           var5 = 1;
           var4 = 1;
         }
-        MouseWheelInput.field_a = mq.a(var4 * var2, (byte) 80, var5 * var2);
+        MouseWheelInput.field_a = TutorialOverlaySupport.createRotationMatrix(var4 * var2, (byte) 80, var5 * var2);
     }
 
     UsernameAvailabilityValidator(TextFieldWidget param0) {

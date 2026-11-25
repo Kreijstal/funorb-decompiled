@@ -269,7 +269,7 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
-          mj.field_Hb[GameRules.field_c].g((byte) 119);
+          LobbyPlayerEntry.field_Hb[GameRules.field_c].g((byte) 119);
         }
         TutorialAi.field_x = Wormhole.field_i;
         BirthDateConfirmationForm.field_Q = 0;

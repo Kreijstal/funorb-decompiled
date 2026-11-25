@@ -776,9 +776,9 @@ final class AggressiveAi extends StandardAi {
                     }
                   }
                   if (var24 == 0) {
-                    var22 = QuickChatCategoryRegistry.a(n.field_q, 4371, new String[]{(String) (var23)});
+                    var22 = QuickChatCategoryRegistry.a(DiplomacyNotice.field_q, 4371, new String[]{(String) (var23)});
                   } else {
-                    var22 = mp.field_d + (String) (var23);
+                    var22 = AccountRequestState.field_d + (String) (var23);
                   }
                 }
                 if (var22 != null) {

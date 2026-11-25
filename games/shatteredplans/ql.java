@@ -41,10 +41,10 @@ final class ql extends IntrusiveNode {
           PlayerStats.field_k = 0;
           SliderPainter.b((byte) 93);
           var9 = new ObjectList();
-          var3 = nd.a((byte) -106);
+          var3 = IntroGlowPoint.readTutorialScene((byte) -106);
           while (var3 != null) {
             var9.add(false, var3);
-            var3 = nd.a((byte) 118);
+            var3 = IntroGlowPoint.readTutorialScene((byte) 118);
           }
           EmailValidator.field_q = new sq[var9.field_g];
           for (var4 = 0; var4 < var9.field_g; var4++) {
@@ -57,7 +57,7 @@ final class ql extends IntrusiveNode {
             if (var5 == null) {
               stackIn_17_0 = null;
             } else {
-              stackIn_17_0 = n.a(var5, -21502);
+              stackIn_17_0 = DiplomacyNotice.findTutorialSceneByTag(var5, -21502);
             }
             var6 = stackIn_17_0;
             if (var6 == null &&

@@ -37,10 +37,10 @@ class IntrusiveNode {
 
     final static LoginMethodPreference[] c(byte param0) {
         if (param0 == -90) {
-          return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, mj.field_Rb};
+          return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
         }
         IntrusiveNode.a(false);
-        return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, mj.field_Rb};
+        return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
     }
 
     final void unlink(byte param0) {

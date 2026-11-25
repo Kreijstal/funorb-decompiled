@@ -173,7 +173,7 @@ final class ChatCompositionSupport {
           }
           if (ProductionContent.field_h == 2 &&
             !VerticalMenuSlider.e((byte) 75)) {
-            if (!DebouncedValidator.a(-30106, nd.field_k)) {
+            if (!DebouncedValidator.a(-30106, IntroGlowPoint.field_k)) {
               var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               if (var11 != 0) {
                 var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{LoginRequestSupport.field_a});

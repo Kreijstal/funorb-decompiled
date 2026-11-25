@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi {
+final class LobbyRoomDecoder {
     static String field_a;
     static String field_b;
     static String field_c;
 
-    final static void a(byte param0, LobbyRoomEntry param1, PacketBuffer param2, boolean param3) {
+    final static void readLobbyRoom(byte param0, LobbyRoomEntry param1, PacketBuffer param2, boolean param3) {
         int var8 = 0;
         LobbyRoomEntry stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -41,7 +41,7 @@ final class mi {
           }
           param1.field_Eb = param2.readUnsignedByte(-64);
           if (param0 != -89) {
-            mi.clearStatics((byte) -67);
+            LobbyRoomDecoder.clearStatics((byte) -67);
           }
           param1.field_nc = param2.readUnsignedByte(-123);
           var4_int = param2.readUnsignedByte(-111);

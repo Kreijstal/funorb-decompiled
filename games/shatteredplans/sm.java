@@ -166,7 +166,7 @@ final class sm {
         if (PointsVictoryChecker.a((byte) -74, param1)) {
           if (this.field_g == -1) {
           }
-          mj.field_Hb[param1].field_g = -1;
+          LobbyPlayerEntry.field_Hb[param1].field_g = -1;
         }
         if (param0 != -30492) {
           this.a(47, 88);
@@ -550,8 +550,8 @@ final class sm {
         }
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
-          mp.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
-          rs.field_Cb.a(oi.field_c, 10 + var4, mp.field_b.field_J + (var5 + 10), -20 + var2, -mp.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
+          AccountRequestState.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
+          rs.field_Cb.a(oi.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
         }
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
@@ -581,9 +581,9 @@ final class sm {
         var10 = this.itemY(param0, true);
         if (21 != var5 &&
           var5 != 22) {
-          mp.field_b.drawStringAlpha(var6, var9, var10 + mp.field_b.field_J, var7, -1, param2);
+          AccountRequestState.field_b.drawStringAlpha(var6, var9, var10 + AccountRequestState.field_b.field_J, var7, -1, param2);
         } else {
-          mp.field_b.drawStringAlpha(var6, var9, mp.field_b.field_J + var10, var7, -1, param2);
+          AccountRequestState.field_b.drawStringAlpha(var6, var9, AccountRequestState.field_b.field_J + var10, var7, -1, param2);
           var9 = var9 + IsolationistAi.field_t;
           SoftwareRasterizer.drawRectAlpha(var9, var10 + (var8 / 2 - 1), 121, 2, var7, param2);
           if (var5 == 21) {
@@ -743,7 +743,7 @@ final class sm {
         SoftwareRasterizer.setClip(stackIn_8_0, stackIn_8_1, stackIn_9_2, var14 + var13);
         this.drawItems(var5, param1 + 14372);
         SoftwareRasterizer.setClip(var11, var13, var11 + var12, var14 + var13);
-        mj.field_Hb[param0].drawItems(var5, 7903);
+        LobbyPlayerEntry.field_Hb[param0].drawItems(var5, 7903);
         SoftwareRasterizer.restoreClip(GzipInflater.field_f);
     }
 
@@ -778,7 +778,7 @@ final class sm {
         if (LoginForm.field_I == null) {
           LoginForm.field_I = GameApplet.a((byte) 85, 0, 7, 10);
         }
-        var2 = QuickChatCategoryRegistry.a(0, 32, nb.field_a, 560, param0 ^ -23);
+        var2 = QuickChatCategoryRegistry.a(0, 32, GameTextResources.field_a, 560, param0 ^ -23);
         var3 = 200;
         var4 = this.b(false) - (-this.c(32) + var2 >> 1);
         var5 = this.h(param0 - 71) - var3 - 24;
@@ -837,7 +837,7 @@ final class sm {
         if (param0 != 2) {
           this.a(-30, 106, 23);
         }
-        int var3 = QuickChatCategoryRegistry.a(0, 32, nb.field_a, var2, 0);
+        int var3 = QuickChatCategoryRegistry.a(0, 32, GameTextResources.field_a, var2, 0);
         int var4 = 80;
         int var5 = this.b(false) - (var3 - this.c(32) >> 1);
         int var6 = -60 + this.h(-122) - var4 - 48;
@@ -913,9 +913,9 @@ final class sm {
         var9 = this.itemY(param0, true);
         if (var4 != 21 &&
           var4 != 22) {
-          mp.field_b.drawString(var5, var8, mp.field_b.field_J + var9, var6, -1);
+          AccountRequestState.field_b.drawString(var5, var8, AccountRequestState.field_b.field_J + var9, var6, -1);
         } else {
-          mp.field_b.drawString(var5, var8, var9 + mp.field_b.field_J, var6, -1);
+          AccountRequestState.field_b.drawString(var5, var8, var9 + AccountRequestState.field_b.field_J, var6, -1);
           var8 = var8 + IsolationistAi.field_t;
           SoftwareRasterizer.drawRect(var8, -1 + (var9 + var7 / 2), 121, 2, var6);
           if (21 == var4) {
@@ -976,7 +976,7 @@ final class sm {
         if (var2Lifetime1 == -1) {
           stackIn_24_0 = 0;
         } else {
-          stackIn_24_0 = 32 + 16 * nd.field_d[var2Lifetime1];
+          stackIn_24_0 = 32 + 16 * IntroGlowPoint.field_d[var2Lifetime1];
         }
         var3 = stackIn_24_0;
         if (var2Lifetime1 == 24) {
@@ -985,7 +985,7 @@ final class sm {
           if (var4 == 0) {
             stackIn_31_0 = 0;
           } else {
-            stackIn_31_0 = 32 + 16 * nd.field_d[var2Lifetime1];
+            stackIn_31_0 = 32 + 16 * IntroGlowPoint.field_d[var2Lifetime1];
           }
           var3 = stackIn_31_0;
         }
@@ -1008,7 +1008,7 @@ final class sm {
           22 == var3) {
           return 120 + IsolationistAi.field_t;
         }
-        return mp.field_b.stringWidth(this.itemLabel(-22609, var3));
+        return AccountRequestState.field_b.stringWidth(this.itemLabel(-22609, var3));
     }
 
     private final void a(int param0, boolean param1, int param2, int param3) {
@@ -1651,10 +1651,10 @@ final class sm {
           }
         }
         if (this.field_a == 5) {
-          fieldTemp$1 = nb.field_a + 1;
-          nb.field_a = nb.field_a + 1;
+          fieldTemp$1 = GameTextResources.field_a + 1;
+          GameTextResources.field_a = GameTextResources.field_a + 1;
           if (fieldTemp$1 > 32) {
-            nb.field_a = 32;
+            GameTextResources.field_a = 32;
           }
         }
     }
@@ -1935,7 +1935,7 @@ final class sm {
           if (ByteArrayStorage.field_b == 32) {
             if (TerritoryResourcePanelSupport.field_c == var6) {
               if (var5 == 0) {
-                stackIn_24_0 = n.field_k;
+                stackIn_24_0 = DiplomacyNotice.field_k;
               } else {
                 stackIn_24_0 = DerelictMapReader.a(var6, -106);
               }
@@ -2003,7 +2003,7 @@ final class sm {
         var5Lifetime1 = stackIn_48_0;
         if (var5Lifetime1 == 0) {
           var7 = DerelictMapGenerator.field_n;
-          var8Lifetime1 = n.field_k;
+          var8Lifetime1 = DiplomacyNotice.field_k;
         } else {
           var7 = CellVertex.field_j[var6];
           var8Lifetime1 = DerelictMapReader.a(var6, -94);
@@ -2040,14 +2040,14 @@ final class sm {
         SoftwareRasterizer.drawRoundedRect(var2Lifetime1, var20, var18, var19, 10, SolVictoryChecker.blendColours(3974311, 0, -118, 128));
         if (-1 != var6 &&
           var6 != 24) {
-          mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
+          AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
           var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
         } else {
           if (var6 == 24) {
-            mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
+            AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
               var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
@@ -2060,10 +2060,10 @@ final class sm {
             rs.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
             if (!oe.field_e) {
-              mp.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
+              AccountRequestState.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, AccountRequestState.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
-              mp.field_b.drawString(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
+              AccountRequestState.field_b.drawString(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + AccountRequestState.field_b.field_J, 2805974, -1);
               rs.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             }
           }
@@ -2083,7 +2083,7 @@ final class sm {
           SoftwareRasterizer.setClip(4 + var2Lifetime2, 4 + var20Lifetime1, var18Lifetime1 + var2Lifetime2 - 4, -4 + var21 + var20Lifetime1);
           if (var6 != -1 && (var6 != 24 ||
             var5Lifetime1 != 0)) {
-            var22Lifetime1 = nd.field_d[var6];
+            var22Lifetime1 = IntroGlowPoint.field_d[var6];
             if (var22Lifetime1 > 1) {
               var23Lifetime1 = var20Lifetime1 + 24;
               var24 = var21;
@@ -2126,7 +2126,7 @@ final class sm {
           ProductionContent.a(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
         }
         if (oq.field_j == 4) {
-          ProductionContent.a(mq.c((byte) 67), 1);
+          ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 67), 1);
         }
         if (GameRules.field_c == 6) {
           this.e(170);
@@ -2268,7 +2268,7 @@ final class sm {
               if (var5 == 1) {
                 if (Dialog.d(true)) {
                   var5 = 0;
-                  uc.a(320, mp.field_b.field_K, mp.field_b.field_K + mp.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, var5);
+                  uc.a(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, var5);
                 } else {
                   this.field_g = param0;
                   var5 = param1 ? 1 : 0;
@@ -2319,7 +2319,7 @@ final class sm {
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;
-                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ValidationMessageWidget.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
+                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                                         HuffmanCodec.a(var5 != 0, -1);
                                       }
                                       break regionExit1;
@@ -2482,8 +2482,8 @@ final class sm {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (this.field_a == 5) {
-          fieldTemp$0 = nb.field_a - 1;
-          nb.field_a = nb.field_a - 1;
+          fieldTemp$0 = GameTextResources.field_a - 1;
+          GameTextResources.field_a = GameTextResources.field_a - 1;
           return fieldTemp$0 <= 0 ? true : false;
         }
         if (param0 < 32) {

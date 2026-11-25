@@ -105,7 +105,7 @@ final class DialWidget extends FocusableWidget {
           if (this.field_E * this.field_E <= var8_int * var8_int + var9 * var9) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - n.field_p;
+          var10 = Math.atan2((double)var9, (double)var8_int) - DiplomacyNotice.field_p;
           if (var10 < 0.0) {
             var10 = var10 - 3.141592653589793 / (double)this.field_F;
           } else {
@@ -137,9 +137,9 @@ final class DialWidget extends FocusableWidget {
 
     final static void h(int param0) {
         int stackIn_12_0 = 0;
-        mj stackIn_19_0 = null;
+        LobbyPlayerEntry stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        mj stackIn_66_0 = null;
+        LobbyPlayerEntry stackIn_66_0 = null;
         boolean stackIn_67_1 = false;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -147,19 +147,19 @@ final class DialWidget extends FocusableWidget {
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
-        mj var3_ref_mj = null;
+        LobbyPlayerEntry var3_ref_mj = null;
         LobbyRoomEntry var4 = null;
         int var4_int = 0;
         int var5 = 0;
         LobbyRoomEntry var6 = null;
-        mj var7 = null;
+        LobbyPlayerEntry var7 = null;
         int var8 = 0;
-        mj var8_ref_mj = null;
+        LobbyPlayerEntry var8_ref_mj = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         java.applet.Applet var12 = null;
-        mj var14 = null;
+        LobbyPlayerEntry var14 = null;
         LobbyRoomEntry var15 = null;
         Object var16 = null;
         Object var17 = null;
@@ -168,21 +168,21 @@ final class DialWidget extends FocusableWidget {
         String var19 = null;
         String var20 = null;
         String var21 = null;
-        mj var22 = null;
+        LobbyPlayerEntry var22 = null;
         Object var23 = null;
         LobbyRoomEntry var24 = null;
-        mj var25 = null;
+        LobbyPlayerEntry var25 = null;
         String var26 = null;
         String var27 = null;
-        mj var28 = null;
-        mj var29 = null;
+        LobbyPlayerEntry var28 = null;
+        LobbyPlayerEntry var29 = null;
         Object var30 = null;
         LobbyRoomEntry var30_ref = null;
-        mj var31 = null;
+        LobbyPlayerEntry var31 = null;
         LobbyRoomEntry var32 = null;
         LobbyRoomEntry var33 = null;
-        mj var34 = null;
-        mj var3_ref_mjLifetime1;
+        LobbyPlayerEntry var34 = null;
+        LobbyPlayerEntry var3_ref_mjLifetime1;
         long var3_longLifetime1;
         long var3_longLifetime2;
         int var3Lifetime1;
@@ -224,10 +224,10 @@ final class DialWidget extends FocusableWidget {
               var9 = stackIn_12_0;
               if (var22 != null) {
                 if (var9 != 0) {
-                  var22.a(var21, var20, (byte) 64);
+                  var22.setPlayerNames(var21, var20, (byte) 64);
                 }
               } else {
-                var8_ref_mj = new mj(var20, var21, var3_long);
+                var8_ref_mj = new LobbyPlayerEntry(var20, var21, var3_long);
                 ShatteredPlansClient.field_H.put(var3_long, var8_ref_mj, true);
               }
               var8_ref_mj.field_zb = pr.currentTimeMillis(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
@@ -263,11 +263,11 @@ final class DialWidget extends FocusableWidget {
               return;
             }
             if (var2 == 7) {
-              var34 = (mj) (PlayerRankingRequest.field_p.startForward(0));
+              var34 = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.startForward(0));
               while (var34 != null) {
                 var34.unlink((byte) -126);
                 var34.unlinkSecondary(16);
-                var34 = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
+                var34 = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.nextForward((byte) -71));
               }
               ValidationMessageWidget.field_X = 0;
               return;
@@ -279,7 +279,7 @@ final class DialWidget extends FocusableWidget {
                 var4 = new LobbyRoomEntry(ProductionContent.field_k);
                 IsaacBackedRandom.field_b.put((long)var3, var4, true);
               }
-              mi.a((byte) -89, var4, var1, true);
+              LobbyRoomDecoder.readLobbyRoom((byte) -89, var4, var1, true);
               LobbyUiSupport.insertLobbyRoomByRank(0, var4);
               return;
             }
@@ -338,7 +338,7 @@ final class DialWidget extends FocusableWidget {
                     var27 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var7 = MutableIntPairNode.findRoomMember(-121, var3_longLifetime2);
                     if (var7 == null) {
-                      var7 = new mj(var26, var27, var3_longLifetime2);
+                      var7 = new LobbyPlayerEntry(var26, var27, var3_longLifetime2);
                       SpriteStripButtonPainter.field_w.put(var3_longLifetime2, var7, true);
                       np.field_a.field_Lb = np.field_a.field_Lb + 1;
                     }
@@ -370,7 +370,7 @@ final class DialWidget extends FocusableWidget {
                     return;
                   }
                   if (var2 == 20) {
-                    mi.a((byte) -89, np.field_a, var1, false);
+                    LobbyRoomDecoder.readLobbyRoom((byte) -89, np.field_a, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -446,13 +446,13 @@ final class DialWidget extends FocusableWidget {
             LobbyUiSupport.insertLobbyRoomByRank(0, var24);
             return;
           }
-          var3_ref_mj = (mj) (uo.field_a.startForward(0));
+          var3_ref_mj = (LobbyPlayerEntry) (uo.field_a.startForward(0));
           while (var3_ref_mj != null) {
             var3_ref_mj.unlink((byte) -91);
             var3_ref_mj.unlinkSecondary(16);
-            var3_ref_mj = (mj) (uo.field_a.nextForward((byte) -71));
+            var3_ref_mj = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
           }
-          var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -109));
+          var3_ref_mjLifetime1 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.startTraversal((byte) -109));
           while (var3_ref_mjLifetime1 != null) {
             if (var3_ref_mjLifetime1.field_Tb ||
               var3_ref_mjLifetime1.field_Vb) {
@@ -463,7 +463,7 @@ final class DialWidget extends FocusableWidget {
               }
               WidgetContainer.a((byte) -60, var3_ref_mjLifetime1);
             }
-            var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
+            var3_ref_mjLifetime1 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
           }
           if (var2 == 1 &&
             null != np.field_a) {
@@ -475,7 +475,7 @@ final class DialWidget extends FocusableWidget {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
             np.field_a = new LobbyRoomEntry(ProductionContent.field_k);
             np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
-            mi.a((byte) -89, np.field_a, var1, false);
+            LobbyRoomDecoder.readLobbyRoom((byte) -89, np.field_a, var1, false);
             sf.field_e = 0L;
           }
           if (var2 != 2 &&

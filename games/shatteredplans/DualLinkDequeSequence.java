@@ -77,7 +77,7 @@ final class DualLinkDequeSequence extends NodeSequence {
 
     final static QuickChatParameterType[] a(int param0) {
         if (param0 == 4) {
-          return new QuickChatParameterType[]{IntrusiveDequeCursor.field_g, nd.field_c, SliderWidget.field_O, ss.field_c, RasterStateFrame.field_p, GameApplet.field_c, CheckboxPainter.field_j, Bzip2State.field_I, ByteArrayReadRequest.field_h, ArchiveSource.field_b, StrongCacheEntry.field_A, WeightedCacheEntry.field_r, AccountBooleanRequest.field_a, ro.field_c};
+          return new QuickChatParameterType[]{IntrusiveDequeCursor.field_g, IntroGlowPoint.field_c, SliderWidget.field_O, ss.field_c, RasterStateFrame.field_p, GameApplet.field_c, CheckboxPainter.field_j, Bzip2State.field_I, ByteArrayReadRequest.field_h, ArchiveSource.field_b, StrongCacheEntry.field_A, WeightedCacheEntry.field_r, AccountBooleanRequest.field_a, ro.field_c};
         }
         return (QuickChatParameterType[]) null;
     }

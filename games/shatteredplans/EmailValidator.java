@@ -441,15 +441,15 @@ final class EmailValidator extends TextFieldValidator {
     final static void d(int param0) {
         RuntimeException decompiledCaughtException = null;
         Object var1 = null;
-        mj var1_ref = null;
+        LobbyPlayerEntry var1_ref = null;
         LobbyRoomEntry var1_ref2 = null;
         RuntimeException var1_ref3 = null;
         int var2 = 0;
-        mj var1_refLifetime1;
+        LobbyPlayerEntry var1_refLifetime1;
         var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_ref = (mj) (PlayerRankingRequest.field_p.startForward(0));
+          var1_ref = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.startForward(0));
           if (param0 < 4) {
             EmailValidator.a(true, true);
           }
@@ -458,12 +458,12 @@ final class EmailValidator extends TextFieldValidator {
               var1_ref.field_Gb = var1_ref.field_Gb - 1;
               if (var1_ref.field_Gb == 0) {
                 var1_ref.field_Eb = 0;
-                if (var1_ref.h(-122)) {
+                if (var1_ref.isSecondaryDetached(-122)) {
                   var1_ref.unlink((byte) -58);
                 }
               }
             }
-            var1_ref = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
+            var1_ref = (LobbyPlayerEntry) (PlayerRankingRequest.field_p.nextForward((byte) -71));
           }
           var1_ref2 = (LobbyRoomEntry) (AccountRequestResult.field_a.startForward(0));
           while (var1_ref2 != null) {
@@ -478,20 +478,20 @@ final class EmailValidator extends TextFieldValidator {
             }
             var1_ref2 = (LobbyRoomEntry) (AccountRequestResult.field_a.nextForward((byte) -71));
           }
-          var1_refLifetime1 = (mj) (uo.field_a.startForward(0));
+          var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.startForward(0));
           while (var1_refLifetime1 != null) {
             if (var1_refLifetime1.field_Gb > 0) {
               var1_refLifetime1.field_Gb = var1_refLifetime1.field_Gb - 1;
               if (var1_refLifetime1.field_Gb != 0) {
-                var1_refLifetime1 = (mj) (uo.field_a.nextForward((byte) -71));
+                var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
                 continue;
               }
               var1_refLifetime1.field_Eb = 0;
-              if (var1_refLifetime1.h(-96)) {
+              if (var1_refLifetime1.isSecondaryDetached(-96)) {
                 var1_refLifetime1.unlink((byte) -108);
               }
             }
-            var1_refLifetime1 = (mj) (uo.field_a.nextForward((byte) -71));
+            var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

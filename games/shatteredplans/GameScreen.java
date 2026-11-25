@@ -1145,7 +1145,7 @@ final class GameScreen {
             var13 == 0) {
             var20 = " ";
           }
-          mp.field_b.drawCentred(var20, var18Lifetime2, 27 + var6, 16777215, -1);
+          AccountRequestState.field_b.drawCentred(var20, var18Lifetime2, 27 + var6, 16777215, -1);
           var21Lifetime2 = -10 + (40 + var5) + 320;
           var22Lifetime2 = 40 + var6;
           var23 = 4 * this.field_D;
@@ -2220,7 +2220,7 @@ final class GameScreen {
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_s.field_W) {
-            mq.a((byte) -44);
+            TutorialOverlaySupport.drawTutorialOverlay((byte) -44);
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_s.field_f &&
@@ -2375,7 +2375,7 @@ final class GameScreen {
             var8 = field_L;
           }
           if (null != var8) {
-            mp.field_b.drawCentredAlpha((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
+            AccountRequestState.field_b.drawCentredAlpha((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
             var11 = rs.field_Cb.field_J + 245;
             if (var8 == StrongCacheEntry.field_v) {
               if (this.field_s.field_P.field_w != 0) {
@@ -2932,8 +2932,8 @@ final class GameScreen {
             NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + rs.field_Cb.field_J / 2) + (var4 + 5), rs.field_Cb.field_J + (var5 + 10), 64);
           }
           var13 = QuickChatCategoryRegistry.a(ProgressDialog.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
-          var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + mp.field_b.field_J));
-          mp.field_b.drawCentred(var13, 320, var14, 16777215, -1);
+          var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + AccountRequestState.field_b.field_J));
+          AccountRequestState.field_b.drawCentred(var13, 320, var14, 16777215, -1);
           var15 = -32 + this.field_u;
           if (var15 > 0) {
             boolean decompiledSharedTail0 = !(var15 >= 32);
@@ -3169,7 +3169,7 @@ final class GameScreen {
               return;
             }
           }
-          vc.a((byte) -39, mp.field_e.length);
+          vc.a((byte) -39, AccountRequestState.field_e.length);
           this.field_P = this.field_s.field_P.getYearName((byte) -50);
           this.field_u = 1;
           MenuLabel.a(ScrollPane.field_yb, 63);
@@ -3324,7 +3324,7 @@ final class GameScreen {
                 this.field_mb.setSelected(false);
               }
               if (this.field_j == var4_ref_qh) {
-                this.field_S.field_o = n.field_j;
+                this.field_S.field_o = DiplomacyNotice.field_j;
                 this.field_S.setSelected(false);
               }
               if (this.field_J == var4_ref_qh) {
@@ -3364,7 +3364,7 @@ final class GameScreen {
             if (this.field_S == DualLinkDequeSequence.field_h) {
               boolean decompiledSharedTail2 = !(this.field_j.field_s);
               if (!decompiledSharedTail2) {
-                this.field_S.field_o = n.field_j;
+                this.field_S.field_o = DiplomacyNotice.field_j;
                 this.field_j.field_s = false;
                 decompiledSharedTail2 = (var9 != 0);
               }
@@ -5088,7 +5088,7 @@ final class GameScreen {
           this.field_y.addLast((byte) -113, this.field_k);
           if (null != this.field_s.field_n) {
             this.field_S = new ToggleButton(511, 25, MusicCrossfadeStream.field_F.field_z, MusicCrossfadeStream.field_F.field_w, -1, MusicCrossfadeStream.field_F, (String) null, 0, -1, DiskArchiveRequest.field_x, (String) null, 0);
-            this.field_S.field_o = n.field_j;
+            this.field_S.field_o = DiplomacyNotice.field_j;
             this.field_y.addLast((byte) -113, this.field_S);
           }
           this.field_n = new ToggleButton(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, HuffmanCodec.field_e.field_z, HuffmanCodec.field_e.field_w, -1, HuffmanCodec.field_e, (String) null, 0, -1, AlignedMenuLabel.field_D, (String) null, 0);
@@ -5251,7 +5251,7 @@ final class GameScreen {
             }
             break;
           }
-          MenuList.a(1546006977, n.a("start", -21502));
+          MenuList.a(1546006977, DiplomacyNotice.findTutorialSceneByTag("start", -21502));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

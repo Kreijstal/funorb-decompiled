@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq {
+final class TutorialOverlaySupport {
     static String field_b;
     static ChatMessage field_c;
     static String field_a;
@@ -15,7 +15,7 @@ final class mq {
         field_b = null;
     }
 
-    final static int[] a(int param0, byte param1, int param2) {
+    final static int[] createRotationMatrix(int param0, byte param1, int param2) {
         int var3 = LobbyCommandSupport.sine(param0, (byte) -104);
         int var4 = IntrusiveNode.cosine(param0, param1 ^ 96);
         int var5 = LobbyCommandSupport.sine(param2, (byte) -104);
@@ -24,13 +24,13 @@ final class mq {
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
         if (param1 != 80) {
-          mq.a(54, (byte) -60, 103);
+          TutorialOverlaySupport.createRotationMatrix(54, (byte) -60, 103);
         }
         int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static void a(byte param0) {
+    final static void drawTutorialOverlay(byte param0) {
         int var7_int = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -124,7 +124,7 @@ final class mq {
             }
           }
           if (param0 != -44) {
-            mq.a((byte) 101);
+            TutorialOverlaySupport.drawTutorialOverlay((byte) 101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class mq {
         }
     }
 
-    final static va c(byte param0) {
+    final static va createBasicGraphicsSettings(byte param0) {
         if (param0 <= 20) {
           field_a = (String) null;
         }

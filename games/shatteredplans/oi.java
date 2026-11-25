@@ -31,9 +31,9 @@ final class oi {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           Star.field_K = EmailValidator.a(param1, "", "starfield", false);
-          mp.field_e = new Sprite[6];
+          AccountRequestState.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
+            AccountRequestState.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
           PasswordInputPainter.field_v = EmailValidator.a(param1, "", "win", false);
           QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);

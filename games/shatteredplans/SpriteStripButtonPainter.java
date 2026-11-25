@@ -353,7 +353,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
             stackIn_16_0 = this.field_u;
           }
           var7 = stackIn_16_0;
-          mj.a(param0.field_x, 2, var7, param3 + param0.field_q + (param0.field_n - this.field_t[0].field_p >> 1), param0.field_m + param1, this.field_t);
+          LobbyPlayerEntry.drawTintedHorizontalSpriteStrip(param0.field_x, 2, var7, param3 + param0.field_q + (param0.field_n - this.field_t[0].field_p >> 1), param0.field_m + param1, this.field_t);
           stackIn_19_0 = (param2) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.field_c.a(param0.field_s, param1 + param0.field_m, -2 + param0.field_q + param3, param0.field_x, param0.field_n, var8, -1, 1, 1, this.field_c.field_J);

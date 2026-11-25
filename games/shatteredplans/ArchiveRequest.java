@@ -49,7 +49,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         try {
           var2 = DialWidget.a(false, "jagex-last-login-method", param0);
           if (var2 == null) {
-            stackIn_4_0 = mj.field_Rb;
+            stackIn_4_0 = LobbyPlayerEntry.field_Rb;
             return stackIn_4_0;
           }
           var3 = IntrusiveNode.c((byte) -90);
@@ -64,7 +64,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             var7 = (java.applet.Applet) null;
             ArchiveRequest.a((java.applet.Applet) null, false);
           }
-          stackIn_15_0 = mj.field_Rb;
+          stackIn_15_0 = LobbyPlayerEntry.field_Rb;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,8 +128,8 @@ abstract class ArchiveRequest extends DualLinkNode {
           FourIntSubmissionRequest.field_o = new Sprite(32, 32);
           FourIntSubmissionRequest.field_o.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawQuarterSize(0, 0);
-          n.field_k = new Sprite(256, 256);
-          n.field_k.bindAsRenderTarget();
+          DiplomacyNotice.field_k = new Sprite(256, 256);
+          DiplomacyNotice.field_k.bindAsRenderTarget();
           DerelictMapGenerator.field_n.draw(64, 64);
           SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);

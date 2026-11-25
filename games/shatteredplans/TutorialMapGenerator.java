@@ -962,7 +962,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_rating", 511);
                 if (null != var2) {
-                  mk.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_friend_add", 511);
                 if (var2 != null) {
@@ -1050,7 +1050,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("no", 511);
                 if (null != var2) {
-                  mi.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_invite_players", 511);
                 if (null != var2) {
@@ -1210,7 +1210,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rated_game_tips", 511);
                 if (null != var2) {
-                  nb.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GameTextResources.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("searching_for_opponent_singular", 511);
                 if (var2 != null) {
@@ -1218,7 +1218,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("searching_for_opponents_plural", 511);
                 if (null != var2) {
-                  mp.field_f = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("find_opponent_singular", 511);
                 if (var2 != null) {
@@ -1242,7 +1242,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("your_game", 511);
                 if (null != var2) {
-                  n.field_m = IterableNodeHashTable.a(var2, 17746);
+                  DiplomacyNotice.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("game_full", 511);
                 if (null != var2) {
@@ -1526,11 +1526,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_cannotbecombined1", 511);
                 if (var2 != null) {
-                  n.field_q = IterableNodeHashTable.a(var2, 17746);
+                  DiplomacyNotice.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_cannotbecombined2", 511);
                 if (var2 != null) {
-                  mp.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playernotmember", 511);
                 if (null != var2) {
@@ -1542,11 +1542,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneedsrating", 511);
                 if (null != var2) {
-                  mq.field_b = IterableNodeHashTable.a(var2, 17746);
+                  TutorialOverlaySupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneedrating", 511);
                 if (var2 != null) {
-                  mk.field_f = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneedsratedgames", 511);
                 if (null != var2) {
@@ -1622,7 +1622,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_inviteplayers_or_trychanging2", 511);
                 if (null != var2) {
-                  mi.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_novalidcombos", 511);
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("ra_intro_no_name", 511);
                 if (null != var2) {
-                  mk.field_g = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_explanation", 511);
                 if (var2 != null) {
@@ -2032,7 +2032,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("creatingyouraccount", 511);
                 if (null != var2) {
-                  mp.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_youmustaccept", 511);
                 if (var2 != null) {
@@ -2060,51 +2060,51 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("monthnames,0", 511);
                 if (var2 != null) {
-                  nd.field_g[0] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,1", 511);
                 if (null != var2) {
-                  nd.field_g[1] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,2", 511);
                 if (null != var2) {
-                  nd.field_g[2] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,3", 511);
                 if (null != var2) {
-                  nd.field_g[3] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,4", 511);
                 if (var2 != null) {
-                  nd.field_g[4] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,5", 511);
                 if (var2 != null) {
-                  nd.field_g[5] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,6", 511);
                 if (var2 != null) {
-                  nd.field_g[6] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,7", 511);
                 if (var2 != null) {
-                  nd.field_g[7] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,8", 511);
                 if (var2 != null) {
-                  nd.field_g[8] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,9", 511);
                 if (null != var2) {
-                  nd.field_g[9] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[9] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,10", 511);
                 if (var2 != null) {
-                  nd.field_g[10] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[10] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,11", 511);
                 if (null != var2) {
-                  nd.field_g[11] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[11] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_welcome", 511);
                 if (var2 != null) {
@@ -2428,7 +2428,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("ignorelistfull", 511);
                 if (var2 != null) {
-                  mi.field_a = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ignorelistdupe", 511);
                 if (null != var2) {
@@ -3086,7 +3086,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_rematchnewgame_unrated", 511);
                 if (null != var2) {
-                  mq.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialOverlaySupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_wantstodraw", 511);
                 if (null != var2) {

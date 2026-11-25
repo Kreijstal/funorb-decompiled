@@ -82,7 +82,7 @@ class StandardAi implements Ai {
           }
           if (param2 > 0) {
             var8Lifetime1 = 0;
-            var9 = mj.field_yb.firstStar(18229);
+            var9 = LobbyPlayerEntry.field_yb.firstStar(18229);
             while (var9 != null) {
               var15 = var9.field_D;
               var10 = var15;
@@ -96,10 +96,10 @@ class StandardAi implements Ai {
                 var8Lifetime1++;
                 break;
               }
-              var9 = mj.field_yb.nextStar(-23410);
+              var9 = LobbyPlayerEntry.field_yb.nextStar(-23410);
             }
             if (0 < var8Lifetime1) {
-              var9Lifetime1 = mj.field_yb.firstStar(18229);
+              var9Lifetime1 = LobbyPlayerEntry.field_yb.firstStar(18229);
               while (var9Lifetime1 != null) {
                 var10Lifetime1 = var9Lifetime1.field_D;
                 for (var11Lifetime1Lifetime1 = 0; var10Lifetime1.length > var11Lifetime1Lifetime1; var11Lifetime1Lifetime1++) {
@@ -114,7 +114,7 @@ class StandardAi implements Ai {
                   var8Lifetime1--;
                   break;
                 }
-                var9Lifetime1 = mj.field_yb.nextStar(-23410);
+                var9Lifetime1 = LobbyPlayerEntry.field_yb.nextStar(-23410);
               }
             }
           }
@@ -287,7 +287,7 @@ class StandardAi implements Ai {
                 var8 = 0;
                 while (var7.length > var8) {
                   var9 = var7[var8];
-                  if (var9.field_R != mj.field_yb) {
+                  if (var9.field_R != LobbyPlayerEntry.field_yb) {
                     var8++;
                     continue;
                   }
@@ -328,7 +328,7 @@ class StandardAi implements Ai {
                 var8 = 0;
                 while (var7.length > var8) {
                   var9 = var7[var8];
-                  if (var9.field_R != mj.field_yb) {
+                  if (var9.field_R != LobbyPlayerEntry.field_yb) {
                     var8++;
                     continue;
                   }
@@ -417,14 +417,14 @@ class StandardAi implements Ai {
         int var4 = 0;
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        Star var2 = mj.field_yb.firstStar(18229);
+        Star var2 = LobbyPlayerEntry.field_yb.firstStar(18229);
         int var3 = param0;
         while (var2 != null) {
           var4 = var2.field_p;
           var5 = this.b((byte) 89, var2);
           var3 = var3 + var5;
           ue.field_e[var4] = var5;
-          var2 = mj.field_yb.nextStar(-23410);
+          var2 = LobbyPlayerEntry.field_yb.nextStar(-23410);
         }
         return var3;
     }
@@ -681,18 +681,18 @@ class StandardAi implements Ai {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         var5 = 0;
         if (param2 <= param0) {
-          var4 = mj.field_yb.firstStar(18229);
+          var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
           while (var4 != null) {
             var6 = var4.field_p;
             var7 = ue.field_e[var6];
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
             oe.field_i[var6] = oe.field_i[var6] + var7;
-            var4 = mj.field_yb.nextStar(-23410);
+            var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
           }
           var5 = var5 + param2;
           param0 = param0 - param2;
         } else {
-          var4 = mj.field_yb.firstStar(18229);
+          var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
           while (var4 != null) {
             var6 = var4.field_p;
             var7 = ue.field_e[var6] * param0 / param2;
@@ -700,7 +700,7 @@ class StandardAi implements Ai {
             param0 = param0 - var7;
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
             var5 = var5 + var7;
-            var4 = mj.field_yb.nextStar(-23410);
+            var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
           }
         }
         if (param1 != -1814) {
@@ -917,7 +917,7 @@ class StandardAi implements Ai {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           GuestPlayForm.field_E = param0;
-          mj.field_yb = param1;
+          LobbyPlayerEntry.field_yb = param1;
           this.c(-17286);
           if (!this.field_g.field_o.field_i) {
             this.computeResourceWeights(0, param1);
@@ -1073,7 +1073,7 @@ class StandardAi implements Ai {
         int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 0;
-        var4 = mj.field_yb.firstStar(18229);
+        var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
         while (var4 != null) {
           var5 = var4.field_p;
           var6 = 0;
@@ -1091,7 +1091,7 @@ class StandardAi implements Ai {
           BirthDateValidator.field_i[var5] = BirthDateValidator.field_i[var5] + var4.field_x;
           QuaternaryNodeList.field_b[var5] = var6;
           var7 = -var4.field_x + var6;
-          var4 = mj.field_yb.nextStar(-23410);
+          var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
           var3 = var3 + var7;
         }
         if (param0 < -29) {
@@ -1452,7 +1452,7 @@ class StandardAi implements Ai {
           this.b(114, -80);
         }
         var3 = 0;
-        var4 = mj.field_yb.firstStar(param1 ^ -16436);
+        var4 = LobbyPlayerEntry.field_yb.firstStar(param1 ^ -16436);
         while (true) {
           if (var4 == null) {
             return var3;
@@ -1496,7 +1496,7 @@ class StandardAi implements Ai {
               var12++;
             }
           }
-          var4 = mj.field_yb.nextStar(-23410);
+          var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
         }
     }
 
@@ -2215,7 +2215,7 @@ class StandardAi implements Ai {
               var9 = this.field_g.field_g.field_e[var7];
               var10 = (FleetMove) (var9.field_s.startForward(-128));
               while (var10 != null) {
-                if (var10.field_y.field_R != mj.field_yb) {
+                if (var10.field_y.field_R != LobbyPlayerEntry.field_yb) {
                   var10 = (FleetMove) (var9.field_s.nextForward(32));
                   continue;
                 }

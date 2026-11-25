@@ -130,7 +130,7 @@ final class ChatPanelLayoutSupport {
                 oq.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
                 tb.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
                 DerelictMapReader.field_d[var12].setTarget(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
-                n.field_n[var12].setTarget(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
+                DiplomacyNotice.field_n[var12].setTarget(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
               }
             }
           }

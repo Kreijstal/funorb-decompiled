@@ -837,7 +837,7 @@ final class MidiPcmStream extends PcmStream {
               if (var12.field_nc == 1) {
                 var34 = va.field_i;
               } else {
-                var34 = mk.field_e[var12.field_nc];
+                var34 = LobbyOptionResources.field_e[var12.field_nc];
               }
               DualLinkDequeSequence.field_k = SolMapGenerator.field_r + " - " + var34;
             }

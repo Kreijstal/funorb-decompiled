@@ -824,10 +824,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var6_int = (int)(var2_long - var4);
             LinkPainter.field_i = ((var6_int >> 1) + 32000) / var6_int;
           }
-          fieldTemp$1 = mk.field_a;
-          mk.field_a = mk.field_a + 1;
+          fieldTemp$1 = LobbyOptionResources.field_a;
+          LobbyOptionResources.field_a = LobbyOptionResources.field_a + 1;
           if (fieldTemp$1 > 50) {
-            mk.field_a = mk.field_a - 50;
+            LobbyOptionResources.field_a = LobbyOptionResources.field_a - 50;
             oq.field_e = true;
             tm.field_i.setSize(VictoryChecker.field_e, nn.field_b);
             tm.field_i.setVisible(true);

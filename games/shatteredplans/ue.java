@@ -4,7 +4,7 @@
 final class ue {
     static String field_c;
     static String field_b;
-    static mp field_a;
+    static AccountRequestState field_a;
     static String field_d;
     static int[] field_e;
 
@@ -79,7 +79,7 @@ final class ue {
     static {
         field_c = "Game Type: Points";
         field_b = "Click to hide the Projects window.";
-        field_a = new mp();
+        field_a = new AccountRequestState();
         field_d = "Off";
     }
 }

@@ -4,14 +4,14 @@
 final class MenuButton extends MenuComponent {
     private String field_F;
     static int[] field_v;
-    static nd[] field_C;
+    static IntroGlowPoint[] field_C;
     static int[] field_x;
     static String field_z;
     static int[] field_u;
     private int field_G;
     private Sprite field_D;
-    static nd[] field_y;
-    static nd[] field_H;
+    static IntroGlowPoint[] field_y;
+    static IntroGlowPoint[] field_H;
     private int field_K;
     static String field_E;
     static int field_B;
@@ -251,17 +251,17 @@ final class MenuButton extends MenuComponent {
         int[] var1 = new int[]{199, 209, 223, 235, 214, 227, 289, 302, 313, 327, 338, 351, 247, 267, 180, 209, 240, 235, 258};
         int[] var2 = new int[]{327, 239, 128, 326, 639, 717, 529, 507, 132, 195, 772, 777, 211, 319, 84, 202, 717, 303, 235, 193};
         int[] var3 = new int[]{395, 478, 553, 617, 475, 615, 611, 384, 552, 628, 492, 403, 401, 348, 627, 393, 615, 509, 500, 545};
-        field_y = new nd[12];
+        field_y = new IntroGlowPoint[12];
         for (var4 = 0; 12 > var4; var4++) {
-          field_y[var4] = new nd(var0[var4], var1[var4], 80);
+          field_y[var4] = new IntroGlowPoint(var0[var4], var1[var4], 80);
         }
-        field_H = new nd[7];
+        field_H = new IntroGlowPoint[7];
         for (var4Lifetime1 = 0; var4Lifetime1 < 7; var4Lifetime1++) {
-          field_H[var4Lifetime1] = new nd(var0[var4Lifetime1 + 12], var1[var4Lifetime1 + 12], 144);
+          field_H[var4Lifetime1] = new IntroGlowPoint(var0[var4Lifetime1 + 12], var1[var4Lifetime1 + 12], 144);
         }
-        field_C = new nd[var2.length];
+        field_C = new IntroGlowPoint[var2.length];
         for (var4Lifetime2 = 0; var4Lifetime2 < var2.length; var4Lifetime2++) {
-          field_C[var4Lifetime2] = new nd(var2[var4Lifetime2], var3[var4Lifetime2], 240);
+          field_C[var4Lifetime2] = new IntroGlowPoint(var2[var4Lifetime2], var3[var4Lifetime2], 240);
         }
         field_J = 0;
     }

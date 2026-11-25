@@ -19,16 +19,16 @@ final class IntroTextLine extends IntrusiveNode {
     final static void drawIntroGalaxyLayers(int param0) {
         int var1_int = 0;
         int var2 = 0;
-        nd[] var3 = null;
+        IntroGlowPoint[] var3 = null;
         int var4 = 0;
         int var6 = 0;
-        nd[] var7 = null;
+        IntroGlowPoint[] var7 = null;
         int var8 = 0;
-        nd var9 = null;
-        nd var10 = null;
+        IntroGlowPoint var9 = null;
+        IntroGlowPoint var10 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        nd[] var3Lifetime1;
+        IntroGlowPoint[] var3Lifetime1;
         int var1_intLifetime1;
         int var1_intLifetime2;
         int var4Lifetime1;

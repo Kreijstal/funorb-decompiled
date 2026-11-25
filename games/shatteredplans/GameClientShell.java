@@ -484,7 +484,7 @@ abstract class GameClientShell extends GameApplet {
           oi.field_f = false;
         }
         if (DefensiveAi.field_p == 0 &&
-          mp.a(true)) {
+          AccountRequestState.pollArchiveIndexReady(true)) {
           DefensiveAi.field_p = 1;
         }
         if (param1 <= 1) {

@@ -1836,13 +1836,13 @@ final class MapView extends MapViewState {
               this.field_qb[3][param0.field_G[3]].drawScaled(this.field_Hb + (this.field_i[var3_int] + (int)(var5_double * 4.0)), -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double));
               if (this.field_X &&
                 SliderWidget.field_L) {
-                mj.field_Nb[param0.field_G[0]].drawScaledAlpha(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), RasterBuffer.field_f);
+                LobbyPlayerEntry.field_Nb[param0.field_G[0]].drawScaledAlpha(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), RasterBuffer.field_f);
                 TextHotspotWidget.field_L[param0.field_G[1]].drawScaledAlpha(this.field_i[var3_int] + (-this.field_Hb - (int)(ProjectsContent.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), RasterBuffer.field_f);
                 var10 = (ArgbSprite) (TextHotspotWidget.field_L[param0.field_G[2]]);
                 var11 = var10.copyArgb();
                 var11.flipHorizontal();
                 var11.drawScaledAlpha((int)(ProjectsContent.field_e * (var5_double * 62.0)) + (this.field_i[var3_int] - this.field_Hb - 2), this.field_J[var3_int] + (int)(var5_double * 33.0), (int)((double)this.field_qb[2][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[2][0].field_w), RasterBuffer.field_f);
-                var12 = (ArgbSprite) (mj.field_Nb[param0.field_G[3]]);
+                var12 = (ArgbSprite) (LobbyPlayerEntry.field_Nb[param0.field_G[3]]);
                 var13 = var12.copyArgb();
                 var13.flipHorizontal();
                 var13.drawScaledAlpha((int)(var5_double * 4.0) + this.field_i[var3_int] + this.field_Hb, -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double), RasterBuffer.field_f);
@@ -2671,8 +2671,8 @@ final class MapView extends MapViewState {
               var7_int = -var7_int + 511;
             }
             var8 = 16711680;
-            mp.field_b.drawCentredAlpha("Checksum", 320, 240, var8, -1, var7_int);
-            mp.field_b.drawCentredAlpha("Failure", 320, mp.field_b.field_J + 240, var8, -1, var7_int);
+            AccountRequestState.field_b.drawCentredAlpha("Checksum", 320, 240, var8, -1, var7_int);
+            AccountRequestState.field_b.drawCentredAlpha("Failure", 320, AccountRequestState.field_b.field_J + 240, var8, -1, var7_int);
           }
           if (sm.field_e) {
             this.field_L = RasterStateFrame.field_n;
@@ -3276,16 +3276,16 @@ final class MapView extends MapViewState {
     final static void a(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        nd[] var1 = null;
+        IntroGlowPoint[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var4 = 0;
-        nd[] var5 = null;
-        nd[] var6 = null;
+        IntroGlowPoint[] var5 = null;
+        IntroGlowPoint[] var6 = null;
         int var7 = 0;
-        nd var8 = null;
-        nd var9 = null;
-        nd[] var1Lifetime1;
+        IntroGlowPoint var8 = null;
+        IntroGlowPoint var9 = null;
+        IntroGlowPoint[] var1Lifetime1;
         int var2Lifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3542,7 +3542,7 @@ final class MapView extends MapViewState {
           this.field_P = new boolean[this.field_O.field_e.length];
           this.field_qb = new ArgbSprite[4][6];
           for (var6_intLifetime2 = 0; var6_intLifetime2 < 6; var6_intLifetime2++) {
-            var7_ref_om = (ArgbSprite) (mj.field_Nb[var6_intLifetime2]);
+            var7_ref_om = (ArgbSprite) (LobbyPlayerEntry.field_Nb[var6_intLifetime2]);
             var8_ref_om = (ArgbSprite) (TextHotspotWidget.field_L[var6_intLifetime2]);
             this.field_qb[0][var6_intLifetime2] = var7_ref_om.copyArgb();
             this.field_qb[3][var6_intLifetime2] = var7_ref_om.copyArgb();

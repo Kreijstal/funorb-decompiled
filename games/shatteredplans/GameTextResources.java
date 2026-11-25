@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb {
+final class GameTextResources {
     static int field_a;
     static String field_c;
     static Sprite[][] field_d;
     static int[] field_b;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isPrintableChatCharacter(char param0, int param1) {
         int var2;
         var2 = 101 / ((param1 - 30) / 59);
         if (param0 < 32) {
@@ -56,19 +56,19 @@ final class nb {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseGameTextStatics(byte param0) {
         field_d = (Sprite[][]) null;
         if (param0 > 99) {
           field_b = null;
           field_c = null;
           return;
         }
-        nb.a('￿', 111);
+        GameTextResources.isPrintableChatCharacter('￿', 111);
         field_b = null;
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void showForcedLoginForm(int param0) {
         String var1 = null;
         String var1Lifetime1;
         if (!TertiaryNodeList.field_b) {
@@ -90,7 +90,7 @@ final class nb {
         HighscoreResponseSupport.field_f.finishAnimations(param0 + 7363);
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] loadGameTextResource(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -99,7 +99,7 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 94) {
-            nb.a((byte) -57);
+            GameTextResources.releaseGameTextStatics((byte) -57);
           }
           stackIn_3_0 = ArrayWidgetGroup.field_D.getFileByName(true, param0, "");
           return stackIn_3_0;

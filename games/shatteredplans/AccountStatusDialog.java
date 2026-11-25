@@ -62,7 +62,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
           }
           return;
         }
-        nb.a(126);
+        GameTextResources.showForcedLoginForm(126);
         if (param0 == -104) {
           return;
         }

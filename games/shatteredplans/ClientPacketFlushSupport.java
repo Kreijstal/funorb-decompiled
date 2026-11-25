@@ -84,13 +84,13 @@ final class ClientPacketFlushSupport {
               return;
             }
             if (LobbyOptionSupport.field_f.position == 0 &&
-              (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
+              (LobbyPlayerEntry.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
               LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {
                 wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
-                mj.field_Pb = pr.currentTimeMillis(14274);
+                LobbyPlayerEntry.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -150,13 +150,13 @@ final class ClientPacketFlushSupport {
               return;
             }
             if (LobbyOptionSupport.field_f.position == 0 &&
-              (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
+              (LobbyPlayerEntry.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
               LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {
                 wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
-                mj.field_Pb = pr.currentTimeMillis(14274);
+                LobbyPlayerEntry.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

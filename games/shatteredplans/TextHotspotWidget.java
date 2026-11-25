@@ -138,13 +138,13 @@ class TextHotspotWidget extends FocusableWidget {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (DebouncedValidator.field_e == null) {
-            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, of.field_f, mk.field_c);
+            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, of.field_f, LobbyOptionResources.field_c);
           }
           if (DebouncedValidator.field_e.field_d == 0) {
             return false;
           }
           dupTemp$1 = pr.currentTimeMillis(14274);
-          mj.field_Pb = dupTemp$1;
+          LobbyPlayerEntry.field_Pb = dupTemp$1;
           IntrusiveDeque.field_e = dupTemp$1;
           if (param1 != ~DebouncedValidator.field_e.field_d) {
             Wormhole.field_j = oa.field_a;

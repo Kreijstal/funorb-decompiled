@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends AnimatedPanel {
+final class LobbyPlayerEntry extends AnimatedPanel {
     int field_Qb;
     boolean field_Ub;
     long field_zb;
@@ -29,7 +29,7 @@ final class mj extends AnimatedPanel {
     static Territory field_yb;
     static SoundCache field_Sb;
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSharedUiOverlays(int param0, boolean param1) {
         if (DualLinkDequeSequence.field_k != null) {
           TooltipSupport.drawTooltip((byte) 54, DualLinkDequeSequence.field_k);
         }
@@ -55,7 +55,7 @@ final class mj extends AnimatedPanel {
         }
     }
 
-    final boolean a(mj param0, int param1) {
+    final boolean sortsBefore(LobbyPlayerEntry param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         int stackIn_5_1 = 0;
@@ -108,7 +108,7 @@ final class mj extends AnimatedPanel {
         }
     }
 
-    final void a(String param0, String param1, byte param2) {
+    final void setPlayerNames(String param0, String param1, byte param2) {
         CharSequence var5 = null;
         this.field_Db = param1;
         if (param2 <= 1) {
@@ -136,7 +136,7 @@ final class mj extends AnimatedPanel {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
+    final static void drawTintedHorizontalSpriteStrip(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -182,15 +182,15 @@ final class mj extends AnimatedPanel {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isSecondaryDetached(int param0) {
         if (param0 < -58) {
           return !this.isSecondaryLinked((byte) 96) ? true : false;
         }
-        mj.clearStatics(-58);
+        LobbyPlayerEntry.clearStatics(-58);
         return !this.isSecondaryLinked((byte) 96) ? true : false;
     }
 
-    mj(String param0, String param1, long param2) {
+    LobbyPlayerEntry(String param0, String param1, long param2) {
         super(0L, (AnimatedPanel) null);
         CharSequence var6 = null;
         try {
