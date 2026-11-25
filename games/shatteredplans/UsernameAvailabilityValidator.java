@@ -294,7 +294,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             var5.field_b = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_b);
           }
           if (PacketBooleanSupport.readBoolean(param0, (byte) -95)) {
-            var5.field_p = DualLinkNode.a(16, false, param0, var5.field_p);
+            var5.field_p = DualLinkNode.readPackedByteArray(16, false, param0, var5.field_p);
             var7 = 0;
             for (var8 = 0; var5.field_p.length > var8; var8++) {
               if ((255 & var5.field_p[var8]) > var7) {

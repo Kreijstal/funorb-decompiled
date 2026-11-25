@@ -288,7 +288,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           var5 = var4;
-          if (OpacityWidget.a(-76, var5)) {
+          if (OpacityWidget.isInvalidPasswordLength(-76, var5)) {
             stackIn_6_0 = AccountValidationText.field_b;
             return stackIn_6_0;
           }

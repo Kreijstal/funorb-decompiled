@@ -36,7 +36,7 @@ final class ArchiveIndex {
         field_p = null;
     }
 
-    private final void a(byte[] param0, byte param1) {
+    private final void decode(byte[] param0, byte param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -276,7 +276,7 @@ final class ArchiveIndex {
               }
             }
           }
-          this.a(param0, (byte) 86);
+          this.decode(param0, (byte) 86);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ci.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

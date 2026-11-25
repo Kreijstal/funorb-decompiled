@@ -10,7 +10,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_h;
     static String field_i;
 
-    final static void c(boolean param0) {
+    final static void decreaseSoundEffectVolume(boolean param0) {
         int var1 = 0;
         if (CheckboxPainter.field_p > 32) {
           var1 = CheckboxPainter.field_p % 32;
@@ -26,7 +26,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(int param0, boolean param1, CipherPacketBuffer param2, byte[] param3) {
+    final static byte[] readPackedByteArray(int param0, boolean param1, CipherPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -116,7 +116,7 @@ class DualLinkNode extends IntrusiveNode {
         this.field_h = null;
     }
 
-    final static Sprite a(int param0, int param1) {
+    final static Sprite getBlurredAchievementIcon(int param0, int param1) {
         Sprite dupTemp$0 = null;
         if (param1 != 32) {
           field_k = (int[]) null;

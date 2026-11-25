@@ -34,7 +34,7 @@ final class DialPainter implements WidgetPainter {
           var5 = (CharSequence) ((Object) param1);
           IntroGlowPoint.field_k = DateInputWidget.normalizeAccountName(var5, true);
           IntroTextLine.field_k = param2;
-          AccountNoticeDialog.r(0);
+          AccountNoticeDialog.openRootQuickChatMenu(0);
           if (param0 < 15) {
             field_e = (Calendar) null;
           }

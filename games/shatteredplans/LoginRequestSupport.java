@@ -20,7 +20,7 @@ final class LoginRequestSupport {
           if (IntrusiveDeque.isRepeatedCharacterString(param0, (byte) 24)) {
             return false;
           }
-          if (OpacityWidget.a(-92, param0)) {
+          if (OpacityWidget.isInvalidPasswordLength(-92, param0)) {
             return false;
           }
           if (param2.length() == 0) {

@@ -14,7 +14,7 @@ final class ClientException extends RuntimeException {
 
     final static void openDefaultQuickChatMenu(boolean param0) {
         ProductionContent.field_h = 0;
-        AccountNoticeDialog.r(0);
+        AccountNoticeDialog.openRootQuickChatMenu(0);
         if (!param0) {
           int[] var2 = (int[]) null;
           ClientException.sortPairedIntsDescending(-36, -67, -120, (int[]) null, (int[]) null);

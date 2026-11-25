@@ -152,7 +152,7 @@ final class ChatPanelSetupSupport {
             ClientClockSupport.field_c = new AnimatedPanel(0L, param0);
             ClientClockSupport.field_c.field_z = TooltipSupport.field_c;
             DateValidationSupport.field_c.addChild(4, ClientClockSupport.field_c);
-            stackIn_34_0 = DirectByteArrayStorage.b((byte) -121) ? 1 : 0;
+            stackIn_34_0 = DirectByteArrayStorage.isLobbyConnected((byte) -121) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
             !LoginMethodPreference.field_g) {

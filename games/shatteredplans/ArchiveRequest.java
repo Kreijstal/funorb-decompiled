@@ -99,7 +99,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             return false;
           }
           if (!BirthDateConfirmationForm.field_P) {
-            return !DirectByteArrayStorage.b((byte) -119) ? true : false;
+            return !DirectByteArrayStorage.isLobbyConnected((byte) -119) ? true : false;
           }
           return false;
         }
@@ -107,7 +107,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           return false;
         }
         if (!BirthDateConfirmationForm.field_P) {
-          return !DirectByteArrayStorage.b((byte) -119) ? true : false;
+          return !DirectByteArrayStorage.isLobbyConnected((byte) -119) ? true : false;
         }
         return false;
     }

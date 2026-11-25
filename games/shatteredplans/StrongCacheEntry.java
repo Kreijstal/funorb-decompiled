@@ -327,7 +327,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           IntrusiveNode.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
           IntrusiveNode.field_a.field_F = ArchiveSourceManager.createGradientPanelSprites(false, 4210752, false, 120, 8421504, (byte) -63);
           GalaxyMap.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
-          GalaxyMap.field_a.field_F = Wormhole.a(16, 3, 114, 6316128, 6316128, 1);
+          GalaxyMap.field_a.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, 114, 6316128, 6316128, 1);
           MusicCrossfadeStream.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           MusicCrossfadeStream.field_v.field_F = QuickChatPhraseRegistry.resetSpriteCanvasBounds(HighscoreResponseSupport.loadSpriteSetByName(-113, "lobby", param4, "popup"), 122);
           var12 = QuickChatPhraseRegistry.resetSpriteCanvasBounds(HighscoreResponseSupport.loadSpriteSetByName(124, "lobby", param4, "popup_mouseover"), 117);
@@ -396,9 +396,9 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           QuickChatPhraseRegistry.field_h.field_lb = QuickChatPhraseRegistry.resetSpriteCanvasBounds(HighscoreResponseSupport.loadSpriteSetByName(100, "lobby", param4, "tab_mouseover"), 85);
           QuickChatPhraseRegistry.field_h.field_sb = var14;
           NotificationEntry.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
-          NotificationEntry.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
+          NotificationEntry.field_t.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, 206, 1856141, 1127256, -1);
           IconTextPanel.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
-          IconTextPanel.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
+          IconTextPanel.field_Eb.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, 290, 11579568, 6052956, -1);
           IsaacBackedRandom.field_a = new AnimatedPanel(0L, var15);
           IsaacBackedRandom.field_a.field_T = 1;
           IsaacBackedRandom.field_a.field_y = 1;

@@ -39,7 +39,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           var12 = 5 + (var10 + param1);
           AgeValidator.field_n.setTarget(var9_int, param7, (byte) 70, 0, 0);
           MenuButton.field_w.setTarget(var9_int, var12, (byte) 48, param7, 0);
-          MenuButton.field_w.field_F = Wormhole.a(16, 3, MenuButton.field_w.field_mb, 11579568, 8421504, 2105376);
+          MenuButton.field_w.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, MenuButton.field_w.field_mb, 11579568, 8421504, 2105376);
           var12 = var12 + param7;
           ValidatedTextInputWidget.field_X.setTarget(var9_int, var12, (byte) 106, -(var12 / 2) + param8, -(var9_int / 2) + param0);
         } catch (RuntimeException runtimeException) {

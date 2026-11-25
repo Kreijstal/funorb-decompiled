@@ -86,7 +86,7 @@ final class QuickChatHelpPanel extends AnimatedPanel {
           this.field_xb.setTarget(15, 15, (byte) 126, 5, -20 + var17.field_K);
           var8.setTarget(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
           var9.setTarget(this.field_K, 15, (byte) 75, 20, 0);
-          var8.field_F = Wormhole.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
+          var8.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
           var17.addChild(4, this.field_xb);
           var8.addChild(4, var9);
           this.addChild(4, var17);

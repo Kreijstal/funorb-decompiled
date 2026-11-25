@@ -1040,7 +1040,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         PlayerEliminatedEvent.clearStatics(2105376);
         DateInputWidget.clearStatics((byte) -113);
         RichTextLayout.clearStatics((byte) 36);
-        DirectByteArrayStorage.a((byte) 104);
+        DirectByteArrayStorage.clearDirectByteArrayStorageStatics((byte) 104);
         IntList.clearIntListStatics(19568);
         DraggableWidget.clearStatics(-950540796);
         DropTargetWidget.clearDropTargetStatics((byte) 111);
@@ -1243,12 +1243,12 @@ public final class ShatteredPlansClient extends GameClientShell {
               MeshData.field_h) {
               var3 = 0;
             }
-            StatusMessagePanel.a(2, var3 != 0);
+            StatusMessagePanel.updateLobby(2, var3 != 0);
             if (MusicEnvelope.field_d) {
               SecondaryNodeHashTable.field_g.tick(var4 != 0, true);
             }
             if (TiledNineSlicePainter.field_b) {
-              StatusMessagePanel.a(320, 8, 180, var4 != 0);
+              StatusMessagePanel.updateChatInputOverlay(320, 8, 180, var4 != 0);
               PasswordInputPainter.field_x.tick(var4 != 0, true);
             }
             while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {

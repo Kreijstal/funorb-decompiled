@@ -190,7 +190,7 @@ abstract class GameClientShell extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         LeaderboardSortSupport.field_e = this.field_v;
-        ObjectList.a(0, LeaderboardSortSupport.field_e);
+        ObjectList.setLoadingTextLanguage(0, LeaderboardSortSupport.field_e);
         GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
@@ -394,7 +394,7 @@ abstract class GameClientShell extends GameApplet {
         if (ClientContextMenuSupport.field_b != null) {
           BattleExplosionVisual.field_o = ClientContextMenuSupport.field_b.takeRotation(86);
         }
-        if (DirectByteArrayStorage.b((byte) -117)) {
+        if (DirectByteArrayStorage.isLobbyConnected((byte) -117)) {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
           if (this.field_y ||
             !(var3 >= MutableIntPairNode.getKeyboardIdleTicks(-26918)) &&

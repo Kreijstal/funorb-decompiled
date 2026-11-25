@@ -257,7 +257,7 @@ final class PlayerReportPanel extends AnimatedPanel {
             var28[2].setTarget(var16Lifetime2, var17Lifetime5, (byte) 73, var21, 39 + var16Lifetime2 * 2);
             var22 = var21;
             this.field_Cb.setTarget(13 + var19 + 13, var17Lifetime5 + var22 + 10, (byte) 51, 24, 0);
-            this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
+            this.field_Cb.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
             var23 = 13 + (13 + var19);
             var24 = var17Lifetime5 + (24 + var22 + 10);
             var25 = ArchiveLoadProgress.positionPopupX(-47, param0, var23, param2);
@@ -275,7 +275,7 @@ final class PlayerReportPanel extends AnimatedPanel {
           this.field_Ab.setTarget(var15_int, UniformNineSliceFactory.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + UniformNineSliceFactory.field_c * var17Lifetime1;
           this.field_Cb.setTarget(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
-          this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
+          this.field_Cb.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
           var18Lifetime1 = 13 + (13 + var15_int);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ArchiveLoadProgress.positionPopupX(-107, param0, var18Lifetime1, param2);

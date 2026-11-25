@@ -164,7 +164,7 @@ final class LobbyLayoutSupport {
           MouseInputHandler.field_d.setTarget(360, -10 + SoftwareRasterizer.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + SoftwareRasterizer.field_b >> 1);
           ValidationIndicator.field_K.setTarget(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
           QuickChatCategoryRegistry.field_a.setTarget(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
-          QuickChatCategoryRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatCategoryRegistry.field_a.field_mb, 11579568, 8421504, 1);
+          QuickChatCategoryRegistry.field_a.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, QuickChatCategoryRegistry.field_a.field_mb, 11579568, 8421504, 1);
           MenuList.field_v.setTarget(QuickChatCategoryRegistry.field_a.field_K - 10, -2 + QuickChatCategoryRegistry.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           ClientRasterSupport.field_c.setTarget(80, 24, (byte) 108, -5 + QuickChatCategoryRegistry.field_a.field_mb - 24, (QuickChatCategoryRegistry.field_a.field_K - 80) / 2);
           CachedArchiveSource.layoutLobbyPlayerList(18);

@@ -27,7 +27,7 @@ final class ObjectList {
         this.field_b = var2;
     }
 
-    final static void a(int param0, int param1, ScrollPane param2, boolean param3, int param4) {
+    final static void updateLobbyPlayerList(int param0, int param1, ScrollPane param2, boolean param3, int param4) {
         int var27_int = 0;
         ScrollPane stackIn_42_0 = null;
         int stackIn_42_1 = 0;
@@ -497,12 +497,12 @@ final class ObjectList {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setLoadingTextLanguage(int param0, int param1) {
         StringNode.field_h = SpriteButton.field_v[param1];
         DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ScrollPane var3 = (ScrollPane) null;
-          ObjectList.a(-32, 115, (ScrollPane) null, false, 125);
+          ObjectList.updateLobbyPlayerList(-32, 115, (ScrollPane) null, false, 125);
         }
         AccountStatusDialog.field_xb = HighscoreResponseSupport.field_c[param1];
     }
@@ -566,7 +566,7 @@ final class ObjectList {
         field_a = null;
         if (param0) {
           ScrollPane var2 = (ScrollPane) null;
-          ObjectList.a(-33, 120, (ScrollPane) null, true, 27);
+          ObjectList.updateLobbyPlayerList(-33, 120, (ScrollPane) null, true, 27);
         }
     }
 

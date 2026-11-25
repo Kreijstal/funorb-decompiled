@@ -379,7 +379,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         try {
           if (this.field_K != param0) {
             if (this.field_Q == param0) {
-              Wormhole.a((byte) 115);
+              Wormhole.showAccountCreationForm((byte) 115);
             } else {
               if (this.field_P == param0) {
                 if (this.field_L) {

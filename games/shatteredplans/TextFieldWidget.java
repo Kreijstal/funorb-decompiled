@@ -571,7 +571,7 @@ class TextFieldWidget extends FocusableWidget {
           var5_int = param2.getGroupIdByName(126, param4);
           var6 = param2.getFileIdByName(var5_int, (byte) 106, param1);
           if (param0 >= 94) {
-            stackIn_4_0 = StatusMessagePanel.a(param3, 1, param2, var5_int, var6);
+            stackIn_4_0 = StatusMessagePanel.loadBinaryBitmapFont(param3, 1, param2, var5_int, var6);
             return stackIn_4_0;
           }
           stackIn_2_0 = (BinaryBitmapFont) null;

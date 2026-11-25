@@ -141,7 +141,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_H == param0) {
-            Wormhole.a((byte) 71);
+            Wormhole.showAccountCreationForm((byte) 71);
             return;
           }
           if (param0 != this.field_G) {

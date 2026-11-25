@@ -98,7 +98,7 @@ final class AccountStatusSupport {
           var4 = SoundCache.field_c.field_nb.textHeight(param1, 272, SoundCache.field_c.field_Y);
           var5 = -(var4 / 2) - 110 + var3 / 2 + 7;
           BattleExplosionVisual.field_v.setTarget(320, -(2 * var5) + (-120 + var3), (byte) 102, var5, (var2_int - 320) / 2);
-          BattleExplosionVisual.field_v.field_F = Wormhole.a(16, 3, BattleExplosionVisual.field_v.field_mb, 11579568, 8421504, 2105376);
+          BattleExplosionVisual.field_v.field_F = Wormhole.createVerticalGradientNineSlice(16, 3, BattleExplosionVisual.field_v.field_mb, 11579568, 8421504, 2105376);
           SoundCache.field_c.setTarget(-24 + BattleExplosionVisual.field_v.field_K - 24, -24 + BattleExplosionVisual.field_v.field_mb - 20, (byte) 67, 16, 24);
           SocketConnector.field_d.setTarget(80, 24, (byte) 115, BattleExplosionVisual.field_v.field_mb - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {

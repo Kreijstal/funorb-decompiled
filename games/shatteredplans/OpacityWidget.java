@@ -17,7 +17,7 @@ final class OpacityWidget extends SingleChildWidget {
         this.alpha = 256;
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isInvalidPasswordLength(int param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -82,7 +82,7 @@ final class OpacityWidget extends SingleChildWidget {
         try {
           if (param0 != -15338) {
             var3 = (AccountCreationForm) null;
-            OpacityWidget.a((String) null, false, (String) null, -21, (String) null, (AccountCreationForm) null, -88);
+            OpacityWidget.beginAccountCreation((String) null, false, (String) null, -21, (String) null, (AccountCreationForm) null, -88);
           }
           var4 = new Sprite[9];
           var2 = var4;
@@ -103,7 +103,7 @@ final class OpacityWidget extends SingleChildWidget {
         }
     }
 
-    final static boolean a(String param0, boolean param1, String param2, int param3, String param4, AccountCreationForm param5, int param6) {
+    final static boolean beginAccountCreation(String param0, boolean param1, String param2, int param3, String param4, AccountCreationForm param5, int param6) {
         RuntimeException var7 = null;
         AccountCreationDialog var8 = null;
         RuntimeException stackIn_17_0 = null;
@@ -220,7 +220,7 @@ final class OpacityWidget extends SingleChildWidget {
           return;
         }
         AccountCreationForm var2 = (AccountCreationForm) null;
-        OpacityWidget.a((String) null, false, (String) null, 41, (String) null, (AccountCreationForm) null, 17);
+        OpacityWidget.beginAccountCreation((String) null, false, (String) null, 41, (String) null, (AccountCreationForm) null, 17);
         field_K = null;
         field_G = null;
     }

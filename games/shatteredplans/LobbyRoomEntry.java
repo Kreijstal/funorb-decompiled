@@ -226,10 +226,10 @@ final class LobbyRoomEntry extends AnimatedPanel {
         } else {
           MenuList.field_v.field_s = true;
           GalaxyMapLayoutSupport.field_a.field_zb.field_z = null;
-          ObjectList.a(param4, 0, GalaxyMapLayoutSupport.field_a, param1, param2);
+          ObjectList.updateLobbyPlayerList(param4, 0, GalaxyMapLayoutSupport.field_a, param1, param2);
         }
         MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
-        ObjectList.a(param4, 0, EmailValidationError.field_a, param1, param2);
+        ObjectList.updateLobbyPlayerList(param4, 0, EmailValidationError.field_a, param1, param2);
         Star.field_w = Star.field_w + 1;
     }
 

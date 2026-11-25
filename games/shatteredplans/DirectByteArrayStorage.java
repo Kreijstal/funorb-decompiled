@@ -21,7 +21,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
           this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_k.position(0);
           if (param1 != 95) {
-            DirectByteArrayStorage.a((byte) -7);
+            DirectByteArrayStorage.clearDirectByteArrayStorageStatics((byte) -7);
           }
           this.field_k.put(param0);
         } catch (RuntimeException runtimeException) {
@@ -29,7 +29,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean isCanvasResizeAvailable(byte param0) {
         int var1 = 72 / ((param0 + 17) / 62);
         if (BoundsRect.field_p == null) {
           return false;
@@ -40,7 +40,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         return false;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isLobbyConnected(byte param0) {
         if (param0 >= -112) {
           return true;
         }
@@ -53,7 +53,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void clearDirectByteArrayStorageStatics(byte param0) {
         field_m = null;
         field_g = null;
         field_l = null;
@@ -64,7 +64,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
           field_f = null;
           return;
         }
-        DirectByteArrayStorage.c((byte) 27);
+        DirectByteArrayStorage.isCanvasResizeAvailable((byte) 27);
         field_f = null;
     }
 

@@ -99,7 +99,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           stackIn_12_1 = !(param2);
           IntroGlowPoint.field_k = DateInputWidget.normalizeAccountName((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);
           IntroTextLine.field_k = param0;
-          var6 = AccountNoticeDialog.a(param3, (byte) -112, DiplomacyRowSupport.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
+          var6 = AccountNoticeDialog.createQuickChatPhraseMenu(param3, (byte) -112, DiplomacyRowSupport.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
           CipherPacketBuffer.installQuickChatMenu(0, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

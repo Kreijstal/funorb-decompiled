@@ -14,7 +14,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
     private FocusableWidget[] field_E;
     static String field_I;
 
-    final static BinaryBitmapFont a(Archive param0, int param1, Archive param2, int param3, int param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFont(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         BinaryBitmapFont stackIn_5_0 = null;
@@ -117,7 +117,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void updateLobby(int param0, boolean param1) {
         int var2;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
@@ -222,17 +222,17 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         field_H = null;
         field_I = null;
         if (param0 != 240) {
-          StatusMessagePanel.a(119, 101, 48, true);
+          StatusMessagePanel.updateChatInputOverlay(119, 101, 48, true);
         }
         field_M = null;
         field_F = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void updateChatInputOverlay(int param0, int param1, int param2, boolean param3) {
         NanoFrameTimer.a(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, DateValidationSupport.field_a);
         if (param1 != 8) {
           Archive var5 = (Archive) null;
-          StatusMessagePanel.a((Archive) null, -64, (Archive) null, 13, 77);
+          StatusMessagePanel.loadBinaryBitmapFont((Archive) null, -64, (Archive) null, 13, 77);
         }
     }
 

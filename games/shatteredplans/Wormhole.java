@@ -17,7 +17,7 @@ final class Wormhole extends IntrusiveNode {
         field_h = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createVerticalGradientNineSlice(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var16 = null;
         int[] var18 = SoftwareRasterizer.field_h;
         int[] var17 = var18;
@@ -61,7 +61,7 @@ final class Wormhole extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void showAccountCreationForm(byte param0) {
         TerritoryResourcePanelSupport.field_b = new AccountCreationForm();
         if (param0 > 64) {
           HighscoreResponseSupport.field_f.setContent(TerritoryResourcePanelSupport.field_b, -88);

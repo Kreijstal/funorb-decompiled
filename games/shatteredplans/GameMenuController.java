@@ -1805,7 +1805,7 @@ final class GameMenuController {
             if (this.field_d.isLeftPressed(-97) &&
               CheckboxPainter.field_p > 0) {
               var5 = 1;
-              DualLinkNode.c(!param2);
+              DualLinkNode.decreaseSoundEffectVolume(!param2);
             }
             if (this.field_d.isRightPressed(-97) &&
               CheckboxPainter.field_p < 256) {
@@ -1919,7 +1919,7 @@ final class GameMenuController {
           stackIn_5_0 = ((1 << var6 & ReflectionCheckDecoder.field_a) == 0) ? 0 : 1;
           var5 = stackIn_5_0;
           if (var5 != 0) {
-            stackIn_8_0 = DualLinkNode.a(var6, 32);
+            stackIn_8_0 = DualLinkNode.getBlurredAchievementIcon(var6, 32);
           } else {
             stackIn_8_0 = MouseInputHandler.field_b;
           }

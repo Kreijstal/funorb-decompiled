@@ -33,7 +33,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
             } else {
               var3 = MenuList.field_z;
               this.field_n = this.field_n + 10;
-              if (DirectByteArrayStorage.c((byte) 58)) {
+              if (DirectByteArrayStorage.isCanvasResizeAvailable((byte) 58)) {
                 this.field_n = this.field_n + 20;
                 var3 = IterableNodeHashTable.field_c;
               }
@@ -70,11 +70,11 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
         }
     }
 
-    final static void r(int param0) {
+    final static void openRootQuickChatMenu(int param0) {
         CipherPacketBuffer.installQuickChatMenu(param0 ^ param0, AccountInputSupport.field_b);
     }
 
-    final static boolean q(int param0) {
+    final static boolean isAccountRequestPending(int param0) {
         int var1 = -98 / ((param0 + 33) / 63);
         return !ChatAndSocialPanel.field_a.isComplete(14) ? true : false;
     }
@@ -169,7 +169,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
         }
     }
 
-    final static QuickChatMenu a(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+    final static QuickChatMenu createQuickChatPhraseMenu(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;

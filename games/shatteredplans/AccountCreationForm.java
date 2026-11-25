@@ -379,7 +379,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           var2 = Integer.parseInt(this.field_L.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
-        return OpacityWidget.a(this.field_F.field_s, this.field_K.field_z, this.field_Q.field_s, var2, this.field_J.field_s, this, -13037);
+        return OpacityWidget.beginAccountCreation(this.field_F.field_s, this.field_K.field_z, this.field_Q.field_s, var2, this.field_J.field_s, this, -13037);
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
