@@ -262,7 +262,7 @@ final class ScrollPane extends AnimatedPanel {
             if (NameSuggestionsPanel.field_L <= 0) {
               continue;
             }
-            ListContent.a(param0 ^ 93);
+            ListContent.removePendingIntroTextLines(param0 ^ 93);
             if (SolVictoryChecker.field_m >= 5) {
               stackIn_21_0 = -1;
             } else {
@@ -385,7 +385,7 @@ final class ScrollPane extends AnimatedPanel {
               if (NameSuggestionsPanel.field_L <= 0) {
                 return;
               }
-              ListContent.a(0);
+              ListContent.removePendingIntroTextLines(0);
               if (5 > SolVictoryChecker.field_m) {
                 stackIn_88_0 = 1 + SolVictoryChecker.field_m;
               } else {

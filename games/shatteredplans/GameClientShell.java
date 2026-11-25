@@ -827,7 +827,7 @@ abstract class GameClientShell extends GameApplet {
               return null;
             }
           }
-          var11 = param1.a(param3, param4, param5, param2, -1194);
+          var11 = param1.requestFullscreen(param3, param4, param5, param2, -1194);
           if (!param0) {
             field_o = (String) null;
           }

@@ -146,7 +146,7 @@ final class RichTextLayout extends TextLayout {
               stackIn_38_1 = var14;
               stackIn_38_2 = param1 + 27329;
               if (param2 == 3) {
-                stackIn_39_3 = this.a(param1 ^ -28135, param4, param6.stringWidth(var13), var13);
+                stackIn_39_3 = this.computeJustificationSpacing(param1 ^ -28135, param4, param6.stringWidth(var13), var13);
               } else {
                 stackIn_39_3 = 0;
               }

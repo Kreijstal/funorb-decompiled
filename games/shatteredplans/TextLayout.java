@@ -26,7 +26,7 @@ abstract class TextLayout {
         return this.field_d.length;
     }
 
-    final static void a(int param0, int param1) {
+    final static void layoutAnimatedLobbyPanels(int param0, int param1) {
         int var2 = (PlayerReportPanel.field_Mb - 640) / 2;
         int var3 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var4 = var3 - param1 * param1;
@@ -83,7 +83,7 @@ abstract class TextLayout {
         return var2;
     }
 
-    final int a(int param0, int param1, int param2, String param3) {
+    final int computeJustificationSpacing(int param0, int param1, int param2, String param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -142,7 +142,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getCharacterIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         TextLayoutLine var6;
@@ -179,7 +179,7 @@ abstract class TextLayout {
         return -1;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getCharacterX(boolean param0, int param1) {
         TextLayoutLine var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         TextLayoutLine[] var3 = this.field_d;

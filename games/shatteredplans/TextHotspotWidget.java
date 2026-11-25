@@ -329,13 +329,13 @@ class TextHotspotWidget extends FocusableWidget {
             for (var11 = var8; var9 >= var11; var11++) {
               var25 = var24.field_d[var11];
               if (var8 == var11) {
-                stackIn_9_0 = var24.a(true, var5);
+                stackIn_9_0 = var24.getCharacterX(true, var5);
               } else {
                 stackIn_9_0 = var25.field_b[0];
               }
               var13 = stackIn_9_0;
               if (var11 == var9) {
-                stackIn_14_0 = var24.a(true, var2);
+                stackIn_14_0 = var24.getCharacterX(true, var2);
               } else {
                 if (var25 != null) {
                   stackIn_14_0 = var25.field_b[var25.field_b.length - 1];
@@ -375,13 +375,13 @@ class TextHotspotWidget extends FocusableWidget {
           for (var11Lifetime1 = var8Lifetime1; var9Lifetime1 >= var11Lifetime1; var11Lifetime1++) {
             var20 = var19.field_d[var11Lifetime1];
             if (var8Lifetime1 == var11Lifetime1) {
-              stackIn_29_0 = var19.a(true, var5Lifetime1);
+              stackIn_29_0 = var19.getCharacterX(true, var5Lifetime1);
             } else {
               stackIn_29_0 = var20.field_b[0];
             }
             var13Lifetime1 = stackIn_29_0;
             if (var11Lifetime1 == var9Lifetime1) {
-              stackIn_34_0 = var19.a(true, var2Lifetime1);
+              stackIn_34_0 = var19.getCharacterX(true, var2Lifetime1);
             } else {
               if (var20 != null) {
                 stackIn_34_0 = var20.field_b[var20.field_b.length - 1];

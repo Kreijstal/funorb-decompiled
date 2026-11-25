@@ -42,11 +42,11 @@ final class GameMenuController {
         var8 = 20 + var3;
         var9 = var5 - 10;
         var10 = var6 + 10;
-        TargetedChatMessage.field_m = MenuWindow.a(TargetedChatMessage.field_m, var9 - 3, 24, -3 + var7, -1, 24);
-        SolMapGenerator.field_q = MenuWindow.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
+        TargetedChatMessage.field_m = MenuWindow.captureRasterRectangle(TargetedChatMessage.field_m, var9 - 3, 24, -3 + var7, -1, 24);
+        SolMapGenerator.field_q = MenuWindow.captureRasterRectangle(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
         if (MatchingTextValidator.field_t.field_a == 2) {
           IntroLogoSupport.scaleRectangleBrightness(var8, -50, var10, param1 + 128, var7, var9);
-          RasterTargetSupport.field_a = MenuWindow.a(RasterTargetSupport.field_a, var9, var8, var7, -1, var10);
+          RasterTargetSupport.field_a = MenuWindow.captureRasterRectangle(RasterTargetSupport.field_a, var9, var8, var7, -1, var10);
           RasterTargetSupport.pushSpriteRenderTarget(RasterTargetSupport.field_a, 107);
           SoftwareRasterizer.b(3, 3, 0, 0, var8, var10);
           RasterTargetSupport.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
@@ -1814,7 +1814,7 @@ final class GameMenuController {
             }
             if (((var5 != 0)) && ((!(this.field_d.isPointerHeld((byte) -114)) ||
               !(RasterStateFrame.field_n <= TutorialVictoryChecker.field_q)))) {
-              MenuLabel.a(SocketArchiveNetworkClient.field_w, 89);
+              MenuLabel.playSoundEffect(SocketArchiveNetworkClient.field_w, 89);
               TutorialVictoryChecker.field_q = 25 + RasterStateFrame.field_n;
             }
             decompiledFrameRemainder0 = false;
@@ -2365,7 +2365,7 @@ final class GameMenuController {
                                                           TextHotspotWidget.openSubscriptionPage(GameScreen.getHostApplet((byte) 126), (byte) 51);
                                                         }
                                                       } else {
-                                                        MenuLabel.a(AchievementProgress.field_a, this.field_a, (byte) 123);
+                                                        MenuLabel.requestMenuLogin(AchievementProgress.field_a, this.field_a, (byte) 123);
                                                       }
                                                       break regionExit1;
                                                     }

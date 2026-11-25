@@ -1834,7 +1834,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_x.savePosition(var2);
               continue;
             }
-            this.field_x.e();
+            this.field_x.markTrackFinished();
             this.field_x.savePosition(var2);
             if (this.field_x.isFinished()) {
               if (null != this.field_z) {

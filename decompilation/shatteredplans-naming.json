@@ -20724,6 +20724,30 @@
       "renamedSymbol": "M:ListContent.clearStatics(B)V"
     },
     {
+      "symbol": "M:ph.a(I)V",
+      "originalName": "a",
+      "to": "removePendingIntroTextLines",
+      "evidence": "Unlink retained intro text lines whose timer is negative,leaving displayed lines intact. Negative-delay constructor assignment,render skip and scene-skip callers read. Preserve null-deque early return,original iterator guard,live iteration,unlink order and wrapper exceptions. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ListContent.removePendingIntroTextLines(I)V"
+    },
+    {
+      "symbol": "M:ph.a(IIII)Z",
+      "originalName": "a",
+      "to": "handleChatKeyInput",
+      "evidence": "Dispatch key input to active chat widget,Quick Chat editor,Quick Chat shortcuts or free-chat editor in original priority order. All incoming overlay windows read. Preserve restriction early return,guard-derived shortcut argument,late invalid-int caption clear and exact boolean propagation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ListContent.handleChatKeyInput(IIII)Z"
+    },
+    {
+      "symbol": "M:ph.a(Lbc;I)V",
+      "originalName": "a",
+      "to": "loadTutorialScenes",
+      "evidence": "Read tutorial.txt from supplied archive and pass its bytes to retained tutorial scene text decoder. Complete decoder wrapper read. Preserve archive/group literals,nullable returned bytes,decoder before discarded guard division and exception wrapping. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ListContent.loadTutorialScenes(LArchive;I)V"
+    },
+    {
       "symbol": "M:pi.a()Z",
       "originalName": "a",
       "to": "isFinished",
@@ -20738,6 +20762,14 @@
       "evidence": "Reads the next event of a track and returns its status code.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiFileReader.readEvent(I)I"
+    },
+    {
+      "symbol": "M:pi.a(II)I",
+      "originalName": "a",
+      "to": "decodeEventPayload",
+      "evidence": "Decode MIDI meta end-track/tempo/other events or pack status and original data bytes. Complete reader,sequencer and patch-usage consumer read. Preserve return1/2/3markers,VLQ cursor order,tempo-offset adjustment with original int subtraction before long multiplication,arbitrary status indexing and partial reads. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.decodeEventPayload(II)I"
     },
     {
       "symbol": "M:pi.a(J)V",
@@ -20804,6 +20836,14 @@
       "renamedSymbol": "M:MidiFileReader.advanceTime(I)V"
     },
     {
+      "symbol": "M:pi.e()V",
+      "originalName": "e",
+      "to": "markTrackFinished",
+      "evidence": "Mark current MIDI cursor negative;callers then save it to the selected track position. Complete sequencer and patch-usage consumers read. Preserve sole position=-1write without updating per-track state or other fields. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.markTrackFinished()V"
+    },
+    {
       "symbol": "M:pi.e(I)V",
       "originalName": "e",
       "to": "savePosition",
@@ -20818,6 +20858,14 @@
       "evidence": "Returns whether the PacketBuffer still holds a payload.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiFileReader.isLoaded()Z"
+    },
+    {
+      "symbol": "M:pi.f(I)I",
+      "originalName": "f",
+      "to": "readEventWithRunningStatus",
+      "evidence": "Read MIDI status or reuse per-track running status,handle original F0/F7skip and embedded-system-status cases,and delegate payload decoding. Complete reader and public wrapper read. Preserve signed first-byte test,exact status allowlist,length/cursor arithmetic,stored running status and partial failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiFileReader.readEventWithRunningStatus(I)I"
     },
     {
       "symbol": "M:pi.g()I",
@@ -21156,6 +21204,14 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(I)LPlatformTask;"
     },
     {
+      "symbol": "M:qb.a(IIIII)Lpb;",
+      "originalName": "a",
+      "to": "requestFullscreen",
+      "evidence": "Queue fullscreen task6with original packed dimensions,bit depth and refresh rate. Fullscreen frame consumer and dispatcher case6read. Preserve additions versus bitwise OR,full signed-int packing,invalid guard cache-file clear and allocation/queue order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;"
+    },
+    {
       "symbol": "M:qb.a(IILjava/lang/Object;BI)Lpb;",
       "originalName": "a",
       "to": "submit",
@@ -21172,6 +21228,14 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.requestSocket(IILjava/lang/String;)LPlatformTask;"
     },
     {
+      "symbol": "M:qb.a(IZLjava/lang/String;I)Lpb;",
+      "originalName": "a",
+      "to": "requestSocketInternal",
+      "evidence": "Queue socket task1for direct path or22for retained connector path. Complete public wrapper and both dispatcher cases read. Preserve guard>-96null before submission,hostname reference,unrestricted port and queue publication/locking. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;"
+    },
+    {
       "symbol": "M:qb.a(Ljava/awt/Frame;B)Lpb;",
       "originalName": "a",
       "to": "requestFrame",
@@ -21186,6 +21250,14 @@
       "evidence": "Queues task kind 9 that looks up a field by class and name.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskDispatcher.requestField(Ljava/lang/Class;BLjava/lang/String;)LPlatformTask;"
+    },
+    {
+      "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
+      "originalName": "a",
+      "to": "openPreferencesFile",
+      "evidence": "Try original directory list for jagex preference file using original game/suffix and rc/wip/default extension;return first opened10000byte-limited cache file or null. Preserve directory existence checks outside inner catch,empty-path behavior,per-directory Exception continuation,false-flag static clear and loop order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;"
     },
     {
       "symbol": "M:qb.a(Ljava/net/URL;Z)Lpb;",
@@ -21492,6 +21564,14 @@
       "renamedSymbol": "M:MenuWindow.drawComponent(I)V"
     },
     {
+      "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+      "originalName": "a",
+      "to": "captureRasterRectangle",
+      "evidence": "Capture clipped640by480raster rectangle into reused or newly allocated sprite and retain clipping offsets. Fade-transition caller windows read. Preserve actual raster stride,oversized sprite reuse/untouched pixels,negative result null,nonstandard full-int guard-dependent vertical clip and post-copy offset writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;"
+    },
+    {
       "symbol": "M:qh.a(ZII)V",
       "originalName": "a",
       "to": "resize",
@@ -21522,6 +21602,22 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuWindow.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:qh.f(I)Z",
+      "originalName": "f",
+      "to": "isClientFocused",
+      "evidence": "Return true in fullscreen,otherwise retained applet focus snapshot. Focus event assignments,snapshot copy and complete caret blink consumer read. Preserve fullscreen short circuit,guard29443static clear and live focus field read. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuWindow.isClientFocused(I)Z"
+    },
+    {
+      "symbol": "M:qh.g(I)V",
+      "originalName": "g",
+      "to": "tickChatPanelTransition",
+      "evidence": "Decrement retained chat transition timer,rebase starting position on target change,and update animated chat layout while timer remains positive. Complete transition tick caller and layout helper read. Preserve repeated field reads,width-delta arithmetic,call timing and late guard<57static clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuWindow.tickChatPanelTransition(I)V"
     },
     {
       "symbol": "M:qi.a(I)V",
@@ -21604,12 +21700,44 @@
       "renamedSymbol": "M:MenuLabel.drawComponent(I)V"
     },
     {
+      "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+      "originalName": "a",
+      "to": "requestMenuLogin",
+      "evidence": "Start retained login transition and save requested menu destination for post-login return. Login transition state/return consumers read. String argument is unused;preserve it,invalid-byte null sound-effect call before writes,and original state-then-destination assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V"
+    },
+    {
+      "symbol": "M:qk.a(Lqf;I)Lgm;",
+      "originalName": "a",
+      "to": "playSoundEffect",
+      "evidence": "Play retained effect sample at effect volume through original PCM helper. Complete helper and menu input window read. Preserve low-int recursive login-transition side effect,nullable effect failures,helper argument order and wrapper context. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;"
+    },
+    {
+      "symbol": "M:qk.a([BI)[Ljava/lang/String;",
+      "originalName": "a",
+      "to": "decodeTextLines",
+      "evidence": "Split byte text at CR/LF,runs of separators skipped after each decoded segment,and decode each segment with retained CP1252helper. Tutorial decoder and list helpers read. Preserve guard13early null,leading empty segment,trailing separator behavior,no trimming,zero-byte filtering and partial list state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;"
+    },
+    {
       "symbol": "M:qk.f(I)V",
       "originalName": "f",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuLabel.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:qk.g(I)V",
+      "originalName": "g",
+      "to": "showReconnectStatusDialog",
+      "evidence": "Reset account UI,enable forced-login mode,deactivate retained dialogs,and show original connection-lost status dialog on valid int path. Complete reset,deactivation/status helpers and exact caption read. Preserve unconditional first mutations,guard>-12early return,constructor flags and dialog publication order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuLabel.showReconnectStatusDialog(I)V"
     },
     {
       "symbol": "M:ql.a(B)V",
@@ -21698,6 +21826,38 @@
       "evidence": "Assigns null to 2 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextLayout.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:qo.a(II)V",
+      "originalName": "a",
+      "to": "layoutAnimatedLobbyPanels",
+      "evidence": "Position retained199wide and438wide lobby panels using original quadratic transition fraction and centered640wide origin. Complete transition ticker and target setter read. Preserve squared int overflow,zero denominator,original raster dimension field and late guard assignment before panel calls. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextLayout.layoutAnimatedLobbyPanels(II)V"
+    },
+    {
+      "symbol": "M:qo.a(III)I",
+      "originalName": "a",
+      "to": "getCharacterIndexAt",
+      "evidence": "Find line spanning supplied Ycoordinate and return nearest Xcharacter index plus prior line lengths. Complete line helper and widget hit-test consumer read. Preserve inclusive line bounds,single-line bypass of guard,empty/outside -1and per-line length-minus-one accounting. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextLayout.getCharacterIndexAt(III)I"
+    },
+    {
+      "symbol": "M:qo.a(IIILjava/lang/String;)I",
+      "originalName": "a",
+      "to": "computeJustificationSpacing",
+      "evidence": "Compute Q8extra spacing per literal space outside original angle-bracket tag state. Complete selected body and rich-text caller windows read. Preserve invalid guard43return before String access,UTF-16scan,unbalanced-tag behavior,int subtraction/shift overflow and zero when no eligible spaces. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I"
+    },
+    {
+      "symbol": "M:qo.a(ZI)I",
+      "originalName": "a",
+      "to": "getCharacterX",
+      "evidence": "Return stored line-relative Xcoordinate for character position,subtracting length-minus-one across lines. Complete caret/selection consumers read. Preserve line-array snapshot,first matching endpoint,negative-index failure,out-of-range zero and false-flag static clear before traversal. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextLayout.getCharacterX(ZI)I"
     },
     {
       "symbol": "M:qo.b(I)I",
@@ -253140,7 +253300,7 @@
     },
     {
       "symbol": "L:ph.a(I)V#0",
-      "renamedSymbol": "L:ListContent.a(I)V#0",
+      "renamedSymbol": "L:ListContent.removePendingIntroTextLines(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -253151,7 +253311,7 @@
     },
     {
       "symbol": "L:ph.a(I)V#1",
-      "renamedSymbol": "L:ListContent.a(I)V#1",
+      "renamedSymbol": "L:ListContent.removePendingIntroTextLines(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -253162,7 +253322,7 @@
     },
     {
       "symbol": "L:ph.a(I)V#2",
-      "renamedSymbol": "L:ListContent.a(I)V#2",
+      "renamedSymbol": "L:ListContent.removePendingIntroTextLines(I)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -253173,7 +253333,7 @@
     },
     {
       "symbol": "L:ph.a(I)V#3",
-      "renamedSymbol": "L:ListContent.a(I)V#3",
+      "renamedSymbol": "L:ListContent.removePendingIntroTextLines(I)V#3",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -253184,7 +253344,7 @@
     },
     {
       "symbol": "L:ph.a(I)V#4",
-      "renamedSymbol": "L:ListContent.a(I)V#4",
+      "renamedSymbol": "L:ListContent.removePendingIntroTextLines(I)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -253195,7 +253355,7 @@
     },
     {
       "symbol": "L:ph.a(Lbc;I)V#0",
-      "renamedSymbol": "L:ListContent.a(LArchive;I)V#0",
+      "renamedSymbol": "L:ListContent.loadTutorialScenes(LArchive;I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -253206,7 +253366,7 @@
     },
     {
       "symbol": "L:ph.a(Lbc;I)V#1",
-      "renamedSymbol": "L:ListContent.a(LArchive;I)V#1",
+      "renamedSymbol": "L:ListContent.loadTutorialScenes(LArchive;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -253250,7 +253410,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#0",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#0",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -253261,7 +253421,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#1",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#1",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -253272,7 +253432,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#2",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#2",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -253283,7 +253443,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#3",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#3",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -253294,7 +253454,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#4",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#4",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#4",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -253305,7 +253465,7 @@
     },
     {
       "symbol": "L:pi.a(II)I#5",
-      "renamedSymbol": "L:MidiFileReader.a(II)I#5",
+      "renamedSymbol": "L:MidiFileReader.decodeEventPayload(II)I#5",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -253415,7 +253575,7 @@
     },
     {
       "symbol": "L:pi.f(I)I#0",
-      "renamedSymbol": "L:MidiFileReader.f(I)I#0",
+      "renamedSymbol": "L:MidiFileReader.readEventWithRunningStatus(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -253426,7 +253586,7 @@
     },
     {
       "symbol": "L:pi.f(I)I#1",
-      "renamedSymbol": "L:MidiFileReader.f(I)I#1",
+      "renamedSymbol": "L:MidiFileReader.readEventWithRunningStatus(I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -253437,7 +253597,7 @@
     },
     {
       "symbol": "L:pi.f(I)I#2",
-      "renamedSymbol": "L:MidiFileReader.f(I)I#2",
+      "renamedSymbol": "L:MidiFileReader.readEventWithRunningStatus(I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -254845,7 +255005,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -254856,7 +255016,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#1",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -254867,7 +255027,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#10",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#10",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -254878,7 +255038,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -254889,7 +255049,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -254900,7 +255060,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#4",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#4",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254911,7 +255071,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#5",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#5",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -254922,7 +255082,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#6",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#6",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -254933,7 +255093,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#7",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#7",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#7",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -254944,7 +255104,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#8",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#8",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -254955,7 +255115,7 @@
     },
     {
       "symbol": "L:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#9",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#9",
+      "renamedSymbol": "L:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -257562,7 +257722,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#0",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#0",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -257573,7 +257733,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#1",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#1",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -257584,7 +257744,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#10",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#10",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -257595,7 +257755,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#11",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#11",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -257606,7 +257766,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#12",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#12",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -257617,7 +257777,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#13",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#13",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -257628,7 +257788,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#14",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#14",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -257639,7 +257799,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#15",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#15",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -257650,7 +257810,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#2",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#2",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#2",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -257661,7 +257821,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#3",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#3",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#3",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -257672,7 +257832,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#4",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#4",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#4",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -257683,7 +257843,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#5",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#5",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#5",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -257694,7 +257854,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#6",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#6",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -257705,7 +257865,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#7",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#7",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#7",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -257716,7 +257876,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#8",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#8",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -257727,7 +257887,7 @@
     },
     {
       "symbol": "L:qh.a(Lbi;IIIII)Lbi;#9",
-      "renamedSymbol": "L:MenuWindow.a(LSprite;IIIII)LSprite;#9",
+      "renamedSymbol": "L:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -258585,7 +258745,7 @@
     },
     {
       "symbol": "L:qk.a(Ljava/lang/String;IB)V#0",
-      "renamedSymbol": "L:MenuLabel.a(Ljava/lang/String;IB)V#0",
+      "renamedSymbol": "L:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -258596,7 +258756,7 @@
     },
     {
       "symbol": "L:qk.a(Ljava/lang/String;IB)V#1",
-      "renamedSymbol": "L:MenuLabel.a(Ljava/lang/String;IB)V#1",
+      "renamedSymbol": "L:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -258607,7 +258767,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#0",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#0",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -258618,7 +258778,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#1",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#1",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -258629,7 +258789,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#2",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#2",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -258640,7 +258800,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#3",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#3",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -258651,7 +258811,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#4",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#4",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -258662,7 +258822,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#5",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#5",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -258673,7 +258833,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#6",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#6",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -258684,7 +258844,7 @@
     },
     {
       "symbol": "L:qk.a(Lqf;I)Lgm;#7",
-      "renamedSymbol": "L:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#7",
+      "renamedSymbol": "L:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -258695,7 +258855,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#0",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#0",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -258706,7 +258866,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#1",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#1",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -258717,7 +258877,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#10",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#10",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -258728,7 +258888,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#11",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#11",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -258739,7 +258899,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#2",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#2",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -258750,7 +258910,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#3",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#3",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -258761,7 +258921,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#4",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#4",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -258772,7 +258932,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#5",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#5",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -258783,7 +258943,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#6",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#6",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#6",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -258794,7 +258954,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#7",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#7",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#7",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -258805,7 +258965,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#8",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#8",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#8",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -258816,7 +258976,7 @@
     },
     {
       "symbol": "L:qk.a([BI)[Ljava/lang/String;#9",
-      "renamedSymbol": "L:MenuLabel.a([BI)[Ljava/lang/String;#9",
+      "renamedSymbol": "L:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#9",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -259465,7 +259625,7 @@
     },
     {
       "symbol": "L:qo.a(II)V#0",
-      "renamedSymbol": "L:TextLayout.a(II)V#0",
+      "renamedSymbol": "L:TextLayout.layoutAnimatedLobbyPanels(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -259476,7 +259636,7 @@
     },
     {
       "symbol": "L:qo.a(II)V#1",
-      "renamedSymbol": "L:TextLayout.a(II)V#1",
+      "renamedSymbol": "L:TextLayout.layoutAnimatedLobbyPanels(II)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -259487,7 +259647,7 @@
     },
     {
       "symbol": "L:qo.a(II)V#2",
-      "renamedSymbol": "L:TextLayout.a(II)V#2",
+      "renamedSymbol": "L:TextLayout.layoutAnimatedLobbyPanels(II)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -259498,7 +259658,7 @@
     },
     {
       "symbol": "L:qo.a(III)I#0",
-      "renamedSymbol": "L:TextLayout.a(III)I#0",
+      "renamedSymbol": "L:TextLayout.getCharacterIndexAt(III)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -259509,7 +259669,7 @@
     },
     {
       "symbol": "L:qo.a(III)I#1",
-      "renamedSymbol": "L:TextLayout.a(III)I#1",
+      "renamedSymbol": "L:TextLayout.getCharacterIndexAt(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -259520,7 +259680,7 @@
     },
     {
       "symbol": "L:qo.a(III)I#2",
-      "renamedSymbol": "L:TextLayout.a(III)I#2",
+      "renamedSymbol": "L:TextLayout.getCharacterIndexAt(III)I#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -259531,7 +259691,7 @@
     },
     {
       "symbol": "L:qo.a(III)I#3",
-      "renamedSymbol": "L:TextLayout.a(III)I#3",
+      "renamedSymbol": "L:TextLayout.getCharacterIndexAt(III)I#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -259542,7 +259702,7 @@
     },
     {
       "symbol": "L:qo.a(III)I#4",
-      "renamedSymbol": "L:TextLayout.a(III)I#4",
+      "renamedSymbol": "L:TextLayout.getCharacterIndexAt(III)I#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -259553,7 +259713,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#0",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#0",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -259564,7 +259724,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#1",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#1",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#1",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -259575,7 +259735,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#10",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#10",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#10",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -259586,7 +259746,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#11",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#11",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#11",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -259597,7 +259757,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#12",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#12",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -259608,7 +259768,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#13",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#13",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#13",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -259619,7 +259779,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#14",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#14",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -259630,7 +259790,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#2",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#2",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -259641,7 +259801,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#3",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#3",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -259652,7 +259812,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#4",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#4",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -259663,7 +259823,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#5",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#5",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -259674,7 +259834,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#6",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#6",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#6",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -259685,7 +259845,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#7",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#7",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#7",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -259696,7 +259856,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#8",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#8",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#8",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -259707,7 +259867,7 @@
     },
     {
       "symbol": "L:qo.a(IIILjava/lang/String;)I#9",
-      "renamedSymbol": "L:TextLayout.a(IIILjava/lang/String;)I#9",
+      "renamedSymbol": "L:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#9",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -259718,7 +259878,7 @@
     },
     {
       "symbol": "L:qo.a(ZI)I#0",
-      "renamedSymbol": "L:TextLayout.a(ZI)I#0",
+      "renamedSymbol": "L:TextLayout.getCharacterX(ZI)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -259729,7 +259889,7 @@
     },
     {
       "symbol": "L:qo.a(ZI)I#1",
-      "renamedSymbol": "L:TextLayout.a(ZI)I#1",
+      "renamedSymbol": "L:TextLayout.getCharacterX(ZI)I#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -259740,7 +259900,7 @@
     },
     {
       "symbol": "L:qo.a(ZI)I#2",
-      "renamedSymbol": "L:TextLayout.a(ZI)I#2",
+      "renamedSymbol": "L:TextLayout.getCharacterX(ZI)I#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -259751,7 +259911,7 @@
     },
     {
       "symbol": "L:qo.a(ZI)I#3",
-      "renamedSymbol": "L:TextLayout.a(ZI)I#3",
+      "renamedSymbol": "L:TextLayout.getCharacterX(ZI)I#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -350600,9 +350760,9 @@
     },
     {
       "symbol": "M:ph.a(I)V",
-      "renamedSymbol": "M:ListContent.a(I)V",
+      "renamedSymbol": "M:ListContent.removePendingIntroTextLines(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removePendingIntroTextLines",
       "declaration": {
         "file": "ph.java",
         "start": 872,
@@ -350611,9 +350771,9 @@
     },
     {
       "symbol": "M:ph.a(IIII)Z",
-      "renamedSymbol": "M:ListContent.a(IIII)Z",
+      "renamedSymbol": "M:ListContent.handleChatKeyInput(IIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleChatKeyInput",
       "declaration": {
         "file": "ph.java",
         "start": 313,
@@ -350622,9 +350782,9 @@
     },
     {
       "symbol": "M:ph.a(Lbc;I)V",
-      "renamedSymbol": "M:ListContent.a(LArchive;I)V",
+      "renamedSymbol": "M:ListContent.loadTutorialScenes(LArchive;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadTutorialScenes",
       "declaration": {
         "file": "ph.java",
         "start": 1720,
@@ -350677,9 +350837,9 @@
     },
     {
       "symbol": "M:pi.a(II)I",
-      "renamedSymbol": "M:MidiFileReader.a(II)I",
+      "renamedSymbol": "M:MidiFileReader.decodeEventPayload(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeEventPayload",
       "declaration": {
         "file": "pi.java",
         "start": 1287,
@@ -350776,9 +350936,9 @@
     },
     {
       "symbol": "M:pi.e()V",
-      "renamedSymbol": "M:MidiFileReader.e()V",
+      "renamedSymbol": "M:MidiFileReader.markTrackFinished()V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "markTrackFinished",
       "declaration": {
         "file": "pi.java",
         "start": 2905,
@@ -350809,9 +350969,9 @@
     },
     {
       "symbol": "M:pi.f(I)I",
-      "renamedSymbol": "M:MidiFileReader.f(I)I",
+      "renamedSymbol": "M:MidiFileReader.readEventWithRunningStatus(I)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "readEventWithRunningStatus",
       "declaration": {
         "file": "pi.java",
         "start": 3129,
@@ -351370,9 +351530,9 @@
     },
     {
       "symbol": "M:qb.a(IIIII)Lpb;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIIII)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFullscreen",
       "declaration": {
         "file": "qb.java",
         "start": 1619,
@@ -351403,9 +351563,9 @@
     },
     {
       "symbol": "M:qb.a(IZLjava/lang/String;I)Lpb;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IZLjava/lang/String;I)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocketInternal",
       "declaration": {
         "file": "qb.java",
         "start": 779,
@@ -351436,9 +351596,9 @@
     },
     {
       "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openPreferencesFile",
       "declaration": {
         "file": "qb.java",
         "start": 3286,
@@ -351931,9 +352091,9 @@
     },
     {
       "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
-      "renamedSymbol": "M:MenuWindow.a(LSprite;IIIII)LSprite;",
+      "renamedSymbol": "M:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "captureRasterRectangle",
       "declaration": {
         "file": "qh.java",
         "start": 331,
@@ -351986,9 +352146,9 @@
     },
     {
       "symbol": "M:qh.f(I)Z",
-      "renamedSymbol": "M:MenuWindow.f(I)Z",
+      "renamedSymbol": "M:MenuWindow.isClientFocused(I)Z",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "isClientFocused",
       "declaration": {
         "file": "qh.java",
         "start": 8911,
@@ -351997,9 +352157,9 @@
     },
     {
       "symbol": "M:qh.g(I)V",
-      "renamedSymbol": "M:MenuWindow.g(I)V",
+      "renamedSymbol": "M:MenuWindow.tickChatPanelTransition(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "tickChatPanelTransition",
       "declaration": {
         "file": "qh.java",
         "start": 9087,
@@ -352162,9 +352322,9 @@
     },
     {
       "symbol": "M:qk.a(Ljava/lang/String;IB)V",
-      "renamedSymbol": "M:MenuLabel.a(Ljava/lang/String;IB)V",
+      "renamedSymbol": "M:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestMenuLogin",
       "declaration": {
         "file": "qk.java",
         "start": 5542,
@@ -352173,9 +352333,9 @@
     },
     {
       "symbol": "M:qk.a(Lqf;I)Lgm;",
-      "renamedSymbol": "M:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;",
+      "renamedSymbol": "M:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "playSoundEffect",
       "declaration": {
         "file": "qk.java",
         "start": 3193,
@@ -352184,9 +352344,9 @@
     },
     {
       "symbol": "M:qk.a([BI)[Ljava/lang/String;",
-      "renamedSymbol": "M:MenuLabel.a([BI)[Ljava/lang/String;",
+      "renamedSymbol": "M:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeTextLines",
       "declaration": {
         "file": "qk.java",
         "start": 1192,
@@ -352206,9 +352366,9 @@
     },
     {
       "symbol": "M:qk.g(I)V",
-      "renamedSymbol": "M:MenuLabel.g(I)V",
+      "renamedSymbol": "M:MenuLabel.showReconnectStatusDialog(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "showReconnectStatusDialog",
       "declaration": {
         "file": "qk.java",
         "start": 4662,
@@ -352371,9 +352531,9 @@
     },
     {
       "symbol": "M:qo.a(II)V",
-      "renamedSymbol": "M:TextLayout.a(II)V",
+      "renamedSymbol": "M:TextLayout.layoutAnimatedLobbyPanels(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutAnimatedLobbyPanels",
       "declaration": {
         "file": "qo.java",
         "start": 690,
@@ -352382,9 +352542,9 @@
     },
     {
       "symbol": "M:qo.a(III)I",
-      "renamedSymbol": "M:TextLayout.a(III)I",
+      "renamedSymbol": "M:TextLayout.getCharacterIndexAt(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getCharacterIndexAt",
       "declaration": {
         "file": "qo.java",
         "start": 4329,
@@ -352393,9 +352553,9 @@
     },
     {
       "symbol": "M:qo.a(IIILjava/lang/String;)I",
-      "renamedSymbol": "M:TextLayout.a(IIILjava/lang/String;)I",
+      "renamedSymbol": "M:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeJustificationSpacing",
       "declaration": {
         "file": "qo.java",
         "start": 2311,
@@ -352404,9 +352564,9 @@
     },
     {
       "symbol": "M:qo.a(ZI)I",
-      "renamedSymbol": "M:TextLayout.a(ZI)I",
+      "renamedSymbol": "M:TextLayout.getCharacterX(ZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getCharacterX",
       "declaration": {
         "file": "qo.java",
         "start": 5427,
@@ -431186,7 +431346,7 @@
     },
     {
       "symbol": "P:ph.a(I)V#0",
-      "renamedSymbol": "P:ListContent.a(I)V#0",
+      "renamedSymbol": "P:ListContent.removePendingIntroTextLines(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431197,7 +431357,7 @@
     },
     {
       "symbol": "P:ph.a(IIII)Z#0",
-      "renamedSymbol": "P:ListContent.a(IIII)Z#0",
+      "renamedSymbol": "P:ListContent.handleChatKeyInput(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431208,7 +431368,7 @@
     },
     {
       "symbol": "P:ph.a(IIII)Z#1",
-      "renamedSymbol": "P:ListContent.a(IIII)Z#1",
+      "renamedSymbol": "P:ListContent.handleChatKeyInput(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431219,7 +431379,7 @@
     },
     {
       "symbol": "P:ph.a(IIII)Z#2",
-      "renamedSymbol": "P:ListContent.a(IIII)Z#2",
+      "renamedSymbol": "P:ListContent.handleChatKeyInput(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431230,7 +431390,7 @@
     },
     {
       "symbol": "P:ph.a(IIII)Z#3",
-      "renamedSymbol": "P:ListContent.a(IIII)Z#3",
+      "renamedSymbol": "P:ListContent.handleChatKeyInput(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431241,7 +431401,7 @@
     },
     {
       "symbol": "P:ph.a(Lbc;I)V#0",
-      "renamedSymbol": "P:ListContent.a(LArchive;I)V#0",
+      "renamedSymbol": "P:ListContent.loadTutorialScenes(LArchive;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431252,7 +431412,7 @@
     },
     {
       "symbol": "P:ph.a(Lbc;I)V#1",
-      "renamedSymbol": "P:ListContent.a(LArchive;I)V#1",
+      "renamedSymbol": "P:ListContent.loadTutorialScenes(LArchive;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431285,7 +431445,7 @@
     },
     {
       "symbol": "P:pi.a(II)I#0",
-      "renamedSymbol": "P:MidiFileReader.a(II)I#0",
+      "renamedSymbol": "P:MidiFileReader.decodeEventPayload(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431296,7 +431456,7 @@
     },
     {
       "symbol": "P:pi.a(II)I#1",
-      "renamedSymbol": "P:MidiFileReader.a(II)I#1",
+      "renamedSymbol": "P:MidiFileReader.decodeEventPayload(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431373,7 +431533,7 @@
     },
     {
       "symbol": "P:pi.f(I)I#0",
-      "renamedSymbol": "P:MidiFileReader.f(I)I#0",
+      "renamedSymbol": "P:MidiFileReader.readEventWithRunningStatus(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432583,7 +432743,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lpb;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432594,7 +432754,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lpb;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -432605,7 +432765,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lpb;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -432616,7 +432776,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lpb;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -432627,7 +432787,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lpb;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreen(IIIII)LPlatformTask;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -432726,7 +432886,7 @@
     },
     {
       "symbol": "P:qb.a(IZLjava/lang/String;I)Lpb;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZLjava/lang/String;I)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432737,7 +432897,7 @@
     },
     {
       "symbol": "P:qb.a(IZLjava/lang/String;I)Lpb;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZLjava/lang/String;I)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -432748,7 +432908,7 @@
     },
     {
       "symbol": "P:qb.a(IZLjava/lang/String;I)Lpb;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZLjava/lang/String;I)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -432759,7 +432919,7 @@
     },
     {
       "symbol": "P:qb.a(IZLjava/lang/String;I)Lpb;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZLjava/lang/String;I)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(IZLjava/lang/String;I)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -432825,7 +432985,7 @@
     },
     {
       "symbol": "P:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -432836,7 +432996,7 @@
     },
     {
       "symbol": "P:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -432847,7 +433007,7 @@
     },
     {
       "symbol": "P:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -432858,7 +433018,7 @@
     },
     {
       "symbol": "P:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.openPreferencesFile(Ljava/lang/String;ILjava/lang/String;Z)LRandomAccessCacheFile;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -433914,7 +434074,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#0",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#0",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433925,7 +434085,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#1",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#1",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433936,7 +434096,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#2",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#2",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -433947,7 +434107,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#3",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#3",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -433958,7 +434118,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#4",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#4",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -433969,7 +434129,7 @@
     },
     {
       "symbol": "P:qh.a(Lbi;IIIII)Lbi;#5",
-      "renamedSymbol": "P:MenuWindow.a(LSprite;IIIII)LSprite;#5",
+      "renamedSymbol": "P:MenuWindow.captureRasterRectangle(LSprite;IIIII)LSprite;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -434090,7 +434250,7 @@
     },
     {
       "symbol": "P:qh.f(I)Z#0",
-      "renamedSymbol": "P:MenuWindow.f(I)Z#0",
+      "renamedSymbol": "P:MenuWindow.isClientFocused(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434101,7 +434261,7 @@
     },
     {
       "symbol": "P:qh.g(I)V#0",
-      "renamedSymbol": "P:MenuWindow.g(I)V#0",
+      "renamedSymbol": "P:MenuWindow.tickChatPanelTransition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434519,7 +434679,7 @@
     },
     {
       "symbol": "P:qk.a(Ljava/lang/String;IB)V#0",
-      "renamedSymbol": "P:MenuLabel.a(Ljava/lang/String;IB)V#0",
+      "renamedSymbol": "P:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434530,7 +434690,7 @@
     },
     {
       "symbol": "P:qk.a(Ljava/lang/String;IB)V#1",
-      "renamedSymbol": "P:MenuLabel.a(Ljava/lang/String;IB)V#1",
+      "renamedSymbol": "P:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434541,7 +434701,7 @@
     },
     {
       "symbol": "P:qk.a(Ljava/lang/String;IB)V#2",
-      "renamedSymbol": "P:MenuLabel.a(Ljava/lang/String;IB)V#2",
+      "renamedSymbol": "P:MenuLabel.requestMenuLogin(Ljava/lang/String;IB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434552,7 +434712,7 @@
     },
     {
       "symbol": "P:qk.a(Lqf;I)Lgm;#0",
-      "renamedSymbol": "P:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#0",
+      "renamedSymbol": "P:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434563,7 +434723,7 @@
     },
     {
       "symbol": "P:qk.a(Lqf;I)Lgm;#1",
-      "renamedSymbol": "P:MenuLabel.a(LSoundEffectDefinition;I)LSoundPlayback;#1",
+      "renamedSymbol": "P:MenuLabel.playSoundEffect(LSoundEffectDefinition;I)LSoundPlayback;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434574,7 +434734,7 @@
     },
     {
       "symbol": "P:qk.a([BI)[Ljava/lang/String;#0",
-      "renamedSymbol": "P:MenuLabel.a([BI)[Ljava/lang/String;#0",
+      "renamedSymbol": "P:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434585,7 +434745,7 @@
     },
     {
       "symbol": "P:qk.a([BI)[Ljava/lang/String;#1",
-      "renamedSymbol": "P:MenuLabel.a([BI)[Ljava/lang/String;#1",
+      "renamedSymbol": "P:MenuLabel.decodeTextLines([BI)[Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434607,7 +434767,7 @@
     },
     {
       "symbol": "P:qk.g(I)V#0",
-      "renamedSymbol": "P:MenuLabel.g(I)V#0",
+      "renamedSymbol": "P:MenuLabel.showReconnectStatusDialog(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434948,7 +435108,7 @@
     },
     {
       "symbol": "P:qo.a(II)V#0",
-      "renamedSymbol": "P:TextLayout.a(II)V#0",
+      "renamedSymbol": "P:TextLayout.layoutAnimatedLobbyPanels(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434959,7 +435119,7 @@
     },
     {
       "symbol": "P:qo.a(II)V#1",
-      "renamedSymbol": "P:TextLayout.a(II)V#1",
+      "renamedSymbol": "P:TextLayout.layoutAnimatedLobbyPanels(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434970,7 +435130,7 @@
     },
     {
       "symbol": "P:qo.a(III)I#0",
-      "renamedSymbol": "P:TextLayout.a(III)I#0",
+      "renamedSymbol": "P:TextLayout.getCharacterIndexAt(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434981,7 +435141,7 @@
     },
     {
       "symbol": "P:qo.a(III)I#1",
-      "renamedSymbol": "P:TextLayout.a(III)I#1",
+      "renamedSymbol": "P:TextLayout.getCharacterIndexAt(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434992,7 +435152,7 @@
     },
     {
       "symbol": "P:qo.a(III)I#2",
-      "renamedSymbol": "P:TextLayout.a(III)I#2",
+      "renamedSymbol": "P:TextLayout.getCharacterIndexAt(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -435003,7 +435163,7 @@
     },
     {
       "symbol": "P:qo.a(IIILjava/lang/String;)I#0",
-      "renamedSymbol": "P:TextLayout.a(IIILjava/lang/String;)I#0",
+      "renamedSymbol": "P:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435014,7 +435174,7 @@
     },
     {
       "symbol": "P:qo.a(IIILjava/lang/String;)I#1",
-      "renamedSymbol": "P:TextLayout.a(IIILjava/lang/String;)I#1",
+      "renamedSymbol": "P:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -435025,7 +435185,7 @@
     },
     {
       "symbol": "P:qo.a(IIILjava/lang/String;)I#2",
-      "renamedSymbol": "P:TextLayout.a(IIILjava/lang/String;)I#2",
+      "renamedSymbol": "P:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -435036,7 +435196,7 @@
     },
     {
       "symbol": "P:qo.a(IIILjava/lang/String;)I#3",
-      "renamedSymbol": "P:TextLayout.a(IIILjava/lang/String;)I#3",
+      "renamedSymbol": "P:TextLayout.computeJustificationSpacing(IIILjava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -435047,7 +435207,7 @@
     },
     {
       "symbol": "P:qo.a(ZI)I#0",
-      "renamedSymbol": "P:TextLayout.a(ZI)I#0",
+      "renamedSymbol": "P:TextLayout.getCharacterX(ZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435058,7 +435218,7 @@
     },
     {
       "symbol": "P:qo.a(ZI)I#1",
-      "renamedSymbol": "P:TextLayout.a(ZI)I#1",
+      "renamedSymbol": "P:TextLayout.getCharacterX(ZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -460912,7 +461072,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "d62c2ce9ac9c877b47e95502f25a15397dd3fbf172ef209055b3754588982135",
+      "outputSha256": "06bcf6e6215bf650d63f6b3a3dbd96d34e38d879c9b24eb3e224f8f40ea260bc",
       "edits": [
         {
           "start": 86,
@@ -461776,6 +461936,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 6628,
+          "end": 6629,
+          "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "requestMenuLogin"
+        },
+        {
           "start": 6630,
           "end": 6632,
           "symbol": "C:se",
@@ -461963,6 +462130,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 7933,
+          "end": 7934,
+          "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "requestMenuLogin"
         },
         {
           "start": 7935,
@@ -464709,6 +464883,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "ListContent"
+        },
+        {
+          "start": 22800,
+          "end": 22801,
+          "symbol": "M:ph.a(Lbc;I)V",
+          "original": "a",
+          "renamed": "loadTutorialScenes"
         },
         {
           "start": 22802,
@@ -477903,7 +478084,7 @@
       "original": "af.java",
       "renamed": "DelegatingCanvas.java",
       "inputSha256": "5a261a8253cd8c4732c8bbecaba845a947f838ba8dddeff9eff966f661cda189",
-      "outputSha256": "2e4e2e2a53ad9319b6e41c2f2c387e95bc8d31573adf39b0189d3912c12fd359",
+      "outputSha256": "41c3e2b889b0591090ffd184610409a087795c8015c3f9671a5952bd940aa03d",
       "edits": [
         {
           "start": 50,
@@ -477953,6 +478134,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 1486,
+          "end": 1487,
+          "symbol": "M:qh.g(I)V",
+          "original": "g",
+          "renamed": "tickChatPanelTransition"
         },
         {
           "start": 1541,
@@ -480540,7 +480728,7 @@
       "original": "ak.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "09c28e7df6409321535742b0c5b649a5cbd10bf228af3331bc1b4c912af18bc5",
-      "outputSha256": "dcf8714aacc6e9f9cddc9ab32b8cec5a0f37ce00b1cbe16a732819c47795150b",
+      "outputSha256": "3667a16b357fc7ee920fd3caefab736b7545ee2efede24f7e99d616644faa04b",
       "edits": [
         {
           "start": 50,
@@ -481306,6 +481494,13 @@
           "renamed": "TextLayout"
         },
         {
+          "start": 6086,
+          "end": 6087,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
+        },
+        {
           "start": 6095,
           "end": 6097,
           "symbol": "C:bc",
@@ -481325,6 +481520,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "TextLayout"
+        },
+        {
+          "start": 6161,
+          "end": 6162,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
         },
         {
           "start": 6170,
@@ -486629,7 +486831,7 @@
       "original": "bb.java",
       "renamed": "LobbyRoomControlsSupport.java",
       "inputSha256": "e469f2b3aa7aa80ccfdbf04fa775c29297878d4f865e02d5523893e085814d74",
-      "outputSha256": "864c2b2fb4f847236d2b98cd0144821eea534f2256b1500ee2a2cfdb32e726b3",
+      "outputSha256": "9c0165c63baeaebfd8b8491dab4910247cf8dab10aca319f549fd10433dea24e",
       "edits": [
         {
           "start": 50,
@@ -487001,6 +487203,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "TextLayout"
+        },
+        {
+          "start": 3739,
+          "end": 3740,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
         },
         {
           "start": 3748,
@@ -548054,7 +548263,7 @@
       "original": "en.java",
       "renamed": "LobbyLayoutSupport.java",
       "inputSha256": "3c69ca02e4526f19b78e5b8b82ec9c39eb0976a9f7076e25c041ec6f94024098",
-      "outputSha256": "8cb32ca2b11d72f0fefc8fb295ffed315d626710ca6feef45c6317e7ec767409",
+      "outputSha256": "39a41fe104b75f17fb44d2e15f616c80ba0753242b231a7e4a1c77c5d8f69d4b",
       "edits": [
         {
           "start": 50,
@@ -548167,6 +548376,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "TextLayout"
+        },
+        {
+          "start": 1278,
+          "end": 1279,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
         },
         {
           "start": 1317,
@@ -561662,7 +561878,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "8ad0e87ff2a3b1a65888d2d0a02969b701cb8f7cdab1134eaddfad6f9dd3f2ab",
+      "outputSha256": "c2d2d030cf8343b8643b86b6f83b7e3b5fd983c4c9ae03d00c11541eac30276d",
       "edits": [
         {
           "start": 50,
@@ -565718,6 +565934,13 @@
           "renamed": "savePosition"
         },
         {
+          "start": 69838,
+          "end": 69839,
+          "symbol": "M:pi.e()V",
+          "original": "e",
+          "renamed": "markTrackFinished"
+        },
+        {
           "start": 69868,
           "end": 69869,
           "symbol": "M:pi.e(I)V",
@@ -568115,7 +568338,7 @@
       "original": "gh.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "d78a1d984514ccf8a1cefeaafb565908e7e640a24911df12a166a6a535c81b51",
-      "outputSha256": "4ef418dd53e81da6d4637231925e27ba617ab07a7a08416419a33f185626fcf5",
+      "outputSha256": "2b8a648c47dced8c423b05ae88a3b466fd06ea99f088df48765b37266e49f4de",
       "edits": [
         {
           "start": 50,
@@ -568263,6 +568486,13 @@
           "symbol": "M:pi.a(I)I",
           "original": "a",
           "renamed": "readEvent"
+        },
+        {
+          "start": 1713,
+          "end": 1714,
+          "symbol": "M:pi.e()V",
+          "original": "e",
+          "renamed": "markTrackFinished"
         },
         {
           "start": 1737,
@@ -574296,7 +574526,7 @@
       "original": "go.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "5390bf948886f70478332f30ccfa9c87a67fe4bc76c42823d15566ed553b9c2a",
-      "outputSha256": "755c731289fde2f14ae2f294c1f6dc498693ec7a5d8742c2b1c4a09cd54eb1d8",
+      "outputSha256": "1f6cb54cbc0cb84c9162139002971ef952b69e3ac0dafb16a850761b65726f42",
       "edits": [
         {
           "start": 44,
@@ -574626,6 +574856,13 @@
           "symbol": "M:pj.a(Z)I",
           "original": "a",
           "renamed": "getLineHeight"
+        },
+        {
+          "start": 5546,
+          "end": 5547,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
         },
         {
           "start": 6025,
@@ -621906,7 +622143,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "31f2a3937cb2f83284551f4550ba29f9c76f29c7fd8eb4f431e30bd638cd4407",
+      "outputSha256": "ab6f6cbb74fb75d266452309abf940ef7a875e7e7dc447e854b92a81bcf270f6",
       "edits": [
         {
           "start": 50,
@@ -623056,6 +623293,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 28619,
+          "end": 28620,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 28621,
@@ -625661,6 +625905,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 70220,
+          "end": 70221,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 70222,
           "end": 70224,
           "symbol": "C:jj",
@@ -627754,6 +628005,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 112904,
+          "end": 112905,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 112906,
           "end": 112908,
           "symbol": "C:jj",
@@ -627768,6 +628026,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 112993,
+          "end": 112994,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 112995,
           "end": 112997,
           "symbol": "C:hs",
@@ -627780,6 +628045,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 113096,
+          "end": 113097,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 113098,
@@ -627985,6 +628257,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 118016,
+          "end": 118017,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 118018,
           "end": 118020,
           "symbol": "C:us",
@@ -628062,6 +628341,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 119887,
+          "end": 119888,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 119889,
           "end": 119891,
           "symbol": "C:qc",
@@ -628074,6 +628360,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 119972,
+          "end": 119973,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 119974,
@@ -631545,7 +631838,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "db4ba62041fedce03a8b9fec620413a75802fe2086db064121ffc94f39f1f0c5",
+      "outputSha256": "a1037e2ec4284523b6b7ea958b845699bab0616333ee917c70f81a3608d6e2c2",
       "edits": [
         {
           "start": 50,
@@ -633499,6 +633792,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 35162,
+          "end": 35163,
+          "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+          "original": "a",
+          "renamed": "captureRasterRectangle"
         },
         {
           "start": 35165,
@@ -639171,6 +639471,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 120784,
+          "end": 120785,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 120786,
           "end": 120788,
           "symbol": "C:ub",
@@ -639353,6 +639660,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 123217,
+          "end": 123218,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 123219,
           "end": 123221,
           "symbol": "C:sf",
@@ -639365,6 +639679,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 123450,
+          "end": 123451,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 123452,
@@ -641110,6 +641431,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 151120,
+          "end": 151121,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 151122,
@@ -648945,7 +649273,7 @@
       "original": "la.java",
       "renamed": "RichTextLayout.java",
       "inputSha256": "1d21da58c0b88788d1c7f86133dcf8dc23d0fbe2a50bb0d380ccc12856752ef6",
-      "outputSha256": "2b0f39a099e3dd235d870520896bc314ca2a408f34d53ccb639d8351f2b8d41d",
+      "outputSha256": "147f869cf2f9e337a29fc6c2dcc1fedf5146b16cb866f8c3e502bdcad0e1c822",
       "edits": [
         {
           "start": 50,
@@ -649121,6 +649449,13 @@
           "symbol": "M:nq.c(Ljava/lang/String;)I",
           "original": "c",
           "renamed": "stringWidth"
+        },
+        {
+          "start": 5225,
+          "end": 5226,
+          "symbol": "M:qo.a(IIILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "computeJustificationSpacing"
         },
         {
           "start": 5259,
@@ -663651,7 +663986,7 @@
       "original": "me.java",
       "renamed": "VictoryChecker.java",
       "inputSha256": "a125e633ae70e34cda68278f7d3ee4e0bc8e57db1e9ec5968c42e6c6541be62c",
-      "outputSha256": "e80395c48b13b10ea34b6fac5f4ca4be87353d2e788a7a82cc73e5fa3c671e5f",
+      "outputSha256": "ab08c0f17a67f528c5ccad386d5903aad8f7778a54a97d05ee6631752a50fc62",
       "edits": [
         {
           "start": 53,
@@ -663722,6 +664057,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 554,
+          "end": 555,
+          "symbol": "M:qh.f(I)Z",
+          "original": "f",
+          "renamed": "isClientFocused"
         },
         {
           "start": 578,
@@ -678921,7 +679263,7 @@
       "original": "o.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "a3117040d0ba6cf6d1b93a8896b95cf37b7123f15e0d5307927e1ccdf6207591",
-      "outputSha256": "f012b4d8b2e3b00b65533c1be643caffad6ebb5230cf83b3a5faf815463646f5",
+      "outputSha256": "aad726f3fac6b5a058bb263b5758ca09c1201fdc2b5c834960106955d8f77556",
       "edits": [
         {
           "start": 44,
@@ -679090,6 +679432,13 @@
           "symbol": "M:qo.a(BI)I",
           "original": "a",
           "renamed": "getLineIndexOfCharacter"
+        },
+        {
+          "start": 2312,
+          "end": 2313,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
         },
         {
           "start": 2354,
@@ -679323,6 +679672,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 5245,
+          "end": 5246,
+          "symbol": "M:qo.a(III)I",
+          "original": "a",
+          "renamed": "getCharacterIndexAt"
+        },
+        {
           "start": 5253,
           "end": 5254,
           "symbol": "M:o.b(ILvg;I)I",
@@ -679461,6 +679817,20 @@
           "symbol": "M:ke.a(IIIII)V",
           "original": "a",
           "renamed": "pushIntersectedClip"
+        },
+        {
+          "start": 8823,
+          "end": 8824,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
+        },
+        {
+          "start": 8963,
+          "end": 8964,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
         },
         {
           "start": 9257,
@@ -684830,7 +685200,7 @@
       "original": "oh.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "17d35fe2b28688a825a296efb3de42f8b1c198dfa870c11f450083ce5b1ec879",
-      "outputSha256": "af735adad41742a03cc39c6deff6a385826bf838207abadfa670dd92d0136038",
+      "outputSha256": "46c1fa70154529eb1658969e393f075c2becaa7d497f17143ba7724c967027e7",
       "edits": [
         {
           "start": 44,
@@ -684952,6 +685322,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 640,
+          "end": 641,
+          "symbol": "M:qk.g(I)V",
+          "original": "g",
+          "renamed": "showReconnectStatusDialog"
+        },
+        {
           "start": 659,
           "end": 661,
           "symbol": "C:gm",
@@ -684985,6 +685362,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 775,
+          "end": 776,
+          "symbol": "M:qk.g(I)V",
+          "original": "g",
+          "renamed": "showReconnectStatusDialog"
         },
         {
           "start": 794,
@@ -698182,7 +698566,7 @@
       "original": "ph.java",
       "renamed": "ListContent.java",
       "inputSha256": "9cce3654c093907fa5065d8e66fb9d1918a32e15aac2a43c8dae9371786fff29",
-      "outputSha256": "823995bd43519daa2b7657592b09ed677d9c0177fb0bb3016ea40869afd2bd06",
+      "outputSha256": "09ffed6828b45379a65b0390976da6d3f3d9f83b9cb488a503bfd627c206d28a",
       "edits": [
         {
           "start": 50,
@@ -698218,6 +698602,13 @@
           "symbol": "C:ff",
           "original": "ff",
           "renamed": "SpriteButton"
+        },
+        {
+          "start": 313,
+          "end": 314,
+          "symbol": "M:ph.a(IIII)Z",
+          "original": "a",
+          "renamed": "handleChatKeyInput"
         },
         {
           "start": 377,
@@ -698325,6 +698716,13 @@
           "renamed": "handleFreeChatKeyInput"
         },
         {
+          "start": 872,
+          "end": 873,
+          "symbol": "M:ph.a(I)V",
+          "original": "a",
+          "renamed": "removePendingIntroTextLines"
+        },
+        {
           "start": 896,
           "end": 898,
           "symbol": "C:hd",
@@ -698402,6 +698800,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1720,
+          "end": 1721,
+          "symbol": "M:ph.a(Lbc;I)V",
+          "original": "a",
+          "renamed": "loadTutorialScenes"
+        },
+        {
           "start": 1722,
           "end": 1724,
           "symbol": "C:bc",
@@ -698477,7 +698882,7 @@
       "original": "pi.java",
       "renamed": "MidiFileReader.java",
       "inputSha256": "fe4653c274c35b17260e2813ae30a89428cb8987fd8748433a0db71dea81398f",
-      "outputSha256": "4777f2bee172b41ed1eb97f9897d09ecb544a70db3be6766c766e630be324092",
+      "outputSha256": "027850e9101fe515110137e9fa198ab8e4230ee820a72f6e926812f079b2aa93",
       "edits": [
         {
           "start": 50,
@@ -698506,6 +698911,13 @@
           "symbol": "M:pi.a(I)I",
           "original": "a",
           "renamed": "readEvent"
+        },
+        {
+          "start": 586,
+          "end": 587,
+          "symbol": "M:pi.f(I)I",
+          "original": "f",
+          "renamed": "readEventWithRunningStatus"
         },
         {
           "start": 640,
@@ -698562,6 +698974,13 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 1287,
+          "end": 1288,
+          "symbol": "M:pi.a(II)I",
+          "original": "a",
+          "renamed": "decodeEventPayload"
         },
         {
           "start": 1516,
@@ -698648,6 +699067,13 @@
           "renamed": "nextTrack"
         },
         {
+          "start": 2905,
+          "end": 2906,
+          "symbol": "M:pi.e()V",
+          "original": "e",
+          "renamed": "markTrackFinished"
+        },
+        {
           "start": 2932,
           "end": 2939,
           "symbol": "F:ob.field_j:I",
@@ -698676,6 +699102,13 @@
           "renamed": "trackCount"
         },
         {
+          "start": 3129,
+          "end": 3130,
+          "symbol": "M:pi.f(I)I",
+          "original": "f",
+          "renamed": "readEventWithRunningStatus"
+        },
+        {
           "start": 3227,
           "end": 3234,
           "symbol": "F:ob.field_h:[B",
@@ -698702,6 +699135,13 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 3550,
+          "end": 3551,
+          "symbol": "M:pi.a(II)I",
+          "original": "a",
+          "renamed": "decodeEventPayload"
         },
         {
           "start": 3605,
@@ -698737,6 +699177,13 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 4022,
+          "end": 4023,
+          "symbol": "M:pi.a(II)I",
+          "original": "a",
+          "renamed": "decodeEventPayload"
         },
         {
           "start": 4082,
@@ -700688,7 +701135,7 @@
       "original": "qb.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "bb202855c095af43bd02ebe3f2a23a483131a4a971b9ac73aeea64f18d25286e",
-      "outputSha256": "c5235df13c33f3af88a48bac776b743be941423a137e5d736865b61f73b0a014",
+      "outputSha256": "45c6287f2f38008efaa5a40ac6c2a73139f4f47a2339b5c8b990ff9bc7726613",
       "edits": [
         {
           "start": 69,
@@ -700759,6 +701206,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 779,
+          "end": 780,
+          "symbol": "M:qb.a(IZLjava/lang/String;I)Lpb;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
         },
         {
           "start": 884,
@@ -700838,11 +701292,25 @@
           "renamed": "requestSocket"
         },
         {
+          "start": 1556,
+          "end": 1557,
+          "symbol": "M:qb.a(IZLjava/lang/String;I)Lpb;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
+        },
+        {
           "start": 1616,
           "end": 1618,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 1619,
+          "end": 1620,
+          "symbol": "M:qb.a(IIIII)Lpb;",
+          "original": "a",
+          "renamed": "requestFullscreen"
         },
         {
           "start": 1740,
@@ -700873,6 +701341,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 1981,
+          "end": 1982,
+          "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
+          "original": "a",
+          "renamed": "openPreferencesFile"
+        },
+        {
           "start": 2260,
           "end": 2262,
           "symbol": "C:pb",
@@ -700892,6 +701367,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 2425,
+          "end": 2426,
+          "symbol": "M:qb.a(IZLjava/lang/String;I)Lpb;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
         },
         {
           "start": 2489,
@@ -700934,6 +701416,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3286,
+          "end": 3287,
+          "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
+          "original": "a",
+          "renamed": "openPreferencesFile"
         },
         {
           "start": 3396,
@@ -701222,11 +701711,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 14693,
+          "end": 14694,
+          "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
+          "original": "a",
+          "renamed": "openPreferencesFile"
+        },
+        {
           "start": 14888,
           "end": 14890,
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 14891,
+          "end": 14892,
+          "symbol": "M:qb.a(Ljava/lang/String;ILjava/lang/String;Z)Lra;",
+          "original": "a",
+          "renamed": "openPreferencesFile"
         },
         {
           "start": 15083,
@@ -703088,7 +703591,7 @@
       "original": "qf.java",
       "renamed": "SoundEffectDefinition.java",
       "inputSha256": "291068786772e48a3faeeda1b201291fd43643cb7b85c205574f55d1a611a7dd",
-      "outputSha256": "7ca4f1361b439b5b549e0f73be70cb49aaf894cc4af6db0d9ba285ac7c0a0337",
+      "outputSha256": "a738500f61c347ca8375096d3ae7fcbcffb793f0dcd0d13c4afe61d75fdad8aa",
       "edits": [
         {
           "start": 71,
@@ -703210,6 +703713,13 @@
           "renamed": "ListContent"
         },
         {
+          "start": 851,
+          "end": 852,
+          "symbol": "M:ph.a(IIII)Z",
+          "original": "a",
+          "renamed": "handleChatKeyInput"
+        },
+        {
           "start": 966,
           "end": 968,
           "symbol": "C:hp",
@@ -703280,6 +703790,13 @@
           "renamed": "ListContent"
         },
         {
+          "start": 1240,
+          "end": 1241,
+          "symbol": "M:ph.a(IIII)Z",
+          "original": "a",
+          "renamed": "handleChatKeyInput"
+        },
+        {
           "start": 1355,
           "end": 1357,
           "symbol": "C:tc",
@@ -703336,6 +703853,13 @@
           "renamed": "ListContent"
         },
         {
+          "start": 1562,
+          "end": 1563,
+          "symbol": "M:ph.a(IIII)Z",
+          "original": "a",
+          "renamed": "handleChatKeyInput"
+        },
+        {
           "start": 1673,
           "end": 1675,
           "symbol": "C:qf",
@@ -703369,6 +703893,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "ListContent"
+        },
+        {
+          "start": 1770,
+          "end": 1771,
+          "symbol": "M:ph.a(IIII)Z",
+          "original": "a",
+          "renamed": "handleChatKeyInput"
         },
         {
           "start": 1886,
@@ -704539,7 +705070,7 @@
       "original": "qh.java",
       "renamed": "MenuWindow.java",
       "inputSha256": "0960f0e3db3c856cd76c5017fc57c59f250212a2958314c4fd56e5c391974b71",
-      "outputSha256": "e4918ecdd65572376c018b3afa427788e6d4c2ee06008bd853c52b6438b5a1ed",
+      "outputSha256": "d7c1a35fd0f3c6e9d1f1f9e4f2f61121d6ba6b13fda8ac2a82fe5c2f31a4ed22",
       "edits": [
         {
           "start": 50,
@@ -704575,6 +705106,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 331,
+          "end": 332,
+          "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+          "original": "a",
+          "renamed": "captureRasterRectangle"
         },
         {
           "start": 333,
@@ -705340,6 +705878,13 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 8911,
+          "end": 8912,
+          "symbol": "M:qh.f(I)Z",
+          "original": "f",
+          "renamed": "isClientFocused"
+        },
+        {
           "start": 9026,
           "end": 9028,
           "symbol": "C:bj",
@@ -705352,6 +705897,13 @@
           "symbol": "C:br",
           "original": "br",
           "renamed": "MusicPatch"
+        },
+        {
+          "start": 9087,
+          "end": 9088,
+          "symbol": "M:qh.g(I)V",
+          "original": "g",
+          "renamed": "tickChatPanelTransition"
         },
         {
           "start": 9117,
@@ -706404,7 +706956,7 @@
       "original": "qk.java",
       "renamed": "MenuLabel.java",
       "inputSha256": "ea725ad9dd4d835d69f9987dba3caed34bcfbf27f9f8d7bd388c5ce464c8562f",
-      "outputSha256": "453a949821541b3e9f88043a0e57c17b46fe8476a5227de6e3352608c1946ecb",
+      "outputSha256": "3ff040da0f91aa11db45fbcd8dc03d7f43d6be3c0c58c6eb7e1895c063339bda",
       "edits": [
         {
           "start": 44,
@@ -706498,6 +707050,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1192,
+          "end": 1193,
+          "symbol": "M:qk.a([BI)[Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeTextLines"
+        },
+        {
           "start": 1335,
           "end": 1337,
           "symbol": "C:tq",
@@ -706568,6 +707127,13 @@
           "renamed": "SoundPlayback"
         },
         {
+          "start": 3193,
+          "end": 3194,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 3195,
           "end": 3197,
           "symbol": "C:qf",
@@ -706587,6 +707153,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 3590,
+          "end": 3591,
+          "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "requestMenuLogin"
         },
         {
           "start": 3660,
@@ -706643,6 +707216,13 @@
           "symbol": "C:rs",
           "original": "rs",
           "renamed": "IconTextPanel"
+        },
+        {
+          "start": 4662,
+          "end": 4663,
+          "symbol": "M:qk.g(I)V",
+          "original": "g",
+          "renamed": "showReconnectStatusDialog"
         },
         {
           "start": 4686,
@@ -706729,6 +707309,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 5542,
+          "end": 5543,
+          "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "requestMenuLogin"
+        },
+        {
           "start": 5641,
           "end": 5643,
           "symbol": "C:qf",
@@ -706748,6 +707335,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 5677,
+          "end": 5678,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
         },
         {
           "start": 5680,
@@ -707864,7 +708458,7 @@
       "original": "qo.java",
       "renamed": "TextLayout.java",
       "inputSha256": "c51fe95fe0f0f563a4bb68c9fff5417541932e13e5bb49c4e5f7e5317ba50f56",
-      "outputSha256": "9814e19a0829b4ba358a60cc197031491a1c425a181563f94208132b711e5895",
+      "outputSha256": "6d2eb6676948d712427b10c924a52bffb34978612bbf5552d465e696d663fae3",
       "edits": [
         {
           "start": 53,
@@ -707914,6 +708508,13 @@
           "symbol": "M:qo.a(I)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 690,
+          "end": 691,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
         },
         {
           "start": 738,
@@ -708021,6 +708622,13 @@
           "renamed": "getWidth"
         },
         {
+          "start": 2311,
+          "end": 2312,
+          "symbol": "M:qo.a(IIILjava/lang/String;)I",
+          "original": "a",
+          "renamed": "computeJustificationSpacing"
+        },
+        {
           "start": 4171,
           "end": 4172,
           "symbol": "C:r",
@@ -708033,6 +708641,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4329,
+          "end": 4330,
+          "symbol": "M:qo.a(III)I",
+          "original": "a",
+          "renamed": "getCharacterIndexAt"
         },
         {
           "start": 4417,
@@ -708061,6 +708676,13 @@
           "symbol": "M:ha.a(ZI)I",
           "original": "a",
           "renamed": "getCharacterIndexAtX"
+        },
+        {
+          "start": 5427,
+          "end": 5428,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
         },
         {
           "start": 5467,
@@ -734743,7 +735365,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "0f994f719367a8cd0b697d59b78350e6c2380cd1a907ef7d4c2397395ae9236d",
+      "outputSha256": "81f3d9be7216ba84f972f8ab4d0d911962cae4b24f1fd62a65b4e1ce6d758170",
       "edits": [
         {
           "start": 50,
@@ -734837,6 +735459,13 @@
           "renamed": "MenuWindow"
         },
         {
+          "start": 1087,
+          "end": 1088,
+          "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+          "original": "a",
+          "renamed": "captureRasterRectangle"
+        },
+        {
           "start": 1089,
           "end": 1091,
           "symbol": "C:kp",
@@ -734856,6 +735485,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 1159,
+          "end": 1160,
+          "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+          "original": "a",
+          "renamed": "captureRasterRectangle"
         },
         {
           "start": 1161,
@@ -734898,6 +735534,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "MenuWindow"
+        },
+        {
+          "start": 1364,
+          "end": 1365,
+          "symbol": "M:qh.a(Lbi;IIIII)Lbi;",
+          "original": "a",
+          "renamed": "captureRasterRectangle"
         },
         {
           "start": 1366,
@@ -742665,6 +743308,13 @@
           "renamed": "MenuLabel"
         },
         {
+          "start": 68915,
+          "end": 68916,
+          "symbol": "M:qk.a(Lqf;I)Lgm;",
+          "original": "a",
+          "renamed": "playSoundEffect"
+        },
+        {
           "start": 68917,
           "end": 68919,
           "symbol": "C:qc",
@@ -745332,6 +745982,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 91618,
+          "end": 91619,
+          "symbol": "M:qk.a(Ljava/lang/String;IB)V",
+          "original": "a",
+          "renamed": "requestMenuLogin"
         },
         {
           "start": 91620,
@@ -754245,7 +754902,7 @@
       "original": "tc.java",
       "renamed": "DialogRoot.java",
       "inputSha256": "ab7dfb13d40b0a7e162ec9e295e3c6236547ee2112212a09dfcc9c1733bb4fa1",
-      "outputSha256": "b6c3caaf0f389bb0986aba61480f6e38f1d5490255e4fe4cf1b5c0c29d46bdb3",
+      "outputSha256": "a5717f7315ea243ab76a4e0d289e91cc3faaaccfd29edac41a1a3eadf288f2fa",
       "edits": [
         {
           "start": 50,
@@ -755611,6 +756268,13 @@
           "symbol": "C:qk",
           "original": "qk",
           "renamed": "MenuLabel"
+        },
+        {
+          "start": 18055,
+          "end": 18056,
+          "symbol": "M:qk.a([BI)[Ljava/lang/String;",
+          "original": "a",
+          "renamed": "decodeTextLines"
         },
         {
           "start": 18113,
@@ -760430,7 +761094,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "e51f555920186205a2fe7f009b1a4a8c4ad4ae7ffc6c47e628ae6e435973c79f",
+      "outputSha256": "063f5125fddada473c67f4ca4d1a82df08f87713a8334b1dec0fc58bec9bbdac",
       "edits": [
         {
           "start": 53,
@@ -764246,6 +764910,13 @@
           "symbol": "M:dc.a(Lqb;B)[Lgl;",
           "original": "a",
           "renamed": "queryDisplayModes"
+        },
+        {
+          "start": 26090,
+          "end": 26091,
+          "symbol": "M:qb.a(IIIII)Lpb;",
+          "original": "a",
+          "renamed": "requestFullscreen"
         },
         {
           "start": 26257,
@@ -773708,7 +774379,7 @@
       "original": "ts.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "7b1c1e9b1ee69583d5e2665f9fea036abe867c8b25b289108df20de0f1c45872",
+      "outputSha256": "ea4a041d387798d5ac59510ae5502de76d9dee655160825d16d51615141203f9",
       "edits": [
         {
           "start": 63,
@@ -774600,6 +775271,20 @@
           "renamed": "getLineIndexOfCharacter"
         },
         {
+          "start": 11386,
+          "end": 11387,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
+        },
+        {
+          "start": 11595,
+          "end": 11596,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
+        },
+        {
           "start": 11901,
           "end": 11903,
           "symbol": "C:ql",
@@ -774675,6 +775360,20 @@
           "symbol": "M:qo.a(BI)I",
           "original": "a",
           "renamed": "getLineIndexOfCharacter"
+        },
+        {
+          "start": 13329,
+          "end": 13330,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
+        },
+        {
+          "start": 13564,
+          "end": 13565,
+          "symbol": "M:qo.a(ZI)I",
+          "original": "a",
+          "renamed": "getCharacterX"
         },
         {
           "start": 13870,
@@ -776136,7 +776835,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "4bb80990537b654ba5a2c6ae2da8e47551104bc18b3df24b3d4cac82153f4eb1",
+      "outputSha256": "a9aeb1581c1a30ee6874fa74a35dcee225db13e5ab3d0882df90ff01001a4152",
       "edits": [
         {
           "start": 50,
@@ -776564,6 +777263,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "ListContent"
+        },
+        {
+          "start": 10135,
+          "end": 10136,
+          "symbol": "M:ph.a(I)V",
+          "original": "a",
+          "renamed": "removePendingIntroTextLines"
         },
         {
           "start": 10167,
@@ -777159,6 +777865,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "ListContent"
+        },
+        {
+          "start": 13849,
+          "end": 13850,
+          "symbol": "M:ph.a(I)V",
+          "original": "a",
+          "renamed": "removePendingIntroTextLines"
         },
         {
           "start": 13877,
@@ -782834,7 +783547,7 @@
       "original": "uo.java",
       "renamed": "LobbyRoomInteractionSupport.java",
       "inputSha256": "9825ac590ae6649c8a9888f95ec2e1ce832521557782b5ed80c016c82c2799b0",
-      "outputSha256": "27b39431f4a6ba34fce6b3d360ba7ddf386b79c7673e5d25159e44523f299c19",
+      "outputSha256": "5bfb89f5be4a2e64a37b7c1be9a96980bda0418724a87f5cdc911af6a99267e8",
       "edits": [
         {
           "start": 50,
@@ -783178,6 +783891,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "TextLayout"
+        },
+        {
+          "start": 6017,
+          "end": 6018,
+          "symbol": "M:qo.a(II)V",
+          "original": "a",
+          "renamed": "layoutAnimatedLobbyPanels"
         },
         {
           "start": 6026,
@@ -819280,10 +820000,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "756ac775c1bdf025643e7524000db6c6d973f7d1981c963da3610bcecef78eb0",
+    "rulesSha256": "473809f937b779602d5c8fea58b44104fc0ef8d8b798a36157b0d6a9e9ccfaeb",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "a1a4d11afc2714881fb7e5ac42cae8111c3f839e501414101e753562f91c41da",
+    "outputTreeSha256": "9b1e8f223f93211ce04b77e338a76fd839f03df56c958f71994b98cff00e03df",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

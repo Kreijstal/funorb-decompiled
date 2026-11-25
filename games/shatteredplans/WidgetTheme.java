@@ -73,7 +73,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var14 = var13;
             var7 = var14.getLineIndexOfCharacter((byte) 81, param0);
             var8 = var13.field_d[var7];
-            var9 = var14.a(true, param0);
+            var9 = var14.getCharacterX(true, param0);
             var10 = this.computeTextX((byte) -14, param4, var9, param1);
             var11 = this.getTextY(param3, param4, 68) + Math.max(0, var8.field_e);
             var12 = this.getTextY(param3, param4, -122) + Math.min(this.getInnerHeight(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
@@ -137,7 +137,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var8 = (UiWidget) null;
             this.drawCaret(67, 67, -1, 15, (UiWidget) null);
           }
-          stackIn_3_0 = param3.field_j.a(-this.getTextX(0, param3, param0) + param1, 3357, param5 - this.getTextY(param2, param3, -78));
+          stackIn_3_0 = param3.field_j.getCharacterIndexAt(-this.getTextX(0, param3, param0) + param1, 3357, param5 - this.getTextY(param2, param3, -78));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,11 +222,11 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
               if (var12 != var10) {
                 stackIn_14_0 = var13.field_b[0];
               } else {
-                stackIn_14_0 = var19.a(true, var8);
+                stackIn_14_0 = var19.getCharacterX(true, var8);
               }
               var14 = stackIn_14_0;
               if (var12 == var11) {
-                stackIn_19_0 = var19.a(true, var9);
+                stackIn_19_0 = var19.getCharacterX(true, var9);
               } else {
                 if (var13 != null) {
                   stackIn_19_0 = var13.field_b[var13.field_b.length - 1];

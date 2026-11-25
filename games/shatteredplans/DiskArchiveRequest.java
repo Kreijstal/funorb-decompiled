@@ -183,10 +183,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
           ClientDialogSupport.layoutLobbySidePanels(438);
         }
         if (Archive.field_b > 0) {
-          TextLayout.a(22353, Archive.field_b);
+          TextLayout.layoutAnimatedLobbyPanels(22353, Archive.field_b);
         }
         if (PrivateChatMessage.field_k > 0) {
-          TextLayout.a(22353, PrivateChatMessage.field_k);
+          TextLayout.layoutAnimatedLobbyPanels(22353, PrivateChatMessage.field_k);
         }
     }
 

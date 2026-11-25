@@ -45,7 +45,7 @@ final class LobbyLayoutSupport {
           } else {
             stackIn_4_1 = Archive.field_b;
           }
-          TextLayout.a(stackIn_3_0, stackIn_4_1);
+          TextLayout.layoutAnimatedLobbyPanels(stackIn_3_0, stackIn_4_1);
           DiplomacyNotice.field_h.layout(0, -42 + SocialListPanel.field_xb.field_mb, (byte) 95, SocialListPanel.field_xb.field_K, 0);
           DefendTask.field_x.setTarget(BattleExplosionVisual.field_t.field_K, UniformNineSliceFactory.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = ClientDrawingSupport.field_a;

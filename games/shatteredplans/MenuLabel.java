@@ -34,7 +34,7 @@ class MenuLabel extends MenuComponent {
         }
     }
 
-    final static String[] a(byte[] param0, int param1) {
+    final static String[] decodeTextLines(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -93,7 +93,7 @@ class MenuLabel extends MenuComponent {
         }
     }
 
-    final static SoundPlayback a(SoundEffectDefinition param0, int param1) {
+    final static SoundPlayback playSoundEffect(SoundEffectDefinition param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         SoundPlayback stackIn_3_0 = null;
@@ -104,7 +104,7 @@ class MenuLabel extends MenuComponent {
         try {
           if (param1 < 44) {
             var3 = (String) null;
-            MenuLabel.a((String) null, 122, (byte) 75);
+            MenuLabel.requestMenuLogin((String) null, 122, (byte) 75);
           }
           stackIn_3_0 = AccountFieldValue.playPcmSample(param0.field_a, -124, param0.field_f);
           return stackIn_3_0;
@@ -132,7 +132,7 @@ class MenuLabel extends MenuComponent {
         }
     }
 
-    final static void g(int param0) {
+    final static void showReconnectStatusDialog(int param0) {
         MenuButton.f(-1);
         ClientRuntimeState.field_f = true;
         TertiaryNodeList.field_b = true;
@@ -160,11 +160,11 @@ class MenuLabel extends MenuComponent {
         }
     }
 
-    final static void a(String param0, int param1, byte param2) {
+    final static void requestMenuLogin(String param0, int param1, byte param2) {
         try {
           if (param2 < 74) {
             SoundEffectDefinition var4 = (SoundEffectDefinition) null;
-            MenuLabel.a((SoundEffectDefinition) null, 124);
+            MenuLabel.playSoundEffect((SoundEffectDefinition) null, 124);
           }
           ClientOverlayDrawSupport.field_g = ClientInputSupport.field_f;
           SolMapReader.field_b = param1;

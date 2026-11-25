@@ -963,7 +963,7 @@ final class GameScreen {
           var7 = 360;
           if (MatchingTextValidator.field_t.field_h == 2) {
             IntroLogoSupport.scaleRectangleBrightness(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
-            var8 = MenuWindow.a((Sprite) null, var6, var4, var5, -1, var7);
+            var8 = MenuWindow.captureRasterRectangle((Sprite) null, var6, var4, var5, -1, var7);
             RasterTargetSupport.pushSpriteRenderTarget(var8, 93);
             SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
             OpacityWidget.popLegacyRasterState(0);
@@ -3172,7 +3172,7 @@ final class GameScreen {
           ClientRandomSupport.randomBelow((byte) -39, AccountRequestState.field_e.length);
           this.field_P = this.field_s.field_P.getYearName((byte) -50);
           this.field_u = 1;
-          MenuLabel.a(ScrollPane.field_yb, 63);
+          MenuLabel.playSoundEffect(ScrollPane.field_yb, 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3245,13 +3245,13 @@ final class GameScreen {
               boolean decompiledSharedTail3 = !(32 > this.field_u);
               if (!decompiledSharedTail3) {
                 this.field_u = -this.field_u + 60000;
-                MenuLabel.a(SoundTriggerTick.field_g, 121);
+                MenuLabel.playSoundEffect(SoundTriggerTick.field_g, 121);
                 decompiledSharedTail3 = (var9 != 0);
               }
               if ((decompiledSharedTail3) &&
                 (59968 > this.field_u)) {
                 this.field_u = 59968;
-                MenuLabel.a(SoundTriggerTick.field_g, 111);
+                MenuLabel.playSoundEffect(SoundTriggerTick.field_g, 111);
               }
             }
             return true;
@@ -3943,7 +3943,7 @@ final class GameScreen {
               this.finishTurnIntroduction((byte) 33);
             }
             if (this.field_u == 59968) {
-              MenuLabel.a(SoundTriggerTick.field_g, 122);
+              MenuLabel.playSoundEffect(SoundTriggerTick.field_g, 122);
             }
             break;
           }

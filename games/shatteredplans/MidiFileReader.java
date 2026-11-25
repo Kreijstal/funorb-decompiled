@@ -24,7 +24,7 @@ final class MidiFileReader {
     }
 
     final int readEvent(int param0) {
-        int var2 = this.f(param0);
+        int var2 = this.readEventWithRunningStatus(param0);
         return var2;
     }
 
@@ -53,7 +53,7 @@ final class MidiFileReader {
         this.field_i.position = this.field_h[param0];
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeEventPayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -108,7 +108,7 @@ final class MidiFileReader {
         return var2;
     }
 
-    final void e() {
+    final void markTrackFinished() {
         this.field_i.position = -1;
     }
 
@@ -120,7 +120,7 @@ final class MidiFileReader {
         return this.field_h.length;
     }
 
-    private final int f(int param0) {
+    private final int readEventWithRunningStatus(int param0) {
         int var2;
         int var3;
         int var4;
@@ -134,7 +134,7 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeEventPayload(param0, var2);
         }
         var3 = this.field_i.readVariableInt(false);
         if (var2 == 247 &&
@@ -146,7 +146,7 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.field_i.position = this.field_i.position + 1;
             this.field_d[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeEventPayload(param0, var4);
           }
         }
         this.field_i.position = this.field_i.position + var3;

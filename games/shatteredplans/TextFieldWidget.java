@@ -165,7 +165,7 @@ class TextFieldWidget extends FocusableWidget {
           this.field_h = 0;
           return;
         }
-        var7 = this.field_h + var3.a(true, this.field_H);
+        var7 = this.field_h + var3.getCharacterX(true, this.field_H);
         if (-var6 + var5 < var7) {
           this.field_h = this.field_h - var6 + (var5 - var7);
         } else {

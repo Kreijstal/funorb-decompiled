@@ -12,7 +12,7 @@ final class ListContent implements MenuContent {
     static boolean field_g;
     SpriteButton[][] field_f;
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatKeyInput(int param0, int param1, int param2, int param3) {
         if (LoginMethodPreference.field_g) {
           return RasterSpanFactory.field_c.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
         }
@@ -32,7 +32,7 @@ final class ListContent implements MenuContent {
         return ByteArrayStorage.handleFreeChatKeyInput(param1, param2, false);
     }
 
-    final static void a(int param0) {
+    final static void removePendingIntroTextLines(int param0) {
         IntroTextLine var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -57,7 +57,7 @@ final class ListContent implements MenuContent {
         }
     }
 
-    final static void a(Archive param0, int param1) {
+    final static void loadTutorialScenes(Archive param0, int param1) {
         try {
           DialogRoot.a((byte) 23, param0.getFileByName(true, "tutorial.txt", ""));
           int var2_int = -90 / ((param1 + 9) / 32);

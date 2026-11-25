@@ -35,7 +35,7 @@ final class SoundEffectDefinition {
           if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
-          if (ListContent.a(4, param1, param3, param2)) {
+          if (ListContent.handleChatKeyInput(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -51,7 +51,7 @@ final class SoundEffectDefinition {
           if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
-          if (ListContent.a(4, param1, param3, param2)) {
+          if (ListContent.handleChatKeyInput(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -65,7 +65,7 @@ final class SoundEffectDefinition {
           if (DefendTask.handleSocialNameInput(97)) {
             return true;
           }
-          if (ListContent.a(4, param1, param3, param2)) {
+          if (ListContent.handleChatKeyInput(4, param1, param3, param2)) {
             return true;
           }
           return false;
@@ -74,7 +74,7 @@ final class SoundEffectDefinition {
         if (DefendTask.handleSocialNameInput(97)) {
           return true;
         }
-        if (!ListContent.a(4, param1, param3, param2)) {
+        if (!ListContent.handleChatKeyInput(4, param1, param3, param2)) {
           return false;
         }
         return true;

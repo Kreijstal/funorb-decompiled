@@ -13,7 +13,7 @@ final class MenuWindow extends MenuComponent {
     static String field_C;
     static boolean field_v;
 
-    final static Sprite a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite captureRasterRectangle(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var13 = 0;
         Sprite stackIn_30_0 = null;
@@ -208,14 +208,14 @@ final class MenuWindow extends MenuComponent {
         field_w = null;
     }
 
-    final static boolean f(int param0) {
+    final static boolean isClientFocused(int param0) {
         if (param0 != 29443) {
           field_B = (String) null;
         }
         return null != NameSuggestionsPanel.field_K ? true : MusicPatch.field_i;
     }
 
-    final static void g(int param0) {
+    final static void tickChatPanelTransition(int param0) {
         if (!(LabeledChildWidget.field_J <= 0)) {
           LabeledChildWidget.field_J = LabeledChildWidget.field_J - 1;
         }

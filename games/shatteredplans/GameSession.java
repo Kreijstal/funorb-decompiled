@@ -727,7 +727,7 @@ final class GameSession implements AiHost {
             this.field_y = false;
             if (!this.field_T) {
               if (this.field_m != 0) {
-                MenuLabel.a(ClientRenderSupport.field_d, param0 ^ -3671);
+                MenuLabel.playSoundEffect(ClientRenderSupport.field_d, param0 ^ -3671);
                 this.field_Y.setInteractionMode(-76, 0);
                 if (var5 == 0) {
                   return;
@@ -1810,7 +1810,7 @@ final class GameSession implements AiHost {
                 var3_intLifetime1 = var5.field_J - var6;
               }
               if (var3_intLifetime1 <= 0) {
-                MenuLabel.a(ConquestVictoryChecker.field_l, 47);
+                MenuLabel.playSoundEffect(ConquestVictoryChecker.field_l, 47);
                 if (var7 != 0) {
                   this.changeMoveSize(this.field_z.field_S, var3_intLifetime1, 10755);
                 }
@@ -2904,12 +2904,12 @@ final class GameSession implements AiHost {
                       this.queueFleetMove(false, var5_int, this.field_z.field_p, this.field_K);
                       if (this.field_n != this.field_z.field_p.field_y && (null != this.field_z.field_p.field_y ||
                         this.field_z.field_p.field_x != 0)) {
-                        MenuLabel.a(ConquestVictoryChecker.field_l, 78);
+                        MenuLabel.playSoundEffect(ConquestVictoryChecker.field_l, 78);
                         if (var8 != 0) {
-                          MenuLabel.a(StandardMapGenerator.field_l, 89);
+                          MenuLabel.playSoundEffect(StandardMapGenerator.field_l, 89);
                         }
                       } else {
-                        MenuLabel.a(StandardMapGenerator.field_l, 89);
+                        MenuLabel.playSoundEffect(StandardMapGenerator.field_l, 89);
                       }
                     }
                     this.refreshMapView(2);
@@ -3039,7 +3039,7 @@ final class GameSession implements AiHost {
                 return;
               }
               this.field_K = this.field_z.field_p;
-              MenuLabel.a(ClientRenderSupport.field_d, 74);
+              MenuLabel.playSoundEffect(ClientRenderSupport.field_d, 74);
               this.field_Y.setInteractionMode(-107, 1);
               this.field_z.field_z[this.field_K.field_p] = 1;
               var4 = this.field_K.field_D;
@@ -3091,10 +3091,10 @@ final class GameSession implements AiHost {
               }
               var4_ref2 = DialWidget.createSoundEffectPlayback(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
-                var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
+                var4_ref2 = MenuLabel.playSoundEffect(SocketArchiveNetworkClient.field_w, 78);
               }
             } else {
-              var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
+              var4_ref2 = MenuLabel.playSoundEffect(SocketArchiveNetworkClient.field_w, 78);
             }
             if (null != this.field_E) {
               var5_ref2 = this.field_E;

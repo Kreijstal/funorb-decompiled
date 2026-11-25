@@ -476,7 +476,7 @@ final class DialogRoot extends SingleChildWidget {
 
     final static void a(byte param0, byte[] param1) {
         try {
-          TextHotspotRegion.loadTutorialScenes((byte) 50, MenuLabel.a(param1, 13));
+          TextHotspotRegion.loadTutorialScenes((byte) 50, MenuLabel.decodeTextLines(param1, 13));
           if (param0 <= 21) {
             DialogRoot.clearStatics(false);
           }

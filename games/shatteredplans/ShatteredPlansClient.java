@@ -202,7 +202,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                         var3 = RoundedFrameSupport.a(106);
                         if (var3 == 1) {
                           AccountStatusDialog.field_ob = true;
-                          MenuLabel.a(AchievementProgress.field_a, 0, (byte) 122);
+                          MenuLabel.requestMenuLogin(AchievementProgress.field_a, 0, (byte) 122);
                         }
                         this.b(false, true);
                       }
@@ -230,7 +230,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                         }
                         else {
                           BattleContribution.field_s = true;
-                          MenuLabel.a(RasterSpanFactory.field_b, 0, (byte) 125);
+                          MenuLabel.requestMenuLogin(RasterSpanFactory.field_b, 0, (byte) 125);
                         }
                       }
                     }
@@ -612,7 +612,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             return false;
           }
           if (null != LeaderboardSortSupport.field_c) {
-            ListContent.a(LeaderboardSortSupport.field_c, param0 - 167);
+            ListContent.loadTutorialScenes(LeaderboardSortSupport.field_c, param0 - 167);
             IsaacRandom.field_h = TextReplacementEntry.decodeTrimmedLines(LeaderboardSortSupport.field_c.getFileByName(true, "starnames.txt", ""), (byte) -17);
             LeaderboardSortSupport.field_c = null;
             ValidationState.c(121);

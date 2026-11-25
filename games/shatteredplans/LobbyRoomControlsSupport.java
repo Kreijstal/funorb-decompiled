@@ -109,7 +109,7 @@ final class LobbyRoomControlsSupport {
         int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          TextLayout.a(22353, Archive.field_b);
+          TextLayout.layoutAnimatedLobbyPanels(22353, Archive.field_b);
           if (param2 != -2) {
             field_d = (String) null;
           }

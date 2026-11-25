@@ -29,7 +29,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private MicrosoftCursorController field_m;
     private static String field_d;
 
-    private final PlatformTask a(int param0, boolean param1, String param2, int param3) {
+    private final PlatformTask requestSocketInternal(int param0, boolean param1, String param2, int param3) {
         if (param3 > -96) {
           return (PlatformTask) null;
         }
@@ -54,10 +54,10 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param0 != 65535) {
           this.field_e = true;
         }
-        return this.a(param1, false, param2, param0 ^ -65434);
+        return this.requestSocketInternal(param1, false, param2, param0 ^ -65434);
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask requestFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -1194) {
           this.field_k = (RandomAccessCacheFile) null;
         }
@@ -67,7 +67,7 @@ final class PlatformTaskDispatcher implements Runnable {
     final boolean isReady(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          PlatformTaskDispatcher.a((String) null, -128, (String) null, true);
+          PlatformTaskDispatcher.openPreferencesFile((String) null, -128, (String) null, true);
         }
         if (!this.field_w) {
           return false;
@@ -82,7 +82,7 @@ final class PlatformTaskDispatcher implements Runnable {
         PlatformTask discarded$0 = null;
         if (param1) {
           String var4 = (String) null;
-          discarded$0 = this.a(-90, true, (String) null, -75);
+          discarded$0 = this.requestSocketInternal(-90, true, (String) null, -75);
         }
         return this.submit(0, 4, param0, (byte) 92, 0);
     }
@@ -112,7 +112,7 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    private final static RandomAccessCacheFile a(String param0, int param1, String param2, boolean param3) {
+    private final static RandomAccessCacheFile openPreferencesFile(String param0, int param1, String param2, boolean param3) {
         try {
           int var6 = 0;
           RandomAccessCacheFile stackIn_15_0 = null;
@@ -341,11 +341,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.field_b), field_h, "", true);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_b), field_h, "", true);
                         var8.field_e = var3_ref3;
                         break;
                       case 12:
-                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.field_b), field_h, field_s, true);
+                        var3_ref3 = PlatformTaskDispatcher.openPreferencesFile((String) (var8.field_b), field_h, field_s, true);
                         var8.field_e = var3_ref3;
                         break;
                       case 21:

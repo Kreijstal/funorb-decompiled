@@ -68,7 +68,7 @@ final class MusicTrack extends IntrusiveNode {
             var4.seekToTrack(var6Lifetime1);
             var8 = var4.readEvent(var6Lifetime1);
             if (var8 == 1) {
-              var4.e();
+              var4.markTrackFinished();
               var4.savePosition(var6Lifetime1);
               if (var4.isFinished()) {
                 return;

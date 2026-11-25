@@ -21,13 +21,13 @@ class IntrusiveNode {
 
     final static void requestReconnectUi(int param0) {
         if (param0 == ~SoundPlayback.field_i) {
-          MenuLabel.g(-125);
+          MenuLabel.showReconnectStatusDialog(-125);
           SoundPlayback.field_i = 11;
           GameSpriteResources.field_f = true;
           return;
         }
         if (!ClientCapabilitySupport.matchesClientCapabilityGuard(-12165)) {
-          MenuLabel.g(-125);
+          MenuLabel.showReconnectStatusDialog(-125);
           SoundPlayback.field_i = 11;
           GameSpriteResources.field_f = true;
           return;

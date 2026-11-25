@@ -40,7 +40,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static void b(int param0) {
-        MenuWindow.g(83);
+        MenuWindow.tickChatPanelTransition(83);
         if (param0 != 0) {
           field_f = (AnimatedPanel) null;
           DiskArchiveRequest.tickLobbyPanelTransitions(-751);

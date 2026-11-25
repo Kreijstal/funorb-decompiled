@@ -185,7 +185,7 @@ final class LobbyRoomInteractionSupport {
         var18 = null;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          TextLayout.a(22353, PrivateChatMessage.field_k);
+          TextLayout.layoutAnimatedLobbyPanels(22353, PrivateChatMessage.field_k);
           if (null != MenuInputState.field_a) {
             boolean decompiledFrameRemainder0 = true;
             DialPainter.field_g.field_s = true;
