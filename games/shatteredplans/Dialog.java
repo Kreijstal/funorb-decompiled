@@ -207,7 +207,7 @@ abstract class Dialog extends WidgetContainer {
         CheckboxWidgetPainter.releaseMouseHandler(false);
         ContentTransitionPhase.closeClientResources(0);
         if (IntrusiveNode.b(true)) {
-          LobbyOptionSupport.field_f.h(1, 255);
+          LobbyOptionSupport.field_f.writeOpcode(1, 255);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);
         }
         TabbedPanel.closeClientSocket(-107);

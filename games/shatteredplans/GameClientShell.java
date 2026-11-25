@@ -64,7 +64,7 @@ abstract class GameClientShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == param1) {
-            var5_int = RasterSpanFactory.pollLoginCredentials(CipherPacketBuffer.j((byte) 64), AccountInputSupport.createAccountFieldValue(64), 0);
+            var5_int = RasterSpanFactory.pollLoginCredentials(CipherPacketBuffer.createCurrentAccountTextValue((byte) 64), AccountInputSupport.createAccountFieldValue(64), 0);
             if (var5_int != -1) {
               LoginResultSupport.showLoginResult(var5_int, (byte) -88, HighscoreResponseSupport.field_e, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -76,7 +76,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
+            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.getAccountRequestType((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
               GraphicsSettings.showLoginResult(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -131,13 +131,13 @@ abstract class GameClientShell extends GameApplet {
             StringNode.openCustomerSupportPage(115, GameScreen.getHostApplet((byte) 125));
           }
           if (10 == var4) {
-            LobbyOptionSupport.field_f.h(17, 255);
+            LobbyOptionSupport.field_f.writeOpcode(17, 255);
           }
           if (var4 == 11) {
             ChatPanelLayoutSupport.reloadGamePage(GameScreen.getHostApplet((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
-            CipherPacketBuffer.a(SolVictoryChecker.c(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
+            CipherPacketBuffer.openGameWebPage(SolVictoryChecker.c(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
           }
           if (var4 == 13) {
             try {
@@ -770,7 +770,7 @@ abstract class GameClientShell extends GameApplet {
         int var3 = param0 != ~(var2 & 1) ? 1 : 0;
         int var4 = TextInputPainter.field_t - 1;
         byte[] var5 = new byte[var4];
-        SpriteWipeSupport.field_a.b(var4, ~param0, 0, var5);
+        SpriteWipeSupport.field_a.readBytesIsaac(var4, ~param0, 0, var5);
         ExternalLinkSupport.openExternalUrl(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 

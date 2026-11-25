@@ -516,11 +516,11 @@ final class SolVictoryChecker extends VictoryChecker {
               if (StarAnnotation.field_m > 0) {
                 DualLinkDeque.field_b = true;
               }
-              LobbyOptionSupport.field_f.a(IntroRenderSupport.field_b, (byte) -77);
+              LobbyOptionSupport.field_f.setIsaacSeed(IntroRenderSupport.field_b, (byte) -77);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 IntroRenderSupport.field_b[var8Lifetime1] = IntroRenderSupport.field_b[var8Lifetime1] + 50;
               }
-              SpriteWipeSupport.field_a.a(IntroRenderSupport.field_b, (byte) 107);
+              SpriteWipeSupport.field_a.setIsaacSeed(IntroRenderSupport.field_b, (byte) 107);
               stackIn_81_0 = BufferedCacheFile.field_e;
               return stackIn_81_0;
             }

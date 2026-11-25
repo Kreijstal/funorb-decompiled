@@ -49,7 +49,7 @@ final class LobbyRoomControlsSupport {
     final static void writePlayerReportRequest(int param0, long param1, int param2, boolean param3, String param4, int param5) {
         int var7_int = 0;
         try {
-          LobbyOptionSupport.field_f.h(param2, 255);
+          LobbyOptionSupport.field_f.writeOpcode(param2, 255);
           LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 1;
           var7_int = LobbyOptionSupport.field_f.position;
           if (param0 < 18) {

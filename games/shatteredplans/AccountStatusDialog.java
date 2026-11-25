@@ -80,7 +80,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
             this.field_sb = false;
           }
           if (!this.field_sb) {
-            CipherPacketBuffer.a("tochangedisplayname.ws", GameScreen.getHostApplet((byte) 126), (byte) 63);
+            CipherPacketBuffer.openGameWebPage("tochangedisplayname.ws", GameScreen.getHostApplet((byte) 126), (byte) 63);
             return;
           }
           TutorialTextSupport.setPendingUiAction((byte) -127, 3);

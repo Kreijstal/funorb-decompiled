@@ -43,7 +43,7 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException var4 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4_int = param2.b((byte) 105, param0);
+          var4_int = param2.readBits((byte) 105, param0);
           if (0 == var4_int) {
             return null;
           }
@@ -55,11 +55,11 @@ class DualLinkNode extends IntrusiveNode {
             stackIn_10_0 = (byte[]) null;
             return stackIn_10_0;
           }
-          var5 = param2.b((byte) 103, 3);
-          var6 = (byte)param2.b((byte) 115, 8);
+          var5 = param2.readBits((byte) 103, 3);
+          var6 = (byte)param2.readBits((byte) 115, 8);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(var6 + param2.b((byte) 112, var5));
+              param3[var7] = (byte)(var6 + param2.readBits((byte) 112, var5));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

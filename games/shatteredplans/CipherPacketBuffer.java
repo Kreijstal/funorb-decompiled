@@ -9,7 +9,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static SecondaryNodeHashTable field_m;
     private IsaacRandom field_o;
 
-    final int b(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4 = 0;
@@ -19,7 +19,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var4Lifetime1;
         int var5Lifetime1;
         if (param0 <= 76) {
-          this.i((byte) 45);
+          this.finishBitAccess((byte) 45);
         } else {
           var4 = -(7 & this.field_n) + 8;
           var5 = 0;
@@ -56,7 +56,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var5Lifetime1;
     }
 
-    final void h(int param0, int param1) {
+    final void writeOpcode(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.field_o.nextInt(13) + param0);
@@ -69,7 +69,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void b(int param0, int param1, int param2, byte[] param3) {
+    final void readBytesIsaac(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -100,7 +100,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static AccountFieldValue j(byte param0) {
+    final static AccountFieldValue createCurrentAccountTextValue(byte param0) {
         if (param0 != 64) {
           return (AccountFieldValue) null;
         }
@@ -123,7 +123,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void openGameWebPage(String param0, java.applet.Applet param1, byte param2) {
         try {
           java.net.URL var3 = null;
           Exception var3_ref = null;
@@ -174,7 +174,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static MenuList a(int param0, int param1, Player param2, int param3) {
+    final static MenuList createFleetCountBar(int param0, int param1, Player param2, int param3) {
         RuntimeException var4 = null;
         HorizontalGradientComponent var5 = null;
         SpriteButton var6 = null;
@@ -212,7 +212,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setIsaacSeed(int[] param0, byte param1) {
         try {
           int var3_int = 31 / ((param1 - 45) / 58);
           this.field_o = new IsaacRandom(param0);
@@ -221,7 +221,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final int h(byte param0) {
+    final int readOpcode(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == 126) {
           fieldTemp$0 = this.position;
@@ -231,16 +231,16 @@ final class CipherPacketBuffer extends PacketBuffer {
         return -76;
     }
 
-    final void m(int param0) {
+    final void startBitAccess(int param0) {
         if (param0 <= -16) {
           this.field_n = this.position * 8;
           return;
         }
-        this.h(53, 123);
+        this.writeOpcode(53, 123);
         this.field_n = this.position * 8;
     }
 
-    final static void a(int param0, QuickChatMenu param1) {
+    final static void installQuickChatMenu(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }
@@ -254,7 +254,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void i(byte param0) {
+    final void finishBitAccess(byte param0) {
         this.position = (7 + this.field_n) / 8;
         int var2 = 126 / ((param0 - 50) / 63);
     }

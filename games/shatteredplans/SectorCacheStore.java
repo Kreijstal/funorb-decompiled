@@ -14,7 +14,7 @@ final class SectorCacheStore {
     static String[] field_c;
     static boolean[] field_h;
 
-    private final boolean a(int param0, boolean param1, byte param2, int param3, byte[] param4) {
+    private final boolean writeSectorChain(int param0, boolean param1, byte param2, int param3, byte[] param4) {
         try {
           RuntimeException stackIn_69_0 = null;
           StringBuilder stackIn_69_1 = null;
@@ -199,7 +199,7 @@ final class SectorCacheStore {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -339,11 +339,11 @@ final class SectorCacheStore {
         field_d = null;
         if (param0 != 4) {
           String var2 = (String) null;
-          SectorCacheStore.a((String) null, (String) null, -43);
+          SectorCacheStore.findLastSubstringFrom((String) null, (String) null, -43);
         }
     }
 
-    final boolean a(int param0, int param1, byte[] param2, int param3) {
+    final boolean write(int param0, int param1, byte[] param2, int param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -358,12 +358,12 @@ final class SectorCacheStore {
           synchronized (var5) {
             if (param0 >= 0 &&
               param0 <= this.field_e) {
-              var6 = this.a(param0, true, (byte) -22, param1, param2) ? 1 : 0;
+              var6 = this.writeSectorChain(param0, true, (byte) -22, param1, param2) ? 1 : 0;
               if (param3 != 2) {
                 this.field_a = (BufferedCacheFile) null;
               }
               if (var6 == 0) {
-                var6 = this.a(param0, false, (byte) -1, param1, param2) ? 1 : 0;
+                var6 = this.writeSectorChain(param0, false, (byte) -1, param1, param2) ? 1 : 0;
               }
               stackIn_9_0 = var6;
             } else {
@@ -385,7 +385,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static int a(String param0, String param1, int param2) {
+    final static int findLastSubstringFrom(String param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

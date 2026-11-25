@@ -190,7 +190,7 @@ final class GradientMenuLabel extends MenuComponent {
         if (param0 <= 54) {
           GradientMenuLabel.readLocalPlayerName(112);
         }
-        var2.h(param1, 255);
+        var2.writeOpcode(param1, 255);
         var2.writeByte(2, (byte) -59);
         var2.writeByte(4, (byte) -84);
         var2.writeByte(DerelictMapReader.a(0), (byte) -76);

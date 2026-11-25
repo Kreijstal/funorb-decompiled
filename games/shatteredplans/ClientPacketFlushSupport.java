@@ -85,7 +85,7 @@ final class ClientPacketFlushSupport {
             }
             if (LobbyOptionSupport.field_f.position == 0 &&
               (LobbyPlayerEntry.field_Pb + 10000L) < ClientClockSupport.currentTimeMillis(param1 + 14192)) {
-              LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
+              LobbyOptionSupport.field_f.writeOpcode(param0, param1 ^ 173);
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {
@@ -151,7 +151,7 @@ final class ClientPacketFlushSupport {
             }
             if (LobbyOptionSupport.field_f.position == 0 &&
               (LobbyPlayerEntry.field_Pb + 10000L) < ClientClockSupport.currentTimeMillis(param1 + 14192)) {
-              LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
+              LobbyOptionSupport.field_f.writeOpcode(param0, param1 ^ 173);
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {

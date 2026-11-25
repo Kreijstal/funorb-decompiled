@@ -105,7 +105,7 @@ final class NotificationEntry extends IntrusiveNode {
             var9 = (short[]) null;
             NotificationEntry.readPackedShortArray((byte) -7, (CipherPacketBuffer) null, 123, (short[]) null);
           }
-          var4_int = param1.b((byte) 101, param2);
+          var4_int = param1.readBits((byte) 101, param2);
           if (var4_int == 0) {
             return null;
           }
@@ -113,11 +113,11 @@ final class NotificationEntry extends IntrusiveNode {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param1.b((byte) 99, 4);
-          var6 = (short)param1.b((byte) 86, 16);
+          var5 = param1.readBits((byte) 99, 4);
+          var6 = (short)param1.readBits((byte) 86, 16);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(param1.b((byte) 93, var5) + var6);
+              param3[var7] = (short)(param1.readBits((byte) 93, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

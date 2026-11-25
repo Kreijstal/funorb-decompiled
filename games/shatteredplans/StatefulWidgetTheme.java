@@ -404,7 +404,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
             stackIn_3_0 = (UiWidget) (param0);
           }
           var11 = (FocusableWidget) (stackIn_3_0);
-          BufferedSocket.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
+          BufferedSocket.pushIntersectedClip(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
           if (var11 != null) {
             param2 = param2 & var11.field_y;
           }

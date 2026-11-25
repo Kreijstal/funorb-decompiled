@@ -203,7 +203,7 @@ final class MenuPointerSupport extends IntrusiveNode {
         int var4 = 0;
         try {
           var5 = LobbyOptionSupport.field_f;
-          var5.h(param1, param0 - 65);
+          var5.writeOpcode(param1, param0 - 65);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) -59);

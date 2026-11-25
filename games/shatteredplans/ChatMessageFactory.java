@@ -183,7 +183,7 @@ final class ChatMessageFactory {
             var4.field_jc = null;
           }
           var5 = LobbyOptionSupport.field_f;
-          var5.h(param1, 255);
+          var5.writeOpcode(param1, 255);
           var5.writeByte(3, (byte) -92);
           var5.writeByte(11, (byte) -69);
           var5.writeShort(param0, 255);

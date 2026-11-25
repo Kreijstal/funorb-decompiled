@@ -99,7 +99,7 @@ final class BufferedSocket implements Runnable {
           }
           this.field_p = null;
           if (param0 < 83) {
-            BufferedSocket.a(52, 12, -47, -94, 64);
+            BufferedSocket.pushIntersectedClip(52, 12, -47, -94, 64);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -146,7 +146,7 @@ final class BufferedSocket implements Runnable {
         this.close(104);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void pushIntersectedClip(int param0, int param1, int param2, int param3, int param4) {
         ChatAndSocialPanel.pushRasterState(false);
         if (param0 != -6187) {
           BufferedSocket.clearStatics((byte) 13);
@@ -301,7 +301,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static void a(int param0, QuickChatPhraseDefinition param1) {
+    final static void setQuickChatPlaceholder(int param0, QuickChatPhraseDefinition param1) {
         try {
           param1.field_s = new char[]{(char)63};
           if (param0 >= -39) {

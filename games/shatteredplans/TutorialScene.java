@@ -167,7 +167,7 @@ final class TutorialScene {
 
     final static void writeJoinGameRequest(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = LobbyOptionSupport.field_f;
-        var3.h(param1, 255);
+        var3.writeOpcode(param1, 255);
         var3.writeByte(3, (byte) -70);
         var3.writeByte(8, (byte) -58);
         var3.writeShort(param2, 255);

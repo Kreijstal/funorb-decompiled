@@ -2013,7 +2013,7 @@ final class GameScreen {
               var6_ref = var4_array[var5Lifetime1];
               var7 = var2[var6_ref.field_x];
               var8 = var6_ref.field_v.field_o / 2 + (-var6_ref.field_v.field_o + 182) * var7 / var3;
-              var9 = CipherPacketBuffer.a(var7, -30577, var6_ref, var8);
+              var9 = CipherPacketBuffer.createFleetCountBar(var7, -30577, var6_ref, var8);
               var9.moveTo((byte) 39, this.field_cb.field_z.field_k, this.field_cb.field_z.field_y + this.field_cb.field_z.field_t);
               this.field_cb.field_z.addChild(var9, 8);
               var5Lifetime1++;

@@ -497,7 +497,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:SectorCacheStore.a(IZBI[B)Z#0"
+      "renamedSymbol": "B:SectorCacheStore.writeSectorChain(IZBI[B)Z#0"
     },
     {
       "symbol": "B:uo.a(BZIZZ)V#0",
@@ -13332,12 +13332,28 @@
       "renamedSymbol": "M:BufferedSocket.available(I)I"
     },
     {
+      "symbol": "M:ke.a(IIIII)V",
+      "originalName": "a",
+      "to": "pushIntersectedClip",
+      "evidence": "Push pooled raster state then intersect current clip with supplied rectangle using original argument permutation. Complete raster push/intersection helpers and clip callers read. Preserve allocation/pool state,wrong-int static cleanup between operations,and missing pop on exception;do not replace with setClip or scoped restoration. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.pushIntersectedClip(IIIII)V"
+    },
+    {
       "symbol": "M:ke.a(II[BI)V",
       "originalName": "a",
       "to": "write",
       "evidence": "Copies bytes into the write buffer under a lock and wakes the writer thread.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BufferedSocket.write(II[BI)V"
+    },
+    {
+      "symbol": "M:ke.a(ILsi;)V",
+      "originalName": "a",
+      "to": "setQuickChatPlaceholder",
+      "evidence": "Replace phrase retained character/int arrays with question-mark char and-1ID arrays. Complete Quick Chat setup caller and supplied phrase fields read. Preserve array allocations/identity,partial first-array write,wrong-int caption clear and null/wrapper behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.setQuickChatPlaceholder(ILQuickChatPhraseDefinition;)V"
     },
     {
       "symbol": "M:ke.a(Z)V",
@@ -16668,6 +16684,14 @@
       "renamedSymbol": "M:PacketBuffer.writeLong40(IJ)V"
     },
     {
+      "symbol": "M:ob.a(ILkm;)V",
+      "originalName": "a",
+      "to": "initializeTutorialState",
+      "evidence": "After original int modulo,reset tutorial scene/transition references and coordinates,retain GameSession,perform two discarded white fade-palette allocations,create text context and two event deques,clear tutorial flags,and allocate eight-scene stack and TutorialMapGenerator. Session tutorial caller inspected. Preserve every assignment/allocation and exception order,including discarded palette results. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.initializeTutorialState(ILGameSession;)V"
+    },
+    {
       "symbol": "M:ob.a(I[IBI)V",
       "originalName": "a",
       "to": "xteaDecryptRange",
@@ -16834,6 +16858,14 @@
       "evidence": "Stores the byte count just written big-endian in the two bytes before the data.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PacketBuffer.patchLengthShort(II)V"
+    },
+    {
+      "symbol": "M:ob.g(B)I",
+      "originalName": "g",
+      "to": "getAccountRequestType",
+      "evidence": "Return retained account request type selected by account dialog setup;wrong byte first clears caption. Account request/form dispatch and setup setter excerpt read. Preserve unrestricted stored int and guard side effect. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.getAccountRequestType(B)I"
     },
     {
       "symbol": "M:ob.g(I)B",
@@ -20012,12 +20044,100 @@
       "renamedSymbol": "M:DelayedInboundPacket.readChatMessage(ZI)LChatHistoryEntry;"
     },
     {
+      "symbol": "M:sl.a(IILfs;I)Llp;",
+      "originalName": "a",
+      "to": "createFleetCountBar",
+      "evidence": "Build fixed182wide player-colored fleet panel row with gradient,player fleet icon at supplied extent,and numeric count label. Complete112line refreshFleetsPanel consumer sums fleets and supplies scaled extent. Preserve child order,all coordinate/division/size arithmetic,nullable player behavior,allocations and late guard static mutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;"
+    },
+    {
+      "symbol": "M:sl.a(ILvm;)V",
+      "originalName": "a",
+      "to": "installQuickChatMenu",
+      "evidence": "For nonnull menu,store current menu,clear retained parent child deque,append current menu and set open flag. Null returns before dereferences. Both callers inspected. Preserve guard forwarded to clear,partial global write/child updates and runtime wrapping. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.installQuickChatMenu(ILQuickChatMenu;)V"
+    },
+    {
+      "symbol": "M:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+      "originalName": "a",
+      "to": "openGameWebPage",
+      "evidence": "Resolve supplied path against applet code base,rewrite settings/session URL parameters through complete helper,then use original external-link opener. Display-name/account-page callers read. Preserve wrong-byte font clear,URL resolution,original Exception catch printing stack trace,outer checked/unchecked behavior and literals. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V"
+    },
+    {
+      "symbol": "M:sl.a([IB)V",
+      "originalName": "a",
+      "to": "setIsaacSeed",
+      "evidence": "Evaluate original byte division then replace retained ISAAC generator with new IsaacRandom(seed). Complete constructor copies seed into256word result state and seeds engine. Preserve all input lengths/nulls,allocation/alias/exception behavior and no narrowing or validation changes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.setIsaacSeed([IB)V"
+    },
+    {
+      "symbol": "M:sl.b(BI)I",
+      "originalName": "b",
+      "to": "readBits",
+      "evidence": "Read supplied bit count MSB-first from retained bit cursor with original masks/shift and cursor increment. Complete46line body plus packed model consumers inspected. Preserve duplicate guard branches,initial byte index before invalid-byte finishBitAccess callback,signed shift/overflow/negative counts and partial cursor writes before bounds failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.readBits(BI)I"
+    },
+    {
+      "symbol": "M:sl.b(III[B)V",
+      "originalName": "b",
+      "to": "readBytesIsaac",
+      "evidence": "For indices from supplied start to exclusive limit,advance packet position,subtract one ISAAC word from payload byte and store into destination at offset+index. Complete generator nextInt helper read. Preserve unusual range/offset semantics,RNG draws,preincrement/read/write exception ordering,byte truncation and diagnostics. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.readBytesIsaac(III[B)V"
+    },
+    {
+      "symbol": "M:sl.h(B)I",
+      "originalName": "h",
+      "to": "readOpcode",
+      "evidence": "For byte126advance packet position and return payload byte minus next ISAAC word masked255;other bytes return-76without reads. Network dispatch caller inspected. Preserve exact RNG/read/position ordering and full-byte behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.readOpcode(B)I"
+    },
+    {
+      "symbol": "M:sl.h(II)V",
+      "originalName": "h",
+      "to": "writeOpcode",
+      "evidence": "Advance position and write opcode+next ISAAC word as byte;non255guard then changes static sentinel. Broad packet writers inspected. Preserve array/reference evaluation,random draws,byte truncation,overflow,partial cursor writes and late guard mutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.writeOpcode(II)V"
+    },
+    {
+      "symbol": "M:sl.i(B)V",
+      "originalName": "i",
+      "to": "finishBitAccess",
+      "evidence": "Set byte position to signed(7+bitCursor)/8then evaluate original byte-derived division. Preserve signed overflow/rounding,arbitrary bit cursor and arithmetic failure after position write. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.finishBitAccess(B)V"
+    },
+    {
+      "symbol": "M:sl.j(B)Le;",
+      "originalName": "j",
+      "to": "createCurrentAccountTextValue",
+      "evidence": "For byte64allocate AccountFieldValue from current account text and pending-result predicate;otherwise return null before helpers. Complete text/pending/field constructor helpers read. Preserve normalization of null/empty in constructor,helper order,flag semantics and allocation identity without assuming particular credential subtype. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.createCurrentAccountTextValue(B)LAccountFieldValue;"
+    },
+    {
       "symbol": "M:sl.l(I)V",
       "originalName": "l",
       "to": "clearStatics",
       "evidence": "Assigns null to 6 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CipherPacketBuffer.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:sl.m(I)V",
+      "originalName": "m",
+      "to": "startBitAccess",
+      "evidence": "For int<=-16set bit cursor to byte position*8;otherwise first write original opcode53with invalid guard123then set bit cursor. Preserve complete int domain,ISAAC consumption/static sentinel,overflow and partial failure ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CipherPacketBuffer.startBitAccess(I)V"
     },
     {
       "symbol": "M:sm.a(B)Z",
@@ -21770,6 +21890,38 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SectorCacheStore.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ua.a(II)[B",
+      "originalName": "a",
+      "to": "read",
+      "evidence": "Under data-file monitor,read6byte index record,validate length/start sector,then read520byte sector chain using8byte headers/512payload or10byte headers/510payload for IDs>65535. Validate ID/chunk/store/nextsector,copy bytes,and return null on original IO/validation paths. Complete127line body and file helpers read. Preserve signed index arithmetic before long widening,shared scratch buffer,guard return after seek,allocation,partial reads/cursor and catch/lock behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore.read(II)[B"
+    },
+    {
+      "symbol": "M:ua.a(II[BI)Z",
+      "originalName": "a",
+      "to": "write",
+      "evidence": "Under data-file monitor,validate requested length then attempt reuse of existing chain;on false retry fresh allocation. Wrong guard nulls index file after first attempt even on success. Complete private chain writer and worker caller read. Preserve nested reentrant locks,short-circuit order,partial file writes,argument domains,guard timing and runtime wrapper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore.write(II[BI)Z"
+    },
+    {
+      "symbol": "M:ua.a(IZBI[B)Z",
+      "originalName": "a",
+      "to": "writeSectorChain",
+      "evidence": "Write6byte index record and original chained sector headers/payload,optionally reusing validated chain then allocating data sectors. Complete184line body/file helpers read. Preserve label/decompiler region flags,8/10byte header layouts,512/510payload capacities,original remaining<=512termination test even for large IDs,EOF reuse break returning true,IO false results,all signed arithmetic/shared scratch writes,late byte division and partial index/data state;no corruption repair or rollback. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore.writeSectorChain(IZBI[B)Z"
+    },
+    {
+      "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
+      "originalName": "a",
+      "to": "findLastSubstringFrom",
+      "evidence": "Repeated forward indexOf from supplied start then previousMatch+1returns last matching index at/after start or-1. Color-markup consumer inspected. Preserve overlapping search,null exceptions,signed increment and empty-needle nontermination behavior;do not substitute String.lastIndexOf with backward start semantics. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I"
     },
     {
       "symbol": "M:ub.g(I)V",
@@ -24358,7 +24510,7 @@
     },
     {
       "symbol": "B:ua.a(IZBI[B)Z#0",
-      "renamedSymbol": "B:SectorCacheStore.a(IZBI[B)Z#0",
+      "renamedSymbol": "B:SectorCacheStore.writeSectorChain(IZBI[B)Z#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -186652,7 +186804,7 @@
     },
     {
       "symbol": "L:ke.a(ILsi;)V#0",
-      "renamedSymbol": "L:BufferedSocket.a(ILQuickChatPhraseDefinition;)V#0",
+      "renamedSymbol": "L:BufferedSocket.setQuickChatPlaceholder(ILQuickChatPhraseDefinition;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -235712,7 +235864,7 @@
     },
     {
       "symbol": "L:ob.a(ILkm;)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(ILGameSession;)V#0",
+      "renamedSymbol": "L:PacketBuffer.initializeTutorialState(ILGameSession;)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -235723,7 +235875,7 @@
     },
     {
       "symbol": "L:ob.a(ILkm;)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(ILGameSession;)V#1",
+      "renamedSymbol": "L:PacketBuffer.initializeTutorialState(ILGameSession;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -274399,7 +274551,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#0",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#0",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274410,7 +274562,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#1",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#1",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274421,7 +274573,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#10",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#10",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -274432,7 +274584,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#2",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#2",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274443,7 +274595,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#3",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#3",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -274454,7 +274606,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#4",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#4",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -274465,7 +274617,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#5",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#5",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -274476,7 +274628,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#6",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#6",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#6",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -274487,7 +274639,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#7",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#7",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#7",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -274498,7 +274650,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#8",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#8",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#8",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -274509,7 +274661,7 @@
     },
     {
       "symbol": "L:sl.a(IILfs;I)Llp;#9",
-      "renamedSymbol": "L:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#9",
+      "renamedSymbol": "L:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274520,7 +274672,7 @@
     },
     {
       "symbol": "L:sl.a(ILvm;)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.a(ILQuickChatMenu;)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.installQuickChatMenu(ILQuickChatMenu;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -274531,7 +274683,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -274542,7 +274694,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -274553,7 +274705,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#10",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#10",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#10",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -274564,7 +274716,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#11",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#11",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -274575,7 +274727,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#12",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#12",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -274586,7 +274738,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -274597,7 +274749,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#3",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#3",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -274608,7 +274760,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#4",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#4",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#4",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -274619,7 +274771,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#5",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#5",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#5",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -274630,7 +274782,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#6",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#6",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#6",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -274641,7 +274793,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#7",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#7",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#7",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -274652,7 +274804,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#8",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#8",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274663,7 +274815,7 @@
     },
     {
       "symbol": "L:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#9",
-      "renamedSymbol": "L:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#9",
+      "renamedSymbol": "L:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -274674,7 +274826,7 @@
     },
     {
       "symbol": "L:sl.a([IB)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.a([IB)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.setIsaacSeed([IB)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -274685,7 +274837,7 @@
     },
     {
       "symbol": "L:sl.a([IB)V#1",
-      "renamedSymbol": "L:CipherPacketBuffer.a([IB)V#1",
+      "renamedSymbol": "L:CipherPacketBuffer.setIsaacSeed([IB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -274696,7 +274848,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#0",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#0",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -274707,7 +274859,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#1",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#1",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -274718,7 +274870,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#2",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#2",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274729,7 +274881,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#3",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#3",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274740,7 +274892,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#4",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#4",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274751,7 +274903,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#5",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#5",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -274762,7 +274914,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#6",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#6",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#6",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -274773,7 +274925,7 @@
     },
     {
       "symbol": "L:sl.b(BI)I#7",
-      "renamedSymbol": "L:CipherPacketBuffer.b(BI)I#7",
+      "renamedSymbol": "L:CipherPacketBuffer.readBits(BI)I#7",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -274784,7 +274936,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -274795,7 +274947,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#1",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#1",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -274806,7 +274958,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#2",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#2",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -274817,7 +274969,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#3",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#3",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -274828,7 +274980,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#4",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#4",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#4",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -274839,7 +274991,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#5",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#5",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274850,7 +275002,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#6",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#6",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274861,7 +275013,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#7",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#7",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274872,7 +275024,7 @@
     },
     {
       "symbol": "L:sl.b(III[B)V#8",
-      "renamedSymbol": "L:CipherPacketBuffer.b(III[B)V#8",
+      "renamedSymbol": "L:CipherPacketBuffer.readBytesIsaac(III[B)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -274883,7 +275035,7 @@
     },
     {
       "symbol": "L:sl.h(B)I#0",
-      "renamedSymbol": "L:CipherPacketBuffer.h(B)I#0",
+      "renamedSymbol": "L:CipherPacketBuffer.readOpcode(B)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -274894,7 +275046,7 @@
     },
     {
       "symbol": "L:sl.h(II)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.h(II)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.writeOpcode(II)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -274905,7 +275057,7 @@
     },
     {
       "symbol": "L:sl.i(B)V#0",
-      "renamedSymbol": "L:CipherPacketBuffer.i(B)V#0",
+      "renamedSymbol": "L:CipherPacketBuffer.finishBitAccess(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -299215,7 +299367,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#0",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#0",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#0",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -299226,7 +299378,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#1",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#1",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#1",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -299237,7 +299389,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#10",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#10",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -299248,7 +299400,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#11",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#11",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -299259,7 +299411,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#12",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#12",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -299270,7 +299422,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#13",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#13",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -299281,7 +299433,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#14",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#14",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -299292,7 +299444,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#15",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#15",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -299303,7 +299455,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#16",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#16",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -299314,7 +299466,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#17",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#17",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -299325,7 +299477,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#18",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#18",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#18",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -299336,7 +299488,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#19",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#19",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#19",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -299347,7 +299499,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#2",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#2",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -299358,7 +299510,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#20",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#20",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#20",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -299369,7 +299521,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#21",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#21",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#21",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -299380,7 +299532,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#22",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#22",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#22",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -299391,7 +299543,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#23",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#23",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#23",
       "originalName": "stackIn_53_0",
       "renamedName": "stackIn_53_0",
       "declaration": {
@@ -299402,7 +299554,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#24",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#24",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#24",
       "originalName": "stackIn_56_0",
       "renamedName": "stackIn_56_0",
       "declaration": {
@@ -299413,7 +299565,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#25",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#25",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#25",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -299424,7 +299576,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#26",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#26",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#26",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -299435,7 +299587,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#27",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#27",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#27",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -299446,7 +299598,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#28",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#28",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#28",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -299457,7 +299609,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#3",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#3",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#3",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -299468,7 +299620,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#4",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#4",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -299479,7 +299631,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#5",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#5",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -299490,7 +299642,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#6",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#6",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -299501,7 +299653,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#7",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#7",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -299512,7 +299664,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#8",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#8",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -299523,7 +299675,7 @@
     },
     {
       "symbol": "L:ua.a(II)[B#9",
-      "renamedSymbol": "L:SectorCacheStore.a(II)[B#9",
+      "renamedSymbol": "L:SectorCacheStore.read(II)[B#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -299534,7 +299686,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#0",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#0",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -299545,7 +299697,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#1",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#1",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -299556,7 +299708,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#2",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#2",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -299567,7 +299719,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#3",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#3",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -299578,7 +299730,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#4",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#4",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -299589,7 +299741,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#5",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#5",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -299600,7 +299752,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#6",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#6",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -299611,7 +299763,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#7",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#7",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -299622,7 +299774,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#8",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#8",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -299633,7 +299785,7 @@
     },
     {
       "symbol": "L:ua.a(II[BI)Z#9",
-      "renamedSymbol": "L:SectorCacheStore.a(II[BI)Z#9",
+      "renamedSymbol": "L:SectorCacheStore.write(II[BI)Z#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -299644,7 +299796,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#0",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#0",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#0",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -299655,7 +299807,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#1",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#1",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#1",
       "originalName": "stackIn_69_1",
       "renamedName": "stackIn_69_1",
       "declaration": {
@@ -299666,7 +299818,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#10",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#10",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -299677,7 +299829,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#11",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#11",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -299688,7 +299840,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#12",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#12",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -299699,7 +299851,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#13",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#13",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -299710,7 +299862,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#14",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#14",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -299721,7 +299873,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#15",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#15",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -299732,7 +299884,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#16",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#16",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#16",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -299743,7 +299895,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#17",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#17",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -299754,7 +299906,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#18",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#18",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#18",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -299765,7 +299917,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#19",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#19",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -299776,7 +299928,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#2",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#2",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#2",
       "originalName": "stackIn_70_2",
       "renamedName": "stackIn_70_2",
       "declaration": {
@@ -299787,7 +299939,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#20",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#20",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#20",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -299798,7 +299950,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#21",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#21",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#21",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -299809,7 +299961,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#22",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#22",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#22",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -299820,7 +299972,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#23",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#23",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#23",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -299831,7 +299983,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#24",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#24",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#24",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -299842,7 +299994,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#3",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#3",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#3",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -299853,7 +300005,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#4",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#4",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#4",
       "originalName": "decompiledRegionSelector1",
       "renamedName": "decompiledRegionSelector1",
       "declaration": {
@@ -299864,7 +300016,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#5",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#5",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -299875,7 +300027,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#6",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#6",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -299886,7 +300038,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#7",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#7",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#7",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -299897,7 +300049,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#8",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#8",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#8",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -299908,7 +300060,7 @@
     },
     {
       "symbol": "L:ua.a(IZBI[B)Z#9",
-      "renamedSymbol": "L:SectorCacheStore.a(IZBI[B)Z#9",
+      "renamedSymbol": "L:SectorCacheStore.writeSectorChain(IZBI[B)Z#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -299919,7 +300071,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#0",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#0",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -299930,7 +300082,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#1",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#1",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -299941,7 +300093,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#10",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#10",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -299952,7 +300104,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#11",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#11",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -299963,7 +300115,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#2",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#2",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -299974,7 +300126,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#3",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#3",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -299985,7 +300137,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#4",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#4",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -299996,7 +300148,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#5",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#5",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#5",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -300007,7 +300159,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#6",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#6",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#6",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -300018,7 +300170,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#7",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#7",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#7",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -300029,7 +300181,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#8",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#8",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#8",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -300040,7 +300192,7 @@
     },
     {
       "symbol": "L:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#9",
-      "renamedSymbol": "L:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#9",
+      "renamedSymbol": "L:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#9",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -337748,9 +337900,9 @@
     },
     {
       "symbol": "M:ke.a(IIIII)V",
-      "renamedSymbol": "M:BufferedSocket.a(IIIII)V",
+      "renamedSymbol": "M:BufferedSocket.pushIntersectedClip(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pushIntersectedClip",
       "declaration": {
         "file": "ke.java",
         "start": 4533,
@@ -337770,9 +337922,9 @@
     },
     {
       "symbol": "M:ke.a(ILsi;)V",
-      "renamedSymbol": "M:BufferedSocket.a(ILQuickChatPhraseDefinition;)V",
+      "renamedSymbol": "M:BufferedSocket.setQuickChatPlaceholder(ILQuickChatPhraseDefinition;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setQuickChatPlaceholder",
       "declaration": {
         "file": "ke.java",
         "start": 10479,
@@ -344777,9 +344929,9 @@
     },
     {
       "symbol": "M:ob.a(ILkm;)V",
-      "renamedSymbol": "M:PacketBuffer.a(ILGameSession;)V",
+      "renamedSymbol": "M:PacketBuffer.initializeTutorialState(ILGameSession;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeTutorialState",
       "declaration": {
         "file": "ob.java",
         "start": 23022,
@@ -345019,9 +345171,9 @@
     },
     {
       "symbol": "M:ob.g(B)I",
-      "renamedSymbol": "M:PacketBuffer.g(B)I",
+      "renamedSymbol": "M:PacketBuffer.getAccountRequestType(B)I",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getAccountRequestType",
       "declaration": {
         "file": "ob.java",
         "start": 3950,
@@ -351927,9 +352079,9 @@
     },
     {
       "symbol": "M:sl.a(IILfs;I)Llp;",
-      "renamedSymbol": "M:CipherPacketBuffer.a(IILPlayer;I)LMenuList;",
+      "renamedSymbol": "M:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createFleetCountBar",
       "declaration": {
         "file": "sl.java",
         "start": 6343,
@@ -351938,9 +352090,9 @@
     },
     {
       "symbol": "M:sl.a(ILvm;)V",
-      "renamedSymbol": "M:CipherPacketBuffer.a(ILQuickChatMenu;)V",
+      "renamedSymbol": "M:CipherPacketBuffer.installQuickChatMenu(ILQuickChatMenu;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "installQuickChatMenu",
       "declaration": {
         "file": "sl.java",
         "start": 8922,
@@ -351949,9 +352101,9 @@
     },
     {
       "symbol": "M:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
-      "renamedSymbol": "M:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+      "renamedSymbol": "M:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openGameWebPage",
       "declaration": {
         "file": "sl.java",
         "start": 4113,
@@ -351960,9 +352112,9 @@
     },
     {
       "symbol": "M:sl.a([IB)V",
-      "renamedSymbol": "M:CipherPacketBuffer.a([IB)V",
+      "renamedSymbol": "M:CipherPacketBuffer.setIsaacSeed([IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setIsaacSeed",
       "declaration": {
         "file": "sl.java",
         "start": 8079,
@@ -351971,9 +352123,9 @@
     },
     {
       "symbol": "M:sl.b(BI)I",
-      "renamedSymbol": "M:CipherPacketBuffer.b(BI)I",
+      "renamedSymbol": "M:CipherPacketBuffer.readBits(BI)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "readBits",
       "declaration": {
         "file": "sl.java",
         "start": 227,
@@ -351982,9 +352134,9 @@
     },
     {
       "symbol": "M:sl.b(III[B)V",
-      "renamedSymbol": "M:CipherPacketBuffer.b(III[B)V",
+      "renamedSymbol": "M:CipherPacketBuffer.readBytesIsaac(III[B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "readBytesIsaac",
       "declaration": {
         "file": "sl.java",
         "start": 2284,
@@ -351993,9 +352145,9 @@
     },
     {
       "symbol": "M:sl.h(B)I",
-      "renamedSymbol": "M:CipherPacketBuffer.h(B)I",
+      "renamedSymbol": "M:CipherPacketBuffer.readOpcode(B)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "readOpcode",
       "declaration": {
         "file": "sl.java",
         "start": 8432,
@@ -352004,9 +352156,9 @@
     },
     {
       "symbol": "M:sl.h(II)V",
-      "renamedSymbol": "M:CipherPacketBuffer.h(II)V",
+      "renamedSymbol": "M:CipherPacketBuffer.writeOpcode(II)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "writeOpcode",
       "declaration": {
         "file": "sl.java",
         "start": 1962,
@@ -352015,9 +352167,9 @@
     },
     {
       "symbol": "M:sl.i(B)V",
-      "renamedSymbol": "M:CipherPacketBuffer.i(B)V",
+      "renamedSymbol": "M:CipherPacketBuffer.finishBitAccess(B)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "finishBitAccess",
       "declaration": {
         "file": "sl.java",
         "start": 9376,
@@ -352026,9 +352178,9 @@
     },
     {
       "symbol": "M:sl.j(B)Le;",
-      "renamedSymbol": "M:CipherPacketBuffer.j(B)LAccountFieldValue;",
+      "renamedSymbol": "M:CipherPacketBuffer.createCurrentAccountTextValue(B)LAccountFieldValue;",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "createCurrentAccountTextValue",
       "declaration": {
         "file": "sl.java",
         "start": 3644,
@@ -352048,9 +352200,9 @@
     },
     {
       "symbol": "M:sl.m(I)V",
-      "renamedSymbol": "M:CipherPacketBuffer.m(I)V",
+      "renamedSymbol": "M:CipherPacketBuffer.startBitAccess(I)V",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "startBitAccess",
       "declaration": {
         "file": "sl.java",
         "start": 8711,
@@ -355271,9 +355423,9 @@
     },
     {
       "symbol": "M:ua.a(II)[B",
-      "renamedSymbol": "M:SectorCacheStore.a(II)[B",
+      "renamedSymbol": "M:SectorCacheStore.read(II)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "read",
       "declaration": {
         "file": "ua.java",
         "start": 9237,
@@ -355282,9 +355434,9 @@
     },
     {
       "symbol": "M:ua.a(II[BI)Z",
-      "renamedSymbol": "M:SectorCacheStore.a(II[BI)Z",
+      "renamedSymbol": "M:SectorCacheStore.write(II[BI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "write",
       "declaration": {
         "file": "ua.java",
         "start": 14667,
@@ -355293,9 +355445,9 @@
     },
     {
       "symbol": "M:ua.a(IZBI[B)Z",
-      "renamedSymbol": "M:SectorCacheStore.a(IZBI[B)Z",
+      "renamedSymbol": "M:SectorCacheStore.writeSectorChain(IZBI[B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeSectorChain",
       "declaration": {
         "file": "ua.java",
         "start": 331,
@@ -355304,9 +355456,9 @@
     },
     {
       "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
-      "renamedSymbol": "M:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I",
+      "renamedSymbol": "M:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findLastSubstringFrom",
       "declaration": {
         "file": "ua.java",
         "start": 16374,
@@ -405222,7 +405374,7 @@
     },
     {
       "symbol": "P:ke.a(IIIII)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(IIIII)V#0",
+      "renamedSymbol": "P:BufferedSocket.pushIntersectedClip(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -405233,7 +405385,7 @@
     },
     {
       "symbol": "P:ke.a(IIIII)V#1",
-      "renamedSymbol": "P:BufferedSocket.a(IIIII)V#1",
+      "renamedSymbol": "P:BufferedSocket.pushIntersectedClip(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -405244,7 +405396,7 @@
     },
     {
       "symbol": "P:ke.a(IIIII)V#2",
-      "renamedSymbol": "P:BufferedSocket.a(IIIII)V#2",
+      "renamedSymbol": "P:BufferedSocket.pushIntersectedClip(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -405255,7 +405407,7 @@
     },
     {
       "symbol": "P:ke.a(IIIII)V#3",
-      "renamedSymbol": "P:BufferedSocket.a(IIIII)V#3",
+      "renamedSymbol": "P:BufferedSocket.pushIntersectedClip(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -405266,7 +405418,7 @@
     },
     {
       "symbol": "P:ke.a(IIIII)V#4",
-      "renamedSymbol": "P:BufferedSocket.a(IIIII)V#4",
+      "renamedSymbol": "P:BufferedSocket.pushIntersectedClip(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -405321,7 +405473,7 @@
     },
     {
       "symbol": "P:ke.a(ILsi;)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(ILQuickChatPhraseDefinition;)V#0",
+      "renamedSymbol": "P:BufferedSocket.setQuickChatPlaceholder(ILQuickChatPhraseDefinition;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -405332,7 +405484,7 @@
     },
     {
       "symbol": "P:ke.a(ILsi;)V#1",
-      "renamedSymbol": "P:BufferedSocket.a(ILQuickChatPhraseDefinition;)V#1",
+      "renamedSymbol": "P:BufferedSocket.setQuickChatPlaceholder(ILQuickChatPhraseDefinition;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -422283,7 +422435,7 @@
     },
     {
       "symbol": "P:ob.a(ILkm;)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(ILGameSession;)V#0",
+      "renamedSymbol": "P:PacketBuffer.initializeTutorialState(ILGameSession;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -422294,7 +422446,7 @@
     },
     {
       "symbol": "P:ob.a(ILkm;)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(ILGameSession;)V#1",
+      "renamedSymbol": "P:PacketBuffer.initializeTutorialState(ILGameSession;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -422712,7 +422864,7 @@
     },
     {
       "symbol": "P:ob.g(B)I#0",
-      "renamedSymbol": "P:PacketBuffer.g(B)I#0",
+      "renamedSymbol": "P:PacketBuffer.getAccountRequestType(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438618,7 +438770,7 @@
     },
     {
       "symbol": "P:sl.a(IILfs;I)Llp;#0",
-      "renamedSymbol": "P:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#0",
+      "renamedSymbol": "P:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438629,7 +438781,7 @@
     },
     {
       "symbol": "P:sl.a(IILfs;I)Llp;#1",
-      "renamedSymbol": "P:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#1",
+      "renamedSymbol": "P:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438640,7 +438792,7 @@
     },
     {
       "symbol": "P:sl.a(IILfs;I)Llp;#2",
-      "renamedSymbol": "P:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#2",
+      "renamedSymbol": "P:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -438651,7 +438803,7 @@
     },
     {
       "symbol": "P:sl.a(IILfs;I)Llp;#3",
-      "renamedSymbol": "P:CipherPacketBuffer.a(IILPlayer;I)LMenuList;#3",
+      "renamedSymbol": "P:CipherPacketBuffer.createFleetCountBar(IILPlayer;I)LMenuList;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -438662,7 +438814,7 @@
     },
     {
       "symbol": "P:sl.a(ILvm;)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.a(ILQuickChatMenu;)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.installQuickChatMenu(ILQuickChatMenu;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438673,7 +438825,7 @@
     },
     {
       "symbol": "P:sl.a(ILvm;)V#1",
-      "renamedSymbol": "P:CipherPacketBuffer.a(ILQuickChatMenu;)V#1",
+      "renamedSymbol": "P:CipherPacketBuffer.installQuickChatMenu(ILQuickChatMenu;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438684,7 +438836,7 @@
     },
     {
       "symbol": "P:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438695,7 +438847,7 @@
     },
     {
       "symbol": "P:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
-      "renamedSymbol": "P:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
+      "renamedSymbol": "P:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438706,7 +438858,7 @@
     },
     {
       "symbol": "P:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
-      "renamedSymbol": "P:CipherPacketBuffer.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
+      "renamedSymbol": "P:CipherPacketBuffer.openGameWebPage(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -438717,7 +438869,7 @@
     },
     {
       "symbol": "P:sl.a([IB)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.a([IB)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.setIsaacSeed([IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438728,7 +438880,7 @@
     },
     {
       "symbol": "P:sl.a([IB)V#1",
-      "renamedSymbol": "P:CipherPacketBuffer.a([IB)V#1",
+      "renamedSymbol": "P:CipherPacketBuffer.setIsaacSeed([IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438739,7 +438891,7 @@
     },
     {
       "symbol": "P:sl.b(BI)I#0",
-      "renamedSymbol": "P:CipherPacketBuffer.b(BI)I#0",
+      "renamedSymbol": "P:CipherPacketBuffer.readBits(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438750,7 +438902,7 @@
     },
     {
       "symbol": "P:sl.b(BI)I#1",
-      "renamedSymbol": "P:CipherPacketBuffer.b(BI)I#1",
+      "renamedSymbol": "P:CipherPacketBuffer.readBits(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438761,7 +438913,7 @@
     },
     {
       "symbol": "P:sl.b(III[B)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.b(III[B)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.readBytesIsaac(III[B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438772,7 +438924,7 @@
     },
     {
       "symbol": "P:sl.b(III[B)V#1",
-      "renamedSymbol": "P:CipherPacketBuffer.b(III[B)V#1",
+      "renamedSymbol": "P:CipherPacketBuffer.readBytesIsaac(III[B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438783,7 +438935,7 @@
     },
     {
       "symbol": "P:sl.b(III[B)V#2",
-      "renamedSymbol": "P:CipherPacketBuffer.b(III[B)V#2",
+      "renamedSymbol": "P:CipherPacketBuffer.readBytesIsaac(III[B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -438794,7 +438946,7 @@
     },
     {
       "symbol": "P:sl.b(III[B)V#3",
-      "renamedSymbol": "P:CipherPacketBuffer.b(III[B)V#3",
+      "renamedSymbol": "P:CipherPacketBuffer.readBytesIsaac(III[B)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -438805,7 +438957,7 @@
     },
     {
       "symbol": "P:sl.h(B)I#0",
-      "renamedSymbol": "P:CipherPacketBuffer.h(B)I#0",
+      "renamedSymbol": "P:CipherPacketBuffer.readOpcode(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438816,7 +438968,7 @@
     },
     {
       "symbol": "P:sl.h(II)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.h(II)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.writeOpcode(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438827,7 +438979,7 @@
     },
     {
       "symbol": "P:sl.h(II)V#1",
-      "renamedSymbol": "P:CipherPacketBuffer.h(II)V#1",
+      "renamedSymbol": "P:CipherPacketBuffer.writeOpcode(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438838,7 +438990,7 @@
     },
     {
       "symbol": "P:sl.i(B)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.i(B)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.finishBitAccess(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438849,7 +439001,7 @@
     },
     {
       "symbol": "P:sl.j(B)Le;#0",
-      "renamedSymbol": "P:CipherPacketBuffer.j(B)LAccountFieldValue;#0",
+      "renamedSymbol": "P:CipherPacketBuffer.createCurrentAccountTextValue(B)LAccountFieldValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438871,7 +439023,7 @@
     },
     {
       "symbol": "P:sl.m(I)V#0",
-      "renamedSymbol": "P:CipherPacketBuffer.m(I)V#0",
+      "renamedSymbol": "P:CipherPacketBuffer.startBitAccess(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447671,7 +447823,7 @@
     },
     {
       "symbol": "P:ua.a(II)[B#0",
-      "renamedSymbol": "P:SectorCacheStore.a(II)[B#0",
+      "renamedSymbol": "P:SectorCacheStore.read(II)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447682,7 +447834,7 @@
     },
     {
       "symbol": "P:ua.a(II)[B#1",
-      "renamedSymbol": "P:SectorCacheStore.a(II)[B#1",
+      "renamedSymbol": "P:SectorCacheStore.read(II)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -447693,7 +447845,7 @@
     },
     {
       "symbol": "P:ua.a(II[BI)Z#0",
-      "renamedSymbol": "P:SectorCacheStore.a(II[BI)Z#0",
+      "renamedSymbol": "P:SectorCacheStore.write(II[BI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447704,7 +447856,7 @@
     },
     {
       "symbol": "P:ua.a(II[BI)Z#1",
-      "renamedSymbol": "P:SectorCacheStore.a(II[BI)Z#1",
+      "renamedSymbol": "P:SectorCacheStore.write(II[BI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -447715,7 +447867,7 @@
     },
     {
       "symbol": "P:ua.a(II[BI)Z#2",
-      "renamedSymbol": "P:SectorCacheStore.a(II[BI)Z#2",
+      "renamedSymbol": "P:SectorCacheStore.write(II[BI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -447726,7 +447878,7 @@
     },
     {
       "symbol": "P:ua.a(II[BI)Z#3",
-      "renamedSymbol": "P:SectorCacheStore.a(II[BI)Z#3",
+      "renamedSymbol": "P:SectorCacheStore.write(II[BI)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -447737,7 +447889,7 @@
     },
     {
       "symbol": "P:ua.a(IZBI[B)Z#0",
-      "renamedSymbol": "P:SectorCacheStore.a(IZBI[B)Z#0",
+      "renamedSymbol": "P:SectorCacheStore.writeSectorChain(IZBI[B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447748,7 +447900,7 @@
     },
     {
       "symbol": "P:ua.a(IZBI[B)Z#1",
-      "renamedSymbol": "P:SectorCacheStore.a(IZBI[B)Z#1",
+      "renamedSymbol": "P:SectorCacheStore.writeSectorChain(IZBI[B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -447759,7 +447911,7 @@
     },
     {
       "symbol": "P:ua.a(IZBI[B)Z#2",
-      "renamedSymbol": "P:SectorCacheStore.a(IZBI[B)Z#2",
+      "renamedSymbol": "P:SectorCacheStore.writeSectorChain(IZBI[B)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -447770,7 +447922,7 @@
     },
     {
       "symbol": "P:ua.a(IZBI[B)Z#3",
-      "renamedSymbol": "P:SectorCacheStore.a(IZBI[B)Z#3",
+      "renamedSymbol": "P:SectorCacheStore.writeSectorChain(IZBI[B)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -447781,7 +447933,7 @@
     },
     {
       "symbol": "P:ua.a(IZBI[B)Z#4",
-      "renamedSymbol": "P:SectorCacheStore.a(IZBI[B)Z#4",
+      "renamedSymbol": "P:SectorCacheStore.writeSectorChain(IZBI[B)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -447792,7 +447944,7 @@
     },
     {
       "symbol": "P:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#0",
-      "renamedSymbol": "P:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#0",
+      "renamedSymbol": "P:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -447803,7 +447955,7 @@
     },
     {
       "symbol": "P:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#1",
-      "renamedSymbol": "P:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#1",
+      "renamedSymbol": "P:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -447814,7 +447966,7 @@
     },
     {
       "symbol": "P:ua.a(Ljava/lang/String;Ljava/lang/String;I)I#2",
-      "renamedSymbol": "P:SectorCacheStore.a(Ljava/lang/String;Ljava/lang/String;I)I#2",
+      "renamedSymbol": "P:SectorCacheStore.findLastSubstringFrom(Ljava/lang/String;Ljava/lang/String;I)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -482183,7 +482335,7 @@
       "original": "bb.java",
       "renamed": "LobbyRoomControlsSupport.java",
       "inputSha256": "e469f2b3aa7aa80ccfdbf04fa775c29297878d4f865e02d5523893e085814d74",
-      "outputSha256": "45a41181d66c5f35c002011f25a5d8b52171f1ec9d8e90d2d87e01c197b5b897",
+      "outputSha256": "a961890b7549f288d78c2b734d1b9201359cd69934586772a42faa3839dd21eb",
       "edits": [
         {
           "start": 50,
@@ -482310,6 +482462,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 1703,
+          "end": 1704,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1729,
@@ -483304,7 +483463,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "bc0596fb5ea8c4868ea28ba171683bce5f537f5a331fff3d8fa0fdc58f930c23",
+      "outputSha256": "eb7ab64d02aa6ee27e8126df8d9bf72ea9a134ddd48558cb92301cab96b76de9",
       "edits": [
         {
           "start": 50,
@@ -483830,6 +483989,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 13629,
+          "end": 13630,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 13722,
@@ -490134,7 +490300,7 @@
       "original": "bo.java",
       "renamed": "AccountNoticeDialog.java",
       "inputSha256": "84768556095b83c8c37d13638f944dacccd0f3396ff38e480b0841a201690ce6",
-      "outputSha256": "a4c8834a717b92557894f82da5615f734e471e2132bd6b3b48d321c306790b0e",
+      "outputSha256": "4b6a44475f2e135ed92c19241cde9b57d16b2d906a2d53b4d5c6101d7eaa3bff",
       "edits": [
         {
           "start": 50,
@@ -490340,6 +490506,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 2470,
+          "end": 2471,
+          "symbol": "M:sl.a(ILvm;)V",
+          "original": "a",
+          "renamed": "installQuickChatMenu"
+        },
+        {
           "start": 2489,
           "end": 2491,
           "symbol": "C:of",
@@ -490492,6 +490665,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 4649,
+          "end": 4650,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 4678,
@@ -495451,7 +495631,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "740072e39d91de3e3c60555818ffae1bc8c6cbba2d89bade1da50c3e8b0707c6",
+      "outputSha256": "9882ee7c7622bc70caa4dedc625b2385ecf75117d29153e68944ff70dbefcd9f",
       "edits": [
         {
           "start": 50,
@@ -496070,6 +496250,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 5820,
+          "end": 5821,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 5854,
           "end": 5856,
           "symbol": "C:ac",
@@ -496082,6 +496269,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 5889,
+          "end": 5890,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 5911,
@@ -496110,6 +496304,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 6055,
+          "end": 6056,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 6086,
@@ -503253,7 +503454,7 @@
       "original": "cp.java",
       "renamed": "CanvasResizeController.java",
       "inputSha256": "805c71dace3027164d7d0abbc99687fdf8d9622553ac02b2137e4e568f167f46",
-      "outputSha256": "2806848d0b4dd219a6b0bf8ec6544cf4a30688c3370105408f9fce051bc34783",
+      "outputSha256": "572f5ed9c7405487b014eaeabb0d7612a337b2520e324f70361ffbc11960bd05",
       "edits": [
         {
           "start": 50,
@@ -503324,6 +503525,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 1138,
+          "end": 1139,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1167,
@@ -505000,7 +505208,7 @@
       "original": "d.java",
       "renamed": "ClientPacketFlushSupport.java",
       "inputSha256": "ab618e4226766859014f80c779a54120af86ce8bf0746bcafe7ce6aa69c074bf",
-      "outputSha256": "e2d5dcd1bccab39e041fbb516be866526034662ea56d4d32df5b3e01e27cc059",
+      "outputSha256": "e7e0a9def8e87d20be463e0cf562f4fe90fa38df6d2124f7ffe3aea0cd63660a",
       "edits": [
         {
           "start": 89,
@@ -505211,6 +505419,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 2857,
+          "end": 2858,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 2912,
@@ -505449,6 +505664,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 5505,
+          "end": 5506,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 5560,
@@ -512597,7 +512819,7 @@
       "original": "dd.java",
       "renamed": "ChatMessageFactory.java",
       "inputSha256": "19d48c7efdac17adb6a531d8dfff28da779883bfffe2a72a8d66cd88a1d80914",
-      "outputSha256": "34809fa134bd5bfdeee7643a0eeea493f0f38b34bc02115641d6579f4a67f312",
+      "outputSha256": "30e82c68ef704727923759e0f5e8f9df96119578176a6fb53abce9e1163e022a",
       "edits": [
         {
           "start": 50,
@@ -513006,6 +513228,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 6269,
+          "end": 6270,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 6300,
           "end": 6301,
           "symbol": "M:ob.c(IB)V",
@@ -513138,7 +513367,7 @@
       "original": "df.java",
       "renamed": "DualLinkNode.java",
       "inputSha256": "a39b58782d973db98643b12e3d40aa2fae23abb6948c840ba5d8b06dd39a365d",
-      "outputSha256": "31e9774d72edda0281f48e0c1acac40f8eb7f1fee2a42856ddd36b29de664332",
+      "outputSha256": "91920defa2e306e4b1bfeca0ada59b84c7c1af50102f86dd9721a0af0fe38b7d",
       "edits": [
         {
           "start": 44,
@@ -513244,6 +513473,34 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1233,
+          "end": 1234,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1585,
+          "end": 1586,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1633,
+          "end": 1634,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1781,
+          "end": 1782,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 2747,
@@ -513827,7 +514084,7 @@
       "original": "di.java",
       "renamed": "FleetTrailPoint.java",
       "inputSha256": "fd8e83ffb38f4d4a0d13dc804f92389a188a5c9559da34d60304b86b8b7fb614",
-      "outputSha256": "99011d5307828667404982ebb688333042f629b9729349c7acc14676c739e0a9",
+      "outputSha256": "a702e22fcc47b540a245ee79ce2ddfe1318bf178f35d9528a040dc0ca4556e9e",
       "edits": [
         {
           "start": 50,
@@ -514073,6 +514330,13 @@
           "symbol": "C:sa",
           "original": "sa",
           "renamed": "SpriteWipeSupport"
+        },
+        {
+          "start": 1948,
+          "end": 1949,
+          "symbol": "M:sl.h(B)I",
+          "original": "h",
+          "renamed": "readOpcode"
         },
         {
           "start": 1977,
@@ -514535,6 +514799,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 7624,
+          "end": 7625,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 7633,
@@ -517157,7 +517428,7 @@
       "original": "dn.java",
       "renamed": "DualLinkDequeSequence.java",
       "inputSha256": "9273bff7b1ed04de92cf8de79e4d0398c0582e1e2203a09d0573575ad213c8ad",
-      "outputSha256": "da2a80a0e4bc2dd12c6ad7b41dd347729b49dd866070890d51c9ac5c962f2368",
+      "outputSha256": "12ab3c751dad50d275a27bb29fb17eb2d01c2f16d58ce58221cfd5d157928601",
       "edits": [
         {
           "start": 50,
@@ -517249,6 +517520,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1935,
+          "end": 1936,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1966,
@@ -520063,7 +520341,7 @@
       "original": "ec.java",
       "renamed": "UsernameAvailabilityValidator.java",
       "inputSha256": "d920473148bca1519432704dfbe72f17927a010a8cdfdd0700b4f24fd9a3d96b",
-      "outputSha256": "aab5fc698ccd2fe78a20c7871d59aeaa79cb885b83d51e329851f0dd4c630099",
+      "outputSha256": "8938af728f4bb89639acfa5d365838204647db9e22c565b18d068a9ebb76f025",
       "edits": [
         {
           "start": 50,
@@ -520654,6 +520932,13 @@
           "renamed": "MeshData"
         },
         {
+          "start": 7989,
+          "end": 7990,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
           "start": 8126,
           "end": 8128,
           "symbol": "C:ng",
@@ -520687,6 +520972,13 @@
           "symbol": "C:sr",
           "original": "sr",
           "renamed": "MeshData"
+        },
+        {
+          "start": 8277,
+          "end": 8278,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 8321,
@@ -520731,6 +521023,13 @@
           "renamed": "readPackedShortArray"
         },
         {
+          "start": 8539,
+          "end": 8540,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
           "start": 8582,
           "end": 8584,
           "symbol": "C:tm",
@@ -520771,6 +521070,13 @@
           "symbol": "M:tm.a(BLsl;I[S)[S",
           "original": "a",
           "renamed": "readPackedShortArray"
+        },
+        {
+          "start": 8874,
+          "end": 8875,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 8919,
@@ -520855,6 +521161,13 @@
           "symbol": "M:tm.a(BLsl;I[S)[S",
           "original": "a",
           "renamed": "readPackedShortArray"
+        },
+        {
+          "start": 9370,
+          "end": 9371,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 9415,
@@ -536223,7 +536536,7 @@
       "original": "eg.java",
       "renamed": "BattleEvent.java",
       "inputSha256": "3e9b09d1e9b6391d036a1b97b242527f06cd87576613db806418ba9db736eb3b",
-      "outputSha256": "77e4265b559249c5331c617902591e2c5e7e03803782d42ce744cc117d7779bd",
+      "outputSha256": "e5d7feeaa32701639661676e51b175be262b92f2dde34d6fede21398b85d7258",
       "edits": [
         {
           "start": 50,
@@ -536399,6 +536712,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 1584,
+          "end": 1585,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1613,
@@ -537100,7 +537420,7 @@
       "original": "ei.java",
       "renamed": "LobbyUiSupport.java",
       "inputSha256": "179bd9af3092e8e49d527198f9c9208c5bd3f3cd0e4b8c22755aecc215ffc569",
-      "outputSha256": "8c72d67479fa33f3cc5f99c65d28a32765ccc92daec55d7bb69ae9a4a67fb56d",
+      "outputSha256": "0b3fc0c06ecebf45fb3a74d1bc5e8e8b5e86b2b39f59e06a2384c9fe07754599",
       "edits": [
         {
           "start": 50,
@@ -537458,6 +537778,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 4694,
+          "end": 4695,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 4726,
@@ -558485,7 +558812,7 @@
       "original": "gd.java",
       "renamed": "IntroLoadingSupport.java",
       "inputSha256": "218988e0d019053c1cc9727ef02460a32e3d19ee6218ded410c07eb398b9fa2d",
-      "outputSha256": "dee1cd18ae89c7b3f736120216f861b2aafae6f462c31fcf74eeb768441e6b80",
+      "outputSha256": "d2eac37966e94af06b6cedecbdb78c7ea2dd97ac7bd8168d2dd8dcda3e4f9002",
       "edits": [
         {
           "start": 50,
@@ -558710,6 +559037,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 1083,
+          "end": 1084,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1112,
@@ -564823,7 +565157,7 @@
       "original": "gn.java",
       "renamed": "StatefulWidgetTheme.java",
       "inputSha256": "15098b5f6647d50b3af68643175ec0e0658a8dc5f770cf2b4508f8e10f430969",
-      "outputSha256": "a6d0204e1efba40d2b4cff412f808302d0d75544804cef79f7dacdb118a9d858",
+      "outputSha256": "2740e88fbf98e29d9e65fdca96ee469951d6d76f159a5960cf92018f7b3eaaa3",
       "edits": [
         {
           "start": 50,
@@ -565909,6 +566243,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 13850,
+          "end": 13851,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 14106,
@@ -584825,7 +585166,7 @@
       "original": "ih.java",
       "renamed": "AccountNoticeKind.java",
       "inputSha256": "b2bd8bb082f01fa050afc8e1817c252e6db7d022a0532adfa664cf92db72dd82",
-      "outputSha256": "2de20973c79a9473717a552aa684a18e8270c79f2868f1ce4f286d40e22464be",
+      "outputSha256": "8ac1587496f4f7ffda54b2f7f4db3144bacb8878c68c73682de343ad0799cde5",
       "edits": [
         {
           "start": 50,
@@ -584882,6 +585223,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 461,
+          "end": 462,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 492,
@@ -589090,7 +589438,7 @@
       "original": "ip.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "620e717ee176002a9a17279ea850077dd8bb0aa2a63bb0052836952541344506",
-      "outputSha256": "de8f755d49193204052d08a98c0f20098d5f2e9c37871d1f202e021238ccccd5",
+      "outputSha256": "60bc8a345caa1c89fac661e85eb43d9d43fb0be868e86fc0ae23008c84d4e68c",
       "edits": [
         {
           "start": 71,
@@ -589170,6 +589518,20 @@
           "renamed": "MeshMaterial"
         },
         {
+          "start": 1276,
+          "end": 1277,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1384,
+          "end": 1385,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
           "start": 1424,
           "end": 1426,
           "symbol": "C:hc",
@@ -589191,6 +589553,13 @@
           "renamed": "readBoolean"
         },
         {
+          "start": 1637,
+          "end": 1638,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
           "start": 1651,
           "end": 1652,
           "symbol": "C:a",
@@ -589210,6 +589579,55 @@
           "symbol": "C:hc",
           "original": "hc",
           "renamed": "MeshMaterial"
+        },
+        {
+          "start": 1789,
+          "end": 1790,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1829,
+          "end": 1830,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1890,
+          "end": 1891,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1929,
+          "end": 1930,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1968,
+          "end": 1969,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 2008,
+          "end": 2009,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 2048,
+          "end": 2049,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 2649,
@@ -592342,7 +592760,7 @@
       "original": "je.java",
       "renamed": "LobbyCommandSupport.java",
       "inputSha256": "56be762c6fc30c9df0bea7fd716c822ca94ead425bb91678af4015385c4b4976",
-      "outputSha256": "30128ceb6992e08cbf062604ec2427bad311c4cdacf5bd49df1daf680e6781a9",
+      "outputSha256": "c4f3cf0e259b919d501cb158ba75592c0d29628b15230c28c27025025f0d1c7c",
       "edits": [
         {
           "start": 50,
@@ -592455,6 +592873,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 1499,
+          "end": 1500,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1557,
@@ -594047,7 +594472,7 @@
       "original": "ji.java",
       "renamed": "DateInputWidget.java",
       "inputSha256": "1334e228494e0c4354456456e93288a6e3f069c67c179f8ffa285c8fd6d2d381",
-      "outputSha256": "35f5ed4cac40fb211b3c95c0c9cf181ddfe8382524f54bf5487aa88c1341df2b",
+      "outputSha256": "1374f4bb7e7b3cc2d7985a74302b7e7c7e514cc6f04c32911d53880fa91536a4",
       "edits": [
         {
           "start": 53,
@@ -594358,11 +594783,25 @@
           "renamed": "SectorCacheStore"
         },
         {
+          "start": 4922,
+          "end": 4923,
+          "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "findLastSubstringFrom"
+        },
+        {
           "start": 4962,
           "end": 4964,
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 4965,
+          "end": 4966,
+          "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "findLastSubstringFrom"
         },
         {
           "start": 5289,
@@ -604713,7 +605152,7 @@
       "original": "kb.java",
       "renamed": "GradientMenuLabel.java",
       "inputSha256": "58cc5c04d0e33888b77d6a325b2ed8a646d3deef9bbb068a05fe480648bb96bb",
-      "outputSha256": "3fa9e1f8cc297314a6620ae409a26d788f616654831a2144c2c1424ff5d0e917",
+      "outputSha256": "c39491fa468fee218cd29e0257b825ff4b93a297cf9672da80a4977929229fe0",
       "edits": [
         {
           "start": 50,
@@ -605857,6 +606296,13 @@
           "renamed": "readLocalPlayerName"
         },
         {
+          "start": 8415,
+          "end": 8416,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 8444,
           "end": 8445,
           "symbol": "M:ob.c(IB)V",
@@ -606690,7 +607136,7 @@
       "original": "ke.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "6f8df033730a204dc91e2b839a37d368e35f2c979dd5fa4e2103ebd20851ed6c",
-      "outputSha256": "58bb51948acc8e910cf56346c0026d8d0ff2f630c08105d68b5f5a9166d2f62b",
+      "outputSha256": "fdaa723819a0420577216c9ce01e333b84b7fd83761fe903655db4e4c3040507",
       "edits": [
         {
           "start": 69,
@@ -606777,6 +607223,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 3394,
+          "end": 3395,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
+        },
+        {
           "start": 3714,
           "end": 3715,
           "symbol": "M:ke.b(B)V",
@@ -606803,6 +607256,13 @@
           "symbol": "M:ke.b(I)V",
           "original": "b",
           "renamed": "close"
+        },
+        {
+          "start": 4533,
+          "end": 4534,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 4605,
@@ -606894,6 +607354,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 10479,
+          "end": 10480,
+          "symbol": "M:ke.a(ILsi;)V",
+          "original": "a",
+          "renamed": "setQuickChatPlaceholder"
         },
         {
           "start": 10493,
@@ -612434,7 +612901,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "531b96746ddbdd6c4893d9234367daa52a5b78fbe106ffbf36a2dad2bc5937d9",
+      "outputSha256": "4af766e7c5f93ee34ffac54d005f5b2741c562ba7f069b830c9ca06e309b9d93",
       "edits": [
         {
           "start": 50,
@@ -613922,6 +614389,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 34035,
+          "end": 34036,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 34079,
           "end": 34086,
           "symbol": "F:ob.field_j:I",
@@ -615151,6 +615625,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 50406,
+          "end": 50407,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 50647,
           "end": 50648,
           "symbol": "C:r",
@@ -615671,6 +616152,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 61430,
+          "end": 61431,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 61520,
           "end": 61527,
           "symbol": "F:ob.field_j:I",
@@ -615944,6 +616432,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 65514,
+          "end": 65515,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 65744,
           "end": 65745,
           "symbol": "C:r",
@@ -616210,6 +616705,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 73775,
+          "end": 73776,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 73804,
           "end": 73805,
           "symbol": "M:ob.c(IB)V",
@@ -616271,6 +616773,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 74813,
+          "end": 74814,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 74840,
@@ -617335,6 +617844,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 100927,
+          "end": 100928,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 101157,
@@ -618900,6 +619416,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 128721,
+          "end": 128722,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 128752,
           "end": 128753,
           "symbol": "M:ob.c(IB)V",
@@ -620142,6 +620665,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 148575,
+          "end": 148576,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 148602,
           "end": 148609,
           "symbol": "F:ob.field_j:I",
@@ -620238,6 +620768,13 @@
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 149192,
+          "end": 149193,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 149221,
@@ -620733,6 +621270,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 158863,
+          "end": 158864,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 158892,
           "end": 158899,
           "symbol": "F:ob.field_j:I",
@@ -620892,6 +621436,13 @@
           "symbol": "C:ob",
           "original": "ob",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 162334,
+          "end": 162335,
+          "symbol": "M:ob.a(ILkm;)V",
+          "original": "a",
+          "renamed": "initializeTutorialState"
         },
         {
           "start": 162412,
@@ -621702,7 +622253,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "400e31a8554235255544c62c957fb7d8c95b5c847e934bbf269287c00d0bfc4d",
+      "outputSha256": "e282e5f701a019c0244c26651dc5ef1d2c87f5c4a7c412f36cb4e048f7a2eebd",
       "edits": [
         {
           "start": 50,
@@ -626028,6 +626579,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 77379,
+          "end": 77380,
+          "symbol": "M:sl.a(IILfs;I)Llp;",
+          "original": "a",
+          "renamed": "createFleetCountBar"
         },
         {
           "start": 77431,
@@ -650769,7 +651327,7 @@
       "original": "md.java",
       "renamed": "StripedProgressWidget.java",
       "inputSha256": "2e554a21872f3bf46ffae515f88464fda482d64d721fd79041ef0db91f520983",
-      "outputSha256": "b24470c501913148af4f462b76a766e23c5a1ee1f31068bfab2d26429808ecde",
+      "outputSha256": "55c6168004815693779342b81a9247b2b8663e25e3d924993baf1c8b5a619d3e",
       "edits": [
         {
           "start": 50,
@@ -651038,6 +651596,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 5381,
+          "end": 5382,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
+        },
+        {
           "start": 5600,
           "end": 5601,
           "symbol": "M:bi.f(II)V",
@@ -651246,6 +651811,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 8835,
+          "end": 8836,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 8998,
@@ -659799,7 +660371,7 @@
       "original": "ne.java",
       "renamed": "BattleContribution.java",
       "inputSha256": "9fedd35967e4eca7648a45799c1ea9a35e1eb0c80ed721241f8c1e5708198f55",
-      "outputSha256": "7d7193b9936d785ebd5599056c662d250b84a3d89a5c68d38e02d87acce96576",
+      "outputSha256": "cacaef18ddfceb78dca77581146e82057b8b41f73fd125a82bd721dd3ffc111b",
       "edits": [
         {
           "start": 50,
@@ -660262,6 +660834,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 5065,
+          "end": 5066,
+          "symbol": "M:ke.a(ILsi;)V",
+          "original": "a",
+          "renamed": "setQuickChatPlaceholder"
         },
         {
           "start": 5096,
@@ -661089,7 +661668,7 @@
       "original": "ng.java",
       "renamed": "PacketBooleanSupport.java",
       "inputSha256": "bd920ed03212121dbb40a3704786f861a44acabb6fb3e40f7b1129a58dcb7985",
-      "outputSha256": "4bc1679ced9d3315899bec6df4c0327a3b12a5fb06fec06fdc7f3147e1252cf0",
+      "outputSha256": "6dea1e47908489547d2edb996668856d4847708cdceb8aeed1cfe268fb4337ff",
       "edits": [
         {
           "start": 50,
@@ -661111,6 +661690,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 498,
+          "end": 499,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 1014,
@@ -661935,7 +662521,7 @@
       "original": "nj.java",
       "renamed": "ClientDialogSupport.java",
       "inputSha256": "518ce20da85be3484511bb0904de127e71f1be35d46e5959db1ba83ba0645f37",
-      "outputSha256": "de9aa2325ac9e0dd1cd3e72f06390628118eaa0db53a73425930e78b25dccc80",
+      "outputSha256": "8ab1d003dd17c8a31ae4362ba543459c51525f3d98c7004ac2af2a3bf47c02e7",
       "edits": [
         {
           "start": 50,
@@ -662209,6 +662795,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 2318,
+          "end": 2319,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 2349,
@@ -665815,7 +666408,7 @@
       "original": "ns.java",
       "renamed": "AccountStatusDialog.java",
       "inputSha256": "abcf079be7100ece226299bab9f84307d7053264f02834b7eebacd1de7971368",
-      "outputSha256": "e2c0fe97eeec4379f09f38226d6ff693c329ad2c5781f1b0da5ad0188ff4c930",
+      "outputSha256": "749f4392e9aab11e5613ce62b5a155ff64a6e6cba78d1b985e9b63037a3b5bb9",
       "edits": [
         {
           "start": 44,
@@ -666033,6 +666626,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 2214,
+          "end": 2215,
+          "symbol": "M:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "openGameWebPage"
         },
         {
           "start": 2242,
@@ -666397,7 +666997,7 @@
       "original": "o.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "a3117040d0ba6cf6d1b93a8896b95cf37b7123f15e0d5307927e1ccdf6207591",
-      "outputSha256": "f459c9805d32c9a241f1b77dd13d0e78a591ff92807425e08be604da5438d52c",
+      "outputSha256": "193d9ac265c423ff856761acccced938908cf50bed0b49ee22e069ac09dba5c0",
       "edits": [
         {
           "start": 44,
@@ -666587,6 +667187,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 2668,
+          "end": 2669,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 2828,
@@ -666888,6 +667495,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 8423,
+          "end": 8424,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 9257,
@@ -667289,6 +667903,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 17077,
+          "end": 17078,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 17108,
           "end": 17115,
           "symbol": "F:ob.field_j:I",
@@ -667553,6 +668174,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 22636,
+          "end": 22637,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 22810,
@@ -668184,7 +668812,7 @@
       "original": "ob.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "64a9c58e54e27b5760caa4cd056514f2aa506d73170f888463019731cda49411",
-      "outputSha256": "e5b04e3a08e9629977d11130eb0086ef36ee70b4d1247aac442ce22ffaea7dd2",
+      "outputSha256": "34628041260e88df596df8e2ed5a4d145449f1ddd271f1679472a27e1bc4c33d",
       "edits": [
         {
           "start": 44,
@@ -668731,6 +669359,13 @@
           "symbol": "F:ob.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 3950,
+          "end": 3951,
+          "symbol": "M:ob.g(B)I",
+          "original": "g",
+          "renamed": "getAccountRequestType"
         },
         {
           "start": 4056,
@@ -670474,6 +671109,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 23022,
+          "end": 23023,
+          "symbol": "M:ob.a(ILkm;)V",
+          "original": "a",
+          "renamed": "initializeTutorialState"
         },
         {
           "start": 23036,
@@ -672812,7 +673454,7 @@
       "original": "oj.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "976948de6ad9f45ab94f9099172da1710f34c35084d3a75bbd760f008635a398",
-      "outputSha256": "b482110fdeb874e301fddabdd25f5d175d49104197079afcae16074d0ed0e8e2",
+      "outputSha256": "d8a54c0b73c606870b20852e6c50dbe9f3bf129614c08f67bec29e515373ec96",
       "edits": [
         {
           "start": 50,
@@ -672913,6 +673555,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 1032,
+          "end": 1033,
+          "symbol": "M:sl.m(I)V",
+          "original": "m",
+          "renamed": "startBitAccess"
+        },
+        {
           "start": 1050,
           "end": 1052,
           "symbol": "C:wc",
@@ -672960,6 +673609,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "UsernameAvailabilityValidator"
+        },
+        {
+          "start": 1351,
+          "end": 1352,
+          "symbol": "M:sl.i(B)V",
+          "original": "i",
+          "renamed": "finishBitAccess"
         },
         {
           "start": 1469,
@@ -677271,7 +677927,7 @@
       "original": "oq.java",
       "renamed": "TextReplacementEntry.java",
       "inputSha256": "0a11a42fde7ae8da09287fc1d2a2441f449f84ed7ce0cde38b8bcef65f4bd29f",
-      "outputSha256": "9ea8f1577b42681d763306401dc2737e9a27b72c17eec7e0f57740ee0327d9d3",
+      "outputSha256": "710eaca6f0e23ee849a41f6491cc19cf1eb4984b9d3b8d70181f99a7d3afbee8",
       "edits": [
         {
           "start": 50,
@@ -677419,6 +678075,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 2145,
+          "end": 2146,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 2174,
@@ -677826,7 +678489,7 @@
       "original": "os.java",
       "renamed": "RoundedMenuPanel.java",
       "inputSha256": "d22b0fb9af399a6e14631d67837bad1e9a6371a9585a61547aaf5363451960fa",
-      "outputSha256": "ba580fcfe34d44fe1f2b166f4c1e78578deb82de13c50246872af31e1903698b",
+      "outputSha256": "1d8e7f386c50fbbcb16bc3fae520ed8cfa8ec9a7e0b7635b7c05ee3e2906b551",
       "edits": [
         {
           "start": 50,
@@ -677890,6 +678553,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 2953,
+          "end": 2954,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 2982,
@@ -678135,6 +678805,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 5791,
+          "end": 5792,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 5822,
@@ -702085,7 +702762,7 @@
       "original": "rf.java",
       "renamed": "AllianceExpiredEvent.java",
       "inputSha256": "585b66425bafbbee93cec3d314c638740ae8ba29d3f031999e7e69c256d03f81",
-      "outputSha256": "25ec7c97565fffa0239636e775aad0894b63bbbe7a4639a104600d1abd53aea4",
+      "outputSha256": "e3df766f243694588820aaaa0dd28537e0b69f6c5186741b3f465fdf71a46d22",
       "edits": [
         {
           "start": 50,
@@ -702142,6 +702819,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 338,
+          "end": 339,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 367,
@@ -705194,7 +705878,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "8211d5725cac9e595fbaaa856b716ed6aecae12c9b91c24ad4086376f7792cb0",
+      "outputSha256": "478d854ec5ef0feb75b3f9b91311a5feee92debb035df0fff50786c3dbaf9d36",
       "edits": [
         {
           "start": 50,
@@ -706457,6 +707141,13 @@
           "renamed": "nextForward"
         },
         {
+          "start": 5973,
+          "end": 5974,
+          "symbol": "M:ua.a(II)[B",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
           "start": 6603,
           "end": 6604,
           "symbol": "C:r",
@@ -706497,6 +707188,20 @@
           "symbol": "M:db.a(I)Ldf;",
           "original": "a",
           "renamed": "pollFirst"
+        },
+        {
+          "start": 8245,
+          "end": 8246,
+          "symbol": "M:ua.a(II[BI)Z",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 8453,
+          "end": 8454,
+          "symbol": "M:ua.a(II)[B",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 8883,
@@ -706728,6 +707433,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 11149,
+          "end": 11150,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 11170,
@@ -719173,7 +719885,7 @@
       "original": "sl.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "b9f8181773bf3cdc42083760a19c5481e66415e0997c746a4f5932a756dbaf30",
-      "outputSha256": "cfe4d4c5bd1f65a0704fa8a5157c7232eacb8257cb3227351a5cfd8f5e5cd84a",
+      "outputSha256": "609d52dcf9a2ea9c97723587c48fedcde6248ca95ca17a38e810434e6a4dc2cd",
       "edits": [
         {
           "start": 50,
@@ -719209,6 +719921,20 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 227,
+          "end": 228,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 560,
+          "end": 561,
+          "symbol": "M:sl.i(B)V",
+          "original": "i",
+          "renamed": "finishBitAccess"
         },
         {
           "start": 825,
@@ -719295,6 +720021,13 @@
           "renamed": "payload"
         },
         {
+          "start": 1962,
+          "end": 1963,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 2021,
           "end": 2028,
           "symbol": "F:ob.field_j:I",
@@ -719335,6 +720068,13 @@
           "symbol": "M:sl.<init>([B)V",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 2284,
+          "end": 2285,
+          "symbol": "M:sl.b(III[B)V",
+          "original": "b",
+          "renamed": "readBytesIsaac"
         },
         {
           "start": 2800,
@@ -719393,6 +720133,13 @@
           "renamed": "AccountFieldValue"
         },
         {
+          "start": 3644,
+          "end": 3645,
+          "symbol": "M:sl.j(B)Le;",
+          "original": "j",
+          "renamed": "createCurrentAccountTextValue"
+        },
+        {
           "start": 3707,
           "end": 3708,
           "symbol": "C:e",
@@ -719449,6 +720196,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 4113,
+          "end": 4114,
+          "symbol": "M:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "openGameWebPage"
+        },
+        {
           "start": 4642,
           "end": 4644,
           "symbol": "C:nq",
@@ -719496,6 +720250,13 @@
           "symbol": "C:lp",
           "original": "lp",
           "renamed": "MenuList"
+        },
+        {
+          "start": 6343,
+          "end": 6344,
+          "symbol": "M:sl.a(IILfs;I)Llp;",
+          "original": "a",
+          "renamed": "createFleetCountBar"
         },
         {
           "start": 6369,
@@ -719624,6 +720385,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 8079,
+          "end": 8080,
+          "symbol": "M:sl.a([IB)V",
+          "original": "a",
+          "renamed": "setIsaacSeed"
+        },
+        {
           "start": 8205,
           "end": 8207,
           "symbol": "C:mh",
@@ -719643,6 +720411,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 8432,
+          "end": 8433,
+          "symbol": "M:sl.h(B)I",
+          "original": "h",
+          "renamed": "readOpcode"
         },
         {
           "start": 8536,
@@ -719680,6 +720455,13 @@
           "renamed": "nextInt"
         },
         {
+          "start": 8711,
+          "end": 8712,
+          "symbol": "M:sl.m(I)V",
+          "original": "m",
+          "renamed": "startBitAccess"
+        },
+        {
           "start": 8786,
           "end": 8793,
           "symbol": "F:ob.field_j:I",
@@ -719687,11 +720469,25 @@
           "renamed": "position"
         },
         {
+          "start": 8840,
+          "end": 8841,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 8880,
           "end": 8887,
           "symbol": "F:ob.field_j:I",
           "original": "field_j",
           "renamed": "position"
+        },
+        {
+          "start": 8922,
+          "end": 8923,
+          "symbol": "M:sl.a(ILvm;)V",
+          "original": "a",
+          "renamed": "installQuickChatMenu"
         },
         {
           "start": 8936,
@@ -719762,6 +720558,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 9376,
+          "end": 9377,
+          "symbol": "M:sl.i(B)V",
+          "original": "i",
+          "renamed": "finishBitAccess"
         },
         {
           "start": 9406,
@@ -733455,7 +734258,7 @@
       "original": "sq.java",
       "renamed": "TutorialScene.java",
       "inputSha256": "654975a5ffc0cb2289965a3b29f1a70c4481dad6ee534ea9a729190872995d6b",
-      "outputSha256": "97004f3c72c1a4904a1a3ba49a70e58a4162809cad9ef3d7d7549f4c3d7ea4c4",
+      "outputSha256": "8ca2651bcbb0b359f78c483de8bb85d9906b09c1ea9da9cdfcd293a70f1e6b23",
       "edits": [
         {
           "start": 50,
@@ -733673,6 +734476,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 5623,
+          "end": 5624,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 5652,
@@ -742450,7 +743260,7 @@
       "original": "ti.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "d8c3c311ca5eb88fb82f5ff2c3675375aca856738a10037a63cf649861a9b8fb",
-      "outputSha256": "44d3665d8535b3b521c6b5ea40baa79fcdad0ada493671b8cca6dbb595e1b112",
+      "outputSha256": "229c13f346d4c1d3bf07f7370dae04e797165fb2ecfd2b21c15e4c8e59dd0301",
       "edits": [
         {
           "start": 71,
@@ -743335,6 +744145,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 8337,
+          "end": 8338,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 8366,
           "end": 8373,
           "symbol": "F:ob.field_j:I",
@@ -743529,7 +744346,7 @@
       "original": "tj.java",
       "renamed": "ArchiveSourceManager.java",
       "inputSha256": "3d00f761aafe27b7cb24740215fbc8dbc3b979dae5c3c4ca97fe439b3b859277",
-      "outputSha256": "a791f1db7c0a94265ccb9a4c9479b8a04868d0a2ccf8fb92fa582f1845681391",
+      "outputSha256": "65d84b08c17e55b2e40c4a60544677953cc30928717608685865df308d5d83f4",
       "edits": [
         {
           "start": 50,
@@ -744050,6 +744867,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 4419,
+          "end": 4420,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 4448,
           "end": 4455,
           "symbol": "F:ob.field_j:I",
@@ -744300,7 +745124,7 @@
       "original": "tk.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "eca478a58df4a052330423acec8de3fbd667f77f8216aa963b5a5ff6a8ca0422",
-      "outputSha256": "e2d744561efbcce12a90ebf2aa495b15a0abca84a6d4c5862a353aabf5ec6071",
+      "outputSha256": "16c365553761bf0aedf190ebce0caf358f0e7e177d3598c6cd9024e98a05f650",
       "edits": [
         {
           "start": 50,
@@ -744457,6 +745281,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 1449,
+          "end": 1450,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 1480,
           "end": 1481,
           "symbol": "M:ob.c(IB)V",
@@ -744497,6 +745328,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 1670,
+          "end": 1671,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 1708,
@@ -744618,6 +745456,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 2900,
+          "end": 2901,
+          "symbol": "M:sl.a(ILvm;)V",
+          "original": "a",
+          "renamed": "installQuickChatMenu"
+        },
+        {
           "start": 3657,
           "end": 3658,
           "symbol": "C:r",
@@ -744637,7 +745482,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "ccbc50eab60f20a927121dd6b0258729aa60acc17865052b84b61f4f45f9ffe2",
+      "outputSha256": "8cb1d3820d0f5be91196efb10a0f0e244b4fe0c78618d995cbba85d8f178fa17",
       "edits": [
         {
           "start": 53,
@@ -744780,6 +745625,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 1953,
+          "end": 1954,
+          "symbol": "M:sl.j(B)Le;",
+          "original": "j",
+          "renamed": "createCurrentAccountTextValue"
+        },
+        {
           "start": 1967,
           "end": 1969,
           "symbol": "C:of",
@@ -744883,6 +745735,13 @@
           "symbol": "C:ob",
           "original": "ob",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2406,
+          "end": 2407,
+          "symbol": "M:ob.g(B)I",
+          "original": "g",
+          "renamed": "getAccountRequestType"
         },
         {
           "start": 2421,
@@ -745242,6 +746101,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 4153,
+          "end": 4154,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 4217,
           "end": 4219,
           "symbol": "C:hr",
@@ -745275,6 +746141,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 4309,
+          "end": 4310,
+          "symbol": "M:sl.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "openGameWebPage"
         },
         {
           "start": 4311,
@@ -748126,6 +748999,13 @@
           "renamed": "SpriteWipeSupport"
         },
         {
+          "start": 24147,
+          "end": 24148,
+          "symbol": "M:sl.b(III[B)V",
+          "original": "b",
+          "renamed": "readBytesIsaac"
+        },
+        {
           "start": 24182,
           "end": 24184,
           "symbol": "C:ue",
@@ -748334,7 +749214,7 @@
       "original": "tm.java",
       "renamed": "NotificationEntry.java",
       "inputSha256": "64b5e6a87e7822357b407e5aa07f794544125c1dc49b70166a77af504f3280d6",
-      "outputSha256": "94ddbe82b60693ed3ba38fd68ffde312fe612bbe5536bad897adcd1946fe12aa",
+      "outputSha256": "2f5b1a6d0cffa0bbcf85c23ebe79b8b3ab70b3270aa9c9d1c7e15b6bae8c44cb",
       "edits": [
         {
           "start": 50,
@@ -748538,6 +749418,34 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 3178,
+          "end": 3179,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3420,
+          "end": 3421,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3468,
+          "end": 3469,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3610,
+          "end": 3611,
+          "symbol": "M:sl.b(BI)I",
+          "original": "b",
+          "renamed": "readBits"
         },
         {
           "start": 4583,
@@ -758778,7 +759686,7 @@
       "original": "ua.java",
       "renamed": "SectorCacheStore.java",
       "inputSha256": "74ba2000f601c71b85f9de4ac6273d002b4596d176b13b8472384d883befe9b8",
-      "outputSha256": "9ec94d18a2cd3010a933d435eda694a214851bc622aefde446a8e8ec0907f13a",
+      "outputSha256": "d7cd93a820d9119fa92c58fcbfa611961e7f36b32aaaa4d70dce14fdf988a844",
       "edits": [
         {
           "start": 69,
@@ -758814,6 +759722,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 331,
+          "end": 332,
+          "symbol": "M:ua.a(IZBI[B)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
         },
         {
           "start": 1263,
@@ -759337,6 +760252,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 9237,
+          "end": 9238,
+          "symbol": "M:ua.a(II)[B",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
           "start": 10283,
           "end": 10284,
           "symbol": "M:ej.a(B)J",
@@ -759603,11 +760525,39 @@
           "renamed": "SectorCacheStore"
         },
         {
+          "start": 14594,
+          "end": 14595,
+          "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "findLastSubstringFrom"
+        },
+        {
+          "start": 14667,
+          "end": 14668,
+          "symbol": "M:ua.a(II[BI)Z",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 15225,
+          "end": 15226,
+          "symbol": "M:ua.a(IZBI[B)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
+        },
+        {
           "start": 15343,
           "end": 15345,
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 15428,
+          "end": 15429,
+          "symbol": "M:ua.a(IZBI[B)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
         },
         {
           "start": 16182,
@@ -759622,6 +760572,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 16374,
+          "end": 16375,
+          "symbol": "M:ua.a(Ljava/lang/String;Ljava/lang/String;I)I",
+          "original": "a",
+          "renamed": "findLastSubstringFrom"
         },
         {
           "start": 17811,
@@ -761523,7 +762480,7 @@
       "original": "uf.java",
       "renamed": "ArchiveLoadStep.java",
       "inputSha256": "1c5a6e08fc9aa9dd7ed7cf032da0c47e7c5c84f00a435ab0d02b8681f21e0558",
-      "outputSha256": "3a3063744397e26f90e72131c24d7a75309ac9e4984d94f67b1736d6aeb14561",
+      "outputSha256": "ccf9d8f8b0e5f45d6ce3762310a3daf3a59aa55b690ad49d2fa22d301ba3e391",
       "edits": [
         {
           "start": 50,
@@ -761608,6 +762565,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 760,
+          "end": 761,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 791,
@@ -761904,7 +762868,7 @@
       "original": "ui.java",
       "renamed": "SolVictoryChecker.java",
       "inputSha256": "0a254280ba5263fd45e7a1ba3a37758f2f2a2a4640c41a461ebee5c449a71ccb",
-      "outputSha256": "e217ce80ab9f5f763b167ccfe9ecf9c408d59dd3d9ae648971b90963b4673c72",
+      "outputSha256": "ef4ff222d5d067a38c718c5887a524b63c6fa24f349f163c7d2486f328cd80ff",
       "edits": [
         {
           "start": 50,
@@ -763503,6 +764467,13 @@
           "renamed": "LobbyOptionSupport"
         },
         {
+          "start": 18521,
+          "end": 18522,
+          "symbol": "M:sl.a([IB)V",
+          "original": "a",
+          "renamed": "setIsaacSeed"
+        },
+        {
           "start": 18523,
           "end": 18525,
           "symbol": "C:qn",
@@ -763529,6 +764500,13 @@
           "symbol": "C:sa",
           "original": "sa",
           "renamed": "SpriteWipeSupport"
+        },
+        {
+          "start": 18741,
+          "end": 18742,
+          "symbol": "M:sl.a([IB)V",
+          "original": "a",
+          "renamed": "setIsaacSeed"
         },
         {
           "start": 18743,
@@ -770037,7 +771015,7 @@
       "original": "vd.java",
       "renamed": "MenuComponent.java",
       "inputSha256": "a0eaa305ca21c65b4838011d6199373a7d2cada9681effa8cd3fdfa108edbe4f",
-      "outputSha256": "5896cf87034e23cdfdfa59eeafdd6628f00983f63757f503563aaed61ff64e02",
+      "outputSha256": "4d1a43db071d8aebf2479129b97e8b6303c25dd3a4795472aa393b6e4c9907c5",
       "edits": [
         {
           "start": 44,
@@ -771426,6 +772404,13 @@
           "renamed": "isNextReflectionCheckReady"
         },
         {
+          "start": 13554,
+          "end": 13555,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
+        },
+        {
           "start": 13596,
           "end": 13603,
           "symbol": "F:ob.field_j:I",
@@ -771747,7 +772732,7 @@
       "original": "vf.java",
       "renamed": "QuaternaryListSequence.java",
       "inputSha256": "853037c3e7164a76fe67095821c78d174335b13a9c5d4821eb35a02e44c8cc6b",
-      "outputSha256": "6ac372a41c7e2594a6db3e861985be44e921580c3b34919d21c3787e6349e038",
+      "outputSha256": "65de415eba9c15525fca0262cd3b0a9a10009a672cd175f504e00f8909339b19",
       "edits": [
         {
           "start": 71,
@@ -772485,6 +773470,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 12402,
+          "end": 12403,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 12449,
@@ -792761,7 +793753,7 @@
       "original": "vn.java",
       "renamed": "BattleSnapshot.java",
       "inputSha256": "da6f4f7540567e6af357d84bd91427010133ff6408158f92d710942a31a5ff46",
-      "outputSha256": "d06f98fa33b4b583517237c311d6be884a1d12446be517cd506c94dfba34541f",
+      "outputSha256": "53cea9b106ad27ad0b3e1f1f0b129f741fc7783e9a87c2ad5b7c21d49ba35d62",
       "edits": [
         {
           "start": 71,
@@ -792853,6 +793845,13 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 787,
+          "end": 788,
+          "symbol": "M:ke.a(IIIII)V",
+          "original": "a",
+          "renamed": "pushIntersectedClip"
         },
         {
           "start": 837,
@@ -793842,7 +794841,7 @@
       "original": "vq.java",
       "renamed": "ReflectionCheckDecoder.java",
       "inputSha256": "d9099dc6b2e7b41ee67730dba1a23de9ab1d9cc0bdeafe17f7881e917e8d13b2",
-      "outputSha256": "32006a167f60b31167322f463ca77e98b74a3ee3834593f47b3960f40107ed24",
+      "outputSha256": "db9b5bc51e55a124e6fdb68ed253d63335edf9186190c7f953bb6b93200b248a",
       "edits": [
         {
           "start": 50,
@@ -794214,6 +795213,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 8220,
+          "end": 8221,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 8260,
@@ -794678,7 +795684,7 @@
       "original": "w.java",
       "renamed": "Dialog.java",
       "inputSha256": "6042a3f10f29e620916ab0f4c99c0c93e073be6934598a175d993ec0a6af251c",
-      "outputSha256": "c308d297d7c58a486e68746bc2cf9e6bf0ace188db7a39390abf15e4c9c32035",
+      "outputSha256": "4dcacc4c35fe6a0a068b748d6bf40b4bf76bc40f211755daaae7b7bb77999550",
       "edits": [
         {
           "start": 53,
@@ -795295,6 +796301,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 6724,
+          "end": 6725,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 6745,
@@ -798447,7 +799460,7 @@
       "original": "wj.java",
       "renamed": "MenuPointerSupport.java",
       "inputSha256": "5496bd1c996193e9d715658ef17b4fbbed2396cbce3371d02703096aa3e35a16",
-      "outputSha256": "dc77b8da72fc06b60a3088f1c1137c3cff102c9305913560e10a4315ed35ac6d",
+      "outputSha256": "33c1fc5f7468f952116f47d336ecccb6f6cfb2591decdd50ba61a11ac59d19ff",
       "edits": [
         {
           "start": 50,
@@ -799386,6 +800399,13 @@
           "symbol": "C:js",
           "original": "js",
           "renamed": "LobbyOptionSupport"
+        },
+        {
+          "start": 7227,
+          "end": 7228,
+          "symbol": "M:sl.h(II)V",
+          "original": "h",
+          "renamed": "writeOpcode"
         },
         {
           "start": 7266,
@@ -801940,10 +802960,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "770679e1a2e268e1387c3ed3ac160a43df954663b5cc7f246c8f641885898289",
+    "rulesSha256": "943611dc33923298d8f55c9b718fb689ec01c38cf1e98d68a7d9b13d1dc77686",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "559a3b7e59ad6107cb96b58fc71e36ef7be39ea01491179549dfe0811e3649f3",
+    "outputTreeSha256": "1470c42ea058002119cc1f63787a4ed3891c3cf212d29f08c815c90199ba63b3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

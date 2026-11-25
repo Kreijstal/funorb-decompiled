@@ -126,7 +126,7 @@ final class LobbyUiSupport {
         int var8 = 0;
         try {
           var10 = LobbyOptionSupport.field_f;
-          var10.h(param0, 255);
+          var10.writeOpcode(param0, 255);
           var10.position = var10.position + 1;
           var7 = var10.position;
           var10.writeByte(4, (byte) -106);

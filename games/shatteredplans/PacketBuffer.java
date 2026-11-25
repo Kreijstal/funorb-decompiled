@@ -129,7 +129,7 @@ class PacketBuffer extends IntrusiveNode {
         return var2 | var3;
     }
 
-    final static int g(byte param0) {
+    final static int getAccountRequestType(byte param0) {
         if (param0 != -24) {
           field_i = (String) null;
         }
@@ -665,7 +665,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, GameSession param1) {
+    final static void initializeTutorialState(int param0, GameSession param1) {
         try {
           int var2_int = -35 % ((param0 + 60) / 50);
           GradientMenuLabel.field_x = 1;

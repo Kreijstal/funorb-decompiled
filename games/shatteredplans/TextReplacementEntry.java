@@ -66,7 +66,7 @@ final class TextReplacementEntry {
         if (param1) {
           return;
         }
-        var2.h(param0, 255);
+        var2.writeOpcode(param0, 255);
         var2.writeByte(1, (byte) -114);
         var2.writeByte(3, (byte) -73);
     }

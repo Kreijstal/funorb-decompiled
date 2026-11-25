@@ -131,7 +131,7 @@ final class ArchiveSourceManager {
 
     final static void writeInviteRequest(byte param0, int param1, long param2) {
         CipherPacketBuffer var4 = LobbyOptionSupport.field_f;
-        var4.h(param1, 255);
+        var4.writeOpcode(param1, 255);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         int var6 = 1 % ((30 - param0) / 59);

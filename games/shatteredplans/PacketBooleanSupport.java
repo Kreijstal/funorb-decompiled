@@ -14,7 +14,7 @@ final class PacketBooleanSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -95) {
-            stackIn_6_0 = (param0.b((byte) 126, 1) == 1);
+            stackIn_6_0 = (param0.readBits((byte) 126, 1) == 1);
             return stackIn_6_0;
           }
           return true;

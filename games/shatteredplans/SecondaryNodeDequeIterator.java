@@ -45,28 +45,28 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2_int = param1.b((byte) 93, 8);
+          var2_int = param1.readBits((byte) 93, 8);
           if (0 < var2_int) {
             return null;
           }
-          var3 = param1.b((byte) 116, 12);
+          var3 = param1.readBits((byte) 116, 12);
           var4 = new MeshMaterial[var3];
           if (param0 != 24243) {
             field_d = (String) null;
           }
           for (var5 = 0; var3 > var5; var5++) {
             if (!PacketBooleanSupport.readBoolean(param1, (byte) -95)) {
-              var6 = param1.b((byte) 127, HitRegion.signedBitLength(var5 - 1, 1));
+              var6 = param1.readBits((byte) 127, HitRegion.signedBitLength(var5 - 1, 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_hc = new MeshMaterial();
-              param1.b((byte) 122, 24);
-              param1.b((byte) 80, 24);
-              var6_ref_hc.field_a = param1.b((byte) 87, 24);
-              param1.b((byte) 100, 9);
-              param1.b((byte) 122, 12);
-              param1.b((byte) 106, 12);
-              param1.b((byte) 122, 12);
+              param1.readBits((byte) 122, 24);
+              param1.readBits((byte) 80, 24);
+              var6_ref_hc.field_a = param1.readBits((byte) 87, 24);
+              param1.readBits((byte) 100, 9);
+              param1.readBits((byte) 122, 12);
+              param1.readBits((byte) 106, 12);
+              param1.readBits((byte) 122, 12);
               var4[var5] = var6_ref_hc;
             }
           }

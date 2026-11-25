@@ -58,7 +58,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         CipherPacketBuffer var3Lifetime1;
         if (param2 == -2) {
           var3 = LobbyOptionSupport.field_f;
-          var3.h(param0, 255);
+          var3.writeOpcode(param0, 255);
           var3.writeByte(3, (byte) -71);
           var3.writeByte(9, (byte) -110);
           var3.writeShort(param1, 255);
@@ -66,7 +66,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
         NetworkArchiveRequest.clearNetworkRequestStatics(false);
         var3Lifetime1 = LobbyOptionSupport.field_f;
-        var3Lifetime1.h(param0, 255);
+        var3Lifetime1.writeOpcode(param0, 255);
         var3Lifetime1.writeByte(3, (byte) -71);
         var3Lifetime1.writeByte(9, (byte) -110);
         var3Lifetime1.writeShort(param1, 255);
@@ -100,7 +100,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           IntroGlowPoint.field_k = DateInputWidget.normalizeAccountName((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);
           IntroTextLine.field_k = param0;
           var6 = AccountNoticeDialog.a(param3, (byte) -112, DiplomacyRowSupport.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
-          CipherPacketBuffer.a(0, var6);
+          CipherPacketBuffer.installQuickChatMenu(0, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

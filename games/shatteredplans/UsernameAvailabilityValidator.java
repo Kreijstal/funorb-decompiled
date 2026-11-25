@@ -257,24 +257,24 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         int var9 = 0;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2_int = param0.b((byte) 126, 8);
+          var2_int = param0.readBits((byte) 126, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
           var4 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
           var5 = new MeshData();
-          var5.field_x = (short)param0.b((byte) 115, 16);
+          var5.field_x = (short)param0.readBits((byte) 115, 16);
           var5.field_w = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_w);
           var5.field_z = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_z);
           var5.field_f = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_f);
-          var5.field_u = (short)param0.b((byte) 99, 16);
+          var5.field_u = (short)param0.readBits((byte) 99, 16);
           var5.field_s = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_s);
           var6 = 99 % ((-48 - param1) / 42);
           var5.field_i = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_i);
           var5.field_B = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_B);
           if (var3 != 0) {
-            var5.field_e = (short)param0.b((byte) 82, 16);
+            var5.field_e = (short)param0.readBits((byte) 82, 16);
             var5.field_I = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_I);
             var5.field_y = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_y);
             var5.field_v = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_v);
@@ -283,7 +283,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             var5.field_n = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_n);
           }
           if (var4 != 0) {
-            param0.b((byte) 98, 16);
+            param0.readBits((byte) 98, 16);
             var5.field_C = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_C);
             var5.field_g = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_g);
             var5.field_L = NotificationEntry.readPackedShortArray((byte) 39, param0, 16, var5.field_L);

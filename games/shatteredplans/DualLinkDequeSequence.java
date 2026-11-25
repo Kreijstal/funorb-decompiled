@@ -56,7 +56,7 @@ final class DualLinkDequeSequence extends NodeSequence {
           }
           var5 = LobbyOptionSupport.field_f;
           CipherPacketBuffer var3 = var5;
-          var5.h(param0, 255);
+          var5.writeOpcode(param0, 255);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(1, (byte) -60);

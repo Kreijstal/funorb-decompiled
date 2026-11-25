@@ -52,7 +52,7 @@ final class LobbyCommandSupport {
 
     final static void writeReturnToLobbyRequest(byte param0, int param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
-        var2.h(param1, 255);
+        var2.writeOpcode(param1, 255);
         if (param0 > 32) {
           var2.writeByte(1, (byte) -104);
           var2.writeByte(1, (byte) -93);

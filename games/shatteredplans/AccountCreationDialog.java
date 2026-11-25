@@ -33,7 +33,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var8 = new CipherPacketBuffer(param1.getFileByName(true, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(-108);
-          var10.m(-84);
+          var10.startBitAccess(-84);
           AdditiveSpriteWipeSupport.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           ClientRandomSupport.field_d = new MeshData[var3];
           ValidatedTextInputWidget.field_Z = new int[var3][];
@@ -43,7 +43,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           for (var4 = 0; var3 > var4; var4++) {
             ClientRandomSupport.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
           }
-          var10.i((byte) -47);
+          var10.finishBitAccess((byte) -47);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

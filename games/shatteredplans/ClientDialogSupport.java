@@ -66,7 +66,7 @@ final class ClientDialogSupport {
             return stackIn_26_0;
           }
           var6 = LobbyOptionSupport.field_f;
-          var6.h(param1, 255);
+          var6.writeOpcode(param1, 255);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(0, (byte) -58);

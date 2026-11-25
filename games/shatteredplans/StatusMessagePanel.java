@@ -154,17 +154,17 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (GameMenuController.field_e &&
           RasterStateFrame.field_n % 50 == 0) {
-          LobbyOptionSupport.field_f.h(58, 255);
+          LobbyOptionSupport.field_f.writeOpcode(58, 255);
         }
         if (DefendTask.field_u) {
-          LobbyOptionSupport.field_f.h(58, 255);
+          LobbyOptionSupport.field_f.writeOpcode(58, 255);
           DefendTask.field_u = false;
         }
         if (param0 != 2) {
           field_F = (Sprite) null;
         }
         if (GzipInflater.field_d) {
-          LobbyOptionSupport.field_f.h(10, param0 + 253);
+          LobbyOptionSupport.field_f.writeOpcode(10, param0 + 253);
           GzipInflater.field_d = false;
         }
         if (HorizontalGradientComponent.field_B) {

@@ -77,7 +77,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var10 = this.b((byte) -14, param4, var9, param1);
             var11 = this.getTextY(param3, param4, 68) + Math.max(0, var8.field_e);
             var12 = this.getTextY(param3, param4, -122) + Math.min(this.getInnerHeight(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
-            BufferedSocket.a(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
+            BufferedSocket.pushIntersectedClip(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
             MusicVoice.field_I.a(var10, -110, var10, this.field_i, var11, var12);
             Star.f((byte) -122);
           }
@@ -216,7 +216,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             }
             var10 = var19.getLineIndexOfCharacter((byte) 120, var8);
             var11 = var19.getLineIndexOfCharacter((byte) 100, var9);
-            BufferedSocket.a(param4 - 6187, param2 + param5.field_m + param5.field_x, param1 + param5.field_q + param5.field_n, param1 + param5.field_q, param2 + param5.field_m);
+            BufferedSocket.pushIntersectedClip(param4 - 6187, param2 + param5.field_m + param5.field_x, param1 + param5.field_q + param5.field_n, param1 + param5.field_q, param2 + param5.field_m);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var18.field_d[var12];
               if (var12 != var10) {
@@ -435,7 +435,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           var8.unlinkSecondary(16);
           UrlLoader.field_c = UrlLoader.field_c - 1;
           var9 = LobbyOptionSupport.field_f;
-          var9.h(param1, 255);
+          var9.writeOpcode(param1, 255);
           var9.position = var9.position + 1;
           if (param0 > -71) {
             WidgetTheme.clearStatics((byte) 60);
@@ -580,7 +580,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             field_s = 115;
           }
           boolean decompiledFrameRemainder0 = true;
-          BufferedSocket.a(-6187, param4.field_m + (param0 + param4.field_x), param4.field_q + (param1 + param4.field_n), param4.field_q + param1, param0 + param4.field_m);
+          BufferedSocket.pushIntersectedClip(-6187, param4.field_m + (param0 + param4.field_x), param4.field_q + (param1 + param4.field_n), param4.field_q + param1, param0 + param4.field_m);
           var9_int = this.getInnerWidth(123, param4);
           var10 = this.getInnerHeight(param4, 0);
           if (this.field_d) {

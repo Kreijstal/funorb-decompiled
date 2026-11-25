@@ -96,7 +96,7 @@ final class RoundedMenuPanel extends MenuComponent {
 
     final static void writeSpectateRequest(int param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = LobbyOptionSupport.field_f;
-        var3.h(param1, 255);
+        var3.writeOpcode(param1, 255);
         var3.writeByte(3, (byte) -68);
         var3.writeByte(10, (byte) -98);
         if (!param2) {
@@ -177,7 +177,7 @@ final class RoundedMenuPanel extends MenuComponent {
           var7.unlinkSecondary(16);
           GameSpriteResources.field_e = GameSpriteResources.field_e - 1;
           var5 = LobbyOptionSupport.field_f;
-          var5.h(param1, 255);
+          var5.writeOpcode(param1, 255);
           var5.position = var5.position + 1;
           var6 = var5.position;
           if (param0 != 117) {

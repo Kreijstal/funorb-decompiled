@@ -144,7 +144,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = (DiskArchiveRequest) (this.field_c.nextForward(32));
             }
           }
-          var4.field_w = param1.a(param0, 86);
+          var4.field_w = param1.read(param0, 86);
           var4.field_u = false;
           var4.field_q = true;
           stackIn_15_0 = var4;
@@ -205,11 +205,11 @@ final class DiskCacheWorker implements Runnable {
             }
             try {
               if (var7.field_y == 2) {
-                var7.field_B.a(var7.field_w.length, (int)var7.field_l, var7.field_w, 2);
+                var7.field_B.write(var7.field_w.length, (int)var7.field_l, var7.field_w, 2);
                 var7.field_u = false;
               } else {
                 if (3 == var7.field_y) {
-                  var7.field_w = var7.field_B.a((int)var7.field_l, 119);
+                  var7.field_w = var7.field_B.read((int)var7.field_l, 119);
                   var7.field_u = false;
                 } else {
                   var7.field_u = false;
@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
           QuickChatPhraseRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
         if (PlayerRankingRequest.field_o == -6) {
-          LobbyOptionSupport.field_f.h(9, 255);
+          LobbyOptionSupport.field_f.writeOpcode(9, 255);
           StripedProgressWidget.field_Q = true;
           PlayerRankingRequest.field_o = GameRules.field_c;
         }

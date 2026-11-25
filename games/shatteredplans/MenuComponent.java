@@ -394,7 +394,7 @@ class MenuComponent extends IntrusiveNode {
         try {
           var1 = LobbyOptionSupport.field_f;
           while (ChatCompositionSupport.isNextReflectionCheckReady((byte) -50)) {
-            var1.h(8, 255);
+            var1.writeOpcode(8, 255);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

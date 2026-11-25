@@ -59,7 +59,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               if (!StarAnnotation.a(param1 ^ -73, 1)) {
                 return false;
               }
-              ArchiveNetworkClient.field_b = SpriteWipeSupport.field_a.h((byte) 126);
+              ArchiveNetworkClient.field_b = SpriteWipeSupport.field_a.readOpcode((byte) 126);
               SpriteWipeSupport.field_a.position = 0;
               TextInputPainter.field_t = param0[ArchiveNetworkClient.field_b];
             }
@@ -218,7 +218,7 @@ final class FleetTrailPoint extends IntrusiveNode {
         boolean stackIn_25_1 = false;
         AnimatedPanel stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        BufferedSocket.a(-6187, SoftwareRasterizer.field_b + 640 >> 1, SoftwareRasterizer.field_k, 0, -640 + SoftwareRasterizer.field_b >> 1);
+        BufferedSocket.pushIntersectedClip(-6187, SoftwareRasterizer.field_b + 640 >> 1, SoftwareRasterizer.field_k, 0, -640 + SoftwareRasterizer.field_b >> 1);
         if (PlacementOrder.field_t > 0) {
           if (StatefulWidgetTheme.field_y != null) {
             StatefulWidgetTheme.field_y.drawOpaque(MapViewState.field_j.field_hb, 0);

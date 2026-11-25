@@ -57,7 +57,7 @@ final class BattleEvent extends IntrusiveNode {
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         CipherPacketBuffer var7 = LobbyOptionSupport.field_f;
         CipherPacketBuffer var8 = var7;
-        var8.h(param0, 255);
+        var8.writeOpcode(param0, 255);
         var8.position = var8.position + 1;
         int var4 = var8.position;
         var8.writeByte(1, (byte) -86);

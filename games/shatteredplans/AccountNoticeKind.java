@@ -16,7 +16,7 @@ final class AccountNoticeKind {
         try {
           var8 = LobbyOptionSupport.field_f;
           CipherPacketBuffer var6 = var8;
-          var8.h(param5, 255);
+          var8.writeOpcode(param5, 255);
           var8.position = var8.position + 1;
           var7 = var8.position;
           var8.writeByte(param3, (byte) -80);

@@ -33,7 +33,7 @@ final class BattleSnapshot extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          BufferedSocket.a(-6187, 640, 480, 372, 0);
+          BufferedSocket.pushIntersectedClip(-6187, 640, 480, 372, 0);
           var1_int = -RasterBuffer.field_a + 480;
           for (var2 = 0; PlacementEvent.field_l.length > var2; var2++) {
             if (null != PlacementEvent.field_l[var2]) {

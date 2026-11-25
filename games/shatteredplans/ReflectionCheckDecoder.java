@@ -195,7 +195,7 @@ final class ReflectionCheckDecoder {
             return stackIn_21_0;
           }
           var5 = LobbyOptionSupport.field_f;
-          var5.h(param2, param0 ^ 253);
+          var5.writeOpcode(param2, param0 ^ 253);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(param0, (byte) -97);

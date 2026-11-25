@@ -387,7 +387,7 @@ final class Archive {
 
     final static void a(int param0, byte param1, long param2) {
         CipherPacketBuffer var4 = LobbyOptionSupport.field_f;
-        var4.h(param0, param1 + 253);
+        var4.writeOpcode(param0, param1 + 253);
         if (param1 != 2) {
           return;
         }
