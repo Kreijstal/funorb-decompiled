@@ -25,8 +25,8 @@ final class PopupPresentation implements EventPresentation {
     private Unit unit;
     private int field_f;
 
-    private final void f(int param0) {
-        this.a(param0 - 131, this.field_r, this.field_f);
+    private final void drawSpellSelectionBurst(int param0) {
+        this.drawParticleBurstAt(param0 - 131, this.field_r, this.field_f);
         if (param0 != 3) {
           field_l = (String) null;
         }
@@ -44,13 +44,13 @@ final class PopupPresentation implements EventPresentation {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = this.field_n;
         if (0 == var2) {
-          this.c(obfuscationGuard + 55);
+          this.drawDamageNumber(obfuscationGuard + 55);
         } else {
           if (var2 == 3) {
-            this.c(3);
+            this.drawDamageNumber(3);
           } else {
             if (4 == var2) {
-              this.c(obfuscationGuard ^ -49);
+              this.drawDamageNumber(obfuscationGuard ^ -49);
             }
           }
         }
@@ -123,7 +123,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawParticleBurstAt(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -146,7 +146,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, GameEvent param3) {
+    final boolean initializeTileEvent(int param0, int param1, int param2, GameEvent param3) {
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         String stackIn_62_2 = null;
@@ -268,7 +268,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void i(int param0) {
+    private final void drawSingleTargetDamageSparks(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_9_0 = 0;
@@ -306,7 +306,7 @@ final class PopupPresentation implements EventPresentation {
           }
         }
         if (param0 != 10) {
-          this.e((byte) -128);
+          this.drawAreaDamageFireballs((byte) -128);
         }
         if (null != this.field_t) {
           for (var2Lifetime1 = 0; this.field_t.length > var2Lifetime1; var2Lifetime1++) {
@@ -317,7 +317,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void e(byte param0) {
+    private final void drawAreaDamageFireballs(byte param0) {
         int var2 = 0;
         RgbSprite stackIn_4_0;
         int stackIn_4_1;
@@ -356,7 +356,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void e(int param0) {
+    private final void drawStatusEffectBurst(int param0) {
         int var2 = 0;
         int var3;
         int var4;
@@ -387,36 +387,36 @@ final class PopupPresentation implements EventPresentation {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard >= -119) {
           var4 = (GameEvent) null;
-          this.a(116, -87, 41, (GameEvent) null);
+          this.initializeTileEvent(116, -87, 41, (GameEvent) null);
         }
         var2 = this.field_n;
         if (var2 == 1) {
-          this.a(0, (byte) 117);
+          this.drawFloatingEffectIcon(0, (byte) 117);
         } else {
           if (var2 != 5) {
             if (var2 != 9) {
               if (2 != var2) {
                 if (var2 != 6) {
                   if (var2 == 7) {
-                    this.d(20);
+                    this.drawUnitEffectBurst(20);
                   } else {
                     if (var2 == 14) {
-                      this.a(false);
+                      this.drawAreaHealingGlow(false);
                     } else {
                       if (var2 == 13) {
-                        this.g(10);
+                        this.drawSingleTargetHealingGlow(10);
                       } else {
                         if (var2 == 12) {
-                          this.i(10);
+                          this.drawSingleTargetDamageSparks(10);
                         } else {
                           if (11 == var2) {
-                            this.e((byte) -117);
+                            this.drawAreaDamageFireballs((byte) -117);
                           } else {
                             if (var2 == 10) {
-                              this.e(-111);
+                              this.drawStatusEffectBurst(-111);
                             } else {
                               if (8 == var2) {
-                                this.f(3);
+                                this.drawSpellSelectionBurst(3);
                               }
                             }
                           }
@@ -425,7 +425,7 @@ final class PopupPresentation implements EventPresentation {
                     }
                   }
                 } else {
-                  this.a(7, (byte) 122);
+                  this.drawFloatingEffectIcon(7, (byte) 122);
                 }
               } else {
                 if (this.field_m >= 0) {
@@ -433,13 +433,13 @@ final class PopupPresentation implements EventPresentation {
                 } else {
                   stackIn_25_1 = 5;
                 }
-                this.a(stackIn_25_1, (byte) 88);
+                this.drawFloatingEffectIcon(stackIn_25_1, (byte) 88);
               }
             } else {
-              this.a(3, (byte) 101);
+              this.drawFloatingEffectIcon(3, (byte) 101);
             }
           } else {
-            this.a(2, (byte) 121);
+            this.drawFloatingEffectIcon(2, (byte) 121);
           }
         }
     }
@@ -455,7 +455,7 @@ final class PopupPresentation implements EventPresentation {
         field_l = null;
     }
 
-    private final void d(int param0) {
+    private final void drawUnitEffectBurst(int param0) {
         int var2 = 0;
         int var3;
         int var4;
@@ -495,7 +495,7 @@ final class PopupPresentation implements EventPresentation {
         return false;
     }
 
-    private final void a(boolean param0) {
+    private final void drawAreaHealingGlow(boolean param0) {
         if (param0) {
           this.presenter = (EventPresenter) null;
         }
@@ -508,7 +508,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void drawFloatingEffectIcon(int param0, byte param1) {
         if (param1 < 83) {
           return;
         }
@@ -520,7 +520,7 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawDamageNumber(int param0) {
         SoftwareRaster.fillCircle(this.presenter.screenX + 40, -20 + this.presenter.screenY, 10, this.field_i);
         StructureGlowRenderer.field_a[this.field_a ? 1 : 0].drawTransparent(20 + this.presenter.screenX, this.presenter.screenY - 35);
         if (param0 != 3) {
@@ -529,7 +529,7 @@ final class PopupPresentation implements EventPresentation {
         DateInputWidget.field_E.drawCentered(Integer.toString(this.field_m), this.presenter.screenX + 40, this.presenter.screenY - 15, 16777215, 0);
     }
 
-    private final void g(int param0) {
+    private final void drawSingleTargetHealingGlow(int param0) {
         RgbSprite stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
@@ -583,10 +583,10 @@ final class PopupPresentation implements EventPresentation {
         }
     }
 
-    final static boolean h(int param0) {
+    final static boolean requiresAccountUi(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != 31337) {
-          PopupPresentation.h(-19);
+          PopupPresentation.requiresAccountUi(-19);
         }
         boolean decompiledFrameRemainder0 = true;
         if (StrongCacheEntry.field_E >= 20 &&

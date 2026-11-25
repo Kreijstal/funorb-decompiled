@@ -524,7 +524,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard <= 124) {
           return;
         }
-        if (!PopupPresentation.h(31337) &&
+        if (!PopupPresentation.requiresAccountUi(31337) &&
           SoundCache.field_b != 11) {
           LoginMethod.a((byte) 73);
         }

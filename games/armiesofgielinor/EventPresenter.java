@@ -319,12 +319,12 @@ final class EventPresenter extends IntrusiveNode {
         if (24 != this.event.eventKind) {
           this.presentationActive = true;
           this.presentation = (EventPresentation) ((Object) new PopupPresentation(this.battlefield, this.controller.camera, this));
-          var4 = ((PopupPresentation) (this.presentation)).a(-98, param1, param0, this.event) ? 1 : 0;
+          var4 = ((PopupPresentation) (this.presentation)).initializeTileEvent(-98, param1, param0, this.event) ? 1 : 0;
         } else {
           this.fullCombatScene = false;
           this.presentationActive = true;
           this.presentation = (EventPresentation) ((Object) new PopupPresentation(this.battlefield, this.controller.camera, this));
-          var4 = ((PopupPresentation) (this.presentation)).a(-95, param1, param0, this.event) ? 1 : 0;
+          var4 = ((PopupPresentation) (this.presentation)).initializeTileEvent(-95, param1, param0, this.event) ? 1 : 0;
         }
         if (var4 == 0) {
           this.event.acknowledgePresentation((byte) -107);

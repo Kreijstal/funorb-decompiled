@@ -95,9 +95,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (obfuscationGuard > -111) {
             return;
           }
-          if (PopupPresentation.h(31337)) {
+          if (PopupPresentation.requiresAccountUi(31337)) {
             this.advanceAccountUi((byte) 4);
-            if (PopupPresentation.h(31337)) {
+            if (PopupPresentation.requiresAccountUi(31337)) {
               if (AccountRequestResult.a((byte) 105)) {
                 discarded$0 = this.c(-100, false);
               }
@@ -1015,7 +1015,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         int var4 = 0;
         try {
           var2 = VerticalScrollbar.p(0);
-          if (PopupPresentation.h(obfuscationGuard ^ 31337)) {
+          if (PopupPresentation.requiresAccountUi(obfuscationGuard ^ 31337)) {
             GameAppletShell.a(false, PrivateTextRecipientSupport.a(false), var2);
             return;
           }

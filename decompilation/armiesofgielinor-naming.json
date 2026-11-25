@@ -90860,12 +90860,44 @@
       "renamedSymbol": "M:PopupPresentation.requestFinish(I)V"
     },
     {
+      "symbol": "M:ql.a(IB)V",
+      "originalName": "a",
+      "to": "drawFloatingEffectIcon",
+      "evidence": "ql.java: Draws selected overlayicons sprite rising/fading relative to presenter and random offsets. Heal/strength/upkeep callers select icon. Preserve byte<83return before reads,full signed amount including MIN_VALUE negation overflow,signed width mirroring,absolute-value specialcase1,all scaling/opacity arithmetic and raster calls. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawFloatingEffectIcon(IB)V"
+    },
+    {
+      "symbol": "M:ql.a(III)V",
+      "originalName": "a",
+      "to": "drawParticleBurstAt",
+      "evidence": "ql.java: Draws double additive glow at supplied screen point during first20frames and shared scatter particles thereafter. Spell-selection-origin wrapper supplies absolute coordinates. Preserve elapsed<40and<20tests,duplicate draws/int-operation order,late intguard nulling unit,shared scatter array,parabolic motion and unclamped opacity arithmetic. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawParticleBurstAt(III)V"
+    },
+    {
+      "symbol": "M:ql.a(IIILoj;)Z",
+      "originalName": "a",
+      "to": "initializeTileEvent",
+      "evidence": "ql.java: EventPresenter initializes popup at explicit tile coordinates. Handles conditional heal/bonus/lifesteal/corpse events,teleport and spell classification into status,area/single-target damage/healing visuals. Preserve reset/tile write before event read,random offsets even on failed eligibility,early50/-1failures,all casts/nulls,guard> -68clearing tile array,kind25helper side effect,advanceFrame before tile rewrite and full signed domains. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z"
+    },
+    {
       "symbol": "M:ql.a(Loj;B)Z",
       "originalName": "a",
       "to": "initialize",
       "evidence": "pa.java: Initializes presentation data for the event. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupPresentation.initialize(LGameEvent;B)Z"
+    },
+    {
+      "symbol": "M:ql.a(Z)V",
+      "originalName": "a",
+      "to": "drawAreaHealingGlow",
+      "evidence": "ql.java: Draws area-healing spell glow selected for negative effect amount and positive radius. Rises during first20frames then expands/fades until40. Preserve true flag nulling presenter before frame test,all integer coordinate/width/opacity operations and absence of clamping. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawAreaHealingGlow(Z)V"
     },
     {
       "symbol": "M:ql.b(B)Z",
@@ -90900,12 +90932,76 @@
       "renamedSymbol": "M:PopupPresentation.drawBaseLayer(B)V"
     },
     {
+      "symbol": "M:ql.c(I)V",
+      "originalName": "c",
+      "to": "drawDamageNumber",
+      "evidence": "ql.java: Draws coloured damage circle,bloodsplat/poison sprite and numeric amount. Overlay dispatcher uses it for effect types0/3/4. Preserve circle then sprite then wrong-intguard recursive drawBaseLayer then text,all palette/index/null failures and original amount formatting. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawDamageNumber(I)V"
+    },
+    {
       "symbol": "M:ql.d(B)V",
       "originalName": "d",
       "to": "releaseStatics",
       "evidence": "ql.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupPresentation.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ql.d(I)V",
+      "originalName": "d",
+      "to": "drawUnitEffectBurst",
+      "evidence": "ql.java: Shared unit-effect burst used for summoning,teleport,owner change and default spell visuals. Guard20required before any reads;double80x100glow first20frames then scatter. Preserve both frame tests,duplicate draws,shared vectors,parabolic integer motion and fade arithmetic. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawUnitEffectBurst(I)V"
+    },
+    {
+      "symbol": "M:ql.e(B)V",
+      "originalName": "e",
+      "to": "drawAreaDamageFireballs",
+      "evidence": "ql.java: Area-damage spell visual uses randomly selected basic/fireball sprites. Rises first20frames then draws randomly chosen sprite per scatter particle with growth/parabolic motion/fade. Preserve random calls in rendering,all signed math and duplicate expressions,late wrong-byte initialize(null),null/empty asset failures and guard width. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawAreaDamageFireballs(B)V"
+    },
+    {
+      "symbol": "M:ql.e(I)V",
+      "originalName": "e",
+      "to": "drawStatusEffectBurst",
+      "evidence": "ql.java: Status-effect spell handlerkind6selects double100x50glow followed by scatter particles. Preserve elapsed<40and<20tests,paired draw/int order,shared vectors,parabolic/fade arithmetic and late intguard>=-108clearing field_a. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawStatusEffectBurst(I)V"
+    },
+    {
+      "symbol": "M:ql.f(I)V",
+      "originalName": "f",
+      "to": "drawSpellSelectionBurst",
+      "evidence": "ql.java: SpellCastEvent selection mode sets origin on radial spell-menu ring;delegates burst at retained field_r/field_f screen coordinates. Preserve intguard arithmetic passed into draw helper before late wrongguard clearing static string,and all guard domains. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawSpellSelectionBurst(I)V"
+    },
+    {
+      "symbol": "M:ql.g(I)V",
+      "originalName": "g",
+      "to": "drawSingleTargetHealingGlow",
+      "evidence": "ql.java: Negative-effect spell with nonpositive radius selects rising,expanding then fading double glow. Preserve guard10return before frame reads,20/30/40timing boundaries,all paired draw calls,integer operation order and unclamped pixel/opacity domains. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawSingleTargetHealingGlow(I)V"
+    },
+    {
+      "symbol": "M:ql.h(I)Z",
+      "originalName": "h",
+      "to": "requiresAccountUi",
+      "evidence": "ql.java: Shared client predicate routes update/drawing to account UI until resource/session state is ready. Canonical guard31337false requires loader>=20,account helper and original counter/socket condition. Preserve every helper/short-circuit read and otherwise redundant SocketFactory.c(10)call;all other ints recurse through-19indefinitely with original stack failure rather than simplifying guard. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.requiresAccountUi(I)Z"
+    },
+    {
+      "symbol": "M:ql.i(I)V",
+      "originalName": "i",
+      "to": "drawSingleTargetDamageSparks",
+      "evidence": "ql.java: Nonnegative-damage spell with nonpositive radius selects rising random-walk spark trail plus shared scatter. Preserve rendering-time random calls/order,up-to30points bounded by elapsed frame,signed right shifts,var coordinate accumulation,late wrong-intguard invoking fireballs and parabolic/fade integer arithmetic. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PopupPresentation.drawSingleTargetDamageSparks(I)V"
     },
     {
       "symbol": "M:qm.a(IIBI)V",
@@ -444665,7 +444761,7 @@
     },
     {
       "symbol": "L:ql.a(IB)V#0",
-      "renamedSymbol": "L:PopupPresentation.a(IB)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawFloatingEffectIcon(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -444676,7 +444772,7 @@
     },
     {
       "symbol": "L:ql.a(III)V#0",
-      "renamedSymbol": "L:PopupPresentation.a(III)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawParticleBurstAt(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -444687,7 +444783,7 @@
     },
     {
       "symbol": "L:ql.a(III)V#1",
-      "renamedSymbol": "L:PopupPresentation.a(III)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawParticleBurstAt(III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -444698,7 +444794,7 @@
     },
     {
       "symbol": "L:ql.a(III)V#2",
-      "renamedSymbol": "L:PopupPresentation.a(III)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawParticleBurstAt(III)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -444709,7 +444805,7 @@
     },
     {
       "symbol": "L:ql.a(III)V#3",
-      "renamedSymbol": "L:PopupPresentation.a(III)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawParticleBurstAt(III)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -444720,7 +444816,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#0",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#0",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#0",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -444731,7 +444827,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#1",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#1",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#1",
       "originalName": "stackIn_61_1",
       "renamedName": "stackIn_61_1",
       "declaration": {
@@ -444742,7 +444838,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#2",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#2",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#2",
       "originalName": "stackIn_62_2",
       "renamedName": "stackIn_62_2",
       "declaration": {
@@ -444753,7 +444849,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#3",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#3",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -444764,7 +444860,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#4",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#4",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -444775,7 +444871,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#5",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#5",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -444786,7 +444882,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#6",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#6",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -444797,7 +444893,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#7",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#7",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -444808,7 +444904,7 @@
     },
     {
       "symbol": "L:ql.a(IIILoj;)Z#8",
-      "renamedSymbol": "L:PopupPresentation.a(IIILGameEvent;)Z#8",
+      "renamedSymbol": "L:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -445171,7 +445267,7 @@
     },
     {
       "symbol": "L:ql.d(I)V#0",
-      "renamedSymbol": "L:PopupPresentation.d(I)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawUnitEffectBurst(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -445182,7 +445278,7 @@
     },
     {
       "symbol": "L:ql.d(I)V#1",
-      "renamedSymbol": "L:PopupPresentation.d(I)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawUnitEffectBurst(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -445193,7 +445289,7 @@
     },
     {
       "symbol": "L:ql.d(I)V#2",
-      "renamedSymbol": "L:PopupPresentation.d(I)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawUnitEffectBurst(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -445204,7 +445300,7 @@
     },
     {
       "symbol": "L:ql.d(I)V#3",
-      "renamedSymbol": "L:PopupPresentation.d(I)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawUnitEffectBurst(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -445215,7 +445311,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#0",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -445226,7 +445322,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#1",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -445237,7 +445333,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#10",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#10",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -445248,7 +445344,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#2",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#2",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -445259,7 +445355,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#3",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#3",
       "originalName": "stackIn_4_2",
       "renamedName": "stackIn_4_2",
       "declaration": {
@@ -445270,7 +445366,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#4",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#4",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#4",
       "originalName": "stackIn_4_3",
       "renamedName": "stackIn_4_3",
       "declaration": {
@@ -445281,7 +445377,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#5",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#5",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#5",
       "originalName": "stackIn_4_4",
       "renamedName": "stackIn_4_4",
       "declaration": {
@@ -445292,7 +445388,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#6",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#6",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#6",
       "originalName": "stackIn_5_5",
       "renamedName": "stackIn_5_5",
       "declaration": {
@@ -445303,7 +445399,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#7",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#7",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -445314,7 +445410,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#8",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#8",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -445325,7 +445421,7 @@
     },
     {
       "symbol": "L:ql.e(B)V#9",
-      "renamedSymbol": "L:PopupPresentation.e(B)V#9",
+      "renamedSymbol": "L:PopupPresentation.drawAreaDamageFireballs(B)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -445336,7 +445432,7 @@
     },
     {
       "symbol": "L:ql.e(I)V#0",
-      "renamedSymbol": "L:PopupPresentation.e(I)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawStatusEffectBurst(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -445347,7 +445443,7 @@
     },
     {
       "symbol": "L:ql.e(I)V#1",
-      "renamedSymbol": "L:PopupPresentation.e(I)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawStatusEffectBurst(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -445358,7 +445454,7 @@
     },
     {
       "symbol": "L:ql.e(I)V#2",
-      "renamedSymbol": "L:PopupPresentation.e(I)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawStatusEffectBurst(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -445369,7 +445465,7 @@
     },
     {
       "symbol": "L:ql.e(I)V#3",
-      "renamedSymbol": "L:PopupPresentation.e(I)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawStatusEffectBurst(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -445380,7 +445476,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#0",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -445391,7 +445487,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#1",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#1",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -445402,7 +445498,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#10",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#10",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#10",
       "originalName": "stackIn_9_4",
       "renamedName": "stackIn_9_4",
       "declaration": {
@@ -445413,7 +445509,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#11",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#11",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#11",
       "originalName": "stackIn_10_5",
       "renamedName": "stackIn_10_5",
       "declaration": {
@@ -445424,7 +445520,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#12",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#12",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -445435,7 +445531,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#2",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#2",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -445446,7 +445542,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#3",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#3",
       "originalName": "stackIn_6_3",
       "renamedName": "stackIn_6_3",
       "declaration": {
@@ -445457,7 +445553,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#4",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#4",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#4",
       "originalName": "stackIn_6_4",
       "renamedName": "stackIn_6_4",
       "declaration": {
@@ -445468,7 +445564,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#5",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#5",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#5",
       "originalName": "stackIn_7_5",
       "renamedName": "stackIn_7_5",
       "declaration": {
@@ -445479,7 +445575,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#6",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#6",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#6",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -445490,7 +445586,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#7",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#7",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#7",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -445501,7 +445597,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#8",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#8",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#8",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -445512,7 +445608,7 @@
     },
     {
       "symbol": "L:ql.g(I)V#9",
-      "renamedSymbol": "L:PopupPresentation.g(I)V#9",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetHealingGlow(I)V#9",
       "originalName": "stackIn_9_3",
       "renamedName": "stackIn_9_3",
       "declaration": {
@@ -445523,7 +445619,7 @@
     },
     {
       "symbol": "L:ql.h(I)Z#0",
-      "renamedSymbol": "L:PopupPresentation.h(I)Z#0",
+      "renamedSymbol": "L:PopupPresentation.requiresAccountUi(I)Z#0",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -445534,7 +445630,7 @@
     },
     {
       "symbol": "L:ql.h(I)Z#1",
-      "renamedSymbol": "L:PopupPresentation.h(I)Z#1",
+      "renamedSymbol": "L:PopupPresentation.requiresAccountUi(I)Z#1",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -445545,7 +445641,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#0",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#0",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -445556,7 +445652,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#1",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#1",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -445567,7 +445663,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#10",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#10",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#10",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -445578,7 +445674,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#2",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#2",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -445589,7 +445685,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#3",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#3",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#3",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -445600,7 +445696,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#4",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#4",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -445611,7 +445707,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#5",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#5",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -445622,7 +445718,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#6",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#6",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -445633,7 +445729,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#7",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#7",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -445644,7 +445740,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#8",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#8",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#8",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -445655,7 +445751,7 @@
     },
     {
       "symbol": "L:ql.i(I)V#9",
-      "renamedSymbol": "L:PopupPresentation.i(I)V#9",
+      "renamedSymbol": "L:PopupPresentation.drawSingleTargetDamageSparks(I)V#9",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -567073,9 +567169,9 @@
     },
     {
       "symbol": "M:ql.a(IB)V",
-      "renamedSymbol": "M:PopupPresentation.a(IB)V",
+      "renamedSymbol": "M:PopupPresentation.drawFloatingEffectIcon(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFloatingEffectIcon",
       "declaration": {
         "file": "ql.java",
         "start": 17994,
@@ -567084,9 +567180,9 @@
     },
     {
       "symbol": "M:ql.a(III)V",
-      "renamedSymbol": "M:PopupPresentation.a(III)V",
+      "renamedSymbol": "M:PopupPresentation.drawParticleBurstAt(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawParticleBurstAt",
       "declaration": {
         "file": "ql.java",
         "start": 3940,
@@ -567095,9 +567191,9 @@
     },
     {
       "symbol": "M:ql.a(IIILoj;)Z",
-      "renamedSymbol": "M:PopupPresentation.a(IIILGameEvent;)Z",
+      "renamedSymbol": "M:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeTileEvent",
       "declaration": {
         "file": "ql.java",
         "start": 4862,
@@ -567117,9 +567213,9 @@
     },
     {
       "symbol": "M:ql.a(Z)V",
-      "renamedSymbol": "M:PopupPresentation.a(Z)V",
+      "renamedSymbol": "M:PopupPresentation.drawAreaHealingGlow(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAreaHealingGlow",
       "declaration": {
         "file": "ql.java",
         "start": 17456,
@@ -567172,9 +567268,9 @@
     },
     {
       "symbol": "M:ql.c(I)V",
-      "renamedSymbol": "M:PopupPresentation.c(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawDamageNumber(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawDamageNumber",
       "declaration": {
         "file": "ql.java",
         "start": 18603,
@@ -567194,9 +567290,9 @@
     },
     {
       "symbol": "M:ql.d(I)V",
-      "renamedSymbol": "M:PopupPresentation.d(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawUnitEffectBurst(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "drawUnitEffectBurst",
       "declaration": {
         "file": "ql.java",
         "start": 16103,
@@ -567205,9 +567301,9 @@
     },
     {
       "symbol": "M:ql.e(B)V",
-      "renamedSymbol": "M:PopupPresentation.e(B)V",
+      "renamedSymbol": "M:PopupPresentation.drawAreaDamageFireballs(B)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawAreaDamageFireballs",
       "declaration": {
         "file": "ql.java",
         "start": 11335,
@@ -567216,9 +567312,9 @@
     },
     {
       "symbol": "M:ql.e(I)V",
-      "renamedSymbol": "M:PopupPresentation.e(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawStatusEffectBurst(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawStatusEffectBurst",
       "declaration": {
         "file": "ql.java",
         "start": 12945,
@@ -567227,9 +567323,9 @@
     },
     {
       "symbol": "M:ql.f(I)V",
-      "renamedSymbol": "M:PopupPresentation.f(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawSpellSelectionBurst(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawSpellSelectionBurst",
       "declaration": {
         "file": "ql.java",
         "start": 628,
@@ -567238,9 +567334,9 @@
     },
     {
       "symbol": "M:ql.g(I)V",
-      "renamedSymbol": "M:PopupPresentation.g(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawSingleTargetHealingGlow(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "drawSingleTargetHealingGlow",
       "declaration": {
         "file": "ql.java",
         "start": 19022,
@@ -567249,9 +567345,9 @@
     },
     {
       "symbol": "M:ql.h(I)Z",
-      "renamedSymbol": "M:PopupPresentation.h(I)Z",
+      "renamedSymbol": "M:PopupPresentation.requiresAccountUi(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "requiresAccountUi",
       "declaration": {
         "file": "ql.java",
         "start": 21259,
@@ -567260,9 +567356,9 @@
     },
     {
       "symbol": "M:ql.i(I)V",
-      "renamedSymbol": "M:PopupPresentation.i(I)V",
+      "renamedSymbol": "M:PopupPresentation.drawSingleTargetDamageSparks(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "drawSingleTargetDamageSparks",
       "declaration": {
         "file": "ql.java",
         "start": 9497,
@@ -676171,7 +676267,7 @@
     },
     {
       "symbol": "P:ql.a(IB)V#0",
-      "renamedSymbol": "P:PopupPresentation.a(IB)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawFloatingEffectIcon(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676182,7 +676278,7 @@
     },
     {
       "symbol": "P:ql.a(IB)V#1",
-      "renamedSymbol": "P:PopupPresentation.a(IB)V#1",
+      "renamedSymbol": "P:PopupPresentation.drawFloatingEffectIcon(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -676193,7 +676289,7 @@
     },
     {
       "symbol": "P:ql.a(III)V#0",
-      "renamedSymbol": "P:PopupPresentation.a(III)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawParticleBurstAt(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676204,7 +676300,7 @@
     },
     {
       "symbol": "P:ql.a(III)V#1",
-      "renamedSymbol": "P:PopupPresentation.a(III)V#1",
+      "renamedSymbol": "P:PopupPresentation.drawParticleBurstAt(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -676215,7 +676311,7 @@
     },
     {
       "symbol": "P:ql.a(III)V#2",
-      "renamedSymbol": "P:PopupPresentation.a(III)V#2",
+      "renamedSymbol": "P:PopupPresentation.drawParticleBurstAt(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -676226,7 +676322,7 @@
     },
     {
       "symbol": "P:ql.a(IIILoj;)Z#0",
-      "renamedSymbol": "P:PopupPresentation.a(IIILGameEvent;)Z#0",
+      "renamedSymbol": "P:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676237,7 +676333,7 @@
     },
     {
       "symbol": "P:ql.a(IIILoj;)Z#1",
-      "renamedSymbol": "P:PopupPresentation.a(IIILGameEvent;)Z#1",
+      "renamedSymbol": "P:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -676248,7 +676344,7 @@
     },
     {
       "symbol": "P:ql.a(IIILoj;)Z#2",
-      "renamedSymbol": "P:PopupPresentation.a(IIILGameEvent;)Z#2",
+      "renamedSymbol": "P:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -676259,7 +676355,7 @@
     },
     {
       "symbol": "P:ql.a(IIILoj;)Z#3",
-      "renamedSymbol": "P:PopupPresentation.a(IIILGameEvent;)Z#3",
+      "renamedSymbol": "P:PopupPresentation.initializeTileEvent(IIILGameEvent;)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -676292,7 +676388,7 @@
     },
     {
       "symbol": "P:ql.a(Z)V#0",
-      "renamedSymbol": "P:PopupPresentation.a(Z)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawAreaHealingGlow(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676358,7 +676454,7 @@
     },
     {
       "symbol": "P:ql.c(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.c(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawDamageNumber(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676380,7 +676476,7 @@
     },
     {
       "symbol": "P:ql.d(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.d(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawUnitEffectBurst(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676391,7 +676487,7 @@
     },
     {
       "symbol": "P:ql.e(B)V#0",
-      "renamedSymbol": "P:PopupPresentation.e(B)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawAreaDamageFireballs(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676402,7 +676498,7 @@
     },
     {
       "symbol": "P:ql.e(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.e(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawStatusEffectBurst(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676413,7 +676509,7 @@
     },
     {
       "symbol": "P:ql.f(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.f(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawSpellSelectionBurst(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676424,7 +676520,7 @@
     },
     {
       "symbol": "P:ql.g(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.g(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawSingleTargetHealingGlow(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676435,7 +676531,7 @@
     },
     {
       "symbol": "P:ql.h(I)Z#0",
-      "renamedSymbol": "P:PopupPresentation.h(I)Z#0",
+      "renamedSymbol": "P:PopupPresentation.requiresAccountUi(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -676446,7 +676542,7 @@
     },
     {
       "symbol": "P:ql.i(I)V#0",
-      "renamedSymbol": "P:PopupPresentation.i(I)V#0",
+      "renamedSymbol": "P:PopupPresentation.drawSingleTargetDamageSparks(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -714455,7 +714551,7 @@
       "original": "ArmiesOfGielinor.java",
       "renamed": "ArmiesOfGielinor.java",
       "inputSha256": "5dc18e9d91f377f97b4a752fd07b762c9ad0b241cfac5ed3e4138c3c9af9a048",
-      "outputSha256": "73a185b2b16a052ba0d830da64a08b7a08eb72a437f48ed28adfbc4205db6f68",
+      "outputSha256": "d9de2df44ff77a322d6ab52ae00c68be0997859ced5a966b9d4d67f7961eaf5d",
       "edits": [
         {
           "start": 103,
@@ -714717,6 +714813,13 @@
           "renamed": "PopupPresentation"
         },
         {
+          "start": 2759,
+          "end": 2760,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
+        },
+        {
           "start": 2788,
           "end": 2789,
           "symbol": "M:wf.g(B)V",
@@ -714729,6 +714832,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "PopupPresentation"
+        },
+        {
+          "start": 2820,
+          "end": 2821,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
         },
         {
           "start": 2850,
@@ -720504,6 +720614,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "PopupPresentation"
+        },
+        {
+          "start": 37480,
+          "end": 37481,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
         },
         {
           "start": 37482,
@@ -1605957,7 +1606074,7 @@
       "original": "ql.java",
       "renamed": "PopupPresentation.java",
       "inputSha256": "93d8e169d447ff804d1522078180bd7305168e9a48ac42a34043ddd95c6d798c",
-      "outputSha256": "1c2cc3e5816473a798fbd697aadb344ff0569d94f5ee0ea689d35f95620b3f08",
+      "outputSha256": "c506dd7341b5fbbe6c9d75c7037f72a25f0a1a26e641bc296535fad3c3ff12a1",
       "edits": [
         {
           "start": 71,
@@ -1606051,6 +1606168,20 @@
           "renamed": "unit"
         },
         {
+          "start": 628,
+          "end": 629,
+          "symbol": "M:ql.f(I)V",
+          "original": "f",
+          "renamed": "drawSpellSelectionBurst"
+        },
+        {
+          "start": 657,
+          "end": 658,
+          "symbol": "M:ql.a(III)V",
+          "original": "a",
+          "renamed": "drawParticleBurstAt"
+        },
+        {
           "start": 803,
           "end": 804,
           "symbol": "M:ql.a(I)V",
@@ -1606107,11 +1606238,32 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 1093,
+          "end": 1094,
+          "symbol": "M:ql.c(I)V",
+          "original": "c",
+          "renamed": "drawDamageNumber"
+        },
+        {
           "start": 1095,
           "end": 1101,
           "symbol": "P:ql.a(B)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1170,
+          "end": 1171,
+          "symbol": "M:ql.c(I)V",
+          "original": "c",
+          "renamed": "drawDamageNumber"
+        },
+        {
+          "start": 1243,
+          "end": 1244,
+          "symbol": "M:ql.c(I)V",
+          "original": "c",
+          "renamed": "drawDamageNumber"
         },
         {
           "start": 1245,
@@ -1606450,6 +1606602,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3940,
+          "end": 3941,
+          "symbol": "M:ql.a(III)V",
+          "original": "a",
+          "renamed": "drawParticleBurstAt"
+        },
+        {
           "start": 4088,
           "end": 4095,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1606574,6 +1606733,13 @@
           "symbol": "F:ql.field_h:I",
           "original": "field_h",
           "renamed": "elapsedFrames"
+        },
+        {
+          "start": 4862,
+          "end": 4863,
+          "symbol": "M:ql.a(IIILoj;)Z",
+          "original": "a",
+          "renamed": "initializeTileEvent"
         },
         {
           "start": 4900,
@@ -1607325,6 +1607491,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 9497,
+          "end": 9498,
+          "symbol": "M:ql.i(I)V",
+          "original": "i",
+          "renamed": "drawSingleTargetDamageSparks"
+        },
+        {
           "start": 9815,
           "end": 9822,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1607472,6 +1607645,13 @@
           "renamed": "screenY"
         },
         {
+          "start": 10752,
+          "end": 10753,
+          "symbol": "M:ql.e(B)V",
+          "original": "e",
+          "renamed": "drawAreaDamageFireballs"
+        },
+        {
           "start": 10937,
           "end": 10944,
           "symbol": "F:ql.field_b:Lvb;",
@@ -1607547,6 +1607727,13 @@
           "symbol": "F:ql.field_h:I",
           "original": "field_h",
           "renamed": "elapsedFrames"
+        },
+        {
+          "start": 11335,
+          "end": 11336,
+          "symbol": "M:ql.e(B)V",
+          "original": "e",
+          "renamed": "drawAreaDamageFireballs"
         },
         {
           "start": 11382,
@@ -1607829,6 +1608016,13 @@
           "renamed": "GameEvent"
         },
         {
+          "start": 12945,
+          "end": 12946,
+          "symbol": "M:ql.e(I)V",
+          "original": "e",
+          "renamed": "drawStatusEffectBurst"
+        },
+        {
           "start": 13069,
           "end": 13076,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1608067,11 +1608261,102 @@
           "renamed": "GameEvent"
         },
         {
+          "start": 14157,
+          "end": 14158,
+          "symbol": "M:ql.a(IIILoj;)Z",
+          "original": "a",
+          "renamed": "initializeTileEvent"
+        },
+        {
           "start": 14174,
           "end": 14176,
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "GameEvent"
+        },
+        {
+          "start": 14264,
+          "end": 14265,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
+        },
+        {
+          "start": 14479,
+          "end": 14480,
+          "symbol": "M:ql.d(I)V",
+          "original": "d",
+          "renamed": "drawUnitEffectBurst"
+        },
+        {
+          "start": 14578,
+          "end": 14579,
+          "symbol": "M:ql.a(Z)V",
+          "original": "a",
+          "renamed": "drawAreaHealingGlow"
+        },
+        {
+          "start": 14686,
+          "end": 14687,
+          "symbol": "M:ql.g(I)V",
+          "original": "g",
+          "renamed": "drawSingleTargetHealingGlow"
+        },
+        {
+          "start": 14797,
+          "end": 14798,
+          "symbol": "M:ql.i(I)V",
+          "original": "i",
+          "renamed": "drawSingleTargetDamageSparks"
+        },
+        {
+          "start": 14914,
+          "end": 14915,
+          "symbol": "M:ql.e(B)V",
+          "original": "e",
+          "renamed": "drawAreaDamageFireballs"
+        },
+        {
+          "start": 15046,
+          "end": 15047,
+          "symbol": "M:ql.e(I)V",
+          "original": "e",
+          "renamed": "drawStatusEffectBurst"
+        },
+        {
+          "start": 15176,
+          "end": 15177,
+          "symbol": "M:ql.f(I)V",
+          "original": "f",
+          "renamed": "drawSpellSelectionBurst"
+        },
+        {
+          "start": 15412,
+          "end": 15413,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
+        },
+        {
+          "start": 15648,
+          "end": 15649,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
+        },
+        {
+          "start": 15732,
+          "end": 15733,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
+        },
+        {
+          "start": 15800,
+          "end": 15801,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
         },
         {
           "start": 15870,
@@ -1608107,6 +1608392,13 @@
           "symbol": "M:ql.d(B)V",
           "original": "d",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 16103,
+          "end": 16104,
+          "symbol": "M:ql.d(I)V",
+          "original": "d",
+          "renamed": "drawUnitEffectBurst"
         },
         {
           "start": 16227,
@@ -1608361,6 +1608653,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 17456,
+          "end": 17457,
+          "symbol": "M:ql.a(Z)V",
+          "original": "a",
+          "renamed": "drawAreaHealingGlow"
+        },
+        {
           "start": 17513,
           "end": 17520,
           "symbol": "F:ql.field_b:Lvb;",
@@ -1608515,6 +1608814,13 @@
           "renamed": "elapsedFrames"
         },
         {
+          "start": 17994,
+          "end": 17995,
+          "symbol": "M:ql.a(IB)V",
+          "original": "a",
+          "renamed": "drawFloatingEffectIcon"
+        },
+        {
           "start": 18181,
           "end": 18183,
           "symbol": "C:od",
@@ -1608625,6 +1608931,13 @@
           "symbol": "F:ql.field_h:I",
           "original": "field_h",
           "renamed": "elapsedFrames"
+        },
+        {
+          "start": 18603,
+          "end": 18604,
+          "symbol": "M:ql.c(I)V",
+          "original": "c",
+          "renamed": "drawDamageNumber"
         },
         {
           "start": 18627,
@@ -1608758,6 +1609071,13 @@
           "symbol": "F:vb.field_v:I",
           "original": "field_v",
           "renamed": "screenY"
+        },
+        {
+          "start": 19022,
+          "end": 19023,
+          "symbol": "M:ql.g(I)V",
+          "original": "g",
+          "renamed": "drawSingleTargetHealingGlow"
         },
         {
           "start": 19046,
@@ -1609166,11 +1609486,25 @@
           "renamed": "drawScaledAdditive"
         },
         {
+          "start": 21259,
+          "end": 21260,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
+        },
+        {
           "start": 21353,
           "end": 21355,
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "PopupPresentation"
+        },
+        {
+          "start": 21356,
+          "end": 21357,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
         },
         {
           "start": 21436,
@@ -1825062,7 +1825396,7 @@
       "original": "vb.java",
       "renamed": "EventPresenter.java",
       "inputSha256": "5407cacd6d3658716dd9bf8aeff8d3150ebe350a6d342da93e181881c2c85514",
-      "outputSha256": "cfb5856ed62b95bfc042a64a4c849aa2a7ece98f90ae148d98656d75350e68ca",
+      "outputSha256": "5cf7f6892bf0b57b57ca567bf01e6a1dd97ced2df5856c7b77d87b7b347b35a2",
       "edits": [
         {
           "start": 50,
@@ -1828124,6 +1828458,13 @@
           "renamed": "presentation"
         },
         {
+          "start": 15867,
+          "end": 15868,
+          "symbol": "M:ql.a(IIILoj;)Z",
+          "original": "a",
+          "renamed": "initializeTileEvent"
+        },
+        {
           "start": 15895,
           "end": 15902,
           "symbol": "F:vb.field_r:Loj;",
@@ -1828199,6 +1828540,13 @@
           "symbol": "F:vb.field_B:Lpa;",
           "original": "field_B",
           "renamed": "presentation"
+        },
+        {
+          "start": 16123,
+          "end": 16124,
+          "symbol": "M:ql.a(IIILoj;)Z",
+          "original": "a",
+          "renamed": "initializeTileEvent"
         },
         {
           "start": 16151,
@@ -1872234,7 +1872582,7 @@
       "original": "wf.java",
       "renamed": "NetworkGameShell.java",
       "inputSha256": "83fd1c3a97ad89c7d18c95a0270efe8f07449370ead978c48ee1daf6b0a0538a",
-      "outputSha256": "ca3ca5a0a620cee42f06187fbf98e1adff171e541446d48a7a30d7e4b77f05de",
+      "outputSha256": "e32a085d7957c57b423b0a494de9649ab16831b65bd8f857d5174ed690504b20",
       "edits": [
         {
           "start": 53,
@@ -1876678,6 +1877026,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "PopupPresentation"
+        },
+        {
+          "start": 15218,
+          "end": 15219,
+          "symbol": "M:ql.h(I)Z",
+          "original": "h",
+          "renamed": "requiresAccountUi"
         },
         {
           "start": 15240,
@@ -1907983,10 +1908338,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "f2aa196dae521258635bb4ad912449de62f34841490cd70912328be6282b4212",
+    "rulesSha256": "0b095580e5f44b44ebe49b96e20e119adc76b899e6ad234311830fa61fdf2d96",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "927ad3da5544a4ffd955b2f6a10251c35fa0a578902aaa98fa7dd9adc483f614",
+    "outputTreeSha256": "170c8936e588a3e58aadb07d75220e48b38eaefecd51732ac1f80aa4ece355ad",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
