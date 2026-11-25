@@ -65,7 +65,7 @@ final class UrlLoader implements Runnable {
             for (var7_int = 1; var5 > var7_int; var7_int++) {
               QuaternaryNodeList.field_a[var7_int] = var15.readString(-1);
             }
-            MenuComponent.a(var6, var5, (byte) 18);
+            MenuComponent.resetRankingBuffers(var6, var5, (byte) 18);
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
               TutorialVictoryChecker.readPackedRankingStats(var15, false);
               if (var7_intLifetime1 != 0) {

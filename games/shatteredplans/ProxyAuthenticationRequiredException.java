@@ -21,7 +21,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param3, param1, param2, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param3, param1, param2, 2)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
@@ -54,7 +54,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param2, param3, param1, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param2, param3, param1, 2)) {
             return null;
           }
           if (param0 < -71) {

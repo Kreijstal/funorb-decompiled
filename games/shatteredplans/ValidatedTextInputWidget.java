@@ -32,7 +32,7 @@ final class ValidatedTextInputWidget extends TextFieldWidget implements Validata
         if (this.field_v == null) {
           return null;
         }
-        ScrollBar.a(LobbyRoomControlsSupport.field_b, !param0 ? true : false, this.field_x - this.field_U + TertiaryListSequence.field_k);
+        ScrollBar.setTooltipAnchor(LobbyRoomControlsSupport.field_b, !param0 ? true : false, this.field_x - this.field_U + TertiaryListSequence.field_k);
         if (param0) {
           return this.field_v;
         }

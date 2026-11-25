@@ -892,7 +892,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ProjectsContent.clearStatics(5);
         MenuButton.clearStatics(128);
         GradientMenuLabel.clearStatics(true);
-        MenuComponent.a((byte) -124);
+        MenuComponent.clearMenuComponentStatics((byte) -124);
         HorizontalGradientComponent.clearStatics((byte) 106);
         SpriteButton.clearStatics((byte) -68);
         MenuList.clearStatics(1546006977);

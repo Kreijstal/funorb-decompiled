@@ -108,7 +108,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param3, param0, param2, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param3, param0, param2, 2)) {
             return null;
           }
           if (param1 < -104) {
@@ -163,7 +163,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             var5 = (Archive) null;
             RoundedFrameSupport.a((Archive) null, 22, -122, 78);
           }
-          if (MenuComponent.a(param3, param2, param0, 2)) {
+          if (MenuComponent.decodeSpriteSheetFromArchive(param3, param2, param0, 2)) {
             stackIn_6_0 = LinkPainter.createDecodedSprites(0);
             return stackIn_6_0;
           }

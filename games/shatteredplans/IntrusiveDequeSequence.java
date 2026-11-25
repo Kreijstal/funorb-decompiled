@@ -30,7 +30,7 @@ final class IntrusiveDequeSequence extends NodeSequence {
         return this.field_h.nextForward((byte) -71);
     }
 
-    final static void a(String param0, byte param1, long param2, int param3, int param4) {
+    final static void rememberLastQuickChatMessage(String param0, byte param1, long param2, int param3, int param4) {
         try {
           ConquestVictoryChecker.field_n = true;
           if (param1 <= 44) {
@@ -59,7 +59,7 @@ final class IntrusiveDequeSequence extends NodeSequence {
         field_k = null;
         field_j = null;
         if (param0 != 11) {
-          IntrusiveDequeSequence.a((String) null, (byte) -25, 15L, -37, -9);
+          IntrusiveDequeSequence.rememberLastQuickChatMessage((String) null, (byte) -25, 15L, -37, -9);
         }
         field_i = null;
     }

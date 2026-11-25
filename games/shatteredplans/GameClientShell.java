@@ -92,7 +92,7 @@ abstract class GameClientShell extends GameApplet {
             if (param0) {
               StripedProgressWidget.field_B = false;
             } else {
-              var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, DropTargetWidget.getAccountDialogText(-116), this.field_C, BoundsRect.d(-121));
+              var5_intLifetime2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -121, false, DropTargetWidget.getAccountDialogText(-116), this.field_C, BoundsRect.d(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, DiplomacyRowSupport.field_c);
@@ -137,7 +137,7 @@ abstract class GameClientShell extends GameApplet {
             ChatPanelLayoutSupport.reloadGamePage(GameScreen.getHostApplet((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
-            CipherPacketBuffer.openGameWebPage(SolVictoryChecker.c(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
+            CipherPacketBuffer.openGameWebPage(SolVictoryChecker.getRequestedGameWebPage(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
           }
           if (var4 == 13) {
             try {
@@ -589,7 +589,7 @@ abstract class GameClientShell extends GameApplet {
           QuickChatPhraseRegistry.attachCanvasInput(NotificationEntry.field_i, false);
         }
         if (AwtEventQueueSupport.field_c[8]) {
-          MenuComponent.d(2147483647);
+          MenuComponent.writeReadyReflectionChecks(2147483647);
         }
     }
 
@@ -674,7 +674,7 @@ abstract class GameClientShell extends GameApplet {
         if (StripedProgressWidget.field_B) {
           return -1;
         }
-        int var2 = SolVictoryChecker.a(this.field_B, (byte) -94, true, DropTargetWidget.getAccountDialogText(-125), this.field_C, BoundsRect.d(-97));
+        int var2 = SolVictoryChecker.pollLoginHandshake(this.field_B, (byte) -94, true, DropTargetWidget.getAccountDialogText(-125), this.field_C, BoundsRect.d(-97));
         if (var2 == -1) {
           return -1;
         }

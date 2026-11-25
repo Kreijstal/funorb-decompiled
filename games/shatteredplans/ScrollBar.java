@@ -80,7 +80,7 @@ final class ScrollBar extends AnimatedPanel {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean pollPageBackward(int param0) {
         if (this.field_xb.field_rb != 0) {
           this.field_Hb = 20;
           return true;
@@ -110,7 +110,7 @@ final class ScrollBar extends AnimatedPanel {
         return true;
     }
 
-    final int a(int param0, int param1, int param2, boolean param3) {
+    final int getThumbScrollOffset(int param0, int param1, int param2, boolean param3) {
         int var7 = 0;
         int var8 = 0;
         int var5 = 0;
@@ -143,7 +143,7 @@ final class ScrollBar extends AnimatedPanel {
         return var5;
     }
 
-    final boolean h(int param0) {
+    final boolean pollScrollBackward(int param0) {
         if (param0 >= -109) {
           return false;
         }
@@ -169,7 +169,7 @@ final class ScrollBar extends AnimatedPanel {
         return true;
     }
 
-    final boolean g(byte param0) {
+    final boolean pollPageForward(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -196,26 +196,26 @@ final class ScrollBar extends AnimatedPanel {
         return false;
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndScrollRange(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         this.field_hb = param1;
         if (param3 == -77) {
           this.field_mb = param7;
           this.field_db = param0;
           this.field_K = param2;
-          this.a(param5, param3 + 97, param6, param4);
+          this.layoutScrollControls(param5, param3 + 97, param6, param4);
           return;
         }
     }
 
-    final boolean g(int param0) {
+    final boolean isThumbDragging(int param0) {
         if (param0 == -20641) {
           return this.field_Ab.field_ub != 0 ? true : false;
         }
-        this.i(-86);
+        this.pollPageBackward(-86);
         return this.field_Ab.field_ub != 0 ? true : false;
     }
 
-    final static void j(int param0) {
+    final static void showDefaultLoginForm(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -223,7 +223,7 @@ final class ScrollBar extends AnimatedPanel {
         PasswordInputPainter.showLoginForm(HighscoreResponseSupport.field_g, (String) null, (byte) 3);
     }
 
-    final boolean f(boolean param0) {
+    final boolean pollScrollForward(boolean param0) {
         if (this.field_Cb.field_rb != 0) {
           this.field_Hb = 20;
           return true;
@@ -244,7 +244,7 @@ final class ScrollBar extends AnimatedPanel {
         return true;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void setTooltipAnchor(int param0, boolean param1, int param2) {
         if (param1) {
           return;
         }
@@ -262,7 +262,7 @@ final class ScrollBar extends AnimatedPanel {
         field_yb = null;
     }
 
-    final static void a(Sprite[][] param0, int param1, byte[] param2, boolean param3, Archive param4, int[] param5, Sprite[][] param6, String[] param7, String[] param8, int param9, byte[] param10, Archive param11, Archive param12, IndexedSprite[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
+    final static void initializeLobbyUi(Sprite[][] param0, int param1, byte[] param2, boolean param3, Archive param4, int[] param5, Sprite[][] param6, String[] param7, String[] param8, int param9, byte[] param10, Archive param11, Archive param12, IndexedSprite[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -435,7 +435,7 @@ final class ScrollBar extends AnimatedPanel {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutScrollControls(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -494,7 +494,7 @@ final class ScrollBar extends AnimatedPanel {
           var15.field_db = var6;
           var15.field_mb = -var6 + this.field_mb;
           if (param1 != 20) {
-            this.i(-87);
+            this.pollPageBackward(-87);
           }
           var15.field_hb = 0;
           var15.field_K = this.field_K;
@@ -545,7 +545,7 @@ final class ScrollBar extends AnimatedPanel {
           var15Lifetime1.field_db = var6;
           var15Lifetime1.field_mb = -var6 + this.field_mb;
           if (param1 != 20) {
-            this.i(-87);
+            this.pollPageBackward(-87);
           }
           var15Lifetime1.field_hb = 0;
           var15Lifetime1.field_K = this.field_K;
@@ -590,7 +590,7 @@ final class ScrollBar extends AnimatedPanel {
         var15Lifetime2.field_db = var6;
         var15Lifetime2.field_mb = -var6 + this.field_mb;
         if (param1 != 20) {
-          this.i(-87);
+          this.pollPageBackward(-87);
         }
         var15Lifetime2.field_hb = 0;
         var15Lifetime2.field_K = this.field_K;

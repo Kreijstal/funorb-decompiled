@@ -103,12 +103,12 @@ class MenuComponent extends IntrusiveNode {
           stackIn_11_0 = (0 <= param1) && (param0 >= 0) && (this.field_m > param1) && (param0 < this.field_i);
           return stackIn_11_0;
         }
-        MenuComponent.d(-118);
+        MenuComponent.writeReadyReflectionChecks(-118);
         stackIn_18_0 = (0 <= param1) && (param0 >= 0) && (this.field_m > param1) && (param0 < this.field_i);
         return stackIn_18_0;
     }
 
-    final static boolean a(int param0, Archive param1, int param2, int param3) {
+    final static boolean decodeSpriteSheetFromArchive(int param0, Archive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -141,7 +141,7 @@ class MenuComponent extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void resetRankingBuffers(int param0, int param1, byte param2) {
         if (null != QuickChatPhraseRegistry.field_d) {
           if (param1 <= QuickChatPhraseRegistry.field_d.length) {
             if (null == GameApplet.field_f ||
@@ -312,7 +312,7 @@ class MenuComponent extends IntrusiveNode {
         }
         UiSpriteSupport.field_c = 0;
         if (param2 != 18) {
-          MenuComponent.a((byte) 6);
+          MenuComponent.clearMenuComponentStatics((byte) 6);
         }
         SpriteButton.field_u = 2147483647;
         GzipInflater.field_e = -2147483648;
@@ -357,7 +357,7 @@ class MenuComponent extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearMenuComponentStatics(byte param0) {
         field_n = null;
         if (param0 <= -114) {
           field_q = null;
@@ -366,7 +366,7 @@ class MenuComponent extends IntrusiveNode {
           return;
         }
         Archive var2 = (Archive) null;
-        MenuComponent.a(40, (Archive) null, 88, 85);
+        MenuComponent.decodeSpriteSheetFromArchive(40, (Archive) null, 88, 85);
         field_q = null;
         field_j = null;
         field_r = null;
@@ -382,7 +382,7 @@ class MenuComponent extends IntrusiveNode {
         this.field_m = param2;
     }
 
-    final static void d(int param0) {
+    final static void writeReadyReflectionChecks(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -403,7 +403,7 @@ class MenuComponent extends IntrusiveNode {
           }
           if (param0 != 2147483647) {
             var4 = (Archive) null;
-            MenuComponent.a(0, (Archive) null, -70, 78);
+            MenuComponent.decodeSpriteSheetFromArchive(0, (Archive) null, -70, 78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

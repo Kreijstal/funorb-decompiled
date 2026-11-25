@@ -26140,6 +26140,14 @@
       "renamedSymbol": "M:SolVictoryChecker.showResults(BLGameState;LGameScreen;)V"
     },
     {
+      "symbol": "M:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
+      "originalName": "a",
+      "to": "pollLoginHandshake",
+      "evidence": "Advance original login/reconnect handshake through credential kind,server challenge,login payload and result packets;publish session flags/cookie/account name and seed both ISAAC buffers on success. Both complete normal-login and reconnect callers read. Preserve pending -1,exact result codes and packet cursor resets,single retry flag/port swap,guard side effect,JavaScript exception catches,mutable key +50 loop and partial session publication order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I"
+    },
+    {
       "symbol": "M:ui.a(IIII)I",
       "originalName": "a",
       "to": "blendColours",
@@ -26194,6 +26202,14 @@
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SolVictoryChecker.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ui.c(Z)Ljava/lang/String;",
+      "originalName": "c",
+      "to": "getRequestedGameWebPage",
+      "evidence": "Return retained page string set by requestGameWebPage and consumed by login UI action12. Complete producer and consumer read. Preserve null/identity and true-flag unrelated integer write before returning. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SolVictoryChecker.getRequestedGameWebPage(Z)Ljava/lang/String;"
     },
     {
       "symbol": "M:uj.a(B)V",
@@ -26356,12 +26372,28 @@
       "renamedSymbol": "M:PlayerStats.statTexts(I)[Ljava/lang/String;"
     },
     {
+      "symbol": "M:um.a(ILbc;II)[Lbi;",
+      "originalName": "a",
+      "to": "loadSpritesWithAlpha",
+      "evidence": "Decode archive sprite sheet through shared decoder,then materialize Sprite or ArgbSprite entries using original alpha flags. Complete factory and archive wrapper contexts read. Preserve null when archive file absent,group/file order,late integer guard caption clear,shared decode buffers and cleanup order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;"
+    },
+    {
       "symbol": "M:um.b(B)[I",
       "originalName": "b",
       "to": "statValues",
       "evidence": "Returns sixteen ranking values built from the counters.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerStats.statValues(B)[I"
+    },
+    {
+      "symbol": "M:um.b(I)V",
+      "originalName": "b",
+      "to": "tickIntroGlowParticles",
+      "evidence": "Advance intro glow pulses,emit particles at pulse reversal,update retained50sample trails/kinematics,enqueue scene captions at frame0 and request scene3 at frame950. Complete particle constructor and scene-request helper read. Preserve initial guard division,two Math.random calls per emission,conditional randomBelow draw,float/double casts,deque iteration and all counter/publication order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerStats.tickIntroGlowParticles(I)V"
     },
     {
       "symbol": "M:un.a(B)Loh;",
@@ -26378,6 +26410,14 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveDequeSequence.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:un.a(Ljava/lang/String;BJII)V",
+      "originalName": "a",
+      "to": "rememberLastQuickChatMessage",
+      "evidence": "Retain destination name/account ID,channel and phrase ID for the repeat-last Quick Chat shortcut,marking availability first. Complete sending menu and shortcut consumer read. Preserve original String alias,long account ID,byte-dependent array clear and exact assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V"
     },
     {
       "symbol": "M:un.a(Z)Loh;",
@@ -26484,6 +26524,38 @@
       "renamedSymbol": "M:PopupPlacementSupport.preloadArchive(LArchive;I)Z"
     },
     {
+      "symbol": "M:ur.a(IIIBIIII)V",
+      "originalName": "a",
+      "to": "setBoundsAndScrollRange",
+      "evidence": "Set retained horizontal origin first and,on byte -77,set vertical extent/origin,width and delegate viewport/content/offset to scrollbar control layout. Complete ScrollPane layout caller and full ScrollBar class read. Preserve partial write for other byte values,argument arithmetic and virtual field identities. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V"
+    },
+    {
+      "symbol": "M:ur.a(IIII)V",
+      "originalName": "a",
+      "to": "layoutScrollControls",
+      "evidence": "Lay out backward/forward arrows,track,page regions and draggable thumb from viewport/content extent and offset. Full ScrollBar constructor and ScrollPane callers read. Preserve signed multiply/divide/overflow,minimum thumb sizing and clamp order,enabled flags,three original branches,guard-triggered page polling and partial layout writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.layoutScrollControls(IIII)V"
+    },
+    {
+      "symbol": "M:ur.a(IIIZ)I",
+      "originalName": "a",
+      "to": "getThumbScrollOffset",
+      "evidence": "Convert retained thumb displacement to content scroll offset with original integer rounding and flag-dependent clamp order. Complete dragging consumer read. Preserve zero/nonpositive travel behavior,guard96return,unrestricted signed content-minus-viewport and overflow. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.getThumbScrollOffset(IIIZ)I"
+    },
+    {
+      "symbol": "M:ur.a(IZI)V",
+      "originalName": "a",
+      "to": "setTooltipAnchor",
+      "evidence": "Retain tooltip anchor coordinates unless supplied boolean requests early return. Complete validated text tooltip and tooltip-state consumer read. Preserve original coordinate roles,unrestricted ints and first/second field assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.setTooltipAnchor(IZI)V"
+    },
+    {
       "symbol": "M:ur.a(Ldc;ILob;)Lfs;",
       "originalName": "a",
       "to": "readGamePlayer",
@@ -26492,12 +26564,68 @@
       "renamedSymbol": "M:ScrollBar.readGamePlayer(LGameState;ILPacketBuffer;)LPlayer;"
     },
     {
+      "symbol": "M:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
+      "originalName": "a",
+      "to": "initializeLobbyUi",
+      "evidence": "Forward original archives,font/sprite/option tables and membership flag into MenuButton lobby styles/widgets/chat/report initialization. Complete delegate and incoming wrapper context read. Preserve reordered array aliases,explicit null string array,two original constant arguments,unused int parameter and late guard caption clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V"
+    },
+    {
       "symbol": "M:ur.f(B)V",
       "originalName": "f",
       "to": "clearStatics",
       "evidence": "Assigns null to 4 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ScrollBar.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:ur.f(Z)Z",
+      "originalName": "f",
+      "to": "pollScrollForward",
+      "evidence": "Consume forward-arrow click/held state using shared20frame initial and3frame repeat counter. Full ScrollBar and complete scroll-input caller read. Preserve click priority,true-flag static cleanup before hold test,counter mutation and exact boolean results. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollScrollForward(Z)Z"
+    },
+    {
+      "symbol": "M:ur.g(B)Z",
+      "originalName": "g",
+      "to": "pollPageForward",
+      "evidence": "Consume forward page-region click/hold and repeat only while pointer is at or beyond original thumb end. Full ScrollBar and complete scroll-input caller read. Preserve click priority,shared20/3counter,edge-inclusive pointer comparison and byte-derived division only on original false paths. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollPageForward(B)Z"
+    },
+    {
+      "symbol": "M:ur.g(I)Z",
+      "originalName": "g",
+      "to": "isThumbDragging",
+      "evidence": "Return retained thumb held state,with original invalid-int page-poll side effect before the same test. Full ScrollBar and complete drag consumer read. Preserve guard -20641,held-state field identity,repeat-counter side effects and boolean conversion. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.isThumbDragging(I)Z"
+    },
+    {
+      "symbol": "M:ur.h(I)Z",
+      "originalName": "h",
+      "to": "pollScrollBackward",
+      "evidence": "Consume backward-arrow click/held state with shared20frame initial and3frame repeat counter. Full ScrollBar and complete scroll-input caller read. Preserve int>=-109early false,click priority,original decrement branches and exact counter/result ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollScrollBackward(I)Z"
+    },
+    {
+      "symbol": "M:ur.i(I)Z",
+      "originalName": "i",
+      "to": "pollPageBackward",
+      "evidence": "Consume backward page-region click/hold and repeat while pointer precedes original thumb start. Full ScrollBar and complete scroll-input caller read. Preserve shared20/3counter,strict pointer comparison and unusual int<=84true fallback on original false paths. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollPageBackward(I)Z"
+    },
+    {
+      "symbol": "M:ur.j(I)V",
+      "originalName": "j",
+      "to": "showDefaultLoginForm",
+      "evidence": "On int0show original login form with retained username and explicit null password after status dialog close. Complete status-dialog caller and form helper read. Preserve early no-op for other ints,argument identities and form publication sequence. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.showDefaultLoginForm(I)V"
     },
     {
       "symbol": "M:us.a(I)V",
@@ -26660,6 +26788,14 @@
       "renamedSymbol": "M:ClientRandomSupport.clearStatics(I)V"
     },
     {
+      "symbol": "M:vd.a(B)V",
+      "originalName": "a",
+      "to": "clearMenuComponentStatics",
+      "evidence": "Clear retained MenuComponent captions,queue and shared panel during client resource disposal. Incoming disposal context read. Preserve first caption clear before byte guard,invalid-byte null-archive decode call and original subsequent clears/exception ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuComponent.clearMenuComponentStatics(B)V"
+    },
+    {
       "symbol": "M:vd.a(BII)V",
       "originalName": "a",
       "to": "moveTo",
@@ -26684,12 +26820,28 @@
       "renamedSymbol": "M:MenuComponent.drawComponent(I)V"
     },
     {
+      "symbol": "M:vd.a(IIB)V",
+      "originalName": "a",
+      "to": "resetRankingBuffers",
+      "evidence": "Ensure original parallel ranking arrays/index capacity then reset count and four min/max sentinels before reading ranking rows. Complete row accumulator and incoming ranking response context read. Preserve existing arrays when large enough,doubled signed allocation sizes,index extra capacity,all branch/allocation/publication order and late invalid-byte static cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuComponent.resetRankingBuffers(IIB)V"
+    },
+    {
       "symbol": "M:vd.a(III)V",
       "originalName": "a",
       "to": "onPointerClick",
       "evidence": "Default menu click callback does nothing for guard0and clears retained child deque for other ints. Complete pointer dispatcher read. Preserve virtual descriptor/package visibility and exact invalid-guard side effect;override closure includes vertical slider. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuComponent.onPointerClick(III)V"
+    },
+    {
+      "symbol": "M:vd.a(ILbc;II)Z",
+      "originalName": "a",
+      "to": "decodeSpriteSheetFromArchive",
+      "evidence": "Read original archive group/file bytes and populate shared sprite decoder buffers,returning false for absent file. Incoming font,indexed sprite and alpha sprite factory contexts read. Preserve getFile argument order,shared decoder data,unchanged int branches and exception context. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z"
     },
     {
       "symbol": "M:vd.a(Lvd;I)V",
@@ -26738,6 +26890,14 @@
       "evidence": "Disposes each child recursively and then unlinks the children.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuComponent.dispose(Z)V"
+    },
+    {
+      "symbol": "M:vd.d(I)V",
+      "originalName": "d",
+      "to": "writeReadyReflectionChecks",
+      "evidence": "While first queued reflection check is ready,write opcode8,reserve length byte,serialize original reflection results/checksum and patch packet length. Complete readiness and result serializer helpers read. Preserve shared outgoing buffer alias,readiness loop,reflection/deserialization side effects and exception codes,queue unlink inside serializer,partial packet cursor and late guard null-archive call. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuComponent.writeReadyReflectionChecks(I)V"
     },
     {
       "symbol": "M:vd.d(III)V",
@@ -306065,7 +306225,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -306076,7 +306236,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
       "originalName": "stackIn_32_0",
       "renamedName": "stackIn_32_0",
       "declaration": {
@@ -306087,7 +306247,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#10",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#10",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#10",
       "originalName": "stackIn_104_0",
       "renamedName": "stackIn_104_0",
       "declaration": {
@@ -306098,7 +306258,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#11",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#11",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#11",
       "originalName": "stackIn_107_0",
       "renamedName": "stackIn_107_0",
       "declaration": {
@@ -306109,7 +306269,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#12",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#12",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#12",
       "originalName": "stackIn_107_1",
       "renamedName": "stackIn_107_1",
       "declaration": {
@@ -306120,7 +306280,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#13",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#13",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#13",
       "originalName": "stackIn_108_2",
       "renamedName": "stackIn_108_2",
       "declaration": {
@@ -306131,7 +306291,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#14",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#14",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#14",
       "originalName": "stackIn_110_1",
       "renamedName": "stackIn_110_1",
       "declaration": {
@@ -306142,7 +306302,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#15",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#15",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#15",
       "originalName": "stackIn_111_2",
       "renamedName": "stackIn_111_2",
       "declaration": {
@@ -306153,7 +306313,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#16",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#16",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#16",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -306164,7 +306324,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#17",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#17",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#17",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -306175,7 +306335,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#18",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#18",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -306186,7 +306346,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#19",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#19",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#19",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -306197,7 +306357,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
       "originalName": "stackIn_44_0",
       "renamedName": "stackIn_44_0",
       "declaration": {
@@ -306208,7 +306368,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#20",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#20",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#20",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -306219,7 +306379,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#21",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#21",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#21",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -306230,7 +306390,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#22",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#22",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#22",
       "originalName": "var8_ref_Throwable",
       "renamedName": "var8_ref_Throwable",
       "declaration": {
@@ -306241,7 +306401,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#23",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#23",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -306252,7 +306412,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#24",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#24",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#24",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -306263,7 +306423,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#25",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#25",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#25",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -306274,7 +306434,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#26",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#26",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#26",
       "originalName": "var6_intLifetime1",
       "renamedName": "var6_intLifetime1",
       "declaration": {
@@ -306285,7 +306445,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#27",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#27",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#27",
       "originalName": "var6_intLifetime2",
       "renamedName": "var6_intLifetime2",
       "declaration": {
@@ -306296,7 +306456,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#28",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#28",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#28",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -306307,7 +306467,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#29",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#29",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#29",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -306318,7 +306478,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
       "originalName": "stackIn_48_0",
       "renamedName": "stackIn_48_0",
       "declaration": {
@@ -306329,7 +306489,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#30",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#30",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#30",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -306340,7 +306500,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#31",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#31",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#31",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -306351,7 +306511,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#32",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#32",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#32",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -306362,7 +306522,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#33",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#33",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#33",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -306373,7 +306533,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#34",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#34",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#34",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -306384,7 +306544,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
       "originalName": "stackIn_51_0",
       "renamedName": "stackIn_51_0",
       "declaration": {
@@ -306395,7 +306555,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
       "originalName": "stackIn_54_0",
       "renamedName": "stackIn_54_0",
       "declaration": {
@@ -306406,7 +306566,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#6",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#6",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#6",
       "originalName": "stackIn_81_0",
       "renamedName": "stackIn_81_0",
       "declaration": {
@@ -306417,7 +306577,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#7",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#7",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#7",
       "originalName": "stackIn_87_0",
       "renamedName": "stackIn_87_0",
       "declaration": {
@@ -306428,7 +306588,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#8",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#8",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#8",
       "originalName": "stackIn_92_0",
       "renamedName": "stackIn_92_0",
       "declaration": {
@@ -306439,7 +306599,7 @@
     },
     {
       "symbol": "L:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#9",
-      "renamedSymbol": "L:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#9",
+      "renamedSymbol": "L:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#9",
       "originalName": "stackIn_102_0",
       "renamedName": "stackIn_102_0",
       "declaration": {
@@ -308243,7 +308403,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#0",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#0",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -308254,7 +308414,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#1",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#1",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -308265,7 +308425,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#2",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#2",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -308276,7 +308436,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#3",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#3",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -308287,7 +308447,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#4",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#4",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -308298,7 +308458,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#5",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#5",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -308309,7 +308469,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#6",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#6",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -308320,7 +308480,7 @@
     },
     {
       "symbol": "L:um.a(ILbc;II)[Lbi;#7",
-      "renamedSymbol": "L:PlayerStats.a(ILArchive;II)[LSprite;#7",
+      "renamedSymbol": "L:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -308375,7 +308535,7 @@
     },
     {
       "symbol": "L:um.b(I)V#0",
-      "renamedSymbol": "L:PlayerStats.b(I)V#0",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -308386,7 +308546,7 @@
     },
     {
       "symbol": "L:um.b(I)V#1",
-      "renamedSymbol": "L:PlayerStats.b(I)V#1",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -308397,7 +308557,7 @@
     },
     {
       "symbol": "L:um.b(I)V#10",
-      "renamedSymbol": "L:PlayerStats.b(I)V#10",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -308408,7 +308568,7 @@
     },
     {
       "symbol": "L:um.b(I)V#11",
-      "renamedSymbol": "L:PlayerStats.b(I)V#11",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -308419,7 +308579,7 @@
     },
     {
       "symbol": "L:um.b(I)V#12",
-      "renamedSymbol": "L:PlayerStats.b(I)V#12",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -308430,7 +308590,7 @@
     },
     {
       "symbol": "L:um.b(I)V#13",
-      "renamedSymbol": "L:PlayerStats.b(I)V#13",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -308441,7 +308601,7 @@
     },
     {
       "symbol": "L:um.b(I)V#14",
-      "renamedSymbol": "L:PlayerStats.b(I)V#14",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -308452,7 +308612,7 @@
     },
     {
       "symbol": "L:um.b(I)V#15",
-      "renamedSymbol": "L:PlayerStats.b(I)V#15",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -308463,7 +308623,7 @@
     },
     {
       "symbol": "L:um.b(I)V#16",
-      "renamedSymbol": "L:PlayerStats.b(I)V#16",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -308474,7 +308634,7 @@
     },
     {
       "symbol": "L:um.b(I)V#17",
-      "renamedSymbol": "L:PlayerStats.b(I)V#17",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -308485,7 +308645,7 @@
     },
     {
       "symbol": "L:um.b(I)V#18",
-      "renamedSymbol": "L:PlayerStats.b(I)V#18",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -308496,7 +308656,7 @@
     },
     {
       "symbol": "L:um.b(I)V#2",
-      "renamedSymbol": "L:PlayerStats.b(I)V#2",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#2",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -308507,7 +308667,7 @@
     },
     {
       "symbol": "L:um.b(I)V#3",
-      "renamedSymbol": "L:PlayerStats.b(I)V#3",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -308518,7 +308678,7 @@
     },
     {
       "symbol": "L:um.b(I)V#4",
-      "renamedSymbol": "L:PlayerStats.b(I)V#4",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#4",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -308529,7 +308689,7 @@
     },
     {
       "symbol": "L:um.b(I)V#5",
-      "renamedSymbol": "L:PlayerStats.b(I)V#5",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#5",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -308540,7 +308700,7 @@
     },
     {
       "symbol": "L:um.b(I)V#6",
-      "renamedSymbol": "L:PlayerStats.b(I)V#6",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -308551,7 +308711,7 @@
     },
     {
       "symbol": "L:um.b(I)V#7",
-      "renamedSymbol": "L:PlayerStats.b(I)V#7",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -308562,7 +308722,7 @@
     },
     {
       "symbol": "L:um.b(I)V#8",
-      "renamedSymbol": "L:PlayerStats.b(I)V#8",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -308573,7 +308733,7 @@
     },
     {
       "symbol": "L:um.b(I)V#9",
-      "renamedSymbol": "L:PlayerStats.b(I)V#9",
+      "renamedSymbol": "L:PlayerStats.tickIntroGlowParticles(I)V#9",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -308617,7 +308777,7 @@
     },
     {
       "symbol": "L:un.a(Ljava/lang/String;BJII)V#0",
-      "renamedSymbol": "L:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#0",
+      "renamedSymbol": "L:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -309882,7 +310042,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#0",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#0",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -309893,7 +310053,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#1",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#1",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -309904,7 +310064,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#10",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#10",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#10",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -309915,7 +310075,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#11",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#11",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#11",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -309926,7 +310086,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#12",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#12",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#12",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -309937,7 +310097,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#13",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#13",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#13",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -309948,7 +310108,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#14",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#14",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#14",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -309959,7 +310119,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#15",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#15",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#15",
       "originalName": "var15Lifetime2",
       "renamedName": "var15Lifetime2",
       "declaration": {
@@ -309970,7 +310130,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#16",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#16",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#16",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -309981,7 +310141,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#17",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#17",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#17",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -309992,7 +310152,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#18",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#18",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#18",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -310003,7 +310163,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#19",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#19",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#19",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -310014,7 +310174,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#2",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#2",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -310025,7 +310185,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#20",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#20",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#20",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -310036,7 +310196,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#21",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#21",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#21",
       "originalName": "var18Lifetime2",
       "renamedName": "var18Lifetime2",
       "declaration": {
@@ -310047,7 +310207,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#22",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#22",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#22",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -310058,7 +310218,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#23",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#23",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#23",
       "originalName": "var19Lifetime2",
       "renamedName": "var19Lifetime2",
       "declaration": {
@@ -310069,7 +310229,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#24",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#24",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#24",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -310080,7 +310240,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#25",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#25",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#25",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -310091,7 +310251,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#26",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#26",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#26",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -310102,7 +310262,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#27",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#27",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#27",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -310113,7 +310273,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#28",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#28",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#28",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -310124,7 +310284,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#29",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#29",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#29",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -310135,7 +310295,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#3",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#3",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -310146,7 +310306,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#30",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#30",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#30",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -310157,7 +310317,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#31",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#31",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#31",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -310168,7 +310328,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#32",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#32",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#32",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -310179,7 +310339,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#33",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#33",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#33",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -310190,7 +310350,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#4",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#4",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -310201,7 +310361,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#5",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#5",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -310212,7 +310372,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#6",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#6",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -310223,7 +310383,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#7",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#7",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#7",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -310234,7 +310394,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#8",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#8",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#8",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -310245,7 +310405,7 @@
     },
     {
       "symbol": "L:ur.a(IIII)V#9",
-      "renamedSymbol": "L:ScrollBar.a(IIII)V#9",
+      "renamedSymbol": "L:ScrollBar.layoutScrollControls(IIII)V#9",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -310256,7 +310416,7 @@
     },
     {
       "symbol": "L:ur.a(IIIZ)I#0",
-      "renamedSymbol": "L:ScrollBar.a(IIIZ)I#0",
+      "renamedSymbol": "L:ScrollBar.getThumbScrollOffset(IIIZ)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -310267,7 +310427,7 @@
     },
     {
       "symbol": "L:ur.a(IIIZ)I#1",
-      "renamedSymbol": "L:ScrollBar.a(IIIZ)I#1",
+      "renamedSymbol": "L:ScrollBar.getThumbScrollOffset(IIIZ)I#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -310278,7 +310438,7 @@
     },
     {
       "symbol": "L:ur.a(IIIZ)I#2",
-      "renamedSymbol": "L:ScrollBar.a(IIIZ)I#2",
+      "renamedSymbol": "L:ScrollBar.getThumbScrollOffset(IIIZ)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -310289,7 +310449,7 @@
     },
     {
       "symbol": "L:ur.a(IIIZ)I#3",
-      "renamedSymbol": "L:ScrollBar.a(IIIZ)I#3",
+      "renamedSymbol": "L:ScrollBar.getThumbScrollOffset(IIIZ)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -310410,7 +310570,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -310421,7 +310581,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -310432,7 +310592,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -310443,7 +310603,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -310454,7 +310614,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -310465,7 +310625,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -310476,7 +310636,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -310487,7 +310647,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -310498,7 +310658,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -310509,7 +310669,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -310520,7 +310680,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
       "originalName": "stackIn_30_2",
       "renamedName": "stackIn_30_2",
       "declaration": {
@@ -310531,7 +310691,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#19",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#19",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#19",
       "originalName": "stackIn_32_1",
       "renamedName": "stackIn_32_1",
       "declaration": {
@@ -310542,7 +310702,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -310553,7 +310713,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#20",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#20",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#20",
       "originalName": "stackIn_33_2",
       "renamedName": "stackIn_33_2",
       "declaration": {
@@ -310564,7 +310724,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#21",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#21",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#21",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -310575,7 +310735,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#22",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#22",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#22",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -310586,7 +310746,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#23",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#23",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#23",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -310597,7 +310757,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#24",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#24",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#24",
       "originalName": "stackIn_39_2",
       "renamedName": "stackIn_39_2",
       "declaration": {
@@ -310608,7 +310768,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#25",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#25",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#25",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -310619,7 +310779,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#26",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#26",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#26",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -310630,7 +310790,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#27",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#27",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#27",
       "originalName": "stackIn_44_1",
       "renamedName": "stackIn_44_1",
       "declaration": {
@@ -310641,7 +310801,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#28",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#28",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#28",
       "originalName": "stackIn_45_2",
       "renamedName": "stackIn_45_2",
       "declaration": {
@@ -310652,7 +310812,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#29",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#29",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#29",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -310663,7 +310823,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -310674,7 +310834,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#30",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#30",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#30",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -310685,7 +310845,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#31",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#31",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#31",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -310696,7 +310856,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#32",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#32",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#32",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -310707,7 +310867,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -310718,7 +310878,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -310729,7 +310889,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -310740,7 +310900,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -310751,7 +310911,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -310762,7 +310922,7 @@
     },
     {
       "symbol": "L:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
-      "renamedSymbol": "L:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
+      "renamedSymbol": "L:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -310773,7 +310933,7 @@
     },
     {
       "symbol": "L:ur.g(B)Z#0",
-      "renamedSymbol": "L:ScrollBar.g(B)Z#0",
+      "renamedSymbol": "L:ScrollBar.pollPageForward(B)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -310784,7 +310944,7 @@
     },
     {
       "symbol": "L:ur.g(B)Z#1",
-      "renamedSymbol": "L:ScrollBar.g(B)Z#1",
+      "renamedSymbol": "L:ScrollBar.pollPageForward(B)Z#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -310795,7 +310955,7 @@
     },
     {
       "symbol": "L:ur.g(B)Z#2",
-      "renamedSymbol": "L:ScrollBar.g(B)Z#2",
+      "renamedSymbol": "L:ScrollBar.pollPageForward(B)Z#2",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -310806,7 +310966,7 @@
     },
     {
       "symbol": "L:ur.j(I)V#0",
-      "renamedSymbol": "L:ScrollBar.j(I)V#0",
+      "renamedSymbol": "L:ScrollBar.showDefaultLoginForm(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -312225,7 +312385,7 @@
     },
     {
       "symbol": "L:vd.a(B)V#0",
-      "renamedSymbol": "L:MenuComponent.a(B)V#0",
+      "renamedSymbol": "L:MenuComponent.clearMenuComponentStatics(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -312346,7 +312506,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#0",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#0",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -312357,7 +312517,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#1",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#1",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -312368,7 +312528,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#2",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#2",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -312379,7 +312539,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#3",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#3",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -312390,7 +312550,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#4",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#4",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -312401,7 +312561,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#5",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#5",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -312412,7 +312572,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#6",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#6",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -312423,7 +312583,7 @@
     },
     {
       "symbol": "L:vd.a(ILbc;II)Z#7",
-      "renamedSymbol": "L:MenuComponent.a(ILArchive;II)Z#7",
+      "renamedSymbol": "L:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -312500,7 +312660,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#0",
-      "renamedSymbol": "L:MenuComponent.d(I)V#0",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -312511,7 +312671,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#1",
-      "renamedSymbol": "L:MenuComponent.d(I)V#1",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -312522,7 +312682,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#2",
-      "renamedSymbol": "L:MenuComponent.d(I)V#2",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -312533,7 +312693,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#3",
-      "renamedSymbol": "L:MenuComponent.d(I)V#3",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#3",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -312544,7 +312704,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#4",
-      "renamedSymbol": "L:MenuComponent.d(I)V#4",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -312555,7 +312715,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#5",
-      "renamedSymbol": "L:MenuComponent.d(I)V#5",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -312566,7 +312726,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#6",
-      "renamedSymbol": "L:MenuComponent.d(I)V#6",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -312577,7 +312737,7 @@
     },
     {
       "symbol": "L:vd.d(I)V#7",
-      "renamedSymbol": "L:MenuComponent.d(I)V#7",
+      "renamedSymbol": "L:MenuComponent.writeReadyReflectionChecks(I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -360152,9 +360312,9 @@
     },
     {
       "symbol": "M:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
-      "renamedSymbol": "M:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
+      "renamedSymbol": "M:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollLoginHandshake",
       "declaration": {
         "file": "ui.java",
         "start": 12057,
@@ -360240,9 +360400,9 @@
     },
     {
       "symbol": "M:ui.c(Z)Ljava/lang/String;",
-      "renamedSymbol": "M:SolVictoryChecker.c(Z)Ljava/lang/String;",
+      "renamedSymbol": "M:SolVictoryChecker.getRequestedGameWebPage(Z)Ljava/lang/String;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getRequestedGameWebPage",
       "declaration": {
         "file": "ui.java",
         "start": 4142,
@@ -360504,9 +360664,9 @@
     },
     {
       "symbol": "M:um.a(ILbc;II)[Lbi;",
-      "renamedSymbol": "M:PlayerStats.a(ILArchive;II)[LSprite;",
+      "renamedSymbol": "M:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSpritesWithAlpha",
       "declaration": {
         "file": "um.java",
         "start": 7398,
@@ -360526,9 +360686,9 @@
     },
     {
       "symbol": "M:um.b(I)V",
-      "renamedSymbol": "M:PlayerStats.b(I)V",
+      "renamedSymbol": "M:PlayerStats.tickIntroGlowParticles(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "tickIntroGlowParticles",
       "declaration": {
         "file": "um.java",
         "start": 1987,
@@ -360570,9 +360730,9 @@
     },
     {
       "symbol": "M:un.a(Ljava/lang/String;BJII)V",
-      "renamedSymbol": "M:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V",
+      "renamedSymbol": "M:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "rememberLastQuickChatMessage",
       "declaration": {
         "file": "un.java",
         "start": 687,
@@ -360779,9 +360939,9 @@
     },
     {
       "symbol": "M:ur.a(IIIBIIII)V",
-      "renamedSymbol": "M:ScrollBar.a(IIIBIIII)V",
+      "renamedSymbol": "M:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBoundsAndScrollRange",
       "declaration": {
         "file": "ur.java",
         "start": 5994,
@@ -360790,9 +360950,9 @@
     },
     {
       "symbol": "M:ur.a(IIII)V",
-      "renamedSymbol": "M:ScrollBar.a(IIII)V",
+      "renamedSymbol": "M:ScrollBar.layoutScrollControls(IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutScrollControls",
       "declaration": {
         "file": "ur.java",
         "start": 14883,
@@ -360801,9 +360961,9 @@
     },
     {
       "symbol": "M:ur.a(IIIZ)I",
-      "renamedSymbol": "M:ScrollBar.a(IIIZ)I",
+      "renamedSymbol": "M:ScrollBar.getThumbScrollOffset(IIIZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getThumbScrollOffset",
       "declaration": {
         "file": "ur.java",
         "start": 3712,
@@ -360812,9 +360972,9 @@
     },
     {
       "symbol": "M:ur.a(IZI)V",
-      "renamedSymbol": "M:ScrollBar.a(IZI)V",
+      "renamedSymbol": "M:ScrollBar.setTooltipAnchor(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setTooltipAnchor",
       "declaration": {
         "file": "ur.java",
         "start": 7273,
@@ -360834,9 +360994,9 @@
     },
     {
       "symbol": "M:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
-      "renamedSymbol": "M:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
+      "renamedSymbol": "M:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeLobbyUi",
       "declaration": {
         "file": "ur.java",
         "start": 7658,
@@ -360856,9 +361016,9 @@
     },
     {
       "symbol": "M:ur.f(Z)Z",
-      "renamedSymbol": "M:ScrollBar.f(Z)Z",
+      "renamedSymbol": "M:ScrollBar.pollScrollForward(Z)Z",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "pollScrollForward",
       "declaration": {
         "file": "ur.java",
         "start": 6777,
@@ -360867,9 +361027,9 @@
     },
     {
       "symbol": "M:ur.g(B)Z",
-      "renamedSymbol": "M:ScrollBar.g(B)Z",
+      "renamedSymbol": "M:ScrollBar.pollPageForward(B)Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "pollPageForward",
       "declaration": {
         "file": "ur.java",
         "start": 5178,
@@ -360878,9 +361038,9 @@
     },
     {
       "symbol": "M:ur.g(I)Z",
-      "renamedSymbol": "M:ScrollBar.g(I)Z",
+      "renamedSymbol": "M:ScrollBar.isThumbDragging(I)Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "isThumbDragging",
       "declaration": {
         "file": "ur.java",
         "start": 6365,
@@ -360889,9 +361049,9 @@
     },
     {
       "symbol": "M:ur.h(I)Z",
-      "renamedSymbol": "M:ScrollBar.h(I)Z",
+      "renamedSymbol": "M:ScrollBar.pollScrollBackward(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "pollScrollBackward",
       "declaration": {
         "file": "ur.java",
         "start": 4560,
@@ -360900,9 +361060,9 @@
     },
     {
       "symbol": "M:ur.i(I)Z",
-      "renamedSymbol": "M:ScrollBar.i(I)Z",
+      "renamedSymbol": "M:ScrollBar.pollPageBackward(I)Z",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "pollPageBackward",
       "declaration": {
         "file": "ur.java",
         "start": 2986,
@@ -360911,9 +361071,9 @@
     },
     {
       "symbol": "M:ur.j(I)V",
-      "renamedSymbol": "M:ScrollBar.j(I)V",
+      "renamedSymbol": "M:ScrollBar.showDefaultLoginForm(I)V",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "showDefaultLoginForm",
       "declaration": {
         "file": "ur.java",
         "start": 6593,
@@ -361175,9 +361335,9 @@
     },
     {
       "symbol": "M:vd.a(B)V",
-      "renamedSymbol": "M:MenuComponent.a(B)V",
+      "renamedSymbol": "M:MenuComponent.clearMenuComponentStatics(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearMenuComponentStatics",
       "declaration": {
         "file": "vd.java",
         "start": 12589,
@@ -361219,9 +361379,9 @@
     },
     {
       "symbol": "M:vd.a(IIB)V",
-      "renamedSymbol": "M:MenuComponent.a(IIB)V",
+      "renamedSymbol": "M:MenuComponent.resetRankingBuffers(IIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetRankingBuffers",
       "declaration": {
         "file": "vd.java",
         "start": 4831,
@@ -361241,9 +361401,9 @@
     },
     {
       "symbol": "M:vd.a(ILbc;II)Z",
-      "renamedSymbol": "M:MenuComponent.a(ILArchive;II)Z",
+      "renamedSymbol": "M:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeSpriteSheetFromArchive",
       "declaration": {
         "file": "vd.java",
         "start": 3542,
@@ -361318,9 +361478,9 @@
     },
     {
       "symbol": "M:vd.d(I)V",
-      "renamedSymbol": "M:MenuComponent.d(I)V",
+      "renamedSymbol": "M:MenuComponent.writeReadyReflectionChecks(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "writeReadyReflectionChecks",
       "declaration": {
         "file": "vd.java",
         "start": 13166,
@@ -453619,7 +453779,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -453630,7 +453790,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -453641,7 +453801,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -453652,7 +453812,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -453663,7 +453823,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -453674,7 +453834,7 @@
     },
     {
       "symbol": "P:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
-      "renamedSymbol": "P:SolVictoryChecker.a(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
+      "renamedSymbol": "P:SolVictoryChecker.pollLoginHandshake(IBZLjava/lang/String;ZLjava/lang/String;)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -453828,7 +453988,7 @@
     },
     {
       "symbol": "P:ui.c(Z)Ljava/lang/String;#0",
-      "renamedSymbol": "P:SolVictoryChecker.c(Z)Ljava/lang/String;#0",
+      "renamedSymbol": "P:SolVictoryChecker.getRequestedGameWebPage(Z)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454510,7 +454670,7 @@
     },
     {
       "symbol": "P:um.a(ILbc;II)[Lbi;#0",
-      "renamedSymbol": "P:PlayerStats.a(ILArchive;II)[LSprite;#0",
+      "renamedSymbol": "P:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454521,7 +454681,7 @@
     },
     {
       "symbol": "P:um.a(ILbc;II)[Lbi;#1",
-      "renamedSymbol": "P:PlayerStats.a(ILArchive;II)[LSprite;#1",
+      "renamedSymbol": "P:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -454532,7 +454692,7 @@
     },
     {
       "symbol": "P:um.a(ILbc;II)[Lbi;#2",
-      "renamedSymbol": "P:PlayerStats.a(ILArchive;II)[LSprite;#2",
+      "renamedSymbol": "P:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -454543,7 +454703,7 @@
     },
     {
       "symbol": "P:um.a(ILbc;II)[Lbi;#3",
-      "renamedSymbol": "P:PlayerStats.a(ILArchive;II)[LSprite;#3",
+      "renamedSymbol": "P:PlayerStats.loadSpritesWithAlpha(ILArchive;II)[LSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -454565,7 +454725,7 @@
     },
     {
       "symbol": "P:um.b(I)V#0",
-      "renamedSymbol": "P:PlayerStats.b(I)V#0",
+      "renamedSymbol": "P:PlayerStats.tickIntroGlowParticles(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454609,7 +454769,7 @@
     },
     {
       "symbol": "P:un.a(Ljava/lang/String;BJII)V#0",
-      "renamedSymbol": "P:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#0",
+      "renamedSymbol": "P:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454620,7 +454780,7 @@
     },
     {
       "symbol": "P:un.a(Ljava/lang/String;BJII)V#1",
-      "renamedSymbol": "P:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#1",
+      "renamedSymbol": "P:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -454631,7 +454791,7 @@
     },
     {
       "symbol": "P:un.a(Ljava/lang/String;BJII)V#2",
-      "renamedSymbol": "P:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#2",
+      "renamedSymbol": "P:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -454642,7 +454802,7 @@
     },
     {
       "symbol": "P:un.a(Ljava/lang/String;BJII)V#3",
-      "renamedSymbol": "P:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#3",
+      "renamedSymbol": "P:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -454653,7 +454813,7 @@
     },
     {
       "symbol": "P:un.a(Ljava/lang/String;BJII)V#4",
-      "renamedSymbol": "P:IntrusiveDequeSequence.a(Ljava/lang/String;BJII)V#4",
+      "renamedSymbol": "P:IntrusiveDequeSequence.rememberLastQuickChatMessage(Ljava/lang/String;BJII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -455049,7 +455209,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#0",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#0",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455060,7 +455220,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#1",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#1",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455071,7 +455231,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#2",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#2",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455082,7 +455242,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#3",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#3",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455093,7 +455253,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#4",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#4",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -455104,7 +455264,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#5",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#5",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -455115,7 +455275,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#6",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#6",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -455126,7 +455286,7 @@
     },
     {
       "symbol": "P:ur.a(IIIBIIII)V#7",
-      "renamedSymbol": "P:ScrollBar.a(IIIBIIII)V#7",
+      "renamedSymbol": "P:ScrollBar.setBoundsAndScrollRange(IIIBIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -455137,7 +455297,7 @@
     },
     {
       "symbol": "P:ur.a(IIII)V#0",
-      "renamedSymbol": "P:ScrollBar.a(IIII)V#0",
+      "renamedSymbol": "P:ScrollBar.layoutScrollControls(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455148,7 +455308,7 @@
     },
     {
       "symbol": "P:ur.a(IIII)V#1",
-      "renamedSymbol": "P:ScrollBar.a(IIII)V#1",
+      "renamedSymbol": "P:ScrollBar.layoutScrollControls(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455159,7 +455319,7 @@
     },
     {
       "symbol": "P:ur.a(IIII)V#2",
-      "renamedSymbol": "P:ScrollBar.a(IIII)V#2",
+      "renamedSymbol": "P:ScrollBar.layoutScrollControls(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455170,7 +455330,7 @@
     },
     {
       "symbol": "P:ur.a(IIII)V#3",
-      "renamedSymbol": "P:ScrollBar.a(IIII)V#3",
+      "renamedSymbol": "P:ScrollBar.layoutScrollControls(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455181,7 +455341,7 @@
     },
     {
       "symbol": "P:ur.a(IIIZ)I#0",
-      "renamedSymbol": "P:ScrollBar.a(IIIZ)I#0",
+      "renamedSymbol": "P:ScrollBar.getThumbScrollOffset(IIIZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455192,7 +455352,7 @@
     },
     {
       "symbol": "P:ur.a(IIIZ)I#1",
-      "renamedSymbol": "P:ScrollBar.a(IIIZ)I#1",
+      "renamedSymbol": "P:ScrollBar.getThumbScrollOffset(IIIZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455203,7 +455363,7 @@
     },
     {
       "symbol": "P:ur.a(IIIZ)I#2",
-      "renamedSymbol": "P:ScrollBar.a(IIIZ)I#2",
+      "renamedSymbol": "P:ScrollBar.getThumbScrollOffset(IIIZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455214,7 +455374,7 @@
     },
     {
       "symbol": "P:ur.a(IIIZ)I#3",
-      "renamedSymbol": "P:ScrollBar.a(IIIZ)I#3",
+      "renamedSymbol": "P:ScrollBar.getThumbScrollOffset(IIIZ)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455225,7 +455385,7 @@
     },
     {
       "symbol": "P:ur.a(IZI)V#0",
-      "renamedSymbol": "P:ScrollBar.a(IZI)V#0",
+      "renamedSymbol": "P:ScrollBar.setTooltipAnchor(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455236,7 +455396,7 @@
     },
     {
       "symbol": "P:ur.a(IZI)V#1",
-      "renamedSymbol": "P:ScrollBar.a(IZI)V#1",
+      "renamedSymbol": "P:ScrollBar.setTooltipAnchor(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455247,7 +455407,7 @@
     },
     {
       "symbol": "P:ur.a(IZI)V#2",
-      "renamedSymbol": "P:ScrollBar.a(IZI)V#2",
+      "renamedSymbol": "P:ScrollBar.setTooltipAnchor(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455291,7 +455451,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455302,7 +455462,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -455313,7 +455473,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -455324,7 +455484,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -455335,7 +455495,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -455346,7 +455506,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -455357,7 +455517,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -455368,7 +455528,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -455379,7 +455539,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -455390,7 +455550,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#17",
       "originalName": "param17",
       "renamedName": "param17",
       "declaration": {
@@ -455401,7 +455561,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#18",
       "originalName": "param18",
       "renamedName": "param18",
       "declaration": {
@@ -455412,7 +455572,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -455423,7 +455583,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -455434,7 +455594,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -455445,7 +455605,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -455456,7 +455616,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -455467,7 +455627,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -455478,7 +455638,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -455489,7 +455649,7 @@
     },
     {
       "symbol": "P:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
-      "renamedSymbol": "P:ScrollBar.a([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
+      "renamedSymbol": "P:ScrollBar.initializeLobbyUi([[LSprite;I[BZLArchive;[I[[LSprite;[Ljava/lang/String;[Ljava/lang/String;I[BLArchive;LArchive;[LIndexedSprite;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -455511,7 +455671,7 @@
     },
     {
       "symbol": "P:ur.f(Z)Z#0",
-      "renamedSymbol": "P:ScrollBar.f(Z)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollScrollForward(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455522,7 +455682,7 @@
     },
     {
       "symbol": "P:ur.g(B)Z#0",
-      "renamedSymbol": "P:ScrollBar.g(B)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollPageForward(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455533,7 +455693,7 @@
     },
     {
       "symbol": "P:ur.g(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.g(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.isThumbDragging(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455544,7 +455704,7 @@
     },
     {
       "symbol": "P:ur.h(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.h(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollScrollBackward(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455555,7 +455715,7 @@
     },
     {
       "symbol": "P:ur.i(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.i(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollPageBackward(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455566,7 +455726,7 @@
     },
     {
       "symbol": "P:ur.j(I)V#0",
-      "renamedSymbol": "P:ScrollBar.j(I)V#0",
+      "renamedSymbol": "P:ScrollBar.showDefaultLoginForm(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456039,7 +456199,7 @@
     },
     {
       "symbol": "P:vd.a(B)V#0",
-      "renamedSymbol": "P:MenuComponent.a(B)V#0",
+      "renamedSymbol": "P:MenuComponent.clearMenuComponentStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456116,7 +456276,7 @@
     },
     {
       "symbol": "P:vd.a(IIB)V#0",
-      "renamedSymbol": "P:MenuComponent.a(IIB)V#0",
+      "renamedSymbol": "P:MenuComponent.resetRankingBuffers(IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456127,7 +456287,7 @@
     },
     {
       "symbol": "P:vd.a(IIB)V#1",
-      "renamedSymbol": "P:MenuComponent.a(IIB)V#1",
+      "renamedSymbol": "P:MenuComponent.resetRankingBuffers(IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -456138,7 +456298,7 @@
     },
     {
       "symbol": "P:vd.a(IIB)V#2",
-      "renamedSymbol": "P:MenuComponent.a(IIB)V#2",
+      "renamedSymbol": "P:MenuComponent.resetRankingBuffers(IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -456182,7 +456342,7 @@
     },
     {
       "symbol": "P:vd.a(ILbc;II)Z#0",
-      "renamedSymbol": "P:MenuComponent.a(ILArchive;II)Z#0",
+      "renamedSymbol": "P:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456193,7 +456353,7 @@
     },
     {
       "symbol": "P:vd.a(ILbc;II)Z#1",
-      "renamedSymbol": "P:MenuComponent.a(ILArchive;II)Z#1",
+      "renamedSymbol": "P:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -456204,7 +456364,7 @@
     },
     {
       "symbol": "P:vd.a(ILbc;II)Z#2",
-      "renamedSymbol": "P:MenuComponent.a(ILArchive;II)Z#2",
+      "renamedSymbol": "P:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -456215,7 +456375,7 @@
     },
     {
       "symbol": "P:vd.a(ILbc;II)Z#3",
-      "renamedSymbol": "P:MenuComponent.a(ILArchive;II)Z#3",
+      "renamedSymbol": "P:MenuComponent.decodeSpriteSheetFromArchive(ILArchive;II)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -456391,7 +456551,7 @@
     },
     {
       "symbol": "P:vd.d(I)V#0",
-      "renamedSymbol": "P:MenuComponent.d(I)V#0",
+      "renamedSymbol": "P:MenuComponent.writeReadyReflectionChecks(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -461840,7 +462000,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "6b4e0b05858e4bd054ab51dccbad99cfd2e757025f53645c96138df991543480",
+      "outputSha256": "62ff02d35e87ffa5cc1cf67e42650515ef57643d1a6c7217640e933187a3731d",
       "edits": [
         {
           "start": 86,
@@ -469347,6 +469507,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 31658,
+          "end": 31659,
+          "symbol": "M:vd.a(B)V",
+          "original": "a",
+          "renamed": "clearMenuComponentStatics"
         },
         {
           "start": 31682,
@@ -501812,7 +501979,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "3e4a9ec3f6848953617e68352c1d12ff55204e54b76c2ba7fe6113d5b0352dcd",
+      "outputSha256": "3aa8eaca60adb4c50897c8bb4384709965730990dc297d2877923ca453989bdb",
       "edits": [
         {
           "start": 50,
@@ -501911,6 +502078,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 873,
+          "end": 874,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 966,
@@ -503873,7 +504047,7 @@
       "original": "ch.java",
       "renamed": "RoundedFrameSupport.java",
       "inputSha256": "f736055e37199533433f3956683f507ffa2477bf2feed11fd567645c21359f72",
-      "outputSha256": "f5f56bb10218552632375cce0d99afe4b9c6cfeec19e7952db4e4941bf6d1a1d",
+      "outputSha256": "0adb005b269856620753dc6f51a800d81ff8e274c5dc3172a848e247c85f5349",
       "edits": [
         {
           "start": 50,
@@ -504338,6 +504512,13 @@
           "renamed": "MenuComponent"
         },
         {
+          "start": 4491,
+          "end": 4492,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
+        },
+        {
           "start": 4617,
           "end": 4619,
           "symbol": "C:ed",
@@ -504658,6 +504839,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 6798,
+          "end": 6799,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 6856,
@@ -558047,7 +558235,7 @@
       "original": "fa.java",
       "renamed": "ValidatedTextInputWidget.java",
       "inputSha256": "b4ae4035be71c0fc4bbc797d03cf9ac65880b79a6eb88f27f9d3215c27d59996",
-      "outputSha256": "06f7341b10d1888679162c96061c0eca1b83c433c298af47be6cb481e9190d83",
+      "outputSha256": "3001b87756b8eb93e75394229aa49036c02fe3fd11fa999d04641e09fd7b3be8",
       "edits": [
         {
           "start": 50,
@@ -558160,6 +558348,13 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 1011,
+          "end": 1012,
+          "symbol": "M:ur.a(IZI)V",
+          "original": "a",
+          "renamed": "setTooltipAnchor"
         },
         {
           "start": 1013,
@@ -566629,7 +566824,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "00e98bbfa7b83647ce4bbbd4d5e33270cc4ccd343cdc1bd9bfb5625d8679aa35",
+      "outputSha256": "848a31ab7cfc6db2798fc450b131db475c474aece663080b374798e14eeccdf4",
       "edits": [
         {
           "start": 50,
@@ -566777,6 +566972,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 2023,
+          "end": 2024,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 2152,
@@ -569136,6 +569338,13 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 36580,
+          "end": 36581,
+          "symbol": "M:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
+          "original": "a",
+          "renamed": "initializeLobbyUi"
         },
         {
           "start": 40173,
@@ -657596,7 +657805,7 @@
       "original": "lg.java",
       "renamed": "ProxyAuthenticationRequiredException.java",
       "inputSha256": "830ea192e0f25e4d36225c55c57138c1bcbea667e1b254fbb9d7469018857cb9",
-      "outputSha256": "19eb3ddaf7424a467ea8dcfd2a88dc6a1a5a9c572f496530139054fb93293228",
+      "outputSha256": "edd0d2eb756e30043d72a303619b6efaa4d33abc62b8ed9eeee14d8911a60635",
       "edits": [
         {
           "start": 69,
@@ -657653,6 +657862,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 676,
+          "end": 677,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 760,
@@ -657730,6 +657946,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 2015,
+          "end": 2016,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 2140,
@@ -669256,7 +669479,7 @@
       "original": "mf.java",
       "renamed": "EmailValidator.java",
       "inputSha256": "4d3442f9298f6ca391fd498156ade9ce7c412afa0b61d3a3fdf455779c60fff3",
-      "outputSha256": "02aaddd7a00f2be3182635c4856ccfba91a984602df8a7d6dbc8578d4ba13a60",
+      "outputSha256": "a70908e95344e19ba69ccfeae881668fe1de1c1a88f5d22c3afefa913df05f70",
       "edits": [
         {
           "start": 50,
@@ -669341,6 +669564,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 898,
+          "end": 899,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 1009,
@@ -683579,7 +683809,7 @@
       "original": "ns.java",
       "renamed": "AccountStatusDialog.java",
       "inputSha256": "abcf079be7100ece226299bab9f84307d7053264f02834b7eebacd1de7971368",
-      "outputSha256": "77bd2e1b935526b6d40fd826bfeb04834f88ba653aa015cc8324ccb45f296871",
+      "outputSha256": "76dd8337525bba76bc90ee455a0beef7c27732ec94041ad488c5ec45a663e177",
       "edits": [
         {
           "start": 44,
@@ -683762,6 +683992,13 @@
           "symbol": "C:ur",
           "original": "ur",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 1537,
+          "end": 1538,
+          "symbol": "M:ur.j(I)V",
+          "original": "j",
+          "renamed": "showDefaultLoginForm"
         },
         {
           "start": 1592,
@@ -718002,7 +718239,7 @@
       "original": "r.java",
       "renamed": "UrlLoader.java",
       "inputSha256": "f00cbff469999e7268a699f889ad7147f63bd197ea501e4b6398a73f49f107bf",
-      "outputSha256": "b75fe8d0be583ba471845be19f616944ef793e52bc010fbcaf309a2fea8cfc87",
+      "outputSha256": "a7e16215150017bd7578d21b341ea746acef2e7169f9db64322c5f2f1ed385d0",
       "edits": [
         {
           "start": 69,
@@ -718178,6 +718415,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 1870,
+          "end": 1871,
+          "symbol": "M:vd.a(IIB)V",
+          "original": "a",
+          "renamed": "resetRankingBuffers"
         },
         {
           "start": 1999,
@@ -766923,7 +767167,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "aea458ddac9d0015e52492759e8ecb23d8158541100acff831422c4469735dfd",
+      "outputSha256": "34957be490a598131b9826cc360fe53d56b0209e378b307ef99d14951a6a47b8",
       "edits": [
         {
           "start": 53,
@@ -767339,6 +767583,13 @@
           "renamed": "SolVictoryChecker"
         },
         {
+          "start": 2956,
+          "end": 2957,
+          "symbol": "M:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
+        },
+        {
           "start": 2992,
           "end": 2994,
           "symbol": "C:vj",
@@ -767666,6 +767917,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SolVictoryChecker"
+        },
+        {
+          "start": 4314,
+          "end": 4315,
+          "symbol": "M:ui.c(Z)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "getRequestedGameWebPage"
         },
         {
           "start": 4324,
@@ -770384,6 +770642,13 @@
           "renamed": "MenuComponent"
         },
         {
+          "start": 18269,
+          "end": 18270,
+          "symbol": "M:vd.d(I)V",
+          "original": "d",
+          "renamed": "writeReadyReflectionChecks"
+        },
+        {
           "start": 18315,
           "end": 18316,
           "symbol": "M:tl.a(ZZ)I",
@@ -770634,6 +770899,13 @@
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "SolVictoryChecker"
+        },
+        {
+          "start": 20259,
+          "end": 20260,
+          "symbol": "M:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 20293,
@@ -783077,7 +783349,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "0615f9a2afbfaca12048792384432df0fedcce96ee6cca2f54dcd79b0b99203f",
+      "outputSha256": "13e711dec62f86ada3dba3c801b59329f460b32e07047024e86cdebc473a5e3d",
       "edits": [
         {
           "start": 50,
@@ -783127,6 +783399,55 @@
           "symbol": "M:ub.a(IZIBI)V",
           "original": "a",
           "renamed": "applyScrollInput"
+        },
+        {
+          "start": 376,
+          "end": 377,
+          "symbol": "M:ur.h(I)Z",
+          "original": "h",
+          "renamed": "pollScrollBackward"
+        },
+        {
+          "start": 497,
+          "end": 498,
+          "symbol": "M:ur.f(Z)Z",
+          "original": "f",
+          "renamed": "pollScrollForward"
+        },
+        {
+          "start": 611,
+          "end": 612,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 732,
+          "end": 733,
+          "symbol": "M:ur.g(B)Z",
+          "original": "g",
+          "renamed": "pollPageForward"
+        },
+        {
+          "start": 1880,
+          "end": 1881,
+          "symbol": "M:ur.g(I)Z",
+          "original": "g",
+          "renamed": "isThumbDragging"
+        },
+        {
+          "start": 1943,
+          "end": 1944,
+          "symbol": "M:ur.a(IIIZ)I",
+          "original": "a",
+          "renamed": "getThumbScrollOffset"
+        },
+        {
+          "start": 2134,
+          "end": 2135,
+          "symbol": "M:ur.a(IIII)V",
+          "original": "a",
+          "renamed": "layoutScrollControls"
         },
         {
           "start": 2236,
@@ -783218,6 +783539,13 @@
           "symbol": "M:ub.a(IIZ)V",
           "original": "a",
           "renamed": "layoutScrollPaneChildren"
+        },
+        {
+          "start": 4374,
+          "end": 4375,
+          "symbol": "M:ur.a(IIIBIIII)V",
+          "original": "a",
+          "renamed": "setBoundsAndScrollRange"
         },
         {
           "start": 4569,
@@ -784065,6 +784393,13 @@
           "symbol": "C:um",
           "original": "um",
           "renamed": "PlayerStats"
+        },
+        {
+          "start": 12879,
+          "end": 12880,
+          "symbol": "M:um.b(I)V",
+          "original": "b",
+          "renamed": "tickIntroGlowParticles"
         },
         {
           "start": 12948,
@@ -785520,7 +785855,7 @@
       "original": "ui.java",
       "renamed": "SolVictoryChecker.java",
       "inputSha256": "0a254280ba5263fd45e7a1ba3a37758f2f2a2a4640c41a461ebee5c449a71ccb",
-      "outputSha256": "21b985e43db4bda10e1f1edb4c1cd72c249e1639b097b604cdfef4738be328d0",
+      "outputSha256": "12613ed41741c5d19ac268cf1d862e4bc454d4cede320049a0d7087df3ca04e0",
       "edits": [
         {
           "start": 50,
@@ -785689,6 +786024,13 @@
           "symbol": "M:ui.a(IIII)I",
           "original": "a",
           "renamed": "blendColours"
+        },
+        {
+          "start": 4142,
+          "end": 4143,
+          "symbol": "M:ui.c(Z)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "getRequestedGameWebPage"
         },
         {
           "start": 4233,
@@ -786025,6 +786367,13 @@
           "symbol": "M:ui.c(I)V",
           "original": "c",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 12057,
+          "end": 12058,
+          "symbol": "M:ui.a(IBZLjava/lang/String;ZLjava/lang/String;)I",
+          "original": "a",
+          "renamed": "pollLoginHandshake"
         },
         {
           "start": 13291,
@@ -789248,7 +789597,7 @@
       "original": "um.java",
       "renamed": "PlayerStats.java",
       "inputSha256": "ef9abfa3f340d781b7524ac9767a25823c6cfe26755cf0c5dbdf4c89d1cfe8dd",
-      "outputSha256": "870b776c5d1e90b7635d1bd3dcffb04b02b22743267c5c0a9a3c5a91cad61875",
+      "outputSha256": "f14bc2c9cca9fea4634a1066a09c6e335f768b4afd512ef027d105c668205e9f",
       "edits": [
         {
           "start": 50,
@@ -789270,6 +789619,13 @@
           "symbol": "M:um.b(B)[I",
           "original": "b",
           "renamed": "statValues"
+        },
+        {
+          "start": 1987,
+          "end": 1988,
+          "symbol": "M:um.b(I)V",
+          "original": "b",
+          "renamed": "tickIntroGlowParticles"
         },
         {
           "start": 2258,
@@ -789664,6 +790020,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 7398,
+          "end": 7399,
+          "symbol": "M:um.a(ILbc;II)[Lbi;",
+          "original": "a",
+          "renamed": "loadSpritesWithAlpha"
+        },
+        {
           "start": 7412,
           "end": 7414,
           "symbol": "C:bc",
@@ -789683,6 +790046,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 7769,
+          "end": 7770,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 7853,
@@ -789739,7 +790109,7 @@
       "original": "un.java",
       "renamed": "IntrusiveDequeSequence.java",
       "inputSha256": "b10b34d5e0c6b1cd18f7e3c233fff181691576ddfbf56152358efc94066aca17",
-      "outputSha256": "e017ee56243f4da52829e7c60a9c8e28b949008e3201eef01cbd5203f4db2ba3",
+      "outputSha256": "54d9eb9ad3708f6e0a5f771997db578befca0ebeceb30e6861690ed2f9726372",
       "edits": [
         {
           "start": 50,
@@ -789847,6 +790217,13 @@
           "renamed": "nextForward"
         },
         {
+          "start": 687,
+          "end": 688,
+          "symbol": "M:un.a(Ljava/lang/String;BJII)V",
+          "original": "a",
+          "renamed": "rememberLastQuickChatMessage"
+        },
+        {
           "start": 780,
           "end": 782,
           "symbol": "C:jj",
@@ -789936,6 +790313,13 @@
           "symbol": "C:un",
           "original": "un",
           "renamed": "IntrusiveDequeSequence"
+        },
+        {
+          "start": 1681,
+          "end": 1682,
+          "symbol": "M:un.a(Ljava/lang/String;BJII)V",
+          "original": "a",
+          "renamed": "rememberLastQuickChatMessage"
         },
         {
           "start": 2160,
@@ -791960,7 +792344,7 @@
       "original": "ur.java",
       "renamed": "ScrollBar.java",
       "inputSha256": "ae98ecfb82700717c3d52b07051b37be3cda74b7a0b7c35db28c1959790e426b",
-      "outputSha256": "7921e07688a436cad70d5cd5733723d95071bac62b28bf02fde7988d1163698e",
+      "outputSha256": "cacf7393349dccb6ecd35a388e3443925b53d5a220f4d2779ab4aefea5b3f4ac",
       "edits": [
         {
           "start": 50,
@@ -792187,6 +792571,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 2986,
+          "end": 2987,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
+        },
+        {
           "start": 3533,
           "end": 3535,
           "symbol": "C:bb",
@@ -792194,11 +792585,67 @@
           "renamed": "LobbyRoomControlsSupport"
         },
         {
+          "start": 3712,
+          "end": 3713,
+          "symbol": "M:ur.a(IIIZ)I",
+          "original": "a",
+          "renamed": "getThumbScrollOffset"
+        },
+        {
+          "start": 4560,
+          "end": 4561,
+          "symbol": "M:ur.h(I)Z",
+          "original": "h",
+          "renamed": "pollScrollBackward"
+        },
+        {
+          "start": 5178,
+          "end": 5179,
+          "symbol": "M:ur.g(B)Z",
+          "original": "g",
+          "renamed": "pollPageForward"
+        },
+        {
           "start": 5721,
           "end": 5723,
           "symbol": "C:bb",
           "original": "bb",
           "renamed": "LobbyRoomControlsSupport"
+        },
+        {
+          "start": 5994,
+          "end": 5995,
+          "symbol": "M:ur.a(IIIBIIII)V",
+          "original": "a",
+          "renamed": "setBoundsAndScrollRange"
+        },
+        {
+          "start": 6272,
+          "end": 6273,
+          "symbol": "M:ur.a(IIII)V",
+          "original": "a",
+          "renamed": "layoutScrollControls"
+        },
+        {
+          "start": 6365,
+          "end": 6366,
+          "symbol": "M:ur.g(I)Z",
+          "original": "g",
+          "renamed": "isThumbDragging"
+        },
+        {
+          "start": 6497,
+          "end": 6498,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 6593,
+          "end": 6594,
+          "symbol": "M:ur.j(I)V",
+          "original": "j",
+          "renamed": "showDefaultLoginForm"
         },
         {
           "start": 6709,
@@ -792222,6 +792669,13 @@
           "renamed": "HighscoreResponseSupport"
         },
         {
+          "start": 6777,
+          "end": 6778,
+          "symbol": "M:ur.f(Z)Z",
+          "original": "f",
+          "renamed": "pollScrollForward"
+        },
+        {
           "start": 6935,
           "end": 6937,
           "symbol": "C:ur",
@@ -792234,6 +792688,13 @@
           "symbol": "M:ur.f(B)V",
           "original": "f",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 7273,
+          "end": 7274,
+          "symbol": "M:ur.a(IZI)V",
+          "original": "a",
+          "renamed": "setTooltipAnchor"
         },
         {
           "start": 7375,
@@ -792255,6 +792716,13 @@
           "symbol": "M:ur.f(B)V",
           "original": "f",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 7658,
+          "end": 7659,
+          "symbol": "M:ur.a([[Lbi;I[BZLbc;[I[[Lbi;[Ljava/lang/String;[Ljava/lang/String;I[BLbc;Lbc;[Lnk;[[Ljava/lang/String;I[[Ljava/lang/String;[II)V",
+          "original": "a",
+          "renamed": "initializeLobbyUi"
         },
         {
           "start": 7660,
@@ -792411,6 +792879,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 14883,
+          "end": 14884,
+          "symbol": "M:ur.a(IIII)V",
+          "original": "a",
+          "renamed": "layoutScrollControls"
+        },
+        {
           "start": 15078,
           "end": 15080,
           "symbol": "C:qr",
@@ -792535,6 +793010,27 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 16623,
+          "end": 16624,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 18496,
+          "end": 18497,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 20404,
+          "end": 20405,
+          "symbol": "M:ur.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageBackward"
         }
       ]
     },
@@ -793090,7 +793586,7 @@
       "original": "va.java",
       "renamed": "GraphicsSettings.java",
       "inputSha256": "72a96c4bf30a8a4750ddf5ccfe9844c3c9443a4ba06a1f64a8ac37ea1f6f793f",
-      "outputSha256": "375ac6b0c243c5beafbd207988f421eb671c42a2344e1603c82f74a51d961d33",
+      "outputSha256": "6f217c709f9cd85c606e34f37a16b7306dfca0f856c972109d924eaf5b804bdd",
       "edits": [
         {
           "start": 50,
@@ -793378,6 +793874,13 @@
           "symbol": "C:um",
           "original": "um",
           "renamed": "PlayerStats"
+        },
+        {
+          "start": 5432,
+          "end": 5433,
+          "symbol": "M:um.a(ILbc;II)[Lbi;",
+          "original": "a",
+          "renamed": "loadSpritesWithAlpha"
         },
         {
           "start": 5541,
@@ -793912,7 +794415,7 @@
       "original": "vd.java",
       "renamed": "MenuComponent.java",
       "inputSha256": "a0eaa305ca21c65b4838011d6199373a7d2cada9681effa8cd3fdfa108edbe4f",
-      "outputSha256": "c8ab39310623c9f3d37f5156f9c473a4618d2314897b94e21614d52c4056d9df",
+      "outputSha256": "8941ca6bf54763b853a57eed3dd32ec6ed2bc38fd0bf562887b54242aa6c1308",
       "edits": [
         {
           "start": 44,
@@ -794174,6 +794677,20 @@
           "renamed": "MenuComponent"
         },
         {
+          "start": 3363,
+          "end": 3364,
+          "symbol": "M:vd.d(I)V",
+          "original": "d",
+          "renamed": "writeReadyReflectionChecks"
+        },
+        {
+          "start": 3542,
+          "end": 3543,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
+        },
+        {
           "start": 3556,
           "end": 3558,
           "symbol": "C:bc",
@@ -794214,6 +794731,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4831,
+          "end": 4832,
+          "symbol": "M:vd.a(IIB)V",
+          "original": "a",
+          "renamed": "resetRankingBuffers"
         },
         {
           "start": 4892,
@@ -795056,6 +795580,13 @@
           "renamed": "MenuComponent"
         },
         {
+          "start": 11314,
+          "end": 11315,
+          "symbol": "M:vd.a(B)V",
+          "original": "a",
+          "renamed": "clearMenuComponentStatics"
+        },
+        {
           "start": 11345,
           "end": 11347,
           "symbol": "C:ff",
@@ -795245,6 +795776,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 12589,
+          "end": 12590,
+          "symbol": "M:vd.a(B)V",
+          "original": "a",
+          "renamed": "clearMenuComponentStatics"
+        },
+        {
           "start": 12774,
           "end": 12776,
           "symbol": "C:bc",
@@ -795266,6 +795804,13 @@
           "renamed": "MenuComponent"
         },
         {
+          "start": 12806,
+          "end": 12807,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
+        },
+        {
           "start": 12813,
           "end": 12815,
           "symbol": "C:bc",
@@ -795285,6 +795830,13 @@
           "symbol": "M:vd.b(III)V",
           "original": "b",
           "renamed": "onPointerDrag"
+        },
+        {
+          "start": 13166,
+          "end": 13167,
+          "symbol": "M:vd.d(I)V",
+          "original": "d",
+          "renamed": "writeReadyReflectionChecks"
         },
         {
           "start": 13278,
@@ -795390,6 +795942,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 13878,
+          "end": 13879,
+          "symbol": "M:vd.a(ILbc;II)Z",
+          "original": "a",
+          "renamed": "decodeSpriteSheetFromArchive"
         },
         {
           "start": 13884,
@@ -821444,7 +822003,7 @@
       "original": "vm.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "a0272fe8e75a3b61c7a9ab38bd067d96019b3a1776cf28d05fc35ee913fdb216",
-      "outputSha256": "65e7bab91379d284ff122176717ff3479f280b6ab2b6da8c4202f2ee196b2f3b",
+      "outputSha256": "18ba90870fc7daa858a6ba82d113348634d2f830036fb8bdd7844240d7178a7f",
       "edits": [
         {
           "start": 71,
@@ -821949,6 +822508,13 @@
           "symbol": "C:un",
           "original": "un",
           "renamed": "IntrusiveDequeSequence"
+        },
+        {
+          "start": 6480,
+          "end": 6481,
+          "symbol": "M:un.a(Ljava/lang/String;BJII)V",
+          "original": "a",
+          "renamed": "rememberLastQuickChatMessage"
         },
         {
           "start": 6482,
@@ -831709,10 +832275,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "8a457f52042b62473ff8f287de9deb1fa4c75c277e0b802bd12565571fa54659",
+    "rulesSha256": "b14005a64fab136d31ec4dff6e7b314ee77de122f088604ca66eb836c53e7ff6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "6a078e83fd4eb560f1ab2af27b984d2c3ac4d0ef9e3568e42329a6bacd4721cb",
+    "outputTreeSha256": "aa017c8e9591689f3e523428fa6768daa543bc214fa28473ba9ba4b764d42107",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

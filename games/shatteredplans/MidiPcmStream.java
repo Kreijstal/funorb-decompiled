@@ -70,7 +70,7 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param2, param0, param1, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param2, param0, param1, 2)) {
             return null;
           }
           if (param3 == -20487) {
@@ -937,7 +937,7 @@ final class MidiPcmStream extends PcmStream {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          ScrollBar.a(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
+          ScrollBar.initializeLobbyUi(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
           if (param14 != 16384) {
             field_o = (String) null;
           }

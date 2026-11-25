@@ -26,7 +26,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param3, param2, param4, param1 ^ 3)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param3, param2, param4, param1 ^ 3)) {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }

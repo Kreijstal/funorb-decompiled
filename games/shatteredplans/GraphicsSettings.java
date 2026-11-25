@@ -149,7 +149,7 @@ final class GraphicsSettings {
           var4_int = param3.getGroupIdByName(123, param2);
           var5 = param3.getFileIdByName(var4_int, (byte) 106, param0);
           if (param1 == 0) {
-            stackIn_4_0 = PlayerStats.a(var4_int, param3, var5, param1 - 84);
+            stackIn_4_0 = PlayerStats.loadSpritesWithAlpha(var4_int, param3, var5, param1 - 84);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;

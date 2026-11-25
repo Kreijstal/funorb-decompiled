@@ -55,7 +55,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
             }
             return;
           }
-          ScrollBar.j(0);
+          ScrollBar.showDefaultLoginForm(0);
           if (param0 != -104) {
             this.closeStatusDialog((byte) -32);
             return;

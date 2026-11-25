@@ -12,16 +12,16 @@ final class ScrollPane extends AnimatedPanel {
     static String field_Eb;
 
     private final void applyScrollInput(int param0, boolean param1, int param2, byte param3, int param4) {
-        if (this.field_Ab.h(param3 - 125)) {
+        if (this.field_Ab.pollScrollBackward(param3 - 125)) {
           this.field_xb.field_w = this.field_xb.field_w + param2;
         }
-        if (this.field_Ab.f(false)) {
+        if (this.field_Ab.pollScrollForward(false)) {
           this.field_xb.field_w = this.field_xb.field_w - param2;
         }
-        if (this.field_Ab.i(param3 ^ 113)) {
+        if (this.field_Ab.pollPageBackward(param3 ^ 113)) {
           this.field_xb.field_w = this.field_xb.field_w + param4;
         }
-        if (this.field_Ab.g((byte) 104)) {
+        if (this.field_Ab.pollPageForward((byte) 104)) {
           this.field_xb.field_w = this.field_xb.field_w - param4;
         }
         if (this.field_L) {
@@ -42,14 +42,14 @@ final class ScrollPane extends AnimatedPanel {
             this.field_xb.field_w = -this.field_xb.field_db;
           }
         }
-        if (this.field_Ab.g(-20641)) {
-          this.field_xb.field_db = -this.field_Ab.a(-5639, this.field_xb.field_mb, this.field_zb.field_mb, param1);
+        if (this.field_Ab.isThumbDragging(-20641)) {
+          this.field_xb.field_db = -this.field_Ab.getThumbScrollOffset(-5639, this.field_xb.field_mb, this.field_zb.field_mb, param1);
           this.field_xb.field_w = 0;
         }
         if (param3 != 10) {
           return;
         }
-        this.field_Ab.a(this.field_zb.field_mb, 20, this.field_xb.field_mb, -this.field_xb.field_db);
+        this.field_Ab.layoutScrollControls(this.field_zb.field_mb, 20, this.field_xb.field_mb, -this.field_xb.field_db);
     }
 
     final void processScrollInput(int param0, boolean param1, byte param2, int param3) {
@@ -114,7 +114,7 @@ final class ScrollPane extends AnimatedPanel {
         this.field_xb.field_hb = 0;
         if (!param2) {
           this.field_xb.field_K = this.field_K - param0 - param1;
-          this.field_Ab.a(0, -param0 + this.field_K, param0, (byte) -77, -this.field_xb.field_db, this.field_zb.field_mb, this.field_xb.field_mb, this.field_mb);
+          this.field_Ab.setBoundsAndScrollRange(0, -param0 + this.field_K, param0, (byte) -77, -this.field_xb.field_db, this.field_zb.field_mb, this.field_xb.field_mb, this.field_mb);
           return;
         }
     }
@@ -349,7 +349,7 @@ final class ScrollPane extends AnimatedPanel {
                   }
                 }
               } else {
-                PlayerStats.b(-63);
+                PlayerStats.tickIntroGlowParticles(-63);
               }
             }
           } else {

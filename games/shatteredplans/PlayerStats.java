@@ -67,7 +67,7 @@ final class PlayerStats {
         return var2;
     }
 
-    final static void b(int param0) {
+    final static void tickIntroGlowParticles(int param0) {
         int var6 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
@@ -193,7 +193,7 @@ final class PlayerStats {
         return var2;
     }
 
-    final static Sprite[] a(int param0, Archive param1, int param2, int param3) {
+    final static Sprite[] loadSpritesWithAlpha(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -202,7 +202,7 @@ final class PlayerStats {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param0, param1, param2, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param0, param1, param2, 2)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }

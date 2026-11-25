@@ -118,7 +118,7 @@ final class SolVictoryChecker extends VictoryChecker {
         return param3 * param1 + (256 - param3) * param0 >>> 8 & -1778319616 | -352386817 & (-param3 + 256) * var4 + param3 * var5 >>> 8;
     }
 
-    final static String c(boolean param0) {
+    final static String getRequestedGameWebPage(boolean param0) {
         if (param0) {
           field_p = 84;
         }
@@ -350,7 +350,7 @@ final class SolVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static int a(int param0, byte param1, boolean param2, String param3, boolean param4, String param5) {
+    final static int pollLoginHandshake(int param0, byte param1, boolean param2, String param3, boolean param4, String param5) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_32_0 = 0;

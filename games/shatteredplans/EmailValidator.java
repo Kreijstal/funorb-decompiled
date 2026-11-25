@@ -26,7 +26,7 @@ final class EmailValidator extends TextFieldValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MenuComponent.a(param1, param2, param0, 2)) {
+          if (!MenuComponent.decodeSpriteSheetFromArchive(param1, param2, param0, 2)) {
             return null;
           }
           if (param4 > -83) {
