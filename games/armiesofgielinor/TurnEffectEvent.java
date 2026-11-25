@@ -135,7 +135,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
@@ -149,7 +149,7 @@ final class TurnEffectEvent extends GameEvent {
           if (param1 > -84) {
             field_F = (java.awt.Color) null;
           }
-          var4_int = this.a((byte) -39, param2, param0, true) ? 1 : 0;
+          var4_int = this.enqueuePresenter((byte) -39, param2, param0, true) ? 1 : 0;
           this.applyToBattlefield(param2.battlefield, -26661);
           stackIn_4_0 = var4_int;
           return stackIn_4_0 != 0;

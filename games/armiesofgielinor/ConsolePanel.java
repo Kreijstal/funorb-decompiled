@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ConsolePanel implements ap {
+abstract class ConsolePanel implements ConsolePanelMarker {
     ScrollContainer outputScroll;
     static ClientUiComponent field_m;
     String prompt;

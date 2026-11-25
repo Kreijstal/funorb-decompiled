@@ -27,7 +27,7 @@ final class DamageEvent extends GameEvent {
         return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -41,7 +41,7 @@ final class DamageEvent extends GameEvent {
             return false;
           }
           this.applyToBattlefield(param2.battlefield, -26661);
-          stackIn_4_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_4_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

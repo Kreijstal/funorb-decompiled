@@ -56,7 +56,7 @@ final class GrowthEvent extends GameEvent {
         }
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -67,7 +67,7 @@ final class GrowthEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -84) {
-            stackIn_4_0 = this.a((byte) -39, param2, param0, true);
+            stackIn_4_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
             return stackIn_4_0;
           }
           return false;

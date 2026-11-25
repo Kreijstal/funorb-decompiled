@@ -133,7 +133,7 @@ final class ProjectileEffect {
         if (this.animationPlayer != null) {
           var4_ref = (ModelMesh) (this.animationPlayer.applyCurrentFrame(false, true, false, FullscreenConfirmationDialog.field_db[this.effectKind]));
         } else {
-          var4_ref = (ModelMesh) (FullscreenConfirmationDialog.field_db[this.effectKind].a(false, false, false));
+          var4_ref = (ModelMesh) (FullscreenConfirmationDialog.field_db[this.effectKind].copyToSharedWorkspace(false, false, false));
         }
         stackIn_8_0 = (!param0) ? 140 : 1908;
         var5 = stackIn_8_0;
@@ -170,7 +170,7 @@ final class ProjectileEffect {
         } else {
           stackIn_23_6 = var11;
         }
-        ((ModelMesh) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_22_5, stackIn_23_6, var10);
+        ((ModelMesh) (Object) stackIn_22_0).drawPerspective(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_22_5, stackIn_23_6, var10);
         return;
     }
 

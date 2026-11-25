@@ -58,7 +58,7 @@ final class AttackEvent extends GameEvent {
         return var3Lifetime1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -71,7 +71,7 @@ final class AttackEvent extends GameEvent {
           if (param1 >= -84) {
             this.targetDeltaY = 109;
           }
-          stackIn_3_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_3_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,7 +207,7 @@ final class AttackEvent extends GameEvent {
         try {
           if (obfuscationGuard != -26661) {
             var6 = (GameplayController) null;
-            this.a((NodeDeque) null, (byte) 68, (GameplayController) null);
+            this.beginPresentation((NodeDeque) null, (byte) 68, (GameplayController) null);
           }
           if (this.applied) {
             return;

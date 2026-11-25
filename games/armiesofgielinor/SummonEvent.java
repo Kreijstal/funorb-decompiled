@@ -147,7 +147,7 @@ final class SummonEvent extends GameEvent {
         }
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         Battlefield var5 = null;
         boolean stackIn_3_0 = false;
@@ -163,7 +163,7 @@ final class SummonEvent extends GameEvent {
             var5 = (Battlefield) null;
             this.applyToBattlefield((Battlefield) null, 15);
           }
-          stackIn_3_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_3_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

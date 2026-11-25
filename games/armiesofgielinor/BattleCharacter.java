@@ -544,7 +544,7 @@ final class BattleCharacter {
         } else {
           stackIn_31_7 = 0;
         }
-        ((ModelMesh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, stackIn_30_5, stackIn_30_6 - stackIn_31_7, this.destinationY);
+        ((ModelMesh) (Object) stackIn_26_0).drawPerspective(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, stackIn_30_5, stackIn_30_6 - stackIn_31_7, this.destinationY);
         if (!param2) {
           if (this.field_w == 1) {
             for (var9Lifetime1 = 0; var9Lifetime1 < ResourceClientErrorSupport.field_a; var9Lifetime1++) {

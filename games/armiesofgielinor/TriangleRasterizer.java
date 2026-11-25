@@ -1347,8 +1347,8 @@ final class TriangleRasterizer {
         var19 = var42;
         if (var19 != null &&
           blendAlpha <= 10) {
-          field_p = textureProvider.a(param18, 5409);
-          stackIn_6_0 = (textureProvider.b(-26298, param18) == 0);
+          field_p = textureProvider.isTextureSize64(param18, 5409);
+          stackIn_6_0 = (textureProvider.getTextureAlphaMode(-26298, param18) == 0);
           field_d = stackIn_6_0;
           var20 = param4 - param3;
           var21 = param1 - param0;

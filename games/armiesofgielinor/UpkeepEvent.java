@@ -116,7 +116,7 @@ final class UpkeepEvent extends GameEvent {
         return var4Lifetime1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
@@ -127,7 +127,7 @@ final class UpkeepEvent extends GameEvent {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = this.a((byte) -39, param2, param0, true) ? 1 : 0;
+          var4_int = this.enqueuePresenter((byte) -39, param2, param0, true) ? 1 : 0;
           this.applyToBattlefield(param2.battlefield, -26661);
           if (param1 < -84) {
             stackIn_4_0 = var4_int;

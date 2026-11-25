@@ -27,7 +27,7 @@ final class TeleportEvent extends GameEvent {
         return var3Lifetime1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -39,13 +39,13 @@ final class TeleportEvent extends GameEvent {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (!this.a((byte) -39, param2, param0, true)) ? 0 : 1;
+          stackIn_3_0 = (!this.enqueuePresenter((byte) -39, param2, param0, true)) ? 0 : 1;
           var4_int = stackIn_3_0;
           if (param1 > -84) {
             TeleportEvent.a(-83, -34, -127);
           }
           if (!this.skipDestinationPlacement) {
-            var4_int = var4_int != 0 | this.a(this.sourceY + this.targetDeltaY, 15, param2, param0, this.sourceX + this.targetDeltaX) ? 1 : 0;
+            var4_int = var4_int != 0 | this.enqueuePresenterAt(this.sourceY + this.targetDeltaY, 15, param2, param0, this.sourceX + this.targetDeltaX) ? 1 : 0;
           }
           stackIn_8_0 = var4_int;
           return stackIn_8_0 != 0;

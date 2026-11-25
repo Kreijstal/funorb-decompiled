@@ -58,7 +58,7 @@ final class DeathEvent extends GameEvent {
         }
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         String var5 = null;
         MovementPlanner stackIn_6_0 = null;
@@ -81,7 +81,7 @@ final class DeathEvent extends GameEvent {
             stackIn_7_1 = (null == param2.field_oc);
             ((MovementPlanner) (Object) stackIn_6_0).prepareForUnit(stackIn_7_1, 32, param2.controlledPlayerId, param2.selectedUnit, param2.movementPlanner.selectionMode, param2.movementPlanner.spellId);
           }
-          stackIn_9_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_9_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

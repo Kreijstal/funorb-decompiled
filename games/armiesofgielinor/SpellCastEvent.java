@@ -326,7 +326,7 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         int stackIn_39_0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -357,7 +357,7 @@ final class SpellCastEvent extends GameEvent {
           if (param1 >= -84) {
             SpellCastEvent.b(30, -93);
           }
-          var4_int = var4_int != 0 | this.a((byte) -39, param2, param0, false) ? 1 : 0;
+          var4_int = var4_int != 0 | this.enqueuePresenter((byte) -39, param2, param0, false) ? 1 : 0;
           if (SpellDefinitionTable.spellDefinitions[this.spell.spellId][3] != 4 &&
             SpellDefinitionTable.spellDefinitions[this.spell.spellId][4] != 5) {
             var5 = ((UnitSpell) (this.spell)).targetX;
@@ -370,7 +370,7 @@ final class SpellCastEvent extends GameEvent {
                   for (var9 = -var7 + var6; var9 <= var7 + var6; var9++) {
                     if (0 <= var9 &&
                       param2.battlefield.mapWidth > var9) {
-                      var4_int = var4_int != 0 | this.a(var9, 15, param2, param0, var8) ? 1 : 0;
+                      var4_int = var4_int != 0 | this.enqueuePresenterAt(var9, 15, param2, param0, var8) ? 1 : 0;
                     }
                   }
                 }
@@ -404,12 +404,12 @@ final class SpellCastEvent extends GameEvent {
                 var12Lifetime1 = -1;
               }
               while (var8 == param2.battlefield.getNormalizedTerrainAt(var10, -94, var9)) {
-                var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
+                var4_int = var4_int != 0 | this.enqueuePresenterAt(var10, 15, param2, param0, var9) ? 1 : 0;
                 var9 = var9 + var11Lifetime1;
                 var10 = var10 + var12Lifetime1;
               }
-              var4_int = var4_int != 0 | this.a(var6 - var12Lifetime1, 15, param2, param0, -var11Lifetime1 + var5) ? 1 : 0;
-              var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
+              var4_int = var4_int != 0 | this.enqueuePresenterAt(var6 - var12Lifetime1, 15, param2, param0, -var11Lifetime1 + var5) ? 1 : 0;
+              var4_int = var4_int != 0 | this.enqueuePresenterAt(var10, 15, param2, param0, var9) ? 1 : 0;
             }
           }
           LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], MusicPatchEnvelope.field_f[this.spell.spellId]}), param2.field_Nb);

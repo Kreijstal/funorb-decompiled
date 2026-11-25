@@ -19,14 +19,14 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract void applyToBattlefield(Battlefield battlefield, int obfuscationGuard);
 
-    final void a(int param0) {
+    final void markPresentationIncomplete(int param0) {
         this.presentationComplete = false;
         if (param0 >= -30) {
           return;
         }
     }
 
-    private final boolean e(int param0) {
+    private final boolean isPresentationBlocking(int param0) {
         boolean stackIn_43_0 = false;
         int var2;
         int var3;
@@ -118,7 +118,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract String describeEvent(byte obfuscationGuard, boolean verbose);
 
-    final boolean a(byte param0, GameplayController param1, NodeDeque param2, boolean param3) {
+    final boolean enqueuePresenter(byte param0, GameplayController param1, NodeDeque param2, boolean param3) {
         EventPresenter var5 = null;
         RuntimeException var5_ref = null;
         boolean stackIn_10_0 = false;
@@ -132,7 +132,7 @@ abstract class GameEvent extends IntrusiveNode {
           if (param0 != -39) {
             return false;
           }
-          var5 = EventPresenterFactory.createEventPresenter(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.unitRenderer);
+          var5 = EventPresenterFactory.createEventPresenter(param1, 10120, param1.battlefield, this.isPresentationBlocking(1023) & param3, this, param1.unitRenderer);
           if (var5 != null) {
             param2.addLast((byte) -119, (IntrusiveNode) (var5));
           }
@@ -219,7 +219,7 @@ abstract class GameEvent extends IntrusiveNode {
         bitMasks = null;
     }
 
-    final boolean a(int param0, int param1, GameplayController param2, NodeDeque param3, int param4) {
+    final boolean enqueuePresenterAt(int param0, int param1, GameplayController param2, NodeDeque param3, int param4) {
         EventPresenter var6 = null;
         RuntimeException var6_ref = null;
         boolean stackIn_9_0 = false;
@@ -230,7 +230,7 @@ abstract class GameEvent extends IntrusiveNode {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = RadialSummonMenu.a(this, param2.battlefield, this.e(param1 + 1008), param0, param2, 17, param4, param2.unitRenderer);
+          var6 = RadialSummonMenu.a(this, param2.battlefield, this.isPresentationBlocking(param1 + 1008), param0, param2, 17, param4, param2.unitRenderer);
           if (var6 != null) {
             param3.addLast((byte) -119, (IntrusiveNode) (var6));
           }
@@ -262,7 +262,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    abstract boolean a(NodeDeque param0, byte param1, GameplayController param2);
+    abstract boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2);
 
     final static pu a(int param0, CipherPacketBuffer param1) {
         int var8 = 0;

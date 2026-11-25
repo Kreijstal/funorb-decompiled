@@ -116,7 +116,7 @@ abstract class ResourceRequest extends DualLinkedNode {
             param0 = param3.applyCurrentFrame(false, true, false, param0);
           }
           param0.scaleGeometry(param4, param4, param4);
-          param0.a(var9_int, var10, var11, var14, var15, var16, var17, -1L);
+          param0.drawPerspective(var9_int, var10, var11, var14, var15, var16, var17, -1L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

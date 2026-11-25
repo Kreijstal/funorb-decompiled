@@ -209,7 +209,7 @@ final class QuickChatPhraseRepository {
         return phrase;
     }
 
-    QuickChatPhraseRepository(int unusedParameter, ResourceArchive localArchive, ResourceArchive globalArchive, gj unusedMarker) {
+    QuickChatPhraseRepository(int unusedParameter, ResourceArchive localArchive, ResourceArchive globalArchive, QuickChatRepositoryMarker unusedMarker) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

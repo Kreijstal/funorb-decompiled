@@ -9,7 +9,7 @@ final class OwnerChangeEvent extends GameEvent {
     static boolean field_B;
     static String field_y;
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         GameplayController var5 = null;
         boolean stackIn_3_0 = false;
@@ -22,9 +22,9 @@ final class OwnerChangeEvent extends GameEvent {
         try {
           if (param1 >= -84) {
             var5 = (GameplayController) null;
-            this.a((NodeDeque) null, (byte) -44, (GameplayController) null);
+            this.beginPresentation((NodeDeque) null, (byte) -44, (GameplayController) null);
           }
-          stackIn_3_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_3_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -8,7 +8,7 @@ final class RevivalEvent extends GameEvent {
     private int destinationY;
     static long lastQuickChatRecipientAccountId;
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -19,7 +19,7 @@ final class RevivalEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -84) {
-            stackIn_4_0 = this.a((byte) -39, param2, param0, true) | this.a(this.destinationY, 15, param2, param0, this.destinationX);
+            stackIn_4_0 = this.enqueuePresenter((byte) -39, param2, param0, true) | this.enqueuePresenterAt(this.destinationY, 15, param2, param0, this.destinationX);
             return stackIn_4_0;
           }
           return true;

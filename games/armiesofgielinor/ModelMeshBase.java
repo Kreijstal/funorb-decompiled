@@ -197,9 +197,9 @@ abstract class ModelMeshBase extends MeshObject {
 
     abstract void scaleGeometry(int scaleX, int scaleY, int scaleZ);
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7);
+    abstract void drawPerspective(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7);
 
-    abstract ModelMeshBase a(boolean param0, boolean param1, boolean param2);
+    abstract ModelMeshBase copyToSharedWorkspace(boolean param0, boolean param1, boolean param2);
 
     abstract void applyMaskedGroupTransform(int transformType, int[] groups, int x, int y, int z, boolean transformOption, int transformMask, int[] transformMatrix);
 

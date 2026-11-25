@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BitLengthSupport implements gj {
+final class BitLengthSupport implements QuickChatRepositoryMarker {
     static RgbSprite[] field_d;
     static boolean field_c;
     static RgbSprite field_b;

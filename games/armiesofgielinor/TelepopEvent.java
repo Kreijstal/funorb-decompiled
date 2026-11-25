@@ -42,7 +42,7 @@ final class TelepopEvent extends GameEvent {
         this.eventKind = 6;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -55,7 +55,7 @@ final class TelepopEvent extends GameEvent {
           if (param1 >= -84) {
             this.describeEvent((byte) -47, true);
           }
-          stackIn_3_0 = this.a((byte) -39, param2, param0, true);
+          stackIn_3_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -57,7 +57,7 @@ final class ParasiteEvent extends GameEvent {
         return var1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -68,7 +68,7 @@ final class ParasiteEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -84) {
-            stackIn_4_0 = this.a((byte) -39, param2, param0, true);
+            stackIn_4_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
             return stackIn_4_0;
           }
           return false;
@@ -128,7 +128,7 @@ final class ParasiteEvent extends GameEvent {
           }
           if (obfuscationGuard != -26661) {
             GameplayController var6 = (GameplayController) null;
-            this.a((NodeDeque) null, (byte) 109, (GameplayController) null);
+            this.beginPresentation((NodeDeque) null, (byte) 109, (GameplayController) null);
           }
           WidgetTheme.recomputeClientStateChecksum(battlefield, -126);
         } catch (RuntimeException runtimeException) {

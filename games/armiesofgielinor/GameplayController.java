@@ -3807,7 +3807,7 @@ final class GameplayController {
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameCompleted0)) {
-                    this.field_Q = ((GameEvent) (var3)).a(this.eventPresenters, (byte) -127, this);
+                    this.field_Q = ((GameEvent) (var3)).beginPresentation(this.eventPresenters, (byte) -127, this);
                     this.field_O = this.a(false, (GameEvent) (var3));
                     if (QuickChatCategoryMenuSupport.activeCampaignMission != null && (((GameEvent) (var3)).eventKind == 0 ||
                       ((GameEvent) (var3)).eventKind == 21 ||

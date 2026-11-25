@@ -127,7 +127,7 @@ final class AnimationPlayer {
           stackIn_5_1 = copyVariant;
           stackIn_5_2 = false;
           stackIn_6_3 = !(frameVariant);
-          var5 = ((ModelMeshBase) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
+          var5 = ((ModelMeshBase) (Object) stackIn_5_0).copyToSharedWorkspace(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           var5.applyAnimationFrame(IntPair.field_q, this.frameId, (AnimationFrameSet) null, -1, 0, 0, frameVariant);
           stackIn_7_0 = var5;
           return stackIn_7_0;

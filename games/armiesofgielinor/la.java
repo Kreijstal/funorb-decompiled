@@ -230,7 +230,7 @@ final class la {
         if (param5) {
           GrowableIntArray.a(124, var15);
         }
-        var15.a(var8, var9, var10, var11, var12, var14, var13);
+        var15.drawPerspective(var8, var9, var10, var11, var12, var14, var13);
     }
 
     static {

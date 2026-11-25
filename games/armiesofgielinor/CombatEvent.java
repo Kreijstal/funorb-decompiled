@@ -75,7 +75,7 @@ final class CombatEvent extends GameEvent {
         return var3Lifetime1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         boolean stackIn_34_0 = false;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
@@ -128,7 +128,7 @@ final class CombatEvent extends GameEvent {
           }
           param2.d(this.battleId, 4);
           if (!SpellDefinitionTable.field_a) {
-            stackIn_34_0 = this.a((byte) -39, param2, param0, true);
+            stackIn_34_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
             return stackIn_34_0;
           }
           param2.e(this.battleId, -56);

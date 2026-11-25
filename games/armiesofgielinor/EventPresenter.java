@@ -70,7 +70,7 @@ final class EventPresenter extends IntrusiveNode {
                   if (this.event.eventKind == 5) {
                     var3 = (TelefragEvent) (this.event);
                     if (var3.b(this.battlefield, -75)) {
-                      new DeathEvent(this.battlefield.getUnitAt(var3.unit.tileY, true, var3.unit.tileX), true).a(this.controller.eventPresenters, (byte) -86, this.controller);
+                      new DeathEvent(this.battlefield.getUnitAt(var3.unit.tileY, true, var3.unit.tileX), true).beginPresentation(this.controller.eventPresenters, (byte) -86, this.controller);
                     }
                     this.fullCombatScene = false;
                     this.presentation = (EventPresentation) ((Object) new EffectPresentation(this.battlefield, this.controller.camera, this));
@@ -383,7 +383,7 @@ final class EventPresenter extends IntrusiveNode {
           this.unitRenderer = unitRenderer;
           this.controller = controller;
           discarded$0 = new j(240, controller.camera);
-          this.event.a(-97);
+          this.event.markPresentationIncomplete(-97);
           this.elapsedFrames = 0;
           this.presentationActive = false;
           this.field_w = blocking ? true : false;
@@ -403,7 +403,7 @@ final class EventPresenter extends IntrusiveNode {
           this.unitRenderer = param2;
           this.controller = param0;
           discarded$0 = new j(240, param0.camera);
-          this.event.a(-97);
+          this.event.markPresentationIncomplete(-97);
           this.presentationActive = false;
           this.field_w = param6 ? true : false;
         } catch (RuntimeException runtimeException) {

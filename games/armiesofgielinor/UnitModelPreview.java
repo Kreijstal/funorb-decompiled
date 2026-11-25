@@ -375,13 +375,13 @@ final class UnitModelPreview {
         if (!this.animationAvailable) {
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(screenX, screenY);
-          var18_ref = (ModelMesh) (this.model.a(var5 != 0, false, var6 != 0));
+          var18_ref = (ModelMesh) (this.model.copyToSharedWorkspace(var5 != 0, false, var6 != 0));
           var20 = var18_ref;
           var18_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
           if (highlighted) {
             ContextActionMenu.a(false, var20);
           }
-          var20.a(var7, var8, var9, var12, var13, var14, var15);
+          var20.drawPerspective(var7, var8, var9, var12, var13, var14, var15);
           return;
         }
         TriangleRasterizer.useRasterClip();
@@ -392,10 +392,10 @@ final class UnitModelPreview {
         if (highlighted) {
           ContextActionMenu.a(copyVariant, var19);
         } else {
-          var19.a(var7, var8, var9, var12, var13, var14, var15);
+          var19.drawPerspective(var7, var8, var9, var12, var13, var14, var15);
           return;
         }
-        var19.a(var7, var8, var9, var12, var13, var14, var15);
+        var19.drawPerspective(var7, var8, var9, var12, var13, var14, var15);
     }
 
     UnitModelPreview(int[] unusedColors, int unitType, int yaw) {

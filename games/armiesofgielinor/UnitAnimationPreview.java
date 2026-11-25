@@ -141,14 +141,14 @@ final class UnitAnimationPreview {
             animatedModel.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.projectionCenterX, this.projectionCenterY);
-            animatedModelReference.a(firstRotation, wrappedYaw, halfTurn, wrappedTilt, translationX, translationY, translationZ);
+            animatedModelReference.drawPerspective(firstRotation, wrappedYaw, halfTurn, wrappedTilt, translationX, translationY, translationZ);
           } else {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.projectionCenterX, this.projectionCenterY);
-            unanimatedModel = (ModelMesh) (this.model.a(copyFlagOne != 0, false, copyFlagTwo != 0));
+            unanimatedModel = (ModelMesh) (this.model.copyToSharedWorkspace(copyFlagOne != 0, false, copyFlagTwo != 0));
             unanimatedModelReference = unanimatedModel;
             unanimatedModel.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
-            unanimatedModelReference.a(firstRotation, wrappedYaw, halfTurn, wrappedTilt, translationX, translationY, translationZ);
+            unanimatedModelReference.drawPerspective(firstRotation, wrappedYaw, halfTurn, wrappedTilt, translationX, translationY, translationZ);
           }
           return;
         }
@@ -170,14 +170,14 @@ final class UnitAnimationPreview {
           alternateAnimatedModel.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(this.projectionCenterX, this.projectionCenterY);
-          alternateAnimatedModelReference.a(alternateFirstRotation, alternateWrappedYaw, alternateHalfTurn, alternateWrappedTilt, alternateTranslationX, alternateTranslationY, alternateTranslationZ);
+          alternateAnimatedModelReference.drawPerspective(alternateFirstRotation, alternateWrappedYaw, alternateHalfTurn, alternateWrappedTilt, alternateTranslationX, alternateTranslationY, alternateTranslationZ);
         } else {
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(this.projectionCenterX, this.projectionCenterY);
-          alternateUnanimatedModel = (ModelMesh) (this.model.a(alternateCopyFlagOne != 0, false, alternateCopyFlagTwo != 0));
+          alternateUnanimatedModel = (ModelMesh) (this.model.copyToSharedWorkspace(alternateCopyFlagOne != 0, false, alternateCopyFlagTwo != 0));
           alternateUnanimatedModelReference = alternateUnanimatedModel;
           alternateUnanimatedModel.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
-          alternateUnanimatedModelReference.a(alternateFirstRotation, alternateWrappedYaw, alternateHalfTurn, alternateWrappedTilt, alternateTranslationX, alternateTranslationY, alternateTranslationZ);
+          alternateUnanimatedModelReference.drawPerspective(alternateFirstRotation, alternateWrappedYaw, alternateHalfTurn, alternateWrappedTilt, alternateTranslationX, alternateTranslationY, alternateTranslationZ);
         }
     }
 

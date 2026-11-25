@@ -23,7 +23,7 @@ final class StateChangeEvent extends GameEvent {
         PasswordValidator.field_j = PasswordValidator.field_j + 1;
     }
 
-    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+    final boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2) {
         int stackIn_104_0 = 0;
         RuntimeException stackIn_107_0 = null;
         StringBuilder stackIn_107_1 = null;
@@ -53,12 +53,12 @@ final class StateChangeEvent extends GameEvent {
               if (var6 != 4) {
                 if (var6 != 0) {
                   this.acknowledgePresentation((byte) -95);
-                } else if (this.a((byte) -39, param2, param0, true)) {
+                } else if (this.enqueuePresenter((byte) -39, param2, param0, true)) {
                   var4_int = 1;
                 }
               } else if (!param2.battlefield.tiles[param2.battlefield.mapWidth * this.tileY + this.tileX].hasCorpse(111)) {
                 this.acknowledgePresentation((byte) -74);
-              } else if (this.a((byte) -39, param2, param0, true)) {
+              } else if (this.enqueuePresenter((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
             } else {
@@ -70,7 +70,7 @@ final class StateChangeEvent extends GameEvent {
                   param2.battlefield.arePlayersAllied(var13.ownerPlayer, -16985, this.playerId) &&
                   var13.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
-                  if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
+                  if (this.enqueuePresenterAt(this.tileY, 15, param2, param0, this.tileX - 1)) {
                     var4_int = 1;
                   }
                 }
@@ -83,7 +83,7 @@ final class StateChangeEvent extends GameEvent {
                   param2.battlefield.arePlayersAllied(var14.ownerPlayer, -16985, this.playerId) &&
                   var14.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
-                  if (this.a(this.tileY, 15, param2, param0, 1 + this.tileX)) {
+                  if (this.enqueuePresenterAt(this.tileY, 15, param2, param0, 1 + this.tileX)) {
                     var4_int = 1;
                   }
                 }
@@ -96,7 +96,7 @@ final class StateChangeEvent extends GameEvent {
                   param2.battlefield.arePlayersAllied(var15.ownerPlayer, -16985, this.playerId) &&
                   var15.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
-                  if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
+                  if (this.enqueuePresenterAt(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
                 }
@@ -109,14 +109,14 @@ final class StateChangeEvent extends GameEvent {
                   param2.battlefield.arePlayersAllied(var16.ownerPlayer, -16985, this.playerId) &&
                   var16.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
-                  if (this.a(this.tileY + 1, 15, param2, param0, this.tileX)) {
+                  if (this.enqueuePresenterAt(this.tileY + 1, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
                 }
               }
               if (this.pendingPresentations <= 1) {
                 this.acknowledgePresentation((byte) -127);
-              } else if (this.a((byte) -39, param2, param0, true)) {
+              } else if (this.enqueuePresenter((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
             }
@@ -126,7 +126,7 @@ final class StateChangeEvent extends GameEvent {
               if (var9 != null &&
                 param2.battlefield.arePlayersAllied(var9.ownerPlayer, -16985, this.playerId)) {
                 this.pendingPresentations = this.pendingPresentations + 1;
-                if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
+                if (this.enqueuePresenterAt(this.tileY, 15, param2, param0, this.tileX - 1)) {
                   var4_int = 1;
                 }
               }
@@ -136,7 +136,7 @@ final class StateChangeEvent extends GameEvent {
               if (var10 != null &&
                 param2.battlefield.arePlayersAllied(var10.ownerPlayer, -16985, this.playerId)) {
                 this.pendingPresentations = this.pendingPresentations + 1;
-                if (this.a(this.tileY, 15, param2, param0, this.tileX + 1)) {
+                if (this.enqueuePresenterAt(this.tileY, 15, param2, param0, this.tileX + 1)) {
                   var4_int = 1;
                 }
               }
@@ -146,7 +146,7 @@ final class StateChangeEvent extends GameEvent {
               if (var11 != null &&
                 param2.battlefield.arePlayersAllied(var11.ownerPlayer, -16985, this.playerId)) {
                 this.pendingPresentations = this.pendingPresentations + 1;
-                if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
+                if (this.enqueuePresenterAt(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
               }
@@ -156,13 +156,13 @@ final class StateChangeEvent extends GameEvent {
               if (var12 != null &&
                 param2.battlefield.arePlayersAllied(var12.ownerPlayer, -16985, this.playerId)) {
                 this.pendingPresentations = this.pendingPresentations + 1;
-                if (this.a(1 + this.tileY, 15, param2, param0, this.tileX)) {
+                if (this.enqueuePresenterAt(1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
               }
             }
             if (1 < this.pendingPresentations) {
-              if (this.a((byte) -39, param2, param0, true)) {
+              if (this.enqueuePresenter((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
             } else {
@@ -315,7 +315,7 @@ final class StateChangeEvent extends GameEvent {
           }
           if (obfuscationGuard != -26661) {
             var5 = (GameplayController) null;
-            this.a((NodeDeque) null, (byte) -124, (GameplayController) null);
+            this.beginPresentation((NodeDeque) null, (byte) -124, (GameplayController) null);
           }
           if (2 == this.effectType ||
             3 == this.effectType) {

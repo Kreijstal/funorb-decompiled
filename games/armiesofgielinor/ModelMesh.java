@@ -352,7 +352,7 @@ final class ModelMesh extends ModelMeshBase {
         }
     }
 
-    final ModelMeshBase a(boolean param0, boolean param1, boolean param2) {
+    final ModelMeshBase copyToSharedWorkspace(boolean param0, boolean param1, boolean param2) {
         if (!param0 &&
           field_u.length < this.faceCount) {
           field_u = new byte[this.faceCount + 100];
@@ -364,7 +364,7 @@ final class ModelMesh extends ModelMeshBase {
           field_K = new int[this.faceCount + 100];
           field_C = new short[this.faceCount + 100];
         }
-        return this.a(param0, param1, field_ib, field_u, field_C, field_gb, field_m, field_K);
+        return this.copyIntoWorkspace(param0, param1, field_ib, field_u, field_C, field_gb, field_m, field_K);
     }
 
     private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -411,8 +411,8 @@ final class ModelMesh extends ModelMeshBase {
         this.boundsValid = false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param0, param1, param2, param3, param4, param5, param6, -1L);
+    final void drawPerspective(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this.drawPerspective(param0, param1, param2, param3, param4, param5, param6, -1L);
     }
 
     private final void b(int param0) {
@@ -474,7 +474,7 @@ final class ModelMesh extends ModelMeshBase {
         return param0;
     }
 
-    private final ModelMeshBase a(boolean param0, boolean param1, ModelMesh param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
+    private final ModelMeshBase copyIntoWorkspace(boolean param0, boolean param1, ModelMesh param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
         int var9;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -813,7 +813,7 @@ final class ModelMesh extends ModelMeshBase {
         this.boundsValid = true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7) {
+    final void drawPerspective(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7) {
         int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
@@ -883,12 +883,12 @@ final class ModelMesh extends ModelMeshBase {
               field_O[var21] = var24;
             }
           }
-          this.a(false, param7 >= 0L ? true : false, param7, (int) this.boundingRadius, this.boundingRadius << 1);
+          this.drawFaces(false, param7 >= 0L ? true : false, param7, (int) this.boundingRadius, this.boundingRadius << 1);
         } catch (RuntimeException runtimeException) {
         }
     }
 
-    private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
+    private final void drawFaces(boolean param0, boolean param1, long param2, int param3, int param4) {
         int incrementValue$12 = 0;
         int dupTemp$10 = 0;
         int[] arrayValue$11 = null;
