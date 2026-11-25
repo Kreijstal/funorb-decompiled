@@ -23,18 +23,18 @@ final class StarAnnotation extends IntrusiveNode {
           if (SpriteWipeSupport.field_a.position >= param1) {
             return true;
           }
-          if (null == wg.field_f) {
+          if (null == ClientLobbyResources.field_f) {
             return false;
           }
           try {
             var3 = 52 % ((param0 - 38) / 63);
-            var2_int = wg.field_f.available(-1);
+            var2_int = ClientLobbyResources.field_f.available(-1);
             if (var2_int <= 0) {
               if (var2_int < 0) {
                 TabbedPanel.closeClientSocket(-114);
                 return false;
               }
-              if (wh.a(18) <= 30000L) {
+              if (ChatAndSocialPanel.serverReadIdleMillis(18) <= 30000L) {
                 return false;
               }
               TabbedPanel.closeClientSocket(-114);
@@ -43,7 +43,7 @@ final class StarAnnotation extends IntrusiveNode {
             if (var2_int > param1 - SpriteWipeSupport.field_a.position) {
               var2_int = param1 - SpriteWipeSupport.field_a.position;
             }
-            wg.field_f.readFully(SpriteWipeSupport.field_a.payload, var2_int, SpriteWipeSupport.field_a.position, (byte) 119);
+            ClientLobbyResources.field_f.readFully(SpriteWipeSupport.field_a.payload, var2_int, SpriteWipeSupport.field_a.position, (byte) 119);
             IntrusiveDeque.field_e = ClientClockSupport.currentTimeMillis(14274);
             SpriteWipeSupport.field_a.position = SpriteWipeSupport.field_a.position + var2_int;
             if (SpriteWipeSupport.field_a.position < param1) {

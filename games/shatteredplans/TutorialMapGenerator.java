@@ -942,7 +942,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_invite_withdrawn", 511);
                 if (null != var2) {
-                  vs.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_request_declined", 511);
                 if (var2 != null) {
@@ -1146,7 +1146,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_friends_only", 511);
                 if (var2 != null) {
-                  wg.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_friends", 511);
                 if (var2 != null) {
@@ -1238,7 +1238,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("waiting_to_start_hint", 511);
                 if (var2 != null) {
-                  wg.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("your_game", 511);
                 if (null != var2) {
@@ -1370,7 +1370,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("you_can_spectate", 511);
                 if (var2 != null) {
-                  we.field_d = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_not_spectate", 511);
                 if (var2 != null) {
@@ -1422,7 +1422,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("no_options_available", 511);
                 if (null != var2) {
-                  we.field_a = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reportabuse", 511);
                 if (var2 != null) {
@@ -1724,7 +1724,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_2_2", 511);
                 if (null != var2) {
-                  wg.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("createafreeaccount", 511);
                 if (null != var2) {
@@ -1836,7 +1836,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("connectionlost_reconnecting", 511);
                 if (null != var2) {
-                  we.field_b = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connectionlost_withreason", 511);
                 if (var2 != null) {
@@ -3390,7 +3390,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_countdown_sing", 511);
                 if (null != var2) {
-                  vs.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_countdown_pl", 511);
                 if (null != var2) {

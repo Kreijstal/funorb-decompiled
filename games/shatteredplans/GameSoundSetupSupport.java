@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vo {
+final class GameSoundSetupSupport {
     static String field_c;
     static String field_a;
     static int field_b;
@@ -10,11 +10,11 @@ final class vo {
         field_a = null;
         field_c = null;
         if (param0 != 256) {
-          vo.clearStatics(45);
+          GameSoundSetupSupport.clearStatics(45);
         }
     }
 
-    final static void a(Archive param0, Archive param1, int param2) {
+    final static void initializeGameSounds(Archive param0, Archive param1, int param2) {
         try {
           LobbyPlayerEntry.field_Sb = new SoundCache(param1, param0);
           SoundEffectSupport.loadSoundEffectDefinition(param2 + 28, 153, "shatteredplans_menu_open");

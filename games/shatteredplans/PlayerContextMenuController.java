@@ -211,7 +211,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (6 == param0) {
-          var8 = vq.a(2, this.field_k, param1);
+          var8 = ReflectionCheckDecoder.requestAddIgnore(2, this.field_k, param1);
           if (var8 != null) {
             var5Lifetime2 = (String) null;
             StripedProgressWidget.a(2, var8, 0, this.field_k, (String) null, -16169);
@@ -437,7 +437,7 @@ final class PlayerContextMenuController {
           this.field_l = param0.field_n;
           if (param0.field_n == 0) {
             if (QuickChatMenu.field_Bb == 0) {
-              this.field_j.addItem(1, 12, wg.field_c);
+              this.field_j.addItem(1, 12, ClientLobbyResources.field_c);
             }
             this.field_j.addItem(1, 13, ValidationMessageWidget.field_O);
           }

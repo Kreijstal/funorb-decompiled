@@ -967,7 +967,7 @@ final class GameSession implements AiHost {
               (this.field_P.field_w & 1 << this.field_h) == 0) &&
               !(this.field_P.field_x.isLoser((byte) 123, this.field_n)));
             if (!decompiledSharedTail0) {
-              QuickChatPhraseRegistry.a(param0 ^ 18008, wh.field_b, false, 10);
+              QuickChatPhraseRegistry.a(param0 ^ 18008, ChatAndSocialPanel.field_b, false, 10);
               decompiledSharedTail0 = (var11 != 0);
             }
             if ((decompiledSharedTail0) &&
@@ -3689,11 +3689,11 @@ final class GameSession implements AiHost {
             if (this.field_P.field_z) {
               QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
               if (var6 != 0) {
-                QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
+                QuickChatPhraseRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
               }
             }
           } else {
-            QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
+            QuickChatPhraseRegistry.a(32767, ChatAndSocialPanel.field_b, false, 10);
           }
           if (GameMenuController.field_e &&
             (this.field_P.field_e & 1 << this.field_h) == 0) {

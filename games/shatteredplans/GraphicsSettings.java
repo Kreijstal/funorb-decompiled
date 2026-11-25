@@ -97,19 +97,19 @@ final class GraphicsSettings {
           }
           if (param2 != 255) {
             if (100 > param2) {
-              wh.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
+              ChatAndSocialPanel.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
               return;
             }
             if (param2 <= 105) {
-              wh.field_c = DialogRoot.a(args, (byte) -64);
+              ChatAndSocialPanel.field_c = DialogRoot.a(args, (byte) -64);
               return;
             }
-            wh.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
+            ChatAndSocialPanel.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
             return;
           }
           stackIn_12_0 = 93;
           stackIn_13_1 = !(AlternateLoginCredentials.field_t >= 13);
-          wh.field_c = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_12_0, stackIn_13_1);
+          ChatAndSocialPanel.field_c = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

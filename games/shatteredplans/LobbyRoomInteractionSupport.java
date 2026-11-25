@@ -51,7 +51,7 @@ final class LobbyRoomInteractionSupport {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (!wh.field_a.isComplete(14)) {
+          if (!ChatAndSocialPanel.field_a.isComplete(14)) {
             stackIn_22_0 = 1;
             return stackIn_22_0;
           }

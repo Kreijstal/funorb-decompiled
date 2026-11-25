@@ -207,7 +207,7 @@ final class LobbyOptionSupport {
                 if (var8_int == 0) {
                   return;
                 }
-                wg.field_d = true;
+                ClientLobbyResources.field_d = true;
                 return;
               }
               var19 = UnderageAccountInfoPanel.field_D[var9];
@@ -314,7 +314,7 @@ final class LobbyOptionSupport {
                   ClientDrawingSupport.field_c[param0] = (byte)var11;
                 }
                 LobbyOptionSupport.evaluateRoomOptionCombinations(param0 + 1, param1 ^ 0, param2, param3, param4, param5, param6, param7);
-                if (wg.field_d) {
+                if (ClientLobbyResources.field_d) {
                   return;
                 }
               }
@@ -354,7 +354,7 @@ final class LobbyOptionSupport {
               LobbyOptionSupport.evaluateRoomOptionCombinations(1 + param0, 1, param2, param3, param4, param5, param6, param7);
               var10_intLifetime1 = 1;
             }
-            if (wg.field_d) {
+            if (ClientLobbyResources.field_d) {
               return;
             }
             var11++;

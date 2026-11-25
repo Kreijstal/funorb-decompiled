@@ -391,11 +391,11 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           var21Lifetime1 = -param1[0] + param4[0];
           var22Lifetime1 = param4[1] - param1[1];
           var23Lifetime1 = -param1[2] + param4[2];
-          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> 16 - we.field_e;
+          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> 16 - KeyboardStateSupport.field_e;
           if (param3 < 11) {
             return;
           }
-          var10 = param1[8] * var23Lifetime1 + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - we.field_e;
+          var10 = param1[8] * var23Lifetime1 + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - KeyboardStateSupport.field_e;
           var11 = var23Lifetime1 * param1[11] + (var22Lifetime1 * param1[10] + param1[9] * var21Lifetime1) >> 16;
           var21Lifetime2 = wn.field_i;
           var22Lifetime2 = wn.field_a;
@@ -405,8 +405,8 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               var24Lifetime1 = param6.field_w[var23Lifetime2];
               var25Lifetime1 = param6.field_z[var23Lifetime2];
               var26Lifetime1 = param6.field_f[var23Lifetime2];
-              var27Lifetime1 = (var12 * var24Lifetime1 + (var25Lifetime1 * var15 + var26Lifetime1 * var18) >> 16 - we.field_e) + var9;
-              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> -we.field_e + 16);
+              var27Lifetime1 = (var12 * var24Lifetime1 + (var25Lifetime1 * var15 + var26Lifetime1 * var18) >> 16 - KeyboardStateSupport.field_e) + var9;
+              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> -KeyboardStateSupport.field_e + 16);
               var29Lifetime1 = var11 + (var25Lifetime1 * var17 + var24Lifetime1 * var14 + var26Lifetime1 * var20 >> 16);
               stackIn_65_0 = ~var29Lifetime1;
               stackIn_65_1 = -51;
@@ -425,8 +425,8 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                   TutorialStageSupport.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
-                  ProxyAuthenticationRequiredException.field_a[var23Lifetime2] = var27Lifetime1 >> we.field_e;
-                  QuickChatHelpPanel.field_yb[var23Lifetime2] = var28Lifetime1 >> we.field_e;
+                  ProxyAuthenticationRequiredException.field_a[var23Lifetime2] = var27Lifetime1 >> KeyboardStateSupport.field_e;
+                  QuickChatHelpPanel.field_yb[var23Lifetime2] = var28Lifetime1 >> KeyboardStateSupport.field_e;
                   DateValidationSupport.field_d[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

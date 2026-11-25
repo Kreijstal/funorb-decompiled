@@ -73,7 +73,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             field_a = (String) null;
           }
           var3_int = 0;
-          var4 = vo.field_b;
+          var4 = GameSoundSetupSupport.field_b;
           while (StarLinkPlanner.field_c.length > var3_int) {
             var5 = ClientClockSupport.field_d[var3_int];
             if (0 <= var5) {

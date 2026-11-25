@@ -123,13 +123,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var11 = var13;
             var5_ref_int__ = var11;
             for (var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = PrivateChatMessage.intOr(ProgressDialog.field_fb[we.intAnd((int) var20[var6], 255)], we.intAnd(-16777216, var21[var6] << 24));
+              var5_ref_int__[var6] = PrivateChatMessage.intOr(ProgressDialog.field_fb[KeyboardStateSupport.intAnd((int) var20[var6], 255)], KeyboardStateSupport.intAnd(-16777216, var21[var6] << 24));
             }
             var3 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
-              var9[var5] = ProgressDialog.field_fb[we.intAnd(255, (int) var20[var5])];
+              var9[var5] = ProgressDialog.field_fb[KeyboardStateSupport.intAnd(255, (int) var20[var5])];
             }
             var3 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9);
           }
@@ -144,13 +144,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var11Lifetime1 = var13Lifetime1;
           var5_ref_int__Lifetime1 = var11Lifetime1;
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = PrivateChatMessage.intOr(ProgressDialog.field_fb[we.intAnd((int) var18[var6Lifetime1], 255)], we.intAnd(-16777216, var19[var6Lifetime1] << 24));
+            var5_ref_int__Lifetime1[var6Lifetime1] = PrivateChatMessage.intOr(ProgressDialog.field_fb[KeyboardStateSupport.intAnd((int) var18[var6Lifetime1], 255)], KeyboardStateSupport.intAnd(-16777216, var19[var6Lifetime1] << 24));
           }
           var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13Lifetime1);
         } else {
           var9Lifetime1 = new int[var1];
           for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
-            var9Lifetime1[var5Lifetime1] = ProgressDialog.field_fb[we.intAnd(255, (int) var18[var5Lifetime1])];
+            var9Lifetime1[var5Lifetime1] = ProgressDialog.field_fb[KeyboardStateSupport.intAnd(255, (int) var18[var5Lifetime1])];
           }
           var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9Lifetime1);
         }
@@ -185,14 +185,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (!SolMapReader.b(57)) {
                 return true;
               }
-              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, ServerRequestRetrySupport.field_d, TertiaryLinkNode.field_r, (String) null, param1);
               return true;
             }
             if (var3 != 0) {
               return false;
             }
             if (SolMapReader.b(57)) {
-              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, ServerRequestRetrySupport.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }
@@ -201,7 +201,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return false;
           }
           if (SolMapReader.b(57)) {
-            AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+            AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, ServerRequestRetrySupport.field_d, TertiaryLinkNode.field_r, (String) null, param1);
           }
           return true;
         }
@@ -224,7 +224,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                   return false;
                 }
                 if (SolMapReader.b(57)) {
-                  AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+                  AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, ServerRequestRetrySupport.field_d, TertiaryLinkNode.field_r, (String) null, param1);
                 }
                 return true;
               }
@@ -235,7 +235,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               return false;
             }
             if (SolMapReader.b(57)) {
-              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              AccountNoticeKind.writeChatMessageRequest(ValidationMessageWidget.field_S, param0 ^ 3, ServerRequestRetrySupport.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }

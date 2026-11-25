@@ -177,7 +177,7 @@ final class ContextActionMenu extends AnimatedPanel {
           }
           return;
         }
-        this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Nb, (Sprite) null, we.field_a);
+        this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Nb, (Sprite) null, KeyboardStateSupport.field_a);
         this.field_Gb[this.field_Pb].field_G = 1;
         this.addChild(param2 + 4, this.field_Gb[this.field_Pb]);
         this.field_Ib[this.field_Pb] = -1;

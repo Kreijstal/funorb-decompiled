@@ -65,7 +65,7 @@ final class WhirlpoolHasher {
                 this.field_o = 0;
                 this.field_d = 0;
               }
-              this.field_a[this.field_o] = (byte)we.intAnd(255, var8 << -var7 + 8);
+              this.field_a[this.field_o] = (byte)KeyboardStateSupport.intAnd(255, var8 << -var7 + 8);
               param1 = param1 - 8L;
               this.field_d = this.field_d + var7;
               var5_int++;
@@ -90,7 +90,7 @@ final class WhirlpoolHasher {
               this.field_o = 0;
               this.field_d = 0;
             }
-            this.field_a[this.field_o] = (byte)we.intAnd(var8Lifetime1 << -var7 + 8, 255);
+            this.field_a[this.field_o] = (byte)KeyboardStateSupport.intAnd(var8Lifetime1 << -var7 + 8, 255);
             this.field_d = this.field_d + (int)param1;
           }
           return;
@@ -291,12 +291,12 @@ final class WhirlpoolHasher {
               stackIn_32_0 = -1;
             }
             var20 = stackIn_32_0;
-            if (wc.field_a != null &&
+            if (AdditiveSpriteWipeSupport.field_a != null &&
               null != param5.field_b &&
               var14Lifetime1 < param5.field_b.length &&
               param5.field_b[var14Lifetime1] != -1 &&
-              wc.field_a.length > param5.field_b[var14Lifetime1]) {
-              stackIn_39_0 = wc.field_a[param5.field_b[var14Lifetime1]];
+              AdditiveSpriteWipeSupport.field_a.length > param5.field_b[var14Lifetime1]) {
+              stackIn_39_0 = AdditiveSpriteWipeSupport.field_a[param5.field_b[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }
@@ -401,7 +401,7 @@ final class WhirlpoolHasher {
         int var9 = 0;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], 128 >>> we.intAnd(7, this.field_d));
+          this.field_a[this.field_o] = (byte)PrivateChatMessage.intOr((int) this.field_a[this.field_o], 128 >>> KeyboardStateSupport.intAnd(7, this.field_d));
           this.field_o = this.field_o + 1;
           if (this.field_o > 32) {
             while (this.field_o < 64) {
@@ -567,7 +567,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.intAnd(255, (int)(this.field_e[we.intAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_h[var3Lifetime1] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][KeyboardStateSupport.intAnd(255, (int)(this.field_e[KeyboardStateSupport.intAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -582,7 +582,7 @@ final class WhirlpoolHasher {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.intAnd((int)(this.field_f[we.intAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_h[var3Lifetime1Lifetime2] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][KeyboardStateSupport.intAnd((int)(this.field_f[KeyboardStateSupport.intAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

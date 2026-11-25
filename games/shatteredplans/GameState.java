@@ -1336,7 +1336,7 @@ final class GameState {
         }
         while (0 <= var4) {
           for (var5 = this.field_r - 1; var5 > var4; var5--) {
-            this.field_v[var4].field_h[var5] = we.intAnd(param0, 1) != 0 ? true : false;
+            this.field_v[var4].field_h[var5] = KeyboardStateSupport.intAnd(param0, 1) != 0 ? true : false;
             param0 = param0 >> 1;
           }
           var4--;

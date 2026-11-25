@@ -34,7 +34,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var10 = var8;
           var3 = var10.readUnsignedByte(-108);
           var10.m(-84);
-          wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
+          AdditiveSpriteWipeSupport.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           ClientRandomSupport.field_d = new MeshData[var3];
           ValidatedTextInputWidget.field_Z = new int[var3][];
           if (param0 <= 82) {
@@ -85,7 +85,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
 
     public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_Eb) {
-          wa.a((byte) -40, false, true);
+          RasterCoverageSpan.openLoginForm((byte) -40, false, true);
           return;
         }
         try {

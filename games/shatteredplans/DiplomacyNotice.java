@@ -3,7 +3,7 @@
  */
 final class DiplomacyNotice extends IntrusiveNode {
     int field_i;
-    static wh field_h;
+    static ChatAndSocialPanel field_h;
     static double field_p;
     static String field_q;
     static String field_m;

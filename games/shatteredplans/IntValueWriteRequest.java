@@ -89,7 +89,7 @@ final class IntValueWriteRequest extends IntrusiveNode {
     final static void pushSpriteRaster(byte param0, Sprite param1) {
         try {
           int var2_int = -121 % ((29 - param0) / 51);
-          wh.pushRasterState(false);
+          ChatAndSocialPanel.pushRasterState(false);
           SoftwareRasterizer.setTarget(param1.field_B, param1.field_o, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

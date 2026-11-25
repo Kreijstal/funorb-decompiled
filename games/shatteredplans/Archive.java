@@ -9,7 +9,7 @@ final class Archive {
     static String field_i;
     private Object[][] field_n;
     private ArchiveSource field_e;
-    static wh field_g;
+    static ChatAndSocialPanel field_g;
     static int[][] field_c;
     private ArchiveIndex field_f;
     static String field_a;
@@ -321,7 +321,7 @@ final class Archive {
           throw new IllegalArgumentException(param1 + " " + param2);
         }
         if (param0 <= 40) {
-          field_g = (wh) (this.field_m[17]);
+          field_g = (ChatAndSocialPanel) (this.field_m[17]);
           return true;
         }
         return true;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
+final class AdditiveSpriteWipeSupport {
     static String field_b;
     static MeshMaterial[] field_a;
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
+    final static void drawAdditiveWipe(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

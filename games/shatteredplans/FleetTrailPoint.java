@@ -281,21 +281,21 @@ final class FleetTrailPoint extends IntrusiveNode {
           if (param0 != -7904) {
             return;
           }
-          stackIn_5_0 = wg.field_a.field_Db;
+          stackIn_5_0 = ClientLobbyResources.field_a.field_Db;
           stackIn_5_1 = param2 * ((UniformNineSliceFactory.field_c + 2) * 3);
           stackIn_5_2 = 2 + UniformNineSliceFactory.field_c;
-          stackIn_6_3 = (wg.field_a.field_Db == DerelictVictoryChecker.field_l);
+          stackIn_6_3 = (ClientLobbyResources.field_a.field_Db == DerelictVictoryChecker.field_l);
           var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
-          var4 = wg.field_a.field_Eb.field_M;
+          var4 = ClientLobbyResources.field_a.field_Eb.field_M;
           if (2 != ClientInputSupport.field_b &&
             1 != ClientInputSupport.field_b) {
-            wg.field_a.field_s = false;
-            wg.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
-            MatchingTextValidator.a(false, wg.field_a.field_Eb);
+            ClientLobbyResources.field_a.field_s = false;
+            ClientLobbyResources.field_a.field_Db.field_zb.field_z = LobbyUiSetupSupport.field_c;
+            MatchingTextValidator.a(false, ClientLobbyResources.field_a.field_Eb);
             return;
           }
-          wg.field_a.field_Db.field_zb.field_z = null;
-          wg.field_a.field_s = true;
+          ClientLobbyResources.field_a.field_Db.field_zb.field_z = null;
+          ClientLobbyResources.field_a.field_s = true;
           var5 = null;
           var6 = (SocialListEntry) (var4.startForward(param0 ^ -7904));
           while (var6 != null) {
@@ -308,7 +308,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               var7 = 1;
               var6.markDirty((byte) -123);
             }
-            var6.field_K = wg.field_a.field_Eb.field_K;
+            var6.field_K = ClientLobbyResources.field_a.field_Eb.field_K;
             var6.field_Cb.setTarget(var6.field_K, UniformNineSliceFactory.field_c, (byte) 78, 0, 0);
             var8 = 0;
             if (var6.field_Bb != null &&
@@ -338,7 +338,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               var6.field_gb = UniformNineSliceFactory.field_c - var6.field_mb;
             }
             if (var7 != 0) {
-              wg.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var5), var6, (byte) 55);
+              ClientLobbyResources.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var5), var6, (byte) 55);
             }
             if (var6.field_Db != null &&
               var6.field_Db.field_L) {
@@ -351,7 +351,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             }
             var5 = var6;
             if (0 != var6.field_rb) {
-              SliderPainter.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, wg.field_a.field_Db, var6, -1, -1);
+              SliderPainter.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, ClientLobbyResources.field_a.field_Db, var6, -1, -1);
               var16 = DerelictVictoryChecker.field_m;
               var13_ref_String = TutorialVictoryChecker.field_o;
               var16.field_j.addItem(1, 7, var13_ref_String);
@@ -362,14 +362,14 @@ final class FleetTrailPoint extends IntrusiveNode {
             }
             var6 = (SocialListEntry) (var4.nextForward((byte) -71));
           }
-          if (wg.field_a.field_Fb.field_rb != 0) {
-            ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+          if (ClientLobbyResources.field_a.field_Fb.field_rb != 0) {
+            ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(ClientLobbyResources.field_a.field_Fb.field_B, ClientLobbyResources.field_a.field_Fb.field_N, ClientLobbyResources.field_a.field_Fb.field_K, ClientLobbyResources.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
             MapViewState.field_b = 2;
           }
-          if (wg.field_a.field_yb.field_rb == 0) {
+          if (ClientLobbyResources.field_a.field_yb.field_rb == 0) {
             return;
           }
-          ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+          ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(ClientLobbyResources.field_a.field_yb.field_B, ClientLobbyResources.field_a.field_yb.field_N, ClientLobbyResources.field_a.field_yb.field_K, ClientLobbyResources.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
           MapViewState.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -243,7 +243,7 @@ abstract class GameClientShell extends GameApplet {
                         this.b(false);
                       } else {
                         if (var2 == 8) {
-                          vq.a(SpriteWipeSupport.field_a, ValidatedTextInputWidget.field_W, TextInputPainter.field_t, -3);
+                          ReflectionCheckDecoder.readReflectionCheck(SpriteWipeSupport.field_a, ValidatedTextInputWidget.field_W, TextInputPainter.field_t, -3);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -385,7 +385,7 @@ abstract class GameClientShell extends GameApplet {
           }
           BoundsRect.field_p.a(true);
         }
-        we.a((byte) -59);
+        KeyboardStateSupport.snapshotKeyboardInput((byte) -59);
         HighscoreResponseSupport.snapshotMouseInput((byte) 62);
         if (!ArchiveLoadStep.isClientNotReady(false) &&
           SoundPlayback.field_i != 11) {
@@ -545,7 +545,7 @@ abstract class GameClientShell extends GameApplet {
           StringList.field_f = null;
           LinkPainter.field_g = null;
           GalaxyMap.field_g = null;
-          we.a((java.applet.Applet) (this), 4289);
+          KeyboardStateSupport.inspectAppletUsernameParameter((java.applet.Applet) (this), 4289);
           ValidationState.c(124);
           DefensiveAi.field_p = 10;
         }

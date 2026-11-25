@@ -78,7 +78,7 @@ class IntrusiveNode {
     final static boolean b(boolean param0) {
         if (!param0) {
           field_d = (Sprite[]) null;
-          if (wg.field_f == null) {
+          if (ClientLobbyResources.field_f == null) {
             return false;
           }
           if (Wormhole.field_j.isLoginOrConnectedPhase(64)) {
@@ -86,7 +86,7 @@ class IntrusiveNode {
           }
           return false;
         }
-        if (wg.field_f == null) {
+        if (ClientLobbyResources.field_f == null) {
           return false;
         }
         if (Wormhole.field_j.isLoginOrConnectedPhase(64)) {

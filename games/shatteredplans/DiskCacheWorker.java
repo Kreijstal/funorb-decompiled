@@ -67,22 +67,22 @@ final class DiskCacheWorker implements Runnable {
         IntNode.field_h.field_x = -60 + TabbedPanel.field_Cb.field_x;
         var2 = 60 + EmailSyntaxValidator.field_o.field_w;
         IntNode.field_h.field_p = 60 + TabbedPanel.field_Cb.field_p;
-        we.field_f = new Sprite(var1_int, var2);
+        KeyboardStateSupport.field_f = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
-          we.field_f.field_B[var1_int * 60 + var3] = EmailSyntaxValidator.field_o.field_B[var3];
+          KeyboardStateSupport.field_f.field_B[var1_int * 60 + var3] = EmailSyntaxValidator.field_o.field_B[var3];
         }
-        we.field_f.field_t = EmailSyntaxValidator.field_o.field_t;
-        we.field_f.field_p = EmailSyntaxValidator.field_o.field_p + 60;
-        we.field_f.field_x = -60 + EmailSyntaxValidator.field_o.field_x;
-        we.field_f.field_o = EmailSyntaxValidator.field_o.field_o;
+        KeyboardStateSupport.field_f.field_t = EmailSyntaxValidator.field_o.field_t;
+        KeyboardStateSupport.field_f.field_p = EmailSyntaxValidator.field_o.field_p + 60;
+        KeyboardStateSupport.field_f.field_x = -60 + EmailSyntaxValidator.field_o.field_x;
+        KeyboardStateSupport.field_f.field_o = EmailSyntaxValidator.field_o.field_o;
         IntNode.field_h.bindAsRenderTarget();
         if (param0 != 50) {
           return;
         }
         try {
           SoftwareRasterizer.b(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
-          we.field_f.bindAsRenderTarget();
-          SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
+          KeyboardStateSupport.field_f.bindAsRenderTarget();
+          SoftwareRasterizer.b(60, 60, 0, 0, KeyboardStateSupport.field_f.field_z, KeyboardStateSupport.field_f.field_w);
           AccountBooleanRequest.field_j = GraphicsSettings.field_e.copy();
           AccountBooleanRequest.field_j.rotate180();
           for (var3 = 0; var3 < AccountBooleanRequest.field_j.field_B.length; var3++) {
@@ -302,7 +302,7 @@ final class DiskCacheWorker implements Runnable {
         if (LobbyRoomInteractionSupport.field_e) {
           StringList.field_b = null;
           GameKeyHandler.field_a = new IntrusiveDeque();
-          vq.field_a = 0;
+          ReflectionCheckDecoder.field_a = 0;
           LobbyRoomInteractionSupport.field_e = false;
         }
         if (param0 != 1048576) {
@@ -363,11 +363,11 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
         try {
-          wh.field_a = CheckboxPainter.a("", -12179);
+          ChatAndSocialPanel.field_a = CheckboxPainter.a("", -12179);
           if (param0 != 624) {
             DiskCacheWorker.b((byte) -62);
           }
-          wh.field_a.setResult(false, 37);
+          ChatAndSocialPanel.field_a.setResult(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
           PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;

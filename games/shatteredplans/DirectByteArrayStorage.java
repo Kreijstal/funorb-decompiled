@@ -44,7 +44,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         if (param0 >= -112) {
           return true;
         }
-        if (null == wg.field_f) {
+        if (null == ClientLobbyResources.field_f) {
           return false;
         }
         if (AccountNoticeKind.field_f != Wormhole.field_j) {

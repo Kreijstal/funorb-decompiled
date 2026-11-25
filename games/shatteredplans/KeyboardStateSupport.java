@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we {
+final class KeyboardStateSupport {
     static String field_d;
     static String field_a;
     static int field_c;
@@ -23,7 +23,7 @@ final class we {
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void inspectAppletUsernameParameter(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -57,7 +57,7 @@ final class we {
         }
     }
 
-    final static void a(byte param0) {
+    final static void snapshotKeyboardInput(byte param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -70,7 +70,7 @@ final class we {
             AccountInputSupport.field_e = AccountInputSupport.field_e + 1;
             DialogRoot.field_B = MenuButton.field_J;
             if (param0 != -59) {
-              we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);
+              KeyboardStateSupport.drawAlternatingDashedLineQ4(49, -95, -50, 61, 66, -88, -81, -110, -20);
             }
             if (IntroRenderSupport.field_c < 0) {
               for (var2 = 0; var2 < 112; var2++) {
@@ -98,7 +98,7 @@ final class we {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawAlternatingDashedLineQ4(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_28_0;
         int stackIn_28_1;
         int stackIn_28_2;

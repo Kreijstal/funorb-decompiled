@@ -74,15 +74,15 @@ final class IntroRenderSupport {
               continue;
             }
             if (230 > var1.field_h) {
-              wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
+              AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
             } else {
               if (var1.field_h >= 250) {
                 var5 = -(5 * var1.field_h) + 1500;
-                wc.a(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, var5);
-                wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, var5);
+                AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, var5);
+                AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, var1.field_h << 4, var3, var1.field_i, var2, var5);
               } else {
-                wc.a(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, -2760 + 12 * var1.field_h);
-                wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
+                AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, -2760 + 12 * var1.field_h);
+                AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
               }
             }
             var2 = var2 + var1.field_i.field_w;

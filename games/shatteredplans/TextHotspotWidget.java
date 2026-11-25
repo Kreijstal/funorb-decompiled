@@ -150,7 +150,7 @@ class TextHotspotWidget extends FocusableWidget {
             Wormhole.field_j = ContentTransitionPhase.field_a;
           } else {
             try {
-              wg.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
+              ClientLobbyResources.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
               var4 = SpriteWipeSupport.field_a;
               var5 = var4;
               LobbyOptionSupport.field_f.position = 0;

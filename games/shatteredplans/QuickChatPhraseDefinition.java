@@ -72,7 +72,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             stackIn_3_0 = 63;
             return stackIn_3_0;
           }
-          if (wg.field_f == null &&
+          if (ClientLobbyResources.field_f == null &&
             !TextHotspotWidget.a(false, -2)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
@@ -194,9 +194,9 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             stackIn_56_0 = BufferedCacheFile.field_e;
             return stackIn_56_0;
           }
-          if (null == wg.field_f) {
+          if (null == ClientLobbyResources.field_f) {
             if (BufferedSocket.field_j) {
-              if (wh.a(18) > 30000L) {
+              if (ChatAndSocialPanel.serverReadIdleMillis(18) > 30000L) {
                 DiplomacyRowSupport.field_c = QuickChatParameterType.field_f;
               } else {
                 DiplomacyRowSupport.field_c = QuaternaryNodeList.field_d;

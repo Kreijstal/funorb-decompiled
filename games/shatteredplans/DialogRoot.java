@@ -64,7 +64,7 @@ final class DialogRoot extends SingleChildWidget {
     final static void f(byte param0) {
         if (!IsolationistAi.field_r &&
           ScrollBar.field_zb == null) {
-          ScrollBar.field_zb = vs.a((byte) 88, 4);
+          ScrollBar.field_zb = ServerRequestRetrySupport.requestServerIntArray((byte) 88, 4);
         }
         if (param0 <= 118) {
           field_G = (PlayerReportPanel) null;
@@ -458,7 +458,7 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DiplomacyNotice.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new wh(SocialListEntry.field_yb, IntrusiveNode.field_c);
+        DiplomacyNotice.field_h = !param1 ? new ChatAndSocialPanel(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new ChatAndSocialPanel(SocialListEntry.field_yb, IntrusiveNode.field_c);
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, DiplomacyNotice.field_h.field_d);
         SocialListPanel.field_xb.addChild(4, DialPainter.field_g);
@@ -508,7 +508,7 @@ final class DialogRoot extends SingleChildWidget {
         TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
         PlayerReportPanel.field_Mb = SoftwareRasterizer.field_b;
         ClientDialogSupport.layoutLobbySidePanels(438);
-        Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
+        Archive.field_g.layout(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         PairedIntSortSupport.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);
         int var1 = UniformNineSliceFactory.field_c + 2;
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);

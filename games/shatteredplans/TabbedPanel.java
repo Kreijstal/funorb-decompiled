@@ -198,9 +198,9 @@ final class TabbedPanel extends AnimatedPanel {
         if (param0 > -95) {
           field_Cb = (Sprite) null;
         }
-        if (wg.field_f != null) {
-          wg.field_f.close(111);
-          wg.field_f = null;
+        if (ClientLobbyResources.field_f != null) {
+          ClientLobbyResources.field_f.close(111);
+          ClientLobbyResources.field_f = null;
         }
     }
 

@@ -209,7 +209,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void c(int param0, byte param1, int param2) {
         this.field_m[param2] = param0;
-        this.field_P[param2] = we.intAnd(-128, param0);
+        this.field_P[param2] = KeyboardStateSupport.intAnd(-128, param0);
         int var4 = 120 % ((51 - param1) / 40);
         this.setProgram(param2, param0, (byte) -16);
     }
@@ -864,7 +864,7 @@ final class MidiPcmStream extends PcmStream {
             }
             if (var12.field_ac.field_L) {
               if (var12.field_Fb == 2) {
-                stackIn_170_0 = we.field_d;
+                stackIn_170_0 = KeyboardStateSupport.field_d;
               } else {
                 stackIn_170_0 = NumericDateInputWidget.field_K;
               }
@@ -1198,7 +1198,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (16 > var5) {
-          this.field_P[var5] = we.intAnd(this.field_m[var5], -128);
+          this.field_P[var5] = KeyboardStateSupport.intAnd(this.field_m[var5], -128);
           var5++;
         }
     }
@@ -1320,44 +1320,44 @@ final class MidiPcmStream extends PcmStream {
         var6Lifetime4 = 127 & param0 >> 8;
         var7Lifetime3 = 127 & param0 >> 16;
         if (var6Lifetime4 == 0) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + we.intAnd(-2080769, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + KeyboardStateSupport.intAnd(-2080769, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 32) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(-16257, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 1) {
-          this.field_p[var5Lifetime4] = we.intAnd(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_p[var5Lifetime4] = KeyboardStateSupport.intAnd(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (33 == var6Lifetime4) {
-          this.field_p[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_p[var5Lifetime4], -128);
+          this.field_p[var5Lifetime4] = var7Lifetime3 + KeyboardStateSupport.intAnd(this.field_p[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 5) {
-          this.field_J[var5Lifetime4] = we.intAnd(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_J[var5Lifetime4] = KeyboardStateSupport.intAnd(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (37 == var6Lifetime4) {
-          this.field_J[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_J[var5Lifetime4], -128);
+          this.field_J[var5Lifetime4] = var7Lifetime3 + KeyboardStateSupport.intAnd(this.field_J[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 7) {
-          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_y[var5Lifetime4]);
+          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(-16257, this.field_y[var5Lifetime4]);
         }
         if (39 == var6Lifetime4) {
-          this.field_y[var5Lifetime4] = we.intAnd(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
+          this.field_y[var5Lifetime4] = KeyboardStateSupport.intAnd(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
         }
         if (var6Lifetime4 == 10) {
-          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_G[var5Lifetime4], -16257);
+          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(this.field_G[var5Lifetime4], -16257);
         }
         if (42 == var6Lifetime4) {
-          this.field_G[var5Lifetime4] = we.intAnd(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_G[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (var6Lifetime4 == 11) {
-          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_s[var5Lifetime4]);
+          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(-16257, this.field_s[var5Lifetime4]);
         }
         if (var6Lifetime4 == 43) {
-          this.field_s[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_s[var5Lifetime4], -128);
+          this.field_s[var5Lifetime4] = var7Lifetime3 + KeyboardStateSupport.intAnd(this.field_s[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 64) {
           if (var7Lifetime3 < 64) {
-            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -2);
+            this.field_F[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_F[var5Lifetime4], -2);
           } else {
             this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 1);
           }
@@ -1365,22 +1365,22 @@ final class MidiPcmStream extends PcmStream {
         if (var6Lifetime4 == 65) {
           if (var7Lifetime3 < 64) {
             this.a(true, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -3);
+            this.field_F[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_F[var5Lifetime4], -3);
           } else {
             this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 2);
           }
         }
         if (var6Lifetime4 == 99) {
-          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(127, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(127, this.field_q[var5Lifetime4]);
         }
         if (98 == var6Lifetime4) {
-          this.field_q[var5Lifetime4] = var7Lifetime3 + we.intAnd(16256, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = var7Lifetime3 + KeyboardStateSupport.intAnd(16256, this.field_q[var5Lifetime4]);
         }
         if (var6Lifetime4 == 101) {
-          this.field_q[var5Lifetime4] = we.intAnd(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
+          this.field_q[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
         }
         if (var6Lifetime4 == 100) {
-          this.field_q[var5Lifetime4] = 16384 + (we.intAnd(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
+          this.field_q[var5Lifetime4] = 16384 + (KeyboardStateSupport.intAnd(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
         }
         if (var6Lifetime4 == 120) {
           this.removeChannelVoices(var5Lifetime4, (byte) 68);
@@ -1394,25 +1394,25 @@ final class MidiPcmStream extends PcmStream {
         if (var6Lifetime4 == 6) {
           var8 = this.field_q[var5Lifetime4];
           if (var8 == 16384) {
-            this.field_r[var5Lifetime4] = we.intAnd(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
+            this.field_r[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
           }
         }
         if (var6Lifetime4 == 38) {
           var8Lifetime1 = this.field_q[var5Lifetime4];
           if (var8Lifetime1 == 16384) {
-            this.field_r[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_r[var5Lifetime4], -128);
+            this.field_r[var5Lifetime4] = var7Lifetime3 + KeyboardStateSupport.intAnd(this.field_r[var5Lifetime4], -128);
           }
         }
         if (var6Lifetime4 == 16) {
-          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_t[var5Lifetime4], -16257);
+          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + KeyboardStateSupport.intAnd(this.field_t[var5Lifetime4], -16257);
         }
         if (var6Lifetime4 == 48) {
-          this.field_t[var5Lifetime4] = we.intAnd(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_t[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (81 == var6Lifetime4) {
           if (var7Lifetime3 < 64) {
             this.d(0, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -5);
+            this.field_F[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_F[var5Lifetime4], -5);
           } else {
             this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 4);
           }

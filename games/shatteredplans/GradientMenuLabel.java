@@ -159,7 +159,7 @@ final class GradientMenuLabel extends MenuComponent {
             }
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
-          vo.field_b = LoginForm.field_O - (DiskCacheWorker.field_b >> 1);
+          GameSoundSetupSupport.field_b = LoginForm.field_O - (DiskCacheWorker.field_b >> 1);
           AccountStatusDialog.field_nb.resetSelection(RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

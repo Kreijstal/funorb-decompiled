@@ -26,7 +26,7 @@ final class ReflectionCheck extends IntrusiveNode {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           wn.c();
-          we.field_e = 11;
+          KeyboardStateSupport.field_e = 11;
           HorizontalGradientComponent.field_w = new int[260];
           if (param0 != -47) {
             var5 = (TutorialScene) null;

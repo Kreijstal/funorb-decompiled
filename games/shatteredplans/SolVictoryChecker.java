@@ -383,7 +383,7 @@ final class SolVictoryChecker extends VictoryChecker {
           int var8Lifetime1;
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            if (wg.field_f == null &&
+            if (ClientLobbyResources.field_f == null &&
               !TextHotspotWidget.a(param2, -2)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -544,9 +544,9 @@ final class SolVictoryChecker extends VictoryChecker {
             if (param1 > -48) {
               SolVictoryChecker.blendColours(-26, -48, -112, -53);
             }
-            if (wg.field_f == null) {
+            if (ClientLobbyResources.field_f == null) {
               if (BufferedSocket.field_j) {
-                if (wh.a(18) <= 30000L) {
+                if (ChatAndSocialPanel.serverReadIdleMillis(18) <= 30000L) {
                   DiplomacyRowSupport.field_c = QuaternaryNodeList.field_d;
                 } else {
                   DiplomacyRowSupport.field_c = QuickChatParameterType.field_f;

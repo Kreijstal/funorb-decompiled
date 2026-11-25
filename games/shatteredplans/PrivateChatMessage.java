@@ -721,7 +721,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("hint_cancel", 97);
                 if (null != var2) {
-                  vo.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GameSoundSetupSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_waitingforplayer", 126);
                 if (var2 != null) {
@@ -813,7 +813,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("turnOnePoint", 123);
                 if (null != var2) {
-                  vs.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("turnPoints", 95);
                 if (null != var2) {
@@ -1604,7 +1604,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_error", 111);
                 if (var2 != null) {
-                  wc.field_b = IterableNodeHashTable.a(var2, 17746);
+                  AdditiveSpriteWipeSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_max_total_fleet_size", 109);
                 if (null != var2) {
@@ -1684,11 +1684,11 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_avg_move_size", 117);
                 if (var2 != null) {
-                  wa.field_i = IterableNodeHashTable.a(var2, 17746);
+                  RasterCoverageSpan.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_max_production", 104);
                 if (null != var2) {
-                  vs.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_ships_constructed", 101);
                 if (null != var2) {
@@ -1716,11 +1716,11 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_defences_failed", 127);
                 if (null != var2) {
-                  vo.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GameSoundSetupSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_efficiency", 108);
                 if (var2 != null) {
-                  vs.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_fluidity", 117);
                 if (var2 != null) {

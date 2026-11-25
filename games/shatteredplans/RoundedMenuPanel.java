@@ -122,11 +122,11 @@ final class RoundedMenuPanel extends MenuComponent {
             stackIn_2_0 = (AccountBooleanRequest) null;
             return stackIn_2_0;
           }
-          if (wh.field_a.isComplete(14) &&
-            !param1.equals(wh.field_a.getInput(-103))) {
-            wh.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
+          if (ChatAndSocialPanel.field_a.isComplete(14) &&
+            !param1.equals(ChatAndSocialPanel.field_a.getInput(-103))) {
+            ChatAndSocialPanel.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
           }
-          stackIn_7_0 = wh.field_a;
+          stackIn_7_0 = ChatAndSocialPanel.field_a;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -49,7 +49,7 @@ final class PlayerRankingRequest extends IntrusiveNode {
             var9 = var9 + (8 + (-8 & -var9 + var7));
             var10 = var9 + PolygonSpanIterator.scanlineY * SoftwareRasterizer.field_b;
             while (var8 > var9) {
-              SoftwareRasterizer.field_h[var10] = we.intAnd(16711935, we.intAnd(16711935, SoftwareRasterizer.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (we.intAnd(we.intAnd(65280, SoftwareRasterizer.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
+              SoftwareRasterizer.field_h[var10] = KeyboardStateSupport.intAnd(16711935, KeyboardStateSupport.intAnd(16711935, SoftwareRasterizer.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (KeyboardStateSupport.intAnd(KeyboardStateSupport.intAnd(65280, SoftwareRasterizer.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
               var10 += 8;
               var9 += 8;
             }

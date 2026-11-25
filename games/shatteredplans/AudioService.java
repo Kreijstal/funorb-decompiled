@@ -14,12 +14,12 @@ final class AudioService implements Runnable {
         MusicVoice.field_I = AccountBooleanRequest.getAccountDialogStyle(108);
         if (param0 == 0) {
           ByteArrayStorage.field_e = new DialogRoot();
-          wa.a((byte) -50, true, true);
+          RasterCoverageSpan.openLoginForm((byte) -50, true, true);
           return;
         }
         field_f = (String) null;
         ByteArrayStorage.field_e = new DialogRoot();
-        wa.a((byte) -50, true, true);
+        RasterCoverageSpan.openLoginForm((byte) -50, true, true);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8, int param9) {
@@ -50,7 +50,7 @@ final class AudioService implements Runnable {
             var13 = param4;
             var14 = param1;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + (we.intAnd(33471547, var14) >> 17) - (-we.intAnd(65280, var13 >> 9) - (we.intAnd(33423360, var12) >> 1));
+            var10[var11] = var15 + (KeyboardStateSupport.intAnd(33471547, var14) >> 17) - (-KeyboardStateSupport.intAnd(65280, var13 >> 9) - (KeyboardStateSupport.intAnd(33423360, var12) >> 1));
             param2++;
             param1 = param1 + param7;
             param6 = param6 + param9;

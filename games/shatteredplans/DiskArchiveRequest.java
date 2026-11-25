@@ -17,7 +17,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int var1 = 100 % ((-56 - param0) / 52);
     }
 
-    final static void a(int param0, int param1, wa param2) {
+    final static void a(int param0, int param1, RasterCoverageSpan param2) {
         int stackIn_7_0;
         int stackIn_7_1;
         Object stackIn_7_2;
@@ -29,7 +29,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        wa var5 = null;
+        RasterCoverageSpan var5 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 > param1 &&
@@ -43,7 +43,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             } else {
               stackIn_8_4 = -param0 + param2.field_h;
             }
-            var5 = wi.a(stackIn_7_0, stackIn_7_1, (wa) (stackIn_7_2), stackIn_7_3, stackIn_8_4, param2.field_g + param0, param1 - 3903);
+            var5 = wi.a(stackIn_7_0, stackIn_7_1, (RasterCoverageSpan) (stackIn_7_2), stackIn_7_3, stackIn_8_4, param2.field_g + param0, param1 - 3903);
             param2.field_h = param0;
             while (param2.field_c != null) {
               if (!(param2.field_c.field_g >= var5.field_g) ||

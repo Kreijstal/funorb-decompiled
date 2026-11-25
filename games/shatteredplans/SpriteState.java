@@ -21,7 +21,7 @@ abstract class SpriteState extends DualLinkNode {
         LobbyOptionSupport.field_i = MusicTrack.load(param0, "", "shattered_plans_ingame");
         PaddedContentDialog.field_nb = wp.field_a;
         PlacementEvent.field_n = MusicTrack.load(param0, "", "shattered_plans_win");
-        wh.field_b = MusicTrack.load(param0, "", "shattered_plans_lose");
+        ChatAndSocialPanel.field_b = MusicTrack.load(param0, "", "shattered_plans_lose");
         ValidationState.field_b.field_u.preparePatches(param1, SoundTriggerTick.field_d, 50, 0, LobbyPlayerEntry.field_Sb);
         ValidationState.field_b.field_u.preparePatches(param1, wp.field_a, 41, 0, LobbyPlayerEntry.field_Sb);
         ValidationState.field_b.field_u.preparePatches(param1, LobbyOptionSupport.field_i, 111, 0, LobbyPlayerEntry.field_Sb);

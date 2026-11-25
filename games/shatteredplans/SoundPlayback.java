@@ -158,7 +158,7 @@ final class SoundPlayback extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {

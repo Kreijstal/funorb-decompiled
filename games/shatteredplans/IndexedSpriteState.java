@@ -19,7 +19,7 @@ abstract class IndexedSpriteState {
         try {
           BufferedSocket.field_i = SpriteResourceSupport.loadSpriteByName(2, param1, "basic", "display_name_changed");
           ClientPacketFlushSupport.field_a = new SocialListPanel(0L, AccountNoticeKind.field_g, ByteArrayReadRequest.field_k, SocketArchiveNetworkClient.field_u);
-          wg.field_a = new SocialListPanel(0L, AccountNoticeKind.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
+          ClientLobbyResources.field_a = new SocialListPanel(0L, AccountNoticeKind.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
           OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
@@ -39,9 +39,9 @@ abstract class IndexedSpriteState {
           var6 = var5;
           ClientPacketFlushSupport.field_a.field_Db.field_zb.field_G = 1;
           var6.field_y = 1;
-          wg.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
-          var3 = wg.field_a.field_Db.field_zb;
-          wg.field_a.field_Db.field_zb.field_G = 1;
+          ClientLobbyResources.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
+          var3 = ClientLobbyResources.field_a.field_Db.field_zb;
+          ClientLobbyResources.field_a.field_Db.field_zb.field_G = 1;
           var3.field_y = 1;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

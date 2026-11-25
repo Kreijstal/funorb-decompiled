@@ -20,8 +20,8 @@ final class IntroLoadingSupport {
         }
         SoftwareRasterizer.clear();
         int var1 = 240;
-        wc.a(-27030, FleetTrailPoint.field_m << 1, -GraphicsSettings.field_d[0].field_z + 640 >> 1, GraphicsSettings.field_d[0], var1, 256);
-        wc.a(-27030, -128 + (FleetTrailPoint.field_m << 1), -GraphicsSettings.field_d[1].field_z + 640 >> 1, GraphicsSettings.field_d[1], var1 + GraphicsSettings.field_d[1].field_w, 256);
+        AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, FleetTrailPoint.field_m << 1, -GraphicsSettings.field_d[0].field_z + 640 >> 1, GraphicsSettings.field_d[0], var1, 256);
+        AdditiveSpriteWipeSupport.drawAdditiveWipe(-27030, -128 + (FleetTrailPoint.field_m << 1), -GraphicsSettings.field_d[1].field_z + 640 >> 1, GraphicsSettings.field_d[1], var1 + GraphicsSettings.field_d[1].field_w, 256);
         if (!EmailValidator.field_r) {
           var2 = DerelictVictoryChecker.field_n.getGroupProgressByName("intro", (byte) 53);
           AttackTask.a((byte) 73, 455, 15, 16711680, 10, var2, 100);

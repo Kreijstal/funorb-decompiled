@@ -583,7 +583,7 @@ final class SecondaryNodeHashTable {
           CanvasResizeController.field_a.addChild(4, PairedIntSortSupport.field_c);
         }
         CanvasResizeController.field_a.addChild(4, MenuList.field_v);
-        Archive.field_g = new wh(MessageKind.field_a, CanvasResizeController.field_a);
+        Archive.field_g = new ChatAndSocialPanel(MessageKind.field_a, CanvasResizeController.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;
         }

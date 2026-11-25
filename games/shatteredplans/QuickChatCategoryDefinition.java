@@ -252,7 +252,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
             var5 = var9;
             var6 = param0;
             var7 = param3;
-            var9[var6] = var7 + (we.intAnd(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (KeyboardStateSupport.intAnd(var9[var6], 16711422) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

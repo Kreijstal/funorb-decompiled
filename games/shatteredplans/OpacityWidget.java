@@ -133,7 +133,7 @@ final class OpacityWidget extends SingleChildWidget {
           MenuInputState.field_m = param1;
           AccountCreationForm.field_G = param4;
           PlayerStats.field_j = param2;
-          wh.field_c = null;
+          ChatAndSocialPanel.field_c = null;
           HighscoreResponseSupport.field_g = param0;
           AlternateLoginCredentials.field_t = param3;
           return true;

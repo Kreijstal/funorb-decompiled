@@ -64,7 +64,7 @@ final class LobbyUiSetupSupport {
           LobbyOptionResources.field_d = param14;
           SoundPlayback.field_l = param11;
           MenuLabel.field_x = param10;
-          wa.field_d = param3;
+          RasterCoverageSpan.field_d = param3;
           Star.field_O = param9;
           LobbyUiSupport.field_f = param2;
           DiplomacyRowSupport.field_a = param1;
@@ -200,7 +200,7 @@ final class LobbyUiSetupSupport {
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
             QuickChatCategoryRegistry.field_g[4 + var17_intLifetime3] = new AnimatedPanel(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
-            array$2 = new IconLabelPanel[1 + we.intAnd(255, (int) BattleExplosionVisual.field_r[var17_intLifetime3])];
+            array$2 = new IconLabelPanel[1 + KeyboardStateSupport.intAnd(255, (int) BattleExplosionVisual.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
             for (var18 = 0; var18 < (255 & BattleExplosionVisual.field_r[var17_intLifetime3]); var18++) {
@@ -213,9 +213,9 @@ final class LobbyUiSetupSupport {
                   var19_ref = GameTextResources.field_d[var17_intLifetime3][var18];
                 }
               }
-              if (null != wa.field_d) {
-                if (wa.field_d[var17_intLifetime3] != null) {
-                  var20 = wa.field_d[var17_intLifetime3][var18];
+              if (null != RasterCoverageSpan.field_d) {
+                if (RasterCoverageSpan.field_d[var17_intLifetime3] != null) {
+                  var20 = RasterCoverageSpan.field_d[var17_intLifetime3][var18];
                 } else {
                   var20 = null;
                 }

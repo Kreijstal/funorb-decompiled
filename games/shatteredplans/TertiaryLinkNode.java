@@ -10,14 +10,14 @@ class TertiaryLinkNode extends DualLinkNode {
     TertiaryLinkNode field_q;
 
     final static void c(int param0, int param1) {
-        wa dupTemp$0 = null;
+        RasterCoverageSpan dupTemp$0 = null;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        wa var4 = null;
+        RasterCoverageSpan var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

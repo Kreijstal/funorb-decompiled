@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vs {
+final class ServerRequestRetrySupport {
     static String field_b;
     static int field_d;
     static String field_f;
@@ -9,7 +9,7 @@ final class vs {
     static String field_e;
     static String field_a;
 
-    final static ServerIntArrayRequest a(byte param0, int param1) {
+    final static ServerIntArrayRequest requestServerIntArray(byte param0, int param1) {
         ServerIntArrayRequest var2 = new ServerIntArrayRequest();
         SolMapGenerator.field_o.addLast((byte) -113, var2);
         AccountNoticeDialog.a(param1, 2);
@@ -28,7 +28,7 @@ final class vs {
         field_a = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendPendingRequests(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         FourIntSubmissionRequest var4 = null;

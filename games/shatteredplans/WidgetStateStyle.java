@@ -48,7 +48,7 @@ final class WidgetStateStyle {
     }
 
     final static void a(boolean param0, boolean param1) {
-        wa.a((byte) 109, param1, param0);
+        RasterCoverageSpan.openLoginForm((byte) 109, param1, param0);
     }
 
     final WidgetStateStyle setTextColor(byte param0, int param1) {

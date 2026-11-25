@@ -32,7 +32,7 @@ final class NodeHashTableIterator implements Iterator {
 
     final static AnimatedPanel a(int param0) {
         int var1 = -56 % ((-22 - param0) / 48);
-        return wg.field_a.field_Eb;
+        return ClientLobbyResources.field_a.field_Eb;
     }
 
     final static void a(Star param0, byte param1) {

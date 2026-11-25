@@ -26,7 +26,7 @@ final class MusicVoice extends IntrusiveNode {
     int field_p;
     int field_B;
     static WidgetTheme field_o;
-    static wa field_D;
+    static RasterCoverageSpan field_D;
     int field_i;
     static String field_N;
     static String[] field_w;

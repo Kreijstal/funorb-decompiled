@@ -39,7 +39,7 @@ final class RasterTargetSupport {
         if (param1 != 72) {
           field_c = (String) null;
         }
-        wh.field_a.setResult(param0, 88);
+        ChatAndSocialPanel.field_a.setResult(param0, 88);
     }
 
     final static int crc32(int param0, byte[] param1, byte param2, int param3) {

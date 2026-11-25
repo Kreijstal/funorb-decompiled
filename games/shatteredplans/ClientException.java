@@ -83,9 +83,9 @@ final class ClientException extends RuntimeException {
         try {
           var1_int = ValidationMessageWidget.field_R - ByteArrayReadRequest.field_j;
           ByteArrayReadRequest.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
-          vo.field_b = -(DiskCacheWorker.field_b >> 1) + LoginForm.field_O;
+          GameSoundSetupSupport.field_b = -(DiskCacheWorker.field_b >> 1) + LoginForm.field_O;
           ValidationMessageWidget.field_R = ByteArrayReadRequest.field_j + var1_int;
-          var2 = vo.field_b;
+          var2 = GameSoundSetupSupport.field_b;
           if (param0 <= 32) {
             return;
           }
@@ -118,7 +118,7 @@ final class ClientException extends RuntimeException {
               var2 = var2 + LobbyRoomInteractionSupport.field_g;
             }
             if (var4 >= 0) {
-              MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
+              MusicEnvelope.field_g.drawString(var6, var8, var2 + KeyboardStateSupport.field_c, var5, -1);
               var2 = var2 + (ClientUiResourceState.field_b + LobbyOptionSupport.field_e + LobbyRoomInteractionSupport.field_g);
             } else {
               FourIntSubmissionRequest.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);

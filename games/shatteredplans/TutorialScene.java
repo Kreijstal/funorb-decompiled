@@ -185,11 +185,11 @@ final class TutorialScene {
 
     final static void insertPolygonScanlineSpan(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException decompiledCaughtException = null;
-        wa var7 = null;
+        RasterCoverageSpan var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        wa var9 = null;
-        wa var10 = null;
+        RasterCoverageSpan var9 = null;
+        RasterCoverageSpan var10 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 < 0) {

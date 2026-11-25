@@ -126,7 +126,7 @@ final class BoundsRect extends IntrusiveNode {
         if (ExternalLinkSupport.field_a == MatchingTextValidator.field_s) {
           return ClientSessionSupport.field_b;
         }
-        if (!wh.field_a.isComplete(14)) {
+        if (!ChatAndSocialPanel.field_a.isComplete(14)) {
           return ClientSessionSupport.field_b;
         }
         if (param0 < -61) {

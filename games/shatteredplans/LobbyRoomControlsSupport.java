@@ -199,11 +199,11 @@ final class LobbyRoomControlsSupport {
                 stackIn_29_1 = SpriteStripButtonPainter.field_v;
               }
               stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{IntValueWriteRequest.field_j.field_z});
-              DualLinkDequeSequence.field_f.field_z = wg.field_b;
+              DualLinkDequeSequence.field_f.field_z = ClientLobbyResources.field_b;
               DialPainter.field_g.field_s = true;
-              wg.field_d = true;
+              ClientLobbyResources.field_d = true;
               if (null != UnderageAccountInfoPanel.field_D) {
-                wg.field_d = false;
+                ClientLobbyResources.field_d = false;
                 RasterBuffer.field_h = false;
                 if (ClientDrawingSupport.field_c == null) {
                   ClientDrawingSupport.field_c = new byte[ProductionContent.field_k];
@@ -218,10 +218,10 @@ final class LobbyRoomControlsSupport {
                 LobbyOptionSupport.evaluateRoomOptionCombinations(-1, param2 + 3, IntNode.field_p, ProductionContent.field_k, 0, true, -1, -1);
                 if (!(RasterTargetSupport.field_b < 2) &&
                   FleetTrailPoint.field_p[12]) {
-                  wg.field_d = true;
+                  ClientLobbyResources.field_d = true;
                 }
               }
-              if (!wg.field_d) {
+              if (!ClientLobbyResources.field_d) {
                 IntValueWriteRequest.field_j.field_s = false;
                 if (IntValueWriteRequest.field_j.field_v) {
                   var9 = null;

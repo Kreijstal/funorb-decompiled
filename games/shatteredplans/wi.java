@@ -6,11 +6,11 @@ final class wi {
     static String field_a;
     static String field_b;
 
-    final static wa a(int param0, int param1, wa param2, int param3, int param4, int param5, int param6) {
-        wa var7 = null;
+    final static RasterCoverageSpan a(int param0, int param1, RasterCoverageSpan param2, int param3, int param4, int param5, int param6) {
+        RasterCoverageSpan var7 = null;
         RuntimeException var7_ref = null;
-        wa stackIn_2_0 = null;
-        wa stackIn_7_0 = null;
+        RasterCoverageSpan stackIn_2_0 = null;
+        RasterCoverageSpan stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -18,16 +18,16 @@ final class wi {
         try {
           var7 = MusicVoice.field_D;
           if (param6 != -3903) {
-            stackIn_2_0 = (wa) null;
+            stackIn_2_0 = (RasterCoverageSpan) null;
             return stackIn_2_0;
           }
           if (var7 != null) {
             MusicVoice.field_D = MusicVoice.field_D.field_c;
           } else {
-            var7 = new wa();
+            var7 = new RasterCoverageSpan();
             ChatMessage.field_a = ChatMessage.field_a + 1;
           }
-          var7.a(param1, param5, param0, param3, param2, param4, (byte) -34);
+          var7.configure(param1, param5, param0, param3, param2, param4, (byte) -34);
           stackIn_7_0 = var7;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

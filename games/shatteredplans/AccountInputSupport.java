@@ -33,21 +33,21 @@ final class AccountInputSupport {
         }
         if (param0 != 42) {
           AccountInputSupport.getCurrentAccountText((byte) 108);
-          if (!wh.field_a.isComplete(14)) {
-            return wh.field_a.getInput(98);
+          if (!ChatAndSocialPanel.field_a.isComplete(14)) {
+            return ChatAndSocialPanel.field_a.getInput(98);
           }
           if (ExternalLinkSupport.field_a != MatchingTextValidator.field_s) {
             return MenuWindow.field_B;
           }
-          return wh.field_a.getInput(-45);
+          return ChatAndSocialPanel.field_a.getInput(-45);
         }
-        if (!wh.field_a.isComplete(14)) {
-          return wh.field_a.getInput(98);
+        if (!ChatAndSocialPanel.field_a.isComplete(14)) {
+          return ChatAndSocialPanel.field_a.getInput(98);
         }
         if (ExternalLinkSupport.field_a != MatchingTextValidator.field_s) {
           return MenuWindow.field_B;
         }
-        return wh.field_a.getInput(-45);
+        return ChatAndSocialPanel.field_a.getInput(-45);
     }
 
     final static AccountFieldValue createAccountFieldValue(int param0) {

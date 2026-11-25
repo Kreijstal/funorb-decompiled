@@ -41,7 +41,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
             return stackIn_14_0;
           }
           if (9 == param0) {
-            stackIn_17_0 = vs.field_e;
+            stackIn_17_0 = ServerRequestRetrySupport.field_e;
             return stackIn_17_0;
           }
           if (~param0 == param1) {

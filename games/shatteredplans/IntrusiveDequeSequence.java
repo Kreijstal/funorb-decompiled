@@ -36,7 +36,7 @@ final class IntrusiveDequeSequence extends NodeSequence {
           if (param1 <= 44) {
             field_k = (int[]) null;
           }
-          vs.field_d = param4;
+          ServerRequestRetrySupport.field_d = param4;
           DefendTask.field_o = param2;
           ValidationMessageWidget.field_S = param0;
           TertiaryLinkNode.field_r = param3;

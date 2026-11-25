@@ -133,8 +133,8 @@ abstract class ResizingDialog extends Dialog {
           var8Lifetime1++;
         }
         GradientMenuLabel.field_v.draw(this.field_x + param0 - 90, 10 + param2);
-        wh.drawHorizontalSpriteStrip(RoundedMenuPanel.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
-        wh.drawHorizontalSpriteStrip(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
+        ChatAndSocialPanel.drawHorizontalSpriteStrip(RoundedMenuPanel.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
+        ChatAndSocialPanel.drawHorizontalSpriteStrip(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_n;
         var6Lifetime2 = 127;
@@ -208,7 +208,7 @@ abstract class ResizingDialog extends Dialog {
                 var5 = WidgetTheme.a((byte) -88, param2, var4);
               }
               if (MapViewState.field_b == 2) {
-                var5 = vq.a(2, var4, param2);
+                var5 = ReflectionCheckDecoder.requestAddIgnore(2, var4, param2);
               }
               if (3 == MapViewState.field_b) {
                 var5 = RoundedMenuPanel.requestRemoveIgnore((byte) 117, param2, var4, var4);

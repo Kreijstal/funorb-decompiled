@@ -7,7 +7,7 @@ final class StandardMapReader implements MapGenerator {
     private int field_b;
     static AnimatedPanel field_h;
     static String field_d;
-    static wa field_g;
+    static RasterCoverageSpan field_g;
     private int field_f;
     private int field_c;
 
@@ -42,10 +42,10 @@ final class StandardMapReader implements MapGenerator {
           var8Lifetime1 = 0;
           while (var8Lifetime1 < 4) {
             var9Lifetime1 = this.field_e.readUnsignedByte(-91);
-            var6.field_G[var8Lifetime1] = we.intAnd(15, var9Lifetime1);
+            var6.field_G[var8Lifetime1] = KeyboardStateSupport.intAnd(15, var9Lifetime1);
             var8Lifetime1++;
             if (4 > var8Lifetime1) {
-              var6.field_G[var8Lifetime1] = we.intAnd(var9Lifetime1, 240) >> 4;
+              var6.field_G[var8Lifetime1] = KeyboardStateSupport.intAnd(var9Lifetime1, 240) >> 4;
               var8Lifetime1++;
               continue;
             }

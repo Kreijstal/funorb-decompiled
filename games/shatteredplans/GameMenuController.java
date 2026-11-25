@@ -550,7 +550,7 @@ final class GameMenuController {
         }
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
-          AccountRequestState.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
+          AccountRequestState.field_b.drawCentred(AdditiveSpriteWipeSupport.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
           IconTextPanel.field_Cb.a(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, IconTextPanel.field_Cb.field_J);
         }
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
@@ -862,7 +862,7 @@ final class GameMenuController {
         if (this.field_a == 8 &&
           ClientRuntimeState.field_e &&
           ScrollBar.field_zb == null) {
-          ScrollBar.field_zb = vs.a((byte) 88, 4);
+          ScrollBar.field_zb = ServerRequestRetrySupport.requestServerIntArray((byte) 88, 4);
         }
         this.field_d.resetSelection(this.findMenuItemAt(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
         this.field_h = 0;
@@ -980,7 +980,7 @@ final class GameMenuController {
         }
         var3 = stackIn_24_0;
         if (var2Lifetime1 == 24) {
-          stackIn_28_0 = ((1 << var2Lifetime1 & vq.field_a) == 0) ? 0 : 1;
+          stackIn_28_0 = ((1 << var2Lifetime1 & ReflectionCheckDecoder.field_a) == 0) ? 0 : 1;
           var4 = stackIn_28_0;
           if (var4 == 0) {
             stackIn_31_0 = 0;
@@ -1183,18 +1183,18 @@ final class GameMenuController {
                 OpacityWidget.popLegacyRasterState(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
                 var42 = WhirlpoolHasher.field_n;
-                var10Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
                 ProgressDialog.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.drawInstructionFleet(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = LoginForm.field_N;
-                var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
                 AccountRequestResult.field_f[RasterStateFrame.field_n % AccountRequestResult.field_f.length].draw(5 + param3, 42 + param0);
                 var44 = IntArrayReadRequest.field_n;
                 var5 = var44;
-                var10Lifetime2Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2Lifetime2 * 4) * var8 >> 2);
                 return;
               }
@@ -1246,7 +1246,7 @@ final class GameMenuController {
                   }
                 }
                 var32 = DebouncedValidator.field_a;
-                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
                 var15 = RasterStateFrame.field_n % 50;
                 if (var15 >= 25) {
@@ -1265,7 +1265,7 @@ final class GameMenuController {
                   SoftwareRasterizer.drawHorizontalLine(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
                 }
                 var33 = WhirlpoolHasher.field_l;
-                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 var16_intLifetime2 = RasterStateFrame.field_n / 100 % 3;
                 var17_intLifetime1 = RasterStateFrame.field_n % 100;
@@ -1323,7 +1323,7 @@ final class GameMenuController {
                   var10_ref_om.drawAdditive(15 + param3, param0 + 15, var18_intLifetime1);
                 }
                 var36 = DraggableWidget.field_F;
-                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 if (null != ClientRasterSupport.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
@@ -1345,13 +1345,13 @@ final class GameMenuController {
                 SoftwareRasterizer.drawVerticalLine(9 + param3, param0 + 10, 35, 16777215);
                 SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 44, 40, 16777215);
                 var37 = ScrollPane.field_Cb;
-                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (var14 * 4 + 3) >> 2);
                 return;
               }
               if (param2 == 7) {
                 var9Lifetime2 = RasterStateFrame.field_n % 200;
-                var10Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((2 * var10Lifetime3 + 3) * var8 >> 1);
                 var11Lifetime3 = param0;
                 var12Lifetime2 = param3 + 125;
@@ -1359,8 +1359,8 @@ final class GameMenuController {
                 var14 = 150;
                 var15 = 125;
                 var16 = new String[16];
-                var17 = wg.field_e.expandPlaceholders(5607, ListContent.field_d);
-                var18 = wg.field_e.expandPlaceholders(5607, ClientOverlayDrawSupport.field_h);
+                var17 = ClientLobbyResources.field_e.expandPlaceholders(5607, ListContent.field_d);
+                var18 = ClientLobbyResources.field_e.expandPlaceholders(5607, ClientOverlayDrawSupport.field_h);
                 var19Lifetime1 = IconTextPanel.field_Cb.wrapText(var17, new int[]{var14}, var16);
                 var20Lifetime1 = IconTextPanel.field_Cb.wrapText(var18, new int[]{var15}, var16);
                 stackIn_96_0 = (var20Lifetime1 < var19Lifetime1) ? var19Lifetime1 : var20Lifetime1;
@@ -1374,8 +1374,8 @@ final class GameMenuController {
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
                 this.drawInstructionProjectIcon(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
                 var11Lifetime3 = var11Lifetime3 + (IconTextPanel.field_Cb.field_J + var21Lifetime1);
-                var17Lifetime1 = wg.field_e.expandPlaceholders(5607, LobbyUiSetupSupport.field_b);
-                var18Lifetime1 = wg.field_e.expandPlaceholders(5607, wq.field_c);
+                var17Lifetime1 = ClientLobbyResources.field_e.expandPlaceholders(5607, LobbyUiSetupSupport.field_b);
+                var18Lifetime1 = ClientLobbyResources.field_e.expandPlaceholders(5607, wq.field_c);
                 var19Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
                 var20Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
                 stackIn_99_0 = (var20Lifetime1Lifetime1 >= var19Lifetime1Lifetime1) ? var20Lifetime1Lifetime1 : var19Lifetime1Lifetime1;
@@ -1387,7 +1387,7 @@ final class GameMenuController {
                 this.drawInstructionFleet(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.drawInstructionProjectIcon(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
-                var17Lifetime2 = wg.field_e.expandPlaceholders(5607, AccountInputSupport.field_a);
+                var17Lifetime2 = ClientLobbyResources.field_e.expandPlaceholders(5607, AccountInputSupport.field_a);
                 var10Lifetime3Lifetime4 = IconTextPanel.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
                 var21Lifetime1Lifetime2 = var10Lifetime3Lifetime4 * var8 + var8;
                 if (40 > var21Lifetime1Lifetime2) {
@@ -1427,23 +1427,23 @@ final class GameMenuController {
               }
               if (8 == param2) {
                 var38 = StandardMapGenerator.field_g;
-                var9Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(param3 + 15, 20, 0, param0 + (IconTextPanel.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
                 var39 = WidgetStyle.field_b;
-                var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(15 + param3, 20, 1, param0 + (IconTextPanel.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
                 var40 = ClientOverlayDrawSupport.field_f;
                 var5 = var40;
                 var5 = var40;
-                var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(15 + param3, 20, 2, (IconTextPanel.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
                 var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
-                var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.drawInstructionProjectIcon(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * IconTextPanel.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime3 + 3) >> 2);
                 return;
@@ -1465,7 +1465,7 @@ final class GameMenuController {
         } else {
           var5 = ClientRandomSupport.field_e;
         }
-        this.drawWrappedInstructions(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, wg.field_e.expandPlaceholders(5607, var5));
+        this.drawWrappedInstructions(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, ClientLobbyResources.field_e.expandPlaceholders(5607, var5));
     }
 
     private final int itemRight(boolean param0, int param1) {
@@ -1916,7 +1916,7 @@ final class GameMenuController {
         SoftwareRasterizer.resetClip();
         for (var6 = 0; var6 < 25; var6++) {
           var7_int = (int)(Math.cos((double)(-(23 * var6)) + 3.141592653589793 * (double)(2 * RasterStateFrame.field_n) / 150.0) * 64.0) + 64;
-          stackIn_5_0 = ((1 << var6 & vq.field_a) == 0) ? 0 : 1;
+          stackIn_5_0 = ((1 << var6 & ReflectionCheckDecoder.field_a) == 0) ? 0 : 1;
           var5 = stackIn_5_0;
           if (var5 != 0) {
             stackIn_8_0 = DualLinkNode.a(var6, 32);
@@ -1996,7 +1996,7 @@ final class GameMenuController {
         }
         var6 = stackIn_42_0;
         if (var6 != -1) {
-          stackIn_48_0 = ((vq.field_a & 1 << var6) != 0) ? 1 : 0;
+          stackIn_48_0 = ((ReflectionCheckDecoder.field_a & 1 << var6) != 0) ? 1 : 0;
         } else {
           stackIn_48_0 = 0;
         }

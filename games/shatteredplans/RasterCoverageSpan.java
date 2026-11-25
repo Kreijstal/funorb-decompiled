@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa {
+final class RasterCoverageSpan {
     static String field_i;
     int field_a;
     int field_g;
     static String[][] field_d;
     int field_e;
     static Sprite field_b;
-    wa field_c;
+    RasterCoverageSpan field_c;
     int field_h;
     int field_f;
 
-    final void a(int param0, int param1, int param2, int param3, wa param4, int param5, byte param6) {
+    final void configure(int param0, int param1, int param2, int param3, RasterCoverageSpan param4, int param5, byte param6) {
         try {
           if (param6 != -34) {
-            wa.a((byte) -86, false, true);
+            RasterCoverageSpan.openLoginForm((byte) -86, false, true);
           }
           this.field_h = param5;
           this.field_g = param1;
@@ -35,7 +35,7 @@ final class wa {
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2) {
+    final static void openLoginForm(byte param0, boolean param1, boolean param2) {
         int var3 = 123 / ((param0 - 33) / 54);
         String var4 = (String) null;
         AlternateLoginCredentials.openLoginFormFullInts((String) null, param2, -110, param1);
@@ -54,13 +54,13 @@ final class wa {
         field_d = (String[][]) null;
     }
 
-    final void b(int param0) {
+    final void recycle(int param0) {
         this.field_c = MusicVoice.field_D;
         MusicVoice.field_D = this;
         int var2 = 111 % ((param0 + 71) / 45);
     }
 
-    wa() {
+    RasterCoverageSpan() {
         this.field_c = null;
     }
 

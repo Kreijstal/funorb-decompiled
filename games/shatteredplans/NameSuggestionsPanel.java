@@ -3,7 +3,7 @@
  */
 final class NameSuggestionsPanel extends WidgetContainer implements ButtonListener {
     private NameSuggestionListener field_F;
-    static wa[] field_J;
+    static RasterCoverageSpan[] field_J;
     static String field_E;
     static AnimatedPanel field_D;
     static String field_M;
@@ -44,7 +44,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             }
             return;
           }
-          field_J = new wa[SoftwareRasterizer.field_k];
+          field_J = new RasterCoverageSpan[SoftwareRasterizer.field_k];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

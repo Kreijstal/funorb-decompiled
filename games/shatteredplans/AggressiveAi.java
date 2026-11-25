@@ -426,7 +426,7 @@ final class AggressiveAi extends StandardAi {
                           SpriteResourceSupport.field_c[var10] = (byte) 0;
                         }
                       } else {
-                        SpriteResourceSupport.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) SpriteResourceSupport.field_c[var8 / 8], 1 << we.intAnd(7, var8));
+                        SpriteResourceSupport.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) SpriteResourceSupport.field_c[var8 / 8], 1 << KeyboardStateSupport.intAnd(7, var8));
                       }
                     }
                   } else {
@@ -621,12 +621,12 @@ final class AggressiveAi extends StandardAi {
                 stackIn_229_0 = 1;
               }
               var17Lifetime1 = stackIn_229_0;
-              wg.field_d = true;
+              ClientLobbyResources.field_d = true;
               if (var17Lifetime1 == 0 &&
                 var10 >= 0 &&
                 null != UnderageAccountInfoPanel.field_D && (!param1 ||
                 !TurnEventLog.field_i)) {
-                wg.field_d = false;
+                ClientLobbyResources.field_d = false;
                 if (ClientDrawingSupport.field_c == null) {
                   ClientDrawingSupport.field_c = new byte[ProductionContent.field_k];
                   ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
@@ -638,9 +638,9 @@ final class AggressiveAi extends StandardAi {
                 LobbyOptionSupport.evaluateRoomOptionCombinations(-1, 1, param2, var8, 0, param1, var10, -1);
                 if (RasterTargetSupport.field_b >= 2 &&
                   FleetTrailPoint.field_p[12]) {
-                  wg.field_d = true;
+                  ClientLobbyResources.field_d = true;
                 }
-                if (!wg.field_d) {
+                if (!ClientLobbyResources.field_d) {
                   var17Lifetime1 = 1;
                 }
               }
@@ -650,10 +650,10 @@ final class AggressiveAi extends StandardAi {
                 if (param1) {
                   if (var10 == -1) {
                     for (var19 = var7Lifetime4; var19 < var31.length + (var7Lifetime4 - 1); var19++) {
-                      TutorialTextSupport.field_f[var19 / 8] = (byte)we.intAnd((int) TutorialTextSupport.field_f[var19 / 8], ~(1 << we.intAnd(var19, 7)));
+                      TutorialTextSupport.field_f[var19 / 8] = (byte)KeyboardStateSupport.intAnd((int) TutorialTextSupport.field_f[var19 / 8], ~(1 << KeyboardStateSupport.intAnd(var19, 7)));
                     }
                   } else {
-                    TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], 1 << we.intAnd(var10 + var7Lifetime4, 7));
+                    TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], 1 << KeyboardStateSupport.intAnd(var10 + var7Lifetime4, 7));
                   }
                 } else {
                   if (var17Lifetime1 == 0 &&
@@ -665,17 +665,17 @@ final class AggressiveAi extends StandardAi {
               }
               if (param1 &&
                 var17Lifetime1 != 0) {
-                TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.intAnd((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.intAnd(7, var7Lifetime4 + var10)));
+                TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8] = (byte)KeyboardStateSupport.intAnd((int) TutorialTextSupport.field_f[(var10 + var7Lifetime4) / 8], ~(1 << KeyboardStateSupport.intAnd(7, var7Lifetime4 + var10)));
               }
               if (var10 >= 0 &&
                 var18.field_v) {
-                if (wa.field_d == null) {
+                if (RasterCoverageSpan.field_d == null) {
                   var19_ref = null;
                 } else {
-                  if (wa.field_d[var8] == null) {
+                  if (RasterCoverageSpan.field_d[var8] == null) {
                     var19_ref = null;
                   } else {
-                    var19_ref = wa.field_d[var8][var10];
+                    var19_ref = RasterCoverageSpan.field_d[var8][var10];
                   }
                 }
                 if (LobbyUiSupport.field_f == null) {
@@ -748,7 +748,7 @@ final class AggressiveAi extends StandardAi {
                   var22 = MenuWindow.field_D;
                 }
                 if (var4_int != 0 &&
-                  !wg.field_d) {
+                  !ClientLobbyResources.field_d) {
                   var23 = null;
                   var24 = 0;
                   if (RasterBuffer.field_h) {
@@ -816,7 +816,7 @@ final class AggressiveAi extends StandardAi {
                 }
               } else {
                 stackIn_330_0 = var18;
-                stackIn_331_1 = (wg.field_d) && (param2.field_dc[var8] == (byte)var10);
+                stackIn_331_1 = (ClientLobbyResources.field_d) && (param2.field_dc[var8] == (byte)var10);
                 stackIn_330_0.field_bb = stackIn_331_1;
               }
               stackIn_347_0 = var18;

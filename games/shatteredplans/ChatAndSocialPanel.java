@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh {
+final class ChatAndSocialPanel {
     static MusicTrack field_b;
     TabbedPanel field_d;
     static AccountBooleanRequest field_a;
     static AccountRequestResult field_c;
 
-    final static long a(int param0) {
+    final static long serverReadIdleMillis(int param0) {
         if (param0 != 18) {
           field_c = (AccountRequestResult) null;
           return ClientClockSupport.currentTimeMillis(14274) - IntrusiveDeque.field_e;
@@ -28,7 +28,7 @@ final class wh {
           return;
         }
         Sprite[] var2 = (Sprite[]) null;
-        wh.drawHorizontalSpriteStrip((Sprite[]) null, 98, -107, (byte) 31, 66);
+        ChatAndSocialPanel.drawHorizontalSpriteStrip((Sprite[]) null, 98, -107, (byte) 31, 66);
         var1Lifetime1 = (RasterStateFrame) (TextHotspotRegion.field_p.pollLast(true));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new RasterStateFrame();
@@ -95,19 +95,19 @@ final class wh {
         }
     }
 
-    wh(String param0, AnimatedPanel param1) {
+    ChatAndSocialPanel(String param0, AnimatedPanel param1) {
         String[] var3 = null;
         AnimatedPanel[] var4 = null;
         try {
           var3 = new String[]{param0, SoundPlayback.field_o, WidgetStateStyle.field_b};
-          var4 = new AnimatedPanel[]{param1, OpacityWidget.field_A, (AnimatedPanel) ((Object) wg.field_a)};
+          var4 = new AnimatedPanel[]{param1, OpacityWidget.field_A, (AnimatedPanel) ((Object) ClientLobbyResources.field_a)};
           this.field_d = new TabbedPanel(0L, QuickChatCategoryRegistry.field_h, var3, NotificationEntry.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void layout(int param0, int param1, byte param2, int param3, int param4) {
         int var6 = 24;
         int var7 = 5;
         this.field_d.setTabBounds(param3, param4, param1, var6, param0, false, var7);
@@ -115,7 +115,7 @@ final class wh {
         BattleSnapshot.field_t.setTarget(-UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + UniformNineSliceFactory.field_c, 0);
         FleetMove.field_F.setTarget(82 + UnderageAccountInfoPanel.field_K, 18, (byte) 117, 2 + UniformNineSliceFactory.field_c, -80 - UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2));
         ClientPacketFlushSupport.field_a.setSocialListBounds(-22 + (OpacityWidget.field_A.field_mb - UniformNineSliceFactory.field_c), 20 + UniformNineSliceFactory.field_c + 2, UnderageAccountInfoPanel.field_K, 2, 20, OpacityWidget.field_A.field_K, (byte) 123, 0);
-        wg.field_a.layoutSocialListControls(2, UnderageAccountInfoPanel.field_K, 0, 20);
+        ClientLobbyResources.field_a.layoutSocialListControls(2, UnderageAccountInfoPanel.field_K, 0, 20);
         if (param2 == 95) {
           return;
         }

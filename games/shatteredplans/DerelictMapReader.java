@@ -51,10 +51,10 @@ final class DerelictMapReader implements MapGenerator {
           var9Lifetime1 = 0;
           while (var9Lifetime1 < 4) {
             var10Lifetime1 = this.field_m.readUnsignedByte(-119);
-            var7.field_G[var9Lifetime1] = we.intAnd(15, var10Lifetime1);
+            var7.field_G[var9Lifetime1] = KeyboardStateSupport.intAnd(15, var10Lifetime1);
             var9Lifetime1++;
             if (var9Lifetime1 < 4) {
-              var7.field_G[var9Lifetime1] = we.intAnd(var10Lifetime1, 240) >> 4;
+              var7.field_G[var9Lifetime1] = KeyboardStateSupport.intAnd(var10Lifetime1, 240) >> 4;
               var9Lifetime1++;
               continue;
             }

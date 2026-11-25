@@ -106,7 +106,7 @@ final class BattleContribution extends IntrusiveNode {
         RoundedFrameSupport.field_c = null;
         MapGenerationException.field_a = false;
         GameSpriteResources.field_d = null;
-        we.field_f = null;
+        KeyboardStateSupport.field_f = null;
         DualLinkDeque.field_a = null;
         MusicVoice.field_n = null;
         Dialog.field_D = null;

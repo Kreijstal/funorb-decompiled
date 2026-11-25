@@ -78,7 +78,7 @@ final class ClientPacketFlushSupport {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (wg.field_f != null && (param0 < 0 ||
+          if (ClientLobbyResources.field_f != null && (param0 < 0 ||
             AccountNoticeKind.field_f == Wormhole.field_j)) {
             if (param1 != 82) {
               return;
@@ -89,7 +89,7 @@ final class ClientPacketFlushSupport {
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {
-                wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
+                ClientLobbyResources.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
                 LobbyPlayerEntry.field_Pb = ClientClockSupport.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class ClientPacketFlushSupport {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (wg.field_f != null && (param0 < 0 ||
+          if (ClientLobbyResources.field_f != null && (param0 < 0 ||
             AccountNoticeKind.field_f == Wormhole.field_j)) {
             if (param1 != 82) {
               return;
@@ -155,7 +155,7 @@ final class ClientPacketFlushSupport {
             }
             if (LobbyOptionSupport.field_f.position > 0) {
               try {
-                wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
+                ClientLobbyResources.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
                 LobbyPlayerEntry.field_Pb = ClientClockSupport.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

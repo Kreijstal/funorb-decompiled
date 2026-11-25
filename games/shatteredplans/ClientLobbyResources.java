@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg {
+final class ClientLobbyResources {
     static TextReplacementContext field_e;
     static String field_g;
     static BufferedSocket field_f;

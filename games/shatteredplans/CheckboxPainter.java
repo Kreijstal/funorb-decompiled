@@ -122,23 +122,23 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static wa a(byte param0) {
+    final static RasterCoverageSpan a(byte param0) {
         int fieldTemp$0 = 0;
-        wa localTemp$1 = null;
+        RasterCoverageSpan localTemp$1 = null;
         Object stackIn_11_0 = null;
         int stackIn_13_0 = 0;
         int stackIn_13_1 = 0;
-        wa stackIn_45_0 = null;
+        RasterCoverageSpan stackIn_45_0 = null;
         int stackIn_48_0 = 0;
         int stackIn_48_1 = 0;
-        wa stackIn_52_0 = null;
+        RasterCoverageSpan stackIn_52_0 = null;
         RuntimeException decompiledCaughtException = null;
-        wa var1 = null;
+        RasterCoverageSpan var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
-        wa var3 = null;
+        RasterCoverageSpan var3 = null;
         int var4 = 0;
-        wa var1Lifetime1;
+        RasterCoverageSpan var1Lifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           scanLoop1: while (true) {
@@ -157,7 +157,7 @@ final class CheckboxPainter implements WidgetPainter {
             }
             if (null == StandardMapReader.field_g) {
               stackIn_11_0 = null;
-              return (wa) (stackIn_11_0);
+              return (RasterCoverageSpan) (stackIn_11_0);
             }
             stackIn_13_0 = param0;
             stackIn_13_1 = -92;
@@ -188,13 +188,13 @@ final class CheckboxPainter implements WidgetPainter {
                   localTemp$1 = var1.field_c;
                   var1 = localTemp$1;
                   StandardMapReader.field_g.field_c = localTemp$1;
-                  var3.b(56);
+                  var3.recycle(56);
                   if (0 == StandardMapReader.field_g.field_f &&
                     0 == StandardMapReader.field_g.field_a) {
                     if (var1 != null &&
                       StandardMapReader.field_g.field_g == var1.field_g) {
                       var1.field_e = var1.field_e + StandardMapReader.field_g.field_e;
-                      StandardMapReader.field_g.b(-16);
+                      StandardMapReader.field_g.recycle(-16);
                       StandardMapReader.field_g = var1;
                       var1 = var1.field_c;
                     } else {
@@ -204,7 +204,7 @@ final class CheckboxPainter implements WidgetPainter {
                   if (var1 == null) {
                     var1 = StandardMapReader.field_g;
                     StandardMapReader.field_g = null;
-                    var1.b(param0 + 109);
+                    var1.recycle(param0 + 109);
                     stackIn_45_0 = var1;
                     return stackIn_45_0;
                   }
@@ -223,7 +223,7 @@ final class CheckboxPainter implements WidgetPainter {
           }
           var1Lifetime1 = StandardMapReader.field_g;
           StandardMapReader.field_g = var1Lifetime1.field_c;
-          var1Lifetime1.b(-118);
+          var1Lifetime1.recycle(-118);
           stackIn_52_0 = var1Lifetime1;
           return stackIn_52_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

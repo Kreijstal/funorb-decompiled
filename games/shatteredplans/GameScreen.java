@@ -1678,7 +1678,7 @@ final class GameScreen {
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
           IconTextPanel.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
-          var6 = UiWidget.field_t.field_z * 2 + IconTextPanel.field_Cb.stringWidth("= " + vs.field_a);
+          var6 = UiWidget.field_t.field_z * 2 + IconTextPanel.field_Cb.stringWidth("= " + ServerRequestRetrySupport.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + IconTextPanel.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (IconTextPanel.field_Cb.field_J + param1);
           var8 = UiWidget.field_t.field_z + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
@@ -1701,7 +1701,7 @@ final class GameScreen {
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ContextActionMenu.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ArrayWidgetGroup.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
-          IconTextPanel.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + ServerRequestRetrySupport.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -1713,10 +1713,10 @@ final class GameScreen {
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
           IconTextPanel.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
-          var6 = StarSoundState.field_j.field_z + IconTextPanel.field_Cb.stringWidth("= " + vs.field_a);
+          var6 = StarSoundState.field_j.field_z + IconTextPanel.field_Cb.stringWidth("= " + ServerRequestRetrySupport.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + IconTextPanel.field_Cb.field_J + param2, var6 + 15, StarSoundState.field_j.field_w + 10, 5, 0, 128);
           StarSoundState.field_j.draw(param0 + (param3 - var6) / 2, IconTextPanel.field_Cb.field_J + (param2 + 20));
-          IconTextPanel.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + StarSoundState.field_j.field_z), 25 + IconTextPanel.field_Cb.field_J + (StarSoundState.field_j.field_w / 2 + param2), 16777215, param1);
+          IconTextPanel.field_Cb.drawString("= " + ServerRequestRetrySupport.field_a, (param3 - var6) / 2 + (param0 + StarSoundState.field_j.field_z), 25 + IconTextPanel.field_Cb.field_J + (StarSoundState.field_j.field_w / 2 + param2), 16777215, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -3987,7 +3987,7 @@ final class GameScreen {
               SoftwareRasterizer.b(2, 2, 0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w);
               var6Lifetime1 = 0;
               while (!(var6Lifetime1 >= GradientMenuLabel.field_w.field_B.length)) {
-                GradientMenuLabel.field_w.field_B[var6Lifetime1] = 16777215 + we.intAnd(GradientMenuLabel.field_w.field_B[var6Lifetime1] << 8, -16777216);
+                GradientMenuLabel.field_w.field_B[var6Lifetime1] = 16777215 + KeyboardStateSupport.intAnd(GradientMenuLabel.field_w.field_B[var6Lifetime1] << 8, -16777216);
                 var6Lifetime1++;
                 if (var7 != 0) {
                   return;

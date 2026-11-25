@@ -147,7 +147,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        wh.pushRasterState(false);
+        ChatAndSocialPanel.pushRasterState(false);
         if (param0 != -6187) {
           BufferedSocket.clearStatics((byte) 13);
         }

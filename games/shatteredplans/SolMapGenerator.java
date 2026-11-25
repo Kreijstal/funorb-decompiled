@@ -181,7 +181,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         }
         try {
           var9 = var17.field_w;
-          wh.pushRasterState(false);
+          ChatAndSocialPanel.pushRasterState(false);
           var17.bindAsRenderTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
           var15 = new Sprite(var9, var9);

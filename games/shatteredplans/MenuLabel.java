@@ -140,7 +140,7 @@ class MenuLabel extends MenuComponent {
         if (param0 > -12) {
           return;
         }
-        ByteArrayNode.a(we.field_b, -78, false);
+        ByteArrayNode.a(KeyboardStateSupport.field_b, -78, false);
     }
 
     public static void clearStatics(int param0) {

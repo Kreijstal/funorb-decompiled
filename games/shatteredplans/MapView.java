@@ -915,7 +915,7 @@ final class MapView extends MapViewState {
             if (var29 != null) {
               stackIn_6_0 = var29.field_e;
             } else {
-              stackIn_6_0 = wa.field_b;
+              stackIn_6_0 = RasterCoverageSpan.field_b;
             }
             var30 = stackIn_6_0;
             var11 = var30;
@@ -1506,19 +1506,19 @@ final class MapView extends MapViewState {
           this.field_ib[var2].field_v.bindAsRenderTarget();
           StatusMessagePanel.field_F.drawColourised(0, 0, var3);
           for (var4 = 0; var4 < StatusMessagePanel.field_F.field_B.length; var4++) {
-            this.field_ib[var2].field_v.field_B[var4] = we.intAnd(-16777216, StatusMessagePanel.field_F.field_B[var4]) + we.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
+            this.field_ib[var2].field_v.field_B[var4] = KeyboardStateSupport.intAnd(-16777216, StatusMessagePanel.field_F.field_B[var4]) + KeyboardStateSupport.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
           }
           this.field_ib[var2].field_n = (Sprite) ((Object) new ArgbSprite(MatchingTextValidator.field_p.field_o, MatchingTextValidator.field_p.field_p));
           this.field_ib[var2].field_n.bindAsRenderTarget();
           MatchingTextValidator.field_p.drawTinted(0, 0, var3);
           for (var4Lifetime1 = 0; var4Lifetime1 < MatchingTextValidator.field_p.field_B.length; var4Lifetime1++) {
-            this.field_ib[var2].field_n.field_B[var4Lifetime1] = we.intAnd(-16777216, MatchingTextValidator.field_p.field_B[var4Lifetime1]) + we.intAnd(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
+            this.field_ib[var2].field_n.field_B[var4Lifetime1] = KeyboardStateSupport.intAnd(-16777216, MatchingTextValidator.field_p.field_B[var4Lifetime1]) + KeyboardStateSupport.intAnd(this.field_ib[var2].field_n.field_B[var4Lifetime1], 16777215);
           }
           this.field_ib[var2].field_b = (Sprite) ((Object) new ArgbSprite(ReflectionCheck.field_o.field_o, ReflectionCheck.field_o.field_p));
           this.field_ib[var2].field_b.bindAsRenderTarget();
           ReflectionCheck.field_o.drawTinted(0, 0, var3);
           for (var4Lifetime2 = 0; ReflectionCheck.field_o.field_B.length > var4Lifetime2; var4Lifetime2++) {
-            this.field_ib[var2].field_b.field_B[var4Lifetime2] = we.intAnd(16777215, this.field_ib[var2].field_b.field_B[var4Lifetime2]) + we.intAnd(ReflectionCheck.field_o.field_B[var4Lifetime2], -16777216);
+            this.field_ib[var2].field_b.field_B[var4Lifetime2] = KeyboardStateSupport.intAnd(16777215, this.field_ib[var2].field_b.field_B[var4Lifetime2]) + KeyboardStateSupport.intAnd(ReflectionCheck.field_o.field_B[var4Lifetime2], -16777216);
           }
           this.field_ib[var2].field_o = new Sprite(10, 12);
           this.field_ib[var2].field_o.bindAsRenderTarget();
@@ -3083,7 +3083,7 @@ final class MapView extends MapViewState {
                       var22 = (-1 + var23_ref.field_m) * var22 / 2;
                       var29 = 65537 * var22 + 256 * (var22 >> 1);
                       if (MatchingTextValidator.field_t.field_f) {
-                        we.a(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29, 80);
+                        KeyboardStateSupport.drawAlternatingDashedLineQ4(9, var27 << 4, var26 << 4, var25 << 4, var24, 0, var28 << 4, var29, 80);
                         break;
                       }
                       BytePayloadNode.a((byte) 92, 0, var27 << 4, var24, var26 << 4, var29, var25 << 4, var28 << 4, 5);
@@ -3142,7 +3142,7 @@ final class MapView extends MapViewState {
               if (var5 == null) {
                 this.field_o.showStatusText(10, 0, ScrollPane.field_Bb);
               } else {
-                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(vo.field_c, 4371, new String[]{UiTextSupport.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
+                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(GameSoundSetupSupport.field_c, 4371, new String[]{UiTextSupport.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }
             }
           }
@@ -3526,7 +3526,7 @@ final class MapView extends MapViewState {
             this.field_bb[var6_int] = new int[256];
           }
           for (var6_intLifetime1 = 0; 256 > var6_intLifetime1; var6_intLifetime1++) {
-            this.field_bb[0][var6_intLifetime1] = PrivateChatMessage.intOr(we.intAnd(254, var6_intLifetime1) << 7, var6_intLifetime1);
+            this.field_bb[0][var6_intLifetime1] = PrivateChatMessage.intOr(KeyboardStateSupport.intAnd(254, var6_intLifetime1) << 7, var6_intLifetime1);
             this.field_bb[1][var6_intLifetime1] = var6_intLifetime1 << 8;
             this.field_bb[2][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 8, var6_intLifetime1 << 16);
             this.field_bb[3][var6_intLifetime1] = PrivateChatMessage.intOr(var6_intLifetime1 << 16, var6_intLifetime1);
@@ -3564,9 +3564,9 @@ final class MapView extends MapViewState {
                 if (var14 == var13 &&
                   var13 == var15) {
                   if (128 < var13) {
-                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + ((var10 * (256 - var15) - (32640 - 255 * var15) >> 7) + ((-var14 + 256) * var9 - 32640 + var14 * 255 >> 7 << 8) + (255 * (var13 - 128) + var8 * (-var13 + 256) >> 7 << 16));
+                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = KeyboardStateSupport.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + ((var10 * (256 - var15) - (32640 - 255 * var15) >> 7) + ((-var14 + 256) * var9 - 32640 + var14 * 255 >> 7 << 8) + (255 * (var13 - 128) + var8 * (-var13 + 256) >> 7 << 16));
                   } else {
-                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = we.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + (var10 * var15 >> 7) + (var9 * var14 >> 7 << 8) + (var8 * var13 >> 7 << 16);
+                    this.field_qb[var6_intLifetime3][var11].field_B[var12] = KeyboardStateSupport.intAnd(-16777216, this.field_qb[var6_intLifetime3][var11].field_B[var12]) + (var10 * var15 >> 7) + (var9 * var14 >> 7 << 8) + (var8 * var13 >> 7 << 16);
                   }
                 }
               }

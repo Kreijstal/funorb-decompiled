@@ -483,7 +483,7 @@ final class ProxySocketConnector extends SocketConnector {
         IntNode.field_h.drawAdditive(var1, -60 + var2, 256);
         var2 = 300 - 150 * FleetTrailPoint.field_m / 800;
         var1 = -120;
-        we.field_f.drawAdditive(var1, -60 + var2, 256);
+        KeyboardStateSupport.field_f.drawAdditive(var1, -60 + var2, 256);
         var1 = -62;
         var2 = -(FleetTrailPoint.field_m * 40 / 800) + 200;
         TabbedPanel.field_Cb.draw(var1, var2);

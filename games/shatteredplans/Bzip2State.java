@@ -152,12 +152,12 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[13] = PlayerReportPanel.field_Eb;
           QuickChatPhraseRegistry.field_g[1] = QuickChatParameterType.field_g;
           ChatCompositionSupport.field_b[6] = LobbyLayoutSupport.field_e;
-          ChatCompositionSupport.field_b[11] = vo.field_a;
+          ChatCompositionSupport.field_b[11] = GameSoundSetupSupport.field_a;
           ChatCompositionSupport.field_b[0] = MenuLabel.field_v;
           ChatCompositionSupport.field_b[15] = MenuTransitionSupport.field_e;
           ChatCompositionSupport.field_b[13] = ClientRasterSupport.field_d;
-          ChatCompositionSupport.field_b[4] = vs.field_c;
-          ChatCompositionSupport.field_b[12] = vs.field_b;
+          ChatCompositionSupport.field_b[4] = ServerRequestRetrySupport.field_c;
+          ChatCompositionSupport.field_b[12] = ServerRequestRetrySupport.field_b;
           ChatCompositionSupport.field_b[14] = RoundedFrameSupport.field_b;
           ChatCompositionSupport.field_b[1] = MenuInputState.field_l;
           ChatCompositionSupport.field_b[5] = IntArrayReadRequest.field_m;
@@ -166,7 +166,7 @@ final class Bzip2State {
           ChatCompositionSupport.field_b[8] = StarAbandonedEvent.field_s;
           ChatCompositionSupport.field_b[7] = VictoryChecker.field_f;
           ChatCompositionSupport.field_b[2] = ChatHistoryEntry.field_m;
-          ChatCompositionSupport.field_b[3] = wa.field_i;
+          ChatCompositionSupport.field_b[3] = RasterCoverageSpan.field_i;
           Dialog.field_J[0] = new String[5];
           ScrollPane.field_Db = new String[5][];
           ScrollPane.field_Db[0] = new String[5];

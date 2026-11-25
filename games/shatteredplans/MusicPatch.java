@@ -106,7 +106,7 @@ final class MusicPatch extends IntrusiveNode {
         }
         if (PrivateChatMessage.field_l == ProjectsContent.field_g) {
           PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
-          return wh.field_c;
+          return ChatAndSocialPanel.field_c;
         }
         if (param0 == 65536) {
           return null;
@@ -380,7 +380,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVariableInt(false);
             }
-            this.field_k[var23] = (short)(this.field_k[var23] + (we.intAnd(-1 + var22, 2) << 14));
+            this.field_k[var23] = (short)(this.field_k[var23] + (KeyboardStateSupport.intAnd(-1 + var22, 2) << 14));
             var20Lifetime2--;
             this.field_n[var23] = var22;
           }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq {
+final class ReflectionCheckDecoder {
     static int field_a;
 
-    final static void a(PacketBuffer param0, PlatformTaskDispatcher param1, int param2, int param3) {
+    final static void readReflectionCheck(PacketBuffer param0, PlatformTaskDispatcher param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -152,7 +152,7 @@ final class vq {
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddIgnore(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         CipherPacketBuffer var5 = null;

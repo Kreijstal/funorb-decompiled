@@ -254,13 +254,13 @@ final class GameAssetSetupSupport {
           LobbyPlayerEntry.field_Kb = new Sprite(12, 12);
           LobbyPlayerEntry.field_Kb.bindAsRenderTarget();
           AccountValidationText.field_e.drawColourised(1, 1, 8421504);
-          wa.field_b = new Sprite(128, 128);
-          wa.field_b.bindAsRenderTarget();
+          RasterCoverageSpan.field_b = new Sprite(128, 128);
+          RasterCoverageSpan.field_b.bindAsRenderTarget();
           TextFieldWidget.field_L.draw(0, 0);
-          for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
-            if (wa.field_b.field_B[var13_intLifetime7] != 0) {
-              SoftwareRasterizer.blendPixel(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
-              wa.field_b.field_B[var13_intLifetime7] = PrivateChatMessage.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
+          for (var13_intLifetime7 = 0; var13_intLifetime7 < RasterCoverageSpan.field_b.field_B.length; var13_intLifetime7++) {
+            if (RasterCoverageSpan.field_b.field_B[var13_intLifetime7] != 0) {
+              SoftwareRasterizer.blendPixel(var13_intLifetime7 % RasterCoverageSpan.field_b.field_z, var13_intLifetime7 / RasterCoverageSpan.field_b.field_z, 16777215, 128);
+              RasterCoverageSpan.field_b.field_B[var13_intLifetime7] = PrivateChatMessage.intOr(RasterCoverageSpan.field_b.field_B[var13_intLifetime7], -16777216);
             }
           }
           LobbyRoomEntry.field_Vb = new Sprite(18, 12);

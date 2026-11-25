@@ -1001,7 +1001,7 @@ class AnimatedPanel extends PanelNode {
           var6 = new Sprite(param0.getFileByName(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) NotificationEntry.field_i));
           var3 = var6.field_z;
           var4 = var6.field_w;
-          wh.pushRasterState(false);
+          ChatAndSocialPanel.pushRasterState(false);
           if (param1 <= 22) {
             GameRules var5 = (GameRules) null;
             AnimatedPanel.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);

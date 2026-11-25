@@ -76,7 +76,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
 
     final static boolean q(int param0) {
         int var1 = -98 / ((param0 + 33) / 63);
-        return !wh.field_a.isComplete(14) ? true : false;
+        return !ChatAndSocialPanel.field_a.isComplete(14) ? true : false;
     }
 
     private final FocusableWidget appendButton(WidgetListener param0, String param1, int param2) {
