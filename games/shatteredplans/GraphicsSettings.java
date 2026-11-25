@@ -101,7 +101,7 @@ final class GraphicsSettings {
               return;
             }
             if (param2 <= 105) {
-              ChatAndSocialPanel.field_c = DialogRoot.a(args, (byte) -64);
+              ChatAndSocialPanel.field_c = DialogRoot.createNameSuggestionResult(args, (byte) -64);
               return;
             }
             ChatAndSocialPanel.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);

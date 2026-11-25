@@ -209,7 +209,7 @@ final class PlayerStats {
           if (param3 > -70) {
             field_p = (String) null;
           }
-          stackIn_6_0 = IntrusiveNodeHashTable.a(-126);
+          stackIn_6_0 = IntrusiveNodeHashTable.createDecodedSpritesWithAlpha(-126);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

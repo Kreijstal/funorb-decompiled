@@ -30,7 +30,7 @@ abstract class GameClientShell extends GameApplet {
         AwtEventQueueSupport.field_c[11] = true;
         AwtEventQueueSupport.field_c[12] = true;
         if (param0 > -8) {
-          this.j((byte) 51);
+          this.tickLoginAndIntroUi((byte) 51);
         }
         AwtEventQueueSupport.field_c[13] = true;
     }
@@ -44,7 +44,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    private final int a(boolean param0, int param1, boolean param2) {
+    private final int dispatchLoginUiActions(boolean param0, int param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -185,14 +185,14 @@ abstract class GameClientShell extends GameApplet {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         if (param0 != 256) {
-          this.e((byte) -62);
+          this.dispatchBasePacket((byte) -62);
         }
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         LeaderboardSortSupport.field_e = this.field_v;
         ObjectList.setLoadingTextLanguage(0, LeaderboardSortSupport.field_e);
         GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
-        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
+        IntrusiveNodeHashTable.initializeArchiveServices(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
         ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
         QuickChatPhraseRegistry.attachCanvasInput(NotificationEntry.field_i, false);
@@ -212,7 +212,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    final void e(byte param0) {
+    final void dispatchBasePacket(byte param0) {
         boolean stackIn_32_0 = false;
         int var2;
         ChatHistoryEntry var3;
@@ -240,7 +240,7 @@ abstract class GameClientShell extends GameApplet {
                       UrlLoader.readPlayerRankingResponse((byte) 67);
                     } else {
                       if (var2 == 7) {
-                        this.b(false);
+                        this.readSessionCookieUpdate(false);
                       } else {
                         if (var2 == 8) {
                           ReflectionCheckDecoder.readReflectionCheck(SpriteWipeSupport.field_a, ValidatedTextInputWidget.field_W, TextInputPainter.field_t, -3);
@@ -253,7 +253,7 @@ abstract class GameClientShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.i(-1);
+                                this.readExternalUrlRequest(-1);
                                 return;
                               }
                               if (var2 == 18) {
@@ -282,7 +282,7 @@ abstract class GameClientShell extends GameApplet {
               HighscoreResponseSupport.readHighscoreResponse((byte) 104);
             }
           } else {
-            GameClientShell.f((byte) 24);
+            GameClientShell.consumePendingFourIntResponse((byte) 24);
           }
           return;
         }
@@ -295,7 +295,7 @@ abstract class GameClientShell extends GameApplet {
         field_z = null;
         field_o = null;
         if (param0 > -8) {
-          GameClientShell.f((byte) 43);
+          GameClientShell.consumePendingFourIntResponse((byte) 43);
         }
     }
 
@@ -346,7 +346,7 @@ abstract class GameClientShell extends GameApplet {
         HighscoreResponseSupport.field_a[12] = -1;
     }
 
-    private final static void f(byte param0) {
+    private final static void consumePendingFourIntResponse(byte param0) {
         PopupPlacementSupport var1 = (PopupPlacementSupport) (IsaacRandom.field_d.startForward(0));
         if (var1 == null) {
           TabbedPanel.closeClientSocket(-110);
@@ -363,7 +363,7 @@ abstract class GameClientShell extends GameApplet {
         var1.unlink((byte) -104);
     }
 
-    final void a(boolean param0, int param1) {
+    final void tickClientShell(boolean param0, int param1) {
         int stackIn_24_0 = 0;
         String stackIn_106_0 = null;
         boolean stackIn_107_1 = false;
@@ -488,7 +488,7 @@ abstract class GameClientShell extends GameApplet {
           DefensiveAi.field_p = 1;
         }
         if (param1 <= 1) {
-          this.i(-82);
+          this.readExternalUrlRequest(-82);
         }
         if (1 == DefensiveAi.field_p) {
           if (LeaderboardSortSupport.field_e != 0) {
@@ -593,14 +593,14 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    final int a(boolean param0, boolean param1) {
+    final int pollLoginUiActions(boolean param0, boolean param1) {
         if (!param0) {
-          this.e((byte) 84);
+          this.dispatchBasePacket((byte) 84);
         }
-        return this.a(true, 1, param1);
+        return this.dispatchLoginUiActions(true, 1, param1);
     }
 
-    private final void b(boolean param0) {
+    private final void readSessionCookieUpdate(boolean param0) {
         if (param0) {
           return;
         }
@@ -615,7 +615,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    final void j(byte param0) {
+    final void tickLoginAndIntroUi(byte param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int var3;
@@ -637,12 +637,12 @@ abstract class GameClientShell extends GameApplet {
             stackIn_13_0 = this;
             stackIn_13_3 = true;
           }
-          discarded$1 = this.a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
+          discarded$1 = this.dispatchLoginUiActions(stackIn_12_1, stackIn_12_2, stackIn_13_3);
         } else {
           if (DefensiveAi.field_p >= 10) {
             if (UiTextSupport.hasLogoIntroFinished(250)) {
               if (SoundPlayback.field_i == 0) {
-                discarded$2 = this.a(false, 1, false);
+                discarded$2 = this.dispatchLoginUiActions(false, 1, false);
               } else {
                 ChatAreaLayoutSupport.updateLoginUi(0, BattleExplosionVisual.field_o);
               }
@@ -765,7 +765,7 @@ abstract class GameClientShell extends GameApplet {
         }
     }
 
-    private final void i(int param0) {
+    private final void readExternalUrlRequest(int param0) {
         int var2 = SpriteWipeSupport.field_a.readUnsignedByte(-82);
         int var3 = param0 != ~(var2 & 1) ? 1 : 0;
         int var4 = TextInputPainter.field_t - 1;
@@ -865,7 +865,7 @@ abstract class GameClientShell extends GameApplet {
         AwtEventQueueSupport.field_c[17] = true;
         AwtEventQueueSupport.field_c[8] = param1;
         if (param0 >= -33) {
-          this.i(-80);
+          this.readExternalUrlRequest(-80);
         }
         AwtEventQueueSupport.field_c[7] = true;
         AwtEventQueueSupport.field_c[16] = true;

@@ -193,7 +193,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           SoftwareRasterizer.field_b == BattleExplosionVisual.field_q.field_g)) {
           if (null == MenuInputState.field_a) {
             if (null == IntNode.field_p) {
-              DialogRoot.j(param9 ^ 97);
+              DialogRoot.layoutLobbyPanels(param9 ^ 97);
             } else {
               LobbyLayoutSupport.layoutLobbyRoomPanels(param9 + 15471, true);
             }

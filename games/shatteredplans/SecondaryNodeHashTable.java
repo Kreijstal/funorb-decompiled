@@ -590,7 +590,7 @@ final class SecondaryNodeHashTable {
         MapViewState.field_j = new AnimatedPanel(0L, (AnimatedPanel) null);
         MapViewState.field_j.addChild(param0 + 87, Archive.field_g.field_d);
         MapViewState.field_j.addChild(4, QuickChatMenu.field_Ab);
-        DialogRoot.j(96);
+        DialogRoot.layoutLobbyPanels(96);
     }
 
     final DualLinkNode startTraversal(byte param0) {

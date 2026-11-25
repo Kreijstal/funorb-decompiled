@@ -363,7 +363,7 @@ final class DiskCacheWorker implements Runnable {
 
     final static void initializeLoginUi(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
         try {
-          ChatAndSocialPanel.field_a = CheckboxPainter.a("", -12179);
+          ChatAndSocialPanel.field_a = CheckboxPainter.createAccountBooleanRequest("", -12179);
           if (param0 != 624) {
             DiskCacheWorker.loadIntroSprites((byte) -62);
           }

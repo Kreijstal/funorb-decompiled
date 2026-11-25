@@ -51,7 +51,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          CheckboxPainter.a(-86, param17, param16, param11);
+          CheckboxPainter.configureSharedWidgetFonts(-86, param17, param16, param11);
           SpriteResourceSupport.setSharedWidgetMetrics(param20, param5, param3 + 26883, param10, param7);
           BattleEvent.setUiCenter(param2, param8, param3);
           ChatAreaLayoutSupport.configureQuickChatRows(-4440, param19, param13, param14, param9, param12);

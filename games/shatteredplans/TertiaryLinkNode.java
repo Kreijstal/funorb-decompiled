@@ -40,7 +40,7 @@ class TertiaryLinkNode extends DualLinkNode {
           CheckboxWidget.beginCoverageScan(param0 ^ 27840);
           var3 = param1 & 65280;
           while (true) {
-            dupTemp$0 = CheckboxPainter.a((byte) -92);
+            dupTemp$0 = CheckboxPainter.nextCoverageSpan((byte) -92);
             var4 = dupTemp$0;
             if (dupTemp$0 == null) {
               if (AlignedMenuLabel.field_A) {

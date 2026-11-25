@@ -47,8 +47,8 @@ final class SliderPainter implements WidgetPainter {
             return;
           }
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_f);
-          for (var10 = -1 + var12.g((byte) 93); var10 >= 0; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, (byte) -58) * var7 / var12.a((byte) -13), var9, this.field_a, this.field_h);
+          for (var10 = -1 + var12.getMarkerCount((byte) 93); var10 >= 0; var10--) {
+            SoftwareRasterizer.fillCircle(var8 + var12.getMarkerValue(var10, (byte) -58) * var7 / var12.getMaximumValue((byte) -13), var9, this.field_a, this.field_h);
           }
           if (null == this.field_c) {
             return;

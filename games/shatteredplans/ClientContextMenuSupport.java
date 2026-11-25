@@ -131,7 +131,7 @@ final class ClientContextMenuSupport {
           for (var7 = 0; param3.length > var7; var7 += 2) {
             var8 = param3[var7];
             var9 = param3[var7 + 1];
-            if (SliderWidget.a(var5, -120, var4_int, var9, param1, var8, param2)) {
+            if (SliderWidget.edgeCrossesRightwardRay(var5, -120, var4_int, var9, param1, var8, param2)) {
               var6++;
             }
             var5 = var9;

@@ -105,10 +105,10 @@ final class ChatCompositionSupport {
             }
             if (var5.field_k <= var2_ref.field_k) {
               if (!(var2_ref.field_k <= var5.field_k)) {
-                DialogRoot.a(param1 ^ 24, var5, false, var2_ref);
+                DialogRoot.accumulatePolygonEdgeCoverageQ4(param1 ^ 24, var5, false, var2_ref);
               }
             } else {
-              DialogRoot.a(61, var2_ref, true, var5);
+              DialogRoot.accumulatePolygonEdgeCoverageQ4(61, var2_ref, true, var5);
             }
             var2_ref = var5;
             var4++;

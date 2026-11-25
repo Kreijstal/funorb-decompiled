@@ -67,7 +67,7 @@ final class IntrusiveNodeHashTable {
         return null;
     }
 
-    final static Sprite[] a(int param0) {
+    final static Sprite[] createDecodedSpritesWithAlpha(int param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -111,7 +111,7 @@ final class IntrusiveNodeHashTable {
         return var1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, String param7, int param8) {
+    final static void initializeArchiveServices(int param0, int param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, String param7, int param8) {
         try {
           HighscoreResponseSupport.field_h = param3;
           ClientCapabilitySupport.field_a = param6;
@@ -132,7 +132,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static int a(byte param0, Star[] param1) {
+    final static int labelStarConnectedComponents(byte param0, Star[] param1) {
         int var6 = 0;
         int var9 = 0;
         int stackIn_25_0 = 0;
@@ -229,7 +229,7 @@ final class IntrusiveNodeHashTable {
             if (!param0) {
               return null;
             }
-            IntrusiveNodeHashTable.a(10);
+            IntrusiveNodeHashTable.createDecodedSpritesWithAlpha(10);
             return null;
           }
           fieldTemp$0 = this.field_c;
@@ -247,7 +247,7 @@ final class IntrusiveNodeHashTable {
         return this.nextInTraversal(false);
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeRoomOptionsRequest(int param0, int param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.writeOpcode(param0, 255);
         var2.position = var2.position + 1;

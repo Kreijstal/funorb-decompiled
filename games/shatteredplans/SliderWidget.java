@@ -81,7 +81,7 @@ final class SliderWidget extends FocusableWidget {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean edgeCrossesRightwardRay(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var7Lifetime1;
         if (param3 == param0) {
@@ -111,7 +111,7 @@ final class SliderWidget extends FocusableWidget {
         return false;
     }
 
-    final int a(byte param0) {
+    final int getMaximumValue(byte param0) {
         int var2 = -76 / ((param0 - 68) / 51);
         return this.field_F;
     }
@@ -124,7 +124,7 @@ final class SliderWidget extends FocusableWidget {
         field_E = (boolean[][]) null;
     }
 
-    final int g(byte param0) {
+    final int getMarkerCount(byte param0) {
         if (param0 != 93) {
           field_K = (GameRules) null;
           return this.field_J.size((byte) 56);
@@ -132,7 +132,7 @@ final class SliderWidget extends FocusableWidget {
         return this.field_J.size((byte) 56);
     }
 
-    final int a(int param0, byte param1) {
+    final int getMarkerValue(int param0, byte param1) {
         if (param0 < 0) {
           return -1;
         }
@@ -142,7 +142,7 @@ final class SliderWidget extends FocusableWidget {
         if (param1 == -58) {
           return this.field_J.get((byte) 124, param0);
         }
-        this.a((byte) -8);
+        this.getMaximumValue((byte) -8);
         return this.field_J.get((byte) 124, param0);
     }
 

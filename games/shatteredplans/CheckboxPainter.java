@@ -22,7 +22,7 @@ final class CheckboxPainter implements WidgetPainter {
     static int[] field_a;
     private int field_q;
 
-    final static AccountBooleanRequest a(String param0, int param1) {
+    final static AccountBooleanRequest createAccountBooleanRequest(String param0, int param1) {
         RuntimeException var2 = null;
         AccountBooleanRequest stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -31,7 +31,7 @@ final class CheckboxPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -12179) {
-            CheckboxPainter.a(true);
+            CheckboxPainter.clearCheckboxPainterStatics(true);
           }
           stackIn_4_0 = new AccountBooleanRequest(param0);
           return stackIn_4_0;
@@ -49,12 +49,12 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean hasMultiplePlayers(boolean param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            CheckboxPainter.a(true);
+            CheckboxPainter.clearCheckboxPainterStatics(true);
           }
           return !(param1 < 2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,7 +64,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearCheckboxPainterStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -84,7 +84,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
+    final static void configureSharedWidgetFonts(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -122,7 +122,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static RasterCoverageSpan a(byte param0) {
+    final static RasterCoverageSpan nextCoverageSpan(byte param0) {
         int fieldTemp$0 = 0;
         RasterCoverageSpan localTemp$1 = null;
         Object stackIn_11_0 = null;

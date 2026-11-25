@@ -124,7 +124,7 @@ final class RoundedMenuPanel extends MenuComponent {
           }
           if (ChatAndSocialPanel.field_a.isComplete(14) &&
             !param1.equals(ChatAndSocialPanel.field_a.getInput(-103))) {
-            ChatAndSocialPanel.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
+            ChatAndSocialPanel.field_a = CheckboxPainter.createAccountBooleanRequest(param1, param0 ^ -12121);
           }
           stackIn_7_0 = ChatAndSocialPanel.field_a;
           return stackIn_7_0;

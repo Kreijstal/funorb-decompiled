@@ -148,14 +148,14 @@ public final class ShatteredPlansClient extends GameClientShell {
             GameScreen.setFullscreenDialogModeIfOpen(4);
           }
           stackIn_7_1 = (null != NameSuggestionsPanel.field_K);
-          this.a(stackIn_7_1, 77);
+          this.tickClientShell(stackIn_7_1, 77);
           if (PlayerStats.field_n) {
             this.c(false);
             PlayerStats.field_n = false;
           }
           RasterStateFrame.field_n = RasterStateFrame.field_n + 1;
           if (ArchiveLoadStep.isClientNotReady(false)) {
-            this.j((byte) -123);
+            this.tickLoginAndIntroUi((byte) -123);
             if (ArchiveLoadStep.isClientNotReady(false)) {
               if (MutableIntPairNode.field_h) {
                 return;
@@ -174,7 +174,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
           } else {
             if (!StrongCacheEntry.areClientPreferencesReady((byte) 122)) {
-              DialogRoot.f((byte) 125);
+              DialogRoot.pollClientPreferences((byte) 125);
             } else {
               if (DisplayModeInfo.field_e) {
                 if (!TutorialScene.isFullscreenDialogOpen(false)) {
@@ -182,7 +182,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     var2 = 1;
                     stackIn_45_1 = true;
                     stackIn_46_2 = (NameSuggestionsPanel.field_K != null);
-                    var3 = this.a(stackIn_45_1, stackIn_46_2);
+                    var3 = this.pollLoginUiActions(stackIn_45_1, stackIn_46_2);
                     if (var3 == 1 ||
                       var3 == 2) {
                       if (NameSuggestionsPanel.field_K != null) {
@@ -352,7 +352,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   ((GameSession) (var4_ref)).handleTurnResultPacket(14759)) {
                   continue;
                 }
-                this.e((byte) -84);
+                this.dispatchBasePacket((byte) -84);
                 continue;
               }
               if (TiledNineSlicePainter.field_b ||
@@ -956,7 +956,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         Bzip2State.clearStatics((byte) -105);
         ClientDrawingSupport.clearStatics(3);
         LoginRequestSupport.clearStatics(32);
-        CheckboxPainter.a(false);
+        CheckboxPainter.clearCheckboxPainterStatics(false);
         StatefulWidgetTheme.clearStatics(true);
         DialPainter.clearStatics(16711935);
         SliderPainter.clearStatics((byte) 49);

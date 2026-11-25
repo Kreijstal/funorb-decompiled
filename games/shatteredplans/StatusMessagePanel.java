@@ -134,7 +134,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         boolean stackIn_14_11 = false;
         EmailValidator.tickLobbyEntryExpiry(58);
         if (MenuInputState.field_a != null) {
-          stackIn_6_0 = (CheckboxPainter.a(true, MenuInputState.field_a.field_Lb)) ? 1 : 0;
+          stackIn_6_0 = (CheckboxPainter.hasMultiplePlayers(true, MenuInputState.field_a.field_Lb)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }

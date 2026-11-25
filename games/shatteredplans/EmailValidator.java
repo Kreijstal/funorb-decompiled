@@ -225,7 +225,7 @@ final class EmailValidator extends TextFieldValidator {
                   if (PrivateChatMessage.field_k <= 0) {
                     if (MouseInputHandler.field_f > Archive.field_b) {
                       if (0 == Archive.field_b) {
-                        DialogRoot.a(true, true);
+                        DialogRoot.initializeLobbyRoomPanels(true, true);
                       }
                       Archive.field_b = Archive.field_b + 1;
                     }
@@ -245,7 +245,7 @@ final class EmailValidator extends TextFieldValidator {
                 } else {
                   if (PrivateChatMessage.field_k < MouseInputHandler.field_f) {
                     if (0 == PrivateChatMessage.field_k) {
-                      DialogRoot.a(true, false);
+                      DialogRoot.initializeLobbyRoomPanels(true, false);
                     }
                     PrivateChatMessage.field_k = PrivateChatMessage.field_k + 1;
                   }

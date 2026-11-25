@@ -61,7 +61,7 @@ final class DialogRoot extends SingleChildWidget {
         return null;
     }
 
-    final static void f(byte param0) {
+    final static void pollClientPreferences(byte param0) {
         if (!IsolationistAi.field_r &&
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = ServerRequestRetrySupport.requestServerIntArray((byte) 88, 4);
@@ -86,7 +86,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static AccountRequestResult a(String[] args, byte param1) {
+    final static AccountRequestResult createNameSuggestionResult(String[] args, byte param1) {
         AccountRequestResult var2 = null;
         RuntimeException var2_ref = null;
         AccountRequestResult stackIn_3_0 = null;
@@ -160,7 +160,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, MutableIntPairNode param1, boolean param2, MutableIntPairNode param3) {
+    final static void accumulatePolygonEdgeCoverageQ4(int param0, MutableIntPairNode param1, boolean param2, MutableIntPairNode param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -457,7 +457,7 @@ final class DialogRoot extends SingleChildWidget {
         return null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void initializeLobbyRoomPanels(boolean param0, boolean param1) {
         DiplomacyNotice.field_h = !param1 ? new ChatAndSocialPanel(QuickChatCategoryRegistry.field_c, BattleExplosionVisual.field_t) : new ChatAndSocialPanel(SocialListEntry.field_yb, IntrusiveNode.field_c);
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, DiplomacyNotice.field_h.field_d);
@@ -474,7 +474,7 @@ final class DialogRoot extends SingleChildWidget {
         LobbyLayoutSupport.layoutLobbyRoomPanels(15471, param1);
     }
 
-    final static void a(byte param0, byte[] param1) {
+    final static void decodeTutorialScenes(byte param0, byte[] param1) {
         try {
           TextHotspotRegion.loadTutorialScenes((byte) 50, MenuLabel.decodeTextLines(param1, 13));
           if (param0 <= 21) {
@@ -504,7 +504,7 @@ final class DialogRoot extends SingleChildWidget {
         return stackIn_9_0;
     }
 
-    final static void j(int param0) {
+    final static void layoutLobbyPanels(int param0) {
         TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
         PlayerReportPanel.field_Mb = SoftwareRasterizer.field_b;
         ClientDialogSupport.layoutLobbySidePanels(438);

@@ -59,7 +59,7 @@ final class ListContent implements MenuContent {
 
     final static void loadTutorialScenes(Archive param0, int param1) {
         try {
-          DialogRoot.a((byte) 23, param0.getFileByName(true, "tutorial.txt", ""));
+          DialogRoot.decodeTutorialScenes((byte) 23, param0.getFileByName(true, "tutorial.txt", ""));
           int var2_int = -90 / ((param1 + 9) / 32);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

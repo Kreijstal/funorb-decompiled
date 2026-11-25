@@ -829,7 +829,7 @@ final class AggressiveAi extends StandardAi {
             if (param1) {
               return;
             }
-            IntrusiveNodeHashTable.a(param3, 0);
+            IntrusiveNodeHashTable.writeRoomOptionsRequest(param3, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

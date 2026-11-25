@@ -38,7 +38,7 @@ final class LoginResultSupport {
               param0 <= 105) {
               var8 = param2;
               SocialNameInputPanel.updateAccountNameSuggestions(var8, false);
-              ProjectsWindowSupport.field_a = DialogRoot.a(param2, (byte) -89);
+              ProjectsWindowSupport.field_a = DialogRoot.createNameSuggestionResult(param2, (byte) -89);
               return;
             }
             ProjectsWindowSupport.field_a = GameAssetSetupSupport.createStatusResult(param3, param0, param1 - 35);
