@@ -561,7 +561,7 @@ final class MapView extends MapViewState {
             }
           }
           if (!(var9 <= 1.0 + (this.field_Jb * 300.0 + 0.5 - this.field_wb * 150.0))) {
-            ProgressDialog.a(false, var16Lifetime1, var6, (byte) 69, 200, var5, var15Lifetime1);
+            ProgressDialog.drawFleetTrail(false, var16Lifetime1, var6, (byte) 69, 200, var5, var15Lifetime1);
           } else {
             if (0 != var17Lifetime1) {
               if (var17Lifetime1 == 32768) {
@@ -1245,7 +1245,7 @@ final class MapView extends MapViewState {
                       }
                     }
                   } else {
-                    ProgressDialog.a(false, var19, var21Lifetime1, (byte) 74, 200, var20Lifetime1, var18Lifetime1);
+                    ProgressDialog.drawFleetTrail(false, var19, var21Lifetime1, (byte) 74, 200, var20Lifetime1, var18Lifetime1);
                   }
                 }
               } else {
@@ -1469,7 +1469,7 @@ final class MapView extends MapViewState {
               SoftwareRasterizer.fillCircleAlpha(var34 >> 4, var35 >> 4, 9, 0, 92);
               IconTextPanel.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
-              ProgressDialog.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
+              ProgressDialog.drawFleetTrail(false, var17, var19, (byte) 99, this.field_t, var18, var16);
             }
             var5 = (FleetVisual) (param0.nextForward((byte) -71));
           }
@@ -2610,11 +2610,11 @@ final class MapView extends MapViewState {
             this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
             RandomAccessCacheFile.pushLegacyRasterState(-113);
             this.field_Cb.bindAsRenderTarget();
-            ProgressDialog.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
+            ProgressDialog.drawFleetTrail(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
             this.field_K.bindAsRenderTarget();
-            ProgressDialog.a(true, this.field_K.field_w - 1, 4, (byte) 77, 200, var11Lifetime1 / 2, 0);
+            ProgressDialog.drawFleetTrail(true, this.field_K.field_w - 1, 4, (byte) 77, 200, var11Lifetime1 / 2, 0);
             this.field_Ob.bindAsRenderTarget();
-            ProgressDialog.a(true, this.field_K.field_w - 1, 4, (byte) -35, 200, 4, -1 + this.field_Ob.field_z);
+            ProgressDialog.drawFleetTrail(true, this.field_K.field_w - 1, 4, (byte) -35, 200, 4, -1 + this.field_Ob.field_z);
             OpacityWidget.popLegacyRasterState(0);
             if (this.field_xb == null) {
               this.field_xb = new Sprite[13];

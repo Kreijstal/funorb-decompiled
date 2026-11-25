@@ -438,7 +438,7 @@ final class DiskCacheWorker implements Runnable {
           ArchiveRequest.decodeLogoAudio(param2 - 1102, param3);
           AccountCreationDialog.a(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
-          ReflectionCheck.d((byte) -47);
+          ReflectionCheck.initializeMeshRasterizer((byte) -47);
           UrlLoader.b((byte) -112);
           LobbyOptionSupport.field_j = -ClientContextMenuSupport.field_c + 0;
         } catch (RuntimeException runtimeException) {

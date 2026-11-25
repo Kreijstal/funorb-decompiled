@@ -747,7 +747,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientException.clearStatics(108);
         GameApplet.b(param0 ^ -24187);
         UrlLoader.clearStatics(0);
-        MouseInputHandler.a(param0 ^ -24150);
+        MouseInputHandler.clearMouseInputStatics(param0 ^ -24150);
         MouseWheelInput.clearStatics(param0 ^ -24163);
         SoftwareRasterizer.clearStatics();
         Archive.clearStatics(-466);
@@ -1081,7 +1081,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ServerIntArrayRequest.clearStatics((byte) -115);
         FourIntSubmissionRequest.clearStatics((byte) 67);
         ByteArrayReadRequest.clearStatics(16711680);
-        ByteArrayNode.a((byte) 93);
+        ByteArrayNode.clearByteArrayNodeStatics((byte) 93);
         AccountRequestState.clearStatics(param0 + 16160);
         AccountRequestResult.releaseAccountRequestStatics(1);
         StatusMessagePanel.clearStatics(240);

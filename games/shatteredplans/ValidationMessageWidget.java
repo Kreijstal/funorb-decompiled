@@ -16,7 +16,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
     static int field_U;
 
     ValidationMessageWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, IsaacBackedRandom.b(114));
+        super(param1, IsaacBackedRandom.getValidationMessageTheme(114));
         try {
           this.field_M = param0;
           this.field_W = param1;

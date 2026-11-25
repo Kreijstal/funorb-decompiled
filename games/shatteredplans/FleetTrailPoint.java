@@ -56,7 +56,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           while (true) {
             if (ArchiveNetworkClient.field_b < 0) {
               SpriteWipeSupport.field_a.position = 0;
-              if (!StarAnnotation.a(param1 ^ -73, 1)) {
+              if (!StarAnnotation.readServerBytes(param1 ^ -73, 1)) {
                 return false;
               }
               ArchiveNetworkClient.field_b = SpriteWipeSupport.field_a.readOpcode((byte) 126);

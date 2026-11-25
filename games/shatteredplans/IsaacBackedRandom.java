@@ -11,7 +11,7 @@ final class IsaacBackedRandom extends Random {
     static SecondaryNodeHashTable field_b;
     static AnimatedPanel field_c;
 
-    final static void a(int param0) {
+    final static void resetArchiveConnectionErrors(int param0) {
         if (param0 > 111) {
           TertiaryLinkNode.field_o.field_a = 0;
           TertiaryLinkNode.field_o.field_p = 0;
@@ -22,7 +22,7 @@ final class IsaacBackedRandom extends Random {
         TertiaryLinkNode.field_o.field_p = 0;
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] createRoundedNineSlice(int param0, byte param1, int param2, int param3) {
         int var4 = 10;
         Sprite[] var5 = new Sprite[9];
         var5[0] = new Sprite(param3, param3);
@@ -67,14 +67,14 @@ final class IsaacBackedRandom extends Random {
         this.field_f = new IsaacRandom(var4);
     }
 
-    final static WidgetTheme b(int param0) {
+    final static WidgetTheme getValidationMessageTheme(int param0) {
         if (MusicVoice.field_o == null) {
           MusicVoice.field_o = new WidgetTheme(EmailValidator.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, EmailValidator.field_x.field_J, -1, 2147483647, true);
         }
         if (param0 > 12) {
           return MusicVoice.field_o;
         }
-        IsaacBackedRandom.a(23);
+        IsaacBackedRandom.resetArchiveConnectionErrors(23);
         return MusicVoice.field_o;
     }
 

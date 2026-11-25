@@ -57,7 +57,7 @@ final class SpriteButton extends MenuComponent {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean isSpriteMissing(byte param0) {
         if (param0 == 34) {
           return null == this.field_w ? true : false;
         }
@@ -65,11 +65,11 @@ final class SpriteButton extends MenuComponent {
         return null == this.field_w ? true : false;
     }
 
-    final void a(int param0, Sprite param1) {
+    final void setSprite(int param0, Sprite param1) {
         try {
           this.field_w = param1;
           if (param0 != -2948) {
-            this.d((byte) 56);
+            this.isSpriteMissing((byte) 56);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

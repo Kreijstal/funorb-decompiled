@@ -11,7 +11,7 @@ final class PairedIntSortSupport {
           if (param2 < 17) {
             field_c = (AnimatedPanel) null;
           }
-          ProgressDialog.a(param0, param1, param1.length - 1, true, 0);
+          ProgressDialog.sortPairedIntsAscending(param0, param1, param1.length - 1, true, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "nm.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

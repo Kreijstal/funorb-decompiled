@@ -1186,7 +1186,7 @@ final class GameMenuController {
                 var10Lifetime2 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
-                ProgressDialog.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
+                ProgressDialog.drawFleetTrail(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.drawInstructionFleet(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = LoginForm.field_N;
                 var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(ClientLobbyResources.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
@@ -1369,7 +1369,7 @@ final class GameMenuController {
                 var21Lifetime1 = var8 + var8 * var10Lifetime3Lifetime2;
                 IconTextPanel.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 IconTextPanel.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
-                ProgressDialog.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
+                ProgressDialog.drawFleetTrail(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
                 this.drawInstructionFleet(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
                 this.drawInstructionProjectIcon(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
@@ -1383,7 +1383,7 @@ final class GameMenuController {
                 var21Lifetime1Lifetime1 = var8 * var10Lifetime3Lifetime3 + var8;
                 IconTextPanel.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 IconTextPanel.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
-                ProgressDialog.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
+                ProgressDialog.drawFleetTrail(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
                 this.drawInstructionFleet(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.drawInstructionProjectIcon(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);

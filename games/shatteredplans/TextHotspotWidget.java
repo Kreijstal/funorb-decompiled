@@ -244,7 +244,7 @@ class TextHotspotWidget extends FocusableWidget {
                 ProxySocketConnector.c(8421504);
               } else {
                 if (4 == SolVictoryChecker.field_m) {
-                  FullscreenFocusCanvas.a(param0 - 6173);
+                  FullscreenFocusCanvas.drawIntroOrbScene(param0 - 6173);
                 } else {
                   if (SolVictoryChecker.field_m == 5) {
                     TutorialMapGenerator.c(param0 ^ 6333);

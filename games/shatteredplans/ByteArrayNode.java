@@ -12,7 +12,7 @@ final class ByteArrayNode extends IntrusiveNode {
     static int field_k;
     int field_j;
 
-    final static void a(String param0, int param1, boolean param2) {
+    final static void showAccountStatusDialog(String param0, int param1, boolean param2) {
         try {
           ToggleButton.field_D = param2;
           FleetMove.field_C = true;
@@ -24,7 +24,7 @@ final class ByteArrayNode extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearByteArrayNodeStatics(byte param0) {
         field_o = null;
         field_l = null;
         if (param0 >= 76) {
@@ -34,7 +34,7 @@ final class ByteArrayNode extends IntrusiveNode {
           field_i = null;
           return;
         }
-        ByteArrayNode.a((byte) 91);
+        ByteArrayNode.clearByteArrayNodeStatics((byte) 91);
         field_m = null;
         field_p = (IconLabelPanel[][]) null;
         field_h = null;

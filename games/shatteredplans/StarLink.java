@@ -9,7 +9,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
     private int field_l;
     static String field_m;
 
-    final static String a(int param0, int param1, String param2) {
+    final static String formatLobbyRoomStatus(int param0, int param1, String param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -81,7 +81,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
         field_h = null;
     }
 
-    final static IndexedSprite a(byte param0, IndexedSprite param1, int[] param2) {
+    final static IndexedSprite copyWithPalette(byte param0, IndexedSprite param1, int[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         IndexedSprite var4 = null;

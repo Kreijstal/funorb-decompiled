@@ -189,7 +189,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = StarAnnotation.a(param1, (byte) -110);
+              var3 = StarAnnotation.formatThrowableSummary(param1, (byte) -110);
             }
             if (param2 != null) {
               if (param1 != null) {

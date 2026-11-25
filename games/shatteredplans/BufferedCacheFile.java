@@ -458,7 +458,7 @@ final class BufferedCacheFile {
             return;
           }
           StandardMapGenerator.attachInputListeners(NameSuggestionsPanel.field_K, (byte) 9);
-          NameSuggestionsPanel.field_K.a(ValidatedTextInputWidget.field_W, -17115);
+          NameSuggestionsPanel.field_K.disposeFullscreenFrame(ValidatedTextInputWidget.field_W, -17115);
           NameSuggestionsPanel.field_K = null;
           if (null != BoundsRect.field_p) {
             BoundsRect.field_p.c(-119);

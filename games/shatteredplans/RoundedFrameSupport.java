@@ -112,7 +112,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             return null;
           }
           if (param1 < -104) {
-            stackIn_7_0 = MouseInputHandler.a(true);
+            stackIn_7_0 = MouseInputHandler.createDecodedSprite(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;

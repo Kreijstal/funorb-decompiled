@@ -14,7 +14,7 @@ final class ReflectionCheck extends IntrusiveNode {
     static MenuWindow field_k;
     int field_l;
 
-    final static void d(byte param0) {
+    final static void initializeMeshRasterizer(byte param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -30,7 +30,7 @@ final class ReflectionCheck extends IntrusiveNode {
           HorizontalGradientComponent.field_w = new int[260];
           if (param0 != -47) {
             var5 = (TutorialScene) null;
-            ReflectionCheck.a((String[]) null, (TutorialScene) null, 48);
+            ReflectionCheck.appendTutorialActions((String[]) null, (TutorialScene) null, 48);
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
@@ -50,7 +50,7 @@ final class ReflectionCheck extends IntrusiveNode {
         }
     }
 
-    final static void a(String[] args, TutorialScene param1, int param2) {
+    final static void appendTutorialActions(String[] args, TutorialScene param1, int param2) {
         int var4 = 0;
         String[] var3 = null;
         String var5 = null;

@@ -51,7 +51,7 @@ final class ProgressDialog extends ResizingDialog {
         return param0 == (-param0 & param0) ? true : false;
     }
 
-    final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+    final static void drawFleetTrail(boolean param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         int var56 = 0;
         int var57 = 0;
         double stackIn_26_0 = 0.0;
@@ -229,7 +229,7 @@ final class ProgressDialog extends ResizingDialog {
         }
     }
 
-    final static void a(CandidateLink param0, boolean param1, int param2, CandidateLink param3) {
+    final static void clipCandidateLinks(CandidateLink param0, boolean param1, int param2, CandidateLink param3) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -394,7 +394,7 @@ final class ProgressDialog extends ResizingDialog {
         field_Z = null;
     }
 
-    final static void a(int[] param0, int[] param1, int param2, boolean param3, int param4) {
+    final static void sortPairedIntsAscending(int[] param0, int[] param1, int param2, boolean param3, int param4) {
         int var10 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -439,8 +439,8 @@ final class ProgressDialog extends ResizingDialog {
             param1[var6] = var7;
             param0[param2] = param0[var6];
             param0[var6] = var8;
-            ProgressDialog.a(param0, param1, -1 + var6, true, param4);
-            ProgressDialog.a(param0, param1, param2, true, var6 + 1);
+            ProgressDialog.sortPairedIntsAscending(param0, param1, -1 + var6, true, param4);
+            ProgressDialog.sortPairedIntsAscending(param0, param1, param2, true, var6 + 1);
           }
           if (!param3) {
             field_kb = (String) null;

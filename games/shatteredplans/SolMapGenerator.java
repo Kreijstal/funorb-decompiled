@@ -173,7 +173,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           var14 = var6[var9];
           IndexedSprite[] var10 = var14;
           for (var11_int = 0; var14.length > var11_int; var11_int++) {
-            var14[var11_int] = StarLink.a((byte) 27, var5[var9], var19[var11_int]);
+            var14[var11_int] = StarLink.copyWithPalette((byte) 27, var5[var9], var19[var11_int]);
           }
         }
         if (param0 < 12) {

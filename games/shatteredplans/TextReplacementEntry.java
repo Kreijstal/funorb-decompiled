@@ -227,7 +227,7 @@ final class TextReplacementEntry {
         try {
           var4 = (ByteArrayNode) (MapView.field_vb.startForward(0));
           while (var4 != null) {
-            DualLinkDequeSequence.a(param0, var4, (byte) 13);
+            DualLinkDequeSequence.writeByteArrayRequest(param0, var4, (byte) 13);
             var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
           }
           var2 = SectorCacheStore.field_d.startForward(0);

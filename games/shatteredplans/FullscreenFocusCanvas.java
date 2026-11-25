@@ -21,7 +21,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static void a(int param0, int param1, byte[] param2, int param3, int[] param4) {
+    final static void groupFaceDepthBucketsByPriority(int param0, int param1, byte[] param2, int param3, int[] param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -87,7 +87,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(PlatformTaskDispatcher param0, int param1) {
+    final void disposeFullscreenFrame(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != -17115) {
             field_b = 54;
@@ -106,7 +106,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static void a(int param0) {
+    final static void drawIntroOrbScene(int param0) {
         int fieldTemp$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;

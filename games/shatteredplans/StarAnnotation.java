@@ -14,7 +14,7 @@ final class StarAnnotation extends IntrusiveNode {
     Player field_i;
     int field_o;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean readServerBytes(int param0, int param1) {
         try {
           int var2_int = 0;
           IOException var2 = null;
@@ -64,7 +64,7 @@ final class StarAnnotation extends IntrusiveNode {
         }
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String formatThrowableSummary(Throwable param0, byte param1) throws IOException {
         ClientException var15 = null;
         String var9 = null;
         int var10 = 0;

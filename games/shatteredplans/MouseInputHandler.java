@@ -95,7 +95,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static Sprite a(boolean param0) {
+    final static Sprite createDecodedSprite(boolean param0) {
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var19 = null;
@@ -136,7 +136,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           TertiaryListSequence.clearDecodedSpriteData(0);
           return (Sprite) (var3);
         }
-        MouseInputHandler.a(79);
+        MouseInputHandler.clearMouseInputStatics(79);
         byte[] var18 = IntroTextLine.field_q[0];
         if (SectorCacheStore.field_h[0]) {
           var19 = MusicEnvelope.field_l[0];
@@ -158,7 +158,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         return (Sprite) (var3Lifetime1);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatShortcuts(int param0, int param1, int param2) {
         int var3 = IntNode.field_p != null ? 1 : 0;
         if (param0 != 1) {
           return true;
@@ -390,7 +390,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void clearMouseInputStatics(int param0) {
         field_d = null;
         field_a = null;
         field_g = null;
@@ -401,7 +401,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           field_h = null;
           return;
         }
-        MouseInputHandler.a(7, -49, -44);
+        MouseInputHandler.handleQuickChatShortcuts(7, -49, -44);
         field_c = null;
         field_h = null;
     }

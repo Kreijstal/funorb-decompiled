@@ -165,14 +165,14 @@ final class HorizontalGradientComponent extends MenuComponent {
 
     final static boolean readPacketPayload(byte param0) {
         if (-1 == TextInputPainter.field_t) {
-          if (!StarAnnotation.a(-57, 1)) {
+          if (!StarAnnotation.readServerBytes(-57, 1)) {
             return false;
           }
           TextInputPainter.field_t = SpriteWipeSupport.field_a.readUnsignedByte(-54);
           SpriteWipeSupport.field_a.position = 0;
         }
         if (-2 == TextInputPainter.field_t) {
-          if (!StarAnnotation.a(118, 2)) {
+          if (!StarAnnotation.readServerBytes(118, 2)) {
             return false;
           }
           TextInputPainter.field_t = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
@@ -182,7 +182,7 @@ final class HorizontalGradientComponent extends MenuComponent {
           BitmapFont var2 = (BitmapFont) null;
           HorizontalGradientComponent.showStyledAccountChoiceMenu(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (BitmapFont) null, true, 22, -30);
         }
-        return StarAnnotation.a(-78, TextInputPainter.field_t);
+        return StarAnnotation.readServerBytes(-78, TextInputPainter.field_t);
     }
 
     HorizontalGradientComponent(int param0, int param1, int param2, int param3, int param4, int param5) {

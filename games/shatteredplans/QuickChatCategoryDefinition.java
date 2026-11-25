@@ -135,7 +135,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
             Wormhole.field_j = StarSoundState.field_k;
           }
           if (Wormhole.field_j == StarSoundState.field_k &&
-            StarAnnotation.a(110, 1)) {
+            StarAnnotation.readServerBytes(110, 1)) {
             var9Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-83);
             SpriteWipeSupport.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
@@ -156,7 +156,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 BufferedCacheFile.field_e = var9Lifetime1;
                 TextInputPainter.field_t = -1;
               } else {
-                StarAnnotation.a(119, CandidateLink.a(-85));
+                StarAnnotation.readServerBytes(119, CandidateLink.a(-85));
                 SpriteWipeSupport.field_d = new Boolean(EmailValidationError.readBooleanByte((byte) -24, SpriteWipeSupport.field_a));
                 SpriteWipeSupport.field_a.position = 0;
               }
@@ -164,10 +164,10 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
           }
           if (TurnEventLog.field_h == Wormhole.field_j) {
             var9Lifetime2 = 2;
-            if (StarAnnotation.a(-87, var9Lifetime2)) {
+            if (StarAnnotation.readServerBytes(-87, var9Lifetime2)) {
               var10Lifetime1 = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
               SpriteWipeSupport.field_a.position = 0;
-              if (StarAnnotation.a(126, var10Lifetime1)) {
+              if (StarAnnotation.readServerBytes(126, var10Lifetime1)) {
                 var11 = HighscoreResponseSupport.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   HighscoreResponseSupport.field_e[var12] = SpriteWipeSupport.field_a.readMarkedString((byte) -126);

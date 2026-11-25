@@ -79,7 +79,7 @@ final class IntroGlowPoint {
                           SpriteResourceSupport.appendTutorialObjective((String[]) (var6), 0, var8);
                         } else {
                           if (var5.equalsIgnoreCase("action")) {
-                            ReflectionCheck.a((String[]) (var6), var8, 0);
+                            ReflectionCheck.appendTutorialActions((String[]) (var6), var8, 0);
                           } else {
                             if (!var5.equalsIgnoreCase("flag")) {
                               if (!var5.equalsIgnoreCase("endthread")) {

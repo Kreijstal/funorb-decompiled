@@ -141,7 +141,7 @@ final class GameScreen {
             var3_int++;
           } while (var9 == 0);
           var3_ref = (StatusContent) (this.field_k.field_v);
-          var3_ref.field_e.a(-2948, (Sprite) null);
+          var3_ref.field_e.setSprite(-2948, (Sprite) null);
           if (this.field_s.field_z.field_T == -1 &&
             !this.field_s.field_L) {
             boolean decompiledFrameRemainder2 = true;
@@ -702,7 +702,7 @@ final class GameScreen {
               }
               if ((decompiledFrameCompleted2) &&
                 (decompiledFrameCompleted1)) {
-                var6_ref_ff__[0].a(-2948, BattleContribution.createColourisedMenuDivider(var8_int, false));
+                var6_ref_ff__[0].setSprite(-2948, BattleContribution.createColourisedMenuDivider(var8_int, false));
               }
               if (decompiledFrameCompleted2) {
                 var9_int = 1;
@@ -727,7 +727,7 @@ final class GameScreen {
                     stackIn_84_0 = this.field_s.field_P.field_v[var10].field_k;
                   }
                   var8_intLifetime1 = stackIn_84_0;
-                  var6_ref_ff__[var9_int].a(-2948, UiSpriteSupport.createColourisedIcon(var8_intLifetime1, 0));
+                  var6_ref_ff__[var9_int].setSprite(-2948, UiSpriteSupport.createColourisedIcon(var8_intLifetime1, 0));
                   var9_int++;
                 }
                 if (decompiledFrameCompleted0) {
@@ -745,14 +745,14 @@ final class GameScreen {
               }
               var8 = stackIn_92_0;
               var5.setLabel((byte) 122, 0, var8);
-              var6_ref_ff__[0].a(-2948, BattleContribution.createColourisedMenuDivider(-1, false));
+              var6_ref_ff__[0].setSprite(-2948, BattleContribution.createColourisedMenuDivider(-1, false));
               var9_int = 1;
               do {
                 if (var9_int >= var6_ref_ff__.length) {
                   var7.field_o = null;
                   break;
                 }
-                var6_ref_ff__[var9_int].a(-2948, UiSpriteSupport.createColourisedIcon(-1, 0));
+                var6_ref_ff__[var9_int].setSprite(-2948, UiSpriteSupport.createColourisedIcon(-1, 0));
                 var9_int++;
               } while (var11 == 0);
               var9 = (MenuComponent) (var7.field_l.startForward(0));
@@ -787,9 +787,9 @@ final class GameScreen {
             }
             var6 = stackIn_122_0;
             if (var4 != 0) {
-              var3.field_f[0][var4].a(-2948, UiSpriteSupport.createColourisedIcon(var6, 0));
+              var3.field_f[0][var4].setSprite(-2948, UiSpriteSupport.createColourisedIcon(var6, 0));
             } else {
-              var3.field_f[0][var4].a(-2948, BattleContribution.createColourisedMenuDivider(var6, false));
+              var3.field_f[0][var4].setSprite(-2948, BattleContribution.createColourisedMenuDivider(var6, false));
             }
             var4++;
           }
@@ -3759,7 +3759,7 @@ final class GameScreen {
           if (this.field_s.field_L ||
             this.field_bb == null) {
             var2 = (StatusContent) (this.field_k.field_v);
-            var2.field_e.a(-2948, (Sprite) null);
+            var2.field_e.setSprite(-2948, (Sprite) null);
             boolean decompiledSharedTail1 = (this.field_s.field_N != 1);
             if (!decompiledSharedTail1) {
               this.showStatusText(10, 0, ContentDialog.field_Y);
@@ -4765,7 +4765,7 @@ final class GameScreen {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           var2 = (StatusContent) (this.field_k.field_v);
-          if (var2.field_e.d((byte) 34) &&
+          if (var2.field_e.isSpriteMissing((byte) 34) &&
             this.field_s.field_m != 2) {
             if (!this.field_s.field_P.field_o.field_i) {
               var3 = (Territory) (this.field_s.field_n.field_i.startForward(0));
@@ -4794,7 +4794,7 @@ final class GameScreen {
           if (decompiledFrameCompleted0) {
             this.field_s.submitTurn(124);
             this.field_bb.select(81);
-            var2.field_e.a(-2948, (Sprite) null);
+            var2.field_e.setSprite(-2948, (Sprite) null);
             stackIn_28_0 = this.field_s.field_N;
             stackIn_28_1 = 1;
           }
@@ -5014,7 +5014,7 @@ final class GameScreen {
           }
           if (stackIn_36_0) {
             var5 = (StatusContent) (this.field_k.field_v);
-            var5.field_e.a(-2948, this.field_t);
+            var5.field_e.setSprite(-2948, this.field_t);
             var5.field_f.moveTo((byte) 122, 55, var5.field_f.field_t);
             if (this.field_s.field_W) {
               NodeHashTableIterator.a(0, "unplaced");

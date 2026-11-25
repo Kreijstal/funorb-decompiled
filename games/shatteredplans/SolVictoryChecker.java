@@ -402,7 +402,7 @@ final class SolVictoryChecker extends VictoryChecker {
               Wormhole.field_j = IntrusiveNodeHashTable.field_i;
             }
             if (IntrusiveNodeHashTable.field_i == Wormhole.field_j &&
-              StarAnnotation.a(-90, 1)) {
+              StarAnnotation.readServerBytes(-90, 1)) {
               var6_int = SpriteWipeSupport.field_a.readUnsignedByte(-92);
               SpriteWipeSupport.field_a.position = 0;
               if (var6_int != 0) {
@@ -414,7 +414,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
             }
             if (MusicVoice.field_m == Wormhole.field_j &&
-              StarAnnotation.a(-91, 8)) {
+              StarAnnotation.readServerBytes(-91, 8)) {
               Dialog.field_I = SpriteWipeSupport.field_a.readLong(110);
               SpriteWipeSupport.field_a.position = 0;
               LoginRequestSupport.writeLoginRequest(param0, param2, param4, -84, TutorialOverlaySupport.field_c);
@@ -422,7 +422,7 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             boolean decompiledFrameRemainder0 = true;
             if (IntrusiveNodeHashTable.field_d == Wormhole.field_j &&
-              StarAnnotation.a(119, 1)) {
+              StarAnnotation.readServerBytes(119, 1)) {
               var6_intLifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-63);
               DraggableWidget.field_H = null;
               SpriteWipeSupport.field_a.position = 0;

@@ -19,7 +19,7 @@ final class ListContent implements MenuContent {
         if (QuickChatPhraseDefinition.field_t) {
           return QuickChatPhraseDefinition.handleQuickChatKey(-85, param1, param3);
         }
-        if (MouseInputHandler.a(param0 ^ 5, param3, param1)) {
+        if (MouseInputHandler.handleQuickChatShortcuts(param0 ^ 5, param3, param1)) {
           return true;
         }
         if (HighscoreResponseSupport.field_b) {

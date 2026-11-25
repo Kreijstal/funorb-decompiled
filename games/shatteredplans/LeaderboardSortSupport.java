@@ -117,7 +117,7 @@ final class LeaderboardSortSupport {
           }
           AccountCreationDialog.field_Ib = param3;
           MenuWindow.field_B = param2;
-          ByteArrayNode.a(ClientException.field_c, param1 ^ -80, param0);
+          ByteArrayNode.showAccountStatusDialog(ClientException.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

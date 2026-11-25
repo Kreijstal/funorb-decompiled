@@ -86,12 +86,12 @@ final class AudioFilter {
         if (this.field_d[param0] == 0) {
           return 0;
         }
-        var3Lifetime1 = this.b(param0, 0, param1);
-        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.a(param0, 0, param1));
+        var3Lifetime1 = this.interpolatePoleRadius(param0, 0, param1);
+        field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.interpolatePoleAngle(param0, 0, param1));
         field_f[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (var4 = 1; var4 < this.field_d[param0]; var4++) {
-          var3Lifetime2 = this.b(param0, var4, param1);
-          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.a(param0, var4, param1));
+          var3Lifetime2 = this.interpolatePoleRadius(param0, var4, param1);
+          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.interpolatePoleAngle(param0, var4, param1));
           var6 = var3Lifetime2 * var3Lifetime2;
           field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
           field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
@@ -121,7 +121,7 @@ final class AudioFilter {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    private final float a(int param0, int param1, float param2) {
+    private final float interpolatePoleAngle(int param0, int param1, float param2) {
         float var4 = (float)this.field_a[param0][0][param1] + param2 * (float)(this.field_a[param0][1][param1] - this.field_a[param0][0][param1]);
         var4 = var4 * 0.0001220703125f;
         return AudioFilter.pitchToAngle(var4);
@@ -134,7 +134,7 @@ final class AudioFilter {
         this.field_c = new int[2][2][4];
     }
 
-    private final float b(int param0, int param1, float param2) {
+    private final float interpolatePoleRadius(int param0, int param1, float param2) {
         float var4 = (float)this.field_c[param0][0][param1] + param2 * (float)(this.field_c[param0][1][param1] - this.field_c[param0][0][param1]);
         var4 = var4 * 0.00152587890625f;
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));

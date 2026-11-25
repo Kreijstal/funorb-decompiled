@@ -801,7 +801,7 @@ final class MidiPcmStream extends PcmStream {
                 var31 = var31 + UniformNineSliceFactory.field_c;
               }
             }
-            var33 = StarLink.a(var12.field_hc, -11, var32);
+            var33 = StarLink.formatLobbyRoomStatus(var12.field_hc, -11, var32);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -DateValidationSupport.field_a - DateValidationSupport.field_a + var12.field_K);
               var12.field_ic.field_z = var33;

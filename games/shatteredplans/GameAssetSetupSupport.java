@@ -277,7 +277,7 @@ final class GameAssetSetupSupport {
           LobbyRoomEntry.field_Vb.addOutline(16777215);
           AccountRequestResult.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
-          DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
+          DerelictMapReader.field_i = IsaacBackedRandom.createRoundedNineSlice(5592405, (byte) 41, 13882323, 10);
           IntHashIndex.field_b = SpriteResourceSupport.loadSpriteByName(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
           ArchiveRequest.prepareAchievementPlaceholderSprites(14, SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param2, "basic", var13));

@@ -87,7 +87,7 @@ abstract class GameClientShell extends GameApplet {
             if (TutorialTextSupport.field_g != -1 &&
               TutorialTextSupport.field_g != 0) {
               TutorialTextSupport.field_g = -1;
-              IsaacBackedRandom.a(116);
+              IsaacBackedRandom.resetArchiveConnectionErrors(116);
             }
             if (param0) {
               StripedProgressWidget.field_B = false;
@@ -476,7 +476,7 @@ abstract class GameClientShell extends GameApplet {
           if (-1 != TutorialTextSupport.field_g &&
             TutorialTextSupport.field_g != 0) {
             TutorialTextSupport.field_g = -1;
-            IsaacBackedRandom.a(112);
+            IsaacBackedRandom.resetArchiveConnectionErrors(112);
           }
         }
         if (TutorialTextSupport.field_g == 0 &&

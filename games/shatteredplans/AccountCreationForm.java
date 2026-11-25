@@ -367,7 +367,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
     }
 
-    private final boolean validateAge(boolean param0) {
+    private final boolean submitAccountCreation(boolean param0) {
         if (!this.validateAll(72)) {
           return false;
         }
@@ -684,7 +684,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
             WeightedLruCache.b((byte) -120);
           } else {
             if (param0 == this.field_E) {
-              discarded$1 = this.validateAge(false);
+              discarded$1 = this.submitAccountCreation(false);
             }
           }
           if (param1 != 6) {
