@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ava {
+final class ModelTriangleAttachment {
     private int field_g;
     static int field_d;
     int field_b;
@@ -10,11 +10,11 @@ final class ava {
     private byte field_e;
     int field_c;
 
-    final ava copyWithVertices(int param0, int param1, int param2, int param3) {
+    final ModelTriangleAttachment copyWithVertices(int param0, int param1, int param2, int param3) {
         if (param0 != 0) {
-          return (ava) null;
+          return (ModelTriangleAttachment) null;
         }
-        return new ava(this.field_g, param3, param1, param2, this.field_e);
+        return new ModelTriangleAttachment(this.field_g, param3, param1, param2, this.field_e);
     }
 
     final static void updateLobbyPlayerRows(ScrollPanel param0, int param1, int param2, boolean param3, int param4) {
@@ -492,7 +492,7 @@ final class ava {
         field_f = null;
     }
 
-    ava(int param0, int param1, int param2, int param3, byte param4) {
+    ModelTriangleAttachment(int param0, int param1, int param2, int param3, byte param4) {
         this.field_b = param3;
         this.field_g = param0;
         this.field_e = param4;

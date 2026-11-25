@@ -110,7 +110,7 @@ final class SimpleActionBehaviour extends Behaviour {
             stackIn_8_0 = OpacityWidget.field_A;
             return stackIn_8_0;
           }
-          var3 = rga.splitPreservingEmptyParts(32287, param1, '.');
+          var3 = ModelVertexAttachment.splitPreservingEmptyParts(32287, param1, '.');
           if (var3.length < 2) {
             stackIn_12_0 = NameEntryPopup.field_wb;
             return stackIn_12_0;

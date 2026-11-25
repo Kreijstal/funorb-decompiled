@@ -35,12 +35,12 @@ final class SneakHintPanel implements MessagePanel {
         LegacyOpenGlSpriteTexture.fillRoundedRectangle(stackIn_8_0, CurrentGraphicsToolkit.toolkit, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, TermsLinksPanel.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((FontMask) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, TermsLinksPanel.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else if (VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, ConsoleHistoryEntry.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((FontMask) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, ConsoleHistoryEntry.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
-          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((FontMask) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
           this.field_c = (SneakHintDecoration[]) null;

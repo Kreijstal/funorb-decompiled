@@ -1816,7 +1816,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var5_int = 0;
               var6 = 0;
               var7 = 0;
-              var8 = rga.splitPreservingEmptyParts(32287, this.field_h.replace('/', ' '), ' ');
+              var8 = ModelVertexAttachment.splitPreservingEmptyParts(32287, this.field_h.replace('/', ' '), ' ');
               for (var9 = 0; var9 < var8.length; var9++) {
                 var13 = var8[var9];
                 var10 = var13;
@@ -2197,7 +2197,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2 = var2 | 1;
         }
         var3 = jaggl.OpenGL.glGetString(7938);
-        var4 = rga.splitPreservingEmptyParts(32287, var3.replace('.', ' '), ' ');
+        var4 = ModelVertexAttachment.splitPreservingEmptyParts(32287, var3.replace('.', ' '), ' ');
         if (var4.length < 2) {
           var2 = var2 | 4;
         } else {

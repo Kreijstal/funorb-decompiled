@@ -43,7 +43,7 @@ final class OpenGlFaceNormal {
           var2 = 0;
           var3 = 0;
           for (var4 = 0; OpenGlRenderbuffer.getCourseCount(-1) > var4; var4++) {
-            var5 = rga.getCourseRoomCount(26499, var4);
+            var5 = ModelVertexAttachment.getCourseRoomCount(26499, var4);
             for (var6 = 0; var6 < var5; var6++) {
               var15 = DateInputWidget.getCourseRoom(var4, 91, var6);
               if (-1 != var15.field_a ||

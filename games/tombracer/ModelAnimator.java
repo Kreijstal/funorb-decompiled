@@ -177,7 +177,7 @@ final class ModelAnimator {
           return var5;
         }
         if (null != this.player) {
-          var7 = rga.copyModel(var5, param3, 124);
+          var7 = ModelVertexAttachment.copyModel(var5, param3, 124);
           var6 = var7;
           if (param1 != -1) {
             field_c = (String) null;
@@ -194,7 +194,7 @@ final class ModelAnimator {
         if (this.scale == 128) {
           return var5;
         }
-        var8 = rga.copyModel(var5, param3, 124);
+        var8 = ModelVertexAttachment.copyModel(var5, param3, 124);
         if (param1 != -1) {
           field_c = (String) null;
         }

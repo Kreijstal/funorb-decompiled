@@ -83,7 +83,7 @@ abstract class SceneLight extends IntrusiveNode {
           GraphicsHeap.field_g = QuickChatParamType.createToolkitSprite(TextResourceLoader.field_b, param0, (byte) -50);
           VariantMask.field_d = QuickChatParamType.createToolkitSprite(ContentTransitionPhase.field_a, param0, (byte) -38);
           ModelCodecAndSocialPanelState.field_c = QuickChatParamType.createToolkitSprite(SocketArchiveNetworkClient.field_s, param0, (byte) 126);
-          CharacterSelectPhase.field_r = QuickChatParamType.createToolkitSprite(aa.field_a, param0, (byte) 125);
+          CharacterSelectPhase.field_r = QuickChatParamType.createToolkitSprite(FontMask.field_a, param0, (byte) 125);
           DropdownPopupList.field_E = QuickChatParamType.createToolkitSprite(LobbyPlayerEntry.field_Bb, param0, (byte) -119);
           InvitationAndMedalResources.field_a = QuickChatParamType.createToolkitSprite(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
           CharacterChoiceFactory.field_a = QuickChatParamType.createToolkitSprite(MatchScreen.field_q, param0, (byte) 28);

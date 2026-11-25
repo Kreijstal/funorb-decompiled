@@ -382,9 +382,9 @@ final class CrossedSineBandsOperator extends TextureOperator {
           }
         }
         if (param1) {
-          ava.field_d = LobbyGameWidget.field_Xb;
+          ModelTriangleAttachment.field_d = LobbyGameWidget.field_Xb;
         } else {
-          ava.field_d = (-640 + SceneLight.field_i) / 2;
+          ModelTriangleAttachment.field_d = (-640 + SceneLight.field_i) / 2;
         }
         ToolkitSelector.advanceLobbyTransitions((byte) -98, param1);
         if (ProjectionMode.field_a > 0) {
@@ -406,13 +406,13 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } else {
           RasterShape.field_e.field_X = true;
           RadialSelectionPainter.field_j.field_vb.field_r = null;
-          ava.updateLobbyPlayerRows(RadialSelectionPainter.field_j, param6, param0, param9, 2);
+          ModelTriangleAttachment.updateLobbyPlayerRows(RadialSelectionPainter.field_j, param6, param0, param9, 2);
         }
         PlayTrackCommand.updateLobbyGameList(param7, 0, param3, param0, param4, param6, param9);
         if (param2 != 4096) {
           return;
         }
-        ava.updateLobbyPlayerRows(MidiPatch.field_n, param6, param0, param9, 2);
+        ModelTriangleAttachment.updateLobbyPlayerRows(MidiPatch.field_n, param6, param0, param9, 2);
         ByteArrayCopies.field_a = ByteArrayCopies.field_a + 1;
     }
 

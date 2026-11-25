@@ -34,7 +34,7 @@ final class SelectionMenuInput {
           var2 = 0;
           if (var1_int != 0 &&
             BillboardDefinition.field_h.selectedIndex >= 0) {
-            var2 = rga.field_b[BillboardDefinition.field_h.selectedIndex];
+            var2 = ModelVertexAttachment.field_b[BillboardDefinition.field_h.selectedIndex];
             if (var2 == 2) {
               AccountRegistrationLauncher.closeSelectionMenu(-103);
             }

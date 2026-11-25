@@ -150,7 +150,7 @@ final class InstructionsScreen extends DropInMenuScreen {
               }
               ModelPreviewRenderer.drawModelPreview(var11Lifetime2, AchievementNotificationOverlay.field_r[DialogButtonPainter.field_r][var8], AchievementNotificationOverlay.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(AchievementNotificationOverlay.field_u[DialogButtonPainter.field_r][var8], 12166, AchievementNotificationOverlay.field_m[DialogButtonPainter.field_r][var8]), -1918106173, var7 + AchievementNotificationOverlay.field_k[DialogButtonPainter.field_r][var8], -50 + var9);
             }
-            var11Lifetime2Lifetime1 = TooltipRenderer.field_p.drawWrapped((aa) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, SinglePlayerCourseGenerator.field_h, var9, 0);
+            var11Lifetime2Lifetime1 = TooltipRenderer.field_p.drawWrapped((FontMask) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, SinglePlayerCourseGenerator.field_h, var9, 0);
             if (DialogButtonPainter.field_r > 0) {
               var11Lifetime2Lifetime1 = Math.max(var11Lifetime2Lifetime1, 3);
             }

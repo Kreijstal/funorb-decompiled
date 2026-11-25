@@ -200,7 +200,7 @@ final class MatchHud {
                   }
                   var28_double = 80.0;
                 }
-                FloatPacketBuffer.field_j.drawWrapped((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, RasterStateFrame.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
+                FloatPacketBuffer.field_j.drawWrapped((FontMask) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, RasterStateFrame.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
                 ClippedChildWidget.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-ClippedChildWidget.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
@@ -335,20 +335,20 @@ final class MatchHud {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), QueuedByteShortRequest.field_g, (byte) 124, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                  var39 = var36.drawWrapped((FontMask) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), QueuedByteShortRequest.field_g, (byte) 124, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), ChannelOverrideChatTarget.field_h, (byte) 72, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                  var39Lifetime1 = var36.drawWrapped((FontMask) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), ChannelOverrideChatTarget.field_h, (byte) 72, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), MazeSearchNode.field_k, (byte) -106, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                    var39Lifetime1 = var36.drawWrapped((FontMask) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), MazeSearchNode.field_k, (byte) -106, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), HiscoreTable.field_l, (byte) 107, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
+                  var39Lifetime2 = var36.drawWrapped((FontMask) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), HiscoreTable.field_l, (byte) 107, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }

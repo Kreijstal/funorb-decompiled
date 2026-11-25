@@ -10,19 +10,19 @@ final class DropTargetWidget extends SingleChildWidget {
         DraggableWidget var7 = null;
         try {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
-          var7 = ava.field_f;
+          var7 = ModelTriangleAttachment.field_f;
           if (var7 != null &&
             this.containsPointer(param5, param3, 17, param2, param4)) {
             if (this.field_h instanceof DragReleaseListener) {
               ((DragReleaseListener) (this.field_h)).onDragReleased(var7, (byte) 59, this);
-              ava.field_f = null;
+              ModelTriangleAttachment.field_f = null;
               return;
             }
             if (!(var7.field_h instanceof DragReleaseListener)) {
               return;
             }
             ((DragReleaseListener) (var7.field_h)).onDragReleased(var7, (byte) 59, this);
-            ava.field_f = null;
+            ModelTriangleAttachment.field_f = null;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "k.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

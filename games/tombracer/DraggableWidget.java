@@ -84,7 +84,7 @@ final class DraggableWidget extends SingleChildWidget {
           if (param4 == 1) {
             this.field_D = param3 - this.field_n - param2;
             this.field_A = -this.field_i + (param6 - param1);
-            ava.field_f = this;
+            ModelTriangleAttachment.field_f = this;
           }
           this.field_s = param4;
           return true;

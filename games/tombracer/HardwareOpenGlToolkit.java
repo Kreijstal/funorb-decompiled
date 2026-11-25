@@ -1488,7 +1488,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               -1 == this.field_Nc.indexOf("brian paul") &&
               this.field_Nc.indexOf("mesa") == -1) {
               var20 = jaggl.OpenGL.glGetString(7938);
-              var9 = rga.splitPreservingEmptyParts(32287, var20.replace('.', ' '), ' ');
+              var9 = ModelVertexAttachment.splitPreservingEmptyParts(32287, var20.replace('.', ' '), ' ');
               if (2 > var9.length) {
                 throw new RuntimeException("");
               }
@@ -1538,7 +1538,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 var11_int = 0;
                 var12 = 0;
                 var13 = 0;
-                var14 = rga.splitPreservingEmptyParts(32287, this.field_jd.replace('/', ' '), ' ');
+                var14 = ModelVertexAttachment.splitPreservingEmptyParts(32287, this.field_jd.replace('/', ' '), ' ');
                 for (var15 = 0; var14.length > var15; var15++) {
                   var21 = var14[var15];
                   var16 = var21;

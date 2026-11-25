@@ -31,7 +31,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
         if (param0 != 18998) {
           return 12;
         }
-        return aa.field_c;
+        return FontMask.field_c;
     }
 
     protected GraphicsHeap() {

@@ -5,8 +5,8 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
     private NativeSoftwareGraphicsHeap field_g;
     private NativeSoftwareGraphicsToolkit field_f;
     long field_nativeid;
-    rga[] field_d;
-    ava[] field_e;
+    ModelVertexAttachment[] field_d;
+    ModelTriangleAttachment[] field_e;
 
     final void draw(Transform3D param0, ModelDrawMarker param1, int param2) {
         if (param1 == null) {

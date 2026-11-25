@@ -74,7 +74,7 @@ abstract class ConsoleWindow implements ShellListener {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           var4_int = -10 + this.field_a.field_G - 15;
-          var5 = rga.splitPreservingEmptyParts(32287, param1, '\n');
+          var5 = ModelVertexAttachment.splitPreservingEmptyParts(32287, param1, '\n');
           if (param0 != 24219) {
             this.isModal(-59);
           }

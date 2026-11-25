@@ -556,7 +556,7 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         WhirlpoolDigest.releaseStatics(param0 + 3560);
         MidiNoteUsageNode.releaseStatics((byte) 76);
         SoundTone.releaseStatics();
-        aa.releaseStatics(true);
+        FontMask.releaseStatics(true);
         PerlinNoise2D.releaseStatics((byte) -123);
         TileRenderable.releaseStatics(param0 + 3747);
         StatReportingScoringObserver.releaseStatics(true);
@@ -663,8 +663,8 @@ public final class TombRacer extends TombRacerShell implements TombRacerClientMa
         BoulderComponent.releaseStatics((byte) 79);
         WallCrusherComponent.releaseStatics(4096);
         SimpleMoveLocomotor.releaseStatics((byte) -92);
-        ava.releaseStatics(-1);
-        rga.releaseStatics((byte) 99);
+        ModelTriangleAttachment.releaseStatics(-1);
+        ModelVertexAttachment.releaseStatics((byte) 99);
         LruNodeCache.releaseStatics((byte) -100);
         ProceduralTexture.releaseStatics(-98);
         ConnectionLostText.releaseStatics((byte) -75);

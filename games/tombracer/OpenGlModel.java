@@ -36,7 +36,7 @@ final class OpenGlModel extends ToolkitModel {
     private short field_S;
     private short[] field_hb;
     private int[][] field_C;
-    private ava[] field_D;
+    private ModelTriangleAttachment[] field_D;
     private byte[] field_o;
     private short[] field_H;
     private int field_u;
@@ -56,7 +56,7 @@ final class OpenGlModel extends ToolkitModel {
     private int[][] field_d;
     private int[] field_e;
     private short[] field_E;
-    private rga[] field_t;
+    private ModelVertexAttachment[] field_t;
     static java.awt.Image field_x;
     private int[] field_P;
     static String field_V;

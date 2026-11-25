@@ -920,7 +920,7 @@ final class GameFontMetrics {
               var2 = param1.getParameter("cookieprefix");
               var3 = var2 + "settings";
               var4 = (String) (JavaScriptBridge.callWindowFunction(param1, 2864, "getcookies"));
-              var5 = rga.splitPreservingEmptyParts(param0 + 32287, var4, ';');
+              var5 = ModelVertexAttachment.splitPreservingEmptyParts(param0 + 32287, var4, ';');
               var6 = param0;
               while (var6 < var5.length) {
                 var7 = var5[var6].indexOf('=');

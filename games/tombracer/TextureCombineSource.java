@@ -133,7 +133,7 @@ final class TextureCombineSource {
         var16_ref.drawLoadingProgress(incrementValue$3, (byte) 47, param0);
         WidgetStyleLayer.field_f = SpriteData.loadSheet(param2, "", "achievements");
         MatchStatistics.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
-        aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
+        FontMask.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
         LobbyPlayerEntry.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
         ConstrainToRectangleLocomotor.field_t = SpriteData.loadSprite(param2, "", "map_coin_silver");
         MatchScreen.field_q = SpriteData.loadSprite(param2, "", "map_coin_bronze");

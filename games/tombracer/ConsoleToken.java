@@ -35,7 +35,7 @@ final class ConsoleToken extends IntrusiveNode {
           var1_int = ByteGameMessageSender.field_d - ProgressDialogLauncher.field_a;
           ProgressDialogLauncher.field_a = -(var1_int >> 1) + Transform3D.field_a;
           ByteGameMessageSender.field_d = ProgressDialogLauncher.field_a + var1_int;
-          FriendLookupAndContextMenus.field_b = -(aa.field_c >> 1) + AllPlatformsMazeComponent.field_N;
+          FriendLookupAndContextMenus.field_b = -(FontMask.field_c >> 1) + AllPlatformsMazeComponent.field_N;
           var2 = FriendLookupAndContextMenus.field_b;
           if (param0 <= 79) {
             return;

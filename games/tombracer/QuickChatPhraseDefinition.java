@@ -112,7 +112,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.field_l = rga.splitPreservingEmptyParts(32287, param0.readString((byte) -76), '<');
+            this.field_l = ModelVertexAttachment.splitPreservingEmptyParts(32287, param0.readString((byte) -76), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

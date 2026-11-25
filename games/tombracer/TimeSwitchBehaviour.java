@@ -110,7 +110,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
             return;
           }
           if (param4 <= LineShape.field_h) {
-            rga.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
+            ModelVertexAttachment.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
             return;
           }
           ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);
@@ -129,7 +129,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           return;
         }
         if (param4 <= LineShape.field_h) {
-          rga.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
+          ModelVertexAttachment.fillBorderedRectangleRows(param5, 107, param6, param1, param2, param7, param3, param4);
           return;
         }
         ClippedFilledRectangleRenderer.drawClippedBorderedRectangle(param1, param7, param5, 99, param3, param4, param2, param6);

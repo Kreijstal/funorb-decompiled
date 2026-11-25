@@ -17,11 +17,11 @@ final class Model extends ToolkitModel {
     private Model field_tb;
     private int[] field_mb;
     private int[] field_E;
-    private rga[] field_kb;
+    private ModelVertexAttachment[] field_kb;
     private SoftwareModelBillboard[] field_e;
     private SoftwareTransform3D field_B;
     private boolean field_ab;
-    private ava[] field_i;
+    private ModelTriangleAttachment[] field_i;
     private short field_Bb;
     private int[][] field_Cb;
     private VertexNormal[] field_lb;

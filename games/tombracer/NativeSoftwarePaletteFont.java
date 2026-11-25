@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends GameFont implements NativeResource {
+final class NativeSoftwarePaletteFont extends GameFont implements NativeResource {
     long field_nativeid;
 
-    private final native void S(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
+    private final native void initializeNativePalettedGlyphs(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
 
-    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        this.PA(param0, param1, param2, param3, param4, param5, param6, param7);
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7) {
+        this.drawNativeMaskedGlyph(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    private final native void PA(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    private final native void drawNativeMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7);
 
     public final native void releaseNative(boolean param0);
 
-    n(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    NativeSoftwarePaletteFont(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
@@ -29,7 +29,7 @@ final class n extends GameFont implements NativeResource {
           var9[var11] = param3[var11].field_d;
           var10[var11] = param3[var11].field_c;
         }
-        this.S(param0, param1, var6, param3[0].field_g, var7, var8, var9, var10);
+        this.initializeNativePalettedGlyphs(param0, param1, var6, param3[0].field_g, var7, var8, var9, var10);
     }
 
     final native void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);

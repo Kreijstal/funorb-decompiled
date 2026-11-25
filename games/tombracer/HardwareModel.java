@@ -33,7 +33,7 @@ final class HardwareModel extends ToolkitModel {
     static boolean[] field_B;
     private byte[] field_C;
     private int[] field_J;
-    private rga[] field_s;
+    private ModelVertexAttachment[] field_s;
     private float[] field_t;
     private HardwareModelVertexStream field_ib;
     private int field_h;
@@ -44,7 +44,7 @@ final class HardwareModel extends ToolkitModel {
     private short[] field_kb;
     static String field_bb;
     private HardwareLightingArrays field_e;
-    private ava[] field_X;
+    private ModelTriangleAttachment[] field_X;
     private int field_n;
     private short[] field_hb;
     private int field_W;

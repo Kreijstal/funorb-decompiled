@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rga {
+final class ModelVertexAttachment {
     static int[] field_b;
     int field_a;
     private int field_c;
@@ -39,7 +39,7 @@ final class rga {
           var6 = 0;
           if (param0 != 32287) {
             var10 = (String) null;
-            rga.splitPreservingEmptyParts(65, (String) null, 'ﾭ');
+            ModelVertexAttachment.splitPreservingEmptyParts(65, (String) null, 'ﾭ');
           }
           for (var7 = 0; var7 < var3_int; var7++) {
             for (var8 = var6; param2 != param1.charAt(var8); var8++) {
@@ -86,7 +86,7 @@ final class rga {
             C2SRoomResultPacket.fillRange((byte) -55, param5, param6, PackedBitSetSupport.field_a[var12], param3);
           }
           if (param1 <= 97) {
-            rga.releaseStatics((byte) -93);
+            ModelVertexAttachment.releaseStatics((byte) -93);
           }
           for (var12Lifetime1 = param7; var12Lifetime1 > var9; var12Lifetime1--) {
             C2SRoomResultPacket.fillRange((byte) -55, param5, param6, PackedBitSetSupport.field_a[var12Lifetime1], param3);
@@ -136,18 +136,18 @@ final class rga {
         }
     }
 
-    final rga copyWithVertex(int param0, int param1) {
+    final ModelVertexAttachment copyWithVertex(int param0, int param1) {
         if (param0 != 0) {
           ToolkitModel var4 = (ToolkitModel) null;
-          rga.copyModel((ToolkitModel) null, (byte) 71, 47);
+          ModelVertexAttachment.copyModel((ToolkitModel) null, (byte) 71, 47);
         }
-        return new rga(this.field_c, param1);
+        return new ModelVertexAttachment(this.field_c, param1);
     }
 
     final static int getCourseRoomCount(int param0, int param1) {
         if (param0 != 26499) {
           String var3 = (String) null;
-          rga.splitPreservingEmptyParts(121, (String) null, 'J');
+          ModelVertexAttachment.splitPreservingEmptyParts(121, (String) null, 'J');
         }
         if (CourseStartPacket.field_a == null) {
           return 0;
@@ -157,7 +157,7 @@ final class rga {
         return var4.length;
     }
 
-    rga(int param0, int param1) {
+    ModelVertexAttachment(int param0, int param1) {
         this.field_c = param0;
         this.field_a = param1;
     }

@@ -30,7 +30,7 @@ final class OpacityWidget extends SingleChildWidget {
         int var2 = var1 - HiscoresScreen.field_r * HiscoresScreen.field_r;
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (ValidationStatusIcon.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
-        LobbyOverlayAndDateValidationState.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
+        LobbyOverlayAndDateValidationState.field_e.setBounds(640, 120, -23776, var3, ModelTriangleAttachment.field_d);
         HardwareGraphicsHeap.layoutQuickChatMenu(640, 5, ChatMessageLayout.field_d, 25, EmbossNormalizationTable.field_c, ValidationStatusIcon.field_E - 24, 0);
     }
 

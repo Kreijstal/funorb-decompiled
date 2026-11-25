@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SoftwareScanlineMask extends aa {
+final class SoftwareScanlineMask extends FontMask {
     static boolean field_f;
     static int field_g;
     int[] field_d;

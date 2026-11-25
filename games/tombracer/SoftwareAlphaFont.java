@@ -38,7 +38,7 @@ final class SoftwareAlphaFont extends GameFont {
         }
     }
 
-    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
@@ -175,7 +175,7 @@ final class SoftwareAlphaFont extends GameFont {
         }
     }
 
-    private final void blitMaskedCoverageGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitMaskedCoverageGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, FontMask param12, int param13, int param14) {
         int var22 = 0;
         int var27 = 0;
         int incrementValue$0 = 0;

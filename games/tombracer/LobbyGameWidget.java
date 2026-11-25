@@ -200,7 +200,7 @@ final class LobbyGameWidget extends UiComponent {
         RoomDefinition var6 = null;
         int incrementValue$0 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        int[] var8 = new int[rga.getCourseRoomCount(26499, param0)];
+        int[] var8 = new int[ModelVertexAttachment.getCourseRoomCount(26499, param0)];
         int[] var2 = var8;
         if (!param1) {
           field_Db = (SpriteData) null;

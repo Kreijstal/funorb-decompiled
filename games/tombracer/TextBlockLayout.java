@@ -20,7 +20,7 @@ abstract class TextBlockLayout {
         int var5 = BufferedSocket.randomBelow(2147483647, new Random(), -76);
         JavaKeyCodeMapPatches.field_d = false;
         SinglePlayerCourseGenerator var6 = new SinglePlayerCourseGenerator(param0, var5);
-        SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.getCourseRoomCount(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
+        SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, ModelVertexAttachment.getCourseRoomCount(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
         SecondaryNodeDequeIterator.field_a.initPlayers((byte) -64);
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);

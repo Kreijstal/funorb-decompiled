@@ -211,7 +211,7 @@ final class ClientResourceBootstrap {
                 SimpleConditionBehaviour.field_p[1] = new UiComponent(0L, GpuDataType.field_j, ConsoleToken.field_j);
                 array$0 = new ContextMenuRow[1 + SafeZoneBehaviour.field_u.length];
                 SoftwareRenderTarget.field_b[1] = array$0;
-                SoftwareRenderTarget.field_b[1][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+                SoftwareRenderTarget.field_b[1][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, FontMask.field_b);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -225,7 +225,7 @@ final class ClientResourceBootstrap {
               }
             }
             SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, GpuDataType.field_j, GameWindowAndSpectatorState.field_a);
-            SoftwareRenderTarget.field_b[2] = new ContextMenuRow[]{new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
+            SoftwareRenderTarget.field_b[2] = new ContextMenuRow[]{new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, FontMask.field_b), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -233,7 +233,7 @@ final class ClientResourceBootstrap {
             SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, GpuDataType.field_j, DropTargetWidget.field_z);
             array$1 = new ContextMenuRow[1 + MirrorMoverLocomotor.field_r];
             SoftwareRenderTarget.field_b[3] = array$1;
-            SoftwareRenderTarget.field_b[3][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+            SoftwareRenderTarget.field_b[3][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, FontMask.field_b);
             var17_int = 0;
             while (!(MirrorMoverLocomotor.field_r <= var17_int)) {
               SoftwareRenderTarget.field_b[3][1 + var17_int] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
@@ -252,7 +252,7 @@ final class ClientResourceBootstrap {
               SimpleConditionBehaviour.field_p[var17_int + 4] = new UiComponent(0L, GpuDataType.field_j, DebouncedValidationSource.field_e[var17_int]);
               array$2 = new ContextMenuRow[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
               SoftwareRenderTarget.field_b[4 + var17_int] = array$2;
-              SoftwareRenderTarget.field_b[var17_int + 4][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+              SoftwareRenderTarget.field_b[var17_int + 4][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, FontMask.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;

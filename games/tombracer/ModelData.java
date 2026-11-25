@@ -12,12 +12,12 @@ final class ModelData {
     int[] field_v;
     int field_E;
     ModelBillboardAttachment[] field_m;
-    ava[] field_B;
+    ModelTriangleAttachment[] field_B;
     int[] field_c;
     short[] field_K;
     int[] field_D;
     byte field_k;
-    rga[] field_e;
+    ModelVertexAttachment[] field_e;
     byte[] field_z;
     int field_L;
     byte[] field_G;
@@ -619,7 +619,7 @@ final class ModelData {
           }
           var66.position = var43;
           if (param1 != 0) {
-            this.field_e = (rga[]) null;
+            this.field_e = (ModelVertexAttachment[]) null;
           }
           this.field_L = this.field_L + 1;
           var4.position = var44;
@@ -704,7 +704,7 @@ final class ModelData {
           if (var12 != 0) {
             var58Lifetime3 = var66.readUnsignedByte(255);
             if (0 < var58Lifetime3) {
-              this.field_B = new ava[var58Lifetime3];
+              this.field_B = new ModelTriangleAttachment[var58Lifetime3];
               for (var59Lifetime2 = 0; var59Lifetime2 < var58Lifetime3; var59Lifetime2++) {
                 var60Lifetime1 = var66.readUnsignedShort(param1 + 121);
                 var61 = var66.readUnsignedShort(122);
@@ -713,16 +713,16 @@ final class ModelData {
                 } else {
                   var62 = this.field_C[var61];
                 }
-                this.field_B[var59Lifetime2] = new ava(var60Lifetime1, (int) this.field_a[var61], (int) this.field_t[var61], (int) this.field_J[var61], (byte) var62);
+                this.field_B[var59Lifetime2] = new ModelTriangleAttachment(var60Lifetime1, (int) this.field_a[var61], (int) this.field_t[var61], (int) this.field_J[var61], (byte) var62);
               }
             }
             var59Lifetime2 = var66.readUnsignedByte(255);
             if (var59Lifetime2 > 0) {
-              this.field_e = new rga[var59Lifetime2];
+              this.field_e = new ModelVertexAttachment[var59Lifetime2];
               for (var60Lifetime1Lifetime1 = 0; var60Lifetime1Lifetime1 < var59Lifetime2; var60Lifetime1Lifetime1++) {
                 var61Lifetime2 = var66.readUnsignedShort(121);
                 var62Lifetime2 = var66.readUnsignedShort(123);
-                this.field_e[var60Lifetime1Lifetime1] = new rga(var61Lifetime2, var62Lifetime2);
+                this.field_e[var60Lifetime1Lifetime1] = new ModelVertexAttachment(var61Lifetime2, var62Lifetime2);
               }
             }
           }
@@ -1330,7 +1330,7 @@ final class ModelData {
             }
           }
           if (var4 > 0) {
-            this.field_e = new rga[var4];
+            this.field_e = new ModelVertexAttachment[var4];
           }
           if (var9 != 0) {
             this.field_g = new byte[this.field_o];
@@ -1378,7 +1378,7 @@ final class ModelData {
             this.field_n = new byte[this.field_o];
           }
           if (var3_int > 0) {
-            this.field_B = new ava[var3_int];
+            this.field_B = new ModelTriangleAttachment[var3_int];
           }
           var3_intLifetime1 = 0;
           var5Lifetime1 = 0;

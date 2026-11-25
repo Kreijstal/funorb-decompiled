@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends GameFont implements NativeResource {
+final class NativeSoftwareMonochromeFont extends GameFont implements NativeResource {
     long field_nativeid;
 
     protected final void finalize() {
@@ -10,11 +10,11 @@ final class h extends GameFont implements NativeResource {
         }
     }
 
-    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        this.NA(param0, param1, param2, param3, param4, param5, param6, param7);
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7) {
+        this.drawNativeMaskedGlyph(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
-    h(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
+    NativeSoftwareMonochromeFont(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, GameFontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
@@ -29,14 +29,14 @@ final class h extends GameFont implements NativeResource {
           var9[var11] = param3[var11].field_d;
           var10[var11] = param3[var11].field_c;
         }
-        this.JA(param0, param1, var6, var7, var8, var9, var10);
+        this.initializeNativeMonochromeGlyphs(param0, param1, var6, var7, var8, var9, var10);
     }
 
     public final native void releaseNative(boolean param0);
 
-    private final native void JA(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void initializeNativeMonochromeGlyphs(NativeSoftwareGraphicsToolkit param0, NativeSoftwareGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 
-    private final native void NA(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    private final native void drawNativeMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7);
 
     final native void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 }

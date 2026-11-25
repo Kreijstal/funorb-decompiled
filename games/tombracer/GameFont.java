@@ -17,13 +17,13 @@ abstract class GameFont {
           return;
         }
         try {
-          this.drawText(false, param2 - this.field_a.stringWidth(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
+          this.drawText(false, param2 - this.field_a.stringWidth(param5, (byte) 107) / 2, (FontMask) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7);
 
     private final void setColours(int param0, int param1, int param2) {
         FullscreenFailureReason.field_b = -1;
@@ -152,7 +152,7 @@ abstract class GameFont {
         }
     }
 
-    private final int drawWrappedLines(int[] param0, int param1, String param2, int param3, int param4, aa param5, int param6, ToolkitSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int drawWrappedLines(int[] param0, int param1, String param2, int param3, int param4, FontMask param5, int param6, ToolkitSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_3_0 = 0;
         int stackIn_46_0 = 0;
         Object stackIn_49_0 = null;
@@ -330,7 +330,7 @@ abstract class GameFont {
         }
     }
 
-    private final void drawText(boolean param0, int param1, aa param2, int[] param3, int param4, ToolkitSprite[] param5, String param6, int param7, int param8) {
+    private final void drawText(boolean param0, int param1, FontMask param2, int[] param3, int param4, ToolkitSprite[] param5, String param6, int param7, int param8) {
         int var13 = 0;
         int stackIn_29_0 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -506,7 +506,7 @@ abstract class GameFont {
         }
     }
 
-    final int drawWrapped(aa param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, ToolkitSprite[] param13, int param14, int param15) {
+    final int drawWrapped(FontMask param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, ToolkitSprite[] param13, int param14, int param15) {
         int var17_int = 0;
         RuntimeException var17 = null;
         int stackIn_1_0 = 0;
@@ -562,7 +562,7 @@ abstract class GameFont {
         }
         try {
           this.setColours(param4, param5, 125);
-          this.drawText(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
+          this.drawText(param1, param3, (FontMask) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -577,7 +577,7 @@ abstract class GameFont {
             this.field_a = (GameFontMetrics) null;
           }
           this.setColours(param4, param3, 118);
-          this.drawText(false, -this.field_a.stringWidth(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
+          this.drawText(false, -this.field_a.stringWidth(param2, (byte) -102) + param5, (FontMask) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

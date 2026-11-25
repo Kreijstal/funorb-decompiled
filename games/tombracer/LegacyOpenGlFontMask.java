@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LegacyOpenGlFontMask extends aa {
+final class LegacyOpenGlFontMask extends FontMask {
     LegacyOpenGlSpriteTexture field_d;
 
     final static void tickGuestLoginTransition(boolean param0) {

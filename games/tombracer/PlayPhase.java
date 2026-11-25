@@ -174,7 +174,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, MainRoomCatalog.field_a, var5_intLifetime1);
-            TooltipRenderer.field_p.drawWrapped((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, SinglePlayerCourseGenerator.field_h, var4_intLifetime1, 1);
+            TooltipRenderer.field_p.drawWrapped((FontMask) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, SinglePlayerCourseGenerator.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class aa {
+abstract class FontMask {
     static SpriteData field_a;
     static String field_b;
     static int field_c;
 
-    protected aa() throws Throwable {
+    protected FontMask() throws Throwable {
         throw new Error();
     }
 

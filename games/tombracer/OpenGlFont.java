@@ -27,7 +27,7 @@ final class OpenGlFont extends GameFont {
         }
     }
 
-    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, FontMask param5, int param6, int param7) {
         LegacyOpenGlFontMask var9;
         LegacyOpenGlSpriteTexture var10;
         float var11;

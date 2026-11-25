@@ -521,13 +521,13 @@ class UiWidget extends IntrusiveNode {
                 if (RangeOperator.field_p == 0 &&
                   TextFieldValidator.field_f != 0) {
                   this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
-                  var8 = ava.field_f;
+                  var8 = ModelTriangleAttachment.field_f;
                   if (var8 != null) {
                     if (!(var8.field_h instanceof DragReleaseListener)) {
-                      ava.field_f = null;
+                      ModelTriangleAttachment.field_f = null;
                     } else {
                       ((DragReleaseListener) (var8.field_h)).onDragReleased(var8, (byte) 59, (DropTargetWidget) null);
-                      ava.field_f = null;
+                      ModelTriangleAttachment.field_f = null;
                     }
                   }
                   if (var7 != 0 &&
@@ -554,12 +554,12 @@ class UiWidget extends IntrusiveNode {
           if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
-            var9 = ava.field_f;
+            var9 = ModelTriangleAttachment.field_f;
             if (var9 != null) {
               if (var9.field_h instanceof DragReleaseListener) {
                 ((DragReleaseListener) (var9.field_h)).onDragReleased(var9, (byte) 59, (DropTargetWidget) null);
               }
-              ava.field_f = null;
+              ModelTriangleAttachment.field_f = null;
             }
             if (var7 != 0 &&
               var5 != 0 &&
@@ -587,13 +587,13 @@ class UiWidget extends IntrusiveNode {
               if (RangeOperator.field_p == 0 &&
                 TextFieldValidator.field_f != 0) {
                 this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
-                var10 = ava.field_f;
+                var10 = ModelTriangleAttachment.field_f;
                 if (var10 != null) {
                   if (!(var10.field_h instanceof DragReleaseListener)) {
-                    ava.field_f = null;
+                    ModelTriangleAttachment.field_f = null;
                   } else {
                     ((DragReleaseListener) (var10.field_h)).onDragReleased(var10, (byte) 59, (DropTargetWidget) null);
-                    ava.field_f = null;
+                    ModelTriangleAttachment.field_f = null;
                   }
                 }
                 if (var7 != 0 &&
@@ -614,12 +614,12 @@ class UiWidget extends IntrusiveNode {
           if (RangeOperator.field_p == 0 &&
             TextFieldValidator.field_f != 0) {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
-            var11 = ava.field_f;
+            var11 = ModelTriangleAttachment.field_f;
             if (var11 != null) {
               if (var11.field_h instanceof DragReleaseListener) {
                 ((DragReleaseListener) (var11.field_h)).onDragReleased(var11, (byte) 59, (DropTargetWidget) null);
               }
-              ava.field_f = null;
+              ModelTriangleAttachment.field_f = null;
             }
             if (var7 != 0 &&
               var5 != 0 &&
@@ -671,12 +671,12 @@ class UiWidget extends IntrusiveNode {
           return param1;
         }
         this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
-        var13 = ava.field_f;
+        var13 = ModelTriangleAttachment.field_f;
         if (var13 != null) {
           if (var13.field_h instanceof DragReleaseListener) {
             ((DragReleaseListener) (var13.field_h)).onDragReleased(var13, (byte) 59, (DropTargetWidget) null);
           }
-          ava.field_f = null;
+          ModelTriangleAttachment.field_f = null;
         }
         if (var7 != 0 &&
           var5 != 0 &&
