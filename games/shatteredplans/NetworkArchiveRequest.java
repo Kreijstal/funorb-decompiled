@@ -12,7 +12,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static int field_y;
     static BitmapFont field_C;
 
-    final int e(int param0) {
+    final int getProgress(int param0) {
         if (null == this.field_D) {
           return 0;
         }
@@ -22,7 +22,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         return 19;
     }
 
-    final byte[] e(byte param0) {
+    final byte[] getData(byte param0) {
         if (this.field_u) {
           throw new RuntimeException();
         }
@@ -32,11 +32,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         if (param0 > 48) {
           return this.field_D.payload;
         }
-        this.e(92);
+        this.getProgress(92);
         return this.field_D.payload;
     }
 
-    public static void d(boolean param0) {
+    public static void clearNetworkRequestStatics(boolean param0) {
         field_x = null;
         field_B = null;
         if (!param0) {
@@ -45,7 +45,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           return;
         }
         int[] var2 = (int[]) null;
-        NetworkArchiveRequest.a(4L, (String) null, true, (int[]) null, 74);
+        NetworkArchiveRequest.openQuickChatReplyMenu(4L, (String) null, true, (int[]) null, 74);
         field_C = null;
         field_v = null;
     }
@@ -53,7 +53,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     NetworkArchiveRequest() {
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void writeLeaveGameRequest(int param0, int param1, byte param2) {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (param2 == -2) {
@@ -64,7 +64,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var3.writeShort(param1, 255);
           return;
         }
-        NetworkArchiveRequest.d(false);
+        NetworkArchiveRequest.clearNetworkRequestStatics(false);
         var3Lifetime1 = LobbyOptionSupport.field_f;
         var3Lifetime1.h(param0, 255);
         var3Lifetime1.writeByte(3, (byte) -71);
@@ -72,7 +72,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         var3Lifetime1.writeShort(param1, 255);
     }
 
-    final static boolean a(long param0, String param1, boolean param2, int[] param3, int param4) {
+    final static boolean openQuickChatReplyMenu(long param0, String param1, boolean param2, int[] param3, int param4) {
         QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         String stackIn_11_0 = null;

@@ -15,11 +15,11 @@ final class MapGenerationException extends Exception {
           return;
         }
         if (UiSpriteSupport.field_b >= 224) {
-          DiskArchiveRequest.c(-78, 256);
+          DiskArchiveRequest.setMusicVolume(-78, 256);
           return;
         }
         int var1 = UiSpriteSupport.field_b % 32;
-        DiskArchiveRequest.c(124, UiSpriteSupport.field_b + (32 - var1));
+        DiskArchiveRequest.setMusicVolume(124, UiSpriteSupport.field_b + (32 - var1));
     }
 
     static {

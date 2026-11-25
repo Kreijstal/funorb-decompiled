@@ -245,7 +245,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var3 != 0) {
           return false;
         }
-        return NetworkArchiveRequest.a(IndexedSpriteState.field_e, ConquestVictoryChecker.field_o, false, LobbyRoomInteractionSupport.field_f, GameClientShell.field_D);
+        return NetworkArchiveRequest.openQuickChatReplyMenu(IndexedSpriteState.field_e, ConquestVictoryChecker.field_o, false, LobbyRoomInteractionSupport.field_f, GameClientShell.field_D);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {

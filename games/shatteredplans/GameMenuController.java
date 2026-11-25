@@ -1822,10 +1822,10 @@ final class GameMenuController {
           else {
             if (var6 == 22) {
               if (this.field_d.isHomePressed(-1)) {
-                DiskArchiveRequest.c(-68, 0);
+                DiskArchiveRequest.setMusicVolume(-68, 0);
               }
               if (this.field_d.isEndPressed(true)) {
-                DiskArchiveRequest.c(-61, 256);
+                DiskArchiveRequest.setMusicVolume(-61, 256);
               }
               if (this.field_d.isPointerHeld((byte) -73)) {
                 stackIn_92_0 = -120;
@@ -1835,12 +1835,12 @@ final class GameMenuController {
                 var7Lifetime1 = TertiaryListSequence.field_k - var6;
                 var8Lifetime1 = 256 * var7Lifetime1 / 120;
                 if (var8Lifetime1 <= 0) {
-                  DiskArchiveRequest.c(127, 0);
+                  DiskArchiveRequest.setMusicVolume(127, 0);
                 } else {
                   if (256 > var8Lifetime1) {
-                    DiskArchiveRequest.c(-66, var8Lifetime1);
+                    DiskArchiveRequest.setMusicVolume(-66, var8Lifetime1);
                   } else {
-                    DiskArchiveRequest.c(127, 256);
+                    DiskArchiveRequest.setMusicVolume(127, 256);
                   }
                 }
               }

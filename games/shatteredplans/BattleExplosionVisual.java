@@ -83,7 +83,7 @@ final class BattleExplosionVisual extends StarSoundState {
     final static void updateLobbyUi(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         DualLinkDequeSequence.field_k = null;
         AiTask.a(-15887);
-        param13 = DiskArchiveRequest.a(true, param7, param5, param13, param8, param10, param9);
+        param13 = DiskArchiveRequest.pollLobbyOverlays(true, param7, param5, param13, param8, param10, param9);
         LobbyRoomEntry.updateLobbyInterface(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
         IntrusiveDeque.a(param12, param11, -1043);
         PasswordValidator.a(-115, param7, param12, param13);

@@ -187,7 +187,7 @@ final class ArchiveSourceManager {
         if (this.field_c.field_u) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_c.e((byte) 91));
+        var10 = new PacketBuffer(this.field_c.getData((byte) 91));
         var10.position = 5;
         var3 = var10.readUnsignedByte(-120);
         var10.position = var10.position + 72 * var3;

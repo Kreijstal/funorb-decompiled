@@ -460,7 +460,7 @@ final class LobbyRoomInteractionSupport {
           }
           if (MenuInputState.field_a != null) {
             if (0 != DialPainter.field_g.field_rb) {
-              NetworkArchiveRequest.a(param2, MenuInputState.field_a.getRoomId(-92), (byte) -2);
+              NetworkArchiveRequest.writeLeaveGameRequest(param2, MenuInputState.field_a.getRoomId(-92), (byte) -2);
             }
             if (0 != IntValueWriteRequest.field_j.field_rb) {
               DefendTask.field_u = true;

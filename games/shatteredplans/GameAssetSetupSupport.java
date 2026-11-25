@@ -280,7 +280,7 @@ final class GameAssetSetupSupport {
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
           IntHashIndex.field_b = SpriteResourceSupport.loadSpriteByName(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
-          ArchiveRequest.a(14, SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param2, "basic", var13));
+          ArchiveRequest.prepareAchievementPlaceholderSprites(14, SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param2, "basic", var13));
           CellVertex.field_j = HighscoreResponseSupport.loadSpriteSetByName(param6 + 70, "", param0, "achievements");
           var14 = CellVertex.field_j.length;
           TextHotspotRegion.field_o = new Sprite[var14];

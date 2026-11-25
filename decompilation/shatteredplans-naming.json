@@ -5068,12 +5068,36 @@
       "renamedSymbol": "M:ClientContextMenuSupport.openLobbyPlayerContextMenu(ZBLLobbyRoomEntry;Ljava/lang/String;)V"
     },
     {
+      "symbol": "M:ak.a(IILwa;)V",
+      "originalName": "a",
+      "to": "splitCoverageSpan",
+      "evidence": "Require split offset>supplied lower guard and<retained span length;acquire adjusted trailing span,shorten original then insert trailing span in existing sorted linked chain. Complete span factory and110line span-merger caller read. Preserve max-int length sentinel,slope/coverage arithmetic,guard-derived factory null result,allocation/pool aliases,ordering and partial shortening before failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V"
+    },
+    {
       "symbol": "M:ak.a(ILjava/lang/CharSequence;C)I",
       "originalName": "a",
       "to": "countChar",
       "evidence": "Counts how often a character occurs in the sequence.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DiskArchiveRequest.countChar(ILjava/lang/CharSequence;C)I"
+    },
+    {
+      "symbol": "M:ak.a(Lbc;BZLbc;)V",
+      "originalName": "a",
+      "to": "initializeLobbyChat",
+      "evidence": "After original byte division,initialize shared chat widgets,load lobby chatfilter sprite set,store three captions and initialize Quick Chat resources. Lobby setup caller and complete Quick Chat setup helper read. Preserve unused/forwarded arguments,caption order,archive mutations,all guards and runtime diagnostic literal. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V"
+    },
+    {
+      "symbol": "M:ak.a(ZIIZIII)Z",
+      "originalName": "a",
+      "to": "pollLobbyOverlays",
+      "evidence": "When overlay predicate true,poll Quick Chat/help,input context menu and dismiss on selection,then social-name dialog and player-report panel;return original possibly-consumed pointer flag. Complete overlay predicate/Quick Chat adapter/social-name helper read. Preserve condition and call order,unused arguments,flag consumption only within overlay branch and false-guard static mutation. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z"
     },
     {
       "symbol": "M:ak.a([II[Ljava/lang/Object;)V",
@@ -5084,12 +5108,52 @@
       "renamedSymbol": "M:DiskArchiveRequest.sortParallel([II[Ljava/lang/Object;)V"
     },
     {
+      "symbol": "M:ak.c(II)V",
+      "originalName": "c",
+      "to": "setMusicVolume",
+      "evidence": "Store supplied volume,forward to nonnull MIDI stream and crossfade stream,then evaluate original discarded division. Volume keys/slider callers and complete crossfade setter read. Preserve unrestricted volume domain,per-branch write/lock/call order,nullable stream behavior and arithmetic failure after writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.setMusicVolume(II)V"
+    },
+    {
+      "symbol": "M:ak.e(B)[B",
+      "originalName": "e",
+      "to": "getData",
+      "evidence": "Disk request data contract:byte<=48first changes operation code to-105;pending requests throw,otherwise return retained payload by identity. Preserve volatile read order,possible null result,guard mutation and shared abstract override name. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.getData(B)[B"
+    },
+    {
+      "symbol": "M:ak.e(I)I",
+      "originalName": "e",
+      "to": "getProgress",
+      "evidence": "Disk request progress:pending returns0;complete returns100and nonzero int also clears retained payload before return. Preserve guard side effect,completion read and complete int domain;match abstract/network override family. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.getProgress(I)I"
+    },
+    {
+      "symbol": "M:ak.f(B)V",
+      "originalName": "f",
+      "to": "tickIntroColonizationScene",
+      "evidence": "At frame0enqueue colonization story text with retained font;increment frame and request intro scene4exactly at750. Actual GameRules colonization text and intro dispatcher read. Wrong byte first invokes null countChar callback. Preserve both branch copies,guard/failure timing,increment overflow and exact equality transition. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.tickIntroColonizationScene(B)V"
+    },
+    {
       "symbol": "M:ak.h(I)V",
       "originalName": "h",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DiskArchiveRequest.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ak.i(I)V",
+      "originalName": "i",
+      "to": "tickLobbyPanelTransitions",
+      "evidence": "Decrement only first positive counter among three lobby panel transition counters,then update layouts for each counter still positive. Complete DelegatingCanvas caller and source field/call layouts inspected. Preserve exclusive decrement priority,late wrong-int sprite clear and conditional layout ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.tickLobbyPanelTransitions(I)V"
     },
     {
       "symbol": "M:al.a()I",
@@ -12146,6 +12210,62 @@
       "evidence": "Invoke first shared overlay stage, optional wrong-byte cleanup, then interface overlays with first bool true. Preserve both branches, argument forwarding and call/failure order. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ClientOverlayDrawSupport.drawSharedClientOverlays(ZB)V"
+    },
+    {
+      "symbol": "M:jc.a(IB)V",
+      "originalName": "a",
+      "to": "requestIntroScene",
+      "evidence": "Store requested intro scene ID and pending-change flag after original byte modulo;scene1also queues retained music track. Intro dispatch and scene tick callers plus complete music queue helper read. Preserve deferred transition semantics,unrestricted ID,partial writes and music/guard behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.requestIntroScene(IB)V"
+    },
+    {
+      "symbol": "M:jc.a(ILbc;)V",
+      "originalName": "a",
+      "to": "decodeLogoAudio",
+      "evidence": "Read Vorbis setup from headers.packvorbis,load jagex logo2.packvorbis and decodeAll,then evaluate original discarded int division. Preserve exact asset literals,discarded decoded result,decoder side effects,guard timing and RuntimeException wrapper. Naming only;no performance/default/audio changes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.decodeLogoAudio(ILArchive;)V"
+    },
+    {
+      "symbol": "M:jc.a(ILbi;)V",
+      "originalName": "a",
+      "to": "prepareAchievementPlaceholderSprites",
+      "evidence": "Push legacy raster state,create128base,256blurred copy,32quarter copy,and256/64halo placeholders from supplied locked/unachieved sprite. Both achievement asset callers and complete raster push/pop helpers read. Preserve allocations,global identities,blur order,early int<=12return without pop and exception paths without finally restoration. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.prepareAchievementPlaceholderSprites(ILSprite;)V"
+    },
+    {
+      "symbol": "M:jc.a(Ljava/applet/Applet;Z)Lbg;",
+      "originalName": "a",
+      "to": "readLastLoginMethod",
+      "evidence": "Read jagex-last-login-method cookie via complete browser-cookie helper,match three known LoginMethodPreference values,or return default. Unknown cookie plus false bool recursively invokes null applet helper;preserve all recursion/early matches,fallbacks,allocation/cookie bridge and diagnostic catches. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;"
+    },
+    {
+      "symbol": "M:jc.e(B)[B",
+      "originalName": "e",
+      "to": "getData",
+      "evidence": "Abstract archive request data retrieval contract with disk/network overrides. Both complete implementations and provider/index/group callers read. Preserve byte descriptor and guard side effects,volatile completion checks,payload aliases and throwing behavior;all three family declarations receive same name. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.getData(B)[B"
+    },
+    {
+      "symbol": "M:jc.e(I)I",
+      "originalName": "e",
+      "to": "getProgress",
+      "evidence": "Abstract archive request progress contract implemented by disk/network requests. Preserve int descriptor,shared family name,complete-domain guard behavior and concrete payload-clear/constant-return side effects. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.getProgress(I)I"
+    },
+    {
+      "symbol": "M:jc.f(I)Z",
+      "originalName": "f",
+      "to": "shouldServiceLobbyConnection",
+      "evidence": "Gate lobby service/reconnection on client state>=10,absence of login-back flag and false retained special-account-notice predicate. Complete notice predicate and serviceConnection caller read. Preserve short-circuit field reads,wrong-int caption clear and boolean formula;does not claim socket already connected. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveRequest.shouldServiceLobbyConnection(I)Z"
     },
     {
       "symbol": "M:jc.g(I)V",
@@ -19380,6 +19500,22 @@
       "renamedSymbol": "M:DiskCacheWorker.shutdown(B)V"
     },
     {
+      "symbol": "M:rn.a(I)V",
+      "originalName": "a",
+      "to": "commitMenuTransition",
+      "evidence": "When current and target menu IDs differ,release old highscore request,copy transition state,select target,intro/music/logout special paths and dispose retained game/session widgets and social state. Complete197line client transition consumer read. Preserve all early returns,mode IDs,packet opcode9,clock-free field writes,guard-derived music recursion and late guard-limited social cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.commitMenuTransition(I)V"
+    },
+    {
+      "symbol": "M:rn.a(ILbc;ZLbc;Lbc;)V",
+      "originalName": "a",
+      "to": "initializeLoginUi",
+      "evidence": "Create empty account-result request and set false result,load common login UI assets,reset login UI through original AudioService helper and initialize two retained selection constants. Complete common-assets helper and GameClientShell setup caller read. Preserve ignored bool,archive order,wrong-int intro sprite callback,all allocation/partial state and diagnostic wrapping. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V"
+    },
+    {
       "symbol": "M:rn.a(ILua;I)Lak;",
       "originalName": "a",
       "to": "read",
@@ -19404,12 +19540,36 @@
       "renamedSymbol": "M:DiskCacheWorker.enqueue(LDiskArchiveRequest;I)V"
     },
     {
+      "symbol": "M:rn.a(Lua;II)Lak;",
+      "originalName": "a",
+      "to": "queueRead",
+      "evidence": "For int13514allocate nonpriority disk request with operation3,store cache/key and enqueue under original monitor;otherwise return null. Complete queue/run helpers prove operation3reads sector data. Preserve key widening,allocation/queue order,notify/count/lock behavior and runtime wrapper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:rn.a(Lvk;IILbc;)V",
+      "originalName": "a",
+      "to": "loadIntroResources",
+      "evidence": "Compute intro lead-in frames using original integer duration*target-rate/1000,decode logo audio,load additional intro resources through original helpers and set timeline negative offset. GameClientShell caller read. Preserve unused mixer,all guard-derived arguments,overflow/division,traversal,call/exception order and asset/default behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V"
+    },
+    {
       "symbol": "M:rn.a(Z)V",
       "originalName": "a",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DiskCacheWorker.clearStatics(Z)V"
+    },
+    {
+      "symbol": "M:rn.b(B)V",
+      "originalName": "b",
+      "to": "loadIntroSprites",
+      "evidence": "Load three intro scene sprite sets,process saturation and globe textures,build atmosphere/halo/blurred city layers and reversed/tinted Earth sprites,then restore legacy raster and mark ready. Complete101line body read. Preserve asset load including discarded intro2_glow,all FP/log/cast/bit arithmetic,pixel loops,dimensions/offset aliases and byte50gate/exception paths that leave raster state unrestored. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.loadIntroSprites(B)V"
     },
     {
       "symbol": "M:ro.a(B)V",
@@ -20898,6 +21058,46 @@
       "evidence": "When source array exists,evaluate original int modulo,first poll explicit group-prefetch queues for every nonnull source,then poll every source background scanner in second pass. Preserve two-pass order,null slots,modulo failure and pending state visibility. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArchiveSourceManager.pollArchiveSources(I)V"
+    },
+    {
+      "symbol": "M:tk.a(IIB)V",
+      "originalName": "a",
+      "to": "writeLeaveGameRequest",
+      "evidence": "Write caller-selected ISAAC opcode,length3,action-kind9and room ID as short. Used for Return to lobby,decline invitation and withdraw join request. Context action labels and main transition source read. Preserve byte guard invoking static clear before packet,write order,truncation/cursor/partial exceptions and exact packet values. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V"
+    },
+    {
+      "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
+      "originalName": "a",
+      "to": "openQuickChatReplyMenu",
+      "evidence": "Check sender/category/channel eligibility,return false for true bool,normalize channel1to0,store reply sender name/normalized name/ID,build category menu and install it. Complete eligibility/menu builder/installer and channel consumer read. Handles public/private channels;preserve eligibility before bool return,null menu still returning true,normalization and partial-global-write/exception order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z"
+    },
+    {
+      "symbol": "M:tk.d(Z)V",
+      "originalName": "d",
+      "to": "clearNetworkRequestStatics",
+      "evidence": "Clear four static sprite/text/font/array resources with original order;true bool first calls null Quick Chat reply callback after first two clears. Preserve callback/exception/partial clear behavior and leave every other static field untouched. Distinct name avoids inherited static cleanup conflicts. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.clearNetworkRequestStatics(Z)V"
+    },
+    {
+      "symbol": "M:tk.e(B)[B",
+      "originalName": "e",
+      "to": "getData",
+      "evidence": "Network request data:throw while pending or before buffer cursor reaches payload length minus padding;otherwise return whole retained payload. Byte<=48first calls progress with92after checks. Preserve field dereference order,full buffer alias including padding and guard/exception behavior;match abstract/disk family. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.getData(B)[B"
+    },
+    {
+      "symbol": "M:tk.e(I)I",
+      "originalName": "e",
+      "to": "getProgress",
+      "evidence": "If no response buffer return0;int0returns original100*position/(length-padding),other ints return19. Preserve overflow,division by zero,arbitrary progress values,partial response cursor and guard ordering;match abstract/disk family. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.getProgress(I)I"
     },
     {
       "symbol": "M:tl.a(IIIIZIII)V",
@@ -77717,7 +77917,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#0",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#0",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -77728,7 +77928,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#1",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#1",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#1",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -77739,7 +77939,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#10",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#10",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -77750,7 +77950,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#11",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#11",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -77761,7 +77961,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#12",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#12",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -77772,7 +77972,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#2",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#2",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#2",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -77783,7 +77983,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#3",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#3",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#3",
       "originalName": "stackIn_7_3",
       "renamedName": "stackIn_7_3",
       "declaration": {
@@ -77794,7 +77994,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#4",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#4",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#4",
       "originalName": "stackIn_8_4",
       "renamedName": "stackIn_8_4",
       "declaration": {
@@ -77805,7 +78005,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#5",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#5",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#5",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -77816,7 +78016,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#6",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#6",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#6",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -77827,7 +78027,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#7",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#7",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#7",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -77838,7 +78038,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#8",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#8",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -77849,7 +78049,7 @@
     },
     {
       "symbol": "L:ak.a(IILwa;)V#9",
-      "renamedSymbol": "L:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#9",
+      "renamedSymbol": "L:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -77992,7 +78192,7 @@
     },
     {
       "symbol": "L:ak.a(Lbc;BZLbc;)V#0",
-      "renamedSymbol": "L:DiskArchiveRequest.a(LArchive;BZLArchive;)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -78003,7 +78203,7 @@
     },
     {
       "symbol": "L:ak.a(Lbc;BZLbc;)V#1",
-      "renamedSymbol": "L:DiskArchiveRequest.a(LArchive;BZLArchive;)V#1",
+      "renamedSymbol": "L:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -78036,7 +78236,7 @@
     },
     {
       "symbol": "L:ak.c(II)V#0",
-      "renamedSymbol": "L:DiskArchiveRequest.c(II)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.setMusicVolume(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -78047,7 +78247,7 @@
     },
     {
       "symbol": "L:ak.c(II)V#1",
-      "renamedSymbol": "L:DiskArchiveRequest.c(II)V#1",
+      "renamedSymbol": "L:DiskArchiveRequest.setMusicVolume(II)V#1",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -78058,7 +78258,7 @@
     },
     {
       "symbol": "L:ak.f(B)V#0",
-      "renamedSymbol": "L:DiskArchiveRequest.f(B)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.tickIntroColonizationScene(B)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -78069,7 +78269,7 @@
     },
     {
       "symbol": "L:ak.f(B)V#1",
-      "renamedSymbol": "L:DiskArchiveRequest.f(B)V#1",
+      "renamedSymbol": "L:DiskArchiveRequest.tickIntroColonizationScene(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -78080,7 +78280,7 @@
     },
     {
       "symbol": "L:ak.f(B)V#2",
-      "renamedSymbol": "L:DiskArchiveRequest.f(B)V#2",
+      "renamedSymbol": "L:DiskArchiveRequest.tickIntroColonizationScene(B)V#2",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -78102,7 +78302,7 @@
     },
     {
       "symbol": "L:ak.i(I)V#0",
-      "renamedSymbol": "L:DiskArchiveRequest.i(I)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.tickLobbyPanelTransitions(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -173615,7 +173815,7 @@
     },
     {
       "symbol": "L:jc.a(IB)V#0",
-      "renamedSymbol": "L:ArchiveRequest.a(IB)V#0",
+      "renamedSymbol": "L:ArchiveRequest.requestIntroScene(IB)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -173626,7 +173826,7 @@
     },
     {
       "symbol": "L:jc.a(ILbc;)V#0",
-      "renamedSymbol": "L:ArchiveRequest.a(ILArchive;)V#0",
+      "renamedSymbol": "L:ArchiveRequest.decodeLogoAudio(ILArchive;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -173637,7 +173837,7 @@
     },
     {
       "symbol": "L:jc.a(ILbc;)V#1",
-      "renamedSymbol": "L:ArchiveRequest.a(ILArchive;)V#1",
+      "renamedSymbol": "L:ArchiveRequest.decodeLogoAudio(ILArchive;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -173648,7 +173848,7 @@
     },
     {
       "symbol": "L:jc.a(ILbc;)V#2",
-      "renamedSymbol": "L:ArchiveRequest.a(ILArchive;)V#2",
+      "renamedSymbol": "L:ArchiveRequest.decodeLogoAudio(ILArchive;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -173659,7 +173859,7 @@
     },
     {
       "symbol": "L:jc.a(ILbi;)V#0",
-      "renamedSymbol": "L:ArchiveRequest.a(ILSprite;)V#0",
+      "renamedSymbol": "L:ArchiveRequest.prepareAchievementPlaceholderSprites(ILSprite;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -173670,7 +173870,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#0",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#0",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -173681,7 +173881,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#1",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#1",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -173692,7 +173892,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#10",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#10",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#10",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -173703,7 +173903,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#11",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#11",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#11",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -173714,7 +173914,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#12",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#12",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#12",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -173725,7 +173925,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#13",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#13",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -173736,7 +173936,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#14",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#14",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -173747,7 +173947,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#2",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#2",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#2",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -173758,7 +173958,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#3",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#3",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -173769,7 +173969,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#4",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#4",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -173780,7 +173980,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#5",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#5",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -173791,7 +173991,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#6",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#6",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -173802,7 +174002,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#7",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#7",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#7",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -173813,7 +174013,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#8",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#8",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#8",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -173824,7 +174024,7 @@
     },
     {
       "symbol": "L:jc.a(Ljava/applet/Applet;Z)Lbg;#9",
-      "renamedSymbol": "L:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#9",
+      "renamedSymbol": "L:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#9",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -265256,7 +265456,7 @@
     },
     {
       "symbol": "L:rn.a(ILbc;ZLbc;Lbc;)V#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -265608,7 +265808,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#0",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -265619,7 +265819,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#1",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#1",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -265630,7 +265830,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#2",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#2",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -265641,7 +265841,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#3",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#3",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -265652,7 +265852,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#4",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#4",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -265663,7 +265863,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#5",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#5",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#5",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -265674,7 +265874,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#6",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#6",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#6",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -265685,7 +265885,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#7",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#7",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -265696,7 +265896,7 @@
     },
     {
       "symbol": "L:rn.a(Lua;II)Lak;#8",
-      "renamedSymbol": "L:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#8",
+      "renamedSymbol": "L:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -265707,7 +265907,7 @@
     },
     {
       "symbol": "L:rn.a(Lvk;IILbc;)V#0",
-      "renamedSymbol": "L:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -265718,7 +265918,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#0",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -265729,7 +265929,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#1",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -265740,7 +265940,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#2",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#2",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -265751,7 +265951,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#3",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#3",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -265762,7 +265962,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#4",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#4",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#4",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -265773,7 +265973,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#5",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#5",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -265784,7 +265984,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#6",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#6",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -265795,7 +265995,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#7",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#7",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -265806,7 +266006,7 @@
     },
     {
       "symbol": "L:rn.b(B)V#8",
-      "renamedSymbol": "L:DiskCacheWorker.b(B)V#8",
+      "renamedSymbol": "L:DiskCacheWorker.loadIntroSprites(B)V#8",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -287751,7 +287951,7 @@
     },
     {
       "symbol": "L:tk.a(IIB)V#0",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIB)V#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -287762,7 +287962,7 @@
     },
     {
       "symbol": "L:tk.a(IIB)V#1",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(IIB)V#1",
+      "renamedSymbol": "L:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V#1",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -287773,7 +287973,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#0",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -287784,7 +287984,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#1",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#1",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#1",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -287795,7 +287995,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#10",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#10",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -287806,7 +288006,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#2",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#2",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#2",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -287817,7 +288017,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#3",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#3",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#3",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -287828,7 +288028,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#4",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#4",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#4",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -287839,7 +288039,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#5",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#5",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#5",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -287850,7 +288050,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#6",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#6",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#6",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -287861,7 +288061,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#7",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#7",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#7",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -287872,7 +288072,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#8",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#8",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#8",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -287883,7 +288083,7 @@
     },
     {
       "symbol": "L:tk.a(JLjava/lang/String;Z[II)Z#9",
-      "renamedSymbol": "L:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#9",
+      "renamedSymbol": "L:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -287894,7 +288094,7 @@
     },
     {
       "symbol": "L:tk.d(Z)V#0",
-      "renamedSymbol": "L:NetworkArchiveRequest.d(Z)V#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.clearNetworkRequestStatics(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -320586,9 +320786,9 @@
     },
     {
       "symbol": "M:ak.a(IILwa;)V",
-      "renamedSymbol": "M:DiskArchiveRequest.a(IILRasterCoverageSpan;)V",
+      "renamedSymbol": "M:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "splitCoverageSpan",
       "declaration": {
         "file": "ak.java",
         "start": 405,
@@ -320608,9 +320808,9 @@
     },
     {
       "symbol": "M:ak.a(Lbc;BZLbc;)V",
-      "renamedSymbol": "M:DiskArchiveRequest.a(LArchive;BZLArchive;)V",
+      "renamedSymbol": "M:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeLobbyChat",
       "declaration": {
         "file": "ak.java",
         "start": 2692,
@@ -320619,9 +320819,9 @@
     },
     {
       "symbol": "M:ak.a(ZIIZIII)Z",
-      "renamedSymbol": "M:DiskArchiveRequest.a(ZIIZIII)Z",
+      "renamedSymbol": "M:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollLobbyOverlays",
       "declaration": {
         "file": "ak.java",
         "start": 4471,
@@ -320641,9 +320841,9 @@
     },
     {
       "symbol": "M:ak.c(II)V",
-      "renamedSymbol": "M:DiskArchiveRequest.c(II)V",
+      "renamedSymbol": "M:DiskArchiveRequest.setMusicVolume(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "setMusicVolume",
       "declaration": {
         "file": "ak.java",
         "start": 5046,
@@ -320652,9 +320852,9 @@
     },
     {
       "symbol": "M:ak.e(B)[B",
-      "renamedSymbol": "M:DiskArchiveRequest.e(B)[B",
+      "renamedSymbol": "M:DiskArchiveRequest.getData(B)[B",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getData",
       "declaration": {
         "file": "ak.java",
         "start": 7678,
@@ -320663,9 +320863,9 @@
     },
     {
       "symbol": "M:ak.e(I)I",
-      "renamedSymbol": "M:DiskArchiveRequest.e(I)I",
+      "renamedSymbol": "M:DiskArchiveRequest.getProgress(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getProgress",
       "declaration": {
         "file": "ak.java",
         "start": 4246,
@@ -320674,9 +320874,9 @@
     },
     {
       "symbol": "M:ak.f(B)V",
-      "renamedSymbol": "M:DiskArchiveRequest.f(B)V",
+      "renamedSymbol": "M:DiskArchiveRequest.tickIntroColonizationScene(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "tickIntroColonizationScene",
       "declaration": {
         "file": "ak.java",
         "start": 3470,
@@ -320696,9 +320896,9 @@
     },
     {
       "symbol": "M:ak.i(I)V",
-      "renamedSymbol": "M:DiskArchiveRequest.i(I)V",
+      "renamedSymbol": "M:DiskArchiveRequest.tickLobbyPanelTransitions(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "tickLobbyPanelTransitions",
       "declaration": {
         "file": "ak.java",
         "start": 5533,
@@ -335502,9 +335702,9 @@
     },
     {
       "symbol": "M:jc.a(IB)V",
-      "renamedSymbol": "M:ArchiveRequest.a(IB)V",
+      "renamedSymbol": "M:ArchiveRequest.requestIntroScene(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestIntroScene",
       "declaration": {
         "file": "jc.java",
         "start": 263,
@@ -335513,9 +335713,9 @@
     },
     {
       "symbol": "M:jc.a(ILbc;)V",
-      "renamedSymbol": "M:ArchiveRequest.a(ILArchive;)V",
+      "renamedSymbol": "M:ArchiveRequest.decodeLogoAudio(ILArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeLogoAudio",
       "declaration": {
         "file": "jc.java",
         "start": 2571,
@@ -335524,9 +335724,9 @@
     },
     {
       "symbol": "M:jc.a(ILbi;)V",
-      "renamedSymbol": "M:ArchiveRequest.a(ILSprite;)V",
+      "renamedSymbol": "M:ArchiveRequest.prepareAchievementPlaceholderSprites(ILSprite;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "prepareAchievementPlaceholderSprites",
       "declaration": {
         "file": "jc.java",
         "start": 3534,
@@ -335535,9 +335735,9 @@
     },
     {
       "symbol": "M:jc.a(Ljava/applet/Applet;Z)Lbg;",
-      "renamedSymbol": "M:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;",
+      "renamedSymbol": "M:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readLastLoginMethod",
       "declaration": {
         "file": "jc.java",
         "start": 704,
@@ -335546,9 +335746,9 @@
     },
     {
       "symbol": "M:jc.e(B)[B",
-      "renamedSymbol": "M:ArchiveRequest.e(B)[B",
+      "renamedSymbol": "M:ArchiveRequest.getData(B)[B",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getData",
       "declaration": {
         "file": "jc.java",
         "start": 634,
@@ -335557,9 +335757,9 @@
     },
     {
       "symbol": "M:jc.e(I)I",
-      "renamedSymbol": "M:ArchiveRequest.e(I)I",
+      "renamedSymbol": "M:ArchiveRequest.getProgress(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getProgress",
       "declaration": {
         "file": "jc.java",
         "start": 668,
@@ -335568,9 +335768,9 @@
     },
     {
       "symbol": "M:jc.f(I)Z",
-      "renamedSymbol": "M:ArchiveRequest.f(I)Z",
+      "renamedSymbol": "M:ArchiveRequest.shouldServiceLobbyConnection(I)Z",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "shouldServiceLobbyConnection",
       "declaration": {
         "file": "jc.java",
         "start": 3049,
@@ -350506,9 +350706,9 @@
     },
     {
       "symbol": "M:rn.a(I)V",
-      "renamedSymbol": "M:DiskCacheWorker.a(I)V",
+      "renamedSymbol": "M:DiskCacheWorker.commitMenuTransition(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "commitMenuTransition",
       "declaration": {
         "file": "rn.java",
         "start": 10594,
@@ -350517,9 +350717,9 @@
     },
     {
       "symbol": "M:rn.a(ILbc;ZLbc;Lbc;)V",
-      "renamedSymbol": "M:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V",
+      "renamedSymbol": "M:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeLoginUi",
       "declaration": {
         "file": "rn.java",
         "start": 13758,
@@ -350561,9 +350761,9 @@
     },
     {
       "symbol": "M:rn.a(Lua;II)Lak;",
-      "renamedSymbol": "M:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;",
+      "renamedSymbol": "M:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueRead",
       "declaration": {
         "file": "rn.java",
         "start": 14445,
@@ -350572,9 +350772,9 @@
     },
     {
       "symbol": "M:rn.a(Lvk;IILbc;)V",
-      "renamedSymbol": "M:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V",
+      "renamedSymbol": "M:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadIntroResources",
       "declaration": {
         "file": "rn.java",
         "start": 16453,
@@ -350594,9 +350794,9 @@
     },
     {
       "symbol": "M:rn.b(B)V",
-      "renamedSymbol": "M:DiskCacheWorker.b(B)V",
+      "renamedSymbol": "M:DiskCacheWorker.loadIntroSprites(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "loadIntroSprites",
       "declaration": {
         "file": "rn.java",
         "start": 301,
@@ -353729,9 +353929,9 @@
     },
     {
       "symbol": "M:tk.a(IIB)V",
-      "renamedSymbol": "M:NetworkArchiveRequest.a(IIB)V",
+      "renamedSymbol": "M:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeLeaveGameRequest",
       "declaration": {
         "file": "tk.java",
         "start": 1286,
@@ -353740,9 +353940,9 @@
     },
     {
       "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
-      "renamedSymbol": "M:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z",
+      "renamedSymbol": "M:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openQuickChatReplyMenu",
       "declaration": {
         "file": "tk.java",
         "start": 1837,
@@ -353751,9 +353951,9 @@
     },
     {
       "symbol": "M:tk.d(Z)V",
-      "renamedSymbol": "M:NetworkArchiveRequest.d(Z)V",
+      "renamedSymbol": "M:NetworkArchiveRequest.clearNetworkRequestStatics(Z)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "clearNetworkRequestStatics",
       "declaration": {
         "file": "tk.java",
         "start": 928,
@@ -353762,9 +353962,9 @@
     },
     {
       "symbol": "M:tk.e(B)[B",
-      "renamedSymbol": "M:NetworkArchiveRequest.e(B)[B",
+      "renamedSymbol": "M:NetworkArchiveRequest.getData(B)[B",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getData",
       "declaration": {
         "file": "tk.java",
         "start": 538,
@@ -353773,9 +353973,9 @@
     },
     {
       "symbol": "M:tk.e(I)I",
-      "renamedSymbol": "M:NetworkArchiveRequest.e(I)I",
+      "renamedSymbol": "M:NetworkArchiveRequest.getProgress(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getProgress",
       "declaration": {
         "file": "tk.java",
         "start": 283,
@@ -361165,7 +361365,7 @@
     },
     {
       "symbol": "P:ak.a(IILwa;)V#0",
-      "renamedSymbol": "P:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361176,7 +361376,7 @@
     },
     {
       "symbol": "P:ak.a(IILwa;)V#1",
-      "renamedSymbol": "P:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#1",
+      "renamedSymbol": "P:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361187,7 +361387,7 @@
     },
     {
       "symbol": "P:ak.a(IILwa;)V#2",
-      "renamedSymbol": "P:DiskArchiveRequest.a(IILRasterCoverageSpan;)V#2",
+      "renamedSymbol": "P:DiskArchiveRequest.splitCoverageSpan(IILRasterCoverageSpan;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -361231,7 +361431,7 @@
     },
     {
       "symbol": "P:ak.a(Lbc;BZLbc;)V#0",
-      "renamedSymbol": "P:DiskArchiveRequest.a(LArchive;BZLArchive;)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361242,7 +361442,7 @@
     },
     {
       "symbol": "P:ak.a(Lbc;BZLbc;)V#1",
-      "renamedSymbol": "P:DiskArchiveRequest.a(LArchive;BZLArchive;)V#1",
+      "renamedSymbol": "P:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361253,7 +361453,7 @@
     },
     {
       "symbol": "P:ak.a(Lbc;BZLbc;)V#2",
-      "renamedSymbol": "P:DiskArchiveRequest.a(LArchive;BZLArchive;)V#2",
+      "renamedSymbol": "P:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -361264,7 +361464,7 @@
     },
     {
       "symbol": "P:ak.a(Lbc;BZLbc;)V#3",
-      "renamedSymbol": "P:DiskArchiveRequest.a(LArchive;BZLArchive;)V#3",
+      "renamedSymbol": "P:DiskArchiveRequest.initializeLobbyChat(LArchive;BZLArchive;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -361275,7 +361475,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#0",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#0",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361286,7 +361486,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#1",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#1",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361297,7 +361497,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#2",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#2",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -361308,7 +361508,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#3",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#3",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -361319,7 +361519,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#4",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#4",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -361330,7 +361530,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#5",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#5",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -361341,7 +361541,7 @@
     },
     {
       "symbol": "P:ak.a(ZIIZIII)Z#6",
-      "renamedSymbol": "P:DiskArchiveRequest.a(ZIIZIII)Z#6",
+      "renamedSymbol": "P:DiskArchiveRequest.pollLobbyOverlays(ZIIZIII)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -361385,7 +361585,7 @@
     },
     {
       "symbol": "P:ak.c(II)V#0",
-      "renamedSymbol": "P:DiskArchiveRequest.c(II)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.setMusicVolume(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361396,7 +361596,7 @@
     },
     {
       "symbol": "P:ak.c(II)V#1",
-      "renamedSymbol": "P:DiskArchiveRequest.c(II)V#1",
+      "renamedSymbol": "P:DiskArchiveRequest.setMusicVolume(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -361407,7 +361607,7 @@
     },
     {
       "symbol": "P:ak.e(B)[B#0",
-      "renamedSymbol": "P:DiskArchiveRequest.e(B)[B#0",
+      "renamedSymbol": "P:DiskArchiveRequest.getData(B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361418,7 +361618,7 @@
     },
     {
       "symbol": "P:ak.e(I)I#0",
-      "renamedSymbol": "P:DiskArchiveRequest.e(I)I#0",
+      "renamedSymbol": "P:DiskArchiveRequest.getProgress(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361429,7 +361629,7 @@
     },
     {
       "symbol": "P:ak.f(B)V#0",
-      "renamedSymbol": "P:DiskArchiveRequest.f(B)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.tickIntroColonizationScene(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -361451,7 +361651,7 @@
     },
     {
       "symbol": "P:ak.i(I)V#0",
-      "renamedSymbol": "P:DiskArchiveRequest.i(I)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.tickLobbyPanelTransitions(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400314,7 +400514,7 @@
     },
     {
       "symbol": "P:jc.a(IB)V#0",
-      "renamedSymbol": "P:ArchiveRequest.a(IB)V#0",
+      "renamedSymbol": "P:ArchiveRequest.requestIntroScene(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400325,7 +400525,7 @@
     },
     {
       "symbol": "P:jc.a(IB)V#1",
-      "renamedSymbol": "P:ArchiveRequest.a(IB)V#1",
+      "renamedSymbol": "P:ArchiveRequest.requestIntroScene(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -400336,7 +400536,7 @@
     },
     {
       "symbol": "P:jc.a(ILbc;)V#0",
-      "renamedSymbol": "P:ArchiveRequest.a(ILArchive;)V#0",
+      "renamedSymbol": "P:ArchiveRequest.decodeLogoAudio(ILArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400347,7 +400547,7 @@
     },
     {
       "symbol": "P:jc.a(ILbc;)V#1",
-      "renamedSymbol": "P:ArchiveRequest.a(ILArchive;)V#1",
+      "renamedSymbol": "P:ArchiveRequest.decodeLogoAudio(ILArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -400358,7 +400558,7 @@
     },
     {
       "symbol": "P:jc.a(ILbi;)V#0",
-      "renamedSymbol": "P:ArchiveRequest.a(ILSprite;)V#0",
+      "renamedSymbol": "P:ArchiveRequest.prepareAchievementPlaceholderSprites(ILSprite;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400369,7 +400569,7 @@
     },
     {
       "symbol": "P:jc.a(ILbi;)V#1",
-      "renamedSymbol": "P:ArchiveRequest.a(ILSprite;)V#1",
+      "renamedSymbol": "P:ArchiveRequest.prepareAchievementPlaceholderSprites(ILSprite;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -400380,7 +400580,7 @@
     },
     {
       "symbol": "P:jc.a(Ljava/applet/Applet;Z)Lbg;#0",
-      "renamedSymbol": "P:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#0",
+      "renamedSymbol": "P:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400391,7 +400591,7 @@
     },
     {
       "symbol": "P:jc.a(Ljava/applet/Applet;Z)Lbg;#1",
-      "renamedSymbol": "P:ArchiveRequest.a(Ljava/applet/Applet;Z)LLoginMethodPreference;#1",
+      "renamedSymbol": "P:ArchiveRequest.readLastLoginMethod(Ljava/applet/Applet;Z)LLoginMethodPreference;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -400402,7 +400602,7 @@
     },
     {
       "symbol": "P:jc.e(B)[B#0",
-      "renamedSymbol": "P:ArchiveRequest.e(B)[B#0",
+      "renamedSymbol": "P:ArchiveRequest.getData(B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400413,7 +400613,7 @@
     },
     {
       "symbol": "P:jc.e(I)I#0",
-      "renamedSymbol": "P:ArchiveRequest.e(I)I#0",
+      "renamedSymbol": "P:ArchiveRequest.getProgress(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -400424,7 +400624,7 @@
     },
     {
       "symbol": "P:jc.f(I)Z#0",
-      "renamedSymbol": "P:ArchiveRequest.f(I)Z#0",
+      "renamedSymbol": "P:ArchiveRequest.shouldServiceLobbyConnection(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435668,7 +435868,7 @@
     },
     {
       "symbol": "P:rn.a(I)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(I)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.commitMenuTransition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435679,7 +435879,7 @@
     },
     {
       "symbol": "P:rn.a(ILbc;ZLbc;Lbc;)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435690,7 +435890,7 @@
     },
     {
       "symbol": "P:rn.a(ILbc;ZLbc;Lbc;)V#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#1",
+      "renamedSymbol": "P:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -435701,7 +435901,7 @@
     },
     {
       "symbol": "P:rn.a(ILbc;ZLbc;Lbc;)V#2",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#2",
+      "renamedSymbol": "P:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -435712,7 +435912,7 @@
     },
     {
       "symbol": "P:rn.a(ILbc;ZLbc;Lbc;)V#3",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#3",
+      "renamedSymbol": "P:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -435723,7 +435923,7 @@
     },
     {
       "symbol": "P:rn.a(ILbc;ZLbc;Lbc;)V#4",
-      "renamedSymbol": "P:DiskCacheWorker.a(ILArchive;ZLArchive;LArchive;)V#4",
+      "renamedSymbol": "P:DiskCacheWorker.initializeLoginUi(ILArchive;ZLArchive;LArchive;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -435833,7 +436033,7 @@
     },
     {
       "symbol": "P:rn.a(Lua;II)Lak;#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#0",
+      "renamedSymbol": "P:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435844,7 +436044,7 @@
     },
     {
       "symbol": "P:rn.a(Lua;II)Lak;#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#1",
+      "renamedSymbol": "P:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -435855,7 +436055,7 @@
     },
     {
       "symbol": "P:rn.a(Lua;II)Lak;#2",
-      "renamedSymbol": "P:DiskCacheWorker.a(LSectorCacheStore;II)LDiskArchiveRequest;#2",
+      "renamedSymbol": "P:DiskCacheWorker.queueRead(LSectorCacheStore;II)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -435866,7 +436066,7 @@
     },
     {
       "symbol": "P:rn.a(Lvk;IILbc;)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435877,7 +436077,7 @@
     },
     {
       "symbol": "P:rn.a(Lvk;IILbc;)V#1",
-      "renamedSymbol": "P:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V#1",
+      "renamedSymbol": "P:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -435888,7 +436088,7 @@
     },
     {
       "symbol": "P:rn.a(Lvk;IILbc;)V#2",
-      "renamedSymbol": "P:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V#2",
+      "renamedSymbol": "P:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -435899,7 +436099,7 @@
     },
     {
       "symbol": "P:rn.a(Lvk;IILbc;)V#3",
-      "renamedSymbol": "P:DiskCacheWorker.a(LPcmStreamMixer;IILArchive;)V#3",
+      "renamedSymbol": "P:DiskCacheWorker.loadIntroResources(LPcmStreamMixer;IILArchive;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -435921,7 +436121,7 @@
     },
     {
       "symbol": "P:rn.b(B)V#0",
-      "renamedSymbol": "P:DiskCacheWorker.b(B)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.loadIntroSprites(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444303,7 +444503,7 @@
     },
     {
       "symbol": "P:tk.a(IIB)V#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIB)V#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444314,7 +444514,7 @@
     },
     {
       "symbol": "P:tk.a(IIB)V#1",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIB)V#1",
+      "renamedSymbol": "P:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444325,7 +444525,7 @@
     },
     {
       "symbol": "P:tk.a(IIB)V#2",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(IIB)V#2",
+      "renamedSymbol": "P:NetworkArchiveRequest.writeLeaveGameRequest(IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -444336,7 +444536,7 @@
     },
     {
       "symbol": "P:tk.a(JLjava/lang/String;Z[II)Z#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444347,7 +444547,7 @@
     },
     {
       "symbol": "P:tk.a(JLjava/lang/String;Z[II)Z#1",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#1",
+      "renamedSymbol": "P:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444358,7 +444558,7 @@
     },
     {
       "symbol": "P:tk.a(JLjava/lang/String;Z[II)Z#2",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#2",
+      "renamedSymbol": "P:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -444369,7 +444569,7 @@
     },
     {
       "symbol": "P:tk.a(JLjava/lang/String;Z[II)Z#3",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#3",
+      "renamedSymbol": "P:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -444380,7 +444580,7 @@
     },
     {
       "symbol": "P:tk.a(JLjava/lang/String;Z[II)Z#4",
-      "renamedSymbol": "P:NetworkArchiveRequest.a(JLjava/lang/String;Z[II)Z#4",
+      "renamedSymbol": "P:NetworkArchiveRequest.openQuickChatReplyMenu(JLjava/lang/String;Z[II)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -444391,7 +444591,7 @@
     },
     {
       "symbol": "P:tk.d(Z)V#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.d(Z)V#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.clearNetworkRequestStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444402,7 +444602,7 @@
     },
     {
       "symbol": "P:tk.e(B)[B#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.e(B)[B#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.getData(B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444413,7 +444613,7 @@
     },
     {
       "symbol": "P:tk.e(I)I#0",
-      "renamedSymbol": "P:NetworkArchiveRequest.e(I)I#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.getProgress(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -457232,7 +457432,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "99c603014ca0e107b7b0026058e67d157d153b750e4d4365eb3f736d7fdb7fcf",
+      "outputSha256": "a8d47aca8f597592afb7af303f6e6192a3a5bb4d53f8ad2d133491bca4df67ac",
       "edits": [
         {
           "start": 86,
@@ -458447,6 +458647,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 9460,
+          "end": 9461,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
+        },
+        {
           "start": 9486,
           "end": 9488,
           "symbol": "C:md",
@@ -458494,6 +458701,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 9673,
+          "end": 9674,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 9699,
@@ -458648,6 +458862,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 10127,
+          "end": 10128,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 10155,
@@ -458924,6 +459145,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 12102,
+          "end": 12103,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
+        },
+        {
           "start": 12134,
           "end": 12135,
           "symbol": "C:v",
@@ -459013,6 +459241,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 12549,
+          "end": 12550,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 12580,
@@ -459547,6 +459782,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 16966,
+          "end": 16967,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
+        },
+        {
           "start": 17000,
           "end": 17001,
           "symbol": "M:tl.i(B)I",
@@ -459699,6 +459941,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 17708,
+          "end": 17709,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 17738,
@@ -464825,6 +465074,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 32563,
+          "end": 32564,
+          "symbol": "M:tk.d(Z)V",
+          "original": "d",
+          "renamed": "clearNetworkRequestStatics"
+        },
+        {
           "start": 32581,
           "end": 32583,
           "symbol": "C:ua",
@@ -467387,6 +467643,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 37998,
+          "end": 37999,
+          "symbol": "M:jc.a(ILbi;)V",
+          "original": "a",
+          "renamed": "prepareAchievementPlaceholderSprites"
+        },
+        {
           "start": 38004,
           "end": 38006,
           "symbol": "C:id",
@@ -467595,6 +467858,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 38672,
+          "end": 38673,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 38718,
@@ -467931,6 +468201,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 40589,
+          "end": 40590,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
         },
         {
           "start": 40657,
@@ -468449,6 +468726,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 43495,
+          "end": 43496,
+          "symbol": "M:tk.a(IIB)V",
+          "original": "a",
+          "renamed": "writeLeaveGameRequest"
         },
         {
           "start": 43501,
@@ -473397,7 +473681,7 @@
       "original": "af.java",
       "renamed": "DelegatingCanvas.java",
       "inputSha256": "5a261a8253cd8c4732c8bbecaba845a947f838ba8dddeff9eff966f661cda189",
-      "outputSha256": "e48129b271f23f22d8d11859ff5edfdc1a22868da04f91542fc8ddcd1c0c02f6",
+      "outputSha256": "2e4e2e2a53ad9319b6e41c2f2c387e95bc8d31573adf39b0189d3912c12fd359",
       "edits": [
         {
           "start": 50,
@@ -473463,11 +473747,25 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 1564,
+          "end": 1565,
+          "symbol": "M:ak.i(I)V",
+          "original": "i",
+          "renamed": "tickLobbyPanelTransitions"
+        },
+        {
           "start": 1609,
           "end": 1611,
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 1612,
+          "end": 1613,
+          "symbol": "M:ak.i(I)V",
+          "original": "i",
+          "renamed": "tickLobbyPanelTransitions"
         },
         {
           "start": 1853,
@@ -475915,7 +476213,7 @@
       "original": "ak.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "09c28e7df6409321535742b0c5b649a5cbd10bf228af3331bc1b4c912af18bc5",
-      "outputSha256": "e0b9d808c9fdd88d3bd144a8b996db13743d672b50a32c3575e86a62ae09d2ce",
+      "outputSha256": "a103a0d760fe1275da6754af294c094f0137ad747b69e258f2a5020df73bba50",
       "edits": [
         {
           "start": 50,
@@ -475967,6 +476265,13 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 405,
+          "end": 406,
+          "symbol": "M:ak.a(IILwa;)V",
+          "original": "a",
+          "renamed": "splitCoverageSpan"
+        },
+        {
           "start": 431,
           "end": 433,
           "symbol": "C:wa",
@@ -476014,6 +476319,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2692,
+          "end": 2693,
+          "symbol": "M:ak.a(Lbc;BZLbc;)V",
+          "original": "a",
+          "renamed": "initializeLobbyChat"
         },
         {
           "start": 2694,
@@ -476205,6 +476517,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3470,
+          "end": 3471,
+          "symbol": "M:ak.f(B)V",
+          "original": "f",
+          "renamed": "tickIntroColonizationScene"
+        },
+        {
           "start": 3606,
           "end": 3608,
           "symbol": "C:ak",
@@ -476282,6 +476601,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 3879,
+          "end": 3880,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
+        },
+        {
           "start": 3969,
           "end": 3971,
           "symbol": "C:di",
@@ -476343,6 +476669,27 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 4207,
+          "end": 4208,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
+        },
+        {
+          "start": 4246,
+          "end": 4247,
+          "symbol": "M:ak.e(I)I",
+          "original": "e",
+          "renamed": "getProgress"
+        },
+        {
+          "start": 4471,
+          "end": 4472,
+          "symbol": "M:ak.a(ZIIZIII)Z",
+          "original": "a",
+          "renamed": "pollLobbyOverlays"
         },
         {
           "start": 4579,
@@ -476415,6 +476762,13 @@
           "renamed": "handlePlayerReportPanel"
         },
         {
+          "start": 5046,
+          "end": 5047,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 5131,
           "end": 5133,
           "symbol": "C:wm",
@@ -476469,6 +476823,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 5533,
+          "end": 5534,
+          "symbol": "M:ak.i(I)V",
+          "original": "i",
+          "renamed": "tickLobbyPanelTransitions"
         },
         {
           "start": 5632,
@@ -476630,6 +476991,13 @@
           "symbol": "M:ak.<init>()V",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 7678,
+          "end": 7679,
+          "symbol": "M:ak.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
         },
         {
           "start": 8015,
@@ -499107,7 +499475,7 @@
       "original": "ck.java",
       "renamed": "GameAssetSetupSupport.java",
       "inputSha256": "59719f0315e8d99b2db60702fc77f74ed0b563d31dd2ef793727c26cf2316a34",
-      "outputSha256": "cd4fd392bf0fedde9df1156036acbb5613c1142978e6d1b06576685756903b58",
+      "outputSha256": "0ef422288685436a5d6d8286445115b65768e57a234fe74d26b2f554fb9addae",
       "edits": [
         {
           "start": 50,
@@ -501600,6 +501968,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 12603,
+          "end": 12604,
+          "symbol": "M:jc.a(ILbi;)V",
+          "original": "a",
+          "renamed": "prepareAchievementPlaceholderSprites"
         },
         {
           "start": 12609,
@@ -520697,7 +521072,7 @@
       "original": "ed.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "70753d50fffe89448d786478aa4dd3728b55d4dcdbb4e9ec4456e02a52f82168",
-      "outputSha256": "43faf72a6daee4f3540583542724765224dae3f32741fdc11ff0ace3d4382351",
+      "outputSha256": "9db97a2b924366ddffd2682ff4a994a9aefdf42cbfe49a9473a5f313e37a5731",
       "edits": [
         {
           "start": 50,
@@ -521734,6 +522109,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 8719,
+          "end": 8720,
+          "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
+          "original": "a",
+          "renamed": "openQuickChatReplyMenu"
         },
         {
           "start": 8721,
@@ -547155,7 +547537,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "1374c284a9d0fad038641d9421fe40a1f2aae92cc78e9c153debd2f455feeded",
+      "outputSha256": "45348a7814c53ce010664455024caf7137a2aa23d1e1f19a3a9c95ef11790df8",
       "edits": [
         {
           "start": 50,
@@ -547632,6 +548014,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 5017,
+          "end": 5018,
+          "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
+          "original": "a",
+          "renamed": "openQuickChatReplyMenu"
         },
         {
           "start": 5310,
@@ -548663,6 +549052,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 18613,
+          "end": 18614,
+          "symbol": "M:tk.a(IIB)V",
+          "original": "a",
+          "renamed": "writeLeaveGameRequest"
+        },
+        {
           "start": 18728,
           "end": 18730,
           "symbol": "C:os",
@@ -548759,6 +549155,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 19504,
+          "end": 19505,
+          "symbol": "M:tk.a(IIB)V",
+          "original": "a",
+          "renamed": "writeLeaveGameRequest"
         },
         {
           "start": 19611,
@@ -549586,7 +549989,7 @@
       "original": "fe.java",
       "renamed": "MenuButton.java",
       "inputSha256": "38b55f05036f70827b9faf99d2bb4da1c6281b6ac1f51b6e8a1aa2e27f0aa27e",
-      "outputSha256": "c1e886ed13e3b9e3c8bc11ec2f2d7b9e36008ef50f1a5de25747170ea84219b9",
+      "outputSha256": "c33f7882b9673d711ded471a580130568bef0f0337904d759fc2ccfb6cb4caef",
       "edits": [
         {
           "start": 50,
@@ -549867,6 +550270,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 4061,
+          "end": 4062,
+          "symbol": "M:ak.a(Lbc;BZLbc;)V",
+          "original": "a",
+          "renamed": "initializeLobbyChat"
         },
         {
           "start": 4110,
@@ -562472,7 +562882,7 @@
       "original": "gl.java",
       "renamed": "DisplayModeInfo.java",
       "inputSha256": "3fe0040e1abe723114efa7b34d206110d49d454ea59012d86a6503f2dbde057b",
-      "outputSha256": "e902a860e90384aa6a857fed9c51d170d180c98863918345dea3eee98d29e46c",
+      "outputSha256": "af41d65b3ee49ec7932b52958549de1a258ccf5d54351655427c6fbb785c9f16",
       "edits": [
         {
           "start": 50,
@@ -562683,6 +563093,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 1271,
+          "end": 1272,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 1339,
@@ -591160,7 +591577,7 @@
       "original": "jc.java",
       "renamed": "ArchiveRequest.java",
       "inputSha256": "d9296a9ddeafbd379e2873893951773949205131a47d5e7ecb668e02ba42c09d",
-      "outputSha256": "509d4106059d7c2d6286e136237a7ca86c61ab737bd4f0e6ec7fe4804c735a6c",
+      "outputSha256": "d1cd9e67f30ee3bdb513f62620f940141ce0f24d7ebb0a379089f0769e79520c",
       "edits": [
         {
           "start": 53,
@@ -591175,6 +591592,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 263,
+          "end": 264,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 347,
@@ -591212,11 +591636,32 @@
           "renamed": "clearStatics"
         },
         {
+          "start": 634,
+          "end": 635,
+          "symbol": "M:jc.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
+        },
+        {
+          "start": 668,
+          "end": 669,
+          "symbol": "M:jc.e(I)I",
+          "original": "e",
+          "renamed": "getProgress"
+        },
+        {
           "start": 701,
           "end": 703,
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "LoginMethodPreference"
+        },
+        {
+          "start": 704,
+          "end": 705,
+          "symbol": "M:jc.a(Ljava/applet/Applet;Z)Lbg;",
+          "original": "a",
+          "renamed": "readLastLoginMethod"
         },
         {
           "start": 851,
@@ -591289,6 +591734,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 1825,
+          "end": 1826,
+          "symbol": "M:jc.a(Ljava/applet/Applet;Z)Lbg;",
+          "original": "a",
+          "renamed": "readLastLoginMethod"
+        },
+        {
           "start": 1899,
           "end": 1901,
           "symbol": "C:mj",
@@ -591308,6 +591760,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2571,
+          "end": 2572,
+          "symbol": "M:jc.a(ILbc;)V",
+          "original": "a",
+          "renamed": "decodeLogoAudio"
         },
         {
           "start": 2585,
@@ -591380,6 +591839,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3049,
+          "end": 3050,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
+        },
+        {
           "start": 3143,
           "end": 3145,
           "symbol": "C:gm",
@@ -591420,6 +591886,13 @@
           "symbol": "C:cb",
           "original": "cb",
           "renamed": "DirectByteArrayStorage"
+        },
+        {
+          "start": 3534,
+          "end": 3535,
+          "symbol": "M:jc.a(ILbi;)V",
+          "original": "a",
+          "renamed": "prepareAchievementPlaceholderSprites"
         },
         {
           "start": 3548,
@@ -595406,7 +595879,7 @@
       "original": "jn.java",
       "renamed": "MapGenerationException.java",
       "inputSha256": "018eccb82afe1974ccd9445c236cbaeee9739cbd7f5b558aca7edcb30dd37028",
-      "outputSha256": "98fe01410c2caded2fca5964bd4c7400031ce89fbb16b5fdecc560b9d4f0ea92",
+      "outputSha256": "ee01e39e7b77d3a79f8637e4159b46f6a7d5fa1e8af95d4bd7290dd3628da16e",
       "edits": [
         {
           "start": 50,
@@ -595437,6 +595910,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 358,
+          "end": 359,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 418,
           "end": 420,
           "symbol": "C:wm",
@@ -595449,6 +595929,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 446,
+          "end": 447,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
         },
         {
           "start": 453,
@@ -639482,7 +639969,7 @@
       "original": "ld.java",
       "renamed": "ByteArrayReadRequest.java",
       "inputSha256": "61870eb80da60b2c031adacb7733c28ba3adf623eea509675de299f880b8278e",
-      "outputSha256": "6e76b4cb748a34bfd5a47b2163ff19dd4d3cf512d9e6ed448cc4471396aa0438",
+      "outputSha256": "72828a6eb56a864487be3ee7a5bbd711871161394bdf6e8a43754fa6b604496f",
       "edits": [
         {
           "start": 50,
@@ -639695,6 +640182,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 3651,
+          "end": 3652,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
+        },
+        {
           "start": 3728,
           "end": 3730,
           "symbol": "C:bc",
@@ -639791,6 +640285,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 4015,
+          "end": 4016,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 4144,
@@ -641481,7 +641982,7 @@
       "original": "lh.java",
       "renamed": "VerticalMenuSlider.java",
       "inputSha256": "add7629d0c71fc1ec89dc7e32527ab509fd6de5a2a0ec57ee7827569adba976d",
-      "outputSha256": "45fa1261e6e90ace66052429131b5f0a0e442b2f4b2cd31295f863330c2fd074",
+      "outputSha256": "8757c1171be50422d3f095c44c860c5ea15c6c108ca8ce470b2f22b82a4db855",
       "edits": [
         {
           "start": 50,
@@ -641587,6 +642088,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 2189,
+          "end": 2190,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 2435,
@@ -678173,7 +678681,7 @@
       "original": "p.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "0bd645edaf7535411bdb64f924bff8a02da1b048411cb440b6fef342f236e4ad",
-      "outputSha256": "8686765287cc2e5d268627009f09524f1baf47311b3ed565f1795a694309be7a",
+      "outputSha256": "bc94cee889de9e7c09edc32b381ab9eee22ed0aec227f25fe0f1c6ec7ac8a3ea",
       "edits": [
         {
           "start": 50,
@@ -678885,6 +679393,13 @@
           "renamed": "enqueueRequest"
         },
         {
+          "start": 9144,
+          "end": 9145,
+          "symbol": "M:jc.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
+        },
+        {
           "start": 9299,
           "end": 9301,
           "symbol": "C:ak",
@@ -678990,6 +679505,13 @@
           "renamed": "get"
         },
         {
+          "start": 11309,
+          "end": 11310,
+          "symbol": "M:jc.e(I)I",
+          "original": "e",
+          "renamed": "getProgress"
+        },
+        {
           "start": 11419,
           "end": 11420,
           "symbol": "M:p.b(B)V",
@@ -679030,6 +679552,13 @@
           "symbol": "M:p.a(III)Ljc;",
           "original": "a",
           "renamed": "loadGroupRequest"
+        },
+        {
+          "start": 11793,
+          "end": 11794,
+          "symbol": "M:jc.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
         },
         {
           "start": 11821,
@@ -679102,6 +679631,13 @@
           "renamed": "enqueueRequest"
         },
         {
+          "start": 13637,
+          "end": 13638,
+          "symbol": "M:rn.a(Lua;II)Lak;",
+          "original": "a",
+          "renamed": "queueRead"
+        },
+        {
           "start": 13820,
           "end": 13821,
           "symbol": "M:rn.a(ILua;I)Lak;",
@@ -679149,6 +679685,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 14249,
+          "end": 14250,
+          "symbol": "M:jc.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
         },
         {
           "start": 14336,
@@ -696859,7 +697402,7 @@
       "original": "qs.java",
       "renamed": "SingleChildWidget.java",
       "inputSha256": "aefb6bcd1c26bb310343cd9746435d5646e85083e9bc45ad2d4c959e71a7c6f6",
-      "outputSha256": "c9860f775a083f09eb2765cde789f0a204e3959e1c12b924e090dabb92481d52",
+      "outputSha256": "2e486ec354ff0c1ccc25cce979d7696e8d12ecbfcd677d57ac732eaa9a8b619b",
       "edits": [
         {
           "start": 74,
@@ -697142,6 +697685,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 7081,
+          "end": 7082,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 7140,
           "end": 7142,
           "symbol": "C:wm",
@@ -697154,6 +697704,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 7224,
+          "end": 7225,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
         },
         {
           "start": 7239,
@@ -702574,7 +703131,7 @@
       "original": "ri.java",
       "renamed": "LoginForm.java",
       "inputSha256": "8f8b5ad2325108553cf90f8769ad363cad3625c04ae8063cfde58de11a16a5fc",
-      "outputSha256": "f85b0783a0ce29a122c3d0005718324bbc192b3e2b8bdeacded52ce5b61b0467",
+      "outputSha256": "28b550b4413f6f9fc77a86ce7c3270011fbad1b95ce012939b533d9d836f8c67",
       "edits": [
         {
           "start": 50,
@@ -703408,6 +703965,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 10870,
+          "end": 10871,
+          "symbol": "M:jc.a(Ljava/applet/Applet;Z)Lbg;",
+          "original": "a",
+          "renamed": "readLastLoginMethod"
         },
         {
           "start": 10872,
@@ -704630,7 +705194,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "f85962291060da1f4532807cc2b7df5a1b8da9a230ac32c29b9d46399d039ffa",
+      "outputSha256": "8211d5725cac9e595fbaaa856b716ed6aecae12c9b91c24ad4086376f7792cb0",
       "edits": [
         {
           "start": 50,
@@ -704645,6 +705209,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 301,
+          "end": 302,
+          "symbol": "M:rn.b(B)V",
+          "original": "b",
+          "renamed": "loadIntroSprites"
         },
         {
           "start": 541,
@@ -705998,6 +706569,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 10594,
+          "end": 10595,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
+        },
+        {
           "start": 10622,
           "end": 10624,
           "symbol": "C:vr",
@@ -706418,6 +706996,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 13758,
+          "end": 13759,
+          "symbol": "M:rn.a(ILbc;ZLbc;Lbc;)V",
+          "original": "a",
+          "renamed": "initializeLoginUi"
+        },
+        {
           "start": 13772,
           "end": 13774,
           "symbol": "C:bc",
@@ -706458,6 +707043,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 13924,
+          "end": 13925,
+          "symbol": "M:rn.b(B)V",
+          "original": "b",
+          "renamed": "loadIntroSprites"
         },
         {
           "start": 13961,
@@ -706537,6 +707129,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 14445,
+          "end": 14446,
+          "symbol": "M:rn.a(Lua;II)Lak;",
+          "original": "a",
+          "renamed": "queueRead"
+        },
+        {
           "start": 14447,
           "end": 14449,
           "symbol": "C:ua",
@@ -706607,6 +707206,13 @@
           "renamed": "shutdown"
         },
         {
+          "start": 16453,
+          "end": 16454,
+          "symbol": "M:rn.a(Lvk;IILbc;)V",
+          "original": "a",
+          "renamed": "loadIntroResources"
+        },
+        {
           "start": 16455,
           "end": 16457,
           "symbol": "C:vk",
@@ -706647,6 +707253,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 16592,
+          "end": 16593,
+          "symbol": "M:jc.a(ILbc;)V",
+          "original": "a",
+          "renamed": "decodeLogoAudio"
         },
         {
           "start": 16628,
@@ -719163,7 +719776,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "2a9d5d136cfcb1858c701f7c748619c6a2d8270caf2d0b6f371397706dd2b7b6",
+      "outputSha256": "566437bb68d9f6eae91b61d3b2ae9be1f8d148c305d4576c30639d3aae8965a9",
       "edits": [
         {
           "start": 50,
@@ -726770,6 +727383,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 69157,
+          "end": 69158,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 69215,
           "end": 69216,
           "symbol": "M:np.a(Z)Z",
@@ -726782,6 +727402,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 69245,
+          "end": 69246,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
         },
         {
           "start": 69305,
@@ -726826,6 +727453,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 69733,
+          "end": 69734,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 69834,
           "end": 69836,
           "symbol": "C:ak",
@@ -726833,11 +727467,25 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 69837,
+          "end": 69838,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
+        },
+        {
           "start": 69907,
           "end": 69909,
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 69910,
+          "end": 69911,
+          "symbol": "M:ak.c(II)V",
+          "original": "c",
+          "renamed": "setMusicVolume"
         },
         {
           "start": 70008,
@@ -731195,7 +731843,7 @@
       "original": "so.java",
       "renamed": "BattleExplosionVisual.java",
       "inputSha256": "08bb2afb87f3b83b5655cddbe46333b393e92286064676bf7ea034e75547a620",
-      "outputSha256": "1e30c208bded2fdcc9bba367d4282c47cb1440632f7f566072161aac2a4a3a4f",
+      "outputSha256": "92ac5b6788a4327d22f2a522891c18749aec373abced5f80b420c7f36559080d",
       "edits": [
         {
           "start": 50,
@@ -731392,6 +732040,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 3115,
+          "end": 3116,
+          "symbol": "M:ak.a(ZIIZIII)Z",
+          "original": "a",
+          "renamed": "pollLobbyOverlays"
         },
         {
           "start": 3182,
@@ -740145,7 +740800,7 @@
       "original": "tf.java",
       "renamed": "CheckboxPainter.java",
       "inputSha256": "f260da1aad5a104f0dffe765d52d3c47b890803f79dab7be5ad92b16b281a81a",
-      "outputSha256": "9e4cb85226b5ea1882496a13751c48e3f14fef066c80cae94981255311fe019c",
+      "outputSha256": "28b6f0f2474a2aad719215bb24230243243c7144cf7d5aa04c7f97f3d1d7f388",
       "edits": [
         {
           "start": 50,
@@ -740521,6 +741176,13 @@
           "renamed": "DiskArchiveRequest"
         },
         {
+          "start": 6178,
+          "end": 6179,
+          "symbol": "M:ak.a(IILwa;)V",
+          "original": "a",
+          "renamed": "splitCoverageSpan"
+        },
+        {
           "start": 6197,
           "end": 6199,
           "symbol": "C:rd",
@@ -740680,6 +741342,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 7864,
+          "end": 7865,
+          "symbol": "M:ak.a(IILwa;)V",
+          "original": "a",
+          "renamed": "splitCoverageSpan"
         },
         {
           "start": 7867,
@@ -742860,7 +743529,7 @@
       "original": "tj.java",
       "renamed": "ArchiveSourceManager.java",
       "inputSha256": "3d00f761aafe27b7cb24740215fbc8dbc3b979dae5c3c4ca97fe439b3b859277",
-      "outputSha256": "060107d0820705a98d5099f80b9a8f0dba34929d88258c113b0595f99ef04ba2",
+      "outputSha256": "a791f1db7c0a94265ccb9a4c9479b8a04868d0a2ccf8fb92fa582f1845681391",
       "edits": [
         {
           "start": 50,
@@ -743486,6 +744155,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 6083,
+          "end": 6084,
+          "symbol": "M:tk.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
+        },
+        {
           "start": 6112,
           "end": 6119,
           "symbol": "F:ob.field_j:I",
@@ -743624,7 +744300,7 @@
       "original": "tk.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "eca478a58df4a052330423acec8de3fbd667f77f8216aa963b5a5ff6a8ca0422",
-      "outputSha256": "f225c5c7068494a97e969e0e1ecb9fc1cd42c3a67cc5eda011f87e5ca0b9fd88",
+      "outputSha256": "e2d744561efbcce12a90ebf2aa495b15a0abca84a6d4c5862a353aabf5ec6071",
       "edits": [
         {
           "start": 50,
@@ -743662,6 +744338,13 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 283,
+          "end": 284,
+          "symbol": "M:tk.e(I)I",
+          "original": "e",
+          "renamed": "getProgress"
+        },
+        {
           "start": 428,
           "end": 435,
           "symbol": "F:ob.field_j:I",
@@ -743674,6 +744357,13 @@
           "symbol": "F:ob.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 538,
+          "end": 539,
+          "symbol": "M:tk.e(B)[B",
+          "original": "e",
+          "renamed": "getData"
         },
         {
           "start": 674,
@@ -743697,11 +744387,25 @@
           "renamed": "payload"
         },
         {
+          "start": 854,
+          "end": 855,
+          "symbol": "M:tk.e(I)I",
+          "original": "e",
+          "renamed": "getProgress"
+        },
+        {
           "start": 889,
           "end": 896,
           "symbol": "F:ob.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 928,
+          "end": 929,
+          "symbol": "M:tk.d(Z)V",
+          "original": "d",
+          "renamed": "clearNetworkRequestStatics"
         },
         {
           "start": 1142,
@@ -743711,11 +744415,25 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 1145,
+          "end": 1146,
+          "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
+          "original": "a",
+          "renamed": "openQuickChatReplyMenu"
+        },
+        {
           "start": 1250,
           "end": 1252,
           "symbol": "M:tk.<init>()V",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1286,
+          "end": 1287,
+          "symbol": "M:tk.a(IIB)V",
+          "original": "a",
+          "renamed": "writeLeaveGameRequest"
         },
         {
           "start": 1335,
@@ -743767,6 +744485,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 1602,
+          "end": 1603,
+          "symbol": "M:tk.d(Z)V",
+          "original": "d",
+          "renamed": "clearNetworkRequestStatics"
+        },
+        {
           "start": 1636,
           "end": 1638,
           "symbol": "C:js",
@@ -743793,6 +744518,13 @@
           "symbol": "M:ob.d(II)V",
           "original": "d",
           "renamed": "writeShort"
+        },
+        {
+          "start": 1837,
+          "end": 1838,
+          "symbol": "M:tk.a(JLjava/lang/String;Z[II)Z",
+          "original": "a",
+          "renamed": "openQuickChatReplyMenu"
         },
         {
           "start": 1919,
@@ -743905,7 +744637,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "27267af01e62465ba439cb71f0eca19e9d9207191b495144a31ce9ef672ed1ce",
+      "outputSha256": "ccbc50eab60f20a927121dd6b0258729aa60acc17865052b84b61f4f45f9ffe2",
       "edits": [
         {
           "start": 53,
@@ -745700,6 +746432,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 12927,
+          "end": 12928,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
+        },
+        {
           "start": 12949,
           "end": 12951,
           "symbol": "C:rq",
@@ -746001,6 +746740,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 14609,
+          "end": 14610,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
+        },
+        {
           "start": 14630,
           "end": 14632,
           "symbol": "C:ip",
@@ -746069,6 +746815,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 14873,
+          "end": 14874,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
         },
         {
           "start": 14893,
@@ -746491,6 +747244,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 16212,
+          "end": 16213,
+          "symbol": "M:rn.a(ILbc;ZLbc;Lbc;)V",
+          "original": "a",
+          "renamed": "initializeLoginUi"
+        },
+        {
           "start": 16219,
           "end": 16221,
           "symbol": "C:rq",
@@ -746636,6 +747396,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 16808,
+          "end": 16809,
+          "symbol": "M:rn.a(Lvk;IILbc;)V",
+          "original": "a",
+          "renamed": "loadIntroResources"
         },
         {
           "start": 16810,
@@ -747154,6 +747921,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 20139,
+          "end": 20140,
+          "symbol": "M:jc.f(I)Z",
+          "original": "f",
+          "renamed": "shouldServiceLobbyConnection"
         },
         {
           "start": 20192,
@@ -748636,7 +749410,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "adbde70bb5a91f209c70345d6b260f04d7b1bf0ac3880ce911f4d00b1c576f4f",
+      "outputSha256": "e721656e41b63d332ca1d7ff376949d1a242d2d6d8a647d3a573ab791e9b7a94",
       "edits": [
         {
           "start": 71,
@@ -756072,6 +756846,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 139881,
+          "end": 139882,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
+        },
+        {
           "start": 140133,
           "end": 140134,
           "symbol": "C:r",
@@ -758904,7 +759685,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "ccc104c4c975871b9cf28f5b2f5308432a33a59452893327a9beccda3773a627",
+      "outputSha256": "80bfa375e2f9b8d7041540549d3154c664bb792341898144ebfa7008cbea8f7a",
       "edits": [
         {
           "start": 50,
@@ -759243,6 +760024,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 9560,
+          "end": 9561,
+          "symbol": "M:rn.b(B)V",
+          "original": "b",
+          "renamed": "loadIntroSprites"
+        },
+        {
           "start": 9642,
           "end": 9644,
           "symbol": "C:ub",
@@ -759269,6 +760057,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 9780,
+          "end": 9781,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 9853,
@@ -759325,6 +760120,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 10314,
+          "end": 10315,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 10374,
@@ -759551,6 +760353,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 11955,
+          "end": 11956,
+          "symbol": "M:rn.a(I)V",
+          "original": "a",
+          "renamed": "commitMenuTransition"
+        },
+        {
           "start": 11992,
           "end": 11994,
           "symbol": "C:ne",
@@ -759661,6 +760470,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 12557,
+          "end": 12558,
+          "symbol": "M:ak.f(B)V",
+          "original": "f",
+          "renamed": "tickIntroColonizationScene"
         },
         {
           "start": 12619,
@@ -759817,6 +760633,13 @@
           "renamed": "ArchiveRequest"
         },
         {
+          "start": 13642,
+          "end": 13643,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
+        },
+        {
           "start": 13714,
           "end": 13715,
           "symbol": "C:p",
@@ -759864,6 +760687,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 14029,
+          "end": 14030,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 14324,
@@ -764711,7 +765541,7 @@
       "original": "um.java",
       "renamed": "PlayerStats.java",
       "inputSha256": "ef9abfa3f340d781b7524ac9767a25823c6cfe26755cf0c5dbdf4c89d1cfe8dd",
-      "outputSha256": "4b60281caa75b2b7bdce17f85f8de9c3af8544fdf998a4cc193d6cf01d302d0c",
+      "outputSha256": "334524f5a31402fff622aad61abbb88dc942c53976eb6255c3abb4c6a2d2f977",
       "edits": [
         {
           "start": 50,
@@ -764950,6 +765780,13 @@
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 5093,
+          "end": 5094,
+          "symbol": "M:jc.a(IB)V",
+          "original": "a",
+          "renamed": "requestIntroScene"
         },
         {
           "start": 5330,
@@ -765364,7 +766201,7 @@
       "original": "uo.java",
       "renamed": "LobbyRoomInteractionSupport.java",
       "inputSha256": "9825ac590ae6649c8a9888f95ec2e1ce832521557782b5ed80c016c82c2799b0",
-      "outputSha256": "48993b329746d1696697761de0c0ab0f39e94f2d048fbc4298e3f913525bf2c3",
+      "outputSha256": "1bbe468bc832cb872e45634958aec4dc058f7710f2c81300a387a115eaf4da91",
       "edits": [
         {
           "start": 50,
@@ -766847,6 +767684,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 18092,
+          "end": 18093,
+          "symbol": "M:tk.a(IIB)V",
+          "original": "a",
+          "renamed": "writeLeaveGameRequest"
         },
         {
           "start": 18102,
@@ -801096,10 +801940,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "32626b86176f0391eb03d2388efca944bc7b4057945bc2c73a383f44555fa707",
+    "rulesSha256": "770679e1a2e268e1387c3ed3ac160a43df954663b5cc7f246c8f641885898289",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "9f3a3cdc35225a6adb951bbf3afc76edb19ce376474a2b8c0197db7bfecb4112",
+    "outputTreeSha256": "559a3b7e59ad6107cb96b58fc71e36ef7be39ea01491179549dfe0811e3649f3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

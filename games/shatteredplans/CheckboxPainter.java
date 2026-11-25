@@ -175,7 +175,7 @@ final class CheckboxPainter implements WidgetPainter {
                 stackIn_48_1 = ~var2;
                 if (var4 == 0) {
                   if (stackIn_48_0 > stackIn_48_1) {
-                    DiskArchiveRequest.a(var1.field_h, 0, StandardMapReader.field_g);
+                    DiskArchiveRequest.splitCoverageSpan(var1.field_h, 0, StandardMapReader.field_g);
                   } else {
                     if (var2 < 0) {
                       throw new RuntimeException();
@@ -217,7 +217,7 @@ final class CheckboxPainter implements WidgetPainter {
               if (stackIn_48_0 >= stackIn_48_1) {
                 break;
               }
-              DiskArchiveRequest.a(-StandardMapReader.field_g.field_g + var1.field_g, 0, StandardMapReader.field_g);
+              DiskArchiveRequest.splitCoverageSpan(-StandardMapReader.field_g.field_g + var1.field_g, 0, StandardMapReader.field_g);
               break;
             }
           }

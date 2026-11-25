@@ -3340,7 +3340,7 @@ final class MapView extends MapViewState {
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (500 == fieldTemp$0) {
-            ArchiveRequest.a(2, (byte) -61);
+            ArchiveRequest.requestIntroScene(2, (byte) -61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

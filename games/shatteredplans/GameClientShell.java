@@ -416,7 +416,7 @@ abstract class GameClientShell extends GameApplet {
           if (var3Lifetime1 != 0 &&
             TutorialTextSupport.field_g == 0 &&
             SoundPlayback.field_i == 11 &&
-            !ArchiveRequest.f(-11)) {
+            !ArchiveRequest.shouldServiceLobbyConnection(-11)) {
             LinkPainter.c(86);
           }
           if (TutorialTextSupport.field_g != -1 &&
@@ -470,7 +470,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if ((TutorialTextSupport.field_g != -1 &&
           TutorialTextSupport.field_g != 0 ||
-          ArchiveRequest.f(-11)) &&
+          ArchiveRequest.shouldServiceLobbyConnection(-11)) &&
           SecondaryNodeDequeIterator.field_b <= ClientClockSupport.currentTimeMillis(14274)) {
           StripedProgressWidget.field_B = false;
           if (-1 != TutorialTextSupport.field_g &&
@@ -480,7 +480,7 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (TutorialTextSupport.field_g == 0 &&
-          !ArchiveRequest.f(-11)) {
+          !ArchiveRequest.shouldServiceLobbyConnection(-11)) {
           GameSpriteResources.field_f = false;
         }
         if (DefensiveAi.field_p == 0 &&
@@ -525,7 +525,7 @@ abstract class GameClientShell extends GameApplet {
           GameScreen.drawOverlaysUnlessGuardMatches(28164);
           DerelictMapGenerator.field_r = LobbyUiSetupSupport.field_c;
           UiTextSupport.field_a = false;
-          DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, StringList.field_f);
+          DiskCacheWorker.initializeLoginUi(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, StringList.field_f);
           if (TextFieldWidget.field_D ||
             null != ChatPanelLayoutSupport.field_b) {
             stackIn_106_0 = ChatPanelLayoutSupport.field_b;
@@ -541,7 +541,7 @@ abstract class GameClientShell extends GameApplet {
             AccountStatusDialog.field_rb = HighscoreResponseSupport.getSharedPcmMixer(3);
             StripedProgressWidget.field_M = DateInputWidget.a(-123);
           }
-          DiskCacheWorker.a(AccountStatusDialog.field_rb, StripedProgressWidget.field_M, 1000, GalaxyMap.field_g);
+          DiskCacheWorker.loadIntroResources(AccountStatusDialog.field_rb, StripedProgressWidget.field_M, 1000, GalaxyMap.field_g);
           StringList.field_f = null;
           LinkPainter.field_g = null;
           GalaxyMap.field_g = null;
@@ -668,7 +668,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0 != 16) {
           return -22;
         }
-        if (!ArchiveRequest.f(-11)) {
+        if (!ArchiveRequest.shouldServiceLobbyConnection(-11)) {
           return -1;
         }
         if (StripedProgressWidget.field_B) {

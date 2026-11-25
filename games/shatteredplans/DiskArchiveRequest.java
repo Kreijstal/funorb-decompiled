@@ -17,7 +17,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int var1 = 100 % ((-56 - param0) / 52);
     }
 
-    final static void a(int param0, int param1, RasterCoverageSpan param2) {
+    final static void splitCoverageSpan(int param0, int param1, RasterCoverageSpan param2) {
         int stackIn_7_0;
         int stackIn_7_1;
         Object stackIn_7_2;
@@ -73,7 +73,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
+    final static void initializeLobbyChat(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
           ChatPanelSetupSupport.initializeSharedChatPanel(DiplomacyNotice.field_o, ObjectList.field_h, 124, AccountConnectionPhase.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ContextActionMenu.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
@@ -87,7 +87,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void f(byte param0) {
+    final static void tickIntroColonizationScene(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 != 118) {
           CharSequence var2 = (CharSequence) null;
@@ -98,7 +98,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (fieldTemp$0 == 750) {
-            ArchiveRequest.a(4, (byte) 122);
+            ArchiveRequest.requestIntroScene(4, (byte) 122);
             return;
           }
           return;
@@ -111,10 +111,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (fieldTemp$1 != 750) {
           return;
         }
-        ArchiveRequest.a(4, (byte) 122);
+        ArchiveRequest.requestIntroScene(4, (byte) 122);
     }
 
-    final int e(int param0) {
+    final int getProgress(int param0) {
         if (this.field_u) {
           return 0;
         }
@@ -125,7 +125,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return 100;
     }
 
-    final static boolean a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static boolean pollLobbyOverlays(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (WeightedLruCache.a(-126)) {
           WidgetTheme.a(param3, param6, false, param2);
           if (null != DerelictVictoryChecker.field_m &&
@@ -144,7 +144,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         return param3;
     }
 
-    final static void c(int param0, int param1) {
+    final static void setMusicVolume(int param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
         UiSpriteSupport.field_b = param1;
@@ -162,7 +162,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         var2Lifetime1 = -9 / ((62 - param0) / 62);
     }
 
-    final static void i(int param0) {
+    final static void tickLobbyPanelTransitions(int param0) {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (PlacementOrder.field_t > 0) {
@@ -231,7 +231,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     DiskArchiveRequest() {
     }
 
-    final byte[] e(byte param0) {
+    final byte[] getData(byte param0) {
         if (param0 <= 48) {
           this.field_y = -105;
           if (this.field_u) {

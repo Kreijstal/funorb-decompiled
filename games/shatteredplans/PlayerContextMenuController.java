@@ -165,7 +165,7 @@ final class PlayerContextMenuController {
                       if (param0 != 19) {
                         return false;
                       }
-                      NetworkArchiveRequest.a(this.field_b, this.field_k, false, this.field_i, this.field_l);
+                      NetworkArchiveRequest.openQuickChatReplyMenu(this.field_b, this.field_k, false, this.field_i, this.field_l);
                     }
                   }
                 }
@@ -572,7 +572,7 @@ final class PlayerContextMenuController {
             return true;
           }
           if (param2 == 3) {
-            NetworkArchiveRequest.a(param0, this.field_f, (byte) -2);
+            NetworkArchiveRequest.writeLeaveGameRequest(param0, this.field_f, (byte) -2);
             return true;
           }
           if (param2 == 10) {
@@ -604,7 +604,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param2 == 3) {
-          NetworkArchiveRequest.a(param0, this.field_f, (byte) -2);
+          NetworkArchiveRequest.writeLeaveGameRequest(param0, this.field_f, (byte) -2);
           return true;
         }
         if (param2 == 10) {

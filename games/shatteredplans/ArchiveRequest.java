@@ -10,7 +10,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     static int field_r;
     volatile boolean field_u;
 
-    final static void a(int param0, byte param1) {
+    final static void requestIntroScene(int param0, byte param1) {
         int var2 = -92 % ((78 - param1) / 44);
         MusicEnvelope.field_i = param0;
         CachedArchiveSource.field_n = true;
@@ -26,11 +26,11 @@ abstract class ArchiveRequest extends DualLinkNode {
         field_s = null;
     }
 
-    abstract byte[] e(byte param0);
+    abstract byte[] getData(byte param0);
 
-    abstract int e(int param0);
+    abstract int getProgress(int param0);
 
-    final static LoginMethodPreference a(java.applet.Applet param0, boolean param1) {
+    final static LoginMethodPreference readLastLoginMethod(java.applet.Applet param0, boolean param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -62,7 +62,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           if (!param1) {
             var7 = (java.applet.Applet) null;
-            ArchiveRequest.a((java.applet.Applet) null, false);
+            ArchiveRequest.readLastLoginMethod((java.applet.Applet) null, false);
           }
           stackIn_15_0 = LobbyPlayerEntry.field_Rb;
           return stackIn_15_0;
@@ -80,7 +80,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, Archive param1) {
+    final static void decodeLogoAudio(int param0, Archive param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.readSetup(param1.getFileByName(true, "", "headers.packvorbis"));
@@ -92,7 +92,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static boolean f(int param0) {
+    final static boolean shouldServiceLobbyConnection(int param0) {
         if (param0 != -11) {
           field_s = (String) null;
           if (SoundPlayback.field_i < 10) {
@@ -112,7 +112,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         return false;
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void prepareAchievementPlaceholderSprites(int param0, Sprite param1) {
         RandomAccessCacheFile.pushLegacyRasterState(-117);
         DerelictMapGenerator.field_n = new Sprite(128, 128);
         DerelictMapGenerator.field_n.bindAsRenderTarget();

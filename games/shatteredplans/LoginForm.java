@@ -295,7 +295,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             this.field_q = this.field_q + (var7.textHeight(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ListContent.field_e;
-          var9 = ArchiveRequest.a(GameScreen.getHostApplet((byte) 124), true);
+          var9 = ArchiveRequest.readLastLoginMethod(GameScreen.getHostApplet((byte) 124), true);
           if (var9 == CheckboxWidgetPainter.field_b) {
             var8 = QuaternaryLinkNode.field_v;
           } else {

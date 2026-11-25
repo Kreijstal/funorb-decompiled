@@ -278,7 +278,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (this.field_l.field_u) {
           return null;
         }
-        var8 = this.field_l.e((byte) 50);
+        var8 = this.field_l.getData((byte) 50);
         var6 = var8;
         var5 = var6;
         var9 = var5;
@@ -339,7 +339,7 @@ final class CachedArchiveSource extends ArchiveSource {
     final int getGroupProgress(int param0, byte param1) {
         ArchiveRequest var3 = (ArchiveRequest) (this.field_f.get((long)param0, -25064));
         if (var3 != null) {
-          return var3.e(0);
+          return var3.getProgress(0);
         }
         int var4 = -32 / ((param1 + 3) / 58);
         return 0;
@@ -360,7 +360,7 @@ final class CachedArchiveSource extends ArchiveSource {
           return null;
         }
         int var5 = 84 % ((param0 + 51) / 33);
-        byte[] var4 = var3.e((byte) 109);
+        byte[] var4 = var3.getData((byte) 109);
         var3.unlink((byte) -60);
         return var4;
     }
@@ -419,7 +419,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null == this.field_r) {
                 throw new RuntimeException();
               }
-              var4 = this.field_k.a(this.field_r, param2, 13514);
+              var4 = this.field_k.queueRead(this.field_r, param2, 13514);
             }
           } else {
             if (this.field_r != null &&
@@ -437,7 +437,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (((ArchiveRequest) (var4)).field_u) {
           return null;
         }
-        var18 = ((ArchiveRequest) (var4)).e((byte) 82);
+        var18 = ((ArchiveRequest) (var4)).getData((byte) 82);
         var13 = var18;
         var5 = var13;
         if (var4 instanceof DiskArchiveRequest) {

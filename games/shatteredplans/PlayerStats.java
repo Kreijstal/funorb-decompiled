@@ -145,7 +145,7 @@ final class PlayerStats {
           if (fieldTemp$0 != 950) {
             return;
           }
-          ArchiveRequest.a(3, (byte) -113);
+          ArchiveRequest.requestIntroScene(3, (byte) -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

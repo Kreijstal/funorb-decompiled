@@ -279,14 +279,14 @@ public final class ShatteredPlansClient extends GameClientShell {
             stackIn_150_0 = -10;
             stackIn_150_1 = ~BufferedCacheFile.field_e;
             if (stackIn_150_0 == stackIn_150_1) {
-              DiskCacheWorker.a(1048576);
+              DiskCacheWorker.commitMenuTransition(1048576);
               StripedProgressWidget.field_Q = false;
               PlayerRankingRequest.field_o = 10;
               GameSpriteResources.field_c = SpriteWipeSupport.field_a.readString(-1);
               continue;
             }
             if (BufferedCacheFile.field_e == 14) {
-              DiskCacheWorker.a(1048576);
+              DiskCacheWorker.commitMenuTransition(1048576);
               BytePayloadNode.a(HitRegion.a(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
               SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
@@ -296,7 +296,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (15 == BufferedCacheFile.field_e) {
               if (EmailValidator.field_p) {
-                DiskCacheWorker.a(1048576);
+                DiskCacheWorker.commitMenuTransition(1048576);
                 ProjectsContent.a((byte) -122);
                 IntroRenderSupport.clearChatHistory(112);
                 MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
@@ -357,7 +357,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               }
               if (TiledNineSlicePainter.field_b ||
                 MusicEnvelope.field_d) {
-                DiskCacheWorker.a(1048576);
+                DiskCacheWorker.commitMenuTransition(1048576);
                 if (TiledNineSlicePainter.field_b) {
                   PasswordInputPainter.field_x.handleGameExit(false, false);
                 }
@@ -372,7 +372,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               ArchiveConnectionRetrySupport.field_a = false;
               continue;
             }
-            DiskCacheWorker.a(1048576);
+            DiskCacheWorker.commitMenuTransition(1048576);
             var4 = SpriteWipeSupport.field_a.readUnsignedByte(-93);
             var5_ref_vr = AccountRequestResult.readGameRules((byte) -85, SpriteWipeSupport.field_a);
             var6 = SpriteWipeSupport.field_a.readSignedByte(-2852);
@@ -487,7 +487,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (var5 != 0) {
             TabbedPanel.closeClientSocket(-108);
           }
-          if (ArchiveRequest.f(-11)) {
+          if (ArchiveRequest.shouldServiceLobbyConnection(-11)) {
             var6 = this.serviceConnection((byte) 16);
             if (var6 == 0 ||
               var6 == 1) {
@@ -509,7 +509,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     GameSpriteResources.field_c = RoundedFrameSupport.field_a;
                     MenuTransitionSupport.beginMenuTransition(0, 10, (byte) 96, false);
                   }
-                  DiskCacheWorker.a(1048576);
+                  DiskCacheWorker.commitMenuTransition(1048576);
                   LobbyPlayerEntry.field_Hb[GameRules.field_c].resetMenuInput(0, (byte) 84, false);
                   MusicEnvelope.field_d = false;
                   TiledNineSlicePainter.field_b = false;
@@ -931,7 +931,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         HitRegion.clearStatics((byte) 15);
         AllianceExpiredEvent.clearStatics(true);
         SocketArchiveNetworkClient.clearStatics(-126);
-        NetworkArchiveRequest.d(false);
+        NetworkArchiveRequest.clearNetworkRequestStatics(false);
         SectorCacheStore.clearStatics(4);
         DiskArchiveRequest.clearStatics(param0 + 24092);
         CachedArchiveSource.clearStatics((byte) 114);
@@ -1158,7 +1158,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 stackIn_82_0 = !(RasterTargetSupport.field_b < 2);
                 AchievementProgress.field_g = stackIn_82_0;
                 PlayerRankingRequest.field_o = SolMapReader.field_b;
-                ArchiveRequest.a(75, SpriteResourceSupport.loadSpriteByName(2, AttackTask.field_s, "basic", "unachieved"));
+                ArchiveRequest.prepareAchievementPlaceholderSprites(75, SpriteResourceSupport.loadSpriteByName(2, AttackTask.field_s, "basic", "unachieved"));
                 GameSpriteResources.clearAccountChoiceFlag(!param0);
                 if (BattleContribution.field_s) {
                   BattleContribution.field_s = false;
@@ -1169,7 +1169,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -6, (byte) 96, false);
                 }
                 if (PointsVictoryChecker.a((byte) -111, PlayerRankingRequest.field_o)) {
-                  DiskCacheWorker.a(1048576);
+                  DiskCacheWorker.commitMenuTransition(1048576);
                 }
                 GzipInflater.a(1);
               }
@@ -1232,7 +1232,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 BirthDateConfirmationForm.field_Q = BirthDateConfirmationForm.field_Q + 1;
               }
               if (BirthDateConfirmationForm.field_Q == 32) {
-                DiskCacheWorker.a(1048576);
+                DiskCacheWorker.commitMenuTransition(1048576);
               }
             }
           }
@@ -1321,7 +1321,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           Wormhole.field_i = true;
         }
         if (PlayerRankingRequest.field_o == -7) {
-          NetworkArchiveRequest.a(11, MenuInputState.field_a.getRoomId(-79), (byte) -2);
+          NetworkArchiveRequest.writeLeaveGameRequest(11, MenuInputState.field_a.getRoomId(-79), (byte) -2);
           PlayerRankingRequest.field_o = GameRules.field_c;
           ArchiveConnectionRetrySupport.field_a = true;
         }

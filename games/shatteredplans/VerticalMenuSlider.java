@@ -91,7 +91,7 @@ final class VerticalMenuSlider extends MenuComponent {
           field_E = (String) null;
           return;
         }
-        ArchiveRequest.a(1, (byte) 127);
+        ArchiveRequest.requestIntroScene(1, (byte) 127);
         if (param0 == 44) {
           return;
         }

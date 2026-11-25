@@ -39,7 +39,7 @@ final class DisplayModeInfo {
         int fieldTemp$0 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 == 350) {
-          ArchiveRequest.a(-1, (byte) -114);
+          ArchiveRequest.requestIntroScene(-1, (byte) -114);
         }
         if (param0 > -29) {
           DisplayModeInfo.a(66);

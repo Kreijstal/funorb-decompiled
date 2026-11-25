@@ -239,7 +239,7 @@ final class ScrollPane extends AnimatedPanel {
             }
           } else {
             if (!MapGenerationException.field_a) {
-              DiskCacheWorker.b((byte) 50);
+              DiskCacheWorker.loadIntroSprites((byte) 50);
             }
           }
           if (param0 != 93) {
@@ -247,7 +247,7 @@ final class ScrollPane extends AnimatedPanel {
           }
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (TextReplacementEntry.field_j == 13) {
-              ArchiveRequest.a(-1, (byte) 125);
+              ArchiveRequest.requestIntroScene(-1, (byte) 125);
               continue;
             }
             if (TextReplacementEntry.field_j != 83) {
@@ -268,7 +268,7 @@ final class ScrollPane extends AnimatedPanel {
             } else {
               stackIn_21_0 = SolVictoryChecker.field_m + 1;
             }
-            ArchiveRequest.a(stackIn_21_0, (byte) 125);
+            ArchiveRequest.requestIntroScene(stackIn_21_0, (byte) 125);
           }
           if (50 + ValidationState.field_a < RasterStateFrame.field_n) {
             ValidationState.field_a = RasterStateFrame.field_n + ClientRandomSupport.randomBelow((byte) -39, 50);
@@ -317,7 +317,7 @@ final class ScrollPane extends AnimatedPanel {
               if (SolVictoryChecker.field_m == -1) {
                 HorizontalGradientComponent.field_v = 50;
                 MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
-                DiskCacheWorker.a(param0 + 1048483);
+                DiskCacheWorker.commitMenuTransition(param0 + 1048483);
                 BattleContribution.d(true);
               }
               if (SolVictoryChecker.field_m == 2) {
@@ -338,7 +338,7 @@ final class ScrollPane extends AnimatedPanel {
             } else {
               if (2 != SolVictoryChecker.field_m) {
                 if (SolVictoryChecker.field_m == 3) {
-                  DiskArchiveRequest.f((byte) 118);
+                  DiskArchiveRequest.tickIntroColonizationScene((byte) 118);
                 } else {
                   if (SolVictoryChecker.field_m == 4) {
                     ByteArrayReadRequest.advanceClosingIntroText(0);
@@ -377,7 +377,7 @@ final class ScrollPane extends AnimatedPanel {
               PointsVictoryChecker.field_p < 620 &&
               440 <= SliderWidget.field_P &&
               SliderWidget.field_P < 460) {
-              ArchiveRequest.a(-1, (byte) 122);
+              ArchiveRequest.requestIntroScene(-1, (byte) 122);
               return;
             }
             if (!CachedArchiveSource.field_n &&
@@ -391,7 +391,7 @@ final class ScrollPane extends AnimatedPanel {
               } else {
                 stackIn_88_0 = -1;
               }
-              ArchiveRequest.a(stackIn_88_0, (byte) -55);
+              ArchiveRequest.requestIntroScene(stackIn_88_0, (byte) -55);
               return;
             }
           }

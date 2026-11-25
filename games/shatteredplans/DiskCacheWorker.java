@@ -11,7 +11,7 @@ final class DiskCacheWorker implements Runnable {
     private boolean field_f;
     int field_d;
 
-    final static void b(byte param0) {
+    final static void loadIntroSprites(byte param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -264,7 +264,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0) {
+    final static void commitMenuTransition(int param0) {
         if (GameRules.field_c == PlayerRankingRequest.field_o) {
           return;
         }
@@ -361,11 +361,11 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
+    final static void initializeLoginUi(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
         try {
           ChatAndSocialPanel.field_a = CheckboxPainter.a("", -12179);
           if (param0 != 624) {
-            DiskCacheWorker.b((byte) -62);
+            DiskCacheWorker.loadIntroSprites((byte) -62);
           }
           ChatAndSocialPanel.field_a.setResult(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
@@ -377,7 +377,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest a(SectorCacheStore param0, int param1, int param2) {
+    final DiskArchiveRequest queueRead(SectorCacheStore param0, int param1, int param2) {
         DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         DiskArchiveRequest stackIn_2_0 = null;
@@ -432,10 +432,10 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
+    final static void loadIntroResources(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
           ClientContextMenuSupport.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
-          ArchiveRequest.a(param2 - 1102, param3);
+          ArchiveRequest.decodeLogoAudio(param2 - 1102, param3);
           AccountCreationDialog.a(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
           ReflectionCheck.d((byte) -47);

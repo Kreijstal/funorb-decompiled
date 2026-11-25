@@ -107,7 +107,7 @@ final class ByteArrayReadRequest extends IntrusiveNode {
           fieldTemp$1 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (fieldTemp$1 == 950) {
-            ArchiveRequest.a(5, (byte) -67);
+            ArchiveRequest.requestIntroScene(5, (byte) -67);
           }
           return;
         }
@@ -119,7 +119,7 @@ final class ByteArrayReadRequest extends IntrusiveNode {
         fieldTemp$0 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 == 950) {
-          ArchiveRequest.a(5, (byte) -67);
+          ArchiveRequest.requestIntroScene(5, (byte) -67);
         }
         return;
     }
