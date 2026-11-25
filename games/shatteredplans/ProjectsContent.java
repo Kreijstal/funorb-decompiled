@@ -10,7 +10,7 @@ final class ProjectsContent implements MenuContent {
     static double field_e;
     static double field_d;
 
-    final static void b(byte param0) {
+    final static void tickChatNotifications(byte param0) {
         int var2 = 0;
         ChatHistoryEntry var1 = null;
         NotificationEntry var2_ref_tm = null;
@@ -19,7 +19,7 @@ final class ProjectsContent implements MenuContent {
         RuntimeException var1_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = DialWidget.i(0);
+          var1 = DialWidget.getLatestChatEntry(0);
           if (var1 != null &&
             var1 != StandardMapGenerator.field_j) {
             TutorialStageSupport.notifyChatEntriesAfter(StandardMapGenerator.field_j, 1);
@@ -60,7 +60,7 @@ final class ProjectsContent implements MenuContent {
         }
     }
 
-    final static void a(byte param0) {
+    final static void closeClientOverlays(byte param0) {
         LeaderboardSortSupport.clearActiveContextMenu(3);
         if (param0 > -119) {
           return;

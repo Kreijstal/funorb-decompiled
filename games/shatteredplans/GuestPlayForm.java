@@ -170,7 +170,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             String var3 = (String) null;
             GuestPlayForm.setChatCompositionPrompt(-64, -115, (String) null, (String) null, 39);
           }
-          StandardMapGenerator.field_j = DialWidget.i(0);
+          StandardMapGenerator.field_j = DialWidget.getLatestChatEntry(0);
           ByteArrayReadRequest.field_p = new IntrusiveDeque();
           PlacementEvent.field_l = new NotificationEntry[7];
         } catch (RuntimeException runtimeException) {

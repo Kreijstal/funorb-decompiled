@@ -596,7 +596,7 @@ final class ClientDrawingSupport {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < RasterViewportState.field_c) {
-                        AudioService.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
+                        AudioService.blendGouraudSpanHalfBackground(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -606,9 +606,9 @@ final class ClientDrawingSupport {
                         var38 = -1 + RasterViewportState.field_c - var37;
                       }
                       if (0 > var37) {
-                        AudioService.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
+                        AudioService.blendGouraudSpanHalfBackground(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
                       } else {
-                        AudioService.a(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
+                        AudioService.blendGouraudSpanHalfBackground(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
                       }
                     }
                   }
@@ -683,7 +683,7 @@ final class ClientDrawingSupport {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     RasterViewportState.field_c > var36Lifetime1) {
-                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
+                    AudioService.blendGouraudSpanHalfBackground(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -693,9 +693,9 @@ final class ClientDrawingSupport {
                     var37Lifetime1 = -var36Lifetime1 + (RasterViewportState.field_c - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.blendGouraudSpanHalfBackground(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
                   } else {
-                    AudioService.a(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.blendGouraudSpanHalfBackground(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
                   }
                 }
               }

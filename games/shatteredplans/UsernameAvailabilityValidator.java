@@ -38,7 +38,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          if (!UiWidget.a(var5, (byte) -89)) {
+          if (!UiWidget.isValidAccountName(var5, (byte) -89)) {
             stackIn_3_0 = ArchiveSourceManager.field_b;
             return stackIn_3_0;
           }

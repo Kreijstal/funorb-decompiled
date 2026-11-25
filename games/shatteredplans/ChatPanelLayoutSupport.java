@@ -58,7 +58,7 @@ final class ChatPanelLayoutSupport {
                 ChatPanelLayoutSupport.reloadGamePage((java.applet.Applet) null, (byte) -44);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(AudioService.a(param0, false, var5), "_self");
+              param0.getAppletContext().showDocument(AudioService.rewriteCurrentAppletUrl(param0, false, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

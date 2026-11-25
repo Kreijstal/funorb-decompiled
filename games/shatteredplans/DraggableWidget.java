@@ -21,7 +21,7 @@ final class DraggableWidget extends SingleChildWidget {
           return;
         }
         if (MatchingTextValidator.field_t.field_k) {
-          ContentDialog.a(var1, 0, var2, Star.field_K);
+          ContentDialog.drawFilteredSpriteBackground(var1, 0, var2, Star.field_K);
           SoftwareRasterizer.drawHorizontalLine(0, 0, 640, 0);
           return;
         }
@@ -218,7 +218,7 @@ final class DraggableWidget extends SingleChildWidget {
           var5_int = 6 % ((64 - param0) / 61);
           if (this.markVisited(false, param2, param3, param1)) {
             this.appendDescription(param1, param2, false, param3);
-            this.a(81, param1, param2, param3);
+            this.appendChildDescription(81, param1, param2, param3);
             discarded$64 = param3.append(" revert=").append(this.field_B);
             if (this.field_J != 2147483647 &&
               this.field_C != 2147483647) {

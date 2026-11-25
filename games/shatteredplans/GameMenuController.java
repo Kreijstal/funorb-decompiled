@@ -1845,7 +1845,7 @@ final class GameMenuController {
                 }
               }
               if (this.field_d.isLeftPressed(-97)) {
-                SingleChildWidget.d(!param2);
+                SingleChildWidget.decreaseMusicVolumeStep(!param2);
               }
               if (this.field_d.isRightPressed(-77)) {
                 MapGenerationException.a(11615);

@@ -26,7 +26,7 @@ final class LobbyRoomInteractionSupport {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ByteArrayStorage.field_e.a(QuickChatMenuSupport.field_a, true, ClientRasterSupport.field_e, (byte) 0);
+          ByteArrayStorage.field_e.pollPointerInput(QuickChatMenuSupport.field_a, true, ClientRasterSupport.field_e, (byte) 0);
           ByteArrayStorage.field_e.updateDialogs(120);
           if (param0 != -75) {
             stackIn_3_0 = -107;
@@ -34,7 +34,7 @@ final class LobbyRoomInteractionSupport {
           }
           stackIn_6_0 = 55;
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(stackIn_6_0)) {
-            ByteArrayStorage.field_e.a(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
+            ByteArrayStorage.field_e.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
             stackIn_6_0 = 55;
           }
           if (UniformNineSliceFactory.field_b != -1) {

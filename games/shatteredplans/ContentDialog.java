@@ -230,7 +230,7 @@ abstract class ContentDialog extends ResizingDialog {
         super.finishAnimations(param0);
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3) {
+    final static void drawFilteredSpriteBackground(int param0, int param1, int param2, Sprite param3) {
         int var17 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;

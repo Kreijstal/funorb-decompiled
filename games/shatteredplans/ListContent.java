@@ -14,7 +14,7 @@ final class ListContent implements MenuContent {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (LoginMethodPreference.field_g) {
-          return RasterSpanFactory.field_c.a(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
+          return RasterSpanFactory.field_c.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
         }
         if (QuickChatPhraseDefinition.field_t) {
           return QuickChatPhraseDefinition.handleQuickChatKey(-85, param1, param3);

@@ -7,7 +7,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
     UiWidget field_z;
     static ScrollPane field_y;
 
-    private final boolean a(UiWidget param0, int param1) {
+    private final boolean unfocusedChildContains(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -33,7 +33,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    final void a(int param0, Hashtable param1, int param2, StringBuilder param3) {
+    final void appendChildDescription(int param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$12 = null;
         int var5_int = 0;
         StringBuilder discarded$14 = null;
@@ -149,7 +149,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -160,7 +160,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
           if (param0 != 0) {
             field_y = (ScrollPane) null;
           }
-          stackIn_7_0 = (null != this.field_z) && (this.field_z.isFocused(param0 + 1)) && (this.field_z.a(param0 ^ 0, param1, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (null != this.field_z) && (this.field_z.isFocused(param0 + 1)) && (this.field_z.handleMouseWheel(param0 ^ 0, param1, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,7 +176,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    final static void d(boolean param0) {
+    final static void decreaseMusicVolumeStep(boolean param0) {
         if (!param0) {
           return;
         }
@@ -191,7 +191,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         DiskArchiveRequest.setMusicVolume(126, -var1 + UiSpriteSupport.field_b);
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean unfocusedChildContains(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         boolean stackIn_7_0 = false;
@@ -257,7 +257,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         String var3Lifetime1;
         if (!param0) {
           UiWidget var4 = (UiWidget) null;
-          discarded$0 = this.a(112, (UiWidget) null);
+          discarded$0 = this.unfocusedChildContains(112, (UiWidget) null);
           var2 = super.getTooltip(param0);
           if (this.field_z != null) {
             var3 = this.field_z.getTooltip(param0);
@@ -292,7 +292,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         try {
           if (this.markVisited(false, param2, param3, param1)) {
             this.appendDescription(param1, param2, false, param3);
-            this.a(81, param1, param2, param3);
+            this.appendChildDescription(81, param1, param2, param3);
           }
           var5_int = -117 % ((param0 - 64) / 61);
           stackIn_3_0 = (StringBuilder) (param3);
@@ -430,9 +430,9 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
             return false;
           }
           if (FleetTrailPoint.field_p[81]) {
-            stackIn_14_0 = this.a(9501, param3);
+            stackIn_14_0 = this.unfocusedChildContains(9501, param3);
           } else {
-            stackIn_14_0 = this.a(param3, 125);
+            stackIn_14_0 = this.unfocusedChildContains(param3, 125);
           }
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

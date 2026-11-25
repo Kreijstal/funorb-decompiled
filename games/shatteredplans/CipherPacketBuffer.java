@@ -140,7 +140,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = AudioService.a(param1, false, var3);
+              var3 = AudioService.rewriteCurrentAppletUrl(param1, false, var3);
               ExternalLinkSupport.openExternalUrl(param1, true, var3.toString(), -102);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -10,7 +10,7 @@ final class AudioService implements Runnable {
     static String field_g;
     volatile boolean field_a;
 
-    final static void a(int param0) {
+    final static void initializeAccountDialogs(int param0) {
         MusicVoice.field_I = AccountBooleanRequest.getAccountDialogStyle(108);
         if (param0 == 0) {
           ByteArrayStorage.field_e = new DialogRoot();
@@ -22,7 +22,7 @@ final class AudioService implements Runnable {
         RasterCoverageSpan.openLoginForm((byte) -50, true, true);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8, int param9) {
+    final static void blendGouraudSpanHalfBackground(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8, int param9) {
         int var16 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -71,7 +71,7 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static GameState a(GameRules param0, String[] param1, int param2, int param3, int param4) {
+    final static GameState createTutorialGameState(GameRules param0, String[] param1, int param2, int param3, int param4) {
         try {
           GameState var5 = null;
           RuntimeException var5_ref = null;
@@ -175,7 +175,7 @@ final class AudioService implements Runnable {
         this.field_a = false;
     }
 
-    final static java.net.URL a(java.applet.Applet param0, boolean param1, java.net.URL param2) {
+    final static java.net.URL rewriteCurrentAppletUrl(java.applet.Applet param0, boolean param1, java.net.URL param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_10_0 = null;
@@ -231,7 +231,7 @@ final class AudioService implements Runnable {
         field_e = null;
         if (param0 > -41) {
           String[] var2 = (String[]) null;
-          AudioService.a((GameRules) null, (String[]) null, 30, -16, 113);
+          AudioService.createTutorialGameState((GameRules) null, (String[]) null, 30, -16, 113);
           return;
         }
     }

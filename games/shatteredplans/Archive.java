@@ -941,10 +941,10 @@ final class Archive {
           if (param0 > -11) {
             field_h = (String) null;
           }
-          DialWidget.field_I.a(BattleEvent.field_o, true, QuickChatPhraseRegistry.field_b, (byte) 0);
+          DialWidget.field_I.pollPointerInput(BattleEvent.field_o, true, QuickChatPhraseRegistry.field_b, (byte) 0);
           DialWidget.field_I.updateDialogs(125);
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-            DialWidget.field_I.a(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
+            DialWidget.field_I.dispatchKeyInput(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

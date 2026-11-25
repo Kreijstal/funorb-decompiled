@@ -96,7 +96,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, byte param3) {
+    final boolean pollPointerInput(int param0, boolean param1, int param2, byte param3) {
         int var5;
         DraggableWidget var6;
         int var7;
@@ -111,7 +111,7 @@ class UiWidget extends IntrusiveNode {
         } else {
           if (BattleExplosionVisual.field_o != 0 &&
             var5 != 0) {
-            this.a(0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, this, param2, param0, BattleExplosionVisual.field_o);
+            this.handleMouseWheel(0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, this, param2, param0, BattleExplosionVisual.field_o);
           }
           if (LobbyCommandSupport.field_d != 0) {
             if (!this.handlePress(LobbyCommandSupport.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
@@ -177,12 +177,12 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static StringList g(int param0) {
+    final static StringList createStringList(int param0) {
         int var1 = 4 / ((-7 - param0) / 37);
         return BattleEvent.c(1, 0);
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidAccountName(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -213,7 +213,7 @@ class UiWidget extends IntrusiveNode {
         int var2 = -22 % ((-84 - param0) / 33);
     }
 
-    final boolean a(int param0, char param1, boolean param2) {
+    final boolean dispatchKeyInput(int param0, char param1, boolean param2) {
         if (this.isFocused(1) &&
           this.handleKey(param0, param1, 13, this)) {
           return true;
@@ -316,7 +316,7 @@ class UiWidget extends IntrusiveNode {
     final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_8_0 = false;
         if (param1 < 36) {
-          this.a(126, '￡', false);
+          this.dispatchKeyInput(126, '￡', false);
         }
         stackIn_8_0 = (this.field_m + param4 <= param0) && (param2 >= param3 + this.field_q) && (param0 < this.field_x + (this.field_m + param4)) && (param3 + (this.field_q + this.field_n) > param2);
         return stackIn_8_0;
@@ -345,7 +345,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    boolean handleMouseWheel(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -358,7 +358,7 @@ final class MusicCrossfadeStream extends PcmStream {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = AudioService.a(param1, false, var4).getFile();
+              var3 = AudioService.rewriteCurrentAppletUrl(param1, false, var4).getFile();
               BrowserJavaScriptBridge.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, -95);
               BrowserJavaScriptBridge.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, -65);
               BrowserJavaScriptBridge.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, -88);

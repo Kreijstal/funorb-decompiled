@@ -10,7 +10,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
     static String field_B;
     IntrusiveDeque field_A;
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -24,14 +24,14 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         try {
           if (param0 != 0) {
             var11 = (UiWidget) null;
-            this.a(118, -43, -76, (UiWidget) null, 87, 88, 5);
+            this.handleMouseWheel(118, -43, -76, (UiWidget) null, 87, 88, 5);
           }
           var12 = new IntrusiveDequeCursor(this.field_A);
           var9 = (UiWidget) (var12.startForward(2));
           while (var9 != null) {
             if (var9.isLinked(param0 + 2048)) {
               if (var9.isFocused(1) &&
-                var9.a(0, param1, param2, param3, param4, param5, param6)) {
+                var9.handleMouseWheel(0, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var12.nextForward((byte) 58));

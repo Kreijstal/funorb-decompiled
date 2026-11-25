@@ -3782,7 +3782,7 @@ final class GameScreen {
                 !this.field_s.field_W) {
                 this.refreshChatPanel(15);
               }
-              ProjectsContent.b((byte) -127);
+              ProjectsContent.tickChatNotifications((byte) -127);
               this.field_V.moveTo((byte) 68, this.field_V.field_k, this.getAreaHeight((byte) 14) - this.field_V.field_i / 2);
               this.field_K.moveTo((byte) 45, this.field_K.field_k, this.field_V.field_t);
               break;

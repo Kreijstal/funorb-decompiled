@@ -309,7 +309,7 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         if (DiskArchiveRequest.field_A) {
-          ProjectsContent.a((byte) -120);
+          ProjectsContent.closeClientOverlays((byte) -120);
           UsernameAvailabilityValidator.e((byte) -66);
           TerritoryResourcePanelSupport.clearSocialLists(true);
           DiskArchiveRequest.field_A = false;
@@ -369,7 +369,7 @@ final class DiskCacheWorker implements Runnable {
           }
           ChatAndSocialPanel.field_a.setResult(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
-          AudioService.a(0);
+          AudioService.initializeAccountDialogs(0);
           PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
           MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;
         } catch (RuntimeException runtimeException) {

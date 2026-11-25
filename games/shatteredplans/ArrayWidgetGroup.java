@@ -65,7 +65,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -87,7 +87,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
             var10 = var12[var9];
             if (var10 != null &&
               var10.isFocused(1) &&
-              var10.a(param0 ^ 0, param1, param2, param3, param4, param5, param6)) {
+              var10.handleMouseWheel(param0 ^ 0, param1, param2, param3, param4, param5, param6)) {
               return true;
             }
           }
@@ -675,7 +675,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
           return null;
         }
         var7 = (UiWidget) null;
-        this.a(115, -37, -38, (UiWidget) null, 68, 55, -109);
+        this.handleMouseWheel(115, -37, -38, (UiWidget) null, 68, 55, -109);
         return null;
     }
 

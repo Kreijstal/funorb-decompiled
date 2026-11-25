@@ -297,7 +297,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (15 == BufferedCacheFile.field_e) {
               if (EmailValidator.field_p) {
                 DiskCacheWorker.commitMenuTransition(1048576);
-                ProjectsContent.a((byte) -122);
+                ProjectsContent.closeClientOverlays((byte) -122);
                 IntroRenderSupport.clearChatHistory(112);
                 MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
                 EmailValidator.field_p = false;
@@ -314,7 +314,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (BufferedCacheFile.field_e == 10 &&
               EmailValidator.field_p) {
-              DialWidget.h(112);
+              DialWidget.readLobbyUpdate(112);
               continue;
             }
             if (BufferedCacheFile.field_e == 71) {

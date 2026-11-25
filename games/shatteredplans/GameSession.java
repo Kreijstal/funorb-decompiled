@@ -1581,7 +1581,7 @@ final class GameSession implements AiHost {
           var2.position = var2.position + 2;
           var3 = var2.position;
           var2.writeByte(this.field_P.field_O, (byte) -109);
-          AchievementProgress.writeOrders(MapView.createDualLinkDequeSequence((byte) 81, this.field_o), -256, MapView.createDualLinkDequeSequence((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
+          AchievementProgress.writeOrders(MapView.createDualLinkDequeSequence((byte) 81, this.field_o), -256, MapView.createDualLinkDequeSequence((byte) 93, this.field_ab), DialWidget.createQuaternaryListSequence(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
           this.field_v.clear((byte) 112);
@@ -3089,7 +3089,7 @@ final class GameSession implements AiHost {
               if (var6 < 24) {
                 var6 = 24;
               }
-              var4_ref2 = DialWidget.a(96, SocketArchiveNetworkClient.field_w, var6);
+              var4_ref2 = DialWidget.createSoundEffectPlayback(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
                 var4_ref2 = MenuLabel.a(SocketArchiveNetworkClient.field_w, 78);
               }
@@ -4236,7 +4236,7 @@ final class GameSession implements AiHost {
           this.field_M = param7;
           if (!this.field_f) {
             if (this.field_W) {
-              this.field_P = AudioService.a(param3, param5, param2, -22379, 4);
+              this.field_P = AudioService.createTutorialGameState(param3, param5, param2, -22379, 4);
               PacketBuffer.initializeTutorialState(-126, this);
               if (var13 != 0) {
                 this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);

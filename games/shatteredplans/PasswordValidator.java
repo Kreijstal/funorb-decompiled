@@ -92,7 +92,7 @@ final class PasswordValidator extends TextFieldValidator {
           DateValidationSupport.field_c.a(param3, -20429);
           if (null != RasterSpanFactory.field_c) {
             if (LoginMethodPreference.field_g) {
-              RasterSpanFactory.field_c.a(DateValidationSupport.field_c.field_B, param3, DateValidationSupport.field_c.field_N, (byte) 0);
+              RasterSpanFactory.field_c.pollPointerInput(DateValidationSupport.field_c.field_B, param3, DateValidationSupport.field_c.field_N, (byte) 0);
             } else {
               RasterSpanFactory.field_c = null;
             }

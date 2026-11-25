@@ -127,7 +127,7 @@ abstract class DebouncedValidator implements ValidationSource {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(AudioService.a(param1, false, var2), "_top");
+              param1.getAppletContext().showDocument(AudioService.rewriteCurrentAppletUrl(param1, false, var2), "_top");
               if (param0 != 1) {
                 field_a = (String) null;
               }

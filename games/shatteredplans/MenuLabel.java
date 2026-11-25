@@ -52,7 +52,7 @@ class MenuLabel extends MenuComponent {
             stackIn_3_0 = (String[]) null;
             return stackIn_3_0;
           }
-          var6 = UiWidget.g(param1 + 105);
+          var6 = UiWidget.createStringList(param1 + 105);
           var3 = 0;
           var4 = 0;
           while (true) {

@@ -193,7 +193,7 @@ class TextHotspotWidget extends FocusableWidget {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               var3 = 96 / ((param1 + 19) / 53);
-              param0.getAppletContext().showDocument(AudioService.a(param0, false, var2), "_top");
+              param0.getAppletContext().showDocument(AudioService.rewriteCurrentAppletUrl(param0, false, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

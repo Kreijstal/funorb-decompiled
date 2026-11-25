@@ -32,7 +32,7 @@ final class SpriteResourceSupport {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
               var3 = 3 / ((12 - param1) / 37);
-              param0.getAppletContext().showDocument(AudioService.a(param0, false, var2), "_top");
+              param0.getAppletContext().showDocument(AudioService.rewriteCurrentAppletUrl(param0, false, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

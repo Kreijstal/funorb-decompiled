@@ -12,14 +12,14 @@ final class DialWidget extends FocusableWidget {
     static DialogRoot field_I;
     int field_H;
 
-    final static ChatHistoryEntry i(int param0) {
+    final static ChatHistoryEntry getLatestChatEntry(int param0) {
         if (DebouncedValidator.field_g == param0) {
           return null;
         }
         return UiSpriteSupport.field_d[DebouncedValidator.field_g - 1];
     }
 
-    final static NodeSequence a(int param0, QuaternaryNodeList param1) {
+    final static NodeSequence createQuaternaryListSequence(int param0, QuaternaryNodeList param1) {
         RuntimeException var2 = null;
         QuaternaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -28,7 +28,7 @@ final class DialWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -102) {
-            DialWidget.h(-96);
+            DialWidget.readLobbyUpdate(-96);
           }
           stackIn_3_0 = new QuaternaryListSequence(param1);
           return (NodeSequence) ((Object) stackIn_3_0);
@@ -46,7 +46,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    final static SoundPlayback a(int param0, SoundEffectDefinition param1, int param2) {
+    final static SoundPlayback createSoundEffectPlayback(int param0, SoundEffectDefinition param1, int param2) {
         RuntimeException var3 = null;
         SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -96,7 +96,7 @@ final class DialWidget extends FocusableWidget {
         try {
           if (!super.handlePress(param0, param1, (byte) 98, param3, param4, param5, param6)) {
             if (param2 <= 95) {
-              DialWidget.i(34);
+              DialWidget.getLatestChatEntry(34);
             }
             return false;
           }
@@ -135,7 +135,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    final static void h(int param0) {
+    final static void readLobbyUpdate(int param0) {
         int stackIn_12_0 = 0;
         LobbyPlayerEntry stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
@@ -205,7 +205,7 @@ final class DialWidget extends FocusableWidget {
           var1 = SpriteWipeSupport.field_a;
           if (param0 < 69) {
             var12 = (java.applet.Applet) null;
-            DialWidget.a(false, (String) null, (java.applet.Applet) null);
+            DialWidget.readBrowserCookie(false, (String) null, (java.applet.Applet) null);
           }
           var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-119);
           if (var2 != 0 &&
@@ -507,7 +507,7 @@ final class DialWidget extends FocusableWidget {
         }
     }
 
-    final static String a(boolean param0, String param1, java.applet.Applet param2) {
+    final static String readBrowserCookie(boolean param0, String param1, java.applet.Applet param2) {
         try {
           String var3 = null;
           String[] var4 = null;
