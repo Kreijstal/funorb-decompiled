@@ -218,12 +218,12 @@ final class RoundedMenuPanel extends MenuComponent {
           String var3 = (String) null;
           RoundedMenuPanel.getAccountBooleanRequest(-15, (String) null);
         }
-        ul.field_Hb = 3 & param1;
+        ContextActionMenu.field_Hb = 3 & param1;
         if (!(2 >= TutorialScene.field_a)) {
           TutorialScene.field_a = 2;
         }
-        if (!(ul.field_Hb <= 2)) {
-          ul.field_Hb = 2;
+        if (!(ContextActionMenu.field_Hb <= 2)) {
+          ContextActionMenu.field_Hb = 2;
         }
     }
 

@@ -581,7 +581,7 @@ final class GameState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_g = uk.a(this.field_M, this, param0, this.field_A, this.field_v, param1, (byte) -7, this.field_o);
+          this.field_g = MapStateReader.readMapState(this.field_M, this, param0, this.field_A, this.field_v, param1, (byte) -7, this.field_o);
           if (param2) {
             this.field_L = (Random) null;
           }

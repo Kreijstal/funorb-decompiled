@@ -52,7 +52,7 @@ final class InvalidMapConnectionException extends Exception {
             while (var7 != null) {
               var8 = -var7.field_y.field_A + var7.field_B.field_A;
               var9 = var7.field_B.field_S - var7.field_y.field_S;
-              if (!ul.a(var8, var9, 0, var5, var6)) {
+              if (!ContextActionMenu.isAngleBefore(var8, var9, 0, var5, var6)) {
                 var7 = (FleetMove) (param1.field_T.nextForward((byte) -71));
                 continue;
               }

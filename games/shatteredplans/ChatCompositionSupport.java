@@ -236,7 +236,7 @@ final class ChatCompositionSupport {
               boolean decompiledSharedTail0 = !(LoginMethodPreference.field_g);
               if (!decompiledSharedTail0) {
                 var6 = "";
-                var5 = "<col=999999>" + var5 + uh.field_d + "</col>";
+                var5 = "<col=999999>" + var5 + ArchiveLoadProgress.field_d + "</col>";
                 decompiledSharedTail0 = (var11 != 0);
               }
               if ((decompiledSharedTail0) &&

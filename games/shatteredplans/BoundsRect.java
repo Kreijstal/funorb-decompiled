@@ -120,10 +120,10 @@ final class BoundsRect extends IntrusiveNode {
     }
 
     final static String d(int param0) {
-        if (ue.field_a == PrivateChatMessage.field_l) {
+        if (ExternalLinkSupport.field_a == PrivateChatMessage.field_l) {
           return PlayerStats.field_j;
         }
-        if (ue.field_a == MatchingTextValidator.field_s) {
+        if (ExternalLinkSupport.field_a == MatchingTextValidator.field_s) {
           return ClientSessionSupport.field_b;
         }
         if (!wh.field_a.isComplete(14)) {

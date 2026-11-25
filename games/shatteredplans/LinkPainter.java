@@ -292,11 +292,11 @@ final class LinkPainter implements WidgetPainter {
                         if (!HighscoreResponseSupport.field_b) {
                           var17 = DerelictVictoryChecker.field_m;
                           var18 = QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
-                          var17.field_j.a(1, 8, var18);
+                          var17.field_j.addItem(1, 8, var18);
                         }
                         var17Lifetime1 = DerelictVictoryChecker.field_m;
                         var18Lifetime1 = QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var16});
-                        var17Lifetime1.field_j.a(1, 18, var18Lifetime1);
+                        var17Lifetime1.field_j.addItem(1, 18, var18Lifetime1);
                       }
                       var5 = var7;
                     } else if (var7.field_Cb.field_L &&

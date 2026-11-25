@@ -153,7 +153,7 @@ final class AudioService implements Runnable {
               }
               ClientOverlayDrawSupport.sleep((byte) -98, 10L);
               var5 = (Object) null;
-              ud.a(-106, this.field_c, (Object) null);
+              AwtEventQueueSupport.postDummyEvent(-106, this.field_c, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

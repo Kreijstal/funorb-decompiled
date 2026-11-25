@@ -206,7 +206,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           if (param0 != -7416) {
             DateInputWidget.a(7);
           }
-          if (ue.field_a == MatchingTextValidator.field_s) {
+          if (ExternalLinkSupport.field_a == MatchingTextValidator.field_s) {
             stackIn_4_0 = null;
             return (AccountRequestResult) (stackIn_4_0);
           }
@@ -218,7 +218,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           }
           ClientSessionSupport.field_b = param1;
           ProjectsWindowSupport.field_a = null;
-          MatchingTextValidator.field_s = ue.field_a;
+          MatchingTextValidator.field_s = ExternalLinkSupport.field_a;
           stackIn_10_0 = null;
           return (AccountRequestResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

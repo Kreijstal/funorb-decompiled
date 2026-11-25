@@ -854,7 +854,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_off", 511);
                 if (var2 != null) {
-                  ue.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ExternalLinkSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby", 511);
                 if (var2 != null) {
@@ -1438,7 +1438,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("dob_chatdisabled", 511);
                 if (var2 != null) {
-                  uh.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("dob_enterforchat", 511);
                 if (var2 != null) {
@@ -1574,7 +1574,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_trychanging1", 511);
                 if (var2 != null) {
-                  ud.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_trychanging2", 511);
                 if (var2 != null) {
@@ -3114,7 +3114,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_youresigned", 511);
                 if (null != var2) {
-                  uh.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youresigned_rematch", 511);
                 if (null != var2) {
@@ -3494,19 +3494,19 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_name,0", 511);
                 if (var2 != null) {
-                  ul.field_Fb[0] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Fb[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_name,1", 511);
                 if (null != var2) {
-                  ul.field_Fb[1] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Fb[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_long_name,0", 511);
                 if (null != var2) {
-                  uh.field_g[0] = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_g[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_long_name,1", 511);
                 if (null != var2) {
-                  uh.field_g[1] = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_g[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_fixed_size", 511);
                 if (var2 != null) {

@@ -11,8 +11,8 @@ final class IntroTextLine extends IntrusiveNode {
     static String field_p;
     static String field_j;
     static EmailValidationError field_r;
-    static ul field_t;
-    static uh field_n;
+    static ContextActionMenu field_t;
+    static ArchiveLoadProgress field_n;
     static long field_k;
     static int[] field_l;
 

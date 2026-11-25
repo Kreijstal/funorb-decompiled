@@ -350,7 +350,7 @@ final class QuickChatMenuSupport {
         ValidationState.field_d = new int[param1];
         LobbyUiSupport.field_d = new int[param1];
         ClientUiLoadingSupport.field_c = new int[param1];
-        ue.field_e = new int[param1];
+        ExternalLinkSupport.field_e = new int[param1];
         BirthDateValidator.field_i = new int[param1];
     }
 

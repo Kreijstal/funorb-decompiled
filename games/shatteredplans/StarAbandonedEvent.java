@@ -34,8 +34,8 @@ final class StarAbandonedEvent extends IntrusiveNode {
         if (param0 < 53) {
           return (java.awt.Container) null;
         }
-        if (null != uf.field_b) {
-          return (java.awt.Container) ((Object) uf.field_b);
+        if (null != ArchiveLoadStep.field_b) {
+          return (java.awt.Container) ((Object) ArchiveLoadStep.field_b);
         }
         return (java.awt.Container) ((Object) GameScreen.getHostApplet((byte) 125));
     }

@@ -305,7 +305,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
           var9 = param2;
           var10 = param4;
           var11 = param5;
-          var12.field_j.b(var10, var11, 0, var8, var9);
+          var12.field_j.layoutAtAnchor(var10, var11, 0, var8, var9);
           if (param6 != 110) {
             field_t = (int[]) null;
           }

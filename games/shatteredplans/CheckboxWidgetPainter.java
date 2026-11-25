@@ -6,7 +6,7 @@ final class CheckboxWidgetPainter implements WidgetPainter {
     static LoginMethodPreference field_b;
     static String field_a;
 
-    final static Ai createAi(int param0, AiHost param1, Player param2, GameState param3, int param4) {
+    final static PlayerAi createAi(int param0, AiHost param1, Player param2, GameState param3, int param4) {
         RuntimeException var5 = null;
         TutorialAi stackIn_5_0 = null;
         AggressiveAi stackIn_8_0 = null;
@@ -29,31 +29,31 @@ final class CheckboxWidgetPainter implements WidgetPainter {
           }
           if (param0 == 2) {
             stackIn_5_0 = new TutorialAi(param3, param2, param1);
-            return (Ai) ((Object) stackIn_5_0);
+            return (PlayerAi) ((Object) stackIn_5_0);
           }
           if (4 == param0) {
             stackIn_8_0 = new AggressiveAi(param3, param2, param1);
-            return (Ai) ((Object) stackIn_8_0);
+            return (PlayerAi) ((Object) stackIn_8_0);
           }
           if (5 == param0) {
             stackIn_11_0 = new RecklessAi(param3, param2, param1);
-            return (Ai) ((Object) stackIn_11_0);
+            return (PlayerAi) ((Object) stackIn_11_0);
           }
           if (param0 == 6) {
             stackIn_14_0 = new IsolationistAi(param3, param2, param1);
-            return (Ai) ((Object) stackIn_14_0);
+            return (PlayerAi) ((Object) stackIn_14_0);
           }
           if (param0 == 7) {
             stackIn_18_0 = new DefensiveAi(param3, param2, param1);
-            return (Ai) ((Object) stackIn_18_0);
+            return (PlayerAi) ((Object) stackIn_18_0);
           }
           if (param0 != 0 &&
             1 != param0) {
             stackIn_25_0 = new StandardAi(param3, param2, param1, param0);
-            return (Ai) ((Object) stackIn_25_0);
+            return (PlayerAi) ((Object) stackIn_25_0);
           }
           stackIn_23_0 = new LegacyAi(param3, param2, param1, param0);
-          return (Ai) ((Object) stackIn_23_0);
+          return (PlayerAi) ((Object) stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

@@ -20,19 +20,19 @@ abstract class GameClientShell extends GameApplet {
     private boolean field_y;
 
     private final void allowOpcode4(int param0) {
-        ud.field_c[4] = true;
+        AwtEventQueueSupport.field_c[4] = true;
         if (param0 != 3) {
           field_D = -48;
         }
     }
 
     private final void allowOpcodes11To13(byte param0) {
-        ud.field_c[11] = true;
-        ud.field_c[12] = true;
+        AwtEventQueueSupport.field_c[11] = true;
+        AwtEventQueueSupport.field_c[12] = true;
         if (param0 > -8) {
           this.j((byte) 51);
         }
-        ud.field_c[13] = true;
+        AwtEventQueueSupport.field_c[13] = true;
     }
 
     final void configureGame(String param0, int param1, byte param2) {
@@ -206,7 +206,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void allowOpcode1(byte param0) {
-        ud.field_c[1] = true;
+        AwtEventQueueSupport.field_c[1] = true;
         if (param0 > -81) {
           this.allowOpcodes11To13((byte) -17);
         }
@@ -223,7 +223,7 @@ abstract class GameClientShell extends GameApplet {
           this.allowBaseOpcodes(-69, true);
         }
         if (var2 < 64 &&
-          ud.field_c[var2]) {
+          AwtEventQueueSupport.field_c[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -387,7 +387,7 @@ abstract class GameClientShell extends GameApplet {
         }
         we.a((byte) -59);
         HighscoreResponseSupport.snapshotMouseInput((byte) 62);
-        if (!uf.a(false) &&
+        if (!ArchiveLoadStep.isClientNotReady(false) &&
           SoundPlayback.field_i != 11) {
           Archive.c(-78);
         }
@@ -574,7 +574,7 @@ abstract class GameClientShell extends GameApplet {
         if (DefensiveAi.field_p == 13) {
           var3Lifetime2 = 1;
           if (null != IntroTextLine.field_n) {
-            stackIn_141_0 = (!IntroTextLine.field_n.b(-1)) ? 0 : 1;
+            stackIn_141_0 = (!IntroTextLine.field_n.pollLoaded(-1)) ? 0 : 1;
             var3Lifetime2 = stackIn_141_0;
             ClientDialogSupport.setLoadingProgress(IntroTextLine.field_n.field_h, 2, IntroTextLine.field_n.field_c);
           }
@@ -588,7 +588,7 @@ abstract class GameClientShell extends GameApplet {
           this.createCanvas(0);
           QuickChatCategoryRegistry.a(NotificationEntry.field_i, false);
         }
-        if (ud.field_c[8]) {
+        if (AwtEventQueueSupport.field_c[8]) {
           MenuComponent.d(2147483647);
         }
     }
@@ -609,7 +609,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void allowOpcode5(byte param0) {
-        ud.field_c[5] = true;
+        AwtEventQueueSupport.field_c[5] = true;
         if (param0 > -22) {
           this.allowOpcode4(99);
         }
@@ -654,7 +654,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void allowOpcode2(byte param0) {
-        ud.field_c[2] = true;
+        AwtEventQueueSupport.field_c[2] = true;
         int var2 = -9 % ((param0 + 55) / 57);
     }
 
@@ -771,11 +771,11 @@ abstract class GameClientShell extends GameApplet {
         int var4 = TextInputPainter.field_t - 1;
         byte[] var5 = new byte[var4];
         SpriteWipeSupport.field_a.b(var4, ~param0, 0, var5);
-        ue.a(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
+        ExternalLinkSupport.openExternalUrl(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
     private final void allowOpcode6(int param0) {
-        ud.field_c[6] = true;
+        AwtEventQueueSupport.field_c[6] = true;
         if (param0 != -31193) {
           this.allowOpcode2((byte) -62);
         }
@@ -861,16 +861,16 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void allowBaseOpcodes(int param0, boolean param1) {
-        ud.field_c[0] = true;
-        ud.field_c[17] = true;
-        ud.field_c[8] = param1;
+        AwtEventQueueSupport.field_c[0] = true;
+        AwtEventQueueSupport.field_c[17] = true;
+        AwtEventQueueSupport.field_c[8] = param1;
         if (param0 >= -33) {
           this.i(-80);
         }
-        ud.field_c[7] = true;
-        ud.field_c[16] = true;
-        ud.field_c[3] = true;
-        ud.field_c[18] = true;
+        AwtEventQueueSupport.field_c[7] = true;
+        AwtEventQueueSupport.field_c[16] = true;
+        AwtEventQueueSupport.field_c[3] = true;
+        AwtEventQueueSupport.field_c[18] = true;
     }
 
     static {

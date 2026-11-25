@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. Reproducible rules live in dekobloko-work/readable; the reverse dictionary is ../../decompilation/shatteredplans-naming.json.
 
-Resolved declarations: 427/459 classes and 2174/3231 methods have readable names; 363 constructors follow their class names.
-Remaining: 32 opaque class names and 1057 opaque method names. The complete naming goal is still in progress.
+Resolved declarations: 435/459 classes and 2195/3231 methods have readable names; 363 constructors follow their class names.
+Remaining: 24 opaque class names and 1036 opaque method names. The complete naming goal is still in progress.
 
 Audit with `node readable/naming-coverage.mjs shatteredplans` in dekobloko-work; it exits unsuccessfully while opaque names remain.
 

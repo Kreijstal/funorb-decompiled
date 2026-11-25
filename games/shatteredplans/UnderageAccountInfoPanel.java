@@ -414,7 +414,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                 if (stackIn_65_0 > stackIn_65_1) {
                   TutorialStageSupport.field_c[var23Lifetime2] = -2147483648;
                 } else {
-                  ul.field_Cb[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  ContextActionMenu.field_Cb[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   IntNode.field_i[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;

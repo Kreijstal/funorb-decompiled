@@ -67,18 +67,18 @@ final class ClientContextMenuSupport {
             !(RasterTargetSupport.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
             var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
-            var7.field_j.a(1, 10, var8);
+            var7.field_j.addItem(1, 10, var8);
           }
           DerelictVictoryChecker.field_m.addRoomJoinActions(false);
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;
               var12 = QuickChatCategoryRegistry.a(SpriteResourceSupport.field_e, 4371, new String[]{param3});
-              var11.field_j.a(1, 16, var12);
+              var11.field_j.addItem(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;
               var10 = QuickChatCategoryRegistry.a(DirectByteArrayStorage.field_g, 4371, new String[]{param3});
-              var9.field_j.a(1, 15, var10);
+              var9.field_j.addItem(1, 15, var10);
             }
           }
           var13 = DerelictVictoryChecker.field_m;
@@ -87,7 +87,7 @@ final class ClientContextMenuSupport {
           }
           var5 = PointsVictoryChecker.field_p;
           var6 = SliderWidget.field_P;
-          var13.field_j.b(0, 0, 0, var5, var6);
+          var13.field_j.layoutAtAnchor(0, 0, 0, var5, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

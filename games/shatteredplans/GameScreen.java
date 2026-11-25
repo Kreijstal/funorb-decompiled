@@ -1684,21 +1684,21 @@ final class GameScreen {
           var8 = UiWidget.field_t.field_z + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
           ArrayWidgetGroup.field_z.draw((-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
-          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ContextActionMenu.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ContextActionMenu.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ContextActionMenu.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
           IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.addRadialGlowQ4(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ContextActionMenu.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ContextActionMenu.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ContextActionMenu.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ArrayWidgetGroup.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
           IconTextPanel.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
@@ -2870,7 +2870,7 @@ final class GameScreen {
           }
           if (decompiledFrameRemainder0) {
             if (var9 instanceof PointsVictoryChecker) {
-              var8 = ue.field_c;
+              var8 = ExternalLinkSupport.field_c;
               if (var16 != 0) {
                 if (!(var9 instanceof DerelictVictoryChecker)) {
                   var8 = TutorialConditionalText.field_a;
@@ -3370,7 +3370,7 @@ final class GameScreen {
               }
               if (decompiledSharedTail2) {
                 this.a(-120, this.field_j);
-                this.field_S.field_o = ue.field_b;
+                this.field_S.field_o = ExternalLinkSupport.field_b;
                 this.field_j.field_s = true;
               }
               this.field_j.field_A = false;
@@ -3845,7 +3845,7 @@ final class GameScreen {
                     break regionExit2;
                   }
                   if (0 != (var3.field_f & 1 << var5)) {
-                    var6_ref = uh.field_e;
+                    var6_ref = ArchiveLoadProgress.field_e;
                   } else {
                     if ((1 << var5 & this.field_s.field_P.field_w) != 0) {
                       var6_ref = MenuList.field_A;
@@ -3883,8 +3883,8 @@ final class GameScreen {
               }
               if (decompiledSharedTail0) {
                 var4 = 1;
-                if (this.field_ab[var3.field_r] != ul.field_Ab) {
-                  this.field_ab[var3.field_r] = ul.field_Ab;
+                if (this.field_ab[var3.field_r] != ContextActionMenu.field_Ab) {
+                  this.field_ab[var3.field_r] = ContextActionMenu.field_Ab;
                   this.field_z[var3.field_r] = true;
                   this.field_J.field_A = true;
                   this.field_n.select(86);
@@ -5229,7 +5229,7 @@ final class GameScreen {
             HighscoreQueryRequest.putTextReplacement("continue", 1904, wm.field_e);
             HighscoreQueryRequest.putTextReplacement("continue2", 1904, IntValueWriteRequest.field_k);
             HighscoreQueryRequest.putTextReplacement("continue3", 1904, StatefulWidgetTheme.field_v);
-            HighscoreQueryRequest.putTextReplacement("continuekey", 1904, ul.field_Ob);
+            HighscoreQueryRequest.putTextReplacement("continuekey", 1904, ContextActionMenu.field_Ob);
             HighscoreQueryRequest.putTextReplacement("captureAll", 1904, SecondaryNodeHashTable.field_e);
             HighscoreQueryRequest.putTextReplacement("exit", 1904, SpriteWipeSupport.field_b);
             QuickChatHelpSupport.field_d = this.field_s.field_n;

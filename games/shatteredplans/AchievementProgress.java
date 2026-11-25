@@ -131,7 +131,7 @@ final class AchievementProgress {
           }
           var4 = (PlayerRankingRequest) (PlacementOrder.field_r.startForward(0));
           while (var4 != null) {
-            uf.a(var4, param0, false);
+            ArchiveLoadStep.writeRankingRequest(var4, param0, false);
             var4 = (PlayerRankingRequest) (PlacementOrder.field_r.nextForward((byte) -71));
           }
           return;

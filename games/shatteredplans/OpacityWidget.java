@@ -129,7 +129,7 @@ final class OpacityWidget extends SingleChildWidget {
             var8.f(false);
             return true;
           }
-          PrivateChatMessage.field_l = ue.field_a;
+          PrivateChatMessage.field_l = ExternalLinkSupport.field_a;
           MenuInputState.field_m = param1;
           AccountCreationForm.field_G = param4;
           PlayerStats.field_j = param2;

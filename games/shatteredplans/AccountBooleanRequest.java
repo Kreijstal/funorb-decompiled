@@ -322,11 +322,11 @@ final class AccountBooleanRequest {
             if (!HighscoreResponseSupport.field_b) {
               var5 = DerelictVictoryChecker.field_m;
               var6 = GzipInflater.field_h;
-              var5.field_j.a(param1 + 1, 14, var6);
+              var5.field_j.addItem(param1 + 1, 14, var6);
             }
             var7 = DerelictVictoryChecker.field_m;
             var8 = ServerIntArrayRequest.field_o;
-            var7.field_j.a(param1 + 1, 20, var8);
+            var7.field_j.addItem(param1 + 1, 20, var8);
           }
           if (1 == param0.field_n &&
             !TextLayoutLine.a((byte) 111) &&
@@ -335,11 +335,11 @@ final class AccountBooleanRequest {
             if (!HighscoreResponseSupport.field_b) {
               var9 = DerelictVictoryChecker.field_m;
               var10 = MenuLabel.field_z;
-              var9.field_j.a(1, 14, var10);
+              var9.field_j.addItem(1, 14, var10);
             }
             var11 = DerelictVictoryChecker.field_m;
             var12 = IntroLogoSupport.field_a;
-            var11.field_j.a(1, 20, var12);
+            var11.field_j.addItem(1, 20, var12);
           }
           DerelictVictoryChecker.field_m.addRoomJoinActions(false);
           DerelictVictoryChecker.field_m.addInviteActions(false, -16661);
@@ -349,7 +349,7 @@ final class AccountBooleanRequest {
           var13 = DerelictVictoryChecker.field_m;
           var3 = PointsVictoryChecker.field_p;
           var4 = SliderWidget.field_P;
-          var13.field_j.b(0, param1, 0, var3, var4);
+          var13.field_j.layoutAtAnchor(0, param1, 0, var3, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

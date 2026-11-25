@@ -462,7 +462,7 @@ final class ObjectList {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ud.field_d, 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_d, 4371, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 != 0) {

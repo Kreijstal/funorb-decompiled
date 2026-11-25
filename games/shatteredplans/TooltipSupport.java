@@ -34,7 +34,7 @@ final class TooltipSupport {
           int var5 = 7 % ((-9 - param0) / 60);
           var6 = SpriteState.field_u.field_nb.maxLineWidth(param1, 500) + 6;
           var7 = 2 + var4 * UniformNineSliceFactory.field_c;
-          var8 = uh.a(-38, var2_int, var6, 12);
+          var8 = ArchiveLoadProgress.positionPopupX(-38, var2_int, var6, 12);
           var9 = uq.a(20, 0, var7, var3);
           SoftwareRasterizer.drawRect(var8, var9, var6, var7, 0);
           SoftwareRasterizer.fillRect(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);

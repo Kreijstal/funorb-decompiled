@@ -72,7 +72,7 @@ final class LobbyUiSetupSupport {
           BattleExplosionVisual.field_r = param12;
           GameTextResources.field_d = param7;
           FleetMove.field_A = param8;
-          uk.field_b = HighscoreResponseSupport.loadSpriteSetByName(62, "lobby", param4, "gameprivacy");
+          MapStateReader.field_b = HighscoreResponseSupport.loadSpriteSetByName(62, "lobby", param4, "gameprivacy");
           CheckboxPainter.field_l = HighscoreResponseSupport.loadSpriteSetByName(83, "lobby", param4, "ratedgame");
           DateInputWidget.field_E = HighscoreResponseSupport.loadSpriteSetByName(-88, "lobby", param4, "opentome");
           LegacyAi.field_s = HighscoreResponseSupport.loadSpriteSetByName(71, "lobby", param4, "allowspectators");
@@ -173,7 +173,7 @@ final class LobbyUiSetupSupport {
           QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
           ByteArrayNode.field_p[0] = new IconLabelPanel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ByteArrayNode.field_p[0][1 + var17_int] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
+            ByteArrayNode.field_p[0][1 + var17_int] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, MapStateReader.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
           }
           if (param13 != -7966) {
             LobbyUiSetupSupport.clearStatics(-52);

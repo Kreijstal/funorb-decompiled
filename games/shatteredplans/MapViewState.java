@@ -437,7 +437,7 @@ abstract class MapViewState {
           if (param0 > -21) {
             this.field_X = false;
           }
-          var4 = uk.a(false, param1);
+          var4 = MapStateReader.getStarTypeSprite(false, param1);
           var5 = var4;
           var4.drawScaled(-1 + this.field_i[param1.field_p] - (int)(this.field_g * (float)var5.field_z / (this.field_I * 2.0f)), -1 + this.field_J[param1.field_p] - (int)((float)var5.field_z * this.field_g / (this.field_I * 2.0f)), (int)(this.field_g * (float)var5.field_z / this.field_I), (int)(this.field_g * (float)var5.field_z / this.field_I));
         } catch (RuntimeException runtimeException) {

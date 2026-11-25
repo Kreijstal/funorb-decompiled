@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface Ai {
+interface PlayerAi {
     public abstract void planTurn(byte param0);
 
     public abstract void broadcastChat(int param0);

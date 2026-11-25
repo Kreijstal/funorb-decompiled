@@ -346,7 +346,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             LobbyRoomControlsSupport.field_c = param5;
             LobbyOptionResources.field_c = param12;
             DualLinkDeque.field_b = param8;
-            uk.field_a = param9;
+            MapStateReader.field_a = param9;
             AccountFieldValue.field_b = param10;
             WidgetStyle.field_g = param11;
             if (StarAbandonedEvent.field_l.field_a == null) {

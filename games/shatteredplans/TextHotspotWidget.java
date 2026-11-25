@@ -160,7 +160,7 @@ class TextHotspotWidget extends FocusableWidget {
               TargetedChatMessage.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
-              AccountHandshakeSupport.writeAccountHandshake(WidgetStyle.field_g, PrivateChatMessage.field_o, LobbyOptionSupport.field_f, (byte) 20, uk.field_a);
+              AccountHandshakeSupport.writeAccountHandshake(WidgetStyle.field_g, PrivateChatMessage.field_o, LobbyOptionSupport.field_f, (byte) 20, MapStateReader.field_a);
               ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

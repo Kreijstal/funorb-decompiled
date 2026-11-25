@@ -354,11 +354,11 @@ final class FleetTrailPoint extends IntrusiveNode {
               SliderPainter.a((int[]) null, 0L, var6.field_Ab, var6.field_Eb, param0 + 8197, wg.field_a.field_Db, var6, -1, -1);
               var16 = DerelictVictoryChecker.field_m;
               var13_ref_String = TutorialVictoryChecker.field_o;
-              var16.field_j.a(1, 7, var13_ref_String);
+              var16.field_j.addItem(1, 7, var13_ref_String);
               var17 = DerelictVictoryChecker.field_m;
               var13 = PointsVictoryChecker.field_p;
               var14 = SliderWidget.field_P;
-              var17.field_j.b(0, 0, 0, var13, var14);
+              var17.field_j.layoutAtAnchor(0, 0, 0, var13, var14);
             }
             var6 = (ve) (var4.nextForward((byte) -71));
           }

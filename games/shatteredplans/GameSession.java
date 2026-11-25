@@ -26,7 +26,7 @@ final class GameSession implements AiHost {
     private boolean field_G;
     private int[] field_J;
     int field_m;
-    Ai[] field_s;
+    PlayerAi[] field_s;
     private SoundTriggerTick field_E;
     private int[] field_d;
     int field_h;
@@ -1964,12 +1964,12 @@ final class GameSession implements AiHost {
               var4 = QuickChatCategoryRegistry.a(AiTask.field_h, 4371, new String[]{param0.name});
               this.field_H.addFirst(new DiplomacyNotice(param0, (Player) null, var4), 0);
               if (ShatteredPlansClient.field_F) {
-                var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
+                var4 = QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
                 this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
               }
             }
           } else {
-            var4 = QuickChatCategoryRegistry.a(ud.field_b, 4371, new String[]{param1.name});
+            var4 = QuickChatCategoryRegistry.a(AwtEventQueueSupport.field_b, 4371, new String[]{param1.name});
             this.field_H.addFirst(new DiplomacyNotice(param1, (Player) null, var4), 0);
           }
           if (null != this.field_s[param1.field_x]) {
@@ -2626,7 +2626,7 @@ final class GameSession implements AiHost {
             var4[param1.field_x] = new StandardAi(this.field_P, param1, (AiHost) (this), param0);
             var4[var5] = var3;
           }
-          this.field_s = (Ai[]) ((Object) var4);
+          this.field_s = (PlayerAi[]) ((Object) var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2744,7 +2744,7 @@ final class GameSession implements AiHost {
             TextReplacementEntry.field_j == 16) {
             GameMenuController.field_e = true;
             ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
-            this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
+            this.field_s[this.field_h] = (PlayerAi) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
             var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {
               this.changeMoveSize(var2_ref, -var2_ref.field_z, 10755);
@@ -3810,7 +3810,7 @@ final class GameSession implements AiHost {
             return;
           }
           if (GameMenuController.field_e) {
-            this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
+            this.field_s[this.field_h] = (PlayerAi) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
           }
           var3_ref_fs__ = this.field_P.field_v;
           var4 = 0;
@@ -4304,7 +4304,7 @@ final class GameSession implements AiHost {
           }
           stackIn_44_1 = (this.field_n != null);
           this.field_b = stackIn_44_1;
-          this.field_s = (Ai[]) ((Object) new TaskAi[this.field_P.field_v.length]);
+          this.field_s = (PlayerAi[]) ((Object) new TaskAi[this.field_P.field_v.length]);
           var10 = this.field_P.field_v;
           var11 = 0;
           scanLoop1: while (true) {
@@ -4328,7 +4328,7 @@ final class GameSession implements AiHost {
                     }
                     if (stackIn_80_0 != ~var10_intLifetime1 ||
                       var13 != 0) {
-                      this.field_s[var10_intLifetime1] = (Ai) ((Object) new TaskAi(this.field_P.field_v[var10_intLifetime1], this.field_P, (AiHost) (this)));
+                      this.field_s[var10_intLifetime1] = (PlayerAi) ((Object) new TaskAi(this.field_P.field_v[var10_intLifetime1], this.field_P, (AiHost) (this)));
                       this.field_s[var10_intLifetime1].setChatEnabled(true, -6861);
                     }
                     var10_intLifetime1++;

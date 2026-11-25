@@ -301,11 +301,11 @@ final class WhirlpoolHasher {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = ul.field_Cb[var15Lifetime1];
+            var22 = ContextActionMenu.field_Cb[var15Lifetime1];
             var23 = IntNode.field_i[var15Lifetime1];
-            var24 = ul.field_Cb[var16];
+            var24 = ContextActionMenu.field_Cb[var16];
             var25 = IntNode.field_i[var16];
-            var26 = ul.field_Cb[var17];
+            var26 = ContextActionMenu.field_Cb[var17];
             var27 = IntNode.field_i[var17];
             if (var18 == var19 &&
               var20 == var19) {

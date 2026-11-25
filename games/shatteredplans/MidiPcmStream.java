@@ -693,7 +693,7 @@ final class MidiPcmStream extends PcmStream {
               var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), UniformNineSliceFactory.field_c, (byte) 46, var31, var33_intLifetime1);
               var34_int = TextLayout.field_b;
               if ((var14Lifetime1 & 1 << CanvasResizeController.field_q) != 0) {
-                var50_ref = uk.field_b[var12.field_nc];
+                var50_ref = MapStateReader.field_b[var12.field_nc];
                 var12.field_Bb.field_pb = var50_ref;
                 var12.field_Bb.setTarget(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
                 var34_int = var34_int + (var50_ref.field_o + TextLayout.field_b);

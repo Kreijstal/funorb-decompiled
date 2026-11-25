@@ -112,7 +112,7 @@ final class DerelictMapReader implements MapGenerator {
         if (param0 != 0) {
           DerelictMapReader.clearStatics(false);
         }
-        return ul.field_Hb + (TutorialScene.field_a << 2) + (QuickChatMenu.field_Bb << 4);
+        return ContextActionMenu.field_Hb + (TutorialScene.field_a << 2) + (QuickChatMenu.field_Bb << 4);
     }
 
     DerelictMapReader(PacketBuffer param0, int param1, int param2, int param3, int param4, int param5) {

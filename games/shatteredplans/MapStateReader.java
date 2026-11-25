@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk {
+final class MapStateReader {
     static int field_a;
     static Sprite[] field_b;
 
@@ -10,7 +10,7 @@ final class uk {
         int var1 = 36 / ((-14 - param0) / 59);
     }
 
-    final static Sprite a(boolean param0, Star param1) {
+    final static Sprite getStarTypeSprite(boolean param0, Star param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -81,7 +81,7 @@ final class uk {
         }
     }
 
-    final static GalaxyMap a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, GameRules param7) throws MapGenerationException, InvalidMapConnectionException {
+    final static GalaxyMap readMapState(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, GameRules param7) throws MapGenerationException, InvalidMapConnectionException {
         int var17_int = 0;
         GalaxyMap stackIn_81_0 = null;
         RuntimeException stackIn_84_0 = null;
@@ -167,7 +167,7 @@ final class uk {
           var13 = SpriteWipeSupport.hexRowsForMapHeight(var10, -109);
           if (param6 != -7) {
             var27 = (Star) null;
-            uk.a(false, (Star) null);
+            MapStateReader.getStarTypeSprite(false, (Star) null);
           }
           var15_int = param0;
           if (var15_int != 0 &&

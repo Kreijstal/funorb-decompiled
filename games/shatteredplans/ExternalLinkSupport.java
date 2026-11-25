@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue {
+final class ExternalLinkSupport {
     static String field_c;
     static String field_b;
     static AccountRequestState field_a;
     static String field_d;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void releaseExternalLinkStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 == 18031) {
@@ -18,13 +18,13 @@ final class ue {
           return;
         }
         String var2 = (String) null;
-        ue.a((java.applet.Applet) null, false, (String) null, -37);
+        ExternalLinkSupport.openExternalUrl((java.applet.Applet) null, false, (String) null, -37);
         field_e = null;
         field_b = null;
         field_d = null;
     }
 
-    final static void a(java.applet.Applet param0, boolean param1, String param2, int param3) {
+    final static void openExternalUrl(java.applet.Applet param0, boolean param1, String param2, int param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;

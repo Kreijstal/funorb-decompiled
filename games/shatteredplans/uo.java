@@ -47,7 +47,7 @@ final class uo {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
-          if (MatchingTextValidator.field_s == ue.field_a) {
+          if (MatchingTextValidator.field_s == ExternalLinkSupport.field_a) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
@@ -55,7 +55,7 @@ final class uo {
             stackIn_22_0 = 1;
             return stackIn_22_0;
           }
-          if (PrivateChatMessage.field_l != ue.field_a) {
+          if (PrivateChatMessage.field_l != ExternalLinkSupport.field_a) {
             stackIn_27_0 = -1;
             return stackIn_27_0;
           }

@@ -69,11 +69,11 @@ final class IntrusiveDeque {
           DerelictVictoryChecker.field_m.addInviteActions(false, param2 - 15618);
           var4 = DerelictVictoryChecker.field_m;
           var5_ref_String = SocketArchiveNetworkClient.field_u;
-          var4.field_j.a(param2 ^ -1044, 5, var5_ref_String);
+          var4.field_j.addItem(param2 ^ -1044, 5, var5_ref_String);
           var4Lifetime1 = DerelictVictoryChecker.field_m;
           var5 = PointsVictoryChecker.field_p;
           var6 = SliderWidget.field_P;
-          var4Lifetime1.field_j.b(0, 0, 0, var5, var6);
+          var4Lifetime1.field_j.layoutAtAnchor(0, 0, 0, var5, var6);
         }
         FleetTrailPoint.a(-7904, param1, param0);
     }

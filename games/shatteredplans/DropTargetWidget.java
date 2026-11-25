@@ -189,12 +189,12 @@ final class DropTargetWidget extends SingleChildWidget {
     final static String i(int param0) {
         if (param0 >= -90) {
           field_B = (String) null;
-          if (ue.field_a == PrivateChatMessage.field_l) {
+          if (ExternalLinkSupport.field_a == PrivateChatMessage.field_l) {
             return AccountCreationForm.field_G;
           }
           return AccountCreationDialog.field_Ib;
         }
-        if (ue.field_a == PrivateChatMessage.field_l) {
+        if (ExternalLinkSupport.field_a == PrivateChatMessage.field_l) {
           return AccountCreationForm.field_G;
         }
         return AccountCreationDialog.field_Ib;

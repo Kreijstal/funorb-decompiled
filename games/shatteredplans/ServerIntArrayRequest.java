@@ -34,8 +34,8 @@ final class ServerIntArrayRequest extends IntrusiveNode {
         }
         var4 = 40 % ((-21 - param0) / 59);
         if (param3 == 2 &&
-          ul.field_Hb != param2) {
-          ul.field_Hb = param2;
+          ContextActionMenu.field_Hb != param2) {
+          ContextActionMenu.field_Hb = param2;
           MenuWindow.field_v = true;
           GradientMenuLabel.writeChatFilterSettings(95, param1);
         }

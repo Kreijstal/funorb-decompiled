@@ -165,103 +165,103 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,0", 95);
                 if (var2 != null) {
-                  ud.field_a[0] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,1", 120);
                 if (null != var2) {
-                  ud.field_a[1] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,2", 108);
                 if (null != var2) {
-                  ud.field_a[2] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,3", 120);
                 if (var2 != null) {
-                  ud.field_a[3] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,4", 121);
                 if (null != var2) {
-                  ud.field_a[4] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,5", 97);
                 if (null != var2) {
-                  ud.field_a[5] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,6", 107);
                 if (var2 != null) {
-                  ud.field_a[6] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,7", 109);
                 if (var2 != null) {
-                  ud.field_a[7] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,8", 117);
                 if (var2 != null) {
-                  ud.field_a[8] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,9", 106);
                 if (var2 != null) {
-                  ud.field_a[9] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[9] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,10", 117);
                 if (var2 != null) {
-                  ud.field_a[10] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[10] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,11", 107);
                 if (var2 != null) {
-                  ud.field_a[11] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[11] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,12", 100);
                 if (var2 != null) {
-                  ud.field_a[12] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[12] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,13", 119);
                 if (null != var2) {
-                  ud.field_a[13] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[13] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,14", 96);
                 if (var2 != null) {
-                  ud.field_a[14] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[14] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,15", 127);
                 if (null != var2) {
-                  ud.field_a[15] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[15] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,16", 100);
                 if (var2 != null) {
-                  ud.field_a[16] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[16] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,17", 95);
                 if (null != var2) {
-                  ud.field_a[17] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[17] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,18", 122);
                 if (var2 != null) {
-                  ud.field_a[18] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[18] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,19", 102);
                 if (null != var2) {
-                  ud.field_a[19] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[19] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,20", 114);
                 if (var2 != null) {
-                  ud.field_a[20] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[20] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,21", 95);
                 if (null != var2) {
-                  ud.field_a[21] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[21] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,22", 122);
                 if (null != var2) {
-                  ud.field_a[22] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[22] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,23", 105);
                 if (null != var2) {
-                  ud.field_a[23] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[23] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_names,24", 107);
                 if (var2 != null) {
-                  ud.field_a[24] = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_a[24] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_no_achievement", 127);
                 if (var2 != null) {
@@ -269,103 +269,103 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,0", 119);
                 if (null != var2) {
-                  ul.field_Qb[0] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,1", 99);
                 if (var2 != null) {
-                  ul.field_Qb[1] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,2", 108);
                 if (null != var2) {
-                  ul.field_Qb[2] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,3", 103);
                 if (null != var2) {
-                  ul.field_Qb[3] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,4", 115);
                 if (var2 != null) {
-                  ul.field_Qb[4] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,5", 126);
                 if (var2 != null) {
-                  ul.field_Qb[5] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,6", 121);
                 if (var2 != null) {
-                  ul.field_Qb[6] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,7", 125);
                 if (var2 != null) {
-                  ul.field_Qb[7] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,8", 116);
                 if (null != var2) {
-                  ul.field_Qb[8] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,9", 125);
                 if (null != var2) {
-                  ul.field_Qb[9] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[9] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,10", 115);
                 if (null != var2) {
-                  ul.field_Qb[10] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[10] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,11", 108);
                 if (var2 != null) {
-                  ul.field_Qb[11] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[11] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,12", 108);
                 if (var2 != null) {
-                  ul.field_Qb[12] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[12] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,13", 118);
                 if (null != var2) {
-                  ul.field_Qb[13] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[13] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,14", 118);
                 if (null != var2) {
-                  ul.field_Qb[14] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[14] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,15", 102);
                 if (null != var2) {
-                  ul.field_Qb[15] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[15] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,16", 103);
                 if (var2 != null) {
-                  ul.field_Qb[16] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[16] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,17", 123);
                 if (null != var2) {
-                  ul.field_Qb[17] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[17] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,18", 104);
                 if (null != var2) {
-                  ul.field_Qb[18] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[18] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,19", 117);
                 if (null != var2) {
-                  ul.field_Qb[19] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[19] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,20", 117);
                 if (var2 != null) {
-                  ul.field_Qb[20] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[20] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,21", 115);
                 if (null != var2) {
-                  ul.field_Qb[21] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[21] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,22", 124);
                 if (null != var2) {
-                  ul.field_Qb[22] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[22] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,23", 106);
                 if (null != var2) {
-                  ul.field_Qb[23] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[23] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievement_criteria,24", 106);
                 if (var2 != null) {
-                  ul.field_Qb[24] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Qb[24] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("achievements_rated_only", 110);
                 if (var2 != null) {
@@ -1187,7 +1187,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("msg_offeredpactto", 97);
                 if (var2 != null) {
-                  ud.field_b = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("msg_offeredpactby", 120);
                 if (var2 != null) {
@@ -1407,7 +1407,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_continuekey", 108);
                 if (null != var2) {
-                  ul.field_Ob = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Ob = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_balanced", 121);
                 if (var2 != null) {
@@ -1495,7 +1495,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("message_incoming_offers", 122);
                 if (null != var2) {
-                  ul.field_Ab = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Ab = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_farzoom", 101);
                 if (null != var2) {
@@ -1760,7 +1760,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_map_points", 96);
                 if (null != var2) {
-                  ue.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ExternalLinkSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_map_derelicts", 101);
                 if (null != var2) {
@@ -2046,7 +2046,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipProjectsButtonHide", 111);
                 if (null != var2) {
-                  ue.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ExternalLinkSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipDiplomacyButtonHide", 112);
                 if (null != var2) {

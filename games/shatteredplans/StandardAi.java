@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class StandardAi implements Ai {
+class StandardAi implements PlayerAi {
     int field_o;
     static String field_m;
     int field_k;
@@ -423,7 +423,7 @@ class StandardAi implements Ai {
           var4 = var2.field_p;
           var5 = this.b((byte) 89, var2);
           var3 = var3 + var5;
-          ue.field_e[var4] = var5;
+          ExternalLinkSupport.field_e[var4] = var5;
           var2 = LobbyPlayerEntry.field_yb.nextStar(-23410);
         }
         return var3;
@@ -684,7 +684,7 @@ class StandardAi implements Ai {
           var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
           while (var4 != null) {
             var6 = var4.field_p;
-            var7 = ue.field_e[var6];
+            var7 = ExternalLinkSupport.field_e[var6];
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
             ClientRuntimeState.field_i[var6] = ClientRuntimeState.field_i[var6] + var7;
             var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
@@ -695,7 +695,7 @@ class StandardAi implements Ai {
           var4 = LobbyPlayerEntry.field_yb.firstStar(18229);
           while (var4 != null) {
             var6 = var4.field_p;
-            var7 = ue.field_e[var6] * param0 / param2;
+            var7 = ExternalLinkSupport.field_e[var6] * param0 / param2;
             ClientRuntimeState.field_i[var6] = ClientRuntimeState.field_i[var6] + var7;
             param0 = param0 - var7;
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
@@ -1021,7 +1021,7 @@ class StandardAi implements Ai {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var2 = 0; var2 < this.field_o; var2++) {
           WeightedLruCache.field_a[var2] = 0;
-          ue.field_e[var2] = 0;
+          ExternalLinkSupport.field_e[var2] = 0;
           QuaternaryNodeList.field_b[var2] = 0;
           BirthDateValidator.field_i[var2] = 0;
           ValidationState.field_c[var2] = 0;

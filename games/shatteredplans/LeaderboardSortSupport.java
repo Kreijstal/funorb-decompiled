@@ -96,16 +96,16 @@ final class LeaderboardSortSupport {
         double var1 = 3.141592653589793 * (double)(RasterStateFrame.field_n % 512) / 256.0;
         int var3 = 16 * (UiWidget.field_t.field_z / 2 - 9);
         ProductionContent.field_c[0] = (int)((double)var3 * Math.sin(var1));
-        ul.field_Db[0] = (int)(Math.cos(var1) * (double)var3);
+        ContextActionMenu.field_Db[0] = (int)(Math.cos(var1) * (double)var3);
         ProductionContent.field_c[1] = -ProductionContent.field_c[0];
-        ul.field_Db[1] = -ul.field_Db[0];
+        ContextActionMenu.field_Db[1] = -ContextActionMenu.field_Db[0];
         var1 = var1 + 2.0943951023931953;
         ProductionContent.field_c[2] = (int)(Math.sin(var1) * (double)var3);
         if (param0) {
-          ul.field_Db[2] = (int)((double)var3 * Math.cos(var1));
+          ContextActionMenu.field_Db[2] = (int)((double)var3 * Math.cos(var1));
           var1 = var1 + 2.0943951023931953;
           ProductionContent.field_c[3] = (int)(Math.sin(var1) * (double)var3);
-          ul.field_Db[3] = (int)(Math.cos(var1) * (double)var3);
+          ContextActionMenu.field_Db[3] = (int)(Math.cos(var1) * (double)var3);
           return;
         }
     }

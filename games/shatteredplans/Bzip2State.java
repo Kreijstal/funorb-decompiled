@@ -121,7 +121,7 @@ final class Bzip2State {
           TextReplacementEntry.field_i[27] = MenuButton.field_z;
           TextReplacementEntry.field_i[21] = NumericDateInputWidget.field_Q;
           TextReplacementEntry.field_i[32] = MidiPcmStream.field_L;
-          TextReplacementEntry.field_i[19] = ul.field_Fb[1];
+          TextReplacementEntry.field_i[19] = ContextActionMenu.field_Fb[1];
           TextReplacementEntry.field_i[17] = AccountStatusSupport.field_a[2];
           TextReplacementEntry.field_i[28] = TutorialConditionalText.field_a;
           TextReplacementEntry.field_i[30] = PrivateChatMessage.field_j;
@@ -133,7 +133,7 @@ final class Bzip2State {
           TextReplacementEntry.field_i[25] = SpriteState.field_v;
           TextReplacementEntry.field_i[23] = ScrollBar.field_Db;
           TextReplacementEntry.field_i[16] = AccountStatusSupport.field_a[1];
-          TextReplacementEntry.field_i[18] = ul.field_Fb[0];
+          TextReplacementEntry.field_i[18] = ContextActionMenu.field_Fb[0];
           TextReplacementEntry.field_i[22] = IconTextPanel.field_zb;
           QuickChatPhraseRegistry.field_g[0] = AccountNoticeKind.field_e;
           QuickChatPhraseRegistry.field_g[9] = SecondaryNodeHashTable.field_a;

@@ -115,7 +115,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           }
           MeshData.field_h = false;
           if (LoginMethodPreference.field_g) {
-            var5 = uh.field_d;
+            var5 = ArchiveLoadProgress.field_d;
           } else {
             if (HighscoreResponseSupport.field_b) {
               var5 = LabeledChildWidget.field_E;

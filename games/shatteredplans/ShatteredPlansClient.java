@@ -154,9 +154,9 @@ public final class ShatteredPlansClient extends GameClientShell {
             PlayerStats.field_n = false;
           }
           RasterStateFrame.field_n = RasterStateFrame.field_n + 1;
-          if (uf.a(false)) {
+          if (ArchiveLoadStep.isClientNotReady(false)) {
             this.j((byte) -123);
-            if (uf.a(false)) {
+            if (ArchiveLoadStep.isClientNotReady(false)) {
               if (MutableIntPairNode.field_h) {
                 return;
               }
@@ -764,7 +764,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ChatHistoryEntry.clearStatics((byte) -25);
         AccountHandshakeSupport.clearStatics(108);
         FrameTimer.clearStatics((byte) 47);
-        uh.clearStatics(param0 ^ -24161);
+        ArchiveLoadProgress.clearStatics(param0 ^ -24161);
         FullscreenFocusCanvas.clearStatics(-1314558012);
         CanvasResizeController.clearStatics(false);
         ArchiveNetworkClient.a(16967);
@@ -783,7 +783,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         GameTextResources.releaseGameTextStatics((byte) 123);
         ClientCapabilitySupport.clearStatics((byte) -98);
         AccountInputSupport.releaseAccountInputStatics(64);
-        ud.clearStatics(127);
+        AwtEventQueueSupport.clearStatics(127);
         ClientContextMenuSupport.clearStatics(21805);
         ProjectsWindowSupport.clearStatics((byte) -29);
         SoundCache.clearStatics((byte) 120);
@@ -807,10 +807,10 @@ public final class ShatteredPlansClient extends GameClientShell {
         SecondaryNodeHashTable.clearStatics(true);
         LobbyPlayerEntry.clearStatics(-4923);
         IntroRenderSupport.clearStatics(-989994556);
-        ue.a(18031);
+        ExternalLinkSupport.releaseExternalLinkStatics(18031);
         IconTextPanel.clearStatics(2616);
         ScrollBar.clearStatics((byte) -118);
-        ul.g(param0 ^ -24045);
+        ContextActionMenu.releaseContextMenuStatics(param0 ^ -24045);
         SocialListPanel.clearStatics(param0 + 47949);
         PlayerContextMenuController.clearStatics((byte) -87);
         ScrollPane.clearStatics(param0 ^ param0);
@@ -947,7 +947,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         PairedIntSortSupport.clearStatics((byte) 4);
         PlayerOverlaySupport.clearStatics(-27153);
         ClientRuntimeState.clearStatics(param0 ^ -24069);
-        uk.clearStatics((byte) 91);
+        MapStateReader.clearStatics((byte) 91);
         DelegatingCanvas.a(param0 ^ 24068);
         LobbyRoomControlsSupport.clearStatics((byte) 26);
         IntHashIndex.clearStatics((byte) -26);
@@ -1071,7 +1071,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         CheckboxWidgetPainter.clearStatics(-1);
         OpacityWidget.releaseOpacityWidgetStatics(124);
         ve.clearStatics(0);
-        uf.clearStatics((byte) 68);
+        ArchiveLoadStep.clearStatics((byte) 68);
         IntroTextLine.clearStatics((byte) -99);
         vc.clearStatics(-67);
         IntroGlowPoint.clearStatics(true);
@@ -1306,7 +1306,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           StringList.field_b = null;
           var11 = new String[]{IntList.field_f[0], IntList.field_f[1], IntList.field_f[2], IntList.field_f[3]};
           PasswordInputPainter.field_x = new GameSession(false, false, (int) MidiPcmStream.field_w[0], SliderWidget.field_K, PlacementEvent.field_k, var11, 0, false, (GameScreen) null);
-          stackIn_102_0 = (!uh.field_i) ? 0 : 1;
+          stackIn_102_0 = (!ArchiveLoadProgress.field_i) ? 0 : 1;
           var4Lifetime1 = stackIn_102_0;
           MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var4Lifetime1 != 0);
           Wormhole.field_i = true;
@@ -1315,7 +1315,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           StringList.field_b = null;
           var12 = new String[]{IntList.field_f[0]};
           PasswordInputPainter.field_x = new GameSession(false, true, 0, TaskAi.field_a, 0, var12, 0, false, (GameScreen) null);
-          stackIn_107_0 = (!uh.field_i) ? 0 : 1;
+          stackIn_107_0 = (!ArchiveLoadProgress.field_i) ? 0 : 1;
           var4Lifetime2 = stackIn_107_0;
           MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var4Lifetime2 != 0);
           Wormhole.field_i = true;
@@ -1376,7 +1376,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           stackIn_3_0 = NotificationEntry.field_i;
         }
         var2 = stackIn_3_0;
-        if (uf.a(false)) {
+        if (ArchiveLoadStep.isClientNotReady(false)) {
           if (NameSuggestionsPanel.field_K == null) {
             stackIn_7_0 = MusicPatch.field_i;
           } else {
@@ -1458,7 +1458,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (!DialPainter.c(0)) {
               if (!this.field_G.isEmpty(27)) {
                 var3_ref_he = (IntNode) (this.field_G.startForward(param0 ^ 1));
-                var4 = ud.field_a[var3_ref_he.field_k];
+                var4 = AwtEventQueueSupport.field_a[var3_ref_he.field_k];
                 var5_int = AccountRequestState.field_b.stringWidth(var4) + 50;
                 var6 = 36;
                 var7_int = 10 + var5_int / 2;

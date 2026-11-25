@@ -41,7 +41,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uf.field_b != null) {
+          if (ArchiveLoadStep.field_b != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -367,7 +367,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(DerelictVictoryChecker.field_p > var3)) {
                       this.runDraw((byte) 58);
-                      ud.a(-22, ValidatedTextInputWidget.field_W, NotificationEntry.field_i);
+                      AwtEventQueueSupport.postDummyEvent(-22, ValidatedTextInputWidget.field_W, NotificationEntry.field_i);
                       break;
                     }
                     this.runUpdate((byte) -23);
@@ -416,7 +416,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != uf.field_b) {
+        if (null != ArchiveLoadStep.field_b) {
           return null;
         }
         if (null != NodeSequence.field_a &&
@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uf.field_b != null) {
+          if (ArchiveLoadStep.field_b != null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -544,7 +544,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != uf.field_b) {
+          if (null != ArchiveLoadStep.field_b) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -831,9 +831,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             TextReplacementEntry.field_e = true;
             NotificationEntry.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
             NotificationEntry.field_i.setVisible(true);
-            if (uf.field_b != null &&
+            if (ArchiveLoadStep.field_b != null &&
               null == OpacityWidget.field_K) {
-              var6 = uf.field_b.getInsets();
+              var6 = ArchiveLoadStep.field_b.getInsets();
               NotificationEntry.field_i.setLocation(var6.left + NanoFrameTimer.field_k, var6.top + StatefulWidgetTheme.field_B);
               if (ShatteredPlansClient.field_F) {
                 NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);
@@ -897,7 +897,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var4.field_k = param1;
             var4.field_j = param3;
             PlacementOrder.field_r.addLast((byte) -113, var4);
-            uf.a(var4, param2, false);
+            ArchiveLoadStep.writeRankingRequest(var4, param2, false);
             stackIn_12_0 = param0;
             stackIn_12_1 = 29;
           }
@@ -987,7 +987,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.disposeResources(-24069);
-          if (uf.field_b != null) {
+          if (ArchiveLoadStep.field_b != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -1049,23 +1049,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.runDraw((byte) -79);
           }
           if (null == OpacityWidget.field_K) {
-            if (null == uf.field_b) {
+            if (null == ArchiveLoadStep.field_b) {
               if (NodeSequence.field_a == null) {
                 var2 = TextHotspotWidget.field_G;
                 if (var4 != 0) {
                   var2 = NodeSequence.field_a;
-                  var2 = uf.field_b;
+                  var2 = ArchiveLoadStep.field_b;
                   var2 = OpacityWidget.field_K;
                 }
               } else {
                 var2 = NodeSequence.field_a;
                 if (var4 != 0) {
-                  var2 = uf.field_b;
+                  var2 = ArchiveLoadStep.field_b;
                   var2 = OpacityWidget.field_K;
                 }
               }
             } else {
-              var2 = uf.field_b;
+              var2 = ArchiveLoadStep.field_b;
               if (var4 != 0) {
                 var2 = OpacityWidget.field_K;
               }
@@ -1078,8 +1078,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NotificationEntry.field_i));
           NotificationEntry.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
           NotificationEntry.field_i.setVisible(true);
-          if (uf.field_b == var2) {
-            var3 = uf.field_b.getInsets();
+          if (ArchiveLoadStep.field_b == var2) {
+            var3 = ArchiveLoadStep.field_b.getInsets();
             NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k + var3.left, var3.top + StatefulWidgetTheme.field_B);
             if (var4 != 0) {
               NotificationEntry.field_i.setLocation(NanoFrameTimer.field_k, StatefulWidgetTheme.field_B);

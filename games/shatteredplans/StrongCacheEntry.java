@@ -304,10 +304,10 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           TextLayout.field_b = 2;
           var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
           ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
-          ul.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
+          ContextActionMenu.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
           ImageProducerRasterBuffer.field_p.a(var5, var24);
-          ul.field_xb.a(var5, var24);
+          ContextActionMenu.field_xb.a(var5, var24);
           var8 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var8.field_nb = (BitmapFont) ((Object) var7);
           var8.field_x = 16777215;
@@ -375,7 +375,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           ArrayWidgetGroup.field_E = new AnimatedPanel(0L, ObjectList.field_h);
           ArrayWidgetGroup.field_E.copyFrom(StatefulWidgetTheme.field_w, false);
           var16 = HighscoreResponseSupport.loadSpriteSetByName(-82, "lobby", param4, "button_mouseover");
-          IntroTextLine.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, StatefulWidgetTheme.field_w, 3, 2, TextLayout.field_b, 3, UniformNineSliceFactory.field_c);
+          IntroTextLine.field_t = new ContextActionMenu(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, StatefulWidgetTheme.field_w, 3, 2, TextLayout.field_b, 3, UniformNineSliceFactory.field_c);
           StandardMapReader.field_h = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
           StandardMapReader.field_h.field_lb = var16;
           StandardMapReader.field_h.field_T = 1;

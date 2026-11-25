@@ -11,7 +11,7 @@ final class PlayerContextMenuController {
     int field_f;
     private long field_b;
     static int[] field_g;
-    ul field_j;
+    ContextActionMenu field_j;
     static String field_d;
     String field_k;
 
@@ -55,23 +55,23 @@ final class PlayerContextMenuController {
         if (var4 != null) {
           if (!MenuInputState.field_a.field_Ab ||
             !(MenuInputState.field_a.field_lc < 0)) {
-            this.field_j.a(1, 1, QuickChatCategoryRegistry.a(ContentDialog.field_fb, 4371, new String[]{var5}));
+            this.field_j.addItem(1, 1, QuickChatCategoryRegistry.a(ContentDialog.field_fb, 4371, new String[]{var5}));
           }
         } else {
           if (var7 != null &&
             MenuInputState.field_a.field_mc &&
             MenuInputState.field_a.field_Lb < MenuInputState.field_a.field_Eb) {
             if (var7.field_Tb) {
-              this.field_j.a(1, 1, QuickChatCategoryRegistry.a(field_c, 4371, new String[]{var5}));
+              this.field_j.addItem(1, 1, QuickChatCategoryRegistry.a(field_c, 4371, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.a(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
+                this.field_j.addItem(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
               } else {
                 if (!var7.field_Vb) {
-                  this.field_j.a(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
+                  this.field_j.addItem(1, 0, QuickChatCategoryRegistry.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
                 } else {
-                  this.field_j.a(param1 ^ -16662, 0, QuickChatCategoryRegistry.a(StatusContent.field_g, 4371, new String[]{var5}));
-                  this.field_j.a(1, 1, QuickChatCategoryRegistry.a(BufferedCacheFile.field_f, 4371, new String[]{var5}));
+                  this.field_j.addItem(param1 ^ -16662, 0, QuickChatCategoryRegistry.a(StatusContent.field_g, 4371, new String[]{var5}));
+                  this.field_j.addItem(1, 1, QuickChatCategoryRegistry.a(BufferedCacheFile.field_f, 4371, new String[]{var5}));
                 }
               }
             }
@@ -86,7 +86,7 @@ final class PlayerContextMenuController {
 
     final boolean handleMenuSelection(int param0, int param1, int param2, int param3, boolean param4) {
         boolean discarded$5 = false;
-        int var6 = this.field_j.b(param4, (byte) 93);
+        int var6 = this.field_j.pollAction(param4, (byte) 93);
         if (-2 == var6) {
           return false;
         }
@@ -106,7 +106,7 @@ final class PlayerContextMenuController {
           if (null == this.field_j) {
             return false;
           }
-          if (this.field_j.f((byte) 31)) {
+          if (this.field_j.pollOpenState((byte) 31)) {
             return true;
           }
           return false;
@@ -114,7 +114,7 @@ final class PlayerContextMenuController {
         if (null == this.field_j) {
           return false;
         }
-        if (this.field_j.f((byte) 31)) {
+        if (this.field_j.pollOpenState((byte) 31)) {
           return true;
         }
         return false;
@@ -248,31 +248,31 @@ final class PlayerContextMenuController {
             var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a(1, 4, QuickChatCategoryRegistry.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
-              this.field_j.a(1, 6, QuickChatCategoryRegistry.a(TextHotspotWidget.field_F, 4371, new String[]{var7}));
+              this.field_j.addItem(1, 4, QuickChatCategoryRegistry.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
+              this.field_j.addItem(1, 6, QuickChatCategoryRegistry.a(TextHotspotWidget.field_F, 4371, new String[]{var7}));
               if (param0 != null &&
                 param1 != 2 &&
                 !LoginMethodPreference.field_g) {
                 this.field_i = param0;
-                this.field_j.a(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
+                this.field_j.addItem(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!Player.a(-68, this.field_k) &&
                 !LoginMethodPreference.field_g) {
                 if (!HighscoreResponseSupport.field_b) {
-                  this.field_j.a(1, 8, QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
+                  this.field_j.addItem(1, 8, QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
-                this.field_j.a(1, 18, QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var7}));
+                this.field_j.addItem(1, 18, QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
-                  this.field_j.a(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
+                  this.field_j.addItem(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
                 }
               }
-              this.field_j.a(1, 5, QuickChatCategoryRegistry.a(FocusableWidget.field_C, 4371, new String[]{var7}));
+              this.field_j.addItem(1, 5, QuickChatCategoryRegistry.a(FocusableWidget.field_C, 4371, new String[]{var7}));
             }
             if (var6 != 0) {
-              this.field_j.a(1, 7, QuickChatCategoryRegistry.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
+              this.field_j.addItem(1, 7, QuickChatCategoryRegistry.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
             }
           }
           if (param2 >= -13) {
@@ -316,7 +316,7 @@ final class PlayerContextMenuController {
             if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
               var3 = this.getDisplayName(-127);
               var2 = var3;
-              this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
+              this.field_j.addItem(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
             }
             return;
           }
@@ -328,7 +328,7 @@ final class PlayerContextMenuController {
         if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
           var3 = this.getDisplayName(-127);
           var2Lifetime1 = var3;
-          this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
+          this.field_j.addItem(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
           return;
         }
     }
@@ -437,24 +437,24 @@ final class PlayerContextMenuController {
           this.field_l = param0.field_n;
           if (param0.field_n == 0) {
             if (QuickChatMenu.field_Bb == 0) {
-              this.field_j.a(1, 12, wg.field_c);
+              this.field_j.addItem(1, 12, wg.field_c);
             }
-            this.field_j.a(1, 13, ValidationMessageWidget.field_O);
+            this.field_j.addItem(1, 13, ValidationMessageWidget.field_O);
           }
           if (param0.field_n == 1) {
             if (TutorialScene.field_a == 0) {
-              this.field_j.a(1, 12, IntNode.field_m);
+              this.field_j.addItem(1, 12, IntNode.field_m);
             }
-            this.field_j.a(1, 13, StatefulWidgetTheme.field_A);
+            this.field_j.addItem(1, 13, StatefulWidgetTheme.field_A);
           }
           if (param1 >= -67) {
             this.addReportAction(-9);
           }
           if (2 == param0.field_n) {
-            if (0 == ul.field_Hb) {
-              this.field_j.a(1, 12, PlacementEvent.field_m);
+            if (0 == ContextActionMenu.field_Hb) {
+              this.field_j.addItem(1, 12, PlacementEvent.field_m);
             }
-            this.field_j.a(1, 13, SecondaryNodeDeque.field_c);
+            this.field_j.addItem(1, 13, SecondaryNodeDeque.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -487,33 +487,33 @@ final class PlayerContextMenuController {
           }
           var3 = var6.field_Xb;
           if (var6.field_Jb) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var6.field_cc) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
             if (var6.field_Yb) {
-              this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
+              this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
             }
             return;
           }
           if (!var6.field_Yb &&
             var6.field_mc) {
             if (!var6.field_Ab) {
-              this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+              this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
+                this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
               }
               return;
             }
             if (!var6.field_cc) {
               if (var6.field_Yb) {
-                this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
+                this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
               }
               return;
             }
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
           }
           if (!var6.field_Yb) {
             return;
@@ -529,20 +529,20 @@ final class PlayerContextMenuController {
           }
           var3 = var7.field_Xb;
           if (var7.field_Jb) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var7.field_cc) {
-            this.field_j.a(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
+            this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(MenuTransitionSupport.field_c, 4371, new String[]{var3}));
           } else {
             if (!var7.field_Yb &&
               var7.field_mc) {
               if (!var7.field_Ab) {
-                this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+                this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
               } else {
                 if (var7.field_cc) {
-                  this.field_j.a(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
+                  this.field_j.addItem(1, 2, QuickChatCategoryRegistry.a(GarrisonTask.field_r, 4371, new String[]{var3}));
                 }
               }
             }
@@ -551,7 +551,7 @@ final class PlayerContextMenuController {
             return;
           }
         }
-        this.field_j.a(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
+        this.field_j.addItem(1, 3, QuickChatCategoryRegistry.a(PlayerOverlaySupport.field_a, 4371, new String[]{var3}));
     }
 
     private final boolean handleLobbyAction(int param0, int param1, int param2) {
@@ -624,7 +624,7 @@ final class PlayerContextMenuController {
 
     PlayerContextMenuController(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new ul(IntroTextLine.field_t);
+          this.field_j = new ContextActionMenu(IntroTextLine.field_t);
           this.field_i = param6;
           this.field_b = param1;
           this.field_l = param5;

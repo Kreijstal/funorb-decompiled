@@ -4,14 +4,14 @@
 import java.io.*;
 import java.util.*;
 
-public class ug {
+public class CacheFileLocator {
     private static int field_e;
     private static String field_b;
     private static Hashtable field_a;
     private static boolean field_d;
     private static String field_c;
 
-    public static void a(int param0, String param1, byte param2) {
+    public static void initializeCacheLocation(int param0, String param1, byte param2) {
         Exception exception = null;
         int var3 = 0;
         Throwable decompiledCaughtException = null;
@@ -34,19 +34,19 @@ public class ug {
         field_b = "~/";
     }
 
-    private ug() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
-    public static File a(String param0, int param1, int param2, String param3) {
+    public static File getCacheFile(String param0, int param1, int param2, String param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param3, param0);
     }
 
-    public static File a(String param0, boolean param1) {
+    public static File getCacheFile(String param0, boolean param1) {
         if (param1) {
           return (File) null;
         }
-        return ug.a(param0, field_e, -18261, field_c);
+        return CacheFileLocator.getCacheFile(param0, field_e, -18261, field_c);
     }
 
     static {

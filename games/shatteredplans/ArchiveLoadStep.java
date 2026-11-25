@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf {
+final class ArchiveLoadStep {
     static java.awt.Frame field_b;
     String field_f;
     Archive field_a;
@@ -9,7 +9,7 @@ final class uf {
     String field_d;
     int field_e;
 
-    final static boolean a(boolean param0) {
+    final static boolean isClientNotReady(boolean param0) {
         if (param0) {
           return true;
         }
@@ -28,7 +28,7 @@ final class uf {
         return false;
     }
 
-    final static void a(PlayerRankingRequest param0, int param1, boolean param2) {
+    final static void writeRankingRequest(PlayerRankingRequest param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = null;
         if (param2) {
           return;
@@ -48,7 +48,7 @@ final class uf {
         field_b = null;
     }
 
-    private uf() throws Throwable {
+    private ArchiveLoadStep() throws Throwable {
         throw new Error();
     }
 

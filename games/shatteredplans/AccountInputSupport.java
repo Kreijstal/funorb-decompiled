@@ -28,7 +28,7 @@ final class AccountInputSupport {
     }
 
     final static String getCurrentAccountText(byte param0) {
-        if (PrivateChatMessage.field_l == ue.field_a) {
+        if (PrivateChatMessage.field_l == ExternalLinkSupport.field_a) {
           return HighscoreResponseSupport.field_g;
         }
         if (param0 != 42) {
@@ -36,7 +36,7 @@ final class AccountInputSupport {
           if (!wh.field_a.isComplete(14)) {
             return wh.field_a.getInput(98);
           }
-          if (ue.field_a != MatchingTextValidator.field_s) {
+          if (ExternalLinkSupport.field_a != MatchingTextValidator.field_s) {
             return MenuWindow.field_B;
           }
           return wh.field_a.getInput(-45);
@@ -44,7 +44,7 @@ final class AccountInputSupport {
         if (!wh.field_a.isComplete(14)) {
           return wh.field_a.getInput(98);
         }
-        if (ue.field_a != MatchingTextValidator.field_s) {
+        if (ExternalLinkSupport.field_a != MatchingTextValidator.field_s) {
           return MenuWindow.field_B;
         }
         return wh.field_a.getInput(-45);

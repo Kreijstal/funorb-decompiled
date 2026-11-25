@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud {
+final class AwtEventQueueSupport {
     static String field_d;
     static String[] field_a;
     static String field_b;
@@ -17,7 +17,7 @@ final class ud {
         }
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
+    final static void postDummyEvent(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

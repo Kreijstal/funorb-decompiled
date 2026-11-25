@@ -757,10 +757,10 @@ final class BufferedCacheFile {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = ul.field_Cb[var9];
+                var12 = ContextActionMenu.field_Cb[var9];
                 var13 = IntNode.field_i[var9];
-                var14 = -var12 + ul.field_Cb[var10];
-                var15 = -var12 + ul.field_Cb[var11];
+                var14 = -var12 + ContextActionMenu.field_Cb[var10];
+                var15 = -var12 + ContextActionMenu.field_Cb[var11];
                 var16 = IntNode.field_i[var10] - var13;
                 var17 = -var13 + IntNode.field_i[var11];
               }
@@ -909,10 +909,10 @@ final class BufferedCacheFile {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = ul.field_Cb[var9];
+                var12 = ContextActionMenu.field_Cb[var9];
                 var13 = IntNode.field_i[var9];
-                var14 = -var12 + ul.field_Cb[var10];
-                var15 = -var12 + ul.field_Cb[var11];
+                var14 = -var12 + ContextActionMenu.field_Cb[var10];
+                var15 = -var12 + ContextActionMenu.field_Cb[var11];
                 var16 = IntNode.field_i[var10] - var13;
                 var17 = -var13 + IntNode.field_i[var11];
               }

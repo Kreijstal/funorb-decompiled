@@ -2160,13 +2160,13 @@ final class MapView extends MapViewState {
             IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
             if (param0.field_L > 0 &&
               6 > param0.field_B) {
-              SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[0], (this.field_J[var3_int] << 4) + ContextActionMenu.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (param0.field_L == 2) {
-                SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[1], ContextActionMenu.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L == 3) {
-                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], (this.field_J[var3_int] << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ContextActionMenu.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], (this.field_J[var3_int] << 4) + ContextActionMenu.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
                 return;
               }
             }
@@ -2181,15 +2181,15 @@ final class MapView extends MapViewState {
             IconTextPanel.field_Cb.drawCentred(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
             if (param0.field_L > 0 &&
               param0.field_B < 6) {
-              SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ContextActionMenu.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (2 == param0.field_L) {
-                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + (this.field_i[var3_int] << 4), ul.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + (this.field_i[var3_int] << 4), ContextActionMenu.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L != 3) {
                 return;
               }
-              SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, MusicCrossfadeStream.field_s);
-              SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], ul.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + (this.field_i[var3_int] << 4), ContextActionMenu.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, MusicCrossfadeStream.field_s);
+              SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[3], ContextActionMenu.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, MusicCrossfadeStream.field_s);
               return;
             }
           }

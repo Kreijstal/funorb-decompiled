@@ -76,11 +76,11 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ChatPanelSetupSupport.initializeSharedChatPanel(DiplomacyNotice.field_o, ObjectList.field_h, 124, AccountConnectionPhase.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
+          ChatPanelSetupSupport.initializeSharedChatPanel(DiplomacyNotice.field_o, ObjectList.field_h, 124, AccountConnectionPhase.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ContextActionMenu.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
           BoundsRect.field_m = HighscoreResponseSupport.loadSpriteSetByName(93, "lobby", param3, "chatfilter");
           SettingsCookieSupport.field_d[1] = SoundPlayback.field_o;
           SettingsCookieSupport.field_d[0] = AccountStatusSupport.field_b;
-          SettingsCookieSupport.field_d[2] = ue.field_d;
+          SettingsCookieSupport.field_d[2] = ExternalLinkSupport.field_d;
           BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

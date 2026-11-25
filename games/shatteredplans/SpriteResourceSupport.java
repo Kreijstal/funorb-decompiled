@@ -151,7 +151,7 @@ final class SpriteResourceSupport {
           var2 = TutorialScene.field_a;
         }
         if (param1 == 2) {
-          var2 = ul.field_Hb;
+          var2 = ContextActionMenu.field_Hb;
         }
         if (param0 == -7019) {
           return var2;

@@ -119,7 +119,7 @@ final class MenuTransitionSupport {
 
     final static boolean isAccountNameRequestPending(int param0) {
         int var1 = 94 / ((param0 + 29) / 49);
-        return MatchingTextValidator.field_s == ue.field_a ? true : false;
+        return MatchingTextValidator.field_s == ExternalLinkSupport.field_a ? true : false;
     }
 
     final static void queueAnimationPreferences(byte param0) {

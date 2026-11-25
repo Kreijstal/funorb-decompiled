@@ -268,21 +268,21 @@ final class TutorialAi extends LegacyAi {
             var30 = var21;
             var21Lifetime2 = var12;
             var13 = wi.field_a;
-            var11.field_j.a(false, var12, var13, 11);
+            var11.field_j.addIconItem(false, var12, var13, 11);
             var14 = DerelictVictoryChecker.field_m;
             var15 = BoundsRect.field_m[1];
             var21Lifetime3 = var15;
             var30Lifetime3 = var21Lifetime3;
             var21Lifetime4 = var15;
             var16 = TextHotspotWidget.field_H;
-            var14.field_j.a(false, var15, var16, 12);
+            var14.field_j.addIconItem(false, var15, var16, 12);
             var17 = DerelictVictoryChecker.field_m;
             var18 = BoundsRect.field_m[2];
             var21Lifetime5 = var18;
             var30Lifetime4 = var21Lifetime5;
             var21Lifetime6 = var18;
             var19 = ValidationMessageWidget.field_O;
-            var17.field_j.a(false, var18, var19, 13);
+            var17.field_j.addIconItem(false, var18, var19, 13);
           }
           if (param0 == 1) {
             var20 = DerelictVictoryChecker.field_m;
@@ -290,33 +290,33 @@ final class TutorialAi extends LegacyAi {
             var30Lifetime1 = var21Lifetime1;
             var30Lifetime1Lifetime1 = var21Lifetime1;
             var22 = PaddedContentDialog.field_pb;
-            var20.field_j.a(false, var21Lifetime1, var22, 11);
+            var20.field_j.addIconItem(false, var21Lifetime1, var22, 11);
             var23 = DerelictVictoryChecker.field_m;
             var24 = BoundsRect.field_m[1];
             var30Lifetime1Lifetime2 = var24;
             var30Lifetime1Lifetime3 = var24;
             var25 = BattleExplosionVisual.field_s;
-            var23.field_j.a(false, var24, var25, 12);
+            var23.field_j.addIconItem(false, var24, var25, 12);
             var26 = DerelictVictoryChecker.field_m;
             var27 = BoundsRect.field_m[2];
             var30Lifetime1Lifetime4 = var27;
             var30Lifetime1Lifetime5 = var27;
             var28 = StatefulWidgetTheme.field_A;
-            var26.field_j.a(false, var27, var28, 13);
+            var26.field_j.addIconItem(false, var27, var28, 13);
           }
           if (2 == param0) {
             var29 = DerelictVictoryChecker.field_m;
             var30Lifetime2 = BoundsRect.field_m[0];
             var31 = SocialListSetupSupport.field_d;
-            var29.field_j.a(false, var30Lifetime2, var31, 11);
+            var29.field_j.addIconItem(false, var30Lifetime2, var31, 11);
             var32 = DerelictVictoryChecker.field_m;
             var33 = BoundsRect.field_m[1];
             var34 = field_w;
-            var32.field_j.a(false, var33, var34, 12);
+            var32.field_j.addIconItem(false, var33, var34, 12);
             var35 = DerelictVictoryChecker.field_m;
             var36 = BoundsRect.field_m[2];
             var37 = SecondaryNodeDeque.field_c;
-            var35.field_j.a(false, var36, var37, 13);
+            var35.field_j.addIconItem(false, var36, var37, 13);
           }
           var38 = DerelictVictoryChecker.field_m;
           if (param1 > -107) {
@@ -326,7 +326,7 @@ final class TutorialAi extends LegacyAi {
           var5 = param2.field_N;
           var6 = param2.field_K;
           var7 = param2.field_mb;
-          var38.field_j.b(var6, var7, 0, var4, var5);
+          var38.field_j.layoutAtAnchor(var6, var7, 0, var4, var5);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

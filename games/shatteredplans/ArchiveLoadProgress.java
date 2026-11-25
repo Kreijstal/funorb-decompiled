@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh {
+final class ArchiveLoadProgress {
     private int field_j;
     static String field_d;
     static String field_e;
-    private uf[] field_b;
+    private ArchiveLoadStep[] field_b;
     static boolean field_i;
     private int field_a;
     float field_h;
@@ -20,9 +20,9 @@ final class uh {
         int var1 = -94 % ((param0 - 19) / 58);
     }
 
-    final boolean b(int param0) {
+    final boolean pollLoaded(int param0) {
         int var3;
-        uf var4;
+        ArchiveLoadStep var4;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != -1) {
           this.field_a = 107;
@@ -30,24 +30,24 @@ final class uh {
         while (this.field_j < this.field_f) {
           var4 = this.field_b[this.field_j];
           if (!var4.field_a.isIndexLoaded((byte) -42)) {
-            this.a(true, 0, var4);
+            this.updateProgress(true, 0, var4);
             return false;
           }
           if (var4.field_e >= 0 &&
             !var4.field_a.ensureGroupLoaded(109, var4.field_e)) {
-            this.a(true, var4.field_a.getGroupProgress((byte) 36, var4.field_e), var4);
+            this.updateProgress(true, var4.field_a.getGroupProgress((byte) 36, var4.field_e), var4);
             return false;
           }
           if (var4.field_d != null &&
             !var4.field_a.ensureGroupLoadedByName(var4.field_d, -118)) {
-            this.a(true, var4.field_a.getGroupProgressByName(var4.field_d, (byte) 91), var4);
+            this.updateProgress(true, var4.field_a.getGroupProgressByName(var4.field_d, (byte) 91), var4);
             return false;
           }
           if (var4.field_e < 0 &&
             null == var4.field_d &&
             var4.field_c != null &&
             !var4.field_a.preloadAll(-1)) {
-            this.a(true, var4.field_a.getOverallProgress(100), var4);
+            this.updateProgress(true, var4.field_a.getOverallProgress(100), var4);
             return false;
           }
           this.field_j = this.field_j + 1;
@@ -55,11 +55,11 @@ final class uh {
         return true;
     }
 
-    private uh() throws Throwable {
+    private ArchiveLoadProgress() throws Throwable {
         throw new Error();
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int positionPopupX(int param0, int param1, int param2, int param3) {
         if (param0 >= -8) {
           field_e = (String) null;
           if (!(SoftwareRasterizer.field_b < param2 + param1)) {
@@ -79,7 +79,7 @@ final class uh {
         return -param2 + param3 + param1;
     }
 
-    private final void a(boolean param0, int param1, uf param2) {
+    private final void updateProgress(boolean param0, int param1, ArchiveLoadStep param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;

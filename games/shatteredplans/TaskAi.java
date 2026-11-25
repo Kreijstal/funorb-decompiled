@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class TaskAi implements Ai {
+final class TaskAi implements PlayerAi {
     private Player field_w;
     static String field_d;
     static AnimatedPanel field_o;

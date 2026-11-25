@@ -389,7 +389,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
           this.field_zb.setTarget(var9_int, UniformNineSliceFactory.field_c, (byte) 76, UniformNineSliceFactory.field_c + 3, 5);
           var10 = 5 + var9_int + 5;
           var11 = 3 + UniformNineSliceFactory.field_c * 2 + 3;
-          var12 = uh.a(-57, param0, var10, param2);
+          var12 = ArchiveLoadProgress.positionPopupX(-57, param0, var10, param2);
           var13 = uq.a(param3, 0, var11, param1);
           this.setTarget(var10, var11, (byte) 63, var13, var12);
           return;

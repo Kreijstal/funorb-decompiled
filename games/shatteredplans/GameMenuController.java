@@ -1153,16 +1153,16 @@ final class GameMenuController {
                   var12 = 390;
                 }
                 LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
-                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ContextActionMenu.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 IconTextPanel.field_Cb.drawString(DelayedInboundPacket.field_i, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ContextActionMenu.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ContextActionMenu.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
                 IconTextPanel.field_Cb.drawString(LabeledChildWidget.field_F, var12 + 22, IconTextPanel.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
-                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ContextActionMenu.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + var12 * 16, ContextActionMenu.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + var12 * 16, ContextActionMenu.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 IconTextPanel.field_Cb.drawString(MenuComponent.field_n, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 MenuLabel.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
@@ -2040,17 +2040,17 @@ final class GameMenuController {
         SoftwareRasterizer.drawRoundedRect(var2Lifetime1, var20, var18, var19, 10, SolVictoryChecker.blendColours(3974311, 0, -118, 128));
         if (-1 != var6 &&
           var6 != 24) {
-          AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
+          AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
           var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
           var22 = IconTextPanel.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
-          var22 = var22 + (1 + IconTextPanel.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
+          var22 = var22 + (1 + IconTextPanel.field_Cb.a(ContextActionMenu.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
           IconTextPanel.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
         } else {
           if (var6 == 24) {
-            AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
+            AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
               var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
-              var22_ref_String = ul.field_Qb[var6];
+              var22_ref_String = ContextActionMenu.field_Qb[var6];
             } else {
               var21_ref_String = "(" + AccountRequestResult.field_i + "???)";
               var22_ref_String = ClientOverlaySupport.field_c;
@@ -2399,7 +2399,7 @@ final class GameMenuController {
                                                                 TextReplacementEntry.field_i[28] = RichTextLayout.field_n;
                                                                 break regionExit1;
                                                               case 2:
-                                                                TextReplacementEntry.field_i[28] = ue.field_c;
+                                                                TextReplacementEntry.field_i[28] = ExternalLinkSupport.field_c;
                                                                 break regionExit1;
                                                               default:
                                                                 break regionExit1;

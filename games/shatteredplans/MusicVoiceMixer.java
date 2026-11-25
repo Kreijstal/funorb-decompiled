@@ -157,7 +157,7 @@ final class MusicVoiceMixer extends PcmStream {
           var7 = new GradientMenuLabel(0, 0, 209, param1.field_o.field_k, var6Lifetime2, 16777215, false);
           var21.addChild(var7, 8);
           var8 = 7;
-          var9 = new SpriteButton(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));
+          var9 = new SpriteButton(0, var8 + var7.field_i, 35, 35, MapStateReader.getStarTypeSprite(false, param1.field_q));
           var21.addChild(var9, 8);
           var10 = new FilledMenuPanel(40, var8 + (var7.field_i + ObjectList.field_d[0].field_w), 4 * ObjectList.field_d[0].field_z + 15, 35 - ObjectList.field_d[0].field_w, 2, 2105376);
           var21.addChild(var10, 8);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends AnimatedPanel {
+final class ContextActionMenu extends AnimatedPanel {
     static String[] field_Qb;
     static int field_Hb;
     static int[] field_Db;
@@ -23,12 +23,12 @@ final class ul extends AnimatedPanel {
     private int field_Bb;
     private int field_Pb;
 
-    final boolean f(byte param0) {
+    final boolean pollOpenState(byte param0) {
         if (this.field_Bb != -2) {
           return false;
         }
         if (param0 != 31) {
-          this.b(-117, 88, 37, -45, -114);
+          this.layoutAtAnchor(-117, 88, 37, -45, -114);
           if (13 == TextReplacementEntry.field_j) {
             this.field_Bb = -1;
             return true;
@@ -42,7 +42,7 @@ final class ul extends AnimatedPanel {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void appendRankingRow(int param0, int param1, int param2, int param3, int param4, int param5) {
         QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
         ProxyAuthenticationRequiredException.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
@@ -72,7 +72,7 @@ final class ul extends AnimatedPanel {
         }
     }
 
-    final void a(boolean param0, Sprite param1, String param2, int param3) {
+    final void addIconItem(boolean param0, Sprite param1, String param2, int param3) {
         try {
           this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, param1, param2);
           if (param0) {
@@ -89,7 +89,7 @@ final class ul extends AnimatedPanel {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseContextMenuStatics(int param0) {
         field_Ob = null;
         field_Cb = null;
         field_Fb = null;
@@ -100,11 +100,11 @@ final class ul extends AnimatedPanel {
           field_xb = null;
           return;
         }
-        ul.a(-91, 59, -35, 74, -62);
+        ContextActionMenu.isAngleBefore(-91, 59, -35, 74, -62);
         field_xb = null;
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void addItem(int param0, int param1, String param2) {
         try {
           this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, (Sprite) null, param2);
           this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
@@ -118,7 +118,7 @@ final class ul extends AnimatedPanel {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final static boolean isAngleBefore(int param0, int param1, int param2, int param3, int param4) {
         double var5 = Math.atan2((double)param4, (double)param3);
         if (param4 > -40 &&
           param4 < 0 &&
@@ -142,7 +142,7 @@ final class ul extends AnimatedPanel {
         return var7 < var5 ? true : false;
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutAtAnchor(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -169,7 +169,7 @@ final class ul extends AnimatedPanel {
           }
           var6 = var6 + 2 * this.field_Kb;
           var7Lifetime3 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
-          var8Lifetime3 = uh.a(param2 - 60, param3, var6, param0);
+          var8Lifetime3 = ArchiveLoadProgress.positionPopupX(param2 - 60, param3, var6, param0);
           var9 = uq.a(param1, param2 + 0, var7Lifetime3, param4);
           this.setTarget(var6, var7Lifetime3, (byte) 46, var9, var8Lifetime3);
           for (var10 = 0; this.field_Pb > var10; var10++) {
@@ -191,7 +191,7 @@ final class ul extends AnimatedPanel {
         }
         var6Lifetime1 = var6Lifetime1 + 2 * this.field_Kb;
         var7Lifetime2 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
-        var8Lifetime2 = uh.a(param2 - 60, param3, var6Lifetime1, param0);
+        var8Lifetime2 = ArchiveLoadProgress.positionPopupX(param2 - 60, param3, var6Lifetime1, param0);
         var9Lifetime1 = uq.a(param1, param2 + 0, var7Lifetime2, param4);
         this.setTarget(var6Lifetime1, var7Lifetime2, (byte) 46, var9Lifetime1, var8Lifetime2);
         for (var10Lifetime1 = 0; this.field_Pb > var10Lifetime1; var10Lifetime1++) {
@@ -200,11 +200,11 @@ final class ul extends AnimatedPanel {
         return;
     }
 
-    ul(ul param0) {
+    ContextActionMenu(ContextActionMenu param0) {
         this(param0, param0.field_Lb, param0.field_Nb, param0.field_Mb, param0.field_Kb, param0.field_Eb, param0.field_Jb, param0.field_yb, param0.field_zb);
     }
 
-    final int b(boolean param0, byte param1) {
+    final int pollAction(boolean param0, byte param1) {
         int var3 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         this.a(param0, -20429);
@@ -223,7 +223,7 @@ final class ul extends AnimatedPanel {
         return this.field_Bb;
     }
 
-    ul(AnimatedPanel param0, Sprite[] param1, AnimatedPanel param2, AnimatedPanel param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextActionMenu(AnimatedPanel param0, Sprite[] param1, AnimatedPanel param2, AnimatedPanel param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ib = new int[256];
         this.field_Gb = new IconLabelPanel[256];
