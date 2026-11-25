@@ -576,7 +576,7 @@ final class SpriteDropdownMenu {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1 = new RgbSprite(540, 140);
-          CombatSandbox.a(var1, 3);
+          CombatSandbox.pushSpriteRasterTarget(var1, 3);
           if (!param0) {
             SpriteDropdownMenu.releaseStatics(33);
           }

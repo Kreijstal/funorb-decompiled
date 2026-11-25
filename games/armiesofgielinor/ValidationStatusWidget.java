@@ -103,17 +103,17 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           waitingSpriteHeight = waitingIcon.canvasHeight << 1;
           if (this.spinnerSprite == null) {
             this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
-            CombatSandbox.a(this.spinnerSprite, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
           } else {
             if (this.spinnerSprite.pixelWidth < waitingSpriteWidth) {
               this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
-              CombatSandbox.a(this.spinnerSprite, 3);
+              CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
             } else {
               if (waitingSpriteHeight > this.spinnerSprite.pixelHeight) {
                 this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
-                CombatSandbox.a(this.spinnerSprite, 3);
+                CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
               } else {
-                CombatSandbox.a(this.spinnerSprite, 3);
+                CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
                 SoftwareRaster.clearPixels();
               }
             }
@@ -142,17 +142,17 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         checkingSpriteHeight = checkingIcon.canvasHeight << 1;
         if (this.spinnerSprite == null) {
           this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
-          CombatSandbox.a(this.spinnerSprite, 3);
+          CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
         } else {
           if (this.spinnerSprite.pixelWidth < checkingSpriteWidth) {
             this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
-            CombatSandbox.a(this.spinnerSprite, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
           } else {
             if (checkingSpriteHeight > this.spinnerSprite.pixelHeight) {
               this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
-              CombatSandbox.a(this.spinnerSprite, 3);
+              CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
             } else {
-              CombatSandbox.a(this.spinnerSprite, 3);
+              CombatSandbox.pushSpriteRasterTarget(this.spinnerSprite, 3);
               SoftwareRaster.clearPixels();
             }
           }

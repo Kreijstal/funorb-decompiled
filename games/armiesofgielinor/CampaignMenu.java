@@ -1344,7 +1344,7 @@ final class CampaignMenu {
             runtimeException = decompiledCaughtException;
             runtimeException.printStackTrace();
           }
-          CombatSandbox.a(sprite, 3);
+          CombatSandbox.pushSpriteRasterTarget(sprite, 3);
           SoftwareRaster.fillRectangle(0, 0, sprite.pixelWidth, sprite.pixelHeight, 4473924);
           tileIndex = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1866,7 +1866,7 @@ final class CampaignMenu {
               var3.statusText = EmailCheckResult.formatTemplate(4800, ConsoleExpression.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = DisplayModeOptionPainter.field_w[var3.entryId];
               var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
-              CombatSandbox.a(var7, 3);
+              CombatSandbox.pushSpriteRasterTarget(var7, 3);
               var6.drawPixels(0, 0);
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.entryId == 1);

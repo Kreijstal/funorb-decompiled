@@ -559,14 +559,14 @@ final class MembershipExpansionScreen {
           var11_int = (int)((float)param8 / param9);
           var12 = (int)((float)param7 / param9);
           var13 = new RgbSprite(var11_int, var12);
-          CombatSandbox.a(var13, 3);
+          CombatSandbox.pushSpriteRasterTarget(var13, 3);
           if (param6 >= -108) {
             MembershipExpansionScreen.b(-32);
           }
           param0.drawScaled((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
-          CombatSandbox.a(param0, 3);
+          CombatSandbox.pushSpriteRasterTarget(param0, 3);
           var13.drawDownscaledAreaAverage(param2, param1, param8, param7);
           QuickChatPhraseRepository.popRasterState(-18862);
           return;
@@ -666,7 +666,7 @@ final class MembershipExpansionScreen {
           if (this.field_t == null &&
             null != EmailConfirmationValidator.field_n) {
             this.field_t = new RgbSprite(622, 47);
-            CombatSandbox.a(this.field_t, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.field_t, 3);
             SoftwareRaster.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
@@ -683,7 +683,7 @@ final class MembershipExpansionScreen {
             }
             var10 = DirectByteStorage.a(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
-            CombatSandbox.a(var5, 3);
+            CombatSandbox.pushSpriteRasterTarget(var5, 3);
             SoftwareRaster.fillVerticalGradient(0, 0, var5.pixelWidth, var5.pixelHeight / 2, 16180917, 16306250);
             SoftwareRaster.fillVerticalGradient(0, var5.pixelHeight / 2, var5.pixelWidth, var5.pixelHeight, 16306250, 15568919);
             var6 = LocalizedUrlSupport.field_a;
@@ -693,7 +693,7 @@ final class MembershipExpansionScreen {
             this.a(var5, 12 - EmailConfirmationValidator.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], EmailConfirmationValidator.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_b = new RgbSprite(121, 122);
-            CombatSandbox.a(this.field_b, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.field_b, 3);
             var5.drawRotated(this.field_b.pixelWidth / 2, this.field_b.pixelHeight / 2, -2048, 4096);
             QuickChatPhraseRepository.popRasterState(-18862);
             return;

@@ -53,14 +53,14 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         }
         RgbSprite compositeSprite = new RgbSprite(this.child.width, this.child.height);
         if (obfuscationGuard < -82) {
-          CombatSandbox.a(compositeSprite, 3);
+          CombatSandbox.pushSpriteRasterTarget(compositeSprite, 3);
           this.child.drawWidget(0, 0, (byte) -86, renderLayer);
           QuickChatPhraseRepository.popRasterState(-18862);
           compositeSprite.drawWithOpacity(this.x + originX, originY + this.y, this.alpha);
           return;
         }
         field_M = (String[]) null;
-        CombatSandbox.a(compositeSprite, 3);
+        CombatSandbox.pushSpriteRasterTarget(compositeSprite, 3);
         this.child.drawWidget(0, 0, (byte) -86, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
         compositeSprite.drawWithOpacity(this.x + originX, originY + this.y, this.alpha);

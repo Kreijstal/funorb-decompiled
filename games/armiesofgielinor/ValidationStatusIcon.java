@@ -110,18 +110,18 @@ final class ValidationStatusIcon extends InteractiveWidget {
           var10 = var21.canvasHeight << 1;
           if (null == PreparedAction.field_p) {
             PreparedAction.field_p = new RgbSprite(var9, var10);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+            CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
           } else {
             if (var9 > PreparedAction.field_p.pixelWidth) {
               PreparedAction.field_p = new RgbSprite(var9, var10);
-              CombatSandbox.a(PreparedAction.field_p, 3);
+              CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
             } else {
               if (var10 <= PreparedAction.field_p.pixelHeight) {
-                CombatSandbox.a(PreparedAction.field_p, 3);
+                CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
                 SoftwareRaster.clearPixels();
               } else {
                 PreparedAction.field_p = new RgbSprite(var9, var10);
-                CombatSandbox.a(PreparedAction.field_p, 3);
+                CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
               }
             }
           }
@@ -139,11 +139,11 @@ final class ValidationStatusIcon extends InteractiveWidget {
           if (null != PreparedAction.field_p &&
             var9Lifetime1 <= PreparedAction.field_p.pixelWidth &&
             var10Lifetime1 <= PreparedAction.field_p.pixelHeight) {
-            CombatSandbox.a(PreparedAction.field_p, 3);
+            CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
             SoftwareRaster.clearPixels();
           } else {
             PreparedAction.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+            CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
           }
           var15.drawRotatedAboutPivot(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
@@ -169,18 +169,18 @@ final class ValidationStatusIcon extends InteractiveWidget {
         var10Lifetime2 = var16.canvasHeight << 1;
         if (null == PreparedAction.field_p) {
           PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-          CombatSandbox.a(PreparedAction.field_p, 3);
+          CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
         } else {
           if (var9Lifetime2 > PreparedAction.field_p.pixelWidth) {
             PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+            CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
           } else {
             if (var10Lifetime2 <= PreparedAction.field_p.pixelHeight) {
-              CombatSandbox.a(PreparedAction.field_p, 3);
+              CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
               SoftwareRaster.clearPixels();
             } else {
               PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-              CombatSandbox.a(PreparedAction.field_p, 3);
+              CombatSandbox.pushSpriteRasterTarget(PreparedAction.field_p, 3);
             }
           }
         }

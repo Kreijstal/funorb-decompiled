@@ -85,7 +85,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           !(TutorialLayout.field_b.pixelHeight >= this.height)) {
           TutorialLayout.field_b = new RgbSprite(this.width, this.height);
         }
-        CombatSandbox.a(TutorialLayout.field_b, 3);
+        CombatSandbox.pushSpriteRasterTarget(TutorialLayout.field_b, 3);
         SoftwareRaster.clearPixels();
         this.drawDialogBackground(0, 1851680193, 0);
         super.drawWidget(-originX - this.x, -originY - this.y, (byte) -106, renderLayer);

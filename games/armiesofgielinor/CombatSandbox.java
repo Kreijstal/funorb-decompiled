@@ -16,7 +16,7 @@ final class CombatSandbox {
     static String field_e;
     private RgbSprite[] field_b;
 
-    private final void b(byte param0) {
+    private final void initializeControls(byte param0) {
         this.field_d = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Attacker", 0, 0);
         this.field_h = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Defender", 0, 0);
         this.field_a = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Run Attack", 0, 0);
@@ -32,7 +32,7 @@ final class CombatSandbox {
         this.field_l[5] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
     }
 
-    private final int a(int param0, byte param1) {
+    private final int getControlWidth(int param0, byte param1) {
         if (param0 == 0) {
           return this.field_d.getWidth(-29408);
         }
@@ -66,7 +66,7 @@ final class CombatSandbox {
         return this.field_l[5].getWidth(-18332);
     }
 
-    private final void b(int param0) {
+    private final void drawDropdowns(int param0) {
         int var2;
         int var3;
         int var4;
@@ -87,7 +87,7 @@ final class CombatSandbox {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void setControlPosition(int param0, int param1, int param2, int param3) {
         if (param2 == 0) {
           this.field_d.setPosition(param3, (byte) 55, param0);
         }
@@ -104,7 +104,7 @@ final class CombatSandbox {
           this.field_l[1].setPosition(-59, param0, param3);
         }
         if (param1 > -41) {
-          this.a(-21);
+          this.drawExitHint(-21);
         }
         if (param2 == 5) {
           this.field_l[3].setPosition(87, param0, param3);
@@ -120,7 +120,7 @@ final class CombatSandbox {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, boolean param3, int param4, boolean param5) {
+    private final void updateControlsAndRunAttack(boolean param0, int param1, int param2, boolean param3, int param4, boolean param5) {
         Unit stackIn_24_0;
         Unit stackIn_24_1;
         int stackIn_24_2;
@@ -163,14 +163,14 @@ final class CombatSandbox {
         int var24;
         int var8Lifetime1;
         var24 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a((byte) -121, param2, param4);
+        this.updateDropdownInputTarget((byte) -121, param2, param4);
         var7 = param5 ? 1 : 0;
         for (var8 = 0; var8 < this.field_l.length; var8++) {
           this.field_l[var8].updateInput(param0, -18596, param4, param2, param3, param1);
           var7 = var7 != 0 | this.field_l[var8].hasInputChanged((byte) 122) ? 1 : 0;
         }
         if (var7 != 0) {
-          this.c((byte) -95);
+          this.layoutControls((byte) -95);
         }
         if (this.field_a.containsPointer(param4, 0, param2) &&
           param0) {
@@ -255,7 +255,7 @@ final class CombatSandbox {
         }
     }
 
-    final static void a(RgbSprite param0, int param1) {
+    final static void pushSpriteRasterTarget(RgbSprite param0, int param1) {
         if (param1 != 3) {
           return;
         }
@@ -267,14 +267,14 @@ final class CombatSandbox {
         }
     }
 
-    private final void a(int param0) {
+    private final void drawExitHint(int param0) {
         int var2 = FixedSquareRootSupport.field_b.width >> 1;
         int var3 = -this.field_m.maxAscent + FixedSquareRootSupport.field_b.height - (this.field_m.maxDescent << 1);
         int var4 = this.field_i[param0];
         this.field_m.drawCentered("Press Esc to return to the main menu", var2, var3, var4, -1);
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void updateDropdownInputTarget(byte param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -320,8 +320,8 @@ final class CombatSandbox {
           this.field_m = param2;
           this.field_i = param3;
           this.field_f = param1;
-          this.b((byte) -49);
-          this.c((byte) -103);
+          this.initializeControls((byte) -49);
+          this.layoutControls((byte) -103);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -334,9 +334,9 @@ final class CombatSandbox {
           this.field_d.drawLabel(113);
           this.field_h.drawLabel(71);
           this.field_a.drawLabel(53);
-          this.b(0);
+          this.drawDropdowns(0);
         }
-        this.a(0);
+        this.drawExitHint(0);
         if (obfuscationGuard != 2) {
           return;
         }
@@ -345,7 +345,7 @@ final class CombatSandbox {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int getControlHeight(byte param0, int param1) {
         if (0 == param1) {
           return this.field_d.getHeight((byte) -25);
         }
@@ -371,7 +371,7 @@ final class CombatSandbox {
           return this.field_l[4].getHeight(true);
         }
         if (param0 != -101) {
-          this.a(true, 53, -58, false, -8, false);
+          this.updateControlsAndRunAttack(true, 53, -58, false, -8, false);
         }
         if (param1 == 8) {
           return this.field_l[5].getHeight(true);
@@ -379,19 +379,19 @@ final class CombatSandbox {
         return 0;
     }
 
-    private final void c(byte param0) {
-        this.a(10, -50, 0, 10);
-        this.a(10, -45, 1, this.a((byte) -101, 0) + 10);
-        this.a(10, -44, 2, this.a((byte) -101, 0) + (10 + this.a((byte) -101, 1)));
+    private final void layoutControls(byte param0) {
+        this.setControlPosition(10, -50, 0, 10);
+        this.setControlPosition(10, -45, 1, this.getControlHeight((byte) -101, 0) + 10);
+        this.setControlPosition(10, -44, 2, this.getControlHeight((byte) -101, 0) + (10 + this.getControlHeight((byte) -101, 1)));
         if (param0 > -56) {
-          this.a(-9);
+          this.drawExitHint(-9);
         }
-        this.a(10, -82, 7, this.a((byte) -101, 0) + 10 - (-this.a((byte) -101, 1) - this.a((byte) -101, 3)));
-        this.a(630 - this.a(3, (byte) -42), -64, 3, 10);
-        this.a(-this.a(4, (byte) -42) + 630, -75, 4, this.a((byte) -101, 3) + 10);
-        this.a(630 - this.a(5, (byte) -42), -112, 5, 10 - (-this.a((byte) -101, 3) - this.a((byte) -101, 4)));
-        this.a(630 - this.a(8, (byte) -42), -100, 8, this.a((byte) -101, 3) + 10 + this.a((byte) -101, 4) + this.a((byte) -101, 5));
-        this.a(320 - this.a(6, (byte) -42) / 2, -84, 6, 360);
+        this.setControlPosition(10, -82, 7, this.getControlHeight((byte) -101, 0) + 10 - (-this.getControlHeight((byte) -101, 1) - this.getControlHeight((byte) -101, 3)));
+        this.setControlPosition(630 - this.getControlWidth(3, (byte) -42), -64, 3, 10);
+        this.setControlPosition(-this.getControlWidth(4, (byte) -42) + 630, -75, 4, this.getControlHeight((byte) -101, 3) + 10);
+        this.setControlPosition(630 - this.getControlWidth(5, (byte) -42), -112, 5, 10 - (-this.getControlHeight((byte) -101, 3) - this.getControlHeight((byte) -101, 4)));
+        this.setControlPosition(630 - this.getControlWidth(8, (byte) -42), -100, 8, this.getControlHeight((byte) -101, 3) + 10 + this.getControlHeight((byte) -101, 4) + this.getControlHeight((byte) -101, 5));
+        this.setControlPosition(320 - this.getControlWidth(6, (byte) -42) / 2, -84, 6, 360);
     }
 
     final void advanceFrame(int inputValue, int obfuscationGuard, int screenY, boolean inputActive, int screenX, boolean secondaryInput) {
@@ -413,7 +413,7 @@ final class CombatSandbox {
           }
           return;
         }
-        this.a(inputActive, inputValue, screenX, secondaryInput, screenY, false);
+        this.updateControlsAndRunAttack(inputActive, inputValue, screenX, secondaryInput, screenY, false);
     }
 
     public static void releaseStatics(byte obfuscationGuard) {

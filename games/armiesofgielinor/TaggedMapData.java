@@ -38,7 +38,7 @@ final class TaggedMapData implements TaggedFieldReader {
         if (!(PasswordValidator.field_j <= 200)) {
           var5 = (250 - PasswordValidator.field_j << 8) / 50;
         }
-        CombatSandbox.a(ReflectionCheckRequest.field_n, 3);
+        CombatSandbox.pushSpriteRasterTarget(ReflectionCheckRequest.field_n, 3);
         TriangleRasterizer.useRasterClip();
         SoftwareRaster.clearPixels();
         DebouncedValidator.e(9);

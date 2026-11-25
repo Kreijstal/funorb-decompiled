@@ -95348,12 +95348,92 @@
       "renamedSymbol": "M:CombatSandbox.releaseStatics(B)V"
     },
     {
+      "symbol": "M:vn.a(BI)I",
+      "originalName": "a",
+      "to": "getControlHeight",
+      "evidence": "vn.java: Maps layout ids0..8 to label/dropdown heights in attacker/unit/terrain/defender/unit/terrain/run/damage/damage order. Unknown ids return0. Preserve early returns0..7 before byte-101 guard; bad guard calls input/update path before id8 or unknown result. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.getControlHeight(BI)I"
+    },
+    {
+      "symbol": "M:vn.a(BII)V",
+      "originalName": "a",
+      "to": "updateDropdownInputTarget",
+      "evidence": "vn.java: Finds the first dropdown whose control/menu contains pointer, then enables only that dropdown. With no match, evaluates byte-derived division and enables dropdown0 while disabling others. Preserve read/call order, full byte domain and guard arithmetic only on no-hit branch. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.updateDropdownInputTarget(BII)V"
+    },
+    {
+      "symbol": "M:vn.a(I)V",
+      "originalName": "a",
+      "to": "drawExitHint",
+      "evidence": "vn.java: Centers the literal escape-to-main-menu instruction near framebuffer bottom using font ascent/descent and caller-selected palette index. Preserve arbitrary index (including bad guard calls with negative values), font/raster reads, original literal and exception behavior. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.drawExitHint(I)V"
+    },
+    {
+      "symbol": "M:vn.a(IB)I",
+      "originalName": "a",
+      "to": "getControlWidth",
+      "evidence": "vn.java: Maps layout ids0..8 to corresponding label/dropdown widths; unknown returns0. Id0 returns before guard-42; other ids preserve bad-byte emailLoginMethod clear before lookup. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.getControlWidth(IB)I"
+    },
+    {
+      "symbol": "M:vn.a(IIII)V",
+      "originalName": "a",
+      "to": "setControlPosition",
+      "evidence": "vn.java: Routes a layout id to the corresponding label/dropdown position setter, keeping their differing argument conventions. Preserve independent if branches and guard-triggered drawExitHint(-21) between id4 and id5 branches. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.setControlPosition(IIII)V"
+    },
+    {
       "symbol": "M:vn.a(IIIZIZ)V",
       "originalName": "a",
       "to": "advanceFrame",
       "evidence": "vn.java: Updates the active combat presentation or sandbox input; preserves the original argument order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CombatSandbox.advanceFrame(IIIZIZ)V"
+    },
+    {
+      "symbol": "M:vn.a(Lwk;I)V",
+      "originalName": "a",
+      "to": "pushSpriteRasterTarget",
+      "evidence": "vn.java: Canonical guard3 pushes current raster state then targets supplied sprite pixels and canvas dimensions. All34 incoming bindings are retained. Preserve push before sprite null/field access, original catch context and lack of automatic restoration; other guards return before any work. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.pushSpriteRasterTarget(LRgbSprite;I)V"
+    },
+    {
+      "symbol": "M:vn.a(ZIIZIZ)V",
+      "originalName": "a",
+      "to": "updateControlsAndRunAttack",
+      "evidence": "vn.java: Updates pointer input target and all six dropdowns, combines change flags without short circuit, relayouts when changed, and starts an attack preview when run button is activated. Preserve special unit75/76 substitutions and flag8, health division with zero floor, capped attack/counterattack arithmetic, null battle context, presentation initialization and wipe creation order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V"
+    },
+    {
+      "symbol": "M:vn.b(B)V",
+      "originalName": "b",
+      "to": "initializeControls",
+      "evidence": "vn.java: Allocates Attacker, Defender and Run Attack framed labels, then six dropdowns using unit, terrain and player-profile option arrays. Preserve constructor/allocation order and bad-byte guard clearing run label after dropdown4 and before dropdown5. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.initializeControls(B)V"
+    },
+    {
+      "symbol": "M:vn.b(I)V",
+      "originalName": "b",
+      "to": "drawDropdowns",
+      "evidence": "vn.java: Draws closed dropdowns from caller-supplied starting index, then open dropdowns from zero so menus appear above controls. Preserve two distinct traversals, menu state re-reads and original draw byte values. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.drawDropdowns(I)V"
+    },
+    {
+      "symbol": "M:vn.c(B)V",
+      "originalName": "c",
+      "to": "layoutControls",
+      "evidence": "vn.java: Positions attacker controls against x10 and defender controls against x630 minus individual widths, stacking by measured heights; centers Run Attack at x320,y360. Preserve call evaluation order and bad-byte drawExitHint(-9) after first three placements. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases, arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CombatSandbox.layoutControls(B)V"
     },
     {
       "symbol": "M:vn.c(I)V",
@@ -509523,7 +509603,7 @@
     },
     {
       "symbol": "L:vn.a(BII)V#0",
-      "renamedSymbol": "L:CombatSandbox.a(BII)V#0",
+      "renamedSymbol": "L:CombatSandbox.updateDropdownInputTarget(BII)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -509534,7 +509614,7 @@
     },
     {
       "symbol": "L:vn.a(BII)V#1",
-      "renamedSymbol": "L:CombatSandbox.a(BII)V#1",
+      "renamedSymbol": "L:CombatSandbox.updateDropdownInputTarget(BII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -509545,7 +509625,7 @@
     },
     {
       "symbol": "L:vn.a(BII)V#2",
-      "renamedSymbol": "L:CombatSandbox.a(BII)V#2",
+      "renamedSymbol": "L:CombatSandbox.updateDropdownInputTarget(BII)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -509556,7 +509636,7 @@
     },
     {
       "symbol": "L:vn.a(BII)V#3",
-      "renamedSymbol": "L:CombatSandbox.a(BII)V#3",
+      "renamedSymbol": "L:CombatSandbox.updateDropdownInputTarget(BII)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -509567,7 +509647,7 @@
     },
     {
       "symbol": "L:vn.a(BII)V#4",
-      "renamedSymbol": "L:CombatSandbox.a(BII)V#4",
+      "renamedSymbol": "L:CombatSandbox.updateDropdownInputTarget(BII)V#4",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -509578,7 +509658,7 @@
     },
     {
       "symbol": "L:vn.a(I)V#0",
-      "renamedSymbol": "L:CombatSandbox.a(I)V#0",
+      "renamedSymbol": "L:CombatSandbox.drawExitHint(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -509589,7 +509669,7 @@
     },
     {
       "symbol": "L:vn.a(I)V#1",
-      "renamedSymbol": "L:CombatSandbox.a(I)V#1",
+      "renamedSymbol": "L:CombatSandbox.drawExitHint(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -509600,7 +509680,7 @@
     },
     {
       "symbol": "L:vn.a(I)V#2",
-      "renamedSymbol": "L:CombatSandbox.a(I)V#2",
+      "renamedSymbol": "L:CombatSandbox.drawExitHint(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -509611,7 +509691,7 @@
     },
     {
       "symbol": "L:vn.a(Lwk;I)V#0",
-      "renamedSymbol": "L:CombatSandbox.a(LRgbSprite;I)V#0",
+      "renamedSymbol": "L:CombatSandbox.pushSpriteRasterTarget(LRgbSprite;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -509622,7 +509702,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#0",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#0",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#0",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -509633,7 +509713,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#1",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#1",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#1",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -509644,7 +509724,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#10",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#10",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#10",
       "originalName": "stackIn_25_8",
       "renamedName": "stackIn_25_8",
       "declaration": {
@@ -509655,7 +509735,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#11",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#11",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#11",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -509666,7 +509746,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#12",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#12",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#12",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -509677,7 +509757,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#13",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#13",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#13",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -509688,7 +509768,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#14",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#14",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#14",
       "originalName": "stackIn_27_3",
       "renamedName": "stackIn_27_3",
       "declaration": {
@@ -509699,7 +509779,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#15",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#15",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#15",
       "originalName": "stackIn_27_4",
       "renamedName": "stackIn_27_4",
       "declaration": {
@@ -509710,7 +509790,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#16",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#16",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#16",
       "originalName": "stackIn_27_5",
       "renamedName": "stackIn_27_5",
       "declaration": {
@@ -509721,7 +509801,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#17",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#17",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#17",
       "originalName": "stackIn_27_6",
       "renamedName": "stackIn_27_6",
       "declaration": {
@@ -509732,7 +509812,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#18",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#18",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#18",
       "originalName": "stackIn_27_7",
       "renamedName": "stackIn_27_7",
       "declaration": {
@@ -509743,7 +509823,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#19",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#19",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#19",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -509754,7 +509834,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#2",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#2",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#2",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -509765,7 +509845,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#20",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#20",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#20",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -509776,7 +509856,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#21",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#21",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#21",
       "originalName": "stackIn_28_8",
       "renamedName": "stackIn_28_8",
       "declaration": {
@@ -509787,7 +509867,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#22",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#22",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#22",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -509798,7 +509878,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#23",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#23",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#23",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -509809,7 +509889,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#24",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#24",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#24",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -509820,7 +509900,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#25",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#25",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#25",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -509831,7 +509911,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#26",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#26",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#26",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -509842,7 +509922,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#27",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#27",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#27",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -509853,7 +509933,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#28",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#28",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#28",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -509864,7 +509944,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#29",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#29",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#29",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -509875,7 +509955,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#3",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#3",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#3",
       "originalName": "stackIn_24_3",
       "renamedName": "stackIn_24_3",
       "declaration": {
@@ -509886,7 +509966,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#30",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#30",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#30",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -509897,7 +509977,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#31",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#31",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#31",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -509908,7 +509988,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#32",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#32",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#32",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -509919,7 +509999,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#33",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#33",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#33",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -509930,7 +510010,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#34",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#34",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#34",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -509941,7 +510021,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#35",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#35",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#35",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -509952,7 +510032,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#36",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#36",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#36",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -509963,7 +510043,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#37",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#37",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#37",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -509974,7 +510054,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#38",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#38",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#38",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -509985,7 +510065,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#39",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#39",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#39",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -509996,7 +510076,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#4",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#4",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#4",
       "originalName": "stackIn_24_4",
       "renamedName": "stackIn_24_4",
       "declaration": {
@@ -510007,7 +510087,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#40",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#40",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#40",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -510018,7 +510098,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#5",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#5",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#5",
       "originalName": "stackIn_24_5",
       "renamedName": "stackIn_24_5",
       "declaration": {
@@ -510029,7 +510109,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#6",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#6",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#6",
       "originalName": "stackIn_24_6",
       "renamedName": "stackIn_24_6",
       "declaration": {
@@ -510040,7 +510120,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#7",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#7",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#7",
       "originalName": "stackIn_24_7",
       "renamedName": "stackIn_24_7",
       "declaration": {
@@ -510051,7 +510131,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#8",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#8",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#8",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -510062,7 +510142,7 @@
     },
     {
       "symbol": "L:vn.a(ZIIZIZ)V#9",
-      "renamedSymbol": "L:CombatSandbox.a(ZIIZIZ)V#9",
+      "renamedSymbol": "L:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#9",
       "originalName": "stackIn_25_1",
       "renamedName": "stackIn_25_1",
       "declaration": {
@@ -510073,7 +510153,7 @@
     },
     {
       "symbol": "L:vn.b(I)V#0",
-      "renamedSymbol": "L:CombatSandbox.b(I)V#0",
+      "renamedSymbol": "L:CombatSandbox.drawDropdowns(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -510084,7 +510164,7 @@
     },
     {
       "symbol": "L:vn.b(I)V#1",
-      "renamedSymbol": "L:CombatSandbox.b(I)V#1",
+      "renamedSymbol": "L:CombatSandbox.drawDropdowns(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -510095,7 +510175,7 @@
     },
     {
       "symbol": "L:vn.b(I)V#2",
-      "renamedSymbol": "L:CombatSandbox.b(I)V#2",
+      "renamedSymbol": "L:CombatSandbox.drawDropdowns(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -510106,7 +510186,7 @@
     },
     {
       "symbol": "L:vn.b(I)V#3",
-      "renamedSymbol": "L:CombatSandbox.b(I)V#3",
+      "renamedSymbol": "L:CombatSandbox.drawDropdowns(I)V#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -577338,9 +577418,9 @@
     },
     {
       "symbol": "M:vn.a(BI)I",
-      "renamedSymbol": "M:CombatSandbox.a(BI)I",
+      "renamedSymbol": "M:CombatSandbox.getControlHeight(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getControlHeight",
       "declaration": {
         "file": "vn.java",
         "start": 11027,
@@ -577349,9 +577429,9 @@
     },
     {
       "symbol": "M:vn.a(BII)V",
-      "renamedSymbol": "M:CombatSandbox.a(BII)V",
+      "renamedSymbol": "M:CombatSandbox.updateDropdownInputTarget(BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateDropdownInputTarget",
       "declaration": {
         "file": "vn.java",
         "start": 8861,
@@ -577360,9 +577440,9 @@
     },
     {
       "symbol": "M:vn.a(I)V",
-      "renamedSymbol": "M:CombatSandbox.a(I)V",
+      "renamedSymbol": "M:CombatSandbox.drawExitHint(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawExitHint",
       "declaration": {
         "file": "vn.java",
         "start": 8551,
@@ -577371,9 +577451,9 @@
     },
     {
       "symbol": "M:vn.a(IB)I",
-      "renamedSymbol": "M:CombatSandbox.a(IB)I",
+      "renamedSymbol": "M:CombatSandbox.getControlWidth(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getControlWidth",
       "declaration": {
         "file": "vn.java",
         "start": 1468,
@@ -577382,9 +577462,9 @@
     },
     {
       "symbol": "M:vn.a(IIII)V",
-      "renamedSymbol": "M:CombatSandbox.a(IIII)V",
+      "renamedSymbol": "M:CombatSandbox.setControlPosition(IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setControlPosition",
       "declaration": {
         "file": "vn.java",
         "start": 2923,
@@ -577404,9 +577484,9 @@
     },
     {
       "symbol": "M:vn.a(Lwk;I)V",
-      "renamedSymbol": "M:CombatSandbox.a(LRgbSprite;I)V",
+      "renamedSymbol": "M:CombatSandbox.pushSpriteRasterTarget(LRgbSprite;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pushSpriteRasterTarget",
       "declaration": {
         "file": "vn.java",
         "start": 8138,
@@ -577415,9 +577495,9 @@
     },
     {
       "symbol": "M:vn.a(ZIIZIZ)V",
-      "renamedSymbol": "M:CombatSandbox.a(ZIIZIZ)V",
+      "renamedSymbol": "M:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateControlsAndRunAttack",
       "declaration": {
         "file": "vn.java",
         "start": 3859,
@@ -577426,9 +577506,9 @@
     },
     {
       "symbol": "M:vn.b(B)V",
-      "renamedSymbol": "M:CombatSandbox.b(B)V",
+      "renamedSymbol": "M:CombatSandbox.initializeControls(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "initializeControls",
       "declaration": {
         "file": "vn.java",
         "start": 397,
@@ -577437,9 +577517,9 @@
     },
     {
       "symbol": "M:vn.b(I)V",
-      "renamedSymbol": "M:CombatSandbox.b(I)V",
+      "renamedSymbol": "M:CombatSandbox.drawDropdowns(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawDropdowns",
       "declaration": {
         "file": "vn.java",
         "start": 2335,
@@ -577448,9 +577528,9 @@
     },
     {
       "symbol": "M:vn.c(B)V",
-      "renamedSymbol": "M:CombatSandbox.c(B)V",
+      "renamedSymbol": "M:CombatSandbox.layoutControls(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "layoutControls",
       "declaration": {
         "file": "vn.java",
         "start": 11916,
@@ -704025,7 +704105,7 @@
     },
     {
       "symbol": "P:vn.a(BI)I#0",
-      "renamedSymbol": "P:CombatSandbox.a(BI)I#0",
+      "renamedSymbol": "P:CombatSandbox.getControlHeight(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704036,7 +704116,7 @@
     },
     {
       "symbol": "P:vn.a(BI)I#1",
-      "renamedSymbol": "P:CombatSandbox.a(BI)I#1",
+      "renamedSymbol": "P:CombatSandbox.getControlHeight(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704047,7 +704127,7 @@
     },
     {
       "symbol": "P:vn.a(BII)V#0",
-      "renamedSymbol": "P:CombatSandbox.a(BII)V#0",
+      "renamedSymbol": "P:CombatSandbox.updateDropdownInputTarget(BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704058,7 +704138,7 @@
     },
     {
       "symbol": "P:vn.a(BII)V#1",
-      "renamedSymbol": "P:CombatSandbox.a(BII)V#1",
+      "renamedSymbol": "P:CombatSandbox.updateDropdownInputTarget(BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704069,7 +704149,7 @@
     },
     {
       "symbol": "P:vn.a(BII)V#2",
-      "renamedSymbol": "P:CombatSandbox.a(BII)V#2",
+      "renamedSymbol": "P:CombatSandbox.updateDropdownInputTarget(BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -704080,7 +704160,7 @@
     },
     {
       "symbol": "P:vn.a(I)V#0",
-      "renamedSymbol": "P:CombatSandbox.a(I)V#0",
+      "renamedSymbol": "P:CombatSandbox.drawExitHint(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704091,7 +704171,7 @@
     },
     {
       "symbol": "P:vn.a(IB)I#0",
-      "renamedSymbol": "P:CombatSandbox.a(IB)I#0",
+      "renamedSymbol": "P:CombatSandbox.getControlWidth(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704102,7 +704182,7 @@
     },
     {
       "symbol": "P:vn.a(IB)I#1",
-      "renamedSymbol": "P:CombatSandbox.a(IB)I#1",
+      "renamedSymbol": "P:CombatSandbox.getControlWidth(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704113,7 +704193,7 @@
     },
     {
       "symbol": "P:vn.a(IIII)V#0",
-      "renamedSymbol": "P:CombatSandbox.a(IIII)V#0",
+      "renamedSymbol": "P:CombatSandbox.setControlPosition(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704124,7 +704204,7 @@
     },
     {
       "symbol": "P:vn.a(IIII)V#1",
-      "renamedSymbol": "P:CombatSandbox.a(IIII)V#1",
+      "renamedSymbol": "P:CombatSandbox.setControlPosition(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704135,7 +704215,7 @@
     },
     {
       "symbol": "P:vn.a(IIII)V#2",
-      "renamedSymbol": "P:CombatSandbox.a(IIII)V#2",
+      "renamedSymbol": "P:CombatSandbox.setControlPosition(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -704146,7 +704226,7 @@
     },
     {
       "symbol": "P:vn.a(IIII)V#3",
-      "renamedSymbol": "P:CombatSandbox.a(IIII)V#3",
+      "renamedSymbol": "P:CombatSandbox.setControlPosition(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -704223,7 +704303,7 @@
     },
     {
       "symbol": "P:vn.a(Lwk;I)V#0",
-      "renamedSymbol": "P:CombatSandbox.a(LRgbSprite;I)V#0",
+      "renamedSymbol": "P:CombatSandbox.pushSpriteRasterTarget(LRgbSprite;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704234,7 +704314,7 @@
     },
     {
       "symbol": "P:vn.a(Lwk;I)V#1",
-      "renamedSymbol": "P:CombatSandbox.a(LRgbSprite;I)V#1",
+      "renamedSymbol": "P:CombatSandbox.pushSpriteRasterTarget(LRgbSprite;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704245,7 +704325,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#0",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#0",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704256,7 +704336,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#1",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#1",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -704267,7 +704347,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#2",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#2",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -704278,7 +704358,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#3",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#3",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -704289,7 +704369,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#4",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#4",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -704300,7 +704380,7 @@
     },
     {
       "symbol": "P:vn.a(ZIIZIZ)V#5",
-      "renamedSymbol": "P:CombatSandbox.a(ZIIZIZ)V#5",
+      "renamedSymbol": "P:CombatSandbox.updateControlsAndRunAttack(ZIIZIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -704311,7 +704391,7 @@
     },
     {
       "symbol": "P:vn.b(B)V#0",
-      "renamedSymbol": "P:CombatSandbox.b(B)V#0",
+      "renamedSymbol": "P:CombatSandbox.initializeControls(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704322,7 +704402,7 @@
     },
     {
       "symbol": "P:vn.b(I)V#0",
-      "renamedSymbol": "P:CombatSandbox.b(I)V#0",
+      "renamedSymbol": "P:CombatSandbox.drawDropdowns(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -704333,7 +704413,7 @@
     },
     {
       "symbol": "P:vn.c(B)V#0",
-      "renamedSymbol": "P:CombatSandbox.c(B)V#0",
+      "renamedSymbol": "P:CombatSandbox.layoutControls(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805912,7 +805992,7 @@
       "original": "bh.java",
       "renamed": "AlphaWidgetContainer.java",
       "inputSha256": "f5d04d20bf42494ad5b230d6eef6b8e48cae6a4d433dbbb0894a727006db9595",
-      "outputSha256": "ce0fa23bfda857411d44a00aae6d1da07cf3bbc6430ecb04d84c1a95e20d699a",
+      "outputSha256": "dffe63f6e8b209e3e701836399d81bdad90ebc81e9d7af2e412fd1685c62b9ef",
       "edits": [
         {
           "start": 50,
@@ -806265,6 +806345,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 1357,
+          "end": 1358,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 1359,
           "end": 1363,
           "symbol": "L:bh.a(IIBI)V#0",
@@ -806361,6 +806448,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 1597,
+          "end": 1598,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 1599,
@@ -882835,7 +882929,7 @@
       "original": "cv.java",
       "renamed": "CampaignMenu.java",
       "inputSha256": "e6e012c51c04386e953d103a16fbdbe4b67976090decffab2fa14b8c12fc0761",
-      "outputSha256": "25521dbab9ddc137082ffd0d3bd6fa1b0845c1d0c34025ac7cb8ca5aabb19706",
+      "outputSha256": "5ab73ed55ddcae5c896f7fb29f07ebafcd3961929a9346a6421e94fe5aeca2ef",
       "edits": [
         {
           "start": 50,
@@ -890046,6 +890140,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 52807,
+          "end": 52808,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 52809,
           "end": 52813,
           "symbol": "L:cv.a(Lom;Lsl;III)Lwk;#1",
@@ -893943,6 +894044,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 72427,
+          "end": 72428,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 72458,
@@ -1388878,7 +1388986,7 @@
       "original": "kw.java",
       "renamed": "ValidationStatusIcon.java",
       "inputSha256": "7be4e996ace53a53e26b89d5432fb6538af422836071e525d4e9eb1a8a67948f",
-      "outputSha256": "db776ddc7e29a3212bf2f7495336d651fe8592c6459677f2d88f8c2c457bc802",
+      "outputSha256": "8adb1c76f9328f5f03e393bfe0656f6159faf0f137cab54e0d36a205c98662dc",
       "edits": [
         {
           "start": 50,
@@ -1389630,6 +1389738,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 3556,
+          "end": 3557,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 3558,
           "end": 3560,
           "symbol": "C:bd",
@@ -1389672,6 +1389787,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 3703,
+          "end": 3704,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 3705,
           "end": 3707,
           "symbol": "C:bd",
@@ -1389698,6 +1389820,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 3810,
+          "end": 3811,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 3812,
@@ -1389740,6 +1389869,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 3944,
+          "end": 3945,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 3946,
@@ -1389924,6 +1390060,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 4641,
+          "end": 4642,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 4643,
           "end": 4645,
           "symbol": "C:bd",
@@ -1389964,6 +1390107,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 4777,
+          "end": 4778,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 4779,
@@ -1390211,6 +1390361,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 5744,
+          "end": 5745,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 5746,
           "end": 5748,
           "symbol": "C:bd",
@@ -1390253,6 +1390410,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 5910,
+          "end": 5911,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 5912,
           "end": 5914,
           "symbol": "C:bd",
@@ -1390279,6 +1390443,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 6020,
+          "end": 6021,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 6022,
@@ -1390321,6 +1390492,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 6164,
+          "end": 6165,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 6166,
@@ -1458311,7 +1458489,7 @@
       "original": "ng.java",
       "renamed": "SpriteDropdownMenu.java",
       "inputSha256": "36c4fdde15653bde3593c5b95b6f0d959f0a179aa8e01677eaa9c4f779d98f76",
-      "outputSha256": "e1f9477b7a22e617f86ac09305cb2714e5a5abc1d74a169e31edfe52fb253213",
+      "outputSha256": "d7bcdfb58ad1bd19e3fa8258ddeccf5cca72a43055ea34525df5ade43ebee817",
       "edits": [
         {
           "start": 50,
@@ -1462449,6 +1462627,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 16665,
+          "end": 16666,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 16714,
@@ -1544823,7 +1545008,7 @@
       "original": "oo.java",
       "renamed": "MembershipExpansionScreen.java",
       "inputSha256": "0f5d484f1d6e8ae2cd6f733834b60e2d34328bcc8143ee6bbcdb8f62f5064db3",
-      "outputSha256": "74ecd311ce06b09a3f34f05a9749dbeb920fdd601df68ceea98317c5765ebf92",
+      "outputSha256": "68d15f674a4407608d28b3ff9d47bf5d008961c42edbd97f887a557dda46b9c9",
       "edits": [
         {
           "start": 50,
@@ -1546674,6 +1546859,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 21140,
+          "end": 21141,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 21197,
           "end": 21199,
           "symbol": "C:oo",
@@ -1546721,6 +1546913,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 21500,
+          "end": 21501,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 21530,
@@ -1546812,6 +1547011,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 25172,
+          "end": 25173,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 25204,
@@ -1546910,6 +1547116,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 25916,
+          "end": 25917,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 25940,
@@ -1547106,6 +1547319,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 26612,
+          "end": 26613,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 26649,
@@ -1575863,7 +1576083,7 @@
       "original": "pk.java",
       "renamed": "ValidationStatusWidget.java",
       "inputSha256": "0f27a0cf8e71ae165bfdd25400c0afe82d72d5b6a755408f14b8da972af42259",
-      "outputSha256": "baa5374c36b4204d3aee0dbaba13183601f1a4d71a0dfc53b500f2cd744549fe",
+      "outputSha256": "bcb288a62c1aa98a8fbeed0e3b9e85040eee3d2f0b740ddea5d224009bbe22a3",
       "edits": [
         {
           "start": 50,
@@ -1576825,6 +1577045,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 3545,
+          "end": 3546,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 3552,
           "end": 3559,
           "symbol": "F:pk.field_Y:Lwk;",
@@ -1576886,6 +1577113,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 3700,
+          "end": 3701,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 3707,
@@ -1576951,6 +1577185,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 3863,
+          "end": 3864,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 3870,
           "end": 3877,
           "symbol": "F:pk.field_Y:Lwk;",
@@ -1576963,6 +1577204,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 3925,
+          "end": 3926,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 3932,
@@ -1577413,6 +1577661,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 4918,
+          "end": 4919,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 4925,
           "end": 4932,
           "symbol": "F:pk.field_Y:Lwk;",
@@ -1577474,6 +1577729,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 5092,
+          "end": 5093,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 5099,
@@ -1577539,6 +1577801,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 5274,
+          "end": 5275,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 5281,
           "end": 5288,
           "symbol": "F:pk.field_Y:Lwk;",
@@ -1577551,6 +1577820,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 5332,
+          "end": 5333,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 5339,
@@ -1656306,7 +1656582,7 @@
       "original": "rj.java",
       "renamed": "StripedProgressWidget.java",
       "inputSha256": "2e9ecd5515a75d9580fcca48881114d4f54eeec3a8881994427d9d33823380d3",
-      "outputSha256": "dcdc620c5153711eb947ea91d9c1187d3bf5702ecc19d4df11b9d43e76591413",
+      "outputSha256": "a1633bbefd5aca022603b1200ccae46b4ab8e2cb688bc772617462e747b30f04",
       "edits": [
         {
           "start": 50,
@@ -1656601,6 +1656877,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 887,
+          "end": 888,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 889,
@@ -1657681,6 +1657964,13 @@
           "renamed": "CombatSandbox"
         },
         {
+          "start": 3431,
+          "end": 3432,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 3438,
           "end": 3445,
           "symbol": "F:rj.field_K:Lwk;",
@@ -1657833,6 +1658123,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 3744,
+          "end": 3745,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 3751,
@@ -1658975,6 +1659272,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 10229,
+          "end": 10230,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 10231,
@@ -1685044,7 +1685348,7 @@
       "original": "sc.java",
       "renamed": "TaggedMapData.java",
       "inputSha256": "8ff3993d87b602955ccca028a9468fe9739b2f75408f492684fa2304fa211dc8",
-      "outputSha256": "e1d7c7a3b9729b9c7b78818daffcc49f6c8fc075cbce9786bbc9f3df29fbae06",
+      "outputSha256": "aa72d6cd69d61c9f8090244a6b43647298efc94482e2f638eced7679deac42b0",
       "edits": [
         {
           "start": 50,
@@ -1685171,6 +1685475,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 1030,
+          "end": 1031,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 1032,
@@ -1843787,7 +1844098,7 @@
       "original": "vn.java",
       "renamed": "CombatSandbox.java",
       "inputSha256": "f4300a4c321c31d08b2d1d1d810e8135eed3a99be2f194fd216ad8c04094ed40",
-      "outputSha256": "519de6c2e7ba3def77a7a9385ce9a6f28a2ca0f02064e273c198553acbe67618",
+      "outputSha256": "f795216892656cf7a8a3b0b37cb1ad55847d941899573a24e0ccff4d79e41d8e",
       "edits": [
         {
           "start": 50,
@@ -1843872,6 +1844183,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 397,
+          "end": 398,
+          "symbol": "M:vn.b(B)V",
+          "original": "b",
+          "renamed": "initializeControls"
         },
         {
           "start": 441,
@@ -1843993,6 +1844311,13 @@
           "renamed": "PlayerProfile"
         },
         {
+          "start": 1468,
+          "end": 1469,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
+        },
+        {
           "start": 1554,
           "end": 1555,
           "symbol": "M:ia.c(I)I",
@@ -1844070,6 +1844395,13 @@
           "renamed": "getWidth"
         },
         {
+          "start": 2335,
+          "end": 2336,
+          "symbol": "M:vn.b(I)V",
+          "original": "b",
+          "renamed": "drawDropdowns"
+        },
+        {
           "start": 2464,
           "end": 2471,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1844103,6 +1844435,13 @@
           "symbol": "M:r.f(B)V",
           "original": "f",
           "renamed": "drawControl"
+        },
+        {
+          "start": 2923,
+          "end": 2924,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
         },
         {
           "start": 3025,
@@ -1844140,6 +1844479,13 @@
           "renamed": "setPosition"
         },
         {
+          "start": 3460,
+          "end": 3461,
+          "symbol": "M:vn.a(I)V",
+          "original": "a",
+          "renamed": "drawExitHint"
+        },
+        {
           "start": 3531,
           "end": 3532,
           "symbol": "M:r.e(III)V",
@@ -1844166,6 +1844512,13 @@
           "symbol": "M:r.e(III)V",
           "original": "e",
           "renamed": "setPosition"
+        },
+        {
+          "start": 3859,
+          "end": 3860,
+          "symbol": "M:vn.a(ZIIZIZ)V",
+          "original": "a",
+          "renamed": "updateControlsAndRunAttack"
         },
         {
           "start": 3955,
@@ -1844245,6 +1844598,13 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 4974,
+          "end": 4975,
+          "symbol": "M:vn.a(BII)V",
+          "original": "a",
+          "renamed": "updateDropdownInputTarget"
+        },
+        {
           "start": 5127,
           "end": 5128,
           "symbol": "M:r.a(ZIIIZI)V",
@@ -1844257,6 +1844617,13 @@
           "symbol": "M:r.a(B)Z",
           "original": "a",
           "renamed": "hasInputChanged"
+        },
+        {
+          "start": 5299,
+          "end": 5300,
+          "symbol": "M:vn.c(B)V",
+          "original": "c",
+          "renamed": "layoutControls"
         },
         {
           "start": 5349,
@@ -1844504,6 +1844871,13 @@
           "renamed": "ScreenWipeTransition"
         },
         {
+          "start": 8138,
+          "end": 8139,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
+        },
+        {
           "start": 8140,
           "end": 8142,
           "symbol": "C:wk",
@@ -1844574,6 +1844948,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 8551,
+          "end": 8552,
+          "symbol": "M:vn.a(I)V",
+          "original": "a",
+          "renamed": "drawExitHint"
+        },
+        {
           "start": 8586,
           "end": 8588,
           "symbol": "C:so",
@@ -1844621,6 +1845002,13 @@
           "symbol": "M:ka.c(Ljava/lang/String;IIII)V",
           "original": "c",
           "renamed": "drawCentered"
+        },
+        {
+          "start": 8861,
+          "end": 8862,
+          "symbol": "M:vn.a(BII)V",
+          "original": "a",
+          "renamed": "updateDropdownInputTarget"
         },
         {
           "start": 9033,
@@ -1844693,6 +1845081,20 @@
           "renamed": "BinaryBitmapFont"
         },
         {
+          "start": 10194,
+          "end": 10195,
+          "symbol": "M:vn.b(B)V",
+          "original": "b",
+          "renamed": "initializeControls"
+        },
+        {
+          "start": 10224,
+          "end": 10225,
+          "symbol": "M:vn.c(B)V",
+          "original": "c",
+          "renamed": "layoutControls"
+        },
+        {
           "start": 10310,
           "end": 10312,
           "symbol": "C:ig",
@@ -1844763,6 +1845165,20 @@
           "renamed": "drawLabel"
         },
         {
+          "start": 10823,
+          "end": 10824,
+          "symbol": "M:vn.b(I)V",
+          "original": "b",
+          "renamed": "drawDropdowns"
+        },
+        {
+          "start": 10852,
+          "end": 10853,
+          "symbol": "M:vn.a(I)V",
+          "original": "a",
+          "renamed": "drawExitHint"
+        },
+        {
           "start": 10870,
           "end": 10876,
           "symbol": "P:vn.c(I)V#0",
@@ -1844789,6 +1845205,13 @@
           "symbol": "M:cg.a(II)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 11027,
+          "end": 11028,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
         },
         {
           "start": 11113,
@@ -1844847,11 +1845270,214 @@
           "renamed": "getHeight"
         },
         {
+          "start": 11743,
+          "end": 11744,
+          "symbol": "M:vn.a(ZIIZIZ)V",
+          "original": "a",
+          "renamed": "updateControlsAndRunAttack"
+        },
+        {
           "start": 11849,
           "end": 11850,
           "symbol": "M:r.e(Z)I",
           "original": "e",
           "renamed": "getHeight"
+        },
+        {
+          "start": 11916,
+          "end": 11917,
+          "symbol": "M:vn.c(B)V",
+          "original": "c",
+          "renamed": "layoutControls"
+        },
+        {
+          "start": 11946,
+          "end": 11947,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 11978,
+          "end": 11979,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 11997,
+          "end": 11998,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12035,
+          "end": 12036,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12054,
+          "end": 12055,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12085,
+          "end": 12086,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12149,
+          "end": 12150,
+          "symbol": "M:vn.a(I)V",
+          "original": "a",
+          "renamed": "drawExitHint"
+        },
+        {
+          "start": 12179,
+          "end": 12180,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12198,
+          "end": 12199,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12230,
+          "end": 12231,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12255,
+          "end": 12256,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12289,
+          "end": 12290,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12302,
+          "end": 12303,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
+        },
+        {
+          "start": 12346,
+          "end": 12347,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12354,
+          "end": 12355,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
+        },
+        {
+          "start": 12391,
+          "end": 12392,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12429,
+          "end": 12430,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12442,
+          "end": 12443,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
+        },
+        {
+          "start": 12481,
+          "end": 12482,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12506,
+          "end": 12507,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12540,
+          "end": 12541,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12553,
+          "end": 12554,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
+        },
+        {
+          "start": 12585,
+          "end": 12586,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12615,
+          "end": 12616,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12640,
+          "end": 12641,
+          "symbol": "M:vn.a(BI)I",
+          "original": "a",
+          "renamed": "getControlHeight"
+        },
+        {
+          "start": 12673,
+          "end": 12674,
+          "symbol": "M:vn.a(IIII)V",
+          "original": "a",
+          "renamed": "setControlPosition"
+        },
+        {
+          "start": 12686,
+          "end": 12687,
+          "symbol": "M:vn.a(IB)I",
+          "original": "a",
+          "renamed": "getControlWidth"
         },
         {
           "start": 12744,
@@ -1844985,6 +1845611,13 @@
           "symbol": "C:cg",
           "original": "cg",
           "renamed": "ScreenWipeTransition"
+        },
+        {
+          "start": 13333,
+          "end": 13334,
+          "symbol": "M:vn.a(ZIIZIZ)V",
+          "original": "a",
+          "renamed": "updateControlsAndRunAttack"
         },
         {
           "start": 13335,
@@ -1888152,7 +1888785,7 @@
       "original": "wl.java",
       "renamed": "ModalDialog.java",
       "inputSha256": "27e8624aa273e878a777effb943c33f0c5202856c8c3778656b4c9a440ad9df0",
-      "outputSha256": "9a4db8cae7536ba0079caa9df859febd1dca860b83d980cf65fa66fc6f7282e1",
+      "outputSha256": "ef522c5cdf9161e2a4912cca7d0546e1a393e82126dc1cdd1a57229796a728be",
       "edits": [
         {
           "start": 53,
@@ -1888951,6 +1889584,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "CombatSandbox"
+        },
+        {
+          "start": 2813,
+          "end": 2814,
+          "symbol": "M:vn.a(Lwk;I)V",
+          "original": "a",
+          "renamed": "pushSpriteRasterTarget"
         },
         {
           "start": 2815,
@@ -1901972,10 +1902612,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "883f1fe23d9cd663b771142d6b4a6121d0f84ad4c1154dcc357055e44489f5a6",
+    "rulesSha256": "cbead63083d0cd5f40c992319793751a9f3a54802d0206f164ff8ba9f320f9c4",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "3b7a2f909f1f6eec05fbf1d8287114368602c7bfb4368438ced083976231b797",
+    "outputTreeSha256": "439308d78bcd55fe13a7f28a4a5a1c50fcb57bfcff0195eb1d539d33d338cd82",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

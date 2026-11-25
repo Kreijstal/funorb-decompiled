@@ -32,7 +32,7 @@ final class StripedProgressWidget extends Widget {
         int secondaryRedBlue;
         int secondaryGreen;
         int secondaryShade;
-        CombatSandbox.a(texture, 3);
+        CombatSandbox.pushSpriteRasterTarget(texture, 3);
         int halfHeight = this.height >> 1;
         if (obfuscationGuard >= -54) {
           return (RgbSprite) null;
@@ -95,7 +95,7 @@ final class StripedProgressWidget extends Widget {
           }
           QuickChatPhraseRepository.popRasterState(-18862);
           if (SoftwareRaster.clipLeft <= x + this.rightCapMask.pixelWidth) {
-            CombatSandbox.a(this.capScratch, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.capScratch, 3);
             texture.drawTransparent(-this.stripeOffset, 0);
             texture.drawTransparent(this.stripeWidth * 2 - this.stripeOffset, 0);
             this.leftCapMask.drawMultiplied(0, 0);
@@ -103,7 +103,7 @@ final class StripedProgressWidget extends Widget {
             this.capScratch.drawTransparent(x, y);
           }
           if (-this.rightCapMask.pixelWidth + rightX <= SoftwareRaster.clipRight) {
-            CombatSandbox.a(this.capScratch, 3);
+            CombatSandbox.pushSpriteRasterTarget(this.capScratch, 3);
             for (rightTileOffset = -this.rightCapMask.pixelWidth + this.width + this.stripeOffset; rightTileOffset > this.stripeWidth * 2; rightTileOffset = rightTileOffset - this.stripeWidth * 2) {
             }
             texture.drawTransparent(-rightTileOffset, 0);
@@ -272,7 +272,7 @@ final class StripedProgressWidget extends Widget {
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int maskWidth = this.height >> 1;
         RgbSprite mask = new RgbSprite(maskWidth, this.height);
-        CombatSandbox.a(mask, obfuscationGuard - 747);
+        CombatSandbox.pushSpriteRasterTarget(mask, obfuscationGuard - 747);
         if (obfuscationGuard != 750) {
           return (RgbSprite) null;
         }
