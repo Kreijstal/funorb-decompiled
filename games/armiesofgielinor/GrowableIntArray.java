@@ -140,7 +140,7 @@ final class GrowableIntArray {
         if (null == MoveAttackRequest.sessionSocket) {
           return false;
         }
-        if (SpectateRoomRequestSupport.connectionState.b((byte) -121)) {
+        if (SpectateRoomRequestSupport.connectionState.isLoginReplyOrConnected((byte) -121)) {
           return true;
         }
         return false;

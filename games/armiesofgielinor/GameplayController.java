@@ -3821,12 +3821,12 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail2 = (((GameEvent) (var3)).eventKind != 2);
                     if (!decompiledSharedTail2) {
-                      LocalAccountSupport.a((byte) -108, 3);
+                      LocalAccountSupport.playLoadedSoundEffect((byte) -108, 3);
                       decompiledSharedTail2 = (var10 != 0);
                     }
                     if ((decompiledSharedTail2) &&
                       (((GameEvent) (var3)).eventKind == 3)) {
-                      LocalAccountSupport.a((byte) -98, 4);
+                      LocalAccountSupport.playLoadedSoundEffect((byte) -98, 4);
                     }
                     if (this.field_Q &&
                       !this.field_O) {
@@ -5044,7 +5044,7 @@ final class GameplayController {
             ((MovementPlanner) (Object) stackIn_38_0).prepareForUnit(stackIn_39_1, 80, this.controlledPlayerId, this.selectedUnit, -1, -1);
           }
           if (param0) {
-            LocalAccountSupport.a((byte) -112, 0);
+            LocalAccountSupport.playLoadedSoundEffect((byte) -112, 0);
           }
           if (null != this.selectedUnit) {
             this.notifyTutorialAction(4, -116);
@@ -6582,7 +6582,7 @@ final class GameplayController {
                       }
                     }}
                   if (((String) (var2)).length() > 0) {
-                    ClientConnectionState.a(-1204320024, -30 + 30 * var15, 223, (String) (var2));
+                    ClientConnectionState.drawBattleTooltip(-1204320024, -30 + 30 * var15, 223, (String) (var2));
                     return;
                   }
                   decompiledFrameRemainder9 = (var20 != 0);
@@ -6665,7 +6665,7 @@ final class GameplayController {
                   } else {
                     var2 = NameSuggestionList.field_J;
                   }
-                  ClientConnectionState.a(param0 - 1204320144, 0, 253, (String) (var2));
+                  ClientConnectionState.drawBattleTooltip(param0 - 1204320144, 0, 253, (String) (var2));
                   return;
                 }
               }
@@ -6879,7 +6879,7 @@ final class GameplayController {
                   if (0 >= ((String) (var2)).length()) {
                     break;
                   }
-                  ClientConnectionState.a(param0 - 1204320144, 0, 253, (String) (var2));
+                  ClientConnectionState.drawBattleTooltip(param0 - 1204320144, 0, 253, (String) (var2));
                   return;
                 }
               }
@@ -8326,7 +8326,7 @@ final class GameplayController {
             if (param0 == 23) {
               this.cycleSpellMenuMode(false);
               this.notifyTutorialAction(19, -119);
-              LocalAccountSupport.a((byte) -90, 0);
+              LocalAccountSupport.playLoadedSoundEffect((byte) -90, 0);
             }
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameCompleted3 = true;
@@ -8679,12 +8679,12 @@ final class GameplayController {
                     ((MovementPlanner) (Object) stackIn_633_0).selectTarget(stackIn_633_1, stackIn_634_2, var8Lifetime2, (byte) 57);
                     if (this.movementPlanner.actionAllowed) {
                       this.notifyTutorialAction(18, -125);
-                      LocalAccountSupport.a((byte) -102, 1);
+                      LocalAccountSupport.playLoadedSoundEffect((byte) -102, 1);
                       if (var16 == 0) {
                         return;
                       }
                     }
-                    LocalAccountSupport.a((byte) -123, 2);
+                    LocalAccountSupport.playLoadedSoundEffect((byte) -123, 2);
                     if (var16 == 0) {
                       return;
                     }
@@ -8696,7 +8696,7 @@ final class GameplayController {
                     null != this.battlefield.tiles[var10Lifetime1Lifetime3].occupant) {
                     this.submitPreparedMovement((byte) 77);
                   }
-                  LocalAccountSupport.a((byte) -35, 1);
+                  LocalAccountSupport.playLoadedSoundEffect((byte) -35, 1);
                   return;
                 }
                 if (var8Lifetime2 <= -1 ||
@@ -10487,7 +10487,7 @@ final class GameplayController {
           }
           this.movementPlanner.clearSelection(-34);
           if (param1) {
-            LocalAccountSupport.a((byte) -96, 0);
+            LocalAccountSupport.playLoadedSoundEffect((byte) -96, 0);
           }
           this.notifyTutorialAction(28, -113);
           return;

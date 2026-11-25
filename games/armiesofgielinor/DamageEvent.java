@@ -108,7 +108,7 @@ final class DamageEvent extends GameEvent {
         try {
           SphinxActionRequest.a(param14, param8, -84, param19, param18);
           ContextualRuntimeException.a(param10 - 716, param8);
-          SingleChildWidgetContainer.a(param16, param7, param2, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, param4);
+          SingleChildWidgetContainer.initializeLobbyGameOptions(param16, param7, param2, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, param4);
           if (param10 != -5429) {
             field_z = (String) null;
           }

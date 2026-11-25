@@ -23,10 +23,10 @@ final class LoginMethod {
             }
             return;
           }
-          SphinxActionRequest.field_v.a(true, -6226, DateInputWidget.field_F, AiUnitPlanner.field_s);
+          SphinxActionRequest.field_v.processPointerInput(true, -6226, DateInputWidget.field_F, AiUnitPlanner.field_s);
           SphinxActionRequest.field_v.advanceDialogs((byte) -117);
           while (Unit.pollKeyEvent((byte) 107)) {
-            SphinxActionRequest.field_v.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
+            SphinxActionRequest.field_v.processKeyInput(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
           }
           if (param0 >= 10) {
             return;

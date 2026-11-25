@@ -219,7 +219,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == actionCode) {
-            actionOneResult = ClientConnectionState.a(false, CampaignMission.getEmailIdentifierStatus((byte) -27), IconLabelControl.getAccountNameIdentifierStatus(-117));
+            actionOneResult = ClientConnectionState.pollAccountIdentifierChecks(false, CampaignMission.getEmailIdentifierStatus((byte) -27), IconLabelControl.getAccountNameIdentifierStatus(-117));
             if (actionOneResult != -1) {
               AiPlanningStrategy.a(103, CampaignLookupSupport.field_b, BitmapTextWidgetPainter.field_r, actionOneResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -411,7 +411,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 LeaderEscortCondition.handleHighscoreResponse(9);
                 break;
               case 4:
-                LocalAccountSupport.a((byte) -101);
+                LocalAccountSupport.readPendingRequestResponse((byte) -101);
                 break;
               case 6:
                 AiInfluenceMap.handleRatingLeaderboardResponse(true);

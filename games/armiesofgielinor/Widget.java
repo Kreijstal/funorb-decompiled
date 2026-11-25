@@ -62,13 +62,13 @@ class Widget extends IntrusiveNode {
 
     boolean isFocused(boolean obfuscationGuard) {
         if (obfuscationGuard) {
-          this.a((Hashtable) null, 105, (byte) 68, (StringBuilder) null);
+          this.beginDebugTreeEntry((Hashtable) null, 105, (byte) 68, (StringBuilder) null);
           return false;
         }
         return false;
     }
 
-    final void a(int param0, Hashtable param1, boolean param2, StringBuilder param3) {
+    final void appendDebugProperties(int param0, Hashtable param1, boolean param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -222,7 +222,7 @@ class Widget extends IntrusiveNode {
         this(param0, ReloadPageSupport.field_c.field_t, param1);
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean processKeyInput(int param0, char param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
         if (!this.isFocused(false)) {
@@ -268,8 +268,8 @@ class Widget extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param0, (byte) 74, param1)) {
-            this.a(param0, param3, true, param1);
+          if (this.beginDebugTreeEntry(param3, param0, (byte) 74, param1)) {
+            this.appendDebugProperties(param0, param3, true, param1);
           }
           if (param2 != 26477) {
             this.x = -116;
@@ -296,7 +296,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3) {
+    final boolean processPointerInput(boolean param0, int param1, int param2, int param3) {
         int var5;
         DraggableWidgetContainer var6;
         int var7;
@@ -607,7 +607,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final boolean a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
+    final boolean beginDebugTreeEntry(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;

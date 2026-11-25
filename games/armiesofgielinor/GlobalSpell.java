@@ -93,10 +93,10 @@ final class GlobalSpell extends Spell {
         CampaignProgress.a(2000, param1);
         if (param0 >= -21) {
           GlobalSpell.a(-83, true);
-          LocalAccountSupport.a(-10820, param1);
+          LocalAccountSupport.drawSharedUiOverlays(-10820, param1);
           return;
         }
-        LocalAccountSupport.a(-10820, param1);
+        LocalAccountSupport.drawSharedUiOverlays(-10820, param1);
     }
 
     final void prepareEffect(byte obfuscationGuard, Battlefield battlefield) {

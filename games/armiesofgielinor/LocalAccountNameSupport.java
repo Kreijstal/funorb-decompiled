@@ -40,7 +40,7 @@ final class LocalAccountNameSupport {
         }
     }
 
-    final static ProceduralMapSupport b(String param0, byte param1) {
+    final static ProceduralMapSupport validateEmailAddress(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

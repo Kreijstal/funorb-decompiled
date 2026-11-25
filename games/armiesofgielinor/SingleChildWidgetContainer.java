@@ -126,13 +126,13 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param0, (byte) 39, param1)) {
-            this.a(param0, param3, true, param1);
-            this.a(param3, param0, 106, param1);
+          if (this.beginDebugTreeEntry(param3, param0, (byte) 39, param1)) {
+            this.appendDebugProperties(param0, param3, true, param1);
+            this.appendChildDebugTree(param3, param0, 106, param1);
           }
           if (param2 != 26477) {
             var6 = (ResourceArchive) null;
-            SingleChildWidgetContainer.a((ResourceArchive) null, (AnimationSequence[][]) null, (ResourceArchive) null, (byte) -118);
+            SingleChildWidgetContainer.preloadAnimationFrameSets((ResourceArchive) null, (AnimationSequence[][]) null, (ResourceArchive) null, (byte) -118);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -156,7 +156,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         }
     }
 
-    final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    final void appendChildDebugTree(Hashtable param0, int param1, int param2, StringBuilder param3) {
         StringBuilder discarded$11 = null;
         int var6 = 0;
         StringBuilder discarded$13 = null;
@@ -242,7 +242,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, ResourceArchive param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
+    final static void initializeLobbyGameOptions(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, ResourceArchive param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
         IconTextComponent[] array$0 = null;
         IconTextComponent[] array$1 = null;
         IconTextComponent[] array$2 = null;
@@ -677,7 +677,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         try {
           if (obfuscationGuard != -12215) {
             var6 = (String[]) null;
-            SingleChildWidgetContainer.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
+            SingleChildWidgetContainer.initializeLobbyGameOptions((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
           }
           if (this.child != null &&
             this.child.isFocused(false) &&
@@ -726,7 +726,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         this.layoutChild(true);
     }
 
-    final static void a(ResourceArchive param0, AnimationSequence[][] param1, ResourceArchive param2, byte param3) {
+    final static void preloadAnimationFrameSets(ResourceArchive param0, AnimationSequence[][] param1, ResourceArchive param2, byte param3) {
         int var5 = 0;
         int var7 = 0;
         int var11 = 0;

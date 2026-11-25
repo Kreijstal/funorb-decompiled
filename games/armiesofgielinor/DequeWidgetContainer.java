@@ -339,9 +339,9 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param3, param0, (byte) 96, param1)) {
-            this.a(param0, param3, true, param1);
-            this.a(param3, 81, param1, param0);
+          if (this.beginDebugTreeEntry(param3, param0, (byte) 96, param1)) {
+            this.appendDebugProperties(param0, param3, true, param1);
+            this.appendChildDebugTrees(param3, 81, param1, param0);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -373,7 +373,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         this.refreshChildLayouts(0);
     }
 
-    private final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    private final void appendChildDebugTrees(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -572,7 +572,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
 
     public static void releaseStatics(byte obfuscationGuard) {
         if (obfuscationGuard != -89) {
-          DequeWidgetContainer.j(114);
+          DequeWidgetContainer.closeResourceAndCacheServices(114);
         }
         field_C = null;
     }
@@ -594,7 +594,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         }
     }
 
-    final static void j(int param0) {
+    final static void closeResourceAndCacheServices(int param0) {
         try {
           int var2 = 0;
           IOException iOException = null;

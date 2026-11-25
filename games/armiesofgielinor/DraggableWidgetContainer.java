@@ -192,9 +192,9 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           if (param2 != 26477) {
             this.returnAfterDrag = false;
           }
-          if (this.a(param3, param0, (byte) 61, param1)) {
-            this.a(param0, param3, true, param1);
-            this.a(param3, param0, -56, param1);
+          if (this.beginDebugTreeEntry(param3, param0, (byte) 61, param1)) {
+            this.appendDebugProperties(param0, param3, true, param1);
+            this.appendChildDebugTree(param3, param0, -56, param1);
             discarded$62 = param1.append(" revert=").append(this.returnAfterDrag);
             if (2147483647 != this.returnX &&
               this.returnY != 2147483647) {

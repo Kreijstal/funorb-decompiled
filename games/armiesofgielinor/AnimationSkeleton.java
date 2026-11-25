@@ -102,7 +102,7 @@ final class AnimationSkeleton extends IntrusiveNode {
           String var2 = (String) null;
           AnimationSkeleton.addExceptionContext((Throwable) null, (String) null);
         }
-        return LocalAccountSupport.a(23660, CombatEvent.d((byte) 16));
+        return LocalAccountSupport.hasTuhstatbutCookieOrParameter(23660, CombatEvent.d((byte) 16));
     }
 
     static {

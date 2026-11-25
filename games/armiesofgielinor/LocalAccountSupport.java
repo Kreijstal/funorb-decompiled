@@ -21,7 +21,7 @@ final class LocalAccountSupport {
             var1 = DiskCacheRequest.friendsByName.next(1);
           }
           if (obfuscationGuard > -112) {
-            LocalAccountSupport.a(89, true);
+            LocalAccountSupport.drawSharedUiOverlays(89, true);
           }
           var1Lifetime1 = MusicTrackSelectionSupport.ignoredAccountsByName.first((byte) 66);
           while (var1Lifetime1 != null) {
@@ -34,7 +34,7 @@ final class LocalAccountSupport {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void playLoadedSoundEffect(byte param0, int param1) {
         if (null == MonotonicClockSupport.field_a ||
           0 == MonotonicClockSupport.field_a.length) {
           return;
@@ -45,7 +45,7 @@ final class LocalAccountSupport {
         }
         RadialSummonMenu.playDefaultSoundWithIntGuard(106, MonotonicClockSupport.field_a[param1]);
         if (param0 > -22) {
-          LocalAccountSupport.b(0);
+          LocalAccountSupport.initializeLoginDialogHost(0);
         }
     }
 
@@ -53,13 +53,13 @@ final class LocalAccountSupport {
         StructureGlowRenderer.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
         if (obfuscationGuard <= 10) {
           String[] var2 = (String[]) null;
-          LocalAccountSupport.a(70, 41, (String[][]) null, (String[]) null, 94);
+          LocalAccountSupport.mapUnitAnimationVariants(70, 41, (String[][]) null, (String[]) null, 94);
         }
         CharSequence var3 = (CharSequence) ((Object) StructureGlowRenderer.localAccountName);
         IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var3, false);
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean hasTuhstatbutCookieOrParameter(int param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -126,7 +126,7 @@ final class LocalAccountSupport {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, String[][] param2, String[] param3, int param4) {
+    final static void mapUnitAnimationVariants(int param0, int param1, String[][] param2, String[] param3, int param4) {
         int var6 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -171,7 +171,7 @@ final class LocalAccountSupport {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSharedUiOverlays(int param0, boolean param1) {
         if (param0 != -10820) {
           field_b = (ClientConnectionState) null;
         }
@@ -182,17 +182,17 @@ final class LocalAccountSupport {
         AchievementNotification.drawQuickChatOverlay((byte) 102);
     }
 
-    final static void b(int param0) {
+    final static void initializeLoginDialogHost(int param0) {
         ReloadPageSupport.field_c = NameSuggestionList.k(5);
         KingBlackDragonEvent.field_C = new ModalDialogHost();
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          LocalAccountSupport.a(43, (java.applet.Applet) null);
+          LocalAccountSupport.hasTuhstatbutCookieOrParameter(43, (java.applet.Applet) null);
         }
         LinkButtonPainter.a(true, true, param0 + 25);
     }
 
-    final static void a(byte param0) {
+    final static void readPendingRequestResponse(byte param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

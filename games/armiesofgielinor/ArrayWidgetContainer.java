@@ -529,8 +529,8 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param0, (byte) 55, param1)) {
-            this.a(param0, param3, true, param1);
+          if (this.beginDebugTreeEntry(param3, param0, (byte) 55, param1)) {
+            this.appendDebugProperties(param0, param3, true, param1);
             this.appendChildDebugTrees(param3, -121, param1, param0);
           }
           if (param2 != 26477) {

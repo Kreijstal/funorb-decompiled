@@ -164,7 +164,7 @@ abstract class ArchiveProvider {
               return stackIn_17_0;
             }
           }
-          stackIn_20_0 = SummonEvent.a(var4[-1 + var4.length], -19);
+          stackIn_20_0 = SummonEvent.validateEmailTopLevelDomain(var4[-1 + var4.length], -19);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

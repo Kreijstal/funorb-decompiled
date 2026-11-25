@@ -473,7 +473,7 @@ final class StateChangeEvent extends GameEvent {
         }
         try {
           MoveEvent.a(param2, false, param1, param0);
-          LocalAccountSupport.b(-2);
+          LocalAccountSupport.initializeLoginDialogHost(-2);
           ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
           EffectsGainSupport.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {

@@ -34,7 +34,7 @@ abstract class PreparedAction extends IntrusiveNode {
             var6 = param0[var5].length;
             array$1 = new int[var6];
             BestScoreStrategy.unitAnimationVariants[param2][var5] = array$1;
-            LocalAccountSupport.a(var5, 0, param0, param1, param2);
+            LocalAccountSupport.mapUnitAnimationVariants(var5, 0, param0, param1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

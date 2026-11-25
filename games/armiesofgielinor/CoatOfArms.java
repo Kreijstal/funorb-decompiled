@@ -45,10 +45,10 @@ final class CoatOfArms {
 
     final int findPartAt(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 21930) {
-          return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.parts, false);
+          return MatchConditionRegistry.findCoatOfArmsPartAt(param0 - param3, param4 - param2, this.parts, false);
         }
         this.setPart(42, -104, -118);
-        return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.parts, false);
+        return MatchConditionRegistry.findCoatOfArmsPartAt(param0 - param3, param4 - param2, this.parts, false);
     }
 
     final String toQueryString(byte obfuscationGuard) {
@@ -123,8 +123,8 @@ final class CoatOfArms {
               var12++;
             }
           }
-          SingleChildWidgetContainer.a(param1, StructureTerrainSupport.animationSequencesByGroup, param2, (byte) 126);
-          SingleChildWidgetContainer.a(param1, AccountNameFoldingSupport.field_a, param2, (byte) 126);
+          SingleChildWidgetContainer.preloadAnimationFrameSets(param1, StructureTerrainSupport.animationSequencesByGroup, param2, (byte) 126);
+          SingleChildWidgetContainer.preloadAnimationFrameSets(param1, AccountNameFoldingSupport.field_a, param2, (byte) 126);
           MovementPresentation.buildUnitAnimationVariants(param3 ^ -11757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

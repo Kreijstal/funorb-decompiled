@@ -166,7 +166,7 @@ final class LogoFaceSortSupport {
         int var1_int = 0;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          KingBlackDragonEvent.field_C.a(true, -6226, LoginMethod.field_b, UiSelectionState.field_i);
+          KingBlackDragonEvent.field_C.processPointerInput(true, -6226, LoginMethod.field_b, UiSelectionState.field_i);
           KingBlackDragonEvent.field_C.advanceDialogs((byte) -102);
           if (param0 != -3) {
             LogoFaceSortSupport.pollAccountFlowAction(103);
@@ -195,7 +195,7 @@ final class LogoFaceSortSupport {
               }
               break;
             }
-            KingBlackDragonEvent.field_C.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
+            KingBlackDragonEvent.field_C.processKeyInput(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
           } while (var2 == 0);
           var1_int = OctaveNoiseMap.field_r;
           AccountIdentifierStatus.setAccountFlowAction(param0 ^ -127, -1);

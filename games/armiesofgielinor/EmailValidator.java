@@ -82,7 +82,7 @@ final class EmailValidator extends TextFieldValidator {
           if (obfuscationGuard != -3137) {
             field_l = (String) null;
           }
-          syntaxResult = (null != LocalAccountNameSupport.b(text, (byte) -24)) ? 0 : 1;
+          syntaxResult = (null != LocalAccountNameSupport.validateEmailAddress(text, (byte) -24)) ? 0 : 1;
           syntaxValid = syntaxResult;
           if (syntaxValid != 0) {
             validState = MembershipExpansionScreen.validationValid;

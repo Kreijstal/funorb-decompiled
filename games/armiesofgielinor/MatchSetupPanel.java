@@ -1121,7 +1121,7 @@ final class MatchSetupPanel {
         try {
           var12_int = -1;
           if (param7) {
-            var12_int = MatchConditionRegistry.a(param0 - param10, -param8 + param6, param2, param9);
+            var12_int = MatchConditionRegistry.findCoatOfArmsPartAt(param0 - param10, -param8 + param6, param2, param9);
           }
           var13 = 0;
           if (param9) {

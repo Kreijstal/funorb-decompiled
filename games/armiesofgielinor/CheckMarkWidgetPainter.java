@@ -64,7 +64,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
     }
 
     final static void a(boolean param0) {
-        if (!ClientConnectionState.a(76)) {
+        if (!ClientConnectionState.isSelectionMenuActive(76)) {
           return;
         }
         SelectionMenuLayoutSupport.configureStatusSelectionMenu(4, param0, (byte) 61);

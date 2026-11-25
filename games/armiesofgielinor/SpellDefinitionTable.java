@@ -16,7 +16,7 @@ final class SpellDefinitionTable {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetChatInteraction(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -34,10 +34,10 @@ final class SpellDefinitionTable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final static void setSelectionMenuLineHeights(int param0, int param1, int param2, boolean param3, int param4) {
         GrowableIntArray.field_e = param0;
         if (param3) {
-          SpellDefinitionTable.a(29);
+          SpellDefinitionTable.resetChatInteraction(29);
           TelepopEvent.field_B = param4;
           return;
         }

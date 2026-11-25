@@ -223,7 +223,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     ModalDialogHost.field_H = false;
                     ViewportManager.field_c = false;
                     QuickChatMenuDisplaySupport.field_j = true;
-                    SpellDefinitionTable.a(0);
+                    SpellDefinitionTable.resetChatInteraction(0);
                   }
                   TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                   ScrollContainer.field_Qb = false;
@@ -379,7 +379,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     CipherPacketBuffer.a(false, -2, 1, ChatInputDispatchSupport.field_a);
                     ViewportManager.field_c = false;
                     ModalDialogHost.field_H = false;
-                    SpellDefinitionTable.a(0);
+                    SpellDefinitionTable.resetChatInteraction(0);
                   }
                   ScrollContainer.field_Qb = false;
                   continue;
@@ -589,7 +589,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   ModalDialogHost.field_H = false;
                   ViewportManager.field_c = false;
                   FaceNormal.field_d = false;
-                  SpellDefinitionTable.a(0);
+                  SpellDefinitionTable.resetChatInteraction(0);
                 }
                 ScrollContainer.field_Qb = false;
                 SpellCastAction.field_t = false;

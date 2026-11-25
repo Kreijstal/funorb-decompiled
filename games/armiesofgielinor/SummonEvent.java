@@ -13,7 +13,7 @@ final class SummonEvent extends GameEvent {
     private int unitType;
     private boolean field_y;
 
-    final static ProceduralMapSupport a(String param0, int param1) {
+    final static ProceduralMapSupport validateEmailTopLevelDomain(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

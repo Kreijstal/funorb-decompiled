@@ -23,7 +23,7 @@ final class ClientConnectionState {
         try {
           if (obfuscationGuard != -15329) {
             var4 = (String) null;
-            ClientConnectionState.a(18, -42, -58, (String) null);
+            ClientConnectionState.drawBattleTooltip(18, -42, -58, (String) null);
           }
           stackIn_3_0 = (long)SpriteControlNode.readTwoTierUnsignedInt(-9202, 8, 4, packet);
           return stackIn_3_0;
@@ -56,7 +56,7 @@ final class ClientConnectionState {
         field_d = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isSelectionMenuActive(int param0) {
         if (param0 <= 1) {
           field_f = (String) null;
         }
@@ -70,12 +70,12 @@ final class ClientConnectionState {
     final static void setTicksPerSecond(int ticksPerSecond, boolean obfuscationGuard) {
         if (!obfuscationGuard) {
           AccountIdentifierStatus var3 = (AccountIdentifierStatus) null;
-          ClientConnectionState.a(false, (AccountIdentifierStatus) null, (AccountIdentifierStatus) null);
+          ClientConnectionState.pollAccountIdentifierChecks(false, (AccountIdentifierStatus) null, (AccountIdentifierStatus) null);
         }
         FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)ticksPerSecond;
     }
 
-    final static int a(boolean param0, AccountIdentifierStatus param1, AccountIdentifierStatus param2) {
+    final static int pollAccountIdentifierChecks(boolean param0, AccountIdentifierStatus param1, AccountIdentifierStatus param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_2_0 = 0;
@@ -114,7 +114,7 @@ final class ClientConnectionState {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isLoginReplyOrConnected(byte param0) {
         boolean stackIn_8_0 = false;
         if (param0 >= -64) {
           field_c = (String) null;
@@ -123,7 +123,7 @@ final class ClientConnectionState {
         return stackIn_8_0;
     }
 
-    final static void a(int param0, int param1, int param2, String param3) {
+    final static void drawBattleTooltip(int param0, int param1, int param2, String param3) {
         int var5 = 0;
         if (param3 == null) {
           return;

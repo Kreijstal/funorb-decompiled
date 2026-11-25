@@ -186,7 +186,7 @@ final class UiSelectionState {
           CombatEvent.field_I.updateInput(true, param3);
           if (BestScoreStrategy.field_i != null) {
             if (NodeIterator.field_a) {
-              BestScoreStrategy.field_i.a(param3, -6226, CombatEvent.field_I.screenX, CombatEvent.field_I.screenY);
+              BestScoreStrategy.field_i.processPointerInput(param3, -6226, CombatEvent.field_I.screenX, CombatEvent.field_I.screenY);
             } else {
               BestScoreStrategy.field_i = null;
             }

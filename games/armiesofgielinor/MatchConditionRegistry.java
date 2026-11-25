@@ -79,7 +79,7 @@ final class MatchConditionRegistry {
         }
     }
 
-    final static int a(int param0, int param1, int[] param2, boolean param3) {
+    final static int findCoatOfArmsPartAt(int param0, int param1, int[] param2, boolean param3) {
         int var4_int = 0;
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
