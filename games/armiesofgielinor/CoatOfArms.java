@@ -27,7 +27,7 @@ final class CoatOfArms {
           if (param1 != 0) {
             this.getMissingPartOffset((byte) 83);
           }
-          stackIn_3_0 = cc.a(param5, param3, this.parts, param6, -1, true, param2, param4, this.colourIndices, param0);
+          stackIn_3_0 = CoatOfArmsDrawingSupport.drawCoatOfArms(param5, param3, this.parts, param6, -1, true, param2, param4, this.colourIndices, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,10 +182,10 @@ final class CoatOfArms {
           if (!param2) {
             var4_int = this.parts[3];
             this.parts[3] = -1;
-            cc.a(0, -1, this.parts, -1, -1, false, -1, param0, this.colourIndices, 0);
+            CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param0, this.colourIndices, 0);
             this.parts[3] = var4_int;
           }
-          MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
+          MatchSetupPanel.drawCoatOfArms(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
           NumericDateInputWidget.field_P.bindAsRasterTarget();
           stackIn_5_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
@@ -247,11 +247,11 @@ final class CoatOfArms {
           DropTargetWidgetContainer.field_J.bindAsRasterTarget();
           SoftwareRaster.clearPixels();
           if (param6) {
-            cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
+            CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
           } else {
             var11_int = this.parts[3];
             this.parts[3] = -1;
-            cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
+            CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
             this.parts[3] = var11_int;
           }
           if (!param7) {
@@ -306,10 +306,10 @@ final class CoatOfArms {
           if (!param3) {
             var10_int = this.parts[3];
             this.parts[3] = -1;
-            cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
+            CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
             this.parts[3] = var10_int;
           } else {
-            cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
+            CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
           }
           if (param0) {
             RegionAnchor.field_m[1].drawTransparent(0, 0);
@@ -373,7 +373,7 @@ final class CoatOfArms {
           }
           DropTargetWidgetContainer.field_J.bindAsRasterTarget();
           SoftwareRaster.clearPixels();
-          cc.a(0, -1, this.parts, -1, -1, false, -1, param1, this.colourIndices, 0);
+          CoatOfArmsDrawingSupport.drawCoatOfArms(0, -1, this.parts, -1, -1, false, -1, param1, this.colourIndices, 0);
           if (!param3) {
             if (!param2) {
               if (param5) {

@@ -54,7 +54,7 @@ final class SpellCastEvent extends GameEvent {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = CachedArchiveProvider.field_h - BattlefieldTheme.field_f;
-          BattlefieldTheme.field_f = bt.field_g - (var1_int >> 1);
+          BattlefieldTheme.field_f = LoginAndTutorialSetupSupport.field_g - (var1_int >> 1);
           CachedArchiveProvider.field_h = var1_int + BattlefieldTheme.field_f;
           if (param0 != 15) {
             field_E = (CommunityTabGroup) null;
@@ -76,7 +76,7 @@ final class SpellCastEvent extends GameEvent {
             stackIn_12_0 = var6;
             stackIn_13_1 = !(0 > var4);
             var7 = TextWidthSupport.measureTextWidth(stackIn_12_0, stackIn_13_1, false);
-            var8 = bt.field_g - (var7 >> 1);
+            var8 = LoginAndTutorialSetupSupport.field_g - (var7 >> 1);
             if (0 <= var4) {
               var2 = var2 + QuickChatPhrase.field_w;
               if (MovementPlanner.field_z.selectedIndex != var4) {

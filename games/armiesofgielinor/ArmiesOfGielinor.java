@@ -76,7 +76,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         int var7Lifetime1Lifetime1;
         var11 = obfuscationControl ? 1 : 0;
         try {
-          bs.a((byte) -127);
+          MapHeaderSupport.getKeyboardIdleTicks((byte) -127);
           SpriteDropdownControl.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
           QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.fullscreenCanvas != null &&
@@ -195,7 +195,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (stackIn_337_0 == stackIn_337_1) {
                   DisplaySettingsDialog.i((byte) 123);
                   SpellCastAction.field_t = false;
-                  CipherPacketBuffer.a(false, 11, 1, jt.field_a);
+                  CipherPacketBuffer.a(false, 11, 1, ChatInputDispatchSupport.field_a);
                   PaletteRegionMap.field_i = ByteStorage.incomingPacket.readNullTerminatedString(1);
                   continue;
                 }
@@ -206,7 +206,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   ValidatedTextWidget.field_Z = true;
                   SpellCastAction.field_t = false;
                   FaceNormal.field_d = true;
-                  jt.field_a = -2;
+                  ChatInputDispatchSupport.field_a = -2;
                   TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
@@ -276,14 +276,14 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     continue;
                   }
                   UnitRecordWriter.storedQuicksave = null;
-                  mv.field_b = true;
+                  StructureGlowRenderer.field_b = true;
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 82) {
                   if (!UnitRecordWriter.storedQuicksave.appendSnapshotChunk(DropdownSelectorPainter.packetPayloadLength, -1, ByteStorage.incomingPacket)) {
                     continue;
                   }
-                  mv.field_b = true;
+                  StructureGlowRenderer.field_b = true;
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 80) {
@@ -360,7 +360,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     ProxySocketFactory.b((byte) 16);
                   }
                   SoftwareRaster.clearPixels();
-                  CipherPacketBuffer.a(false, -1, 1, jt.field_a);
+                  CipherPacketBuffer.a(false, -1, 1, ChatInputDispatchSupport.field_a);
                   ScrollContainer.field_Qb = false;
                   MusicPatch.field_w = true;
                   continue;
@@ -376,7 +376,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     QuickChatMenuDisplaySupport.field_j = true;
                     s.field_d = 0;
                     SocketFactory.field_h = false;
-                    CipherPacketBuffer.a(false, -2, 1, jt.field_a);
+                    CipherPacketBuffer.a(false, -2, 1, ChatInputDispatchSupport.field_a);
                     ViewportManager.field_c = false;
                     ModalDialogHost.field_H = false;
                     SpellDefinitionTable.a(0);
@@ -585,7 +585,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     CipherPacketBuffer.a(false, 11, 1, 0);
                   }
                   DisplaySettingsDialog.i((byte) 126);
-                  ConsoleTextNode.field_p[jt.field_a].restoreStageSelection(100, false, 0);
+                  ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].restoreStageSelection(100, false, 0);
                   ModalDialogHost.field_H = false;
                   ViewportManager.field_c = false;
                   FaceNormal.field_d = false;
@@ -733,10 +733,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (!param1) {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameRemainder2 = true;
-              if (jt.field_a == -1) {
+              if (ChatInputDispatchSupport.field_a == -1) {
                 if (!FaceNormal.field_d) {
                   if (FullscreenFocusCanvas.gameplayController == null) {
-                    CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+                    CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
                     decompiledFrameRemainder2 = (var8 != 0);
                   }
                   if (decompiledFrameRemainder2) {
@@ -763,15 +763,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               }
               if ((decompiledFrameRemainder2) &&
                 (decompiledFrameCompleted1)) {
-                if (-2 != jt.field_a) {
-                  if (jt.field_a != -6) {
-                    if (-7 == jt.field_a) {
+                if (-2 != ChatInputDispatchSupport.field_a) {
+                  if (ChatInputDispatchSupport.field_a != -6) {
+                    if (-7 == ChatInputDispatchSupport.field_a) {
                       MatchSetupPanel.c((byte) 61);
                       decompiledFrameRemainder2 = (var8 != 0);
                     }
                     if ((decompiledFrameRemainder2) &&
-                      (MusicCrossfadeStream.a(jt.field_a, true))) {
-                      ConsoleTextNode.field_p[jt.field_a].d((byte) -109);
+                      (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true))) {
+                      ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].d((byte) -109);
                       if (var8 != 0) {
                         ResourceArchive.c(-20193);
                         var3_int = 1;
@@ -926,9 +926,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     AiPlanningStrategy.a(false, 8028);
                   }
                   if (ContentTransitionStage.field_a) {
-                    CipherPacketBuffer.a(false, -4, 1, jt.field_a);
+                    CipherPacketBuffer.a(false, -4, 1, ChatInputDispatchSupport.field_a);
                   }
-                  if (MusicCrossfadeStream.a(jt.field_a, true)) {
+                  if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
                     DisplaySettingsDialog.i((byte) 125);
                   }
                 }
@@ -939,24 +939,24 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (param0 != 0) {
             this.tickClient((byte) -98);
           }
-          if (jt.field_a == -3) {
+          if (ChatInputDispatchSupport.field_a == -3) {
             this.a(false, (byte) -62);
             FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime1 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
           }
-          if (jt.field_a == -10 ||
-            jt.field_a == -11) {
+          if (ChatInputDispatchSupport.field_a == -10 ||
+            ChatInputDispatchSupport.field_a == -11) {
             stackIn_196_0 = QuickChatCategoryMenuSupport.activeCampaignMission;
             stackIn_196_1 = -1;
-            if (jt.field_a != -11) {
+            if (ChatInputDispatchSupport.field_a != -11) {
               stackIn_197_2 = null;
             } else {
               stackIn_197_2 = DropTargetWidgetContainer.getStoredQuicksave(127);
             }
             TextLineLayout.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
-            if (jt.field_a == -10) {
+            if (ChatInputDispatchSupport.field_a == -10) {
               QuicksaveRequestSupport.requestDeleteQuicksave((byte) 27);
             }
             FullscreenFocusCanvas.gameplayController.h(true);
@@ -964,7 +964,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             CipherPacketBuffer.a(var3_intLifetime2 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
           }
-          if (jt.field_a == -8) {
+          if (ChatInputDispatchSupport.field_a == -8) {
             this.a(true, (byte) -67);
             FullscreenFocusCanvas.gameplayController.k((byte) -113);
             FullscreenFocusCanvas.gameplayController.h(true);
@@ -972,7 +972,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             CipherPacketBuffer.a(var3_intLifetime3 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
           }
-          if (jt.field_a == -9) {
+          if (ChatInputDispatchSupport.field_a == -9) {
             this.a(true, (byte) -90);
             FullscreenFocusCanvas.gameplayController.startEquipmentTutorial((byte) 60);
             FullscreenFocusCanvas.gameplayController.h(true);
@@ -980,12 +980,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
           }
-          if (-4 == jt.field_a) {
+          if (-4 == ChatInputDispatchSupport.field_a) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 9);
             SpellCastAction.field_t = true;
             TelepopEvent.field_F = AudioShutdownSupport.field_c;
           }
-          if (jt.field_a == -5) {
+          if (ChatInputDispatchSupport.field_a == -5) {
             boolean decompiledSharedTail0 = !(ModalDialogHost.field_H);
             if (!decompiledSharedTail0) {
               SpectateRoomRequestSupport.writeSpectateRoomRequest(11, 3, 0);
@@ -1030,12 +1030,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           stackIn_21_0 = ((FullscreenFocusCanvas.gameplayController != null ||
             null != SectorCacheStore.field_a) &&
-            jt.field_a == 7);
+            ChatInputDispatchSupport.field_a == 7);
           MusicPatch.field_w = stackIn_21_0;
           if (obfuscationGuard > ~AiPlanningStrategy.pointerX &&
             -1 < HighscoreAccountEntry.pointerY) {
           }
-          BoundedFile.a(jt.field_a, true, MusicPatch.field_w, false);
+          BoundedFile.a(ChatInputDispatchSupport.field_a, true, MusicPatch.field_w, false);
           if (null != mu.field_a) {
             mu.field_a.draw(obfuscationGuard ^ 8, GameClock.field_j);
             GameClock.field_j = GameClock.field_j + 1;
@@ -1111,7 +1111,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           field_H = null;
           field_J = null;
           if (param0 != 3) {
-            ArmiesOfGielinor.a((byte[]) null, false);
+            ArmiesOfGielinor.createBinaryBitmapFont((byte[]) null, false);
           }
           field_I = null;
           field_N = null;
@@ -1148,7 +1148,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           KeyboardInputListener.releaseStatics(true);
           ReloadPageSupport.releaseStatics(0);
           cd.releaseStatics(false);
-          bt.releaseStatics(0);
+          LoginAndTutorialSetupSupport.releaseStatics(0);
           DecodedSpriteSupport.releaseStatics(93);
           GradientUiRenderer.releaseCaches();
           MonotonicClockSupport.releaseStatics(true);
@@ -1352,7 +1352,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           UnitAnimationPreview.releaseStatics((byte) 40);
           PasswordLengthSupport.releaseStatics((byte) 95);
           QuickChatHelpDialog.releaseStatics(obfuscationGuard ^ 55);
-          jk.releaseStatics(obfuscationGuard ^ -28);
+          ColourRampSupport.releaseStatics(obfuscationGuard ^ -28);
           AiUnitPlanner.releaseStatics(-31116);
           DeathEvent.releaseStatics(-81);
           RevivalEvent.releaseStatics((byte) 91);
@@ -1399,7 +1399,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           FaceNormal.releaseStatics((byte) -101);
           VertexNormal.releaseStatics(obfuscationGuard - 14619);
           AnimationSkeleton.releaseStatics(77);
-          mv.releaseStatics((byte) -48);
+          StructureGlowRenderer.releaseStatics((byte) -48);
           AnimationFrame.releaseDecoderScratch();
           LocalizedUrlSupport.releaseStatics(obfuscationGuard ^ -72);
           PreparedAction.releaseStatics(28038);
@@ -1490,7 +1490,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           DateOfBirthValidator.releaseStatics(false);
           NumericDateInputWidget.releaseStatics(false);
           LoginCredentialStagingSupport.releaseStatics(false);
-          bs.releaseStatics(true);
+          MapHeaderSupport.releaseStatics(true);
           NineSliceSpriteSupport.releaseStatics((byte) -84);
           DateInputWidget.releaseStatics(0);
           ScrollWidgetContainer.releaseStatics(false);
@@ -1702,7 +1702,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             RegionAnchor.field_o = null;
             ModalDialog.a(0);
           }
-          bt.field_e = SpriteButtonPainter.a(3, true);
+          LoginAndTutorialSetupSupport.field_e = SpriteButtonPainter.a(3, true);
           AchievementUnlockRequest.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
           UnitAnimationPreview.field_j = SpriteButtonPainter.a(6, true);
           CampaignLookupSupport.field_d = SpriteButtonPainter.a(7, true);
@@ -1728,7 +1728,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         }
     }
 
-    final static BinaryBitmapFont a(byte[] param0, boolean param1) {
+    final static BinaryBitmapFont createBinaryBitmapFont(byte[] param0, boolean param1) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
@@ -1816,7 +1816,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (decompiledFrameCompleted0) {
             if (param0 ||
               var6 != 0) {
-              var4_ref_String = mv.localAccountName;
+              var4_ref_String = StructureGlowRenderer.localAccountName;
               var3 = new String[2];
               if (var4_ref_String == null) {
                 var4_ref_String = BoundedFile.field_i;
@@ -1951,8 +1951,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                 AchievementUnlockRequest.field_l.ensureGroupAvailableByName(28979, "campaign")) {
                                 if (UnitAnimationPreview.field_j.ensureIndex((byte) 82) &&
                                   UnitAnimationPreview.field_j.ensureGroupAvailableByName(28979, "basic")) {
-                                  if (bt.field_e.ensureIndex((byte) 82) &&
-                                    bt.field_e.ensureAllGroupsAvailable(-27927)) {
+                                  if (LoginAndTutorialSetupSupport.field_e.ensureIndex((byte) 82) &&
+                                    LoginAndTutorialSetupSupport.field_e.ensureAllGroupsAvailable(-27927)) {
                                     if (CorpseConditionMarker.field_w.ensureIndex((byte) 82) &&
                                       CorpseConditionMarker.field_w.ensureAllGroupsAvailable(-27927)) {
                                       if (GuestPlayConfirmationForm.field_M.ensureIndex((byte) 82) &&
@@ -2036,7 +2036,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                     CalendarSupport.a((byte) -24, 56.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
                                     return false;
                                   }
-                                  CalendarSupport.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
+                                  CalendarSupport.a((byte) -24, 54.0f, EmailValidator.a(LoginAndTutorialSetupSupport.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
                                   return false;
                                 }
                                 CalendarSupport.a((byte) -24, 52.0f, EmailValidator.a(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", LeapYearSupport.field_f));
@@ -2139,9 +2139,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             return false;
           }
           if (UnitAnimationPreview.field_j == null) {
-            if (bt.field_e != null) {
-              SpellDefinitionTable.setChatHuffmanCodec(new HuffmanCodec(bt.field_e.getFileByName("huffman", -105, "")), 4);
-              bt.field_e = null;
+            if (LoginAndTutorialSetupSupport.field_e != null) {
+              SpellDefinitionTable.setChatHuffmanCodec(new HuffmanCodec(LoginAndTutorialSetupSupport.field_e.getFileByName("huffman", -105, "")), 4);
+              LoginAndTutorialSetupSupport.field_e = null;
               ModalDialog.a(0);
               return false;
             }
@@ -2170,8 +2170,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           CalendarSupport.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.renderClient(0);
-          PowerOfTwoSupport.field_n = DropdownArrowPainter.a(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
-          DateInputWidget.field_E = DropdownArrowPainter.a("basic", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
+          PowerOfTwoSupport.field_n = DropdownArrowPainter.loadBinaryBitmapFontByName(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
+          DateInputWidget.field_E = DropdownArrowPainter.loadBinaryBitmapFontByName("basic", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = ChatMessageWriteSupport.a("introfont", AchievementUnlockRequest.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
           NineSliceFrame.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, AchievementUnlockRequest.field_l, "basic", -2088);
           GradientUiRenderer.installFont(NineSliceFrame.field_e);
@@ -2238,7 +2238,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MusicPatchUsage.manaStarSprites = DropdownSelectorPainter.loadRgbSpritesByName("manastars", (byte) -127, AchievementUnlockRequest.field_l, "basic");
           TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ByteArrayPoolSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("overlayicons", (byte) -125, AchievementUnlockRequest.field_l, "basic");
-          mv.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, AchievementUnlockRequest.field_l, "basic");
+          StructureGlowRenderer.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, AchievementUnlockRequest.field_l, "basic");
           ChatMessageWriteSupport.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ConsoleTextNode.field_k = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, AchievementUnlockRequest.field_l, "basic");
           IsaacRandom.field_a = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, AchievementUnlockRequest.field_l, "basic");
@@ -2267,19 +2267,19 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           } while (var18 == 0);
           var6_array2 = new int[]{13615618, 10121728};
           var7 = new int[]{16184190, 16707943};
-          ConsoleValue.field_b = jk.a(50, var7, 127, var6_array2);
+          ConsoleValue.field_b = ColourRampSupport.interpolateColourRamps(50, var7, 127, var6_array2);
           var8_array = new int[]{13619151, 10132122};
           var9 = new int[]{16185078, 16711422};
-          TutorialController.field_e = jk.a(100, var9, 123, var8_array);
+          TutorialController.field_e = ColourRampSupport.interpolateColourRamps(100, var9, 123, var8_array);
           var10 = new int[]{13421772};
           var11 = new int[]{4473924};
-          AgeValidator.field_k = jk.a(100, var11, 125, var10);
+          AgeValidator.field_k = ColourRampSupport.interpolateColourRamps(100, var11, 125, var10);
           var12 = new int[]{13565952, 10092544};
           var13 = new int[]{16121856, 16646144};
-          MoveAttackAction.field_x = jk.a(100, var13, 125, var12);
+          MoveAttackAction.field_x = ColourRampSupport.interpolateColourRamps(100, var13, 125, var12);
           var14 = new int[]{13369344};
           var15 = new int[]{4456448};
-          ImageProducerSurface.field_l = jk.a(100, var15, 123, var14);
+          ImageProducerSurface.field_l = ColourRampSupport.interpolateColourRamps(100, var15, 123, var14);
           GradientUiRenderer.bakeGradientFrameBorders(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
           SocketResourceClient.a((byte) 125, ManaStarParticle.a(AchievementUnlockRequest.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", AchievementUnlockRequest.field_l));
           IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, AchievementUnlockRequest.field_l, "basic");
@@ -2312,7 +2312,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           } while (var18 == 0);
           if (!LabeledWidgetContainer.field_L) {
             ImageProducerSurface.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", AchievementUnlockRequest.field_l);
-            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, ProjectileEffect.field_c, CorpseConditionMarker.field_w, QuinticFadeSupport.field_d, var16);
+            QuickChatPhrase.a(var16, MapHeaderSupport.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, ProjectileEffect.field_c, CorpseConditionMarker.field_w, QuinticFadeSupport.field_d, var16);
             UnitUnlockPreviewModel.initializeChatHistory((byte) 30, 200);
             DisplayModeOptionPainter.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
           }
@@ -2365,7 +2365,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (param0 != -66) {
             field_J = (BitmapFont) null;
           }
-          jt.field_a = 16;
+          ChatInputDispatchSupport.field_a = 16;
           ClientConnectionState.setTicksPerSecond(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
           DropdownSelector.a(128, 8, PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, PowerOfTwoSupport.field_n.capitalHeight, -99, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), PowerOfTwoSupport.field_n);

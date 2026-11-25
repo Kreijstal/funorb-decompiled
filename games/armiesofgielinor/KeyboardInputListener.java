@@ -65,7 +65,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
               mappedKeyCode >= 0) {
               SphinxActionRequest.keyStateEvents[us.keyStateWriteIndex] = ~mappedKeyCode;
               us.keyStateWriteIndex = 127 & 1 + us.keyStateWriteIndex;
-              if (cc.keyStateReadIndex == us.keyStateWriteIndex) {
+              if (CoatOfArmsDrawingSupport.keyStateReadIndex == us.keyStateWriteIndex) {
                 us.keyStateWriteIndex = -1;
               }
             }
@@ -137,7 +137,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
               0 <= mappedKeyCode) {
               SphinxActionRequest.keyStateEvents[us.keyStateWriteIndex] = mappedKeyCode;
               us.keyStateWriteIndex = us.keyStateWriteIndex + 1 & 127;
-              if (cc.keyStateReadIndex == us.keyStateWriteIndex) {
+              if (CoatOfArmsDrawingSupport.keyStateReadIndex == us.keyStateWriteIndex) {
                 us.keyStateWriteIndex = -1;
               }
             }

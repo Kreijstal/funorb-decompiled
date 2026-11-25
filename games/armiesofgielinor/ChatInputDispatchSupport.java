@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jt {
+final class ChatInputDispatchSupport {
     static int field_a;
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateQuickChatInput(int param0, boolean param1, int param2, int param3) {
         ConsoleExpression.updateQuickChatHelp(16756, param1);
-        PasswordValidator.a(40, param1, param3, param2);
+        PasswordValidator.updateQuickChatMenuInput(40, param1, param3, param2);
         if (param0 != -32216) {
           field_a = 9;
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean pollAccountNameKey(byte param0) {
         int var1 = 72 / ((7 - param0) / 51);
         if (EffectPresentation.field_e == null) {
           return false;

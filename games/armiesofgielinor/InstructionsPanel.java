@@ -486,7 +486,7 @@ final class InstructionsPanel {
                   var9 = 0;
                 }
                 if (var9 != 0) {
-                  mv.a(IgnoreListLookupSupport.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
+                  StructureGlowRenderer.drawStructureGlow(IgnoreListLookupSupport.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
                   ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.a(true, param0), (MeshData) null, -10374);
@@ -2460,8 +2460,8 @@ final class InstructionsPanel {
                   }
                 }
               }
-              mv.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
-              var11 = (CharSequence) ((Object) mv.localAccountName);
+              StructureGlowRenderer.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
+              var11 = (CharSequence) ((Object) StructureGlowRenderer.localAccountName);
               IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
               SpriteControlNode.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
               SpectateRoomRequestSupport.connectionState = ResourceArchive.connectedState;

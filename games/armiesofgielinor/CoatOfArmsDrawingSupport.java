@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc {
+final class CoatOfArmsDrawingSupport {
     static int field_b;
     static int keyStateReadIndex;
 
-    final static int a(int param0, int param1, int[] param2, int param3, int param4, boolean param5, int param6, String param7, int[] param8, int param9) {
+    final static int drawCoatOfArms(int param0, int param1, int[] param2, int param3, int param4, boolean param5, int param6, String param7, int[] param8, int param9) {
         RuntimeException var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -20,7 +20,7 @@ final class cc {
           if (param4 != -1) {
             field_b = -105;
           }
-          stackIn_3_0 = MatchSetupPanel.a(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
+          stackIn_3_0 = MatchSetupPanel.drawCoatOfArms(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -48,7 +48,7 @@ final class cc {
         }
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, boolean param3, int param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFont(ResourceArchive param0, int param1, ResourceArchive param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         BinaryBitmapFont stackIn_9_0 = null;
@@ -66,7 +66,7 @@ final class cc {
           if (!param3) {
             keyStateReadIndex = 104;
           }
-          stackIn_9_0 = ArmiesOfGielinor.a(param2.getFile((byte) 107, param4, param1), true);
+          stackIn_9_0 = ArmiesOfGielinor.createBinaryBitmapFont(param2.getFile((byte) 107, param4, param1), true);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

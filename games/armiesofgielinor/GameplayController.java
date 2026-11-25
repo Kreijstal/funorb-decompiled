@@ -4269,7 +4269,7 @@ final class GameplayController {
             var11 != 0) {
             DateInputWidget.field_E.drawText(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
           }
-          DateInputWidget.field_E.drawRightAligned(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
+          DateInputWidget.field_E.drawRightAligned(LoginAndTutorialSetupSupport.field_d, 45 + param3, param0 - 4, 16777215, -1);
           if (var9 == 0) {
             DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
           }
@@ -5774,7 +5774,7 @@ final class GameplayController {
               }
               stackIn_38_0 = LocalCoatSupport.localCoat;
               stackIn_38_1 = var5_int - 56 + var6 / 2;
-              stackIn_38_2 = mv.localAccountName;
+              stackIn_38_2 = StructureGlowRenderer.localAccountName;
               stackIn_38_3 = false;
               stackIn_38_4 = false;
               stackIn_38_5 = 190 + LocalCoatSupport.localCoat.getMissingPartOffset((byte) 125);
@@ -5865,10 +5865,10 @@ final class GameplayController {
                 decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (var12 != 0)) {
-                  LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, mv.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                  LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
                 }
               } else {
-                LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, mv.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
               }
             }
           }
@@ -8204,7 +8204,7 @@ final class GameplayController {
             }
             if (param0 == 19) {
               if (this.field_lb) {
-                CipherPacketBuffer.a(true, -5, 1, jt.field_a);
+                CipherPacketBuffer.a(true, -5, 1, ChatInputDispatchSupport.field_a);
                 if (var16 == 0) {
                   return;
                 }
@@ -11303,7 +11303,7 @@ final class GameplayController {
             var2_int++;
           } while (var3 == 0);
           if (!DamageEvent.isGuestSession(79)) {
-            this.battlefield.playerNames[0] = mv.localAccountName;
+            this.battlefield.playerNames[0] = StructureGlowRenderer.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
             }
@@ -11954,7 +11954,7 @@ final class GameplayController {
             var2_int++;
           } while (var3 == 0);
           if (!DamageEvent.isGuestSession(76)) {
-            this.battlefield.playerNames[0] = mv.localAccountName;
+            this.battlefield.playerNames[0] = StructureGlowRenderer.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
             }

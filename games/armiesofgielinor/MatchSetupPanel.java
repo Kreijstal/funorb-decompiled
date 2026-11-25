@@ -947,7 +947,7 @@ final class MatchSetupPanel {
               return;
             }
             if (PowerOfTwoSupport.keyCode == 13) {
-              CipherPacketBuffer.a(true, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(true, 0, 1, ChatInputDispatchSupport.field_a);
               if (null != VerticalScrollbar.field_Rb.combatPresentation) {
                 VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
                 VerticalScrollbar.field_Rb.combatPresentation.field_A = null;
@@ -1100,7 +1100,7 @@ final class MatchSetupPanel {
         return -1;
     }
 
-    final static int a(int param0, int param1, int[] param2, int param3, boolean param4, int[] param5, int param6, boolean param7, int param8, boolean param9, int param10, String param11) {
+    final static int drawCoatOfArms(int param0, int param1, int[] param2, int param3, boolean param4, int[] param5, int param6, boolean param7, int param8, boolean param9, int param10, String param11) {
         int stackIn_6_0 = 0;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_34_0 = null;

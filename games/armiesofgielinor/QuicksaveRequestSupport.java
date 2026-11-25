@@ -238,7 +238,7 @@ final class QuicksaveRequestSupport {
         BoundedFile.field_b = false;
         TextLineLayout.field_a = null;
         int var1 = 110 % ((66 - param0) / 44);
-        cc.field_b = -1;
+        CoatOfArmsDrawingSupport.field_b = -1;
     }
 
     static {

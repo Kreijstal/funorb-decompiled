@@ -227,7 +227,7 @@ final class MapLayout extends IntrusiveNode {
           return null;
         }
         var8 = new CipherPacketBuffer(this.encodedMap);
-        this.formatVersion = bs.a(var8, 3);
+        this.formatVersion = MapHeaderSupport.readMapFormatVersion(var8, 3);
         if (obfuscationGuard != 126) {
           this.mapWidth = 72;
         }

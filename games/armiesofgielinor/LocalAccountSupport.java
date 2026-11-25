@@ -50,12 +50,12 @@ final class LocalAccountSupport {
     }
 
     final static void readLocalAccountName(int obfuscationGuard) {
-        mv.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
+        StructureGlowRenderer.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
         if (obfuscationGuard <= 10) {
           String[] var2 = (String[]) null;
           LocalAccountSupport.a(70, 41, (String[][]) null, (String[]) null, 94);
         }
-        CharSequence var3 = (CharSequence) ((Object) mv.localAccountName);
+        CharSequence var3 = (CharSequence) ((Object) StructureGlowRenderer.localAccountName);
         IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var3, false);
     }
 

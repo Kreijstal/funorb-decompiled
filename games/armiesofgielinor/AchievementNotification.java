@@ -553,7 +553,7 @@ final class AchievementNotification extends IntrusiveNode {
               if (!var12.joinable &&
                 !var12.invitationReceived) {
                 if (var12.allowsAdmissionRequests) {
-                  stackIn_166_0 = mv.field_e;
+                  stackIn_166_0 = StructureGlowRenderer.field_e;
                 } else {
                   stackIn_166_0 = SummonRequest.field_y;
                 }

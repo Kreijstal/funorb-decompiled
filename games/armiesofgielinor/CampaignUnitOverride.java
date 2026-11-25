@@ -643,7 +643,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "you_can_ask_to_join");
                 if (null != var2) {
-                  mv.field_e = uu.a(var2, (byte) 82);
+                  StructureGlowRenderer.field_e = uu.a(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(50, "you_cannot_join_in_progress");
                 if (var2 != null) {
@@ -787,7 +787,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_1moreratedgame");
                 if (null != var2) {
-                  bt.field_a = uu.a(var2, (byte) 22);
+                  LoginAndTutorialSetupSupport.field_a = uu.a(var2, (byte) 22);
                 }
                 var2 = NodeIterator.a(50, "gameopt_moreratedgames");
                 if (var2 != null) {
@@ -945,7 +945,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_0_0");
                 if (var2 != null) {
-                  bs.field_c = uu.a(var2, (byte) -94);
+                  MapHeaderSupport.field_c = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "rule_0_1");
                 if (null != var2) {
@@ -2506,27 +2506,27 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  bt.quickChatShortcutLabels[0] = uu.a(var2, (byte) -124);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[0] = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  bt.quickChatShortcutLabels[1] = uu.a(var2, (byte) -95);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[1] = uu.a(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  bt.quickChatShortcutLabels[2] = uu.a(var2, (byte) 56);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[2] = uu.a(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  bt.quickChatShortcutLabels[3] = uu.a(var2, (byte) 95);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[3] = uu.a(var2, (byte) 95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  bt.quickChatShortcutLabels[4] = uu.a(var2, (byte) -106);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[4] = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  bt.quickChatShortcutLabels[5] = uu.a(var2, (byte) -126);
+                  LoginAndTutorialSetupSupport.quickChatShortcutLabels[5] = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "keychar_the_character_under_questionmark");
                 if (var2 != null) {

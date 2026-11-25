@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs {
+final class MapHeaderSupport {
     static ClientUiComponent field_a;
     static int[] field_b;
     static String field_c;
@@ -15,12 +15,12 @@ final class bs {
         field_b = null;
     }
 
-    final static int a(byte param0) {
+    final static int getKeyboardIdleTicks(byte param0) {
         int var1 = 0 % ((-32 - param0) / 48);
         return EmptyWidgetPainter.keyboardIdleTicks;
     }
 
-    final static int a(PacketBuffer param0, int param1) {
+    final static int readMapFormatVersion(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;

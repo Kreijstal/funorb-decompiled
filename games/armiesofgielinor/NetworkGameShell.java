@@ -36,7 +36,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         ClientNetworkBootstrap.initializeNetworkContext(serviceId, 5000, this.secondaryGamePort, 5000, launchFlag, ConsoleExpression.field_m, this.serverNumber, 0, this.primaryGamePort, this.memberLaunch, this.serverHost, IntPair.field_m, this.instanceId, this.gameCrc);
         qf.a(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
-        CampaignMission.field_I = jk.b(68);
+        CampaignMission.field_I = ColourRampSupport.createMouseWheelSource(68);
         BitmapTextWidgetPainter.a(101, IndexedSpriteBase.field_b);
         ChatMessage.field_c = primaryCommonUiArchiveId;
         TerrainScatterSupport.field_n = uiLocalizationArchiveId;
@@ -534,7 +534,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (TeamRoster.isSessionConnected(99)) {
           idleTickLimit = DualNodeHashTable.getNominalTickRate(-113) * 1200;
           if (this.forceDisconnect ||
-            !(idleTickLimit >= bs.a((byte) 99)) &&
+            !(idleTickLimit >= MapHeaderSupport.getKeyboardIdleTicks((byte) 99)) &&
             !(MusicPatchPcmStream.getPointerIdleTicks(4) <= idleTickLimit)) {
             this.forceDisconnect = false;
             TextSplitSupport.closeSessionSocket((byte) -126);

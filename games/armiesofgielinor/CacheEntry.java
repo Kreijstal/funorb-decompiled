@@ -113,7 +113,7 @@ abstract class CacheEntry extends DualLinkedNode {
             ByteStorage.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              SpectateRoomRequestSupport.connectionState = mv.field_c;
+              SpectateRoomRequestSupport.connectionState = StructureGlowRenderer.field_c;
               CampaignLookupSupport.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -135,7 +135,7 @@ abstract class CacheEntry extends DualLinkedNode {
               }
             }
           }
-          if (mv.field_c == SpectateRoomRequestSupport.connectionState) {
+          if (StructureGlowRenderer.field_c == SpectateRoomRequestSupport.connectionState) {
             var9Lifetime2 = 2;
             if (ConsoleTokenCursor.receivePacketBytes(-79, var9Lifetime2)) {
               var10Lifetime1 = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);

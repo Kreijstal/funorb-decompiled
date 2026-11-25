@@ -122,7 +122,7 @@ final class CommunityTabGroup {
           try {
             phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
-            if (GuestSavePrompts.decodedChatAccountName.equals(mv.localAccountName)) {
+            if (GuestSavePrompts.decodedChatAccountName.equals(StructureGlowRenderer.localAccountName)) {
               responsePhraseIds = null;
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;
@@ -288,7 +288,7 @@ final class CommunityTabGroup {
           try {
             phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
-            if (GuestSavePrompts.decodedChatAccountName.equals(mv.localAccountName)) {
+            if (GuestSavePrompts.decodedChatAccountName.equals(StructureGlowRenderer.localAccountName)) {
               responsePhraseIds = null;
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;

@@ -90,7 +90,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
           return;
         }
         try {
-          bt.b(obfuscationGuard ^ obfuscationGuard);
+          LoginAndTutorialSetupSupport.stagePostRegistrationLogin(obfuscationGuard ^ obfuscationGuard);
           this.closeDialog(true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');

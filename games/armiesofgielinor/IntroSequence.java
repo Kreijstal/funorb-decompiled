@@ -60,7 +60,7 @@ final class IntroSequence {
         }
         if (this.field_n <= 0) {
           if (this.field_i.length <= this.field_c) {
-            CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+            CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
           }
           if (this.field_g != 0) {
             if (1 == this.field_g) {
@@ -210,7 +210,7 @@ final class IntroSequence {
             var8Lifetime1Lifetime1 = stackIn_48_0;
             MaskedTextEntryPainter.field_y.drawWithOpacity(this.toScreenX(-(int)this.field_k + 3002, 4592), this.toScreenY((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
-              CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
             }
           } else {
             SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1105, param0 + 4336))), this.toScreenY((byte) -73, 119) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);

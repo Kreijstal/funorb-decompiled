@@ -459,9 +459,9 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateQuickChatMenuInput(int param0, boolean param1, int param2, int param3) {
         if (param0 != 40) {
-          PasswordValidator.a(127, true, 27, -95);
+          PasswordValidator.updateQuickChatMenuInput(127, true, 27, -95);
         }
         if (!BattleTutorial.quickChatMenuVisible) {
           return;

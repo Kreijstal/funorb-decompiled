@@ -136,7 +136,7 @@ final class FixedQuaternion {
         String var8 = null;
         String var8Lifetime1;
         if (FriendLookupSupport.b((byte) -73)) {
-          jt.a(param6 - 32133, param0, param4, param3);
+          ChatInputDispatchSupport.updateQuickChatInput(param6 - 32133, param0, param4, param3);
           if (null != FullscreenMembershipDialog.activeContextMenu) {
             if (!FullscreenMembershipDialog.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {
               AccountRegistrationForm.a(param6 ^ -81, param4, param0);

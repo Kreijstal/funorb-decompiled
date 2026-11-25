@@ -103,8 +103,8 @@ final class MoveAttackAction extends PreparedAction {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          CachedArchiveProvider.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
-          BattlefieldTheme.field_f = bt.field_g - (var7Lifetime1 >> 1);
+          CachedArchiveProvider.field_h = var7Lifetime1 + LoginAndTutorialSetupSupport.field_g - (var7Lifetime1 >> 1);
+          BattlefieldTheme.field_f = LoginAndTutorialSetupSupport.field_g - (var7Lifetime1 >> 1);
           DualLinkedNode.field_r = (QuickChatPhrase.field_w + FullscreenFocusCanvas.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;
           while (SpriteScrollBar.field_h.length > var8Lifetime2) {

@@ -113,9 +113,9 @@ final class SphinxActionRequest extends ActionRequest {
           MusicPatchNode.field_l = 4;
           MusicPatch.field_n = 2;
           GradientSpanBlendSupport.field_d = 15;
-          var7 = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "largefont");
-          ReloadPageSupport.field_a = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "generalfont");
-          LeaderEscortCondition.field_f = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "chatfont");
+          var7 = DropdownArrowPainter.loadBinaryBitmapFontByName("lobby", param1, param4, (byte) -53, "largefont");
+          ReloadPageSupport.field_a = DropdownArrowPainter.loadBinaryBitmapFontByName("lobby", param1, param4, (byte) -53, "generalfont");
+          LeaderEscortCondition.field_f = DropdownArrowPainter.loadBinaryBitmapFontByName("lobby", param1, param4, (byte) -53, "chatfont");
           var7.setInlineSprites(var5, var24);
           ReloadPageSupport.field_a.setInlineSprites(var5, var24);
           LeaderEscortCondition.field_f.setInlineSprites(var5, var24);

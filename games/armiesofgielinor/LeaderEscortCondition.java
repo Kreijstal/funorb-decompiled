@@ -213,7 +213,7 @@ final class LeaderEscortCondition implements MatchCondition {
               var6 = var4_ref.field_k;
               FloorModSupport.field_b[0].field_d = false;
               var7 = var4_ref.field_p;
-              FloorModSupport.field_b[0].field_f = mv.localAccountName;
+              FloorModSupport.field_b[0].field_f = StructureGlowRenderer.localAccountName;
               FloorModSupport.field_b[0].field_c = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 FloorModSupport.field_b[var8_int].field_f = var27.readNullTerminatedString(param0 ^ 8);
@@ -258,7 +258,7 @@ final class LeaderEscortCondition implements MatchCondition {
                   }
                   if (var21 != null &&
                     LocalAccountNameSupport.isLocalAccountName(var21, (byte) 125)) {
-                    var8[1][var13] = mv.localAccountName;
+                    var8[1][var13] = StructureGlowRenderer.localAccountName;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
                     var13++;

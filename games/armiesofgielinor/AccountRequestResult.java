@@ -190,7 +190,7 @@ final class AccountRequestResult {
           if (var2 != null) {
             PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
-            var3 = mv.localAccountName;
+            var3 = StructureGlowRenderer.localAccountName;
             var3 = RatingLeaderboardRequest.a(-121, var3);
             var4 = "";
             var5 = "|";

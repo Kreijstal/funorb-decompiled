@@ -118,7 +118,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
           ConsoleExpression.field_p = ResourceArchive.field_a.overlayValues;
           QuickChatMenuDisplaySupport.field_e = CipherPacketBuffer.currentBattlefield.tiles;
-          bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
+          LoginAndTutorialSetupSupport.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           Bzip2State.a((byte) 111);
           Unit.field_L = false;
           ProgressMessageDialog.field_lb = null;

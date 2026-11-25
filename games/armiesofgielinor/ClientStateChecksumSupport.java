@@ -31,7 +31,7 @@ final class ClientStateChecksumSupport {
         ConsoleParseException.field_d[17] = GameClock.field_b;
         ConsoleParseException.field_d[19] = MidiPcmStream.field_X;
         ConsoleParseException.field_d[11] = LoginMethod.field_f;
-        ConsoleParseException.field_d[6] = bs.field_c;
+        ConsoleParseException.field_d[6] = MapHeaderSupport.field_c;
         ConsoleParseException.field_d[13] = EffectPresentation.field_b;
         ConsoleParseException.field_d[7] = QuickChatMenuDisplaySupport.field_d;
         ConsoleParseException.field_d[21] = HuffmanCodec.field_f;

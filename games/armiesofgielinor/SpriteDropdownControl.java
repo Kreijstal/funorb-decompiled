@@ -272,11 +272,11 @@ final class SpriteDropdownControl extends SpriteControlNode {
               for (keyEvent = 0; keyEvent < 112; keyEvent++) {
                 CampaignLookupSupport.heldKeys[keyEvent] = false;
               }
-              us.keyStateWriteIndex = cc.keyStateReadIndex;
+              us.keyStateWriteIndex = CoatOfArmsDrawingSupport.keyStateReadIndex;
             } else {
-              while (cc.keyStateReadIndex != us.keyStateWriteIndex) {
-                keyEvent = SphinxActionRequest.keyStateEvents[cc.keyStateReadIndex];
-                cc.keyStateReadIndex = 127 & 1 + cc.keyStateReadIndex;
+              while (CoatOfArmsDrawingSupport.keyStateReadIndex != us.keyStateWriteIndex) {
+                keyEvent = SphinxActionRequest.keyStateEvents[CoatOfArmsDrawingSupport.keyStateReadIndex];
+                CoatOfArmsDrawingSupport.keyStateReadIndex = 127 & 1 + CoatOfArmsDrawingSupport.keyStateReadIndex;
                 if (0 > keyEvent) {
                   CampaignLookupSupport.heldKeys[~keyEvent] = false;
                   continue;

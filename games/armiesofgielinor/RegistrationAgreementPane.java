@@ -226,7 +226,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           if (widget != this.continueButton) {
             return;
           }
-          bt.b(0);
+          LoginAndTutorialSetupSupport.stagePostRegistrationLogin(0);
           this.dialog.closeDialog(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

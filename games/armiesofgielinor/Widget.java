@@ -822,7 +822,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        ReloadPageSupport.field_c.drawTooltip(cc.field_b, -127, var5, IntegerPowerSupport.field_e);
+        ReloadPageSupport.field_c.drawTooltip(CoatOfArmsDrawingSupport.field_b, -127, var5, IntegerPowerSupport.field_e);
     }
 
     protected Widget() {

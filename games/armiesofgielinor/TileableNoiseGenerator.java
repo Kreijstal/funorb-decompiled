@@ -519,7 +519,7 @@ abstract class TileableNoiseGenerator {
                       if (var22_int != 1) {
                         restrictionMessage = EmailCheckResult.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
-                        restrictionMessage = bt.field_a;
+                        restrictionMessage = LoginAndTutorialSetupSupport.field_a;
                       }
                     }
                     if (thresholdOneFailed != 0) {

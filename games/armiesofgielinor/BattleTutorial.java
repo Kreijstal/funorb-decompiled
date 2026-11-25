@@ -1682,7 +1682,7 @@ class BattleTutorial {
                 GradientUiRenderer.drawCenteredSolidText(stackIn_24_0, var2 - this.panelWidth / 2 - 10, var3 - 16, 0, true);
                 if (var5 != 0) {
                   if (var4 == 0) {
-                    stackIn_28_0 = jk.field_a;
+                    stackIn_28_0 = ColourRampSupport.field_a;
                   } else {
                     stackIn_28_0 = SkeletonLimitMarker.field_t;
                   }
@@ -1690,7 +1690,7 @@ class BattleTutorial {
                 }
               } else {
                 if (var4 == 0) {
-                  stackIn_28_0 = jk.field_a;
+                  stackIn_28_0 = ColourRampSupport.field_a;
                 } else {
                   stackIn_28_0 = SkeletonLimitMarker.field_t;
                 }

@@ -523,7 +523,7 @@ final class MoveEvent extends GameEvent {
         tutorialLayout = new TutorialLayout();
         EquipmentBattleTutorial.configureTutorialStage(24, 0, 180, 460, 160, 465, new int[]{32, 31, 47, 1, 25, 30, 40, 35, 5, 48, 19, 16}, -59);
         EquipmentBattleTutorial.configureTutorialStage(30, 23, 180, 460, 160, 320, new int[]{3, 53, 54, 4, 7}, -52);
-        bt.a(26);
+        LoginAndTutorialSetupSupport.initializeEquipmentTutorialStage(26);
         EquipmentBattleTutorial.configureTutorialStage(30, 1, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 9}, -90);
         EquipmentBattleTutorial.configureTutorialStage(30, 24, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 50, 9}, -43);
         EquipmentBattleTutorial.configureTutorialStage(30, 2, 180, 460, 100, 400, new int[]{2, 43, 5, 10, 11, 13}, -75);

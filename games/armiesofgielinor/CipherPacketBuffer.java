@@ -208,7 +208,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var4Lifetime1;
-        if (param1 == jt.field_a) {
+        if (param1 == ChatInputDispatchSupport.field_a) {
           return;
         }
         BufferedSocket.field_i = null;
@@ -222,8 +222,8 @@ final class CipherPacketBuffer extends PacketBuffer {
             mu.field_a = new ScreenWipeTransition();
           }
           GameClock.field_j = 0;
-          if (MusicCrossfadeStream.a(jt.field_a, true)) {
-            ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
+          if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+            ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
           }
         } else {
           DualNodeDeque.field_c = 0;
@@ -233,27 +233,27 @@ final class CipherPacketBuffer extends PacketBuffer {
               mu.field_a = new ScreenWipeTransition();
             }
             GameClock.field_j = 0;
-            if (MusicCrossfadeStream.a(jt.field_a, true)) {
-              ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
+            if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+              ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
             }
           } else {
             DualNodeDeque.field_c = 0;
             if (param1 != -10) {
               mu.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
-              if (MusicCrossfadeStream.a(jt.field_a, true)) {
-                ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
+              if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+                ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
               }
             } else {
               GameClock.field_j = 0;
-              if (!MusicCrossfadeStream.a(jt.field_a, true)) {
+              if (!MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
                 if (!MusicCrossfadeStream.a(param1, true)) {
-                  if (jt.field_a == 16) {
+                  if (ChatInputDispatchSupport.field_a == 16) {
                     RasterState.a((byte) 111);
                     TextLineLayout.a((byte) -41);
                     ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                   }
-                  jt.field_a = param1;
+                  ChatInputDispatchSupport.field_a = param1;
                   if (param2 == 1) {
                     return;
                   }
@@ -287,19 +287,19 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (param1 == 15) {
                   SkeletonLimitMarker.a(param0, param2 - 1);
                 }
-                if (jt.field_a == 16) {
+                if (ChatInputDispatchSupport.field_a == 16) {
                   RasterState.a((byte) 111);
                   TextLineLayout.a((byte) -41);
                   ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                 }
-                jt.field_a = param1;
+                ChatInputDispatchSupport.field_a = param1;
                 if (param2 == 1) {
                   return;
                 }
                 CipherPacketBuffer.releaseStatics((byte) -51);
                 return;
               }
-              ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
+              ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
             }
           }
         }
@@ -332,12 +332,12 @@ final class CipherPacketBuffer extends PacketBuffer {
             SkeletonLimitMarker.a(param0, param2 - 1);
           }
         }
-        if (jt.field_a == 16) {
+        if (ChatInputDispatchSupport.field_a == 16) {
           RasterState.a((byte) 111);
           TextLineLayout.a((byte) -41);
           ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
         }
-        jt.field_a = param1;
+        ChatInputDispatchSupport.field_a = param1;
         if (param2 == 1) {
           return;
         }

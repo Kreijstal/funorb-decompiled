@@ -2437,7 +2437,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TXT_MANA");
                 if (var2 != null) {
-                  bt.field_d = uu.a(var2, (byte) 96);
+                  LoginAndTutorialSetupSupport.field_d = uu.a(var2, (byte) 96);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_ENDTURN");
                 if (var2 != null) {
@@ -3589,7 +3589,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TUTHIDE");
                 if (null != var2) {
-                  jk.field_a = uu.a(var2, (byte) 53);
+                  ColourRampSupport.field_a = uu.a(var2, (byte) 53);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TUTSHOW");
                 if (var2 != null) {
@@ -3625,7 +3625,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "SPELLBOOK_RUNE");
                 if (null != var2) {
-                  bt.field_b = uu.a(var2, (byte) -106);
+                  LoginAndTutorialSetupSupport.field_b = uu.a(var2, (byte) -106);
                 }
                 var2 = DropdownSelectorPainter.a(false, "SPELLBOOK_PURSE");
                 if (var2 != null) {
@@ -5729,7 +5729,7 @@ final class TickCounter {
                 }
                 if (var10 == 2) {
                   QuickChatCategoryMenuSupport.activeStructureSprites[17].drawFadedToColour(param7, -40 + param3, param0, param8);
-                  mv.a(param7 + 20, (byte) -95, ProxyAuthenticationRequiredException.field_b + param4, var11, param3);
+                  StructureGlowRenderer.drawStructureGlow(param7 + 20, (byte) -95, ProxyAuthenticationRequiredException.field_b + param4, var11, param3);
                   if (var11 > -1) {
                     ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                   }
@@ -5737,7 +5737,7 @@ final class TickCounter {
                 }
                 if (var10 == 3) {
                   if (var11 > -1) {
-                    mv.a(param7 + 20, (byte) -74, param4 + ProxyAuthenticationRequiredException.field_b, var11, param3);
+                    StructureGlowRenderer.drawStructureGlow(param7 + 20, (byte) -74, param4 + ProxyAuthenticationRequiredException.field_b, var11, param3);
                   }
                   ResourceRequest.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                 }
@@ -5787,7 +5787,7 @@ final class TickCounter {
                       }
                     }
                     var12 = -15;
-                    if (bt.field_f == 4) {
+                    if (LoginAndTutorialSetupSupport.field_f == 4) {
                       var12 -= 22;
                       if (var13 != 0) {
                         var12 -= 10;

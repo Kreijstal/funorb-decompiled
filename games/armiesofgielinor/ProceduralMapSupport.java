@@ -26,13 +26,13 @@ final class ProceduralMapSupport {
     final static String b(boolean param0) {
         if (!param0) {
           ProceduralMapSupport.a(true);
-          if (null != mv.localAccountName) {
-            return mv.localAccountName;
+          if (null != StructureGlowRenderer.localAccountName) {
+            return StructureGlowRenderer.localAccountName;
           }
           return "";
         }
-        if (null != mv.localAccountName) {
-          return mv.localAccountName;
+        if (null != StructureGlowRenderer.localAccountName) {
+          return StructureGlowRenderer.localAccountName;
         }
         return "";
     }

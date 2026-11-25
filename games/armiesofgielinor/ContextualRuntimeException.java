@@ -26,7 +26,7 @@ final class ContextualRuntimeException extends RuntimeException {
           return;
         }
         LobbyControlResources.field_g = param2;
-        bt.field_g = param1;
+        LoginAndTutorialSetupSupport.field_g = param1;
     }
 
     final static int a(int param0, int param1) {

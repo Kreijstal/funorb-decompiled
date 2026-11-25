@@ -365,7 +365,7 @@ final class BitmapTextLayout extends TextLayout {
         SpriteDropdownControl.field_v.setBounds(30, -20500, 68, 5, 5);
         ek.field_c.setBounds(30, -20500, 78, 5, 75);
         CombatViewTransition.field_p.setBounds(30, -20500, 48, 5, 155);
-        bs.field_a.setBounds(30, -20500, 48, 5, 205);
+        MapHeaderSupport.field_a.setBounds(30, -20500, 48, 5, 205);
         int var2 = !GrowableIntArray.field_c ? 200 : 250;
         SphinxActionRequest.field_A.setBounds(30, -20500, -var2 + 363, 5, var2 + 5);
         ModalDialog.field_K.setBounds(30, -20500, -370 + (-5 + SpectateRoomRequestSupport.field_i.width), 5, 370);

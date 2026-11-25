@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bt {
+final class LoginAndTutorialSetupSupport {
     static String[] quickChatShortcutLabels;
     static int field_f;
     static String field_b;
@@ -10,13 +10,13 @@ final class bt {
     static ResourceArchive field_e;
     static String field_d;
 
-    final static void b(int param0) {
+    final static void stagePostRegistrationLogin(int param0) {
         if (param0 == 0) {
           LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, PaginationTextSupport.field_b);
           IgnoreRequestSupport.field_f = true;
           return;
         }
-        bt.releaseStatics(83);
+        LoginAndTutorialSetupSupport.releaseStatics(83);
         LoginCredentialStagingSupport.stageLoginCredentials(true, (byte) 32, cd.field_e, PaginationTextSupport.field_b);
         IgnoreRequestSupport.field_f = true;
     }
@@ -28,11 +28,11 @@ final class bt {
         field_a = null;
         field_b = null;
         if (obfuscationGuard != 0) {
-          bt.b(3);
+          LoginAndTutorialSetupSupport.stagePostRegistrationLogin(3);
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeEquipmentTutorialStage(int param0) {
         MoveEvent.matchSetupPanel = new MatchSetupPanel();
         MoveEvent.matchSetupPanel.initializePanel(1);
         IntPair var1 = MoveEvent.matchSetupPanel.getPanelStart((byte) -72);

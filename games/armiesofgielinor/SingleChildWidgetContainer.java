@@ -341,7 +341,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, LoginCredentialStagingSupport.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, DropdownSelectorPainter.field_g);
-          bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
+          MapHeaderSupport.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, ArrayWidgetContainer.field_D);
           ModalDialog.field_K = new ClientUiComponent(0L, CampaignLookupSupport.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
@@ -368,7 +368,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
           LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
           if (GrowableIntArray.field_c) {
-            LobbyPlayer.field_Lb.addChild(bs.field_a, 114);
+            LobbyPlayer.field_Lb.addChild(MapHeaderSupport.field_a, 114);
           }
           LobbyPlayer.field_Lb.addChild(SphinxActionRequest.field_A, 78);
           LobbyPlayer.field_Lb.addChild(ModalDialog.field_K, 99);

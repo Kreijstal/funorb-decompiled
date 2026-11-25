@@ -86,7 +86,7 @@ final class DropdownArrowPainter implements WidgetPainter {
         field_c = null;
     }
 
-    final static BinaryBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFontByName(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -107,7 +107,7 @@ final class DropdownArrowPainter implements WidgetPainter {
           if (param3 != -53) {
             field_a = true;
           }
-          stackIn_3_0 = cc.a(param1, var5_int, param2, true, var6);
+          stackIn_3_0 = CoatOfArmsDrawingSupport.loadBinaryBitmapFont(param1, var5_int, param2, true, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -522,7 +522,7 @@ final class PopupPresentation implements EventPresentation {
 
     private final void c(int param0) {
         SoftwareRaster.fillCircle(this.presenter.screenX + 40, -20 + this.presenter.screenY, 10, this.field_i);
-        mv.field_a[this.field_a ? 1 : 0].drawTransparent(20 + this.presenter.screenX, this.presenter.screenY - 35);
+        StructureGlowRenderer.field_a[this.field_a ? 1 : 0].drawTransparent(20 + this.presenter.screenX, this.presenter.screenY - 35);
         if (param0 != 3) {
           this.drawBaseLayer((byte) -24);
         }

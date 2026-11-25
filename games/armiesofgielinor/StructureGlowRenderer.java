@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mv {
+final class StructureGlowRenderer {
     static ClientConnectionState field_c;
     static boolean field_b;
     static RgbSprite[] field_a;
     static String localAccountName;
     static String field_e;
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4) {
+    final static void drawStructureGlow(int param0, byte param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -24,7 +24,7 @@ final class mv {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= -40) {
-            mv.a(6, (byte) -96, -115, -102, -81);
+            StructureGlowRenderer.drawStructureGlow(6, (byte) -96, -115, -102, -81);
           }
           for (var5_int = 0; var5_int < 7; var5_int++) {
             var6 = 16 - (param2 + 20 * var5_int) % 144;

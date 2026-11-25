@@ -111,7 +111,7 @@ final class TutorialController {
           var3 = stackIn_4_0;
           if (var3 == 0 &&
             var2_int == 0) {
-            jt.field_a = 0;
+            ChatInputDispatchSupport.field_a = 0;
             return;
           }
           var4 = ValidationStatusWidget.field_V;
@@ -471,7 +471,7 @@ final class TutorialController {
             FullscreenStatusDialog.field_X = new RgbSprite[ProxySocketFactory.field_k.length];
             var2_int = 0;
             while (!(ProxySocketFactory.field_k.length <= var2_int)) {
-              FullscreenStatusDialog.field_X[var2_int] = DeathEvent.a(LocalCoatSupport.localCoat.colourIndices, ProxySocketFactory.field_k[var2_int], mv.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
+              FullscreenStatusDialog.field_X[var2_int] = DeathEvent.a(LocalCoatSupport.localCoat.colourIndices, ProxySocketFactory.field_k[var2_int], StructureGlowRenderer.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -523,7 +523,7 @@ final class TutorialController {
           stackIn_32_1 = true;
           stackIn_32_2 = ProxySocketFactory.field_k[LocalCoatSupport.field_b];
           stackIn_32_3 = LocalCoatSupport.localCoat.colourIndices;
-          stackIn_32_4 = mv.localAccountName;
+          stackIn_32_4 = StructureGlowRenderer.localAccountName;
           stackIn_33_5 = !(UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0) > LocalCoatSupport.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, IgnoreListLookupSupport.a(true, 50));
           SoftwareRaster.resetClip();
@@ -867,7 +867,7 @@ final class TutorialController {
                   }
                   var5 = ConsoleValue.field_b;
                 }
-                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, mv.localAccountName);
+                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, StructureGlowRenderer.localAccountName);
                 break;
               }
               if (var13 != 0) {
@@ -1324,7 +1324,7 @@ final class TutorialController {
                                                                                                                                               MoveEvent.campaignMenu.a(false);
                                                                                                                                               this.selectionState.selectedIndex = -1;
                                                                                                                                               var6 = param0 ? 1 : 0;
-                                                                                                                                              CipherPacketBuffer.a(var6 != 0, 21, 1, jt.field_a);
+                                                                                                                                              CipherPacketBuffer.a(var6 != 0, 21, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                               if (var9 == 0) {
                                                                                                                                                 return;
                                                                                                                                               }
@@ -1364,7 +1364,7 @@ final class TutorialController {
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                                                          CipherPacketBuffer.a(var6 != 0, -4, 1, jt.field_a);
+                                                                                                                                          CipherPacketBuffer.a(var6 != 0, -4, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                           if (var9 == 0) {
                                                                                                                                             return;
                                                                                                                                           }
@@ -1397,13 +1397,13 @@ final class TutorialController {
                                                                                                                                       }
                                                                                                                                       if (this.tutorialStage != 2) {
                                                                                                                                         var6 = param0 ? 1 : 0;
-                                                                                                                                        CipherPacketBuffer.a(var6 != 0, 2, 1, jt.field_a);
+                                                                                                                                        CipherPacketBuffer.a(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                         if (var9 == 0) {
                                                                                                                                           return;
                                                                                                                                         }
                                                                                                                                       }
                                                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                                                      CipherPacketBuffer.a(var6 != 0, 17, 1, jt.field_a);
+                                                                                                                                      CipherPacketBuffer.a(var6 != 0, 17, 1, ChatInputDispatchSupport.field_a);
                                                                                                                                       if (var9 == 0) {
                                                                                                                                         return;
                                                                                                                                       }
@@ -1460,16 +1460,16 @@ final class TutorialController {
                                                                                                                               if (!this.selectionState.hasActivationInput((byte) 55)) {
                                                                                                                                 return;
                                                                                                                               }
-                                                                                                                              if (jt.field_a == 13) {
+                                                                                                                              if (ChatInputDispatchSupport.field_a == 13) {
                                                                                                                                 LocalCoatSupport.writeLocalCoat((byte) 90);
                                                                                                                               }
-                                                                                                                              if (jt.field_a == 12) {
+                                                                                                                              if (ChatInputDispatchSupport.field_a == 12) {
                                                                                                                                 SpriteSheetDecoder.field_n = null;
                                                                                                                                 BattleUnitRenderer.field_a = null;
                                                                                                                               }
                                                                                                                               TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
-                                                                                                                              CipherPacketBuffer.a(var6 != 0, 0, 1, jt.field_a);
+                                                                                                                              CipherPacketBuffer.a(var6 != 0, 0, 1, ChatInputDispatchSupport.field_a);
                                                                                                                               if (var9 == 0) {
                                                                                                                                 return;
                                                                                                                               }
@@ -1495,7 +1495,7 @@ final class TutorialController {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                                          CipherPacketBuffer.a(var6 != 0, 0, param1 + 1, jt.field_a);
+                                                                                                                          CipherPacketBuffer.a(var6 != 0, 0, param1 + 1, ChatInputDispatchSupport.field_a);
                                                                                                                           AccountNameFoldingSupport.field_c = true;
                                                                                                                           if (var9 == 0) {
                                                                                                                             return;
@@ -1520,7 +1520,7 @@ final class TutorialController {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                                      CipherPacketBuffer.a(var6 != 0, 8, param1 ^ 1, jt.field_a);
+                                                                                                                      CipherPacketBuffer.a(var6 != 0, 8, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                                                                                       if (var9 == 0) {
                                                                                                                         return;
                                                                                                                       }
@@ -1542,7 +1542,7 @@ final class TutorialController {
                                                                                                                     return;
                                                                                                                   }
                                                                                                                   var6 = param0 ? 1 : 0;
-                                                                                                                  CipherPacketBuffer.a(var6 != 0, 24, 1, jt.field_a);
+                                                                                                                  CipherPacketBuffer.a(var6 != 0, 24, 1, ChatInputDispatchSupport.field_a);
                                                                                                                   if (var9 == 0) {
                                                                                                                     return;
                                                                                                                   }
@@ -1580,7 +1580,7 @@ final class TutorialController {
                                                                                                             return;
                                                                                                           }
                                                                                                           var6 = param0 ? 1 : 0;
-                                                                                                          CipherPacketBuffer.a(var6 != 0, 2, 1, jt.field_a);
+                                                                                                          CipherPacketBuffer.a(var6 != 0, 2, 1, ChatInputDispatchSupport.field_a);
                                                                                                           if (var9 == 0) {
                                                                                                             return;
                                                                                                           }
@@ -1599,7 +1599,7 @@ final class TutorialController {
                                                                                                       SocketFactory.field_h = false;
                                                                                                       FullscreenFocusCanvas.gameplayController.r(-128);
                                                                                                       var6 = param0 ? 1 : 0;
-                                                                                                      CipherPacketBuffer.a(var6 != 0, -5, 1, jt.field_a);
+                                                                                                      CipherPacketBuffer.a(var6 != 0, -5, 1, ChatInputDispatchSupport.field_a);
                                                                                                       if (var9 == 0) {
                                                                                                         return;
                                                                                                       }
@@ -1618,7 +1618,7 @@ final class TutorialController {
                                                                                                   }
                                                                                                   DebugConsole.field_y = 0;
                                                                                                   var6 = param0 ? 1 : 0;
-                                                                                                  CipherPacketBuffer.a(var6 != 0, 7, 1, jt.field_a);
+                                                                                                  CipherPacketBuffer.a(var6 != 0, 7, 1, ChatInputDispatchSupport.field_a);
                                                                                                   if (var9 == 0) {
                                                                                                     return;
                                                                                                   }
@@ -1647,7 +1647,7 @@ final class TutorialController {
                                                                                           }
                                                                                           if (QuickChatPhraseRepository.a(27875)) {
                                                                                             var6 = param0 ? 1 : 0;
-                                                                                            CipherPacketBuffer.a(var6 != 0, 15, 1, jt.field_a);
+                                                                                            CipherPacketBuffer.a(var6 != 0, 15, 1, ChatInputDispatchSupport.field_a);
                                                                                             if (var9 == 0) {
                                                                                               return;
                                                                                             }
@@ -1666,7 +1666,7 @@ final class TutorialController {
                                                                                         }
                                                                                         if (!DamageEvent.isGuestSession(param1 + 89)) {
                                                                                           var6 = param0 ? 1 : 0;
-                                                                                          CipherPacketBuffer.a(var6 != 0, 13, 1, jt.field_a);
+                                                                                          CipherPacketBuffer.a(var6 != 0, 13, 1, ChatInputDispatchSupport.field_a);
                                                                                           if (var9 == 0) {
                                                                                             return;
                                                                                           }
@@ -1691,12 +1691,12 @@ final class TutorialController {
                                                                                     if (this.tutorialStage == 13) {
                                                                                       return;
                                                                                     }
-                                                                                    if (jt.field_a == 12) {
+                                                                                    if (ChatInputDispatchSupport.field_a == 12) {
                                                                                       SpriteSheetDecoder.field_n = null;
                                                                                       BattleUnitRenderer.field_a = null;
                                                                                     }
                                                                                     var6 = param0 ? 1 : 0;
-                                                                                    CipherPacketBuffer.a(var6 != 0, 13, param1 + 1, jt.field_a);
+                                                                                    CipherPacketBuffer.a(var6 != 0, 13, param1 + 1, ChatInputDispatchSupport.field_a);
                                                                                     if (var9 == 0) {
                                                                                       return;
                                                                                     }
@@ -1704,19 +1704,19 @@ final class TutorialController {
                                                                                   if (!this.selectionState.hasActivationInput((byte) 100)) {
                                                                                     return;
                                                                                   }
-                                                                                  if (18 == jt.field_a) {
+                                                                                  if (18 == ChatInputDispatchSupport.field_a) {
                                                                                     AttackEvent.b(false);
                                                                                   }
-                                                                                  if (jt.field_a == 13) {
+                                                                                  if (ChatInputDispatchSupport.field_a == 13) {
                                                                                     LocalCoatSupport.writeLocalCoat((byte) 90);
                                                                                   }
-                                                                                  if (jt.field_a == 12) {
+                                                                                  if (ChatInputDispatchSupport.field_a == 12) {
                                                                                     BattleUnitRenderer.field_a = null;
                                                                                     SpriteSheetDecoder.field_n = null;
                                                                                   }
                                                                                   var6 = DualNodeDeque.field_c;
                                                                                   var7 = param0 ? 1 : 0;
-                                                                                  CipherPacketBuffer.a(var7 != 0, var6, 1, jt.field_a);
+                                                                                  CipherPacketBuffer.a(var7 != 0, var6, 1, ChatInputDispatchSupport.field_a);
                                                                                   if (var9 == 0) {
                                                                                     return;
                                                                                   }
@@ -1725,7 +1725,7 @@ final class TutorialController {
                                                                                   return;
                                                                                 }
                                                                                 var6 = param0 ? 1 : 0;
-                                                                                CipherPacketBuffer.a(var6 != 0, 6, 1, jt.field_a);
+                                                                                CipherPacketBuffer.a(var6 != 0, 6, 1, ChatInputDispatchSupport.field_a);
                                                                                 if (var9 == 0) {
                                                                                   return;
                                                                                 }
@@ -1734,7 +1734,7 @@ final class TutorialController {
                                                                                 return;
                                                                               }
                                                                               var6 = param0 ? 1 : 0;
-                                                                              CipherPacketBuffer.a(var6 != 0, 14, 1, jt.field_a);
+                                                                              CipherPacketBuffer.a(var6 != 0, 14, 1, ChatInputDispatchSupport.field_a);
                                                                               if (var9 == 0) {
                                                                                 return;
                                                                               }
@@ -1778,7 +1778,7 @@ final class TutorialController {
                                                                         return;
                                                                       }
                                                                       var6 = param0 ? 1 : 0;
-                                                                      CipherPacketBuffer.a(var6 != 0, 0, param1 ^ 1, jt.field_a);
+                                                                      CipherPacketBuffer.a(var6 != 0, 0, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                                       if (var9 == 0) {
                                                                         return;
                                                                       }
@@ -1940,12 +1940,12 @@ final class TutorialController {
                                                         boolean decompiledSharedTail0 = !(!FullscreenFocusCanvas.gameplayController.battlefield.field_X);
                                                         if (!decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
-                                                          CipherPacketBuffer.a(var6 != 0, 19, param1 ^ 1, jt.field_a);
+                                                          CipherPacketBuffer.a(var6 != 0, 19, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                           decompiledSharedTail0 = (var9 != 0);
                                                         }
                                                         if (decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
-                                                          CipherPacketBuffer.a(var6 != 0, -5, param1 ^ 1, jt.field_a);
+                                                          CipherPacketBuffer.a(var6 != 0, -5, param1 ^ 1, ChatInputDispatchSupport.field_a);
                                                         }
                                                       }
                                                       if (!ModalDialogHost.field_H) {
@@ -1961,7 +1961,7 @@ final class TutorialController {
                                                       return;
                                                     }
                                                     var6 = param0 ? 1 : 0;
-                                                    CipherPacketBuffer.a(var6 != 0, 25, 1, jt.field_a);
+                                                    CipherPacketBuffer.a(var6 != 0, 25, 1, ChatInputDispatchSupport.field_a);
                                                     if (var9 == 0) {
                                                       return;
                                                     }
@@ -2045,7 +2045,7 @@ final class TutorialController {
                                           return;
                                         }
                                         var6 = param0 ? 1 : 0;
-                                        CipherPacketBuffer.a(var6 != 0, 23, 1, jt.field_a);
+                                        CipherPacketBuffer.a(var6 != 0, 23, 1, ChatInputDispatchSupport.field_a);
                                         if (var9 == 0) {
                                           return;
                                         }
@@ -2054,7 +2054,7 @@ final class TutorialController {
                                         return;
                                       }
                                       var6 = param0 ? 1 : 0;
-                                      CipherPacketBuffer.a(var6 != 0, 26, 1, jt.field_a);
+                                      CipherPacketBuffer.a(var6 != 0, 26, 1, ChatInputDispatchSupport.field_a);
                                       if (var9 == 0) {
                                         return;
                                       }
@@ -2063,7 +2063,7 @@ final class TutorialController {
                                       return;
                                     }
                                     var6 = param0 ? 1 : 0;
-                                    CipherPacketBuffer.a(var6 != 0, 27, 1, jt.field_a);
+                                    CipherPacketBuffer.a(var6 != 0, 27, 1, ChatInputDispatchSupport.field_a);
                                     if (var9 == 0) {
                                       return;
                                     }
@@ -2072,7 +2072,7 @@ final class TutorialController {
                                     return;
                                   }
                                   var6 = param0 ? 1 : 0;
-                                  CipherPacketBuffer.a(var6 != 0, 28, 1, jt.field_a);
+                                  CipherPacketBuffer.a(var6 != 0, 28, 1, ChatInputDispatchSupport.field_a);
                                   if (var9 == 0) {
                                     return;
                                   }
@@ -2220,7 +2220,7 @@ final class TutorialController {
                 }
                 ReportAbuseDialog.n(14737632);
                 var6 = param0 ? 1 : 0;
-                CipherPacketBuffer.a(var6 != 0, -6, 1, jt.field_a);
+                CipherPacketBuffer.a(var6 != 0, -6, 1, ChatInputDispatchSupport.field_a);
                 if (var9 == 0) {
                   return;
                 }
@@ -2230,7 +2230,7 @@ final class TutorialController {
               }
               NameSuggestionList.a(-28541);
               var6 = param0 ? 1 : 0;
-              CipherPacketBuffer.a(var6 != 0, -7, 1, jt.field_a);
+              CipherPacketBuffer.a(var6 != 0, -7, 1, ChatInputDispatchSupport.field_a);
               if (var9 == 0) {
                 return;
               }
@@ -2286,7 +2286,7 @@ final class TutorialController {
           }
           stackIn_6_0 = 4800;
           if (1 == param1) {
-            stackIn_7_1 = bt.field_b;
+            stackIn_7_1 = LoginAndTutorialSetupSupport.field_b;
           } else {
             stackIn_7_1 = LobbyControlResources.field_f;
           }
@@ -3136,19 +3136,19 @@ final class TutorialController {
         try {
           var2 = null;
           if (0 != DualNodeDeque.field_c &&
-            0 != jt.field_a &&
+            0 != ChatInputDispatchSupport.field_a &&
             DualNodeDeque.field_c != 15 &&
-            15 != jt.field_a) {
+            15 != ChatInputDispatchSupport.field_a) {
             if (DualNodeDeque.field_c != 1 &&
-              jt.field_a != 1 &&
+              ChatInputDispatchSupport.field_a != 1 &&
               DualNodeDeque.field_c != 24 &&
-              jt.field_a != 24) {
+              ChatInputDispatchSupport.field_a != 24) {
               if (DualNodeDeque.field_c != 2 &&
-                2 != jt.field_a &&
+                2 != ChatInputDispatchSupport.field_a &&
                 DualNodeDeque.field_c != 3 &&
-                3 != jt.field_a &&
+                3 != ChatInputDispatchSupport.field_a &&
                 4 != DualNodeDeque.field_c &&
-                jt.field_a != 4) {
+                ChatInputDispatchSupport.field_a != 4) {
                 if (DualNodeDeque.field_c == 21 ||
                   DualNodeDeque.field_c == 23) {
                   var2 = ResourceClientErrorSupport.field_c;
@@ -3528,7 +3528,7 @@ final class TutorialController {
                 if (var10 == 0 &&
                   null != UnitAnimationSelectionSupport.playerProfile) {
                   var6Lifetime1Lifetime1 = ConsoleValue.field_b;
-                  this.a((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.localAccountName);
+                  this.a((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, StructureGlowRenderer.localAccountName);
                 }
                 if (var13 != 0) {
                   var7 = SocketResourceClient.field_s;
@@ -4596,10 +4596,10 @@ final class TutorialController {
               QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.d((byte) 65));
             }
             if (var2_int == 1) {
-              CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
             }
             if (var2_int == 2) {
-              CipherPacketBuffer.a(true, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(true, 0, 1, ChatInputDispatchSupport.field_a);
             }
             return;
           }
@@ -4632,8 +4632,8 @@ final class TutorialController {
                     CipherPacketBuffer.a(false, -1, 1, 0);
                     decompiledSharedTail0 = (var4 != 0);
                   }
-                  if ((decompiledSharedTail0) && (jt.field_a != 10 &&
-                    22 != jt.field_a)) {
+                  if ((decompiledSharedTail0) && (ChatInputDispatchSupport.field_a != 10 &&
+                    22 != ChatInputDispatchSupport.field_a)) {
                     CipherPacketBuffer.a(false, DualNodeDeque.field_c, 1, DualNodeDeque.field_c);
                   }
                 }
@@ -4743,7 +4743,7 @@ final class TutorialController {
           if (this.tutorialStage != 16) {
             if (this.tutorialStage != 8 &&
               this.tutorialStage != 9 &&
-              jt.field_a != 10) {
+              ChatInputDispatchSupport.field_a != 10) {
               if (7 == this.tutorialStage) {
                 this.updateInstructionsPanel(-48);
                 decompiledFrameRemainder3 = (var4 != 0);
@@ -5080,22 +5080,22 @@ final class TutorialController {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (jt.field_a != 7) {
-            if (jt.field_a == 22 ||
+          if (ChatInputDispatchSupport.field_a != 7) {
+            if (ChatInputDispatchSupport.field_a == 22 ||
               this.tutorialStage == 21) {
               MoveEvent.campaignMenu.a(PowerOfTwoSupport.keyCode, (int) DualNodeDeque.typedCharacter, 2);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (jt.field_a == 6 &&
+              if (ChatInputDispatchSupport.field_a == 6 &&
                 !DamageEvent.isGuestSession(79)) {
                 this.a(98);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (jt.field_a != 12 &&
-                  jt.field_a != 20 &&
-                  jt.field_a != 18) {
+                if (ChatInputDispatchSupport.field_a != 12 &&
+                  ChatInputDispatchSupport.field_a != 20 &&
+                  ChatInputDispatchSupport.field_a != 18) {
                   if (8 != this.tutorialStage &&
                     this.tutorialStage != 9) {
                     this.selectionState.pollNavigationKeys((byte) -120);
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
+          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, StructureGlowRenderer.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;

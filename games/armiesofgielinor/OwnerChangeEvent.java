@@ -272,7 +272,7 @@ final class OwnerChangeEvent extends GameEvent {
                 }
               }
             }
-            cc.field_b = LobbyPlayer.field_Ib;
+            CoatOfArmsDrawingSupport.field_b = LobbyPlayer.field_Ib;
             if (param1 != null) {
               BoundedFile.field_b = false;
             } else {
@@ -285,7 +285,7 @@ final class OwnerChangeEvent extends GameEvent {
           if (!BoundedFile.field_b &&
             RasterViewportResizeHandler.field_a < NodeIterator.field_c &&
             BitmapTextWidgetPainter.pointerChangedSnapshot) {
-            cc.field_b = LobbyPlayer.field_Ib;
+            CoatOfArmsDrawingSupport.field_b = LobbyPlayer.field_Ib;
             IntegerPowerSupport.field_e = QuickChatCommandDefinition.field_e;
             RasterViewportResizeHandler.field_a = 0;
           }

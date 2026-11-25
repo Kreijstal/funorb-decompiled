@@ -119,7 +119,7 @@ final class NodeIterator {
             if (param3 != 50) {
               field_b = (RgbSprite[]) null;
             }
-            if (jt.a((byte) -92)) {
+            if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
               return true;
             }
             if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
@@ -133,7 +133,7 @@ final class NodeIterator {
             return true;
           }
           if (param3 == 50) {
-            if (jt.a((byte) -92)) {
+            if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
               return true;
             }
             if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
@@ -143,7 +143,7 @@ final class NodeIterator {
           }
           field_b = (RgbSprite[]) null;
         }
-        if (jt.a((byte) -92)) {
+        if (ChatInputDispatchSupport.pollAccountNameKey((byte) -92)) {
           return true;
         }
         if (SpriteControlNode.a(param1, param0, param2, (byte) 28)) {

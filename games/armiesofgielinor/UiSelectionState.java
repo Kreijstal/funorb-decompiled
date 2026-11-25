@@ -141,7 +141,7 @@ final class UiSelectionState {
           ClientUiNode.field_w &&
           UnitAnimationPreview.field_h &&
           SentenceCaseSupport.field_b &&
-          mv.field_b) ||
+          StructureGlowRenderer.field_b) ||
           DamageEvent.isGuestSession(105));
         return stackIn_12_0;
     }

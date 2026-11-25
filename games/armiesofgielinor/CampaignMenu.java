@@ -1465,7 +1465,7 @@ final class CampaignMenu {
             if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               QuickChatPhraseRepository.a(27875)) {
               PaletteRegionMap.field_i = CalendarSupport.field_g;
-              CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
+              CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, ChatInputDispatchSupport.field_a);
               return;
             }
             this.rebuildMissionEntries(var2.campaignIndex, 53);
@@ -2034,7 +2034,7 @@ final class CampaignMenu {
           if (!BoundedFile.a(campaignIndex, 11906) &&
             QuickChatPhraseRepository.a(27875)) {
             PaletteRegionMap.field_i = CalendarSupport.field_g;
-            CipherPacketBuffer.a(false, 11, 1, jt.field_a);
+            CipherPacketBuffer.a(false, 11, 1, ChatInputDispatchSupport.field_a);
             return;
           }
           if (null == mu.field_g) {
@@ -2071,12 +2071,12 @@ final class CampaignMenu {
                   this.viewMode == 3) {
                   this.viewMode = 1;
                   if (var6 != 0) {
-                    CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+                    CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
                     this.setViewMode(0, (byte) 42);
                   }
                 }
               } else {
-                CipherPacketBuffer.a(false, 0, 1, jt.field_a);
+                CipherPacketBuffer.a(false, 0, 1, ChatInputDispatchSupport.field_a);
                 if (var6 != 0) {
                   this.setViewMode(0, (byte) 42);
                 }

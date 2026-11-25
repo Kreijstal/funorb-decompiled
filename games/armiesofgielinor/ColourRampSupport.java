@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jk {
+abstract class ColourRampSupport {
     static QuickChatCommandDefinition field_b;
     static String field_a;
 
-    final static int[] a(int param0, int[] param1, int param2, int[] param3) {
+    final static int[] interpolateColourRamps(int param0, int[] param1, int param2, int[] param3) {
         int var5 = 0;
         int var12 = 0;
         int stackIn_6_0 = 0;
@@ -91,7 +91,7 @@ abstract class jk {
         field_a = null;
     }
 
-    final static MouseWheelSource b(int param0) {
+    final static MouseWheelSource createMouseWheelSource(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelSource stackIn_3_0 = null;
