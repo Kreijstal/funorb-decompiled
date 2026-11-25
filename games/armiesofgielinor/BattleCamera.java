@@ -317,7 +317,7 @@ final class BattleCamera {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawTerrainLayer(int param0, int param1) {
         int stackIn_19_0;
         int stackIn_19_1;
         int stackIn_19_2;
@@ -395,7 +395,7 @@ final class BattleCamera {
         if (param0 == 0 &&
           EquipmentBattleTutorial.field_B &&
           BitLengthSupport.field_a) {
-          this.a(-12608);
+          this.applyTerrainTintOverlay(-12608);
         }
         return;
     }
@@ -511,7 +511,7 @@ final class BattleCamera {
         this.viewportOriginGrid[1] = this.gridPosition[1];
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9) {
+    private final void applyTerrainTintCell(int param0, int param1, int param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9) {
         int var11;
         int var12;
         int var13;
@@ -552,7 +552,7 @@ final class BattleCamera {
           var14 = this.getAveragedOverlayCorner(param2 - 1, -4510, -1 + param0);
           var11 = this.getAveragedOverlayCorner(param5, -4510, param1);
         }
-        this.a(-8302, param2, var12, param3, var13, param6, param7, var14, param0, param4, param9, param1, var11, param5);
+        this.applyTerrainTintBlock(-8302, param2, var12, param3, var13, param6, param7, var14, param0, param4, param9, param1, var11, param5);
     }
 
     private final void updateViewportCenterGrid(boolean obfuscationGuard) {
@@ -662,7 +662,7 @@ final class BattleCamera {
         this.targetToGrid(1);
     }
 
-    private final void a(int param0) {
+    private final void applyTerrainTintOverlay(int param0) {
         int var18 = 0;
         int var20 = 0;
         int stackIn_3_0 = 0;
@@ -715,7 +715,7 @@ final class BattleCamera {
           var9 = var13;
           var19 = var14;
           for (var20 = var5; var20 <= var17; var20 += 20) {
-            this.a(var7, var6, var9, var19 != 0, var15 != 0, var8, var14 != 0, var18, 1760, var20);
+            this.applyTerrainTintCell(var7, var6, var9, var19 != 0, var15 != 0, var8, var14 != 0, var18, 1760, var20);
             if (var19 == 0) {
               var9++;
               var6--;
@@ -764,7 +764,7 @@ final class BattleCamera {
         this.screenPosition[0] = var4;
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13) {
+    private final void applyTerrainTintBlock(int param0, int param1, int param2, boolean param3, int param4, boolean param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13) {
         int var24 = 0;
         int var28 = 0;
         int stackIn_22_0 = 0;
@@ -802,11 +802,11 @@ final class BattleCamera {
           this.mapHeight - 1 >= param13 &&
           param8 <= -1 + this.mapWidth) {
           if (0 > param13) {
-            this.a(false, param4, param10, -126, param5, param6, param2, param7, param3, param9, param12);
+            this.applyTerrainTintEdge(false, param4, param10, -126, param5, param6, param2, param7, param3, param9, param12);
             return;
           }
           if (0 > param8) {
-            this.a(true, param4, param10, param0 ^ 8236, param5, param6, param2, param7, param3, param9, param12);
+            this.applyTerrainTintEdge(true, param4, param10, param0 ^ 8236, param5, param6, param2, param7, param3, param9, param12);
             return;
           }
           if (param0 != -8302) {
@@ -814,11 +814,11 @@ final class BattleCamera {
             this.clampWorldPosition(-43, (int[]) null);
           }
           if (param1 > -1 + this.mapHeight) {
-            this.a(true, param4, param10, -78, param5, param6, param2, param7, param3, param9, param12);
+            this.applyTerrainTintEdge(true, param4, param10, -78, param5, param6, param2, param7, param3, param9, param12);
             return;
           }
           if (-1 + this.mapWidth < param11) {
-            this.a(false, param4, param10, -120, param5, param6, param2, param7, param3, param9, param12);
+            this.applyTerrainTintEdge(false, param4, param10, -120, param5, param6, param2, param7, param3, param9, param12);
             return;
           }
           var15 = param2 << 16;
@@ -882,7 +882,7 @@ final class BattleCamera {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9, int param10) {
+    private final void applyTerrainTintEdge(boolean param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9, int param10) {
         int var21 = 0;
         int var27 = 0;
         int stackIn_2_0 = 0;
@@ -1023,7 +1023,7 @@ final class BattleCamera {
         return var10 != 0;
     }
 
-    final void g(int param0) {
+    final void drawCombinedTerrainLayers(int param0) {
         boolean stackIn_20_0 = false;
         boolean stackIn_23_0 = false;
         boolean stackIn_26_0 = false;

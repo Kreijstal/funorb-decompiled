@@ -2429,7 +2429,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             QuinticFadeSupport.field_b == null) {
             CalendarSupport.a((byte) -24, 99.0f, AiPlanner.field_R);
             this.renderClient(0);
-            CoatOfArms.a(MusicCrossfadeStream.field_s, RasterImageSurface.field_f, FriendRequestSupport.field_b, 0);
+            CoatOfArms.loadUnitAnimationSequences(MusicCrossfadeStream.field_s, RasterImageSurface.field_f, FriendRequestSupport.field_b, 0);
             FriendRequestSupport.field_b = null;
             RasterImageSurface.field_f = null;
             MusicCrossfadeStream.field_s = null;

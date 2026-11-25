@@ -374,7 +374,7 @@ final class SoftwareRaster {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * width;
         int var23 = width + var6 - var7;
-        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, pixels, paletteScale, palette, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRaster.drawAdditivePaletteBlock(0, 0, 0, 0, 0, var15, var5, var22, pixels, paletteScale, palette, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     private final static void halveRows(int param0, int[] param1, int param2, int param3, int param4, int param5) {
@@ -530,12 +530,12 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRaster.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
-        SoftwareRaster.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRaster.blurRows(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
+        SoftwareRaster.blurColumns(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumns(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -950,7 +950,7 @@ final class SoftwareRaster {
         return;
     }
 
-    private final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
+    private final static boolean drawAdditivePaletteSpan(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
@@ -1681,7 +1681,7 @@ final class SoftwareRaster {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
+    private final static void drawAdditivePaletteBlock(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
         int var18 = 0;
         while (param17 < 0) {
           param3 = param14;
@@ -1714,7 +1714,7 @@ final class SoftwareRaster {
         SoftwareRaster.clearScanlineMasks();
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void fillAdditiveRadialPaletteCircle(int param0, int param1, int param2, int param3, int[] param4) {
         int var16 = 0;
         int var5;
         int var6;
@@ -1809,8 +1809,8 @@ final class SoftwareRaster {
           var28 = (var18 - 2 << 4) - param0;
           var28 = var28 * var28;
           var29 = var28 - var27;
-          if (SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, pixels, param3, param4, 1, var24, var8 + var21Lifetime2)) {
-            SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, pixels, param3, param4, -1, var29, var8 + var27);
+          if (SoftwareRaster.drawAdditivePaletteSpan(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, pixels, param3, param4, 1, var24, var8 + var21Lifetime2)) {
+            SoftwareRaster.drawAdditivePaletteSpan(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, pixels, param3, param4, -1, var29, var8 + var27);
           }
           var14 = var14 + var15;
           var8 = var8 + var11;
@@ -1818,7 +1818,7 @@ final class SoftwareRaster {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRows(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;

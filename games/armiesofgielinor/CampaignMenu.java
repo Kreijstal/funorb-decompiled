@@ -1115,9 +1115,9 @@ final class CampaignMenu {
                 if (stackIn_70_0 <= var25_int) {
                   var26_ref_sd = var15.campaign.participants[var25_int];
                   if (var20Lifetime1 > 2) {
-                    var26_ref_sd.coatOfArms.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.displayName, IgnoreListLookupSupport.a(true, -5 + var18Lifetime2));
+                    var26_ref_sd.coatOfArms.drawEighthSizeWithStatus(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.displayName, IgnoreListLookupSupport.a(true, -5 + var18Lifetime2));
                   } else {
-                    var26_ref_sd.coatOfArms.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, IgnoreListLookupSupport.a(true, var18Lifetime2 - 5), var26_ref_sd.displayName, false, false, false, param0 - 19764);
+                    var26_ref_sd.coatOfArms.drawQuarterSizeWithStatus(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, IgnoreListLookupSupport.a(true, var18Lifetime2 - 5), var26_ref_sd.displayName, false, false, false, param0 - 19764);
                   }
                   var27 = var18Lifetime2 + 60;
                   var28 = 5 + var4Lifetime1 - var27;
@@ -1871,11 +1871,11 @@ final class CampaignMenu {
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.entryId == 1);
               if (!decompiledSharedTail0) {
-                SoftwareRaster.c(var8, var8, 0, 0, var6.canvasWidth, var6.canvasHeight);
+                SoftwareRaster.blurRectangle(var8, var8, 0, 0, var6.canvasWidth, var6.canvasHeight);
                 decompiledSharedTail0 = (var9 != 0);
               }
               if (decompiledSharedTail0) {
-                SoftwareRaster.c(var8, var8, 0, var8, var6.canvasWidth, -var8 + var6.canvasHeight);
+                SoftwareRaster.blurRectangle(var8, var8, 0, var8, var6.canvasWidth, -var8 + var6.canvasHeight);
               }
               QuickChatPhraseRepository.popRasterState(-18862);
               var3.previewSprite = var7;

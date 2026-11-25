@@ -50,7 +50,7 @@ final class BitReversalSupport {
         if (param0) {
           return;
         }
-        TriangleRasterizer.b(0.75f);
+        TriangleRasterizer.rebuildPaletteWithGamma(0.75f);
     }
 
     static {

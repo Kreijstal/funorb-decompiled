@@ -73,7 +73,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         }
         GameCanvas.field_b = new ScreenWipeTransition();
         TriangleRasterizer.useRasterClip();
-        TriangleRasterizer.b(0.75f);
+        TriangleRasterizer.rebuildPaletteWithGamma(0.75f);
     }
 
     final static WidgetTheme k(int param0) {

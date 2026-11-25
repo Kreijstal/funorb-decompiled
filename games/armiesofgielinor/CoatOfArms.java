@@ -16,7 +16,7 @@ final class CoatOfArms {
         return 0;
     }
 
-    final int a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
+    final int drawEditorPreview(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -43,7 +43,7 @@ final class CoatOfArms {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4) {
+    final int findPartAt(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 21930) {
           return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.parts, false);
         }
@@ -70,7 +70,7 @@ final class CoatOfArms {
         field_d = null;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
+    final static void loadUnitAnimationSequences(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         AnimationSequence[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -160,7 +160,7 @@ final class CoatOfArms {
         this.parts[layer] = partId;
     }
 
-    final RgbSprite a(String param0, byte param1, boolean param2) {
+    final RgbSprite createQuarterSizeSprite(String param0, byte param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -173,7 +173,7 @@ final class CoatOfArms {
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param1 != -70) {
             var5 = (String) null;
-            this.a(false, true, (byte) -47, true, false, true, -69, (String) null, 102);
+            this.drawEighthSizeWithStatus(false, true, (byte) -47, true, false, true, -69, (String) null, 102);
           }
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
@@ -203,7 +203,7 @@ final class CoatOfArms {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, boolean param3, int param4, String param5, boolean param6, boolean param7, boolean param8, int param9) {
+    final void drawQuarterSizeWithStatus(boolean param0, int param1, int param2, boolean param3, int param4, String param5, boolean param6, boolean param7, boolean param8, int param9) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -272,7 +272,7 @@ final class CoatOfArms {
             return;
           }
           var18 = (String) null;
-          this.a(true, true, (byte) -68, false, true, false, 10, (String) null, 59);
+          this.drawEighthSizeWithStatus(true, true, (byte) -68, false, true, false, 10, (String) null, 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,7 +288,7 @@ final class CoatOfArms {
         }
     }
 
-    final void a(boolean param0, boolean param1, byte param2, boolean param3, boolean param4, boolean param5, int param6, String param7, int param8) {
+    final void drawEighthSizeWithStatus(boolean param0, boolean param1, byte param2, boolean param3, boolean param4, boolean param5, int param6, String param7, int param8) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -353,7 +353,7 @@ final class CoatOfArms {
         }
     }
 
-    final void a(int param0, String param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6, int param7) {
+    final void drawHalfSizeWithStatus(int param0, String param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6, int param7) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

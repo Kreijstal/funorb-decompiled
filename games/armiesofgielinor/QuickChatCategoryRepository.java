@@ -505,7 +505,7 @@ final class QuickChatCategoryRepository {
             }
           }
           EditableTextWidget.a(false, 76, -32596);
-          TriangleRasterizer.b(0.75f);
+          TriangleRasterizer.rebuildPaletteWithGamma(0.75f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

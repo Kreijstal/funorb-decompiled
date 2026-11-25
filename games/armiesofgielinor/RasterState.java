@@ -92,7 +92,7 @@ final class RasterState extends IntrusiveNode {
           return;
         }
         if (param2 == 2) {
-          EquipmentBattleTutorial.a(param0, param1, param5, param3, (byte) 49);
+          EquipmentBattleTutorial.drawSurroundingTerrainTile(param0, param1, param5, param3, (byte) 49);
         }
     }
 

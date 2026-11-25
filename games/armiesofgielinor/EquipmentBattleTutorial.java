@@ -81,7 +81,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawSurroundingTerrainTile(int param0, int param1, int param2, int param3, byte param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -154,7 +154,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           MoveEvent.tutorialStageItems[stage] = itemIds;
           MoveEvent.tutorialLayout.setStageLayout(rightX, bottomY, (byte) 18, topY, leftX, itemSpacing, stage);
           if (obfuscationGuard >= -26) {
-            EquipmentBattleTutorial.a((RgbSprite[]) null, -121, -66, -22, -91);
+            EquipmentBattleTutorial.drawTiledThreeSlice((RgbSprite[]) null, -121, -66, -22, -91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,7 +337,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             return true;
           }
           if (obfuscationGuard > 0) {
-            EquipmentBattleTutorial.a(-50, 57, -48, -76, (byte) -116);
+            EquipmentBattleTutorial.drawSurroundingTerrainTile(-50, 57, -48, -76, (byte) -116);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -347,7 +347,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         }
     }
 
-    private final String a(byte param0, int param1) {
+    private final String getSpellPrerequisiteMessage(byte param0, int param1) {
         String stackIn_10_0 = null;
         String stackIn_16_0 = null;
         String stackIn_22_0 = null;
@@ -1253,7 +1253,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             }
           }
           if (obfuscationGuard <= 35) {
-            EquipmentBattleTutorial.a(-66, 125, 5, 76, (byte) 66);
+            EquipmentBattleTutorial.drawSurroundingTerrainTile(-66, 125, 5, 76, (byte) 66);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1263,7 +1263,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         }
     }
 
-    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
+    final static void drawTiledThreeSlice(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1290,7 +1290,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               param0[1].drawTransparent(param1, param2);
             }
             if (param4 != 8941) {
-              EquipmentBattleTutorial.a((RgbSprite[]) null, -52, 126, 81, -73);
+              EquipmentBattleTutorial.drawTiledThreeSlice((RgbSprite[]) null, -52, 126, 81, -73);
             }
             SoftwareRaster.restoreClip(DefeatPlayerConsoleCommand.field_H);
             return;
@@ -1310,7 +1310,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         }
     }
 
-    private final int i(int param0) {
+    private final int getEquippedSpellFeedbackIndex(int param0) {
         int stackIn_3_0 = 0;
         int stackIn_617_0 = 0;
         int stackIn_619_0 = 0;
@@ -2100,7 +2100,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard > -113) {
-            discarded$0 = this.a((byte) -54, -8);
+            discarded$0 = this.getSpellPrerequisiteMessage((byte) -54, -8);
           }
           boolean decompiledFrameRemainder6 = true;
           boolean decompiledFrameRemainder5 = true;
@@ -2112,7 +2112,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           this.expanded = true;
           this.stage = stage;
           this.clearControlHighlights((byte) 37);
-          this.d(-85, -1);
+          this.setHighlightedSpellControl(-85, -1);
           var6 = stage;
           if (var6 == 2 &&
             var7 == 0) {
@@ -2158,7 +2158,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder1)) {
             this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[1], (byte) 111);
             this.buttonMode = 1;
-            this.d(-75, 255);
+            this.setHighlightedSpellControl(-75, 255);
             if (var7 == 0) {
               return;
             }
@@ -2219,7 +2219,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               break;
             }
             var3_int = stackIn_87_0;
-            var4 = this.a((byte) 66, this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]);
+            var4 = this.getSpellPrerequisiteMessage((byte) 66, this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]);
             boolean decompiledSharedTail0 = (var4 == null);
             if (!decompiledSharedTail0) {
               this.stage = 9;
@@ -2237,7 +2237,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               var4 = EmailCheckResult.formatTemplate(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
               this.buttonMode = 1;
               this.stage = 8;
-              this.d(-37, this.equipmentSlot);
+              this.setHighlightedSpellControl(-37, this.equipmentSlot);
             }
             this.setMessage(EmailCheckResult.formatTemplate(4800, SpriteDropdownControl.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
             if (var7 == 0) {
@@ -2258,7 +2258,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               stackIn_102_3 = 0;
             }
             this.setMessage(EmailCheckResult.formatTemplate(stackIn_101_1, stackIn_101_2[stackIn_102_3 + 32], new String[]{var4}), (byte) 125);
-            this.d(-122, this.equipmentSlot);
+            this.setHighlightedSpellControl(-122, this.equipmentSlot);
             this.buttonMode = 1;
             if (var7 == 0) {
               return;
@@ -2281,7 +2281,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             }
           }
           if (decompiledFrameRemainder6) {
-            var5 = AttackOverlaySupport.field_b[this.i(-134)];
+            var5 = AttackOverlaySupport.field_b[this.getEquippedSpellFeedbackIndex(-134)];
             if (this.equipmentSlot == 0) {
               var5 = EmailCheckResult.formatTemplate(4800, SpriteDropdownControl.equipmentTutorialMessages[27], new String[]{var5});
             }
@@ -2363,7 +2363,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void setHighlightedSpellControl(int param0, int param1) {
         try {
           this.controller.field_Jb = param1;
           if (param0 > 0) {

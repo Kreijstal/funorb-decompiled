@@ -587,7 +587,7 @@ final class SpriteDropdownMenu {
           var2 = var1.copySprite();
           for (var3 = 0; 15 > var3; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
-            SoftwareRaster.c(4, 4, 0, 0, 540, 140);
+            SoftwareRaster.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           FocusProxyWidget.field_P.bindAsRasterTarget();
           var1.drawHalfSize(0, 0);

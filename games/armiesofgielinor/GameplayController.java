@@ -1012,7 +1012,7 @@ final class GameplayController {
               stackIn_27_6 = var10;
               stackIn_27_7 = true;
               stackIn_28_8 = (0 != (this.battlefield.inactivePlayerMask & 1 << var9));
-              ((CoatOfArms) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
+              ((CoatOfArms) (Object) stackIn_19_0).drawQuarterSizeWithStatus(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
               DateInputWidget.field_E.drawCentered(var10, IgnoreListLookupSupport.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
               this.drawPlayerRuneReward(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
@@ -1161,7 +1161,7 @@ final class GameplayController {
             stackIn_42_6 = var6;
             stackIn_42_7 = true;
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
-            ((CoatOfArms) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
+            ((CoatOfArms) (Object) stackIn_30_0).drawQuarterSizeWithStatus(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
             DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
             this.drawTeamStructureCounts(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
@@ -3401,7 +3401,7 @@ final class GameplayController {
         try {
           int var3 = -15 % ((19 - param0) / 42);
           GradientUiRenderer.drawCenteredGradientText(this.battlefield.playerNames[this.battlefield.currentPlayer], IgnoreListLookupSupport.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), ConsoleValue.field_b, false);
-          this.battlefield.playerCoats[this.battlefield.currentPlayer].a(IgnoreListLookupSupport.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
+          this.battlefield.playerCoats[this.battlefield.currentPlayer].drawHalfSizeWithStatus(IgnoreListLookupSupport.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
         }
@@ -4554,7 +4554,7 @@ final class GameplayController {
           stackIn_32_6 = var7;
           stackIn_32_7 = true;
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
-          ((CoatOfArms) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
+          ((CoatOfArms) (Object) stackIn_20_0).drawQuarterSizeWithStatus(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
           DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
           this.drawTeamStructureCounts(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
@@ -4597,7 +4597,7 @@ final class GameplayController {
           }
           var2_int = 0;
           while (var2_int < this.battlefield.playerCoats.length) {
-            this.field_Wb[var2_int] = this.battlefield.playerCoats[var2_int].a(this.battlefield.getPlayerLabel(var2_int, -1), (byte) -70, this.battlefield.teamGame);
+            this.field_Wb[var2_int] = this.battlefield.playerCoats[var2_int].createQuarterSizeSprite(this.battlefield.getPlayerLabel(var2_int, -1), (byte) -70, this.battlefield.teamGame);
             var2_int++;
             if (var3 != 0) {
               return;
@@ -5767,7 +5767,7 @@ final class GameplayController {
                 stackIn_31_4 = false;
                 stackIn_31_5 = this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) 112) + 190;
                 stackIn_32_6 = (-1 == this.battlefield.currentPlayer);
-                ((CoatOfArms) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_32_6, false, 120);
+                ((CoatOfArms) (Object) stackIn_31_0).drawHalfSizeWithStatus(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_32_6, false, 120);
                 if (var12 == 0) {
                   break regionExit1;
                 }
@@ -5779,7 +5779,7 @@ final class GameplayController {
               stackIn_38_4 = false;
               stackIn_38_5 = 190 + LocalCoatSupport.localCoat.getMissingPartOffset((byte) 125);
               stackIn_39_6 = (this.battlefield.currentPlayer == -1);
-              ((CoatOfArms) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, false, 92);
+              ((CoatOfArms) (Object) stackIn_38_0).drawHalfSizeWithStatus(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, false, 92);
             }
             if (param2 &&
               !(var7 <= 1) || var12 != 0) {
@@ -5821,14 +5821,14 @@ final class GameplayController {
                         stackIn_73_6 = this.battlefield.getPlayerLabel(var11_int, param3 ^ -65);
                         stackIn_73_7 = true;
                         stackIn_74_8 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                        ((CoatOfArms) (Object) stackIn_69_0).a(stackIn_70_1, stackIn_73_2, stackIn_73_3, stackIn_73_4, stackIn_73_5, stackIn_73_6, stackIn_73_7, stackIn_74_8, false, -19744);
+                        ((CoatOfArms) (Object) stackIn_69_0).drawQuarterSizeWithStatus(stackIn_70_1, stackIn_73_2, stackIn_73_3, stackIn_73_4, stackIn_73_5, stackIn_73_6, stackIn_73_7, stackIn_74_8, false, -19744);
                         if (var12 != 0) {
                           stackIn_80_0 = this.battlefield.playerCoats[var11_int];
                           stackIn_80_1 = AccountNameCharacterSupport.field_e[var8][var9][0] + var5_int + (var6 / 2 - 56);
                           stackIn_80_2 = this.battlefield.getPlayerLabel(var11_int, -1);
                           stackIn_81_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var11_int) != 0);
                           stackIn_85_4 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                          ((CoatOfArms) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + AccountNameCharacterSupport.field_e[var8][var9][1], false, false, 96);
+                          ((CoatOfArms) (Object) stackIn_80_0).drawHalfSizeWithStatus(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + AccountNameCharacterSupport.field_e[var8][var9][1], false, false, 96);
                         }
                       } else {
                         stackIn_80_0 = this.battlefield.playerCoats[var11_int];
@@ -5836,7 +5836,7 @@ final class GameplayController {
                         stackIn_80_2 = this.battlefield.getPlayerLabel(var11_int, -1);
                         stackIn_81_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var11_int) != 0);
                         stackIn_85_4 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                        ((CoatOfArms) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + AccountNameCharacterSupport.field_e[var8][var9][1], false, false, 96);
+                        ((CoatOfArms) (Object) stackIn_80_0).drawHalfSizeWithStatus(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + AccountNameCharacterSupport.field_e[var8][var9][1], false, false, 96);
                       }
                     }
                     if (this.controlledPlayerId > -1 &&
@@ -5846,7 +5846,7 @@ final class GameplayController {
                       stackIn_95_2 = this.battlefield.getPlayerLabel(this.controlledPlayerId, param3 - 65);
                       stackIn_96_3 = ((1 << this.controlledPlayerId & this.battlefield.eliminatedPlayerMask) != 0);
                       stackIn_100_4 = (0 != (this.battlefield.inactivePlayerMask & 1 << this.controlledPlayerId));
-                      ((CoatOfArms) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_96_3, stackIn_100_4, 190 + var10, false, false, 78);
+                      ((CoatOfArms) (Object) stackIn_95_0).drawHalfSizeWithStatus(stackIn_95_1, stackIn_95_2, stackIn_96_3, stackIn_100_4, 190 + var10, false, false, 78);
                     }
                     var11_int++;
                     if (var12 == 0) {
@@ -5865,10 +5865,10 @@ final class GameplayController {
                 decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (var12 != 0)) {
-                  LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                  LocalCoatSupport.localCoat.drawHalfSizeWithStatus(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
                 }
               } else {
-                LocalCoatSupport.localCoat.a(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                LocalCoatSupport.localCoat.drawHalfSizeWithStatus(var6 / 2 - 56 + var5_int, StructureGlowRenderer.localAccountName, false, false, LocalCoatSupport.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
               }
             }
           }
@@ -7449,7 +7449,7 @@ final class GameplayController {
           stackIn_15_4 = ((1 << var6_int & this.battlefield.inactivePlayerMask) != 0);
           stackIn_18_5 = MatchConditionEntry.a(param0 - 2, (byte) 94);
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
-          ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
+          ((CoatOfArms) (Object) stackIn_10_0).drawHalfSizeWithStatus(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
           QuickChatPhraseRepository.popRasterState(-18862);
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
           if (param3 <= -1) {
@@ -11251,7 +11251,7 @@ final class GameplayController {
               stackIn_37_6 = var6;
               stackIn_37_7 = true;
               stackIn_38_8 = ((1 << var5 & this.battlefield.inactivePlayerMask) != 0);
-              ((CoatOfArms) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
+              ((CoatOfArms) (Object) stackIn_25_0).drawQuarterSizeWithStatus(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
               DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
               this.drawPlayerRuneReward(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);

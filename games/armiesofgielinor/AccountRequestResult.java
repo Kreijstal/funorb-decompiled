@@ -76,7 +76,7 @@ final class AccountRequestResult {
             PrivateTextRecipientSupport.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
           }
-          EquipmentBattleTutorial.a(param3, param5, param1, param4, (byte) -82);
+          EquipmentBattleTutorial.drawSurroundingTerrainTile(param3, param5, param1, param4, (byte) -82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

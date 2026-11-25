@@ -107,8 +107,8 @@ abstract class ResizableModalDialog extends ModalDialog {
           var8Lifetime1++;
         }
         LocalAccountNameSupport.field_e.drawTransparent(this.width + (x - 90), 10 + y);
-        EquipmentBattleTutorial.a(ReloadPageSupport.field_d, x + 5, y + 35, this.width - 10, 8941);
-        EquipmentBattleTutorial.a(WidgetStateStyle.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
+        EquipmentBattleTutorial.drawTiledThreeSlice(ReloadPageSupport.field_d, x + 5, y + 35, this.width - 10, 8941);
+        EquipmentBattleTutorial.drawTiledThreeSlice(WidgetStateStyle.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

@@ -2802,11 +2802,11 @@ final class CombatPresentation implements EventPresentation {
             var6Lifetime1 = 0 + var2_intLifetime2;
             var7Lifetime1 = -var5Lifetime1 + (CombatEvent.field_I.screenY - var3Lifetime2);
             if (this.field_e > -1) {
-              this.battlefield.playerCoats[this.field_e].a(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
+              this.battlefield.playerCoats[this.field_e].drawHalfSizeWithStatus(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
             }
             var6Lifetime1Lifetime1 = -var2_intLifetime2 + (FixedSquareRootSupport.field_b.width - var4Lifetime1);
             if (this.field_g > -1) {
-              this.battlefield.playerCoats[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
+              this.battlefield.playerCoats[this.field_g].drawHalfSizeWithStatus(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
           GradientUiRenderer.drawHollowGradientFrame(0, 0, PowerOfTwoSupport.field_k, IgnoreRequestSupport.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);

@@ -20,7 +20,7 @@ final class TriangleRasterizer {
     static int[] colorPalette;
     static int[] field_m;
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void drawShadedSpan(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int incrementValue$14 = 0;
         int incrementValue$13 = 0;
         int incrementValue$15 = 0;
@@ -139,7 +139,7 @@ final class TriangleRasterizer {
 
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void drawFlatSpan(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -281,7 +281,7 @@ final class TriangleRasterizer {
         }
     }
 
-    private final static void a(float param0) {
+    private final static void setRandomizedGamma(float param0) {
         field_b = param0;
         field_b = (float)((double)field_b + (Math.random() * 0.03 - 0.015));
     }
@@ -343,7 +343,7 @@ final class TriangleRasterizer {
               while (true) {
                 yC--;
                 if (yC >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xB >> 16);
+                  TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xB >> 16);
                   xB = xB + var9;
                   xA = xA + var7;
                   yA = yA + SoftwareRaster.width;
@@ -353,7 +353,7 @@ final class TriangleRasterizer {
               }
               yB--;
               while (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xC >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xC >> 16);
                 xC = xC + var8;
                 xA = xA + var7;
                 yA = yA + SoftwareRaster.width;
@@ -367,7 +367,7 @@ final class TriangleRasterizer {
             while (true) {
               yC--;
               if (yC >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xB >> 16, xA >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xB >> 16, xA >> 16);
                 xB = xB + var9;
                 xA = xA + var7;
                 yA = yA + SoftwareRaster.width;
@@ -377,7 +377,7 @@ final class TriangleRasterizer {
             }
             yB--;
             while (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xA >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xA >> 16);
               xC = xC + var8;
               xA = xA + var7;
               yA = yA + SoftwareRaster.width;
@@ -408,7 +408,7 @@ final class TriangleRasterizer {
             while (true) {
               yB--;
               if (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xC >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xA >> 16, xC >> 16);
                 xC = xC + var9;
                 xA = xA + var7;
                 yA = yA + SoftwareRaster.width;
@@ -418,7 +418,7 @@ final class TriangleRasterizer {
             }
             yC--;
             while (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xB >> 16, xC >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xB >> 16, xC >> 16);
               xC = xC + var9;
               xB = xB + var8;
               yA = yA + SoftwareRaster.width;
@@ -432,7 +432,7 @@ final class TriangleRasterizer {
           while (true) {
             yB--;
             if (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xA >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xA >> 16);
               xC = xC + var9;
               xA = xA + var7;
               yA = yA + SoftwareRaster.width;
@@ -442,7 +442,7 @@ final class TriangleRasterizer {
           }
           yC--;
           while (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xB >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yA, rgbColor, 0, xC >> 16, xB >> 16);
             xC = xC + var9;
             xB = xB + var8;
             yA = yA + SoftwareRaster.width;
@@ -481,7 +481,7 @@ final class TriangleRasterizer {
               while (true) {
                 yB--;
                 if (yB >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xA >> 16);
+                  TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xA >> 16);
                   xA = xA + var8;
                   xC = xC + var9;
                   yC = yC + SoftwareRaster.width;
@@ -491,7 +491,7 @@ final class TriangleRasterizer {
               }
               yA--;
               while (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xB >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xB >> 16);
                 xB = xB + var7;
                 xC = xC + var9;
                 yC = yC + SoftwareRaster.width;
@@ -505,7 +505,7 @@ final class TriangleRasterizer {
             while (true) {
               yB--;
               if (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xA >> 16, xC >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xA >> 16, xC >> 16);
                 xA = xA + var8;
                 xC = xC + var9;
                 yC = yC + SoftwareRaster.width;
@@ -515,7 +515,7 @@ final class TriangleRasterizer {
             }
             yA--;
             while (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xC >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xC >> 16);
               xB = xB + var7;
               xC = xC + var9;
               yC = yC + SoftwareRaster.width;
@@ -543,7 +543,7 @@ final class TriangleRasterizer {
             while (true) {
               yA--;
               if (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xB >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xC >> 16, xB >> 16);
                 xB = xB + var8;
                 xC = xC + var9;
                 yC = yC + SoftwareRaster.width;
@@ -553,7 +553,7 @@ final class TriangleRasterizer {
             }
             yB--;
             while (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xA >> 16, xB >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xA >> 16, xB >> 16);
               xB = xB + var8;
               xA = xA + var7;
               yC = yC + SoftwareRaster.width;
@@ -567,7 +567,7 @@ final class TriangleRasterizer {
           while (true) {
             yA--;
             if (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xC >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xC >> 16);
               xB = xB + var8;
               xC = xC + var9;
               yC = yC + SoftwareRaster.width;
@@ -577,7 +577,7 @@ final class TriangleRasterizer {
           }
           yB--;
           while (yB >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xA >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yC, rgbColor, 0, xB >> 16, xA >> 16);
             xB = xB + var8;
             xA = xA + var7;
             yC = yC + SoftwareRaster.width;
@@ -615,7 +615,7 @@ final class TriangleRasterizer {
             while (true) {
               yA--;
               if (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xC >> 16);
+                TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xC >> 16);
                 xC = xC + var7;
                 xB = xB + var8;
                 yB = yB + SoftwareRaster.width;
@@ -625,7 +625,7 @@ final class TriangleRasterizer {
             }
             yC--;
             while (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xA >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xA >> 16);
               xA = xA + var9;
               xB = xB + var8;
               yB = yB + SoftwareRaster.width;
@@ -639,7 +639,7 @@ final class TriangleRasterizer {
           while (true) {
             yA--;
             if (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xC >> 16, xB >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xC >> 16, xB >> 16);
               xC = xC + var7;
               xB = xB + var8;
               yB = yB + SoftwareRaster.width;
@@ -649,7 +649,7 @@ final class TriangleRasterizer {
           }
           yC--;
           while (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xB >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xB >> 16);
             xA = xA + var9;
             xB = xB + var8;
             yB = yB + SoftwareRaster.width;
@@ -680,7 +680,7 @@ final class TriangleRasterizer {
           while (true) {
             yC--;
             if (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xA >> 16);
+              TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xB >> 16, xA >> 16);
               xA = xA + var7;
               xB = xB + var8;
               yB = yB + SoftwareRaster.width;
@@ -690,7 +690,7 @@ final class TriangleRasterizer {
           }
           yA--;
           while (yA >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xC >> 16, xA >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xC >> 16, xA >> 16);
             xA = xA + var7;
             xC = xC + var9;
             yB = yB + SoftwareRaster.width;
@@ -704,7 +704,7 @@ final class TriangleRasterizer {
         while (true) {
           yC--;
           if (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xB >> 16);
+            TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xB >> 16);
             xA = xA + var7;
             xB = xB + var8;
             yB = yB + SoftwareRaster.width;
@@ -714,7 +714,7 @@ final class TriangleRasterizer {
         }
         yA--;
         while (yA >= 0) {
-          TriangleRasterizer.a(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xC >> 16);
+          TriangleRasterizer.drawFlatSpan(SoftwareRaster.pixels, yB, rgbColor, 0, xA >> 16, xC >> 16);
           xA = xA + var7;
           xC = xC + var9;
           yB = yB + SoftwareRaster.width;
@@ -723,7 +723,7 @@ final class TriangleRasterizer {
         return;
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void buildColorPaletteRange(int param0, int param1) {
         int var3 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -833,9 +833,9 @@ final class TriangleRasterizer {
         projectionCenterY = rasterY - var3;
     }
 
-    final static void b(float param0) {
-        TriangleRasterizer.a(param0);
-        TriangleRasterizer.a(0, 512);
+    final static void rebuildPaletteWithGamma(float param0) {
+        TriangleRasterizer.setRandomizedGamma(param0);
+        TriangleRasterizer.buildColorPaletteRange(0, 512);
     }
 
     public static void releaseStatics() {
@@ -848,7 +848,7 @@ final class TriangleRasterizer {
         cosineTable = null;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    private final static void drawTexturedSpan(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int dupTemp$18 = 0;
         int dupTemp$19 = 0;
         int dupTemp$20 = 0;
@@ -1303,7 +1303,7 @@ final class TriangleRasterizer {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
+    final static void drawTexturedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
         int localTemp$4 = 0;
         int localTemp$5 = 0;
         int localTemp$6 = 0;
@@ -1429,7 +1429,7 @@ final class TriangleRasterizer {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
@@ -1443,7 +1443,7 @@ final class TriangleRasterizer {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1461,7 +1461,7 @@ final class TriangleRasterizer {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1475,7 +1475,7 @@ final class TriangleRasterizer {
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1514,7 +1514,7 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
@@ -1528,7 +1528,7 @@ final class TriangleRasterizer {
               }
               param2--;
               while (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
@@ -1546,7 +1546,7 @@ final class TriangleRasterizer {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
@@ -1560,7 +1560,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
@@ -1609,7 +1609,7 @@ final class TriangleRasterizer {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
@@ -1623,7 +1623,7 @@ final class TriangleRasterizer {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1641,7 +1641,7 @@ final class TriangleRasterizer {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1655,7 +1655,7 @@ final class TriangleRasterizer {
               }
               param0--;
               while (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -1692,7 +1692,7 @@ final class TriangleRasterizer {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
@@ -1706,7 +1706,7 @@ final class TriangleRasterizer {
               }
               param1--;
               while (param1 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
@@ -1724,7 +1724,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
@@ -1738,7 +1738,7 @@ final class TriangleRasterizer {
             }
             param1--;
             while (param1 >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
@@ -1786,7 +1786,7 @@ final class TriangleRasterizer {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
@@ -1800,7 +1800,7 @@ final class TriangleRasterizer {
               }
               param2--;
               while (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1818,7 +1818,7 @@ final class TriangleRasterizer {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1832,7 +1832,7 @@ final class TriangleRasterizer {
             }
             param2--;
             while (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -1871,7 +1871,7 @@ final class TriangleRasterizer {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
@@ -1885,7 +1885,7 @@ final class TriangleRasterizer {
             }
             param0--;
             while (param0 >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
@@ -1903,7 +1903,7 @@ final class TriangleRasterizer {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
@@ -1917,7 +1917,7 @@ final class TriangleRasterizer {
           }
           param0--;
           while (param0 >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            TriangleRasterizer.drawTexturedSpan(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
@@ -1930,7 +1930,7 @@ final class TriangleRasterizer {
           return;
         }
         var20Lifetime1 = textureProvider.getAverageTextureColor(param18, (byte) -5);
-        TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.b(var20Lifetime1, param6), TriangleRasterizer.b(var20Lifetime1, param7), TriangleRasterizer.b(var20Lifetime1, param8));
+        TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.modulateHslLightness(var20Lifetime1, param6), TriangleRasterizer.modulateHslLightness(var20Lifetime1, param7), TriangleRasterizer.modulateHslLightness(var20Lifetime1, param8));
     }
 
     final static void drawShadedTriangle(int yA, int yB, int yC, int xA, int xB, int xC, int colorA, int colorB, int colorC) {
@@ -2016,7 +2016,7 @@ final class TriangleRasterizer {
               while (true) {
                 yC--;
                 if (yC >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xB >> 16, colorA, var19);
+                  TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xB >> 16, colorA, var19);
                   xB = xB + var17;
                   xA = xA + var16;
                   colorA = colorA + var20;
@@ -2027,7 +2027,7 @@ final class TriangleRasterizer {
               }
               yB--;
               while (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xC >> 16, colorA, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xC >> 16, colorA, var19);
                 xC = xC + var15;
                 xA = xA + var16;
                 colorA = colorA + var20;
@@ -2042,7 +2042,7 @@ final class TriangleRasterizer {
             while (true) {
               yC--;
               if (yC >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xB >> 16, xA >> 16, colorA, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xB >> 16, xA >> 16, colorA, var19);
                 xB = xB + var17;
                 xA = xA + var16;
                 colorA = colorA + var20;
@@ -2053,7 +2053,7 @@ final class TriangleRasterizer {
             }
             yB--;
             while (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xA >> 16, colorA, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xA >> 16, colorA, var19);
               xC = xC + var15;
               xA = xA + var16;
               colorA = colorA + var20;
@@ -2086,7 +2086,7 @@ final class TriangleRasterizer {
             while (true) {
               yB--;
               if (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xC >> 16, colorA, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xA >> 16, xC >> 16, colorA, var19);
                 xC = xC + var17;
                 xA = xA + var16;
                 colorA = colorA + var20;
@@ -2097,7 +2097,7 @@ final class TriangleRasterizer {
             }
             yC--;
             while (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xB >> 16, xC >> 16, colorA, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xB >> 16, xC >> 16, colorA, var19);
               xC = xC + var17;
               xB = xB + var15;
               colorA = colorA + var20;
@@ -2112,7 +2112,7 @@ final class TriangleRasterizer {
           while (true) {
             yB--;
             if (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xA >> 16, colorA, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xA >> 16, colorA, var19);
               xC = xC + var17;
               xA = xA + var16;
               colorA = colorA + var20;
@@ -2123,7 +2123,7 @@ final class TriangleRasterizer {
           }
           yC--;
           while (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xB >> 16, colorA, var19);
+            TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yA, 0, 0, xC >> 16, xB >> 16, colorA, var19);
             xC = xC + var17;
             xB = xB + var15;
             colorA = colorA + var20;
@@ -2165,7 +2165,7 @@ final class TriangleRasterizer {
               while (true) {
                 yB--;
                 if (yB >= 0) {
-                  TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xA >> 16, colorC, var19);
+                  TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xA >> 16, colorC, var19);
                   xA = xA + var15;
                   xC = xC + var17;
                   colorC = colorC + var20;
@@ -2176,7 +2176,7 @@ final class TriangleRasterizer {
               }
               yA--;
               while (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xB >> 16, colorC, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xB >> 16, colorC, var19);
                 xB = xB + var16;
                 xC = xC + var17;
                 colorC = colorC + var20;
@@ -2191,7 +2191,7 @@ final class TriangleRasterizer {
             while (true) {
               yB--;
               if (yB >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xA >> 16, xC >> 16, colorC, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xA >> 16, xC >> 16, colorC, var19);
                 xA = xA + var15;
                 xC = xC + var17;
                 colorC = colorC + var20;
@@ -2202,7 +2202,7 @@ final class TriangleRasterizer {
             }
             yA--;
             while (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xC >> 16, colorC, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xC >> 16, colorC, var19);
               xB = xB + var16;
               xC = xC + var17;
               colorC = colorC + var20;
@@ -2232,7 +2232,7 @@ final class TriangleRasterizer {
             while (true) {
               yA--;
               if (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xB >> 16, colorC, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xC >> 16, xB >> 16, colorC, var19);
                 xB = xB + var15;
                 xC = xC + var17;
                 colorC = colorC + var20;
@@ -2243,7 +2243,7 @@ final class TriangleRasterizer {
             }
             yB--;
             while (yB >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xA >> 16, xB >> 16, colorC, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xA >> 16, xB >> 16, colorC, var19);
               xB = xB + var15;
               xA = xA + var16;
               colorC = colorC + var20;
@@ -2258,7 +2258,7 @@ final class TriangleRasterizer {
           while (true) {
             yA--;
             if (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xC >> 16, colorC, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xC >> 16, colorC, var19);
               xB = xB + var15;
               xC = xC + var17;
               colorC = colorC + var20;
@@ -2269,7 +2269,7 @@ final class TriangleRasterizer {
           }
           yB--;
           while (yB >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xA >> 16, colorC, var19);
+            TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yC, 0, 0, xB >> 16, xA >> 16, colorC, var19);
             xB = xB + var15;
             xA = xA + var16;
             colorC = colorC + var20;
@@ -2310,7 +2310,7 @@ final class TriangleRasterizer {
             while (true) {
               yA--;
               if (yA >= 0) {
-                TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xC >> 16, colorB, var19);
+                TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xC >> 16, colorB, var19);
                 xC = xC + var16;
                 xB = xB + var15;
                 colorB = colorB + var20;
@@ -2321,7 +2321,7 @@ final class TriangleRasterizer {
             }
             yC--;
             while (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xA >> 16, colorB, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xA >> 16, colorB, var19);
               xA = xA + var17;
               xB = xB + var15;
               colorB = colorB + var20;
@@ -2336,7 +2336,7 @@ final class TriangleRasterizer {
           while (true) {
             yA--;
             if (yA >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xC >> 16, xB >> 16, colorB, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xC >> 16, xB >> 16, colorB, var19);
               xC = xC + var16;
               xB = xB + var15;
               colorB = colorB + var20;
@@ -2347,7 +2347,7 @@ final class TriangleRasterizer {
           }
           yC--;
           while (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xB >> 16, colorB, var19);
+            TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xB >> 16, colorB, var19);
             xA = xA + var17;
             xB = xB + var15;
             colorB = colorB + var20;
@@ -2380,7 +2380,7 @@ final class TriangleRasterizer {
           while (true) {
             yC--;
             if (yC >= 0) {
-              TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xA >> 16, colorB, var19);
+              TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xB >> 16, xA >> 16, colorB, var19);
               xA = xA + var16;
               xB = xB + var15;
               colorB = colorB + var20;
@@ -2391,7 +2391,7 @@ final class TriangleRasterizer {
           }
           yA--;
           while (yA >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xC >> 16, xA >> 16, colorB, var19);
+            TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xC >> 16, xA >> 16, colorB, var19);
             xA = xA + var16;
             xC = xC + var17;
             colorB = colorB + var20;
@@ -2406,7 +2406,7 @@ final class TriangleRasterizer {
         while (true) {
           yC--;
           if (yC >= 0) {
-            TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xB >> 16, colorB, var19);
+            TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xB >> 16, colorB, var19);
             xA = xA + var16;
             xB = xB + var15;
             colorB = colorB + var20;
@@ -2417,7 +2417,7 @@ final class TriangleRasterizer {
         }
         yA--;
         while (yA >= 0) {
-          TriangleRasterizer.a(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xC >> 16, colorB, var19);
+          TriangleRasterizer.drawShadedSpan(SoftwareRaster.pixels, yB, 0, 0, xA >> 16, xC >> 16, colorB, var19);
           xA = xA + var16;
           xC = xC + var17;
           colorB = colorB + var20;
@@ -2427,7 +2427,7 @@ final class TriangleRasterizer {
         return;
     }
 
-    private final static int b(int param0, int param1) {
+    private final static int modulateHslLightness(int param0, int param1) {
         param1 = param1 * (param0 & 127) >> 7;
         if (param1 < 2) {
           param1 = 2;

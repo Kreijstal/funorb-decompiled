@@ -2489,7 +2489,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            var2_int = LocalCoatSupport.localCoat.a(HighscoreAccountEntry.pointerY, param0 ^ 21728, IgnoreListLookupSupport.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.pointerX);
+            var2_int = LocalCoatSupport.localCoat.findPartAt(HighscoreAccountEntry.pointerY, param0 ^ 21728, IgnoreListLookupSupport.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.pointerX);
             stackIn_58_0 = ~var2_int;
             stackIn_58_1 = 1;
           }
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, SharedUiLoadingSupport.field_a, StructureGlowRenderer.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
+          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.drawEditorPreview(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, SharedUiLoadingSupport.field_a, StructureGlowRenderer.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;

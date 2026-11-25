@@ -219,7 +219,7 @@ final class IntroSequence {
             SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1443, 4592))), this.toScreenY((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.sine8192(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
             SoftwareRaster.fillRadialPaletteCircle((int)((-var3 + (double)this.toScreenX(1478, 4592)) * 16.0), this.toScreenY((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.sine8192(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
             SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1446, 4592))), this.toScreenY((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.sine8192(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
-            SoftwareRaster.b((int)(this.toScreenX(1890.0 - this.field_k, 16) * 16.0), this.toScreenY((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.sine8192(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
+            SoftwareRaster.fillAdditiveRadialPaletteCircle((int)(this.toScreenX(1890.0 - this.field_k, 16) * 16.0), this.toScreenY((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.sine8192(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
             SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(2614, 4592))), this.toScreenY((byte) -74, 219) << 4, 80, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
             var7 = 256 + (SocketResourceClient.sine8192(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
