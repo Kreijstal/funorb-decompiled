@@ -430,7 +430,7 @@ final class BufferedFile {
     }
 
     final static void initializeGameDialogHost(byte param0) {
-        ReloadPageSupport.field_c = NameSuggestionList.k(5);
+        ReloadPageSupport.field_c = NameSuggestionList.getSharedWidgetTheme(5);
         if (param0 < 78) {
           BufferedFile.createOnePixelBeveledFrameSprites(59, -15, 35, -65);
         }

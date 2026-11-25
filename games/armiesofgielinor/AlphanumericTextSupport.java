@@ -33,7 +33,7 @@ final class AlphanumericTextSupport {
         try {
           for (var2_int = startIndex; var2_int < text.length(); var2_int++) {
             var3 = text.charAt(var2_int);
-            if (!MeshObject.a((byte) -105, (char) var3) &&
+            if (!MeshObject.isAsciiLetter((byte) -105, (char) var3) &&
               !QuickChatSetupSupport.isAsciiDigit(28799, (char) var3)) {
               return true;
             }

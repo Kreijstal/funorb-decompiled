@@ -5810,7 +5810,7 @@ final class TickCounter {
               var12 != 6 &&
               var12 != 2 &&
               0 != (var11 & 1)) {
-              RadialSummonItem.a(var9_int, param5 ^ 117, param3, ProxyAuthenticationRequiredException.field_b, param7);
+              RadialSummonItem.drawKalphiteSpriteCluster(var9_int, param5 ^ 117, param3, ProxyAuthenticationRequiredException.field_b, param7);
             }
           }
           if (param5 != 0) {

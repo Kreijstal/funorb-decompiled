@@ -73,7 +73,7 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByte(param2 + 20033, 18);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
               var10 = EmailValidator.outgoingPacket.position;
-              var11_ref_String = ByteStorage.a(0, CombatEvent.d((byte) 55));
+              var11_ref_String = ByteStorage.readSettingsCookie(0, CombatEvent.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }

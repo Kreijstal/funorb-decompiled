@@ -13,7 +13,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutSharedChatPanel(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -83,7 +83,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            ListMissionsConsoleCommand.e((byte) 60);
+            ListMissionsConsoleCommand.compactLogoFaceDepthBuckets((byte) 60);
           }
           result = new ConsoleValue(RadialSummonMenu.listCampaignMissions((byte) 123, arguments[0].asInt(obfuscationGuard ^ -24870)));
           return result;
@@ -101,7 +101,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void compactLogoFaceDepthBuckets(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;

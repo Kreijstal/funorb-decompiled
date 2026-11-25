@@ -117,7 +117,7 @@ final class RadialSummonItem {
         ProjectileEffect.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawKalphiteSpriteCluster(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -179,7 +179,7 @@ final class RadialSummonItem {
         return true;
     }
 
-    final static void a(int param0, ClientUiComponent param1, int param2, byte[] param3, int param4, ClientUiComponent param5, int param6, int param7, int param8, ClientUiComponent param9) {
+    final static void initializeLobbyState(int param0, ClientUiComponent param1, int param2, byte[] param3, int param4, ClientUiComponent param5, int param6, int param7, int param8, ClientUiComponent param9) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

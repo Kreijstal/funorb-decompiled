@@ -73,7 +73,7 @@ final class RasterState extends IntrusiveNode {
                 }
               } else {
                 if (!BitLengthSupport.field_a) {
-                  QuickChatMenu.a(param5, var8, var7, param1, param3, var9, 54, param0);
+                  QuickChatMenu.drawTintedTerrainTileLayers(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
                 ValidationStatusWidget.a(param3, param0, param1, var7, var8, -29403, var9, param5);
                 if (Unit.field_L) {
@@ -81,7 +81,7 @@ final class RasterState extends IntrusiveNode {
                 }
               }
             } else {
-              QuickChatMenu.a(param5, var8, var7, param1, param3, var9, 101, param0);
+              QuickChatMenu.drawTintedTerrainTileLayers(param5, var8, var7, param1, param3, var9, 101, param0);
             }
           } else {
             if (param2 == 2) {

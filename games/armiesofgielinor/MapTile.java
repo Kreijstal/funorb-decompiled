@@ -25,7 +25,7 @@ final class MapTile implements TaggedFieldReader {
         decodedSpriteHasAlpha = null;
     }
 
-    final static void a(PlatformTaskService param0, Object param1, boolean param2) {
+    final static void pumpAwtEventQueue(PlatformTaskService param0, Object param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         RawPcmStream var5 = null;
@@ -176,7 +176,7 @@ final class MapTile implements TaggedFieldReader {
         return stackIn_6_0;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void applyStructureTurnEffects(int param0, int param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -638,7 +638,7 @@ final class MapTile implements TaggedFieldReader {
 
     final void clearModifierFlag1(byte obfuscationGuard) {
         if (obfuscationGuard < 42) {
-          this.a(13, -128, -104, -117);
+          this.applyStructureTurnEffects(13, -128, -104, -117);
         }
         this.metadata.modifierFlags = this.metadata.modifierFlags & -2;
     }

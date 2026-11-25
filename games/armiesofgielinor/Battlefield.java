@@ -1059,7 +1059,7 @@ final class Battlefield {
             }
             var4 = 0;
             while (var4 < this.mapHeight) {
-              this.tiles[var3 + this.mapWidth * var4].a(var4, var3, this.currentPlayer, 0);
+              this.tiles[var3 + this.mapWidth * var4].applyStructureTurnEffects(var4, var3, this.currentPlayer, 0);
               var4++;
             }
             var3++;

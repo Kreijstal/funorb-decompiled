@@ -37,7 +37,7 @@ final class MusicPatchNode extends IntrusiveNode {
         field_C = null;
         field_G = null;
         if (obfuscationGuard != 9480) {
-          MusicPatchNode.f(69);
+          MusicPatchNode.initializeSharedDialogHost(69);
         }
     }
 
@@ -53,16 +53,16 @@ final class MusicPatchNode extends IntrusiveNode {
         this.envelope = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setSpriteMenuTextColours(int param0, int param1, int param2, int param3) {
         SoundPanSupport.field_c = param2;
         DualNodeDeque.field_g = param1;
         ActionRequest.field_n = param0;
         if (param3 != 3815) {
-          MusicPatchNode.a(-70, -81, 66, 75);
+          MusicPatchNode.setSpriteMenuTextColours(-70, -81, 66, 75);
         }
     }
 
-    final static void f(int param0) {
+    final static void initializeSharedDialogHost(int param0) {
         if (param0 != -28093) {
           MusicPatchNode.releaseStatics(38);
           BufferedFile.initializeGameDialogHost((byte) 102);

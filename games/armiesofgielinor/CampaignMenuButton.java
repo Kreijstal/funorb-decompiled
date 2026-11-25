@@ -14,7 +14,7 @@ final class CampaignMenuButton {
     static String field_b;
     static LogoMesh[] field_a;
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isSingleLowercaseCharacter(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_13_0 = null;
@@ -57,7 +57,7 @@ final class CampaignMenuButton {
         GradientUiRenderer.drawCenteredSolidText(this.label, IgnoreListLookupSupport.toInterfaceX(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
     }
 
-    final static void b(int param0) {
+    final static void openLoginFromGuestSession(int param0) {
         if (!QuickChatCategoryRepository.guestSession) {
           throw new IllegalStateException();
         }

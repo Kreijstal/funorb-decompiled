@@ -177,7 +177,7 @@ final class QuickChatMenu extends ClientUiComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawTintedTerrainTileLayers(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int var8;
@@ -248,7 +248,7 @@ final class QuickChatMenu extends ClientUiComponent {
         return;
     }
 
-    final static void a(ClientUiComponent param0, int param1, boolean param2) {
+    final static void openChatFilterMenu(ClientUiComponent param0, int param1, boolean param2) {
         ClientContextMenu var8 = null;
         RgbSprite var10 = null;
         String var9 = null;

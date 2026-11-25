@@ -1888,7 +1888,7 @@ final class TutorialController {
                                                                 if (!this.selectionState.hasActivationInput((byte) 76)) {
                                                                   return;
                                                                 }
-                                                                MusicPatchNode.f(param1 - 28093);
+                                                                MusicPatchNode.initializeSharedDialogHost(param1 - 28093);
                                                                 if (var9 == 0) {
                                                                   return;
                                                                 }
@@ -2080,7 +2080,7 @@ final class TutorialController {
                                 if (!this.selectionState.hasActivationInput((byte) 67)) {
                                   return;
                                 }
-                                CampaignResult.a(CombatEvent.d((byte) -128), (byte) -3);
+                                CampaignResult.openQuitPage(CombatEvent.d((byte) -128), (byte) -3);
                                 if (var9 == 0) {
                                   return;
                                 }
@@ -2228,7 +2228,7 @@ final class TutorialController {
               if (!this.selectionState.hasActivationInput((byte) 89)) {
                 return;
               }
-              NameSuggestionList.a(-28541);
+              NameSuggestionList.initializeSharedCombatSandbox(-28541);
               var6 = param0 ? 1 : 0;
               CipherPacketBuffer.changeSharedUiStage(var6 != 0, -7, 1, ChatInputDispatchSupport.field_a);
               if (var9 == 0) {

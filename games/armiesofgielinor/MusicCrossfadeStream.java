@@ -221,7 +221,7 @@ final class MusicCrossfadeStream extends PcmStream {
         return null;
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean isSharedUiStageActive(int param0, boolean param1) {
         if (!param1) {
           return false;
         }
@@ -452,7 +452,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawSharedLobbyPanels(byte param0, boolean param1) {
         ClientUiComponent stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         ClientUiComponent stackIn_10_0 = null;

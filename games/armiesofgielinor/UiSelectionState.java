@@ -195,7 +195,7 @@ final class UiSelectionState {
             var5 = LocalAccountNameSupport.field_b[var4_int];
             if (var5 != null) {
               if (0 != var5.pressedButton) {
-                QuickChatMenu.a(var5, var4_int, false);
+                QuickChatMenu.openChatFilterMenu(var5, var4_int, false);
               }
               var6 = MarkerSliderPainter.getChatFilter(var4_int, -119);
               ArchiveLoadStep.field_g[var4_int].sprite = ImageProducerSurface.field_n[var6];

@@ -59,7 +59,7 @@ final class ArchiveLoadSequence {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void readPackedRatingLeaderboardStats(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -101,7 +101,7 @@ final class ArchiveLoadSequence {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int fitPopupX(int param0, int param1, int param2, int param3) {
         if (SoftwareRaster.width >= param2 + param0) {
           return param0;
         }

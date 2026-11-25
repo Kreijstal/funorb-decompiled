@@ -72,7 +72,7 @@ class ClientUiComponent extends ClientUiNode {
         }
     }
 
-    final static void c(boolean param0, int param1) {
+    final static void advanceLobbyPanelTransitions(boolean param0, int param1) {
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 > -101) {
@@ -521,7 +521,7 @@ class ClientUiComponent extends ClientUiNode {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void layoutSharedLobbyPanels(int param0, boolean param1) {
         int var6 = 0;
         int var11 = 0;
         int stackIn_4_0 = 0;
@@ -725,7 +725,7 @@ class ClientUiComponent extends ClientUiNode {
         RuntimeException var5 = null;
         try {
           if (!obfuscationGuard) {
-            ClientUiComponent.a(-53, false);
+            ClientUiComponent.layoutSharedLobbyPanels(-53, false);
           }
           if (previousSibling == null) {
             child.pendingYDelta = 0;

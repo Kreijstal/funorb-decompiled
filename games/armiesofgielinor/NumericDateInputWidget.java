@@ -52,7 +52,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         return true;
     }
 
-    private final void a(String param0, Widget param1, int param2, int param3, int param4) {
+    private final void drawDateFieldLabel(String param0, Widget param1, int param2, int param3, int param4) {
         try {
           AccountIdentifierStatus.field_e.drawCentered(param0, param4 - (-param1.x - (param1.width >> 1)), param1.y + (param2 - 5), param3, -1);
         } catch (RuntimeException runtimeException) {
@@ -178,7 +178,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         return null;
     }
 
-    final static void b(boolean param0) {
+    final static void markAccountCreationBlocked(boolean param0) {
         TilePosition.a((byte) -99, CombatEvent.d((byte) -111));
         if (param0) {
           cachedConsoleSource = (String) null;
@@ -193,9 +193,9 @@ final class NumericDateInputWidget extends DateInputWidget {
         if (obfuscationGuard < -82) {
           originX = originX + this.x;
           originY = originY + this.y;
-          this.a(MusicPatchNode.field_z, this.dayInput, originY, 16777215, originX);
-          this.a(BitCountSupport.field_e, this.monthInput, originY, 16777215, originX);
-          this.a(BattleTutorial.field_l, this.yearInput, originY, 16777215, originX);
+          this.drawDateFieldLabel(MusicPatchNode.field_z, this.dayInput, originY, 16777215, originX);
+          this.drawDateFieldLabel(BitCountSupport.field_e, this.monthInput, originY, 16777215, originX);
+          this.drawDateFieldLabel(BattleTutorial.field_l, this.yearInput, originY, 16777215, originX);
           return;
         }
     }

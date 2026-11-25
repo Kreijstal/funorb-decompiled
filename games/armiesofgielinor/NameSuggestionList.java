@@ -61,7 +61,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeSharedCombatSandbox(int param0) {
         int[] var2 = new int[3];
         int[] var1 = var2;
         var2[0] = 1;
@@ -76,7 +76,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         TriangleRasterizer.rebuildPaletteWithGamma(0.75f);
     }
 
-    final static WidgetTheme k(int param0) {
+    final static WidgetTheme getSharedWidgetTheme(int param0) {
         if (param0 != 5) {
           field_J = (String) null;
         }

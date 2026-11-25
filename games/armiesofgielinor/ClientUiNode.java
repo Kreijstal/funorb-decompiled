@@ -19,7 +19,7 @@ class ClientUiNode extends DualLinkedNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 19) {
-            ClientUiNode.b(49, 30);
+            ClientUiNode.unpackChatFilterSettings(49, 30);
           }
           var2_int = mission.campaign.campaignIndex;
           var3 = mission.missionId;
@@ -39,7 +39,7 @@ class ClientUiNode extends DualLinkedNode {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void unpackChatFilterSettings(int param0, int param1) {
         MaskedTextEntryPainter.field_B = (param0 & 51) >> 4;
         if (param1 != -27498) {
           field_x = (ClientUiComponent) null;
@@ -70,7 +70,7 @@ class ClientUiNode extends DualLinkedNode {
     ClientUiNode() {
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

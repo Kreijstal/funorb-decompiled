@@ -202,7 +202,7 @@ final class DeployEvent extends GameEvent {
             FloorModSupport.socialListState != 1) {
             TaggedMapData.field_g.scrollContainer.viewport.text = ConsoleParseException.field_a;
             TaggedMapData.field_g.inputEnabled = false;
-            ArchiveIndex.a(TaggedMapData.field_g.listContent, -71);
+            ArchiveIndex.collapseComponentVerticalBounds(TaggedMapData.field_g.listContent, -71);
             return;
           }
           TaggedMapData.field_g.scrollContainer.viewport.text = null;

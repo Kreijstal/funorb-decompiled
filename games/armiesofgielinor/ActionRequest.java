@@ -14,7 +14,7 @@ abstract class ActionRequest extends IntrusiveNode {
     static String[] field_l;
     static String field_q;
 
-    final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void drawGridTileInteractionOverlays(boolean param0, int param1, int param2, byte param3, int param4, int param5) {
         if (param3 <= 64) {
           return;
         }
@@ -82,7 +82,7 @@ abstract class ActionRequest extends IntrusiveNode {
 
     abstract PreparedAction prepareAction(int obfuscationGuard, Battlefield battlefield);
 
-    public static void a(int param0) {
+    public static void releaseActionRequestStatics(int param0) {
         field_q = null;
         unitModels = (ModelMeshBase[][]) null;
         field_l = null;

@@ -163,7 +163,7 @@ final class FullscreenDisplayMode {
         int var9Lifetime1;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var7_int = SetCoatConsoleCommand.b(7, param4);
+          var7_int = SetCoatConsoleCommand.alignLengthToEightBytes(7, param4);
           if (DateValiditySupport.field_b == null) {
             DateValiditySupport.field_b = new java.security.SecureRandom();
           }

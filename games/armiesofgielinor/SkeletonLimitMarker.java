@@ -8,19 +8,19 @@ final class SkeletonLimitMarker extends PreparedAction {
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
           if (obfuscationGuard != 64) {
-            SkeletonLimitMarker.a(true, -124);
+            SkeletonLimitMarker.initializePairedSpriteSelection(true, -124);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void initializePairedSpriteSelection(boolean param0, int param1) {
         GameClock.field_d = new UiSelectionState(2);
         GameClock.field_d.restoreSelection(-1, param0, TileableNoiseGenerator.hitTestPairedSprites(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY), param1);
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyByteArray(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -77,7 +77,7 @@ final class SkeletonLimitMarker extends PreparedAction {
           return query;
         }
         byte[] unusedPackedCoat = (byte[]) null;
-        SkeletonLimitMarker.a((byte[]) null, -39);
+        SkeletonLimitMarker.copyByteArray((byte[]) null, -39);
         guardedQuery = LocalCoatSupport.localCoat.toQueryString((byte) -109);
         System.out.println(guardedQuery);
         return guardedQuery;

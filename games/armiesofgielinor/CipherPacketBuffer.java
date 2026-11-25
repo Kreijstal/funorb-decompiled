@@ -212,7 +212,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           return;
         }
         BufferedSocket.field_i = null;
-        CampaignResult.a(73);
+        CampaignResult.releaseCampaignMenuResources(73);
         DualNodeDeque.field_c = param3;
         if (0 != param1) {
           if (param1 == 23) {
@@ -222,7 +222,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             QuickChatSetupSupport.field_a = new ScreenWipeTransition();
           }
           GameClock.field_j = 0;
-          if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+          if (MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true)) {
             ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
           }
         } else {
@@ -233,7 +233,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               QuickChatSetupSupport.field_a = new ScreenWipeTransition();
             }
             GameClock.field_j = 0;
-            if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+            if (MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true)) {
               ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
             }
           } else {
@@ -241,13 +241,13 @@ final class CipherPacketBuffer extends PacketBuffer {
             if (param1 != -10) {
               QuickChatSetupSupport.field_a = new ScreenWipeTransition();
               GameClock.field_j = 0;
-              if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+              if (MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true)) {
                 ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].clearSelectionResources(true);
               }
             } else {
               GameClock.field_j = 0;
-              if (!MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
-                if (!MusicCrossfadeStream.a(param1, true)) {
+              if (!MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true)) {
+                if (!MusicCrossfadeStream.isSharedUiStageActive(param1, true)) {
                   if (ChatInputDispatchSupport.field_a == 16) {
                     RasterState.clearSharedSpriteCacheAndCollectGarbage((byte) 111);
                     TextLineLayout.initializeBasicBattleGraphics((byte) -41);
@@ -285,7 +285,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   ConsoleTextNode.field_p[param1].restoreStageSelection(85, param0, var4);
                 }
                 if (param1 == 15) {
-                  SkeletonLimitMarker.a(param0, param2 - 1);
+                  SkeletonLimitMarker.initializePairedSpriteSelection(param0, param2 - 1);
                 }
                 if (ChatInputDispatchSupport.field_a == 16) {
                   RasterState.clearSharedSpriteCacheAndCollectGarbage((byte) 111);
@@ -303,7 +303,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
           }
         }
-        if (MusicCrossfadeStream.a(param1, true)) {
+        if (MusicCrossfadeStream.isSharedUiStageActive(param1, true)) {
           var4Lifetime1 = -2;
           if (param1 == 15) {
             var4Lifetime1 = -1;
@@ -329,7 +329,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             ConsoleTextNode.field_p[param1].restoreStageSelection(85, param0, var4Lifetime1);
           }
           if (param1 == 15) {
-            SkeletonLimitMarker.a(param0, param2 - 1);
+            SkeletonLimitMarker.initializePairedSpriteSelection(param0, param2 - 1);
           }
         }
         if (ChatInputDispatchSupport.field_a == 16) {

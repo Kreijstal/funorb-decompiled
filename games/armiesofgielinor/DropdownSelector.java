@@ -557,7 +557,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           }
           FriendRequestSupport.configureMessageDialogFrames(param7, param1, param12, param14, -3, param6);
           ContextualRuntimeException.setMessageDialogCenter((byte) -85, param15, param9);
-          MusicPatchNode.a(param8, param0, param13, 3815);
+          MusicPatchNode.setSpriteMenuTextColours(param8, param0, param13, 3815);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

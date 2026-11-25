@@ -199,13 +199,13 @@ final class ActionSpell extends Spell {
         FixedSquareRootSupport.field_b.bindRasterTarget(obfuscationGuard - 17900);
         ContextualRuntimeException.setMessageDialogCenter((byte) -85, width / 2, height / 2);
         if (obfuscationGuard == 23505) {
-          MeshObject.a(-8994, width, height);
+          MeshObject.resizeSharedDialogViewport(-8994, width, height);
           CampaignMission.resizeLoginDialogViewport(height, -22696, width);
           ContentTransitionDialog.c(width / 2, height / 2, 9);
           return;
         }
         ActionSpell.resizeRasterViewport(-106, -34, -122);
-        MeshObject.a(-8994, width, height);
+        MeshObject.resizeSharedDialogViewport(-8994, width, height);
         CampaignMission.resizeLoginDialogViewport(height, -22696, width);
         ContentTransitionDialog.c(width / 2, height / 2, 9);
     }

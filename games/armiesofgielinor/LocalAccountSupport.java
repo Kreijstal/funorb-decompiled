@@ -183,7 +183,7 @@ final class LocalAccountSupport {
     }
 
     final static void initializeLoginDialogHost(int param0) {
-        ReloadPageSupport.field_c = NameSuggestionList.k(5);
+        ReloadPageSupport.field_c = NameSuggestionList.getSharedWidgetTheme(5);
         KingBlackDragonEvent.field_C = new ModalDialogHost();
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;

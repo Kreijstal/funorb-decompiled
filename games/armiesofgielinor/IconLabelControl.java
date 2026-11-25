@@ -89,7 +89,7 @@ final class IconLabelControl extends ClientUiComponent {
             var61 = var45.field_K;
             MouseWheelSource.a((byte) -105, var61, ArchiveLoadSequence.field_g, 0, 0);
           } else {
-            ListMissionsConsoleCommand.e((byte) -63);
+            ListMissionsConsoleCommand.compactLogoFaceDepthBuckets((byte) -63);
           }
           var55 = new int[param1.field_t];
           var50 = var55;

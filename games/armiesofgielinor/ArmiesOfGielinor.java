@@ -143,7 +143,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                         StructureTerrainSupport.exitFullscreen(-104);
                       }
                       if (var2_int == 2) {
-                        CampaignResult.a((java.applet.Applet) (this), (byte) -3);
+                        CampaignResult.openQuitPage((java.applet.Applet) (this), (byte) -3);
                       }
                     }
                     this.advanceGameUi(0, true);
@@ -160,7 +160,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     StructureTerrainSupport.exitFullscreen(-104);
                   }
                   if (var2_int == 2) {
-                    CampaignResult.a((java.applet.Applet) (this), (byte) -3);
+                    CampaignResult.openQuitPage((java.applet.Applet) (this), (byte) -3);
                   }
                 }
                 this.advanceGameUi(0, true);
@@ -200,7 +200,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 14) {
-                  RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.getLobbyRoomListContent((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), LogoFaceSortSupport.getLobbyPlayerListContent(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
+                  RadialSummonItem.initializeLobbyState(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.getLobbyRoomListContent((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), LogoFaceSortSupport.getLobbyPlayerListContent(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
                   IntroSequence.initializeSocialLists(TextWidthSupport.b(-126), -72, ProjectileEffect.getSocialListContent(0));
                   LobbyNotificationSupport.field_d = 0;
                   ValidatedTextWidget.field_Z = true;
@@ -770,7 +770,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       decompiledFrameRemainder2 = (var8 != 0);
                     }
                     if ((decompiledFrameRemainder2) &&
-                      (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true))) {
+                      (MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true))) {
                       ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].advanceStageUi((byte) -109);
                       if (var8 != 0) {
                         ResourceArchive.c(-20193);
@@ -896,10 +896,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (!SoundEffectPreloadSupport.field_a) {
                   SessionTransitionSupport.restartGuestSession(false);
                   if (var8 != 0) {
-                    CampaignMenuButton.b(-20267);
+                    CampaignMenuButton.openLoginFromGuestSession(-20267);
                   }
                 } else {
-                  CampaignMenuButton.b(-20267);
+                  CampaignMenuButton.openLoginFromGuestSession(-20267);
                 }
                 UnitAnimationSelectionSupport.field_f = DialWidgetPainter.field_c;
                 decompiledFrameRemainder4 = (var8 != 0);
@@ -928,7 +928,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   if (ContentTransitionStage.field_a) {
                     CipherPacketBuffer.changeSharedUiStage(false, -4, 1, ChatInputDispatchSupport.field_a);
                   }
-                  if (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
+                  if (MusicCrossfadeStream.isSharedUiStageActive(ChatInputDispatchSupport.field_a, true)) {
                     DisplaySettingsDialog.clearInactiveClientState((byte) 125);
                   }
                 }
@@ -1259,7 +1259,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           CampaignRewardPreview.releaseStatics(126);
           CombatEvent.releaseStatics((byte) -127);
           ManaEvent.releaseStatics(-829);
-          MoveEvent.g(obfuscationGuard ^ -29395);
+          MoveEvent.releaseMoveEventStatics(obfuscationGuard ^ -29395);
           SummonEvent.releaseStatics((byte) 113);
           TurnEffectEvent.releaseTurnEffectStatics(true);
           DeployRequest.releaseStatics((byte) 44);
@@ -1280,7 +1280,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           GameEvent.releaseStatics((byte) -103);
           UnitInfoPopup.releaseStatics(obfuscationGuard ^ 101);
           ActionSpell.releaseStatics(false);
-          ActionRequest.a(100);
+          ActionRequest.releaseActionRequestStatics(100);
           CipherPacketBuffer.releaseStatics((byte) -97);
           ProjectileEffect.releaseStatics(obfuscationGuard + 77);
           CombatPresentation.releaseStatics(-128);

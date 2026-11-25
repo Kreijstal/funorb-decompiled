@@ -40,7 +40,7 @@ final class HighscoreAccountEntry {
           if (storedData instanceof byte[]) {
             byteArray = (byte[]) (storedData);
             if (copyByteArrays) {
-              stackIn_8_0 = SkeletonLimitMarker.a(byteArray, 31732);
+              stackIn_8_0 = SkeletonLimitMarker.copyByteArray(byteArray, 31732);
               return stackIn_8_0;
             }
             stackIn_6_0 = byteArray;

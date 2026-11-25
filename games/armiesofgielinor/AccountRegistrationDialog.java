@@ -114,7 +114,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
               message = result.errorText;
               if (result.statusCode == 248) {
                 if (!obfuscationGuard) {
-                  NumericDateInputWidget.b(false);
+                  NumericDateInputWidget.markAccountCreationBlocked(false);
                 }
                 message = ResourceProtocolClient.field_m;
                 this.terminalFailure = true;

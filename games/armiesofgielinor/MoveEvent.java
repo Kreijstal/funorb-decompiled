@@ -140,7 +140,7 @@ final class MoveEvent extends GameEvent {
         }
     }
 
-    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonUiAssets(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         int stackIn_23_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -175,7 +175,7 @@ final class MoveEvent extends GameEvent {
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) ChatMessageWriteSupport.loadAntialiasedFontByName("arezzo14bold", param2, param3, (byte) -87, "commonui"));
           var4 = new RgbSprite(param0.getFileByName("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           if (param1) {
-            MoveEvent.g(90);
+            MoveEvent.releaseMoveEventStatics(90);
           }
           AccountNameFoldingSupport.a("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.loadIndexedSpritesByName("screen_options", -28106, "commonui", param2);
@@ -429,7 +429,7 @@ final class MoveEvent extends GameEvent {
               }
               if (var7 > 0) {
                 battlefield.refreshTileEffectsNear(this.startY, this.startX, obfuscationGuard + 26661, var7);
-                Bzip2State.a((byte) 101);
+                Bzip2State.rebuildTerrainPresentationGrid((byte) 101);
               }
               if (var12 != 0) {
                 var6.movementSpent = true;
@@ -467,7 +467,7 @@ final class MoveEvent extends GameEvent {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseMoveEventStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -476,7 +476,7 @@ final class MoveEvent extends GameEvent {
           matchSetupPanel = null;
           instructionsPanel = null;
           if (param0 != 29333) {
-            MoveEvent.g(-45);
+            MoveEvent.releaseMoveEventStatics(-45);
           }
           campaignMenu = null;
           tutorialLayout = null;

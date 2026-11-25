@@ -37,7 +37,7 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static RgbSprite[] createGradientBarSprites(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
         RgbSprite var13 = null;
         RgbSprite var14 = null;
         int[] var16 = SoftwareRaster.pixels;
@@ -80,7 +80,7 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 
-    final static int b(int param0, int param1) {
+    final static int alignLengthToEightBytes(int param0, int param1) {
         int var2 = 0;
         if ((param0 & param1) != 0) {
           var2 = 8 - (7 & param1);

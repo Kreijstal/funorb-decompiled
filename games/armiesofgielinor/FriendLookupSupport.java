@@ -84,7 +84,7 @@ final class FriendLookupSupport {
           if (GameCanvas.a((byte) -125, var4)) {
             var5 = var4;
           } else {
-            if (CampaignMenuButton.a(30, var4)) {
+            if (CampaignMenuButton.isSingleLowercaseCharacter(30, var4)) {
               var5 = SpellCastAction.composeAnimationName(param3, (byte) 78, var4);
             } else {
               if (!FocusProxyWidget.isSingleSpace(var4, false)) {

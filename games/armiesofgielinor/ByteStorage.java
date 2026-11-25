@@ -12,11 +12,11 @@ abstract class ByteStorage {
 
     abstract void setBytes(byte obfuscationGuard, byte[] bytes);
 
-    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] createThinBeveledFrameSprites(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 <= -23) {
           return BattleCharacter.createBeveledFrameSprites(param3, 1, param4, 1, 3, param1, -1, 1, param0);
         }
-        ByteStorage.a(0, -20, (byte) -123, -41, 33);
+        ByteStorage.createThinBeveledFrameSprites(0, -20, (byte) -123, -41, 33);
         return BattleCharacter.createBeveledFrameSprites(param3, 1, param4, 1, 3, param1, -1, 1, param0);
     }
 
@@ -33,7 +33,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int startOffset);
 
-    final static String a(int param0, java.applet.Applet param1) {
+    final static String readSettingsCookie(int param0, java.applet.Applet param1) {
         try {
           int var6 = 0;
           String var3 = null;

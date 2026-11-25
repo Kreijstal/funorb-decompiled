@@ -865,7 +865,7 @@ final class InstructionsPanel {
         if (null != this.auxiliaryPreviewModel) {
           this.auxiliaryPreviewModel.setScreenPosition(IgnoreListLookupSupport.toInterfaceX(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
-          SpriteScrollBar.a(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
+          SpriteScrollBar.drawVisibilityTrinketIcon(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;

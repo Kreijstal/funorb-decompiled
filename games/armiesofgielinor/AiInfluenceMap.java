@@ -786,7 +786,7 @@ final class AiInfluenceMap {
             }
             DelayedPacket.a(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              ArchiveLoadSequence.a(var14, -83);
+              ArchiveLoadSequence.readPackedRatingLeaderboardStats(var14, -83);
               if (0 == var6_intLifetime1) {
                 var3.field_r = RevivalEvent.field_D;
                 var3.field_s = SpectateRoomRequestSupport.field_e;
@@ -797,7 +797,7 @@ final class AiInfluenceMap {
                 DisplaySettingsDialog.appendRatingLeaderboardEntry(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, UnitUnlockPreviewModel.field_d, (byte) 125, var6_intLifetime1);
               }
             }
-            ArchiveIndex.a(var5, 0);
+            ArchiveIndex.prepareRatingLeaderboardOrder(var5, 0);
             dupTemp$0 = new String[2][var5];
             var3.field_t = dupTemp$0;
             var6 = dupTemp$0;

@@ -7,7 +7,7 @@ abstract class MeshObject {
     static int field_d;
     static String field_c;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void resizeSharedDialogViewport(int param0, int param1, int param2) {
         SoundPlaybackHandle.dialogViewportWidth = param1;
         if (param0 != -8994) {
           return;
@@ -18,9 +18,9 @@ abstract class MeshObject {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiLetter(byte param0, char param1) {
         if (param0 >= -95) {
-          MeshObject.a(61, 53, 87);
+          MeshObject.resizeSharedDialogViewport(61, 53, 87);
           if (param1 < 65) {
             if (97 > param1) {
               return false;

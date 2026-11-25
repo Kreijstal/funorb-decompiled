@@ -46,7 +46,7 @@ final class Bzip2State {
         field_C = null;
     }
 
-    final static void a(byte param0) {
+    final static void rebuildTerrainPresentationGrid(byte param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -61,7 +61,7 @@ final class Bzip2State {
             CampaignMenuEntry.field_u[var1_int] = QuickChatCategory.field_G[QuickChatMenuDisplaySupport.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
-            Bzip2State.a((byte) 84);
+            Bzip2State.rebuildTerrainPresentationGrid((byte) 84);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ConsoleParseException.field_c; var1_intLifetime1++) {
             for (var2 = 0; ResourceRequest.field_y > var2; var2++) {
@@ -147,7 +147,7 @@ final class Bzip2State {
         }
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static RgbSprite[] loadSpritesWithOptionalAlphaById(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_5_0 = null;
         RgbSprite[] stackIn_7_0 = null;

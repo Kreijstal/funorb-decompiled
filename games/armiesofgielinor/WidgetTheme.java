@@ -261,7 +261,7 @@ final class WidgetTheme {
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.createStateStyle(4, (byte) -105).setStartsNewLayer(true, (byte) 66).setFrameSprites(var5, param0 - 13421900);
-          var4.createStateStyle(5, (byte) -113).setFrameSprites(ByteStorage.a(65793, 0, (byte) -125, 0, 0), -126).setStartsNewLayer(true, (byte) 121).setTextColour(-1, (byte) -109);
+          var4.createStateStyle(5, (byte) -113).setFrameSprites(ByteStorage.createThinBeveledFrameSprites(65793, 0, (byte) -125, 0, 0), -126).setStartsNewLayer(true, (byte) 121).setTextColour(-1, (byte) -109);
           this.field_j = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.horizontalAlignment = 0;

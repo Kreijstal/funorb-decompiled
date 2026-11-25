@@ -630,7 +630,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(Widget.ticksThisFrame > var3)) {
                       this.runRenderFrame(-11);
-                      MapTile.a(IntPair.field_m, IndexedSpriteBase.field_b, true);
+                      MapTile.pumpAwtEventQueue(IntPair.field_m, IndexedSpriteBase.field_b, true);
                       break;
                     }
                     this.runClientTick(17684);

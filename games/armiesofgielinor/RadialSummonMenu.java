@@ -169,7 +169,7 @@ final class RadialSummonMenu {
         LabeledWidgetContainer.field_R.addChild(LoginForm.field_K, 70);
         LoginForm.field_K.addChild(IconTextComponent.field_Kb, 112);
         LoginForm.field_K.addChild(ConsolePanel.field_m, 74);
-        ClientUiComponent.a(27, param1);
+        ClientUiComponent.layoutSharedLobbyPanels(27, param1);
     }
 
     public static void releaseStatics(byte obfuscationGuard) {

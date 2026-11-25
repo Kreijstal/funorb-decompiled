@@ -59,7 +59,7 @@ final class MusicTrackSelectionSupport {
             var6 = var6 | 16;
           }
           EmailValidator.outgoingPacket.writeByte(1, var6);
-          var7 = ByteStorage.a(0, CombatEvent.d((byte) -116));
+          var7 = ByteStorage.readSettingsCookie(0, CombatEvent.d((byte) -116));
           if (var7 == null) {
             var7 = "";
           }

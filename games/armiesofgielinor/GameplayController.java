@@ -3610,7 +3610,7 @@ final class GameplayController {
                 this.field_O = true;
               }
               if (((EventPresenter) (var3)).event.eventKind == 24) {
-                Bzip2State.a((byte) 96);
+                Bzip2State.rebuildTerrainPresentationGrid((byte) 96);
               }
               if (((EventPresenter) (var3)).event.presentationComplete) {
                 ((EventPresenter) (var3)).event.applyToBattlefield(this.battlefield, -26661);
@@ -9217,7 +9217,7 @@ final class GameplayController {
                 continue;
               }
             } else {
-              var5 = IconTextComponent.l(26136);
+              var5 = IconTextComponent.getBattleCameraX(26136);
               stackIn_81_0 = param0;
             }
             if (stackIn_81_0 < 116) {
@@ -11590,7 +11590,7 @@ final class GameplayController {
                 continue;
               }
             } else {
-              var9 = IconTextComponent.l(param0 ^ 26138);
+              var9 = IconTextComponent.getBattleCameraX(param0 ^ 26138);
               stackIn_111_0 = BattleUnitRenderer.getCameraY(param0 - 1);
             }
             var10 = stackIn_111_0;

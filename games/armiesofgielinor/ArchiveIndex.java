@@ -244,7 +244,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void prepareRatingLeaderboardOrder(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -267,7 +267,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(ClientUiComponent param0, int param1) {
+    final static void collapseComponentVerticalBounds(ClientUiComponent param0, int param1) {
         ClientUiComponent var5 = null;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         ClientUiComponent var4 = (ClientUiComponent) (param0.children.first((byte) 121));

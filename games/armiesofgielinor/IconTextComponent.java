@@ -52,9 +52,9 @@ final class IconTextComponent extends ClientUiComponent {
         }
     }
 
-    final static int l(int param0) {
+    final static int getBattleCameraX(int param0) {
         if (param0 != 26136) {
-          IconTextComponent.l(77);
+          IconTextComponent.getBattleCameraX(77);
         }
         return ResourceArchive.field_a.currentPosition[0];
     }
@@ -197,7 +197,7 @@ final class IconTextComponent extends ClientUiComponent {
         }
     }
 
-    final static boolean a(FullscreenDisplayMode param0, FullscreenDisplayMode param1, int param2) {
+    final static boolean isDisplayModeSizeBefore(FullscreenDisplayMode param0, FullscreenDisplayMode param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

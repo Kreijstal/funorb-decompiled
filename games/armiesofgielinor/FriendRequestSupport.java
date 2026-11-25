@@ -22,7 +22,7 @@ final class FriendRequestSupport {
           return;
         }
         try {
-          var7 = ArchiveLoadSequence.a(var2_int, 12, var5, -1);
+          var7 = ArchiveLoadSequence.fitPopupX(var2_int, 12, var5, -1);
           var8 = PasswordLengthSupport.a(var6, 0, var3, 20);
           SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
           SoftwareRaster.fillRectangle(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);

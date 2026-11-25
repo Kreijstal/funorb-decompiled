@@ -30,7 +30,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -73 / ((param2 - 55) / 56);
-          stackIn_1_0 = ClientUiNode.a(param1, param0, 0, -8779);
+          stackIn_1_0 = ClientUiNode.computeCrc32(param1, param0, 0, -8779);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

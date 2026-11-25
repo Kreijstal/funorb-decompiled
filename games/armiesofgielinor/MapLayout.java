@@ -61,7 +61,7 @@ final class MapLayout extends IntrusiveNode {
         }
     }
 
-    private final void a(MapTile[] param0, PacketBuffer param1, int param2) {
+    private final void readLegacyStartingUnits(MapTile[] param0, PacketBuffer param1, int param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -158,7 +158,7 @@ final class MapLayout extends IntrusiveNode {
         return (int[][]) null;
     }
 
-    private final MapTile[] a(int[] param0, int param1, Battlefield param2) {
+    private final MapTile[] buildTerrainTiles(int[] param0, int param1, Battlefield param2) {
         int var7 = 0;
         int var8 = 0;
         int var4_int = 0;
@@ -395,7 +395,7 @@ final class MapLayout extends IntrusiveNode {
           for (var7_int = 0; var5 > var7_int; var7_int++) {
             var6[var7_int] = var4.readUnsignedByte(0);
           }
-          var7 = this.a(var18, 22654, battlefield);
+          var7 = this.buildTerrainTiles(var18, 22654, battlefield);
           if (0 <= this.formatVersion) {
             var8 = var4.readUnsignedByte(0);
             var9 = new TilePosition(0, 0);
@@ -425,7 +425,7 @@ final class MapLayout extends IntrusiveNode {
               }
             }
           } else {
-            this.a(var7, var4, 105);
+            this.readLegacyStartingUnits(var7, var4, 105);
           }
           stackIn_34_0 = var7;
           return stackIn_34_0;

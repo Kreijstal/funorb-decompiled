@@ -7,7 +7,7 @@ final class CampaignResult {
     static ClientUiComponent field_a;
     int turnsTaken;
 
-    final static void a(int param0) {
+    final static void releaseCampaignMenuResources(int param0) {
         int var1 = 20 % ((param0 + 6) / 45);
         FullscreenStatusDialog.field_X = null;
         MoveEvent.campaignMenu.releaseCampaignResources(123);
@@ -17,7 +17,7 @@ final class CampaignResult {
         return "(turnsTaken: " + this.turnsTaken + " damageTaken: " + this.damageTaken + ")";
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openQuitPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -40,7 +40,7 @@ final class CampaignResult {
               return;
             }
             var3 = (java.applet.Applet) null;
-            CampaignResult.a((java.applet.Applet) null, (byte) -10);
+            CampaignResult.openQuitPage((java.applet.Applet) null, (byte) -10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -63,7 +63,7 @@ final class CampaignResult {
 
     public static void releaseStatics(byte obfuscationGuard) {
         if (obfuscationGuard >= -113) {
-          CampaignResult.a(3);
+          CampaignResult.releaseCampaignMenuResources(3);
           field_d = null;
           field_a = null;
           return;

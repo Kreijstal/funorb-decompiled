@@ -38,7 +38,7 @@ final class PcmPlayerService implements Runnable {
               }
               SpriteButtonPainter.sleepMillis(10L, 0);
               eventSource = (Object) null;
-              MapTile.a(this.platformTasks, (Object) null, true);
+              MapTile.pumpAwtEventQueue(this.platformTasks, (Object) null, true);
             }
             loopExitKind = 0;
           } catch (java.lang.Exception workerFailure) {

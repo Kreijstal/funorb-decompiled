@@ -270,7 +270,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (5 == actionCode) {
-            CampaignResult.a(CombatEvent.d((byte) -115), (byte) -3);
+            CampaignResult.openQuitPage(CombatEvent.d((byte) -115), (byte) -3);
           }
           if (6 == actionCode &&
             ChatMessageWriteSupport.field_b) {
@@ -673,7 +673,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (null == ContentTransitionDialog.field_eb) {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
-            HighscoreAccountEntry.field_e = SpriteScrollBar.c((byte) 111);
+            HighscoreAccountEntry.field_e = SpriteScrollBar.getEffectsLatencyFrames((byte) 111);
           }
           RegistrationAgreementPane.initializeLogoAnimation(LoginKind.field_g, (byte) 76, ContentTransitionDialog.field_eb, HighscoreAccountEntry.field_e);
           DisplayModeOptionPainter.field_u = null;

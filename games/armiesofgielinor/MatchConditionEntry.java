@@ -120,7 +120,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             initialLocation = packet.readNullTerminatedString(1);
             EmailValidator.currentLocationLabel = ((String) (initialLocation)).intern();
             chatFilterBits = packet.readUnsignedByte(0);
-            ClientUiNode.b(chatFilterBits, obfuscationGuard - 27499);
+            ClientUiNode.unpackChatFilterSettings(chatFilterBits, obfuscationGuard - 27499);
             return;
           }
           if (DiskCacheRequest.friendsByName == null) {

@@ -22,7 +22,7 @@ final class SpriteScrollBar {
     private boolean incrementHovered;
     private int thickness;
 
-    final static void a(int param0, int param1, byte param2, Unit param3) {
+    final static void drawVisibilityTrinketIcon(int param0, int param1, byte param2, Unit param3) {
         if (param2 != -97) {
           return;
         }
@@ -72,10 +72,10 @@ final class SpriteScrollBar {
         this.drawTrack(61);
     }
 
-    final static int c(byte param0) {
+    final static int getEffectsLatencyFrames(byte param0) {
         if (param0 < 93) {
           Unit var2 = (Unit) null;
-          SpriteScrollBar.a(-81, 18, (byte) -44, (Unit) null);
+          SpriteScrollBar.drawVisibilityTrinketIcon(-81, 18, (byte) -44, (Unit) null);
           return DropTargetWidgetContainer.field_K;
         }
         return DropTargetWidgetContainer.field_K;

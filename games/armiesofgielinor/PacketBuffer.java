@@ -548,7 +548,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendChecksum(byte obfuscationGuard, int startOffset) {
-        int var3 = ClientUiNode.a(this.position, this.payload, startOffset, -8779);
+        int var3 = ClientUiNode.computeCrc32(this.position, this.payload, startOffset, -8779);
         this.writeInt((byte) -87, var3);
         if (obfuscationGuard != -39) {
           this.writeSignedSmart((byte) -110, 112);
@@ -647,7 +647,7 @@ class PacketBuffer extends IntrusiveNode {
           field_k = (byte[][][]) null;
         }
         this.position = this.position - 4;
-        int var2 = ClientUiNode.a(this.position, this.payload, 0, -8779);
+        int var2 = ClientUiNode.computeCrc32(this.position, this.payload, 0, -8779);
         int var3 = this.readInt(1);
         if (var3 == var2) {
           return true;

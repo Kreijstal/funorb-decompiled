@@ -35,7 +35,7 @@ final class SpellConfirmationDialog {
           for (var3 = 1; var3 < var2_int; var3++) {
             var4 = param0[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (IconTextComponent.a(var4, param0[var5], 30549)) {
+              if (IconTextComponent.isDisplayModeSizeBefore(var4, param0[var5], 30549)) {
                 param0[1 + var5] = param0[var5];
                 continue;
               }

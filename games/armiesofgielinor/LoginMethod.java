@@ -146,7 +146,7 @@ final class LoginMethod {
             stackIn_13_0 = (byte[]) (bytes);
             return stackIn_13_0;
           }
-          stackIn_11_0 = SkeletonLimitMarker.a(bytes, 31732);
+          stackIn_11_0 = SkeletonLimitMarker.copyByteArray(bytes, 31732);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

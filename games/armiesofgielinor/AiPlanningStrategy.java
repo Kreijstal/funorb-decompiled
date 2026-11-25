@@ -68,7 +68,7 @@ abstract class AiPlanningStrategy {
             } else {
               ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
             }
-            ArchiveIndex.a(ListMissionsConsoleCommand.field_E.listContent, -47);
+            ArchiveIndex.collapseComponentVerticalBounds(ListMissionsConsoleCommand.field_E.listContent, -47);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {

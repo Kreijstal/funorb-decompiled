@@ -7,7 +7,7 @@ final class QuicksaveRequestSupport {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param9) {
           QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
-          ClientUiComponent.c(param9, -120);
+          ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
           if (ModalDialogHost.field_J > 0) {
             CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
           }
@@ -23,7 +23,7 @@ final class QuicksaveRequestSupport {
             ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
             MapTile.field_f.viewport.text = TelefragEvent.field_y;
             IconTextComponent.field_Kb.inputEnabled = false;
-            ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+            ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
           } else {
             IconTextComponent.field_Kb.inputEnabled = true;
             MapTile.field_f.viewport.text = null;
@@ -34,7 +34,7 @@ final class QuicksaveRequestSupport {
             SoftwareRaster.height == CachedArchiveProvider.field_p) {
             if (!param9) {
               QuickChatCategory.field_u = (-640 + NineSliceSpriteSupport.field_c) / 2;
-              ClientUiComponent.c(param9, -120);
+              ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
               if (ModalDialogHost.field_J > 0) {
                 CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
@@ -50,7 +50,7 @@ final class QuicksaveRequestSupport {
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+                ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
@@ -58,7 +58,7 @@ final class QuicksaveRequestSupport {
               }
             } else {
               QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
-              ClientUiComponent.c(param9, -120);
+              ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
               if (ModalDialogHost.field_J > 0) {
                 CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
@@ -74,7 +74,7 @@ final class QuicksaveRequestSupport {
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+                ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
@@ -89,13 +89,13 @@ final class QuicksaveRequestSupport {
           if (FixedSquareRootSupport.field_b.height == SoftwareRaster.height &&
             SoftwareRaster.width == FixedSquareRootSupport.field_b.width) {
             if (null != ToggleWidget.currentRoom) {
-              ClientUiComponent.a(45, false);
+              ClientUiComponent.layoutSharedLobbyPanels(45, false);
               if (param9) {
                 QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
               } else {
                 QuickChatCategory.field_u = (-640 + NineSliceSpriteSupport.field_c) / 2;
               }
-              ClientUiComponent.c(param9, -120);
+              ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
               if (ModalDialogHost.field_J > 0) {
                 CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               }
@@ -111,7 +111,7 @@ final class QuicksaveRequestSupport {
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+                ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
@@ -123,14 +123,14 @@ final class QuicksaveRequestSupport {
               return;
             }
             if (NumericDateInputWidget.roomSetup != null) {
-              ClientUiComponent.a(108, true);
+              ClientUiComponent.layoutSharedLobbyPanels(108, true);
             } else {
               BitmapTextLayout.layoutLobbyPanels(false);
             }
           }
           if (!param9) {
             QuickChatCategory.field_u = (-640 + NineSliceSpriteSupport.field_c) / 2;
-            ClientUiComponent.c(param9, -120);
+            ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
             if (ModalDialogHost.field_J > 0) {
               CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
             }
@@ -146,7 +146,7 @@ final class QuicksaveRequestSupport {
               ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
               MapTile.field_f.viewport.text = TelefragEvent.field_y;
               IconTextComponent.field_Kb.inputEnabled = false;
-              ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+              ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
             } else {
               IconTextComponent.field_Kb.inputEnabled = true;
               MapTile.field_f.viewport.text = null;
@@ -154,7 +154,7 @@ final class QuicksaveRequestSupport {
             }
           } else {
             QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
-            ClientUiComponent.c(param9, -120);
+            ClientUiComponent.advanceLobbyPanelTransitions(param9, -120);
             if (ModalDialogHost.field_J > 0) {
               CalendarSupport.updateLobbyPanels(param0, param9, 117, param5);
               MarkerSliderWidget.field_N.textHorizontalPadding = SoundEffectPreloadSupport.field_e.textHorizontalPadding;
@@ -169,7 +169,7 @@ final class QuicksaveRequestSupport {
                 ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+                ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
@@ -192,7 +192,7 @@ final class QuicksaveRequestSupport {
                 if (ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                   MapTile.field_f.viewport.text = TelefragEvent.field_y;
                   IconTextComponent.field_Kb.inputEnabled = false;
-                  ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
+                  ArchiveIndex.collapseComponentVerticalBounds(MapTile.field_f.content, param7 - 77);
                 } else {
                   IconTextComponent.field_Kb.inputEnabled = true;
                   MapTile.field_f.viewport.text = null;

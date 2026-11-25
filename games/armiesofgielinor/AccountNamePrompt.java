@@ -150,7 +150,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               discarded$9 = this.nameBuffer.append((char) var2);
             }
           }
-          if (MeshObject.a((byte) -125, (char) var2)) {
+          if (MeshObject.isAsciiLetter((byte) -125, (char) var2)) {
             discarded$10 = this.nameBuffer.append((char) var2);
             if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
@@ -233,7 +233,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               discarded$5 = this.nameBuffer.append((char) var2Lifetime1);
             }
           }
-          if (MeshObject.a((byte) -125, (char) var2Lifetime1)) {
+          if (MeshObject.isAsciiLetter((byte) -125, (char) var2Lifetime1)) {
             discarded$6 = this.nameBuffer.append((char) var2Lifetime1);
             if (84 == PowerOfTwoSupport.keyCode) {
               if (this.nameBuffer.length() <= 0) {
@@ -316,7 +316,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             discarded$1 = this.nameBuffer.append((char) var2Lifetime2);
           }
         }
-        if (MeshObject.a((byte) -125, (char) var2Lifetime2)) {
+        if (MeshObject.isAsciiLetter((byte) -125, (char) var2Lifetime2)) {
           discarded$2 = this.nameBuffer.append((char) var2Lifetime2);
           if (84 == PowerOfTwoSupport.keyCode) {
             if (this.nameBuffer.length() <= 0) {
@@ -401,7 +401,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           this.inputComponent.setBounds(GradientSpanBlendSupport.field_d, -20500, var9_int, 3 + GradientSpanBlendSupport.field_d, 5);
           var10 = var9_int + 5 + 5;
           var11 = 3 + (2 * GradientSpanBlendSupport.field_d + 3);
-          var12 = ArchiveLoadSequence.a(anchorX, anchorWidth, var10, -1);
+          var12 = ArchiveLoadSequence.fitPopupX(anchorX, anchorWidth, var10, -1);
           var13 = PasswordLengthSupport.a(var11, 0, anchorY, anchorHeight);
           this.setBounds(var11, -20500, var10, var13, var12);
           return;
