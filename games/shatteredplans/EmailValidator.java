@@ -71,10 +71,10 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException var2_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = new MenuList(0, 0, 182, param0.length * rs.field_Cb.field_J);
+          var5 = new MenuList(0, 0, 182, param0.length * IconTextPanel.field_Cb.field_J);
           var2 = var5;
           for (var3 = 0; param0.length > var3; var3++) {
-            param0[var3].moveTo((byte) 119, 0, rs.field_Cb.field_J * var3);
+            param0[var3].moveTo((byte) 119, 0, IconTextPanel.field_Cb.field_J * var3);
             var5.addChild(param0[var3], 8);
           }
           if (param1) {

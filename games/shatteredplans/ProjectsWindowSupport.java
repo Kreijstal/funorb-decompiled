@@ -11,15 +11,15 @@ final class ProjectsWindowSupport {
           if (null != vc.field_a) {
             try {
               vc.field_a.seek((byte) -26, 0L);
-              vc.field_a.write(param0 + 84, 24, sa.field_a.position, sa.field_a.payload);
+              vc.field_a.write(param0 + 84, 24, SpriteWipeSupport.field_a.position, SpriteWipeSupport.field_a.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              sa.field_a.position = sa.field_a.position + param0;
+              SpriteWipeSupport.field_a.position = SpriteWipeSupport.field_a.position + param0;
               return;
             }
           }
-          sa.field_a.position = sa.field_a.position + param0;
+          SpriteWipeSupport.field_a.position = SpriteWipeSupport.field_a.position + param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

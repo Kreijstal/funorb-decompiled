@@ -275,7 +275,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
           if (this.field_Q != null) {
             this.field_Q.field_p = (WidgetPainter) ((Object) var6);
           }
-          this.field_H.field_v = sf.field_a;
+          this.field_H.field_v = SoundTriggerTick.field_a;
           if (null != this.field_Q) {
             this.field_Q.field_v = CandidateLink.field_m;
           }

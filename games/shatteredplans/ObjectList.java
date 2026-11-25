@@ -232,7 +232,7 @@ final class ObjectList {
               var12.field_Jb.field_ab = var24_int;
               var12.field_Jb.field_qb = var24_int;
               var12.field_Jb.field_jb = var24_int;
-              if (ro.field_a != param2) {
+              if (EmailValidationError.field_a != param2) {
                 if (var12.field_Tb) {
                   var12.field_Ab.field_z = QuickChatCategoryRegistry.a(WidgetTheme.field_q, 4371, new String[]{var20});
                   var12.field_Mb.field_z = LobbyRoomEntry.field_bc;
@@ -260,7 +260,7 @@ final class ObjectList {
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_z) {
-                  if (param2 != ro.field_a) {
+                  if (param2 != EmailValidationError.field_a) {
                     var26Lifetime2 = var12.field_Mb.measureWidthUnbounded(false) + tg.field_a * 2;
                   } else {
                     var26Lifetime2 = 40;
@@ -457,7 +457,7 @@ final class ObjectList {
                     }
                   }
                 }
-                if (ro.field_a == param2 &&
+                if (EmailValidationError.field_a == param2 &&
                   SecondaryNodeDequeIterator.a((byte) -124)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
@@ -471,7 +471,7 @@ final class ObjectList {
                     var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_e, param1 + 4371, new String[]{(String) (var25)});
                   }
                 }
-                if (ro.field_a == param2 &&
+                if (EmailValidationError.field_a == param2 &&
                   !SecondaryNodeDequeIterator.a((byte) -126)) {
                   var27 = MenuInputState.field_a.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(ve.field_Gb, 4371, new String[]{var27});

@@ -42,21 +42,21 @@ final class TutorialTextSupport {
             ClientException.field_f = null;
             return;
           }
-          var2_int = rs.field_Cb.field_J + rs.field_Cb.field_q;
+          var2_int = IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q;
           var3 = -6 + param0.field_j - 20;
-          var4 = uq.field_m.a(5607, param0.field_c);
-          var12 = TutorialMapGenerator.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
+          var4 = uq.field_m.expandPlaceholders(5607, param0.field_c);
+          var12 = TutorialMapGenerator.a(IconTextPanel.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
           RandomAccessCacheFile.a(-106);
           if (0 < var6) {
             BirthDateConfirmationForm.field_L = new Sprite[var6];
             BirthDateConfirmationForm.field_L[0] = new Sprite(var3, var2_int);
             BirthDateConfirmationForm.field_L[0].bindAsRenderTarget();
-            rs.field_Cb.drawString(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
+            IconTextPanel.field_Cb.drawString(var12[0], 0, IconTextPanel.field_Cb.field_J, 16777215, -1);
             for (var7 = 1; var7 < var6; var7++) {
               BirthDateConfirmationForm.field_L[var7] = new Sprite(var3, var2_int);
               BirthDateConfirmationForm.field_L[var7].bindAsRenderTarget();
-              rs.field_Cb.drawString(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
+              IconTextPanel.field_Cb.drawString(var12[var7], 0, IconTextPanel.field_Cb.field_J, 16777215, -1);
             }
           } else {
             BirthDateConfirmationForm.field_L = null;
@@ -71,8 +71,8 @@ final class TutorialTextSupport {
             GameSpriteResources.field_i = new Sprite[var7Lifetime1][];
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
-              var4Lifetime1 = uq.field_m.a(5607, var9.field_b);
-              var13 = TutorialMapGenerator.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
+              var4Lifetime1 = uq.field_m.expandPlaceholders(5607, var9.field_b);
+              var13 = TutorialMapGenerator.a(IconTextPanel.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
               array$0 = new Sprite[var6Lifetime1];
               GameSpriteResources.field_i[var8] = array$0;
@@ -81,7 +81,7 @@ final class TutorialTextSupport {
               for (var10 = 0; var10 < var6Lifetime1; var10++) {
                 GameSpriteResources.field_i[var8][var10] = new Sprite(var3, var2_int);
                 GameSpriteResources.field_i[var8][var10].bindAsRenderTarget();
-                rs.field_Cb.drawString(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(var13[var10], 0, IconTextPanel.field_Cb.field_J, 16777215, -1);
                 WidgetStyle.field_m[var8][var10] = GameSpriteResources.field_i[var8][var10].copy();
                 WidgetStyle.field_m[var8][var10].bindAsRenderTarget();
                 SoftwareRasterizer.b(1, 1, 0, 0, var3, var2_int);

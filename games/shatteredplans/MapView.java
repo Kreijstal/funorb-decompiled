@@ -201,7 +201,7 @@ final class MapView extends MapViewState {
               var14.field_q <= 480 &&
               var14.field_o >= 0 &&
               0 <= var14.field_i) {
-              rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var13.field_p]), this.field_i[var13.field_p] - 1, this.field_J[var13.field_p] + 3, 16777215, -1);
+              IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_eb[var13.field_p]), this.field_i[var13.field_p] - 1, this.field_J[var13.field_p] + 3, 16777215, -1);
             }
           }
           var3_ref_ln__Lifetime3 = this.field_O.field_e;
@@ -595,7 +595,7 @@ final class MapView extends MapViewState {
             SoftwareRasterizer.fillCircleAlpha(var5, var6, 30, 16777215, 92);
             SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
             SoftwareRasterizer.fillCircleAlpha(var5, var6, 9, 0, 92);
-            rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var5, var6 + 4, 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var5, var6 + 4, 16777215, -1);
             FleetTrailPoint.field_i[0].draw(30 + (var5 - FleetTrailPoint.field_i[0].field_z / 2), -(FleetTrailPoint.field_i[0].field_w / 2) + var6);
             FleetTrailPoint.field_i[1].draw(-30 + (var5 - FleetTrailPoint.field_i[0].field_z / 2), var6 - FleetTrailPoint.field_i[0].field_w / 2);
             FleetTrailPoint.field_i[2].draw(-(FleetTrailPoint.field_i[0].field_z / 2) + var5, var6 - (-30 + FleetTrailPoint.field_i[0].field_w / 2));
@@ -607,7 +607,7 @@ final class MapView extends MapViewState {
             SoftwareRasterizer.fillCircleAlpha(var18, var19, 30, 16777215, 92);
             SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
             SoftwareRasterizer.fillCircleAlpha(var18, var19, 9, 0, 92);
-            rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var18, var19 + 4, 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var18, var19 + 4, 16777215, -1);
             FleetTrailPoint.field_i[0].draw(30 + var18 - FleetTrailPoint.field_i[0].field_z / 2, -(FleetTrailPoint.field_i[0].field_w / 2) + var19);
             FleetTrailPoint.field_i[1].draw(-30 + var18 - FleetTrailPoint.field_i[0].field_z / 2, var19 - FleetTrailPoint.field_i[0].field_w / 2);
             FleetTrailPoint.field_i[2].draw(-(FleetTrailPoint.field_i[0].field_z / 2) + var18, 30 + (var19 - FleetTrailPoint.field_i[0].field_w / 2));
@@ -648,7 +648,7 @@ final class MapView extends MapViewState {
           SoftwareRasterizer.fillCircleAlpha(var2, var3, 30, 16777215, 92);
           SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
           SoftwareRasterizer.fillCircleAlpha(var2, var3, 9, 0, 92);
-          rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var2, 4 + var3, 16777215, -1);
+          IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var2, 4 + var3, 16777215, -1);
           FleetTrailPoint.field_i[0].draw(var2 + (30 - FleetTrailPoint.field_i[0].field_z / 2), -(FleetTrailPoint.field_i[0].field_w / 2) + var3);
           FleetTrailPoint.field_i[1].draw(-(FleetTrailPoint.field_i[0].field_z / 2) + (var2 - 30), var3 - FleetTrailPoint.field_i[0].field_w / 2);
           FleetTrailPoint.field_i[2].draw(var2 - FleetTrailPoint.field_i[0].field_z / 2, -(FleetTrailPoint.field_i[0].field_w / 2) + 30 + var3);
@@ -903,7 +903,7 @@ final class MapView extends MapViewState {
                     }
                   }
                 }
-                rs.field_Cb.drawCentred(Integer.toString(var25), var19 / 2 + var20 + var19 * var28, rs.field_Cb.field_J / 2 + 5 + var23, 16777215, -1);
+                IconTextPanel.field_Cb.drawCentred(Integer.toString(var25), var19 / 2 + var20 + var19 * var28, IconTextPanel.field_Cb.field_J / 2 + 5 + var23, 16777215, -1);
                 var28++;
               }
             }
@@ -1094,7 +1094,7 @@ final class MapView extends MapViewState {
               var15Lifetime2 = (var10_int + var12) / 2;
               var16Lifetime2 = (var11_int + var13) / 2;
               SoftwareRasterizer.fillCircleAlpha(var15Lifetime2, var16Lifetime2 - 1, 9, 16777215, 192);
-              rs.field_Cb.drawCentred(Integer.toString(var6_ref.field_z), var15Lifetime2, 3 + var16Lifetime2, 0, -1);
+              IconTextPanel.field_Cb.drawCentred(Integer.toString(var6_ref.field_z), var15Lifetime2, 3 + var16Lifetime2, 0, -1);
               if (var6_ref == this.field_rb) {
                 var17Lifetime2 = (var10_int + var12) / 2;
                 var18 = (var13 + var11_int) / 2;
@@ -1204,7 +1204,7 @@ final class MapView extends MapViewState {
                     var7 <= 12) {
                     SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
                     SoftwareRasterizer.fillCircleAlpha(var20Lifetime1, var21Lifetime1, 9, 0, 92);
-                    rs.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var20Lifetime1, 4 + var21Lifetime1, 16777215, -1);
+                    IconTextPanel.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var20Lifetime1, 4 + var21Lifetime1, 16777215, -1);
                   } else {
                     SoftwareRasterizer.addRadialGlowQ4(16 * var20Lifetime1, var21Lifetime1 * 16, 60, -1 + UrlLoader.field_j.length, new int[]{-65536, -65536, 0, -65536, -65536});
                   }
@@ -1213,9 +1213,9 @@ final class MapView extends MapViewState {
                     var31 = (var21Lifetime1 + var19) / 2;
                     var30 = var30 - (int)(var26Lifetime1 * (var22Lifetime1 / 10.0));
                     var31 = var31 + (int)(var24Lifetime1 * (var22Lifetime1 / 10.0));
-                    rs.field_Cb.stringWidth(Integer.toString(var6_refLifetime2.field_z));
+                    IconTextPanel.field_Cb.stringWidth(Integer.toString(var6_refLifetime2.field_z));
                     SoftwareRasterizer.fillCircleAlpha(var30, -1 + var31, 9, 16777215, 192);
-                    rs.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var30, 3 + var31, 0, -1);
+                    IconTextPanel.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var30, 3 + var31, 0, -1);
                   }
                 } else {
                   if (var22Lifetime1 <= 1.0 + (0.5 + this.field_Jb * 300.0 - 150.0 * this.field_wb)) {
@@ -1319,7 +1319,7 @@ final class MapView extends MapViewState {
           this.e(param1, -29952);
           if (param1.field_B >= 6) {
             this.a(-86, param1);
-            var6 = rs.field_Cb.stringWidth(Integer.toString(this.field_eb[param1.field_p])) + 1;
+            var6 = IconTextPanel.field_Cb.stringWidth(Integer.toString(this.field_eb[param1.field_p])) + 1;
             if (var6 < 10) {
               var6 = 10;
             }
@@ -1467,7 +1467,7 @@ final class MapView extends MapViewState {
               var37_ref = (ArgbSprite) (stackIn_30_0);
               SpriteMaskEffects.drawRotatedBilinear(var37_ref, MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
               SoftwareRasterizer.fillCircleAlpha(var34 >> 4, var35 >> 4, 9, 0, 92);
-              rs.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
+              IconTextPanel.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
               ProgressDialog.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
             }
@@ -1792,7 +1792,7 @@ final class MapView extends MapViewState {
                     var5[2 + 2 * var6] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin((double)(24 - 12 * var6) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos((double)(24 - var6 * 12) * 3.141592653589793 / 180.0)) << 4);
                     var5[var6 * 2 + 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(var6 * 12) + 18) / 180.0)) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.cos(3.141592653589793 * (double)(-(12 * var6) + 18) / 180.0)) << 4);
                   }
-                  qn.a(var14, SoundPlayback.field_k[0], param1);
+                  IntroRenderSupport.fillPolygon(var14, SoundPlayback.field_k[0], param1);
                 }
                 if (param0.field_G[1] != 0) {
                   var15 = new MutableIntPairNode[2 + 2 * param0.field_G[1]];
@@ -1803,7 +1803,7 @@ final class MapView extends MapViewState {
                     var5Lifetime1[2 + 2 * var6Lifetime1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime1) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)((double)var4 * Math.sin((double)(6 + var6Lifetime1 * 12) * 3.141592653589793 / 180.0)) << 4);
                     var5Lifetime1[2 + 2 * var6Lifetime1 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(var6Lifetime1 * 12 + 12) / 180.0) * (double)var4) << 4, this.field_i[var3_int] - (int)(Math.sin(3.141592653589793 * (double)(12 + 12 * var6Lifetime1) / 180.0) * (double)var4) << 4);
                   }
-                  qn.a(var15, SoundPlayback.field_k[1], true);
+                  IntroRenderSupport.fillPolygon(var15, SoundPlayback.field_k[1], true);
                 }
                 if (param0.field_G[2] != 0) {
                   var16 = new MutableIntPairNode[2 + param0.field_G[2] * 2];
@@ -1814,7 +1814,7 @@ final class MapView extends MapViewState {
                     var5Lifetime2[var6Lifetime2 * 2 + 2] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.cos((double)(6 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)(Math.sin(3.141592653589793 * (double)(6 + var6Lifetime2 * 12) / 180.0) * (double)var4) << 4);
                     var5Lifetime2[2 + var6Lifetime2 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.cos((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.sin((double)(12 + 12 * var6Lifetime2) * 3.141592653589793 / 180.0)) << 4);
                   }
-                  qn.a(var16, SoundPlayback.field_k[2], param1);
+                  IntroRenderSupport.fillPolygon(var16, SoundPlayback.field_k[2], param1);
                 }
                 if (param0.field_G[3] != 0) {
                   var17 = new MutableIntPairNode[2 * param0.field_G[3] + 2];
@@ -1825,7 +1825,7 @@ final class MapView extends MapViewState {
                     var5Lifetime3[2 + 2 * var6Lifetime3] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)((double)var4 * Math.sin(3.141592653589793 * (double)(-(12 * var6Lifetime3) + 24) / 180.0)) << 4, this.field_i[var3_int] + (int)(Math.cos(3.141592653589793 * (double)(24 - 12 * var6Lifetime3) / 180.0) * (double)var4) << 4);
                     var5Lifetime3[2 + var6Lifetime3 * 2 + 1] = TertiaryNodeList.a(0, this.field_J[var3_int] + (int)(Math.sin((double)(18 - 12 * var6Lifetime3) * 3.141592653589793 / 180.0) * (double)var4) << 4, this.field_i[var3_int] + (int)((double)var4 * Math.cos(3.141592653589793 * (double)(18 - var6Lifetime3 * 12) / 180.0)) << 4);
                   }
-                  qn.a(var17, SoundPlayback.field_k[3], param1);
+                  IntroRenderSupport.fillPolygon(var17, SoundPlayback.field_k[3], param1);
                 }
               }
             } else {
@@ -2157,7 +2157,7 @@ final class MapView extends MapViewState {
             }
             ArrayWidgetGroup.field_z.drawTinted(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], this.field_J[param0.field_p] - ArrayWidgetGroup.field_z.field_w / 2, var5);
             UiWidget.field_t.draw(this.field_i[param0.field_p] - UiWidget.field_t.field_z / 2, -3 + this.field_J[param0.field_p] - UiWidget.field_t.field_w / 2);
-            rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
             if (param0.field_L > 0 &&
               6 > param0.field_B) {
               SoftwareRasterizer.addRadialGlowQ4((this.field_i[var3_int] << 4) + ProductionContent.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
@@ -2177,8 +2177,8 @@ final class MapView extends MapViewState {
               ArrayWidgetGroup.field_z.drawAlpha(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
             }
             SpriteState.field_y.draw(-(SpriteState.field_y.field_z / 2) + this.field_i[param0.field_p], -72 + (-(this.field_n * 7 / 10) + this.field_J[param0.field_p]));
-            rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);
-            rs.field_Cb.drawCentred(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
             if (param0.field_L > 0 &&
               param0.field_B < 6) {
               SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
@@ -3335,7 +3335,7 @@ final class MapView extends MapViewState {
           }
           if (FleetTrailPoint.field_m == 0) {
             sg.a(true, false, 0, AttackTask.field_r, NetworkArchiveRequest.field_C);
-            sg.a(true, true, 400, rk.field_h, NetworkArchiveRequest.field_C);
+            sg.a(true, true, 400, IntArrayReadRequest.field_h, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

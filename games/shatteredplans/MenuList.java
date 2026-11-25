@@ -111,17 +111,17 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
             MenuList.writeFleetMove((FleetMove) null, (byte) -74, (PacketBuffer) null);
           }
           if (param1.field_q == -1) {
-            var6 = uq.field_m.a(5607, param1.field_c);
-            var7 = WidgetStateStyle.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 - 20});
-            var5 = 34 + (rs.field_Cb.field_q + var7 * 13);
+            var6 = uq.field_m.expandPlaceholders(5607, param1.field_c);
+            var7 = WidgetStateStyle.a(-9615, var6, IconTextPanel.field_Cb, new int[]{-6 + var4 - 20});
+            var5 = 34 + (IconTextPanel.field_Cb.field_q + var7 * 13);
             BirthDateConfirmationForm.field_L = new Sprite[var7];
             if (param1.field_f != null) {
               var8 = param1.field_f;
               for (var9 = 0; var8.length > var9; var9++) {
                 var10 = var8[var9];
-                var6Lifetime1 = uq.field_m.a(5607, var10.field_b);
-                var7Lifetime1 = WidgetStateStyle.a(-9615, var6Lifetime1, rs.field_Cb, new int[]{-20 + (-6 + var4)});
-                var5 = var5 + (13 * var7Lifetime1 + rs.field_Cb.field_q);
+                var6Lifetime1 = uq.field_m.expandPlaceholders(5607, var10.field_b);
+                var7Lifetime1 = WidgetStateStyle.a(-9615, var6Lifetime1, IconTextPanel.field_Cb, new int[]{-20 + (-6 + var4)});
+                var5 = var5 + (13 * var7Lifetime1 + IconTextPanel.field_Cb.field_q);
               }
             }
           }
@@ -147,7 +147,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           MenuButton.field_B = var2_int;
           TutorialTextSupport.buildTutorialTextSprites(param1, param0 ^ -1546006978);
           if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
-            uq.field_m.a("", 27275, "tabresizehint");
+            uq.field_m.putReplacement("", 27275, "tabresizehint");
           }
           if (WeightedLruCache.field_g != null) {
             return;

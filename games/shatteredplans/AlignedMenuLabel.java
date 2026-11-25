@@ -20,7 +20,7 @@ final class AlignedMenuLabel extends MenuLabel {
           var2 = 40 % ((param0 - 67) / 47);
           return;
         }
-        rs.field_Cb.a(this.field_u, this.field_k, this.field_t, this.field_m, 480, 16777215, -1, this.field_B, 0, rs.field_Cb.field_J);
+        IconTextPanel.field_Cb.a(this.field_u, this.field_k, this.field_t, this.field_m, 480, 16777215, -1, this.field_B, 0, IconTextPanel.field_Cb.field_J);
         var2Lifetime1 = 40 % ((param0 - 67) / 47);
     }
 

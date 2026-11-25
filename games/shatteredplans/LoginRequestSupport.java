@@ -179,15 +179,15 @@ final class LoginRequestSupport {
         int var6 = 0;
         String var7 = null;
         try {
-          qn.field_b[0] = Bzip2State.field_u.nextInt();
-          qn.field_b[1] = Bzip2State.field_u.nextInt();
+          IntroRenderSupport.field_b[0] = Bzip2State.field_u.nextInt();
+          IntroRenderSupport.field_b[1] = Bzip2State.field_u.nextInt();
           ProgressDialog.field_cb.position = 0;
-          qn.field_b[3] = (int)Dialog.field_I;
-          qn.field_b[2] = (int)(Dialog.field_I >> 32);
-          ProgressDialog.field_cb.writeInt(11135, qn.field_b[0]);
-          ProgressDialog.field_cb.writeInt(11135, qn.field_b[1]);
-          ProgressDialog.field_cb.writeInt(11135, qn.field_b[2]);
-          ProgressDialog.field_cb.writeInt(11135, qn.field_b[3]);
+          IntroRenderSupport.field_b[3] = (int)Dialog.field_I;
+          IntroRenderSupport.field_b[2] = (int)(Dialog.field_I >> 32);
+          ProgressDialog.field_cb.writeInt(11135, IntroRenderSupport.field_b[0]);
+          ProgressDialog.field_cb.writeInt(11135, IntroRenderSupport.field_b[1]);
+          ProgressDialog.field_cb.writeInt(11135, IntroRenderSupport.field_b[2]);
+          ProgressDialog.field_cb.writeInt(11135, IntroRenderSupport.field_b[3]);
           QuickChatPhraseRegistry.a(24, ProgressDialog.field_cb);
           if (param3 > -36) {
             return;

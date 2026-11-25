@@ -52,7 +52,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
               this.field_F.draw(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
             }
             if (this.field_G != null) {
-              rs.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
+              IconTextPanel.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
               return;
             }
             return;
@@ -63,32 +63,32 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           if (this.field_G == null) {
             return;
           }
-          rs.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
+          IconTextPanel.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
           return;
         }
         if (this.field_w != -1) {
           SoftwareRasterizer.fillRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w);
           if (this.field_E == null) {
             if (null != this.field_C) {
-              rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+              IconTextPanel.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
             }
             return;
           }
           this.field_E.draw((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
           if (null != this.field_C) {
-            rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+            IconTextPanel.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           }
           return;
         }
         if (this.field_E != null) {
           this.field_E.draw((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
           if (null != this.field_C) {
-            rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+            IconTextPanel.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           }
           return;
         }
         if (null != this.field_C) {
-          rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+          IconTextPanel.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), IconTextPanel.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           return;
         }
     }

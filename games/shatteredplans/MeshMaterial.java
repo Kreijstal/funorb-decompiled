@@ -46,8 +46,8 @@ final class MeshMaterial {
     }
 
     final static MenuList createHeadingWithDividers(int param0, int param1, int param2) {
-        MenuList var9 = new MenuList(param0, param2, 209, rs.field_Cb.field_J);
-        int var4 = (-rs.field_Cb.stringWidth(QuickChatHelpSupport.field_g) + 209 - 20) / 2;
+        MenuList var9 = new MenuList(param0, param2, 209, IconTextPanel.field_Cb.field_J);
+        int var4 = (-IconTextPanel.field_Cb.stringWidth(QuickChatHelpSupport.field_g) + 209 - 20) / 2;
         vc.field_b = new Sprite(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
         RandomAccessCacheFile.a(-107);

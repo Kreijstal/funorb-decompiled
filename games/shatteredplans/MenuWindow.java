@@ -175,7 +175,7 @@ final class MenuWindow extends MenuComponent {
           var9 = 64 + 192 * (-var10 + var8Lifetime1) / (var8Lifetime1 - var7Lifetime3);
           VictoryChecker.field_h.drawAdditive(var10, this.field_t + 3, var9);
         }
-        rs.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
+        IconTextPanel.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
         MenuComponent var12 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var12 != null) {
           var12.drawComponent(-14);
@@ -238,8 +238,8 @@ final class MenuWindow extends MenuComponent {
         if (param2 < 27) {
           param2 = 27;
         }
-        if (!(param2 >= 40 + rs.field_Cb.stringWidth(this.field_y + "X"))) {
-          param2 = rs.field_Cb.stringWidth(this.field_y + "X") + 40;
+        if (!(param2 >= 40 + IconTextPanel.field_Cb.stringWidth(this.field_y + "X"))) {
+          param2 = IconTextPanel.field_Cb.stringWidth(this.field_y + "X") + 40;
         }
         if (!param0) {
           this.drawComponent(1);

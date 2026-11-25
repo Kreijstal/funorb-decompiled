@@ -84,7 +84,7 @@ final class QuickChatMenu extends AnimatedPanel {
             stackIn_6_0 = PlayerStats.field_c.stringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ql.field_n.stringWidth(param0);
+          stackIn_4_0 = TextHotspotRegion.field_n.stringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

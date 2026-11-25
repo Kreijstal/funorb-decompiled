@@ -107,7 +107,7 @@ final class ChatHistoryEntry {
           if (1 == var2_int) {
             stackIn_18_0 = ChatCompositionSupport.field_d;
           } else {
-            stackIn_18_0 = QuickChatCategoryRegistry.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
+            stackIn_18_0 = QuickChatCategoryRegistry.a(TextReplacementContext.field_e, 4371, new String[]{Integer.toString(var2_int)});
           }
           var9 = stackIn_18_0;
           var5 = var9;

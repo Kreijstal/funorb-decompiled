@@ -21,7 +21,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == TertiaryListSequence.field_j) {
             return;
           }
-          ql.field_q = 0;
+          TextHotspotRegion.field_q = 0;
           ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
           PlayerReportPanel.field_Lb = true;
@@ -63,7 +63,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == TertiaryListSequence.field_j) {
             return;
           }
-          ql.field_q = 0;
+          TextHotspotRegion.field_q = 0;
           ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
           PlayerReportPanel.field_Lb = true;
@@ -85,7 +85,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (TertiaryListSequence.field_j != null) {
-            ql.field_q = 0;
+            TextHotspotRegion.field_q = 0;
             ClientContextMenuSupport.field_f = param0.getX();
             AllianceExpiredEvent.field_i = param0.getY();
             PlayerReportPanel.field_Lb = true;
@@ -258,7 +258,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == TertiaryListSequence.field_j) {
             return;
           }
-          ql.field_q = 0;
+          TextHotspotRegion.field_q = 0;
           ClientContextMenuSupport.field_f = -1;
           AllianceExpiredEvent.field_i = -1;
           PlayerReportPanel.field_Lb = true;
@@ -286,7 +286,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != TertiaryListSequence.field_j) {
-            ql.field_q = 0;
+            TextHotspotRegion.field_q = 0;
             v.field_d = 0;
             PlayerReportPanel.field_Lb = true;
             var2_int = param0.getModifiers();
@@ -325,7 +325,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != TertiaryListSequence.field_j) {
-            ql.field_q = 0;
+            TextHotspotRegion.field_q = 0;
             ArchiveSource.field_c = param0.getX();
             TertiaryNodeList.field_e = param0.getY();
             ClientClockSupport.currentTimeMillis(14274);

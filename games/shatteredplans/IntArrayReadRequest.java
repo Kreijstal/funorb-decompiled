@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk extends IntrusiveNode {
+final class IntArrayReadRequest extends IntrusiveNode {
     static String field_n;
     static String field_h;
     static String field_m;
@@ -27,7 +27,7 @@ final class rk extends IntrusiveNode {
         field_n = null;
     }
 
-    private rk() throws Throwable {
+    private IntArrayReadRequest() throws Throwable {
         throw new Error();
     }
 

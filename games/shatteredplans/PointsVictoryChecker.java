@@ -236,7 +236,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         if (param0) {
           PointsVictoryChecker.a((byte) 114, 82);
         }
-        return PasswordValidator.field_n * this.field_o.length + rs.field_Cb.field_J;
+        return PasswordValidator.field_n * this.field_o.length + IconTextPanel.field_Cb.field_J;
     }
 
     final boolean detectWinners(GameState param0, byte param1) {
@@ -448,7 +448,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (var5Lifetime2 > 0) {
             VerticalMenuSlider.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
-          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
+          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
           var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;

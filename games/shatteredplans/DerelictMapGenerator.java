@@ -249,7 +249,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
           CharSequence var2 = (CharSequence) null;
           DerelictMapGenerator.a(false, (CharSequence) null);
         }
-        return sa.field_a.readString(-1);
+        return SpriteWipeSupport.field_a.readString(-1);
     }
 
     final void placeStars(boolean param0, GalaxyMap param1) throws MapGenerationException {

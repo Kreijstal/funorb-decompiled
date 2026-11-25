@@ -877,7 +877,7 @@ abstract class MapViewState {
 
     MapViewState() {
         this.field_L = -30;
-        rs.field_Cb.stringWidth("+");
+        IconTextPanel.field_Cb.stringWidth("+");
         this.field_bb = new int[4][];
     }
 

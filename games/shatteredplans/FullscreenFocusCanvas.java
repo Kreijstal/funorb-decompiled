@@ -92,7 +92,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param1 != -17115) {
             field_b = 54;
           }
-          ql.a(this.field_d, 0, param0);
+          TextHotspotRegion.disposeFullscreenFrame(this.field_d, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

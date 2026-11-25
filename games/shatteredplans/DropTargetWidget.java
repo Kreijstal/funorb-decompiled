@@ -65,7 +65,7 @@ final class DropTargetWidget extends SingleChildWidget {
                 AggressiveAi.field_q = true;
               }
             }
-            rs.field_Fb = DirectByteArrayStorage.field_n;
+            IconTextPanel.field_Fb = DirectByteArrayStorage.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GameKeyHandler.field_d = param0;
@@ -73,7 +73,7 @@ final class DropTargetWidget extends SingleChildWidget {
             LinkPainter.field_e < LoginForm.field_F &&
             UrlLoader.field_d) {
             LinkPainter.field_e = 0;
-            rs.field_Fb = DirectByteArrayStorage.field_n;
+            IconTextPanel.field_Fb = DirectByteArrayStorage.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GzipInflater.field_c = -1;

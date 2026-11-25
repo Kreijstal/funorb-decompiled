@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl {
+final class TextReplacementContext {
     static String field_e;
     static Sprite field_c;
     static boolean[] field_b;
     static String field_d;
     private TextReplacementEntry field_a;
     static Archive field_f;
-    private rl field_g;
+    private TextReplacementContext field_g;
 
-    final void a(String param0, int param1, String param2) {
+    final void putReplacement(String param0, int param1, String param2) {
         TextReplacementEntry var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -26,7 +26,7 @@ final class rl {
           while (true) {
             if (var4 == null) {
               if (param1 != 27275) {
-                rl.a(45, true, 103, -126, true);
+                TextReplacementContext.createArchive(45, true, 103, -126, true);
               }
               this.field_a = new TextReplacementEntry(param2, param0, this.field_a);
               return;
@@ -59,7 +59,7 @@ final class rl {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String expandPlaceholders(int param0, String param1) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$7 = null;
@@ -95,7 +95,7 @@ final class rl {
               var6 = param1.indexOf(">", var4 + 2);
               if (var6 >= 0) {
                 var7 = param1.substring(var4 + 2, var6);
-                var8 = this.b(88, var7);
+                var8 = this.lookupReplacement(88, var7);
                 if (var8 != null) {
                   discarded$7 = var10.append(var8);
                 }
@@ -137,14 +137,14 @@ final class rl {
         field_e = null;
     }
 
-    final static Archive a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static Archive createArchive(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param0 != -1) {
           return (Archive) null;
         }
         return PasswordValidator.a(param2, false, param3, param0 + 12001, param1, param4);
     }
 
-    private final String b(int param0, String param1) {
+    private final String lookupReplacement(int param0, String param1) {
         TextReplacementEntry var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -169,7 +169,7 @@ final class rl {
           if (null == this.field_g) {
             return null;
           }
-          stackIn_11_0 = this.field_g.b(-112, param1);
+          stackIn_11_0 = this.field_g.lookupReplacement(-112, param1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,10 +185,10 @@ final class rl {
         }
     }
 
-    public rl() {
+    public TextReplacementContext() {
     }
 
-    rl(rl param0) {
+    TextReplacementContext(TextReplacementContext param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

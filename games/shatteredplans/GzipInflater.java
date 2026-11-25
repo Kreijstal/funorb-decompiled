@@ -45,7 +45,7 @@ final class GzipInflater {
         ve var6Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = sa.field_a;
+          var1 = SpriteWipeSupport.field_a;
           var2 = var1.readUnsignedByte(-64);
           if (var2 == 0) {
             if (CipherPacketBuffer.field_m == null) {

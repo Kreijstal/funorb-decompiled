@@ -50,14 +50,14 @@ final class uk {
             return BytePayloadNode.field_k;
           }
           if (var2_int == 4) {
-            return rl.field_c;
+            return TextReplacementContext.field_c;
           }
           if (5 == var2_int) {
             stackIn_28_0 = InvalidMapConnectionException.field_d;
             return stackIn_28_0;
           }
           if (var2_int == 6) {
-            return rk.field_k;
+            return IntArrayReadRequest.field_k;
           }
           if (var2_int == 7) {
             return IntrusiveNodeHashTable.field_h;
@@ -164,7 +164,7 @@ final class uk {
           var10 = param2.readUnsignedShort(param6 - 20969);
           var11 = param2.readUnsignedShort(-20976);
           var12 = ValidationIndicator.a(-33, var9);
-          var13 = sa.a(var10, -109);
+          var13 = SpriteWipeSupport.hexRowsForMapHeight(var10, -109);
           if (param6 != -7) {
             var27 = (Star) null;
             uk.a(false, (Star) null);

@@ -251,8 +251,8 @@ final class DraggableWidget extends SingleChildWidget {
         if (param0 != 0) {
           return (Boolean) null;
         }
-        Boolean var1 = sa.field_d;
-        sa.field_d = null;
+        Boolean var1 = SpriteWipeSupport.field_d;
+        SpriteWipeSupport.field_d = null;
         return var1;
     }
 

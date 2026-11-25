@@ -79,7 +79,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
           if (Wormhole.field_j == LegacyAi.field_r) {
             LobbyOptionSupport.field_f.position = 0;
-            sa.field_d = null;
+            SpriteWipeSupport.field_d = null;
             if (param5 == null) {
               ProgressDialog.field_cb.position = 0;
               ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
@@ -136,8 +136,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
           if (Wormhole.field_j == StarSoundState.field_k &&
             StarAnnotation.a(110, 1)) {
-            var9Lifetime1 = sa.field_a.readUnsignedByte(-83);
-            sa.field_a.position = 0;
+            var9Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-83);
+            SpriteWipeSupport.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
               105 >= var9Lifetime1) {
               Wormhole.field_j = TurnEventLog.field_h;
@@ -157,20 +157,20 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 TextInputPainter.field_t = -1;
               } else {
                 StarAnnotation.a(119, CandidateLink.a(-85));
-                sa.field_d = new Boolean(ro.a((byte) -24, sa.field_a));
-                sa.field_a.position = 0;
+                SpriteWipeSupport.field_d = new Boolean(EmailValidationError.readBooleanByte((byte) -24, SpriteWipeSupport.field_a));
+                SpriteWipeSupport.field_a.position = 0;
               }
             }
           }
           if (TurnEventLog.field_h == Wormhole.field_j) {
             var9Lifetime2 = 2;
             if (StarAnnotation.a(-87, var9Lifetime2)) {
-              var10Lifetime1 = sa.field_a.readUnsignedShort(-20976);
-              sa.field_a.position = 0;
+              var10Lifetime1 = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
+              SpriteWipeSupport.field_a.position = 0;
               if (StarAnnotation.a(126, var10Lifetime1)) {
                 var11 = HighscoreResponseSupport.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  HighscoreResponseSupport.field_e[var12] = sa.field_a.readMarkedString((byte) -126);
+                  HighscoreResponseSupport.field_e[var12] = SpriteWipeSupport.field_a.readMarkedString((byte) -126);
                 }
                 TabbedPanel.closeClientSocket(-113);
                 BufferedSocket.field_j = false;
@@ -182,12 +182,12 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           if (StarAbandonedEvent.field_m == Wormhole.field_j &&
             uc.d((byte) -28)) {
             if (BufferedCacheFile.field_e == 255) {
-              var9_ref_String = sa.field_a.readNullableString(1910283844);
+              var9_ref_String = SpriteWipeSupport.field_a.readNullableString(1910283844);
               if (var9_ref_String != null) {
                 SettingsCookieSupport.writeSettingsCookie(-25602, var9_ref_String, GameScreen.getHostApplet((byte) 125));
               }
             } else {
-              DiplomacyRowSupport.field_c = sa.field_a.readString(-1);
+              DiplomacyRowSupport.field_c = SpriteWipeSupport.field_a.readString(-1);
             }
             TabbedPanel.closeClientSocket(-99);
             BufferedSocket.field_j = false;

@@ -16,7 +16,7 @@ final class SolVictoryChecker extends VictoryChecker {
           GameScreen var3 = (GameScreen) null;
           this.showResults((byte) -126, (GameState) null, (GameScreen) null);
         }
-        return rs.field_Cb.field_J * 3 + this.field_n.length * PasswordValidator.field_n;
+        return IconTextPanel.field_Cb.field_J * 3 + this.field_n.length * PasswordValidator.field_n;
     }
 
     final boolean detectWinners(GameState param0, byte param1) {
@@ -287,13 +287,13 @@ final class SolVictoryChecker extends VictoryChecker {
           }
           var19 = new MenuLabel[3];
           var7_array = var19;
-          var7_array[0] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ChatPanelLayoutSupport.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
+          var7_array[0] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatCategoryRegistry.a(ChatPanelLayoutSupport.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
           if (var16 == null) {
-            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, TutorialAi.field_t);
-            var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, (String) null);
+            var7_array[1] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, TutorialAi.field_t);
+            var7_array[2] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, (String) null);
           } else {
-            var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, ChatMessage.field_h);
-            var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, var16.name, var16.field_k);
+            var7_array[1] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, ChatMessage.field_h);
+            var7_array[2] = new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, var16.name, var16.field_k);
           }
           var8 = new Player[this.field_i.length];
           var23 = new int[this.field_i.length];
@@ -403,8 +403,8 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (IntrusiveNodeHashTable.field_i == Wormhole.field_j &&
               StarAnnotation.a(-90, 1)) {
-              var6_int = sa.field_a.readUnsignedByte(-92);
-              sa.field_a.position = 0;
+              var6_int = SpriteWipeSupport.field_a.readUnsignedByte(-92);
+              SpriteWipeSupport.field_a.position = 0;
               if (var6_int != 0) {
                 BufferedCacheFile.field_e = var6_int;
                 Wormhole.field_j = Player.field_l;
@@ -415,17 +415,17 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (MusicVoice.field_m == Wormhole.field_j &&
               StarAnnotation.a(-91, 8)) {
-              Dialog.field_I = sa.field_a.readLong(110);
-              sa.field_a.position = 0;
+              Dialog.field_I = SpriteWipeSupport.field_a.readLong(110);
+              SpriteWipeSupport.field_a.position = 0;
               LoginRequestSupport.writeLoginRequest(param0, param2, param4, -84, TutorialOverlaySupport.field_c);
               Wormhole.field_j = IntrusiveNodeHashTable.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
             if (IntrusiveNodeHashTable.field_d == Wormhole.field_j &&
               StarAnnotation.a(119, 1)) {
-              var6_intLifetime1 = sa.field_a.readUnsignedByte(-63);
+              var6_intLifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-63);
               DraggableWidget.field_H = null;
-              sa.field_a.position = 0;
+              SpriteWipeSupport.field_a.position = 0;
               BufferedCacheFile.field_e = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -448,13 +448,13 @@ final class SolVictoryChecker extends VictoryChecker {
             }
             if (SolMapReader.field_c == Wormhole.field_j &&
               uc.d((byte) -46)) {
-              TertiaryListSequence.field_l = sa.field_a.readLong(46);
+              TertiaryListSequence.field_l = SpriteWipeSupport.field_a.readLong(46);
               FleetTrailPoint.field_q = param3;
-              RasterTargetSupport.field_b = sa.field_a.readUnsignedByte(-85);
-              CellVertex.field_i = sa.field_a.readUnsignedByte(-89);
-              StarAnnotation.field_m = sa.field_a.readUnsignedShort(-20976);
-              var6 = sa.field_a.readNullableString(1910283844);
-              var7 = sa.field_a.readUnsignedByte(-123);
+              RasterTargetSupport.field_b = SpriteWipeSupport.field_a.readUnsignedByte(-85);
+              CellVertex.field_i = SpriteWipeSupport.field_a.readUnsignedByte(-89);
+              StarAnnotation.field_m = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
+              var6 = SpriteWipeSupport.field_a.readNullableString(1910283844);
+              var7 = SpriteWipeSupport.field_a.readUnsignedByte(-123);
               if ((var7 & 1) != 0) {
                 ProjectsWindowSupport.cacheClientSeedBytes(24);
               }
@@ -472,19 +472,19 @@ final class SolVictoryChecker extends VictoryChecker {
                 }
               }
               if (StandardAi.field_a) {
-                sa.field_a.readUnsignedByte(-66);
-                sa.field_a.readUnsignedByte(-102);
-                sa.field_a.readInt(16711680);
-                DisplayNameForm.field_E = sa.field_a.readUnsignedShort(-20976);
+                SpriteWipeSupport.field_a.readUnsignedByte(-66);
+                SpriteWipeSupport.field_a.readUnsignedByte(-102);
+                SpriteWipeSupport.field_a.readInt(16711680);
+                DisplayNameForm.field_E = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
                 TurnEventLog.field_c = new byte[DisplayNameForm.field_E];
                 for (var8 = 0; DisplayNameForm.field_E > var8; var8++) {
-                  TurnEventLog.field_c[var8] = sa.field_a.readSignedByte(-2852);
+                  TurnEventLog.field_c[var8] = SpriteWipeSupport.field_a.readSignedByte(-2852);
                 }
               }
-              Star.field_o = sa.field_a.readString(-1);
+              Star.field_o = SpriteWipeSupport.field_a.readString(-1);
               var11 = (CharSequence) ((Object) Star.field_o);
               ArchiveIndex.field_d = DateInputWidget.a(var11, true);
-              CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
+              CheckboxPainter.field_n = SpriteWipeSupport.field_a.readUnsignedByte(-112);
               Wormhole.field_j = AccountNoticeKind.field_f;
               if (TutorialOverlaySupport.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
                 if (TutorialOverlaySupport.field_c.getKind((byte) 123) == GameSpriteResources.field_b) {
@@ -516,11 +516,11 @@ final class SolVictoryChecker extends VictoryChecker {
               if (StarAnnotation.field_m > 0) {
                 DualLinkDeque.field_b = true;
               }
-              LobbyOptionSupport.field_f.a(qn.field_b, (byte) -77);
+              LobbyOptionSupport.field_f.a(IntroRenderSupport.field_b, (byte) -77);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                qn.field_b[var8Lifetime1] = qn.field_b[var8Lifetime1] + 50;
+                IntroRenderSupport.field_b[var8Lifetime1] = IntroRenderSupport.field_b[var8Lifetime1] + 50;
               }
-              sa.field_a.a(qn.field_b, (byte) 107);
+              SpriteWipeSupport.field_a.a(IntroRenderSupport.field_b, (byte) 107);
               stackIn_81_0 = BufferedCacheFile.field_e;
               return stackIn_81_0;
             }
@@ -536,7 +536,7 @@ final class SolVictoryChecker extends VictoryChecker {
               if (BufferedCacheFile.field_e == 7) {
                 BufferedCacheFile.field_e = 3;
               }
-              DiplomacyRowSupport.field_c = sa.field_a.readString(-1);
+              DiplomacyRowSupport.field_c = SpriteWipeSupport.field_a.readString(-1);
               BufferedSocket.field_j = false;
               stackIn_92_0 = BufferedCacheFile.field_e;
               return stackIn_92_0;

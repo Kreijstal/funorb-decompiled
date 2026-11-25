@@ -116,14 +116,14 @@ final class RandomAccessCacheFile {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var7_int = ReflectionQueueSupport.roundUpToMultipleOfEight(param6, 57);
-          if (ro.field_b == null) {
-            ro.field_b = new java.security.SecureRandom();
+          if (EmailValidationError.field_b == null) {
+            EmailValidationError.field_b = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = param3; var9 < 4; var9++) {
-            var8[var9] = ro.field_b.nextInt();
+            var8[var9] = EmailValidationError.field_b.nextInt();
           }
           if (null == AccountNoticeKind.field_c ||
             !(AccountNoticeKind.field_c.payload.length >= var7_int)) {

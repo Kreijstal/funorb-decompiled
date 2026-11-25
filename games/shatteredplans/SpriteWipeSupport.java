@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa {
+final class SpriteWipeSupport {
     static CipherPacketBuffer field_a;
     static String field_e;
     static String field_b;
     static String field_c;
     static Boolean field_d;
 
-    final static void a(int param0, int param1, byte param2, int param3, Sprite param4, int param5) {
+    final static void drawAdditiveSpriteWipe(int param0, int param1, byte param2, int param3, Sprite param4, int param5) {
         int var13 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -73,7 +73,7 @@ final class sa {
         }
     }
 
-    final static int a(int param0) {
+    final static int getQuickChatMenuWidth(int param0) {
         if (param0 != -27572) {
           field_a = (CipherPacketBuffer) null;
         }
@@ -91,7 +91,7 @@ final class sa {
         field_a = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int hexRowsForMapHeight(int param0, int param1) {
         if (param1 >= -102) {
           field_a = (CipherPacketBuffer) null;
         }

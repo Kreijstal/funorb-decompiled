@@ -786,7 +786,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("error_js5io", 511);
                 if (null != var2) {
-                  sa.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SpriteWipeSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("error_js5connect_full", 511);
                 if (null != var2) {
@@ -922,7 +922,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_x_dropped_out", 511);
                 if (null != var2) {
-                  sa.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SpriteWipeSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_entered_other_game", 511);
                 if (null != var2) {
@@ -1322,7 +1322,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("status_spectate", 511);
                 if (var2 != null) {
-                  ro.field_d = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidationError.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_playing", 511);
                 if (null != var2) {
@@ -1330,7 +1330,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("status_join", 511);
                 if (null != var2) {
-                  qn.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntroRenderSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_private", 511);
                 if (null != var2) {
@@ -1768,7 +1768,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("toserverlist", 511);
                 if (var2 != null) {
-                  rs.field_yb = IterableNodeHashTable.a(var2, 17746);
+                  IconTextPanel.field_yb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("tocustomersupport", 511);
                 if (var2 != null) {
@@ -2016,7 +2016,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create", 511);
                 if (var2 != null) {
-                  qn.field_e = IterableNodeHashTable.a(var2, 17746);
+                  IntroRenderSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_pleasechooseapassword", 511);
                 if (null != var2) {
@@ -2208,7 +2208,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("login_username_tooltip", 511);
                 if (var2 != null) {
-                  sf.field_a = IterableNodeHashTable.a(var2, 17746);
+                  SoundTriggerTick.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_password_tooltip", 511);
                 if (null != var2) {
@@ -2268,7 +2268,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_email_confirm_tooltip", 511);
                 if (null != var2) {
-                  sf.field_h = IterableNodeHashTable.a(var2, 17746);
+                  SoundTriggerTick.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_age_tooltip", 511);
                 if (var2 != null) {
@@ -2604,7 +2604,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("instructions", 511);
                 if (null != var2) {
-                  ro.field_e = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidationError.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("tutorial", 511);
                 if (null != var2) {
@@ -2620,7 +2620,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("music_colon", 511);
                 if (var2 != null) {
-                  rs.field_zb = IterableNodeHashTable.a(var2, 17746);
+                  IconTextPanel.field_zb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fullscreen", 511);
                 if (null != var2) {
@@ -2656,7 +2656,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("quit", 511);
                 if (var2 != null) {
-                  rl.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TextReplacementContext.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_createaccount", 511);
                 if (var2 != null) {
@@ -2982,7 +2982,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mouseoveranicon", 511);
                 if (null != var2) {
-                  rk.field_l = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("notyetachieved", 511);
                 if (var2 != null) {

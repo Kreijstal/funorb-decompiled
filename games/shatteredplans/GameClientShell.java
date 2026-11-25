@@ -243,7 +243,7 @@ abstract class GameClientShell extends GameApplet {
                         this.b(false);
                       } else {
                         if (var2 == 8) {
-                          vq.a(sa.field_a, ValidatedTextInputWidget.field_W, TextInputPainter.field_t, -3);
+                          vq.a(SpriteWipeSupport.field_a, ValidatedTextInputWidget.field_W, TextInputPainter.field_t, -3);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -352,7 +352,7 @@ abstract class GameClientShell extends GameApplet {
           TabbedPanel.closeClientSocket(-110);
           return;
         }
-        CipherPacketBuffer var2 = sa.field_a;
+        CipherPacketBuffer var2 = SpriteWipeSupport.field_a;
         var2.readInt(16711680);
         var2.readInt(16711680);
         if (param0 != 24) {
@@ -431,7 +431,7 @@ abstract class GameClientShell extends GameApplet {
               IntrusiveNode.b(-11);
               if (3 != TutorialTextSupport.field_g) {
                 if (4 == TutorialTextSupport.field_g) {
-                  AccountStatusSupport.showLoginResult((byte) -124, 256, sa.field_e);
+                  AccountStatusSupport.showLoginResult((byte) -124, 256, SpriteWipeSupport.field_e);
                 } else {
                   if (TutorialTextSupport.field_g == 2) {
                     AccountStatusSupport.showLoginResult((byte) -125, 256, ArchiveNetworkClient.field_r);
@@ -494,12 +494,12 @@ abstract class GameClientShell extends GameApplet {
           if (LeaderboardSortSupport.field_e != 0) {
             StarAnnotation.field_j = SoundCache.a(LeaderboardSortSupport.field_a, 124);
           }
-          LinkPainter.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
-          tq.field_f = rl.a(-1, true, 1, SliderPainter.field_j, false);
-          GalaxyMap.field_g = rl.a(-1, true, 1, ConquestVictoryChecker.field_k, false);
+          LinkPainter.field_g = TextReplacementContext.createArchive(-1, true, 1, ArchiveRequest.field_p, false);
+          tq.field_f = TextReplacementContext.createArchive(-1, true, 1, SliderPainter.field_j, false);
+          GalaxyMap.field_g = TextReplacementContext.createArchive(-1, true, 1, ConquestVictoryChecker.field_k, false);
           DefensiveAi.field_p = 2;
           AttackTask.field_s = LinkPainter.field_g;
-          rl.field_f = tq.field_f;
+          TextReplacementContext.field_f = tq.field_f;
         }
         if (DefensiveAi.field_p == 2) {
           if (null != StarAnnotation.field_j &&
@@ -766,11 +766,11 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void i(int param0) {
-        int var2 = sa.field_a.readUnsignedByte(-82);
+        int var2 = SpriteWipeSupport.field_a.readUnsignedByte(-82);
         int var3 = param0 != ~(var2 & 1) ? 1 : 0;
         int var4 = TextInputPainter.field_t - 1;
         byte[] var5 = new byte[var4];
-        sa.field_a.b(var4, ~param0, 0, var5);
+        SpriteWipeSupport.field_a.b(var4, ~param0, 0, var5);
         ue.a(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
@@ -843,7 +843,7 @@ abstract class GameClientShell extends GameApplet {
             stackIn_40_0 = var7;
             return stackIn_40_0;
           }
-          ql.a(var7, 0, param1);
+          TextHotspotRegion.disposeFullscreenFrame(var7, 0, param1);
           stackIn_38_0 = null;
           return (java.awt.Frame) (stackIn_38_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

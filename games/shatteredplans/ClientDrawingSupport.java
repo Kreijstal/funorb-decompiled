@@ -53,9 +53,9 @@ final class ClientDrawingSupport {
             stackIn_4_1 = param3.field_x + 1;
           }
           stackIn_3_0[stackIn_4_1] = var12;
-          var6 = new GradientMenuLabel(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
+          var6 = new GradientMenuLabel(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - IconTextPanel.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
           var13.addChild(var6, 8);
-          var7 = new MenuButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, StripedProgressWidget.i(0), FullscreenFocusCanvas.field_e, 3375155);
+          var7 = new MenuButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, IconTextPanel.field_Cb.field_J, 8421504, StripedProgressWidget.i(0), FullscreenFocusCanvas.field_e, 3375155);
           var13.addChild(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {
@@ -73,7 +73,7 @@ final class ClientDrawingSupport {
             return stackIn_9_0;
           }
           LoginMethodPreference.buildMenuDividerSprites(-2612, param4.length);
-          var8 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
+          var8 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + IconTextPanel.field_Cb.field_J, BattleContribution.a(-1, false));
           var13.addChild(var8, 8);
           var8.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
@@ -84,7 +84,7 @@ final class ClientDrawingSupport {
           }
           stackIn_12_0[stackIn_13_1][0] = var8;
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
-            var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
+            var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + IconTextPanel.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
             var13.addChild(var10, 8);
             var10.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
@@ -338,7 +338,7 @@ final class ClientDrawingSupport {
             var9 = (Object[]) null;
             ClientDrawingSupport.quickSort(121, -50, (int[]) null, (byte) -33, (Object[]) null);
           }
-          var13 = sa.field_a;
+          var13 = SpriteWipeSupport.field_a;
           var2 = var13.readUnsignedByte(-100);
           if (var2 == 0) {
             var11 = HighscoreResponseSupport.newEightIntArray(-128);
@@ -365,7 +365,7 @@ final class ClientDrawingSupport {
             return;
           }
           if (var2 == 1) {
-            var12 = (FourIntSubmissionRequest) (rs.field_Bb.startForward(0));
+            var12 = (FourIntSubmissionRequest) (IconTextPanel.field_Bb.startForward(0));
             if (var12 == null) {
               TabbedPanel.closeClientSocket(-100);
               return;

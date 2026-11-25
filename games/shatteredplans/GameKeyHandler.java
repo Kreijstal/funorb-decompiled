@@ -27,12 +27,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (0 <= qn.field_c &&
+            if (0 <= IntroRenderSupport.field_c &&
               var2_int >= 0) {
-              StrongCacheEntry.field_x[qn.field_c] = ~var2_int;
-              qn.field_c = 1 + qn.field_c & 127;
-              if (qn.field_c == NodeSequence.field_e) {
-                qn.field_c = -1;
+              StrongCacheEntry.field_x[IntroRenderSupport.field_c] = ~var2_int;
+              IntroRenderSupport.field_c = 1 + IntroRenderSupport.field_c & 127;
+              if (IntroRenderSupport.field_c == NodeSequence.field_e) {
+                IntroRenderSupport.field_c = -1;
               }
             }
           }
@@ -74,12 +74,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (0 <= qn.field_c &&
+            if (0 <= IntroRenderSupport.field_c &&
               0 <= var2_int) {
-              StrongCacheEntry.field_x[qn.field_c] = var2_int;
-              qn.field_c = 1 + qn.field_c & 127;
-              if (NodeSequence.field_e == qn.field_c) {
-                qn.field_c = -1;
+              StrongCacheEntry.field_x[IntroRenderSupport.field_c] = var2_int;
+              IntroRenderSupport.field_c = 1 + IntroRenderSupport.field_c & 127;
+              if (NodeSequence.field_e == IntroRenderSupport.field_c) {
+                IntroRenderSupport.field_c = -1;
               }
             }
             if (var2_int >= 0) {
@@ -253,7 +253,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (PlayerOverlaySupport.field_c == null) {
             return;
           }
-          qn.field_c = -1;
+          IntroRenderSupport.field_c = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,7 +333,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            sa.field_a = new CipherPacketBuffer(param4);
+            SpriteWipeSupport.field_a = new CipherPacketBuffer(param4);
             LobbyOptionSupport.field_f = new CipherPacketBuffer(param2);
             StandardAi.field_a = param6;
             PrivateChatMessage.field_o = param7;

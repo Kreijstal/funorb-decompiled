@@ -190,7 +190,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
               var5.appendButton((WidgetListener) (this), param0 ^ 108, QuickChatParameterType.field_b);
             }
             if (param2.field_c == 3) {
-              var5.addActionButton(rs.field_yb, (byte) 103, 7);
+              var5.addActionButton(IconTextPanel.field_yb, (byte) 103, 7);
             } else {
               if (param2.field_c == 6) {
                 var5.addActionButton(AccountStatusSupport.field_d, (byte) 112, 9);

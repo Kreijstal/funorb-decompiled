@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn {
+final class IntroRenderSupport {
     static String field_e;
     static int field_c;
     static String field_a;
     static String field_d;
     static int[] field_b;
 
-    final static FleetVisual a(int param0, FleetMove param1) {
+    final static FleetVisual createFleetVisual(int param0, FleetMove param1) {
         FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -36,7 +36,7 @@ final class qn {
         }
     }
 
-    final static void a(MutableIntPairNode[] param0, int param1, boolean param2) {
+    final static void fillPolygon(MutableIntPairNode[] param0, int param1, boolean param2) {
         try {
           NameSuggestionsPanel.resetPolygonScanlineBuckets(26987);
           ChatCompositionSupport.collectPolygonScanlineEdges(param0, 0);
@@ -49,7 +49,7 @@ final class qn {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawIntroText(byte param0) {
         RuntimeException decompiledCaughtException = null;
         IntroTextLine var1 = null;
         RuntimeException var1_ref = null;
@@ -96,7 +96,7 @@ final class qn {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearChatHistory(int param0) {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < 82) {

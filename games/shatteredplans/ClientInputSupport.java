@@ -13,7 +13,7 @@ final class ClientInputSupport {
 
     final static int getMouseIdleTicks(int param0) {
         int var1 = -92 % ((56 - param0) / 58);
-        return ql.field_q;
+        return TextHotspotRegion.field_q;
     }
 
     public static void clearStatics(byte param0) {

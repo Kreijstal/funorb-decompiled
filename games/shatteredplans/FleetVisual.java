@@ -7,7 +7,7 @@ final class FleetVisual extends IntrusiveNode {
     static String[] field_y;
     int field_w;
     int field_x;
-    static ro field_t;
+    static EmailValidationError field_t;
     int field_n;
     int field_j;
     static String field_i;
@@ -117,6 +117,6 @@ final class FleetVisual extends IntrusiveNode {
         field_y = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         field_i = "Names can only contain letters, numbers, spaces and underscores";
         field_h = "You must play <%1> more rated games before playing with the current options.";
-        field_t = new ro();
+        field_t = new EmailValidationError();
     }
 }

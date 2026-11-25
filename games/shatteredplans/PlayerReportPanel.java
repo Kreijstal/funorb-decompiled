@@ -17,7 +17,7 @@ final class PlayerReportPanel extends AnimatedPanel {
     private AnimatedPanel field_Cb;
     static String field_Kb;
     private AnimatedPanel field_Fb;
-    private rs field_zb;
+    private IconTextPanel field_zb;
     private StringBuilder field_xb;
     private AnimatedPanel field_Jb;
 
@@ -32,18 +32,18 @@ final class PlayerReportPanel extends AnimatedPanel {
         }
     }
 
-    PlayerReportPanel(int param0, int param1, int param2, int param3, int param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, AnimatedPanel param8, rs param9, AnimatedPanel param10, String param11, long param12) {
+    PlayerReportPanel(int param0, int param1, int param2, int param3, int param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, AnimatedPanel param8, IconTextPanel param9, AnimatedPanel param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
-        rs stackIn_6_1;
-        rs stackIn_6_2;
+        IconTextPanel stackIn_6_1;
+        IconTextPanel stackIn_6_2;
         long stackIn_6_3;
-        rs stackIn_6_4;
+        IconTextPanel stackIn_6_4;
         Object stackIn_7_0;
         Object stackIn_8_0;
-        rs stackIn_8_1;
-        rs stackIn_8_2;
+        IconTextPanel stackIn_8_1;
+        IconTextPanel stackIn_8_2;
         String stackIn_8_5;
         AnimatedPanel stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
@@ -80,8 +80,8 @@ final class PlayerReportPanel extends AnimatedPanel {
         AnimatedPanel[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
-        rs stackIn_8_1Lifetime1;
-        rs stackIn_8_2Lifetime1;
+        IconTextPanel stackIn_8_1Lifetime1;
+        IconTextPanel stackIn_8_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -129,7 +129,7 @@ final class PlayerReportPanel extends AnimatedPanel {
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
-                stackIn_6_4 = (rs) (param9);
+                stackIn_6_4 = (IconTextPanel) (param9);
                 if (CellVertex.field_i < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
@@ -146,7 +146,7 @@ final class PlayerReportPanel extends AnimatedPanel {
                 stackIn_8_2Lifetime1 = null;
                 stackIn_8_5 = SolMapGenerator.field_n;
               }
-              this.field_zb = new rs(stackIn_6_3, stackIn_6_4, stackIn_8_5);
+              this.field_zb = new IconTextPanel(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Cb.addChild(4, this.field_zb);
             }
             var28 = new AnimatedPanel[3];
@@ -233,7 +233,7 @@ final class PlayerReportPanel extends AnimatedPanel {
               var19 = var20;
             }
             if (null != this.field_zb) {
-              var20Lifetime2 = this.field_zb.c(4, 0);
+              var20Lifetime2 = this.field_zb.getContentWidth(4, 0);
               if (var19 < var20Lifetime2) {
                 var19 = var20Lifetime2;
               }
@@ -248,8 +248,8 @@ final class PlayerReportPanel extends AnimatedPanel {
             this.field_Bb.setTarget(0, UniformNineSliceFactory.field_c, (byte) 80, var21, 0);
             var21 = var21 + (UniformNineSliceFactory.field_c + 10);
             if (this.field_zb != null) {
-              var20Lifetime3 = this.field_zb.c(4, 0);
-              this.field_zb.a(var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -101, 4, UniformNineSliceFactory.field_c, var21);
+              var20Lifetime3 = this.field_zb.getContentWidth(4, 0);
+              this.field_zb.setIconTextBounds(var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -101, 4, UniformNineSliceFactory.field_c, var21);
               var21 = var21 + (UniformNineSliceFactory.field_c + 10);
             }
             var28[0].setTarget(var16Lifetime2, var17Lifetime5, (byte) 108, var21, 13);
@@ -460,7 +460,7 @@ final class PlayerReportPanel extends AnimatedPanel {
 
     final int pollReportAction(boolean param0, byte param1) {
         int var3 = 0;
-        rs stackIn_6_0 = null;
+        IconTextPanel stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         AnimatedPanel stackIn_15_0 = null;
         boolean stackIn_16_1 = false;

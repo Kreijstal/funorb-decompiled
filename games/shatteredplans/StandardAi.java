@@ -1025,7 +1025,7 @@ class StandardAi implements Ai {
           QuaternaryNodeList.field_b[var2] = 0;
           BirthDateValidator.field_i[var2] = 0;
           ValidationState.field_c[var2] = 0;
-          rl.field_b[var2] = false;
+          TextReplacementContext.field_b[var2] = false;
         }
         if (param0 != -17286) {
           this.hostileNeighbourFleets((byte) -58, (Star) null);
@@ -1617,8 +1617,8 @@ class StandardAi implements Ai {
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
               if (this.field_n != var7.field_y && (null == var7.field_y ||
-                !this.field_n.field_h[var7.field_y.field_x]) && !rl.field_b[var7.field_p]) {
-                rl.field_b[var7.field_p] = true;
+                !this.field_n.field_h[var7.field_y.field_x]) && !TextReplacementContext.field_b[var7.field_p]) {
+                TextReplacementContext.field_b[var7.field_p] = true;
                 var3_int++;
               }
             }
@@ -1632,7 +1632,7 @@ class StandardAi implements Ai {
           var11 = 0;
           var6Lifetime1 = var11;
           while (this.field_o > var11) {
-            if (rl.field_b[var11]) {
+            if (TextReplacementContext.field_b[var11]) {
               var3_int--;
               var10[var3_int] = var11;
             }

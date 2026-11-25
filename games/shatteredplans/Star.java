@@ -295,7 +295,7 @@ final class Star extends DualLinkNode {
         SoftwareRasterizer.setTarget(var1.field_i, var1.field_r, var1.field_k);
         SoftwareRasterizer.setClip(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
         var1.field_i = null;
-        ql.field_p.addLast((byte) -113, var1);
+        TextHotspotRegion.field_p.addLast((byte) -113, var1);
     }
 
     Star(int param0, int param1, int param2, int param3) {

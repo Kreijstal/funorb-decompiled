@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends AnimatedPanel {
+final class IconTextPanel extends AnimatedPanel {
     static IntrusiveDeque field_Bb;
     private AnimatedPanel field_Ab;
     private AnimatedPanel field_xb;
@@ -12,7 +12,7 @@ final class rs extends AnimatedPanel {
     static CoverageBitmapFont field_Cb;
     static AnimatedPanel field_Eb;
 
-    private rs(long param0, AnimatedPanel param1, AnimatedPanel param2, String param3) {
+    private IconTextPanel(long param0, AnimatedPanel param1, AnimatedPanel param2, String param3) {
         super(param0, (AnimatedPanel) null);
         try {
           this.field_xb = new AnimatedPanel(0L, param1);
@@ -26,11 +26,11 @@ final class rs extends AnimatedPanel {
         }
     }
 
-    rs(long param0, rs param1, String param2) {
+    IconTextPanel(long param0, IconTextPanel param1, String param2) {
         this(param0, param1.field_xb, param1.field_Ab, param2);
     }
 
-    private final void b(int param0, byte param1) {
+    private final void layoutChildren(int param0, byte param1) {
         this.field_xb.setTarget(this.field_xb.measureWidthUnbounded(false), this.field_mb, (byte) 69, 0, 0);
         int var3 = this.field_xb.field_K + param0;
         this.field_Ab.setTarget(-var3 + this.field_K, this.field_mb, (byte) 112, 0, var3);
@@ -53,7 +53,7 @@ final class rs extends AnimatedPanel {
         field_Db = null;
     }
 
-    rs(long param0, Sprite param1, Sprite param2, int param3, AnimatedPanel param4, String param5) {
+    IconTextPanel(long param0, Sprite param1, Sprite param2, int param3, AnimatedPanel param4, String param5) {
         this(param0, (AnimatedPanel) null, param4, param5);
         try {
           this.field_xb.field_pb = param2;
@@ -64,7 +64,7 @@ final class rs extends AnimatedPanel {
         }
     }
 
-    final static void g(int param0) {
+    final static void releaseKeyboardInput(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -84,7 +84,7 @@ final class rs extends AnimatedPanel {
         }
     }
 
-    final int c(int param0, int param1) {
+    final int getContentWidth(int param0, int param1) {
         if (param1 == 0) {
           return this.field_xb.measureWidthUnbounded(false) + (param0 + this.field_Ab.measureWidthUnbounded(false));
         }
@@ -92,10 +92,10 @@ final class rs extends AnimatedPanel {
         return this.field_xb.measureWidthUnbounded(false) + (param0 + this.field_Ab.measureWidthUnbounded(false));
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setIconTextBounds(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.setTarget(param0, param4, (byte) 42, param5, param1);
         int var7 = 89 % ((1 - param2) / 60);
-        this.b(param3, (byte) -34);
+        this.layoutChildren(param3, (byte) -34);
     }
 
     static {

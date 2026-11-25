@@ -185,16 +185,16 @@ final class BattleSnapshot extends IntrusiveNode {
         }
     }
 
-    final static ro a(int param0, String param1) {
+    final static EmailValidationError a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        ro var5 = null;
-        ro stackIn_4_0 = null;
-        ro stackIn_8_0 = null;
-        ro stackIn_11_0 = null;
-        ro stackIn_13_0 = null;
+        EmailValidationError var5 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_8_0 = null;
+        EmailValidationError stackIn_11_0 = null;
+        EmailValidationError stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

@@ -258,7 +258,7 @@ final class sm {
           if (var9 > 0) {
             SoftwareRasterizer.drawHorizontalLine(param0 + 30, -20 + (3 + (param1 + var8)), -param0 + var6 - 80, 16777215);
             SoftwareRasterizer.drawHorizontalLine(param0 + 30, -40 + (var8 + (param1 + 3)), -80 + (-param0 + var6), 16777215);
-            rs.field_Cb.drawString(UnderageAccountInfoPanel.field_J[var9], param0 + 50, rs.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
+            IconTextPanel.field_Cb.drawString(UnderageAccountInfoPanel.field_J[var9], param0 + 50, IconTextPanel.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
           }
           if (294 >= var8 &&
             var8 >= -294) {
@@ -307,13 +307,13 @@ final class sm {
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = UnderageAccountInfoPanel.field_J[var11];
-            var16 = rs.field_Cb.stringWidth(var15_ref_String);
-            var17_int = rs.field_Cb.field_q + rs.field_Cb.field_J;
+            var16 = IconTextPanel.field_Cb.stringWidth(var15_ref_String);
+            var17_int = IconTextPanel.field_Cb.field_q + IconTextPanel.field_Cb.field_J;
             var18 = var6 - 15;
             var19 = (var13 - var16 >> 1) + 8 + param1;
             var20 = new Sprite(var17_int, var16);
             RasterTargetSupport.pushSpriteRenderTarget(var20, 125);
-            rs.field_Cb.a(var15_ref_String, 1 + rs.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
+            IconTextPanel.field_Cb.a(var15_ref_String, 1 + IconTextPanel.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
             OpacityWidget.popLegacyRasterState(0);
             var20.drawAdditive(var18, var19, 256 * var14_intLifetime1 / 12);
           }
@@ -331,11 +331,11 @@ final class sm {
         var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
           var14 = UnderageAccountInfoPanel.field_J[var5 - 1];
-          var15 = rs.field_Cb.stringWidth(var14);
-          var16Lifetime1 = rs.field_Cb.field_q + rs.field_Cb.field_J;
+          var15 = IconTextPanel.field_Cb.stringWidth(var14);
+          var16Lifetime1 = IconTextPanel.field_Cb.field_q + IconTextPanel.field_Cb.field_J;
           var17 = new Sprite(var16Lifetime1, var15);
           RasterTargetSupport.pushSpriteRenderTarget(var17, 82);
-          rs.field_Cb.a(var14, rs.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
+          IconTextPanel.field_Cb.a(var14, IconTextPanel.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
           OpacityWidget.popLegacyRasterState(param2 ^ 7552);
           var18Lifetime1 = var6 - 14;
           var19Lifetime1 = (-var15 + var11Lifetime1 >> 1) + 16 + param1;
@@ -551,7 +551,7 @@ final class sm {
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           AccountRequestState.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
-          rs.field_Cb.a(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
+          IconTextPanel.field_Cb.a(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, IconTextPanel.field_Cb.field_J);
         }
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
@@ -637,12 +637,12 @@ final class sm {
           } else {
             SoftwareRasterizer.drawVerticalLine(var12, param3, var11_int - param3, param9);
           }
-          var13 = WidgetStateStyle.a(-9615, param1, rs.field_Cb, new int[]{param6});
+          var13 = WidgetStateStyle.a(-9615, param1, IconTextPanel.field_Cb, new int[]{param6});
           if (param7 != 62) {
             return;
           }
-          param4 = -(rs.field_Cb.field_J * var13 >> 1) + param3;
-          rs.field_Cb.a(param1, 5 + param5, param4, param6, var13 * rs.field_Cb.field_J + rs.field_Cb.field_q, param9, -1, 0, 0, rs.field_Cb.field_J);
+          param4 = -(IconTextPanel.field_Cb.field_J * var13 >> 1) + param3;
+          IconTextPanel.field_Cb.a(param1, 5 + param5, param4, param6, var13 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param9, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -677,24 +677,24 @@ final class sm {
           }
           if (-1 != param7) {
             var13 = 1 + param7 + ".";
-            rs.field_Cb.drawRightAligned(var13, 15 + (BattleSnapshot.field_r[0] + param4), param6, param8, -1);
+            IconTextPanel.field_Cb.drawRightAligned(var13, 15 + (BattleSnapshot.field_r[0] + param4), param6, param8, -1);
           }
           var12 = param0;
-          rs.field_Cb.drawString(var12, param4 - (-BattleSnapshot.field_r[0] - 20), param6, param8, -1);
+          IconTextPanel.field_Cb.drawString(var12, param4 - (-BattleSnapshot.field_r[0] - 20), param6, param8, -1);
           var14 = Integer.toString(param3);
-          rs.field_Cb.drawCentred(var14, param4 + BattleSnapshot.field_r[1], param6, param8, -1);
+          IconTextPanel.field_Cb.drawCentred(var14, param4 + BattleSnapshot.field_r[1], param6, param8, -1);
           var15 = var11_int >= 50 ? "50+" : Integer.toString(var11_int);
           var12Lifetime1 = var15;
-          rs.field_Cb.drawCentred(var15, BattleSnapshot.field_r[2] + param4, param6, param8, -1);
+          IconTextPanel.field_Cb.drawCentred(var15, BattleSnapshot.field_r[2] + param4, param6, param8, -1);
           var12Lifetime2 = param1 + "%";
           if (param2 >= -116) {
             this.a(-46, (byte) -46, 11, -112, -101, -46, -96);
           }
-          rs.field_Cb.drawCentred(var12Lifetime2, param4 + BattleSnapshot.field_r[3], param6, param8, -1);
+          IconTextPanel.field_Cb.drawCentred(var12Lifetime2, param4 + BattleSnapshot.field_r[3], param6, param8, -1);
           var16 = param9 + "%";
-          rs.field_Cb.drawCentred(var16, param4 + BattleSnapshot.field_r[4], param6, param8, -1);
+          IconTextPanel.field_Cb.drawCentred(var16, param4 + BattleSnapshot.field_r[4], param6, param8, -1);
           var17 = param5 + "%";
-          rs.field_Cb.drawCentred(var17, BattleSnapshot.field_r[5] + param4, param6, param8, -1);
+          IconTextPanel.field_Cb.drawCentred(var17, BattleSnapshot.field_r[5] + param4, param6, param8, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
@@ -788,12 +788,12 @@ final class sm {
         regionExit1: {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), -8 + (var3 + var5));
           var6 = 2805974;
-          var7 = 16 + var5 + rs.field_Cb.field_J;
-          rs.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(ByteArrayReadRequest.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
-          rs.field_Cb.drawCentred(MeshMaterial.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(ProgressDialog.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
+          var7 = 16 + var5 + IconTextPanel.field_Cb.field_J;
+          IconTextPanel.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
+          IconTextPanel.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
+          IconTextPanel.field_Cb.drawCentred(ByteArrayReadRequest.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
+          IconTextPanel.field_Cb.drawCentred(MeshMaterial.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
+          IconTextPanel.field_Cb.drawCentred(ProgressDialog.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
           if (!LoginForm.field_I.field_q) {
             var8 = IsaacBackedRandom.field_d;
@@ -826,8 +826,8 @@ final class sm {
             var8 = wj.field_k;
           }
         }
-        var7Lifetime1 = (rs.field_Cb.field_J + var3 >> 1) + var5;
-        rs.field_Cb.drawCentred(var8, var4 + (var2 >> 1), var7Lifetime1, 2805974, -1);
+        var7Lifetime1 = (IconTextPanel.field_Cb.field_J + var3 >> 1) + var5;
+        IconTextPanel.field_Cb.drawCentred(var8, var4 + (var2 >> 1), var7Lifetime1, 2805974, -1);
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
         return;
     }
@@ -845,7 +845,7 @@ final class sm {
           MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
         }
         SoftwareRasterizer.setClip(8 + var5, 8 + var6, var5 + var3 - 8, -8 + var6 + var4);
-        rs.field_Cb.drawCentred(DraggableWidget.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
+        IconTextPanel.field_Cb.drawCentred(DraggableWidget.field_D, 320, (IconTextPanel.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
 
@@ -955,7 +955,7 @@ final class sm {
         for (var2 = 0; CellVertex.field_j.length > var2; var2++) {
           if (var2 != RasterBuffer.field_e &&
             TerritoryResourcePanelSupport.field_c != var2) {
-            ql.field_o[var2] = null;
+            TextHotspotRegion.field_o[var2] = null;
             MapView.field_sb[var2] = null;
           }
         }
@@ -1116,7 +1116,7 @@ final class sm {
         }
         var6 = -60 + TutorialVictoryChecker.field_r[this.field_a];
         var7 = -50 + TutorialVictoryChecker.field_t[this.field_a];
-        var8 = 1 + rs.field_Cb.field_J * 3 / 4;
+        var8 = 1 + IconTextPanel.field_Cb.field_J * 3 / 4;
         if (param2 != 0) {
           if (param2 != 1) {
             if (param2 != 2) {
@@ -1154,16 +1154,16 @@ final class sm {
                 }
                 LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
-                rs.field_Cb.drawString(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(sk.field_i, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
-                rs.field_Cb.drawString(LabeledChildWidget.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(LabeledChildWidget.field_F, var12 + 22, IconTextPanel.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
-                rs.field_Cb.drawString(MenuComponent.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(MenuComponent.field_n, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 MenuLabel.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
                 var13 = RasterStateFrame.field_n % 104;
@@ -1173,7 +1173,7 @@ final class sm {
                 } else {
                   MenuLabel.field_y[12].drawScaledAdditive(-15 + var12, -15 + param0, 30, 30, 128);
                 }
-                rs.field_Cb.drawString(UiTextSupport.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(UiTextSupport.field_d[0], var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 return;
               }
               if (param2 == 5) {
@@ -1183,18 +1183,18 @@ final class sm {
                 OpacityWidget.popLegacyRasterState(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
                 var42 = WhirlpoolHasher.field_n;
-                var10Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
                 ProgressDialog.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.a(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = LoginForm.field_N;
-                var10Lifetime2Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
                 AccountRequestResult.field_f[RasterStateFrame.field_n % AccountRequestResult.field_f.length].draw(5 + param3, 42 + param0);
-                var44 = rk.field_n;
+                var44 = IntArrayReadRequest.field_n;
                 var5 = var44;
-                var10Lifetime2Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime2Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2Lifetime2 * 4) * var8 >> 2);
                 return;
               }
@@ -1229,7 +1229,7 @@ final class sm {
                       var14 = 1;
                     }
                   }
-                  rs.field_Cb.drawCentred(Integer.toString(var14), var12Lifetime1, 4 + var13Lifetime1, 16777215, -1);
+                  IconTextPanel.field_Cb.drawCentred(Integer.toString(var14), var12Lifetime1, 4 + var13Lifetime1, 16777215, -1);
                   if (var11Lifetime2 / 20 > 0 &&
                     var11Lifetime2 / 20 < 4 &&
                     var11Lifetime2 % 20 < 3) {
@@ -1246,7 +1246,7 @@ final class sm {
                   }
                 }
                 var32 = DebouncedValidator.field_a;
-                var14 = rs.field_Cb.a(wg.field_e.a(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
                 var15 = RasterStateFrame.field_n % 50;
                 if (var15 >= 25) {
@@ -1265,7 +1265,7 @@ final class sm {
                   SoftwareRasterizer.drawHorizontalLine(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
                 }
                 var33 = WhirlpoolHasher.field_l;
-                var14 = rs.field_Cb.a(wg.field_e.a(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 var16_intLifetime2 = RasterStateFrame.field_n / 100 % 3;
                 var17_intLifetime1 = RasterStateFrame.field_n % 100;
@@ -1323,7 +1323,7 @@ final class sm {
                   var10_ref_om.drawAdditive(15 + param3, param0 + 15, var18_intLifetime1);
                 }
                 var36 = DraggableWidget.field_F;
-                var14 = rs.field_Cb.a(wg.field_e.a(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 if (null != ClientRasterSupport.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
@@ -1345,13 +1345,13 @@ final class sm {
                 SoftwareRasterizer.drawVerticalLine(9 + param3, param0 + 10, 35, 16777215);
                 SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 44, 40, 16777215);
                 var37 = ScrollPane.field_Cb;
-                var14 = rs.field_Cb.a(wg.field_e.a(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
+                var14 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (var14 * 4 + 3) >> 2);
                 return;
               }
               if (param2 == 7) {
                 var9Lifetime2 = RasterStateFrame.field_n % 200;
-                var10Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((2 * var10Lifetime3 + 3) * var8 >> 1);
                 var11Lifetime3 = param0;
                 var12Lifetime2 = param3 + 125;
@@ -1359,41 +1359,41 @@ final class sm {
                 var14 = 150;
                 var15 = 125;
                 var16 = new String[16];
-                var17 = wg.field_e.a(5607, ListContent.field_d);
-                var18 = wg.field_e.a(5607, ClientOverlayDrawSupport.field_h);
-                var19Lifetime1 = rs.field_Cb.wrapText(var17, new int[]{var14}, var16);
-                var20Lifetime1 = rs.field_Cb.wrapText(var18, new int[]{var15}, var16);
+                var17 = wg.field_e.expandPlaceholders(5607, ListContent.field_d);
+                var18 = wg.field_e.expandPlaceholders(5607, ClientOverlayDrawSupport.field_h);
+                var19Lifetime1 = IconTextPanel.field_Cb.wrapText(var17, new int[]{var14}, var16);
+                var20Lifetime1 = IconTextPanel.field_Cb.wrapText(var18, new int[]{var15}, var16);
                 stackIn_96_0 = (var20Lifetime1 < var19Lifetime1) ? var19Lifetime1 : var20Lifetime1;
                 var10Lifetime3Lifetime1 = stackIn_96_0;
                 var10Lifetime3Lifetime2 = 3;
                 var21Lifetime1 = var8 + var8 * var10Lifetime3Lifetime2;
-                rs.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
-                rs.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
                 this.a(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
                 this.a(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
-                var11Lifetime3 = var11Lifetime3 + (rs.field_Cb.field_J + var21Lifetime1);
-                var17Lifetime1 = wg.field_e.a(5607, tb.field_b);
-                var18Lifetime1 = wg.field_e.a(5607, wq.field_c);
-                var19Lifetime1Lifetime1 = rs.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
-                var20Lifetime1Lifetime1 = rs.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
+                var11Lifetime3 = var11Lifetime3 + (IconTextPanel.field_Cb.field_J + var21Lifetime1);
+                var17Lifetime1 = wg.field_e.expandPlaceholders(5607, tb.field_b);
+                var18Lifetime1 = wg.field_e.expandPlaceholders(5607, wq.field_c);
+                var19Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
+                var20Lifetime1Lifetime1 = IconTextPanel.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
                 stackIn_99_0 = (var20Lifetime1Lifetime1 >= var19Lifetime1Lifetime1) ? var20Lifetime1Lifetime1 : var19Lifetime1Lifetime1;
                 var10Lifetime3Lifetime3 = stackIn_99_0;
                 var21Lifetime1Lifetime1 = var8 * var10Lifetime3Lifetime3 + var8;
-                rs.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
-                rs.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
                 this.a(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
-                var17Lifetime2 = wg.field_e.a(5607, AccountInputSupport.field_a);
-                var10Lifetime3Lifetime4 = rs.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
+                var17Lifetime2 = wg.field_e.expandPlaceholders(5607, AccountInputSupport.field_a);
+                var10Lifetime3Lifetime4 = IconTextPanel.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
                 var21Lifetime1Lifetime2 = var10Lifetime3Lifetime4 * var8 + var8;
                 if (40 > var21Lifetime1Lifetime2) {
                   var21Lifetime1Lifetime2 = 40;
                 }
-                rs.field_Cb.a(var17Lifetime2, var12Lifetime2, var11Lifetime3, 200, var21Lifetime1Lifetime2, 16777215, -1, 0, 1, var8);
+                IconTextPanel.field_Cb.a(var17Lifetime2, var12Lifetime2, var11Lifetime3, 200, var21Lifetime1Lifetime2, 16777215, -1, 0, 1, var8);
                 var23Lifetime1 = -(var9Lifetime2 / 24) + 15;
                 var24Lifetime1 = -(var9Lifetime2 / 17) + 10;
                 if (var24Lifetime1 < 0) {
@@ -1427,24 +1427,24 @@ final class sm {
               }
               if (8 == param2) {
                 var38 = StandardMapGenerator.field_g;
-                var9Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 0, param0 + (rs.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
+                var9Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                this.a(param3 + 15, 20, 0, param0 + (IconTextPanel.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
                 var39 = WidgetStyle.field_b;
-                var9Lifetime3Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 1, param0 + (rs.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
+                var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
+                this.a(15 + param3, 20, 1, param0 + (IconTextPanel.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
                 var40 = ClientOverlayDrawSupport.field_f;
                 var5 = var40;
                 var5 = var40;
-                var9Lifetime3Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 2, (rs.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
+                var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                this.a(15 + param3, 20, 2, (IconTextPanel.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
                 var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
-                var9Lifetime3Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * rs.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
+                var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
+                this.a(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * IconTextPanel.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime3 + 3) >> 2);
                 return;
               }
@@ -1465,7 +1465,7 @@ final class sm {
         } else {
           var5 = vc.field_e;
         }
-        this.a(var8, -91, param0, param3, var6, 16777215, var7, rs.field_Cb, wg.field_e.a(5607, var5));
+        this.a(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, wg.field_e.expandPlaceholders(5607, var5));
     }
 
     private final int a(boolean param0, int param1) {
@@ -2042,9 +2042,9 @@ final class sm {
           var6 != 24) {
           AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
           var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
-          var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
-          var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
-          rs.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+          var22 = IconTextPanel.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var22 = var22 + (1 + IconTextPanel.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
+          IconTextPanel.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
         } else {
           if (var6 == 24) {
             AccountRequestState.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
@@ -2055,16 +2055,16 @@ final class sm {
               var21_ref_String = "(" + AccountRequestResult.field_i + "???)";
               var22_ref_String = ClientOverlaySupport.field_c;
             }
-            var23 = rs.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
-            var23 = var23 + (1 + rs.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * rs.field_Cb.field_J + (var20 - (-14 - rs.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
-            rs.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+            var23 = IconTextPanel.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+            var23 = var23 + (1 + IconTextPanel.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * IconTextPanel.field_Cb.field_J + (var20 - (-14 - IconTextPanel.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
+            IconTextPanel.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * IconTextPanel.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           } else {
             if (!ClientRuntimeState.field_e) {
               AccountRequestState.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, AccountRequestState.field_b.field_J + (6 + var20), 2805974, -1);
-              rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+              IconTextPanel.field_Cb.a(IntArrayReadRequest.field_l, 10 + var2Lifetime1, var20 + 14 + IconTextPanel.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
             } else {
               AccountRequestState.field_b.drawString(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + AccountRequestState.field_b.field_J, 2805974, -1);
-              rs.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+              IconTextPanel.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
             }
           }
         }
@@ -2213,7 +2213,7 @@ final class sm {
           SpriteMaskEffects.darkenThroughSpriteMask(SpriteState.field_q, param0, param6);
           SoftwareRasterizer.restoreClip(var17);
         }
-        rs.field_Cb.drawCentred(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
+        IconTextPanel.field_Cb.drawCentred(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
     }
 
     private final void a(int param0, byte param1) {
@@ -2662,9 +2662,9 @@ final class sm {
           if (param8 != 110) {
             return;
           }
-          var13Lifetime1 = WidgetStateStyle.a(-9615, param4, rs.field_Cb, new int[]{param6});
-          param1 = -(var13Lifetime1 * rs.field_Cb.field_J >> 1) + param3;
-          rs.field_Cb.a(param4, param2 + 5, param1, param6, var13Lifetime1 * rs.field_Cb.field_J + rs.field_Cb.field_q, param0, -1, 0, 0, rs.field_Cb.field_J);
+          var13Lifetime1 = WidgetStateStyle.a(-9615, param4, IconTextPanel.field_Cb, new int[]{param6});
+          param1 = -(var13Lifetime1 * IconTextPanel.field_Cb.field_J >> 1) + param3;
+          IconTextPanel.field_Cb.a(param4, param2 + 5, param1, param6, var13Lifetime1 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param0, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2755,7 +2755,7 @@ final class sm {
         SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {
           SoftwareRasterizer.fillCircleAlpha(var30 >> 4, var31 >> 4, 9, 0, 92);
-          rs.field_Cb.drawCentred(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
+          IconTextPanel.field_Cb.drawCentred(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
         }
     }
 

@@ -39,9 +39,9 @@ final class FleetTrailPoint extends IntrusiveNode {
               var4_ref_sk.field_l < var2_long) {
               var4_ref_sk.unlink((byte) -61);
               TextInputPainter.field_t = var4_ref_sk.field_h.length;
-              sa.field_a.position = 0;
+              SpriteWipeSupport.field_a.position = 0;
               for (var5_int = 0; TextInputPainter.field_t > var5_int; var5_int++) {
-                sa.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
+                SpriteWipeSupport.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
               }
               IterableNodeHashTable.field_e = SliderPainter.field_g;
               SliderPainter.field_g = TargetedChatMessage.field_n;
@@ -55,12 +55,12 @@ final class FleetTrailPoint extends IntrusiveNode {
           }
           while (true) {
             if (ArchiveNetworkClient.field_b < 0) {
-              sa.field_a.position = 0;
+              SpriteWipeSupport.field_a.position = 0;
               if (!StarAnnotation.a(param1 ^ -73, 1)) {
                 return false;
               }
-              ArchiveNetworkClient.field_b = sa.field_a.h((byte) 126);
-              sa.field_a.position = 0;
+              ArchiveNetworkClient.field_b = SpriteWipeSupport.field_a.h((byte) 126);
+              SpriteWipeSupport.field_a.position = 0;
               TextInputPainter.field_t = param0[ArchiveNetworkClient.field_b];
             }
             if (!uc.d((byte) -50)) {
@@ -83,7 +83,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             }
             var5 = new sk(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[TextInputPainter.field_t]);
             for (var6 = 0; var6 < TextInputPainter.field_t; var6++) {
-              var5.field_h[var6] = sa.field_a.payload[var6];
+              var5.field_h[var6] = SpriteWipeSupport.field_a.payload[var6];
             }
             ClientRuntimeState.field_h.addLast((byte) -113, var5);
             ArchiveNetworkClient.field_b = -1;

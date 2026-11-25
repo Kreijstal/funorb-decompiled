@@ -98,7 +98,7 @@ final class sj {
                   var6_ref = var9;
                   if (var5_intLifetime2 != 0) {
                     if (var5_intLifetime2 == 1) {
-                      var6_ref = var9 + qn.field_d + (String) (var6_ref);
+                      var6_ref = var9 + IntroRenderSupport.field_d + (String) (var6_ref);
                     } else {
                       var6_ref = var9 + ReflectionQueueSupport.field_d + (String) (var6_ref);
                     }
@@ -117,11 +117,11 @@ final class sj {
                 var7 = var6_ref;
                 var5 = var7;
               }
-              uq.field_m.a((String) (var6_ref), param0 + 58835, "generateshortfall");
+              uq.field_m.putReplacement((String) (var6_ref), param0 + 58835, "generateshortfall");
               decompiledFrameRemainder0 = false;
             }
             else {
-              uq.field_m.a(DirectByteArrayStorage.field_m, 27275, "generateshortfall");
+              uq.field_m.putReplacement(DirectByteArrayStorage.field_m, 27275, "generateshortfall");
             }
           }
           var4Lifetime1 = 0;
@@ -145,14 +145,14 @@ final class sj {
                 if (var4Lifetime2 != 1) {
                   var5Lifetime1 = var7_ref + ReflectionQueueSupport.field_d + (String) (var5Lifetime1);
                 } else {
-                  var5Lifetime1 = var7_ref + qn.field_d + (String) (var5Lifetime1);
+                  var5Lifetime1 = var7_ref + IntroRenderSupport.field_d + (String) (var5Lifetime1);
                 }
               }
               var4Lifetime2++;
             }
             var11++;
           }
-          uq.field_m.a((String) (var5Lifetime1), 27275, "generateprojectprogress");
+          uq.field_m.putReplacement((String) (var5Lifetime1), 27275, "generateprojectprogress");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

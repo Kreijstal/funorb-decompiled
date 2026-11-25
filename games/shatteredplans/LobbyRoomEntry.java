@@ -108,19 +108,19 @@ final class LobbyRoomEntry extends AnimatedPanel {
           }
           stackIn_9_0 = (var10 != 0) ? 8421504 : 2105376;
           var11 = stackIn_9_0;
-          var12 = new FilledMenuPanel(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
+          var12 = new FilledMenuPanel(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(IconTextPanel.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, IconTextPanel.field_Cb.field_J + 8, 2, var11);
           var17.addChild(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
-            var13_ref = new SpriteButton(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
+            var13_ref = new SpriteButton(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - IconTextPanel.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
             var17.addChild(var13_ref, 8);
           } else {
-            var13_ref2 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, AccountInputSupport.field_d.toUpperCase());
+            var13_ref2 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(IconTextPanel.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, IconTextPanel.field_Cb.field_J, AccountInputSupport.field_d.toUpperCase());
             var17.addChild(var13_ref2, 8);
           }
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var13_ref2Lifetime1 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(IconTextPanel.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, IconTextPanel.field_Cb.field_J, QuickChatCategoryRegistry.a(StandardAi.field_m, 4371, new String[]{Integer.toString(param0)}));
             var17.addChild(var13_ref2Lifetime1, 8);
           }
           var13_refLifetime1 = new SpriteButton(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
@@ -229,7 +229,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           ObjectList.a(param4, 0, GalaxyMapLayoutSupport.field_a, param1, param2);
         }
         MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
-        ObjectList.a(param4, 0, ro.field_a, param1, param2);
+        ObjectList.a(param4, 0, EmailValidationError.field_a, param1, param2);
         Star.field_w = Star.field_w + 1;
     }
 

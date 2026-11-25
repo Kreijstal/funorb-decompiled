@@ -529,7 +529,7 @@ final class BufferedCacheFile {
         int var2 = 0;
         int var3 = 0;
         int var4_int = 0;
-        rk var4 = null;
+        IntArrayReadRequest var4 = null;
         IntValueWriteRequest var5_ref_aq = null;
         int var5 = 0;
         int[] var6 = null;
@@ -537,7 +537,7 @@ final class BufferedCacheFile {
         int var8 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = sa.field_a;
+          var1 = SpriteWipeSupport.field_a;
           if (param0 != -523) {
             return;
           }
@@ -580,7 +580,7 @@ final class BufferedCacheFile {
               return;
             }
           }
-          var4 = (rk) (Bzip2State.field_J.startForward(0));
+          var4 = (IntArrayReadRequest) (Bzip2State.field_J.startForward(0));
           if (var4 == null) {
             TabbedPanel.closeClientSocket(-108);
             return;

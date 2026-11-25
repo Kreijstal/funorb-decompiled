@@ -56,7 +56,7 @@ final class HighscoreResponseSupport {
         var26 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var27 = sa.field_a;
+          var27 = SpriteWipeSupport.field_a;
           var2 = var27.readUnsignedByte(-56);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(-20976);
@@ -208,7 +208,7 @@ final class HighscoreResponseSupport {
         var1 = 59 / ((param0 + 53) / 32);
         var2 = TertiaryListSequence.field_j;
         synchronized (var2) {
-          ql.field_q = ql.field_q + 1;
+          TextHotspotRegion.field_q = TextHotspotRegion.field_q + 1;
           AllianceExpiredEvent.field_n = v.field_d;
           TertiaryListSequence.field_k = ClientContextMenuSupport.field_f;
           LobbyRoomControlsSupport.field_b = AllianceExpiredEvent.field_i;
@@ -228,7 +228,7 @@ final class HighscoreResponseSupport {
           if (param1 != 18014) {
             HighscoreResponseSupport.getSharedPcmMixer(-12);
           }
-          qn.field_c = -1;
+          IntroRenderSupport.field_c = -1;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ae.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

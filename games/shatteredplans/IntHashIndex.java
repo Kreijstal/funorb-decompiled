@@ -4,7 +4,7 @@
 final class IntHashIndex {
     private int[] field_d;
     static Archive field_a;
-    static ro field_e;
+    static EmailValidationError field_e;
     static int[] field_g;
     static boolean field_f;
     static String field_c;
@@ -85,7 +85,7 @@ final class IntHashIndex {
     }
 
     static {
-        field_e = new ro();
+        field_e = new EmailValidationError();
         field_c = "Searching for an opponent";
     }
 }

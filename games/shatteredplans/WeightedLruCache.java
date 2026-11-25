@@ -143,8 +143,8 @@ final class WeightedLruCache {
           var2 = new SpriteButton(15, 10, 36, 36, (Sprite) null);
           TextFieldWidget.field_E.addChild(var2, 8);
           var1.field_e = var2;
-          var3 = new AlignedMenuLabel(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
-          var4 = new AlignedMenuLabel(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
+          var3 = new AlignedMenuLabel(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + IconTextPanel.field_Cb.field_J / 2), 450, IconTextPanel.field_Cb.field_J, (String) null, 0);
+          var4 = new AlignedMenuLabel(15, TextFieldWidget.field_E.field_i - IconTextPanel.field_Cb.field_J, 450, IconTextPanel.field_Cb.field_J, (String) null, 2);
           var1.field_f = var3;
           TextFieldWidget.field_E.addChild(var3, 8);
           TextFieldWidget.field_E.addChild(var4, param0 ^ 77);

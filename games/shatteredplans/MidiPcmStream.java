@@ -644,7 +644,7 @@ final class MidiPcmStream extends PcmStream {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Db.field_z = qn.field_a;
+                  var12.field_Db.field_z = IntroRenderSupport.field_a;
                 }
               } else {
                 if (var12.field_lc >= 0) {
@@ -652,14 +652,14 @@ final class MidiPcmStream extends PcmStream {
                 } else {
                   if (var12.field_mc && (var12.field_cc ||
                     var12.field_Jb)) {
-                    var12.field_Db.field_z = qn.field_a;
+                    var12.field_Db.field_z = IntroRenderSupport.field_a;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (2 != var12.field_Fb) {
                       var12.field_Ub.field_z = DialogRoot.field_F;
                     } else {
-                      var12.field_Db.field_z = ro.field_d;
+                      var12.field_Db.field_z = EmailValidationError.field_d;
                     }
                   }
                 }
@@ -1434,7 +1434,7 @@ final class MidiPcmStream extends PcmStream {
           field_L = (String) null;
         }
         GameKeyHandler.field_d = null;
-        rs.field_Fb = -1;
+        IconTextPanel.field_Fb = -1;
         AggressiveAi.field_q = false;
         RandomAccessCacheFile.field_g = -1;
         LinkPainter.field_e = 0;

@@ -96,7 +96,7 @@ final class CheckboxPainter implements WidgetPainter {
           if (param0 >= -10) {
             return;
           }
-          ql.field_n = param1;
+          TextHotspotRegion.field_n = param1;
           PlayerStats.field_c = param3;
           FrameTimer.field_c = param2;
           BattleEvent.b(SoftwareRasterizer.field_b / 2, SoftwareRasterizer.field_k / 2, 0);

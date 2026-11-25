@@ -27,7 +27,7 @@ final class vo {
           SoundEffectSupport.loadSoundEffectDefinition(128, param2, "shatteredplans_tab_open");
           SoundEffectSupport.loadSoundEffectDefinition(128, 100, "shatteredplans_tab_close");
           ScrollPane.field_yb = SoundEffectSupport.loadSoundEffectDefinition(param2 ^ 228, 256, "shatteredplans_next_open");
-          sf.field_g = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_next_close");
+          SoundTriggerTick.field_g = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

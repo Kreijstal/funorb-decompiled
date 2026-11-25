@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends IntrusiveNode {
+final class TextHotspotRegion extends IntrusiveNode {
     static Sprite[] field_o;
     int field_l;
     int field_m;
     int field_k;
-    ql field_h;
+    TextHotspotRegion field_h;
     int field_i;
     static IntrusiveDeque field_p;
     int field_j;
     static BitmapFont field_n;
     static volatile int field_q;
 
-    final static void a(byte param0, String[] param1) {
+    final static void loadTutorialScenes(byte param0, String[] param1) {
         sq stackIn_17_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -82,7 +82,7 @@ final class ql extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void updateAudio(int param0) {
         SoundPlayback var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         SoundPlayback var1Lifetime1;
@@ -90,7 +90,7 @@ final class ql extends IntrusiveNode {
           ClientContextMenuSupport.field_e.service();
           IsolationistAi.field_q.service();
           if (param0 != -26848) {
-            ql.clearStatics((byte) 108);
+            TextHotspotRegion.clearStatics((byte) 108);
           }
           QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
           if (QuickChatCategoryDefinition.field_u == 0) {
@@ -120,7 +120,7 @@ final class ql extends IntrusiveNode {
         }
     }
 
-    final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
+    final static void disposeFullscreenFrame(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -178,7 +178,7 @@ final class ql extends IntrusiveNode {
         field_n = null;
     }
 
-    ql(int param0, int param1, int param2, int param3, int param4) {
+    TextHotspotRegion(int param0, int param1, int param2, int param3, int param4) {
         this.field_m = param2;
         this.field_j = param3;
         this.field_l = param4;

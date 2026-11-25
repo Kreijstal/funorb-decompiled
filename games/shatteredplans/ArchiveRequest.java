@@ -15,7 +15,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         MusicEnvelope.field_i = param0;
         CachedArchiveSource.field_n = true;
         if (param0 == 1) {
-          QuickChatPhraseRegistry.a(32767, sf.field_d, true, 476);
+          QuickChatPhraseRegistry.a(32767, SoundTriggerTick.field_d, true, 476);
         }
     }
 

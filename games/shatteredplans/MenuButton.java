@@ -46,7 +46,7 @@ final class MenuButton extends MenuComponent {
         }
         int var2 = -72 % ((67 - param0) / 47);
         if (null != this.field_F) {
-          rs.field_Cb.drawCentred(this.field_F, this.field_m / 2 + this.field_k + 1, (rs.field_Cb.field_J + rs.field_Cb.field_q) / 4 + this.field_t + this.field_i / 2, this.field_G, -1);
+          IconTextPanel.field_Cb.drawCentred(this.field_F, this.field_m / 2 + this.field_k + 1, (IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q) / 4 + this.field_t + this.field_i / 2, this.field_G, -1);
         }
     }
 

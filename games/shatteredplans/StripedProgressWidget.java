@@ -233,7 +233,7 @@ final class StripedProgressWidget extends UiWidget {
         int var1 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1Lifetime1;
-        Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
+        Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, IconTextPanel.field_Cb.field_J);
         RandomAccessCacheFile.a(param0 - 106);
         Star.field_F.bindAsRenderTarget();
         for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {

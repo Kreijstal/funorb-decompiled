@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ro {
+final class EmailValidationError {
     static QuickChatParameterType field_c;
     static String field_e;
     static String field_d;
@@ -26,7 +26,7 @@ final class ro {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
+    final static boolean readBooleanByte(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

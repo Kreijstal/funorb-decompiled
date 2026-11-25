@@ -43,7 +43,7 @@ final class UrlLoader implements Runnable {
         int var12Lifetime1;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var15 = sa.field_a;
+          var15 = SpriteWipeSupport.field_a;
           var2 = var15.readUnsignedByte(-102);
           var3 = (PlayerRankingRequest) (PlacementOrder.field_r.startForward(0));
           while (var3 != null) {

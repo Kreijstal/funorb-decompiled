@@ -2867,7 +2867,7 @@ final class TaskAi implements Ai {
           this.field_m = param1;
           this.field_w = param0;
           this.field_x = this.field_m.field_g.field_e.length;
-          sf.a((byte) 124, this.field_x);
+          SoundTriggerTick.ensureAiWorkCapacity((byte) 124, this.field_x);
           this.field_p = true;
           this.field_j = vc.a((byte) -39, 75) + 25;
           this.field_t = vc.a((byte) -39, 75) + 25;

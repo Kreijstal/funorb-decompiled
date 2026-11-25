@@ -7,7 +7,7 @@ class TextHotspotWidget extends FocusableWidget {
     static String[] field_K;
     static Sprite[] field_L;
     private IntrusiveDeque field_D;
-    private ql field_I;
+    private TextHotspotRegion field_I;
     private String[] field_J;
     static String field_E;
     static String field_H;
@@ -22,7 +22,7 @@ class TextHotspotWidget extends FocusableWidget {
           return;
         }
         WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
-        ql var6 = this.field_I;
+        TextHotspotRegion var6 = this.field_I;
         if (var6 != null) {
           var7 = var5.getTextX(0, (UiWidget) (this), param3);
           var8 = var5.getTextY(param2, (UiWidget) (this), 100);
@@ -151,7 +151,7 @@ class TextHotspotWidget extends FocusableWidget {
           } else {
             try {
               wg.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
-              var4 = sa.field_a;
+              var4 = SpriteWipeSupport.field_a;
               var5 = var4;
               LobbyOptionSupport.field_f.position = 0;
               stackIn_9_0 = (param0) ? -2 : -1;
@@ -260,7 +260,7 @@ class TextHotspotWidget extends FocusableWidget {
         if (NameSuggestionsPanel.field_L < 50) {
           us.a(0, NameSuggestionsPanel.field_L);
         }
-        qn.a((byte) -120);
+        IntroRenderSupport.drawIntroText((byte) -120);
         var1 = NetworkArchiveRequest.field_C.stringWidth(MenuInputState.field_d) + 20;
         if (var1 < 80) {
           var1 = 80;
@@ -284,7 +284,7 @@ class TextHotspotWidget extends FocusableWidget {
         String var23;
         TextLayout var24;
         TextLayoutLine var25;
-        ql var26;
+        TextHotspotRegion var26;
         WidgetMetrics var27;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
@@ -293,7 +293,7 @@ class TextHotspotWidget extends FocusableWidget {
         String var18;
         TextLayout var19;
         TextLayoutLine var20;
-        ql var21;
+        TextHotspotRegion var21;
         WidgetMetrics var28;
         int var2Lifetime1;
         int var5Lifetime1;
@@ -344,12 +344,12 @@ class TextHotspotWidget extends FocusableWidget {
                 }
               }
               var14 = stackIn_14_0;
-              var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.getLineHeight(false), -var25.field_e + var25.field_c));
+              var26 = new TextHotspotRegion(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.getLineHeight(false), -var25.field_e + var25.field_c));
               if (var10 == null) {
                 var10 = var26;
                 this.field_D.addLast((byte) -113, var26);
               } else {
-                ((ql) (var10)).field_h = var26;
+                ((TextHotspotRegion) (var10)).field_h = var26;
                 var10 = var26;
                 this.field_D.addLast((byte) -113, var26);
               }
@@ -390,12 +390,12 @@ class TextHotspotWidget extends FocusableWidget {
               }
             }
             var14Lifetime1 = stackIn_34_0;
-            var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.getLineHeight(false), -var20.field_e + var20.field_c));
+            var21 = new TextHotspotRegion(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.getLineHeight(false), -var20.field_e + var20.field_c));
             if (var10Lifetime1 == null) {
               var10Lifetime1 = var21;
               this.field_D.addLast((byte) -113, var21);
             } else {
-              ((ql) (var10Lifetime1)).field_h = var21;
+              ((TextHotspotRegion) (var10Lifetime1)).field_h = var21;
               var10Lifetime1 = var21;
               this.field_D.addLast((byte) -113, var21);
             }
@@ -412,12 +412,12 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    private final ql b(int param0, int param1, byte param2) {
-        ql var4;
-        ql var5;
+    private final TextHotspotRegion b(int param0, int param1, byte param2) {
+        TextHotspotRegion var4;
+        TextHotspotRegion var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        var4 = (ql) (this.field_D.startForward(0));
+        var4 = (TextHotspotRegion) (this.field_D.startForward(0));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -429,7 +429,7 @@ class TextHotspotWidget extends FocusableWidget {
             }
             var5 = var5.field_h;
           }
-          var4 = (ql) (this.field_D.nextForward((byte) -71));
+          var4 = (TextHotspotRegion) (this.field_D.nextForward((byte) -71));
         }
         if (param2 == -66) {
           return null;
@@ -475,7 +475,7 @@ class TextHotspotWidget extends FocusableWidget {
         super.fireAction(param0, param1, param2, param3);
         int var5 = -this.field_m + param1;
         int var6 = -this.field_q + param2;
-        ql var7 = this.b(var5, var6, (byte) -66);
+        TextHotspotRegion var7 = this.b(var5, var6, (byte) -66);
         if (var7 == null) {
           return;
         }

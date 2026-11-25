@@ -483,7 +483,7 @@ final class WhirlpoolHasher {
           }
           var6 = param4 * (182 - IntrusiveDeque.field_a[param3.field_x].field_z) / param2;
           var7 = (-IntrusiveDeque.field_a[param3.field_x].field_z + 182) * param0 / param2;
-          var8 = new Sprite(var6 + var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2, 2 + rs.field_Cb.field_J);
+          var8 = new Sprite(var6 + var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2, 2 + IconTextPanel.field_Cb.field_J);
           RandomAccessCacheFile.a(-128);
           var8.bindAsRenderTarget();
           if (param4 <= 0) {

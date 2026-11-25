@@ -286,9 +286,9 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             }
             var1Lifetime1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
-              uq.field_m.a(ChatHistoryEntry.formatLocalAttackLosses(var1Lifetime1, 23248), 27275, "combatreport1");
+              uq.field_m.putReplacement(ChatHistoryEntry.formatLocalAttackLosses(var1Lifetime1, 23248), 27275, "combatreport1");
             }
-            uq.field_m.a(Integer.toString(TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
+            uq.field_m.putReplacement(Integer.toString(TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
           }
           if (TextReplacementEntry.field_a.field_P.field_z &&
             TextReplacementEntry.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
@@ -307,7 +307,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               stackIn_40_0 = var3.field_y.field_s;
             }
             var4 = stackIn_40_0;
-            uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
+            uq.field_m.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
             var2++;
           }
           return;
@@ -538,7 +538,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           if (param0 < 20) {
             field_K = -33;
           }
-          stackIn_4_0 = ro.field_a.field_xb;
+          stackIn_4_0 = EmailValidationError.field_a.field_xb;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class uq extends IntrusiveNode {
     static String field_n;
     static String field_l;
     static int field_i;
-    static rl field_m;
+    static TextReplacementContext field_m;
     static String field_h;
 
     public static void a(int param0) {

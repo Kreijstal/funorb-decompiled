@@ -19,7 +19,7 @@ final class wh {
         RasterStateFrame var1 = null;
         RasterStateFrame var1Lifetime1;
         if (!param0) {
-          var1 = (RasterStateFrame) (ql.field_p.pollLast(true));
+          var1 = (RasterStateFrame) (TextHotspotRegion.field_p.pollLast(true));
           if (var1 == null) {
             var1 = new RasterStateFrame();
           }
@@ -29,7 +29,7 @@ final class wh {
         }
         Sprite[] var2 = (Sprite[]) null;
         wh.drawHorizontalSpriteStrip((Sprite[]) null, 98, -107, (byte) 31, 66);
-        var1Lifetime1 = (RasterStateFrame) (ql.field_p.pollLast(true));
+        var1Lifetime1 = (RasterStateFrame) (TextHotspotRegion.field_p.pollLast(true));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new RasterStateFrame();
         }

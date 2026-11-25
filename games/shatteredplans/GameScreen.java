@@ -467,7 +467,7 @@ final class GameScreen {
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = DefensiveAi.a((CharSequence) ((Object) param0.substring(9)), 2);
             SpriteResourceSupport.field_d = TextReplacementEntry.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            uq.field_m.a(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
+            uq.field_m.putReplacement(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -1302,7 +1302,7 @@ final class GameScreen {
                   }
                   if (stackIn_206_0 == stackIn_206_1) {
                     var33 = Integer.toString(var31Lifetime1);
-                    var34Lifetime1 = rs.field_Cb.stringWidth(var33);
+                    var34Lifetime1 = IconTextPanel.field_Cb.stringWidth(var33);
                     var35Lifetime1 = -(var34Lifetime1 >> 1) + var32Lifetime1;
                     if (var31Lifetime1 != 0) {
                       if (var24_intLifetime1 - 1 == var31Lifetime1) {
@@ -1311,7 +1311,7 @@ final class GameScreen {
                     } else {
                       var35Lifetime1 = var21Lifetime3 + var34Lifetime1 / 2;
                     }
-                    rs.field_Cb.drawString(Integer.toString(var31Lifetime1), var35Lifetime1, 20 + var6 + (var27Lifetime1 + rs.field_Cb.field_J), 16777215, -1);
+                    IconTextPanel.field_Cb.drawString(Integer.toString(var31Lifetime1), var35Lifetime1, 20 + var6 + (var27Lifetime1 + IconTextPanel.field_Cb.field_J), 16777215, -1);
                     var34Lifetime1Lifetime1 = 0;
                   }
                   SoftwareRasterizer.addVerticalLine(var32Lifetime1, 20 + var6, var27Lifetime1, 789516);
@@ -1327,7 +1327,7 @@ final class GameScreen {
           if (this.field_s.field_P.field_z ||
             this.field_s.field_n != null &&
             (1 << this.field_s.field_n.field_x & this.field_s.field_P.field_w) != 0) {
-            rs.field_Cb.drawCentred(uo.field_d, var5 + 20 + 160, var6 + (var7 - 74), 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(uo.field_d, var5 + 20 + 160, var6 + (var7 - 74), 16777215, -1);
           }
           var24 = (MenuComponent) (this.field_B.startForward(0));
           do {
@@ -1383,15 +1383,15 @@ final class GameScreen {
             this.b(-128);
           }
           MidiPcmStream.a(var9, param1, param2, (byte) -63, 190);
-          rs.field_Cb.drawString(QuickChatPhraseRegistry.field_g[param4], 10 + param2, param1 + rs.field_Cb.field_J, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatPhraseRegistry.field_g[param4], 10 + param2, param1 + IconTextPanel.field_Cb.field_J, 16777215, -1);
           var10 = 210;
           var11 = var10 / (6 + var6_int);
           var12 = 2 * var11 + 12;
           var13 = -(var11 * 8) + var10;
           var14 = var9 - 27;
           if (this.field_p[param0] == 0) {
-            this.drawPlayerRow(var7, 2, param4, param2 + 10, rs.field_Cb.field_J + param1 + (var14 >> 1));
-            this.drawPlayerRow(var8, 2, param4, param2 + 10, param1 - (-rs.field_Cb.field_J - var14));
+            this.drawPlayerRow(var7, 2, param4, param2 + 10, IconTextPanel.field_Cb.field_J + param1 + (var14 >> 1));
+            this.drawPlayerRow(var8, 2, param4, param2 + 10, param1 - (-IconTextPanel.field_Cb.field_J - var14));
             if (var21 == 0) {
               return;
             }
@@ -1413,7 +1413,7 @@ final class GameScreen {
               var17 = var14;
               var19 = 256;
             }
-            var20 = rs.field_Cb.field_J + param1 + QuickChatCategoryRegistry.a(var17, 32, this.field_p[param0], var18, 0);
+            var20 = IconTextPanel.field_Cb.field_J + param1 + QuickChatCategoryRegistry.a(var17, 32, this.field_p[param0], var18, 0);
             this.drawPlayerRow(param4, var20, var16, var19, (byte) 58, 10 + param2);
             var16++;
           }
@@ -1461,9 +1461,9 @@ final class GameScreen {
         try {
           var7 = this.field_s.field_P.field_v[param2];
           var8 = var7.field_s;
-          rs.field_Cb.drawRightAlignedAlpha(this.field_l[param0][param2], param5 + 27, param1, var8, -1, param3);
-          rs.field_Cb.drawStringAlpha(BirthDateConfirmationForm.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
-          rs.field_Cb.drawStringAlpha(var7.name, param5 + 67, param1, var8, -1, param3);
+          IconTextPanel.field_Cb.drawRightAlignedAlpha(this.field_l[param0][param2], param5 + 27, param1, var8, -1, param3);
+          IconTextPanel.field_Cb.drawStringAlpha(BirthDateConfirmationForm.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
+          IconTextPanel.field_Cb.drawStringAlpha(var7.name, param5 + 67, param1, var8, -1, param3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.FB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -1583,9 +1583,9 @@ final class GameScreen {
         }
         try {
           var7 = var6.field_s;
-          rs.field_Cb.drawRightAligned(this.field_l[param2][param0], param3 + 27, param4, var7, -1);
-          rs.field_Cb.drawString(BirthDateConfirmationForm.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
-          rs.field_Cb.drawString(var6.name, 67 + param3, param4, var7, -1);
+          IconTextPanel.field_Cb.drawRightAligned(this.field_l[param2][param0], param3 + 27, param4, var7, -1);
+          IconTextPanel.field_Cb.drawString(BirthDateConfirmationForm.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
+          IconTextPanel.field_Cb.drawString(var6.name, 67 + param3, param4, var7, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -1677,31 +1677,31 @@ final class GameScreen {
         int var8 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
-          rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.stringWidth("= " + vs.field_a);
-          SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
-          var7 = 29 + (rs.field_Cb.field_J + param1);
-          var8 = UiWidget.field_t.field_z + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
+          IconTextPanel.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var6 = UiWidget.field_t.field_z * 2 + IconTextPanel.field_Cb.stringWidth("= " + vs.field_a);
+          SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + IconTextPanel.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
+          var7 = 29 + (IconTextPanel.field_Cb.field_J + param1);
+          var8 = UiWidget.field_t.field_z + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
           ArrayWidgetGroup.field_z.draw((-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
-          rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
           SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           SoftwareRasterizer.addRadialGlowQ4(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
           SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ArrayWidgetGroup.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
-          rs.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
+          IconTextPanel.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -1712,11 +1712,11 @@ final class GameScreen {
         int var6 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
-          rs.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = StarSoundState.field_j.field_z + rs.field_Cb.stringWidth("= " + vs.field_a);
-          SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, StarSoundState.field_j.field_w + 10, 5, 0, 128);
-          StarSoundState.field_j.draw(param0 + (param3 - var6) / 2, rs.field_Cb.field_J + (param2 + 20));
-          rs.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + StarSoundState.field_j.field_z), 25 + rs.field_Cb.field_J + (StarSoundState.field_j.field_w / 2 + param2), 16777215, param1);
+          IconTextPanel.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var6 = StarSoundState.field_j.field_z + IconTextPanel.field_Cb.stringWidth("= " + vs.field_a);
+          SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + IconTextPanel.field_Cb.field_J + param2, var6 + 15, StarSoundState.field_j.field_w + 10, 5, 0, 128);
+          StarSoundState.field_j.draw(param0 + (param3 - var6) / 2, IconTextPanel.field_Cb.field_J + (param2 + 20));
+          IconTextPanel.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + StarSoundState.field_j.field_z), 25 + IconTextPanel.field_Cb.field_J + (StarSoundState.field_j.field_w / 2 + param2), 16777215, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -2225,13 +2225,13 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_s.field_f &&
             !this.field_s.field_P.field_z) {
-            SoftwareRasterizer.fillRoundedRectAlpha(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
+            SoftwareRasterizer.fillRoundedRectAlpha(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, IntArrayReadRequest.field_j.field_z, -2 + IconTextPanel.field_Cb.field_J, 2, 0, 128);
             var2_int = (this.field_s.field_S + 49) / 50;
             if (this.field_s.field_S < 0) {
-              rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
+              IconTextPanel.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + IntArrayReadRequest.field_j.field_z / 2, IconTextPanel.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
             }
             if (AgeValidator.field_o[this.field_s.field_P.field_J] <= (3 * this.field_s.field_S)) {
-              rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
+              IconTextPanel.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), IntArrayReadRequest.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, IconTextPanel.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -2239,10 +2239,10 @@ final class GameScreen {
               if (30 > var3_int) {
                 if ((!(var3_int >= 20)) &&
                   (!(var3_int < 10))) {
-                  rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                  IconTextPanel.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + IntArrayReadRequest.field_j.field_z / 2, 3 * IconTextPanel.field_Cb.field_J / 4 + 3, 3974311, -1);
                 }
               } else {
-                rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                IconTextPanel.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + IntArrayReadRequest.field_j.field_z / 2, 3 * IconTextPanel.field_Cb.field_J / 4 + 3, 3974311, -1);
               }
             }
           }
@@ -2276,9 +2276,9 @@ final class GameScreen {
           if (this.field_U != -1) {
             var4 = this.field_x;
             var5 = 5 + (this.field_k.field_i + this.field_k.field_t);
-            SoftwareRasterizer.fillRoundedRect(this.field_k.field_k + 1, var5, this.field_T.field_z + 10, rs.field_Cb.field_J, 5, 0);
-            SoftwareRasterizer.drawRoundedRect(this.field_k.field_k, -1 + var5, 12 + this.field_T.field_z, rs.field_Cb.field_J + 2, 6, 2052949);
-            sa.a(var4 * 5, this.field_k.field_k + 6, (byte) 116, 32, this.field_T, var5 - 4);
+            SoftwareRasterizer.fillRoundedRect(this.field_k.field_k + 1, var5, this.field_T.field_z + 10, IconTextPanel.field_Cb.field_J, 5, 0);
+            SoftwareRasterizer.drawRoundedRect(this.field_k.field_k, -1 + var5, 12 + this.field_T.field_z, IconTextPanel.field_Cb.field_J + 2, 6, 2052949);
+            SpriteWipeSupport.drawAdditiveSpriteWipe(var4 * 5, this.field_k.field_k + 6, (byte) 116, 32, this.field_T, var5 - 4);
             if (this.field_ib) {
               var6 = this.field_x - 125;
               if (var6 > 0) {
@@ -2376,7 +2376,7 @@ final class GameScreen {
           }
           if (null != var8) {
             AccountRequestState.field_b.drawCentredAlpha((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
-            var11 = rs.field_Cb.field_J + 245;
+            var11 = IconTextPanel.field_Cb.field_J + 245;
             if (var8 == StrongCacheEntry.field_v) {
               if (this.field_s.field_P.field_w != 0) {
                 stackIn_163_0 = IntrusiveNode.field_g;
@@ -2384,13 +2384,13 @@ final class GameScreen {
                 stackIn_163_0 = StatusContent.field_b;
               }
               var8 = stackIn_163_0;
-              rs.field_Cb.drawCentredAlpha((String) (var8), 320, var11, var10, -1, RasterBuffer.field_f);
-              var11 = var11 + (3 + rs.field_Cb.field_J);
+              IconTextPanel.field_Cb.drawCentredAlpha((String) (var8), 320, var11, var10, -1, RasterBuffer.field_f);
+              var11 = var11 + (3 + IconTextPanel.field_Cb.field_J);
             }
-            rs.field_Cb.drawCentredAlpha(WhirlpoolHasher.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
+            IconTextPanel.field_Cb.drawCentredAlpha(WhirlpoolHasher.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
             if (var9 != 0) {
-              var11 = var11 + (rs.field_Cb.field_J + 3);
-              rs.field_Cb.drawCentredAlpha(BattleSnapshot.field_i, 320, var11, var10, -1, RasterBuffer.field_f);
+              var11 = var11 + (IconTextPanel.field_Cb.field_J + 3);
+              IconTextPanel.field_Cb.drawCentredAlpha(BattleSnapshot.field_i, 320, var11, var10, -1, RasterBuffer.field_f);
             }
           }
           if (this.field_u != 0) {
@@ -2444,7 +2444,7 @@ final class GameScreen {
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
           int var6 = 107 / ((10 - param2) / 56);
-          rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
+          IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -2590,9 +2590,9 @@ final class GameScreen {
           if (param0 != 10) {
             this.field_v = false;
           }
-          if (400 > rs.field_Cb.stringWidth(param2)) {
+          if (400 > IconTextPanel.field_Cb.stringWidth(param2)) {
             var4.field_f.a(param1, param2, 16777215);
-            var4.field_f.moveTo((byte) 64, 15, -(3 * rs.field_Cb.field_J / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
+            var4.field_f.moveTo((byte) 64, 15, -(3 * IconTextPanel.field_Cb.field_J / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
             if (!ShatteredPlansClient.field_F) {
               return;
             }
@@ -2600,7 +2600,7 @@ final class GameScreen {
           var5 = param2.indexOf(" ", param2.length() / 2);
           var6 = param2.substring(0, var5) + "<br>" + param2.substring(var5 + 1);
           var4.field_f.a(param1, var6, 16777215);
-          var4.field_f.moveTo((byte) 50, 15, -(rs.field_Cb.field_J * 5 / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
+          var4.field_f.moveTo((byte) 50, 15, -(IconTextPanel.field_Cb.field_J * 5 / 4) + (this.field_k.field_t + this.field_k.field_i / 2 - 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2862,7 +2862,7 @@ final class GameScreen {
           LobbyUiSupport.drawHexagonPanel(true, var6, var3, -12394, var5, var4, 3974311);
           var7 = new int[4];
           SoftwareRasterizer.saveClip(var7);
-          SoftwareRasterizer.setClip(var4 + rs.field_Cb.field_J / 2, var5, -(rs.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
+          SoftwareRasterizer.setClip(var4 + IconTextPanel.field_Cb.field_J / 2, var5, -(IconTextPanel.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
           var9 = this.field_s.field_P.field_x;
           if (var9 instanceof SolVictoryChecker) {
             var8 = RichTextLayout.field_n;
@@ -2899,19 +2899,19 @@ final class GameScreen {
           } else {
             var8 = var8 + SliderPainter.field_k;
           }
-          rs.field_Cb.drawString(var8.toUpperCase(), 10 + var4, rs.field_Cb.field_J + var5, 16777215, -1);
-          ProjectsWindowSupport.drawPlainHexagonPanel(0, -rs.field_Cb.field_J + 450 + 1, true, var4 + rs.field_Cb.field_J / 2, 10 + NodeSequence.field_b[0].field_w, rs.field_Cb.field_J + var5 + 5);
+          IconTextPanel.field_Cb.drawString(var8.toUpperCase(), 10 + var4, IconTextPanel.field_Cb.field_J + var5, 16777215, -1);
+          ProjectsWindowSupport.drawPlainHexagonPanel(0, -IconTextPanel.field_Cb.field_J + 450 + 1, true, var4 + IconTextPanel.field_Cb.field_J / 2, 10 + NodeSequence.field_b[0].field_w, IconTextPanel.field_Cb.field_J + var5 + 5);
           var10 = 0;
           if (null != this.field_s.field_n) {
             var10 = this.field_s.field_n.field_x;
           }
-          var11 = new Sprite(NodeSequence.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + NodeSequence.field_b[0].field_z / 2));
+          var11 = new Sprite(NodeSequence.field_b[0].field_w, -IconTextPanel.field_Cb.field_J + 450 - (10 + NodeSequence.field_b[0].field_z / 2));
           RandomAccessCacheFile.a(param0 ^ -5630);
           var11.bindAsRenderTarget();
           SoftwareRasterizer.fillRectGradient(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           OpacityWidget.popLegacyRasterState(param0 ^ param0);
           var11.rotate90();
-          var11.drawAlpha(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
+          var11.drawAlpha(5 + (IconTextPanel.field_Cb.field_J / 2 + var4), IconTextPanel.field_Cb.field_J + var5 + 10, 64);
           var12 = new ArgbSprite(NodeSequence.field_b[0].field_z, NodeSequence.field_b[0].field_w);
           var13_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -2928,8 +2928,8 @@ final class GameScreen {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var12.draw(5 + (var4 + rs.field_Cb.field_J / 2) + (var11.field_z - NodeSequence.field_b[0].field_z / 2), 10 + var5 + rs.field_Cb.field_J);
-            NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + rs.field_Cb.field_J / 2) + (var4 + 5), rs.field_Cb.field_J + (var5 + 10), 64);
+            var12.draw(5 + (var4 + IconTextPanel.field_Cb.field_J / 2) + (var11.field_z - NodeSequence.field_b[0].field_z / 2), 10 + var5 + IconTextPanel.field_Cb.field_J);
+            NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + IconTextPanel.field_Cb.field_J / 2) + (var4 + 5), IconTextPanel.field_Cb.field_J + (var5 + 10), 64);
           }
           var13 = QuickChatCategoryRegistry.a(ProgressDialog.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
           var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + AccountRequestState.field_b.field_J));
@@ -2938,24 +2938,24 @@ final class GameScreen {
           if (var15 > 0) {
             boolean decompiledSharedTail0 = !(var15 >= 32);
             if (!decompiledSharedTail0) {
-              rs.field_Cb.drawCentred(this.field_P, 320, var14 + rs.field_Cb.field_J + 3, 2458760, -1);
+              IconTextPanel.field_Cb.drawCentred(this.field_P, 320, var14 + IconTextPanel.field_Cb.field_J + 3, 2458760, -1);
               decompiledSharedTail0 = (var16 != 0);
             }
             if (decompiledSharedTail0) {
-              rs.field_Cb.drawCentredAlpha(this.field_P, 320, 3 + var14 + rs.field_Cb.field_J, 2458760, -1, var15 * 8);
+              IconTextPanel.field_Cb.drawCentredAlpha(this.field_P, 320, 3 + var14 + IconTextPanel.field_Cb.field_J, 2458760, -1, var15 * 8);
             }
           }
           if (var9 instanceof ConquestVictoryChecker) {
-            this.drawConquestObjectiveHelp(var4 + (rs.field_Cb.field_J / 2 + 5), 439 - rs.field_Cb.field_J, (byte) 122, var5 + rs.field_Cb.field_J);
+            this.drawConquestObjectiveHelp(var4 + (IconTextPanel.field_Cb.field_J / 2 + 5), 439 - IconTextPanel.field_Cb.field_J, (byte) 122, var5 + IconTextPanel.field_Cb.field_J);
           }
           if (var9 instanceof SolVictoryChecker) {
-            this.drawSolObjectiveHelp(rs.field_Cb.field_J / 2 + (var4 + 5), -1, rs.field_Cb.field_J + var5, -11 + (450 - rs.field_Cb.field_J));
+            this.drawSolObjectiveHelp(IconTextPanel.field_Cb.field_J / 2 + (var4 + 5), -1, IconTextPanel.field_Cb.field_J + var5, -11 + (450 - IconTextPanel.field_Cb.field_J));
           }
           if (var9 instanceof PointsVictoryChecker) {
-            this.drawPointsObjectiveHelp(-rs.field_Cb.field_J + 450 - 11, rs.field_Cb.field_J + var5, 27, rs.field_Cb.field_J / 2 + (var4 + 5));
+            this.drawPointsObjectiveHelp(-IconTextPanel.field_Cb.field_J + 450 - 11, IconTextPanel.field_Cb.field_J + var5, 27, IconTextPanel.field_Cb.field_J / 2 + (var4 + 5));
           }
           if (var9 instanceof DerelictVictoryChecker) {
-            this.drawResourceHelp(5 + rs.field_Cb.field_J / 2 + var4, -rs.field_Cb.field_J + 439, -117, rs.field_Cb.field_J + var5);
+            this.drawResourceHelp(5 + IconTextPanel.field_Cb.field_J / 2 + var4, -IconTextPanel.field_Cb.field_J + 439, -117, IconTextPanel.field_Cb.field_J + var5);
           }
           SoftwareRasterizer.restoreClip(var7);
           return;
@@ -3245,13 +3245,13 @@ final class GameScreen {
               boolean decompiledSharedTail3 = !(32 > this.field_u);
               if (!decompiledSharedTail3) {
                 this.field_u = -this.field_u + 60000;
-                MenuLabel.a(sf.field_g, 121);
+                MenuLabel.a(SoundTriggerTick.field_g, 121);
                 decompiledSharedTail3 = (var9 != 0);
               }
               if ((decompiledSharedTail3) &&
                 (59968 > this.field_u)) {
                 this.field_u = 59968;
-                MenuLabel.a(sf.field_g, 111);
+                MenuLabel.a(SoundTriggerTick.field_g, 111);
               }
             }
             return true;
@@ -3328,7 +3328,7 @@ final class GameScreen {
                 this.field_S.setSelected(false);
               }
               if (this.field_J == var4_ref_qh) {
-                this.field_n.field_o = rk.field_o;
+                this.field_n.field_o = IntArrayReadRequest.field_o;
                 this.field_n.setSelected(false);
               }
               if (this.field_cb == var4_ref_qh) {
@@ -3381,7 +3381,7 @@ final class GameScreen {
             if (DualLinkDequeSequence.field_h == this.field_n) {
               boolean decompiledSharedTail1 = !(this.field_J.field_s);
               if (!decompiledSharedTail1) {
-                this.field_n.field_o = rk.field_o;
+                this.field_n.field_o = IntArrayReadRequest.field_o;
                 this.field_J.field_s = false;
                 decompiledSharedTail1 = (var9 != 0);
               }
@@ -3643,7 +3643,7 @@ final class GameScreen {
         try {
           var3_int = 10 + TertiaryListSequence.field_k;
           var4 = LobbyRoomControlsSupport.field_b + 20;
-          var5 = rs.field_Cb.stringWidth(param1);
+          var5 = IconTextPanel.field_Cb.stringWidth(param1);
           if (13 + var4 > 480) {
             var3_int = TertiaryListSequence.field_k;
             var4 = -15 + LobbyRoomControlsSupport.field_b;
@@ -3653,7 +3653,7 @@ final class GameScreen {
           }
           SoftwareRasterizer.fillRoundedRectAlpha(var3_int, var4, var5 + 10, 13, 5, 0, 192);
           SoftwareRasterizer.drawRoundedRect(-1 + var3_int, var4 - 1, var5 + 12, 15, 6, 3974311);
-          rs.field_Cb.drawString(param1, 6 + var3_int, 3 + (var4 + rs.field_Cb.field_J / 2), 16777215, -1);
+          IconTextPanel.field_Cb.drawString(param1, 6 + var3_int, 3 + (var4 + IconTextPanel.field_Cb.field_J / 2), 16777215, -1);
           if (param0) {
             this.field_ob = (int[]) null;
           }
@@ -3913,15 +3913,15 @@ final class GameScreen {
                   this.field_o = this.field_ab[this.field_U];
                   this.field_ib = this.field_z[this.field_U];
                   this.field_z[this.field_U] = false;
-                  var6 = rs.field_Cb.stringWidth(this.field_o);
-                  this.field_T = new Sprite(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
+                  var6 = IconTextPanel.field_Cb.stringWidth(this.field_o);
+                  this.field_T = new Sprite(var6, IconTextPanel.field_Cb.field_q + IconTextPanel.field_Cb.field_J);
                   RasterTargetSupport.pushSpriteRenderTarget(this.field_T, 92);
                   SoftwareRasterizer.clear();
-                  rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
+                  IconTextPanel.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, IconTextPanel.field_Cb.field_J, 16777215, -1);
                   this.field_eb = this.field_T.copy();
                   this.field_eb.bindAsRenderTarget();
                   SoftwareRasterizer.clear();
-                  rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
+                  IconTextPanel.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, IconTextPanel.field_Cb.field_J, 16777215, -1);
                   SoftwareRasterizer.b(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
                   OpacityWidget.popLegacyRasterState(0);
                 }
@@ -3943,7 +3943,7 @@ final class GameScreen {
               this.a((byte) 33);
             }
             if (this.field_u == 59968) {
-              MenuLabel.a(sf.field_g, 122);
+              MenuLabel.a(SoundTriggerTick.field_g, 122);
             }
             break;
           }
@@ -3979,7 +3979,7 @@ final class GameScreen {
             GradientMenuLabel.field_w.bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w, 0);
             if (ListContent.field_g) {
-              rk.field_j.draw(10, 10);
+              IntArrayReadRequest.field_j.draw(10, 10);
               var5Lifetime1Lifetime1 = SolVictoryChecker.blendColours(0, 16777215, -103, RasterBuffer.field_f);
               GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
               GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
@@ -4819,24 +4819,24 @@ final class GameScreen {
         int var7 = 0;
         try {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
-          rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = 20 + param3 + rs.field_Cb.field_J + 9;
-          var7 = 64 + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}));
-          rk.field_k.drawScaled((-var7 + param1) / 2 + param0, -24 + var6, 64, 64);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), param0 - (-((param1 - var7) / 2) - 75), var6 + 7, 16777215, -1);
-          rs.field_Cb.drawString("=", param0 + (param1 - var7) / 2 + 64, 13 + var6, 16777215, -1);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
+          var6 = 20 + param3 + IconTextPanel.field_Cb.field_J + 9;
+          var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}));
+          IntArrayReadRequest.field_k.drawScaled((-var7 + param1) / 2 + param0, -24 + var6, 64, 64);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), param0 - (-((param1 - var7) / 2) - 75), var6 + 7, 16777215, -1);
+          IconTextPanel.field_Cb.drawString("=", param0 + (param1 - var7) / 2 + 64, 13 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
           var6 += 44;
           IntrusiveNodeHashTable.field_h.drawScaled((-var7 + param1) / 2 + param0, var6 - 24, 64, 64);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
           int var8 = 27 / ((param2 + 51) / 59);
-          rs.field_Cb.drawString("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
+          IconTextPanel.field_Cb.drawString("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
           var6 += 52;
           CanvasResizeController.field_t.drawScaled(param0 + (param1 - var7) / 2, var6 - 24, 64, 64);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
-          rs.field_Cb.drawString("=", 64 + param0 + (-var7 + param1) / 2, 13 + var6, 16777215, -1);
-          rs.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
+          IconTextPanel.field_Cb.drawString("=", 64 + param0 + (-var7 + param1) / 2, 13 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -5064,7 +5064,7 @@ final class GameScreen {
         this.field_v = true;
         try {
           MatchingTextValidator.field_r = new Sprite(20 + IntValueWriteRequest.field_i.field_o, IntValueWriteRequest.field_i.field_p + 20);
-          GradientMenuLabel.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
+          GradientMenuLabel.field_w = new ArgbSprite(IntArrayReadRequest.field_j.field_o + 20, IntArrayReadRequest.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
           this.field_y = new IntrusiveDeque();
@@ -5092,7 +5092,7 @@ final class GameScreen {
             this.field_y.addLast((byte) -113, this.field_S);
           }
           this.field_n = new ToggleButton(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, HuffmanCodec.field_e.field_z, HuffmanCodec.field_e.field_w, -1, HuffmanCodec.field_e, (String) null, 0, -1, AlignedMenuLabel.field_D, (String) null, 0);
-          this.field_n.field_o = rk.field_o;
+          this.field_n.field_o = IntArrayReadRequest.field_o;
           this.field_y.addLast((byte) -113, this.field_n);
           this.field_W = new ToggleButton(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
           this.field_W.field_o = wm.field_a;
@@ -5106,11 +5106,11 @@ final class GameScreen {
             this.field_y.addLast((byte) -113, this.field_g);
           }
           if (this.field_s.field_n != null) {
-            this.field_bb = new ToggleButton(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, LobbyUiSupport.field_a, (String) null, 0);
+            this.field_bb = new ToggleButton(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, IntArrayReadRequest.field_j.field_z, IntArrayReadRequest.field_j.field_w, -1, IntArrayReadRequest.field_j, (String) null, 0, -1, LobbyUiSupport.field_a, (String) null, 0);
             this.field_bb.field_o = AccountCreationDialog.field_Bb;
             this.field_y.addLast((byte) -113, this.field_bb);
           }
-          this.field_K = new RoundedMenuPanel(590, 480 - rs.field_Cb.field_J, 60, 2 * rs.field_Cb.field_J);
+          this.field_K = new RoundedMenuPanel(590, 480 - IconTextPanel.field_Cb.field_J, 60, 2 * IconTextPanel.field_Cb.field_J);
           this.field_y.addFirst(this.field_K, 0);
           this.field_N = new ToggleButton(595, 480 - StarAbandonedEvent.field_r[3].field_w, StarAbandonedEvent.field_r[3].field_z, StarAbandonedEvent.field_r[3].field_w, -1, StarAbandonedEvent.field_r[3], (String) null, 0, -1, StarAbandonedEvent.field_r[0], (String) null, 0);
           if ((32 & StringNode.field_j) != 0) {
@@ -5138,8 +5138,8 @@ final class GameScreen {
           this.field_K.addChild(this.field_N, 8);
           this.field_K.addChild(this.field_X, 8);
           this.field_K.addChild(this.field_d, 8);
-          this.field_V = new RoundedMenuPanel(3, 480, 10 + rs.field_Cb.stringWidth(ByteArrayNode.field_l), 2 * rs.field_Cb.field_J);
-          this.field_f = new ToggleButton(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, ByteArrayNode.field_l, 16777215, -1, (Sprite) null, DualLinkDeque.field_d, 16777215);
+          this.field_V = new RoundedMenuPanel(3, 480, 10 + IconTextPanel.field_Cb.stringWidth(ByteArrayNode.field_l), 2 * IconTextPanel.field_Cb.field_J);
+          this.field_f = new ToggleButton(3, 480, this.field_V.field_m, IconTextPanel.field_Cb.field_J - 4, -1, (Sprite) null, ByteArrayNode.field_l, 16777215, -1, (Sprite) null, DualLinkDeque.field_d, 16777215);
           this.field_V.addChild(this.field_f, 8);
           this.field_y.addFirst(this.field_V, 0);
           this.field_t = new ArgbSprite(TextFieldWidget.field_L.field_o, TextFieldWidget.field_L.field_p);
@@ -5172,7 +5172,7 @@ final class GameScreen {
             OpacityWidget.popLegacyRasterState(0);
             if (!this.field_s.field_f &&
               !this.field_s.field_W) {
-              qn.b(116);
+              IntroRenderSupport.clearChatHistory(116);
               var3_ref_qr = new AnimatedPanel(0L, (AnimatedPanel) null);
               var3_ref_qr.field_M = new IntrusiveDeque();
               this.field_E = new ScrollPane(0L, var3_ref_qr, ObjectList.field_h, AchievementProgress.field_m);
@@ -5186,7 +5186,7 @@ final class GameScreen {
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
               ImageProducerRasterBuffer.field_n = false;
             }
-            GuestPlayForm.a(rs.field_Cb, true);
+            GuestPlayForm.a(IconTextPanel.field_Cb, true);
             this.field_ob = new int[]{82, 52, 52, 52};
             this.field_Q = 0;
             this.field_ab = new String[1 + this.field_s.field_P.field_r];
@@ -5231,7 +5231,7 @@ final class GameScreen {
             HighscoreQueryRequest.putTextReplacement("continue3", 1904, StatefulWidgetTheme.field_v);
             HighscoreQueryRequest.putTextReplacement("continuekey", 1904, ul.field_Ob);
             HighscoreQueryRequest.putTextReplacement("captureAll", 1904, SecondaryNodeHashTable.field_e);
-            HighscoreQueryRequest.putTextReplacement("exit", 1904, sa.field_b);
+            HighscoreQueryRequest.putTextReplacement("exit", 1904, SpriteWipeSupport.field_b);
             QuickChatHelpSupport.field_d = this.field_s.field_n;
             var3 = 0;
             while (true) {

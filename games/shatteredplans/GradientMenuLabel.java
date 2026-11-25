@@ -14,7 +14,7 @@ final class GradientMenuLabel extends MenuComponent {
     static ArgbSprite field_w;
 
     final static void readLocalPlayerName(int param0) {
-        Star.field_o = sa.field_a.readString(-1);
+        Star.field_o = SpriteWipeSupport.field_a.readString(-1);
         if (param0 >= -82) {
           return;
         }
@@ -23,7 +23,7 @@ final class GradientMenuLabel extends MenuComponent {
     }
 
     GradientMenuLabel(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
-        super(param0, param1, param2, rs.field_Cb.field_J);
+        super(param0, param1, param2, IconTextPanel.field_Cb.field_J);
         int var9 = 0;
         int var11 = 0;
         int var8_int = 0;
@@ -206,14 +206,14 @@ final class GradientMenuLabel extends MenuComponent {
         int[] var11 = var5;
         SoftwareRasterizer.saveClip(var8);
         SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
-        int var3 = rs.field_Cb.field_J;
+        int var3 = IconTextPanel.field_Cb.field_J;
         int var4 = -24 / ((param0 - 67) / 47);
         this.field_C.draw(this.field_k, this.field_t);
         if (this.field_z != null) {
           if (this.field_B) {
-            rs.field_Cb.drawCentred(this.field_z, 1 + (this.field_k + this.field_m / 2), (rs.field_Cb.field_J + rs.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
+            IconTextPanel.field_Cb.drawCentred(this.field_z, 1 + (this.field_k + this.field_m / 2), (IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
           } else {
-            rs.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
+            IconTextPanel.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (IconTextPanel.field_Cb.field_q + IconTextPanel.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
           }
         }
         SoftwareRasterizer.restoreClip(var11);

@@ -72,13 +72,13 @@ final class we {
             if (param0 != -59) {
               we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);
             }
-            if (qn.field_c < 0) {
+            if (IntroRenderSupport.field_c < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 FleetTrailPoint.field_p[var2] = false;
               }
-              qn.field_c = NodeSequence.field_e;
+              IntroRenderSupport.field_c = NodeSequence.field_e;
             } else {
-              while (NodeSequence.field_e != qn.field_c) {
+              while (NodeSequence.field_e != IntroRenderSupport.field_c) {
                 var2 = StrongCacheEntry.field_x[NodeSequence.field_e];
                 NodeSequence.field_e = 127 & 1 + NodeSequence.field_e;
                 if (var2 < 0) {

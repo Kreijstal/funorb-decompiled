@@ -84,11 +84,11 @@ final class tb {
           LobbyOptionResources.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
-          sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
+          SoundTriggerTick.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
           GalaxyMapLayoutSupport.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           MenuList.field_v.addChild(param13 ^ -7962, SoundPlayback.field_m);
           if (AccountStatusDialog.field_pb) {
-            MenuList.field_v.addChild(4, sf.field_f);
+            MenuList.field_v.addChild(4, SoundTriggerTick.field_f);
           }
           MenuList.field_v.addChild(4, GalaxyMapLayoutSupport.field_a);
           GalaxyMapLayoutSupport.field_a.field_zb.copyFrom(SpriteState.field_u, false);
@@ -100,7 +100,7 @@ final class tb {
           PairedIntSortSupport.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
           sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
-          SoundEffectDefinition.field_e = new AnimatedPanel(0L, rs.field_Eb);
+          SoundEffectDefinition.field_e = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
           GameSession.field_e = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, FleetTrailPoint.field_j);
           WeightedCacheEntry.field_t = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, QuickChatMenu.field_Lb);
@@ -157,16 +157,16 @@ final class tb {
           DefendTask.field_x.field_y = 1;
           ClientDrawingSupport.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
-          ro.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
+          EmailValidationError.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.addChild(4, DefendTask.field_x);
           so.field_t.addChild(4, ClientDrawingSupport.field_a);
           if (AccountStatusDialog.field_pb) {
             so.field_t.addChild(4, MenuComponent.field_q);
           }
-          so.field_t.addChild(param13 + 7970, ro.field_a);
+          so.field_t.addChild(param13 + 7970, EmailValidationError.field_a);
           DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
-          NameSuggestionsPanel.field_D = new AnimatedPanel(0L, rs.field_Eb);
+          NameSuggestionsPanel.field_D = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, DiplomacyRowSupport.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];

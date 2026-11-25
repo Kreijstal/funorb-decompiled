@@ -165,7 +165,7 @@ final class TextReplacementEntry {
         }
     }
 
-    final static ro validateDomainSuffix(String param0, boolean param1) {
+    final static EmailValidationError validateDomainSuffix(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -173,7 +173,7 @@ final class TextReplacementEntry {
         int var5 = 0;
         CharSequence var6 = null;
         Object stackIn_9_0 = null;
-        ro stackIn_12_0 = null;
+        EmailValidationError stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -202,7 +202,7 @@ final class TextReplacementEntry {
             break;
           }
           stackIn_9_0 = null;
-          return (ro) (stackIn_9_0);
+          return (EmailValidationError) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

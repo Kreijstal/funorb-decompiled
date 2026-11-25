@@ -202,7 +202,7 @@ final class DialWidget extends FocusableWidget {
         var17 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = sa.field_a;
+          var1 = SpriteWipeSupport.field_a;
           if (param0 < 69) {
             var12 = (java.applet.Applet) null;
             DialWidget.a(false, (String) null, (java.applet.Applet) null);
@@ -376,10 +376,10 @@ final class DialWidget extends FocusableWidget {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     if (var3Lifetime5 != 0) {
-                      sf.field_e = ClientClockSupport.currentTimeMillis(14274) + (long)var3Lifetime5;
+                      SoundTriggerTick.field_e = ClientClockSupport.currentTimeMillis(14274) + (long)var3Lifetime5;
                       return;
                     }
-                    sf.field_e = 0L;
+                    SoundTriggerTick.field_e = 0L;
                     return;
                   }
                   if (var2 == 22) {
@@ -476,7 +476,7 @@ final class DialWidget extends FocusableWidget {
             MenuInputState.field_a = new LobbyRoomEntry(ProductionContent.field_k);
             MenuInputState.field_a.setSecondaryKey(16, (long)var3Lifetime1);
             LobbyRoomDecoder.readLobbyRoom((byte) -89, MenuInputState.field_a, var1, false);
-            sf.field_e = 0L;
+            SoundTriggerTick.field_e = 0L;
           }
           if (var2 != 2 &&
             var2 != 3) {

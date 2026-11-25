@@ -63,14 +63,14 @@ final class TutorialOverlaySupport {
               if (te.field_c <= 0) {
                 return;
               }
-              sa.a(te.field_c, var1_int, (byte) 101, 16, BirthDateConfirmationForm.field_L[0], var2);
+              SpriteWipeSupport.drawAdditiveSpriteWipe(te.field_c, var1_int, (byte) 101, 16, BirthDateConfirmationForm.field_L[0], var2);
               for (var4 = 1; BirthDateConfirmationForm.field_L.length > var4; var4++) {
                 var3 = var3 - WeightedLruCache.field_g.field_j;
                 if (var3 <= 0) {
                   return;
                 }
                 var2 += 13;
-                sa.a(var3, var1_int, (byte) 98, 16, BirthDateConfirmationForm.field_L[var4], var2);
+                SpriteWipeSupport.drawAdditiveSpriteWipe(var3, var1_int, (byte) 98, 16, BirthDateConfirmationForm.field_L[var4], var2);
               }
               var2 += 13;
             }
@@ -85,7 +85,7 @@ final class TutorialOverlaySupport {
                       return;
                     }
                     var2 += 13;
-                    sa.a(var3, var1_int, (byte) 89, 16, var5[var7_int], var2);
+                    SpriteWipeSupport.drawAdditiveSpriteWipe(var3, var1_int, (byte) 89, 16, var5[var7_int], var2);
                   }
                 } else {
                   var7 = WidgetStyle.field_m[var4Lifetime1];

@@ -10,7 +10,7 @@ final class IntroTextLine extends IntrusiveNode {
     static byte[][] field_q;
     static String field_p;
     static String field_j;
-    static ro field_r;
+    static EmailValidationError field_r;
     static ul field_t;
     static uh field_n;
     static long field_k;
@@ -79,7 +79,7 @@ final class IntroTextLine extends IntrusiveNode {
         field_q = (byte[][]) null;
         field_l = null;
         if (param0 > -49) {
-          field_r = (ro) null;
+          field_r = (EmailValidationError) null;
         }
         field_s = null;
         field_t = null;
@@ -186,7 +186,7 @@ final class IntroTextLine extends IntrusiveNode {
         field_p = "Your friend list is full. Max of 100 for free users, and 200 for members.";
         field_j = "Click to build fleets in this territory.";
         field_s = new ContentTransitionPhase();
-        field_r = new ro();
+        field_r = new EmailValidationError();
         field_l = new int[5];
     }
 }

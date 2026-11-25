@@ -205,7 +205,7 @@ final class QuaternaryListSequence extends NodeSequence {
         byte[] var10 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8 = sa.field_a;
+          var8 = SpriteWipeSupport.field_a;
           if (param0 != -117) {
             field_f = (String) null;
           }

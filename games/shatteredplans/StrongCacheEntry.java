@@ -397,8 +397,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           QuickChatCategoryRegistry.field_h.field_sb = var14;
           tm.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
           tm.field_t.field_F = Wormhole.a(16, 3, 206, 1856141, 1127256, -1);
-          rs.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
-          rs.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
+          IconTextPanel.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
+          IconTextPanel.field_Eb.field_F = Wormhole.a(16, 3, 290, 11579568, 6052956, -1);
           IsaacBackedRandom.field_a = new AnimatedPanel(0L, var15);
           IsaacBackedRandom.field_a.field_T = 1;
           IsaacBackedRandom.field_a.field_y = 1;
@@ -458,7 +458,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           WeightedCacheEntry.field_o.field_sb = dupTemp$3;
           WeightedCacheEntry.field_o.field_vb = dupTemp$3;
           var17 = HighscoreResponseSupport.loadSpriteSetByName(-118, "lobby", param4, "checkbox");
-          ByteArrayNode.field_i = new rs(0L, var17[1], var17[0], 1, StatefulWidgetTheme.field_w, (String) null);
+          ByteArrayNode.field_i = new IconTextPanel(0L, var17[1], var17[0], 1, StatefulWidgetTheme.field_w, (String) null);
           sj.field_c = new AnimatedPanel(0L, (AnimatedPanel) null);
           sj.field_c.field_F = OpacityWidget.centerOnlyNineSlice(-15338, SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "slideregion"));
           sj.field_c.field_lb = OpacityWidget.centerOnlyNineSlice(-15338, SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "slideregion_mouseover"));

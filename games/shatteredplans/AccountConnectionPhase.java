@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountConnectionPhase {
-    static ro field_a;
+    static EmailValidationError field_a;
     static AnimatedPanel field_b;
     static int[] field_c;
 
@@ -19,7 +19,7 @@ final class AccountConnectionPhase {
         throw new IllegalStateException();
     }
 
-    final static ro validateDomainName(String param0, byte param1) {
+    final static EmailValidationError validateDomainName(String param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -27,13 +27,13 @@ final class AccountConnectionPhase {
         String[] var4 = null;
         String var6_ref_String = null;
         int var6 = 0;
-        ro var7 = null;
+        EmailValidationError var7 = null;
         int var8 = 0;
-        ro stackIn_4_0 = null;
-        ro stackIn_7_0 = null;
-        ro stackIn_11_0 = null;
-        ro stackIn_17_0 = null;
-        ro stackIn_20_0 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_11_0 = null;
+        EmailValidationError stackIn_17_0 = null;
+        EmailValidationError stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -42,7 +42,7 @@ final class AccountConnectionPhase {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = (ro) (field_a);
+            stackIn_4_0 = (EmailValidationError) (field_a);
             return stackIn_4_0;
           }
           if (var2_int > 255) {
@@ -51,7 +51,7 @@ final class AccountConnectionPhase {
           }
           var3 = so.a(param0, '.', -92);
           if (var3.length < 2) {
-            stackIn_11_0 = (ro) (field_a);
+            stackIn_11_0 = (EmailValidationError) (field_a);
             return stackIn_11_0;
           }
           var4 = var3;
@@ -90,6 +90,6 @@ final class AccountConnectionPhase {
     }
 
     static {
-        field_a = new ro();
+        field_a = new EmailValidationError();
     }
 }

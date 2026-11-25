@@ -29,7 +29,7 @@ final class sk extends IntrusiveNode {
         CipherPacketBuffer var8 = null;
         QuickChatCategoryDefinition var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var8 = sa.field_a;
+        var8 = SpriteWipeSupport.field_a;
         var3 = var8.readUnsignedByte(param1 ^ 113);
         stackIn_3_0 = (param1 != ~(128 & var3));
         InvalidMapConnectionException.field_b = stackIn_3_0;

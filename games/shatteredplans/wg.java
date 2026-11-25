@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg {
-    static rl field_e;
+    static TextReplacementContext field_e;
     static String field_g;
     static BufferedSocket field_f;
     static boolean field_d;

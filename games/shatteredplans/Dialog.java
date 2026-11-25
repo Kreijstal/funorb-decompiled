@@ -42,7 +42,7 @@ abstract class Dialog extends WidgetContainer {
           var1 = var6 + ":";
           for (var2 = 0; TextInputPainter.field_t > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & sa.field_a.payload[var2];
+            var3 = 255 & SpriteWipeSupport.field_a.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 <= var4) {
@@ -130,16 +130,16 @@ abstract class Dialog extends WidgetContainer {
         this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ClientOverlaySupport.field_a - param1 >> 1, param1);
     }
 
-    final static ro a(byte param0, String param1) {
+    final static EmailValidationError a(byte param0, String param1) {
         int var4 = 0;
         int var2_int = 0;
         int var3 = 0;
         int var5 = 0;
         int var6 = 0;
-        ro stackIn_4_0 = null;
-        ro stackIn_7_0 = null;
-        ro stackIn_17_0 = null;
-        ro stackIn_21_0 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_17_0 = null;
+        EmailValidationError stackIn_21_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -203,7 +203,7 @@ abstract class Dialog extends WidgetContainer {
         if (tm.field_i != null) {
           StandardMapGenerator.attachInputListeners(tm.field_i, (byte) -101);
         }
-        rs.g(-96);
+        IconTextPanel.releaseKeyboardInput(-96);
         CheckboxWidgetPainter.releaseMouseHandler(false);
         ContentTransitionPhase.closeClientResources(0);
         if (IntrusiveNode.b(true)) {

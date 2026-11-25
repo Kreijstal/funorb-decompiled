@@ -261,11 +261,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.field_L = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_K = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
-        this.field_E = new FocusableWidget(qn.field_e, (WidgetListener) null);
+        this.field_E = new FocusableWidget(IntroRenderSupport.field_e, (WidgetListener) null);
         this.field_O = new FocusableWidget(DiskCacheWorker.field_a, (WidgetListener) null);
         this.field_Q.field_v = WeightedLruCache.field_i;
         this.field_F.field_v = LegacyAi.field_p;
-        this.field_M.field_v = sf.field_h;
+        this.field_M.field_v = SoundTriggerTick.field_h;
         this.field_J.field_v = AiTask.field_k;
         this.field_H.field_v = IntNode.field_o;
         this.field_L.field_v = DerelictMapGenerator.field_p;
@@ -442,11 +442,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         int var6Lifetime6Lifetime2;
         int var6Lifetime6Lifetime3;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = 1 + rs.field_Cb.field_J * 3 / 4;
+        var3 = 1 + IconTextPanel.field_Cb.field_J * 3 / 4;
         var4 = -60 + TutorialVictoryChecker.field_r[6];
         var5 = 40;
         if (0 == param0) {
-          var6 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, vc.field_e), rs.field_Cb, new int[]{var4});
+          var6 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, vc.field_e), IconTextPanel.field_Cb, new int[]{var4});
           var5 = var5 + var6 * var3;
           if (param1 != -71) {
             return -98;
@@ -455,7 +455,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_5_0;
         }
         if (param0 == 1) {
-          var6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, GameAssetSetupSupport.field_g), rs.field_Cb, new int[]{var4});
+          var6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, GameAssetSetupSupport.field_g), IconTextPanel.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime1;
           if (param1 != -71) {
             return -98;
@@ -464,7 +464,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_13_0;
         }
         if (param0 == 2) {
-          var6Lifetime2 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(5607, CellVertex.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime2 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.expandPlaceholders(5607, CellVertex.field_a), IconTextPanel.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime2;
           if (param1 != -71) {
             return -98;
@@ -480,13 +480,13 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (param0 == 5) {
           var8 = WhirlpoolHasher.field_n;
-          var6Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var8), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var8), IconTextPanel.field_Cb, new int[]{var4 - 80});
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime3) >> 2);
           var9 = LoginForm.field_N;
-          var6Lifetime3Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var9), rs.field_Cb, new int[]{-80 + var4});
-          var10 = rk.field_n;
+          var6Lifetime3Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var9), IconTextPanel.field_Cb, new int[]{-80 + var4});
+          var10 = IntArrayReadRequest.field_n;
           var5 = var5 + ((var6Lifetime3Lifetime1 * 4 + 3) * var3 >> 2);
-          var6Lifetime3Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var10), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime3Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var10), IconTextPanel.field_Cb, new int[]{-80 + var4});
           var5 = var5 + var6Lifetime3Lifetime2 * var3;
           if (param1 != -71) {
             return -98;
@@ -496,16 +496,16 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (param0 == 6) {
           var16 = DebouncedValidator.field_a;
-          var6Lifetime4 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var16), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime4 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var16), IconTextPanel.field_Cb, new int[]{-80 + var4});
           var17 = WhirlpoolHasher.field_l;
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime4) >> 2);
-          var6Lifetime4Lifetime1 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime4Lifetime1 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.expandPlaceholders(param1 ^ -5538, var17), IconTextPanel.field_Cb, new int[]{var4 - 80});
           var18 = DraggableWidget.field_F;
           var5 = var5 + ((var6Lifetime4Lifetime1 * 4 + 3) * var3 >> 2);
-          var6Lifetime4Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var18), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime4Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var18), IconTextPanel.field_Cb, new int[]{var4 - 80});
           var19 = ScrollPane.field_Cb;
           var5 = var5 + ((4 * var6Lifetime4Lifetime2 + 3) * var3 >> 2);
-          var6Lifetime4Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var19), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime4Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var19), IconTextPanel.field_Cb, new int[]{-80 + var4});
           var5 = var5 + var6Lifetime4Lifetime3 * var3;
           if (param1 != -71) {
             return -98;
@@ -515,7 +515,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (param0 == 7) {
           var15 = ResizingDialog.field_N;
-          var6Lifetime5 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var15), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime5 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var15), IconTextPanel.field_Cb, new int[]{-80 + var4});
           var5 = 294;
           var5 = var5 + var3 * (-3 + var6Lifetime5);
           if (param1 != -71) {
@@ -526,16 +526,16 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (8 == param0) {
           var11 = StandardMapGenerator.field_g;
-          var6Lifetime6 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var11), IconTextPanel.field_Cb, new int[]{var4 - 40});
           var12 = WidgetStyle.field_b;
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);
-          var6Lifetime6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var12), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var12), IconTextPanel.field_Cb, new int[]{var4 - 40});
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
           var13 = ClientOverlayDrawSupport.field_f;
-          var6Lifetime6Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, var13), IconTextPanel.field_Cb, new int[]{var4 - 40});
           var14 = ArchiveNetworkClient.field_o;
           var5 = var5 + ((4 * var6Lifetime6Lifetime2 + 3) * var3 >> 2);
-          var6Lifetime6Lifetime3 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(5607, var14), rs.field_Cb, new int[]{-40 + var4});
+          var6Lifetime6Lifetime3 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.expandPlaceholders(5607, var14), IconTextPanel.field_Cb, new int[]{-40 + var4});
           var5 = var5 + var6Lifetime6Lifetime3 * var3;
           var5 = var5 + var3;
           if (param1 != -71) {
@@ -545,7 +545,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_53_0;
         }
         if (param0 == 9) {
-          var6Lifetime7 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, ObjectList.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime7 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, ObjectList.field_a), IconTextPanel.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime7;
           if (param1 != -71) {
             return -98;
@@ -556,7 +556,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         if (param0 != 10) {
           throw new RuntimeException();
         }
-        var6Lifetime8 = WidgetStateStyle.a(param1 - 9544, wg.field_e.a(5607, DualLinkNode.field_m), rs.field_Cb, new int[]{var4});
+        var6Lifetime8 = WidgetStateStyle.a(param1 - 9544, wg.field_e.expandPlaceholders(5607, DualLinkNode.field_m), IconTextPanel.field_Cb, new int[]{var4});
         var5 = var5 + var6Lifetime8 * var3;
         if (param1 != -71) {
           return -98;

@@ -51,7 +51,7 @@ final class GameAssetSetupSupport {
         int var15_intLifetime2;
         try {
           AccountRequestState.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
-          rs.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
+          IconTextPanel.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
           SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
@@ -117,7 +117,7 @@ final class GameAssetSetupSupport {
           var26_ref = NodeSequence.field_b[2];
           NodeSequence.field_b[2] = NodeSequence.field_b[4];
           NodeSequence.field_b[4] = var26_ref;
-          rk.field_j = MessageKind.a(true, param0, "", "ready_button");
+          IntArrayReadRequest.field_j = MessageKind.a(true, param0, "", "ready_button");
           LobbyUiSupport.field_a = MessageKind.a(true, param0, "", "ready_button_down");
           ResizingDialog.field_W = MessageKind.a(true, param0, "", "shine_left");
           DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
@@ -132,9 +132,9 @@ final class GameAssetSetupSupport {
           NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
           ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
           BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
-          rl.field_c = MessageKind.a(true, param0, "", "planet_ringed");
+          TextReplacementContext.field_c = MessageKind.a(true, param0, "", "planet_ringed");
           InvalidMapConnectionException.field_d = MessageKind.a(true, param0, "", "planet_rock");
-          rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
+          IntArrayReadRequest.field_k = MessageKind.a(true, param0, "", "alien_miner");
           IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
           GradientMenuLabel.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
@@ -283,7 +283,7 @@ final class GameAssetSetupSupport {
           ArchiveRequest.a(14, SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param2, "basic", var13));
           CellVertex.field_j = HighscoreResponseSupport.loadSpriteSetByName(param6 + 70, "", param0, "achievements");
           var14 = CellVertex.field_j.length;
-          ql.field_o = new Sprite[var14];
+          TextHotspotRegion.field_o = new Sprite[var14];
           MapView.field_sb = new Sprite[var14];
           vh.field_a = new Sprite[var14];
           AlignedMenuLabel.field_C = new Sprite[var14];

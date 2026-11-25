@@ -11,15 +11,15 @@ final class uc extends MenuComponent {
     private int field_u;
     static int[] field_w;
 
-    final static ro a(int param0, String param1) {
-        ro stackIn_4_0 = null;
-        ro stackIn_7_0 = null;
-        ro stackIn_11_0 = null;
+    final static EmailValidationError a(int param0, String param1) {
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_11_0 = null;
         int stackIn_20_0 = 0;
-        ro stackIn_24_0 = null;
-        ro stackIn_38_0 = null;
-        ro stackIn_42_0 = null;
-        ro stackIn_48_0 = null;
+        EmailValidationError stackIn_24_0 = null;
+        EmailValidationError stackIn_38_0 = null;
+        EmailValidationError stackIn_42_0 = null;
+        EmailValidationError stackIn_48_0 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
         String stackIn_53_2 = null;
@@ -93,7 +93,7 @@ final class uc extends MenuComponent {
           if (param0 < -43) {
             return null;
           }
-          stackIn_48_0 = (ro) null;
+          stackIn_48_0 = (EmailValidationError) null;
           return stackIn_48_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,15 +168,15 @@ final class uc extends MenuComponent {
           if (!StarAnnotation.a(-57, 1)) {
             return false;
           }
-          TextInputPainter.field_t = sa.field_a.readUnsignedByte(-54);
-          sa.field_a.position = 0;
+          TextInputPainter.field_t = SpriteWipeSupport.field_a.readUnsignedByte(-54);
+          SpriteWipeSupport.field_a.position = 0;
         }
         if (-2 == TextInputPainter.field_t) {
           if (!StarAnnotation.a(118, 2)) {
             return false;
           }
-          TextInputPainter.field_t = sa.field_a.readUnsignedShort(-20976);
-          sa.field_a.position = 0;
+          TextInputPainter.field_t = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
+          SpriteWipeSupport.field_a.position = 0;
         }
         if (param0 > -25) {
           BitmapFont var2 = (BitmapFont) null;

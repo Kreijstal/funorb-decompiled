@@ -38,8 +38,8 @@ final class wj extends IntrusiveNode {
           }
           if (AllianceExpiredEvent.field_n == 1) {
             ClientOverlayDrawSupport.field_b = ClientOverlayDrawSupport.field_b + 1;
-            if (rs.field_Db != null) {
-              rs.field_Db.b(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, -498);
+            if (IconTextPanel.field_Db != null) {
+              IconTextPanel.field_Db.b(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, -498);
               return true;
             }
             var2_int = (-TertiaryListSequence.field_k + SocialListPanel.field_Gb) * (SocialListPanel.field_Gb - TertiaryListSequence.field_k) + (-LobbyRoomControlsSupport.field_b + DialogRoot.field_C) * (DialogRoot.field_C - LobbyRoomControlsSupport.field_b);
@@ -47,12 +47,12 @@ final class wj extends IntrusiveNode {
               25 < var2_int &&
               wl.field_f != null) {
               VerticalMenuSlider.field_w = wl.field_f.field_k - SocialListPanel.field_Gb;
-              rs.field_Db = wl.field_f;
+              IconTextPanel.field_Db = wl.field_f;
               DisplayNameForm.field_D = wl.field_f.field_t - DialogRoot.field_C;
             }
             return false;
           }
-          if ((rs.field_Db == null ||
+          if ((IconTextPanel.field_Db == null ||
             !(ClientOverlayDrawSupport.field_b >= 5)) &&
             TextInputPainter.a(wl.field_f, param0, (byte) 64)) {
             DualLinkDequeSequence.field_h = wl.field_f;
@@ -62,7 +62,7 @@ final class wj extends IntrusiveNode {
           } else {
             DualLinkDequeSequence.field_h = null;
           }
-          rs.field_Db = null;
+          IconTextPanel.field_Db = null;
           wl.field_f = null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

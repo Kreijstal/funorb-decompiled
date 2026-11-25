@@ -605,7 +605,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("TEXT_INTRO1_END", 111);
                 if (var2 != null) {
-                  rk.field_h = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("TEXT_INTRO2_START", 117);
                 if (var2 != null) {
@@ -785,7 +785,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_join_final", 118);
                 if (null != var2) {
-                  qn.field_d = IterableNodeHashTable.a(var2, 17746);
+                  IntroRenderSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_join", 97);
                 if (null != var2) {
@@ -1083,7 +1083,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_projects", 105);
                 if (var2 != null) {
-                  rk.field_n = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_fleetsize", 95);
                 if (null != var2) {
@@ -1443,7 +1443,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_lost_multiple", 113);
                 if (var2 != null) {
-                  rl.field_e = IterableNodeHashTable.a(var2, 17746);
+                  TextReplacementContext.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_capture_all", 110);
                 if (null != var2) {
@@ -1451,7 +1451,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_exit", 99);
                 if (var2 != null) {
-                  sa.field_b = IterableNodeHashTable.a(var2, 17746);
+                  SpriteWipeSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tabname_territories", 103);
                 if (null != var2) {
@@ -1692,7 +1692,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_ships_constructed", 101);
                 if (null != var2) {
-                  rk.field_m = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_projects_used", 119);
                 if (null != var2) {
@@ -2030,7 +2030,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipDiplomacyButtonShow", 112);
                 if (null != var2) {
-                  rk.field_o = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipFleetInfoButtonShow", 109);
                 if (var2 != null) {

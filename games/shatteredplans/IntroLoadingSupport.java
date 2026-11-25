@@ -41,7 +41,7 @@ final class IntroLoadingSupport {
 
     final static void queueFourIntSubmission(FourIntSubmissionRequest param0, int param1, int param2) {
         try {
-          rs.field_Bb.addLast((byte) -113, param0);
+          IconTextPanel.field_Bb.addLast((byte) -113, param0);
           if (param1 != 1500005281) {
             IntroLoadingSupport.clearStatics(66);
           }

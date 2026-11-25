@@ -145,7 +145,7 @@ final class MusicVoiceMixer extends PcmStream {
         try {
           var21 = new MenuList(0, 0, 209, 70);
           var21.field_h = param1;
-          var5 = new SpriteButton(-5 + (40 - (-((5 + ObjectList.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), rs.field_Cb.field_J - 7, MatchingTextValidator.field_r);
+          var5 = new SpriteButton(-5 + (40 - (-((5 + ObjectList.field_d[0].field_z) * 4) - TurnEventLog.field_d.field_z)), IconTextPanel.field_Cb.field_J - 7, MatchingTextValidator.field_r);
           var21.addChild(var5, 8);
           var22 = param1.field_q.name;
           var6 = var22;
@@ -168,7 +168,7 @@ final class MusicVoiceMixer extends PcmStream {
             if (var13_int < 0) {
               var13_int = 0;
             }
-            var14_ref = new MenuLabel((ObjectList.field_d[var11_int].field_z + 5) * var11_int + 40, ObjectList.field_d[var11_int].field_w + var7.field_i + var8, ObjectList.field_d[var11_int].field_z, rs.field_Cb.field_J, Integer.toString(var13_int));
+            var14_ref = new MenuLabel((ObjectList.field_d[var11_int].field_z + 5) * var11_int + 40, ObjectList.field_d[var11_int].field_w + var7.field_i + var8, ObjectList.field_d[var11_int].field_z, IconTextPanel.field_Cb.field_J, Integer.toString(var13_int));
             var21.addChild(var14_ref, 8);
             var15_ref = new SpriteButton(40 + var11_int * (5 + ObjectList.field_d[var11_int].field_z), var7.field_i + var8, ObjectList.field_d[var11_int]);
             var21.addChild(var15_ref, 8);
@@ -191,7 +191,7 @@ final class MusicVoiceMixer extends PcmStream {
             var20 = (ProductionContent) null;
             MusicVoiceMixer.a((byte) -57, (Territory) null, (ProductionContent) null, true);
           }
-          var13 = new MenuLabel(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, rs.field_Cb.field_J, Integer.toString(var12));
+          var13 = new MenuLabel(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, IconTextPanel.field_Cb.field_J, Integer.toString(var12));
           var21.addChild(var13, 8);
           var14 = new SpriteButton(20 - (-(4 * ObjectList.field_d[0].field_z) - 40), var8 + (var7.field_i - 1), TurnEventLog.field_d);
           var21.addChild(var14, 8);
@@ -203,7 +203,7 @@ final class MusicVoiceMixer extends PcmStream {
           var24_ref = new ToggleButton(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, IntValueWriteRequest.field_i.field_z, IntValueWriteRequest.field_i.field_w, -1, IntValueWriteRequest.field_i, (String) null, -1, -1, AccountHandshakeSupport.field_a, (String) null, -1);
           var24_ref.field_h = param1;
           var21.addChild(var24_ref, 8);
-          var17 = new MenuLabel(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));
+          var17 = new MenuLabel(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, IconTextPanel.field_Cb.field_J, Integer.toString(param1.field_x));
           var17.field_h = param1;
           var21.addChild(var17, 8);
           stackIn_17_0 = var24_ref;

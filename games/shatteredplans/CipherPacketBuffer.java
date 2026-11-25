@@ -194,7 +194,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           var6 = new SpriteButton(-(param2.field_v.field_o / 2) + param3, -(param2.field_v.field_p / 2) + var8.field_i / 2, param2.field_v);
           var8.addChild(var6, 8);
-          var7 = new MenuLabel(-(param2.field_v.field_o / 2) + param3, var8.field_i / 2 - rs.field_Cb.field_J / 2, param2.field_v.field_o, rs.field_Cb.field_J, Integer.toString(param0));
+          var7 = new MenuLabel(-(param2.field_v.field_o / 2) + param3, var8.field_i / 2 - IconTextPanel.field_Cb.field_J / 2, param2.field_v.field_o, IconTextPanel.field_Cb.field_J, Integer.toString(param0));
           var8.addChild(var7, 8);
           stackIn_3_0 = var8;
           return stackIn_3_0;

@@ -446,7 +446,7 @@ class MenuComponent extends IntrusiveNode {
     }
 
     MenuComponent(int param0, int param1, int param2, int param3) {
-        rs.field_Cb.stringWidth("200");
+        IconTextPanel.field_Cb.stringWidth("200");
         this.field_k = param0;
         this.field_h = null;
         this.field_i = param3;

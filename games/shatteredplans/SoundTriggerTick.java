@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf {
+final class SoundTriggerTick {
     static SoundEffectDefinition field_g;
     static long field_e;
     int field_c;
     static AnimatedPanel field_f;
-    sf field_b;
+    SoundTriggerTick field_b;
     static String field_h;
     static String field_a;
     static MusicTrack field_d;
 
-    public static void a(byte param0) {
+    public static void releaseSoundTriggerStatics(byte param0) {
         field_f = null;
         if (param0 == 82) {
           field_a = null;
@@ -20,14 +20,14 @@ final class sf {
           field_d = null;
           return;
         }
-        sf.a((byte) -109, 97);
+        SoundTriggerTick.ensureAiWorkCapacity((byte) -109, 97);
         field_a = null;
         field_g = null;
         field_h = null;
         field_d = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void ensureAiWorkCapacity(byte param0, int param1) {
         if (param1 >= ValidationMessageWidget.field_T) {
           ValidationMessageWidget.field_T = param1;
           TutorialStageSupport.field_f = new boolean[param1];
@@ -41,7 +41,7 @@ final class sf {
         }
     }
 
-    sf(SoundPlayback param0, int param1) {
+    SoundTriggerTick(SoundPlayback param0, int param1) {
         try {
           this.field_c = param1;
           this.field_b = null;

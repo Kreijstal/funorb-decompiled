@@ -309,7 +309,7 @@ final class QuickChatMenuSupport {
               var1_int = var1_int + ArchiveNetworkClient.field_i;
             }
             if (0 <= var4) {
-              ql.field_n.drawString(var6, var8Lifetime1, var1_int + LobbyCommandSupport.field_g, var5, -1);
+              TextHotspotRegion.field_n.drawString(var6, var8Lifetime1, var1_int + LobbyCommandSupport.field_g, var5, -1);
               var1_int = var1_int + (SpriteResourceSupport.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
               PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
@@ -343,7 +343,7 @@ final class QuickChatMenuSupport {
         DirectByteArrayStorage.field_o = new int[param1];
         ValidationMessageWidget.field_U = param1;
         QuaternaryNodeList.field_b = new int[param1];
-        rl.field_b = new boolean[param1];
+        TextReplacementContext.field_b = new boolean[param1];
         WeightedLruCache.field_a = new int[param1];
         StandardMapGenerator.field_i = new int[param1];
         ClientRuntimeState.field_i = new int[param1];

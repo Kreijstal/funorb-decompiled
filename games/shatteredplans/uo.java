@@ -232,7 +232,7 @@ final class uo {
               IntValueWriteRequest.field_j.setTarget(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
               IntValueWriteRequest.field_j.field_z = MenuList.field_u.toUpperCase();
               stackIn_20_0 = IntValueWriteRequest.field_j;
-              stackIn_21_1 = (param3) && (sf.field_e == 0L);
+              stackIn_21_1 = (param3) && (SoundTriggerTick.field_e == 0L);
               stackIn_20_0.field_s = stackIn_21_1;
               var8 = IntValueWriteRequest.field_j;
               var10 = 2;
@@ -350,7 +350,7 @@ final class uo {
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
-                  var17 = ro.field_a.field_xb.field_M;
+                  var17 = EmailValidationError.field_a.field_xb.field_M;
                   var18_ref = (LobbyPlayerEntry) (var17.startForward(0));
                   scanLoop3: while (true) {
                     if (var18_ref != null) {
@@ -434,8 +434,8 @@ final class uo {
                 }
               }
             }
-            if (sf.field_e != 0L) {
-              var9 = (int)(sf.field_e - ClientClockSupport.currentTimeMillis(14274));
+            if (SoundTriggerTick.field_e != 0L) {
+              var9 = (int)(SoundTriggerTick.field_e - ClientClockSupport.currentTimeMillis(14274));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;

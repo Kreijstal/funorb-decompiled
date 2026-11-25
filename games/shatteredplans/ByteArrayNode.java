@@ -3,7 +3,7 @@
  */
 final class ByteArrayNode extends IntrusiveNode {
     byte[] field_n;
-    static rs field_i;
+    static IconTextPanel field_i;
     static String field_m;
     static int[] field_h;
     static String field_o;

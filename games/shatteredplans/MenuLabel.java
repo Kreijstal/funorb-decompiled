@@ -21,7 +21,7 @@ class MenuLabel extends MenuComponent {
     }
 
     MenuLabel(int param0, int param1, String param2) {
-        this(param0, param1, rs.field_Cb.stringWidth(param2), rs.field_Cb.field_J, param2);
+        this(param0, param1, IconTextPanel.field_Cb.stringWidth(param2), IconTextPanel.field_Cb.field_J, param2);
     }
 
     MenuLabel(int param0, int param1, int param2, int param3, String param4) {
@@ -128,7 +128,7 @@ class MenuLabel extends MenuComponent {
         }
         int var2 = -21 / ((67 - param0) / 47);
         if (null != this.field_u) {
-          rs.field_Cb.drawCentred(this.field_u, this.field_m / 2 + this.field_k, 3 * rs.field_Cb.field_J / 4 + this.field_t, this.field_w, -1);
+          IconTextPanel.field_Cb.drawCentred(this.field_u, this.field_m / 2 + this.field_k, 3 * IconTextPanel.field_Cb.field_J / 4 + this.field_t, this.field_w, -1);
         }
     }
 

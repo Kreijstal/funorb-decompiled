@@ -20,7 +20,7 @@ final class StarAnnotation extends IntrusiveNode {
           IOException var2 = null;
           int var3 = 0;
           Throwable decompiledCaughtException = null;
-          if (sa.field_a.position >= param1) {
+          if (SpriteWipeSupport.field_a.position >= param1) {
             return true;
           }
           if (null == wg.field_f) {
@@ -40,16 +40,16 @@ final class StarAnnotation extends IntrusiveNode {
               TabbedPanel.closeClientSocket(-114);
               return false;
             }
-            if (var2_int > param1 - sa.field_a.position) {
-              var2_int = param1 - sa.field_a.position;
+            if (var2_int > param1 - SpriteWipeSupport.field_a.position) {
+              var2_int = param1 - SpriteWipeSupport.field_a.position;
             }
-            wg.field_f.readFully(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
+            wg.field_f.readFully(SpriteWipeSupport.field_a.payload, var2_int, SpriteWipeSupport.field_a.position, (byte) 119);
             IntrusiveDeque.field_e = ClientClockSupport.currentTimeMillis(14274);
-            sa.field_a.position = sa.field_a.position + var2_int;
-            if (sa.field_a.position < param1) {
+            SpriteWipeSupport.field_a.position = SpriteWipeSupport.field_a.position + var2_int;
+            if (SpriteWipeSupport.field_a.position < param1) {
               return false;
             }
-            sa.field_a.position = 0;
+            SpriteWipeSupport.field_a.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

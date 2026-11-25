@@ -87,7 +87,7 @@ abstract class ArchiveSource {
           if (param0 != 13) {
             return null;
           }
-          stackIn_42_0 = QuickChatCategoryRegistry.a(sa.field_c, 4371, new String[]{param2});
+          stackIn_42_0 = QuickChatCategoryRegistry.a(SpriteWipeSupport.field_c, 4371, new String[]{param2});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -27,7 +27,7 @@ final class GameSession implements AiHost {
     private int[] field_J;
     int field_m;
     Ai[] field_s;
-    private sf field_E;
+    private SoundTriggerTick field_E;
     private int[] field_d;
     int field_h;
     boolean field_j;
@@ -217,7 +217,7 @@ final class GameSession implements AiHost {
             return;
           }
           if (!this.field_f) {
-            qn.b(117);
+            IntroRenderSupport.clearChatHistory(117);
             var3_int = param1 ? 1 : 0;
             ta.a(0, 0, (byte) 96, var3_int != 0);
           }
@@ -855,13 +855,13 @@ final class GameSession implements AiHost {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (66 == BufferedCacheFile.field_e) {
-            var2_int = sa.field_a.readUnsignedByte(-108);
-            var3 = sa.field_a.readUnsignedShort(param0 - 35735);
-            var4 = sa.field_a.readInt(16711680);
-            var5 = sa.field_a.readInt(param0 ^ 16726439);
-            var6 = sa.field_a.readUnsignedByte(-75);
-            var7_int = sa.field_a.readUnsignedByte(param0 ^ -14818);
-            var8 = sa.field_a.readUnsignedShort(-20976);
+            var2_int = SpriteWipeSupport.field_a.readUnsignedByte(-108);
+            var3 = SpriteWipeSupport.field_a.readUnsignedShort(param0 - 35735);
+            var4 = SpriteWipeSupport.field_a.readInt(16711680);
+            var5 = SpriteWipeSupport.field_a.readInt(param0 ^ 16726439);
+            var6 = SpriteWipeSupport.field_a.readUnsignedByte(-75);
+            var7_int = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14818);
+            var8 = SpriteWipeSupport.field_a.readUnsignedShort(-20976);
             boolean decompiledSharedTail1 = (!(this.field_P.field_O < var2_int) ||
               -1 == this.field_P.field_O);
             if (!decompiledSharedTail1) {
@@ -903,37 +903,37 @@ final class GameSession implements AiHost {
             return true;
           }
           if (BufferedCacheFile.field_e == 69) {
-            this.field_N = sa.field_a.readUnsignedByte(-78);
+            this.field_N = SpriteWipeSupport.field_a.readUnsignedByte(-78);
             return true;
           }
           if (BufferedCacheFile.field_e == 67) {
-            this.a(1, sa.field_a, TextInputPainter.field_t);
+            this.a(1, SpriteWipeSupport.field_a, TextInputPainter.field_t);
             return true;
           }
           if (70 == BufferedCacheFile.field_e) {
-            this.b(TextInputPainter.field_t, sa.field_a, -123);
+            this.b(TextInputPainter.field_t, SpriteWipeSupport.field_a, -123);
             return true;
           }
           if (68 == BufferedCacheFile.field_e) {
-            this.a(sa.field_a, TextInputPainter.field_t, -80);
+            this.a(SpriteWipeSupport.field_a, TextInputPainter.field_t, -80);
             return true;
           }
           if (BufferedCacheFile.field_e == 62) {
-            this.field_P.field_y = sa.field_a.readUnsignedByte(param0 ^ -14832);
+            this.field_P.field_y = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14832);
             if (this == PasswordInputPainter.field_x) {
               LoginForm.k(8);
             }
             return true;
           }
           if (BufferedCacheFile.field_e == 64) {
-            this.field_P.field_e = sa.field_a.readUnsignedByte(param0 ^ -14814);
+            this.field_P.field_e = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14814);
             if (this == PasswordInputPainter.field_x) {
               wp.a(-2);
             }
             return true;
           }
           if (BufferedCacheFile.field_e == 63) {
-            this.field_P.field_f = sa.field_a.readUnsignedByte(-119);
+            this.field_P.field_f = SpriteWipeSupport.field_a.readUnsignedByte(-119);
             this.field_P.field_w = this.field_P.field_w | this.field_P.field_f;
             var2_intLifetime1 = 0;
             boolean decompiledNaturalLoopExit1 = false;
@@ -954,11 +954,11 @@ final class GameSession implements AiHost {
             return stackIn_77_0 != 0;
           }
           if (BufferedCacheFile.field_e == 65) {
-            this.field_i = sa.field_a.readUnsignedByte(-57);
+            this.field_i = SpriteWipeSupport.field_a.readUnsignedByte(-57);
             return true;
           }
           if (61 == BufferedCacheFile.field_e) {
-            var2_intLifetime2 = sa.field_a.readSignedByte(-2852);
+            var2_intLifetime2 = SpriteWipeSupport.field_a.readSignedByte(-2852);
             this.field_P.declareWinner(var2_intLifetime2, 3);
             ta.a(0, -1, (byte) 96, false);
             this.field_b = false;
@@ -988,9 +988,9 @@ final class GameSession implements AiHost {
             return true;
           }
           if (BufferedCacheFile.field_e == 73) {
-            var2_intLifetime3 = sa.field_a.readUnsignedByte(-95);
-            var3Lifetime1 = sa.field_a.readUnsignedByte(-112);
-            var4Lifetime1 = sa.field_a.readUnsignedByte(param0 ^ -14805);
+            var2_intLifetime3 = SpriteWipeSupport.field_a.readUnsignedByte(-95);
+            var3Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-112);
+            var4Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14805);
             this.a(var4Lifetime1, (byte) 4, this.field_n, this.field_P.field_v[var2_intLifetime3], var3Lifetime1);
             return true;
           }
@@ -1000,9 +1000,9 @@ final class GameSession implements AiHost {
             var3Lifetime2 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var2_intLifetime4 <= var3Lifetime2))) {
-              var4Lifetime2 = sa.field_a.readUnsignedByte(-128);
-              var5Lifetime1 = sa.field_a.readUnsignedByte(-126);
-              stackIn_128_0 = sa.field_a.readUnsignedShort(param0 ^ -26697);
+              var4Lifetime2 = SpriteWipeSupport.field_a.readUnsignedByte(-128);
+              var5Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-126);
+              stackIn_128_0 = SpriteWipeSupport.field_a.readUnsignedShort(param0 ^ -26697);
               if (var11 == 0) {
                 var6Lifetime1 = stackIn_128_0;
                 var7 = "My personality type is " + WidgetStateStyle.field_a[var5Lifetime1] + " and my rating is " + var6Lifetime1;
@@ -1147,7 +1147,7 @@ final class GameSession implements AiHost {
                     var5 = 1;
                     discarded$0 = var6.append("Fleet from " + var7_ref_mg.field_y.name + " to " + var7_ref_mg.field_B.name + " has no owner.\n");
                   } else {
-                    this.field_z.field_c.addLast((byte) -113, qn.a(-121, var7_ref_mg));
+                    this.field_z.field_c.addLast((byte) -113, IntroRenderSupport.createFleetVisual(-121, var7_ref_mg));
                     if (var7_ref_mg.field_z > this.field_z.field_y) {
                       this.field_z.field_y = var7_ref_mg.field_z;
                     }
@@ -2840,7 +2840,7 @@ final class GameSession implements AiHost {
         int var5_int = 0;
         Star[] var5 = null;
         Player var5_ref = null;
-        sf var5_ref2 = null;
+        SoundTriggerTick var5_ref2 = null;
         int var6 = 0;
         Star var6_ref_ln = null;
         int var7_int = 0;
@@ -3105,15 +3105,15 @@ final class GameSession implements AiHost {
                     continue;
                   }
                 } else {
-                  var5_ref2.field_b = new sf(var4_ref2, RasterStateFrame.field_n);
+                  var5_ref2.field_b = new SoundTriggerTick(var4_ref2, RasterStateFrame.field_n);
                 }
                 break;
               }
               if (var8 != 0) {
-                this.field_E = new sf(var4_ref2, RasterStateFrame.field_n);
+                this.field_E = new SoundTriggerTick(var4_ref2, RasterStateFrame.field_n);
               }
             } else {
-              this.field_E = new sf(var4_ref2, RasterStateFrame.field_n);
+              this.field_E = new SoundTriggerTick(var4_ref2, RasterStateFrame.field_n);
             }
             this.field_x = this.field_x + 1;
             this.refreshMapView(2);
