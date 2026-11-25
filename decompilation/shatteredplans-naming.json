@@ -16422,10 +16422,10 @@
     {
       "symbol": "M:pl.a(ZB)V",
       "originalName": "a",
-      "to": "clearStatics",
-      "evidence": "Assigns null to 3 static fields of the class.",
+      "to": "pollQuickChatHelpPanel",
+      "evidence": "Poll the retained QuickChatHelpPanel by forwarding the boolean to updateAndCheckDismissed with -1; clear the retained panel only when dismissed. Byte other than -26 additionally nulls the caption before the panel lookup. Full owner, both incoming caller bodies and complete dismissal helper read. Preserve both byte branches, boolean forwarding, repeated shared-field reads, aliases, partial mutations, guards, descriptors/modifiers and call/exception order. Identifier-only correction of the former clearStatics alias; the separate int cleanup overload remains unchanged.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:QuickChatHelpPanelSupport.clearStatics(ZB)V"
+      "renamedSymbol": "M:QuickChatHelpPanelSupport.pollQuickChatHelpPanel(ZB)V"
     },
     {
       "symbol": "M:pn.a()V",
@@ -343839,9 +343839,9 @@
     },
     {
       "symbol": "M:pl.a(ZB)V",
-      "renamedSymbol": "M:QuickChatHelpPanelSupport.clearStatics(ZB)V",
+      "renamedSymbol": "M:QuickChatHelpPanelSupport.pollQuickChatHelpPanel(ZB)V",
       "originalName": "a",
-      "renamedName": "clearStatics",
+      "renamedName": "pollQuickChatHelpPanel",
       "declaration": {
         "file": "pl.java",
         "start": 132,
@@ -424645,7 +424645,7 @@
     },
     {
       "symbol": "P:pl.a(ZB)V#0",
-      "renamedSymbol": "P:QuickChatHelpPanelSupport.clearStatics(ZB)V#0",
+      "renamedSymbol": "P:QuickChatHelpPanelSupport.pollQuickChatHelpPanel(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -424656,7 +424656,7 @@
     },
     {
       "symbol": "P:pl.a(ZB)V#1",
-      "renamedSymbol": "P:QuickChatHelpPanelSupport.clearStatics(ZB)V#1",
+      "renamedSymbol": "P:QuickChatHelpPanelSupport.pollQuickChatHelpPanel(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -644957,7 +644957,7 @@
       "original": "o.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "a3117040d0ba6cf6d1b93a8896b95cf37b7123f15e0d5307927e1ccdf6207591",
-      "outputSha256": "6ab971c96fedcd5f1c373ea9aa0059266d97357541510ab43e3116d910fac709",
+      "outputSha256": "953b888a1e8471dd80f175cebc16b73ba06716e945562610c8643a0906796eef",
       "edits": [
         {
           "start": 44,
@@ -645048,7 +645048,7 @@
           "end": 1684,
           "symbol": "M:pl.a(ZB)V",
           "original": "a",
-          "renamed": "clearStatics"
+          "renamed": "pollQuickChatHelpPanel"
         },
         {
           "start": 1714,
@@ -663508,7 +663508,7 @@
       "original": "pl.java",
       "renamed": "QuickChatHelpPanelSupport.java",
       "inputSha256": "315ee70cda22a552a747906c9b847841a5b9758c261654c079674dc3b9162f7c",
-      "outputSha256": "cc2c13a16f88fe76ca8d38b3c3cbf3256b7e6a0fff06b66db73bc42f0d53f985",
+      "outputSha256": "6f8c5968ef94ec64ae6376b2088534636f24ea3ac1e568ded574d136078362a5",
       "edits": [
         {
           "start": 50,
@@ -663522,7 +663522,7 @@
           "end": 133,
           "symbol": "M:pl.a(ZB)V",
           "original": "a",
-          "renamed": "clearStatics"
+          "renamed": "pollQuickChatHelpPanel"
         },
         {
           "start": 243,
@@ -663599,7 +663599,7 @@
           "end": 703,
           "symbol": "M:pl.a(ZB)V",
           "original": "a",
-          "renamed": "clearStatics"
+          "renamed": "pollQuickChatHelpPanel"
         }
       ]
     },
@@ -766023,10 +766023,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "a8434de756b051882d2a4f9a1ec89952fe6bd4e09378196b8a3212a94f22a635",
+    "rulesSha256": "6f42fded832089d50e5bfe786324d33b6d00e1fc3581e8c08bb60847f1c693fd",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "f51ef2152c08443765c17307aed740d56b45d8bc8ac050c867e5602384626054",
+    "outputTreeSha256": "5f767df831c6724ac210af97a3f6bbdfd5adf6dbe66ec4d1a1387e822d575f6a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
