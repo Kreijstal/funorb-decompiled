@@ -153,7 +153,7 @@ final class et {
         }
     }
 
-    final static int a(int param0) {
+    final static int pollAccountFlowAction(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         int stackIn_13_0 = 0;
@@ -169,7 +169,7 @@ final class et {
           KingBlackDragonEvent.field_C.a(true, -6226, LoginMethod.field_b, UiSelectionState.field_i);
           KingBlackDragonEvent.field_C.advanceDialogs((byte) -102);
           if (param0 != -3) {
-            et.a(103);
+            et.pollAccountFlowAction(103);
           }
           do {
             if (!Unit.pollKeyEvent((byte) 80)) {
@@ -198,7 +198,7 @@ final class et {
             KingBlackDragonEvent.field_C.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
           } while (var2 == 0);
           var1_int = OctaveNoiseMap.field_r;
-          gl.a(param0 ^ -127, -1);
+          AccountIdentifierStatus.setAccountFlowAction(param0 ^ -127, -1);
           stackIn_13_0 = var1_int;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

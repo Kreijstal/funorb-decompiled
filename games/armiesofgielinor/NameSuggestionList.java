@@ -87,7 +87,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
           GameAppletShell.field_b.field_o = 14;
           GameAppletShell.field_b.field_h = 0;
           GameAppletShell.field_b.field_c = 2763306;
-          GameAppletShell.field_b.font = gl.field_e;
+          GameAppletShell.field_b.font = AccountIdentifierStatus.field_e;
           GameAppletShell.field_b.field_d = 4;
           GameAppletShell.field_b.field_x = 6;
           GameAppletShell.field_b.field_r = 5;

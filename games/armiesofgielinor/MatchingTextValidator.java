@@ -10,11 +10,11 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (param0 > -120) {
           MatchingTextValidator.c((byte) 114);
           qf.a(56);
-          gl.a(124, 4);
+          AccountIdentifierStatus.setAccountFlowAction(124, 4);
           return;
         }
         qf.a(56);
-        gl.a(124, 4);
+        AccountIdentifierStatus.setAccountFlowAction(124, 4);
     }
 
     public static void releaseStatics(int obfuscationGuard) {

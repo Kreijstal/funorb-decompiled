@@ -12,9 +12,9 @@ final class DiskCacheWorker implements Runnable {
     private Thread workerThread;
 
     final static int a(byte param0, String param1, String param2, boolean param3, int param4, int param5, String param6) {
-        gl var7 = null;
+        AccountIdentifierStatus var7 = null;
         RuntimeException var7_ref = null;
-        gl var8 = null;
+        AccountIdentifierStatus var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -30,8 +30,8 @@ final class DiskCacheWorker implements Runnable {
             stackIn_2_0 = -51;
             return stackIn_2_0;
           }
-          var7 = new gl(param1);
-          var8 = new gl(param2);
+          var7 = new AccountIdentifierStatus(param1);
+          var8 = new AccountIdentifierStatus(param2);
           stackIn_4_0 = CacheEntry.a(param6, var7, -20032, param5, param4, var8, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

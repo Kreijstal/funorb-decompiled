@@ -45,7 +45,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitHorizontalFlip(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -91,7 +91,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tintColour);
+          RgbSprite.blitShadedGrayscale(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tintColour);
           return;
         }
     }
@@ -167,12 +167,12 @@ class RgbSprite extends RgbSpriteBase {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, brightness);
+          RgbSprite.blitScaledWithBrightness(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, brightness);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitScaledWithOpacity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -269,7 +269,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(SoftwareRaster.pixels, this.pixels, colour, var5, var4, var7, var6, var8, var9);
+          RgbSprite.blitSilhouette(SoftwareRaster.pixels, this.pixels, colour, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -568,7 +568,7 @@ class RgbSprite extends RgbSpriteBase {
                     if (var37 >> 12 < this.pixelWidth) {
                       var34 = var38 >> 12;
                       if (var38 >> 12 < this.pixelHeight) {
-                        this.a(var23, var33, var34, var37, var38);
+                        this.drawBilinearSample(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -632,7 +632,7 @@ class RgbSprite extends RgbSpriteBase {
                     var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.pixelWidth) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
-                      this.a(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      this.drawBilinearSample(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -697,7 +697,7 @@ class RgbSprite extends RgbSpriteBase {
                     var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.pixelHeight) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
-                      this.a(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      this.drawBilinearSample(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -761,7 +761,7 @@ class RgbSprite extends RgbSpriteBase {
                   var38Lifetime2 >= -4096) {
                   var33Lifetime2 = var37Lifetime2 >> 12;
                   var34Lifetime2 = var38Lifetime2 >> 12;
-                  this.a(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  this.drawBilinearSample(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;
@@ -843,7 +843,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3) {
+    final void drawDownscaledAreaAverage(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var30 = 0;
@@ -1007,7 +1007,7 @@ class RgbSprite extends RgbSpriteBase {
         int var4 = x + (this.pixelWidth >> 1) > SoftwareRaster.clipRight ? SoftwareRaster.clipRight - x << 1 : this.pixelWidth;
         int var5 = y < SoftwareRaster.clipTop ? SoftwareRaster.clipTop - y << 1 : 0;
         int var6 = y + (this.pixelHeight >> 1) > SoftwareRaster.clipBottom ? SoftwareRaster.clipBottom - y << 1 : this.pixelHeight;
-        RgbSprite.a(this.pixels, var5 * this.pixelWidth + var3, (y + (var5 >> 1)) * SoftwareRaster.width + (x + (var3 >> 1)), (this.pixelWidth << 1) - (var4 - var3) + (this.pixelWidth & 1), SoftwareRaster.width - (var4 - var3 >> 1), this.pixelWidth, var4 - var3 >> 1, var6 - var5 >> 1);
+        RgbSprite.blitHalfSize(this.pixels, var5 * this.pixelWidth + var3, (y + (var5 >> 1)) * SoftwareRaster.width + (x + (var3 >> 1)), (this.pixelWidth << 1) - (var4 - var3) + (this.pixelWidth & 1), SoftwareRaster.width - (var4 - var3 >> 1), this.pixelWidth, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void addOutline(int outlineColour) {
@@ -1048,7 +1048,7 @@ class RgbSprite extends RgbSpriteBase {
         this.pixels = var2;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitTintedGrayscale(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -1075,7 +1075,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitWithOpacity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -1099,7 +1099,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1171,7 +1171,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitOpaque(SoftwareRaster.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1251,7 +1251,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitHorizontalFlip(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1302,7 +1302,7 @@ class RgbSprite extends RgbSpriteBase {
         SoftwareRaster.setTarget(this.pixels, this.pixelWidth, this.pixelHeight);
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1344,7 +1344,7 @@ class RgbSprite extends RgbSpriteBase {
         this.offsetX = this.canvasWidth - this.pixelWidth - this.offsetX;
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveWithBrightness(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1368,7 +1368,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1431,12 +1431,12 @@ class RgbSprite extends RgbSpriteBase {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(0, SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitMultiply(0, SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitShadedGrayscale(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -1488,7 +1488,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void blitScaledAdditive(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
@@ -1557,9 +1557,9 @@ class RgbSprite extends RgbSpriteBase {
             return;
           }
           if (opacity == 256) {
-            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.blitAdditive(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, opacity);
+            RgbSprite.blitAdditiveWithBrightness(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, opacity);
           }
           return;
         }
@@ -1573,7 +1573,7 @@ class RgbSprite extends RgbSpriteBase {
         this.drawRotatedAboutPivot(var5, var6, x, y, angle, scale);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -1645,7 +1645,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawBilinearSample(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -1800,7 +1800,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tintColour);
+          RgbSprite.blitTintedGrayscale(SoftwareRaster.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tintColour);
           return;
         }
     }
@@ -1872,7 +1872,7 @@ class RgbSprite extends RgbSpriteBase {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, opacity);
+          RgbSprite.blitScaledWithOpacity(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, opacity);
           return;
         }
     }
@@ -1944,12 +1944,12 @@ class RgbSprite extends RgbSpriteBase {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, width, height, var11, var12, var5);
+          RgbSprite.blitScaled(SoftwareRaster.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, width, height, var11, var12, var5);
           return;
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAdditive(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2017,15 +2017,15 @@ class RgbSprite extends RgbSpriteBase {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            RgbSprite.a(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            RgbSprite.blitScaledAdditive(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            RgbSprite.a(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            RgbSprite.blitScaledAdditiveWithBrightness(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitTransparent(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -2100,7 +2100,7 @@ class RgbSprite extends RgbSpriteBase {
         this.canvasWidth = var3Lifetime3;
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -2187,12 +2187,12 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
+          RgbSprite.blitWithBrightness(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final static void blitScaledAdditiveWithBrightness(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
@@ -2221,7 +2221,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitOpaque(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -2255,7 +2255,7 @@ class RgbSprite extends RgbSpriteBase {
         return var1;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitScaledWithBrightness(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -2310,7 +2310,7 @@ class RgbSprite extends RgbSpriteBase {
         this.pixels = pixels;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitWithBrightness(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -2375,7 +2375,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, opacity);
+          RgbSprite.blitWithOpacity(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, opacity);
           return;
         }
     }
@@ -2421,7 +2421,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitTransparent(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2521,7 +2521,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.blitTransparent(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

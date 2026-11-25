@@ -40,7 +40,7 @@ final class MapRepository {
           return;
         }
         try {
-          gl.a(127, -1);
+          AccountIdentifierStatus.setAccountFlowAction(127, -1);
           ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
           EffectsGainSupport.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {

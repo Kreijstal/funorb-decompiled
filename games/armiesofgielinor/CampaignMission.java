@@ -256,7 +256,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
 
     private final MapLayout loadMapLayout(byte obfuscationGuard) {
         if (obfuscationGuard < 86) {
-          CampaignMission.c((byte) 8);
+          CampaignMission.getEmailIdentifierStatus((byte) 8);
         }
         byte[] var3 = this.mapArchive.getFile((byte) 76, this.mapResourceId, this.mapArchive.getGroupId(ModalDialogHost.field_O[this.campaign.campaignIndex], 102));
         byte[] var2 = var3;
@@ -382,12 +382,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final static gl c(byte param0) {
+    final static AccountIdentifierStatus getEmailIdentifierStatus(byte param0) {
         if (param0 >= -11) {
           ResourceArchive var2 = (ResourceArchive) null;
           CampaignMission.a((byte) -102, (String) null, (String) null, (ResourceArchive) null);
         }
-        return new gl(OctaveNoiseMap.e(488997228), QuickChatPhraseRepository.c(-104));
+        return new AccountIdentifierStatus(OctaveNoiseMap.getEmailIdentifier(488997228), QuickChatPhraseRepository.isEmailCheckPending(-104));
     }
 
     CampaignMission() {

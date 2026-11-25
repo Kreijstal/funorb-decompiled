@@ -24,7 +24,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
           var3.height = 100;
           var3.width = this.width;
           var3.x = 0;
-          var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var3);
           this.countdownLabel = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
           this.countdownLabel.width = this.width;

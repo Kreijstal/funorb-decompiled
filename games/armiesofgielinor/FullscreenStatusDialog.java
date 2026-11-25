@@ -142,7 +142,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var4.y = 50;
           var4.width = this.width;
           var4.height = 80;
-          var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var4);
           this.closeButton = this.createCloseButton(PasswordLengthSupport.field_f, (WidgetListener) (this), 93);
           return;

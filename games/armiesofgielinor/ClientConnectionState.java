@@ -69,13 +69,13 @@ final class ClientConnectionState {
 
     final static void setTicksPerSecond(int ticksPerSecond, boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          gl var3 = (gl) null;
-          ClientConnectionState.a(false, (gl) null, (gl) null);
+          AccountIdentifierStatus var3 = (AccountIdentifierStatus) null;
+          ClientConnectionState.a(false, (AccountIdentifierStatus) null, (AccountIdentifierStatus) null);
         }
         FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)ticksPerSecond;
     }
 
-    final static int a(boolean param0, gl param1, gl param2) {
+    final static int a(boolean param0, AccountIdentifierStatus param1, AccountIdentifierStatus param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_2_0 = 0;

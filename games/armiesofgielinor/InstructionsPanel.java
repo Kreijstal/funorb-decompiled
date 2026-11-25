@@ -1108,7 +1108,7 @@ final class InstructionsPanel {
               SoftwareRaster.clearPixels();
               var25 = param0.canvasWidth;
               var26 = param0.canvasHeight;
-              param3.d(param5, param2, var25, var26);
+              param3.drawDownscaledAreaAverage(param5, param2, var25, var26);
               FixedSquareRootSupport.field_b.bindRasterTarget(5605);
               SoftwareRaster.restoreClip(this.field_J);
               GradientUiRenderer.clearSentinelPixels(param0);

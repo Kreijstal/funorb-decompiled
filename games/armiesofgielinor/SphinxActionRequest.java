@@ -108,7 +108,7 @@ final class SphinxActionRequest extends ActionRequest {
               }
             }
           }
-          gl.field_c = 2;
+          AccountIdentifierStatus.field_c = 2;
           LeapYearSupport.field_b = 11;
           MusicPatchNode.field_l = 4;
           MusicPatch.field_n = 2;

@@ -4129,7 +4129,7 @@ final class GameplayController {
           if (this.battlefield.campaignMission == null) {
             this.turnTimerDial.draw(15, 15, (byte) 121);
             if (this.field_ac) {
-              TrianglePulse.field_d.d(0, 0, 134, 134, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
+              TrianglePulse.field_d.drawScaledAdditive(0, 0, 134, 134, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
             }
           }
           if (this.controlledPlayerId > -1) {
@@ -4152,7 +4152,7 @@ final class GameplayController {
             WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
-              TrianglePulse.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
+              TrianglePulse.field_d.drawScaledAdditive(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
             MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
           }
@@ -4933,7 +4933,7 @@ final class GameplayController {
                 SoftwareRaster.fillCircleBlended(var6, var7, 20, 0, 128);
               } else {
                 if (this.field_nc == var2_int) {
-                  TeamRoster.field_e.d(var6 - 30, var7 - 30, 60, 60, 256);
+                  TeamRoster.field_e.drawScaledAdditive(var6 - 30, var7 - 30, 60, 60, 256);
                 }
                 var8 = SpellDefinitionTable.spellDefinitions[var3][2];
                 if (var8 < BattleCharacter.field_h.length) {
@@ -4952,7 +4952,7 @@ final class GameplayController {
                 ProjectileEffect.field_h[1].drawTransparent(var6 - 23, var7 - 23);
               }
               if (~var2_int == ~this.field_Jb) {
-                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
+                TrianglePulse.field_d.drawScaledAdditive(-35 + var6, var7 - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
               }
               var2_int++;
             }
@@ -4970,7 +4970,7 @@ final class GameplayController {
           BattleCharacter.field_h[170].drawTransparent(111, -20 + (-95 + this.o(125)));
           ProjectileEffect.field_h[1].drawTransparent(107, -118 + this.o(param0 + 132));
           if (this.field_Jb == 255) {
-            TrianglePulse.field_d.d(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
+            TrianglePulse.field_d.drawScaledAdditive(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7341,7 +7341,7 @@ final class GameplayController {
               while (var5 < var2.length) {
                 var6 = 50 * (-1 + var5) + FixedSquareRootSupport.field_b.width / 2;
                 var7 = var4 - 30;
-                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
+                TrianglePulse.field_d.drawScaledAdditive(-35 + var6, var7 - 35, 70, 70, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
                 var5++;
                 if (var11 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -10973,7 +10973,7 @@ final class GameplayController {
                 SoftwareRaster.clearPixels();
                 TrianglePulse.field_d.drawShadedGrayscale(0, 0, TutorialLayout.field_g[1 + this.field_e[var8Lifetime1]]);
                 FixedSquareRootSupport.field_b.bindRasterTarget(5605);
-                AccountNameFoldingSupport.field_e.d(var14 - var16 / 2, var15 - var16 / 2, var16, var16, 255);
+                AccountNameFoldingSupport.field_e.drawScaledAdditive(var14 - var16 / 2, var15 - var16 / 2, var16, var16, 255);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -10984,7 +10984,7 @@ final class GameplayController {
                     AccountNameFoldingSupport.field_e.bindAsRasterTarget();
                     TrianglePulse.field_d.drawShadedGrayscale(0, 0, TutorialLayout.field_g[this.field_e[var8Lifetime1] + 1]);
                     FixedSquareRootSupport.field_b.bindRasterTarget(5605);
-                    AccountNameFoldingSupport.field_e.d(var9Lifetime1Lifetime1 - 5, -5 + var10Lifetime1Lifetime1, 10, 10, 255);
+                    AccountNameFoldingSupport.field_e.drawScaledAdditive(var9Lifetime1Lifetime1 - 5, -5 + var10Lifetime1Lifetime1, 10, 10, 255);
                   }
                   if (this.field_dc[var8Lifetime1] > 256) {
                     ((ArgbSprite) (LocalAccountNameSupport.field_c[1 + this.field_e[var8Lifetime1]])).drawHalfSizeWithOpacity(-18 + var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - 21, (this.field_dc[var8Lifetime1] - 256) * 2);
@@ -11112,7 +11112,7 @@ final class GameplayController {
               var3 = stackIn_20_0;
               var4 = SpellDefinitionTable.spellDefinitions[FloorModSupport.floorModWithOffset(var2_int + this.field_Lb, 1, 135)][2];
               if (~FloorModSupport.floorModWithOffset(this.field_Lb + var2_int, 1, 135) == ~this.field_gc) {
-                TeamRoster.field_e.d(var2_int * 45 + 200 + this.field_g, -125 + this.o(127), 60, 60, 256);
+                TeamRoster.field_e.drawScaledAdditive(var2_int * 45 + 200 + this.field_g, -125 + this.o(127), 60, 60, 256);
               }
               if (var2_int == -1) {
                 if (this.field_g > 0) {

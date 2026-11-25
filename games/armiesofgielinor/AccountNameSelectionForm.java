@@ -17,7 +17,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
     public AccountNameSelectionForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.nameInput = new ValidatedTextWidget("", (WidgetListener) null, 12);
-        BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
+        BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         Widget var2 = new Widget(BattleTutorial.field_u, var1, (WidgetListener) null);
         this.submitButton = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
         this.cancelButton = new InteractiveWidget(ManaStarParticle.field_s, (WidgetListener) null);

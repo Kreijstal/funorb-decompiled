@@ -517,7 +517,7 @@ final class TutorialController {
             stackIn_26_1 = LocalCoatSupport.field_b;
           }
           if (stackIn_26_0 <= stackIn_26_1) {
-            RegionAnchor.field_m[0].d(IgnoreListLookupSupport.a(true, 10), MatchConditionEntry.a(130, (byte) 94), 310, 310, 256);
+            RegionAnchor.field_m[0].drawScaledAdditive(IgnoreListLookupSupport.a(true, 10), MatchConditionEntry.a(130, (byte) 94), 310, 310, 256);
           }
           stackIn_32_0 = MatchConditionEntry.a(165, (byte) 94);
           stackIn_32_1 = true;

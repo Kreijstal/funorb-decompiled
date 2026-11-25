@@ -1230,7 +1230,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           GuestPlayConfirmationForm.k(obfuscationGuard ^ -11944);
           LoginForm.releaseStatics(true);
           AccountNameSelectionForm.releaseStatics((byte) -117);
-          gl.releaseStatics(true);
+          AccountIdentifierStatus.releaseStatics(true);
           WidgetTheme.releaseStatics((byte) 82);
           uu.releaseStatics((byte) 30);
           MapTile.releaseStatics(-107);
@@ -2297,7 +2297,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           CampaignUnitOverride.a(300, ChatMessage.field_t);
           CorpseConditionMarker.field_v = new RgbSprite(32, 32);
           CorpseConditionMarker.field_v.bindAsRasterTarget();
-          ChatMessage.field_t.d(0, 0, 32, 32);
+          ChatMessage.field_t.drawDownscaledAreaAverage(0, 0, 32, 32);
           FixedSquareRootSupport.field_b.bindRasterTarget(5605);
           ChatMessage.field_t = null;
           var16 = new RgbSprite[ArrayWidgetContainer.field_E.length][];

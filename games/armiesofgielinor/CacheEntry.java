@@ -9,7 +9,7 @@ abstract class CacheEntry extends DualLinkedNode {
     static String field_x;
     static String field_y;
 
-    final static int a(String param0, gl param1, int param2, int param3, int param4, gl param5, boolean param6) {
+    final static int a(String param0, AccountIdentifierStatus param1, int param2, int param3, int param4, AccountIdentifierStatus param5, boolean param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
         PacketBuffer stackIn_10_0 = null;
@@ -45,8 +45,8 @@ abstract class CacheEntry extends DualLinkedNode {
         int var9Lifetime3;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var14 = param1.a(param2 ^ -20049);
-          var8 = param5.a(-91);
+          var14 = param1.getIdentifier(param2 ^ -20049);
+          var8 = param5.getIdentifier(-91);
           if (null == MoveAttackRequest.sessionSocket &&
             !EffectPresentation.a(false, 0)) {
             stackIn_4_0 = -1;
@@ -85,14 +85,14 @@ abstract class CacheEntry extends DualLinkedNode {
               vd.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
               vd.field_b.writeInt((byte) -54, CampaignMenuButton.connectionRandom.nextInt());
               stackIn_10_0 = vd.field_b;
-              if (!param1.a((byte) 125)) {
+              if (!param1.isCheckPending((byte) 125)) {
                 stackIn_11_1 = "";
               } else {
                 stackIn_11_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_10_0).writeNullCircumfixedString(stackIn_11_1, param2 ^ -413754288);
               stackIn_13_0 = vd.field_b;
-              if (param5.a((byte) -111)) {
+              if (param5.isCheckPending((byte) -111)) {
                 stackIn_14_1 = var8;
               } else {
                 stackIn_14_1 = "";

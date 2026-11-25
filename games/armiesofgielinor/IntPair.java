@@ -39,7 +39,7 @@ final class IntPair extends IntrusiveNode {
     }
 
     final static void e(int param0) {
-        gl.a(120, param0);
+        AccountIdentifierStatus.setAccountFlowAction(120, param0);
     }
 
     IntPair(int first, int second) {

@@ -12,7 +12,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
     static String field_s;
     static int field_o;
 
-    final static String e(int param0) {
+    final static String getEmailIdentifier(int param0) {
         if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return cd.field_e;
         }
@@ -108,7 +108,7 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
     public static void releaseStatics(int obfuscationGuard) {
         field_q = null;
         if (obfuscationGuard < 106) {
-          OctaveNoiseMap.e(-21);
+          OctaveNoiseMap.getEmailIdentifier(-21);
           field_s = null;
           return;
         }

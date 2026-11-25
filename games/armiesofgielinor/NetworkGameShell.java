@@ -99,7 +99,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard >= -15) {
           this.memberLaunch = true;
         }
-        connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.i(-4938), true);
+        connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.getAccountNameIdentifier(-4938), true);
         if (connectionResult == -1) {
           return -1;
         }
@@ -219,7 +219,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == actionCode) {
-            actionOneResult = ClientConnectionState.a(false, CampaignMission.c((byte) -27), IconLabelControl.l(-117));
+            actionOneResult = ClientConnectionState.a(false, CampaignMission.getEmailIdentifierStatus((byte) -27), IconLabelControl.getAccountNameIdentifierStatus(-117));
             if (actionOneResult != -1) {
               AiPlanningStrategy.a(103, CampaignLookupSupport.field_b, BitmapTextWidgetPainter.field_r, actionOneResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -231,7 +231,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), OctaveNoiseMap.e(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
+            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -247,7 +247,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             if (normalUiMode) {
               MaskedTextEntryPainter.field_C = false;
             } else {
-              connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.i(-4938), false);
+              connectionResult = InstructionsPanel.a((byte) -53, this.affiliateId, this.officialDomainHost, RadialSummonItem.a(-1), CombatPresentation.getAccountNameIdentifier(-4938), false);
               if (connectionResult != -1) {
                 if (connectionResult != 0) {
                   KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);

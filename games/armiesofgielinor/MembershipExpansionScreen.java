@@ -567,7 +567,7 @@ final class MembershipExpansionScreen {
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
           CombatSandbox.a(param0, 3);
-          var13.d(param2, param1, param8, param7);
+          var13.drawDownscaledAreaAverage(param2, param1, param8, param7);
           QuickChatPhraseRepository.popRasterState(-18862);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

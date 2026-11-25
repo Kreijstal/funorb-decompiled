@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl {
+final class AccountIdentifierStatus {
     private String field_a;
     static BitmapFont field_e;
     private boolean field_d;
     static int field_c;
     static boolean field_b;
 
-    final String a(int param0) {
+    final String getIdentifier(int param0) {
         int var2 = 87 % ((param0 - 53) / 55);
         return this.field_a;
     }
 
-    final boolean a(byte param0) {
+    final boolean isCheckPending(byte param0) {
         int var2 = -118 / ((param0 - 29) / 41);
         return this.field_d;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setAccountFlowAction(int param0, int param1) {
         if (param0 < 119) {
           return;
         }
         OctaveNoiseMap.field_r = param1;
     }
 
-    gl(String param0) {
+    AccountIdentifierStatus(String param0) {
         this(param0, false);
     }
 
     public static void releaseStatics(boolean obfuscationGuard) {
         field_e = null;
         if (!obfuscationGuard) {
-          gl.a(-75, -111);
+          AccountIdentifierStatus.setAccountFlowAction(-75, -111);
         }
     }
 
-    gl(String param0, boolean param1) {
+    AccountIdentifierStatus(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_11_0 = null;

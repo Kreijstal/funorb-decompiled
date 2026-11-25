@@ -233,16 +233,16 @@ final class IconLabelControl extends ClientUiComponent {
         }
     }
 
-    final static gl l(int param0) {
+    final static AccountIdentifierStatus getAccountNameIdentifierStatus(int param0) {
         if (param0 >= -110) {
-          return (gl) null;
+          return (AccountIdentifierStatus) null;
         }
-        String var1 = CombatPresentation.i(-4938);
+        String var1 = CombatPresentation.getAccountNameIdentifier(-4938);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new gl(CombatPresentation.i(-4938), AccountNameCheckStatusSupport.isAccountNameCheckPending(false));
+        return new AccountIdentifierStatus(CombatPresentation.getAccountNameIdentifier(-4938), AccountNameCheckStatusSupport.isAccountNameCheckPending(false));
     }
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {

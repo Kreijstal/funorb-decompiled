@@ -13,7 +13,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           Widget var6 = (Widget) null;
           this.updatePointer(51, -1, -80, (Widget) null);
         }
-        gl.field_e.drawText(QuickChatMenu.field_Nb, originX - (-this.x - 4), 4 + (originY + this.y) + gl.field_e.maxAscent, 16777215, -1);
+        AccountIdentifierStatus.field_e.drawText(QuickChatMenu.field_Nb, originX - (-this.x - 4), 4 + (originY + this.y) + AccountIdentifierStatus.field_e.maxAscent, 16777215, -1);
     }
 
     BirthDateChatEnableForm(int x, int y, int width, int height) {

@@ -36,7 +36,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
           var2.width = this.width;
           var2.x = 0;
           var2.y = 50;
-          var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var2);
           if (DamageEvent.isGuestSession(98)) {
             this.membersButton = this.createNoticeButton((WidgetListener) (this), true, ClientContextMenu.field_j);

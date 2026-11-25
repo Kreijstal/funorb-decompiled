@@ -82,14 +82,14 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
                 var17[var11] = (var14 << 8) + (var13 << 16) + var15;
               }
             }
-            ConsolePanel.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
+            ConsolePanel.field_k.drawScaledAdditive(param3 - 20, -15 + param2, 92, 92, 256);
           }
           if (!param5) {
             param9.drawTransparent(param3, param2);
             if (!param1) {
               if (param8) {
                 GradientUiRenderer.multiplyScaledSprite(RegionAnchor.field_m[2], param3, param2, 56, 56);
-                RegionAnchor.field_m[2].d(param3, param2, 56, 56, 228);
+                RegionAnchor.field_m[2].drawScaledAdditive(param3, param2, 56, 56, 228);
               } else {
                 if (param4) {
                   RegionAnchor.field_m[3].drawQuarterSize(param3, param2);
@@ -105,7 +105,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             if (!param1) {
               if (param8) {
                 GradientUiRenderer.multiplyScaledSprite(RegionAnchor.field_m[2], 0, 0, 56, 56);
-                RegionAnchor.field_m[2].d(0, 0, 56, 56, 228);
+                RegionAnchor.field_m[2].drawScaledAdditive(0, 0, 56, 56, 228);
               } else {
                 if (!param4) {
                   NumericDateInputWidget.field_P.bindAsRasterTarget();

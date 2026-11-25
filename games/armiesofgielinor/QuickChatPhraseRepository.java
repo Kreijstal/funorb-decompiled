@@ -9,7 +9,7 @@ final class QuickChatPhraseRepository {
     private ResourceArchive globalArchive;
     static String field_a;
 
-    final static boolean c(int param0) {
+    final static boolean isEmailCheckPending(int param0) {
         if (param0 <= -97) {
           return !IgnoreRequestSupport.emailCheckResult.isComplete((byte) 125) ? true : false;
         }

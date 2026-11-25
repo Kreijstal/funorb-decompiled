@@ -242,7 +242,7 @@ final class CoatOfArms {
                 var11[var12] = (var15 << 8) + ((var14 << 16) + var16);
               }
             }
-            ConsolePanel.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
+            ConsolePanel.field_k.drawScaledAdditive(-20 + param4, param2 - 15, 92, 92, 256);
           }
           DropTargetWidgetContainer.field_J.bindAsRasterTarget();
           SoftwareRaster.clearPixels();
@@ -369,7 +369,7 @@ final class CoatOfArms {
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param6) {
-            RegionAnchor.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
+            RegionAnchor.field_m[0].drawScaledAdditive(-40 + param0, -30 + param4, 184, 184, 256);
           }
           DropTargetWidgetContainer.field_J.bindAsRasterTarget();
           SoftwareRaster.clearPixels();

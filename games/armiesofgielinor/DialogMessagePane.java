@@ -89,7 +89,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             if (this.actionButtons[var6_int] == widget) {
               var7 = this.actionIds[var6_int];
               if (var7 != -1) {
-                gl.a(123, this.actionIds[var6_int]);
+                AccountIdentifierStatus.setAccountFlowAction(123, this.actionIds[var6_int]);
                 break;
               }
               this.dialog.closeDialog(true);

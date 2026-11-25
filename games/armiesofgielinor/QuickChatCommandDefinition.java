@@ -10,7 +10,7 @@ final class QuickChatCommandDefinition {
     static String field_d;
 
     final static void a(int param0) {
-        gl.a(126, 4);
+        AccountIdentifierStatus.setAccountFlowAction(126, 4);
         if (param0 != 26566) {
           QuickChatCommandDefinition.openQuickChatResponses(-97, (String) null, (int[]) null, 72L, -125);
         }

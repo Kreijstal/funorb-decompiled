@@ -84,9 +84,9 @@ final class mv {
           SoftwareRaster.clearPixels();
           TrianglePulse.field_d.drawTintedGrayscale(0, TrianglePulse.field_d.pixelHeight >> 1, FriendRequestSupport.field_c[0][param3]);
           FixedSquareRootSupport.field_b.bindRasterTarget(5605);
-          AccountNameFoldingSupport.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
+          AccountNameFoldingSupport.field_e.drawScaledAdditive(-20 + param0, -200 + param4, 75, 210, 255);
           AccountNameFoldingSupport.field_e.flipVertically();
-          AccountNameFoldingSupport.field_e.d(-20 + param0, param4 + 10, 75, 50, 255);
+          AccountNameFoldingSupport.field_e.drawScaledAdditive(-20 + param0, param4 + 10, 75, 50, 255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -54,7 +54,7 @@ final class NumericDateInputWidget extends DateInputWidget {
 
     private final void a(String param0, Widget param1, int param2, int param3, int param4) {
         try {
-          gl.field_e.drawCentered(param0, param4 - (-param1.x - (param1.width >> 1)), param1.y + (param2 - 5), param3, -1);
+          AccountIdentifierStatus.field_e.drawCentered(param0, param4 - (-param1.x - (param1.width >> 1)), param1.y + (param2 - 5), param3, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

@@ -184,7 +184,7 @@ final class CampaignProgress {
           param1 = false;
         }
         MusicCrossfadeStream.a((byte) 95, param1);
-        if (gl.field_b) {
+        if (AccountIdentifierStatus.field_b) {
           SoftwareRaster.darkenRectangle(DebugConsole.field_w.tabs.x, DebugConsole.field_w.tabs.y, DebugConsole.field_w.tabs.width, DebugConsole.field_w.tabs.height);
           DebugConsole.field_w.tabs.draw(param1, 20);
         }

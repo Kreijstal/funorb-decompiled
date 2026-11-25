@@ -327,7 +327,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         RuntimeException var6 = null;
         try {
           if (this.successfulOutcome) {
-            gl.a(122, 3);
+            AccountIdentifierStatus.setAccountFlowAction(122, 3);
             this.closeDialog(true);
           } else {
             ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");

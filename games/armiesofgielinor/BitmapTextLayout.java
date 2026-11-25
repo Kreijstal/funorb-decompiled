@@ -212,7 +212,7 @@ final class BitmapTextLayout extends TextLayout {
     final static void a(String param0, byte param1) {
         try {
           TextFieldValidator.field_f = param0;
-          gl.a(120, 12);
+          AccountIdentifierStatus.setAccountFlowAction(120, 12);
           if (param1 >= -61) {
             field_e = (String) null;
           }

@@ -170,7 +170,7 @@ final class MoveEvent extends GameEvent {
           LocalAccountNameSupport.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
           NodeIterator.field_b = DropdownSelectorPainter.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
           IgnoreListLookupSupport.validationStatusIcons = ManaStarParticle.a(param2, "validation", (byte) -4, "commonui");
-          gl.field_e = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo12", param2, param3, (byte) -87, "commonui"));
+          AccountIdentifierStatus.field_e = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14", param2, param3, (byte) -87, "commonui"));
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
           var4 = new RgbSprite(param0.getFileByName("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));

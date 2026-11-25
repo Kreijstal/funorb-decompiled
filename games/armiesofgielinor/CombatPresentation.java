@@ -2664,7 +2664,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    final static String i(int param0) {
+    final static String getAccountNameIdentifier(int param0) {
         RuntimeException var1 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;

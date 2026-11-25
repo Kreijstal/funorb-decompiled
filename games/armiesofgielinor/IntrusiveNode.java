@@ -316,7 +316,7 @@ class IntrusiveNode {
         if (!param2) {
           IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 39, (String) null, -75L);
         }
-        return et.a(-3);
+        return et.pollAccountFlowAction(-3);
     }
 
     final static int b(int param0) {

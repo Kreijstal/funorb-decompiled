@@ -215,7 +215,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.nameInput, 170, MusicPatchEnvelope.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.ageInput, 170, field_S, 27270);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.emailOptInToggle, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.emailOptInToggle, true, this.width - 120, 5, AccountIdentifierStatus.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.addChild((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
         BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
