@@ -250,9 +250,9 @@ final class WidgetTheme {
           this.field_v = 15658734;
           this.field_r = 3;
           var4.caretColour = 15658734;
-          var4.createStateStyle(0, (byte) -102).setTextColour(15658734, (byte) -108).setFrameSprites(BufferedFile.a(10066329, 8947848, 1, 7829367), 53);
-          var4.createStateStyle(1, (byte) -119).setFrameSprites(BufferedFile.a(10066329, 11184810, 1, 13421772), 31);
-          var4.createStateStyle(3, (byte) -128).setFrameSprites(BufferedFile.a(7829367, 8947848, 1, 10066329), -128).setContentX(1, 1).setContentY((byte) 81, 1);
+          var4.createStateStyle(0, (byte) -102).setTextColour(15658734, (byte) -108).setFrameSprites(BufferedFile.createOnePixelBeveledFrameSprites(10066329, 8947848, 1, 7829367), 53);
+          var4.createStateStyle(1, (byte) -119).setFrameSprites(BufferedFile.createOnePixelBeveledFrameSprites(10066329, 11184810, 1, 13421772), 31);
+          var4.createStateStyle(3, (byte) -128).setFrameSprites(BufferedFile.createOnePixelBeveledFrameSprites(7829367, 8947848, 1, 10066329), -128).setContentX(1, 1).setContentY((byte) 81, 1);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -274,7 +274,7 @@ final class WidgetTheme {
           discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyStyleTo(var8, param0 ^ 13413726);
-          var8.createStateStyle(0, (byte) -128).setFrameSprites(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).setTextColour(1118481, (byte) 27).setTextShadowColour(-1, param0 ^ 13421751);
+          var8.createStateStyle(0, (byte) -128).setFrameSprites(BufferedFile.createOnePixelBeveledFrameSprites(7829367, 15658734, param0 ^ 13421773, 10066329), 36).setTextColour(1118481, (byte) 27).setTextShadowColour(-1, param0 ^ 13421751);
           var8.createStateStyle(4, (byte) -108).setStartsNewLayer(true, (byte) 104).setFrameSprites(var5, -126);
           this.field_w = (WidgetPainter) ((Object) var8);
           var9 = new RgbSprite[9];

@@ -73,7 +73,7 @@ final class AccountRequestResult {
             if (var7.hasModifierFlag4((byte) -125)) {
               GameEvent.a(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);
             }
-            PrivateTextRecipientSupport.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
+            PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
           }
           EquipmentBattleTutorial.drawSurroundingTerrainTile(param3, param5, param1, param4, (byte) -82);
@@ -188,7 +188,7 @@ final class AccountRequestResult {
             var2 = CacheEntry.field_w;
           }
           if (var2 != null) {
-            PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
+            PrivateTextRecipientSupport.setChatCompositionText(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
             var3 = StructureGlowRenderer.localAccountName;
             var3 = RatingLeaderboardRequest.prefixLocalChatBadge(-121, var3);
@@ -257,7 +257,7 @@ final class AccountRequestResult {
                 }
               }
             }
-            PrivateTextRecipientSupport.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
+            PrivateTextRecipientSupport.setChatCompositionText(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
             if (!ClientStateChecksumSupport.textChatActive) {
               DebouncedValidator.field_b.heldButtonMatches = false;
             }

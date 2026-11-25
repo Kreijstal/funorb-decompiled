@@ -175,7 +175,7 @@ final class LocalAccountSupport {
         if (param0 != -10820) {
           field_b = (ClientConnectionState) null;
         }
-        if (FriendLookupSupport.b((byte) -73)) {
+        if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
           param1 = false;
         }
         TileMetadata.a(5295, param1);

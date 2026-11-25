@@ -48,7 +48,7 @@ final class ThemeSpriteLoadingSupport {
                   }
                   if (var3 == 14 &&
                     var4 == 0) {
-                    SummonRequest.a((byte) 29, var3, var4);
+                    SummonRequest.normalizeAnimationSpriteWidths((byte) 29, var3, var4);
                   }
                 }
               }

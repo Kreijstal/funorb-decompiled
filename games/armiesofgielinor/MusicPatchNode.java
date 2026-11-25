@@ -65,10 +65,10 @@ final class MusicPatchNode extends IntrusiveNode {
     final static void f(int param0) {
         if (param0 != -28093) {
           MusicPatchNode.releaseStatics(38);
-          BufferedFile.a((byte) 102);
+          BufferedFile.initializeGameDialogHost((byte) 102);
           return;
         }
-        BufferedFile.a((byte) 102);
+        BufferedFile.initializeGameDialogHost((byte) 102);
     }
 
     MusicPatchNode() {

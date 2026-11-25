@@ -233,7 +233,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (null != FullscreenMembershipDialog.activeContextMenu) {
           FullscreenMembershipDialog.activeContextMenu.draw((byte) -108, param0);
         }
-        SummonRequest.a(param0, (byte) -89);
+        SummonRequest.drawSocialListPrompt(param0, (byte) -89);
         if (Spell.field_b != null) {
           Spell.field_b.draw(param0, 20);
         }

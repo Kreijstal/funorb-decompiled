@@ -12,7 +12,7 @@ final class FriendLookupSupport {
     static ClientUiComponent[] field_i;
     static BufferedSocket field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         if (param0 >= -106) {
           String var2 = (String) null;
@@ -110,7 +110,7 @@ final class FriendLookupSupport {
         }
     }
 
-    final static void a(byte param0, int param1, PacketBuffer param2, int[] param3) {
+    final static void writePackedPathDirections(byte param0, int param1, PacketBuffer param2, int[] param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -143,7 +143,7 @@ final class FriendLookupSupport {
               param2.writeByte(1, var5);
             }
             if (param0 > -17) {
-              FriendLookupSupport.b((byte) -104);
+              FriendLookupSupport.hasBlockingChatOverlay((byte) -104);
             }
             return;
           }
@@ -168,7 +168,7 @@ final class FriendLookupSupport {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadLogoMeshes(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         LogoMesh var5 = null;
@@ -225,7 +225,7 @@ final class FriendLookupSupport {
         }
     }
 
-    final static void a(int param0) {
+    final static void enableViewportResizing(int param0) {
         if (null == ActionSpell.viewportManager) {
           throw new IllegalStateException("NGR");
         }
@@ -238,7 +238,7 @@ final class FriendLookupSupport {
         PointerCaptureSupport.a(1, -54);
     }
 
-    final static boolean b(byte param0) {
+    final static boolean hasBlockingChatOverlay(byte param0) {
         String var2;
         boolean stackIn_10_0 = false;
         boolean stackIn_20_0 = false;

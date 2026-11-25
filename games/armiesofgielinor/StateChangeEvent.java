@@ -13,7 +13,7 @@ final class StateChangeEvent extends GameEvent {
     static String field_H;
     int playerId;
 
-    final static void e(byte param0) {
+    final static void advanceLogoAnimation(byte param0) {
         if (param0 >= -73) {
           field_y = (String) null;
         }
@@ -195,7 +195,7 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawScatteredTileEffectShadows(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -225,7 +225,7 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    final static void g(int param0) {
+    final static void initializeBattleSetupUi(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -353,12 +353,12 @@ final class StateChangeEvent extends GameEvent {
         var4.writeByte(1, flag);
         var4.writeShort(true, counter);
         if (obfuscationGuard != 6) {
-          StateChangeEvent.a(-60, -103, 22, 28, -21);
+          StateChangeEvent.drawGradientWidgetBorder(-60, -103, 22, 28, -21);
         }
         var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawGradientWidgetBorder(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -465,7 +465,7 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
+    final static void initializeSharedAccountUi(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
         IgnoreRequestSupport.emailCheckResult = ProgressDialog.createEmailCheckResult("", 4210752);
         IgnoreRequestSupport.emailCheckResult.setResult(false, true);
         if (param3 != 0) {

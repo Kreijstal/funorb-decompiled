@@ -187,7 +187,7 @@ final class ClientConnectionState {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            whirlpoolRoundConstants[var15] = BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.a(ArchiveLoadStep.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.a(ArchiveLoadStep.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.a(ArchiveLoadStep.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.a(ArchiveLoadStep.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.a(ArchiveLoadStep.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), ArchiveLoadStep.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
+            whirlpoolRoundConstants[var15] = BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.xorLongs(ArchiveLoadStep.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.xorLongs(ArchiveLoadStep.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.xorLongs(ArchiveLoadStep.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.xorLongs(ArchiveLoadStep.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.xorLongs(ArchiveLoadStep.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), ArchiveLoadStep.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
             var15++;
         }
     }

@@ -132,10 +132,10 @@ final class UiSelectionState {
         return this.keyCode == 97 ? true : false;
     }
 
-    final static boolean d(int param0) {
+    final static boolean isAccountGameDataReady(int param0) {
         boolean stackIn_12_0 = false;
         if (param0 != 95) {
-          UiSelectionState.f(46);
+          UiSelectionState.initializeChatEditor(46);
         }
         stackIn_12_0 = ((OwnerChangeEvent.field_B &&
           ClientUiNode.field_w &&
@@ -161,7 +161,7 @@ final class UiSelectionState {
         return 96 == this.keyCode ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void updateExpandedChatPanel(int param0, int param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -263,7 +263,7 @@ final class UiSelectionState {
         }
     }
 
-    final static void f(int param0) {
+    final static void initializeChatEditor(int param0) {
         TurnEffectEvent.a(8, PasswordLoginCredentials.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
         if (param0 != 0) {
           field_i = 123;

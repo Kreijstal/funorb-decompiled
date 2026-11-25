@@ -30,7 +30,7 @@ final class MusicTrackSelectionSupport {
           AccountRsaBufferSupport.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
           AccountRsaBufferSupport.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
           AccountRsaBufferSupport.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
-          PaletteRegionMap.a(AccountRsaBufferSupport.field_b, (byte) -84);
+          PaletteRegionMap.writeClientRandomSeed(AccountRsaBufferSupport.field_b, (byte) -84);
           AccountRsaBufferSupport.field_b.writeShort(true, param4);
           param2.writeCredentials(AccountRsaBufferSupport.field_b, -11436);
           EmailValidator.outgoingPacket.position = 0;

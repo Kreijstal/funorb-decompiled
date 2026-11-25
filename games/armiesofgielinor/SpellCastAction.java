@@ -118,7 +118,7 @@ final class SpellCastAction extends PreparedAction {
         try {
           int var4_int = 0;
           if (PlatformTaskService.lowercaseOsName.startsWith("win") &&
-            CampaignLookupSupport.a(param2, true)) {
+            CampaignLookupSupport.openWindowsBrowser(param2, true)) {
             return;
           }
           var4_int = -80 / ((param1 - 12) / 48);

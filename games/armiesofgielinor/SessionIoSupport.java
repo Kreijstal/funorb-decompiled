@@ -24,10 +24,10 @@ final class SessionIoSupport {
         if (!param8) {
           field_b = (String) null;
         } else {
-          UiSelectionState.a(param13, param4, 0, param11);
+          UiSelectionState.updateExpandedChatPanel(param13, param4, 0, param11);
           return;
         }
-        UiSelectionState.a(param13, param4, 0, param11);
+        UiSelectionState.updateExpandedChatPanel(param13, param4, 0, param11);
     }
 
     final static void flushSessionPackets(byte param0, int param1) {

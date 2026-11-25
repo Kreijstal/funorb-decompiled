@@ -2440,7 +2440,7 @@ final class TutorialController {
             RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[10]);
             return;
           }
-          var2_int = PrivateTextRecipientSupport.a(HighscoreAccountEntry.pointerY, 24340, IgnoreListLookupSupport.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
+          var2_int = PrivateTextRecipientSupport.hitTestCoatPartPicker(HighscoreAccountEntry.pointerY, 24340, IgnoreListLookupSupport.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
           if (param0 != 330) {
             discarded$0 = this.formatUnitStats(-6, -35);
           }
@@ -2448,7 +2448,7 @@ final class TutorialController {
             stackIn_25_0 = SharedUiLoadingSupport.field_a;
             stackIn_25_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
             stackIn_26_2 = !(BufferedSocket.field_j < 2);
-            if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
+            if (BufferedFile.isCoatPartAvailable(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               LocalCoatSupport.localCoat.setPart(73, var2_int, SharedUiLoadingSupport.field_a);
               RadialSummonMenu.playDefaultSoundWithIntGuard(121, ClientUiNode.field_v[9]);
               if (var5 == 0) {

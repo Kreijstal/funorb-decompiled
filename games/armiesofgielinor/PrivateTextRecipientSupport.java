@@ -7,7 +7,7 @@ final class PrivateTextRecipientSupport {
     static String[] field_c;
     static String field_a;
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawTilePresentationsAndOwnership(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_20_0;
         boolean stackIn_20_1;
         int stackIn_20_2;
@@ -122,7 +122,7 @@ final class PrivateTextRecipientSupport {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static int hitTestCoatPartPicker(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -149,7 +149,7 @@ final class PrivateTextRecipientSupport {
         }
         if (param1 != 24340) {
           String var10 = (String) null;
-          PrivateTextRecipientSupport.a(-51, (String) null, (String) null, 30, 0);
+          PrivateTextRecipientSupport.setChatCompositionText(-51, (String) null, (String) null, 30, 0);
           if (-4 + (param6 - 40) < -param3 + param0) {
             return -3;
           }
@@ -183,15 +183,15 @@ final class PrivateTextRecipientSupport {
         return -3;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean hasFocusOrFullscreen(boolean param0) {
         if (!param0) {
           return FixedQuaternion.fullscreenCanvas == null ? AccountNameCharacterSupport.tickFocusSnapshot : true;
         }
-        PrivateTextRecipientSupport.a(15, false, true, 64, -122, 113, -41, -38, 58);
+        PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(15, false, true, 64, -122, 113, -41, -38, 58);
         return FixedQuaternion.fullscreenCanvas == null ? AccountNameCharacterSupport.tickFocusSnapshot : true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 == -1) {
           field_b = null;
@@ -200,13 +200,13 @@ final class PrivateTextRecipientSupport {
           return;
         }
         String var2 = (String) null;
-        PrivateTextRecipientSupport.a(-83, (String) null, (String) null, 92, 123);
+        PrivateTextRecipientSupport.setChatCompositionText(-83, (String) null, (String) null, 92, 123);
         field_b = null;
         field_c = null;
         field_d = (int[][]) null;
     }
 
-    final static void a(int param0, String param1, String param2, int param3, int param4) {
+    final static void setChatCompositionText(int param0, String param1, String param2, int param3, int param4) {
         try {
           UpkeepEvent.field_z.blinkTextSuffix = param1;
           UpkeepEvent.field_z.text = param2;

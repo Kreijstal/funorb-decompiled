@@ -180,7 +180,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var13Lifetime1Lifetime1;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9_int = PrivateTextRecipientSupport.a(param3, 24340, param2, param8, param4, param5, param1);
+          var9_int = PrivateTextRecipientSupport.hitTestCoatPartPicker(param3, 24340, param2, param8, param4, param5, param1);
           GradientUiRenderer.drawGradientFrame(param2, param8, param5, param1, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           GradientUiRenderer.drawGradientFrame(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           GradientUiRenderer.drawGradientFrame(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
@@ -238,7 +238,7 @@ final class PasswordValidator extends TextFieldValidator {
                   stackIn_40_0 = AccountRegistrationForm.field_X;
                   stackIn_40_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > BufferedSocket.field_j);
-                  if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
+                  if (!BufferedFile.isCoatPartAvailable(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
                     GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, TutorialController.field_e, 0, 128, false);
@@ -247,7 +247,7 @@ final class PasswordValidator extends TextFieldValidator {
                   stackIn_34_0 = AccountRegistrationForm.field_X;
                   stackIn_34_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
-                  if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
+                  if (!BufferedFile.isCoatPartAvailable(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ImageProducerSurface.field_l, 0, 128, false);
                   } else {
                     GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
@@ -346,7 +346,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_87_0 = AccountRegistrationForm.field_X;
             stackIn_87_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
             stackIn_88_2 = !(BufferedSocket.field_j < 2);
-            if (!BufferedFile.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
+            if (!BufferedFile.isCoatPartAvailable(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
               param4 += 10;
               param3 += 30;
               var12 = null;

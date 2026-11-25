@@ -241,7 +241,7 @@ final class WhirlpoolHasher {
         blockWordIndex = 0;
         inputByteIndex = 0;
         while (blockWordIndex < 8) {
-          this.blockWords[blockWordIndex] = BufferedFile.a(ArchiveLoadStep.a((long)this.inputBlock[7 + inputByteIndex], 255L), BufferedFile.a(ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 6], 255L) << 8, BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a((long)this.inputBlock[inputByteIndex] << 56, ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 1] << 48, 71776119061217280L)), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 2], 255L) << 40), ArchiveLoadStep.a((long)this.inputBlock[3 + inputByteIndex], 255L) << 32), ArchiveLoadStep.a(255L, (long)this.inputBlock[4 + inputByteIndex]) << 24), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 5], 255L) << 16)));
+          this.blockWords[blockWordIndex] = BufferedFile.xorLongs(ArchiveLoadStep.a((long)this.inputBlock[7 + inputByteIndex], 255L), BufferedFile.xorLongs(ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 6], 255L) << 8, BufferedFile.xorLongs(BufferedFile.xorLongs(BufferedFile.xorLongs(BufferedFile.xorLongs(BufferedFile.xorLongs((long)this.inputBlock[inputByteIndex] << 56, ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 1] << 48, 71776119061217280L)), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 2], 255L) << 40), ArchiveLoadStep.a((long)this.inputBlock[3 + inputByteIndex], 255L) << 32), ArchiveLoadStep.a(255L, (long)this.inputBlock[4 + inputByteIndex]) << 24), ArchiveLoadStep.a((long)this.inputBlock[inputByteIndex + 5], 255L) << 16)));
           blockWordIndex++;
           inputByteIndex += 8;
         }
@@ -249,7 +249,7 @@ final class WhirlpoolHasher {
           hashWord = this.hashState[initialStateIndex];
           blockWord = this.blockWords[initialStateIndex];
           this.roundKey[initialStateIndex] = hashWord;
-          this.cipherState[initialStateIndex] = BufferedFile.a(blockWord, hashWord);
+          this.cipherState[initialStateIndex] = BufferedFile.xorLongs(blockWord, hashWord);
         }
         for (round = 1; round <= 10; round++) {
           for (keyTransformIndex = 0; 8 > keyTransformIndex; keyTransformIndex++) {
@@ -257,7 +257,7 @@ final class WhirlpoolHasher {
             keyTableIndex = 0;
             keyByteShift = 56;
             while (keyTableIndex < 8) {
-              this.roundTemporary[keyTransformIndex] = BufferedFile.a(this.roundTemporary[keyTransformIndex], ClientConnectionState.whirlpoolRoundTables[keyTableIndex][ProceduralMapSupport.bitwiseAnd(255, (int)(this.roundKey[ProceduralMapSupport.bitwiseAnd(7, keyTransformIndex - keyTableIndex)] >>> keyByteShift))]);
+              this.roundTemporary[keyTransformIndex] = BufferedFile.xorLongs(this.roundTemporary[keyTransformIndex], ClientConnectionState.whirlpoolRoundTables[keyTableIndex][ProceduralMapSupport.bitwiseAnd(255, (int)(this.roundKey[ProceduralMapSupport.bitwiseAnd(7, keyTransformIndex - keyTableIndex)] >>> keyByteShift))]);
               keyByteShift -= 8;
               keyTableIndex++;
             }
@@ -265,14 +265,14 @@ final class WhirlpoolHasher {
           for (keyCopyIndex = 0; keyCopyIndex < 8; keyCopyIndex++) {
             this.roundKey[keyCopyIndex] = this.roundTemporary[keyCopyIndex];
           }
-          this.roundKey[0] = BufferedFile.a(this.roundKey[0], ClientConnectionState.whirlpoolRoundConstants[round]);
+          this.roundKey[0] = BufferedFile.xorLongs(this.roundKey[0], ClientConnectionState.whirlpoolRoundConstants[round]);
           for (cipherTransformIndex = 0; cipherTransformIndex < 8; cipherTransformIndex++) {
             this.roundTemporary[cipherTransformIndex] = this.roundKey[cipherTransformIndex];
             cipherTableIndex = 0;
             unusedCipherTableStart = cipherTableIndex;
             cipherByteShift = 56;
             while (cipherTableIndex < 8) {
-              this.roundTemporary[cipherTransformIndex] = BufferedFile.a(this.roundTemporary[cipherTransformIndex], ClientConnectionState.whirlpoolRoundTables[cipherTableIndex][ProceduralMapSupport.bitwiseAnd((int)(this.cipherState[ProceduralMapSupport.bitwiseAnd(cipherTransformIndex - cipherTableIndex, 7)] >>> cipherByteShift), 255)]);
+              this.roundTemporary[cipherTransformIndex] = BufferedFile.xorLongs(this.roundTemporary[cipherTransformIndex], ClientConnectionState.whirlpoolRoundTables[cipherTableIndex][ProceduralMapSupport.bitwiseAnd((int)(this.cipherState[ProceduralMapSupport.bitwiseAnd(cipherTransformIndex - cipherTableIndex, 7)] >>> cipherByteShift), 255)]);
               cipherByteShift -= 8;
               cipherTableIndex++;
             }
@@ -285,7 +285,7 @@ final class WhirlpoolHasher {
           this.reset(65);
         }
         for (feedForwardIndex = 0; feedForwardIndex < 8; feedForwardIndex++) {
-          this.hashState[feedForwardIndex] = BufferedFile.a(this.hashState[feedForwardIndex], BufferedFile.a(this.blockWords[feedForwardIndex], this.cipherState[feedForwardIndex]));
+          this.hashState[feedForwardIndex] = BufferedFile.xorLongs(this.hashState[feedForwardIndex], BufferedFile.xorLongs(this.blockWords[feedForwardIndex], this.cipherState[feedForwardIndex]));
         }
     }
 

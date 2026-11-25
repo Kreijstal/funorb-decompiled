@@ -14,7 +14,7 @@ final class ToastMessage extends IntrusiveNode {
 
     final static boolean c(byte param0) {
         int var1 = 52 / ((-9 - param0) / 42);
-        if (!PrivateTextRecipientSupport.a(false)) {
+        if (!PrivateTextRecipientSupport.hasFocusOrFullscreen(false)) {
           return false;
         }
         if ((NanoGameClock.field_n & 8) == 0) {

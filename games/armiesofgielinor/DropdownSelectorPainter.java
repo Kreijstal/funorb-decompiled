@@ -170,7 +170,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
           }
           var6_int = originX + widget.x;
           var7 = originY + widget.y;
-          StateChangeEvent.a(widget.width, var6_int, widget.height, -127, var7);
+          StateChangeEvent.drawGradientWidgetBorder(widget.width, var6_int, widget.height, -127, var7);
           if (widget.isFocused(false)) {
             AccountNameSelectionForm.drawDottedRectangleOutline(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
           }

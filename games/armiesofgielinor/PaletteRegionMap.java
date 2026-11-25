@@ -22,7 +22,7 @@ final class PaletteRegionMap {
         return this.anchorsByRegion[1 + regionId];
     }
 
-    final static void a(byte param0, java.awt.Canvas param1) {
+    final static void drawLoadingCanvas(byte param0, java.awt.Canvas param1) {
         if (11 == SoundCache.field_b) {
           AnimationFrameSet.d((byte) -13);
         }
@@ -48,7 +48,7 @@ final class PaletteRegionMap {
         this.anchorsByRegion[regionId].addLast((byte) -119, (IntrusiveNode) (new RegionAnchor(column, row)));
     }
 
-    final static boolean b(int param0) {
+    final static boolean canResizeViewport(int param0) {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -21 % ((param0 + 25) / 55);
@@ -56,7 +56,7 @@ final class PaletteRegionMap {
         return stackIn_4_0;
     }
 
-    final static void a(PacketBuffer param0, byte param1) {
+    final static void writeClientRandomSeed(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -75,7 +75,7 @@ final class PaletteRegionMap {
           try {
             if (param1 != -84) {
               var6 = (java.awt.Canvas) null;
-              PaletteRegionMap.a((byte) -8, (java.awt.Canvas) null);
+              PaletteRegionMap.drawLoadingCanvas((byte) -8, (java.awt.Canvas) null);
             }
             var7 = new byte[24];
             var2 = var7;
@@ -127,7 +127,7 @@ final class PaletteRegionMap {
         }
     }
 
-    final static ClientUiComponent a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
+    final static ClientUiComponent createStatefulComponentTemplate(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
         int var13_int = 0;
         RuntimeException var13 = null;
         ClientUiComponent var14 = null;
@@ -247,9 +247,9 @@ final class PaletteRegionMap {
         return sprite;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void updateCenteredChatEntry(int param0, int param1, boolean param2, int param3) {
         if (param3 != 0) {
-          PaletteRegionMap.b(-81);
+          PaletteRegionMap.canResizeViewport(-81);
         }
         DiskCacheWorker.updateChatEntryControls(MusicPatchNode.field_l, 2, GradientSpanBlendSupport.field_d, param0, AccountIdentifierStatus.field_c, param1, param2);
     }

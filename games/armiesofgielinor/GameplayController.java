@@ -3585,7 +3585,7 @@ final class GameplayController {
           }
           if (param1) {
             this.updateCamera((byte) -42);
-            if (!FriendLookupSupport.b((byte) -73)) {
+            if (!FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
               this.handleBattlePointerAction(this.resolvePointerAction(true), 123);
               if (null == FullscreenFocusCanvas.gameplayController &&
                 SectorCacheStore.field_a == null) {

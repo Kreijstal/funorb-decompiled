@@ -23,7 +23,7 @@ final class CampaignLookupSupport {
         heldKeys = null;
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean openWindowsBrowser(String param0, boolean param1) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
@@ -73,7 +73,7 @@ final class CampaignLookupSupport {
         }
     }
 
-    final static void a(byte param0) {
+    final static void updateCollapsedSharedUi(byte param0) {
         DiskCacheWorker.collapseChatPanel(-10232);
         ContextualRuntimeException.b(-6145);
         if (param0 != -97) {
@@ -88,7 +88,7 @@ final class CampaignLookupSupport {
         return GameUiOverlaySupport.campaigns[campaignIndex];
     }
 
-    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
+    final static void configureSelectionMenuFonts(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           LoginMethod.field_d = param1;
           TaggedMapData.field_b = param0;

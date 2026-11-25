@@ -180,7 +180,7 @@ final class CampaignProgress {
     }
 
     final static void a(int param0, boolean param1) {
-        if (FriendLookupSupport.b((byte) -73)) {
+        if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
           param1 = false;
         }
         MusicCrossfadeStream.a((byte) 95, param1);

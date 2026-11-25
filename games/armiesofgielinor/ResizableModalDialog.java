@@ -309,7 +309,7 @@ abstract class ResizableModalDialog extends ModalDialog {
               6 != var8 &&
               var8 != 2 &&
               (1 & var7_int) != 0) {
-              StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
+              StateChangeEvent.drawScatteredTileEffectShadows(var6_int, param2 ^ -12933, param5, param3);
             }
             if (QuickChatMenuDisplaySupport.field_e[param4].hasCorpse(-121)) {
               GradientUiRenderer.multiplySprite(NetworkGameShell.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);

@@ -94,7 +94,7 @@ final class MovementPlanner {
           packet.writeByte(1, 255 & this.pathLength);
           packet.writeByte(1, this.unit.tileX);
           packet.writeByte(1, this.unit.tileY);
-          FriendLookupSupport.a((byte) -112, this.pathLength, packet, this.pathDirections);
+          FriendLookupSupport.writePackedPathDirections((byte) -112, this.pathLength, packet, this.pathDirections);
           PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -73);
           stackIn_19_0 = var4_intLifetime1;
           return stackIn_19_0;
@@ -1186,7 +1186,7 @@ final class MovementPlanner {
           packet.writeByte(1, this.pathLength & 255);
           packet.writeByte(1, this.unit.tileX);
           packet.writeByte(1, this.unit.tileY);
-          FriendLookupSupport.a((byte) -27, this.pathLength, packet, this.pathDirections);
+          FriendLookupSupport.writePackedPathDirections((byte) -27, this.pathLength, packet, this.pathDirections);
           if (!obfuscationGuard) {
             this.resetCosts(-21);
           }

@@ -26,7 +26,7 @@ final class BufferedFile {
         return (int)((numerator << 16) / denominator);
     }
 
-    final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static boolean isCoatPartAvailable(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         if (0 > param3) {
           return true;
         }
@@ -53,7 +53,7 @@ final class BufferedFile {
 
     final long length(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          BufferedFile.a((byte) 77);
+          BufferedFile.initializeGameDialogHost((byte) 77);
         }
         return this.logicalLength;
     }
@@ -93,7 +93,7 @@ final class BufferedFile {
             if (length <= this.writeBuffer.length) {
               if (0 >= length) {
                 if (obfuscationGuard <= 0) {
-                  BufferedFile.a((byte) -46);
+                  BufferedFile.initializeGameDialogHost((byte) -46);
                 }
                 return;
               }
@@ -163,11 +163,11 @@ final class BufferedFile {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long xorLongs(long param0, long param1) {
         return param0 ^ param1;
     }
 
-    final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
+    final static AntialiasedBitmapFont loadAntialiasedFont(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         AntialiasedBitmapFont stackIn_2_0 = null;
         AntialiasedBitmapFont stackIn_7_0 = null;
@@ -232,7 +232,7 @@ final class BufferedFile {
         this.file.close(obfuscationGuard + 702);
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] createOnePixelBeveledFrameSprites(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
           BufferedFile.releaseStatics((byte) 15);
         }
@@ -407,7 +407,7 @@ final class BufferedFile {
         this.readBufferLength = 0;
         if (obfuscationGuard != -42) {
           var5 = (ResourceArchive) null;
-          BufferedFile.a((ResourceArchive) null, 70, (ResourceArchive) null, (byte) -40, 15);
+          BufferedFile.loadAntialiasedFont((ResourceArchive) null, 70, (ResourceArchive) null, (byte) -40, 15);
         }
         if (~this.filePosition != ~this.position) {
           this.file.seek(this.position, 110);
@@ -429,10 +429,10 @@ final class BufferedFile {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeGameDialogHost(byte param0) {
         ReloadPageSupport.field_c = NameSuggestionList.k(5);
         if (param0 < 78) {
-          BufferedFile.a(59, -15, 35, -65);
+          BufferedFile.createOnePixelBeveledFrameSprites(59, -15, 35, -65);
         }
         SphinxActionRequest.field_v = new ModalDialogHost();
         TutorialController.showDisplaySettingsDialog((byte) 74);

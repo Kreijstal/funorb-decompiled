@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteBase {
     int[] palette;
     byte[] pixelIndices;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blendPaletteWithFadeColour(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$11 = 0;
@@ -80,7 +80,7 @@ final class IndexedSprite extends IndexedSpriteBase {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRaster.pixels, this.pixelIndices, this.palette, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyOpaquePalettePixels(SoftwareRaster.pixels, this.pixelIndices, this.palette, var4, var3, var6, var5, var7, var8);
     }
 
     final RgbSprite toRgbSprite() {
@@ -215,10 +215,10 @@ final class IndexedSprite extends IndexedSpriteBase {
           var7 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, alpha, fadeColour);
+        IndexedSprite.blendPaletteWithFadeColour(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, alpha, fadeColour);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void copyOpaquePalettePixels(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -310,10 +310,10 @@ final class IndexedSprite extends IndexedSpriteBase {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.copyTransparentPalettePixels(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void copyScaledTransparentPalettePixels(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -380,7 +380,7 @@ final class IndexedSprite extends IndexedSpriteBase {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRaster.pixels, this.pixelIndices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
+        IndexedSprite.blendTransparentPalettePixels(SoftwareRaster.pixels, this.pixelIndices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
     }
 
     final void drawQuarterSize(int x, int y) {
@@ -479,7 +479,7 @@ final class IndexedSprite extends IndexedSpriteBase {
         return this.pixelIndices[y * this.pixelWidth + x] != 0 ? true : false;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendTransparentPalettePixels(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -505,7 +505,7 @@ final class IndexedSprite extends IndexedSpriteBase {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void copyTransparentPalettePixels(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -621,7 +621,7 @@ final class IndexedSprite extends IndexedSpriteBase {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        IndexedSprite.a(SoftwareRaster.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, width, height, var11, var12, var5);
+        IndexedSprite.copyScaledTransparentPalettePixels(SoftwareRaster.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, width, height, var11, var12, var5);
     }
 
     IndexedSprite(int width, int height, int paletteSize) {

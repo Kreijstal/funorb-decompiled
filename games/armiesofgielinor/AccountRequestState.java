@@ -36,7 +36,7 @@ final class AccountRequestState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          CampaignLookupSupport.a(param14, param9, 333, param17);
+          CampaignLookupSupport.configureSelectionMenuFonts(param14, param9, 333, param17);
           if (param8 <= 80) {
             return;
           }

@@ -68,9 +68,9 @@ final class QuickChatSetupSupport {
           }
           MapLayout.addCustomQuickChatOption(var4, 19003);
           var12 = (BitmapFont) null;
-          ClientStateChecksumSupport.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
-          QuickChatMenuDisplaySupport.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
-          AccountNameAvailabilityValidator.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
+          ClientStateChecksumSupport.field_f = PaletteRegionMap.createStatefulComponentTemplate(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          QuickChatMenuDisplaySupport.field_g = PaletteRegionMap.createStatefulComponentTemplate(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
+          AccountNameAvailabilityValidator.field_n = PaletteRegionMap.createStatefulComponentTemplate(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;

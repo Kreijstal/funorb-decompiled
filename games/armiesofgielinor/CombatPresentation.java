@@ -3013,7 +3013,7 @@ final class CombatPresentation implements EventPresentation {
               stackIn_19_0 = null;
               if (var3 != 0) {
                 if (stackIn_19_0 != this.field_D[var2_int]) {
-                  this.field_D[var2_int].d(59);
+                  this.field_D[var2_int].advanceProjectileAnimation(59);
                   var2_int++;
                   break scanLoop1;
                 }
@@ -3038,7 +3038,7 @@ final class CombatPresentation implements EventPresentation {
               if (stackIn_19_0Lifetime1 == this.field_D[var2_int]) {
                 break;
               }
-              this.field_D[var2_int].d(59);
+              this.field_D[var2_int].advanceProjectileAnimation(59);
               var2_int++;
               if (var3 == 0) {
                 continue;

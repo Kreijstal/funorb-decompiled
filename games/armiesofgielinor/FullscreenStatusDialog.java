@@ -124,7 +124,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             if (SocialListPanel.field_Mb == statusToken) {
               this.height = this.height + 10;
               var3 = MoveAttackRequest.field_y;
-              if (PaletteRegionMap.b(-108)) {
+              if (PaletteRegionMap.canResizeViewport(-108)) {
                 this.height = this.height + 20;
                 var3 = field_W;
               }

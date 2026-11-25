@@ -135,7 +135,7 @@ final class FixedQuaternion {
     final static boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         String var8 = null;
         String var8Lifetime1;
-        if (FriendLookupSupport.b((byte) -73)) {
+        if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
           ChatInputDispatchSupport.updateQuickChatInput(param6 - 32133, param0, param4, param3);
           if (null != FullscreenMembershipDialog.activeContextMenu) {
             if (!FullscreenMembershipDialog.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {

@@ -257,7 +257,7 @@ final class TurnEffectEvent extends GameEvent {
           } else {
             var5 = ReflectionCheckRequest.field_l;
           }
-          PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, var5, 112, 0);
+          PrivateTextRecipientSupport.setChatCompositionText(MeshObject.field_d, (String) null, var5, 112, 0);
           UpkeepEvent.field_z.matchedButtonTextColour = (8355711 & SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
           FullscreenStatusToken.field_b = UpkeepEvent.field_z;
           UpkeepEvent.field_z.heldPressTextColour = (8355711 & SpellConfirmationDialog.field_i.heldPressTextColour >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));

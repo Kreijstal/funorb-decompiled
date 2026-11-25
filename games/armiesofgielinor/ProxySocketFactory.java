@@ -11,7 +11,7 @@ final class ProxySocketFactory extends SocketFactory {
     private java.net.ProxySelector field_l;
 
     final static void b(byte param0) {
-        UiSelectionState.f(0);
+        UiSelectionState.initializeChatEditor(0);
         if (param0 != 16) {
           ProxySocketFactory.releaseStatics(-107);
         }

@@ -87,7 +87,7 @@ final class CheckMarkWidgetPainter implements WidgetPainter {
             this.paintWidget((Widget) null, 118, -124, false, 7);
           }
           var7 = widget.y + originY;
-          StateChangeEvent.a(widget.width, var6_int, widget.height, -52, var7);
+          StateChangeEvent.drawGradientWidgetBorder(widget.width, var6_int, widget.height, -52, var7);
           var8 = IgnoreListLookupSupport.validationStatusIcons[1];
           if (widget instanceof InteractiveWidget &&
             ((InteractiveWidget) (widget)).active) {

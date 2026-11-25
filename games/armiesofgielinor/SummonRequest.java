@@ -22,7 +22,7 @@ final class SummonRequest extends ActionRequest {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            SummonRequest.a((byte) 111);
+            SummonRequest.releaseSummonRequestStatics((byte) 111);
           }
           stackIn_3_0 = Bzip2State.getAccountNameValidationError(false, param0, (byte) -95);
           return stackIn_3_0;
@@ -67,7 +67,7 @@ final class SummonRequest extends ActionRequest {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawSocialListPrompt(boolean param0, byte param1) {
         if (param1 >= -74) {
           field_w = (String) null;
         }
@@ -76,7 +76,7 @@ final class SummonRequest extends ActionRequest {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseSummonRequestStatics(byte param0) {
         field_y = null;
         if (param0 >= -42) {
           CharSequence var2 = (CharSequence) null;
@@ -99,7 +99,7 @@ final class SummonRequest extends ActionRequest {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 640) {
-            SummonRequest.a(false, (byte) 44);
+            SummonRequest.drawSocialListPrompt(false, (byte) 44);
           }
           if (type.isArray()) {
             arrayName = SummonRequest.consoleTypeName(obfuscationGuard ^ 0, type.getComponentType()) + "[]";
@@ -121,7 +121,7 @@ final class SummonRequest extends ActionRequest {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void normalizeAnimationSpriteWidths(byte param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -139,7 +139,7 @@ final class SummonRequest extends ActionRequest {
             if (null != DecodedSpriteSupport.field_a[param1] &&
               DecodedSpriteSupport.field_a[param1].length > param2) {
               if (param0 != 29) {
-                SummonRequest.a(false);
+                SummonRequest.getMessageDialogWidth(false);
               }
               for (var4 = 0; DecodedSpriteSupport.field_a[param1][param2].length > var4; var4++) {
                 var7 = DecodedSpriteSupport.field_a[param1][param2][var4];
@@ -254,14 +254,14 @@ final class SummonRequest extends ActionRequest {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getMessageDialogWidth(boolean param0) {
         if (!param0) {
           field_B = -104;
         }
         return -BattlefieldTheme.field_f + CachedArchiveProvider.field_h;
     }
 
-    final static void a(byte param0, int[] param1, int param2) {
+    final static void replaceTutorialStageItems(byte param0, int[] param1, int param2) {
         try {
           MoveEvent.tutorialStageItems[param2] = param1;
           ConsoleTextNode.field_p[param2] = new TutorialController(param2);

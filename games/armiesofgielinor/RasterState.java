@@ -66,7 +66,7 @@ final class RasterState extends IntrusiveNode {
                     }
                     UnitCycler.a(22 + param5, var11, var7 + ProxyAuthenticationRequiredException.field_b, 119, param3 + 20);
                   }
-                  PrivateTextRecipientSupport.a(param3, false, false, var9, param5, var7, param1, var8, param0);
+                  PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param3, false, false, var9, param5, var7, param1, var8, param0);
                   if (QuickChatMenuDisplaySupport.field_e[var7].hasModifierFlag4((byte) -115)) {
                     GameEvent.a(param3 + 20, true, ProxyAuthenticationRequiredException.field_b + var7, QuickChatMenuDisplaySupport.field_e[var7].ownerPlayer, 22 + param5);
                   }
@@ -86,7 +86,7 @@ final class RasterState extends IntrusiveNode {
           } else {
             if (param2 == 2) {
               TickCounter.a(var9, true, param0, param3, var7, 0, param1, param5, var8);
-              PrivateTextRecipientSupport.a(param3, false, true, var9, param5, var7, param1, var8, param0);
+              PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param3, false, true, var9, param5, var7, param1, var8, param0);
             }
           }
           return;

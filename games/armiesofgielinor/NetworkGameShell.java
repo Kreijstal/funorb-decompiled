@@ -377,7 +377,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (!AccountRequestResult.isGameUiPhaseActive((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
             if (!BitmapTextWidgetPainter.b(true)) {
-              StateChangeEvent.e((byte) -84);
+              StateChangeEvent.advanceLogoAnimation((byte) -84);
             } else {
               if (SoundCache.field_b == 0) {
                 discardedUiResult = this.processAccountUiAction(false, false, (byte) -92);
@@ -659,7 +659,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           EmailValidator.c((byte) 91);
           ChatMessageWriteSupport.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;
-          StateChangeEvent.a(CombatPresentation.field_M, DisplayModeOptionPainter.field_u, LoginKind.field_g, 0, BestScoreStrategy.field_l);
+          StateChangeEvent.initializeSharedAccountUi(CombatPresentation.field_M, DisplayModeOptionPainter.field_u, LoginKind.field_g, 0, BestScoreStrategy.field_l);
           if (ChatMessage.field_r ||
             PasswordLengthSupport.field_b != null) {
             loginGuard = 3;

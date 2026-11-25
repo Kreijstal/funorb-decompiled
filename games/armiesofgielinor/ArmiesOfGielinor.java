@@ -115,7 +115,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (UiSelectionState.d(95)) {
+            if (UiSelectionState.isAccountGameDataReady(95)) {
               if (!SessionTransitionSupport.markReconnectExpected(-83)) {
                 if (DefeatPlayerConsoleCommand.e((byte) 89)) {
                   if (~UnitAnimationSelectionSupport.field_f != ~UnitAnimationSelectionSupport.field_e) {
@@ -201,7 +201,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 14) {
                   RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), LogoFaceSortSupport.getLobbyPlayerListContent(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
-                  IntroSequence.initializeSocialLists(TextWidthSupport.b(-126), -72, ProjectileEffect.c(0));
+                  IntroSequence.initializeSocialLists(TextWidthSupport.b(-126), -72, ProjectileEffect.getSocialListContent(0));
                   LobbyNotificationSupport.field_d = 0;
                   ValidatedTextWidget.field_Z = true;
                   SpellCastAction.field_t = false;
@@ -810,7 +810,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 SectorCacheStore.field_a.advanceBattle(109, var4 != 0);
               }
               if (ViewportManager.field_c) {
-                PaletteRegionMap.a(320, 180, var4 != 0, 0);
+                PaletteRegionMap.updateCenteredChatEntry(320, 180, var4 != 0, 0);
                 FullscreenFocusCanvas.gameplayController.advanceBattle(param0 + 119, var4 != 0);
               }
               while (Unit.pollKeyEvent((byte) -127)) {
@@ -859,7 +859,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               decompiledFrameRemainder1 = !(FaceNormal.field_d);
             }
             if (decompiledFrameRemainder1) {
-              CampaignLookupSupport.a((byte) -97);
+              CampaignLookupSupport.updateCollapsedSharedUi((byte) -97);
             }
             if (ValidatedTextWidget.field_Z) {
               if (!(AudioShutdownSupport.field_c <= TelepopEvent.field_F)) {
@@ -1016,16 +1016,16 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         try {
           var2 = VerticalScrollbar.p(0);
           if (PopupPresentation.requiresAccountUi(obfuscationGuard ^ 31337)) {
-            GameAppletShell.a(false, PrivateTextRecipientSupport.a(false), var2);
+            GameAppletShell.a(false, PrivateTextRecipientSupport.hasFocusOrFullscreen(false), var2);
             return;
           }
           if (!DelayedPacket.field_q) {
-            PaletteRegionMap.a((byte) 121, var2);
+            PaletteRegionMap.drawLoadingCanvas((byte) 121, var2);
             return;
           }
-          if (!UiSelectionState.d(obfuscationGuard + 95)) {
+          if (!UiSelectionState.isAccountGameDataReady(obfuscationGuard + 95)) {
             CalendarSupport.a((byte) -24, 100.0f, DateInputWidget.field_G);
-            PaletteRegionMap.a((byte) 122, var2);
+            PaletteRegionMap.drawLoadingCanvas((byte) 122, var2);
             return;
           }
           stackIn_21_0 = ((FullscreenFocusCanvas.gameplayController != null ||
@@ -1252,7 +1252,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           TutorialLayout.releaseStatics(obfuscationGuard ^ -4368117);
           MembershipExpansionScreen.releaseStatics(-8616);
           UiSelectionState.releaseStatics((byte) 110);
-          PrivateTextRecipientSupport.a(-1);
+          PrivateTextRecipientSupport.releaseStatics(-1);
           SpellCastAction.releaseStatics(-4541);
           AiPlanner.releaseStatics(-27464);
           AiWeightProfile.releaseStatics(true);
@@ -1264,7 +1264,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           TurnEffectEvent.a(true);
           DeployRequest.releaseStatics((byte) 44);
           SphinxActionRequest.releaseStatics(-27538);
-          SummonRequest.a((byte) -58);
+          SummonRequest.releaseSummonRequestStatics((byte) -58);
           GlobalSpell.releaseStatics((byte) 103);
           UnitSpell.releaseStatics(6);
           UnitModelPreview.releaseStatics(obfuscationGuard ^ 298276648);
@@ -1386,7 +1386,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           DequeWidgetContainer.releaseStatics((byte) -89);
           ArrayWidgetContainer.releaseStatics(0);
           ThemeSpriteLoadingSupport.releaseStatics((byte) -37);
-          FriendLookupSupport.a((byte) -112);
+          FriendLookupSupport.releaseStatics((byte) -112);
           PcmPlayerService.releaseLabels(-74);
           TaggedMapData.releaseStatics(-91);
           TilePosition.releaseStatics(false);
@@ -2353,7 +2353,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         var3 = obfuscationControl ? 1 : 0;
         try {
           LineOfSightGrid.buildSpellMenu(17);
-          StateChangeEvent.g(1);
+          StateChangeEvent.initializeBattleSetupUi(1);
           var2_int = 0;
           while (var2_int < 29) {
             ConsoleTextNode.field_p[var2_int] = new TutorialController(var2_int);

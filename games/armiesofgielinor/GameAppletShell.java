@@ -428,7 +428,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                PaletteRegionMap.a((byte) 111, param2);
+                PaletteRegionMap.drawLoadingCanvas((byte) 111, param2);
                 if (var4 != 0) {
                   SoftwareRaster.clearPixels();
                   TaggedMapData.a(240, 320, -121);

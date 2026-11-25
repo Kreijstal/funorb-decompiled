@@ -105,7 +105,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           }
           fullscreenModesAvailable = !(this.displayModes.length <= 0);
           this.hasFullscreenModes = fullscreenModesAvailable;
-          resizeAvailableFlag = (!PaletteRegionMap.b(85)) ? 0 : 1;
+          resizeAvailableFlag = (!PaletteRegionMap.canResizeViewport(85)) ? 0 : 1;
           resizeAvailable = resizeAvailableFlag;
           nonGuestSnapshot = !(DamageEvent.isGuestSession(79));
           this.nonGuestAtOpen = nonGuestSnapshot;
@@ -324,7 +324,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         } else {
           if (this.selectedModeButton == this.resizableModeButton) {
             StructureTerrainSupport.b(-109);
-            FriendLookupSupport.a(-4223);
+            FriendLookupSupport.enableViewportResizing(-4223);
           } else {
             if (this.fullscreenModeButton == this.selectedModeButton) {
               if (this.displayModeDropdown != null) {

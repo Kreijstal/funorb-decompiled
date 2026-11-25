@@ -165,7 +165,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
         try {
           InteractiveWidget.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);
-          FriendLookupSupport.a(-93, param0);
+          FriendLookupSupport.loadLogoMeshes(-93, param0);
           GzipDecoder.a(32381, param0);
           DropdownArrowPainter.a(54);
           SpriteDropdownMenu.buildLogoGlowSprite(true);

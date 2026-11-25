@@ -42,7 +42,7 @@ class TextEntryWidgetPainter extends BitmapTextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (renderFlag) {
-            StateChangeEvent.a(widget.width, widget.x + originX, widget.height, 94, originY + widget.y);
+            StateChangeEvent.drawGradientWidgetBorder(widget.width, widget.x + originX, widget.height, 94, originY + widget.y);
           }
           super.paintWidget(widget, originX, -120, renderFlag, originY);
           if (obfuscationGuard <= -79) {

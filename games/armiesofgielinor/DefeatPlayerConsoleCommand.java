@@ -20,7 +20,7 @@ final class DefeatPlayerConsoleCommand extends ConsoleCommand {
 
     final static void h(int param0) {
         int var2 = 0;
-        int var1 = SummonRequest.a(true);
+        int var1 = SummonRequest.getMessageDialogWidth(true);
         int var2Lifetime1;
         if (param0 == 1976460609) {
           var2 = FixedSquareRootSupport.a(param0 - 1976435396);

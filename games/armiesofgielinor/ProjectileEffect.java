@@ -23,14 +23,14 @@ final class ProjectileEffect {
         return ValidationStatusIcon.campaignPacketWord0;
     }
 
-    final static ClientUiComponent c(int param0) {
+    final static ClientUiComponent getSocialListContent(int param0) {
         if (param0 != 0) {
           return (ClientUiComponent) null;
         }
         return ListMissionsConsoleCommand.field_E.listContent;
     }
 
-    private final void a(int param0, int param1, boolean param2, byte param3) {
+    private final void drawProjectedParticleTrail(int param0, int param1, boolean param2, byte param3) {
         int var8 = 0;
         int var5;
         int var6;
@@ -106,7 +106,7 @@ final class ProjectileEffect {
         field_a = null;
     }
 
-    private final void a(boolean param0, boolean param1, int param2) {
+    private final void drawProjectileModel(boolean param0, boolean param1, int param2) {
         int stackIn_8_0 = 0;
         ModelMesh stackIn_22_0;
         int stackIn_22_1;
@@ -183,21 +183,21 @@ final class ProjectileEffect {
         if (this.field_b) {
           if (this.effectKind != 7) {
             if (this.effectKind < 8) {
-              this.a(flag, reverse, obfuscationGuard ^ 299);
+              this.drawProjectileModel(flag, reverse, obfuscationGuard ^ 299);
             } else {
               if (!reverse) {
-                this.a(this.effectKind - 8, paletteIndex, flag, (byte) -44);
+                this.drawProjectedParticleTrail(this.effectKind - 8, paletteIndex, flag, (byte) -44);
               }
             }
           } else {
             if (!reverse) {
-              this.a(6, paletteIndex, flag);
+              this.drawProjectedSpriteTrail(6, paletteIndex, flag);
             }
           }
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void drawProjectedSpriteTrail(int param0, int param1, boolean param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -225,7 +225,7 @@ final class ProjectileEffect {
         }
     }
 
-    final void d(int param0) {
+    final void advanceProjectileAnimation(int param0) {
         if (param0 < 8) {
           this.field_b = false;
         }
