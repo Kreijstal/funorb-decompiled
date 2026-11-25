@@ -113,7 +113,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     }
 
     final static void a(int param0, Sprite param1) {
-        RandomAccessCacheFile.a(-117);
+        RandomAccessCacheFile.pushLegacyRasterState(-117);
         DerelictMapGenerator.field_n = new Sprite(128, 128);
         DerelictMapGenerator.field_n.bindAsRenderTarget();
         if (param0 <= 12) {

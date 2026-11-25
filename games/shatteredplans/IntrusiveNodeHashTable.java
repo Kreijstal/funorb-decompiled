@@ -260,7 +260,7 @@ final class IntrusiveNodeHashTable {
         var2.patchLengthByte(var2.position - var3, (byte) 124);
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean isIgnoredPlayer(String param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

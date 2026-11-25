@@ -195,7 +195,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           if (!this.containsPoint(param1, param2, 0)) {
             return null;
           }
-          var4 = FleetVisual.a(this.field_l, param1, (byte) 117, param2);
+          var4 = FleetVisual.findMenuComponentAt(this.field_l, param1, (byte) 117, param2);
           if (var4 == null) {
             return super.findComponentAt((byte) 127, param1, param2);
           }
@@ -207,7 +207,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         if (!this.containsPoint(param1, param2, 0)) {
           return null;
         }
-        var4Lifetime1 = FleetVisual.a(this.field_l, param1, (byte) 117, param2);
+        var4Lifetime1 = FleetVisual.findMenuComponentAt(this.field_l, param1, (byte) 117, param2);
         if (var4Lifetime1 == null) {
           return super.findComponentAt((byte) 127, param1, param2);
         }

@@ -25,7 +25,7 @@ final class RasterTargetSupport {
 
     final static void pushSpriteRenderTarget(Sprite param0, int param1) {
         try {
-          RandomAccessCacheFile.a(-127);
+          RandomAccessCacheFile.pushLegacyRasterState(-127);
           param0.bindAsRenderTarget();
           if (param1 < 74) {
             field_b = -100;

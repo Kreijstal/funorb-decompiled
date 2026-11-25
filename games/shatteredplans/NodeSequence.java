@@ -73,7 +73,7 @@ abstract class NodeSequence {
             return (SocialListEntry) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = DateInputWidget.a(var6, true);
+          var2 = DateInputWidget.normalizeAccountName(var6, true);
           if (var2 == null) {
             stackIn_10_0 = null;
             return (SocialListEntry) (stackIn_10_0);
@@ -85,7 +85,7 @@ abstract class NodeSequence {
           var3 = (SocialListEntry) (BattleEvent.field_q.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
-            var4 = DateInputWidget.a(var7, true);
+            var4 = DateInputWidget.normalizeAccountName(var7, true);
             if (var4.equals(var2)) {
               stackIn_20_0 = var3;
               return stackIn_20_0;

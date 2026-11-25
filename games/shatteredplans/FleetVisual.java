@@ -22,7 +22,7 @@ final class FleetVisual extends IntrusiveNode {
     int field_k;
     static String field_h;
 
-    final static MenuComponent a(IntrusiveDeque param0, int param1, byte param2, int param3) {
+    final static MenuComponent findMenuComponentAt(IntrusiveDeque param0, int param1, byte param2, int param3) {
         MenuComponent var5 = null;
         int var6 = 0;
         int var7 = 0;

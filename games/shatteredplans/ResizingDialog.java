@@ -198,7 +198,7 @@ abstract class ResizingDialog extends Dialog {
                 var4 = ProxyAuthenticationRequiredException.field_e.field_z;
               } else {
                 var7 = (CharSequence) ((Object) ProxyAuthenticationRequiredException.field_e.field_z);
-                var4 = DateInputWidget.a(var7, true);
+                var4 = DateInputWidget.normalizeAccountName(var7, true);
               }
               var5 = null;
               if (0 == MapViewState.field_b) {

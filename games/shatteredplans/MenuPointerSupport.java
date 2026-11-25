@@ -27,12 +27,12 @@ final class MenuPointerSupport extends IntrusiveNode {
           if (param1 >= -68) {
             return false;
           }
-          PlacementOrder.field_w = FleetVisual.a(param0, LobbyRoomControlsSupport.field_b, (byte) 115, TertiaryListSequence.field_k);
+          PlacementOrder.field_w = FleetVisual.findMenuComponentAt(param0, LobbyRoomControlsSupport.field_b, (byte) 115, TertiaryListSequence.field_k);
           if (1 == LobbyCommandSupport.field_d) {
             ClientOverlayDrawSupport.field_b = 0;
             SocialListPanel.field_Gb = PointsVictoryChecker.field_p;
             DialogRoot.field_C = SliderWidget.field_P;
-            OrderableInsertionSupport.field_f = FleetVisual.a(param0, DialogRoot.field_C, (byte) -41, SocialListPanel.field_Gb);
+            OrderableInsertionSupport.field_f = FleetVisual.findMenuComponentAt(param0, DialogRoot.field_C, (byte) -41, SocialListPanel.field_Gb);
             stackIn_26_0 = (null != OrderableInsertionSupport.field_f);
             return stackIn_26_0;
           }
@@ -54,7 +54,7 @@ final class MenuPointerSupport extends IntrusiveNode {
           }
           if ((IconTextPanel.field_Db == null ||
             !(ClientOverlayDrawSupport.field_b >= 5)) &&
-            TextInputPainter.a(OrderableInsertionSupport.field_f, param0, (byte) 64)) {
+            TextInputPainter.containsMenuComponent(OrderableInsertionSupport.field_f, param0, (byte) 64)) {
             DualLinkDequeSequence.field_h = OrderableInsertionSupport.field_f;
             if (null != DualLinkDequeSequence.field_h) {
               DualLinkDequeSequence.field_h.a(LobbyRoomControlsSupport.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
@@ -113,7 +113,7 @@ final class MenuPointerSupport extends IntrusiveNode {
           GraphicsSettings.field_e.draw(var1_int, var2);
           var4 = -(FleetTrailPoint.field_m * 120 / 1000) + 176;
           var5 = 540 - var4;
-          RandomAccessCacheFile.a(-111);
+          RandomAccessCacheFile.pushLegacyRasterState(-111);
           if (var5 < 256) {
             var4 = 284;
             var5 = 256;

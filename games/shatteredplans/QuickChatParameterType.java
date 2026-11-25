@@ -41,7 +41,7 @@ final class QuickChatParameterType {
           if (12 < var3_int) {
             return false;
           }
-          var4 = DateInputWidget.a(param0, true);
+          var4 = DateInputWidget.normalizeAccountName(param0, true);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!DialogRoot.isNameSeparator(var4.charAt(0), param2 + 6) &&

@@ -203,7 +203,7 @@ final class SolMapReader implements MapGenerator {
             TargetedChatMessage.field_i > var5) {
             var10_int = SpriteResourceSupport.getChatChannelFilter(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.getFilterPriority((byte) 116) && (var8_ref_nf.field_h ||
-              !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {
+              !IntrusiveNodeHashTable.isIgnoredPlayer(var8_ref_nf.field_b, true))) {
               var9 = 1;
             }
           }

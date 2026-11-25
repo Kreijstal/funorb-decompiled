@@ -81,10 +81,10 @@ final class ReflectionCheckDecoder {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = ImageProducerRasterBuffer.a(-134, var10[var17]);
+                      var12[var17] = ImageProducerRasterBuffer.resolveReflectionClass(-134, var10[var17]);
                       var17++;
                     }
-                    var18.field_n[var5] = param1.requestMethod(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
+                    var18.field_n[var5] = param1.requestMethod(var12, var8, param3 + 83, ImageProducerRasterBuffer.resolveReflectionClass(-134, var20));
                     var18.field_h[var5] = var21;
                   }
                 } else {
@@ -98,7 +98,7 @@ final class ReflectionCheckDecoder {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_r[var5] = var9;
-                  var18.field_q[var5] = param1.requestField(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
+                  var18.field_q[var5] = param1.requestField(ImageProducerRasterBuffer.resolveReflectionClass(-134, var15), (byte) 77, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class ReflectionCheckDecoder {
             stackIn_10_0 = SliderPainter.field_d;
             return stackIn_10_0;
           }
-          if (IntrusiveNodeHashTable.a(param1, true)) {
+          if (IntrusiveNodeHashTable.isIgnoredPlayer(param1, true)) {
             stackIn_13_0 = QuickChatCategoryRegistry.a(UiTextSupport.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
@@ -190,7 +190,7 @@ final class ReflectionCheckDecoder {
             stackIn_17_0 = LobbyRoomDecoder.field_a;
             return stackIn_17_0;
           }
-          if (DebouncedValidator.a(param0 - 30108, param1)) {
+          if (DebouncedValidator.isFriendPlayer(param0 - 30108, param1)) {
             stackIn_21_0 = QuickChatCategoryRegistry.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }

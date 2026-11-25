@@ -23,7 +23,7 @@ final class GameSoundSetupSupport {
           StandardMapGenerator.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_move_order");
           ConquestVictoryChecker.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_attack_order");
           SocketArchiveNetworkClient.field_w = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_factory_noise");
-          TertiaryListSequence.field_m = ConquestVictoryChecker.a((byte) -111, 120, "shatteredplans_explosion");
+          TertiaryListSequence.field_m = ConquestVictoryChecker.loadSoundEffectDefinition((byte) -111, 120, "shatteredplans_explosion");
           SoundEffectSupport.loadSoundEffectDefinition(128, param2, "shatteredplans_tab_open");
           SoundEffectSupport.loadSoundEffectDefinition(128, 100, "shatteredplans_tab_close");
           ScrollPane.field_yb = SoundEffectSupport.loadSoundEffectDefinition(param2 ^ 228, 256, "shatteredplans_next_open");

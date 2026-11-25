@@ -56,7 +56,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         }
     }
 
-    final static void a(IntrusiveDeque param0, byte param1) {
+    final static void updatePanelPointerInteraction(IntrusiveDeque param0, byte param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

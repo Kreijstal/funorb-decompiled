@@ -15,7 +15,7 @@ final class BattleContribution extends IntrusiveNode {
     int field_p;
     static int field_j;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static void adjustRectangleSaturationAndBrightness(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         int var10 = 0;
         int var12 = 0;
         int var7_int = 0;
@@ -95,7 +95,7 @@ final class BattleContribution extends IntrusiveNode {
           return (Sprite) null;
         }
         Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
-        RandomAccessCacheFile.a(-127);
+        RandomAccessCacheFile.pushLegacyRasterState(-127);
         var2.bindAsRenderTarget();
         IntrusiveDeque.field_d.drawColourised(0, 0, param0 >= 0 ? param0 : 2105376);
         OpacityWidget.popLegacyRasterState(0);

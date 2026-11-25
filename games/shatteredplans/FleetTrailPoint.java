@@ -121,7 +121,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = DateInputWidget.a(var6, true);
+          var2 = DateInputWidget.normalizeAccountName(var6, true);
           if (param1 <= 115) {
             FleetTrailPoint.clearStatics(false);
           }
@@ -131,7 +131,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           var3 = (SocialListEntry) (CipherPacketBuffer.field_m.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
-            var4 = DateInputWidget.a(var7, true);
+            var4 = DateInputWidget.normalizeAccountName(var7, true);
             if (var4 == null) {
               var4 = var3.field_Ab;
             }

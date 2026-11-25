@@ -5676,6 +5676,14 @@
       "renamedSymbol": "M:FleetVisual.clearStatics(I)V"
     },
     {
+      "symbol": "M:as.a(Lpf;IBI)Lvd;",
+      "originalName": "a",
+      "to": "findMenuComponentAt",
+      "evidence": "Iterate retained menu deque, invoke each component hit-test, return first nonnull result whose retained field_s flag istrue. MenuList/window/pointer callers inspected. Null deque returns before guard; preserve cursor order, field_s gate, byte division and nested hit-test side effects. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;"
+    },
+    {
       "symbol": "M:b.a(I)V",
       "originalName": "a",
       "to": "drawComponent",
@@ -6436,6 +6444,14 @@
       "renamedSymbol": "M:PcmMixerListener.onScheduledEvent(LPcmStreamMixer;)I"
     },
     {
+      "symbol": "M:bo.a(II)V",
+      "originalName": "a",
+      "to": "writeSingleByteRequest",
+      "evidence": "Write supplied opcode through original cipher buffer, literal payload length1, then supplied byte payload. Server-int-array request/retry callers currently supply2. Preserve complete int args/truncation, cipher state, buffer alias, partial cursor and write order; retain generic payload capability. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountNoticeDialog.writeSingleByteRequest(II)V"
+    },
+    {
       "symbol": "M:bo.a(Lkg;IIII)V",
       "originalName": "a",
       "to": "onButtonClicked",
@@ -6738,6 +6754,14 @@
       "evidence": "Creates a sprite-strip button below the status message, increases panel height, adds the child and returns it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:StatusMessagePanel.appendButton(LWidgetListener;ILjava/lang/String;)LFocusableWidget;"
+    },
+    {
+      "symbol": "M:cf.a(Lpf;B)V",
+      "originalName": "a",
+      "to": "updatePanelPointerInteraction",
+      "evidence": "Hit-test AnimatedPanel deque and manage retained press target/origin, drag counter/threshold, drag/release callbacks and hover target. Complete body and TiledNineSlicePainter wrapper read. Preserve squared-distance>5/five-tick predicates, late bad-byte int write, null target paths and all callback/global write order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V"
     },
     {
       "symbol": "M:cf.b(IZ)V",
@@ -7058,6 +7082,14 @@
       "evidence": "Returns the diagnostic text for the current input, or null while the input is empty or still changing. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DebouncedValidator.getMessage(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:da.a(ILjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "isFriendPlayer",
+      "evidence": "Only int-30106queries retained friend-table lookup; other ints returnfalse before name access. Social add/ignore error captions and chat-priority callers inspected. Preserve exact guard, null/normalization behavior and lookup side effects. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z"
     },
     {
       "symbol": "M:da.a(Z)Lu;",
@@ -7724,6 +7756,14 @@
       "renamedSymbol": "M:DualLinkDequeSequence.first(B)LIntrusiveNode;"
     },
     {
+      "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "reverseString",
+      "evidence": "Allocate char array of source length and reverse UTF16code units, constructing new String. Password checks and forward/reversed substring caller inspected. Preserve surrogate behavior, false-bool caption clear after allocation, null exceptions and wrapped diagnostics. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:dn.a(Z)Loh;",
       "originalName": "a",
       "to": "next",
@@ -8290,6 +8330,14 @@
       "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 ee1dd0ac86676c754c3ed27f9d0409e1b2fea1a07c4828b6ca1cbc8d9140901a. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ProductionContent.integerPower(IBI)I"
+    },
+    {
+      "symbol": "M:em.a(IIII[Lbi;I)V",
+      "originalName": "a",
+      "to": "drawTiledNineSlice",
+      "evidence": "Draw retained nine-sprite corners/edge/centre tiles within saved/intersected/restored clips; shrink overlapping corner bounds proportionally. Panel/frame consumers inspected. Preserve null/size early returns, supplied array index guard versus fixed7height access, tile loops, zero-size branches, scratch clip alias and all partial render/failure order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V"
     },
     {
       "symbol": "M:en.a(I)V",
@@ -9410,6 +9458,14 @@
       "evidence": "Abstract: allocates the pixel array and image for a height, component and width. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ImageProducerRasterBuffer.allocate(ILjava/awt/Component;BI)V"
+    },
+    {
+      "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
+      "originalName": "a",
+      "to": "resolveReflectionClass",
+      "evidence": "Resolve original primitive codes B/I/S/J/Z/F/D/C or Class.forName supplied name. ReflectionCheck decoder callers inspected. Preserve missing Vspecial case, Breturn before guard, bad-int original callback, declared ClassNotFoundException and runtime wrapping/call order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;"
     },
     {
       "symbol": "M:ge.a(Ljava/awt/Graphics;IBI)V",
@@ -10988,6 +11044,14 @@
       "renamedSymbol": "M:StandardMapGenerator.fillMissingResources(LGalaxyMap;I)V"
     },
     {
+      "symbol": "M:i.a(IIIIII)V",
+      "originalName": "a",
+      "to": "addRectangleBrightness",
+      "evidence": "Clip rectangle to raster dimensions and add65793*supplied amount with original packed-channel carry/saturation expression. Intro transition caller inspected. Preserve full signed values/overflow, guard division before final horizontal clipping and mutations of working parameters inside loops. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DialPainter.addRectangleBrightness(IIIIII)V"
+    },
+    {
       "symbol": "M:i.a(Lvg;IZIB)V",
       "originalName": "a",
       "to": "paintWidget",
@@ -11908,6 +11972,14 @@
       "renamedSymbol": "M:DateInputWidget.setDateValidator(LBirthDateValidator;I)V"
     },
     {
+      "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "normalizeAccountName",
+      "evidence": "Trim original name separators, reject trimmed lengths outside1..12, normalize accepted characters through existing character mapper and returnnull for empty result. Social/name-validation/login consumers inspected. Preserve raw CharSequence calls, filtering/skipping, Unicode-char behavior and false-bool cleanup after allocation. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:ji.d(Z)I",
       "originalName": "d",
       "to": "day",
@@ -11946,6 +12018,14 @@
       "evidence": "Date-input year contract; the numeric implementation parses the four-character year field.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DateInputWidget.year(I)I"
+    },
+    {
+      "symbol": "M:jj.a(BILjava/lang/String;)Lqf;",
+      "originalName": "a",
+      "to": "loadSoundEffectDefinition",
+      "evidence": "Construct SoundEffectDefinition from original shared SoundCache name lookup with empty group and supplied int scale. Explosion setup caller and alternate guard caller read. Preserve byte>-92clearing static sound first, lookup argument order, allocation and wrapped null/failure order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;"
     },
     {
       "symbol": "M:jj.a(BLdc;Lkq;)V",
@@ -14634,6 +14714,14 @@
       "evidence": "Assigns null to 6 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntroGlowPoint.clearStatics(Z)V"
+    },
+    {
+      "symbol": "M:ne.a(IIBIIII)V",
+      "originalName": "a",
+      "to": "adjustRectangleSaturationAndBrightness",
+      "evidence": "Clip rectangle to raster dimensions then combine channels with original weighted gray(5R+6G+5B) using supplied Q8saturation/brightness factors. Intro setup/transition consumers inspected. Preserve signed arithmetic/overflow, no clamping, clipping before byte24guard, channel packing and write order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V"
     },
     {
       "symbol": "M:ne.c(Z)V",
@@ -17748,6 +17836,14 @@
       "renamedSymbol": "M:UrlLoader.wrapThrowable(Ljava/lang/Throwable;Ljava/lang/String;)LClientException;"
     },
     {
+      "symbol": "M:ra.a(I)V",
+      "originalName": "a",
+      "to": "pushLegacyRasterState",
+      "evidence": "Save raster buffer, clip edges, dimensions and stack index in original shared parallel arrays. All sprite-target callers inspected. Preserve partial stack writes, int>=-103callback between third/fourth writes, alias identity, overflow/index failures and final stack increment. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RandomAccessCacheFile.pushLegacyRasterState(I)V"
+    },
+    {
       "symbol": "M:ra.a(III[B)I",
       "originalName": "a",
       "to": "read",
@@ -18172,6 +18268,14 @@
       "renamedSymbol": "M:LinkPainter.clearStatics(I)V"
     },
     {
+      "symbol": "M:rr.a(Lvd;Lpf;B)Z",
+      "originalName": "a",
+      "to": "containsMenuComponent",
+      "evidence": "Iterate top-level menu deque and recursively test identity/containment through MenuComponent.isOrContains. Return immediately on match; otherwise byte64returnsfalse and other bytes invoke original null pointer helper first. Preserve hierarchy aliases, null/list behavior, cursor and callback order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z"
+    },
+    {
       "symbol": "M:rr.a(Lvg;IZIB)V",
       "originalName": "a",
       "to": "paintWidget",
@@ -18474,6 +18578,14 @@
       "evidence": "Assigns null to 1 static field of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SolMapReader.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:si.a(IILe;Le;ILjava/lang/String;Z)I",
+      "originalName": "a",
+      "to": "pollAccountRequest",
+      "evidence": "Complete account request state machine read: extract two field texts before guard; open/poll socket; submit opcode16login or18extended account request, consuming exactly two original random ints; poll response/suggestions/status/cookie and retain original retry/timeouts. Preserve markers, packet lengths/cursors, conditional submitted text, bool flags, full-int flush call, partial writes and all response values including-1/63/99/248/249/255. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I"
     },
     {
       "symbol": "M:si.a(Lob;BI)V",
@@ -19490,6 +19602,14 @@
       "evidence": "Walks the bucket of the masked key and returns the first node with an equal key.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveNodeHashTable.get(JI)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+      "originalName": "a",
+      "to": "isIgnoredPlayer",
+      "evidence": "Return whether retained ignore-table name lookup finds an entry. Decoder/error captions, chat filtering and social callers establish ignore role. Preserve false-bool CRC32clear before lookup, original normalization/fallback/hash cursor and returned exception behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z"
     },
     {
       "symbol": "M:ti.a(Loh;IJ)V",
@@ -21426,6 +21546,14 @@
       "evidence": "Render additive sprite leading portion when progress>=128, then at most128clipped columns using original fading brightness ramp, finally reset raster clip. Complete type and intro callers read. Preserve additive draw, full-int arithmetic, guard caption clear and resetClip rather than restoring caller clip. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AdditiveSpriteWipeSupport.drawAdditiveWipe(IIILSprite;II)V"
+    },
+    {
+      "symbol": "M:wd.a(IBI)I",
+      "originalName": "a",
+      "to": "selectPlayerNameIconIndex",
+      "evidence": "Evaluate byte-derived remainder then choose index2when third int>=2, else1when first int>=5, else0. Local-name img0/img1 consumer inspected; preserve original thresholds, priority and complete signed domains. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I"
     },
     {
       "symbol": "M:wd.a(IIBII)V",
@@ -79432,7 +79560,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#0",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#0",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -79443,7 +79571,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#1",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#1",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -79454,7 +79582,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#10",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#10",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -79465,7 +79593,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#2",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#2",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -79476,7 +79604,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#3",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#3",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -79487,7 +79615,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#4",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#4",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -79498,7 +79626,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#5",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#5",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#5",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -79509,7 +79637,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#6",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#6",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#6",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -79520,7 +79648,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#7",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#7",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#7",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -79531,7 +79659,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#8",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#8",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -79542,7 +79670,7 @@
     },
     {
       "symbol": "L:as.a(Lpf;IBI)Lvd;#9",
-      "renamedSymbol": "L:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#9",
+      "renamedSymbol": "L:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -90047,7 +90175,7 @@
     },
     {
       "symbol": "L:bo.a(II)V#0",
-      "renamedSymbol": "L:AccountNoticeDialog.a(II)V#0",
+      "renamedSymbol": "L:AccountNoticeDialog.writeSingleByteRequest(II)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -94678,7 +94806,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#0",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#0",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#0",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -94689,7 +94817,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#1",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#1",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#1",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -94700,7 +94828,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#2",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#2",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#2",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -94711,7 +94839,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#3",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#3",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -94722,7 +94850,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#4",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#4",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#4",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -94733,7 +94861,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#5",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#5",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -94744,7 +94872,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#6",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#6",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -94755,7 +94883,7 @@
     },
     {
       "symbol": "L:cf.a(Lpf;B)V#7",
-      "renamedSymbol": "L:StatusMessagePanel.a(LIntrusiveDeque;B)V#7",
+      "renamedSymbol": "L:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -100332,7 +100460,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100343,7 +100471,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -100354,7 +100482,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#2",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#2",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -100365,7 +100493,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#3",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#3",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -100376,7 +100504,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#4",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#4",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -100387,7 +100515,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#5",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#5",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100398,7 +100526,7 @@
     },
     {
       "symbol": "L:da.a(ILjava/lang/String;)Z#6",
-      "renamedSymbol": "L:DebouncedValidator.a(ILjava/lang/String;)Z#6",
+      "renamedSymbol": "L:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -111409,7 +111537,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#0",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#0",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -111420,7 +111548,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#1",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#1",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -111431,7 +111559,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#10",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#10",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -111442,7 +111570,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#2",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#2",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -111453,7 +111581,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#3",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#3",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -111464,7 +111592,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#4",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#4",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -111475,7 +111603,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#5",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#5",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#5",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -111486,7 +111614,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#6",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#6",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -111497,7 +111625,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#7",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#7",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -111508,7 +111636,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#8",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#8",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -111519,7 +111647,7 @@
     },
     {
       "symbol": "L:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#9",
-      "renamedSymbol": "L:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#9",
+      "renamedSymbol": "L:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -120077,7 +120205,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#0",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#0",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#0",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -120088,7 +120216,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#1",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#1",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#1",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -120099,7 +120227,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#10",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#10",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -120110,7 +120238,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#11",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#11",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -120121,7 +120249,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#12",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#12",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -120132,7 +120260,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#13",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#13",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -120143,7 +120271,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#14",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#14",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -120154,7 +120282,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#15",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#15",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -120165,7 +120293,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#16",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#16",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -120176,7 +120304,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#17",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#17",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -120187,7 +120315,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#18",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#18",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -120198,7 +120326,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#19",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#19",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -120209,7 +120337,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#2",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#2",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -120220,7 +120348,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#20",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#20",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -120231,7 +120359,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#21",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#21",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#21",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -120242,7 +120370,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#22",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#22",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -120253,7 +120381,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#23",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#23",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -120264,7 +120392,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#24",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#24",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -120275,7 +120403,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#25",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#25",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#25",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -120286,7 +120414,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#26",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#26",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#26",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -120297,7 +120425,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#27",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#27",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#27",
       "originalName": "var20Lifetime2",
       "renamedName": "var20Lifetime2",
       "declaration": {
@@ -120308,7 +120436,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#28",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#28",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#28",
       "originalName": "var20Lifetime3",
       "renamedName": "var20Lifetime3",
       "declaration": {
@@ -120319,7 +120447,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#29",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#29",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#29",
       "originalName": "var20Lifetime4",
       "renamedName": "var20Lifetime4",
       "declaration": {
@@ -120330,7 +120458,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#3",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#3",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -120341,7 +120469,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#30",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#30",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#30",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -120352,7 +120480,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#4",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#4",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#4",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -120363,7 +120491,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#5",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#5",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#5",
       "originalName": "stackIn_74_0",
       "renamedName": "stackIn_74_0",
       "declaration": {
@@ -120374,7 +120502,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#6",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#6",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#6",
       "originalName": "stackIn_74_1",
       "renamedName": "stackIn_74_1",
       "declaration": {
@@ -120385,7 +120513,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#7",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#7",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#7",
       "originalName": "stackIn_75_2",
       "renamedName": "stackIn_75_2",
       "declaration": {
@@ -120396,7 +120524,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#8",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#8",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -120407,7 +120535,7 @@
     },
     {
       "symbol": "L:em.a(IIII[Lbi;I)V#9",
-      "renamedSymbol": "L:ProductionContent.a(IIII[LSprite;I)V#9",
+      "renamedSymbol": "L:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -136896,7 +137024,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#0",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136907,7 +137035,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#1",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136918,7 +137046,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#10",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#10",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#10",
       "originalName": "stackIn_32_0",
       "renamedName": "stackIn_32_0",
       "declaration": {
@@ -136929,7 +137057,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#11",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#11",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#11",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -136940,7 +137068,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#12",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#12",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#12",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -136951,7 +137079,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#13",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#13",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#13",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -136962,7 +137090,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#14",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#14",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136973,7 +137101,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#15",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#15",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136984,7 +137112,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#2",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#2",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -136995,7 +137123,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#3",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#3",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -137006,7 +137134,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#4",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#4",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -137017,7 +137145,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#5",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#5",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#5",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -137028,7 +137156,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#6",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#6",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#6",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -137039,7 +137167,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#7",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#7",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#7",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -137050,7 +137178,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#8",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#8",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#8",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -137061,7 +137189,7 @@
     },
     {
       "symbol": "L:ge.a(ILjava/lang/String;)Ljava/lang/Class;#9",
-      "renamedSymbol": "L:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#9",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#9",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -162625,7 +162753,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#0",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#0",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -162636,7 +162764,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#1",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#1",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -162647,7 +162775,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#10",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#10",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -162658,7 +162786,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#2",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#2",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#2",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -162669,7 +162797,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#3",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#3",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -162680,7 +162808,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#4",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#4",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#4",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -162691,7 +162819,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#5",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#5",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -162702,7 +162830,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#6",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#6",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -162713,7 +162841,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#7",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#7",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -162724,7 +162852,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#8",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#8",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -162735,7 +162863,7 @@
     },
     {
       "symbol": "L:i.a(IIIIII)V#9",
-      "renamedSymbol": "L:DialPainter.a(IIIIII)V#9",
+      "renamedSymbol": "L:DialPainter.addRectangleBrightness(IIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -173647,7 +173775,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -173658,7 +173786,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -173669,7 +173797,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#10",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#10",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -173680,7 +173808,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#11",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#11",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -173691,7 +173819,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#12",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#12",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -173702,7 +173830,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#13",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#13",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -173713,7 +173841,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#14",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#14",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -173724,7 +173852,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#15",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#15",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -173735,7 +173863,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#16",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#16",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -173746,7 +173874,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#2",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#2",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -173757,7 +173885,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#3",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#3",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#3",
       "originalName": "stackIn_32_0",
       "renamedName": "stackIn_32_0",
       "declaration": {
@@ -173768,7 +173896,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#4",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#4",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#4",
       "originalName": "stackIn_32_1",
       "renamedName": "stackIn_32_1",
       "declaration": {
@@ -173779,7 +173907,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#5",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#5",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#5",
       "originalName": "stackIn_33_2",
       "renamedName": "stackIn_33_2",
       "declaration": {
@@ -173790,7 +173918,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#6",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#6",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -173801,7 +173929,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#7",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#7",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -173812,7 +173940,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#8",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#8",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -173823,7 +173951,7 @@
     },
     {
       "symbol": "L:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#9",
-      "renamedSymbol": "L:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#9",
+      "renamedSymbol": "L:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -173999,7 +174127,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#0",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#0",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -174010,7 +174138,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#1",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#1",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -174021,7 +174149,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#2",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#2",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -174032,7 +174160,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#3",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#3",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -174043,7 +174171,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#4",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#4",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -174054,7 +174182,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#5",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#5",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -174065,7 +174193,7 @@
     },
     {
       "symbol": "L:jj.a(BILjava/lang/String;)Lqf;#6",
-      "renamedSymbol": "L:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#6",
+      "renamedSymbol": "L:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225039,7 +225167,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#0",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#0",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -225050,7 +225178,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#1",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#1",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -225061,7 +225189,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#10",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#10",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#10",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -225072,7 +225200,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#11",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#11",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#11",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -225083,7 +225211,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#12",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#12",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#12",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -225094,7 +225222,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#13",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#13",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#13",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -225105,7 +225233,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#14",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#14",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#14",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -225116,7 +225244,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#15",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#15",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#15",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -225127,7 +225255,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#16",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#16",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#16",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -225138,7 +225266,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#17",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#17",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#17",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -225149,7 +225277,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#18",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#18",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -225160,7 +225288,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#2",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#2",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#2",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -225171,7 +225299,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#3",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#3",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -225182,7 +225310,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#4",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#4",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -225193,7 +225321,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#5",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#5",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -225204,7 +225332,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#6",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#6",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -225215,7 +225343,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#7",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#7",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -225226,7 +225354,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#8",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#8",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#8",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -225237,7 +225365,7 @@
     },
     {
       "symbol": "L:ne.a(IIBIIII)V#9",
-      "renamedSymbol": "L:BattleContribution.a(IIBIIII)V#9",
+      "renamedSymbol": "L:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#9",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -266586,7 +266714,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#0",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#0",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -266597,7 +266725,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#1",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#1",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -266608,7 +266736,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#10",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#10",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -266619,7 +266747,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#11",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#11",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -266630,7 +266758,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#2",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#2",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -266641,7 +266769,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#3",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#3",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -266652,7 +266780,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#4",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#4",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -266663,7 +266791,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#5",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#5",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -266674,7 +266802,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#6",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#6",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -266685,7 +266813,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#7",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#7",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -266696,7 +266824,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#8",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#8",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#8",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -266707,7 +266835,7 @@
     },
     {
       "symbol": "L:rr.a(Lvd;Lpf;B)Z#9",
-      "renamedSymbol": "L:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#9",
+      "renamedSymbol": "L:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#9",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -271349,7 +271477,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#0",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#0",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -271360,7 +271488,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#1",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#1",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -271371,7 +271499,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#10",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#10",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#10",
       "originalName": "stackIn_47_0",
       "renamedName": "stackIn_47_0",
       "declaration": {
@@ -271382,7 +271510,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#11",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#11",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#11",
       "originalName": "stackIn_56_0",
       "renamedName": "stackIn_56_0",
       "declaration": {
@@ -271393,7 +271521,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#12",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#12",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#12",
       "originalName": "stackIn_63_0",
       "renamedName": "stackIn_63_0",
       "declaration": {
@@ -271404,7 +271532,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#13",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#13",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#13",
       "originalName": "stackIn_66_0",
       "renamedName": "stackIn_66_0",
       "declaration": {
@@ -271415,7 +271543,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#14",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#14",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#14",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -271426,7 +271554,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#15",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#15",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#15",
       "originalName": "stackIn_69_1",
       "renamedName": "stackIn_69_1",
       "declaration": {
@@ -271437,7 +271565,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#16",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#16",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#16",
       "originalName": "stackIn_70_2",
       "renamedName": "stackIn_70_2",
       "declaration": {
@@ -271448,7 +271576,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#17",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#17",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#17",
       "originalName": "stackIn_72_1",
       "renamedName": "stackIn_72_1",
       "declaration": {
@@ -271459,7 +271587,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#18",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#18",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#18",
       "originalName": "stackIn_73_2",
       "renamedName": "stackIn_73_2",
       "declaration": {
@@ -271470,7 +271598,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#19",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#19",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#19",
       "originalName": "stackIn_75_1",
       "renamedName": "stackIn_75_1",
       "declaration": {
@@ -271481,7 +271609,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#2",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#2",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -271492,7 +271620,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#20",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#20",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#20",
       "originalName": "stackIn_76_2",
       "renamedName": "stackIn_76_2",
       "declaration": {
@@ -271503,7 +271631,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#21",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#21",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#21",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -271514,7 +271642,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#22",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#22",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#22",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -271525,7 +271653,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#23",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#23",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#23",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -271536,7 +271664,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#24",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#24",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#24",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -271547,7 +271675,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#25",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#25",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#25",
       "originalName": "var9_ref_String",
       "renamedName": "var9_ref_String",
       "declaration": {
@@ -271558,7 +271686,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#26",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#26",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#26",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -271569,7 +271697,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#27",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#27",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#27",
       "originalName": "var11_ref_String",
       "renamedName": "var11_ref_String",
       "declaration": {
@@ -271580,7 +271708,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#28",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#28",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#28",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -271591,7 +271719,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#29",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#29",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#29",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -271602,7 +271730,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#3",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#3",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#3",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -271613,7 +271741,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#30",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#30",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#30",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -271624,7 +271752,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#31",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#31",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#31",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -271635,7 +271763,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#32",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#32",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#32",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -271646,7 +271774,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#33",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#33",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#33",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -271657,7 +271785,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#34",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#34",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#34",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -271668,7 +271796,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#35",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#35",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#35",
       "originalName": "var9Lifetime3",
       "renamedName": "var9Lifetime3",
       "declaration": {
@@ -271679,7 +271807,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#36",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#36",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#36",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -271690,7 +271818,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#4",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#4",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#4",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -271701,7 +271829,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#5",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#5",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#5",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -271712,7 +271840,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#6",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#6",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#6",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -271723,7 +271851,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#7",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#7",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#7",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -271734,7 +271862,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#8",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#8",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#8",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -271745,7 +271873,7 @@
     },
     {
       "symbol": "L:si.a(IILe;Le;ILjava/lang/String;Z)I#9",
-      "renamedSymbol": "L:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#9",
+      "renamedSymbol": "L:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#9",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -285539,7 +285667,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#0",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#0",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -285550,7 +285678,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#1",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#1",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -285561,7 +285689,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#2",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#2",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -285572,7 +285700,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#3",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#3",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#3",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -285583,7 +285711,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#4",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#4",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#4",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -285594,7 +285722,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#5",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#5",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -285605,7 +285733,7 @@
     },
     {
       "symbol": "L:ti.a(Ljava/lang/String;Z)Z#6",
-      "renamedSymbol": "L:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#6",
+      "renamedSymbol": "L:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -314524,7 +314652,7 @@
     },
     {
       "symbol": "L:wd.a(IBI)I#0",
-      "renamedSymbol": "L:NumericDateInputWidget.a(IBI)I#0",
+      "renamedSymbol": "L:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -320211,9 +320339,9 @@
     },
     {
       "symbol": "M:as.a(Lpf;IBI)Lvd;",
-      "renamedSymbol": "M:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;",
+      "renamedSymbol": "M:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findMenuComponentAt",
       "declaration": {
         "file": "as.java",
         "start": 451,
@@ -321630,9 +321758,9 @@
     },
     {
       "symbol": "M:bo.a(II)V",
-      "renamedSymbol": "M:AccountNoticeDialog.a(II)V",
+      "renamedSymbol": "M:AccountNoticeDialog.writeSingleByteRequest(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeSingleByteRequest",
       "declaration": {
         "file": "bo.java",
         "start": 4578,
@@ -322378,9 +322506,9 @@
     },
     {
       "symbol": "M:cf.a(Lpf;B)V",
-      "renamedSymbol": "M:StatusMessagePanel.a(LIntrusiveDeque;B)V",
+      "renamedSymbol": "M:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updatePanelPointerInteraction",
       "declaration": {
         "file": "cf.java",
         "start": 2107,
@@ -323291,9 +323419,9 @@
     },
     {
       "symbol": "M:da.a(ILjava/lang/String;)Z",
-      "renamedSymbol": "M:DebouncedValidator.a(ILjava/lang/String;)Z",
+      "renamedSymbol": "M:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isFriendPlayer",
       "declaration": {
         "file": "da.java",
         "start": 348,
@@ -324600,9 +324728,9 @@
     },
     {
       "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
-      "renamedSymbol": "M:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;",
+      "renamedSymbol": "M:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseString",
       "declaration": {
         "file": "dn.java",
         "start": 266,
@@ -326371,9 +326499,9 @@
     },
     {
       "symbol": "M:em.a(IIII[Lbi;I)V",
-      "renamedSymbol": "M:ProductionContent.a(IIII[LSprite;I)V",
+      "renamedSymbol": "M:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawTiledNineSlice",
       "declaration": {
         "file": "em.java",
         "start": 2762,
@@ -329022,9 +329150,9 @@
     },
     {
       "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
-      "renamedSymbol": "M:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resolveReflectionClass",
       "declaration": {
         "file": "ge.java",
         "start": 9875,
@@ -332289,9 +332417,9 @@
     },
     {
       "symbol": "M:i.a(IIIIII)V",
-      "renamedSymbol": "M:DialPainter.a(IIIIII)V",
+      "renamedSymbol": "M:DialPainter.addRectangleBrightness(IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addRectangleBrightness",
       "declaration": {
         "file": "i.java",
         "start": 1365,
@@ -334390,9 +334518,9 @@
     },
     {
       "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
-      "renamedSymbol": "M:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+      "renamedSymbol": "M:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "normalizeAccountName",
       "declaration": {
         "file": "ji.java",
         "start": 1489,
@@ -334478,9 +334606,9 @@
     },
     {
       "symbol": "M:jj.a(BILjava/lang/String;)Lqf;",
-      "renamedSymbol": "M:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;",
+      "renamedSymbol": "M:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadSoundEffectDefinition",
       "declaration": {
         "file": "jj.java",
         "start": 1614,
@@ -341375,9 +341503,9 @@
     },
     {
       "symbol": "M:ne.a(IIBIIII)V",
-      "renamedSymbol": "M:BattleContribution.a(IIBIIII)V",
+      "renamedSymbol": "M:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "adjustRectangleSaturationAndBrightness",
       "declaration": {
         "file": "ne.java",
         "start": 354,
@@ -347953,9 +348081,9 @@
     },
     {
       "symbol": "M:ra.a(I)V",
-      "renamedSymbol": "M:RandomAccessCacheFile.a(I)V",
+      "renamedSymbol": "M:RandomAccessCacheFile.pushLegacyRasterState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pushLegacyRasterState",
       "declaration": {
         "file": "ra.java",
         "start": 8333,
@@ -349295,9 +349423,9 @@
     },
     {
       "symbol": "M:rr.a(Lvd;Lpf;B)Z",
-      "renamedSymbol": "M:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z",
+      "renamedSymbol": "M:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "containsMenuComponent",
       "declaration": {
         "file": "rr.java",
         "start": 2373,
@@ -350010,9 +350138,9 @@
     },
     {
       "symbol": "M:si.a(IILe;Le;ILjava/lang/String;Z)I",
-      "renamedSymbol": "M:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I",
+      "renamedSymbol": "M:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountRequest",
       "declaration": {
         "file": "si.java",
         "start": 679,
@@ -352012,9 +352140,9 @@
     },
     {
       "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
-      "renamedSymbol": "M:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z",
+      "renamedSymbol": "M:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isIgnoredPlayer",
       "declaration": {
         "file": "ti.java",
         "start": 8781,
@@ -356852,9 +356980,9 @@
     },
     {
       "symbol": "M:wd.a(IBI)I",
-      "renamedSymbol": "M:NumericDateInputWidget.a(IBI)I",
+      "renamedSymbol": "M:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectPlayerNameIconIndex",
       "declaration": {
         "file": "wd.java",
         "start": 6684,
@@ -363782,7 +363910,7 @@
     },
     {
       "symbol": "P:as.a(Lpf;IBI)Lvd;#0",
-      "renamedSymbol": "P:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#0",
+      "renamedSymbol": "P:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -363793,7 +363921,7 @@
     },
     {
       "symbol": "P:as.a(Lpf;IBI)Lvd;#1",
-      "renamedSymbol": "P:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#1",
+      "renamedSymbol": "P:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -363804,7 +363932,7 @@
     },
     {
       "symbol": "P:as.a(Lpf;IBI)Lvd;#2",
-      "renamedSymbol": "P:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#2",
+      "renamedSymbol": "P:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -363815,7 +363943,7 @@
     },
     {
       "symbol": "P:as.a(Lpf;IBI)Lvd;#3",
-      "renamedSymbol": "P:FleetVisual.a(LIntrusiveDeque;IBI)LMenuComponent;#3",
+      "renamedSymbol": "P:FleetVisual.findMenuComponentAt(LIntrusiveDeque;IBI)LMenuComponent;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -368864,7 +368992,7 @@
     },
     {
       "symbol": "P:bo.a(II)V#0",
-      "renamedSymbol": "P:AccountNoticeDialog.a(II)V#0",
+      "renamedSymbol": "P:AccountNoticeDialog.writeSingleByteRequest(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -368875,7 +369003,7 @@
     },
     {
       "symbol": "P:bo.a(II)V#1",
-      "renamedSymbol": "P:AccountNoticeDialog.a(II)V#1",
+      "renamedSymbol": "P:AccountNoticeDialog.writeSingleByteRequest(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -370558,7 +370686,7 @@
     },
     {
       "symbol": "P:cf.a(Lpf;B)V#0",
-      "renamedSymbol": "P:StatusMessagePanel.a(LIntrusiveDeque;B)V#0",
+      "renamedSymbol": "P:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -370569,7 +370697,7 @@
     },
     {
       "symbol": "P:cf.a(Lpf;B)V#1",
-      "renamedSymbol": "P:StatusMessagePanel.a(LIntrusiveDeque;B)V#1",
+      "renamedSymbol": "P:StatusMessagePanel.updatePanelPointerInteraction(LIntrusiveDeque;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -372692,7 +372820,7 @@
     },
     {
       "symbol": "P:da.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "P:DebouncedValidator.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "P:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -372703,7 +372831,7 @@
     },
     {
       "symbol": "P:da.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "P:DebouncedValidator.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "P:DebouncedValidator.isFriendPlayer(ILjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -375409,7 +375537,7 @@
     },
     {
       "symbol": "P:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#0",
-      "renamedSymbol": "P:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#0",
+      "renamedSymbol": "P:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -375420,7 +375548,7 @@
     },
     {
       "symbol": "P:dn.a(Ljava/lang/String;Z)Ljava/lang/String;#1",
-      "renamedSymbol": "P:DualLinkDequeSequence.a(Ljava/lang/String;Z)Ljava/lang/String;#1",
+      "renamedSymbol": "P:DualLinkDequeSequence.reverseString(Ljava/lang/String;Z)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -379149,7 +379277,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#0",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#0",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -379160,7 +379288,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#1",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#1",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -379171,7 +379299,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#2",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#2",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -379182,7 +379310,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#3",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#3",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -379193,7 +379321,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#4",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#4",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -379204,7 +379332,7 @@
     },
     {
       "symbol": "P:em.a(IIII[Lbi;I)V#5",
-      "renamedSymbol": "P:ProductionContent.a(IIII[LSprite;I)V#5",
+      "renamedSymbol": "P:ProductionContent.drawTiledNineSlice(IIII[LSprite;I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -385771,7 +385899,7 @@
     },
     {
       "symbol": "P:ge.a(ILjava/lang/String;)Ljava/lang/Class;#0",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385782,7 +385910,7 @@
     },
     {
       "symbol": "P:ge.a(ILjava/lang/String;)Ljava/lang/Class;#1",
-      "renamedSymbol": "P:ImageProducerRasterBuffer.a(ILjava/lang/String;)Ljava/lang/Class;#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.resolveReflectionClass(ILjava/lang/String;)Ljava/lang/Class;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -394846,7 +394974,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#0",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#0",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -394857,7 +394985,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#1",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#1",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -394868,7 +394996,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#2",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#2",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -394879,7 +395007,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#3",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#3",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -394890,7 +395018,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#4",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#4",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -394901,7 +395029,7 @@
     },
     {
       "symbol": "P:i.a(IIIIII)V#5",
-      "renamedSymbol": "P:DialPainter.a(IIIIII)V#5",
+      "renamedSymbol": "P:DialPainter.addRectangleBrightness(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -399774,7 +399902,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
-      "renamedSymbol": "P:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
+      "renamedSymbol": "P:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399785,7 +399913,7 @@
     },
     {
       "symbol": "P:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
-      "renamedSymbol": "P:DateInputWidget.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
+      "renamedSymbol": "P:DateInputWidget.normalizeAccountName(Ljava/lang/CharSequence;Z)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399884,7 +400012,7 @@
     },
     {
       "symbol": "P:jj.a(BILjava/lang/String;)Lqf;#0",
-      "renamedSymbol": "P:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#0",
+      "renamedSymbol": "P:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399895,7 +400023,7 @@
     },
     {
       "symbol": "P:jj.a(BILjava/lang/String;)Lqf;#1",
-      "renamedSymbol": "P:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#1",
+      "renamedSymbol": "P:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399906,7 +400034,7 @@
     },
     {
       "symbol": "P:jj.a(BILjava/lang/String;)Lqf;#2",
-      "renamedSymbol": "P:ConquestVictoryChecker.a(BILjava/lang/String;)LSoundEffectDefinition;#2",
+      "renamedSymbol": "P:ConquestVictoryChecker.loadSoundEffectDefinition(BILjava/lang/String;)LSoundEffectDefinition;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -415438,7 +415566,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#0",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#0",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -415449,7 +415577,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#1",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#1",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -415460,7 +415588,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#2",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#2",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -415471,7 +415599,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#3",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#3",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -415482,7 +415610,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#4",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#4",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -415493,7 +415621,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#5",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#5",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -415504,7 +415632,7 @@
     },
     {
       "symbol": "P:ne.a(IIBIIII)V#6",
-      "renamedSymbol": "P:BattleContribution.a(IIBIIII)V#6",
+      "renamedSymbol": "P:BattleContribution.adjustRectangleSaturationAndBrightness(IIBIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -431938,7 +432066,7 @@
     },
     {
       "symbol": "P:ra.a(I)V#0",
-      "renamedSymbol": "P:RandomAccessCacheFile.a(I)V#0",
+      "renamedSymbol": "P:RandomAccessCacheFile.pushLegacyRasterState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434842,7 +434970,7 @@
     },
     {
       "symbol": "P:rr.a(Lvd;Lpf;B)Z#0",
-      "renamedSymbol": "P:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#0",
+      "renamedSymbol": "P:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434853,7 +434981,7 @@
     },
     {
       "symbol": "P:rr.a(Lvd;Lpf;B)Z#1",
-      "renamedSymbol": "P:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#1",
+      "renamedSymbol": "P:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434864,7 +434992,7 @@
     },
     {
       "symbol": "P:rr.a(Lvd;Lpf;B)Z#2",
-      "renamedSymbol": "P:TextInputPainter.a(LMenuComponent;LIntrusiveDeque;B)Z#2",
+      "renamedSymbol": "P:TextInputPainter.containsMenuComponent(LMenuComponent;LIntrusiveDeque;B)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -436492,7 +436620,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#0",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#0",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -436503,7 +436631,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#1",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#1",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -436514,7 +436642,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#2",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#2",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -436525,7 +436653,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#3",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#3",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -436536,7 +436664,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#4",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#4",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -436547,7 +436675,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#5",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#5",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -436558,7 +436686,7 @@
     },
     {
       "symbol": "P:si.a(IILe;Le;ILjava/lang/String;Z)I#6",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#6",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.pollAccountRequest(IILAccountFieldValue;LAccountFieldValue;ILjava/lang/String;Z)I#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -442399,7 +442527,7 @@
     },
     {
       "symbol": "P:ti.a(Ljava/lang/String;Z)Z#0",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#0",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -442410,7 +442538,7 @@
     },
     {
       "symbol": "P:ti.a(Ljava/lang/String;Z)Z#1",
-      "renamedSymbol": "P:IntrusiveNodeHashTable.a(Ljava/lang/String;Z)Z#1",
+      "renamedSymbol": "P:IntrusiveNodeHashTable.isIgnoredPlayer(Ljava/lang/String;Z)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -453916,7 +454044,7 @@
     },
     {
       "symbol": "P:wd.a(IBI)I#0",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IBI)I#0",
+      "renamedSymbol": "P:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -453927,7 +454055,7 @@
     },
     {
       "symbol": "P:wd.a(IBI)I#1",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IBI)I#1",
+      "renamedSymbol": "P:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -453938,7 +454066,7 @@
     },
     {
       "symbol": "P:wd.a(IBI)I#2",
-      "renamedSymbol": "P:NumericDateInputWidget.a(IBI)I#2",
+      "renamedSymbol": "P:NumericDateInputWidget.selectPlayerNameIconIndex(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -478685,7 +478813,7 @@
       "original": "as.java",
       "renamed": "FleetVisual.java",
       "inputSha256": "61dbaed629ed0aa5a4025d23742fa0d3fdc16cdbb41521f63f3c91bfc9839409",
-      "outputSha256": "a4261c29215aa29302da7c7fb0257d85fd415be656e15b601b9bab33830bb543",
+      "outputSha256": "ba97c23d244d116d4b3ad912437c3bd6ade1f95ff385610a06d0e980fb1d82ae",
       "edits": [
         {
           "start": 50,
@@ -478735,6 +478863,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "MenuComponent"
+        },
+        {
+          "start": 451,
+          "end": 452,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
         },
         {
           "start": 453,
@@ -483404,7 +483539,7 @@
       "original": "bg.java",
       "renamed": "LoginMethodPreference.java",
       "inputSha256": "89993fb668ee114c8917c9fa897882529c07440335e376bb043cb5ab1abbc0a5",
-      "outputSha256": "fade07ab387135b0e7c7810a4966d7603775a7cacd8ad20500c56b8f471cc051",
+      "outputSha256": "cdd4f5eb3976eeb2a18b20f4fc1acca444704a9b064e7ddb314a88f1700e1bed",
       "edits": [
         {
           "start": 50,
@@ -483573,6 +483708,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 2708,
+          "end": 2709,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 2734,
@@ -486908,7 +487050,7 @@
       "original": "bk.java",
       "renamed": "ChatCompositionSupport.java",
       "inputSha256": "5a9407e814065d6b3573dbb8d36d09172980615c71df0343995c53b072787cc1",
-      "outputSha256": "136c4603c1ad065a93809d960cd8a7395c218d8fd29e0070ea1598db169aa29b",
+      "outputSha256": "5d538b7257a64dc6cf809d8aa48e7b23228284276aaadfd46d079cd20c05be04",
       "edits": [
         {
           "start": 50,
@@ -487196,6 +487338,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "DebouncedValidator"
+        },
+        {
+          "start": 5661,
+          "end": 5662,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
         },
         {
           "start": 5671,
@@ -487843,7 +487992,7 @@
       "original": "bo.java",
       "renamed": "AccountNoticeDialog.java",
       "inputSha256": "84768556095b83c8c37d13638f944dacccd0f3396ff38e480b0841a201690ce6",
-      "outputSha256": "ee7098c7032022bf86d6176efa7d63e780282acc603213fcc871263ecd8a0453",
+      "outputSha256": "a4c8834a717b92557894f82da5615f734e471e2132bd6b3b48d321c306790b0e",
       "edits": [
         {
           "start": 50,
@@ -488180,6 +488329,13 @@
           "symbol": "M:bo.f(Z)V",
           "original": "f",
           "renamed": "dismiss"
+        },
+        {
+          "start": 4578,
+          "end": 4579,
+          "symbol": "M:bo.a(II)V",
+          "original": "a",
+          "renamed": "writeSingleByteRequest"
         },
         {
           "start": 4614,
@@ -489737,7 +489893,7 @@
       "original": "bs.java",
       "renamed": "RasterTargetSupport.java",
       "inputSha256": "abbcbc525ea28096a569ff30329ccdeafd80074ee97c6d4558ae99ca74467ed8",
-      "outputSha256": "3c498320eac390872f2cb52227dabf154baf075d827a4e217efa62633f586bd4",
+      "outputSha256": "04042409e9dddfb03192c25b9737550ae239f1b8b098a6efc9d830c0eada9a51",
       "edits": [
         {
           "start": 50,
@@ -489822,6 +489978,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 597,
+          "end": 598,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 623,
@@ -493111,7 +493274,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "4f85d99660d31392a96f9dd921d893cdf9a36187d17a1777a051fa87cb09ac9b",
+      "outputSha256": "740072e39d91de3e3c60555818ffae1bc8c6cbba2d89bade1da50c3e8b0707c6",
       "edits": [
         {
           "start": 50,
@@ -493252,6 +493415,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2107,
+          "end": 2108,
+          "symbol": "M:cf.a(Lpf;B)V",
+          "original": "a",
+          "renamed": "updatePanelPointerInteraction"
         },
         {
           "start": 2109,
@@ -497107,7 +497277,7 @@
       "original": "ck.java",
       "renamed": "GameAssetSetupSupport.java",
       "inputSha256": "59719f0315e8d99b2db60702fc77f74ed0b563d31dd2ef793727c26cf2316a34",
-      "outputSha256": "925c68a038a77cd1ef890bd20d56d61da347c9d10ed69a204344612977a8ebe8",
+      "outputSha256": "cd4fd392bf0fedde9df1156036acbb5613c1142978e6d1b06576685756903b58",
       "edits": [
         {
           "start": 50,
@@ -497334,6 +497504,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 1766,
+          "end": 1767,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
+        },
+        {
           "start": 1785,
           "end": 1787,
           "symbol": "C:jf",
@@ -497465,6 +497642,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 2142,
+          "end": 2143,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 2236,
@@ -498081,6 +498265,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 4837,
+          "end": 4838,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 4856,
@@ -503151,7 +503342,7 @@
       "original": "da.java",
       "renamed": "DebouncedValidator.java",
       "inputSha256": "cc1863d0c246e75ec17603bb0553605c6b662932ec55848b640443c7b8f49543",
-      "outputSha256": "1cc78daf41e67888ed1a1963f09100cd95505d9eb55508d72a2c1619ddb76361",
+      "outputSha256": "97350b0d820ade55ab4d181e615bb279a6e36bbcc575dd67823009ea1d7fdb8a",
       "edits": [
         {
           "start": 53,
@@ -503187,6 +503378,13 @@
           "symbol": "M:da.a(Z)Lu;",
           "original": "a",
           "renamed": "computeState"
+        },
+        {
+          "start": 348,
+          "end": 349,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
         },
         {
           "start": 711,
@@ -511109,7 +511307,7 @@
       "original": "di.java",
       "renamed": "FleetTrailPoint.java",
       "inputSha256": "fd8e83ffb38f4d4a0d13dc804f92389a188a5c9559da34d60304b86b8b7fb614",
-      "outputSha256": "b0227fa84091bc4833b839e1319ced546dd0b2af9021fc95c196f8fd31f507c9",
+      "outputSha256": "99011d5307828667404982ebb688333042f629b9729349c7acc14676c739e0a9",
       "edits": [
         {
           "start": 50,
@@ -511609,6 +511807,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 4231,
+          "end": 4232,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 4289,
           "end": 4291,
           "symbol": "C:di",
@@ -511649,6 +511854,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 4566,
+          "end": 4567,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 4804,
@@ -514418,7 +514630,7 @@
       "original": "dn.java",
       "renamed": "DualLinkDequeSequence.java",
       "inputSha256": "9273bff7b1ed04de92cf8de79e4d0398c0582e1e2203a09d0573575ad213c8ad",
-      "outputSha256": "3acce5906292b2733b4b2dc9f74ccd0793a2993a315c557b781f431b35d7e5f3",
+      "outputSha256": "da2a80a0e4bc2dd12c6ad7b41dd347729b49dd866070890d51c9ac5c962f2368",
       "edits": [
         {
           "start": 50,
@@ -514454,6 +514666,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 266,
+          "end": 267,
+          "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseString"
         },
         {
           "start": 1497,
@@ -516104,7 +516323,7 @@
       "original": "ea.java",
       "renamed": "IsaacBackedRandom.java",
       "inputSha256": "04b3e6ab78693db69b5a0be0ba257e9a0bab0957af0610b85410d4b66773c7b6",
-      "outputSha256": "6971be95b22e663ef14a2492ac625182f7353eede09e54d53eb228cbc18820a1",
+      "outputSha256": "6e36b09c83ccf5e9ae5404c7f2e1e40d32cbbb16ba7a6a6144bd80ad730a766e",
       "edits": [
         {
           "start": 71,
@@ -516259,6 +516478,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 961,
+          "end": 962,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 986,
@@ -517310,7 +517536,7 @@
       "original": "ec.java",
       "renamed": "UsernameAvailabilityValidator.java",
       "inputSha256": "d920473148bca1519432704dfbe72f17927a010a8cdfdd0700b4f24fd9a3d96b",
-      "outputSha256": "1112356713dc139052e7bc8a974acfd39ae9f2fa7d430902948d1617d75a78f0",
+      "outputSha256": "aab5fc698ccd2fe78a20c7871d59aeaa79cb885b83d51e329851f0dd4c630099",
       "edits": [
         {
           "start": 50,
@@ -517703,6 +517929,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 4546,
+          "end": 4547,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 4568,
@@ -537942,7 +538175,7 @@
       "original": "em.java",
       "renamed": "ProductionContent.java",
       "inputSha256": "8bc3641759e8cac62c171585ad3c84e677fb1346cb114d7253eb77498e54d068",
-      "outputSha256": "6a00a1121817db4305d412e339966046612f9f9036d5acd3cd12aa8578481ff6",
+      "outputSha256": "157b11d50c5ef9cf63ad09c3bebc25c332bec513611be93d345ce156761a801b",
       "edits": [
         {
           "start": 50,
@@ -538069,6 +538302,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2762,
+          "end": 2763,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
         },
         {
           "start": 2812,
@@ -539984,7 +540224,7 @@
       "original": "er.java",
       "renamed": "WhirlpoolHasher.java",
       "inputSha256": "6c024acd825e819ff6d265c3779246c9bb2de06c9792dad4650e2f28358ed47a",
-      "outputSha256": "f3a34c12a51a38f47a2a5cc8c02eaa2d0c50e32ba9d47376c14d83bce76f5f39",
+      "outputSha256": "ba169fbc2a6879bf30ff010aa2ac891606ce7ffa36d086751fa4cf71255f62c1",
       "edits": [
         {
           "start": 50,
@@ -540657,6 +540897,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 18228,
+          "end": 18229,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 18252,
@@ -544483,7 +544730,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "09c9635a2986fa619cf52a53dcaf13dd4aab55f4e7823a74593aab8c9a096ec1",
+      "outputSha256": "955bd029af66b0f367bcf98b99e2df9ee349482d0305b3507d494385a1686d89",
       "edits": [
         {
           "start": 50,
@@ -545093,6 +545340,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 7410,
+          "end": 7411,
+          "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+          "original": "a",
+          "renamed": "isIgnoredPlayer"
         },
         {
           "start": 7527,
@@ -550625,7 +550879,7 @@
       "original": "fs.java",
       "renamed": "Player.java",
       "inputSha256": "e316cffd9f19d30a619de69037ee57ea761466ce5d57cb1c23271525a82ae9c9",
-      "outputSha256": "708d0de5afe693af1d23d049d65f17c3a89ab82d33459504ef55f861db838a1f",
+      "outputSha256": "4f57e24c20c4df505b10aefab947d2b014f8f8d97304cda7aa79ec51a2a1d58a",
       "edits": [
         {
           "start": 50,
@@ -550773,6 +551027,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 1132,
+          "end": 1133,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 1733,
@@ -555684,7 +555945,7 @@
       "original": "ge.java",
       "renamed": "ImageProducerRasterBuffer.java",
       "inputSha256": "f3bd003c31bb4fb5df4d3abd17c7aa77357e4057a2808176009f469d5b46d61f",
-      "outputSha256": "ef8526ebb5a5a28a51b785dc60814553a13739e71218db278ba6ac7f12283548",
+      "outputSha256": "babdfbcc93fbc1cc81f1b4b1084eb241d91ae6636ef84a506029d15649ffca12",
       "edits": [
         {
           "start": 71,
@@ -556035,6 +556296,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 9875,
+          "end": 9876,
+          "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
+          "original": "a",
+          "renamed": "resolveReflectionClass"
         },
         {
           "start": 10724,
@@ -564089,7 +564357,7 @@
       "original": "gq.java",
       "renamed": "QuickChatParameterType.java",
       "inputSha256": "ce401473a3b9659b21f4128dad97ad4741f59dc19bbe38861b4585b9d0d924e0",
-      "outputSha256": "9ea3186c1c27b74b643dee0beb7c48479b79eeae47c666d3e0f76112f1882b21",
+      "outputSha256": "933f43c1afebf58dc9f8dcf747d28e793c6071b438d46283e9f7a3d447ce4151",
       "edits": [
         {
           "start": 50,
@@ -564132,6 +564400,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 1141,
+          "end": 1142,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 1239,
@@ -566306,7 +566581,7 @@
       "original": "hb.java",
       "renamed": "NodeSequence.java",
       "inputSha256": "d70fa3b89b69260ab4f92be006e421593ab451732e6b534eb975542d0a12294e",
-      "outputSha256": "6ab63fbdd31923c4e9392e97e257bcb90cdaf420f6cc76dacbef0ea41b139dff",
+      "outputSha256": "82cbab3f8d62d7eb708907e1c638127a2ec7ac4d5276ab030e89e0410e0e2007",
       "edits": [
         {
           "start": 53,
@@ -566421,6 +566696,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 2549,
+          "end": 2550,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 2647,
           "end": 2649,
           "symbol": "C:ve",
@@ -566461,6 +566743,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 2976,
+          "end": 2977,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 3132,
@@ -566552,7 +566841,7 @@
       "original": "hc.java",
       "renamed": "MeshMaterial.java",
       "inputSha256": "cbdb210fd6b05407d73150f60e3bcb0e0a9f9a5402910b4ac67c3363890b64d8",
-      "outputSha256": "d74d741a632e8d02782313900aa6c71200e742c26f961bc16069bc632b5f4d0c",
+      "outputSha256": "4b6d2a3c093ab431a81caabdf59567657b7bca2da57848b8bff40c4946336723",
       "edits": [
         {
           "start": 50,
@@ -566707,6 +566996,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 1776,
+          "end": 1777,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 1793,
@@ -566868,7 +567164,7 @@
       "original": "hd.java",
       "renamed": "IntroTextLine.java",
       "inputSha256": "98b5c39df933650b6a4d1f0278f70ca75a567b3fb1b8329f003fc1df3e00d1f5",
-      "outputSha256": "c03cb31cbad029b4686d3cf676c59990eae3e56c2b1e4f9e5e303ae31bed7bb7",
+      "outputSha256": "97156d0d0d8946f2835c51d370c3d80b55dbb4b5ea1bc4258a1782e5ac348493",
       "edits": [
         {
           "start": 50,
@@ -567226,6 +567522,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3612,
+          "end": 3613,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 3644,
@@ -574594,7 +574897,7 @@
       "original": "hl.java",
       "renamed": "ValidationIndicator.java",
       "inputSha256": "0bd0dd64298ac933565258bdc29b6ad79c8d18c7ab0e48a7c32a4496d91c2f20",
-      "outputSha256": "38dfaf9631fb6f915b7f0cc29061cb493d1187560f022484f75f65f123d6edce",
+      "outputSha256": "76a8a62f7624fa9995f6fb365d1ff95c7e5ff7468fed1356b2e71a548753c61a",
       "edits": [
         {
           "start": 50,
@@ -574903,6 +575206,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 5244,
+          "end": 5245,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 5261,
@@ -578488,7 +578798,7 @@
       "original": "i.java",
       "renamed": "DialPainter.java",
       "inputSha256": "8aef1a049de4964761da5246a3f428b1d77a813b082334f1118b5f97ed395a25",
-      "outputSha256": "9e9b1c24404c4e4e7bdb02b8ba0d71ee47fa2df6d25a37d3c3b0d050d210aae5",
+      "outputSha256": "b1d41fca3d627e653ab88966c8faf8448a0c3b8fda88c8f96a98b85cec3e7b55",
       "edits": [
         {
           "start": 71,
@@ -578561,6 +578871,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 829,
+          "end": 830,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 854,
           "end": 856,
           "symbol": "C:hd",
@@ -578596,11 +578913,25 @@
           "renamed": "DialPainter"
         },
         {
+          "start": 1269,
+          "end": 1270,
+          "symbol": "M:i.a(IIIIII)V",
+          "original": "a",
+          "renamed": "addRectangleBrightness"
+        },
+        {
           "start": 1324,
           "end": 1326,
           "symbol": "C:el",
           "original": "el",
           "renamed": "TertiaryNodeList"
+        },
+        {
+          "start": 1365,
+          "end": 1366,
+          "symbol": "M:i.a(IIIIII)V",
+          "original": "a",
+          "renamed": "addRectangleBrightness"
         },
         {
           "start": 2037,
@@ -588138,7 +588469,7 @@
       "original": "jc.java",
       "renamed": "ArchiveRequest.java",
       "inputSha256": "d9296a9ddeafbd379e2873893951773949205131a47d5e7ecb668e02ba42c09d",
-      "outputSha256": "09348de923d40041562b013ebf0196e3f8c7e1111fff5b7b3b011804cfea62eb",
+      "outputSha256": "509d4106059d7c2d6286e136237a7ca86c61ab737bd4f0e6ec7fe4804c735a6c",
       "edits": [
         {
           "start": 53,
@@ -588412,6 +588743,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3572,
+          "end": 3573,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 3589,
@@ -590538,7 +590876,7 @@
       "original": "ji.java",
       "renamed": "DateInputWidget.java",
       "inputSha256": "1334e228494e0c4354456456e93288a6e3f069c67c179f8ffa285c8fd6d2d381",
-      "outputSha256": "8983ae178650607fd5226d847a408ef0ff2699adca673d6836227a495d6f72f4",
+      "outputSha256": "35f5ed4cac40fb211b3c95c0c9cf181ddfe8382524f54bf5487aa88c1341df2b",
       "edits": [
         {
           "start": 53,
@@ -590742,6 +591080,13 @@
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "AttackTask"
+        },
+        {
+          "start": 1489,
+          "end": 1490,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 2354,
@@ -591015,7 +591360,7 @@
       "original": "jj.java",
       "renamed": "ConquestVictoryChecker.java",
       "inputSha256": "7dd460fb217931e50a8f84cb4e76c021f08b54b48a8a7a0a4b80642450121fce",
-      "outputSha256": "de5828c4e3252bb37c3217fa715c5cbc565c193affd312b3d1210fc9cf61d649",
+      "outputSha256": "b7cd4834e805487705b0443b016f6b3acfb843279b1151cabcfc80ee95490635",
       "edits": [
         {
           "start": 50,
@@ -591086,6 +591431,13 @@
           "symbol": "C:qf",
           "original": "qf",
           "renamed": "SoundEffectDefinition"
+        },
+        {
+          "start": 1614,
+          "end": 1615,
+          "symbol": "M:jj.a(BILjava/lang/String;)Lqf;",
+          "original": "a",
+          "renamed": "loadSoundEffectDefinition"
         },
         {
           "start": 1704,
@@ -591277,6 +591629,13 @@
           "renamed": "ConquestVictoryChecker"
         },
         {
+          "start": 3647,
+          "end": 3648,
+          "symbol": "M:jj.a(BILjava/lang/String;)Lqf;",
+          "original": "a",
+          "renamed": "loadSoundEffectDefinition"
+        },
+        {
           "start": 3688,
           "end": 3690,
           "symbol": "C:pd",
@@ -591402,7 +591761,7 @@
       "original": "jl.java",
       "renamed": "ResizingDialog.java",
       "inputSha256": "463070a764676665094679284334777655501317e1b625d5737bb65cdf58764c",
-      "outputSha256": "738c69bb5f5601821844acb40987ffc56f5748305628cf6387e55b163fb3613c",
+      "outputSha256": "db195a9cb3517ccd462befca7958aae55130e2cc3a90e0297453044c3e86f930",
       "edits": [
         {
           "start": 53,
@@ -591781,6 +592140,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 6340,
+          "end": 6341,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 6421,
@@ -592743,7 +593109,7 @@
       "original": "jp.java",
       "renamed": "SocialNameInputPanel.java",
       "inputSha256": "6dbdbeab855f3249f85c111125312aff1c460a4e1c483432034585cea19cfb1a",
-      "outputSha256": "9a955e83b7583ce735c18c314f5ed3e4efa8f4cb4cf4df4af86a9d11c356e3d1",
+      "outputSha256": "cce3c0ffa4770397a76aba25e44195be2de66efabf5c68cbfa32a4166c0fe76c",
       "edits": [
         {
           "start": 50,
@@ -593234,6 +593600,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 10903,
+          "end": 10904,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 11372,
@@ -600504,7 +600877,7 @@
       "original": "kb.java",
       "renamed": "GradientMenuLabel.java",
       "inputSha256": "58cc5c04d0e33888b77d6a325b2ed8a646d3deef9bbb068a05fe480648bb96bb",
-      "outputSha256": "7ce5455c7a9f6c79e4c5e277c957974ff3cc27eab2e95ddd74bd36dce35eeacc",
+      "outputSha256": "3fa9e1f8cc297314a6620ae409a26d788f616654831a2144c2c1424ff5d0e917",
       "edits": [
         {
           "start": 50,
@@ -600598,6 +600971,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 539,
+          "end": 540,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 565,
           "end": 567,
           "symbol": "M:kb.<init>(IIIILjava/lang/String;IZ)V",
@@ -600624,6 +601004,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 1058,
+          "end": 1059,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 1090,
@@ -605361,7 +605748,7 @@
       "original": "kg.java",
       "renamed": "FocusableWidget.java",
       "inputSha256": "841a347596a3e240608831f4e85f1fc193b5fadacede7c3a89a3fca56943b6a7",
-      "outputSha256": "7b518be606b9f66c0c2a1813c3fba9f44bf697fcd1b31ef6fff2c968482344ff",
+      "outputSha256": "942c8551136eb167d408bb72bc9935b84c8858560b0ee33fc2c0fcf183012e2b",
       "edits": [
         {
           "start": 65,
@@ -605670,6 +606057,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 6592,
+          "end": 6593,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 6617,
@@ -616730,7 +617124,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "def2591a8668ce2fad688c6324d0f74e721c57f6069e6bb2dd24b52cac617376",
+      "outputSha256": "d566256e3893c6c7528a7714aba58ed01f70d1b93c1fc50d62ebdb7ad2bb3fa6",
       "edits": [
         {
           "start": 50,
@@ -623009,6 +623403,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 111031,
+          "end": 111032,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
+        },
+        {
           "start": 111066,
           "end": 111067,
           "symbol": "M:bi.e()V",
@@ -625553,6 +625954,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 151721,
+          "end": 151722,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 151742,
@@ -629020,6 +629428,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 200250,
+          "end": 200251,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 200282,
@@ -638215,7 +638630,7 @@
       "original": "lp.java",
       "renamed": "MenuList.java",
       "inputSha256": "d346369e465b7a6a17cf031848c265338eb0859a9dac7511effcfacbf594d530",
-      "outputSha256": "c7cf7d7e652da9d919dc582234ef20aad459742c0f8e877983f29aed56094079",
+      "outputSha256": "7c09477caa16afdd86daedb1cf49212b3ff5d94af35968ad4050c4fe4660db67",
       "edits": [
         {
           "start": 50,
@@ -638918,6 +639333,13 @@
           "renamed": "FleetVisual"
         },
         {
+          "start": 6473,
+          "end": 6474,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
+        },
+        {
           "start": 6573,
           "end": 6574,
           "symbol": "M:vd.b(BII)Lvd;",
@@ -638937,6 +639359,13 @@
           "symbol": "C:as",
           "original": "as",
           "renamed": "FleetVisual"
+        },
+        {
+          "start": 6813,
+          "end": 6814,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
         },
         {
           "start": 6918,
@@ -645209,7 +645638,7 @@
       "original": "md.java",
       "renamed": "StripedProgressWidget.java",
       "inputSha256": "2e554a21872f3bf46ffae515f88464fda482d64d721fd79041ef0db91f520983",
-      "outputSha256": "61d5ad5e56b854828aabb4a40a9620be91e3a00f6608b6ae09e5fce33c87a279",
+      "outputSha256": "b24470c501913148af4f462b76a766e23c5a1ee1f31068bfab2d26429808ecde",
       "edits": [
         {
           "start": 50,
@@ -645735,6 +646164,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 9295,
+          "end": 9296,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 9320,
@@ -649408,7 +649844,7 @@
       "original": "mj.java",
       "renamed": "LobbyPlayerEntry.java",
       "inputSha256": "459ef2383ebaffdd48cf87318bd37d6a78ca40a0b45a75ce12a9d1dc7a152758",
-      "outputSha256": "91b9e7fe27af1058c6d710b58c54cdb8500d9b0e73d6acbc2fc958eac3e91d1b",
+      "outputSha256": "17984b923c871011e124c50686f0be3a618def0ffcb060ef97a04a3dc108ba49",
       "edits": [
         {
           "start": 50,
@@ -649705,6 +650141,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 3512,
+          "end": 3513,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 3597,
           "end": 3598,
           "symbol": "C:r",
@@ -649885,6 +650328,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 6539,
+          "end": 6540,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 6624,
@@ -651797,7 +652247,7 @@
       "original": "ms.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "e63aa93bc8bb4dc8c749a023cebd0c5712ae17519fee111c9709c7d22803c2db",
-      "outputSha256": "ca71204a2c654a68dcbddbfcc5abf68b92a8f70527329aace9d631871a5ab572",
+      "outputSha256": "ab53b2e65e9bdc292916b45ebbbf501de743e0ed3112d739ced02874a848a681",
       "edits": [
         {
           "start": 53,
@@ -651840,6 +652290,13 @@
           "symbol": "C:dn",
           "original": "dn",
           "renamed": "DualLinkDequeSequence"
+        },
+        {
+          "start": 863,
+          "end": 864,
+          "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseString"
         },
         {
           "start": 957,
@@ -652233,7 +652690,7 @@
       "original": "na.java",
       "renamed": "Bzip2State.java",
       "inputSha256": "ca158df6e839018ad6cb0b0b4baaffe3b3171e80e5452b91a186c966dbc74b6c",
-      "outputSha256": "d7c56c8af7ddeae9428c798766dff0304b9be8e0ab22af20c9f8da19b9dc0904",
+      "outputSha256": "a78291df4b0c2b2914ed4920fcba7fa7b3171c2f82c4f3e7d1681973ded9776a",
       "edits": [
         {
           "start": 71,
@@ -652276,6 +652733,13 @@
           "symbol": "C:dn",
           "original": "dn",
           "renamed": "DualLinkDequeSequence"
+        },
+        {
+          "start": 1588,
+          "end": 1589,
+          "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseString"
         },
         {
           "start": 1681,
@@ -654162,7 +654626,7 @@
       "original": "ne.java",
       "renamed": "BattleContribution.java",
       "inputSha256": "9fedd35967e4eca7648a45799c1ea9a35e1eb0c80ed721241f8c1e5708198f55",
-      "outputSha256": "ba055e2f39cf611558a673622573a2e3959f94d7da7aff61d74dd7c3a7e5c3ad",
+      "outputSha256": "7d7193b9936d785ebd5599056c662d250b84a3d89a5c68d38e02d87acce96576",
       "edits": [
         {
           "start": 50,
@@ -654198,6 +654662,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 354,
+          "end": 355,
+          "symbol": "M:ne.a(IIBIIII)V",
+          "original": "a",
+          "renamed": "adjustRectangleSaturationAndBrightness"
         },
         {
           "start": 1213,
@@ -654317,6 +654788,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3072,
+          "end": 3073,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 3094,
@@ -654905,7 +655383,7 @@
       "original": "nf.java",
       "renamed": "ChatHistoryEntry.java",
       "inputSha256": "e09ca9039222dfd3c5dcb2e0539262d9bba4d0c723f15ad01918e335a855a4ef",
-      "outputSha256": "7c59ad88ef3e3640865bcea1c25bb31ee677852c01b4ab0b4b74364d9dcca645",
+      "outputSha256": "1a85cf6f82befdcc8b4ae6d212b2a6e1a04adc293d55af8771294c29c2ce5fc6",
       "edits": [
         {
           "start": 50,
@@ -654950,6 +655428,13 @@
           "renamed": "DebouncedValidator"
         },
         {
+          "start": 697,
+          "end": 698,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
+        },
+        {
           "start": 992,
           "end": 994,
           "symbol": "C:ec",
@@ -654969,6 +655454,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "DebouncedValidator"
+        },
+        {
+          "start": 1084,
+          "end": 1085,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
         },
         {
           "start": 1348,
@@ -656270,7 +656762,7 @@
       "original": "nj.java",
       "renamed": "ClientDialogSupport.java",
       "inputSha256": "518ce20da85be3484511bb0904de127e71f1be35d46e5959db1ba83ba0645f37",
-      "outputSha256": "9ef72bf122482c52e1dbe4afa936aff1cf28f0a03f4ba25aeb9d399ae311e1e5",
+      "outputSha256": "de9aa2325ac9e0dd1cd3e72f06390628118eaa0db53a73425930e78b25dccc80",
       "edits": [
         {
           "start": 50,
@@ -656441,6 +656933,13 @@
           "renamed": "DebouncedValidator"
         },
         {
+          "start": 1586,
+          "end": 1587,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
+        },
+        {
           "start": 1634,
           "end": 1636,
           "symbol": "C:re",
@@ -656509,6 +657008,13 @@
           "symbol": "C:ti",
           "original": "ti",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 2137,
+          "end": 2138,
+          "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+          "original": "a",
+          "renamed": "isIgnoredPlayer"
         },
         {
           "start": 2183,
@@ -672042,7 +672548,7 @@
       "original": "os.java",
       "renamed": "RoundedMenuPanel.java",
       "inputSha256": "d22b0fb9af399a6e14631d67837bad1e9a6371a9585a61547aaf5363451960fa",
-      "outputSha256": "271a16e8aa8fef376ad9b0bcc728042e8d1fad7aae1c1ef42ddc5da34837324b",
+      "outputSha256": "ba580fcfe34d44fe1f2b166f4c1e78578deb82de13c50246872af31e1903698b",
       "edits": [
         {
           "start": 50,
@@ -672855,6 +673361,13 @@
           "symbol": "C:as",
           "original": "as",
           "renamed": "FleetVisual"
+        },
+        {
+          "start": 9686,
+          "end": 9687,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
         },
         {
           "start": 9776,
@@ -684509,7 +685022,7 @@
       "original": "qh.java",
       "renamed": "MenuWindow.java",
       "inputSha256": "0960f0e3db3c856cd76c5017fc57c59f250212a2958314c4fd56e5c391974b71",
-      "outputSha256": "b194ef6c02a8864a687f750f529f0506998e1e9e1d886972bdbf40feaba5553f",
+      "outputSha256": "3714cfb71f89d6d37419268f3da3860705070b45f4da35270139f27fcf5cf65e",
       "edits": [
         {
           "start": 50,
@@ -685282,6 +685795,13 @@
           "renamed": "FleetVisual"
         },
         {
+          "start": 8433,
+          "end": 8434,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
+        },
+        {
           "start": 8524,
           "end": 8526,
           "symbol": "C:vd",
@@ -685645,7 +686165,7 @@
       "original": "qj.java",
       "renamed": "TutorialTextSupport.java",
       "inputSha256": "202f14a23e6697ddd81d6aa56e68fb4914ecba7109a841d04e0c2c59e3d21e49",
-      "outputSha256": "9c9bf29558b0941408e4068caa554b87f275db1c1d1eeab6e26c72562159db66",
+      "outputSha256": "3082e7ed693f81232e371f5a5873ef1adbe253923b767f668e67584bcac1e2ee",
       "edits": [
         {
           "start": 50,
@@ -685786,6 +686306,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 1499,
+          "end": 1500,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 1546,
@@ -689559,7 +690086,7 @@
       "original": "qr.java",
       "renamed": "AnimatedPanel.java",
       "inputSha256": "f219693ef275888de47ae02be33a5e640656d150113bf01898124b153da23b8b",
-      "outputSha256": "1334b39ce4da9477a66819a514d3972d833e2d8a2df7503df6798f18057c0991",
+      "outputSha256": "aa08054152b3bea6445878b5982537d57c2b7c4c75cf77fe5152fcc06164f1a6",
       "edits": [
         {
           "start": 44,
@@ -690773,11 +691300,25 @@
           "renamed": "ProductionContent"
         },
         {
+          "start": 31684,
+          "end": 31685,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
+        },
+        {
           "start": 31757,
           "end": 31759,
           "symbol": "C:em",
           "original": "em",
           "renamed": "ProductionContent"
+        },
+        {
+          "start": 31760,
+          "end": 31761,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
         },
         {
           "start": 32465,
@@ -692894,7 +693435,7 @@
       "original": "ra.java",
       "renamed": "RandomAccessCacheFile.java",
       "inputSha256": "35d3a3b68765b24a4747f8fc96f0b1ae1bbfd29199afcad8677e3d9ade5b9e56",
-      "outputSha256": "49ca15a582eef154e12c2175c082069d7026b8b6fc53a02b761ae072ed89bc9b",
+      "outputSha256": "1948027aec12f9e192a90020b16072b6ba864a0acd16b215294876cabf020a60",
       "edits": [
         {
           "start": 69,
@@ -693392,6 +693933,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 8333,
+          "end": 8334,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 8357,
@@ -698843,7 +699391,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "55074554d6f517e7cb23c2c47a3e628d3d2b37b8bcdec1f11dde522b8b163c25",
+      "outputSha256": "f85962291060da1f4532807cc2b7df5a1b8da9a230ac32c29b9d46399d039ffa",
       "edits": [
         {
           "start": 50,
@@ -698865,6 +699413,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 544,
+          "end": 545,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 561,
@@ -699056,6 +699611,13 @@
           "renamed": "BattleContribution"
         },
         {
+          "start": 1009,
+          "end": 1010,
+          "symbol": "M:ne.a(IIBIIII)V",
+          "original": "a",
+          "renamed": "adjustRectangleSaturationAndBrightness"
+        },
+        {
           "start": 1014,
           "end": 1016,
           "symbol": "C:gf",
@@ -699089,6 +699651,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "BattleContribution"
+        },
+        {
+          "start": 1094,
+          "end": 1095,
+          "symbol": "M:ne.a(IIBIIII)V",
+          "original": "a",
+          "renamed": "adjustRectangleSaturationAndBrightness"
         },
         {
           "start": 1099,
@@ -704324,7 +704893,7 @@
       "original": "rr.java",
       "renamed": "TextInputPainter.java",
       "inputSha256": "10be7dc07d702aa339a5e7558b4df3612c9b68ac9333b719f3f92a39fa52b9eb",
-      "outputSha256": "2372d9747c6ff1ae6af2027cc025bdd5bd620b4d5929153046ebab9211e85ba7",
+      "outputSha256": "46263fa9144863c94fc40f099864536d6f4917f735ef08d1a7dbd5d9da7a1e52",
       "edits": [
         {
           "start": 44,
@@ -704486,6 +705055,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2373,
+          "end": 2374,
+          "symbol": "M:rr.a(Lvd;Lpf;B)Z",
+          "original": "a",
+          "renamed": "containsMenuComponent"
         },
         {
           "start": 2375,
@@ -704949,7 +705525,7 @@
       "original": "s.java",
       "renamed": "GzipInflater.java",
       "inputSha256": "14b87494c544c8ba5c1611892a32c7d74cfe3065e254948ca896c78b65ed9569",
-      "outputSha256": "288a0bfa11d9136db82bdef1f9b29f92383fe3baff6d954d72a517931fd76275",
+      "outputSha256": "5b72033819b4f1dce85845ce2c8c4021bc55352f44175ce34faf99be101986a8",
       "edits": [
         {
           "start": 71,
@@ -705076,6 +705652,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 1864,
+          "end": 1865,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 2053,
@@ -705337,6 +705920,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 4003,
+          "end": 4004,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 4196,
           "end": 4198,
           "symbol": "C:ve",
@@ -705363,6 +705953,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 4236,
+          "end": 4237,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 4356,
@@ -709542,7 +710139,7 @@
       "original": "sh.java",
       "renamed": "SolMapReader.java",
       "inputSha256": "0740a169845de1d7a06ce0018f7b5d52f33cdd49b6a3d4176d832ef40b2d1d4e",
-      "outputSha256": "12977354ca91bdcb6959a6221f95222a1adb59ed6f91daacd7fd5cf581ccb85c",
+      "outputSha256": "b437029a1c1152ad3505ea81ccfc6ca74208b9ba52c772230006e75f1a2a456e",
       "edits": [
         {
           "start": 50,
@@ -710028,6 +710625,13 @@
           "renamed": "IntrusiveNodeHashTable"
         },
         {
+          "start": 5904,
+          "end": 5905,
+          "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+          "original": "a",
+          "renamed": "isIgnoredPlayer"
+        },
+        {
           "start": 6135,
           "end": 6137,
           "symbol": "C:qh",
@@ -710341,7 +710945,7 @@
       "original": "si.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "e86a3642f3646dd6591980e4be7e6fb6fa981d25876ff9af582f53a789a2152f",
-      "outputSha256": "6bba01a0a8422ecede5edb9810c80a1cb6c6bed4adca06e3a27309bdce091ca4",
+      "outputSha256": "78c75cb4724a3199460bb4a0eced97c83568402aee9727d46ed5ee2ba5fec9a0",
       "edits": [
         {
           "start": 50,
@@ -710412,6 +711016,13 @@
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 679,
+          "end": 680,
+          "symbol": "M:si.a(IILe;Le;ILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollAccountRequest"
         },
         {
           "start": 705,
@@ -713299,7 +713910,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "549ce9a8754f21cad7ca8b42065d4e07d4431b09f9140149841f35b0dc074981",
+      "outputSha256": "34f8e8ec9847101c3d777fe5cf816a63a9110fc0f157578b1fe51f8714c3616b",
       "edits": [
         {
           "start": 50,
@@ -721501,6 +722112,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 74838,
+          "end": 74839,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
+        },
+        {
           "start": 74855,
           "end": 74857,
           "symbol": "C:gl",
@@ -727287,7 +727905,7 @@
       "original": "sr.java",
       "renamed": "MeshData.java",
       "inputSha256": "52638bc0eb9a7b34a6f0c44cfd68e86c80e4a750e220c2dfdb02ad2dd70bdd62",
-      "outputSha256": "f2dab4921976e3630b5400ac80b59ac143b1c009cabbf542dfad510e4ee2af3f",
+      "outputSha256": "f5061ab4b23176141416be41bb220235992e7598b6339022515297d2bbe507f8",
       "edits": [
         {
           "start": 50,
@@ -727365,6 +727983,13 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "QuickChatPhraseDefinition"
+        },
+        {
+          "start": 1994,
+          "end": 1995,
+          "symbol": "M:si.a(IILe;Le;ILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollAccountRequest"
         },
         {
           "start": 3052,
@@ -735791,7 +736416,7 @@
       "original": "ti.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "d8c3c311ca5eb88fb82f5ff2c3675375aca856738a10037a63cf649861a9b8fb",
-      "outputSha256": "1b816e8bec4683a5c816ae3c6c97dc82c472b11ac64c4970f08fbc93c958e364",
+      "outputSha256": "44d3665d8535b3b521c6b5ea40baa79fcdad0ada493671b8cca6dbb595e1b112",
       "edits": [
         {
           "start": 71,
@@ -736774,6 +737399,13 @@
           "renamed": "position"
         },
         {
+          "start": 8781,
+          "end": 8782,
+          "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+          "original": "a",
+          "renamed": "isIgnoredPlayer"
+        },
+        {
           "start": 9206,
           "end": 9208,
           "symbol": "C:di",
@@ -737550,7 +738182,7 @@
       "original": "tk.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "eca478a58df4a052330423acec8de3fbd667f77f8216aa963b5a5ff6a8ca0422",
-      "outputSha256": "74a6a57c9a58d967733f449191fb284fca34f50ee4bc9de0c82545ed9000c8f8",
+      "outputSha256": "f225c5c7068494a97e969e0e1ecb9fc1cd42c3a67cc5eda011f87e5ca0b9fd88",
       "edits": [
         {
           "start": 50,
@@ -737761,6 +738393,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 2718,
+          "end": 2719,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 2785,
@@ -742534,7 +743173,7 @@
       "original": "tr.java",
       "renamed": "MapView.java",
       "inputSha256": "29cd01a632377441b8ea63adfd069a1c45dc04bc66f73e5e5aecd5fd7d116659",
-      "outputSha256": "02ae552dd432b55410f33230e45019893aa86b75fef6789220cca15bacd94da2",
+      "outputSha256": "c069da3d1af7ff1b14bdda9c4aa1d7f8d6bda16eb2fcdcc11601f551bb0c7ec3",
       "edits": [
         {
           "start": 71,
@@ -745097,6 +745736,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 60787,
+          "end": 60788,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 60950,
@@ -747803,6 +748449,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 109487,
+          "end": 109488,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
+        },
+        {
           "start": 109520,
           "end": 109522,
           "symbol": "C:om",
@@ -748055,6 +748708,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 112679,
+          "end": 112680,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
+        },
+        {
           "start": 112714,
           "end": 112715,
           "symbol": "M:bi.e()V",
@@ -748137,6 +748797,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 113256,
+          "end": 113257,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 113386,
@@ -754440,7 +755107,7 @@
       "original": "ui.java",
       "renamed": "SolVictoryChecker.java",
       "inputSha256": "0a254280ba5263fd45e7a1ba3a37758f2f2a2a4640c41a461ebee5c449a71ccb",
-      "outputSha256": "3111512872d92437acb650f1aa4b0f5810de1c11c6d09eb599158c04b09e45f9",
+      "outputSha256": "e217ce80ab9f5f763b167ccfe9ecf9c408d59dd3d9ae648971b90963b4673c72",
       "edits": [
         {
           "start": 50,
@@ -755757,6 +756424,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "DateInputWidget"
+        },
+        {
+          "start": 17101,
+          "end": 17102,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
         },
         {
           "start": 17131,
@@ -761196,7 +761870,7 @@
       "original": "us.java",
       "renamed": "ClientRenderSupport.java",
       "inputSha256": "efb4f671c8def8961b416360650b10b8787d1cc2a1574f03c982d608f6b81f43",
-      "outputSha256": "bf6ecc9d68698934f8293bf36af717ee7674830322ec2a8b7a5ca5601f4453bf",
+      "outputSha256": "e50dde539e8eabf5ccbeed459ec7303115759ee512e3b60ff311da0aa3499602",
       "edits": [
         {
           "start": 50,
@@ -761283,6 +761957,13 @@
           "renamed": "DialPainter"
         },
         {
+          "start": 505,
+          "end": 506,
+          "symbol": "M:i.a(IIIIII)V",
+          "original": "a",
+          "renamed": "addRectangleBrightness"
+        },
+        {
           "start": 622,
           "end": 624,
           "symbol": "C:us",
@@ -761318,6 +761999,13 @@
           "renamed": "DialPainter"
         },
         {
+          "start": 742,
+          "end": 743,
+          "symbol": "M:i.a(IIIIII)V",
+          "original": "a",
+          "renamed": "addRectangleBrightness"
+        },
+        {
           "start": 867,
           "end": 869,
           "symbol": "C:us",
@@ -761337,6 +762025,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "BattleContribution"
+        },
+        {
+          "start": 931,
+          "end": 932,
+          "symbol": "M:ne.a(IIBIIII)V",
+          "original": "a",
+          "renamed": "adjustRectangleSaturationAndBrightness"
         },
         {
           "start": 936,
@@ -761372,6 +762067,13 @@
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "BattleContribution"
+        },
+        {
+          "start": 1121,
+          "end": 1122,
+          "symbol": "M:ne.a(IIBIIII)V",
+          "original": "a",
+          "renamed": "adjustRectangleSaturationAndBrightness"
         },
         {
           "start": 1126,
@@ -761533,7 +762235,7 @@
       "original": "v.java",
       "renamed": "TiledNineSlicePainter.java",
       "inputSha256": "f85b9f42f12aa210f5e6a97800f58f89e3f85867106adebf9d09d57052187af6",
-      "outputSha256": "df164383b1b9942ebdde50cfb6e86a30b0e3804c92256f4013d49f131a1582b3",
+      "outputSha256": "3a2b2e5d4200885e28ae1beb062b9dec26022e17c8def8ef0aa074387780dd1e",
       "edits": [
         {
           "start": 50,
@@ -761585,11 +762287,25 @@
           "renamed": "ProductionContent"
         },
         {
+          "start": 502,
+          "end": 503,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
+        },
+        {
           "start": 613,
           "end": 615,
           "symbol": "C:em",
           "original": "em",
           "renamed": "ProductionContent"
+        },
+        {
+          "start": 616,
+          "end": 617,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
         },
         {
           "start": 699,
@@ -761604,6 +762320,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "NumericDateInputWidget"
+        },
+        {
+          "start": 1088,
+          "end": 1089,
+          "symbol": "M:wd.a(IBI)I",
+          "original": "a",
+          "renamed": "selectPlayerNameIconIndex"
         },
         {
           "start": 1090,
@@ -761648,6 +762371,13 @@
           "renamed": "StatusMessagePanel"
         },
         {
+          "start": 2131,
+          "end": 2132,
+          "symbol": "M:cf.a(Lpf;B)V",
+          "original": "a",
+          "renamed": "updatePanelPointerInteraction"
+        },
+        {
           "start": 2133,
           "end": 2135,
           "symbol": "C:pd",
@@ -761688,7 +762418,7 @@
       "original": "va.java",
       "renamed": "GraphicsSettings.java",
       "inputSha256": "72a96c4bf30a8a4750ddf5ccfe9844c3c9443a4ba06a1f64a8ac37ea1f6f793f",
-      "outputSha256": "b6accda2a8a58f27d8aef9113a6866fb868f42bec761180fd9d29eede878223e",
+      "outputSha256": "dfb66c981007a8d521dc6689017f5e580e12e44c30ebf7a7e00bbf46f879b0b9",
       "edits": [
         {
           "start": 50,
@@ -762004,6 +762734,13 @@
           "symbol": "C:dn",
           "original": "dn",
           "renamed": "DualLinkDequeSequence"
+        },
+        {
+          "start": 7190,
+          "end": 7191,
+          "symbol": "M:dn.a(Ljava/lang/String;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseString"
         },
         {
           "start": 8236,
@@ -785620,7 +786357,7 @@
       "original": "vo.java",
       "renamed": "GameSoundSetupSupport.java",
       "inputSha256": "044394bd28b0b5462d1c9bfde92a4f12ae33c2e3e5a4d67eca6d837c884ccbc1",
-      "outputSha256": "0a382887365f70ffe9225cf9971d96294b37349adfb489010711c5890657a65c",
+      "outputSha256": "05d187fdbaf367a69c5f76a58d6b3e83eb4890c4c4e8361037b9a21cd1fb8a38",
       "edits": [
         {
           "start": 50,
@@ -785810,6 +786547,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "ConquestVictoryChecker"
+        },
+        {
+          "start": 843,
+          "end": 844,
+          "symbol": "M:jj.a(BILjava/lang/String;)Lqf;",
+          "original": "a",
+          "renamed": "loadSoundEffectDefinition"
         },
         {
           "start": 902,
@@ -786273,7 +787017,7 @@
       "original": "vq.java",
       "renamed": "ReflectionCheckDecoder.java",
       "inputSha256": "d9099dc6b2e7b41ee67730dba1a23de9ab1d9cc0bdeafe17f7881e917e8d13b2",
-      "outputSha256": "15591cce892c54d1b98c4bc445af07ecc5ea88153733ddf1a297348766d7653e",
+      "outputSha256": "32006a167f60b31167322f463ca77e98b74a3ee3834593f47b3960f40107ed24",
       "edits": [
         {
           "start": 50,
@@ -786402,6 +787146,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 3230,
+          "end": 3231,
+          "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
+          "original": "a",
+          "renamed": "resolveReflectionClass"
+        },
+        {
           "start": 3355,
           "end": 3356,
           "symbol": "M:qb.a([Ljava/lang/Class;Ljava/lang/String;ILjava/lang/Class;)Lpb;",
@@ -786414,6 +787165,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 3386,
+          "end": 3387,
+          "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
+          "original": "a",
+          "renamed": "resolveReflectionClass"
         },
         {
           "start": 3530,
@@ -786449,6 +787207,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 3945,
+          "end": 3946,
+          "symbol": "M:ge.a(ILjava/lang/String;)Ljava/lang/Class;",
+          "original": "a",
+          "renamed": "resolveReflectionClass"
         },
         {
           "start": 5460,
@@ -786556,6 +787321,13 @@
           "renamed": "IntrusiveNodeHashTable"
         },
         {
+          "start": 7756,
+          "end": 7757,
+          "symbol": "M:ti.a(Ljava/lang/String;Z)Z",
+          "original": "a",
+          "renamed": "isIgnoredPlayer"
+        },
+        {
           "start": 7802,
           "end": 7804,
           "symbol": "C:re",
@@ -786589,6 +787361,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "DebouncedValidator"
+        },
+        {
+          "start": 8029,
+          "end": 8030,
+          "symbol": "M:da.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isFriendPlayer"
         },
         {
           "start": 8085,
@@ -786856,7 +787635,7 @@
       "original": "vs.java",
       "renamed": "ServerRequestRetrySupport.java",
       "inputSha256": "215cbce96d3148dabbaebe9291a19a0544101a16b2652b132a94604774566a37",
-      "outputSha256": "33533302bc505f14fb02d032fa85283fe45906bed003a52ab0b61797a10ee8ea",
+      "outputSha256": "3dbf8258bf7b0379df15982263ca62acee4a74e7f5acd1c699c4bc9b259e649a",
       "edits": [
         {
           "start": 50,
@@ -786913,6 +787692,13 @@
           "symbol": "C:bo",
           "original": "bo",
           "renamed": "AccountNoticeDialog"
+        },
+        {
+          "start": 344,
+          "end": 345,
+          "symbol": "M:bo.a(II)V",
+          "original": "a",
+          "renamed": "writeSingleByteRequest"
         },
         {
           "start": 435,
@@ -787025,6 +787811,13 @@
           "symbol": "C:bo",
           "original": "bo",
           "renamed": "AccountNoticeDialog"
+        },
+        {
+          "start": 1291,
+          "end": 1292,
+          "symbol": "M:bo.a(II)V",
+          "original": "a",
+          "renamed": "writeSingleByteRequest"
         },
         {
           "start": 1324,
@@ -788303,7 +789096,7 @@
       "original": "wd.java",
       "renamed": "NumericDateInputWidget.java",
       "inputSha256": "631bcc013e9e11099a2d46912cbebf6a1e4baa9a97f5cf26c8c8a79e4bac8e51",
-      "outputSha256": "2ecdaae7883548c5f778fdbd885802e8743159a84a8efd97460f620a1bfe4a77",
+      "outputSha256": "c42867e99311d80afca857a2a4893c73b12300427c8edd1059d8f0c91f08453b",
       "edits": [
         {
           "start": 50,
@@ -789081,6 +789874,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 6684,
+          "end": 6685,
+          "symbol": "M:wd.a(IBI)I",
+          "original": "a",
+          "renamed": "selectPlayerNameIconIndex"
         },
         {
           "start": 6925,
@@ -790492,7 +791292,7 @@
       "original": "wi.java",
       "renamed": "RasterSpanFactory.java",
       "inputSha256": "7b4ceaa9bdf9e9f94750a6769e402f3a4126f1383cbf2f44becb7241b5b781a9",
-      "outputSha256": "8a07f6e375be55d02bf6c1d89df0a9978bd4041c041629e55d704dad0697f7de",
+      "outputSha256": "706139b1aab3262c79b00766786592ed99679821b809cb6bafd5a47812578804",
       "edits": [
         {
           "start": 50,
@@ -790761,6 +791561,13 @@
           "renamed": "QuickChatPhraseDefinition"
         },
         {
+          "start": 3014,
+          "end": 3015,
+          "symbol": "M:si.a(IILe;Le;ILjava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "pollAccountRequest"
+        },
+        {
           "start": 3749,
           "end": 3750,
           "symbol": "C:r",
@@ -790801,7 +791608,7 @@
       "original": "wj.java",
       "renamed": "MenuPointerSupport.java",
       "inputSha256": "5496bd1c996193e9d715658ef17b4fbbed2396cbce3371d02703096aa3e35a16",
-      "outputSha256": "d4d6d2139c50a809131bf5a774157c0b048b12f6779ed805fdf80b906b32e67a",
+      "outputSha256": "dc77b8da72fc06b60a3088f1c1137c3cff102c9305913560e10a4315ed35ac6d",
       "edits": [
         {
           "start": 50,
@@ -790844,6 +791651,13 @@
           "symbol": "C:as",
           "original": "as",
           "renamed": "FleetVisual"
+        },
+        {
+          "start": 782,
+          "end": 783,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
         },
         {
           "start": 792,
@@ -790914,6 +791728,13 @@
           "symbol": "C:as",
           "original": "as",
           "renamed": "FleetVisual"
+        },
+        {
+          "start": 993,
+          "end": 994,
+          "symbol": "M:as.a(Lpf;IBI)Lvd;",
+          "original": "a",
+          "renamed": "findMenuComponentAt"
         },
         {
           "start": 1003,
@@ -791133,6 +791954,13 @@
           "renamed": "TextInputPainter"
         },
         {
+          "start": 1888,
+          "end": 1889,
+          "symbol": "M:rr.a(Lvd;Lpf;B)Z",
+          "original": "a",
+          "renamed": "containsMenuComponent"
+        },
+        {
           "start": 1890,
           "end": 1892,
           "symbol": "C:wl",
@@ -791306,6 +792134,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 3993,
+          "end": 3994,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 4112,
@@ -791824,7 +792659,7 @@
       "original": "wk.java",
       "renamed": "WidgetStateStyle.java",
       "inputSha256": "59cd76d3f6a62f71793b3c54e5616a960f62b12eeafa8598760d0b245183107a",
-      "outputSha256": "b31fc23b7e3790e1a905afb000a23c38ff9a33174b7706827758e19fa408143b",
+      "outputSha256": "b254bc0af95ab8e6c8382ea2cf9f2d8d545508169261c7c495f2cbb4d47a75d3",
       "edits": [
         {
           "start": 50,
@@ -792716,6 +793551,13 @@
           "renamed": "ProductionContent"
         },
         {
+          "start": 12789,
+          "end": 12790,
+          "symbol": "M:em.a(IIII[Lbi;I)V",
+          "original": "a",
+          "renamed": "drawTiledNineSlice"
+        },
+        {
           "start": 12856,
           "end": 12863,
           "symbol": "F:wk.field_h:[Lbi;",
@@ -793100,7 +793942,7 @@
       "original": "wm.java",
       "renamed": "UiSpriteSupport.java",
       "inputSha256": "dd43890dd8ec32020d345ba6acba6ac7a4f87806dea6cab329d5d42f77b15582",
-      "outputSha256": "f5475efc77351a4dfa2e0505c3c562acf46077c756f87201b781bc01d86bcd32",
+      "outputSha256": "c7c291e80a4c5dbd045bcd584d05d7b69102b9f20da0df8bf0bae59dcf65eae6",
       "edits": [
         {
           "start": 50,
@@ -793164,6 +794006,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 335,
+          "end": 336,
+          "symbol": "M:ra.a(I)V",
+          "original": "a",
+          "renamed": "pushLegacyRasterState"
         },
         {
           "start": 366,
@@ -793579,7 +794428,7 @@
       "original": "wp.java",
       "renamed": "RematchMenuSupport.java",
       "inputSha256": "36af563259ec2ad9ef5450daa3c01836d32a1bfb40033d8790335268b0ccabdb",
-      "outputSha256": "dc90f2b4a051d561e6837694933c4069cc5e63941e5d974f7b45856e38504e12",
+      "outputSha256": "1ac42315409a6155d18efe4534c4ca531d329f21d46c42f50f627b964c52060e",
       "edits": [
         {
           "start": 50,
@@ -793939,6 +794788,13 @@
           "renamed": "DateInputWidget"
         },
         {
+          "start": 4224,
+          "end": 4225,
+          "symbol": "M:ji.a(Ljava/lang/CharSequence;Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "normalizeAccountName"
+        },
+        {
           "start": 4461,
           "end": 4463,
           "symbol": "C:tc",
@@ -794245,10 +795101,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "9583785ef04804b90676b61decdfc68698a363c09ff81ae4b5c7082f3a03f01f",
+    "rulesSha256": "b8ede6b56eda3d626680584067995b7113be3dd238fa8adab8224d1012af1f5b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "88f581adfef06f6fe0827729743a560c85bf43cddb4dab34864b25e4a3a24764",
+    "outputTreeSha256": "143410d8678b1186b7d72b495d9637de014ba302bdd801bd20b039cf416230d2",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

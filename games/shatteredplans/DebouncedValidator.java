@@ -13,7 +13,7 @@ abstract class DebouncedValidator implements ValidationSource {
 
     abstract ValidationState computeState(boolean param0);
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isFriendPlayer(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

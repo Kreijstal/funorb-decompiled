@@ -19,7 +19,7 @@ final class GradientMenuLabel extends MenuComponent {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) Star.field_o);
-        ArchiveIndex.field_d = DateInputWidget.a(var2, true);
+        ArchiveIndex.field_d = DateInputWidget.normalizeAccountName(var2, true);
     }
 
     GradientMenuLabel(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
@@ -34,7 +34,7 @@ final class GradientMenuLabel extends MenuComponent {
           this.field_u = param5;
           this.field_z = param4;
           this.field_C = new Sprite(this.field_m, this.field_i);
-          RandomAccessCacheFile.a(-111);
+          RandomAccessCacheFile.pushLegacyRasterState(-111);
           this.field_C.bindAsRenderTarget();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);

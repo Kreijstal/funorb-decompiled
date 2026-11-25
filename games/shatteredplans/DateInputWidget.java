@@ -57,7 +57,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
         return AttackTask.field_t;
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String normalizeAccountName(CharSequence param0, boolean param1) {
         StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
         Object stackIn_16_0 = null;

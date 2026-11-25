@@ -11,7 +11,7 @@ final class UiSpriteSupport {
 
     final static Sprite createColourisedIcon(int param0, int param1) {
         Sprite var2 = new Sprite(GameState.field_F.field_z, GameState.field_F.field_w);
-        RandomAccessCacheFile.a(param1 ^ -110);
+        RandomAccessCacheFile.pushLegacyRasterState(param1 ^ -110);
         var2.bindAsRenderTarget();
         GameState.field_F.drawColourised(0, 0, param0 < param1 ? 2105376 : param0);
         OpacityWidget.popLegacyRasterState(0);

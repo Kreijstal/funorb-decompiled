@@ -273,7 +273,7 @@ final class RoundedMenuPanel extends MenuComponent {
         if (!this.field_s) {
           return null;
         }
-        MenuComponent var4 = FleetVisual.a(this.field_l, param1, (byte) 118, param2);
+        MenuComponent var4 = FleetVisual.findMenuComponentAt(this.field_l, param1, (byte) 118, param2);
         if (param0 < 51) {
           return (MenuComponent) null;
         }

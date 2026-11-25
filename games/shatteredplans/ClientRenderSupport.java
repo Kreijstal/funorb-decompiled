@@ -19,7 +19,7 @@ final class ClientRenderSupport {
 
     final static void applyIntroTransitionEffect(int param0, int param1) {
         if (~SolVictoryChecker.field_m == ~(!CachedArchiveSource.field_n ? 3 : 2)) {
-          DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+          DialPainter.addRectangleBrightness(640, 480, 0, -(5 * param1) + 255, -123, 0);
           if (param0 == 0) {
             return;
           }
@@ -28,21 +28,21 @@ final class ClientRenderSupport {
         }
         if (CachedArchiveSource.field_n) {
           if (MusicEnvelope.field_i == -1) {
-            DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+            DialPainter.addRectangleBrightness(640, 480, 0, -(5 * param1) + 255, -123, 0);
             if (param0 == 0) {
               return;
             }
             ClientRenderSupport.drawInterface(false, true);
             return;
           }
-          BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
+          BattleContribution.adjustRectangleSaturationAndBrightness(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
           if (param0 == 0) {
             return;
           }
           ClientRenderSupport.drawInterface(false, true);
           return;
         }
-        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
+        BattleContribution.adjustRectangleSaturationAndBrightness(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
         if (param0 == 0) {
           return;
         }

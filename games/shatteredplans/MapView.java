@@ -1499,7 +1499,7 @@ final class MapView extends MapViewState {
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
-        RandomAccessCacheFile.a(-120);
+        RandomAccessCacheFile.pushLegacyRasterState(-120);
         for (var2 = param0; this.field_ib.length > var2; var2++) {
           var3 = this.field_ib[var2].field_k;
           this.field_ib[var2].field_v = (Sprite) ((Object) new ArgbSprite(StatusMessagePanel.field_F.field_o, StatusMessagePanel.field_F.field_p));
@@ -2568,7 +2568,7 @@ final class MapView extends MapViewState {
         try {
           if (this.field_Nb != this.field_wb) {
             this.field_Nb = this.field_wb;
-            RandomAccessCacheFile.a(-122);
+            RandomAccessCacheFile.pushLegacyRasterState(-122);
             var15 = new ArgbSprite(10, (int)(this.field_wb * 200.0));
             var15.bindAsRenderTarget();
             for (var9 = 0; var9 < 10; var9++) {
@@ -2608,7 +2608,7 @@ final class MapView extends MapViewState {
             this.field_Cb = new ArgbSprite(var11Lifetime1 + 4, var11Lifetime1 / 10 + 8);
             this.field_K = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
             this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
-            RandomAccessCacheFile.a(-113);
+            RandomAccessCacheFile.pushLegacyRasterState(-113);
             this.field_Cb.bindAsRenderTarget();
             ProgressDialog.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
             this.field_K.bindAsRenderTarget();
@@ -2621,7 +2621,7 @@ final class MapView extends MapViewState {
               this.field_Mb = new Sprite[13];
               this.field_Kb = new Sprite[13];
             }
-            RandomAccessCacheFile.a(-125);
+            RandomAccessCacheFile.pushLegacyRasterState(-125);
             for (var12 = 0; var12 < this.field_xb.length; var12++) {
               var13 = (int)(this.field_Jb * (double)ImageProducerRasterBuffer.field_k[var12].field_o);
               if (!(var13 >= 20 + UiWidget.field_t.field_w)) {

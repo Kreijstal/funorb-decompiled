@@ -33,7 +33,7 @@ final class IsaacBackedRandom extends Random {
         var5[6] = new Sprite(param3, param3);
         var5[7] = new Sprite(10, param3);
         var5[8] = new Sprite(param3, param3);
-        RandomAccessCacheFile.a(-128);
+        RandomAccessCacheFile.pushLegacyRasterState(-128);
         var5[0].bindAsRenderTarget();
         RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, 0, 0, 3974311, 10 + 2 * param3);
         var5[1].bindAsRenderTarget();

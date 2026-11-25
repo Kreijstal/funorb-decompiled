@@ -341,7 +341,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
             field_Cb = (TiledNineSlicePainter) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ArchiveIndex.field_d.equals(DateInputWidget.a(var3, true));
+          stackIn_3_0 = ArchiveIndex.field_d.equals(DateInputWidget.normalizeAccountName(var3, true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

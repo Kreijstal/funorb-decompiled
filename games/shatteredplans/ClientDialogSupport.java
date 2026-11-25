@@ -44,7 +44,7 @@ final class ClientDialogSupport {
             stackIn_8_0 = QuaternaryNodeList.field_f;
             return stackIn_8_0;
           }
-          if (DebouncedValidator.a(-30106, param0)) {
+          if (DebouncedValidator.isFriendPlayer(-30106, param0)) {
             stackIn_12_0 = QuickChatCategoryRegistry.a(MapView.field_pb, 4371, new String[]{param0});
             return stackIn_12_0;
           }
@@ -61,7 +61,7 @@ final class ClientDialogSupport {
             stackIn_22_0 = IntroTextLine.field_p;
             return stackIn_22_0;
           }
-          if (IntrusiveNodeHashTable.a(param0, true)) {
+          if (IntrusiveNodeHashTable.isIgnoredPlayer(param0, true)) {
             stackIn_26_0 = QuickChatCategoryRegistry.a(TextFieldWidget.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }

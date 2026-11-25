@@ -32,7 +32,7 @@ final class DialPainter implements WidgetPainter {
           LoginRequestSupport.field_a = param1;
           ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param1);
-          IntroGlowPoint.field_k = DateInputWidget.a(var5, true);
+          IntroGlowPoint.field_k = DateInputWidget.normalizeAccountName(var5, true);
           IntroTextLine.field_k = param2;
           AccountNoticeDialog.r(0);
           if (param0 < 15) {
@@ -45,12 +45,12 @@ final class DialPainter implements WidgetPainter {
 
     final static boolean a(int param0) {
         if (param0 != 1) {
-          DialPainter.a(-46, -90, 61, -9, 124, 49);
+          DialPainter.addRectangleBrightness(-46, -90, 61, -9, 124, 49);
         }
         return TertiaryNodeList.field_b;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void addRectangleBrightness(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;

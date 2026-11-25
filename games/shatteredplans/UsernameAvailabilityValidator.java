@@ -136,7 +136,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           var3 = 1;
         }
         Sprite var4 = new Sprite(var3, -6 + ClientPacketFlushSupport.field_b[param0].field_w);
-        RandomAccessCacheFile.a(-104);
+        RandomAccessCacheFile.pushLegacyRasterState(-104);
         var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
           SoftwareRasterizer.drawVerticalLine(var5, 0, var4.field_w, SolVictoryChecker.blendColours(0, SoundPlayback.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));

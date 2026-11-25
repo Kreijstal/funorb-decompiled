@@ -919,9 +919,9 @@ class AnimatedPanel extends PanelNode {
         var21 = this.field_E + var19;
         var22 = this.field_tb + var20;
         if (this.field_r) {
-          ProductionContent.a(param7, param10, 7, param4, var16, param3);
+          ProductionContent.drawTiledNineSlice(param7, param10, 7, param4, var16, param3);
         } else {
-          ProductionContent.a(this.field_mb, this.field_K, 7, this.field_N, var16, this.field_B);
+          ProductionContent.drawTiledNineSlice(this.field_mb, this.field_K, 7, this.field_N, var16, this.field_B);
         }
         if (var17 != null) {
           var23_int = this.field_B + var21;

@@ -124,7 +124,7 @@ final class RematchMenuSupport {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = DateInputWidget.a(param1, true);
+            var4 = DateInputWidget.normalizeAccountName(param1, true);
             if (var4 != null &&
               var4.length() >= 1) {
               if (param0 > -46) {

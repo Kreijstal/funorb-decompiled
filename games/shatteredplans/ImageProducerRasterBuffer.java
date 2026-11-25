@@ -221,7 +221,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static Class a(int param0, String param1) throws ClassNotFoundException {
+    final static Class resolveReflectionClass(int param0, String param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         java.awt.Color var3 = null;
         Class stackIn_3_0 = null;

@@ -55,7 +55,7 @@ final class GameAssetSetupSupport {
           SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
-          RandomAccessCacheFile.a(-110);
+          RandomAccessCacheFile.pushLegacyRasterState(-110);
           SettingsCookieSupport.field_a = new Sprite(var7_int, var8);
           SettingsCookieSupport.field_a.bindAsRenderTarget();
           SoftwareRasterizer.fillRect(0, 0, var7_int, var8, 16777215);
@@ -65,7 +65,7 @@ final class GameAssetSetupSupport {
           OpacityWidget.popLegacyRasterState(param6 + 8);
           HuffmanCodec.field_d = HighscoreResponseSupport.loadSpriteSetByName(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
-          RandomAccessCacheFile.a(param6 ^ 108);
+          RandomAccessCacheFile.pushLegacyRasterState(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
             var19 = HuffmanCodec.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
@@ -123,7 +123,7 @@ final class GameAssetSetupSupport {
           DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
           VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
           SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
-          RandomAccessCacheFile.a(-116);
+          RandomAccessCacheFile.pushLegacyRasterState(-116);
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.drawColourised(0, 0, 2105376);
           OpacityWidget.popLegacyRasterState(0);

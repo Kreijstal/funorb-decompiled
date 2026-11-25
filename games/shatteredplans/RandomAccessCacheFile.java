@@ -233,7 +233,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(int param0) {
+    final static void pushLegacyRasterState(int param0) {
         Archive.field_c[field_k] = SoftwareRasterizer.field_h;
         DirectByteArrayStorage.field_f[field_k] = SoftwareRasterizer.field_i;
         TooltipSupport.field_b[field_k] = SoftwareRasterizer.field_l;

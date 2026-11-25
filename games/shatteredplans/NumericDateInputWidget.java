@@ -182,7 +182,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int selectPlayerNameIconIndex(int param0, byte param1, int param2) {
         int var3 = 26 % ((80 - param1) / 43);
         if (param2 >= 2) {
           return 2;

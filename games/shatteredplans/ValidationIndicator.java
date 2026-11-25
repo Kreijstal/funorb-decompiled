@@ -156,7 +156,7 @@ final class ValidationIndicator extends FocusableWidget {
         int var13 = 0;
         int var14 = 0;
         int var15 = ShatteredPlansClient.field_F ? 1 : 0;
-        RandomAccessCacheFile.a(-107);
+        RandomAccessCacheFile.pushLegacyRasterState(-107);
         Sprite[] var16 = new Sprite[param1];
         Sprite[] var2 = var16;
         Sprite var3 = new Sprite(240, 120);

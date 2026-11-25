@@ -50,7 +50,7 @@ final class MeshMaterial {
         int var4 = (-IconTextPanel.field_Cb.stringWidth(QuickChatHelpSupport.field_g) + 209 - 20) / 2;
         ClientRandomSupport.field_b = new Sprite(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
-        RandomAccessCacheFile.a(-107);
+        RandomAccessCacheFile.pushLegacyRasterState(-107);
         ClientRandomSupport.field_b.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, var4, 2, 16777215);
         OpacityWidget.popLegacyRasterState(0);

@@ -47,7 +47,7 @@ final class TutorialTextSupport {
           var4 = PopupPlacementSupport.field_m.expandPlaceholders(5607, param0.field_c);
           var12 = TutorialMapGenerator.a(IconTextPanel.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
-          RandomAccessCacheFile.a(-106);
+          RandomAccessCacheFile.pushLegacyRasterState(-106);
           if (0 < var6) {
             BirthDateConfirmationForm.field_L = new Sprite[var6];
             BirthDateConfirmationForm.field_L[0] = new Sprite(var3, var2_int);

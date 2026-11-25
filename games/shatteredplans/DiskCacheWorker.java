@@ -20,7 +20,7 @@ final class DiskCacheWorker implements Runnable {
         int var2 = 0;
         int var3 = 0;
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
-        RandomAccessCacheFile.a(-111);
+        RandomAccessCacheFile.pushLegacyRasterState(-111);
         QuickChatMenu.field_Jb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
         Dialog.field_D = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
         DualLinkDeque.field_a = SpriteResourceSupport.loadSpriteByName(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
@@ -28,9 +28,9 @@ final class DiskCacheWorker implements Runnable {
         GameSpriteResources.field_d = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
-        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
+        BattleContribution.adjustRectangleSaturationAndBrightness(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
         Dialog.field_D.bindAsRenderTarget();
-        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
+        BattleContribution.adjustRectangleSaturationAndBrightness(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
         QuickChatMenu.field_Jb.bindAsRenderTarget();
         MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");

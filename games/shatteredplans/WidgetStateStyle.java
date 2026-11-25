@@ -366,7 +366,7 @@ final class WidgetStateStyle {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          ProductionContent.a(param2.field_n, param2.field_x, 7, param2.field_q + param3, this.frameSprites, param2.field_m + param0);
+          ProductionContent.drawTiledNineSlice(param2.field_n, param2.field_x, 7, param2.field_q + param3, this.frameSprites, param2.field_m + param0);
           if (null != this.overlaySprite) {
             var6_int = param0 + (param2.field_m + this.offsetX);
             if (param4.field_r == 1) {

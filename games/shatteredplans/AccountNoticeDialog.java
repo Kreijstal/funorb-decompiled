@@ -133,7 +133,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
         this.field_E = false;
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeSingleByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.h(param0, 255);
         var2.writeByte(1, (byte) -76);

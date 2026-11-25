@@ -2906,7 +2906,7 @@ final class GameScreen {
             var10 = this.field_s.field_n.field_x;
           }
           var11 = new Sprite(NodeSequence.field_b[0].field_w, -IconTextPanel.field_Cb.field_J + 450 - (10 + NodeSequence.field_b[0].field_z / 2));
-          RandomAccessCacheFile.a(param0 ^ -5630);
+          RandomAccessCacheFile.pushLegacyRasterState(param0 ^ -5630);
           var11.bindAsRenderTarget();
           SoftwareRasterizer.fillRectGradient(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           OpacityWidget.popLegacyRasterState(param0 ^ param0);
@@ -3965,7 +3965,7 @@ final class GameScreen {
           }
           if (this.field_s.field_W) {
             LoginRequestSupport.updateTutorialSceneTransition(false);
-            RandomAccessCacheFile.a(-127);
+            RandomAccessCacheFile.pushLegacyRasterState(-127);
             MatchingTextValidator.field_r.bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);
             if (AchievementProgress.field_k) {
@@ -5143,7 +5143,7 @@ final class GameScreen {
           this.field_V.addChild(this.field_f, 8);
           this.field_y.addFirst(this.field_V, 0);
           this.field_t = new ArgbSprite(TextFieldWidget.field_L.field_o, TextFieldWidget.field_L.field_p);
-          RandomAccessCacheFile.a(-128);
+          RandomAccessCacheFile.pushLegacyRasterState(-128);
           this.field_t.bindAsRenderTarget();
           TextFieldWidget.field_L.drawTinted(0, 0, 16711680);
           var3 = 0;

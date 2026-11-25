@@ -109,7 +109,7 @@ final class IntroTextLine extends IntrusiveNode {
           }
           this.field_i = new Sprite(var4_int, var5);
           this.field_o = new Sprite(var4_int + 6, 6 + var5);
-          RandomAccessCacheFile.a(-127);
+          RandomAccessCacheFile.pushLegacyRasterState(-127);
           this.field_i.bindAsRenderTarget();
           if (var6 == 0) {
             param1.drawString(param0, 0, param1.field_J, 16777215, -1);

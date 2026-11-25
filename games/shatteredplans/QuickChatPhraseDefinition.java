@@ -27,7 +27,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static int a(int param0, int param1, AccountFieldValue param2, AccountFieldValue param3, int param4, String param5, boolean param6) {
+    final static int pollAccountRequest(int param0, int param1, AccountFieldValue param2, AccountFieldValue param3, int param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;

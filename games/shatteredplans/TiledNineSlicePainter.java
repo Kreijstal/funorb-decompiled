@@ -18,11 +18,11 @@ final class TiledNineSlicePainter {
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
         if (param4 < -102) {
-          ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
+          ProductionContent.drawTiledNineSlice(param0, param3, 7, param2, this.field_c, param1);
           return;
         }
         field_d = -42;
-        ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
+        ProductionContent.drawTiledNineSlice(param0, param3, 7, param2, this.field_c, param1);
     }
 
     final static String prefixLocalPlayerIcon(String param0, byte param1) {
@@ -35,7 +35,7 @@ final class TiledNineSlicePainter {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = NumericDateInputWidget.a(CellVertex.field_i, (byte) 123, RasterTargetSupport.field_b);
+          var2_int = NumericDateInputWidget.selectPlayerNameIconIndex(CellVertex.field_i, (byte) 123, RasterTargetSupport.field_b);
           if (var2_int == 1) {
             param0 = "<img=0>" + param0;
           }
@@ -63,7 +63,7 @@ final class TiledNineSlicePainter {
     }
 
     final static void updatePointerInteraction(byte param0) {
-        StatusMessagePanel.a(TertiaryListSequence.field_f, (byte) 39);
+        StatusMessagePanel.updatePanelPointerInteraction(TertiaryListSequence.field_f, (byte) 39);
         int var1 = -68 % ((param0 + 66) / 40);
     }
 

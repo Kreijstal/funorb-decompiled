@@ -31,7 +31,7 @@ final class ChatHistoryEntry {
             return 1;
           }
           if (ClientInputSupport.field_b == 2) {
-            if (DebouncedValidator.a(-30106, this.field_b)) {
+            if (DebouncedValidator.isFriendPlayer(-30106, this.field_b)) {
               return 1;
             }
             if (param0 > 100) {
@@ -48,7 +48,7 @@ final class ChatHistoryEntry {
           return 1;
         }
         if (ClientInputSupport.field_b == 2) {
-          if (DebouncedValidator.a(-30106, this.field_b)) {
+          if (DebouncedValidator.isFriendPlayer(-30106, this.field_b)) {
             return 1;
           }
           if (param0 > 100) {

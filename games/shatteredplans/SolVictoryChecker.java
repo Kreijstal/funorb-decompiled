@@ -483,7 +483,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
               Star.field_o = SpriteWipeSupport.field_a.readString(-1);
               var11 = (CharSequence) ((Object) Star.field_o);
-              ArchiveIndex.field_d = DateInputWidget.a(var11, true);
+              ArchiveIndex.field_d = DateInputWidget.normalizeAccountName(var11, true);
               CheckboxPainter.field_n = SpriteWipeSupport.field_a.readUnsignedByte(-112);
               Wormhole.field_j = AccountNoticeKind.field_f;
               if (TutorialOverlaySupport.field_c.getKind((byte) 115) != IsolationistAi.field_u) {

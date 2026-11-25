@@ -245,7 +245,7 @@ final class PlayerContextMenuController {
             var7 = this.getDisplayName(-121);
             var4 = var7;
             var5 = NodeSequence.a((byte) -90, this.field_k);
-            var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
+            var6 = IntrusiveNodeHashTable.isIgnoredPlayer(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_j.addItem(1, 4, QuickChatCategoryRegistry.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));

@@ -60,7 +60,7 @@ class TextInputPainter extends WidgetTheme {
         }
     }
 
-    final static boolean a(MenuComponent param0, IntrusiveDeque param1, byte param2) {
+    final static boolean containsMenuComponent(MenuComponent param0, IntrusiveDeque param1, byte param2) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         MenuComponent var4 = null;

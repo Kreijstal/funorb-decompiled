@@ -48,7 +48,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
         field_o = null;
     }
 
-    final static SoundEffectDefinition a(byte param0, int param1, String param2) {
+    final static SoundEffectDefinition loadSoundEffectDefinition(byte param0, int param1, String param2) {
         RuntimeException var3 = null;
         SoundEffectDefinition stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -102,7 +102,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
           return var1;
         }
         String var4 = (String) null;
-        ConquestVictoryChecker.a((byte) 73, 51, (String) null);
+        ConquestVictoryChecker.loadSoundEffectDefinition((byte) 73, 51, (String) null);
         TertiaryListSequence.a(0);
         return var1;
     }

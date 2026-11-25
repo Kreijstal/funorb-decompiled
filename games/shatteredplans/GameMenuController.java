@@ -2008,7 +2008,7 @@ final class GameMenuController {
           var7 = CellVertex.field_j[var6];
           var8Lifetime1 = DerelictMapReader.a(var6, -94);
         }
-        RandomAccessCacheFile.a(-106);
+        RandomAccessCacheFile.pushLegacyRasterState(-106);
         DisplayModeInfo.field_h.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         var7.drawScaled(0, 0, 256, 256);

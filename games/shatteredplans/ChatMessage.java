@@ -26,7 +26,7 @@ abstract class ChatMessage {
         RuntimeException var3_ref = null;
         try {
           param2 = DraggableWidget.a(param2, 1, '_', "");
-          var3 = DualLinkDequeSequence.a(param0, true);
+          var3 = DualLinkDequeSequence.reverseString(param0, true);
           if (param1 != -53) {
             var4 = (String) null;
             ChatMessage.a((String) null, (byte) 116, (String) null);
