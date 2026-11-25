@@ -46,7 +46,7 @@ final class CombatPresentation implements EventPresentation {
     private int field_z;
     private boolean field_f;
 
-    private final void m(int param0) {
+    private final void queueAttacksAgainstDeployedDefender(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -79,7 +79,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(BattleCharacter[] param0, int param1, int param2, BattleCharacter[] param3, boolean param4) {
+    private final void retireUnopposedFrontCharacter(BattleCharacter[] param0, int param1, int param2, BattleCharacter[] param3, boolean param4) {
         RuntimeException stackIn_148_0 = null;
         StringBuilder stackIn_148_1 = null;
         String stackIn_149_2 = null;
@@ -226,7 +226,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(BattleCharacter[] param0, int param1) {
+    private final void queueIdleCharacterJeers(BattleCharacter[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -237,7 +237,7 @@ final class CombatPresentation implements EventPresentation {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -4925) {
-            CombatPresentation.c(-81);
+            CombatPresentation.releaseStatics(-81);
           }
           var3_int = 0;
           while (var3_int < param0.length) {
@@ -266,7 +266,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(int param0, BattleCharacter[] param1, byte param2) {
+    private final void drawCharacterGroupByDepth(int param0, BattleCharacter[] param1, byte param2) {
         Object stackIn_55_0 = null;
         BattleCharacter stackIn_55_1 = null;
         BattleCharacter stackIn_58_0 = null;
@@ -365,7 +365,7 @@ final class CombatPresentation implements EventPresentation {
                   }
                   var6++;
                 }
-                this.a((byte) 104, 0, 0, 128);
+                this.drawBattleBackground((byte) 104, 0, 0, 128);
               }
               var6 = 0;
               while (true) {
@@ -505,7 +505,7 @@ final class CombatPresentation implements EventPresentation {
               if (var6 != null &&
                 var7 != null) {
                 this.presenter.tileIndex = var4;
-                this.b((byte) 54, this.battlefield.mapTheme);
+                this.loadBattleBackground((byte) 54, this.battlefield.mapTheme);
                 this.field_g = -1;
                 this.field_e = -1;
                 var8 = var6.bonusStrength + var6.strength;
@@ -639,7 +639,7 @@ final class CombatPresentation implements EventPresentation {
                   }
                   this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, ConsoleTokenSupport.field_b) - this.field_y);
                   this.field_D = new ProjectileEffect[this.field_p];
-                  this.field_b = this.a(this.field_w, (byte) -128);
+                  this.field_b = this.createRandomIndexOrder(this.field_w, (byte) -128);
                   this.phase = 5;
                   if (!var3.defenderDies) {
                     this.field_L = 8;
@@ -850,7 +850,7 @@ final class CombatPresentation implements EventPresentation {
                 if (this.field_d &&
                   this.field_f) {
                   this.phase = 6;
-                  this.h(obfuscationGuard ^ 56);
+                  this.initializeProjectileImpacts(obfuscationGuard ^ 56);
                 }
                 boolean decompiledSharedTail0 = (this.field_d &&
                   this.field_L == 8);
@@ -909,7 +909,7 @@ final class CombatPresentation implements EventPresentation {
           }
           this.phase = 8;
           if (obfuscationGuard < 94) {
-            this.m(96);
+            this.queueAttacksAgainstDeployedDefender(96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -929,19 +929,19 @@ final class CombatPresentation implements EventPresentation {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.e(2);
+          this.updatePresenterScreenPosition(2);
           if (MatchConditionEntry.field_p != null) {
             MatchConditionEntry.field_p.advanceFrame(1959107777);
           }
           boolean decompiledFrameRemainder0 = true;
           this.phaseFrame = this.phaseFrame + 1;
           if (this.phase == 0) {
-            this.o(-124);
+            this.advanceCombatIntroPhase(-124);
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (8 == this.phase) {
-              this.d((byte) 126);
+              this.advanceCombatExitPhase((byte) 126);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -951,31 +951,31 @@ final class CombatPresentation implements EventPresentation {
                   this.phase != 4) {
                   if (this.phase != 5) {
                     if (6 == this.phase) {
-                      if (this.a(true)) {
+                      if (this.advanceProjectileImpactPhase(true)) {
                         return;
                       }
                       decompiledFrameRemainder0 = false;
                     }
                     else {
                       if (7 == this.phase) {
-                        this.d(29823);
+                        this.advanceAttackerJeerPhase(29823);
                         if (var4 != 0) {
-                          this.c(false);
-                          this.j(-8089);
+                          this.advanceProjectileLaunchPhase(false);
+                          this.advanceCombatAftermath(-8089);
                         }
                       }
                     }
                   } else {
-                    this.c(false);
+                    this.advanceProjectileLaunchPhase(false);
                     if (var4 != 0) {
-                      this.j(-8089);
+                      this.advanceCombatAftermath(-8089);
                     }
                   }
                 } else {
-                  this.j(-8089);
+                  this.advanceCombatAftermath(-8089);
                 }
               } else {
-                if (this.g(-9)) {
+                if (this.advanceMeleePhase(-9)) {
                   return;
                 }
               }
@@ -997,7 +997,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void h(int param0) {
+    private final void initializeProjectileImpacts(int param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1030,32 +1030,32 @@ final class CombatPresentation implements EventPresentation {
     public final void drawOverlayLayer(byte obfuscationGuard) {
         try {
           if (obfuscationGuard != -52) {
-            this.a(61, (Unit) null, 33, true, (Unit) null);
+            this.configureSandboxCombat(61, (Unit) null, 33, true, (Unit) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sk.O(" + obfuscationGuard + ')');
         }
     }
 
-    private final void j(int param0) {
+    private final void advanceCombatAftermath(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (this.phase == 2) {
-            this.a(this.attackers, -4925);
+            this.queueIdleCharacterJeers(this.attackers, -4925);
           }
           if (this.phase == 3 ||
             4 == this.phase) {
-            this.a(this.defenders, -4925);
+            this.queueIdleCharacterJeers(this.defenders, -4925);
           }
-          this.b(this.attackers, 12579);
-          this.b(this.defenders, 12579);
+          this.advanceCharacterGroup(this.attackers, 12579);
+          this.advanceCharacterGroup(this.defenders, 12579);
           if (this.phaseFrame > 240) {
             this.phaseFrame = 0;
             this.phase = 8;
           }
           if (param0 != -8089) {
-            this.d(111);
+            this.advanceAttackerJeerPhase(111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1065,7 +1065,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final boolean g(int param0) {
+    private final boolean advanceMeleePhase(int param0) {
         BattleCharacter stackIn_80_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1074,7 +1074,7 @@ final class CombatPresentation implements EventPresentation {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.b(true);
+          this.rebalanceCombatFormations(true);
           var2_int = 1;
           var3 = 0;
           scanLoop1: while (true) {
@@ -1137,8 +1137,8 @@ final class CombatPresentation implements EventPresentation {
               }
               decompiledFrameRemainder0 = (this.field_q);
               if (decompiledFrameRemainder0) {
-                this.m(-13146);
-                this.e((byte) 105);
+                this.queueAttacksAgainstDeployedDefender(-13146);
+                this.advanceDeployedDefenderAttack((byte) 105);
                 if (0 != this.field_v) {
                   break scanLoop1;
                 }
@@ -1163,9 +1163,9 @@ final class CombatPresentation implements EventPresentation {
               }
             }
             if (this.phaseFrame % 50 == 0) {
-              this.l(param0 + 58);
+              this.scheduleNextMeleeCasualty(param0 + 58);
             }
-            this.k(13047);
+            this.scheduleMeleeExchanges(13047);
             break;
           }
           if (param0 != -9) {
@@ -1179,7 +1179,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void f(int param0) {
+    private final void startNextRangedAttack(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int[] var3 = null;
@@ -1229,7 +1229,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void drawCombatCharactersByDepth(boolean param0) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
@@ -1473,7 +1473,7 @@ final class CombatPresentation implements EventPresentation {
                           var5++;
                         }
                       }
-                      this.a((byte) 114, 0, 0, 128);
+                      this.drawBattleBackground((byte) 114, 0, 0, 128);
                     }
                     if (!this.field_f) {
                       break scanLoop1;
@@ -1595,7 +1595,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean advanceProjectileImpactPhase(boolean param0) {
         int stackIn_36_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1660,7 +1660,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void f(byte param0) {
+    private final void drawCombatWithProjectiles(byte param0) {
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
@@ -1976,7 +1976,7 @@ final class CombatPresentation implements EventPresentation {
                 }
                 break;
               }
-              this.a((byte) 94, 0, 0, 128);
+              this.drawBattleBackground((byte) 94, 0, 0, 128);
               var6 = 0;
               var8 = 0;
               var7 = 0;
@@ -1985,7 +1985,7 @@ final class CombatPresentation implements EventPresentation {
               var6 = this.field_y;
             }
             if (param0 != -15) {
-              this.b((byte) -125, 8);
+              this.loadBattleBackground((byte) -125, 8);
             }
             if (this.field_o) {
               var7 = this.field_w;
@@ -2067,7 +2067,7 @@ final class CombatPresentation implements EventPresentation {
             } while (var12 == 0);
             return;
           }
-          this.d(true);
+          this.drawCombatCharactersByDepth(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2076,18 +2076,18 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void rebalanceCombatFormations(boolean param0) {
         try {
-          this.a(this.defenders, 0, this.field_J, this.field_u, this.attackers);
-          this.a(this.attackers, 0, this.field_u, this.field_J, this.defenders);
-          this.a(this.attackers, this.field_J, this.field_u, this.defenders, param0);
-          this.a(this.defenders, this.field_u, this.field_J, this.attackers, param0);
+          this.promoteReserveCharacter(this.defenders, 0, this.field_J, this.field_u, this.attackers);
+          this.promoteReserveCharacter(this.attackers, 0, this.field_u, this.field_J, this.defenders);
+          this.retireUnopposedFrontCharacter(this.attackers, this.field_J, this.field_u, this.defenders, param0);
+          this.retireUnopposedFrontCharacter(this.defenders, this.field_u, this.field_J, this.attackers, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sk.N(" + param0 + ')');
         }
     }
 
-    private final void k(int param0) {
+    private final void scheduleMeleeExchanges(int param0) {
         Object stackIn_91_0 = null;
         BattleCharacter stackIn_91_1 = null;
         Object stackIn_136_0 = null;
@@ -2106,7 +2106,7 @@ final class CombatPresentation implements EventPresentation {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 13047) {
-            this.a((byte) 42, -38, -15, 53);
+            this.drawBattleBackground((byte) 42, -38, -15, 53);
           }
           if (~this.field_u == ~this.field_J) {
             var2_int = 0;
@@ -2624,7 +2624,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void e(int param0) {
+    private final void updatePresenterScreenPosition(int param0) {
         if (this.field_l == null) {
           return;
         }
@@ -2645,11 +2645,11 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void o(int param0) {
+    private final void advanceCombatIntroPhase(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.b(this.defenders, 12579);
+          this.advanceCharacterGroup(this.defenders, 12579);
           if (this.phaseFrame == 30) {
             this.phase = 1;
           }
@@ -2723,7 +2723,7 @@ final class CombatPresentation implements EventPresentation {
         try {
           boolean decompiledFrameRemainder0 = true;
           this.framebuffer.bindAsRasterTarget();
-          this.a((byte) 99, 0, 0, -1);
+          this.drawBattleBackground((byte) 99, 0, 0, -1);
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.centerProjection();
           if (this.field_d) {
@@ -2735,22 +2735,22 @@ final class CombatPresentation implements EventPresentation {
                   decompiledFrameRemainder0 = (this.field_L == 7);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.a(this.field_y, this.attackers, (byte) 83);
+                  this.drawCharacterGroupByDepth(this.field_y, this.attackers, (byte) 83);
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                this.a(false, this.defenders, (byte) 109, this.field_w, this.field_D);
+                this.drawCharacterGroupWithProjectiles(false, this.defenders, (byte) 109, this.field_w, this.field_D);
                 decompiledFrameRemainder0 = (var9 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
-              this.a(true, this.attackers, (byte) 109, this.field_y, this.field_D);
+              this.drawCharacterGroupWithProjectiles(true, this.attackers, (byte) 109, this.field_y, this.field_D);
               decompiledFrameRemainder0 = (var9 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            this.f((byte) -15);
+            this.drawCombatWithProjectiles((byte) -15);
             if (this.field_o) {
               SoftwareRaster.fillRectangle(320, 0, 640, 480, 0);
               if ((var9 != 0) &&
@@ -2826,7 +2826,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(BattleCharacter[] param0, int param1, int param2, int param3, BattleCharacter[] param4) {
+    private final void promoteReserveCharacter(BattleCharacter[] param0, int param1, int param2, int param3, BattleCharacter[] param4) {
         RuntimeException stackIn_178_0 = null;
         StringBuilder stackIn_178_1 = null;
         String stackIn_179_2 = null;
@@ -2998,7 +2998,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void advanceProjectileLaunchPhase(boolean param0) {
         Object stackIn_19_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -3023,7 +3023,7 @@ final class CombatPresentation implements EventPresentation {
                 this.attackers[var2_int].advanceFrame((byte) 113);
                 if (this.attackers[var2_int].field_l) {
                   this.attackers[var2_int].field_l = false;
-                  this.a((byte) -84, var2_int);
+                  this.spawnAttackerProjectile((byte) -84, var2_int);
                   if (this.field_h) {
                     this.attackers[var2_int].initializeParticles(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
                   }
@@ -3051,12 +3051,12 @@ final class CombatPresentation implements EventPresentation {
             return;
           }
           if (0 == (this.phaseFrame & 15)) {
-            this.f(-24577);
+            this.startNextRangedAttack(-24577);
           }
           if (this.field_D[-1 + this.field_D.length] != null &&
             this.field_D[-1 + this.field_D.length].remainingTicks > 200) {
             this.phase = 6;
-            this.h(1);
+            this.initializeProjectileImpacts(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3066,7 +3066,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3) {
+    private final void drawBattleBackground(byte param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3097,7 +3097,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final int[] a(int param0, byte param1) {
+    private final int[] createRandomIndexOrder(int param0, byte param1) {
         int[] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
@@ -3168,7 +3168,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void e(byte param0) {
+    private final void advanceDeployedDefenderAttack(byte param0) {
         BattleCharacter stackIn_43_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -3243,7 +3243,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    final static void n(int param0) {
+    final static void dismissMessageDialog(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -3259,7 +3259,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final boolean a(byte param0, int param1, BattleCharacter[] param2, int param3, BattleCharacter[] param4) {
+    private final boolean markRandomEngagedCasualty(byte param0, int param1, BattleCharacter[] param2, int param3, BattleCharacter[] param4) {
         RuntimeException stackIn_190_0 = null;
         StringBuilder stackIn_190_1 = null;
         String stackIn_191_2 = null;
@@ -3390,7 +3390,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(boolean param0, BattleCharacter[] param1, byte param2, int param3, ProjectileEffect[] param4) {
+    private final void drawCharacterGroupWithProjectiles(boolean param0, BattleCharacter[] param1, byte param2, int param3, ProjectileEffect[] param4) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
@@ -3597,7 +3597,7 @@ final class CombatPresentation implements EventPresentation {
               }
               break;
             }
-            this.a((byte) 98, 0, 0, 128);
+            this.drawBattleBackground((byte) 98, 0, 0, 128);
           }
           var9 = 0;
           var6_int = 0;
@@ -3676,13 +3676,13 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void d(int param0) {
-        this.a(this.attackers, -4925);
+    private final void advanceAttackerJeerPhase(int param0) {
+        this.queueIdleCharacterJeers(this.attackers, -4925);
         if (param0 != 29823) {
           return;
         }
         try {
-          this.b(this.attackers, 12579);
+          this.advanceCharacterGroup(this.attackers, 12579);
           if (this.phaseFrame > 200) {
             this.phaseFrame = 0;
             this.phase = 8;
@@ -3692,7 +3692,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_M = null;
         field_N = null;
@@ -3739,7 +3739,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void spawnAttackerProjectile(byte param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -3770,7 +3770,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void b(BattleCharacter[] param0, int param1) {
+    private final void advanceCharacterGroup(BattleCharacter[] param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -3808,7 +3808,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void l(int param0) {
+    private final void scheduleNextMeleeCasualty(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3827,7 +3827,7 @@ final class CombatPresentation implements EventPresentation {
               if (this.field_O <= 0) {
                 return;
               }
-              if (!this.a((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
+              if (!this.markRandomEngagedCasualty((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
                 return;
               }
               this.field_O = this.field_O - 1;
@@ -3835,7 +3835,7 @@ final class CombatPresentation implements EventPresentation {
                 return;
               }
             }
-            if (!this.a((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
+            if (!this.markRandomEngagedCasualty((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
               return;
             }
             this.field_v = this.field_v - 1;
@@ -3846,7 +3846,7 @@ final class CombatPresentation implements EventPresentation {
           if (var2_int > 0 &&
             0 < var3) {
             if (AttackEvent.nextBoundedInt(false, this.field_O + this.field_v, ConsoleTokenSupport.field_b) <= this.field_v) {
-              if (!this.a((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
+              if (!this.markRandomEngagedCasualty((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
                 return;
               }
               this.field_v = this.field_v - 1;
@@ -3854,7 +3854,7 @@ final class CombatPresentation implements EventPresentation {
                 return;
               }
             }
-            if (!this.a((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
+            if (!this.markRandomEngagedCasualty((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
               return;
             }
             this.field_O = this.field_O - 1;
@@ -3866,7 +3866,7 @@ final class CombatPresentation implements EventPresentation {
             if (var3 <= 0) {
               return;
             }
-            if (!this.a((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
+            if (!this.markRandomEngagedCasualty((byte) -93, this.field_u, this.attackers, this.field_J, this.defenders)) {
               return;
             }
             this.field_O = this.field_O - 1;
@@ -3874,7 +3874,7 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
           }
-          if (this.a((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
+          if (this.markRandomEngagedCasualty((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
             this.field_v = this.field_v - 1;
           }
           return;
@@ -3885,7 +3885,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void b(byte param0, int param1) {
+    private final void loadBattleBackground(byte param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3901,14 +3901,14 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    private final void d(byte param0) {
+    private final void advanceCombatExitPhase(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.b(this.attackers, param0 + 12453);
-          this.b(this.defenders, param0 + 12453);
+          this.advanceCharacterGroup(this.attackers, param0 + 12453);
+          this.advanceCharacterGroup(this.defenders, param0 + 12453);
           if (param0 != 126) {
-            this.a((byte) -79, 88);
+            this.spawnAttackerProjectile((byte) -79, 88);
           }
           if (this.phaseFrame == 1) {
             if (null != MatchConditionEntry.field_p) {
@@ -3924,7 +3924,7 @@ final class CombatPresentation implements EventPresentation {
         }
     }
 
-    final void a(int param0, Unit param1, int param2, boolean param3, Unit param4) {
+    final void configureSandboxCombat(int param0, Unit param1, int param2, boolean param3, Unit param4) {
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
         boolean stackIn_21_1 = false;
@@ -3985,12 +3985,12 @@ final class CombatPresentation implements EventPresentation {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.battlefield) {
-            this.b((byte) 54, 0);
+            this.loadBattleBackground((byte) 54, 0);
             if (var9 != 0) {
-              this.b((byte) 54, this.battlefield.mapTheme);
+              this.loadBattleBackground((byte) 54, this.battlefield.mapTheme);
             }
           } else {
-            this.b((byte) 54, this.battlefield.mapTheme);
+            this.loadBattleBackground((byte) 54, this.battlefield.mapTheme);
           }
           stackIn_11_0 = (param1.strength > param0) ? 0 : 1;
           var6_int = stackIn_11_0;
@@ -4124,7 +4124,7 @@ final class CombatPresentation implements EventPresentation {
             }
             this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, ConsoleTokenSupport.field_b) - this.field_y);
             this.field_D = new ProjectileEffect[this.field_p];
-            this.field_b = this.a(this.field_w, (byte) -127);
+            this.field_b = this.createRandomIndexOrder(this.field_w, (byte) -127);
             this.phase = 5;
             if (var6_int == 0) {
               this.field_L = 8;
@@ -4358,7 +4358,7 @@ final class CombatPresentation implements EventPresentation {
           if (this.field_d &&
             this.field_f) {
             this.phase = 6;
-            this.h(1);
+            this.initializeProjectileImpacts(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

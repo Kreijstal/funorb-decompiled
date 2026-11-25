@@ -919,7 +919,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   if (PointerInputHandler.field_f != null) {
                     UnitSpell.a(3, 1, PointerInputHandler.field_f);
                   }
-                  CombatPresentation.n(param0 ^ -110);
+                  CombatPresentation.dismissMessageDialog(param0 ^ -110);
                   CipherPacketBuffer.a(false, ClientContextMenu.field_a, 1, 0);
                   if (SoundEffectPreloadSupport.field_a) {
                     SoundEffectPreloadSupport.field_a = false;
@@ -1283,7 +1283,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ActionRequest.a(100);
           CipherPacketBuffer.releaseStatics((byte) -97);
           ProjectileEffect.releaseStatics(obfuscationGuard + 77);
-          CombatPresentation.c(-128);
+          CombatPresentation.releaseStatics(-128);
           AnimationPlayer.releaseStatics(-106);
           ModelMesh.releaseStatics();
           DualLinkedNode.releaseStatics(obfuscationGuard ^ 71);

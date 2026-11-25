@@ -79,7 +79,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
             MovementPlanner.field_z.selectedIndex >= 0) {
             var2 = SpellMenuGroup.field_m[MovementPlanner.field_z.selectedIndex];
             if (var2 == 2) {
-              CombatPresentation.n(-112);
+              CombatPresentation.dismissMessageDialog(-112);
             }
           }
           stackIn_18_0 = var2;

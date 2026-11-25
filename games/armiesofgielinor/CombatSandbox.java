@@ -250,7 +250,7 @@ final class CombatSandbox {
           }
           var23 = (var17 - var22) * (DropdownSelectorPainter.matchupDamagePercent[var21][var20] * WeightedLruCache.terrainDamageTakenPercent[var10]) / 10000;
           this.combatPresentation = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
-          this.combatPresentation.a(var22, var19, var23, true, var18);
+          this.combatPresentation.configureSandboxCombat(var22, var19, var23, true, var18);
           GameCanvas.field_b = new ScreenWipeTransition();
         }
     }
