@@ -2181,7 +2181,7 @@ final class GameScreen {
           return;
         }
         try {
-          SoundPlayback.a(false, 63, param0);
+          SoundPlayback.showFullscreenDialog(false, 63, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.DB(" + param0 + ')');
         }

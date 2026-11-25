@@ -12,7 +12,7 @@ final class FleetMove extends QuaternaryLinkNode {
     static String field_D;
     static AnimatedPanel field_F;
 
-    final static int e(int param0) {
+    final static int getFullscreenDialogHeight(int param0) {
         if (param0 >= -77) {
           field_F = (AnimatedPanel) null;
           return DerelictMapReader.field_a;

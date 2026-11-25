@@ -12,7 +12,7 @@ final class SoundPlayback extends IntrusiveNode {
     static String field_j;
     IntrusiveNode field_n;
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void showFullscreenDialog(boolean param0, int param1, int param2) {
         int stackIn_37_0 = 0;
         int stackIn_40_0 = 0;
         String[] stackIn_47_0 = null;

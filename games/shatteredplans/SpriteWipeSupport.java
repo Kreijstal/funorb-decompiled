@@ -73,7 +73,7 @@ final class SpriteWipeSupport {
         }
     }
 
-    final static int getQuickChatMenuWidth(int param0) {
+    final static int getFullscreenDialogWidth(int param0) {
         if (param0 != -27572) {
           field_a = (CipherPacketBuffer) null;
         }

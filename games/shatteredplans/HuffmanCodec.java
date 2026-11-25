@@ -33,7 +33,7 @@ final class HuffmanCodec {
         }
         if (null == BoundsRect.field_p &&
           CanvasResizeController.field_u) {
-          SoundPlayback.a(param0, 125, var2);
+          SoundPlayback.showFullscreenDialog(param0, 125, var2);
         }
     }
 

@@ -403,7 +403,7 @@ class TextHotspotWidget extends FocusableWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawCenteredMenuPanel(int param0, int param1, int param2) {
         param0 += 30;
         if (param1 == -1) {
           param2 += 30;

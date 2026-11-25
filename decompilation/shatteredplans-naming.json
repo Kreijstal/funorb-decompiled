@@ -7028,6 +7028,14 @@
       "renamedSymbol": "M:GuestPlayForm.onButtonClicked(LFocusableWidget;IIII)V"
     },
     {
+      "symbol": "M:cq.d(Z)I",
+      "originalName": "d",
+      "to": "pollFullscreenDialogAction",
+      "evidence": "Poll vertical keyboard selection and both pointer positions for fullscreen dialog buttons, map activated selection to retained action id, clear dialog state for original close/accept actions or cancellation outside confirmation mode, and on confirmation timeout return action2after opening timeout dialog. Complete59line body, action consumer context and builder read. Preserve bool cancel input, key code13, exact10999ms clock formula, index failures, poll/call order and timeout partial state. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GuestPlayForm.pollFullscreenDialogAction(Z)I"
+    },
+    {
       "symbol": "M:cr.a(B)V",
       "originalName": "a",
       "to": "clearStatics",
@@ -10018,6 +10026,14 @@
       "evidence": "Stores the volume and applies a scaled value to the PcmSampleStream.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoundPlayback.setVolume(BI)V"
+    },
+    {
+      "symbol": "M:gm.a(ZII)V",
+      "originalName": "a",
+      "to": "showFullscreenDialog",
+      "evidence": "Set mode/open flag then build one of six fullscreen membership/configuration/focus/confirmation/timeout dialogs: allocate wrapped text/action arrays, split singular/plural countdown templates, measure maximum width, calculate row heights/button hit rectangles, reset selection and capture confirmation clock. Complete309line body and all callers read. Preserve modes0..5and invalid-mode failure after initial writes, original array padding/indices, allocations/aliases, unused/guard parameters, wrap/measurement order and late division. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundPlayback.showFullscreenDialog(ZII)V"
     },
     {
       "symbol": "M:gn.a(B[Lbi;)V",
@@ -13046,10 +13062,10 @@
     {
       "symbol": "M:kd.a(B)V",
       "originalName": "a",
-      "to": "drawQuickChatMenu",
-      "evidence": "Full119-line draw body read: valid guard-119 gates all work, derive timed lookup countdown and replacement rows, compute text widths/colors/highlights, render normal/selected rows. Preserve timer casts/overflow, substitutions, indices and draw order. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
+      "to": "drawFullscreenDialog",
+      "evidence": "For byte-119render retained fullscreen dialog rows/buttons with selected styles and clock countdown; switch singular wording at1, substitute numeric countdown marker and draw text/nine-slice buttons. Complete119line body, producer and client draw caller confirm fullscreen role rather than Quick Chat. Preserve early byte return including cleanup guard call, live clock timing, integer truncation/clamp, original singular/plural indexing, shared arrays and draw/evaluation order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:QuickChatMenuSupport.drawQuickChatMenu(B)V"
+      "renamedSymbol": "M:QuickChatMenuSupport.drawFullscreenDialog(B)V"
     },
     {
       "symbol": "M:kd.a(I)V",
@@ -15146,6 +15162,14 @@
       "evidence": "Reads a star index from the packet and returns the star of the map.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FleetMove.readStar(LGameState;LPacketBuffer;I)LStar;"
+    },
+    {
+      "symbol": "M:mg.e(I)I",
+      "originalName": "e",
+      "to": "getFullscreenDialogHeight",
+      "evidence": "Return cached fullscreen dialog layout height written by complete dialog builder. Int>=-77first clears retained unrelated AnimatedPanel; both branches return same shared height. Complete7line body and sole drawing caller read; source search confirms builder owns height writes. Preserve guard side effect and duplicate-return structure. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FleetMove.getFullscreenDialogHeight(I)I"
     },
     {
       "symbol": "M:mg.g(B)V",
@@ -19238,10 +19262,10 @@
     {
       "symbol": "M:sa.a(I)I",
       "originalName": "a",
-      "to": "getQuickChatMenuWidth",
-      "evidence": "Return retained menu right-minus-left bounds; wrong int clears archive first. Exact producers compute both bounds from maximum menu string width; Quick Chat draw caller uses width with separately retained menu height. Preserve signed overflow and guard. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, locks/random, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "to": "getFullscreenDialogWidth",
+      "evidence": "Return cached fullscreen text span right-minus-left established by complete dialog builder. Client fullscreen drawing path consumes width/height together. Complete6line body confirms old Quick Chat alias misleading. Preserve signed subtraction and wrong-int CipherPacketBuffer clear before shared reads. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:SpriteWipeSupport.getQuickChatMenuWidth(I)I"
+      "renamedSymbol": "M:SpriteWipeSupport.getFullscreenDialogWidth(I)I"
     },
     {
       "symbol": "M:sa.a(II)I",
@@ -21002,6 +21026,14 @@
       "evidence": "Stores y, height, x and width. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextHotspotWidget.setBounds(IIBII)V"
+    },
+    {
+      "symbol": "M:ts.a(III)V",
+      "originalName": "a",
+      "to": "drawCenteredMenuPanel",
+      "evidence": "Add30pixels to supplied width; for guard-1also add30to height and draw retained plain hexagon panel centered in640x480. Complete8line body and complete delegated panel helper read; client draw uses it for fullscreen dialog and separate menu, so name is shared-menu scope. Preserve guard/no-op, signed overflow and shift/center arithmetic, helper guard and all drawing order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, array/queue aliases, allocations, clock/RNG/locks, clipping/raster state, overflow/casts, FP, partial writes and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextHotspotWidget.drawCenteredMenuPanel(III)V"
     },
     {
       "symbol": "M:ts.a(IIIB)V",
@@ -100470,7 +100502,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#0",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#0",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -100481,7 +100513,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#1",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#1",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -100492,7 +100524,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#2",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#2",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -100503,7 +100535,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#3",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#3",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -100514,7 +100546,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#4",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#4",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#4",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -100525,7 +100557,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#5",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#5",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -100536,7 +100568,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#6",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#6",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#6",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -100547,7 +100579,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#7",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#7",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -100558,7 +100590,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#8",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#8",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -100569,7 +100601,7 @@
     },
     {
       "symbol": "L:cq.d(Z)I#9",
-      "renamedSymbol": "L:GuestPlayForm.d(Z)I#9",
+      "renamedSymbol": "L:GuestPlayForm.pollFullscreenDialogAction(Z)I#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -145900,7 +145932,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#0",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#0",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#0",
       "originalName": "stackIn_37_0",
       "renamedName": "stackIn_37_0",
       "declaration": {
@@ -145911,7 +145943,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#1",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#1",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#1",
       "originalName": "stackIn_40_0",
       "renamedName": "stackIn_40_0",
       "declaration": {
@@ -145922,7 +145954,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#10",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#10",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#10",
       "originalName": "stackIn_89_0",
       "renamedName": "stackIn_89_0",
       "declaration": {
@@ -145933,7 +145965,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#11",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#11",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#11",
       "originalName": "stackIn_89_1",
       "renamedName": "stackIn_89_1",
       "declaration": {
@@ -145944,7 +145976,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#12",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#12",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#12",
       "originalName": "stackIn_90_2",
       "renamedName": "stackIn_90_2",
       "declaration": {
@@ -145955,7 +145987,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#13",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#13",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#13",
       "originalName": "stackIn_115_0",
       "renamedName": "stackIn_115_0",
       "declaration": {
@@ -145966,7 +145998,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#14",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#14",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#14",
       "originalName": "stackIn_116_1",
       "renamedName": "stackIn_116_1",
       "declaration": {
@@ -145977,7 +146009,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#15",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#15",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -145988,7 +146020,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#16",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#16",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#16",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -145999,7 +146031,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#17",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#17",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#17",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -146010,7 +146042,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#18",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#18",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#18",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -146021,7 +146053,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#19",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#19",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#19",
       "originalName": "var4_ref_String__",
       "renamedName": "var4_ref_String__",
       "declaration": {
@@ -146032,7 +146064,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#2",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#2",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#2",
       "originalName": "stackIn_47_0",
       "renamedName": "stackIn_47_0",
       "declaration": {
@@ -146043,7 +146075,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#20",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#20",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#20",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -146054,7 +146086,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#21",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#21",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#21",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -146065,7 +146097,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#22",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#22",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#22",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -146076,7 +146108,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#23",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#23",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#23",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -146087,7 +146119,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#24",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#24",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#24",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -146098,7 +146130,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#25",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#25",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#25",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -146109,7 +146141,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#26",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#26",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#26",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -146120,7 +146152,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#27",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#27",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#27",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -146131,7 +146163,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#28",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#28",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#28",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -146142,7 +146174,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#29",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#29",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#29",
       "originalName": "var4_ref_String__Lifetime1",
       "renamedName": "var4_ref_String__Lifetime1",
       "declaration": {
@@ -146153,7 +146185,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#3",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#3",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#3",
       "originalName": "stackIn_47_1",
       "renamedName": "stackIn_47_1",
       "declaration": {
@@ -146164,7 +146196,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#30",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#30",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#30",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -146175,7 +146207,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#31",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#31",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#31",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -146186,7 +146218,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#32",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#32",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#32",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -146197,7 +146229,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#33",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#33",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#33",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -146208,7 +146240,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#34",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#34",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#34",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -146219,7 +146251,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#35",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#35",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#35",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -146230,7 +146262,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#36",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#36",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#36",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -146241,7 +146273,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#37",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#37",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#37",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -146252,7 +146284,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#38",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#38",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#38",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -146263,7 +146295,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#39",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#39",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#39",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -146274,7 +146306,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#4",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#4",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#4",
       "originalName": "stackIn_48_2",
       "renamedName": "stackIn_48_2",
       "declaration": {
@@ -146285,7 +146317,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#40",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#40",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#40",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -146296,7 +146328,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#41",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#41",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#41",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -146307,7 +146339,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#42",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#42",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#42",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -146318,7 +146350,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#43",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#43",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#43",
       "originalName": "var5Lifetime2Lifetime1",
       "renamedName": "var5Lifetime2Lifetime1",
       "declaration": {
@@ -146329,7 +146361,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#44",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#44",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#44",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -146340,7 +146372,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#45",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#45",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#45",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -146351,7 +146383,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#5",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#5",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#5",
       "originalName": "stackIn_52_0",
       "renamedName": "stackIn_52_0",
       "declaration": {
@@ -146362,7 +146394,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#6",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#6",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#6",
       "originalName": "stackIn_52_1",
       "renamedName": "stackIn_52_1",
       "declaration": {
@@ -146373,7 +146405,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#7",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#7",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#7",
       "originalName": "stackIn_52_2",
       "renamedName": "stackIn_52_2",
       "declaration": {
@@ -146384,7 +146416,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#8",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#8",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#8",
       "originalName": "stackIn_52_3",
       "renamedName": "stackIn_52_3",
       "declaration": {
@@ -146395,7 +146427,7 @@
     },
     {
       "symbol": "L:gm.a(ZII)V#9",
-      "renamedSymbol": "L:SoundPlayback.a(ZII)V#9",
+      "renamedSymbol": "L:SoundPlayback.showFullscreenDialog(ZII)V#9",
       "originalName": "stackIn_55_2",
       "renamedName": "stackIn_55_2",
       "declaration": {
@@ -185159,7 +185191,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#0",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#0",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -185170,7 +185202,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#1",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#1",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#1",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -185181,7 +185213,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#10",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#10",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#10",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -185192,7 +185224,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#11",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#11",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#11",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -185203,7 +185235,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#12",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#12",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#12",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -185214,7 +185246,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#13",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#13",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#13",
       "originalName": "var3_long",
       "renamedName": "var3_long",
       "declaration": {
@@ -185225,7 +185257,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#14",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#14",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#14",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -185236,7 +185268,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#15",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#15",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#15",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -185247,7 +185279,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#16",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#16",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#16",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -185258,7 +185290,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#17",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#17",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#17",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -185269,7 +185301,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#18",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#18",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#18",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -185280,7 +185312,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#19",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#19",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#19",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -185291,7 +185323,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#2",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#2",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#2",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -185302,7 +185334,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#20",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#20",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#20",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -185313,7 +185345,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#21",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#21",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#21",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -185324,7 +185356,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#22",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#22",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#22",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -185335,7 +185367,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#23",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#23",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#23",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -185346,7 +185378,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#3",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#3",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#3",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -185357,7 +185389,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#4",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#4",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#4",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -185368,7 +185400,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#5",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#5",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#5",
       "originalName": "stackIn_40_0",
       "renamedName": "stackIn_40_0",
       "declaration": {
@@ -185379,7 +185411,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#6",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#6",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#6",
       "originalName": "stackIn_40_1",
       "renamedName": "stackIn_40_1",
       "declaration": {
@@ -185390,7 +185422,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#7",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#7",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#7",
       "originalName": "stackIn_41_2",
       "renamedName": "stackIn_41_2",
       "declaration": {
@@ -185401,7 +185433,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#8",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#8",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#8",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -185412,7 +185444,7 @@
     },
     {
       "symbol": "L:kd.a(B)V#9",
-      "renamedSymbol": "L:QuickChatMenuSupport.drawQuickChatMenu(B)V#9",
+      "renamedSymbol": "L:QuickChatMenuSupport.drawFullscreenDialog(B)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -324166,9 +324198,9 @@
     },
     {
       "symbol": "M:cq.d(Z)I",
-      "renamedSymbol": "M:GuestPlayForm.d(Z)I",
+      "renamedSymbol": "M:GuestPlayForm.pollFullscreenDialogAction(Z)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "pollFullscreenDialogAction",
       "declaration": {
         "file": "cq.java",
         "start": 593,
@@ -330909,9 +330941,9 @@
     },
     {
       "symbol": "M:gm.a(ZII)V",
-      "renamedSymbol": "M:SoundPlayback.a(ZII)V",
+      "renamedSymbol": "M:SoundPlayback.showFullscreenDialog(ZII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showFullscreenDialog",
       "declaration": {
         "file": "gm.java",
         "start": 294,
@@ -336937,9 +336969,9 @@
     },
     {
       "symbol": "M:kd.a(B)V",
-      "renamedSymbol": "M:QuickChatMenuSupport.drawQuickChatMenu(B)V",
+      "renamedSymbol": "M:QuickChatMenuSupport.drawFullscreenDialog(B)V",
       "originalName": "a",
-      "renamedName": "drawQuickChatMenu",
+      "renamedName": "drawFullscreenDialog",
       "declaration": {
         "file": "kd.java",
         "start": 7515,
@@ -341524,9 +341556,9 @@
     },
     {
       "symbol": "M:mg.e(I)I",
-      "renamedSymbol": "M:FleetMove.e(I)I",
+      "renamedSymbol": "M:FleetMove.getFullscreenDialogHeight(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getFullscreenDialogHeight",
       "declaration": {
         "file": "mg.java",
         "start": 282,
@@ -350511,9 +350543,9 @@
     },
     {
       "symbol": "M:sa.a(I)I",
-      "renamedSymbol": "M:SpriteWipeSupport.getQuickChatMenuWidth(I)I",
+      "renamedSymbol": "M:SpriteWipeSupport.getFullscreenDialogWidth(I)I",
       "originalName": "a",
-      "renamedName": "getQuickChatMenuWidth",
+      "renamedName": "getFullscreenDialogWidth",
       "declaration": {
         "file": "sa.java",
         "start": 2586,
@@ -354361,9 +354393,9 @@
     },
     {
       "symbol": "M:ts.a(III)V",
-      "renamedSymbol": "M:TextHotspotWidget.a(III)V",
+      "renamedSymbol": "M:TextHotspotWidget.drawCenteredMenuPanel(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawCenteredMenuPanel",
       "declaration": {
         "file": "ts.java",
         "start": 14379,
@@ -373358,7 +373390,7 @@
     },
     {
       "symbol": "P:cq.d(Z)I#0",
-      "renamedSymbol": "P:GuestPlayForm.d(Z)I#0",
+      "renamedSymbol": "P:GuestPlayForm.pollFullscreenDialogAction(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389968,7 +390000,7 @@
     },
     {
       "symbol": "P:gm.a(ZII)V#0",
-      "renamedSymbol": "P:SoundPlayback.a(ZII)V#0",
+      "renamedSymbol": "P:SoundPlayback.showFullscreenDialog(ZII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389979,7 +390011,7 @@
     },
     {
       "symbol": "P:gm.a(ZII)V#1",
-      "renamedSymbol": "P:SoundPlayback.a(ZII)V#1",
+      "renamedSymbol": "P:SoundPlayback.showFullscreenDialog(ZII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389990,7 +390022,7 @@
     },
     {
       "symbol": "P:gm.a(ZII)V#2",
-      "renamedSymbol": "P:SoundPlayback.a(ZII)V#2",
+      "renamedSymbol": "P:SoundPlayback.showFullscreenDialog(ZII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -404279,7 +404311,7 @@
     },
     {
       "symbol": "P:kd.a(B)V#0",
-      "renamedSymbol": "P:QuickChatMenuSupport.drawQuickChatMenu(B)V#0",
+      "renamedSymbol": "P:QuickChatMenuSupport.drawFullscreenDialog(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -414795,7 +414827,7 @@
     },
     {
       "symbol": "P:mg.e(I)I#0",
-      "renamedSymbol": "P:FleetMove.e(I)I#0",
+      "renamedSymbol": "P:FleetMove.getFullscreenDialogHeight(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -436344,7 +436376,7 @@
     },
     {
       "symbol": "P:sa.a(I)I#0",
-      "renamedSymbol": "P:SpriteWipeSupport.getQuickChatMenuWidth(I)I#0",
+      "renamedSymbol": "P:SpriteWipeSupport.getFullscreenDialogWidth(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446486,7 +446518,7 @@
     },
     {
       "symbol": "P:ts.a(III)V#0",
-      "renamedSymbol": "P:TextHotspotWidget.a(III)V#0",
+      "renamedSymbol": "P:TextHotspotWidget.drawCenteredMenuPanel(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446497,7 +446529,7 @@
     },
     {
       "symbol": "P:ts.a(III)V#1",
-      "renamedSymbol": "P:TextHotspotWidget.a(III)V#1",
+      "renamedSymbol": "P:TextHotspotWidget.drawCenteredMenuPanel(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -446508,7 +446540,7 @@
     },
     {
       "symbol": "P:ts.a(III)V#2",
-      "renamedSymbol": "P:TextHotspotWidget.a(III)V#2",
+      "renamedSymbol": "P:TextHotspotWidget.drawCenteredMenuPanel(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -456720,7 +456752,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "397fbcc5b4321c9de8511e05d103790de6f7185b5f3ac83ef3cd432e4d9d4302",
+      "outputSha256": "ba2c34d6b785bc90597e0e6e0210d8b4ed8394ca66c71d1f56cf1d48fe51a8c2",
       "edits": [
         {
           "start": 86,
@@ -457561,6 +457593,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "GuestPlayForm"
+        },
+        {
+          "start": 7104,
+          "end": 7105,
+          "symbol": "M:cq.d(Z)I",
+          "original": "d",
+          "renamed": "pollFullscreenDialogAction"
         },
         {
           "start": 7173,
@@ -468800,6 +468839,13 @@
           "renamed": "TextHotspotWidget"
         },
         {
+          "start": 47281,
+          "end": 47282,
+          "symbol": "M:ts.a(III)V",
+          "original": "a",
+          "renamed": "drawCenteredMenuPanel"
+        },
+        {
           "start": 47283,
           "end": 47285,
           "symbol": "C:sa",
@@ -468811,7 +468857,7 @@
           "end": 47287,
           "symbol": "M:sa.a(I)I",
           "original": "a",
-          "renamed": "getQuickChatMenuWidth"
+          "renamed": "getFullscreenDialogWidth"
         },
         {
           "start": 47310,
@@ -468819,6 +468865,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "FleetMove"
+        },
+        {
+          "start": 47313,
+          "end": 47314,
+          "symbol": "M:mg.e(I)I",
+          "original": "e",
+          "renamed": "getFullscreenDialogHeight"
         },
         {
           "start": 47341,
@@ -468832,7 +468885,7 @@
           "end": 47345,
           "symbol": "M:kd.a(B)V",
           "original": "a",
-          "renamed": "drawQuickChatMenu"
+          "renamed": "drawFullscreenDialog"
         },
         {
           "start": 47391,
@@ -469022,6 +469075,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "TextHotspotWidget"
+        },
+        {
+          "start": 48826,
+          "end": 48827,
+          "symbol": "M:ts.a(III)V",
+          "original": "a",
+          "renamed": "drawCenteredMenuPanel"
         },
         {
           "start": 48828,
@@ -502451,7 +502511,7 @@
       "original": "cq.java",
       "renamed": "GuestPlayForm.java",
       "inputSha256": "a375b0d4035b7a5f722858d5d8cca089dbb7135b0d7a29792bf15e8d531b9792",
-      "outputSha256": "101cba5cf0e08a2c1f817ff25d4a71f4e64a34adb0a7b8fade10f3508b44fc0c",
+      "outputSha256": "7a282619378b9eb91b53578657082b2bb9760a99e5d800934ea6261e847d098e",
       "edits": [
         {
           "start": 50,
@@ -502529,6 +502589,13 @@
           "symbol": "M:f.a(IIII)V",
           "original": "a",
           "renamed": "drawLayer"
+        },
+        {
+          "start": 593,
+          "end": 594,
+          "symbol": "M:cq.d(Z)I",
+          "original": "d",
+          "renamed": "pollFullscreenDialogAction"
         },
         {
           "start": 1019,
@@ -502739,6 +502806,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "SoundPlayback"
+        },
+        {
+          "start": 2092,
+          "end": 2093,
+          "symbol": "M:gm.a(ZII)V",
+          "original": "a",
+          "renamed": "showFullscreenDialog"
         },
         {
           "start": 2396,
@@ -551308,7 +551382,7 @@
       "original": "fm.java",
       "renamed": "HuffmanCodec.java",
       "inputSha256": "8389597dddd3d57da9eae058e78f0b2929ddda7d83d6c8851250bd65392a2a14",
-      "outputSha256": "a88566bc18e09cf29fce68f64614f2978022c33829a8f5a4309a7c374704aead",
+      "outputSha256": "8b7bbcec2bf811b1aeaedf84ce673f3869dbe0e2e6429c1d814af3a50ea9c839",
       "edits": [
         {
           "start": 50,
@@ -551442,6 +551516,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "SoundPlayback"
+        },
+        {
+          "start": 938,
+          "end": 939,
+          "symbol": "M:gm.a(ZII)V",
+          "original": "a",
+          "renamed": "showFullscreenDialog"
         },
         {
           "start": 991,
@@ -561884,7 +561965,7 @@
       "original": "gm.java",
       "renamed": "SoundPlayback.java",
       "inputSha256": "bb32af6d82976e601c29fe9065d5dda4eb54987864d8f25ad4ad5bbc46795bf2",
-      "outputSha256": "718120f8c7ed3d2d3e89f1c5995610830e3fc35d580cee72d5e7f7e02f6e1e61",
+      "outputSha256": "42c915862cf75d6f01c0ab3eae45c76efa1ccc89146e954c256a9034e9f88fca",
       "edits": [
         {
           "start": 50,
@@ -561920,6 +562001,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "symbol": "M:gm.a(ZII)V",
+          "original": "a",
+          "renamed": "showFullscreenDialog"
         },
         {
           "start": 1792,
@@ -604815,7 +604903,7 @@
       "original": "kd.java",
       "renamed": "QuickChatMenuSupport.java",
       "inputSha256": "85121392abdf7017ab609e7aeb982862323f8a71f62c9131e8ad9d409245900f",
-      "outputSha256": "984473fa84c492dc2a4cba9ee6c834a11c9197941ee2f5deaed0ba091bae2d1b",
+      "outputSha256": "7013ef4267ecadbfdf705dfcb8eb361cd83fa1ab4ff65a1fa143958005f78267",
       "edits": [
         {
           "start": 50,
@@ -604913,7 +605001,7 @@
           "end": 7516,
           "symbol": "M:kd.a(B)V",
           "original": "a",
-          "renamed": "drawQuickChatMenu"
+          "renamed": "drawFullscreenDialog"
         },
         {
           "start": 7798,
@@ -605270,7 +605358,7 @@
           "end": 11878,
           "symbol": "M:kd.a(B)V",
           "original": "a",
-          "renamed": "drawQuickChatMenu"
+          "renamed": "drawFullscreenDialog"
         },
         {
           "start": 11931,
@@ -620360,7 +620448,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "7b1ccd842b6c3c24a868b79431954798bb090d172fa367bb8692d4241b109655",
+      "outputSha256": "400e31a8554235255544c62c957fb7d8c95b5c847e934bbf269287c00d0bfc4d",
       "edits": [
         {
           "start": 50,
@@ -624987,6 +625075,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "SoundPlayback"
+        },
+        {
+          "start": 83624,
+          "end": 83625,
+          "symbol": "M:gm.a(ZII)V",
+          "original": "a",
+          "renamed": "showFullscreenDialog"
         },
         {
           "start": 83716,
@@ -652118,7 +652213,7 @@
       "original": "mg.java",
       "renamed": "FleetMove.java",
       "inputSha256": "1482d378778ded4eb32f27fc37ccd1936cc46dfc07856040a37324bdb4d1c7fd",
-      "outputSha256": "ee4a3f53663e0c3ae7274cf043eb6f13d2419cee8f1bc89664bdbe0a8666bb67",
+      "outputSha256": "b5593228a0c63d4074d0b4eb609a74d9b99c1e415cf5e53407e0f5f446c6cec1",
       "edits": [
         {
           "start": 50,
@@ -652161,6 +652256,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 282,
+          "end": 283,
+          "symbol": "M:mg.e(I)I",
+          "original": "e",
+          "renamed": "getFullscreenDialogHeight"
         },
         {
           "start": 348,
@@ -710185,7 +710287,7 @@
       "original": "sa.java",
       "renamed": "SpriteWipeSupport.java",
       "inputSha256": "aaf00e44bd9e249cb3a2cbc82719798fae2d3b830d9712073e3623f792875dd2",
-      "outputSha256": "3183fddfcab06f56ad63a62c31972917cbfe09395fee6aa9f98048a536cf2230",
+      "outputSha256": "b9d18e438cd60c38e109fff876aef56057b6381e959c040802f286af696f279e",
       "edits": [
         {
           "start": 50,
@@ -710318,7 +710420,7 @@
           "end": 2587,
           "symbol": "M:sa.a(I)I",
           "original": "a",
-          "renamed": "getQuickChatMenuWidth"
+          "renamed": "getFullscreenDialogWidth"
         },
         {
           "start": 2655,
@@ -754662,7 +754764,7 @@
       "original": "ts.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "2bd8bdbfcef80b0a9c80bede22f8f8731ebf59ce591bf8039933fcc6c45261bf",
+      "outputSha256": "c8436beae076bf02b8135b4041a825a09227953e649d69a3cf2186ee1a339d0a",
       "edits": [
         {
           "start": 63,
@@ -755636,6 +755738,13 @@
           "symbol": "M:pf.a(BLoh;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 14379,
+          "end": 14380,
+          "symbol": "M:ts.a(III)V",
+          "original": "a",
+          "renamed": "drawCenteredMenuPanel"
         },
         {
           "start": 14503,
@@ -799142,10 +799251,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "ae9fef0088cf1cb11dedeb7d1704265af059f34a24af77bd74b8e47c15c5f42f",
+    "rulesSha256": "4c78f0738cc827d762b67a838a13cad252a0fd82dae9b5b95bdf3f009a59d943",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "8944cf30928d69c083cdabb4c76b0abc7e074366b6e9b1260b6a85a323b3ebbe",
+    "outputTreeSha256": "528e2031dc51cb715fe766c1f387270c11d69d1777e55459e6cd5c30506506c6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

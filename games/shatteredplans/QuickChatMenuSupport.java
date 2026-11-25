@@ -204,7 +204,7 @@ final class QuickChatMenuSupport {
         }
     }
 
-    final static void drawQuickChatMenu(byte param0) {
+    final static void drawFullscreenDialog(byte param0) {
         int var3 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
@@ -328,7 +328,7 @@ final class QuickChatMenuSupport {
         field_c = null;
         field_b = null;
         if (param0 <= 74) {
-          QuickChatMenuSupport.drawQuickChatMenu((byte) -48);
+          QuickChatMenuSupport.drawFullscreenDialog((byte) -48);
         }
     }
 

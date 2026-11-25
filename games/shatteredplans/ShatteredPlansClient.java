@@ -215,7 +215,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   if (~ClientOverlayDrawSupport.field_g != ~ClientOverlayDrawSupport.field_c) {
                     this.b(false, false);
                   } else {
-                    var3 = GuestPlayForm.d(false);
+                    var3 = GuestPlayForm.pollFullscreenDialogAction(false);
                     if (var3 == 2) {
                       BufferedCacheFile.c(0);
                     } else {
@@ -1447,8 +1447,8 @@ public final class ShatteredPlansClient extends GameClientShell {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);
         }
         if (TutorialScene.isFullscreenDialogOpen(false)) {
-          TextHotspotWidget.a(SpriteWipeSupport.getQuickChatMenuWidth(-27572), param0 ^ -2, FleetMove.e(param0 ^ -84));
-          QuickChatMenuSupport.drawQuickChatMenu((byte) -119);
+          TextHotspotWidget.drawCenteredMenuPanel(SpriteWipeSupport.getFullscreenDialogWidth(-27572), param0 ^ -2, FleetMove.getFullscreenDialogHeight(param0 ^ -84));
+          QuickChatMenuSupport.drawFullscreenDialog((byte) -119);
         } else {
           if (PlayerReportPanel.refreshClientActivityDeadline((byte) -67)) {
             stackIn_69_0 = 95;
@@ -1483,7 +1483,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 SoftwareRasterizer.restoreClip(var18);
               }
             } else {
-              TextHotspotWidget.a(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
+              TextHotspotWidget.drawCenteredMenuPanel(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
               ClientException.a(94);
             }
           }

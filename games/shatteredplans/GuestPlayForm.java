@@ -16,7 +16,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         super.drawLayer(param0, param1, param2, param3);
     }
 
-    final static int d(boolean param0) {
+    final static int pollFullscreenDialogAction(boolean param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -64,7 +64,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              SoundPlayback.a(true, 56, 5);
+              SoundPlayback.showFullscreenDialog(true, 56, 5);
             }
           }
           stackIn_26_0 = var3;
