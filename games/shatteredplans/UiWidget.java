@@ -380,7 +380,7 @@ class UiWidget extends IntrusiveNode {
         for (var5_int = 0; var5_int <= var4; var5_int++) {
           this.drawLayer(var5_int, -11857, param0, param1);
         }
-        String var5 = IntrusiveDequeCursor.a(false);
+        String var5 = IntrusiveDequeCursor.getVisibleTooltipText(false);
         if (var5 != null) {
           MusicVoice.field_I.a(IconTextPanel.field_Fb, RandomAccessCacheFile.field_g, 106, var5);
         }

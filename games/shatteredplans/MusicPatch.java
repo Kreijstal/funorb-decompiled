@@ -50,9 +50,9 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param0.a(var9 >> 2, (byte) -63, param2);
+                    var7 = param0.getSynthesizedSample(var9 >> 2, (byte) -63, param2);
                   } else {
-                    var7 = param0.a(0, param2, var9 >> 2);
+                    var7 = param0.getVorbisSample(0, param2, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;

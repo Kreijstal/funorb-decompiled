@@ -492,7 +492,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (1 == DefensiveAi.field_p) {
           if (LeaderboardSortSupport.field_e != 0) {
-            StarAnnotation.field_j = SoundCache.a(LeaderboardSortSupport.field_a, 124);
+            StarAnnotation.field_j = SoundCache.createArchive(LeaderboardSortSupport.field_a, 124);
           }
           LinkPainter.field_g = TextReplacementContext.createArchive(-1, true, 1, ArchiveRequest.field_p, false);
           StringList.field_f = TextReplacementContext.createArchive(-1, true, 1, SliderPainter.field_j, false);
@@ -551,7 +551,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (DefensiveAi.field_p == 10) {
           if (LeaderboardSortSupport.field_e != 0) {
-            StandardAi.field_e = SoundCache.a(CombinedTerritory.field_B, 101);
+            StandardAi.field_e = SoundCache.createArchive(CombinedTerritory.field_B, 101);
           }
           DefensiveAi.field_p = 11;
         }

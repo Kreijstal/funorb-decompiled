@@ -59,7 +59,7 @@ final class ConquestVictoryChecker extends VictoryChecker {
           if (param0 > -92) {
             field_l = (SoundEffectDefinition) null;
           }
-          stackIn_3_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.a("", param2, -22888), param1);
+          stackIn_3_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.getVorbisSampleByName("", param2, -22888), param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

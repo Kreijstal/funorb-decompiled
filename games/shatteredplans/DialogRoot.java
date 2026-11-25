@@ -21,10 +21,10 @@ final class DialogRoot extends SingleChildWidget {
           return;
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        Dialog var3 = (Dialog) (var2.a(2));
+        Dialog var3 = (Dialog) (var2.startForward(2));
         while (var3 != null) {
           var3.field_E = false;
-          var3 = (Dialog) (var2.a((byte) 121));
+          var3 = (Dialog) (var2.nextForward((byte) 121));
         }
         this.field_z = null;
     }
@@ -32,12 +32,12 @@ final class DialogRoot extends SingleChildWidget {
     final void updateDialogs(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        Dialog var3 = (Dialog) (var2.a(2));
+        Dialog var3 = (Dialog) (var2.startForward(2));
         while (var3 != null) {
           if (var3.animate((byte) 92)) {
             var3.unlink((byte) -80);
           }
-          var3 = (Dialog) (var2.a((byte) 125));
+          var3 = (Dialog) (var2.nextForward((byte) 125));
         }
         int var4 = 18 % ((46 - param0) / 54);
         this.field_z = (UiWidget) ((Object) this.getActiveDialog((byte) 115));
@@ -50,13 +50,13 @@ final class DialogRoot extends SingleChildWidget {
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_H);
-        var3 = (Dialog) (var2.a(2));
+        var3 = (Dialog) (var2.startForward(2));
         var4 = 98 % ((param0 - 64) / 35);
         while (var3 != null) {
           if (var3.field_E) {
             return var3;
           }
-          var3 = (Dialog) (var2.a((byte) 110));
+          var3 = (Dialog) (var2.nextForward((byte) 110));
         }
         return null;
     }
@@ -125,10 +125,10 @@ final class DialogRoot extends SingleChildWidget {
           this.field_p.paintWidget((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
-        UiWidget var6 = (UiWidget) (var5.c(105));
+        UiWidget var6 = (UiWidget) (var5.startBackward(105));
         while (var6 != null) {
           var6.drawLayer(param0, -11857, this.field_q + param2, param3 + this.field_m);
-          var6 = (UiWidget) (var5.b((byte) -124));
+          var6 = (UiWidget) (var5.nextBackward((byte) -124));
         }
     }
 
@@ -151,12 +151,12 @@ final class DialogRoot extends SingleChildWidget {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         int var4 = 71 % ((param0 + 34) / 44);
-        Dialog var3 = (Dialog) (var2.a(2));
+        Dialog var3 = (Dialog) (var2.startForward(2));
         while (var3 != null) {
           if (var3.isClosed(0)) {
             var3.unlink((byte) -101);
           }
-          var3 = (Dialog) (var2.a((byte) 47));
+          var3 = (Dialog) (var2.nextForward((byte) 47));
         }
     }
 
@@ -447,12 +447,12 @@ final class DialogRoot extends SingleChildWidget {
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_H);
-        var3 = (Dialog) (var2.a(param0));
+        var3 = (Dialog) (var2.startForward(param0));
         while (var3 != null) {
           if (var3.field_E) {
             return var3.findFocusedChild(param0 ^ 3);
           }
-          var3 = (Dialog) (var2.a((byte) 115));
+          var3 = (Dialog) (var2.nextForward((byte) 115));
         }
         return null;
     }

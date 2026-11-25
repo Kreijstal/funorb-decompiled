@@ -18,7 +18,7 @@ final class SoundEffectSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 128) {
-            stackIn_4_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.a(param0 + 27988, param2, ""), param1);
+            stackIn_4_0 = new SoundEffectDefinition(LobbyPlayerEntry.field_Sb.getSynthesizedSampleByName(param0 + 27988, param2, ""), param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (SoundEffectDefinition) null;

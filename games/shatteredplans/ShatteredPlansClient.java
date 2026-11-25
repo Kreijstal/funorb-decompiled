@@ -1333,16 +1333,16 @@ public final class ShatteredPlansClient extends GameClientShell {
           StandardAi.field_e = null;
           ValidationState.c(121);
         }
-        GameSpriteResources.field_h = SoundCache.a(3, 50);
+        GameSpriteResources.field_h = SoundCache.createArchive(3, 50);
         ChatMessage.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
-        PointsVictoryChecker.field_l = SoundCache.a(6, 93);
-        IntrusiveNodeHashTable.field_g = SoundCache.a(7, 110);
-        IntHashIndex.field_a = SoundCache.a(8, 90);
-        ByteArrayReadRequest.field_m = SoundCache.a(9, 28);
-        DualLinkNode.field_n = SoundCache.a(10, 55);
-        StrongCacheEntry.field_z = SoundCache.a(11, 67);
-        LeaderboardSortSupport.field_c = SoundCache.a(12, 28);
-        RichTextLayout.field_k = SoundCache.a(13, 52);
+        PointsVictoryChecker.field_l = SoundCache.createArchive(6, 93);
+        IntrusiveNodeHashTable.field_g = SoundCache.createArchive(7, 110);
+        IntHashIndex.field_a = SoundCache.createArchive(8, 90);
+        ByteArrayReadRequest.field_m = SoundCache.createArchive(9, 28);
+        DualLinkNode.field_n = SoundCache.createArchive(10, 55);
+        StrongCacheEntry.field_z = SoundCache.createArchive(11, 67);
+        LeaderboardSortSupport.field_c = SoundCache.createArchive(12, 28);
+        RichTextLayout.field_k = SoundCache.createArchive(13, 52);
     }
 
     final void draw(int param0) {

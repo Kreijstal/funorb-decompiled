@@ -11644,6 +11644,78 @@
       "renamedSymbol": "M:SoundCache.clearStatics(B)V"
     },
     {
+      "symbol": "M:io.a(IB[I)Lkk;",
+      "originalName": "a",
+      "to": "getSynthesizedSample",
+      "evidence": "Resolve flat synthesized-sound id using single-group or single-file archive layout, forwarding original budget alias. Single-group path ignores byte guard; single-file path derives private guard by XOR; unsupported layout may invoke original fallback before throwing. Preserve lookup order, archive clearing on bad private guard and cache-hit behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSample(IB[I)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(II)Lbc;",
+      "originalName": "a",
+      "to": "createArchive",
+      "evidence": "Delegate existing archive factory with exact(1,false,index,12000,true,false) args; second int<27first clears static panel. General client archive initialization callers and complete factory read. Preserve factory allocations, cache-store side effects and arbitrary index/guard behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.createArchive(II)LArchive;"
+    },
+    {
+      "symbol": "M:io.a(III[I)Lkk;",
+      "originalName": "a",
+      "to": "getVorbisSample",
+      "evidence": "Use original bit-mixed group/file key XOR4294967296L, check decoded cache before budget, retain partial Vorbis decode in compressed cache, then unlink on success and cache PCM. Wrong first int returnsnull only after successful decode/cache, while cache-hit return remains earlier. Preserve key/sign extension, budget identity/partial progress and exact call order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getVorbisSample(III[I)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;",
+      "originalName": "a",
+      "to": "getSynthesizedSampleByName",
+      "evidence": "Delegate original name-based synthesized sample lookup with null budget and guard-1. Wrong first int clears Vorbis archive reference before delegating. Preserve supplied name order, different archive roles, partial mutations and failure order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(I[II)Lkk;",
+      "originalName": "a",
+      "to": "getVorbisSample",
+      "evidence": "Resolve flat Vorbis id from single-group/single-file layout using original first-int subtraction/XOR guards and supplied budget array. Unsupported layout can perform discarded decode before throwing. Preserve cache-hit versus newly decoded guard behavior and arbitrary integer/empty-budget cases. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getVorbisSample(I[II)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(I[III)Lkk;",
+      "originalName": "a",
+      "to": "getSynthesizedSample",
+      "evidence": "Compute original synthesized cache key with65523mask, return cached PCM before budget check, load/synthesize/cache otherwise and subtract sample byte count after cache insertion. Wrong int clears synthesized archive before key work. Preserve key arithmetic exactly, no key normalization, empty budget failures and shared caches/aliases. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSample(I[III)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;",
+      "originalName": "a",
+      "to": "getVorbisSampleByName",
+      "evidence": "Only int-22888delegates private Vorbis name lookup with true/null budget; other ints returnnull without archive/name access. Conquest sound loader caller inspected. Preserve original group/file name order and guard early return. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;",
+      "originalName": "a",
+      "to": "getVorbisSampleByName",
+      "evidence": "False bool returnsnull before lookups; otherwise resolve Vorbis group and file names, returnnull on missing group/file, then delegate incremental cached Vorbis decode with retained budget. Preserve original guards, array identity, cache writes and exception wrapping. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;"
+    },
+    {
+      "symbol": "M:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;",
+      "originalName": "a",
+      "to": "getSynthesizedSampleByName",
+      "evidence": "Resolve synthesized archive group by final string and file by preceding string, returnnull for missing group or original supplied-guard comparison with complemented file id, then delegate PCM load. Preserve param1<~fileId comparison exactly, no replacement with conventional missing-file test, lookup/cursor/caching order and budget alias. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;"
+    },
+    {
       "symbol": "M:iq.a(Lvg;IZIB)V",
       "originalName": "a",
       "to": "paintWidget",
@@ -16228,12 +16300,76 @@
       "renamedSymbol": "M:ArgbSprite.drawRotated180(II)V"
     },
     {
+      "symbol": "M:on.a(B)Loh;",
+      "originalName": "a",
+      "to": "nextForward",
+      "evidence": "Read retained next node, stop/clear cursor at bound sentinel, otherwise advance to node.next before returning node. Byte<44invokes client rendering dispatcher after advancing. Preserve null-after-exhaustion failure, detached-node behavior, callback ordering and cursor alias. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.nextForward(B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:on.a(BLoh;)Loh;",
+      "originalName": "a",
+      "to": "startBackwardFrom",
+      "evidence": "Evaluate byte-derived division, choose supplied node or deque tail, stop/clear only at bound sentinel, otherwise store previous and return chosen node. Widget reverse-order caller inspected. Preserve external/detached-node inputs, null deque failures and exact guard-before-cursor mutation. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:on.a(I)Loh;",
+      "originalName": "a",
+      "to": "startForward",
+      "evidence": "Read bound deque head, clear cursor at sentinel or retain following node and return head. Wrong int first clears static bool before sentinel test. Preserve original read-before-guard behavior, node aliases, null deque and empty-list paths. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startForward(I)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:on.a(IZ)V",
+      "originalName": "a",
+      "to": "drawClientSessionsAndMenus",
+      "evidence": "Draw retained active and optional secondary GameSession maps, then shared overlays and menu/tooltip pass using original flags/predicate and parameter permutations. Complete map/overlay/predicate helpers read. Preserve first-session draw before wrong-int return, bool short circuits, repeated field reads and all render/callback ordering. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V"
+    },
+    {
+      "symbol": "M:on.a(Z)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "getVisibleTooltipText",
+      "evidence": "Return retained tooltip text only while not suppressed and within original start/duration tick window. Tooltip producer and UiWidget draw consumer inspected. True bool first calls false variant and discards result. Preserve repeated shared reads, recursion, signed tick addition/overflow, null text and suppression behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.getVisibleTooltipText(Z)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:on.a(ZLoh;)Loh;",
+      "originalName": "a",
+      "to": "startForwardFrom",
+      "evidence": "Choose supplied node or deque head, stop/clear at bound sentinel; otherwise true bool writes static counter27then retain next and return chosen node. Widget forward-order caller inspected. Preserve arbitrary node/deque aliases, null failures and write order. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:on.b(B)Loh;",
+      "originalName": "b",
+      "to": "nextBackward",
+      "evidence": "Read retained node, clear cursor at bound sentinel or advance to previous and return original node. Wrong byte clears caption before testing sentinel. Preserve null-after-exhaustion failure and original detached/self-linked node behavior. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.nextBackward(B)LIntrusiveNode;"
+    },
+    {
       "symbol": "M:on.b(I)V",
       "originalName": "b",
       "to": "clearStatics",
       "evidence": "Assigns null to 7 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveDequeCursor.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:on.c(I)Loh;",
+      "originalName": "c",
+      "to": "startBackward",
+      "evidence": "Read bound tail before int guard remainder, stop/clear at bound sentinel or retain previous and return tail. Widget/dialog reverse draw callers inspected. Preserve guard failure after tail read, empty/null deque behavior and aliases. Identifier-only: preserve descriptors/modifiers, full primitive domains, guards/recursion, literals, aliases, allocations, random/locks, clipping, integer overflow/casts, FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startBackward(I)LIntrusiveNode;"
     },
     {
       "symbol": "M:oo.a(B)V",
@@ -169221,7 +169357,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -169232,7 +169368,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169243,7 +169379,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -169254,7 +169390,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#3",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -169265,7 +169401,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -169276,7 +169412,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -169287,7 +169423,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -169298,7 +169434,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169309,7 +169445,7 @@
     },
     {
       "symbol": "L:io.a(IB[I)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(IB[I)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169320,7 +169456,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -169331,7 +169467,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169342,7 +169478,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#10",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#10",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -169353,7 +169489,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#11",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169364,7 +169500,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#12",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#12",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -169375,7 +169511,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#13",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#13",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169386,7 +169522,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -169397,7 +169533,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -169408,7 +169544,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -169419,7 +169555,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#5",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -169430,7 +169566,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#6",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -169441,7 +169577,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#7",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -169452,7 +169588,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#8",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -169463,7 +169599,7 @@
     },
     {
       "symbol": "L:io.a(III[I)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a(III[I)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(III[I)LPcmSample;#9",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -169474,7 +169610,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -169485,7 +169621,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -169496,7 +169632,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -169507,7 +169643,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -169518,7 +169654,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -169529,7 +169665,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -169540,7 +169676,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -169551,7 +169687,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169562,7 +169698,7 @@
     },
     {
       "symbol": "L:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169573,7 +169709,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -169584,7 +169720,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -169595,7 +169731,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169606,7 +169742,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -169617,7 +169753,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -169628,7 +169764,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -169639,7 +169775,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#6",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -169650,7 +169786,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#7",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -169661,7 +169797,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169672,7 +169808,7 @@
     },
     {
       "symbol": "L:io.a(I[II)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a(I[II)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getVorbisSample(I[II)LPcmSample;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169683,7 +169819,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -169694,7 +169830,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169705,7 +169841,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#10",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#10",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -169716,7 +169852,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#11",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#11",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -169727,7 +169863,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#12",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169738,7 +169874,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#13",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#13",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#13",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -169749,7 +169885,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#14",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#14",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169760,7 +169896,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -169771,7 +169907,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -169782,7 +169918,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -169793,7 +169929,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -169804,7 +169940,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#6",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -169815,7 +169951,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#7",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -169826,7 +169962,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#8",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -169837,7 +169973,7 @@
     },
     {
       "symbol": "L:io.a(I[III)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a(I[III)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSample(I[III)LPcmSample;#9",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -169848,7 +169984,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -169859,7 +169995,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -169870,7 +170006,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -169881,7 +170017,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -169892,7 +170028,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -169903,7 +170039,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -169914,7 +170050,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#6",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -169925,7 +170061,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#7",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -169936,7 +170072,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -169947,7 +170083,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -169958,7 +170094,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -169969,7 +170105,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169980,7 +170116,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#10",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#10",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -169991,7 +170127,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#11",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#11",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -170002,7 +170138,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#12",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#12",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -170013,7 +170149,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#13",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#13",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#13",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -170024,7 +170160,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#14",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#14",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -170035,7 +170171,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#15",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#15",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -170046,7 +170182,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -170057,7 +170193,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -170068,7 +170204,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -170079,7 +170215,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -170090,7 +170226,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -170101,7 +170237,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -170112,7 +170248,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#8",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -170123,7 +170259,7 @@
     },
     {
       "symbol": "L:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#9",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -170134,7 +170270,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#0",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -170145,7 +170281,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#1",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -170156,7 +170292,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#10",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#10",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#10",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -170167,7 +170303,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#11",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#11",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -170178,7 +170314,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#12",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#12",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -170189,7 +170325,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#2",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -170200,7 +170336,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#3",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -170211,7 +170347,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#4",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#4",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -170222,7 +170358,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#5",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#5",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#5",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -170233,7 +170369,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#6",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#6",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#6",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -170244,7 +170380,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#7",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#7",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#7",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -170255,7 +170391,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#8",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#8",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#8",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -170266,7 +170402,7 @@
     },
     {
       "symbol": "L:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#9",
-      "renamedSymbol": "L:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#9",
+      "renamedSymbol": "L:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#9",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -240688,7 +240824,7 @@
     },
     {
       "symbol": "L:on.a(B)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.nextForward(B)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -240699,7 +240835,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -240710,7 +240846,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#1",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -240721,7 +240857,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#2",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -240732,7 +240868,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#3",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -240743,7 +240879,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#4",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#4",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -240754,7 +240890,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#5",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#5",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -240765,7 +240901,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#6",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#6",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -240776,7 +240912,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#7",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#7",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -240787,7 +240923,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#8",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -240798,7 +240934,7 @@
     },
     {
       "symbol": "L:on.a(BLoh;)Loh;#9",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -240809,7 +240945,7 @@
     },
     {
       "symbol": "L:on.a(I)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForward(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -240820,7 +240956,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -240831,7 +240967,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#1",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#1",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -240842,7 +240978,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#10",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#10",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#10",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -240853,7 +240989,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#11",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#11",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#11",
       "originalName": "stackIn_86_0",
       "renamedName": "stackIn_86_0",
       "declaration": {
@@ -240864,7 +241000,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#12",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#12",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#12",
       "originalName": "stackIn_94_0",
       "renamedName": "stackIn_94_0",
       "declaration": {
@@ -240875,7 +241011,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#13",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#13",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#13",
       "originalName": "stackIn_99_0",
       "renamedName": "stackIn_99_0",
       "declaration": {
@@ -240886,7 +241022,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#14",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#14",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#14",
       "originalName": "stackIn_106_0",
       "renamedName": "stackIn_106_0",
       "declaration": {
@@ -240897,7 +241033,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#15",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#15",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#15",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -240908,7 +241044,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#16",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#16",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#16",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -240919,7 +241055,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#17",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#17",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#17",
       "originalName": "var2Lifetime3",
       "renamedName": "var2Lifetime3",
       "declaration": {
@@ -240930,7 +241066,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#18",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#18",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#18",
       "originalName": "var2Lifetime4",
       "renamedName": "var2Lifetime4",
       "declaration": {
@@ -240941,7 +241077,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#2",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#2",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -240952,7 +241088,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#3",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#3",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -240963,7 +241099,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#4",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#4",
       "originalName": "stackIn_39_0",
       "renamedName": "stackIn_39_0",
       "declaration": {
@@ -240974,7 +241110,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#5",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#5",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -240985,7 +241121,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#6",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#6",
       "originalName": "stackIn_51_0",
       "renamedName": "stackIn_51_0",
       "declaration": {
@@ -240996,7 +241132,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#7",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#7",
       "originalName": "stackIn_56_0",
       "renamedName": "stackIn_56_0",
       "declaration": {
@@ -241007,7 +241143,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#8",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#8",
       "originalName": "stackIn_63_0",
       "renamedName": "stackIn_63_0",
       "declaration": {
@@ -241018,7 +241154,7 @@
     },
     {
       "symbol": "L:on.a(IZ)V#9",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(IZ)V#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#9",
       "originalName": "stackIn_74_0",
       "renamedName": "stackIn_74_0",
       "declaration": {
@@ -241029,7 +241165,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -241040,7 +241176,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#1",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -241051,7 +241187,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#2",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -241062,7 +241198,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#3",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -241073,7 +241209,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#4",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -241084,7 +241220,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#5",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#5",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -241095,7 +241231,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#6",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#6",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -241106,7 +241242,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#7",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -241117,7 +241253,7 @@
     },
     {
       "symbol": "L:on.a(ZLoh;)Loh;#8",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -241128,7 +241264,7 @@
     },
     {
       "symbol": "L:on.b(B)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.b(B)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.nextBackward(B)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -241139,7 +241275,7 @@
     },
     {
       "symbol": "L:on.c(I)Loh;#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackward(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -241150,7 +241286,7 @@
     },
     {
       "symbol": "L:on.c(I)Loh;#1",
-      "renamedSymbol": "L:IntrusiveDequeCursor.c(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.startBackward(I)LIntrusiveNode;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -333539,9 +333675,9 @@
     },
     {
       "symbol": "M:io.a(IB[I)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(IB[I)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSample(IB[I)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSynthesizedSample",
       "declaration": {
         "file": "io.java",
         "start": 3888,
@@ -333550,9 +333686,9 @@
     },
     {
       "symbol": "M:io.a(II)Lbc;",
-      "renamedSymbol": "M:SoundCache.a(II)LArchive;",
+      "renamedSymbol": "M:SoundCache.createArchive(II)LArchive;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createArchive",
       "declaration": {
         "file": "io.java",
         "start": 11242,
@@ -333561,9 +333697,9 @@
     },
     {
       "symbol": "M:io.a(III[I)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(III[I)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getVorbisSample(III[I)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVorbisSample",
       "declaration": {
         "file": "io.java",
         "start": 7332,
@@ -333572,9 +333708,9 @@
     },
     {
       "symbol": "M:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSynthesizedSampleByName",
       "declaration": {
         "file": "io.java",
         "start": 14157,
@@ -333583,9 +333719,9 @@
     },
     {
       "symbol": "M:io.a(I[II)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(I[II)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getVorbisSample(I[II)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVorbisSample",
       "declaration": {
         "file": "io.java",
         "start": 2338,
@@ -333594,9 +333730,9 @@
     },
     {
       "symbol": "M:io.a(I[III)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(I[III)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSample(I[III)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSynthesizedSample",
       "declaration": {
         "file": "io.java",
         "start": 196,
@@ -333605,9 +333741,9 @@
     },
     {
       "symbol": "M:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVorbisSampleByName",
       "declaration": {
         "file": "io.java",
         "start": 9765,
@@ -333616,9 +333752,9 @@
     },
     {
       "symbol": "M:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;",
-      "renamedSymbol": "M:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVorbisSampleByName",
       "declaration": {
         "file": "io.java",
         "start": 11485,
@@ -333627,9 +333763,9 @@
     },
     {
       "symbol": "M:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;",
-      "renamedSymbol": "M:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;",
+      "renamedSymbol": "M:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSynthesizedSampleByName",
       "declaration": {
         "file": "io.java",
         "start": 5376,
@@ -344275,9 +344411,9 @@
     },
     {
       "symbol": "M:on.a(B)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.nextForward(B)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextForward",
       "declaration": {
         "file": "on.java",
         "start": 5634,
@@ -344286,9 +344422,9 @@
     },
     {
       "symbol": "M:on.a(BLoh;)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startBackwardFrom",
       "declaration": {
         "file": "on.java",
         "start": 4190,
@@ -344297,9 +344433,9 @@
     },
     {
       "symbol": "M:on.a(I)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startForward(I)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startForward",
       "declaration": {
         "file": "on.java",
         "start": 1709,
@@ -344308,9 +344444,9 @@
     },
     {
       "symbol": "M:on.a(IZ)V",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(IZ)V",
+      "renamedSymbol": "M:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawClientSessionsAndMenus",
       "declaration": {
         "file": "on.java",
         "start": 5966,
@@ -344319,9 +344455,9 @@
     },
     {
       "symbol": "M:on.a(Z)Ljava/lang/String;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(Z)Ljava/lang/String;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.getVisibleTooltipText(Z)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVisibleTooltipText",
       "declaration": {
         "file": "on.java",
         "start": 608,
@@ -344330,9 +344466,9 @@
     },
     {
       "symbol": "M:on.a(ZLoh;)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startForwardFrom",
       "declaration": {
         "file": "on.java",
         "start": 2487,
@@ -344341,9 +344477,9 @@
     },
     {
       "symbol": "M:on.b(B)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.b(B)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.nextBackward(B)LIntrusiveNode;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextBackward",
       "declaration": {
         "file": "on.java",
         "start": 1221,
@@ -344363,9 +344499,9 @@
     },
     {
       "symbol": "M:on.c(I)Loh;",
-      "renamedSymbol": "M:IntrusiveDequeCursor.c(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.startBackward(I)LIntrusiveNode;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "startBackward",
       "declaration": {
         "file": "on.java",
         "start": 300,
@@ -397680,7 +397816,7 @@
     },
     {
       "symbol": "P:io.a(IB[I)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(IB[I)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397691,7 +397827,7 @@
     },
     {
       "symbol": "P:io.a(IB[I)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(IB[I)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397702,7 +397838,7 @@
     },
     {
       "symbol": "P:io.a(IB[I)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(IB[I)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(IB[I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397713,7 +397849,7 @@
     },
     {
       "symbol": "P:io.a(II)Lbc;#0",
-      "renamedSymbol": "P:SoundCache.a(II)LArchive;#0",
+      "renamedSymbol": "P:SoundCache.createArchive(II)LArchive;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397724,7 +397860,7 @@
     },
     {
       "symbol": "P:io.a(II)Lbc;#1",
-      "renamedSymbol": "P:SoundCache.a(II)LArchive;#1",
+      "renamedSymbol": "P:SoundCache.createArchive(II)LArchive;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397735,7 +397871,7 @@
     },
     {
       "symbol": "P:io.a(III[I)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(III[I)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(III[I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397746,7 +397882,7 @@
     },
     {
       "symbol": "P:io.a(III[I)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(III[I)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(III[I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397757,7 +397893,7 @@
     },
     {
       "symbol": "P:io.a(III[I)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(III[I)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(III[I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397768,7 +397904,7 @@
     },
     {
       "symbol": "P:io.a(III[I)Lkk;#3",
-      "renamedSymbol": "P:SoundCache.a(III[I)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(III[I)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -397779,7 +397915,7 @@
     },
     {
       "symbol": "P:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397790,7 +397926,7 @@
     },
     {
       "symbol": "P:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397801,7 +397937,7 @@
     },
     {
       "symbol": "P:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName(ILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397812,7 +397948,7 @@
     },
     {
       "symbol": "P:io.a(I[II)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(I[II)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(I[II)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397823,7 +397959,7 @@
     },
     {
       "symbol": "P:io.a(I[II)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(I[II)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(I[II)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397834,7 +397970,7 @@
     },
     {
       "symbol": "P:io.a(I[II)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(I[II)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getVorbisSample(I[II)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397845,7 +397981,7 @@
     },
     {
       "symbol": "P:io.a(I[III)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(I[III)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(I[III)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397856,7 +397992,7 @@
     },
     {
       "symbol": "P:io.a(I[III)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(I[III)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(I[III)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397867,7 +398003,7 @@
     },
     {
       "symbol": "P:io.a(I[III)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(I[III)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(I[III)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397878,7 +398014,7 @@
     },
     {
       "symbol": "P:io.a(I[III)Lkk;#3",
-      "renamedSymbol": "P:SoundCache.a(I[III)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSample(I[III)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -397889,7 +398025,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397900,7 +398036,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397911,7 +398047,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Ljava/lang/String;I)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397922,7 +398058,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397933,7 +398069,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397944,7 +398080,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397955,7 +398091,7 @@
     },
     {
       "symbol": "P:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;#3",
-      "renamedSymbol": "P:SoundCache.a(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.getVorbisSampleByName(Ljava/lang/String;Z[ILjava/lang/String;)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -397966,7 +398102,7 @@
     },
     {
       "symbol": "P:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#0",
-      "renamedSymbol": "P:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397977,7 +398113,7 @@
     },
     {
       "symbol": "P:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#1",
-      "renamedSymbol": "P:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397988,7 +398124,7 @@
     },
     {
       "symbol": "P:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#2",
-      "renamedSymbol": "P:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397999,7 +398135,7 @@
     },
     {
       "symbol": "P:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;#3",
-      "renamedSymbol": "P:SoundCache.a([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
+      "renamedSymbol": "P:SoundCache.getSynthesizedSampleByName([IILjava/lang/String;Ljava/lang/String;)LPcmSample;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -423563,7 +423699,7 @@
     },
     {
       "symbol": "P:on.a(B)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.nextForward(B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423574,7 +423710,7 @@
     },
     {
       "symbol": "P:on.a(BLoh;)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423585,7 +423721,7 @@
     },
     {
       "symbol": "P:on.a(BLoh;)Loh;#1",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startBackwardFrom(BLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423596,7 +423732,7 @@
     },
     {
       "symbol": "P:on.a(I)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startForward(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423607,7 +423743,7 @@
     },
     {
       "symbol": "P:on.a(IZ)V#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(IZ)V#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423618,7 +423754,7 @@
     },
     {
       "symbol": "P:on.a(IZ)V#1",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(IZ)V#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.drawClientSessionsAndMenus(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423629,7 +423765,7 @@
     },
     {
       "symbol": "P:on.a(Z)Ljava/lang/String;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(Z)Ljava/lang/String;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.getVisibleTooltipText(Z)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423640,7 +423776,7 @@
     },
     {
       "symbol": "P:on.a(ZLoh;)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423651,7 +423787,7 @@
     },
     {
       "symbol": "P:on.a(ZLoh;)Loh;#1",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startForwardFrom(ZLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -423662,7 +423798,7 @@
     },
     {
       "symbol": "P:on.b(B)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.b(B)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.nextBackward(B)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -423684,7 +423820,7 @@
     },
     {
       "symbol": "P:on.c(I)Loh;#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.startBackward(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -455808,7 +455944,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "abb69e89cc4e19a20fae12b4dc26642e46a7cd02ad15300e6a4d1437a9322cf6",
+      "outputSha256": "4b58467d0bb7666504d218e3e7142249cc0ca22b23bb0aeea16e9aae6526b4c6",
       "edits": [
         {
           "start": 86,
@@ -467034,6 +467170,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 43806,
+          "end": 43807,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 43824,
           "end": 43826,
           "symbol": "C:ms",
@@ -467062,6 +467205,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 43915,
+          "end": 43916,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 43933,
           "end": 43935,
           "symbol": "C:ti",
@@ -467074,6 +467224,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 43949,
+          "end": 43950,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 43968,
@@ -467090,6 +467247,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 43984,
+          "end": 43985,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 44002,
           "end": 44004,
           "symbol": "C:ld",
@@ -467102,6 +467266,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 44018,
+          "end": 44019,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 44036,
@@ -467118,6 +467289,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 44052,
+          "end": 44053,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 44071,
           "end": 44072,
           "symbol": "C:m",
@@ -467130,6 +467308,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 44086,
+          "end": 44087,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 44105,
@@ -467146,6 +467331,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 44121,
+          "end": 44122,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 44140,
           "end": 44142,
           "symbol": "C:la",
@@ -467158,6 +467350,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 44156,
+          "end": 44157,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 44189,
@@ -489157,7 +489356,7 @@
       "original": "br.java",
       "renamed": "MusicPatch.java",
       "inputSha256": "d77aeed99fa6027c85b1868b769941d33e60f28bc34be21763de0f99595b34e5",
-      "outputSha256": "e9b5da2811fc81c79202b52d137eb3f8e49ff94ad737839ce9ce15251d561d53",
+      "outputSha256": "ef782e4fa21c3edc30a0c8ba76fa22de178f05245337d28588b0c4688623ba58",
       "edits": [
         {
           "start": 50,
@@ -489200,6 +489399,20 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 1543,
+          "end": 1544,
+          "symbol": "M:io.a(IB[I)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
+        },
+        {
+          "start": 1638,
+          "end": 1639,
+          "symbol": "M:io.a(I[II)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
         },
         {
           "start": 1869,
@@ -541871,7 +542084,7 @@
       "original": "f.java",
       "renamed": "WidgetContainer.java",
       "inputSha256": "e50dcdf6ac501c937a5665c14999f448118a2142d70ddaed63678e3d46cbe55b",
-      "outputSha256": "f2befe5c5f7ae321ebf2290216d67d47eed21dc81dd0f009842bccc723e436c5",
+      "outputSha256": "7420a01f9aa316f7fb2249b73be147b9c6b72dc8d0f5460b943a24e3994e332f",
       "edits": [
         {
           "start": 65,
@@ -541958,6 +542171,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 909,
+          "end": 910,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 970,
           "end": 971,
           "symbol": "M:oh.c(I)Z",
@@ -541977,6 +542197,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1176,
+          "end": 1177,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 1792,
@@ -542063,6 +542290,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 2687,
+          "end": 2688,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 2748,
           "end": 2749,
           "symbol": "M:oh.c(I)Z",
@@ -542082,6 +542316,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2913,
+          "end": 2914,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 3655,
@@ -542140,6 +542381,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 4363,
+          "end": 4364,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 4448,
           "end": 4449,
           "symbol": "M:oh.c(I)Z",
@@ -542166,6 +542414,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4651,
+          "end": 4652,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 4907,
@@ -542245,6 +542500,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 5998,
+          "end": 5999,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 6064,
           "end": 6065,
           "symbol": "M:vg.f(I)Z",
@@ -542257,6 +542519,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 6137,
+          "end": 6138,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 6200,
@@ -542315,6 +542584,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 7200,
+          "end": 7201,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 7419,
           "end": 7420,
           "symbol": "M:vg.a(BLjava/util/Hashtable;ILjava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
@@ -542327,6 +542603,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 7492,
+          "end": 7493,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 8205,
@@ -542378,6 +542661,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 8603,
+          "end": 8604,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 8663,
           "end": 8664,
           "symbol": "M:vg.e(I)I",
@@ -542390,6 +542680,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 8772,
+          "end": 8773,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 8924,
@@ -542434,6 +542731,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 9404,
+          "end": 9405,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 9582,
           "end": 9583,
           "symbol": "M:vg.a(BLvg;)Z",
@@ -542446,6 +542750,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 9639,
+          "end": 9640,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 10209,
@@ -542525,6 +542836,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11025,
+          "end": 11026,
+          "symbol": "M:on.c(I)Loh;",
+          "original": "c",
+          "renamed": "startBackward"
+        },
+        {
           "start": 11088,
           "end": 11089,
           "symbol": "M:vg.f(I)Z",
@@ -542539,11 +542857,25 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 11158,
+          "end": 11159,
+          "symbol": "M:on.a(BLoh;)Loh;",
+          "original": "a",
+          "renamed": "startBackwardFrom"
+        },
+        {
           "start": 11201,
           "end": 11203,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 11211,
+          "end": 11212,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 11291,
@@ -542560,11 +542892,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11352,
+          "end": 11353,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 11494,
           "end": 11496,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 11504,
+          "end": 11505,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 11984,
@@ -542644,6 +542990,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 12814,
+          "end": 12815,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 12875,
           "end": 12876,
           "symbol": "M:vg.f(I)Z",
@@ -542658,11 +543011,25 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 12945,
+          "end": 12946,
+          "symbol": "M:on.a(ZLoh;)Loh;",
+          "original": "a",
+          "renamed": "startForwardFrom"
+        },
+        {
           "start": 12983,
           "end": 12985,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 12993,
+          "end": 12994,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 13070,
@@ -542679,11 +543046,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 13178,
+          "end": 13179,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 13243,
           "end": 13245,
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 13253,
+          "end": 13254,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 13732,
@@ -542749,6 +543130,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 14293,
+          "end": 14294,
+          "symbol": "M:on.c(I)Loh;",
+          "original": "c",
+          "renamed": "startBackward"
+        },
+        {
           "start": 14360,
           "end": 14361,
           "symbol": "M:vg.a(IIII)V",
@@ -542761,6 +543149,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 14453,
+          "end": 14454,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 14511,
@@ -542980,6 +543375,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 18107,
+          "end": 18108,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 18160,
           "end": 18161,
           "symbol": "M:vg.d(B)V",
@@ -542992,6 +543394,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 18202,
+          "end": 18203,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 18249,
@@ -543071,6 +543480,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 19145,
+          "end": 19146,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 19293,
           "end": 19294,
           "symbol": "M:oh.c(I)Z",
@@ -543090,6 +543506,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 19440,
+          "end": 19441,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 20126,
@@ -543141,6 +543564,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 20474,
+          "end": 20475,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 20527,
           "end": 20528,
           "symbol": "M:vg.e(B)V",
@@ -543153,6 +543583,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 20571,
+          "end": 20572,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 20614,
@@ -543190,6 +543627,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 20888,
+          "end": 20889,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 20948,
           "end": 20949,
           "symbol": "M:vg.c(Z)Ljava/lang/String;",
@@ -543202,6 +543646,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 21052,
+          "end": 21053,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 21110,
@@ -543281,6 +543732,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 21826,
+          "end": 21827,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 21887,
           "end": 21888,
           "symbol": "M:oh.c(I)Z",
@@ -543300,6 +543758,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 22017,
+          "end": 22018,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 22620,
@@ -557319,7 +557784,7 @@
       "original": "gg.java",
       "renamed": "SoundEffectSupport.java",
       "inputSha256": "a9f40593372ac82fc0e22f4fd41e0d85ceaa40222b1bed97a83b675f40393451",
-      "outputSha256": "ab7c855e6523321ce18785619bd490664bdf134b6d86bb4c83060bc5a426dc84",
+      "outputSha256": "e0bd04afb54d7a7dbaf44a245cba5de4c6febc22589df084f381c8e7cadb8074",
       "edits": [
         {
           "start": 50,
@@ -557383,6 +557848,13 @@
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "LobbyPlayerEntry"
+        },
+        {
+          "start": 614,
+          "end": 615,
+          "symbol": "M:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSampleByName"
         },
         {
           "start": 723,
@@ -585316,7 +585788,7 @@
       "original": "io.java",
       "renamed": "SoundCache.java",
       "inputSha256": "4ad7292d266e9962b7e5c8443775c53c50cdb0109a3efff3683f6d339f3ab272",
-      "outputSha256": "1feb82a88c9bbfa27b4fb645226667d2062fc4954b3470d7e311603ffb1d8f39",
+      "outputSha256": "7fd35495dbb6e4b55d7f1fe1911f972efba47495224a837e5eb684d0ff45a0da",
       "edits": [
         {
           "start": 50,
@@ -585366,6 +585838,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 196,
+          "end": 197,
+          "symbol": "M:io.a(I[III)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
         },
         {
           "start": 346,
@@ -585487,6 +585966,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 2338,
+          "end": 2339,
+          "symbol": "M:io.a(I[II)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
+        },
+        {
           "start": 2388,
           "end": 2390,
           "symbol": "C:kk",
@@ -585515,11 +586001,32 @@
           "renamed": "groupCount"
         },
         {
+          "start": 2817,
+          "end": 2818,
+          "symbol": "M:io.a(III[I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
+        },
+        {
           "start": 2926,
           "end": 2927,
           "symbol": "M:bc.a(II)I",
           "original": "a",
           "renamed": "getFileCount"
+        },
+        {
+          "start": 2992,
+          "end": 2993,
+          "symbol": "M:io.a(III[I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
+        },
+        {
+          "start": 3167,
+          "end": 3168,
+          "symbol": "M:io.a(III[I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
         },
         {
           "start": 3704,
@@ -585543,6 +586050,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 3888,
+          "end": 3889,
+          "symbol": "M:io.a(IB[I)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
+        },
+        {
           "start": 4004,
           "end": 4006,
           "symbol": "C:kk",
@@ -585564,11 +586078,32 @@
           "renamed": "groupCount"
         },
         {
+          "start": 4336,
+          "end": 4337,
+          "symbol": "M:io.a(I[III)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
+        },
+        {
           "start": 4437,
           "end": 4438,
           "symbol": "M:bc.a(II)I",
           "original": "a",
           "renamed": "getFileCount"
+        },
+        {
+          "start": 4489,
+          "end": 4490,
+          "symbol": "M:io.a(I[III)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
+        },
+        {
+          "start": 4650,
+          "end": 4651,
+          "symbol": "M:io.a(I[II)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
         },
         {
           "start": 5211,
@@ -585592,6 +586127,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 5376,
+          "end": 5377,
+          "symbol": "M:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSampleByName"
+        },
+        {
           "start": 5530,
           "end": 5532,
           "symbol": "C:kk",
@@ -585613,6 +586155,13 @@
           "renamed": "getFileIdByName"
         },
         {
+          "start": 6187,
+          "end": 6188,
+          "symbol": "M:io.a(I[III)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSample"
+        },
+        {
           "start": 7167,
           "end": 7168,
           "symbol": "C:r",
@@ -585632,6 +586181,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 7332,
+          "end": 7333,
+          "symbol": "M:io.a(III[I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
         },
         {
           "start": 7482,
@@ -585788,6 +586344,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 9765,
+          "end": 9766,
+          "symbol": "M:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSampleByName"
+        },
+        {
           "start": 9857,
           "end": 9859,
           "symbol": "C:kk",
@@ -585800,6 +586363,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 10250,
+          "end": 10251,
+          "symbol": "M:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSampleByName"
         },
         {
           "start": 10358,
@@ -585830,6 +586400,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 11242,
+          "end": 11243,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 11315,
           "end": 11317,
           "symbol": "C:cc",
@@ -585856,6 +586433,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 11485,
+          "end": 11486,
+          "symbol": "M:io.a(Ljava/lang/String;Z[ILjava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSampleByName"
         },
         {
           "start": 11643,
@@ -585898,6 +586482,13 @@
           "symbol": "M:bc.a(IBLjava/lang/String;)I",
           "original": "a",
           "renamed": "getFileIdByName"
+        },
+        {
+          "start": 12515,
+          "end": 12516,
+          "symbol": "M:io.a(III[I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSample"
         },
         {
           "start": 12643,
@@ -585977,6 +586568,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 14157,
+          "end": 14158,
+          "symbol": "M:io.a(ILjava/lang/String;Ljava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSampleByName"
+        },
+        {
           "start": 14249,
           "end": 14251,
           "symbol": "C:kk",
@@ -585989,6 +586587,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "Archive"
+        },
+        {
+          "start": 14657,
+          "end": 14658,
+          "symbol": "M:io.a([IILjava/lang/String;Ljava/lang/String;)Lkk;",
+          "original": "a",
+          "renamed": "getSynthesizedSampleByName"
         },
         {
           "start": 15404,
@@ -591360,7 +591965,7 @@
       "original": "jj.java",
       "renamed": "ConquestVictoryChecker.java",
       "inputSha256": "7dd460fb217931e50a8f84cb4e76c021f08b54b48a8a7a0a4b80642450121fce",
-      "outputSha256": "b7cd4834e805487705b0443b016f6b3acfb843279b1151cabcfc80ee95490635",
+      "outputSha256": "4dd38e654c43802aca75cda06ffea7c15de781e730d6f1b4f8438a2c4d1b7d03",
       "edits": [
         {
           "start": 50,
@@ -591466,6 +592071,13 @@
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "LobbyPlayerEntry"
+        },
+        {
+          "start": 2040,
+          "end": 2041,
+          "symbol": "M:io.a(Ljava/lang/String;Ljava/lang/String;I)Lkk;",
+          "original": "a",
+          "renamed": "getVorbisSampleByName"
         },
         {
           "start": 2579,
@@ -670800,7 +671412,7 @@
       "original": "on.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "bf5d8e2bc8bd9ed34f4a20a1718c0b5db016c0150ae5d6bf2b4b223959222b20",
-      "outputSha256": "b9b5cf85f77393b58d006e00b0bec787d7947dea7cfed5c3909bb1273bd5df1a",
+      "outputSha256": "42abe8b32d9eb2dafc47b5f4fc6882d6453583e520e9b7abe497d284b7d8567e",
       "edits": [
         {
           "start": 50,
@@ -670838,6 +671450,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:on.c(I)Loh;",
+          "original": "c",
+          "renamed": "startBackward"
+        },
+        {
           "start": 324,
           "end": 326,
           "symbol": "C:oh",
@@ -670873,11 +671492,25 @@
           "renamed": "previous"
         },
         {
+          "start": 608,
+          "end": 609,
+          "symbol": "M:on.a(Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getVisibleTooltipText"
+        },
+        {
           "start": 660,
           "end": 662,
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 663,
+          "end": 664,
+          "symbol": "M:on.a(Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getVisibleTooltipText"
         },
         {
           "start": 687,
@@ -670985,6 +671618,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1221,
+          "end": 1222,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
+        },
+        {
           "start": 1246,
           "end": 1248,
           "symbol": "C:oh",
@@ -671025,6 +671665,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1709,
+          "end": 1710,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
         },
         {
           "start": 1733,
@@ -671088,6 +671735,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2487,
+          "end": 2488,
+          "symbol": "M:on.a(ZLoh;)Loh;",
+          "original": "a",
+          "renamed": "startForwardFrom"
         },
         {
           "start": 2505,
@@ -671195,6 +671849,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4190,
+          "end": 4191,
+          "symbol": "M:on.a(BLoh;)Loh;",
+          "original": "a",
+          "renamed": "startBackwardFrom"
+        },
+        {
           "start": 4205,
           "end": 4207,
           "symbol": "C:oh",
@@ -671272,6 +671933,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5634,
+          "end": 5635,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
+        },
+        {
           "start": 5659,
           "end": 5661,
           "symbol": "C:oh",
@@ -671298,6 +671966,20 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 5868,
+          "end": 5869,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
+        },
+        {
+          "start": 5966,
+          "end": 5967,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
         },
         {
           "start": 6637,
@@ -732607,7 +733289,7 @@
       "original": "tc.java",
       "renamed": "DialogRoot.java",
       "inputSha256": "ab7dfb13d40b0a7e162ec9e295e3c6236547ee2112212a09dfcc9c1733bb4fa1",
-      "outputSha256": "c0ca5c87929c0753963bb5e40b43855df8dcca7f0cdab3c5eb8fea9339f1bfdc",
+      "outputSha256": "3169e2c2226eaf5b59edf092eb389f7df8d200bbdf2077dfaf46f14db6557590",
       "edits": [
         {
           "start": 50,
@@ -732715,11 +733397,25 @@
           "renamed": "Dialog"
         },
         {
+          "start": 581,
+          "end": 582,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 669,
           "end": 670,
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 678,
+          "end": 679,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 755,
@@ -732757,6 +733453,13 @@
           "renamed": "Dialog"
         },
         {
+          "start": 895,
+          "end": 896,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 952,
           "end": 953,
           "symbol": "M:w.a(B)Z",
@@ -732776,6 +733479,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 1039,
+          "end": 1040,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 1135,
@@ -732834,11 +733544,25 @@
           "renamed": "Dialog"
         },
         {
+          "start": 1390,
+          "end": 1391,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 1555,
           "end": 1556,
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 1564,
+          "end": 1565,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 1670,
@@ -733100,6 +733824,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 3788,
+          "end": 3789,
+          "symbol": "M:on.c(I)Loh;",
+          "original": "c",
+          "renamed": "startBackward"
+        },
+        {
           "start": 3843,
           "end": 3844,
           "symbol": "M:vg.a(IIII)V",
@@ -733112,6 +733843,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 3936,
+          "end": 3937,
+          "symbol": "M:on.b(B)Loh;",
+          "original": "b",
+          "renamed": "nextBackward"
         },
         {
           "start": 3985,
@@ -733219,6 +733957,13 @@
           "renamed": "Dialog"
         },
         {
+          "start": 4715,
+          "end": 4716,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 4772,
           "end": 4773,
           "symbol": "M:w.k(I)Z",
@@ -733238,6 +733983,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 4852,
+          "end": 4853,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 4920,
@@ -733590,6 +734342,13 @@
           "renamed": "Dialog"
         },
         {
+          "start": 17140,
+          "end": 17141,
+          "symbol": "M:on.a(I)Loh;",
+          "original": "a",
+          "renamed": "startForward"
+        },
+        {
           "start": 17237,
           "end": 17238,
           "symbol": "M:w.i(I)Lvg;",
@@ -733602,6 +734361,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "Dialog"
+        },
+        {
+          "start": 17291,
+          "end": 17292,
+          "symbol": "M:on.a(B)Loh;",
+          "original": "a",
+          "renamed": "nextForward"
         },
         {
           "start": 17411,
@@ -738463,7 +739229,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "9f123c6f45bd193c0776c53cf3dd2c9696aa9c550c1a6066a58319a14658f8bc",
+      "outputSha256": "1d6b961ff395e8cd206487baed86714c5048a7302a053203c8580fb22d1e9a6a",
       "edits": [
         {
           "start": 53,
@@ -740692,6 +741458,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 15166,
+          "end": 15167,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
+        },
+        {
           "start": 15168,
           "end": 15170,
           "symbol": "C:ai",
@@ -741278,6 +742051,13 @@
           "symbol": "C:io",
           "original": "io",
           "renamed": "SoundCache"
+        },
+        {
+          "start": 17140,
+          "end": 17141,
+          "symbol": "M:io.a(II)Lbc;",
+          "original": "a",
+          "renamed": "createArchive"
         },
         {
           "start": 17142,
@@ -751791,7 +752571,7 @@
       "original": "u.java",
       "renamed": "ValidationState.java",
       "inputSha256": "8a7c71dba6689d49699ae0350b71e1d8fc6f9ac6cbb5c0c88f338b610509927b",
-      "outputSha256": "e312a50c14bb4ce7a2b060a20fd33575413502a1ebce44d810152dfb747e2642",
+      "outputSha256": "99046126ac64b4d4e7d27c99becc5fb20351598e85f555636f70fe861ed64d9a",
       "edits": [
         {
           "start": 50,
@@ -751857,6 +752637,13 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 615,
+          "end": 616,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
+        },
+        {
           "start": 689,
           "end": 691,
           "symbol": "C:in",
@@ -751876,6 +752663,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 786,
+          "end": 787,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
         },
         {
           "start": 872,
@@ -751906,6 +752700,13 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 982,
+          "end": 983,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
+        },
+        {
           "start": 1050,
           "end": 1052,
           "symbol": "C:in",
@@ -751925,6 +752726,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1139,
+          "end": 1140,
+          "symbol": "M:on.a(IZ)V",
+          "original": "a",
+          "renamed": "drawClientSessionsAndMenus"
         },
         {
           "start": 1839,
@@ -765856,7 +766664,7 @@
       "original": "vg.java",
       "renamed": "UiWidget.java",
       "inputSha256": "2c84d20e0e2d70d69aad4017a405741e91c777e512217e1995a2d4f8bb562b5f",
-      "outputSha256": "93455d0bdf1d5f804122eb56429e3e274963f057e9416321166854460c2b9d4d",
+      "outputSha256": "6743506d69f35b9acf0f30a0514820277c890e86ac07d050d28200d735591a50",
       "edits": [
         {
           "start": 65,
@@ -766536,6 +767344,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 13893,
+          "end": 13894,
+          "symbol": "M:on.a(Z)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getVisibleTooltipText"
         },
         {
           "start": 13941,
@@ -795101,10 +795916,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "24b136db493bb7115471eb503ac60e002ba1d73e02fdd11f271ec44008f45721",
+    "rulesSha256": "7e669161cff3812747c1c8c9b32c70b9380a5505548db7570613a596a8f61b47",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "b3f8d5c05d026f4ffcc4889efcca441d04180c4816e9a943eceb7b1fde67a23d",
+    "outputTreeSha256": "326e780a3de47cb0fcead291dfff26b27a3117714eba24878287af460ca1fbfe",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

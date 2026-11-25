@@ -24,14 +24,14 @@ final class ValidationState {
             TextHotspotWidget.a(6493);
           } else {
             if (null != PasswordInputPainter.field_x) {
-              IntrusiveDequeCursor.a(1, param0);
+              IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
               return;
             }
             if (null == SecondaryNodeHashTable.field_g) {
               DraggableWidget.f((byte) -99);
               return;
             }
-            IntrusiveDequeCursor.a(1, param0);
+            IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
             return;
           }
           return;
@@ -40,14 +40,14 @@ final class ValidationState {
           TextHotspotWidget.a(6493);
         } else {
           if (null != PasswordInputPainter.field_x) {
-            IntrusiveDequeCursor.a(1, param0);
+            IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
             return;
           }
           if (null == SecondaryNodeHashTable.field_g) {
             DraggableWidget.f((byte) -99);
             return;
           }
-          IntrusiveDequeCursor.a(1, param0);
+          IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
           return;
         }
     }

@@ -8,7 +8,7 @@ final class SoundCache {
     private Archive field_e;
     private IntrusiveNodeHashTable field_d;
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample getSynthesizedSample(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -66,7 +66,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, int[] param1, int param2) {
+    final PcmSample getVorbisSample(int param0, int[] param1, int param2) {
         PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
@@ -78,16 +78,16 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e.groupCount((byte) -114) == 1) {
-            stackIn_2_0 = this.a(param0 - 12203, param2, 0, param1);
+            stackIn_2_0 = this.getVorbisSample(param0 - 12203, param2, 0, param1);
             return stackIn_2_0;
           }
           if (this.field_e.getFileCount(param2, param0 ^ -26268) == 1) {
-            stackIn_6_0 = this.a(param0 - 12203, 0, param2, param1);
+            stackIn_6_0 = this.getVorbisSample(param0 - 12203, 0, param2, param1);
             return stackIn_6_0;
           }
           if (param0 != 0) {
             var5 = (int[]) null;
-            discarded$1 = this.a(84, 113, 110, (int[]) null);
+            discarded$1 = this.getVorbisSample(84, 113, 110, (int[]) null);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, byte param1, int[] param2) {
+    final PcmSample getSynthesizedSample(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
         PcmSample stackIn_2_0 = null;
@@ -115,16 +115,16 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_b.groupCount((byte) -79) == 1) {
-            stackIn_2_0 = this.a(0, param2, 0, param0);
+            stackIn_2_0 = this.getSynthesizedSample(0, param2, 0, param0);
             return stackIn_2_0;
           }
           if (1 == this.field_b.getFileCount(param0, -26268)) {
-            stackIn_5_0 = this.a(param0, param2, param1 ^ -63, 0);
+            stackIn_5_0 = this.getSynthesizedSample(param0, param2, param1 ^ -63, 0);
             return stackIn_5_0;
           }
           if (param1 != -63) {
             var5 = (int[]) null;
-            this.a(-103, (int[]) null, -81);
+            this.getVorbisSample(-103, (int[]) null, -81);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int[] param0, int param1, String param2, String param3) {
+    private final PcmSample getSynthesizedSampleByName(int[] param0, int param1, String param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -163,7 +163,7 @@ final class SoundCache {
           if (param1 < ~var6) {
             return null;
           }
-          stackIn_7_0 = this.a(var5_int, param0, 0, var6);
+          stackIn_7_0 = this.getSynthesizedSample(var5_int, param0, 0, var6);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, int param1, int param2, int[] param3) {
+    private final PcmSample getVorbisSample(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -261,7 +261,7 @@ final class SoundCache {
         field_c = null;
     }
 
-    final PcmSample a(String param0, String param1, int param2) {
+    final PcmSample getVorbisSampleByName(String param0, String param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_4_0 = null;
@@ -273,7 +273,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == -22888) {
-            stackIn_4_0 = this.a(param0, true, (int[]) null, param1);
+            stackIn_4_0 = this.getVorbisSampleByName(param0, true, (int[]) null, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (PcmSample) null;
@@ -298,7 +298,7 @@ final class SoundCache {
         }
     }
 
-    final static Archive a(int param0, int param1) {
+    final static Archive createArchive(int param0, int param1) {
         if (param1 >= 27) {
           return PasswordValidator.a(1, false, param0, 12000, true, false);
         }
@@ -306,7 +306,7 @@ final class SoundCache {
         return PasswordValidator.a(1, false, param0, 12000, true, false);
     }
 
-    private final PcmSample a(String param0, boolean param1, int[] param2, String param3) {
+    private final PcmSample getVorbisSampleByName(String param0, boolean param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -334,7 +334,7 @@ final class SoundCache {
           }
           var6 = this.field_e.getFileIdByName(var5_int, (byte) 106, param3);
           if (var6 >= 0) {
-            stackIn_10_0 = this.a(-12203, var6, var5_int, param2);
+            stackIn_10_0 = this.getVorbisSample(-12203, var6, var5_int, param2);
             return stackIn_10_0;
           }
           stackIn_8_0 = null;
@@ -376,7 +376,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample a(int param0, String param1, String param2) {
+    final PcmSample getSynthesizedSampleByName(int param0, String param1, String param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -389,7 +389,7 @@ final class SoundCache {
           if (param0 != 28116) {
             this.field_e = (Archive) null;
           }
-          stackIn_3_0 = this.a((int[]) null, -1, param1, param2);
+          stackIn_3_0 = this.getSynthesizedSampleByName((int[]) null, -1, param1, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

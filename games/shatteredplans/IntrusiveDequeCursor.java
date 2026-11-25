@@ -12,7 +12,7 @@ final class IntrusiveDequeCursor {
     static String field_a;
     static String field_h;
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode startBackward(int param0) {
         IntrusiveNode var2 = this.field_d.sentinel.previous;
         int var3 = -32 % ((25 - param0) / 37);
         if (this.field_d.sentinel == var2) {
@@ -23,9 +23,9 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static String a(boolean param0) {
+    final static String getVisibleTooltipText(boolean param0) {
         if (param0) {
-          IntrusiveDequeCursor.a(false);
+          IntrusiveDequeCursor.getVisibleTooltipText(false);
           if (AggressiveAi.field_q) {
             return null;
           }
@@ -49,7 +49,7 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode nextBackward(byte param0) {
         IntrusiveNode var2 = this.field_e;
         if (param0 != -124) {
           field_i = (String) null;
@@ -68,7 +68,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode startForward(int param0) {
         IntrusiveNode var2 = this.field_d.sentinel.next;
         if (param0 != 2) {
           field_b = false;
@@ -100,7 +100,7 @@ final class IntrusiveDequeCursor {
         field_f = null;
     }
 
-    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(boolean param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -148,7 +148,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -187,7 +187,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode nextForward(byte param0) {
         IntrusiveNode var2 = this.field_e;
         if (this.field_d.sentinel == var2) {
           this.field_e = null;
@@ -195,13 +195,13 @@ final class IntrusiveDequeCursor {
         }
         this.field_e = var2.next;
         if (param0 < 44) {
-          IntrusiveDequeCursor.a(-53, false);
+          IntrusiveDequeCursor.drawClientSessionsAndMenus(-53, false);
           return var2;
         }
         return var2;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawClientSessionsAndMenus(int param0, boolean param1) {
         int var2;
         int stackIn_14_0 = 0;
         boolean stackIn_19_0 = false;
