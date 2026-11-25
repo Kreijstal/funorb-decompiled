@@ -123,7 +123,7 @@ final class TutorialLayout {
           field_b = null;
           return;
         }
-        TutorialLayout.a(false);
+        TutorialLayout.resetReflectionCheckQueue(false);
         field_g = null;
         field_c = null;
         field_b = null;
@@ -143,7 +143,7 @@ final class TutorialLayout {
         this.topY[stage] = this.topY[stage] + (screenY - this.getTopY(stage, (byte) -108));
     }
 
-    final static void a(boolean param0) {
+    final static void resetReflectionCheckQueue(boolean param0) {
         DualNodeHashTable.field_e = new NodeDeque();
         if (!param0) {
           field_b = (RgbSprite) null;

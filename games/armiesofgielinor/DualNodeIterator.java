@@ -18,9 +18,9 @@ final class DualNodeIterator implements Iterator {
         }
         if (param0 != 0) {
           field_g = (String) null;
-          return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
+          return (java.awt.Container) ((Object) CombatEvent.getClientApplet((byte) -124));
         }
-        return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
+        return (java.awt.Container) ((Object) CombatEvent.getClientApplet((byte) -124));
     }
 
     final static PalettedBitmapFont loadPalettedFontById(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {

@@ -12,7 +12,7 @@ final class QuickChatCategoryRepository {
     static boolean guestSession;
 
     final static void drawDimmedGameDialogHost(boolean param0, int param1) {
-        NineSliceSpriteSupport.a(param0, true, param1 ^ -81);
+        NineSliceSpriteSupport.drawAccountDialogsWithBackdrop(param0, true, param1 ^ -81);
         if (param1 != -5) {
           field_g = (String) null;
         }
@@ -280,7 +280,7 @@ final class QuickChatCategoryRepository {
                                     ChannelBaseVolumeConsoleCommand.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
-                                    LoginCredentials.a((Throwable) null, 118, "L1: " + CampaignProgress.formatPacketDiagnostic(false));
+                                    LoginCredentials.reportClientError((Throwable) null, 118, "L1: " + CampaignProgress.formatPacketDiagnostic(false));
                                     TextSplitSupport.closeSessionSocket((byte) -124);
                                     break regionExit1;
                                 }

@@ -29,10 +29,10 @@ final class NodeHashTable {
         return var2;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setBattleChatColour(int param0, int param1) {
         SpriteSliceAndBlendSupport.field_d[4] = param1;
         if (param0 != -1) {
-          NodeHashTable.a(87, 95);
+          NodeHashTable.setBattleChatColour(87, 95);
         }
     }
 

@@ -333,7 +333,7 @@ abstract class ResizableModalDialog extends ModalDialog {
                           GradientUiRenderer.multiplySprite(AlternateKeyedLoginCredentials.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
-                            AlphanumericTextSupport.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
+                            AlphanumericTextSupport.drawLargeFoliageShadows(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {
@@ -344,7 +344,7 @@ abstract class ResizableModalDialog extends ModalDialog {
                 }
               }
             }
-            PowerOfTwoSupport.a(26449, param3, param4, param5);
+            PowerOfTwoSupport.drawFoliageShadow(26449, param3, param4, param5);
           }
           var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 106));
           while (var7 != null) {

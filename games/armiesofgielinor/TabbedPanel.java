@@ -216,7 +216,7 @@ final class TabbedPanel extends ClientUiComponent {
           }
           while (var7 < FriendRequestSupport.field_c[0].length) {
             ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.buildPlayerTintedBaseModel(FriendRequestSupport.field_c[0][var7], -20849);
-            ResourceProtocolClient.a(var7, FriendRequestSupport.field_c[0][var7], param1 - 100);
+            ResourceProtocolClient.buildPlayerRadialPalette(var7, FriendRequestSupport.field_c[0][var7], param1 - 100);
             var7++;
           }
           return;

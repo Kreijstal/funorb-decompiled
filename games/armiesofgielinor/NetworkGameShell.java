@@ -139,7 +139,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           return;
         }
         String sessionText = UnitModelPreview.readIncomingNullTerminatedString((byte) 61);
-        TextSplitSupport.setSessionCookie(CombatEvent.d((byte) 47), 0, sessionText);
+        TextSplitSupport.setSessionCookie(CombatEvent.getClientApplet((byte) 47), 0, sessionText);
     }
 
     private final void enableOpcode4(int obfuscationGuard) {
@@ -190,7 +190,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         int textLength = DropdownSelectorPainter.packetPayloadLength - 1;
         byte[] encodedUrl = new byte[textLength];
         ByteStorage.incomingPacket.readCipheredBytes(textLength, encodedUrl, false, 0);
-        SpellCastAction.openExternalUrl(CombatEvent.d((byte) -125), 87, LobbyRoomControlSupport.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
+        SpellCastAction.openExternalUrl(CombatEvent.getClientApplet((byte) -125), 87, LobbyRoomControlSupport.decodeTextBytes(encodedUrl, (byte) 127), navigationFlag != 0);
         if (obfuscationGuard != 16433) {
           this.dispatchSharedPacket(-76);
         }
@@ -263,36 +263,36 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (actionCode == 4) {
             if (BestScoreStrategy.field_l) {
-              QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.d((byte) -116), true);
+              QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.getClientApplet((byte) -116), true);
             } else {
               QuickChatCategoryRepository.guestSession = true;
               SoundCache.field_b = 10;
             }
           }
           if (5 == actionCode) {
-            CampaignResult.openQuitPage(CombatEvent.d((byte) -115), (byte) -3);
+            CampaignResult.openQuitPage(CombatEvent.getClientApplet((byte) -115), (byte) -3);
           }
           if (6 == actionCode &&
             ChatMessageWriteSupport.field_b) {
             SoundCache.field_b = 10;
           }
           if (actionCode == 7) {
-            DialWidget.openServerListPage(CombatEvent.d((byte) 53), -126);
+            DialWidget.openServerListPage(CombatEvent.getClientApplet((byte) 53), -126);
           }
           if (actionCode == 8) {
-            QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.d((byte) -120), true);
+            QuickChatCategoryRepository.clearSessionAndMaybeReload(CombatEvent.getClientApplet((byte) -120), true);
           }
           if (9 == actionCode) {
-            SpectateRoomRequestSupport.a(CombatEvent.d((byte) 48), 11982);
+            SpectateRoomRequestSupport.a(CombatEvent.getClientApplet((byte) 48), 11982);
           }
           if (10 == actionCode) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 17);
           }
           if (11 == actionCode) {
-            ReloadPageSupport.reloadPage((byte) -118, CombatEvent.d((byte) 7));
+            ReloadPageSupport.reloadPage((byte) -118, CombatEvent.getClientApplet((byte) 7));
           }
           if (actionCode == 12) {
-            ActionSpell.openRelativeExternalUrl(CombatEvent.d((byte) -123), -69, GridWidgetContainer.getPendingNavigationUrl(-129));
+            ActionSpell.openRelativeExternalUrl(CombatEvent.getClientApplet((byte) -123), -69, GridWidgetContainer.getPendingNavigationUrl(-129));
           }
           if (actionCode == 13) {
             try {
@@ -313,7 +313,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             } catch (java.lang.Exception caughtCountryFailure) {
               caughtFailure = caughtCountryFailure;
               countryListFailure = (Exception) (Object) caughtFailure;
-              LoginCredentials.a((Throwable) ((Object) countryListFailure), -99, "S1");
+              LoginCredentials.reportClientError((Throwable) ((Object) countryListFailure), -99, "S1");
               failedCountryList = (String) null;
               LoginForm.handleCountryListResponse((String) null, -119);
               MusicPatchEnvelope.field_h = null;
@@ -433,7 +433,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                       MusicPatchEnvelope.readChatRestrictions((byte) 119);
                       break regionExit1;
                     default:
-                      LoginCredentials.a((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.formatPacketDiagnostic(false));
+                      LoginCredentials.reportClientError((Throwable) null, obfuscationGuard ^ -100, "MGS1: " + CampaignProgress.formatPacketDiagnostic(false));
                       TextSplitSupport.closeSessionSocket((byte) -124);
                       break regionExit1;
                   }
@@ -465,7 +465,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           return;
         }
-        LoginCredentials.a((Throwable) null, -115, "MGS2: " + CampaignProgress.formatPacketDiagnostic(false));
+        LoginCredentials.reportClientError((Throwable) null, -115, "MGS2: " + CampaignProgress.formatPacketDiagnostic(false));
         TextSplitSupport.closeSessionSocket((byte) -126);
     }
 
@@ -644,7 +644,7 @@ abstract class NetworkGameShell extends GameAppletShell {
               if (IconTextComponent.field_Nb.ensureGroupAvailableByName(28979, "")) {
                 CampaignUnitOverride.loadCommonClientText((byte) -82, IconTextComponent.field_Nb);
                 IconTextComponent.field_Nb = null;
-                ModalDialog.a(0);
+                ModalDialog.resetFrameTiming(0);
               }
             }
           }
@@ -656,7 +656,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           SharedUiLoadingSupport.ensureCommonUiResources(DisplayModeOptionPainter.field_u, (byte) 127, LoginKind.field_g, CombatPresentation.field_M) &&
           SharedUiLoadingSupport.ensureAllUiGroupsAvailable(LoginKind.field_g, -27701)) {
           GameUiOverlaySupport.releaseStatics(12);
-          EmailValidator.c((byte) 91);
+          EmailValidator.initializeFullscreenConfirmationText((byte) 91);
           ChatMessageWriteSupport.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;
           StateChangeEvent.initializeSharedAccountUi(CombatPresentation.field_M, DisplayModeOptionPainter.field_u, LoginKind.field_g, 0, BestScoreStrategy.field_l);
@@ -680,7 +680,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           CombatPresentation.field_M = null;
           LoginKind.field_g = null;
           SoundCache.probeAppletUsername(-24602, (java.applet.Applet) (this));
-          ModalDialog.a(0);
+          ModalDialog.resetFrameTiming(0);
           StrongCacheEntry.field_E = 10;
         }
         if (StrongCacheEntry.field_E == 10) {
@@ -693,7 +693,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (StrongCacheEntry.field_E == 11) {
           if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
             !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
-            CalendarSupport.setLoadingProgress((byte) -24, 0.0f, StatefulWidgetPainter.a(IgnoreListLookupSupport.field_b, true, LobbyPlayer.field_Jb, RegionAnchor.field_o));
+            CalendarSupport.setLoadingProgress((byte) -24, 0.0f, StatefulWidgetPainter.formatArchiveOverallProgress(IgnoreListLookupSupport.field_b, true, LobbyPlayer.field_Jb, RegionAnchor.field_o));
             loadingStageContinuation = false;
           }
           else {
@@ -779,7 +779,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             caughtFailure = caughtStartupFailure;
             startupFailure = (Exception) (Object) caughtFailure;
             errorMessage = (String) null;
-            LoginCredentials.a((Throwable) ((Object) startupFailure), 98, (String) null);
+            LoginCredentials.reportClientError((Throwable) ((Object) startupFailure), 98, (String) null);
             this.reportGameError("crash", (byte) -40);
           }
           return;

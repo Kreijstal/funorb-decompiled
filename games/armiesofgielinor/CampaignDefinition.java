@@ -23,7 +23,7 @@ final class CampaignDefinition extends IntrusiveNode {
         field_m = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean isFreeCampaign(byte param0) {
         if (param0 != -45) {
           this.localGodId = 54;
           return BoundedFile.isFreeCampaign(this.campaignIndex, 11906);

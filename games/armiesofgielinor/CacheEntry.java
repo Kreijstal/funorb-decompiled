@@ -73,7 +73,7 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByte(param2 + 20033, 18);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
               var10 = EmailValidator.outgoingPacket.position;
-              var11_ref_String = ByteStorage.readSettingsCookie(0, CombatEvent.d((byte) 55));
+              var11_ref_String = ByteStorage.readSettingsCookie(0, CombatEvent.getClientApplet((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -117,7 +117,7 @@ abstract class CacheEntry extends DualLinkedNode {
               CampaignLookupSupport.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                TilePosition.a((byte) -99, CombatEvent.d((byte) -127));
+                TilePosition.a((byte) -99, CombatEvent.getClientApplet((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
                 TextSplitSupport.closeSessionSocket((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
@@ -157,7 +157,7 @@ abstract class CacheEntry extends DualLinkedNode {
             if (MusicCrossfadeStream.deliveredOpcode == 255) {
               var9_ref_String = ByteStorage.incomingPacket.readOptionalString((byte) -85);
               if (var9_ref_String != null) {
-                AccountNameCharacterSupport.a(var9_ref_String, CombatEvent.d((byte) -5), false);
+                AccountNameCharacterSupport.a(var9_ref_String, CombatEvent.getClientApplet((byte) -5), false);
               }
             } else {
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);

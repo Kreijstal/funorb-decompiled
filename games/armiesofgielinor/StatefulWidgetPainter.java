@@ -20,7 +20,7 @@ final class StatefulWidgetPainter extends BitmapTextWidgetPainter {
         }
     }
 
-    final static String a(String param0, boolean param1, String param2, ResourceArchive param3) {
+    final static String formatArchiveOverallProgress(String param0, boolean param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

@@ -10,7 +10,7 @@ final class EmailValidator extends TextFieldValidator {
     static String currentLocationLabel;
     static String[] battleHintMessages;
 
-    final static String a(ResourceArchive param0, int param1, String param2, String param3, String param4) {
+    final static String formatArchiveGroupProgress(ResourceArchive param0, int param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -120,7 +120,7 @@ final class EmailValidator extends TextFieldValidator {
         super(input);
     }
 
-    final static void c(byte param0) {
+    final static void initializeFullscreenConfirmationText(byte param0) {
         if (param0 == 91) {
           ProgressMessageDialog.field_vb = UnitAirAttackSupport.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + ByteArrayPoolSupport.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + FullscreenDisplayMode.field_d;
           return;
@@ -137,7 +137,7 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 89) {
-            EmailValidator.c((byte) -118);
+            EmailValidator.initializeFullscreenConfirmationText((byte) -118);
           }
           if (this.validateText(-3137, text) != ProceduralMapSupport.validationInvalid) {
             stackIn_6_0 = CampaignRewardPreview.field_a;

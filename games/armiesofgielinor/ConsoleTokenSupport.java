@@ -13,11 +13,11 @@ final class ConsoleTokenSupport {
         field_a = null;
         field_b = null;
         if (obfuscationGuard <= 79) {
-          ConsoleTokenSupport.a(110, 51, false, 108, -96, 59);
+          ConsoleTokenSupport.drawUnitStatusOverlays(110, 51, false, 108, -96, 59);
         }
     }
 
-    final static void a(int param0) {
+    final static void increaseMusicGain(int param0) {
         int var1 = 0;
         if (224 <= SoundPlaybackHandle.musicGain) {
           NetworkResourceRequest.b(256, param0 ^ -30690);
@@ -84,7 +84,7 @@ final class ConsoleTokenSupport {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void drawUnitStatusOverlays(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int stackIn_5_0 = 0;
         int stackIn_41_0;
         int stackIn_41_1;

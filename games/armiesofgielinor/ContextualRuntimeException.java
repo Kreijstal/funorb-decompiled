@@ -92,7 +92,7 @@ final class ContextualRuntimeException extends RuntimeException {
           }
         }
         if (ModalDialogHost.field_J > 0) {
-          AlphaWidgetContainer.d(false);
+          AlphaWidgetContainer.positionDefaultLobbyPanels(false);
         }
         if (PreparedAction.field_r > 0) {
           AnimationSequence.positionLobbySidePanels(PreparedAction.field_r, -71);

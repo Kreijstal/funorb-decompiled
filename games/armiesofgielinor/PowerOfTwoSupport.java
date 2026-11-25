@@ -17,7 +17,7 @@ final class PowerOfTwoSupport extends IntrusiveNode {
     static RgbSprite[] field_p;
     static int outgoingChatChannel;
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int hashCp1252Name(byte param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -74,7 +74,7 @@ final class PowerOfTwoSupport extends IntrusiveNode {
         field_n = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawFoliageShadow(int param0, int param1, int param2, int param3) {
         RgbSprite var5 = null;
         if (!BitLengthSupport.field_a) {
           return;

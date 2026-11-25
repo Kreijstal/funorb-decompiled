@@ -155,7 +155,7 @@ final class RadialSummonMenu {
         return null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void initializeLobbyPanelContainers(boolean param0, boolean param1) {
         DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, BitCountSupport.field_c) : new CommunityTabGroup(TeleportAction.field_x, AccountNameAvailabilityValidator.field_l);
         if (param0) {
           return;
@@ -217,7 +217,7 @@ final class RadialSummonMenu {
         }
     }
 
-    final static EventPresenter a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, BattleUnitRenderer param7) {
+    final static EventPresenter createEventPresenter(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, BattleUnitRenderer param7) {
         int var8_int = 0;
         RuntimeException var8 = null;
         EventPresenter var9 = null;

@@ -658,7 +658,7 @@ final class AchievementNotification extends IntrusiveNode {
               var14.field_m = true;
               var14.unlink(param0 ^ 35);
             } else {
-              LoginCredentials.a((Throwable) null, 78, "A1: " + CampaignProgress.formatPacketDiagnostic(false));
+              LoginCredentials.reportClientError((Throwable) null, 78, "A1: " + CampaignProgress.formatPacketDiagnostic(false));
               TextSplitSupport.closeSessionSocket((byte) -127);
             }
           }

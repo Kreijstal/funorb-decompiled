@@ -18,7 +18,7 @@ final class SessionIoSupport {
     final static void updateSharedUiInput(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12, int param13) {
         DialogMessagePane.field_I = null;
         ChannelBaseVolumeConsoleCommand.e((byte) -128);
-        param11 = FixedQuaternion.a(param11, param9, param6, param2, param7, param13, (byte) -83);
+        param11 = FixedQuaternion.processBlockingChatOverlays(param11, param9, param6, param2, param7, param13, (byte) -83);
         QuicksaveRequestSupport.updateLobbyInterface(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
         UnitUnlockPreviewModel.updateSocialListControls(param3, param4, -1);
         if (!param8) {

@@ -90,7 +90,7 @@ final class GlobalSpell extends Spell {
     }
 
     final static void drawSharedInterfaceAndOverlays(int param0, boolean param1) {
-        CampaignProgress.a(2000, param1);
+        CampaignProgress.drawSharedUiAndTabs(2000, param1);
         if (param0 >= -21) {
           GlobalSpell.drawSharedInterfaceAndOverlays(-83, true);
           LocalAccountSupport.drawSharedUiOverlays(-10820, param1);

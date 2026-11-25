@@ -21,10 +21,10 @@ abstract class SpriteControlNode extends IntrusiveNode {
           return false;
         }
         if (param3 > 25) {
-          return ProgressMessageDialog.b(param1, (byte) -59, param2);
+          return ProgressMessageDialog.processChatCompositionKey(param1, (byte) -59, param2);
         }
         field_k = (RgbSprite) null;
-        return ProgressMessageDialog.b(param1, (byte) -59, param2);
+        return ProgressMessageDialog.processChatCompositionKey(param1, (byte) -59, param2);
     }
 
     public static void releaseStatics(boolean obfuscationGuard) {

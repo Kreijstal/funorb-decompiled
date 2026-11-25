@@ -133,7 +133,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             this.y = this.y + (5 + font.getParagraphHeight(this.description, this.width - 40, font.maxAscent));
           }
           accountLabel = AlphaWidgetContainer.field_J;
-          lastLoginMethod = CommunityTabGroup.readLastLoginMethod(0, CombatEvent.d((byte) 34));
+          lastLoginMethod = CommunityTabGroup.readLastLoginMethod(0, CombatEvent.getClientApplet((byte) 34));
           if (lastLoginMethod != CombatSandbox.emailLoginMethod) {
             if (lastLoginMethod == DisplayModeOptionPainter.usernameLoginMethod) {
               accountLabel = DualNodeDeque.field_h;

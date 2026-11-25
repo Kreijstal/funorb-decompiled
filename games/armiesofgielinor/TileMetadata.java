@@ -113,7 +113,7 @@ final class TileMetadata implements TaggedFieldReader {
 
     final static long millisSinceLastPacketRead(int param0) {
         if (param0 != 0) {
-          TileMetadata.a(-47, true);
+          TileMetadata.drawBlockingLobbyOverlays(-47, true);
         }
         return -CampaignMenuButton.lastPacketReadMillis + MonotonicClockSupport.monotonicMillis(-53);
     }
@@ -125,7 +125,7 @@ final class TileMetadata implements TaggedFieldReader {
         return new LoginMethod[]{CombatSandbox.emailLoginMethod, DisplayModeOptionPainter.usernameLoginMethod, MatchConditionEntry.defaultLoginMethod};
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawBlockingLobbyOverlays(int param0, boolean param1) {
         if (ModalDialogHost.field_J > 0 &&
           WhirlpoolHasher.field_g) {
           SoftwareRaster.darkenRectangle(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);

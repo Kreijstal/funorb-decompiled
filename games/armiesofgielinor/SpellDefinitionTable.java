@@ -20,7 +20,7 @@ final class SpellDefinitionTable {
         if (param0 != 0) {
           return;
         }
-        SectorCacheStore.a(2858);
+        SectorCacheStore.resetSharedChatComposition(2858);
     }
 
     final static void setChatHuffmanCodec(HuffmanCodec codec, int obfuscationGuard) {

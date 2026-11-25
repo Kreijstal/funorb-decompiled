@@ -88,7 +88,7 @@ class ClientUiComponent extends ClientUiNode {
               if (PreparedAction.field_r <= 0) {
                 if (AudioShutdownSupport.field_c > InstructionsPanel.field_D) {
                   if (InstructionsPanel.field_D == 0) {
-                    RadialSummonMenu.a(false, false);
+                    RadialSummonMenu.initializeLobbyPanelContainers(false, false);
                   }
                   InstructionsPanel.field_D = InstructionsPanel.field_D + 1;
                 }
@@ -122,7 +122,7 @@ class ClientUiComponent extends ClientUiNode {
                 if (InstructionsPanel.field_D <= 0) {
                   if (AudioShutdownSupport.field_c > PreparedAction.field_r) {
                     if (0 == PreparedAction.field_r) {
-                      RadialSummonMenu.a(false, true);
+                      RadialSummonMenu.initializeLobbyPanelContainers(false, true);
                     }
                     PreparedAction.field_r = PreparedAction.field_r + 1;
                   }

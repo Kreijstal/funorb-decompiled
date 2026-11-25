@@ -219,7 +219,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (obfuscationGuard != 10) {
                 return;
               }
-              ToggleWidget.field_L = CombatEvent.d((byte) 10);
+              ToggleWidget.field_L = CombatEvent.getClientApplet((byte) 10);
               dupTemp$0 = new PlatformTaskService(requestedCacheStoreId, requestedCacheName, cacheIndexCount, true);
               IntPair.field_m = dupTemp$0;
               PacketBuffer.field_s = dupTemp$0;
@@ -236,7 +236,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              LoginCredentials.a(var8_ref, obfuscationGuard - 118, (String) null);
+              LoginCredentials.reportClientError(var8_ref, obfuscationGuard - 118, (String) null);
               this.reportGameError("crash", (byte) -62);
             }
             return;
@@ -310,7 +310,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.errorReported = true;
             System.out.println("error_game_" + errorCode);
             try {
-              AppletScriptBridge.callScriptFunction("loggedout", (byte) -121, CombatEvent.d((byte) -123));
+              AppletScriptBridge.callScriptFunction("loggedout", (byte) -121, CombatEvent.getClientApplet((byte) -123));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -423,7 +423,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (StrongCacheEntry.field_E >= 10) {
             if (BitmapTextWidgetPainter.isLogoAnimationFinished(true)) {
               if (SoundCache.field_b == 0) {
-                NineSliceSpriteSupport.a(param1, false, 112);
+                NineSliceSpriteSupport.drawAccountDialogsWithBackdrop(param1, false, 112);
                 ContentTransitionDialog.paintRasterSurfaceToCanvas(0, 12, param2, 0);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
@@ -641,7 +641,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              LoginCredentials.a((Throwable) (var1), -102, (String) null);
+              LoginCredentials.reportClientError((Throwable) (var1), -102, (String) null);
               this.reportGameError("crash", (byte) -121);
             }
             this.shutdownShell(true, -1251);

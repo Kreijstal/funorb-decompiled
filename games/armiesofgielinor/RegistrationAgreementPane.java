@@ -164,7 +164,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
     final static void initializeLogoAnimation(ResourceArchive param0, byte param1, PcmStreamMixer param2, int param3) {
         try {
           InteractiveWidget.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
-          DualNodeDeque.a((byte) -124, param0);
+          DualNodeDeque.primeLogoAudioDecoder((byte) -124, param0);
           FriendLookupSupport.loadLogoMeshes(-93, param0);
           GzipDecoder.loadLogoFinalFrameSlices(32381, param0);
           DropdownArrowPainter.initializeLogoHighlightLookup(54);

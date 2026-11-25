@@ -179,7 +179,7 @@ final class CampaignProgress {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSharedUiAndTabs(int param0, boolean param1) {
         if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
           param1 = false;
         }

@@ -39,7 +39,7 @@ final class PointerCaptureSupport {
     final static void notifyBrowserResizeMode(int param0, int param1) {
         try {
           try {
-            AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
+            AppletScriptBridge.callScriptFunction(CombatEvent.getClientApplet((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
           } catch (Throwable throwable) {
           }
           int var2 = 87 % ((param1 - 39) / 40);
@@ -73,9 +73,9 @@ final class PointerCaptureSupport {
               var8 = ManaStarParticle.activeTerrainSprites[0];
               if (var8 != null) {
                 if (param4) {
-                  var8.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(param1, (byte) 94));
                 } else {
-                  var8.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(param1, (byte) 94));
                 }
               }
             }
@@ -105,9 +105,9 @@ final class PointerCaptureSupport {
                   var13 = ManaStarParticle.activeTerrainSprites[var12];
                   if (var13 != null) {
                     if (!param4) {
-                      var13.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(param1, (byte) 94));
                     } else {
-                      var13.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(param1, (byte) 94));
                     }
                   }
                   var8_int++;

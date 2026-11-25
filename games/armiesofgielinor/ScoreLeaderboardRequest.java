@@ -12,7 +12,7 @@ final class ScoreLeaderboardRequest extends IntrusiveNode {
     String[][] field_s;
     static int field_q;
 
-    public static void a(boolean param0) {
+    public static void releaseScoreLeaderboardRequestStatics(boolean param0) {
         if (!param0) {
           RgbSprite[] var2 = (RgbSprite[]) null;
           ScoreLeaderboardRequest.resetSpriteCanvasBounds(96, (RgbSprite[]) null);
@@ -65,7 +65,7 @@ final class ScoreLeaderboardRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void storeRandomSeedBytes(int param0) {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;

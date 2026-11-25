@@ -50,7 +50,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
         }
     }
 
-    final static int h(int param0) {
+    final static int pollMessageDialogAction(int param0) {
         int var1_int = 0;
         int var3 = 0;
         int stackIn_18_0 = 0;

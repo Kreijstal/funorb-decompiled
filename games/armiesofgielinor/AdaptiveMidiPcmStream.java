@@ -96,7 +96,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
         this.resetChannelGains(3933);
     }
 
-    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
+    final static void drawTintedThreeSliceBar(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -120,7 +120,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             SoftwareRaster.saveClip(DefeatPlayerConsoleCommand.field_H);
             SoftwareRaster.intersectClip(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
-              AdaptiveMidiPcmStream.a(true);
+              AdaptiveMidiPcmStream.decreaseMusicGain(true);
             }
             var9 = var6_int + param3;
             var10 = -var7 + param2 + param3;
@@ -286,7 +286,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void decreaseMusicGain(boolean param0) {
         int var1 = 0;
         if (32 >= SoundPlaybackHandle.musicGain) {
           NetworkResourceRequest.b(0, 99);
@@ -333,7 +333,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
         }
         if (obfuscationGuard != 3933) {
           RgbSprite[] unusedSprites = (RgbSprite[]) null;
-          AdaptiveMidiPcmStream.a(47, (RgbSprite[]) null, 67, -125, 49, -47);
+          AdaptiveMidiPcmStream.drawTintedThreeSliceBar(47, (RgbSprite[]) null, 67, -125, 49, -47);
         }
         super.setChannelGain(256, -1, (byte) -20);
     }

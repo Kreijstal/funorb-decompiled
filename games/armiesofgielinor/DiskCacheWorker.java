@@ -114,7 +114,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              LoginCredentials.a((Throwable) ((Object) var2_ref), -98, (String) null);
+              LoginCredentials.reportClientError((Throwable) ((Object) var2_ref), -98, (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {

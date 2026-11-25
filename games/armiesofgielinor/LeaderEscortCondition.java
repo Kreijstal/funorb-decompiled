@@ -308,7 +308,7 @@ final class LeaderEscortCondition implements MatchCondition {
             TextSplitSupport.closeSessionSocket((byte) -126);
             return;
           }
-          LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.formatPacketDiagnostic(false));
+          LoginCredentials.reportClientError((Throwable) null, 76, "HS1: " + CampaignProgress.formatPacketDiagnostic(false));
           TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

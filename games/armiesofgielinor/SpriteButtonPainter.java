@@ -184,7 +184,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
           var7 = stackIn_16_0;
           stackIn_19_0 = (!renderFlag) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          AdaptiveMidiPcmStream.a(var7, this.backgroundSprites, widget.width, originX + widget.x, widget.y + originY + (-this.backgroundSprites[0].canvasHeight + widget.height >> 1), -3225);
+          AdaptiveMidiPcmStream.drawTintedThreeSliceBar(var7, this.backgroundSprites, widget.width, originX + widget.x, widget.y + originY + (-this.backgroundSprites[0].canvasHeight + widget.height >> 1), -3225);
           this.font.drawParagraph(widget.text, widget.x + originX, originY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

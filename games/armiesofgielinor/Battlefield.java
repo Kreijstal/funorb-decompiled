@@ -5170,7 +5170,7 @@ final class Battlefield {
           }
           var15 = "\ncx: " + param8 + ", cy: " + param4 + ", ax: " + param1 + ", ay: " + param6 + ", adam: " + param2 + ", ddam: " + param9 + ", creature: " + param10 + ", attdie: " + param3 + ", defdie: " + param11;
           if (this.field_F) {
-            LoginCredentials.a((Throwable) null, 115, var16 + var15);
+            LoginCredentials.reportClientError((Throwable) null, 115, var16 + var15);
             return true;
           }
           this.field_o = true;

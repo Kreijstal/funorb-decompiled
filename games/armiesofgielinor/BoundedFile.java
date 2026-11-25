@@ -82,45 +82,45 @@ final class BoundedFile {
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == -1) {
-          ModalDialog.a(19, param1);
+          ModalDialog.drawGameplayAndSharedUi(19, param1);
         } else {
           if (19 == param0) {
-            ModalDialog.a(65, false);
+            ModalDialog.drawGameplayAndSharedUi(65, false);
             SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
             ConsoleTextNode.field_p[param0].drawStageUi(param3);
           } else {
             if (param0 == 25) {
-              ModalDialog.a(65, false);
+              ModalDialog.drawGameplayAndSharedUi(65, false);
               SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
               ConsoleTextNode.field_p[param0].drawStageUi(param3);
             } else {
               if (param0 == 1) {
-                ModalDialog.a(65, false);
+                ModalDialog.drawGameplayAndSharedUi(65, false);
                 SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                 ConsoleTextNode.field_p[param0].drawStageUi(param3);
               } else {
                 if (param0 == 24) {
-                  ModalDialog.a(65, false);
+                  ModalDialog.drawGameplayAndSharedUi(65, false);
                   SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                   ConsoleTextNode.field_p[param0].drawStageUi(param3);
                 } else {
                   if (param0 == 2) {
-                    ModalDialog.a(65, false);
+                    ModalDialog.drawGameplayAndSharedUi(65, false);
                     SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                     ConsoleTextNode.field_p[param0].drawStageUi(param3);
                   } else {
                     if (param0 == 17) {
-                      ModalDialog.a(65, false);
+                      ModalDialog.drawGameplayAndSharedUi(65, false);
                       SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                       ConsoleTextNode.field_p[param0].drawStageUi(param3);
                     } else {
                       if (param0 == 3) {
-                        ModalDialog.a(65, false);
+                        ModalDialog.drawGameplayAndSharedUi(65, false);
                         SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                         ConsoleTextNode.field_p[param0].drawStageUi(param3);
                       } else {
                         if (param0 == 4) {
-                          ModalDialog.a(65, false);
+                          ModalDialog.drawGameplayAndSharedUi(65, false);
                           SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                           ConsoleTextNode.field_p[param0].drawStageUi(param3);
                         } else {
@@ -142,7 +142,7 @@ final class BoundedFile {
                                     if (!param2) {
                                       AchievementNotification.field_m.drawPixels(FixedSquareRootSupport.field_b.width / 2 - AchievementNotification.field_m.canvasWidth / 2, -(AchievementNotification.field_m.canvasHeight / 2) + FixedSquareRootSupport.field_b.height / 2);
                                     } else {
-                                      ModalDialog.a(61, false);
+                                      ModalDialog.drawGameplayAndSharedUi(61, false);
                                     }
                                     SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                                     ConsoleTextNode.field_p[param0].drawStageUi(false);

@@ -23,7 +23,7 @@ abstract class Spell {
             SectorCacheStore.field_a.eventPresenters.clear(93);
           }
           Throwable var3 = (Throwable) null;
-          LoginCredentials.a((Throwable) null, -63, param0);
+          LoginCredentials.reportClientError((Throwable) null, -63, param0);
           TextSplitSupport.closeSessionSocket((byte) -124);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -53,7 +53,7 @@ final class AlphanumericTextSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void drawLargeFoliageShadows(int param0, int param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         int var5 = 0;

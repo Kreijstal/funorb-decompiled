@@ -84,7 +84,7 @@ abstract class ResourceProtocolClient {
         return this.queuedPriority.size(30578) + this.inFlightPriority.size(30578);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void buildPlayerRadialPalette(int param0, int param1, int param2) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;
@@ -99,7 +99,7 @@ abstract class ResourceProtocolClient {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 > -96) {
-            ResourceProtocolClient.a(-87, 28, 102);
+            ResourceProtocolClient.buildPlayerRadialPalette(-87, 28, 102);
           }
           var11 = ConsoleCommand.field_v[param0];
           var10 = var11;

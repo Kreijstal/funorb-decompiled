@@ -353,7 +353,7 @@ final class BitmapTextLayout extends TextLayout {
     final static void layoutLobbyPanels(boolean param0) {
         NineSliceSpriteSupport.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
-        AlphaWidgetContainer.d(false);
+        AlphaWidgetContainer.positionDefaultLobbyPanels(false);
         SpellCastEvent.field_E.setLayout(-2 + NumericDateInputWidget.field_T.height - 40, (byte) -124, 0, NumericDateInputWidget.field_T.width, 0);
         ReloadPageSupport.field_g.setBounds(GradientSpanBlendSupport.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + GradientSpanBlendSupport.field_d;

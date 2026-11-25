@@ -160,7 +160,7 @@ final class Bzip2State {
             return null;
           }
           if (param1 == 28) {
-            stackIn_7_0 = IgnoreRequestSupport.a((byte) 32);
+            stackIn_7_0 = IgnoreRequestSupport.buildDecodedSpritesWithOptionalAlpha((byte) 32);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite[]) null;

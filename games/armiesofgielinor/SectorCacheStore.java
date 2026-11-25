@@ -58,7 +58,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetSharedChatComposition(int param0) {
         if (param0 != 2858) {
           ChatMessage var2 = (ChatMessage) null;
           SectorCacheStore.appendChatHistory(-95, (ChatMessage) null);

@@ -178,7 +178,7 @@ final class LocalAccountSupport {
         if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
           param1 = false;
         }
-        TileMetadata.a(5295, param1);
+        TileMetadata.drawBlockingLobbyOverlays(5295, param1);
         AchievementNotification.drawQuickChatOverlay((byte) 102);
     }
 
@@ -189,7 +189,7 @@ final class LocalAccountSupport {
           java.applet.Applet var2 = (java.applet.Applet) null;
           LocalAccountSupport.hasTuhstatbutCookieOrParameter(43, (java.applet.Applet) null);
         }
-        LinkButtonPainter.a(true, true, param0 + 25);
+        LinkButtonPainter.openLoginDialogWithOptions(true, true, param0 + 25);
     }
 
     final static void readPendingRequestResponse(byte param0) {
@@ -252,7 +252,7 @@ final class LocalAccountSupport {
             TextSplitSupport.closeSessionSocket((byte) -125);
             return;
           }
-          LoginCredentials.a((Throwable) null, 70, "LR1: " + CampaignProgress.formatPacketDiagnostic(false));
+          LoginCredentials.reportClientError((Throwable) null, 70, "LR1: " + CampaignProgress.formatPacketDiagnostic(false));
           TextSplitSupport.closeSessionSocket((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

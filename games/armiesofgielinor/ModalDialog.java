@@ -156,7 +156,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         return (Widget) (this);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawGameplayAndSharedUi(int param0, boolean param1) {
         int var2;
         String var3;
         ResourceArchive var4;
@@ -177,7 +177,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
           ModalDialog.loadMusicPatch((ResourceArchive) null, -105, true);
         }
         stackIn_13_0 = (param1) && (ToastMessage.c((byte) -103)) && (var2 == 0);
-        NineSliceSpriteSupport.a(stackIn_13_0, false);
+        NineSliceSpriteSupport.drawSharedInterfaceAndDialogs(stackIn_13_0, false);
         if (null != FullscreenFocusCanvas.gameplayController) {
           FullscreenFocusCanvas.gameplayController.drawBattleFrame(0, param1);
         }
@@ -228,7 +228,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;

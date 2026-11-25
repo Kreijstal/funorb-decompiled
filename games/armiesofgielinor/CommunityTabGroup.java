@@ -131,7 +131,7 @@ final class CommunityTabGroup {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
-            LoginCredentials.a((Throwable) ((Object) phraseFailure), -120, "CC1");
+            LoginCredentials.reportClientError((Throwable) ((Object) phraseFailure), -120, "CC1");
             HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }
@@ -297,7 +297,7 @@ final class CommunityTabGroup {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
-            LoginCredentials.a((Throwable) ((Object) phraseFailure), -120, "CC1");
+            LoginCredentials.reportClientError((Throwable) ((Object) phraseFailure), -120, "CC1");
             HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }

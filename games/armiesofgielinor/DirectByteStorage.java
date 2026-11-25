@@ -54,7 +54,7 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createRgbGradientPalette(int param0, int param1, int param2) {
         int var11 = 0;
         int var12 = 0;
         int var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;

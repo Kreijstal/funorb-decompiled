@@ -76,10 +76,10 @@ final class SpellMenuGroup {
               TabbedPanel.isPointerInsideCircle(212, 165, 20, false)) {
               MonotonicClockSupport.field_f = EmailCheckResult.formatTemplate(4800, IndexedDecodedSpriteSupport.field_a, new String[]{this.parent.label});
               hoveredSelection = 40;
-              TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
+              TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, 130 + horizontalOffset), MatchConditionEntry.toInterfaceY(177, (byte) 94), 128);
             }
-            this.icon.drawWithOpacity(IgnoreListLookupSupport.toInterfaceX(true, horizontalOffset + 145), MatchConditionEntry.a(192, (byte) 94), opacity);
-            ProjectileEffect.field_h[1].drawWithOpacity(IgnoreListLookupSupport.toInterfaceX(true, 142 + horizontalOffset), MatchConditionEntry.a(189, (byte) 94), opacity);
+            this.icon.drawWithOpacity(IgnoreListLookupSupport.toInterfaceX(true, horizontalOffset + 145), MatchConditionEntry.toInterfaceY(192, (byte) 94), opacity);
+            ProjectileEffect.field_h[1].drawWithOpacity(IgnoreListLookupSupport.toInterfaceX(true, 142 + horizontalOffset), MatchConditionEntry.toInterfaceY(189, (byte) 94), opacity);
           }
           if (null != this.children) {
             entryCount = this.children.length;
@@ -102,15 +102,15 @@ final class SpellMenuGroup {
                 TabbedPanel.isPointerInsideCircle(iconY, iconX, 20, false)) {
                 MonotonicClockSupport.field_f = this.children[childIndex].label;
                 hoveredSelection = 50 + childIndex;
-                TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 128);
+                TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.toInterfaceY(iconY - 35, (byte) 94), 128);
               }
               if (transition < 0 &&
                 selectedChild == childIndex) {
-                TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), -transition);
+                TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.toInterfaceY(iconY - 35, (byte) 94), -transition);
               }
               stackIn_57_0 = this.children[childIndex].icon;
               stackIn_57_1 = IgnoreListLookupSupport.toInterfaceX(true, -20 + iconX);
-              stackIn_57_2 = MatchConditionEntry.a(iconY - 20, (byte) 94);
+              stackIn_57_2 = MatchConditionEntry.toInterfaceY(iconY - 20, (byte) 94);
               if (childIndex != selectedChild) {
                 stackIn_58_3 = opacity;
               } else {
@@ -119,7 +119,7 @@ final class SpellMenuGroup {
               ((RgbSprite) (Object) stackIn_57_0).drawWithOpacity(stackIn_57_1, stackIn_57_2, stackIn_58_3);
               stackIn_60_0 = ProjectileEffect.field_h[1];
               stackIn_60_1 = IgnoreListLookupSupport.toInterfaceX(true, iconX - 23);
-              stackIn_60_2 = MatchConditionEntry.a(-23 + iconY, (byte) 94);
+              stackIn_60_2 = MatchConditionEntry.toInterfaceY(-23 + iconY, (byte) 94);
               if (childIndex == selectedChild) {
                 stackIn_61_3 = 256;
               } else {
@@ -138,22 +138,22 @@ final class SpellMenuGroup {
                   TabbedPanel.isPointerInsideCircle(iconY, iconX, 20, false)) {
                   MonotonicClockSupport.field_f = MusicPatchEnvelope.field_f[this.spellIds[spellIndex]];
                   hoveredSelection = 50 + spellIndex;
-                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);
+                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -35 + iconX), MatchConditionEntry.toInterfaceY(-35 + iconY, (byte) 94), 128);
                 }
                 if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
-                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -35 + iconX), MatchConditionEntry.a(iconY - 35, (byte) 94), selectionFade);
+                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -35 + iconX), MatchConditionEntry.toInterfaceY(iconY - 35, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == AlphanumericTextSupport.field_a) {
-                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 256 - selectionFade);
+                  TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 35), MatchConditionEntry.toInterfaceY(iconY - 35, (byte) 94), 256 - selectionFade);
                 }
-                BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, iconX - 20), MatchConditionEntry.a(-20 + iconY, (byte) 94));
+                BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, iconX - 20), MatchConditionEntry.toInterfaceY(-20 + iconY, (byte) 94));
                 if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
-                  BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -20 + iconX), MatchConditionEntry.a(iconY - 20, (byte) 94), selectionFade);
+                  BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, -20 + iconX), MatchConditionEntry.toInterfaceY(iconY - 20, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == AlphanumericTextSupport.field_a) {
-                  BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 20), MatchConditionEntry.a(iconY - 20, (byte) 94), 256 - selectionFade);
+                  BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(IgnoreListLookupSupport.toInterfaceX(true, iconX - 20), MatchConditionEntry.toInterfaceY(iconY - 20, (byte) 94), 256 - selectionFade);
                 }
-                ProjectileEffect.field_h[0].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, -23 + iconX), MatchConditionEntry.a(iconY - 23, (byte) 94));
+                ProjectileEffect.field_h[0].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, -23 + iconX), MatchConditionEntry.toInterfaceY(iconY - 23, (byte) 94));
               }
             }
           }

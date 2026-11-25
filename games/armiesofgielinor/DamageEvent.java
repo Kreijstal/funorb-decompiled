@@ -112,7 +112,7 @@ final class DamageEvent extends GameEvent {
           if (param10 != -5429) {
             field_z = (String) null;
           }
-          ClientContextMenu.a(param13, 2, param5, param8);
+          ClientContextMenu.initializeChatAndQuickChatUi(param13, 2, param5, param8);
           ClientStateChecksumSupport.initializeAbuseOffenceDescriptions(param10 + 13099);
           DeployEvent.h(14570);
           TurnChangeEvent.d((byte) -112);

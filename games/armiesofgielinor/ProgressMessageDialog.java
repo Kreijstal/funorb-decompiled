@@ -16,7 +16,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
     static IndexedSprite[] field_rb;
     private BitmapFont font;
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
+    final static void insertNodeAfter(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         IntrusiveNode var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -35,7 +35,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           param1.next.previous = param1;
           if (!param2) {
             var4 = (IntrusiveNode) null;
-            ProgressMessageDialog.a((IntrusiveNode) null, (IntrusiveNode) null, false);
+            ProgressMessageDialog.insertNodeAfter((IntrusiveNode) null, (IntrusiveNode) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         field_vb = null;
     }
 
-    final static boolean b(int param0, byte param1, int param2) {
+    final static boolean processChatCompositionKey(int param0, byte param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         String var4_ref_String;
@@ -330,7 +330,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             AccountIdentifierStatus.setAccountFlowAction(122, 3);
             this.closeDialog(true);
           } else {
-            ActionSpell.openRelativeExternalUrl(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
+            ActionSpell.openRelativeExternalUrl(CombatEvent.getClientApplet((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (obfuscationGuard != 11) {
             ProgressMessageDialog.releaseStatics(46);

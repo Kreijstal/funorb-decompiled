@@ -5779,7 +5779,7 @@ final class TickCounter {
                         default:
                           break regionExit1;
                         case 6:
-                          DualNodeDeque.a(param2, param7, (byte) -107, param6, param3);
+                          DualNodeDeque.drawConnectedStructureSprites(param2, param7, (byte) -107, param6, param3);
                           if (var13 == 0) {
                             break regionExit1;
                           }

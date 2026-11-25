@@ -244,7 +244,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            LoginCredentials.a((Throwable) ((Object) var1_ref), -65, (String) null);
+            LoginCredentials.reportClientError((Throwable) ((Object) var1_ref), -65, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

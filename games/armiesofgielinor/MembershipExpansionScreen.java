@@ -257,7 +257,7 @@ final class MembershipExpansionScreen {
         RuntimeException var2_ref = null;
         try {
           try {
-            QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.d((byte) 73));
+            QuickChatPhraseRepository.openSubscriptionPage(32767, CombatEvent.getClientApplet((byte) 73));
             if (param0 >= -84) {
               this.field_n = 29;
             }
@@ -670,7 +670,7 @@ final class MembershipExpansionScreen {
             SoftwareRaster.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
-            var12 = DirectByteStorage.a(var3, var2_int, -60);
+            var12 = DirectByteStorage.createRgbGradientPalette(var3, var2_int, -60);
             var11 = var12;
             var9 = var11;
             this.drawGradientParagraph(var12, 622, this.field_c, 0, EmailConfirmationValidator.field_n, (byte) 66, 47, 0);
@@ -681,7 +681,7 @@ final class MembershipExpansionScreen {
               var8 = (BitmapFont) null;
               this.drawGradientParagraph((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
             }
-            var10 = DirectByteStorage.a(526344, 526344, 126);
+            var10 = DirectByteStorage.createRgbGradientPalette(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
             CombatSandbox.pushSpriteRasterTarget(var5, 3);
             SoftwareRaster.fillVerticalGradient(0, 0, var5.pixelWidth, var5.pixelHeight / 2, 16180917, 16306250);

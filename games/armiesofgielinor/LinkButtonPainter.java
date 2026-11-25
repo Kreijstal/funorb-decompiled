@@ -88,7 +88,7 @@ final class LinkButtonPainter implements WidgetPainter {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getSpecialUnitIconIndex(int param0, byte param1) {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = param0;
         if (var2 == 59) {
@@ -112,11 +112,11 @@ final class LinkButtonPainter implements WidgetPainter {
         return -5;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void openLoginDialogWithOptions(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
         ProceduralMapSupport.openLoginDialog(3, (String) null, param0, param1);
         if (param2 <= 4) {
-          LinkButtonPainter.a(46, (byte) -104);
+          LinkButtonPainter.getSpecialUnitIconIndex(46, (byte) -104);
         }
     }
 

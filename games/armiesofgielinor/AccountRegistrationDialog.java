@@ -86,7 +86,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         if (this.terminalFailure) {
-          LinkButtonPainter.a(false, true, 21);
+          LinkButtonPainter.openLoginDialogWithOptions(false, true, 21);
           return;
         }
         try {

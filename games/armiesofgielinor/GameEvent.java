@@ -230,7 +230,7 @@ abstract class GameEvent extends IntrusiveNode {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = RadialSummonMenu.a(this, param2.battlefield, this.isPresentationBlocking(param1 + 1008), param0, param2, 17, param4, param2.unitRenderer);
+          var6 = RadialSummonMenu.createEventPresenter(this, param2.battlefield, this.isPresentationBlocking(param1 + 1008), param0, param2, 17, param4, param2.unitRenderer);
           if (var6 != null) {
             param3.addLast((byte) -119, (IntrusiveNode) (var6));
           }

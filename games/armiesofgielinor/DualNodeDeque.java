@@ -133,7 +133,7 @@ final class DualNodeDeque {
         return null;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void drawConnectedStructureSprites(int param0, int param1, byte param2, int param3, int param4) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -308,13 +308,13 @@ final class DualNodeDeque {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void primeLogoAudioDecoder(byte param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.decodeSetup(param1.getFileByName("", 96, "headers.packvorbis"));
           var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
           if (param0 >= -102) {
-            DualNodeDeque.a(-11, -82, (byte) 79, 117, -17);
+            DualNodeDeque.drawConnectedStructureSprites(-11, -82, (byte) 79, 117, -17);
           }
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {

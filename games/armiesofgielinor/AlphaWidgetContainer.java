@@ -77,7 +77,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static void d(boolean param0) {
+    final static void positionDefaultLobbyPanels(boolean param0) {
         int var1 = (NineSliceSpriteSupport.field_c - 640) / 2;
         int var2 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
         int var3 = -(ModalDialogHost.field_J * ModalDialogHost.field_J) + var2;

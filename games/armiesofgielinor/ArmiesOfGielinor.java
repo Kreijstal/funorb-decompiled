@@ -123,7 +123,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     decompiledFrameRemainder0 = (var11 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    var2_int = PrintCoatConsoleCommand.h(-124);
+                    var2_int = PrintCoatConsoleCommand.pollMessageDialogAction(-124);
                     if (1 == var2_int) {
                       TileableNoiseGenerator.a(0, 0);
                     }
@@ -242,10 +242,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   var2 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_119_0, stackIn_120_1);
                   if (((ChatMessage) (var2)).channelId == 4) {
                     if (null != FullscreenFocusCanvas.gameplayController) {
-                      NodeHashTable.a(-1, FullscreenFocusCanvas.gameplayController.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
+                      NodeHashTable.setBattleChatColour(-1, FullscreenFocusCanvas.gameplayController.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                     if (SectorCacheStore.field_a != null) {
-                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
+                      NodeHashTable.setBattleChatColour(-1, SectorCacheStore.field_a.battlefield.getPlayerChatTeamColour(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                   }
                   MapLayout.acceptReceivedChatMessage((ChatMessage) (var2), -1);
@@ -413,9 +413,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       UnitModelViewer.a(((GameplayController) (var2)).controlledPlayerId, false);
                       ((GameplayController) (var2)).battlefield.field_Ab = true;
                       if (((GameplayController) (var2)).controlledPlayerId <= -1) {
-                        NodeHashTable.a(-1, FriendRequestSupport.field_c[0][0]);
+                        NodeHashTable.setBattleChatColour(-1, FriendRequestSupport.field_c[0][0]);
                       } else {
-                        NodeHashTable.a(-1, FriendRequestSupport.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
+                        NodeHashTable.setBattleChatColour(-1, FriendRequestSupport.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
                       }
                     }
                     var3Lifetime2 = ByteStorage.incomingPacket.readUnsignedByte(0);
@@ -568,7 +568,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               FriendRequestSupport.sendQueuedStructuredRequests(5, true);
               SpellCastEvent.resendPreferencesRequests(6, -32666);
               BestScoreStrategy.resendRatingLeaderboardRequests(7, 1742);
-              TutorialLayout.a(true);
+              TutorialLayout.resetReflectionCheckQueue(true);
               if (var3Lifetime1 != 1) {
                 if (FaceNormal.field_d) {
                   SocketFactory.field_h = false;
@@ -671,19 +671,19 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     MusicCrossfadeStream.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
-                  CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
+                  CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
                   return false;
                 }
-                CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, RasterImageSurface.field_f));
+                CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, RasterImageSurface.field_f));
                 return false;
               }
-              CalendarSupport.setLoadingProgress((byte) -24, 67.0f, EmailValidator.a(FriendRequestSupport.field_b, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
+              CalendarSupport.setLoadingProgress((byte) -24, 67.0f, EmailValidator.formatArchiveGroupProgress(FriendRequestSupport.field_b, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
               return false;
             }
-            CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
+            CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
             return false;
           }
-          CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, QuinticFadeSupport.field_b));
+          CalendarSupport.setLoadingProgress((byte) -24, 67.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, QuinticFadeSupport.field_b));
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1045,7 +1045,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           if (!MusicPatch.field_w ||
             !SocketFactory.field_h) {
-            NineSliceSpriteSupport.a(ToastMessage.c((byte) 54), false);
+            NineSliceSpriteSupport.drawSharedInterfaceAndDialogs(ToastMessage.c((byte) 54), false);
           }
           var3 = FullscreenFocusCanvas.gameplayController;
           if (ModalDialogHost.field_H) {
@@ -1307,7 +1307,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ClientUiNode.releaseStatics(31343);
           ContextActionMenu.releaseStatics((byte) 5);
           SocialListPanel.releaseStatics(-8291);
-          ClientContextMenu.a(-97);
+          ClientContextMenu.releaseClientContextMenuStatics(-97);
           ReportAbuseDialog.releaseStatics(73);
           CommunityTabGroup.releaseStatics(-47);
           CalendarSupport.releaseStatics(29022);
@@ -1362,7 +1362,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           TrianglePulse.releaseStatics(16);
           TickCounter.releaseTickCounterStatics(1);
           FullscreenStatusDialog.releaseStatics(12213);
-          IgnoreRequestSupport.a(0);
+          IgnoreRequestSupport.releaseIgnoreRequestSupportStatics(0);
           ByteStorage.releaseStatics(9892);
           Bzip2Decoder.releaseSharedState();
           Bzip2State.releaseStatics((byte) 75);
@@ -1514,7 +1514,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           QuickChatSetupSupport.releaseStatics(0);
           NodeHashIterator.releaseStatics((byte) 100);
           DualNodeIterator.releaseStatics((byte) -121);
-          ScoreLeaderboardRequest.a(true);
+          ScoreLeaderboardRequest.releaseScoreLeaderboardRequestStatics(true);
           ScoreSubmissionRequest.releaseStatics(obfuscationGuard + 155);
           HighscoreAccountEntry.releaseStatics(false);
           RatingLeaderboardRequest.releaseStatics((byte) 97);
@@ -1572,7 +1572,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ToggleTurnSkipConsoleCommand.releaseStatics(-128);
           PrintVictoryConditionsConsoleCommand.releaseStatics(-2260);
           FixInvisibleUnitsConsoleCommand.releaseStatics((byte) -97);
-          MatchConditionEntry.a((byte) -127);
+          MatchConditionEntry.releaseMatchConditionEntryStatics((byte) -127);
           TerrainScatterSupport.releaseStatics(-7);
           PowerOfTwoSupport.releaseStatics((byte) -121);
           FullscreenStatusToken.releaseStatics(-125);
@@ -1700,7 +1700,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             TickCounter.loadClientAssets(RegionAnchor.field_o, 10207);
             IntKeyLookup.a(UnitLossCondition.battlefieldThemes, (byte) 62);
             RegionAnchor.field_o = null;
-            ModalDialog.a(0);
+            ModalDialog.resetFrameTiming(0);
           }
           LoginAndTutorialSetupSupport.field_e = SpriteButtonPainter.a(3, true);
           AchievementUnlockRequest.field_l = DamageEvent.createResourceArchive(0, 5, (byte) 102, false, false);
@@ -2010,7 +2010,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                     TurnTimerDial.a(126, FullscreenStatusToken.field_d);
                                                     TabbedPanel.loadGameSoundSamples(FullscreenStatusToken.field_d, (byte) 123);
                                                     CampaignLookupSupport.field_d = null;
-                                                    ModalDialog.a(0);
+                                                    ModalDialog.resetFrameTiming(0);
                                                     break;
                                                   }
                                                   MouseWheelSource.field_b[var5_int + 1] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
@@ -2018,65 +2018,65 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                 } while (var18 == 0);
                                                 return false;
                                               }
-                                              CalendarSupport.setLoadingProgress((byte) -24, 69.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
+                                              CalendarSupport.setLoadingProgress((byte) -24, 69.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
                                               return false;
                                             }
-                                            CalendarSupport.setLoadingProgress((byte) -24, 66.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
+                                            CalendarSupport.setLoadingProgress((byte) -24, 66.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
-                                          CalendarSupport.setLoadingProgress((byte) -24, 63.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
+                                          CalendarSupport.setLoadingProgress((byte) -24, 63.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
                                           return false;
                                         }
-                                        CalendarSupport.setLoadingProgress((byte) -24, 61.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
+                                        CalendarSupport.setLoadingProgress((byte) -24, 61.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
                                         return false;
                                       }
-                                      CalendarSupport.setLoadingProgress((byte) -24, 58.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, GuestPlayConfirmationForm.field_M));
+                                      CalendarSupport.setLoadingProgress((byte) -24, 58.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, GuestPlayConfirmationForm.field_M));
                                       return false;
                                     }
-                                    CalendarSupport.setLoadingProgress((byte) -24, 56.0f, StatefulWidgetPainter.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
+                                    CalendarSupport.setLoadingProgress((byte) -24, 56.0f, StatefulWidgetPainter.formatArchiveOverallProgress(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
                                     return false;
                                   }
-                                  CalendarSupport.setLoadingProgress((byte) -24, 54.0f, EmailValidator.a(LoginAndTutorialSetupSupport.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
+                                  CalendarSupport.setLoadingProgress((byte) -24, 54.0f, EmailValidator.formatArchiveGroupProgress(LoginAndTutorialSetupSupport.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
                                   return false;
                                 }
-                                CalendarSupport.setLoadingProgress((byte) -24, 52.0f, EmailValidator.a(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", LeapYearSupport.field_f));
+                                CalendarSupport.setLoadingProgress((byte) -24, 52.0f, EmailValidator.formatArchiveGroupProgress(UnitAnimationPreview.field_j, 0, QuickChatPhraseRepository.field_a, "basic", LeapYearSupport.field_f));
                                 return false;
                               }
-                              CalendarSupport.setLoadingProgress((byte) -24, 41.0f, EmailValidator.a(AchievementUnlockRequest.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+                              CalendarSupport.setLoadingProgress((byte) -24, 41.0f, EmailValidator.formatArchiveGroupProgress(AchievementUnlockRequest.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
                               return false;
                             }
-                            CalendarSupport.setLoadingProgress((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, LeapYearSupport.field_d, "", PacketBuffer.field_m));
+                            CalendarSupport.setLoadingProgress((byte) -24, 38.0f, EmailValidator.formatArchiveGroupProgress(SummonAction.field_w, 0, LeapYearSupport.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
                           CalendarSupport.setLoadingProgress((byte) -24, 33.0f, LoginForm.formatArchiveGroupProgress(LeapYearSupport.field_d, 0, IntroSequence.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
-                        CalendarSupport.setLoadingProgress((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
+                        CalendarSupport.setLoadingProgress((byte) -24, 28.0f, EmailValidator.formatArchiveGroupProgress(SpellConfirmationDialog.field_f, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
                         return false;
                       }
-                      CalendarSupport.setLoadingProgress((byte) -24, 23.0f, EmailValidator.a(CampaignLookupSupport.field_d, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
+                      CalendarSupport.setLoadingProgress((byte) -24, 23.0f, EmailValidator.formatArchiveGroupProgress(CampaignLookupSupport.field_d, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
                       return false;
                     }
-                    CalendarSupport.setLoadingProgress((byte) -24, 21.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", LeapYearSupport.field_f));
+                    CalendarSupport.setLoadingProgress((byte) -24, 21.0f, EmailValidator.formatArchiveGroupProgress(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", LeapYearSupport.field_f));
                     return false;
                   }
-                  CalendarSupport.setLoadingProgress((byte) -24, 18.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
+                  CalendarSupport.setLoadingProgress((byte) -24, 18.0f, EmailValidator.formatArchiveGroupProgress(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
                   return false;
                 }
-                CalendarSupport.setLoadingProgress((byte) -24, 16.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, LeapYearSupport.field_f));
+                CalendarSupport.setLoadingProgress((byte) -24, 16.0f, EmailValidator.formatArchiveGroupProgress(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, LeapYearSupport.field_f));
                 return false;
               }
-              CalendarSupport.setLoadingProgress((byte) -24, 13.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
+              CalendarSupport.setLoadingProgress((byte) -24, 13.0f, EmailValidator.formatArchiveGroupProgress(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
               return false;
             }
-            CalendarSupport.setLoadingProgress((byte) -24, 10.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+            CalendarSupport.setLoadingProgress((byte) -24, 10.0f, EmailValidator.formatArchiveGroupProgress(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
             return false;
           }
           if (null != SpellConfirmationDialog.field_f) {
             CalendarSupport.setLoadingProgress((byte) -24, 71.0f, AccountNameCharacterSupport.field_a);
             this.renderClient(0);
             SpellConfirmationDialog.field_f = null;
-            ModalDialog.a(0);
+            ModalDialog.resetFrameTiming(0);
             return false;
           }
           if (null != SummonAction.field_w) {
@@ -2129,7 +2129,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 SummonAction.field_w = null;
                 IntroSequence.field_b = null;
                 FullscreenStatusToken.field_d = null;
-                ModalDialog.a(0);
+                ModalDialog.resetFrameTiming(0);
                 break;
               }
               var8_ref = var6_array[var7_int];
@@ -2142,7 +2142,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (LoginAndTutorialSetupSupport.field_e != null) {
               SpellDefinitionTable.setChatHuffmanCodec(new HuffmanCodec(LoginAndTutorialSetupSupport.field_e.getFileByName("huffman", -105, "")), 4);
               LoginAndTutorialSetupSupport.field_e = null;
-              ModalDialog.a(0);
+              ModalDialog.resetFrameTiming(0);
               return false;
             }
             if (null != GuestPlayConfirmationForm.field_M &&
@@ -2165,7 +2165,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (!this.initializeSceneResources(11672)) {
               return false;
             }
-            ModalDialog.a(0);
+            ModalDialog.resetFrameTiming(0);
             return true;
           }
           CalendarSupport.setLoadingProgress((byte) -24, 90.0f, SectorCacheStore.field_i);
@@ -2221,12 +2221,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           LocalAccountNameSupport.field_c = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "godframes", (byte) -4, "basic");
           GuestPlayConfirmationForm.field_F = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "godglows", (byte) -4, "basic");
           BufferedFile.field_k = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "godframeglows", (byte) -4, "basic");
-          FullscreenMembershipDialog.a((byte) 80, UnitModelPreview.field_d);
+          FullscreenMembershipDialog.tintGrayscaleSpriteSet((byte) 80, UnitModelPreview.field_d);
           ClientStateChecksumSupport.addRadialHighlightsToSprites(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           EditableTextWidget.addRadialSpriteHighlight(8678, 256, 15, TeamRoster.field_e);
-          FullscreenMembershipDialog.a((byte) 105, GuestPlayConfirmationForm.field_F);
-          FullscreenMembershipDialog.a((byte) 124, BufferedFile.field_k);
+          FullscreenMembershipDialog.tintGrayscaleSpriteSet((byte) 105, GuestPlayConfirmationForm.field_F);
+          FullscreenMembershipDialog.tintGrayscaleSpriteSet((byte) 124, BufferedFile.field_k);
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", AchievementUnlockRequest.field_l, false);
           ProjectileEffect.field_h = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "summonrings", (byte) -4, "basic");
           SoundPanSupport.field_b = DropdownSelectorPainter.loadRgbSpritesByName("chatbubbles", (byte) -128, AchievementUnlockRequest.field_l, "basic");
@@ -2318,7 +2318,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           UnitAnimationPreview.field_j = null;
           ResourceRequest.field_A = null;
-          ModalDialog.a(0);
+          ModalDialog.resetFrameTiming(0);
           GradientUiRenderer.particlePalettes = new int[7][64];
           var17 = 0;
           do {
@@ -2409,7 +2409,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             this.renderClient(param0 ^ 11672);
             QuickChatCategoryRepository.loadUnitModels(0, QuinticFadeSupport.field_b);
             QuinticFadeSupport.field_b = null;
-            ModalDialog.a(0);
+            ModalDialog.resetFrameTiming(0);
             return false;
           }
           if (null != ReportAbuseDialog.field_Lb &&
@@ -2417,7 +2417,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             CalendarSupport.setLoadingProgress((byte) -24, 98.0f, AiPlanner.field_R);
             this.renderClient(0);
             ReportAbuseDialog.field_Lb = null;
-            ModalDialog.a(param0 ^ 11672);
+            ModalDialog.resetFrameTiming(param0 ^ 11672);
             return false;
           }
           if (param0 != 11672) {
@@ -2433,7 +2433,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             FriendRequestSupport.field_b = null;
             RasterImageSurface.field_f = null;
             MusicCrossfadeStream.field_s = null;
-            ModalDialog.a(0);
+            ModalDialog.resetFrameTiming(0);
             return false;
           }
           return true;

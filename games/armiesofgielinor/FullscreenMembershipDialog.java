@@ -105,7 +105,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
         try {
           var4 = new InteractiveWidget(text, listener);
           if (!obfuscationGuard) {
-            FullscreenMembershipDialog.a(false, -22, 101);
+            FullscreenMembershipDialog.createUniformFrameSprites(false, -22, 101);
           }
           var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = -6 + this.height;
@@ -174,7 +174,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
         }
     }
 
-    final static void a(byte param0, RgbSprite[] param1) {
+    final static void tintGrayscaleSpriteSet(byte param0, RgbSprite[] param1) {
         int var3 = 0;
         int var8 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -274,7 +274,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, int param2) {
+    final static RgbSprite[] createUniformFrameSprites(boolean param0, int param1, int param2) {
         if (!param0) {
           CipherPacketBuffer var4 = (CipherPacketBuffer) null;
           FullscreenMembershipDialog.readTaggedInteger(false, 58, (CipherPacketBuffer) null);

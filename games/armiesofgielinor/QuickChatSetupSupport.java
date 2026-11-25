@@ -53,7 +53,7 @@ final class QuickChatSetupSupport {
           OwnerChangeEvent.quickChatMenuHost = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            LoginCredentials.a((Throwable) null, -116, "QC1");
+            LoginCredentials.reportClientError((Throwable) null, -116, "QC1");
             return;
           }
           param2.discardPackedGroups = false;
@@ -63,7 +63,7 @@ final class QuickChatSetupSupport {
           var4 = DisplayModeOptionPainter.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
             var11 = (Throwable) null;
-            LoginCredentials.a((Throwable) null, 124, "QC2");
+            LoginCredentials.reportClientError((Throwable) null, 124, "QC2");
             return;
           }
           MapLayout.addCustomQuickChatOption(var4, 19003);

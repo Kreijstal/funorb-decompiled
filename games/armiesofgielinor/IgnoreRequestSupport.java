@@ -29,7 +29,7 @@ final class IgnoreRequestSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -29) {
-            IgnoreRequestSupport.a(93);
+            IgnoreRequestSupport.releaseIgnoreRequestSupportStatics(93);
           }
           nameCharacters = (CharSequence) ((Object) name);
           if (!KeyboardInputListener.isValidSocialTargetName((byte) -90, nameCharacters)) {
@@ -79,7 +79,7 @@ final class IgnoreRequestSupport {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseIgnoreRequestSupportStatics(int param0) {
         if (param0 != 0) {
           field_f = false;
         }
@@ -88,7 +88,7 @@ final class IgnoreRequestSupport {
         field_h = null;
     }
 
-    final static RgbSprite[] a(byte param0) {
+    final static RgbSprite[] buildDecodedSpritesWithOptionalAlpha(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;

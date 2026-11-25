@@ -7,17 +7,17 @@ final class NineSliceSpriteSupport {
     static String field_d;
     static int gameOptionCount;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawSharedInterfaceAndDialogs(boolean param0, boolean param1) {
         GlobalSpell.drawSharedInterfaceAndOverlays(-47, param0);
         if (param1) {
           NineSliceSpriteSupport.releaseStatics((byte) 89);
-          DraggableWidgetContainer.a(param0, true);
+          DraggableWidgetContainer.drawSocialOverlaysAndPrompts(param0, true);
           return;
         }
-        DraggableWidgetContainer.a(param0, true);
+        DraggableWidgetContainer.drawSocialOverlaysAndPrompts(param0, true);
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void drawAccountDialogsWithBackdrop(boolean param0, boolean param1, int param2) {
         if (param2 < 74) {
           return;
         }

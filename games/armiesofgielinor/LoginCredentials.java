@@ -96,7 +96,7 @@ abstract class LoginCredentials {
         field_a = null;
     }
 
-    final static void a(Throwable param0, int param1, String param2) {
+    final static void reportClientError(Throwable param0, int param1, String param2) {
         try {
           PlatformTaskService stackIn_12_0;
           java.net.URL stackIn_12_1;
@@ -130,7 +130,7 @@ abstract class LoginCredentials {
               }
               var4 = var4 + param2;
             }
-            FixedQuaternion.a(var4, false);
+            FixedQuaternion.printClientError(var4, false);
             var8 = ConsolePanel.replaceText(var4, -75, ":", "%3a");
             var9 = ConsolePanel.replaceText(var8, -110, "@", "%40");
             var10 = ConsolePanel.replaceText(var9, -68, "&", "%26");

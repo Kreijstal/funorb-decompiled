@@ -9,13 +9,13 @@ final class MatchConditionEntry extends IntrusiveNode {
     static IndexedSprite field_n;
     static int decodedChatChannel;
 
-    final static int a(int param0, byte param1) {
+    final static int toInterfaceY(int param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 94) {
-            MatchConditionEntry.a((byte) -104);
+            MatchConditionEntry.releaseMatchConditionEntryStatics((byte) -104);
           }
           stackIn_4_0 = param0 + (FixedSquareRootSupport.field_b.height - IgnoreRequestSupport.field_a >> 1);
           return stackIn_4_0;
@@ -109,10 +109,10 @@ final class MatchConditionEntry extends IntrusiveNode {
               return;
             }
             if (obfuscationGuard != 1) {
-              MatchConditionEntry.a((byte) -118);
+              MatchConditionEntry.releaseMatchConditionEntryStatics((byte) -118);
             }
             if (updateType != 4) {
-              LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.formatPacketDiagnostic(false));
+              LoginCredentials.reportClientError((Throwable) null, -66, "F1: " + CampaignProgress.formatPacketDiagnostic(false));
               TextSplitSupport.closeSessionSocket((byte) -125);
               return;
             }
@@ -190,12 +190,12 @@ final class MatchConditionEntry extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseMatchConditionEntryStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 >= -102) {
-            MatchConditionEntry.a(62, (byte) -42);
+            MatchConditionEntry.toInterfaceY(62, (byte) -42);
           }
           field_n = null;
           field_p = null;

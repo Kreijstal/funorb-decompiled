@@ -37,12 +37,12 @@ final class SessionTransitionSupport {
         }
         ChatMessageWriteSupport.field_b = true;
         if (!param0) {
-          DraggableWidgetContainer.a(true, -49);
+          DraggableWidgetContainer.showLoginDialog(true, -49);
           SoundCache.field_b = 0;
           return;
         }
         SessionTransitionSupport.markReconnectExpected(-80);
-        DraggableWidgetContainer.a(true, -49);
+        DraggableWidgetContainer.showLoginDialog(true, -49);
         SoundCache.field_b = 0;
     }
 

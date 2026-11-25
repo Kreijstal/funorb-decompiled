@@ -57,7 +57,7 @@ final class FixedQuaternion {
           destination.z = ((FixedQuaternion) (var3)).z;
           destination.w = ((FixedQuaternion) (var3)).w;
           if (!obfuscationGuard) {
-            FixedQuaternion.a(true, -102, -89, 25, 68, 22, (byte) 122);
+            FixedQuaternion.processBlockingChatOverlays(true, -102, -89, 25, 68, 22, (byte) 122);
           }
           destination.y = ((FixedQuaternion) (var3)).y;
           destination.x = ((FixedQuaternion) (var3)).x;
@@ -132,7 +132,7 @@ final class FixedQuaternion {
         FixedQuaternion.isOnlineFriendOrRoomMember(-48L, (String) null, (byte) -22);
     }
 
-    final static boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final static boolean processBlockingChatOverlays(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         String var8 = null;
         String var8Lifetime1;
         if (FriendLookupSupport.hasBlockingChatOverlay((byte) -73)) {
@@ -144,7 +144,7 @@ final class FixedQuaternion {
               param0 = false;
               if (param6 != -83) {
                 var8 = (String) null;
-                FixedQuaternion.a((String) null, false);
+                FixedQuaternion.printClientError((String) null, false);
                 return param0;
               }
               return param0;
@@ -160,11 +160,11 @@ final class FixedQuaternion {
           return param0;
         }
         var8Lifetime1 = (String) null;
-        FixedQuaternion.a((String) null, false);
+        FixedQuaternion.printClientError((String) null, false);
         return param0;
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void printClientError(String param0, boolean param1) {
         if (!param1) {
           System.out.println("Error: " + ConsolePanel.replaceText(param0, -87, "%0a", "\n"));
           return;

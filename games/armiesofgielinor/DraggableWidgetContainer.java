@@ -143,8 +143,8 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         field_Q = null;
     }
 
-    final static void a(boolean param0, int param1) {
-        LinkButtonPainter.a(param0, false, 108);
+    final static void showLoginDialog(boolean param0, int param1) {
+        LinkButtonPainter.openLoginDialogWithOptions(param0, false, 108);
         if (param1 != -49) {
           field_J = (RgbSprite) null;
         }
@@ -223,7 +223,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawSocialOverlaysAndPrompts(boolean param0, boolean param1) {
         if (!param1) {
           return;
         }

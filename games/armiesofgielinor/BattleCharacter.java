@@ -833,7 +833,7 @@ final class BattleCharacter {
         var7 = AttackEvent.nextBoundedInt(false, ActionRequest.unitModels[this.modelIndex].length, PreferencesWriteRequest.field_n);
         this.model = (ModelMesh) (ActionRequest.unitModels[this.modelIndex][var7]);
         if (null == this.model) {
-          LoginCredentials.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
+          LoginCredentials.reportClientError((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }
         this.field_n = DiskCacheRequest.unitProjectionVariants[this.modelIndex];
         this.destinationX = param2 + param5;

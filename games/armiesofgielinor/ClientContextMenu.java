@@ -172,7 +172,7 @@ final class ClientContextMenu {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
+    final static void initializeChatAndQuickChatUi(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
           MusicTrackSelectionSupport.initializeChatPanel(param2, IconLabelControl.field_Lb, PasswordLoginCredentials.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, SoundEffectPreloadSupport.field_e, ClientUiNode.field_x, GameClock.field_e, WeightedLruCache.field_b, PreparedAction.field_o, FullscreenFocusCanvas.field_e);
           ImageProducerSurface.field_n = DropdownSelectorPainter.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
@@ -185,7 +185,7 @@ final class ClientContextMenu {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseClientContextMenuStatics(int param0) {
         if (param0 <= -15) {
           field_b = null;
           field_j = null;
@@ -195,7 +195,7 @@ final class ClientContextMenu {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        ClientContextMenu.a((ResourceArchive) null, 28, false, (ResourceArchive) null);
+        ClientContextMenu.initializeChatAndQuickChatUi((ResourceArchive) null, 28, false, (ResourceArchive) null);
         field_b = null;
         field_j = null;
         field_n = null;
@@ -466,7 +466,7 @@ final class ClientContextMenu {
 
     private final boolean dispatchReportAction(int actionId, byte obfuscationGuard, int reportPacketOpcode) {
         if (obfuscationGuard <= 38) {
-          ClientContextMenu.a(-18);
+          ClientContextMenu.releaseClientContextMenuStatics(-18);
           if (actionId == 17) {
             Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, SpellDefinitionTable.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
             return true;
@@ -482,7 +482,7 @@ final class ClientContextMenu {
 
     final void draw(byte obfuscationGuard, boolean blinkOn) {
         if (obfuscationGuard != -108) {
-          ClientContextMenu.a(-128);
+          ClientContextMenu.releaseClientContextMenuStatics(-128);
           this.menu.draw(blinkOn, 20);
           return;
         }
