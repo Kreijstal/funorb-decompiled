@@ -18,7 +18,7 @@ class StandardAi implements PlayerAi {
     GameState field_g;
     int[] field_c;
 
-    private final int a(byte param0, int param1, int param2, int[] param3) {
+    private final int allocateRemainingFleets(byte param0, int param1, int param2, int[] param3) {
         Player stackIn_30_0 = null;
         Player stackIn_30_1 = null;
         int stackIn_46_0 = 0;
@@ -61,8 +61,8 @@ class StandardAi implements PlayerAi {
                     if (var10_int > param2) {
                       var10_int = param2;
                     }
-                    this.c(param2, GuestPlayForm.field_E, -1);
-                    var11 = this.a(0, true, var10_int, this.field_g.field_g.field_e[var9_int]);
+                    this.verifyFleetBudget(param2, GuestPlayForm.field_E, -1);
+                    var11 = this.allocateNeighbourAttackFleets(0, true, var10_int, this.field_g.field_g.field_e[var9_int]);
                     if (var10_int < var11) {
                       throw new RuntimeException();
                     }
@@ -72,7 +72,7 @@ class StandardAi implements PlayerAi {
                     var5_int = var5_int + var10_int;
                     param2 = param2 - var10_int;
                     ClientUiLoadingSupport.field_c[var9_int] = ClientUiLoadingSupport.field_c[var9_int] + var11;
-                    this.c(param2, GuestPlayForm.field_E, -1);
+                    this.verifyFleetBudget(param2, GuestPlayForm.field_E, -1);
                   }
                 }
                 continue;
@@ -108,7 +108,7 @@ class StandardAi implements PlayerAi {
                     continue;
                   }
                   var13 = param2 / var8Lifetime1;
-                  this.a(var13, -111, var9Lifetime1);
+                  this.reinforceStar(var13, -111, var9Lifetime1);
                   param2 = param2 - var13;
                   var5_int = var5_int + var13;
                   var8Lifetime1--;
@@ -134,7 +134,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    final int a(int param0, Star param1) {
+    final int countUnattackedForeignNeighbours(int param0, Star param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -190,7 +190,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final void a(Territory param0, int[] param1, int param2) {
+    private final void evaluateAttackTargets(Territory param0, int[] param1, int param2) {
         int var5 = 0;
         Star[] var4 = null;
         int var6 = 0;
@@ -246,7 +246,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int a(int param0, boolean param1, int param2, Star param3) {
+    private final int allocateNeighbourAttackFleets(int param0, boolean param1, int param2, Star param3) {
         int stackIn_5_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_30_0 = 0;
@@ -291,8 +291,8 @@ class StandardAi implements PlayerAi {
                     var8++;
                     continue;
                   }
-                  this.a((byte) -67, var6, var9);
-                  this.a(param3, var9, var6, ~param0);
+                  this.queueFleetPlacement((byte) -67, var6, var9);
+                  this.queueFleetMove(param3, var9, var6, ~param0);
                   break;
                 }
               }
@@ -300,13 +300,13 @@ class StandardAi implements PlayerAi {
               var8_ref_ln = var6_ref_ln__[var7_int];
               var9_int = var8_ref_ln.field_p;
               if (BirthDateValidator.field_i[var9_int] >= var5_int) {
-                this.a(param3, var8_ref_ln, var5_int, ~param0);
+                this.queueFleetMove(param3, var8_ref_ln, var5_int, ~param0);
                 BirthDateValidator.field_i[var9_int] = BirthDateValidator.field_i[var9_int] - var5_int;
                 stackIn_5_0 = param2;
                 return stackIn_5_0;
               }
               if (BirthDateValidator.field_i[var9_int] != 0) {
-                this.a(param3, var8_ref_ln, BirthDateValidator.field_i[var9_int], -1);
+                this.queueFleetMove(param3, var8_ref_ln, BirthDateValidator.field_i[var9_int], -1);
                 var5_int = var5_int - BirthDateValidator.field_i[var9_int];
                 BirthDateValidator.field_i[var9_int] = 0;
               }
@@ -332,8 +332,8 @@ class StandardAi implements PlayerAi {
                     var8++;
                     continue;
                   }
-                  this.a((byte) -67, var6, var9);
-                  this.a(param3, var9, var6, ~param0);
+                  this.queueFleetPlacement((byte) -67, var6, var9);
+                  this.queueFleetMove(param3, var9, var6, ~param0);
                   break;
                 }
               }
@@ -368,7 +368,7 @@ class StandardAi implements PlayerAi {
           if (param1 != 2) {
             this.field_j = (AiHost) null;
           }
-          var3_int = this.a(-5, param0);
+          var3_int = this.countUnattackedForeignNeighbours(-5, param0);
           stackIn_5_0 = (var3_int != 0) ? var3_int : 1;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,7 +413,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int e(int param0) {
+    private final int initializeDefenceFleetDemands(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -421,7 +421,7 @@ class StandardAi implements PlayerAi {
         int var3 = param0;
         while (var2 != null) {
           var4 = var2.field_p;
-          var5 = this.b((byte) 89, var2);
+          var5 = this.estimateDefenceFleetDemand((byte) 89, var2);
           var3 = var3 + var5;
           ExternalLinkSupport.field_e[var4] = var5;
           var2 = LobbyPlayerEntry.field_yb.nextStar(-23410);
@@ -569,12 +569,12 @@ class StandardAi implements PlayerAi {
         if (this.field_n.field_i.isEmpty(59)) {
           return;
         }
-        this.d(-1);
+        this.clearTurnPlanningState(-1);
         VerticalMenuSlider.field_D.clear(0);
         VerticalMenuSlider.field_G.clear(0);
         VerticalMenuSlider.field_v.clear(0);
         if (param0 >= -3) {
-          discarded$0 = this.a(-67, 25, -122);
+          discarded$0 = this.allocateDefenceReserves(-67, 25, -122);
         }
         var2 = (Territory) (this.field_n.field_i.startForward(0));
         var3 = 1;
@@ -672,7 +672,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int allocateDefenceReserves(int param0, int param1, int param2) {
         Star var4;
         int var5;
         int var6;
@@ -706,7 +706,7 @@ class StandardAi implements PlayerAi {
         if (param1 != -1814) {
           return 86;
         }
-        this.c(param0, GuestPlayForm.field_E, -1);
+        this.verifyFleetBudget(param0, GuestPlayForm.field_E, -1);
         return var5;
     }
 
@@ -781,7 +781,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void verifyFleetBudget(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
         Star var6;
@@ -808,7 +808,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    final int[] a(byte param0, Player param1) {
+    final int[] computeDistancesFromPlayer(byte param0, Player param1) {
         int var11 = 0;
         int stackIn_6_0 = 0;
         int[] stackIn_8_0 = null;
@@ -855,7 +855,7 @@ class StandardAi implements PlayerAi {
           }
           var6Lifetime1 = 1;
           if (param0 > -16) {
-            this.a((byte) -4, 36);
+            this.initializeGarrisonReserves((byte) -4, 36);
           }
           while (var6Lifetime1 != 0) {
             var6Lifetime1 = 0;
@@ -918,17 +918,17 @@ class StandardAi implements PlayerAi {
         try {
           GuestPlayForm.field_E = param0;
           LobbyPlayerEntry.field_yb = param1;
-          this.c(-17286);
+          this.clearTerritoryPlanningState(-17286);
           if (!this.field_g.field_o.field_i) {
             this.computeResourceWeights(0, param1);
           } else {
             this.computeResourceWeights(0, this.field_n.field_m);
           }
-          var13 = this.b(127, param1);
+          var13 = this.findAdjacentAttackTargets(127, param1);
           var4 = var13;
-          this.a(param1, var13, 0);
-          this.c(param0, GuestPlayForm.field_E, -1);
-          param0 = param0 - this.a((byte) -106, param0);
+          this.evaluateAttackTargets(param1, var13, 0);
+          this.verifyFleetBudget(param0, GuestPlayForm.field_E, -1);
+          param0 = param0 - this.initializeGarrisonReserves((byte) -106, param0);
           if (param0 < 0) {
             var5 = param1.firstStar(18229);
             var12 = var5;
@@ -953,48 +953,48 @@ class StandardAi implements PlayerAi {
             }
             QuaternaryNodeList.field_b[var6_ref_ln.field_p] = param0;
             param0 = 0;
-            this.a(118, param1);
+            this.commitReservedFleets(118, param1);
             return;
           }
-          this.c(param0, GuestPlayForm.field_E, -1);
+          this.verifyFleetBudget(param0, GuestPlayForm.field_E, -1);
           if (!this.field_g.field_o.field_l &&
             !this.field_g.field_o.field_k) {
-            param0 = param0 - this.b(param0, param2 - 1745);
+            param0 = param0 - this.reserveSupportFleets(param0, param2 - 1745);
           }
-          this.c(param0, GuestPlayForm.field_E, param2 + 53);
+          this.verifyFleetBudget(param0, GuestPlayForm.field_E, param2 + 53);
           if (param0 == 0) {
-            this.a(param2 ^ 30, param1);
+            this.commitReservedFleets(param2 ^ 30, param1);
             return;
           }
-          var6 = this.e(param2 ^ -54);
+          var6 = this.initializeDefenceFleetDemands(param2 ^ -54);
           var7 = null;
           if (param2 != -54) {
             this.field_l = true;
           }
           var8Lifetime1 = 0;
           if (this.field_l) {
-            var9Lifetime1 = this.a(param0, (byte) -58);
+            var9Lifetime1 = this.getDefenceFleetBudget(param0, (byte) -58);
             var7 = MutableIntPairNode.sortedIndices(ValidationState.field_d, this.field_o, (byte) 49);
             if (var9Lifetime1 > var6) {
               var9Lifetime1 = var6;
             }
-            this.c(param0, GuestPlayForm.field_E, -1);
+            this.verifyFleetBudget(param0, GuestPlayForm.field_E, -1);
             param0 = param0 - var9Lifetime1;
-            var8Lifetime1 = this.a(var9Lifetime1, param0, var13, (int[]) (var7), -1);
+            var8Lifetime1 = this.allocateAttacks(var9Lifetime1, param0, var13, (int[]) (var7), -1);
             param0 = param0 - var8Lifetime1;
             param0 = param0 + var9Lifetime1;
-            this.c(param0, GuestPlayForm.field_E, -1);
+            this.verifyFleetBudget(param0, GuestPlayForm.field_E, -1);
           }
-          param0 = param0 - this.a(param0, -1814, var6);
-          this.c(param0, GuestPlayForm.field_E, param2 + 53);
+          param0 = param0 - this.allocateDefenceReserves(param0, -1814, var6);
+          this.verifyFleetBudget(param0, GuestPlayForm.field_E, param2 + 53);
           if (this.field_l &&
             param0 > 0) {
-            param0 = param0 - this.a((byte) 92, var8Lifetime1, param0, (int[]) (var7));
+            param0 = param0 - this.allocateRemainingFleets((byte) 92, var8Lifetime1, param0, (int[]) (var7));
           }
           if (param0 != 0) {
-            this.a(param0, param2 - 70, param1.field_q);
+            this.reinforceStar(param0, param2 - 70, param1.field_q);
           }
-          this.a(-46, param1);
+          this.commitReservedFleets(-46, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1010,13 +1010,13 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void clearArchive(int param0, int param1) {
         if (param0 != 7321) {
           field_e = (Archive) null;
         }
     }
 
-    private final void c(int param0) {
+    private final void clearTerritoryPlanningState(int param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var2 = 0; var2 < this.field_o; var2++) {
@@ -1061,7 +1061,7 @@ class StandardAi implements PlayerAi {
         var4Lifetime1 = -49 / ((-36 - param0) / 38);
     }
 
-    int a(byte param0, int param1) {
+    int initializeGarrisonReserves(byte param0, int param1) {
         int var8 = 0;
         int var3;
         Star var4;
@@ -1100,7 +1100,7 @@ class StandardAi implements PlayerAi {
         return 9;
     }
 
-    int a(int param0, byte param1) {
+    int getDefenceFleetBudget(int param0, byte param1) {
         if (param1 >= -25) {
           field_m = (String) null;
         }
@@ -1112,7 +1112,7 @@ class StandardAi implements PlayerAi {
         return new int[]{14, 15};
     }
 
-    private final void a(Star param0, Star param1, int param2, int param3) {
+    private final void queueFleetMove(Star param0, Star param1, int param2, int param3) {
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -1205,7 +1205,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final void a(int param0, Territory param1) {
+    private final void commitReservedFleets(int param0, Territory param1) {
         int var8 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -1224,7 +1224,7 @@ class StandardAi implements PlayerAi {
         int var4Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.c(0, GuestPlayForm.field_E, -1);
+          this.verifyFleetBudget(0, GuestPlayForm.field_E, -1);
           var3_int = 0;
           var4 = -58 % ((param0 - 53) / 47);
           while (this.field_o > var3_int) {
@@ -1239,9 +1239,9 @@ class StandardAi implements PlayerAi {
                   var6 = var9;
                 }
               }
-              this.a(ValidationState.field_c[var3_int], 86, (Star) (var6));
+              this.reinforceStar(ValidationState.field_c[var3_int], 86, (Star) (var6));
               ValidationState.field_c[var3_int] = 0;
-              this.c(0, GuestPlayForm.field_E, -1);
+              this.verifyFleetBudget(0, GuestPlayForm.field_E, -1);
             }
             var3_int++;
           }
@@ -1250,10 +1250,10 @@ class StandardAi implements PlayerAi {
             var4Lifetime1 = var3.field_p;
             var5 = QuaternaryNodeList.field_b[var4Lifetime1];
             if (var5 != 0) {
-              this.a(var5, 94, var3);
+              this.reinforceStar(var5, 94, var3);
             }
             QuaternaryNodeList.field_b[var4Lifetime1] = 0;
-            this.c(0, GuestPlayForm.field_E, -1);
+            this.verifyFleetBudget(0, GuestPlayForm.field_E, -1);
             var3 = param1.nextStar(-23410);
           }
           return;
@@ -1356,7 +1356,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int a(int param0, int param1, int[] param2, int[] param3, int param4) {
+    private final int allocateAttacks(int param0, int param1, int[] param2, int[] param3, int param4) {
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -1387,15 +1387,15 @@ class StandardAi implements PlayerAi {
                 break;
               }
               if (var10 != param2.length) {
-                this.c(param0 + param1, GuestPlayForm.field_E, -1);
+                this.verifyFleetBudget(param0 + param1, GuestPlayForm.field_E, -1);
                 if (0 == ValidationState.field_d[var8]) {
                   break scanLoop1;
                 }
                 if (LobbyUiSupport.field_d[var8] <= param1) {
-                  var11 = this.a(var9, param1, (byte) 30);
+                  var11 = this.allocateAttackToStar(var9, param1, (byte) 30);
                   param1 = param1 - var11;
                   var6_int = var6_int + var11;
-                  this.c(param0 + param1, GuestPlayForm.field_E, -1);
+                  this.verifyFleetBudget(param0 + param1, GuestPlayForm.field_E, -1);
                   if (param1 == 0) {
                     break scanLoop1;
                   }
@@ -1407,7 +1407,7 @@ class StandardAi implements PlayerAi {
             break;
           }
           if (param1 > 0) {
-            param1 = param1 - this.b(param1, -126, param0);
+            param1 = param1 - this.reinforcePendingAttacks(param1, -126, param0);
           }
           stackIn_22_0 = var6_int;
           return stackIn_22_0;
@@ -1431,7 +1431,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    int b(int param0, int param1) {
+    int reserveSupportFleets(int param0, int param1) {
         Player stackIn_10_0 = null;
         Player stackIn_10_1 = null;
         int var3;
@@ -1449,7 +1449,7 @@ class StandardAi implements PlayerAi {
         Star var8Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -1799) {
-          this.b(114, -80);
+          this.reserveSupportFleets(114, -80);
         }
         var3 = 0;
         var4 = LobbyPlayerEntry.field_yb.firstStar(param1 ^ -16436);
@@ -1591,7 +1591,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int[] b(int param0, Territory param1) {
+    private final int[] findAdjacentAttackTargets(int param0, Territory param1) {
         int[] stackIn_19_0 = null;
         int[] stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -1766,7 +1766,7 @@ class StandardAi implements PlayerAi {
               if (var8.field_u) {
                 var11Lifetime1Lifetime1 = 5 + 2 * var11Lifetime1Lifetime1;
               }
-              var12Lifetime1 = this.a(-5, var8);
+              var12Lifetime1 = this.countUnattackedForeignNeighbours(-5, var8);
               var11Lifetime1Lifetime1 = var11Lifetime1Lifetime1 + var12Lifetime1;
               var11Lifetime1Lifetime1 = var11Lifetime1Lifetime1 + this.hostileNeighbourFleets((byte) -113, var8);
               if (var11Lifetime1Lifetime1 < 1) {
@@ -1830,7 +1830,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int a(Star param0, int param1) {
+    private final int sumAvailableNeighbourFleets(Star param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1869,7 +1869,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final void a(int param0, int param1, Star param2) {
+    private final void reinforceStar(int param0, int param1, Star param2) {
         int var7 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -1901,14 +1901,14 @@ class StandardAi implements PlayerAi {
               var10 = BirthDateValidator.field_i[var8];
               if (param0 <= var10) {
                 if (param2 != var9) {
-                  this.a(param2, var9, param0, -1);
+                  this.queueFleetMove(param2, var9, param0, -1);
                 }
                 BirthDateValidator.field_i[var8] = var10 - param0;
                 return;
               }
               if (0 != var10) {
                 if (var9 != param2) {
-                  this.a(param2, var9, var10, -1);
+                  this.queueFleetMove(param2, var9, var10, -1);
                 }
                 param0 = param0 - var10;
                 BirthDateValidator.field_i[var8] = 0;
@@ -1919,7 +1919,7 @@ class StandardAi implements PlayerAi {
             if (GuestPlayForm.field_E < param0) {
               throw new RuntimeException();
             }
-            this.a((byte) -113, param0, param2);
+            this.queueFleetPlacement((byte) -113, param0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1936,7 +1936,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    int b(byte param0, Star param1) {
+    int estimateDefenceFleetDemand(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1974,7 +1974,7 @@ class StandardAi implements PlayerAi {
         field_m = null;
     }
 
-    private final int a(Star param0, int param1, byte param2) {
+    private final int allocateAttackToStar(Star param0, int param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1987,13 +1987,13 @@ class StandardAi implements PlayerAi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = param0.field_p;
-          var5 = this.b(param0, param2 ^ 33);
+          var5 = this.getAttackFleetDemand(param0, param2 ^ 33);
           if (var5 > param1) {
             var5 = param1;
           }
-          if (this.a(param0, param2 ^ -5932) >= LobbyUiSupport.field_d[var4_int]) {
+          if (this.sumAvailableNeighbourFleets(param0, param2 ^ -5932) >= LobbyUiSupport.field_d[var4_int]) {
             WeightedLruCache.field_a[var4_int] = var5;
-            var6 = this.a(0, false, var5, param0);
+            var6 = this.allocateNeighbourAttackFleets(0, false, var5, param0);
             if (var5 < var6) {
               throw new RuntimeException();
             }
@@ -2040,7 +2040,7 @@ class StandardAi implements PlayerAi {
           if (param0.field_u) {
             var3_int = 2 * (var3_int + 5);
           }
-          var3_int = var3_int + this.a(-5, param0);
+          var3_int = var3_int + this.countUnattackedForeignNeighbours(-5, param0);
           var3_int = var3_int + this.hostileNeighbourFleets((byte) -23, param0);
           if (1 > var3_int) {
             var3_int = 1;
@@ -2061,7 +2061,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final void d(int param0) {
+    private final void clearTurnPlanningState(int param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         if (param0 != -1) {
@@ -2087,7 +2087,7 @@ class StandardAi implements PlayerAi {
 
     public final int getPersonality(boolean param0) {
         if (param0) {
-          this.a(-105, (Star) null);
+          this.countUnattackedForeignNeighbours(-105, (Star) null);
         }
         return this.field_h;
     }
@@ -2161,7 +2161,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    int b(Star param0, int param1) {
+    int getAttackFleetDemand(Star param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -2188,7 +2188,7 @@ class StandardAi implements PlayerAi {
         }
     }
 
-    private final int b(int param0, int param1, int param2) {
+    private final int reinforcePendingAttacks(int param0, int param1, int param2) {
         int var6 = 0;
         int var4;
         int[] var5;
@@ -2223,7 +2223,7 @@ class StandardAi implements PlayerAi {
               }
               if (var10 != null) {
                 var4 = var4 + var8;
-                this.a((byte) -68, var8, var10.field_y);
+                this.queueFleetPlacement((byte) -68, var8, var10.field_y);
                 var10.field_z = var10.field_z + var8;
                 param0 = param0 - var8;
                 var10.field_y.field_J = var10.field_y.field_J - var8;
@@ -2234,7 +2234,7 @@ class StandardAi implements PlayerAi {
           }
           break;
         }
-        this.c(param2 + param0, GuestPlayForm.field_E, -1);
+        this.verifyFleetBudget(param2 + param0, GuestPlayForm.field_E, -1);
         return var4;
     }
 
@@ -2256,7 +2256,7 @@ class StandardAi implements PlayerAi {
         this.field_k = -1;
         DefendTask.field_q = new boolean[this.field_o];
         for (var3_int = 0; var3_int < var2; var3_int++) {
-          SpriteButton.field_x[var3_int] = this.a((byte) -64, this.field_g.field_v[var3_int]);
+          SpriteButton.field_x[var3_int] = this.computeDistancesFromPlayer((byte) -64, this.field_g.field_v[var3_int]);
         }
         var3 = SpriteButton.field_x[this.field_n.field_x];
         var4 = 0;
@@ -2286,7 +2286,7 @@ class StandardAi implements PlayerAi {
           }
         }
         if (param0 != -18484) {
-          this.d(-52);
+          this.clearTurnPlanningState(-52);
         }
         for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
           this.field_b[var5Lifetime1] = this.scorePlayer(var4, CandidateLink.intXor(param0, -18484), this.field_g.field_v[var5Lifetime1]);
@@ -2301,12 +2301,12 @@ class StandardAi implements PlayerAi {
 
     final boolean isChatEnabled(byte param0) {
         if (param0 >= -19) {
-          this.b(102, -64);
+          this.reserveSupportFleets(102, -64);
         }
         return this.field_l;
     }
 
-    private final void a(byte param0, int param1, Star param2) {
+    private final void queueFleetPlacement(byte param0, int param1, Star param2) {
         PlacementOrder var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;

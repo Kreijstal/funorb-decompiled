@@ -81,7 +81,7 @@ final class AggressiveAi extends StandardAi {
         super.updateDiplomacy(param0);
     }
 
-    final int b(Star param0, int param1) {
+    final int getAttackFleetDemand(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -103,7 +103,7 @@ final class AggressiveAi extends StandardAi {
             stackIn_5_0 = 0;
           }
           var3_int = stackIn_5_0;
-          var4 = this.a(-5, param0) + 2 * (param0.field_x + var3_int);
+          var4 = this.countUnattackedForeignNeighbours(-5, param0) + 2 * (param0.field_x + var3_int);
           stackIn_8_0 = (var4 != 0) ? var4 : 1;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

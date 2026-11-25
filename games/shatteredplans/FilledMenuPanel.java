@@ -84,6 +84,6 @@ final class FilledMenuPanel extends MenuComponent {
     }
 
     static {
-        StandardAi.a(7321, 50);
+        StandardAi.clearArchive(7321, 50);
     }
 }

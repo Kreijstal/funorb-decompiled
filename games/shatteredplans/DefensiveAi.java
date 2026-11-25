@@ -101,7 +101,7 @@ final class DefensiveAi extends StandardAi {
             var4 = (Star) null;
             this.hostileNeighbourFleets((byte) -71, (Star) null);
           }
-          var3_int = this.a(-5, param0) + (param0.field_x >> 1);
+          var3_int = this.countUnattackedForeignNeighbours(-5, param0) + (param0.field_x >> 1);
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -207,7 +207,7 @@ final class DefensiveAi extends StandardAi {
         return new int[]{17, 15};
     }
 
-    final int a(int param0, byte param1) {
+    final int getDefenceFleetBudget(int param0, byte param1) {
         if (param1 > -25) {
           CharSequence var4 = (CharSequence) null;
           DefensiveAi.a((CharSequence) null, -24);
@@ -221,7 +221,7 @@ final class DefensiveAi extends StandardAi {
         return -10 + param0;
     }
 
-    final int b(byte param0, Star param1) {
+    final int estimateDefenceFleetDemand(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;

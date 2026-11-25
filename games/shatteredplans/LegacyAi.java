@@ -43,7 +43,7 @@ class LegacyAi extends StandardAi {
         this.field_k = -1;
         var4 = new boolean[this.field_o];
         for (var5_int = 0; var2 > var5_int; var5_int++) {
-          var3[var5_int] = this.a((byte) -122, this.field_g.field_v[var5_int]);
+          var3[var5_int] = this.computeDistancesFromPlayer((byte) -122, this.field_g.field_v[var5_int]);
         }
         var5 = var3[this.field_n.field_x];
         var6 = 0;
@@ -152,7 +152,7 @@ class LegacyAi extends StandardAi {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getDefenceFleetBudget(int param0, byte param1) {
         if (param1 > -25) {
           this.chooseTargetPlayer(104);
         }
@@ -163,7 +163,7 @@ class LegacyAi extends StandardAi {
         super(param0, param1, param2, param3);
     }
 
-    final int b(byte param0, Star param1) {
+    final int estimateDefenceFleetDemand(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -174,7 +174,7 @@ class LegacyAi extends StandardAi {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -43 / ((param0 + 44) / 62);
-          var4 = super.b((byte) 28, param1);
+          var4 = super.estimateDefenceFleetDemand((byte) 28, param1);
           if (this.field_h == 1) {
             var4 = 3 * var4 >> 1;
           }

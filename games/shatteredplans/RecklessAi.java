@@ -63,14 +63,14 @@ final class RecklessAi extends StandardAi {
         super(param0, param1, param2, 5);
     }
 
-    final int a(int param0, byte param1) {
+    final int getDefenceFleetBudget(int param0, byte param1) {
         if (param1 >= -25) {
           return -96;
         }
         return param0 >> 1;
     }
 
-    final int b(Star param0, int param1) {
+    final int getAttackFleetDemand(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -81,17 +81,17 @@ final class RecklessAi extends StandardAi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null == param0.field_y) {
-            stackIn_2_0 = super.b(param0, 100);
+            stackIn_2_0 = super.getAttackFleetDemand(param0, 100);
             return stackIn_2_0;
           }
           var3_int = param0.field_x;
           if (param1 < 41) {
-            this.a(-5, (byte) 83);
+            this.getDefenceFleetBudget(-5, (byte) 83);
           }
           if (param0.field_u) {
             var3_int = var3_int * 2;
           }
-          var3_int = var3_int + this.a(-5, param0);
+          var3_int = var3_int + this.countUnattackedForeignNeighbours(-5, param0);
           if (var3_int < 1) {
             var3_int = 1;
           }
@@ -125,9 +125,9 @@ final class RecklessAi extends StandardAi {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = this.a(-5, param0);
+          var3_int = this.countUnattackedForeignNeighbours(-5, param0);
           if (param1 != 2) {
-            this.a(50, (byte) 72);
+            this.getDefenceFleetBudget(50, (byte) 72);
           }
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;
           return stackIn_5_0;

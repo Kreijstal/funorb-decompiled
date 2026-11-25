@@ -49,7 +49,7 @@ final class TutorialAi extends LegacyAi {
         super(param0, param1, param2, 2);
     }
 
-    final int b(int param0, int param1) {
+    final int reserveSupportFleets(int param0, int param1) {
         int var7 = 0;
         Player stackIn_9_0 = null;
         Player stackIn_9_1 = null;
@@ -174,7 +174,7 @@ final class TutorialAi extends LegacyAi {
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != -18484) {
-          this.a((byte) -16, -120);
+          this.initializeGarrisonReserves((byte) -16, -120);
         }
         this.field_k = -1;
         var2 = this.field_g.field_r;
@@ -332,7 +332,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int initializeGarrisonReserves(byte param0, int param1) {
         int var8 = 0;
         int var3;
         Star var4;
