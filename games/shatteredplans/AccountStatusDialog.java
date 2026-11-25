@@ -144,7 +144,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void showLoginResult(String param0, int param1, int param2) {
         boolean stackIn_6_1 = false;
         StatusMessagePanel stackIn_10_0 = null;
         String stackIn_11_1 = null;

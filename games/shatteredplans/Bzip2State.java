@@ -52,7 +52,7 @@ final class Bzip2State {
         field_I = null;
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean containsNameOrReverse(String param0, int param1, String param2) {
         String var3 = null;
         String var4 = null;
         boolean stackIn_7_0 = false;
@@ -68,7 +68,7 @@ final class Bzip2State {
           var3 = DualLinkDequeSequence.reverseString(param2, true);
           if (param1 < 126) {
             var4 = (String) null;
-            Bzip2State.a((String) null, 75, (String) null);
+            Bzip2State.containsNameOrReverse((String) null, 75, (String) null);
           }
           stackIn_7_0 = (-1 != param0.indexOf(param2)) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -92,7 +92,7 @@ final class Bzip2State {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeMenuTextTables(byte param0) {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (TextReplacementEntry.field_i != null) {

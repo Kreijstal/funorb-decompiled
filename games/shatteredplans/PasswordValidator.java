@@ -296,7 +296,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_10_0 = WeightedLruCache.field_d;
             return stackIn_10_0;
           }
-          if (IntrusiveDeque.a(var5, (byte) 24)) {
+          if (IntrusiveDeque.isRepeatedCharacterString(var5, (byte) 24)) {
             stackIn_13_0 = TutorialStageSupport.field_d;
             return stackIn_13_0;
           }
@@ -320,7 +320,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_31_0 = TutorialVictoryChecker.field_k;
             return stackIn_31_0;
           }
-          if (!Bzip2State.a(var5, 127, var6)) {
+          if (!Bzip2State.containsNameOrReverse(var5, 127, var6)) {
             return AccountValidationText.field_b;
           }
           stackIn_35_0 = ClientInputSupport.field_e;

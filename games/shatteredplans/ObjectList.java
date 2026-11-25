@@ -320,7 +320,7 @@ final class ObjectList {
                 ArchiveSourceManager.writeInviteRequest((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
-                  TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);
+                  TutorialVictoryChecker.openLobbyPlayerContextMenu(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);
                 } else {
                   Archive.writePlayerActionRequest(param4, (byte) 2, var12.field_Ib);
                 }

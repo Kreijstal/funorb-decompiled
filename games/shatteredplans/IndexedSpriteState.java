@@ -68,7 +68,7 @@ abstract class IndexedSpriteState {
         field_h = null;
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     abstract void drawAlpha(int param0, int param1, int param2);
 

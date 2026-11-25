@@ -68,7 +68,7 @@ final class AccountStatusSupport {
               if (ToggleButton.field_D) {
                 param2 = ProgressDialog.field_ib;
               }
-              DateInputWidget.field_G.a(param2, param1, -86);
+              DateInputWidget.field_G.showLoginResult(param2, param1, -86);
             }
             if (param1 != 256 &&
               param1 != 10 &&

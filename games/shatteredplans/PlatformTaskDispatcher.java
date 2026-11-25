@@ -289,7 +289,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = var8.field_g;
                           var4 = var8.field_a;
                           if (this.field_g) {
-                            this.field_m.a(var3_int, -4, var4);
+                            this.field_m.moveCursor(var3_int, -4, var4);
                           } else {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
@@ -303,7 +303,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_g) {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_o, new Object[]{var13, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_m.a(var3_int != 0, var13, 0);
+                            this.field_m.setCursorVisible(var3_int != 0, var13, 0);
                           }
                           break;
                         }

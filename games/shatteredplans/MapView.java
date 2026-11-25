@@ -2081,7 +2081,7 @@ final class MapView extends MapViewState {
             MapView.createDualLinkDequeSequence((byte) 73, (DualLinkDeque) null);
           }
           stackIn_26_0 = !param1;
-          var11 = SpriteStripButtonPainter.a(stackIn_26_0, this.field_Qb[param0.field_p]);
+          var11 = SpriteStripButtonPainter.clipPolygonToRaster(stackIn_26_0, this.field_Qb[param0.field_p]);
           var10 = var11;
           var6 = var10;
           if (var6 != null) {

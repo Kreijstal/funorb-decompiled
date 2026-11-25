@@ -4,7 +4,7 @@
 class TextInputPainter extends WidgetTheme {
     static int field_t;
 
-    final static HitRegion a(IntrusiveDeque param0, int param1, int param2, int param3) {
+    final static HitRegion findHitRegionAt(IntrusiveDeque param0, int param1, int param2, int param3) {
         HitRegion dupTemp$1 = null;
         HitRegion var5 = null;
         int var6 = 0;
@@ -86,7 +86,7 @@ class TextInputPainter extends WidgetTheme {
             return false;
           }
           var6 = (IntrusiveDeque) null;
-          TextInputPainter.a((IntrusiveDeque) null, 76, -63, 75);
+          TextInputPainter.findHitRegionAt((IntrusiveDeque) null, 76, -63, 75);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

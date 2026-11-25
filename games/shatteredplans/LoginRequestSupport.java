@@ -17,7 +17,7 @@ final class LoginRequestSupport {
           if (NodeSequence.a(param0, -31654)) {
             return false;
           }
-          if (IntrusiveDeque.a(param0, (byte) 24)) {
+          if (IntrusiveDeque.isRepeatedCharacterString(param0, (byte) 24)) {
             return false;
           }
           if (OpacityWidget.a(-92, param0)) {
@@ -35,7 +35,7 @@ final class LoginRequestSupport {
           if (ChatMessage.containsForwardOrReversedIgnoringUnderscores(param0, (byte) -53, param2)) {
             return false;
           }
-          if (!Bzip2State.a(param0, 127, param2)) {
+          if (!Bzip2State.containsNameOrReverse(param0, 127, param2)) {
             return true;
           }
           return false;

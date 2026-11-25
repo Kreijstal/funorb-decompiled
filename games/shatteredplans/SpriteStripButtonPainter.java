@@ -9,7 +9,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
     static SecondaryNodeHashTable field_w;
     private int field_x;
 
-    final static int[] a(boolean param0, int[] param1) {
+    final static int[] clipPolygonToRaster(boolean param0, int[] param1) {
         int var7_int = 0;
         int fieldTemp$18 = 0;
         int fieldTemp$19 = 0;
@@ -372,7 +372,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2) {
+    final static Sprite[] createThinNineSlice(int param0, int param1, int param2) {
         int var3 = 124 % ((-27 - param1) / 41);
         return UniformNineSliceFactory.createUniformNineSlice(param0, 1, -10, param2);
     }

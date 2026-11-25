@@ -36,7 +36,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12, int param13, TiledNineSlicePainter param14, TiledNineSlicePainter param15, int param16, BitmapFont param17, int param18, TiledNineSlicePainter param19, int param20) {
+    final static void configureSharedUiResources(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12, int param13, TiledNineSlicePainter param14, TiledNineSlicePainter param15, int param16, BitmapFont param17, int param18, TiledNineSlicePainter param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -96,7 +96,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static int[][] a(Star[] param0, boolean param1) {
+    final static int[][] computeStarDistances(Star[] param0, boolean param1) {
         int[][] stackIn_12_0 = null;
         int[][] stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;

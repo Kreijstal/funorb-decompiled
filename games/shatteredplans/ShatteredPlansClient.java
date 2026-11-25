@@ -584,7 +584,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         boolean stackIn_77_0 = false;
         int var4;
         var4 = field_F ? 1 : 0;
-        Bzip2State.a((byte) 51);
+        Bzip2State.initializeMenuTextTables((byte) 51);
         if (null == IntHashIndex.field_a) {
           if (StrongCacheEntry.field_z != null) {
             ClientDialogSupport.setLoadingProgress(75.0f, 2, GuestPlayForm.field_I);

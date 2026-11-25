@@ -163,9 +163,9 @@ final class BattleContribution extends IntrusiveNode {
             return;
           }
           BufferedSocket.setQuickChatPlaceholder(param1 - 5, var4);
-          PlayerReportPanel.field_Nb = StandardMapReader.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (BitmapFont) null, 0, 2245737, 1513239, 8947848);
-          DiplomacyRowSupport.field_d = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
-          ValidationIndicator.field_I = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
+          PlayerReportPanel.field_Nb = StandardMapReader.createNineSliceWidgetStyle(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (BitmapFont) null, 0, 2245737, 1513239, 8947848);
+          DiplomacyRowSupport.field_d = StandardMapReader.createNineSliceWidgetStyle(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
+          ValidationIndicator.field_I = StandardMapReader.createNineSliceWidgetStyle(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
           if (param1 != -64) {
             field_j = -87;
           }

@@ -55,7 +55,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void updateSocialListMenus(int param0, boolean param1, int param2) {
         PlayerContextMenuController var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
@@ -307,7 +307,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isRepeatedCharacterString(String param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;

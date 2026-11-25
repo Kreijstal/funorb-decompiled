@@ -86,7 +86,7 @@ final class StandardMapReader implements MapGenerator {
         }
     }
 
-    final static AnimatedPanel a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12) {
+    final static AnimatedPanel createNineSliceWidgetStyle(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12) {
         AnimatedPanel var13 = null;
         RuntimeException var13_ref = null;
         AnimatedPanel stackIn_2_0 = null;
@@ -97,11 +97,11 @@ final class StandardMapReader implements MapGenerator {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new AnimatedPanel(0L, (AnimatedPanel) null);
-          var13.field_F = SpriteStripButtonPainter.a(param7, -114, param3);
-          var13.field_lb = SpriteStripButtonPainter.a(param12, -79, param11);
-          var13.field_vb = SpriteStripButtonPainter.a(param10, param5 ^ 28, param6);
-          var13.field_sb = SpriteStripButtonPainter.a(param1, -102, param4);
-          var13.field_wb = SpriteStripButtonPainter.a(param0, param5 - 213, param2);
+          var13.field_F = SpriteStripButtonPainter.createThinNineSlice(param7, -114, param3);
+          var13.field_lb = SpriteStripButtonPainter.createThinNineSlice(param12, -79, param11);
+          var13.field_vb = SpriteStripButtonPainter.createThinNineSlice(param10, param5 ^ 28, param6);
+          var13.field_sb = SpriteStripButtonPainter.createThinNineSlice(param1, -102, param4);
+          var13.field_wb = SpriteStripButtonPainter.createThinNineSlice(param0, param5 - 213, param2);
           var13.field_nb = param8;
           if (param5 != 99) {
             stackIn_2_0 = (AnimatedPanel) null;

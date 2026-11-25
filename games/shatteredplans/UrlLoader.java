@@ -67,7 +67,7 @@ final class UrlLoader implements Runnable {
             }
             MenuComponent.a(var6, var5, (byte) 18);
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
-              TutorialVictoryChecker.a(var15, false);
+              TutorialVictoryChecker.readPackedRankingStats(var15, false);
               if (var7_intLifetime1 != 0) {
                 ContextActionMenu.appendRankingRow(0, Bzip2State.field_L, MenuInputState.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
               } else {

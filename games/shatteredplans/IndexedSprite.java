@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteState {
     byte[] field_j;
     int[] field_k;
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

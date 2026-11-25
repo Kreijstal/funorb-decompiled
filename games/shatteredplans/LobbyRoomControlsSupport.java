@@ -266,7 +266,7 @@ final class LobbyRoomControlsSupport {
             }
             if (0 != IntValueWriteRequest.field_j.field_rb) {
               if (!TurnEventLog.field_i) {
-                AllianceExpiredEvent.a(param3, 104);
+                AllianceExpiredEvent.writeMatchmakingRequest(param3, 104);
               } else {
                 TextReplacementEntry.writeCancelMatchmakingRequest(param3, false);
               }

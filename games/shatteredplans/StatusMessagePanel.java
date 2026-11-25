@@ -66,7 +66,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          MessageKind.field_c = TextInputPainter.a(param0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, 2);
+          MessageKind.field_c = TextInputPainter.findHitRegionAt(param0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, 2);
           if (param1 != 39) {
             field_D = -63;
           }
@@ -100,7 +100,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             ChatPanelSetupSupport.field_c = SliderWidget.field_P;
             GameAssetSetupSupport.field_e = PointsVictoryChecker.field_p;
             PopupPlacementSupport.field_i = 0;
-            BattleSnapshot.field_s = TextInputPainter.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
+            BattleSnapshot.field_s = TextInputPainter.findHitRegionAt(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

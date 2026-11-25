@@ -98,7 +98,7 @@ final class MusicVoiceMixer extends PcmStream {
         }
     }
 
-    final static MenuList a(byte param0, Territory param1, ProductionContent param2, boolean param3) {
+    final static MenuList createTerritoryProductionRow(byte param0, Territory param1, ProductionContent param2, boolean param3) {
         int var11_int = 0;
         String dupTemp$0 = null;
         int var18 = 0;
@@ -189,7 +189,7 @@ final class MusicVoiceMixer extends PcmStream {
           }
           if (param0 <= 117) {
             var20 = (ProductionContent) null;
-            MusicVoiceMixer.a((byte) -57, (Territory) null, (ProductionContent) null, true);
+            MusicVoiceMixer.createTerritoryProductionRow((byte) -57, (Territory) null, (ProductionContent) null, true);
           }
           var13 = new MenuLabel(20 + 4 * ObjectList.field_d[0].field_z + 40, ObjectList.field_d[0].field_w + (var7.field_i + var8), TurnEventLog.field_d.field_z, IconTextPanel.field_Cb.field_J, Integer.toString(var12));
           var21.addChild(var13, 8);

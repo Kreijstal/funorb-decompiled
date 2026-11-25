@@ -82,14 +82,14 @@ final class MenuTransitionSupport {
         if (WidgetContainer.field_C) {
           SoftwareRasterizer.clearRect(DiplomacyNotice.field_h.field_d.field_hb, DiplomacyNotice.field_h.field_d.field_db, DiplomacyNotice.field_h.field_d.field_K, DiplomacyNotice.field_h.field_d.field_mb);
           DiplomacyNotice.field_h.field_d.drawFullRaster(param0, -68);
-          TextFieldValidator.a((byte) 99, param0);
+          TextFieldValidator.drawChatPanel((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;
             return;
           }
           return;
         }
-        TextFieldValidator.a((byte) 99, param0);
+        TextFieldValidator.drawChatPanel((byte) 99, param0);
         if (param1 >= 38) {
           return;
         }

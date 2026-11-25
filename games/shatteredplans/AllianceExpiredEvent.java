@@ -10,7 +10,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
     static HighscorePlayerRecord[] field_j;
     static AnimatedPanel field_l;
 
-    final static void a(int param0, int param1) {
+    final static void writeMatchmakingRequest(int param0, int param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.writeOpcode(param0, 255);
         var2.position = var2.position + 1;

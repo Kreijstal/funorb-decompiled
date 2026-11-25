@@ -1075,7 +1075,7 @@ final class GameScreen {
               var22Lifetime3 = 0;
               if (var21Lifetime4 >= 0 ||
                 var40 != 0) {
-                TextFieldValidator.a(var19Lifetime3, var21Lifetime4, var18Lifetime3, var20_intLifetime2, var14, var22Lifetime3, 16403);
+                TextFieldValidator.addSpriteSpan(var19Lifetime3, var21Lifetime4, var18Lifetime3, var20_intLifetime2, var14, var22Lifetime3, 16403);
                 SoftwareRasterizer.drawHorizontalLineAlpha(var20_intLifetime2, var19Lifetime3, var21Lifetime4, 0, 192);
                 SoftwareRasterizer.setPixel(var20_intLifetime2 - 1, var19Lifetime3, 16777215);
                 SoftwareRasterizer.setPixel(var20_intLifetime2 + var21Lifetime4, var19Lifetime3, 16777215);
@@ -4618,7 +4618,7 @@ final class GameScreen {
               var2.field_d = new ToggleButton[1];
               var2.field_f = new MenuList[1];
               var2.field_i = new MenuLabel[1];
-              var3_ref_lp = MusicVoiceMixer.a((byte) 119, this.field_s.field_n.field_m, var2, true);
+              var3_ref_lp = MusicVoiceMixer.createTerritoryProductionRow((byte) 119, this.field_s.field_n.field_m, var2, true);
               var3_ref_lp.moveTo((byte) 108, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
               this.field_e.field_z.addChild(var3_ref_lp, 8);
               if (this.field_s.field_n.field_m.field_x <= 0) {
@@ -4642,7 +4642,7 @@ final class GameScreen {
               this.field_mb.setSelected(false);
               var3_ref_sd = (Territory) (this.field_s.field_n.field_i.startForward(0));
               if (var3_ref_sd != null) {
-                var4_ref_lp = MusicVoiceMixer.a((byte) 120, var3_ref_sd, var2, true);
+                var4_ref_lp = MusicVoiceMixer.createTerritoryProductionRow((byte) 120, var3_ref_sd, var2, true);
                 var4_ref_lp.moveTo((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
                 this.field_e.field_z.addChild(var4_ref_lp, 8);
                 if (var3_ref_sd.field_x > 0) {
@@ -4651,7 +4651,7 @@ final class GameScreen {
                 }
                 var3_ref_sd = (Territory) (this.field_s.field_n.field_i.nextForward((byte) -71));
                 while (var3_ref_sd != null) {
-                  var5 = MusicVoiceMixer.a((byte) 123, var3_ref_sd, var2, false);
+                  var5 = MusicVoiceMixer.createTerritoryProductionRow((byte) 123, var3_ref_sd, var2, false);
                   var5.moveTo((byte) 126, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
                   this.field_e.field_z.addChild(var5, param0 + 15915);
                   stackIn_40_0 = ~var3_ref_sd.field_x;

@@ -37,7 +37,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
 
     abstract String computeMessageFor(boolean param0, String param1);
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6) {
+    final static void addSpriteSpan(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var7_int = 0;
@@ -113,7 +113,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawChatPanel(byte param0, boolean param1) {
         BirthDateConfirmationForm var2 = null;
         BirthDateConfirmationForm var2Lifetime1;
         if (param0 < 96) {
