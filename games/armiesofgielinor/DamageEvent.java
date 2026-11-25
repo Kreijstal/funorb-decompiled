@@ -113,7 +113,7 @@ final class DamageEvent extends GameEvent {
             field_z = (String) null;
           }
           ClientContextMenu.a(param13, 2, param5, param8);
-          ClientStateChecksumSupport.a(param10 + 13099);
+          ClientStateChecksumSupport.initializeAbuseOffenceDescriptions(param10 + 13099);
           DeployEvent.h(14570);
           TurnChangeEvent.d((byte) -112);
           return;

@@ -769,7 +769,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
                     var10 = var17.length;
                     for (var11 = 0; var11 < var10; var11++) {
                       var12 = var17[var11] >> 16;
-                      var13 = WeightedScoreStrategy.a(0, var12) ? 1 : 0;
+                      var13 = WeightedScoreStrategy.isFrameSetPreloadQueued(0, var12) ? 1 : 0;
                       if (var13 == 0) {
                         var14 = new AnimationFrameSetCacheEntry(param2, param0, var12);
                         if (null == MusicTrackSelectionSupport.field_e) {

@@ -100,7 +100,7 @@ final class ReloadPageSupport {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(applet.getCodeBase(), var4);
-              applet.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var5, applet), "_self");
+              applet.getAppletContext().showDocument(StructureTerrainSupport.applyChangedSessionUrlParameters(-3780, var5, applet), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

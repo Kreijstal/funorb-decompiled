@@ -123,7 +123,7 @@ final class DialWidget extends InteractiveWidget {
                 DialWidget.openServerListPage((java.applet.Applet) null, -54);
               }
               var2 = new java.net.URL(applet.getCodeBase(), "toserverlist.ws");
-              applet.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, applet), "_top");
+              applet.getAppletContext().showDocument(StructureTerrainSupport.applyChangedSessionUrlParameters(-3780, var2, applet), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

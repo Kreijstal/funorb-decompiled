@@ -10,7 +10,7 @@ final class UnitCycler {
     private NodeIterator iterator;
     static ClientUiComponent field_g;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawPlayerGlowColumn(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -211,7 +211,7 @@ final class UnitCycler {
         return this.units.size(false);
     }
 
-    final static void a(int param0, int param1, int param2, Unit param3) {
+    final static void drawUnitSpellTrinketIcon(int param0, int param1, int param2, Unit param3) {
         try {
           GameUiOverlaySupport.drawSpellTrinketIcon(27, param2 - 16, param1, 2);
           int var4_int = 110 / ((49 - param0) / 39);

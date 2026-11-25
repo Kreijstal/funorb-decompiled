@@ -279,7 +279,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
           CipherPacketBuffer var4 = (CipherPacketBuffer) null;
           FullscreenMembershipDialog.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
         }
-        return IntPair.a(param1, (byte) -114, param2, 1);
+        return IntPair.createUniformBorderFrameSprites(param1, (byte) -114, param2, 1);
     }
 
     static {

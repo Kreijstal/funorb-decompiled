@@ -52,7 +52,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
             this.closeConfirmation(10);
           } else {
             if (widget == this.cancelButton) {
-              StructureTerrainSupport.b(-65);
+              StructureTerrainSupport.exitFullscreen(-65);
               this.closeConfirmation(10);
             }
           }
@@ -122,7 +122,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
           elapsedMillis = MonotonicClockSupport.monotonicMillis(92) - this.startedAtMillis;
           remainingSeconds = (int)((10999L - elapsedMillis) / 1000L);
           if (0 >= remainingSeconds) {
-            StructureTerrainSupport.b(-62);
+            StructureTerrainSupport.exitFullscreen(-62);
             this.closeConfirmation(10);
             this.host.showDialog(new FullscreenStatusDialog(this.host, FullscreenMembershipDialog.field_cb), 0);
           } else {

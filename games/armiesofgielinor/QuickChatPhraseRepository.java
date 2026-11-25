@@ -78,7 +78,7 @@ final class QuickChatPhraseRepository {
                 return;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-              param1.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, param1), "_top");
+              param1.getAppletContext().showDocument(StructureTerrainSupport.applyChangedSessionUrlParameters(-3780, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class QuickChatPhraseRepository {
             return;
           }
           stackIn_9_0 = -123;
-          ViewportManager.$cfr$intArgs$a$f94c566f195c(stackIn_9_0, room, var2);
+          ViewportManager.insertNodeBeforeWithIntGuard(stackIn_9_0, room, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

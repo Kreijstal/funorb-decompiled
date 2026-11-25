@@ -26,7 +26,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(int param0, boolean param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
+    final static void drawFoliageLayer(int param0, boolean param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
         int var11 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_8_1 = false;
@@ -79,7 +79,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           field_k = null;
           return;
         }
-        PasswordLoginCredentials.$cfr$intArgs$a$de73e65787eb(0, true, 4, 16, -48, false, 102, -124);
+        PasswordLoginCredentials.drawFoliageLayerWithIntGuard(0, true, 4, 16, -48, false, 102, -124);
         field_h = null;
         field_g = null;
         field_j = null;
@@ -109,7 +109,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$de73e65787eb(int param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, int param7) {
+    final static void drawFoliageLayerWithIntGuard(int param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, int param7) {
         int var11 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_8_1 = false;

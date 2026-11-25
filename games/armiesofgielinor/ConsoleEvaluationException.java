@@ -14,7 +14,7 @@ final class ConsoleEvaluationException extends Exception {
         field_a = null;
     }
 
-    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, int param5) {
+    final static void drawProjectedAdditiveSprite(int param0, RgbSprite param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -49,7 +49,7 @@ final class ConsoleEvaluationException extends Exception {
         }
     }
 
-    final static RgbSprite[] a(boolean param0, ResourceArchive param1, int param2, int param3) {
+    final static RgbSprite[] loadRgbSpritesById(boolean param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;

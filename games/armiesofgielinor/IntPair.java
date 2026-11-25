@@ -12,7 +12,7 @@ final class IntPair extends IntrusiveNode {
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard != -10) {
-          IntPair.e(-3);
+          IntPair.setAccountFlowAction(-3);
         }
         field_m = null;
         field_q = null;
@@ -21,14 +21,14 @@ final class IntPair extends IntrusiveNode {
         field_o = null;
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, int param3) {
+    final static RgbSprite[] createUniformBorderFrameSprites(int param0, byte param1, int param2, int param3) {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         RgbSprite[] var7 = new RgbSprite[9];
         RgbSprite[] var4 = var7;
         var7[0] = SocialListEntry.a(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {
-          IntPair.e(-23);
+          IntPair.setAccountFlowAction(-23);
         }
         while (var5 < 9) {
           var4[var5] = var4[0];
@@ -38,7 +38,7 @@ final class IntPair extends IntrusiveNode {
         return var4;
     }
 
-    final static void e(int param0) {
+    final static void setAccountFlowAction(int param0) {
         AccountIdentifierStatus.setAccountFlowAction(120, param0);
     }
 

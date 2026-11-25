@@ -36,7 +36,7 @@ final class PlayerProfile {
         }
     }
 
-    final static int a(ChatMessage param0, int param1) {
+    final static int getChatMessageColour(ChatMessage param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -49,7 +49,7 @@ final class PlayerProfile {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -5) {
-            PlayerProfile.a(-8, 127, -35, 78, 58, -62, -122);
+            PlayerProfile.layoutQuickChatMenu(-8, 127, -35, 78, 58, -62, -122);
           }
           var2_int = MeshObject.field_d;
           if (param0.channelId != 2) {
@@ -195,7 +195,7 @@ final class PlayerProfile {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatMenu(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         OwnerChangeEvent.quickChatMenuHost.setBounds(param5, -20500, param6, param2, param4);
         if (RegistrationAgreementPane.activeQuickChatMenu != null) {
           RegistrationAgreementPane.activeQuickChatMenu.layoutMenu(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);

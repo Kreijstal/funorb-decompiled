@@ -1096,7 +1096,7 @@ final class ModelMesh extends ModelMeshBase {
           }
         }
         if (field_f) {
-          CorpseConditionMarker.a(var7 - 1, 0, (byte) -127, field_hb, field_W);
+          CorpseConditionMarker.sortParallelIntArraysDescending(var7 - 1, 0, (byte) -127, field_hb, field_W);
           if (this.field_ob == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.drawFace(field_W[var8Lifetime2]);

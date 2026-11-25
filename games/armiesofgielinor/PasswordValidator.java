@@ -381,8 +381,8 @@ final class PasswordValidator extends TextFieldValidator {
                 var19 = EmailCheckResult.formatTemplate(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
                 var13Lifetime1Lifetime1 = DateInputWidget.field_E.textWidth(var19);
-                if (var13Lifetime1Lifetime1 + param4 > IgnoreListLookupSupport.a(true, 620)) {
-                  param4 = IgnoreListLookupSupport.a(true, 620) - var13Lifetime1Lifetime1;
+                if (var13Lifetime1Lifetime1 + param4 > IgnoreListLookupSupport.toInterfaceX(true, 620)) {
+                  param4 = IgnoreListLookupSupport.toInterfaceX(true, 620) - var13Lifetime1Lifetime1;
                 }
                 if (10 + param3 > MatchConditionEntry.a(480, (byte) 94)) {
                   param3 -= 30;

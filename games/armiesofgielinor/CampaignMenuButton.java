@@ -48,13 +48,13 @@ final class CampaignMenuButton {
     }
 
     final void draw(int textRenderParameter) {
-        if (!IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, this.left), IgnoreListLookupSupport.a(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(30 + this.top, (byte) 94))) {
-          GradientUiRenderer.drawFilledGradientFrame(IgnoreListLookupSupport.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
-          GradientUiRenderer.drawCenteredSolidText(this.label, IgnoreListLookupSupport.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
+        if (!IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.toInterfaceX(true, this.left), IgnoreListLookupSupport.toInterfaceX(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(30 + this.top, (byte) 94))) {
+          GradientUiRenderer.drawFilledGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawCenteredSolidText(this.label, IgnoreListLookupSupport.toInterfaceX(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
           return;
         }
-        GradientUiRenderer.drawFilledGradientFrame(IgnoreListLookupSupport.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
-        GradientUiRenderer.drawCenteredSolidText(this.label, IgnoreListLookupSupport.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
+        GradientUiRenderer.drawFilledGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
+        GradientUiRenderer.drawCenteredSolidText(this.label, IgnoreListLookupSupport.toInterfaceX(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
     }
 
     final static void b(int param0) {
@@ -99,7 +99,7 @@ final class CampaignMenuButton {
 
     final boolean containsPointer(byte obfuscationGuard) {
         int var2 = -106 / ((obfuscationGuard - 17) / 39);
-        return IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, this.left), IgnoreListLookupSupport.a(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(this.top + 30, (byte) 94));
+        return IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.toInterfaceX(true, this.left), IgnoreListLookupSupport.toInterfaceX(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(this.top + 30, (byte) 94));
     }
 
     static {

@@ -9,7 +9,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
     private float totalWeight;
     static String responseTargetAccountName;
 
-    final static ModelMeshBase b(int param0, int param1) {
+    final static ModelMeshBase buildPlayerTintedBaseModel(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -30,7 +30,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         return var2.createModel(SummonAction.field_x, SpriteSliceAndBlendSupport.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isFrameSetPreloadQueued(int param0, int param1) {
         AnimationFrameSetCacheEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -144,7 +144,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard > -98) {
-          WeightedScoreStrategy.a(39, 60);
+          WeightedScoreStrategy.isFrameSetPreloadQueued(39, 60);
         }
         responseTargetAccountName = null;
         field_m = null;

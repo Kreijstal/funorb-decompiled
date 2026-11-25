@@ -40,7 +40,7 @@ final class IgnoreListLookupSupport {
         return String.valueOf(param1);
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final static boolean isPointerInDiamond(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_15_0 = false;
         boolean stackIn_33_0 = false;
         boolean stackIn_37_0 = false;
@@ -163,7 +163,7 @@ final class IgnoreListLookupSupport {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int toInterfaceX(boolean param0, int param1) {
         if (!param0) {
           return -83;
         }

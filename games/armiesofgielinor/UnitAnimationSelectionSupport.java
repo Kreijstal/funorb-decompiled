@@ -51,7 +51,7 @@ final class UnitAnimationSelectionSupport {
     }
 
     final static void a(boolean param0) {
-        StructureTerrainSupport.b(-111);
+        StructureTerrainSupport.exitFullscreen(-111);
         if (IndexedSpriteBase.field_b != null) {
           DateValiditySupport.a(IndexedSpriteBase.field_b, 23678);
         }

@@ -372,7 +372,7 @@ final class BattleCamera {
               stackIn_19_4 = 99;
               stackIn_19_5 = var7;
               stackIn_20_6 = !(var8 <= var12 + 40);
-              RasterState.a(stackIn_19_0, stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_20_6);
+              RasterState.drawBattlefieldTilePass(stackIn_19_0, stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_20_6);
             }
             var7 += 80;
             var10++;

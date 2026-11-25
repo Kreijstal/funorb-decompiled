@@ -173,12 +173,12 @@ final class GameplayController {
           }
           if (var9 == 0 ||
             ArmiesOfGielinor.obfuscationControl) {
-            GradientUiRenderer.drawCenteredTextBackdrop(this.battlefield.campaignMission.name, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(80, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(this.battlefield.campaignMission.name, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(80, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(this.battlefield.campaignMission.name, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(80, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(this.battlefield.campaignMission.name, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(80, (byte) 94), ConsoleValue.field_b, true);
           }
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-          GradientUiRenderer.drawCenteredTextBackdrop(FullscreenConfirmationDialog.field_eb, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
-          GradientUiRenderer.drawCenteredGradientText(FullscreenConfirmationDialog.field_eb, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+          GradientUiRenderer.drawCenteredTextBackdrop(FullscreenConfirmationDialog.field_eb, IgnoreListLookupSupport.toInterfaceX(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
+          GradientUiRenderer.drawCenteredGradientText(FullscreenConfirmationDialog.field_eb, IgnoreListLookupSupport.toInterfaceX(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           var10 = param1 + 55;
           var11 = var10 + 100;
           var12 = 50 + param0;
@@ -188,31 +188,31 @@ final class GameplayController {
           var16 = this.battlefield.damageTakenByPlayer[var5.playerSlot];
           var10 -= 32;
           var11 += 42;
-          PowerOfTwoSupport.field_n.drawText(RasterState.field_m, IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
-          PowerOfTwoSupport.field_n.drawRightAligned(Integer.toString(var15), IgnoreListLookupSupport.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          PowerOfTwoSupport.field_n.drawText(RasterState.field_m, IgnoreListLookupSupport.toInterfaceX(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          PowerOfTwoSupport.field_n.drawRightAligned(Integer.toString(var15), IgnoreListLookupSupport.toInterfaceX(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           var14 = var14 + var13;
-          PowerOfTwoSupport.field_n.drawText(OwnerChangeEvent.field_y, IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
-          PowerOfTwoSupport.field_n.drawRightAligned(Integer.toString(var16), IgnoreListLookupSupport.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          PowerOfTwoSupport.field_n.drawText(OwnerChangeEvent.field_y, IgnoreListLookupSupport.toInterfaceX(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          PowerOfTwoSupport.field_n.drawRightAligned(Integer.toString(var16), IgnoreListLookupSupport.toInterfaceX(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           if (var6 == 0) {
             if (var9 != 0) {
               param0 -= 18;
             }
             var17 = SpriteSheetDecoder.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
-            SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
-            GradientUiRenderer.drawCenteredTextBackdrop(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
-            GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.intToString(10602, var17), IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
+            SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.toInterfaceX(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
+            GradientUiRenderer.drawCenteredTextBackdrop(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.toInterfaceX(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.toInterfaceX(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.intToString(10602, var17), IgnoreListLookupSupport.toInterfaceX(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
             if (var7 != 0) {
               param0 += 58;
-              SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
-              GradientUiRenderer.drawCenteredTextBackdrop(InstructionsPanel.field_gb, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
-              GradientUiRenderer.drawCenteredGradientText(InstructionsPanel.field_gb, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
+              SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.toInterfaceX(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
+              GradientUiRenderer.drawCenteredTextBackdrop(InstructionsPanel.field_gb, IgnoreListLookupSupport.toInterfaceX(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
+              GradientUiRenderer.drawCenteredGradientText(InstructionsPanel.field_gb, IgnoreListLookupSupport.toInterfaceX(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
               var18 = var5.createRewardPreview(-1);
-              StandardContentDialog.field_ob.drawTransparent(IgnoreListLookupSupport.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
-              var18.icon.drawTransparent(IgnoreListLookupSupport.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
-              ProjectileEffect.field_h[2].drawTransparent(IgnoreListLookupSupport.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
+              StandardContentDialog.field_ob.drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
+              var18.icon.drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
+              ProjectileEffect.field_h[2].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
               var19 = 10 + ProjectileEffect.field_h[2].canvasWidth + (var10 + 15);
-              PowerOfTwoSupport.field_n.drawParagraph(var18.title, IgnoreListLookupSupport.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
+              PowerOfTwoSupport.field_n.drawParagraph(var18.title, IgnoreListLookupSupport.toInterfaceX(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
             }
           }
           return;
@@ -983,18 +983,18 @@ final class GameplayController {
             discarded$0 = this.canAcceptPlayerInput(false);
           }
           var6 = ConsoleValue.field_b;
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
           if (-1 < param3) {
-            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.a(true, param4 + 137), MatchConditionEntry.a(param1 + 18, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.toInterfaceX(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.toInterfaceX(true, param4 + 137), MatchConditionEntry.a(param1 + 18, (byte) 94), ConsoleValue.field_b, true);
           }
           if (-1 >= param3 ||
             var11 != 0) {
-            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), ConsoleValue.field_b, true);
           }
           var7 = 260 / this.battlefield.getTeamSize(-9650, param0);
-          HuffmanCodec.a(IgnoreListLookupSupport.a(true, 25 + param4), FriendRequestSupport.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
+          HuffmanCodec.drawCoatNameBanner(IgnoreListLookupSupport.toInterfaceX(true, 25 + param4), FriendRequestSupport.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
           var8 = -33 + (5 + param4) + var7 / 2;
           var9 = 0;
           while (var9 < this.battlefield.playerCount) {
@@ -1008,12 +1008,12 @@ final class GameplayController {
               stackIn_23_2 = 0;
               stackIn_23_3 = MatchConditionEntry.a(param1 + 50, (byte) 94);
               stackIn_24_4 = !((this.battlefield.field_C & 1 << var9) <= 0);
-              stackIn_27_5 = IgnoreListLookupSupport.a(true, var8 + 5);
+              stackIn_27_5 = IgnoreListLookupSupport.toInterfaceX(true, var8 + 5);
               stackIn_27_6 = var10;
               stackIn_27_7 = true;
               stackIn_28_8 = (0 != (this.battlefield.inactivePlayerMask & 1 << var9));
               ((CoatOfArms) (Object) stackIn_19_0).drawQuarterSizeWithStatus(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
-              DateInputWidget.field_E.drawCentered(var10, IgnoreListLookupSupport.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
+              DateInputWidget.field_E.drawCentered(var10, IgnoreListLookupSupport.toInterfaceX(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
               this.drawPlayerRuneReward(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
               var8 = var8 + var7;
@@ -1110,7 +1110,7 @@ final class GameplayController {
               stackIn_8_0 = ConsoleValue.field_b;
             }
             var8 = stackIn_8_0;
-            stackIn_11_0 = IgnoreListLookupSupport.a(true, param0);
+            stackIn_11_0 = IgnoreListLookupSupport.toInterfaceX(true, param0);
             stackIn_11_1 = MatchConditionEntry.a(param3, (byte) 94);
             stackIn_11_2 = 184;
             stackIn_11_3 = 111;
@@ -1122,9 +1122,9 @@ final class GameplayController {
             }
             GradientUiRenderer.drawHollowGradientFrame(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 180);
             if (-1 < param1) {
-              GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param1], IgnoreListLookupSupport.a(true, 59 + param0), MatchConditionEntry.a(19 + param3, (byte) 94), true);
+              GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param1], IgnoreListLookupSupport.toInterfaceX(true, 59 + param0), MatchConditionEntry.a(19 + param3, (byte) 94), true);
               stackIn_18_0 = AccountNameCharacterSupport.field_b[param1];
-              stackIn_18_1 = IgnoreListLookupSupport.a(true, 59 + param0);
+              stackIn_18_1 = IgnoreListLookupSupport.toInterfaceX(true, 59 + param0);
               stackIn_18_2 = MatchConditionEntry.a(19 + param3, (byte) 94);
               if (param4 > 2) {
                 stackIn_19_3 = ConsoleValue.field_b;
@@ -1135,9 +1135,9 @@ final class GameplayController {
             }
             if (-1 >= param1 ||
               ArmiesOfGielinor.obfuscationControl) {
-              GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
+              GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
               stackIn_25_0 = DualNodeIterator.field_g;
-              stackIn_25_1 = IgnoreListLookupSupport.a(true, 59 + param0);
+              stackIn_25_1 = IgnoreListLookupSupport.toInterfaceX(true, 59 + param0);
               stackIn_25_2 = MatchConditionEntry.a(param3 + 19, (byte) 94);
               if (param4 > 2) {
                 stackIn_26_3 = ConsoleValue.field_b;
@@ -1157,12 +1157,12 @@ final class GameplayController {
             stackIn_38_2 = stackIn_34_2[stackIn_35_3][var7];
             stackIn_38_3 = MatchConditionEntry.a(param3 + 21, (byte) 94);
             stackIn_39_4 = !((1 << var7 & this.battlefield.field_C) <= 0);
-            stackIn_42_5 = IgnoreListLookupSupport.a(true, param0 + 19);
+            stackIn_42_5 = IgnoreListLookupSupport.toInterfaceX(true, param0 + 19);
             stackIn_42_6 = var6;
             stackIn_42_7 = true;
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
             ((CoatOfArms) (Object) stackIn_30_0).drawQuarterSizeWithStatus(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
-            DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
+            DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.toInterfaceX(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
             this.drawTeamStructureCounts(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
             this.drawPlayerRuneReward(stackIn_47_1, var7, (byte) 110, 280, param3 + 80);
@@ -2282,15 +2282,15 @@ final class GameplayController {
                 var11 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var12 = -65 - var11 + (PowerOfTwoSupport.field_k - var9);
               }
-              if (this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(true, var12)) >= MatchConditionEntry.a(IgnoreRequestSupport.field_a, (byte) 94)) {
+              if (this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.toInterfaceX(true, var12)) >= MatchConditionEntry.a(IgnoreRequestSupport.field_a, (byte) 94)) {
                 var10 = var10 + IgnoreRequestSupport.field_a;
                 if (var13 != 0) {
-                  var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(param0, var12));
+                  var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.toInterfaceX(param0, var12));
                 }
               } else {
-                var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(param0, var12));
+                var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.toInterfaceX(param0, var12));
               }
-              if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 0) + var7 - (var9 + 45), var7 + IgnoreListLookupSupport.a(true, 0) - 15, var10 + MatchConditionEntry.a(0, (byte) 94), 28 + (MatchConditionEntry.a(0, (byte) 94) + var10))) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.toInterfaceX(true, 0) + var7 - (var9 + 45), var7 + IgnoreListLookupSupport.toInterfaceX(true, 0) - 15, var10 + MatchConditionEntry.a(0, (byte) 94), 28 + (MatchConditionEntry.a(0, (byte) 94) + var10))) {
                 stackIn_68_0 = 19;
                 return stackIn_68_0;
               }
@@ -2298,7 +2298,7 @@ final class GameplayController {
                 this.controlledPlayerId > -1 &&
                 !this.field_bb) {
                 var7 = var7 - (var11 + 40);
-                if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 0) + (var7 - var11 - 45), var7 + (IgnoreListLookupSupport.a(true, 0) - 15), var10 + MatchConditionEntry.a(0, (byte) 94), 28 + var10 + MatchConditionEntry.a(0, (byte) 94))) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.toInterfaceX(true, 0) + (var7 - var11 - 45), var7 + (IgnoreListLookupSupport.toInterfaceX(true, 0) - 15), var10 + MatchConditionEntry.a(0, (byte) 94), 28 + var10 + MatchConditionEntry.a(0, (byte) 94))) {
                   stackIn_80_0 = 24;
                   return stackIn_80_0;
                 }
@@ -2312,7 +2312,7 @@ final class GameplayController {
             }
             if (this.eventPresenters.first((byte) 108) != null &&
               ((EventPresenter) (this.eventPresenters.first((byte) 98))).isCombatViewReady((byte) 62)) {
-              var7Lifetime1 = IgnoreListLookupSupport.a(true, 21);
+              var7Lifetime1 = IgnoreListLookupSupport.toInterfaceX(true, 21);
               var8 = MatchConditionEntry.a(35, (byte) 94);
               var9Lifetime1 = 93;
               var10Lifetime1 = 35;
@@ -2520,7 +2520,7 @@ final class GameplayController {
                     stackIn_228_0 = 20;
                     return stackIn_228_0;
                   }
-                  decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.a(343, 133, 405, 1661761121, 0));
+                  decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.isPointerInDiamond(343, 133, 405, 1661761121, 0));
                   if (decompiledFrameRemainder4) {
                     stackIn_233_0 = 0;
                     return stackIn_233_0;
@@ -2533,7 +2533,7 @@ final class GameplayController {
                       stackIn_236_0 = 20;
                       return stackIn_236_0;
                     }
-                    decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.a(348, 128, 420, 1661761121, 0));
+                    decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.isPointerInDiamond(348, 128, 420, 1661761121, 0));
                     if (decompiledFrameRemainder4) {
                       stackIn_239_0 = 0;
                       return stackIn_239_0;
@@ -2546,7 +2546,7 @@ final class GameplayController {
                         stackIn_242_0 = 20;
                         return stackIn_242_0;
                       }
-                      decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.a(343, 133, 405, 1661761121, 0));
+                      decompiledFrameRemainder4 = !(!IgnoreListLookupSupport.isPointerInDiamond(343, 133, 405, 1661761121, 0));
                       if (decompiledFrameRemainder4) {
                         stackIn_247_0 = 0;
                         return stackIn_247_0;
@@ -2558,7 +2558,7 @@ final class GameplayController {
                         stackIn_250_0 = 20;
                         return stackIn_250_0;
                       }
-                      if (IgnoreListLookupSupport.a(383, 93, 415, 1661761121, 0)) {
+                      if (IgnoreListLookupSupport.isPointerInDiamond(383, 93, 415, 1661761121, 0)) {
                         stackIn_253_0 = 0;
                         return stackIn_253_0;
                       }
@@ -2782,7 +2782,7 @@ final class GameplayController {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.battlefield.rankedParticipants[this.field_Rb];
           var5 = this.battlefield.playerNames[var4_int];
           var5 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, var5, 400);
@@ -2833,10 +2833,10 @@ final class GameplayController {
           if (stackIn_35_0 != stackIn_35_1) {
             this.startEquipmentTutorial((byte) 125);
           }
-          SoftwareRaster.setClip(IgnoreListLookupSupport.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), IgnoreListLookupSupport.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
+          SoftwareRaster.setClip(IgnoreListLookupSupport.toInterfaceX(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), IgnoreListLookupSupport.toInterfaceX(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
           var6Lifetime1 = -(NanoGameClock.field_n / 3) % ProxySocketFactory.field_j.pixelHeight;
-          ProxySocketFactory.field_j.drawPixels(IgnoreListLookupSupport.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
-          ProxySocketFactory.field_j.drawPixels(IgnoreListLookupSupport.a(true, 374), MatchConditionEntry.a(ProxySocketFactory.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
+          ProxySocketFactory.field_j.drawPixels(IgnoreListLookupSupport.toInterfaceX(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
+          ProxySocketFactory.field_j.drawPixels(IgnoreListLookupSupport.toInterfaceX(true, 374), MatchConditionEntry.a(ProxySocketFactory.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
           SoftwareRaster.resetClip();
           if (!this.field_l) {
             stackIn_42_0 = ConsoleValue.field_b;
@@ -2844,8 +2844,8 @@ final class GameplayController {
             stackIn_42_0 = TutorialController.field_e;
           }
           var7 = stackIn_42_0;
-          GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, param1 + 3), MatchConditionEntry.a(param0 + 3, (byte) 94), 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
-          GradientUiRenderer.drawCenteredSolidText(var5, IgnoreListLookupSupport.a(true, 483), MatchConditionEntry.a(34 + param0, (byte) 94), 0, true);
+          GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param1 + 3), MatchConditionEntry.a(param0 + 3, (byte) 94), 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
+          GradientUiRenderer.drawCenteredSolidText(var5, IgnoreListLookupSupport.toInterfaceX(true, 483), MatchConditionEntry.a(34 + param0, (byte) 94), 0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3390,18 +3390,18 @@ final class GameplayController {
     private final void drawLocalTurnHandover(int param0) {
         this.drawMenuBackground(-96);
         if (!this.field_bb) {
-          GradientUiRenderer.drawCenteredTextBackdrop(ChatMessage.field_o, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
-          GradientUiRenderer.drawCenteredGradientText(ChatMessage.field_o, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(380, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredTextBackdrop(ChatMessage.field_o, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
+          GradientUiRenderer.drawCenteredGradientText(ChatMessage.field_o, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(380, (byte) 94), ConsoleValue.field_b, false);
         }
         int var2_int = 0;
-        AnimationSkeleton.field_t.draw(IgnoreListLookupSupport.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
+        AnimationSkeleton.field_t.draw(IgnoreListLookupSupport.toInterfaceX(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
         if (this.battlefield.currentPlayer < 0) {
           return;
         }
         try {
           int var3 = -15 % ((19 - param0) / 42);
-          GradientUiRenderer.drawCenteredGradientText(this.battlefield.playerNames[this.battlefield.currentPlayer], IgnoreListLookupSupport.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), ConsoleValue.field_b, false);
-          this.battlefield.playerCoats[this.battlefield.currentPlayer].drawHalfSizeWithStatus(IgnoreListLookupSupport.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
+          GradientUiRenderer.drawCenteredGradientText(this.battlefield.playerNames[this.battlefield.currentPlayer], IgnoreListLookupSupport.toInterfaceX(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), ConsoleValue.field_b, false);
+          this.battlefield.playerCoats[this.battlefield.currentPlayer].drawHalfSizeWithStatus(IgnoreListLookupSupport.toInterfaceX(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
         }
@@ -4335,7 +4335,7 @@ final class GameplayController {
           }
           var2 = (UnitInfoPopup) (this.field_o.first((byte) 91));
           while (var2 != null) {
-            var2.a(this.selectedUnit, this.controlledPlayerId, param0 + 74, this.camera.currentPosition[0], this.camera.currentPosition[1], this.battlefield);
+            var2.drawUnitInfoPopup(this.selectedUnit, this.controlledPlayerId, param0 + 74, this.camera.currentPosition[0], this.camera.currentPosition[1], this.battlefield);
             var2 = (UnitInfoPopup) (this.field_o.next((byte) 123));
             if (var3 != 0) {
               return;
@@ -4528,15 +4528,15 @@ final class GameplayController {
             stackIn_11_0 = TutorialController.field_e;
           }
           var8 = stackIn_11_0;
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, MusicPatch.field_m, var8, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, MusicPatch.field_m, var8, 0, 180);
           if (param2 > -1) {
-            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param2], IgnoreListLookupSupport.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param2], IgnoreListLookupSupport.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param2], IgnoreListLookupSupport.toInterfaceX(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param2], IgnoreListLookupSupport.toInterfaceX(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), ConsoleValue.field_b, true);
           }
           if (param2 <= -1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), ConsoleValue.field_b, true);
           }
           var9 = -26 % ((-25 - param0) / 49);
           stackIn_20_0 = this.battlefield.playerCoats[var6];
@@ -4550,15 +4550,15 @@ final class GameplayController {
           stackIn_28_2 = stackIn_24_2[stackIn_25_3][var6];
           stackIn_28_3 = MatchConditionEntry.a(78 + var5_int, (byte) 94);
           stackIn_29_4 = !((this.battlefield.field_C & 1 << var6) <= 0);
-          stackIn_32_5 = IgnoreListLookupSupport.a(true, 200);
+          stackIn_32_5 = IgnoreListLookupSupport.toInterfaceX(true, 200);
           stackIn_32_6 = var7;
           stackIn_32_7 = true;
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
           ((CoatOfArms) (Object) stackIn_20_0).drawQuarterSizeWithStatus(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
-          DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
+          DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.toInterfaceX(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
           this.drawTeamStructureCounts(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
-          this.drawPlayerRuneReward(stackIn_37_1, var6, (byte) -112, IgnoreListLookupSupport.a(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
+          this.drawPlayerRuneReward(stackIn_37_1, var6, (byte) -112, IgnoreListLookupSupport.toInterfaceX(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4677,7 +4677,7 @@ final class GameplayController {
             var4 = -10;
             var5 = 20;
           }
-          if (!IgnoreListLookupSupport.a(217 - this.battlefield.mapWidth * var3 + var5 + var3 * 2 * this.battlefield.mapWidth, param0 - (this.battlefield.mapWidth * var3 - var5), this.battlefield.mapWidth * (2 * var2_int) + (-450 + 2 * this.field_H) + var4, 1661761121, 2 * (-225 + this.field_H) + var4)) {
+          if (!IgnoreListLookupSupport.isPointerInDiamond(217 - this.battlefield.mapWidth * var3 + var5 + var3 * 2 * this.battlefield.mapWidth, param0 - (this.battlefield.mapWidth * var3 - var5), this.battlefield.mapWidth * (2 * var2_int) + (-450 + 2 * this.field_H) + var4, 1661761121, 2 * (-225 + this.field_H) + var4)) {
             return false;
           }
           var6Lifetime1 = -var5 + this.battlefield.mapWidth * var3 - (217 - HighscoreAccountEntry.pointerY);
@@ -4748,10 +4748,10 @@ final class GameplayController {
         try {
           var2_int = this.battlefield.playerCount;
           SoftwareRaster.clearPixels();
-          AchievementNotification.field_m.drawPixels(IgnoreListLookupSupport.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-          GradientUiRenderer.drawCenteredTextBackdrop(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(35, (byte) 94));
-          GradientUiRenderer.drawCenteredGradientText(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(35, (byte) 94), ConsoleValue.field_b, false);
+          AchievementNotification.field_m.drawPixels(IgnoreListLookupSupport.toInterfaceX(true, 0), MatchConditionEntry.a(0, (byte) 94));
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+          GradientUiRenderer.drawCenteredTextBackdrop(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(35, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(QuickChatCategoryMenuSupport.field_g, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(35, (byte) 94), ConsoleValue.field_b, false);
           var3 = this.battlefield.winnerCount;
           stackIn_5_0 = (null == this.battlefield.campaignMission) ? 0 : 1;
           var4 = stackIn_5_0;
@@ -5330,7 +5330,7 @@ final class GameplayController {
           if (PowerOfTwoSupport.keyCode == 84 &&
             CampaignLookupSupport.heldKeys[86]) {
             if (null != FixedQuaternion.fullscreenCanvas) {
-              StructureTerrainSupport.b(-122);
+              StructureTerrainSupport.exitFullscreen(-122);
               if (var8 != 0) {
                 SoundEffectPreloadSupport.field_a = false;
                 AiPlanningStrategy.requestFullscreen(false, 8028);
@@ -5604,7 +5604,7 @@ final class GameplayController {
           var5 = var3_int * ((param0 - 50) * (param0 - 50)) * (param1 + param0) / 200 / PowerOfTwoSupport.field_k;
           var6 = (int)(Math.sin(3.141592653589793 * (double)param0 / 100.0) * 128.0);
           SoftwareRaster.fillRectangleBlended(0, 0, var3_int, var4, 0, var6);
-          AnimationSkeleton.field_t.draw(IgnoreListLookupSupport.a(true, var5), 0);
+          AnimationSkeleton.field_t.draw(IgnoreListLookupSupport.toInterfaceX(true, var5), 0);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7440,10 +7440,10 @@ final class GameplayController {
             stackIn_7_0 = TutorialController.field_e;
           }
           var8 = stackIn_7_0;
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
-          CampaignUnitOverride.pushRasterClip(IgnoreListLookupSupport.a(true, param1), IgnoreListLookupSupport.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
+          CampaignUnitOverride.pushRasterClip(IgnoreListLookupSupport.toInterfaceX(true, param1), IgnoreListLookupSupport.toInterfaceX(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
           stackIn_10_0 = this.battlefield.playerCoats[var6_int];
-          stackIn_10_1 = IgnoreListLookupSupport.a(true, 13 + param1);
+          stackIn_10_1 = IgnoreListLookupSupport.toInterfaceX(true, 13 + param1);
           stackIn_10_2 = var7;
           stackIn_11_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var6_int) != 0);
           stackIn_15_4 = ((1 << var6_int & this.battlefield.inactivePlayerMask) != 0);
@@ -7451,17 +7451,17 @@ final class GameplayController {
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
           ((CoatOfArms) (Object) stackIn_10_0).drawHalfSizeWithStatus(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
           QuickChatPhraseRepository.popRasterState(-18862);
-          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
           if (param3 <= -1) {
-            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), ConsoleValue.field_b, true);
           }
           if (param3 > -1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.toInterfaceX(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.toInterfaceX(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           }
-          DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
+          DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.toInterfaceX(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
           this.drawTeamStructureCounts(var6_int, 35 + param1, 133 + param0, -12857);
           stackIn_29_1 = (~this.field_Rb == ~param4);
           this.drawPlayerRuneReward(stackIn_29_1, var6_int, (byte) 113, param1 + 35, param0 + 194);
@@ -7556,18 +7556,18 @@ final class GameplayController {
                 ((RgbSprite) (Object) stackIn_39_0[stackIn_40_1]).drawTransparent(28, var9 - 36);
                 var6 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var7 = -65 - var5 - var6 + PowerOfTwoSupport.field_k;
-                var9Lifetime1 = this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(true, var7));
+                var9Lifetime1 = this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.toInterfaceX(true, var7));
                 if (MatchConditionEntry.a(0, (byte) 94) + IgnoreRequestSupport.field_a > var9Lifetime1) {
                   var3_int = -40 + (-MatchConditionEntry.a(0, (byte) 94) + var9Lifetime1);
                 }
               }
               var8Lifetime1 = PowerOfTwoSupport.field_k;
-              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 30 + var5, IgnoreListLookupSupport.a(true, var8Lifetime1 - var5 - 45), MatchConditionEntry.a(var3_int, (byte) 94), -117);
-              GradientUiRenderer.drawSolidText(var4_ref_String, IgnoreListLookupSupport.a(true, var8Lifetime1 - 30 - var5), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
+              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 30 + var5, IgnoreListLookupSupport.toInterfaceX(true, var8Lifetime1 - var5 - 45), MatchConditionEntry.a(var3_int, (byte) 94), -117);
+              GradientUiRenderer.drawSolidText(var4_ref_String, IgnoreListLookupSupport.toInterfaceX(true, var8Lifetime1 - 30 - var5), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               if (this.field_lb &&
                 -1 < this.controlledPlayerId) {
-                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, var6 + 30, IgnoreListLookupSupport.a(true, -15 + var7), MatchConditionEntry.a(var3_int, (byte) 94), -87);
-                GradientUiRenderer.drawSolidText(DisplacedUnitMarker.field_t[12], IgnoreListLookupSupport.a(true, var7), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
+                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, var6 + 30, IgnoreListLookupSupport.toInterfaceX(true, -15 + var7), MatchConditionEntry.a(var3_int, (byte) 94), -87);
+                GradientUiRenderer.drawSolidText(DisplacedUnitMarker.field_t[12], IgnoreListLookupSupport.toInterfaceX(true, var7), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               }
               return;
             }
@@ -9822,7 +9822,7 @@ final class GameplayController {
                   }
                   stackIn_66_0Lifetime1 = var2_int - 120;
                   stackIn_66_1Lifetime1 = FriendRequestSupport.field_c[0][var4];
-                  HuffmanCodec.a(stackIn_66_0Lifetime1, stackIn_66_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) -27, var3);
+                  HuffmanCodec.drawCoatNameBanner(stackIn_66_0Lifetime1, stackIn_66_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) -27, var3);
                   var3 += 30;
                   decompiledFrameRemainder0 = false;
                 }
@@ -9859,7 +9859,7 @@ final class GameplayController {
                   }
                   stackIn_94_0Lifetime1 = var2_int - 120;
                   stackIn_94_1Lifetime1 = FriendRequestSupport.field_c[0][var4];
-                  HuffmanCodec.a(stackIn_94_0Lifetime1, stackIn_94_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) 109, var3);
+                  HuffmanCodec.drawCoatNameBanner(stackIn_94_0Lifetime1, stackIn_94_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) 109, var3);
                   var3 += 30;
                 }
                 var4++;
@@ -10041,11 +10041,11 @@ final class GameplayController {
               var6 = 0;
               break;
             }
-            ByteArrayPoolSupport.field_a[1 + var6].drawTransparent(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(var5_int * var6 + param2, (byte) 94));
+            ByteArrayPoolSupport.field_a[1 + var6].drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(var5_int * var6 + param2, (byte) 94));
             var6++;
           } while (var7 == 0);
           while (var6 < 3) {
-            DateInputWidget.field_E.drawText(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], IgnoreListLookupSupport.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
+            DateInputWidget.field_E.drawText(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], IgnoreListLookupSupport.toInterfaceX(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
             var6++;
             if (var7 != 0) {
               return;
@@ -11220,7 +11220,7 @@ final class GameplayController {
           var4_int = 0;
           param0 = -param0;
           if (param2 > 3) {
-            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
             var7 = 3;
             while (param2 > var7) {
               var5 = this.battlefield.rankedParticipants[var7];
@@ -11231,10 +11231,10 @@ final class GameplayController {
               if (param0 >= 1) {
                 if (param0 >= 0 &&
                   !(AccountNameCharacterSupport.field_b.length <= param0)) {
-                  GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param0], IgnoreListLookupSupport.a(true, var4_int + 98), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
+                  GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param0], IgnoreListLookupSupport.toInterfaceX(true, var4_int + 98), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
                 }
               } else {
-                GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, IgnoreListLookupSupport.toInterfaceX(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
               }
               stackIn_25_0 = this.battlefield.playerCoats[var5];
               stackIn_26_1 = (0 != (1 << var5 & this.battlefield.eliminatedPlayerMask));
@@ -11247,12 +11247,12 @@ final class GameplayController {
               stackIn_33_2 = stackIn_29_2[stackIn_30_3][var5];
               stackIn_33_3 = MatchConditionEntry.a(311, (byte) 94);
               stackIn_34_4 = !((1 << var5 & this.battlefield.field_C) <= 0);
-              stackIn_37_5 = IgnoreListLookupSupport.a(true, 70 + var4_int);
+              stackIn_37_5 = IgnoreListLookupSupport.toInterfaceX(true, 70 + var4_int);
               stackIn_37_6 = var6;
               stackIn_37_7 = true;
               stackIn_38_8 = ((1 << var5 & this.battlefield.inactivePlayerMask) != 0);
               ((CoatOfArms) (Object) stackIn_25_0).drawQuarterSizeWithStatus(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
-              DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
+              DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.toInterfaceX(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
               this.drawPlayerRuneReward(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
               param0++;
@@ -11889,12 +11889,12 @@ final class GameplayController {
           } else {
             stackIn_22_0 = ConsoleTextNode.field_k;
           }
-          SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(stackIn_22_0, var8, IgnoreListLookupSupport.a(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
-          ChatMessageWriteSupport.field_a.drawTransparent(IgnoreListLookupSupport.a(true, param3 + 9), MatchConditionEntry.a(6 + param4, (byte) 94));
-          PowerOfTwoSupport.field_n.drawText(Integer.toString(var6_int), IgnoreListLookupSupport.a(true, param3 + 35), MatchConditionEntry.a(16 + param4, (byte) 94), 104342, -1);
+          SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(stackIn_22_0, var8, IgnoreListLookupSupport.toInterfaceX(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
+          ChatMessageWriteSupport.field_a.drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, param3 + 9), MatchConditionEntry.a(6 + param4, (byte) 94));
+          PowerOfTwoSupport.field_n.drawText(Integer.toString(var6_int), IgnoreListLookupSupport.toInterfaceX(true, param3 + 35), MatchConditionEntry.a(16 + param4, (byte) 94), 104342, -1);
           if (var7 != 0) {
             var10 = "(+" + Integer.toString(var7) + ")";
-            PowerOfTwoSupport.field_n.drawRightAligned(var10, IgnoreListLookupSupport.a(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
+            PowerOfTwoSupport.field_n.drawRightAligned(var10, IgnoreListLookupSupport.toInterfaceX(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
             if (param3 <= AiPlanningStrategy.pointerX &&
               (param3 + var8) > AiPlanningStrategy.pointerX &&
               HighscoreAccountEntry.pointerY >= param4 &&
@@ -11904,8 +11904,8 @@ final class GameplayController {
               var13 = HighscoreAccountEntry.pointerY;
               var14 = DateInputWidget.field_E.getWrappedWidth(var11, 320);
               var15 = DateInputWidget.field_E.getParagraphHeight(var11, 320, DateInputWidget.field_E.maxAscent);
-              SoftwareRaster.fillRoundedRectangleBlended(IgnoreListLookupSupport.a(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);
-              DateInputWidget.field_E.drawParagraph(var11, IgnoreListLookupSupport.a(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, DateInputWidget.field_E.maxAscent);
+              SoftwareRaster.fillRoundedRectangleBlended(IgnoreListLookupSupport.toInterfaceX(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);
+              DateInputWidget.field_E.drawParagraph(var11, IgnoreListLookupSupport.toInterfaceX(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, DateInputWidget.field_E.maxAscent);
             }
           }
           return;

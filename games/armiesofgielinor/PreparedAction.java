@@ -96,7 +96,7 @@ abstract class PreparedAction extends IntrusiveNode {
           } else {
             stackIn_4_0 = 0;
           }
-          PointerCaptureSupport.a(stackIn_4_0, 115);
+          PointerCaptureSupport.notifyBrowserResizeMode(stackIn_4_0, 115);
           if (param0 < 65) {
             field_r = -94;
           }

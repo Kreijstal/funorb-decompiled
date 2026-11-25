@@ -343,7 +343,7 @@ final class EffectPresentation implements EventPresentation {
                         var4 = var20_ref.unit.tileX + var20_ref.unit.tileY * this.mapWidth;
                         var20_ref.unit.modelAnimationIndex = 1;
                         this.presenter.tileIndex = var4;
-                        ImageProducerSurface.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
+                        ImageProducerSurface.playUnitActionSound(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
                         var20_ref.claimUnitModel(var20_ref.unit, 12);
                         this.advanceFrame(var20_ref, (byte) -115);
                       } else {
@@ -407,7 +407,7 @@ final class EffectPresentation implements EventPresentation {
                       this.battlefield.reportEventFailure(0, var14, event);
                       return false;
                     }
-                    ImageProducerSurface.a(var13.unit.unitType, 0, 32);
+                    ImageProducerSurface.playUnitActionSound(var13.unit.unitType, 0, 32);
                     var13.unit.modelAnimationIndex = 2;
                     var13.claimUnitModel(var13.unit, 12);
                     this.advanceFrame(var13, (byte) 73);
@@ -453,7 +453,7 @@ final class EffectPresentation implements EventPresentation {
               return false;
             }
             var7.unit.modelAnimationIndex = 7;
-            ImageProducerSurface.a(var7.unit.unitType, 5, obfuscationGuard - 25);
+            ImageProducerSurface.playUnitActionSound(var7.unit.unitType, 5, obfuscationGuard - 25);
             var7.claimUnitModel(var7.unit, 12);
             this.advanceFrame(var7, (byte) 68);
           }

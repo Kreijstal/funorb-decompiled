@@ -74,7 +74,7 @@ final class EditableTextField extends ClientUiComponent {
         try {
           this.platformService = platformService;
           if (obfuscationGuard != 176) {
-            EditableTextField.n(63);
+            EditableTextField.clearLogoDepthBucketCounts(63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class EditableTextField extends ClientUiComponent {
         }
     }
 
-    final static void n(int param0) {
+    final static void clearLogoDepthBucketCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -123,10 +123,10 @@ final class EditableTextField extends ClientUiComponent {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseEditableTextFieldStatics(byte param0) {
         try {
           if (param0 != -123) {
-            EditableTextField.f((byte) -111);
+            EditableTextField.releaseEditableTextFieldStatics((byte) -111);
           }
           field_Vb = (int[][]) null;
         } catch (RuntimeException runtimeException) {

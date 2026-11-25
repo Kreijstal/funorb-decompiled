@@ -60,7 +60,7 @@ final class BoundedFile {
           var2 = new AccountRequestResult(false);
           var2.suggestedNames = param1;
           if (param0 != 2) {
-            BoundedFile.a(33, true, false, true);
+            BoundedFile.drawUiStage(33, true, false, true);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -78,7 +78,7 @@ final class BoundedFile {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static void drawUiStage(int param0, boolean param1, boolean param2, boolean param3) {
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == -1) {
@@ -163,7 +163,7 @@ final class BoundedFile {
         if (!param3) {
           return;
         }
-        BoundedFile.a(49, -48);
+        BoundedFile.isFreeCampaign(49, -48);
     }
 
     public static void releaseStatics(int obfuscationGuard) {
@@ -191,7 +191,7 @@ final class BoundedFile {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isFreeCampaign(int param0, int param1) {
         if (param1 != 11906) {
           return false;
         }
@@ -259,7 +259,7 @@ final class BoundedFile {
     static {
         field_i = "Allies";
         field_b = false;
-        field_e = GuestPlayConfirmationForm.a(-104);
+        field_e = GuestPlayConfirmationForm.allocateUnlockMask(-104);
         lastPointerPressY = 0;
     }
 }

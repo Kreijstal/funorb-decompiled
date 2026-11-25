@@ -5687,7 +5687,7 @@ final class TickCounter {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawTileStructuresAndEffects(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
         RuntimeException var9 = null;
@@ -5824,7 +5824,7 @@ final class TickCounter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseTickCounterStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

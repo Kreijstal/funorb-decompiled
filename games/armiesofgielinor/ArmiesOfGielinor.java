@@ -81,7 +81,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.fullscreenCanvas != null &&
             FixedQuaternion.fullscreenCanvas.focusLost) {
-            StructureTerrainSupport.b(-127);
+            StructureTerrainSupport.exitFullscreen(-127);
             CheckMarkWidgetPainter.a(false);
           }
           stackIn_10_1 = 127;
@@ -140,7 +140,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (1 == var2_int ||
                       var2_int == 2) {
                       if (null != FixedQuaternion.fullscreenCanvas) {
-                        StructureTerrainSupport.b(-104);
+                        StructureTerrainSupport.exitFullscreen(-104);
                       }
                       if (var2_int == 2) {
                         CampaignResult.a((java.applet.Applet) (this), (byte) -3);
@@ -157,7 +157,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (1 == var2_int ||
                   var2_int == 2) {
                   if (null != FixedQuaternion.fullscreenCanvas) {
-                    StructureTerrainSupport.b(-104);
+                    StructureTerrainSupport.exitFullscreen(-104);
                   }
                   if (var2_int == 2) {
                     CampaignResult.a((java.applet.Applet) (this), (byte) -3);
@@ -355,7 +355,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   } else {
                     ViewportManager.field_c = true;
                     FullscreenFocusCanvas.gameplayController = var10;
-                    ConsolePanel.a(true);
+                    ConsolePanel.updateDrawOfferMenuText(true);
                     WhirlpoolHasher.updateRematchMenuText(7242);
                     ProxySocketFactory.b((byte) 16);
                   }
@@ -501,7 +501,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
-                    ConsolePanel.a(true);
+                    ConsolePanel.updateDrawOfferMenuText(true);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 71) {
@@ -509,7 +509,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (FullscreenFocusCanvas.gameplayController == null) {
                       continue;
                     }
-                    ConsolePanel.a(true);
+                    ConsolePanel.updateDrawOfferMenuText(true);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 73) {
@@ -517,7 +517,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
-                    ConsolePanel.a(true);
+                    ConsolePanel.updateDrawOfferMenuText(true);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 72) {
@@ -638,7 +638,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         try {
           AudioShutdownSupport.shutdownAudioPlayers((byte) -82);
           if (null != FixedQuaternion.fullscreenCanvas) {
-            StructureTerrainSupport.b(-116);
+            StructureTerrainSupport.exitFullscreen(-116);
           }
           UnitAnimationSelectionSupport.a(false);
           if (obfuscationGuard != 103) {
@@ -1035,7 +1035,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (obfuscationGuard > ~AiPlanningStrategy.pointerX &&
             -1 < HighscoreAccountEntry.pointerY) {
           }
-          BoundedFile.a(ChatInputDispatchSupport.field_a, true, MusicPatch.field_w, false);
+          BoundedFile.drawUiStage(ChatInputDispatchSupport.field_a, true, MusicPatch.field_w, false);
           if (null != QuickChatSetupSupport.field_a) {
             QuickChatSetupSupport.field_a.draw(obfuscationGuard ^ 8, GameClock.field_j);
             GameClock.field_j = GameClock.field_j + 1;
@@ -1227,7 +1227,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           StandardContentDialog.releaseStatics((byte) 49);
           ProgressMessageDialog.releaseStatics(0);
           AccountRegistrationForm.releaseStatics((byte) 19);
-          GuestPlayConfirmationForm.k(obfuscationGuard ^ -11944);
+          GuestPlayConfirmationForm.releaseGuestPlayFormStatics(obfuscationGuard ^ -11944);
           LoginForm.releaseStatics(true);
           AccountNameSelectionForm.releaseStatics((byte) -117);
           AccountIdentifierStatus.releaseStatics(true);
@@ -1322,7 +1322,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ConsolePanel.releaseStatics((byte) -109);
           ConsoleTextNode.releaseStatics(-22823);
           EventPresenterFactory.a(false);
-          EditableTextField.f((byte) -123);
+          EditableTextField.releaseEditableTextFieldStatics((byte) -123);
           IndexedSpriteBase.releaseStatics(18347);
           ClientStateChecksumSupport.releaseStatics((byte) 19);
           HuffmanCodec.releaseStatics(-1);
@@ -1360,7 +1360,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           TurnSkipToggleSupport.releaseStatics((byte) 29);
           IntegerPowerSupport.releaseStatics(-31320);
           TrianglePulse.releaseStatics(16);
-          TickCounter.a(1);
+          TickCounter.releaseTickCounterStatics(1);
           FullscreenStatusDialog.releaseStatics(12213);
           IgnoreRequestSupport.a(0);
           ByteStorage.releaseStatics(9892);
@@ -2222,9 +2222,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           GuestPlayConfirmationForm.field_F = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "godglows", (byte) -4, "basic");
           BufferedFile.field_k = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_l, "godframeglows", (byte) -4, "basic");
           FullscreenMembershipDialog.a((byte) 80, UnitModelPreview.field_d);
-          ClientStateChecksumSupport.a(128, GuestPlayConfirmationForm.field_F, 0);
+          ClientStateChecksumSupport.addRadialHighlightsToSprites(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
-          EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
+          EditableTextWidget.addRadialSpriteHighlight(8678, 256, 15, TeamRoster.field_e);
           FullscreenMembershipDialog.a((byte) 105, GuestPlayConfirmationForm.field_F);
           FullscreenMembershipDialog.a((byte) 124, BufferedFile.field_k);
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", AchievementUnlockRequest.field_l, false);

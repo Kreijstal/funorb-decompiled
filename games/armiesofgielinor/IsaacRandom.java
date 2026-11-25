@@ -14,7 +14,7 @@ final class IsaacRandom {
     static String loginAccountIdentifier;
     private int generationCounter;
 
-    private final void b(boolean param0) {
+    private final void initializeIsaacState(boolean param0) {
         int var2 = 0;
         int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var9 = -1640531527;
@@ -137,7 +137,7 @@ final class IsaacRandom {
           this.memory[6 + var2Lifetime2] = var9;
           this.memory[var2Lifetime2 + 7] = var10;
         }
-        this.a(param0);
+        this.generateIsaacBlock(param0);
         this.remainingResults = 256;
     }
 
@@ -150,7 +150,7 @@ final class IsaacRandom {
         field_a = null;
     }
 
-    private final void a(boolean param0) {
+    private final void generateIsaacBlock(boolean param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -192,11 +192,11 @@ final class IsaacRandom {
 
     final int nextInt(int obfuscationGuard) {
         if (0 == this.remainingResults) {
-          this.a(true);
+          this.generateIsaacBlock(true);
           this.remainingResults = 256;
         }
         if (obfuscationGuard != 256) {
-          this.a(false);
+          this.generateIsaacBlock(false);
         }
         int fieldTemp$0 = this.remainingResults - 1;
         this.remainingResults = this.remainingResults - 1;
@@ -211,7 +211,7 @@ final class IsaacRandom {
           for (var2_int = 0; var2_int < seed.length; var2_int++) {
             this.results[var2_int] = seed[var2_int];
           }
-          this.b(true);
+          this.initializeIsaacState(true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ga.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }

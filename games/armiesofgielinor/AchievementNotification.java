@@ -621,7 +621,7 @@ final class AchievementNotification extends IntrusiveNode {
           var13 = ByteStorage.incomingPacket;
           var2 = var13.readUnsignedByte(param0);
           if (var2 == 0) {
-            var10 = GuestPlayConfirmationForm.a(-80);
+            var10 = GuestPlayConfirmationForm.allocateUnlockMask(-80);
             var3 = var10;
             var9 = var10;
             var4 = var9;
@@ -654,7 +654,7 @@ final class AchievementNotification extends IntrusiveNode {
                 TextSplitSupport.closeSessionSocket((byte) -125);
                 return;
               }
-              var14.field_l = GuestPlayConfirmationForm.a(-120);
+              var14.field_l = GuestPlayConfirmationForm.allocateUnlockMask(-120);
               var14.field_m = true;
               var14.unlink(param0 ^ 35);
             } else {

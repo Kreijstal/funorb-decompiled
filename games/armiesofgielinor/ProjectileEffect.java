@@ -218,7 +218,7 @@ final class ProjectileEffect {
               var6 = -(2 * (this.remainingTicks - 10 * var7)) + this.field_k;
               var5 = this.field_d;
             }
-            ConsoleEvaluationException.a(var5, ArrayWidgetContainer.field_F[(-var7 + this.remainingTicks / 20) % ArrayWidgetContainer.field_F.length], (-var7 + 6) * 256 / 6, -110, var4, var6);
+            ConsoleEvaluationException.drawProjectedAdditiveSprite(var5, ArrayWidgetContainer.field_F[(-var7 + this.remainingTicks / 20) % ArrayWidgetContainer.field_F.length], (-var7 + 6) * 256 / 6, -110, var4, var6);
             continue;
           }
           break;

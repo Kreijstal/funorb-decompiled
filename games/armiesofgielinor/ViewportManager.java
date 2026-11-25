@@ -36,7 +36,7 @@ final class ViewportManager {
         this.applyContainerSize((byte) -71);
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param1.previous != null) {
             param1.unlink(-105);
@@ -172,7 +172,7 @@ final class ViewportManager {
         try {
           if (obfuscationGuard != 35) {
             IntrusiveNode var3 = (IntrusiveNode) null;
-            ViewportManager.$cfr$intArgs$a$f94c566f195c(-121, (IntrusiveNode) null, (IntrusiveNode) null);
+            ViewportManager.insertNodeBeforeWithIntGuard(-121, (IntrusiveNode) null, (IntrusiveNode) null);
           }
           component.removeKeyListener(QuickChatCategory.keyboardListener);
           component.removeFocusListener(QuickChatCategory.keyboardListener);
@@ -442,7 +442,7 @@ final class ViewportManager {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$f94c566f195c(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertNodeBeforeWithIntGuard(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param1.previous != null) {
             param1.unlink(-105);

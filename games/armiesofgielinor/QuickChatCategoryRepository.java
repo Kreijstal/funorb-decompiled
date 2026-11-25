@@ -504,7 +504,7 @@ final class QuickChatCategoryRepository {
               FullscreenConfirmationDialog.field_db[var3Lifetime1] = null;
             }
           }
-          EditableTextWidget.a(false, 76, -32596);
+          EditableTextWidget.loadAlternateUnitModels(false, 76, -32596);
           TriangleRasterizer.rebuildPaletteWithGamma(0.75f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

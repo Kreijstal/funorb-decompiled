@@ -24,7 +24,7 @@ final class ClientStateChecksumSupport {
         field_f = null;
     }
 
-    final static void a(int param0) {
+    final static void initializeAbuseOffenceDescriptions(int param0) {
         ConsoleParseException.field_d = new String[CampaignMenuEntry.field_F];
         ConsoleParseException.field_d[9] = GiveTileConsoleCommand.field_E;
         ConsoleParseException.field_d[18] = ResizableModalDialog.field_Q;
@@ -60,7 +60,7 @@ final class ClientStateChecksumSupport {
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, int param2) {
+    final static void addRadialHighlightsToSprites(int param0, RgbSprite[] param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -71,7 +71,7 @@ final class ClientStateChecksumSupport {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var3_int = param2; param1.length > var3_int; var3_int++) {
-            EditableTextWidget.a(8678, param0, 0, param1[var3_int]);
+            EditableTextWidget.addRadialSpriteHighlight(8678, param0, 0, param1[var3_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

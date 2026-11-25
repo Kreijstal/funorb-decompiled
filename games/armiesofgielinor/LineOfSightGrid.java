@@ -37,7 +37,7 @@ final class LineOfSightGrid {
             var8 >= 0) {
             if (-4 + (-40 + param5) >= -param7 + param4 &&
               var8 <= 0) {
-              CorpseConditionMarker.a(-28309, true);
+              CorpseConditionMarker.advanceCoatPickerScroll(-28309, true);
               var9 = -56 % ((-5 - param0) / 50);
               return;
             }
@@ -48,7 +48,7 @@ final class LineOfSightGrid {
             if (15 < Widget.field_n) {
               Widget.field_n = 15;
             }
-            CorpseConditionMarker.a(-28309, false);
+            CorpseConditionMarker.advanceCoatPickerScroll(-28309, false);
             return;
           }
           Widget.field_n = Widget.field_n - 1;
@@ -58,10 +58,10 @@ final class LineOfSightGrid {
           if (Widget.field_n < -15) {
             Widget.field_n = -15;
           }
-          CorpseConditionMarker.a(-28309, false);
+          CorpseConditionMarker.advanceCoatPickerScroll(-28309, false);
           return;
         }
-        CorpseConditionMarker.a(-28309, true);
+        CorpseConditionMarker.advanceCoatPickerScroll(-28309, true);
     }
 
     final static void appendBattleLogLine(byte param0, String param1, NodeDeque param2) {

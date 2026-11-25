@@ -52,7 +52,7 @@ final class ConsoleTextNode extends IntrusiveNode {
     }
 
     static {
-        field_n = GuestPlayConfirmationForm.a(-68);
+        field_n = GuestPlayConfirmationForm.allocateUnlockMask(-68);
         field_o = "Invalid password.";
         field_p = new TutorialController[29];
     }

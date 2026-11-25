@@ -399,7 +399,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final static void closeSharedInteractionUi(byte param0) {
         FixInvisibleUnitsConsoleCommand.g(76);
-        ImageProducerSurface.d(-1);
+        ImageProducerSurface.clearAccountNamePrompt(-1);
         Spell.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);
         QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -117);

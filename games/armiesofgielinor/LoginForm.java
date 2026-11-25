@@ -268,7 +268,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             if (this.registerButton != widget) {
               if (widget == this.navigationButton) {
                 if (this.retryMode) {
-                  IntPair.e(17);
+                  IntPair.setAccountFlowAction(17);
                 } else {
                   if (!this.offerGuestPlay) {
                     QuickChatCommandDefinition.a(obfuscationGuard ^ 26573);

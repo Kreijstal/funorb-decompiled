@@ -319,11 +319,11 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         int selectedModeIndex = 0;
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.classicModeButton == this.selectedModeButton) {
-          StructureTerrainSupport.b(obfuscationGuard - 59);
+          StructureTerrainSupport.exitFullscreen(obfuscationGuard - 59);
           AiActionCandidate.disableViewportResizing(obfuscationGuard ^ -17024);
         } else {
           if (this.selectedModeButton == this.resizableModeButton) {
-            StructureTerrainSupport.b(-109);
+            StructureTerrainSupport.exitFullscreen(-109);
             FriendLookupSupport.enableViewportResizing(-4223);
           } else {
             if (this.fullscreenModeButton == this.selectedModeButton) {

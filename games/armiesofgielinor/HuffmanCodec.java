@@ -13,7 +13,7 @@ final class HuffmanCodec {
     static IndexedSprite[] field_e;
     private int[] decodeTrie;
 
-    final static int a(byte param0, int param1) {
+    final static int getPairedAnimationSlot(byte param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -51,7 +51,7 @@ final class HuffmanCodec {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, String param2, boolean param3, byte param4, int param5) {
+    final static void drawCoatNameBanner(int param0, int param1, String param2, boolean param3, byte param4, int param5) {
         try {
           if (param3) {
             NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;

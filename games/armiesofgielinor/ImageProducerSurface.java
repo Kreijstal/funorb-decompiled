@@ -37,7 +37,7 @@ final class ImageProducerSurface extends RasterImageSurface implements java.awt.
         }
     }
 
-    final static void d(int param0) {
+    final static void clearAccountNamePrompt(int param0) {
         EffectPresentation.field_e = null;
         if (param0 != -1) {
           field_i = (String) null;
@@ -82,7 +82,7 @@ final class ImageProducerSurface extends RasterImageSurface implements java.awt.
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void playUnitActionSound(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var3Lifetime1;

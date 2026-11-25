@@ -80,7 +80,7 @@ final class InstructionsPanel {
         if (param1 < 90) {
           discarded$0 = this.isColumnGroupArgument(60, 20);
         }
-        ArrayWidgetContainer.drawUnitInfoPanel(false, true, this.auxiliaryPreviewUnit, 0, IgnoreListLookupSupport.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
+        ArrayWidgetContainer.drawUnitInfoPanel(false, true, this.auxiliaryPreviewUnit, 0, IgnoreListLookupSupport.toInterfaceX(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
     private final void drawGodFavourOrbsIllustration(byte param0, int param1, int param2) {
@@ -114,13 +114,13 @@ final class InstructionsPanel {
               if (null != UnitModelPreview.field_d &&
                 1 + var7 >= 0 &&
                 1 + var7 < UnitModelPreview.field_d.length) {
-                UnitModelPreview.field_d[1 + var7].drawHalfSize(IgnoreListLookupSupport.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
-                LocalAccountNameSupport.field_c[var7 + 1].drawHalfSize(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
+                UnitModelPreview.field_d[1 + var7].drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
+                LocalAccountNameSupport.field_c[var7 + 1].drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
                   null != GradientUiRenderer.particlePalettes &&
                   0 <= 1 + var7 &&
                   var7 + 1 < GradientUiRenderer.particlePalettes.length) {
-                  GradientUiRenderer.drawParticleRings(IgnoreListLookupSupport.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
+                  GradientUiRenderer.drawParticleRings(IgnoreListLookupSupport.toInterfaceX(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
                   param1 = 50 + param1 - var9;
                   var6++;
                   continue;
@@ -175,8 +175,8 @@ final class InstructionsPanel {
           QuickChatCategory.field_G.length > param2) {
           var6 = QuickChatCategory.field_G[param2];
           var7 = QuickChatCategory.field_G[0];
-          PointerCaptureSupport.a(param1, param0, var7, 27066, true, param3, true, var6);
-          PointerCaptureSupport.a(param1, param0, var7, 27066, true, param3, false, var6);
+          PointerCaptureSupport.drawTerrainCategoryPreview(param1, param0, var7, 27066, true, param3, true, var6);
+          PointerCaptureSupport.drawTerrainCategoryPreview(param1, param0, var7, 27066, true, param3, false, var6);
           if (param2 == 3) {
             ToggleWidget.a(true, true, param1, param0, param3, 1, param4 ^ 0);
           }
@@ -393,7 +393,7 @@ final class InstructionsPanel {
           }
           var12 = title;
           if (var12 != null) {
-            GradientUiRenderer.drawCenteredGradientText(var12, IgnoreListLookupSupport.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(var12, IgnoreListLookupSupport.toInterfaceX(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
           }
           var13 = topY;
           var11Lifetime1 = this.field_Y - this.field_T + (this.getHeadingHalfAscent(true) >> 1);
@@ -475,7 +475,7 @@ final class InstructionsPanel {
             if (2 == var8) {
               if (17 < QuickChatCategoryMenuSupport.activeStructureSprites.length &&
                 QuickChatCategoryMenuSupport.activeStructureSprites.length > 16) {
-                QuickChatCategoryMenuSupport.activeStructureSprites[17].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                QuickChatCategoryMenuSupport.activeStructureSprites[17].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 var9 = 1;
                 if (null == PointerCaptureSupport.field_a ||
                   !(param2 < PointerCaptureSupport.field_a.length)) {
@@ -486,12 +486,12 @@ final class InstructionsPanel {
                   var9 = 0;
                 }
                 if (var9 != 0) {
-                  StructureGlowRenderer.drawStructureGlow(IgnoreListLookupSupport.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
+                  StructureGlowRenderer.drawStructureGlow(IgnoreListLookupSupport.toInterfaceX(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.a(true, param0), (MeshData) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.toInterfaceX(true, param0), (MeshData) null, -10374);
                 }
-                QuickChatCategoryMenuSupport.activeStructureSprites[16].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
+                QuickChatCategoryMenuSupport.activeStructureSprites[16].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
               }
               return;
@@ -500,10 +500,10 @@ final class InstructionsPanel {
               if (QuickChatCategoryMenuSupport.activeStructureSprites.length <= 8) {
                 return;
               }
-              QuickChatCategoryMenuSupport.activeStructureSprites[8].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
+              QuickChatCategoryMenuSupport.activeStructureSprites[8].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
               if (param2 > -1 &&
                 param2 < FriendRequestSupport.field_c.length) {
-                LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
+                LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
               }
             } else {
               if (0 != var8) {
@@ -511,21 +511,21 @@ final class InstructionsPanel {
                   if (11 >= QuickChatCategoryMenuSupport.activeStructureSprites.length) {
                     return;
                   }
-                  QuickChatCategoryMenuSupport.activeStructureSprites[11].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
+                  QuickChatCategoryMenuSupport.activeStructureSprites[11].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
                     FriendRequestSupport.field_c.length > param2) {
-                    LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
-                    UnitCycler.a(IgnoreListLookupSupport.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
+                    LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.toInterfaceX(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
+                    UnitCycler.drawPlayerGlowColumn(IgnoreListLookupSupport.toInterfaceX(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
                   }
                 }
               } else {
                 if (QuickChatCategoryMenuSupport.activeStructureSprites.length <= 0) {
                   return;
                 }
-                QuickChatCategoryMenuSupport.activeStructureSprites[0].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                QuickChatCategoryMenuSupport.activeStructureSprites[0].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
                   FriendRequestSupport.field_c.length > param2) {
-                  LoginCredentialStagingSupport.a(param3 + 7841939, IgnoreListLookupSupport.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
+                  LoginCredentialStagingSupport.a(param3 + 7841939, IgnoreListLookupSupport.toInterfaceX(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
                 }
               }
             }
@@ -554,8 +554,8 @@ final class InstructionsPanel {
         int var3 = this.footerStart.second;
         int var4 = this.footerEnd.first - var2;
         int var5 = -var3 + this.footerEnd.second;
-        SoftwareRaster.fillRectangle(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
-        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        SoftwareRaster.fillRectangle(IgnoreListLookupSupport.toInterfaceX(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
@@ -569,7 +569,7 @@ final class InstructionsPanel {
         int[] var12 = this.footerHighlighted ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
-        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.toInterfaceX(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
     final void initializeInstructionsView(byte param0) {
@@ -671,7 +671,7 @@ final class InstructionsPanel {
           DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           FixedSquareRootSupport.field_b.bindRasterTarget(5605);
-          SpellConfirmationDialog.field_j.drawWithOpacity(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
+          SpellConfirmationDialog.field_j.drawWithOpacity(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -808,7 +808,7 @@ final class InstructionsPanel {
         var3 = this.navigationStart.second;
         var4 = this.navigationEnd.first - var2;
         var5 = this.navigationEnd.second - var3;
-        SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
+        SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.toInterfaceX(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
         var6 = this.navigationStart.second;
         if (param0 != 10) {
           this.advancePortalAnimation(76);
@@ -831,7 +831,7 @@ final class InstructionsPanel {
         if (this.previousEnabled &&
           var13 != null &&
           var13.length() > 0) {
-          GradientUiRenderer.drawGradientText(var13, IgnoreListLookupSupport.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
+          GradientUiRenderer.drawGradientText(var13, IgnoreListLookupSupport.toInterfaceX(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
         }
         if (this.nextHighlighted) {
           stackIn_12_0 = TutorialController.field_e;
@@ -847,11 +847,11 @@ final class InstructionsPanel {
         if (this.nextEnabled &&
           var15 != null &&
           var15.length() > 0) {
-          GradientUiRenderer.drawRightAlignedGradientText(var15, IgnoreListLookupSupport.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
+          GradientUiRenderer.drawRightAlignedGradientText(var15, IgnoreListLookupSupport.toInterfaceX(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
         var2Lifetime3 = this.field_F.first;
         var9 = PaginationTextSupport.formatPageLabel(this.pageCount, -2823, this.pageIndex);
-        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.toInterfaceX(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int getBodyLineHeight(int param0) {
@@ -863,9 +863,9 @@ final class InstructionsPanel {
 
     private final void drawGuardIllustration(int param0, int param1, int param2) {
         if (null != this.auxiliaryPreviewModel) {
-          this.auxiliaryPreviewModel.setScreenPosition(IgnoreListLookupSupport.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
+          this.auxiliaryPreviewModel.setScreenPosition(IgnoreListLookupSupport.toInterfaceX(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
-          SpriteScrollBar.a(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
+          SpriteScrollBar.a(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;
@@ -990,12 +990,12 @@ final class InstructionsPanel {
                 return -1 + (FixedSquareRootSupport.field_b.width >> 1);
               }
               if (var3 == 23) {
-                return IgnoreListLookupSupport.a(!obfuscationGuard, this.navigationEnd.first);
+                return IgnoreListLookupSupport.toInterfaceX(!obfuscationGuard, this.navigationEnd.first);
               }
               if (var3 != 8) {
                 return 1;
               }
-              return IgnoreListLookupSupport.a(true, this.footerEnd.first);
+              return IgnoreListLookupSupport.toInterfaceX(true, this.footerEnd.first);
             }
             return 1;
           }
@@ -1283,12 +1283,12 @@ final class InstructionsPanel {
           }
           param4 = stackIn_26_0;
           if (param3 != null) {
-            param3.drawTransparent(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param3.drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           } else {
             if (param5 == null) {
               return null;
             }
-            param5.draw(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param5.draw(IgnoreListLookupSupport.toInterfaceX(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           }
           stackIn_34_0 = null;
           return (IntPair) (stackIn_34_0);
@@ -1385,7 +1385,7 @@ final class InstructionsPanel {
           if (param4 != null) {
             param3 = param3 - param4.offsetY;
             if (param4 != null) {
-              param4.drawHalfSize(IgnoreListLookupSupport.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
+              param4.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param2), MatchConditionEntry.a(param3, (byte) 94));
             }
           }
           if (param1 == 26823) {
@@ -1448,7 +1448,7 @@ final class InstructionsPanel {
             if (null == QuickChatCategoryMenuSupport.activeStructureSprites[param1]) {
               return;
             }
-            QuickChatCategoryMenuSupport.activeStructureSprites[param1].drawHalfSize(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
+            QuickChatCategoryMenuSupport.activeStructureSprites[param1].drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
             return;
           }
           return;
@@ -1500,9 +1500,9 @@ final class InstructionsPanel {
               NineSliceFrame.activeFoliageSprites[var11Lifetime1] != null) {
               var12 = NineSliceFrame.activeFoliageSprites[var11Lifetime1];
               if (param3) {
-                var12.drawHalfSize(IgnoreListLookupSupport.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
+                var12.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {
-                var12.draw(IgnoreListLookupSupport.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
+                var12.draw(IgnoreListLookupSupport.toInterfaceX(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
               }
             }
           }
@@ -1758,14 +1758,14 @@ final class InstructionsPanel {
           var7 = this.field_fb;
         }
         if (var7 != null) {
-          var7.setScreenPosition(IgnoreListLookupSupport.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
+          var7.setScreenPosition(IgnoreListLookupSupport.toInterfaceX(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
           var7.drawAtStoredPosition((byte) -72, false);
         }
         if (param4 != -1) {
           discarded$0 = this.renderLeaderIllustration(-40, -71, -63, -38, 73);
         }
         if (param3) {
-          this.drawCaptureProgressBar(IgnoreListLookupSupport.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
+          this.drawCaptureProgressBar(IgnoreListLookupSupport.toInterfaceX(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
         }
     }
 
@@ -1774,7 +1774,7 @@ final class InstructionsPanel {
           return;
         }
         try {
-          param2.setScreenPosition(IgnoreListLookupSupport.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
+          param2.setScreenPosition(IgnoreListLookupSupport.toInterfaceX(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
           param2.drawAtStoredPosition((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
@@ -1805,9 +1805,9 @@ final class InstructionsPanel {
           this.field_t = -120;
         }
         if (this.field_S != null) {
-          this.field_S.setScreenPosition(IgnoreListLookupSupport.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
+          this.field_S.setScreenPosition(IgnoreListLookupSupport.toInterfaceX(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.drawAtStoredPosition((byte) -72, false);
-          UnitCycler.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), IgnoreListLookupSupport.a(true, param2), (Unit) null);
+          UnitCycler.drawUnitSpellTrinketIcon(-10, MatchConditionEntry.a(38 + param0, (byte) 94), IgnoreListLookupSupport.toInterfaceX(true, param2), (Unit) null);
         }
     }
 
@@ -1846,8 +1846,8 @@ final class InstructionsPanel {
           return;
         }
         int var8 = QuickChatCategory.field_G[param1];
-        PointerCaptureSupport.a(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
-        PointerCaptureSupport.a(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
+        PointerCaptureSupport.drawTerrainCategoryPreview(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
+        PointerCaptureSupport.drawTerrainCategoryPreview(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
         this.drawStructureOwnershipIllustration(param4, 40 + param0, param3, -25713, param1, var6);
     }
 
@@ -1868,7 +1868,7 @@ final class InstructionsPanel {
             }
             var3 = this.itemIds[itemIndex];
             if (var3 == 22) {
-              return IgnoreListLookupSupport.a(true, this.navigationStart.first);
+              return IgnoreListLookupSupport.toInterfaceX(true, this.navigationStart.first);
             }
             if (var3 == 23) {
               return FixedSquareRootSupport.field_b.width >> 1;
@@ -1876,7 +1876,7 @@ final class InstructionsPanel {
             if (var3 != 8) {
               return 1;
             }
-            return IgnoreListLookupSupport.a(true, this.footerStart.first);
+            return IgnoreListLookupSupport.toInterfaceX(true, this.footerStart.first);
           }
           return 1;
         }
@@ -2151,8 +2151,8 @@ final class InstructionsPanel {
           this.drawNavigationBar((byte) 9);
         }
         int var4 = var3 + var2;
-        GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
-        GradientUiRenderer.drawCenteredGradientText(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
+        GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, IgnoreListLookupSupport.toInterfaceX(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
+        GradientUiRenderer.drawCenteredGradientText(this.field_a, IgnoreListLookupSupport.toInterfaceX(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
     }
 
     private final void initializePortalAnimation(int param0) {
@@ -2740,7 +2740,7 @@ final class InstructionsPanel {
               var17 != null) {
               var23 = 1;
             }
-            PowerOfTwoSupport.field_n.drawParagraph(param2, IgnoreListLookupSupport.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
+            PowerOfTwoSupport.field_n.drawParagraph(param2, IgnoreListLookupSupport.toInterfaceX(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
             var12 = var12 + var21;
             if (param1 != null) {
               var12 = var12 + this.field_g;
@@ -2758,7 +2758,7 @@ final class InstructionsPanel {
             while (param1.length > var25) {
               var22Lifetime1 = PowerOfTwoSupport.field_n.getParagraphHeight(param1[var25], var20Lifetime1, var15);
               var23Lifetime1 = this.field_l;
-              PowerOfTwoSupport.field_n.drawParagraph(param1[var25], IgnoreListLookupSupport.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
+              PowerOfTwoSupport.field_n.drawParagraph(param1[var25], IgnoreListLookupSupport.toInterfaceX(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
               var19Lifetime2 = var19Lifetime2 + var22Lifetime1;
               if ((-1 + param1.length) > var25) {
                 var19Lifetime2 = var19Lifetime2 + this.field_E;
@@ -2872,13 +2872,13 @@ final class InstructionsPanel {
         int var3 = this.field_C.second;
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
-        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         this.drawPanelTitle(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
-        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.toInterfaceX(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.drawPageSections(-107);
         this.drawFooter(obfuscationGuard + 19);
         this.drawNavigationBar((byte) 10);

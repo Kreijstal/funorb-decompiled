@@ -144,7 +144,7 @@ class EditableTextWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void loadAlternateUnitModels(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -350,7 +350,7 @@ class EditableTextWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite param3) {
+    final static void addRadialSpriteHighlight(int param0, int param1, int param2, RgbSprite param3) {
         int var8 = 0;
         int var9 = 0;
         int stackIn_6_0 = 0;
@@ -377,7 +377,7 @@ class EditableTextWidget extends InteractiveWidget {
           var5 = param3.pixelWidth / 2;
           if (param0 != 8678) {
             var16 = (RgbSprite) null;
-            EditableTextWidget.a(-106, -71, -114, (RgbSprite) null);
+            EditableTextWidget.addRadialSpriteHighlight(-106, -71, -114, (RgbSprite) null);
           }
           var6 = param3.pixelHeight / 2;
           stackIn_6_0 = (var5 >= var6) ? var6 : var5;

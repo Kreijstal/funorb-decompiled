@@ -162,7 +162,7 @@ final class MoveAttackAction extends PreparedAction {
                 return;
               }
               var4 = param1.getCodeBase();
-              var3 = StructureTerrainSupport.a(-3780, var4, param1).getFile();
+              var3 = StructureTerrainSupport.applyChangedSessionUrlParameters(-3780, var4, param1).getFile();
               AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 116);
               AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 74);
               AppletScriptBridge.callScriptFunction(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 98);

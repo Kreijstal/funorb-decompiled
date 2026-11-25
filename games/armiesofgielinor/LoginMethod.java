@@ -18,7 +18,7 @@ final class LoginMethod {
           if (!GameUiOverlaySupport.hasOpenGameDialog(9501)) {
             if (FixedQuaternion.fullscreenCanvas != null &&
               FixedQuaternion.fullscreenCanvas.focusLost) {
-              StructureTerrainSupport.b(-110);
+              StructureTerrainSupport.exitFullscreen(-110);
               SphinxActionRequest.field_v.showDialog(new FullscreenStatusDialog(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }
             return;

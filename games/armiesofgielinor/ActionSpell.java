@@ -41,7 +41,7 @@ final class ActionSpell extends Spell {
             }
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = StructureTerrainSupport.a(-3780, var3, param0);
+              var3 = StructureTerrainSupport.applyChangedSessionUrlParameters(-3780, var3, param0);
               SpellCastAction.openExternalUrl(param0, -109, var3.toString(), true);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

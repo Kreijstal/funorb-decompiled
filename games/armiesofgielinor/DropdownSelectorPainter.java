@@ -42,7 +42,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
           }
           var4_int = archive.getGroupId(groupName, 110);
           var5 = archive.getFileId((byte) -72, var4_int, fileName);
-          stackIn_3_0 = ConsoleEvaluationException.a(false, archive, var4_int, var5);
+          stackIn_3_0 = ConsoleEvaluationException.loadRgbSpritesById(false, archive, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

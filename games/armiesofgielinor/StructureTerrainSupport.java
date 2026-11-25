@@ -46,7 +46,7 @@ final class StructureTerrainSupport {
         return true;
     }
 
-    final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
+    final static java.net.URL applyChangedSessionUrlParameters(int param0, java.net.URL param1, java.applet.Applet param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_11_0 = null;
@@ -106,7 +106,7 @@ final class StructureTerrainSupport {
         animationSequencesByGroup = (AnimationSequence[][]) null;
     }
 
-    final static void b(int param0) {
+    final static void exitFullscreen(int param0) {
         if (FixedQuaternion.fullscreenCanvas == null) {
           return;
         }

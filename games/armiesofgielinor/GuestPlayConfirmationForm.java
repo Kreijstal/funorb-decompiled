@@ -51,7 +51,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         }
     }
 
-    final static int[] a(int param0) {
+    final static int[] allocateUnlockMask(int param0) {
         if (param0 > -26) {
           return (int[]) null;
         }
@@ -71,7 +71,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         super.drawWidget(originX, originY, (byte) -107, renderLayer);
     }
 
-    public static void k(int param0) {
+    public static void releaseGuestPlayFormStatics(int param0) {
         field_P = null;
         field_I = null;
         field_M = null;

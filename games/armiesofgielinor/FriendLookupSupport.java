@@ -232,10 +232,10 @@ final class FriendLookupSupport {
         ActionSpell.viewportManager.resizeEnabled = true;
         if (param0 != -4223) {
           field_b = (String) null;
-          PointerCaptureSupport.a(1, -54);
+          PointerCaptureSupport.notifyBrowserResizeMode(1, -54);
           return;
         }
-        PointerCaptureSupport.a(1, -54);
+        PointerCaptureSupport.notifyBrowserResizeMode(1, -54);
     }
 
     final static boolean hasBlockingChatOverlay(byte param0) {

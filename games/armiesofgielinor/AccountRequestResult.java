@@ -59,7 +59,7 @@ final class AccountRequestResult {
             }
             IntrusiveNode.drawMovementAndSpellRangeOutline(78, param5, param3, param4 + 19, var6_int, param1 + 39);
             AttackRangeOverlaySupport.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
-            TickCounter.a(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
+            TickCounter.drawTileStructuresAndEffects(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
             var10 = var7.metadata;
             if (null != var10 &&
               (var10.modifierFlags & 1) != 0 &&
@@ -68,7 +68,7 @@ final class AccountRequestResult {
               if (null != CipherPacketBuffer.currentBattlefield) {
                 var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
               }
-              UnitCycler.a(param1 + 22, var11, ProxyAuthenticationRequiredException.field_b + var6_int, 92, 20 + param4);
+              UnitCycler.drawPlayerGlowColumn(param1 + 22, var11, ProxyAuthenticationRequiredException.field_b + var6_int, 92, 20 + param4);
             }
             if (var7.hasModifierFlag4((byte) -125)) {
               GameEvent.a(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);

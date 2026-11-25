@@ -1639,9 +1639,9 @@ class BattleTutorial {
           this.expandedPanelHeight = -21;
         }
         if (this.stage == 0) {
-          MaskedTextEntryPainter.field_y.drawTransparent(IgnoreListLookupSupport.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
-          GradientUiRenderer.drawCenteredTextBackdrop(this.message, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
-          GradientUiRenderer.drawCenteredGradientText(this.message, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
+          MaskedTextEntryPainter.field_y.drawTransparent(IgnoreListLookupSupport.toInterfaceX(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
+          GradientUiRenderer.drawCenteredTextBackdrop(this.message, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(130, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(this.message, IgnoreListLookupSupport.toInterfaceX(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;
         }
         if (0 == this.panelHeight) {

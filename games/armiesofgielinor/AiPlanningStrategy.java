@@ -468,11 +468,11 @@ abstract class AiPlanningStrategy {
               FixedQuaternion.fullscreenCanvas = TextSplitSupport.openFullscreenCanvas(640, 0, IntPair.field_m, -36, 0, 480);
               if (var3 != 0) {
                 FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
-                PointerCaptureSupport.a(2, 99);
+                PointerCaptureSupport.notifyBrowserResizeMode(2, 99);
               }
             } else {
               FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
-              PointerCaptureSupport.a(2, 99);
+              PointerCaptureSupport.notifyBrowserResizeMode(2, 99);
             }
             if (null != FixedQuaternion.fullscreenCanvas) {
               var2_int = 2;

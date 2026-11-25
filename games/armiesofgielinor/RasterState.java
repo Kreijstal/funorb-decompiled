@@ -26,7 +26,7 @@ final class RasterState extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static void drawBattlefieldTilePass(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var7;
         int var8;
         int var9;
@@ -55,7 +55,7 @@ final class RasterState extends IntrusiveNode {
                   ResizableModalDialog.b(param0, param1, 0, param5, var7, param3);
                   IntrusiveNode.drawMovementAndSpellRangeOutline(62, param1, param0, 19 + param3, var7, 39 + param5);
                   AttackRangeOverlaySupport.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
-                  TickCounter.a(var9, false, param0, param3, var7, 0, param1, param5, var8);
+                  TickCounter.drawTileStructuresAndEffects(var9, false, param0, param3, var7, 0, param1, param5, var8);
                   var10 = QuickChatMenuDisplaySupport.field_e[var7].metadata;
                   if (var10 != null &&
                     (var10.modifierFlags & 1) != 0 &&
@@ -64,7 +64,7 @@ final class RasterState extends IntrusiveNode {
                     if (null != CipherPacketBuffer.currentBattlefield) {
                       var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                     }
-                    UnitCycler.a(22 + param5, var11, var7 + ProxyAuthenticationRequiredException.field_b, 119, param3 + 20);
+                    UnitCycler.drawPlayerGlowColumn(22 + param5, var11, var7 + ProxyAuthenticationRequiredException.field_b, 119, param3 + 20);
                   }
                   PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param3, false, false, var9, param5, var7, param1, var8, param0);
                   if (QuickChatMenuDisplaySupport.field_e[var7].hasModifierFlag4((byte) -115)) {
@@ -85,7 +85,7 @@ final class RasterState extends IntrusiveNode {
             }
           } else {
             if (param2 == 2) {
-              TickCounter.a(var9, true, param0, param3, var7, 0, param1, param5, var8);
+              TickCounter.drawTileStructuresAndEffects(var9, true, param0, param3, var7, 0, param1, param5, var8);
               PrivateTextRecipientSupport.drawTilePresentationsAndOwnership(param3, false, true, var9, param5, var7, param1, var8, param0);
             }
           }
@@ -96,7 +96,7 @@ final class RasterState extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearSharedSpriteCacheAndCollectGarbage(byte param0) {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;

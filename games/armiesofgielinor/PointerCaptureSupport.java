@@ -36,7 +36,7 @@ final class PointerCaptureSupport {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void notifyBrowserResizeMode(int param0, int param1) {
         try {
           try {
             AppletScriptBridge.callScriptFunction(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
@@ -50,7 +50,7 @@ final class PointerCaptureSupport {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
+    final static void drawTerrainCategoryPreview(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         IndexedSprite var8 = null;
@@ -73,9 +73,9 @@ final class PointerCaptureSupport {
               var8 = ManaStarParticle.activeTerrainSprites[0];
               if (var8 != null) {
                 if (param4) {
-                  var8.drawHalfSize(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 } else {
-                  var8.draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 }
               }
             }
@@ -105,9 +105,9 @@ final class PointerCaptureSupport {
                   var13 = ManaStarParticle.activeTerrainSprites[var12];
                   if (var13 != null) {
                     if (!param4) {
-                      var13.draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     } else {
-                      var13.drawHalfSize(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     }
                   }
                   var8_int++;

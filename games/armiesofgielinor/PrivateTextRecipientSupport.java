@@ -33,7 +33,7 @@ final class PrivateTextRecipientSupport {
           }
           var9_int = param5 + ConsoleExpression.field_p[param5];
           if (QuickChatMenuDisplaySupport.field_e[param5].terrainType == 3) {
-            PasswordLoginCredentials.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
+            PasswordLoginCredentials.drawFoliageLayerWithIntGuard(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
           KingBlackDragonEvent.a(1, param5, param4, false, param0);
           var10_ref_vb = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 122));
@@ -50,7 +50,7 @@ final class PrivateTextRecipientSupport {
             stackIn_20_3 = var9_int;
             stackIn_20_4 = param3;
             stackIn_21_5 = (null != QuickChatMenuDisplaySupport.field_e[param5].occupant);
-            PasswordLoginCredentials.$cfr$intArgs$a$de73e65787eb(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, 40 + param4, param7);
+            PasswordLoginCredentials.drawFoliageLayerWithIntGuard(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, 40 + param4, param7);
           }
           if (QuickChatMenuDisplaySupport.field_e[param5].hasExplicitOwner((byte) -79)) {
             var10 = QuickChatMenuDisplaySupport.field_e[param5].getExplicitOwner((byte) -56);

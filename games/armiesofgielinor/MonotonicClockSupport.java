@@ -31,7 +31,7 @@ final class MonotonicClockSupport {
         int var3 = UnitAnimationPreview.field_l + var2 * (-UnitAnimationPreview.field_l + EquipmentBattleTutorial.field_y) / var1;
         if (param0 < -53) {
           CombatEvent.field_I.setBounds(120, -20500, 640, var3, QuickChatCategory.field_u);
-          PlayerProfile.a(-1, MusicPatchNode.field_l, 0, MusicPatch.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
+          PlayerProfile.layoutQuickChatMenu(-1, MusicPatchNode.field_l, 0, MusicPatch.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
           return;
         }
     }

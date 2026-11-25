@@ -63,8 +63,8 @@ final class ThemeSpriteLoadingSupport {
             AlphaDecodedSpriteSupport.field_p[var10].bindAsRasterTarget();
             SoftwareRaster.clearPixels();
             LinkButtonPainter.field_f.selectTheme(var10, 0);
-            PointerCaptureSupport.a(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, true, QuickChatCategory.field_G[3]);
-            PointerCaptureSupport.a(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, false, QuickChatCategory.field_G[3]);
+            PointerCaptureSupport.drawTerrainCategoryPreview(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, true, QuickChatCategory.field_G[3]);
+            PointerCaptureSupport.drawTerrainCategoryPreview(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, false, QuickChatCategory.field_G[3]);
             ToggleWidget.a(true, false, 10, 50, var10, 1, 1);
             ToggleWidget.a(false, false, 10, 50, var10, 1, 1);
             var10++;

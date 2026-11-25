@@ -33,7 +33,7 @@ final class PlatformTaskService implements Runnable {
         if (obfuscationGuard < 37) {
           networkBlockedUntilMillis = -11L;
         }
-        return this.a((byte) 125, port, false, hostname);
+        return this.enqueueSocketConnection((byte) 125, port, false, hostname);
     }
 
     final PlatformTask enterFullscreenAsync(boolean obfuscationGuard, int height, int width, int refreshRate, int bitDepth) {
@@ -43,7 +43,7 @@ final class PlatformTaskService implements Runnable {
         return this.enqueueTask((bitDepth << 16) + refreshRate, (width << 16) + height, (Object) null, (byte) 81, 6);
     }
 
-    private final PlatformTask a(byte param0, int param1, boolean param2, String param3) {
+    private final PlatformTask enqueueSocketConnection(byte param0, int param1, boolean param2, String param3) {
         if (param0 < 121) {
           return (PlatformTask) null;
         }
@@ -57,7 +57,7 @@ final class PlatformTaskService implements Runnable {
         return this.enqueueTask(0, 0, contents, (byte) 102, 19);
     }
 
-    private final static BoundedFile a(boolean param0, String param1, int param2, String param3) {
+    private final static BoundedFile openPreferencesFile(boolean param0, String param1, int param2, String param3) {
         try {
           int var6 = 0;
           BoundedFile stackIn_12_0 = null;
@@ -337,11 +337,11 @@ final class PlatformTaskService implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = PlatformTaskService.a(true, (String) (var8.objectArgument), cacheStoreId, cacheName);
+                        var3_ref = PlatformTaskService.openPreferencesFile(true, (String) (var8.objectArgument), cacheStoreId, cacheName);
                         var8.result = var3_ref;
                         break;
                       case 13:
-                        var3_ref = PlatformTaskService.a(true, (String) (var8.objectArgument), cacheStoreId, "");
+                        var3_ref = PlatformTaskService.openPreferencesFile(true, (String) (var8.objectArgument), cacheStoreId, "");
                         var8.result = var3_ref;
                         break;
                       case 16:

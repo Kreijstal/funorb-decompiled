@@ -205,7 +205,7 @@ abstract class ConsolePanel implements ConsolePanelMarker {
         this.input.advanceEditing(0);
     }
 
-    final static void a(boolean param0) {
+    final static void updateDrawOfferMenuText(boolean param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if ((FullscreenFocusCanvas.gameplayController.battlefield.field_C & 1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId) != 0) {
@@ -431,7 +431,7 @@ abstract class ConsolePanel implements ConsolePanelMarker {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawGouraudTriangle(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 != -66) {
@@ -467,7 +467,7 @@ abstract class ConsolePanel implements ConsolePanelMarker {
         String source;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard != -30847) {
-          ConsolePanel.a(false);
+          ConsolePanel.updateDrawOfferMenuText(false);
         }
         if (96 == character) {
           this.toggleOpen((byte) -4);

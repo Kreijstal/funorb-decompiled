@@ -32,7 +32,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         return null;
     }
 
-    final void a(Unit param0, int param1, int param2, int param3, int param4, Battlefield param5) {
+    final void drawUnitInfoPopup(Unit param0, int param1, int param2, int param3, int param4, Battlefield param5) {
         String var7 = null;
         int var8 = 0;
         int var13 = 0;
@@ -108,7 +108,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             } else {
               SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param0.getUnitCategory(0)].draw(43, 32);
-              AccountHandshakeStateSupport.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
+              AccountHandshakeStateSupport.field_b[this.getMatchupIconIndex(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
             }
           }
           ProgressMessageDialog.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
@@ -151,7 +151,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int getMatchupIconIndex(int param0, int param1, int param2) {
         int var4 = DropdownSelectorPainter.matchupDamagePercent[param1][param0];
         int var5 = DropdownSelectorPainter.matchupDamagePercent[param0][param1];
         if (var5 < var4) {
@@ -224,7 +224,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         }
         if (obfuscationGuard > -100) {
           var5 = (Battlefield) null;
-          this.a((Unit) null, -88, 39, -11, 35, (Battlefield) null);
+          this.drawUnitInfoPopup((Unit) null, -88, 39, -11, 35, (Battlefield) null);
         }
     }
 

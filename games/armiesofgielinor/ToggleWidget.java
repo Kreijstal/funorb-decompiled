@@ -94,9 +94,9 @@ final class ToggleWidget extends InteractiveWidget {
                   NineSliceFrame.activeFoliageSprites[var11] != null) {
                   var12 = NineSliceFrame.activeFoliageSprites[var11];
                   if (param1) {
-                    var12.drawHalfSize(IgnoreListLookupSupport.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.drawHalfSize(IgnoreListLookupSupport.toInterfaceX(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   } else {
-                    var12.draw(IgnoreListLookupSupport.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.draw(IgnoreListLookupSupport.toInterfaceX(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   }
                 }
               }

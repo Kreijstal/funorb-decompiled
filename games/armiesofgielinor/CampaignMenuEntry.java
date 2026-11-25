@@ -248,7 +248,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         if (obfuscationGuard < 114) {
           this.containsPoint(106, -67, 2);
         }
-        stackIn_8_0 = (IgnoreListLookupSupport.a(true, this.left) <= screenX) && (IgnoreListLookupSupport.a(true, this.width + this.left) >= screenX) && (screenY >= MatchConditionEntry.a(this.top, (byte) 94)) && (MatchConditionEntry.a(this.height + this.top, (byte) 94) >= screenY);
+        stackIn_8_0 = (IgnoreListLookupSupport.toInterfaceX(true, this.left) <= screenX) && (IgnoreListLookupSupport.toInterfaceX(true, this.width + this.left) >= screenX) && (screenY >= MatchConditionEntry.a(this.top, (byte) 94)) && (MatchConditionEntry.a(this.height + this.top, (byte) 94) >= screenY);
         return stackIn_8_0;
     }
 

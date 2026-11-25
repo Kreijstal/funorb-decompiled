@@ -607,7 +607,7 @@ final class MovementPresentation implements EventPresentation {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.advancePathIndex(false)) {
-            ImageProducerSurface.a(event.unit.unitType, 0, 32);
+            ImageProducerSurface.playUnitActionSound(event.unit.unitType, 0, 32);
           }
           if (event == null) {
             return;

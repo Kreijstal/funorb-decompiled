@@ -207,7 +207,7 @@ final class ConsoleTokenSupport {
               ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
             }
             if (var12.hasMovementFlag1(false)) {
-              UnitCycler.a(111, param5, param0, var12);
+              UnitCycler.drawUnitSpellTrinketIcon(111, param5, param0, var12);
             }
             if (var12.hasMovementFlag8AtFullStrength(8)) {
               SpriteScrollBar.a(param0, param5, (byte) -97, var12);
@@ -263,7 +263,7 @@ final class ConsoleTokenSupport {
                 ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
-                UnitCycler.a(111, param5, param0, var12);
+                UnitCycler.drawUnitSpellTrinketIcon(111, param5, param0, var12);
               }
               if (var12.hasMovementFlag8AtFullStrength(8)) {
                 SpriteScrollBar.a(param0, param5, (byte) -97, var12);
@@ -318,7 +318,7 @@ final class ConsoleTokenSupport {
                 ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
-                UnitCycler.a(111, param5, param0, var12);
+                UnitCycler.drawUnitSpellTrinketIcon(111, param5, param0, var12);
               }
               if (var12.hasMovementFlag8AtFullStrength(8)) {
                 SpriteScrollBar.a(param0, param5, (byte) -97, var12);
@@ -375,7 +375,7 @@ final class ConsoleTokenSupport {
           ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
         }
         if (var12.hasMovementFlag1(false)) {
-          UnitCycler.a(111, param5, param0, var12);
+          UnitCycler.drawUnitSpellTrinketIcon(111, param5, param0, var12);
         }
         if (var12.hasMovementFlag8AtFullStrength(8)) {
           SpriteScrollBar.a(param0, param5, (byte) -97, var12);

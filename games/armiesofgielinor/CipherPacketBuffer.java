@@ -249,7 +249,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               if (!MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true)) {
                 if (!MusicCrossfadeStream.a(param1, true)) {
                   if (ChatInputDispatchSupport.field_a == 16) {
-                    RasterState.a((byte) 111);
+                    RasterState.clearSharedSpriteCacheAndCollectGarbage((byte) 111);
                     TextLineLayout.initializeBasicBattleGraphics((byte) -41);
                     ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                   }
@@ -288,7 +288,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   SkeletonLimitMarker.a(param0, param2 - 1);
                 }
                 if (ChatInputDispatchSupport.field_a == 16) {
-                  RasterState.a((byte) 111);
+                  RasterState.clearSharedSpriteCacheAndCollectGarbage((byte) 111);
                   TextLineLayout.initializeBasicBattleGraphics((byte) -41);
                   ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
                 }
@@ -333,7 +333,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
         }
         if (ChatInputDispatchSupport.field_a == 16) {
-          RasterState.a((byte) 111);
+          RasterState.clearSharedSpriteCacheAndCollectGarbage((byte) 111);
           TextLineLayout.initializeBasicBattleGraphics((byte) -41);
           ThemeSpriteLoadingSupport.loadThemeSprites(AchievementUnlockRequest.field_l, 18);
         }

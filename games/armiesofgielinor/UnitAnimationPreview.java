@@ -55,7 +55,7 @@ final class UnitAnimationPreview {
         }
         if (3 == this.animationSlot &&
           this.animationPlayer.frameIndex == ClientUiComponent.field_K[this.unitType][0]) {
-          ImageProducerSurface.a(this.unitType, 4, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 4, 32);
         }
         if (this.animationSlot != 4) {
           return;
@@ -63,7 +63,7 @@ final class UnitAnimationPreview {
         if (this.animationPlayer.frameIndex != ClientUiComponent.field_K[this.unitType][1]) {
           return;
         }
-        ImageProducerSurface.a(this.unitType, 7, 32);
+        ImageProducerSurface.playUnitActionSound(this.unitType, 7, 32);
         return;
     }
 
@@ -199,31 +199,31 @@ final class UnitAnimationPreview {
         this.installFrameSet((byte) 122);
         soundSlot = this.animationSlot;
         if (soundSlot == 1) {
-          ImageProducerSurface.a(this.unitType, 0, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 0, 32);
           return;
         }
         if (2 == soundSlot) {
-          ImageProducerSurface.a(this.unitType, 0, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 0, 32);
           return;
         }
         if (soundSlot == 3) {
-          ImageProducerSurface.a(this.unitType, 3, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 3, 32);
           return;
         }
         if (soundSlot == 5) {
-          ImageProducerSurface.a(this.unitType, 6, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 6, 32);
           return;
         }
         if (soundSlot == 6) {
-          ImageProducerSurface.a(this.unitType, 2, 32);
-          ImageProducerSurface.a(this.unitType, 1, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 2, 32);
+          ImageProducerSurface.playUnitActionSound(this.unitType, 1, 32);
           return;
         }
         if (soundSlot != 7) {
           return;
         }
-        ImageProducerSurface.a(this.unitType, 5, 32);
-        ImageProducerSurface.a(this.unitType, 2, 32);
+        ImageProducerSurface.playUnitActionSound(this.unitType, 5, 32);
+        ImageProducerSurface.playUnitActionSound(this.unitType, 2, 32);
         return;
     }
 

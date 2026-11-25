@@ -9,7 +9,7 @@ final class CorpseConditionMarker extends PreparedAction {
     static ResourceArchive field_w;
     static String field_x;
 
-    final static void a(int param0, boolean param1) {
+    final static void advanceCoatPickerScroll(int param0, boolean param1) {
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
         if (AccountRegistrationForm.field_X < 0) {
@@ -42,7 +42,7 @@ final class CorpseConditionMarker extends PreparedAction {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int[] param3, int[] param4) {
+    final static void sortParallelIntArraysDescending(int param0, int param1, byte param2, int[] param3, int[] param4) {
         int var10 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -87,8 +87,8 @@ final class CorpseConditionMarker extends PreparedAction {
             param3[var6] = var7;
             param4[param0] = param4[var6];
             param4[var6] = var8;
-            CorpseConditionMarker.a(-1 + var6, param1, (byte) -127, param3, param4);
-            CorpseConditionMarker.a(param0, 1 + var6, (byte) -127, param3, param4);
+            CorpseConditionMarker.sortParallelIntArraysDescending(-1 + var6, param1, (byte) -127, param3, param4);
+            CorpseConditionMarker.sortParallelIntArraysDescending(param0, 1 + var6, (byte) -127, param3, param4);
           }
           if (param2 != -127) {
             field_w = (ResourceArchive) null;
@@ -118,7 +118,7 @@ final class CorpseConditionMarker extends PreparedAction {
         try {
           if (obfuscationGuard != 64) {
             int[] var4 = (int[]) null;
-            CorpseConditionMarker.a(12, -29, (byte) 33, (int[]) null, (int[]) null);
+            CorpseConditionMarker.sortParallelIntArraysDescending(12, -29, (byte) 33, (int[]) null, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dk.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');

@@ -136,7 +136,7 @@ final class AccountRequestState {
               }
               var10 = LoginCredentials.formatChatPrefix(var8_ref_mo, (byte) 103);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_mo.text);
-              var12 = PlayerProfile.a(var8_ref_mo, -5);
+              var12 = PlayerProfile.getChatMessageColour(var8_ref_mo, -5);
               var8_ref_mo.rowComponent = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var11);
               var8_ref_mo.rowComponent.heldPressTextColour = (SpellConfirmationDialog.field_i.heldPressTextColour >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
               var8_ref_mo.rowComponent.font = IntrusiveNode.field_e;
