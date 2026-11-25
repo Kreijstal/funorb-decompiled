@@ -435,7 +435,7 @@ final class BufferedFile {
           BufferedFile.a(59, -15, 35, -65);
         }
         SphinxActionRequest.field_v = new ModalDialogHost();
-        TutorialController.h((byte) 74);
+        TutorialController.showDisplaySettingsDialog((byte) 74);
     }
 
     private final void flush(byte obfuscationGuard) throws IOException {

@@ -87,42 +87,42 @@ final class BoundedFile {
           if (19 == param0) {
             ModalDialog.a(65, false);
             SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-            ConsoleTextNode.field_p[param0].e(param3);
+            ConsoleTextNode.field_p[param0].drawStageUi(param3);
           } else {
             if (param0 == 25) {
               ModalDialog.a(65, false);
               SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-              ConsoleTextNode.field_p[param0].e(param3);
+              ConsoleTextNode.field_p[param0].drawStageUi(param3);
             } else {
               if (param0 == 1) {
                 ModalDialog.a(65, false);
                 SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                ConsoleTextNode.field_p[param0].e(param3);
+                ConsoleTextNode.field_p[param0].drawStageUi(param3);
               } else {
                 if (param0 == 24) {
                   ModalDialog.a(65, false);
                   SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                  ConsoleTextNode.field_p[param0].e(param3);
+                  ConsoleTextNode.field_p[param0].drawStageUi(param3);
                 } else {
                   if (param0 == 2) {
                     ModalDialog.a(65, false);
                     SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                    ConsoleTextNode.field_p[param0].e(param3);
+                    ConsoleTextNode.field_p[param0].drawStageUi(param3);
                   } else {
                     if (param0 == 17) {
                       ModalDialog.a(65, false);
                       SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                      ConsoleTextNode.field_p[param0].e(param3);
+                      ConsoleTextNode.field_p[param0].drawStageUi(param3);
                     } else {
                       if (param0 == 3) {
                         ModalDialog.a(65, false);
                         SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                        ConsoleTextNode.field_p[param0].e(param3);
+                        ConsoleTextNode.field_p[param0].drawStageUi(param3);
                       } else {
                         if (param0 == 4) {
                           ModalDialog.a(65, false);
                           SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                          ConsoleTextNode.field_p[param0].e(param3);
+                          ConsoleTextNode.field_p[param0].drawStageUi(param3);
                         } else {
                           if (param0 == -2) {
                             SoftwareRaster.clearPixels();
@@ -145,7 +145,7 @@ final class BoundedFile {
                                       ModalDialog.a(61, false);
                                     }
                                     SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
-                                    ConsoleTextNode.field_p[param0].e(false);
+                                    ConsoleTextNode.field_p[param0].drawStageUi(false);
                                   }
                                 }
                               }

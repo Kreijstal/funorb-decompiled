@@ -71,7 +71,7 @@ final class TutorialController {
             var14 != 0) {
             GradientUiRenderer.drawGradientText(var5, var11, var9 + 25, field_e, true);
           }
-          var12 = this.b((byte) 84, itemIndex);
+          var12 = this.getItemSeparatorX((byte) 84, itemIndex);
           if (var12 > -1) {
             BestScoreStrategy.field_m.drawPixels(var12, -2 + var9);
           }
@@ -98,7 +98,7 @@ final class TutorialController {
         }
     }
 
-    private final void g(int param0) {
+    private final void drawGuestSavePrompt(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -170,7 +170,7 @@ final class TutorialController {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void handleSpellShopInput(boolean param0) {
         int discarded$0 = 0;
         boolean stackIn_24_3 = false;
         boolean stackIn_30_3 = false;
@@ -248,14 +248,14 @@ final class TutorialController {
                         AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                         RasterViewportResizeHandler.field_d = UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int];
                         TextLineLayout.currentSpellMenu = TextHotspotRegion.spellMenuById[RasterViewportResizeHandler.field_d];
-                        this.a((byte) 96, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
+                        this.rebuildSpellDescriptionSprite((byte) 96, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                         return;
                       }
                       ScoreLeaderboardRequest.field_q = 248;
                       AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                       RasterViewportResizeHandler.field_d = UnitAnimationSelectionSupport.playerProfile.equippedSpellIds[var2_int];
                       MidiPcmStream.field_p = TextHotspotRegion.spellMenuById[RasterViewportResizeHandler.field_d];
-                      this.a((byte) 88, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
+                      this.rebuildSpellDescriptionSprite((byte) 88, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                       if (TextLineLayout.currentSpellMenu != MidiPcmStream.field_p) {
                         RadialSummonMenu.playDefaultSoundWithIntGuard(127, MoveAttackRequest.field_v[44]);
                         return;
@@ -291,7 +291,7 @@ final class TutorialController {
                     EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
                     EmailValidator.outgoingPacket.writeShort(true, RasterViewportResizeHandler.field_d + 2000);
                     UnitAnimationSelectionSupport.playerProfile.spellQuantities[RasterViewportResizeHandler.field_d] = UnitAnimationSelectionSupport.playerProfile.spellQuantities[RasterViewportResizeHandler.field_d] + 1;
-                    this.a((byte) 48, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
+                    this.rebuildSpellDescriptionSprite((byte) 48, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(58, ClientUiNode.field_v[2]);
                   }
                   return;
@@ -302,7 +302,7 @@ final class TutorialController {
                     ScoreLeaderboardRequest.field_q = 248;
                     KingBlackDragonEvent.field_A = -248;
                     TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
-                    this.a((byte) 51, -1, TextLineLayout.currentSpellMenu);
+                    this.rebuildSpellDescriptionSprite((byte) 51, -1, TextLineLayout.currentSpellMenu);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(118, MoveAttackRequest.field_v[43]);
                     AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                     RasterViewportResizeHandler.field_d = -1;
@@ -330,7 +330,7 @@ final class TutorialController {
                       TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.children[var4];
                       ScoreLeaderboardRequest.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
-                      this.a((byte) 92, -1, TextLineLayout.currentSpellMenu);
+                      this.rebuildSpellDescriptionSprite((byte) 92, -1, TextLineLayout.currentSpellMenu);
                       RadialSummonMenu.playDefaultSoundWithIntGuard(79, MoveAttackRequest.field_v[42]);
                       AlphanumericTextSupport.field_a = RasterViewportResizeHandler.field_d;
                       RasterViewportResizeHandler.field_d = -1;
@@ -365,7 +365,7 @@ final class TutorialController {
                     RasterViewportResizeHandler.field_d = TextLineLayout.currentSpellMenu.spellIds[var4Lifetime3];
                     ScoreLeaderboardRequest.field_q = 248;
                     TelepopEvent.field_D = true;
-                    this.a((byte) 90, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
+                    this.rebuildSpellDescriptionSprite((byte) 90, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(113, MoveAttackRequest.field_v[45]);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(124, ClientUiNode.field_v[12]);
                     return;
@@ -373,7 +373,7 @@ final class TutorialController {
                 }
                 if ((decompiledFrameCompleted1) &&
                   (decompiledFrameCompleted0)) {
-                  stackIn_123_0Lifetime1 = this.a(TextLineLayout.currentSpellMenu, (byte) 83);
+                  stackIn_123_0Lifetime1 = this.handleSpellBreadcrumbSelection(TextLineLayout.currentSpellMenu, (byte) 83);
                 }
                 if (var7 == 0) {
                   break;
@@ -387,7 +387,7 @@ final class TutorialController {
                 var3Lifetime1 = (TrianglePulse.field_c - 312) * MapRepository.field_c / 291;
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(param0, 34), IgnoreListLookupSupport.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
-                discarded$0 = this.a(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
+                discarded$0 = this.handleOwnedSpellGridSelection(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
               if (BoundedUrlRequest.field_j != 2 &&
                 IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 279), IgnoreListLookupSupport.a(true, 293), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94), MatchConditionEntry.a(60 - (-MapRepository.field_c - 24), (byte) 94))) {
@@ -435,7 +435,7 @@ final class TutorialController {
             BoundedUrlRequest.field_j = 1;
           }
           if (!param0) {
-            this.c(94);
+            this.updateOwnedSpellScrollbar(94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -445,7 +445,7 @@ final class TutorialController {
         }
     }
 
-    private final void l(int param0) {
+    private final void drawUnlockLevelProgression(int param0) {
         RgbSprite stackIn_23_0 = null;
         int stackIn_23_1 = 0;
         int stackIn_23_2 = 0;
@@ -550,14 +550,14 @@ final class TutorialController {
           } while (var4 == 0);
           boolean decompiledSharedTail1 = !(UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0) <= LocalCoatSupport.field_b);
           if (!decompiledSharedTail1) {
-            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, SummonRequest.field_w, new String[]{this.formatRuneCount(param0 ^ 23558, var2_int), this.formatRuneCount(-38, var3)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
           }
           if (decompiledSharedTail1) {
-            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, LocalAccountNameSupport.field_g, new String[]{this.c(-38, var2_int)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            PowerOfTwoSupport.field_n.drawParagraph(EmailCheckResult.formatTemplate(4800, LocalAccountNameSupport.field_g, new String[]{this.formatRuneCount(-38, var2_int)}), IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
-            GradientUiRenderer.drawCenteredGradientText(this.c(-38, NodeDeque.unlockLevelCosts[LocalCoatSupport.field_b]), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.formatRuneCount(-38, NodeDeque.unlockLevelCosts[LocalCoatSupport.field_b]), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0) == LocalCoatSupport.field_b &&
               UnitAnimationSelectionSupport.playerProfile.getAvailableRunes((byte) 123) >= NodeDeque.unlockLevelCosts[UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0)]) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 469), IgnoreListLookupSupport.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
@@ -598,7 +598,7 @@ final class TutorialController {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void drawScrollableDescription(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -667,7 +667,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int getPackedItemEdgeX(byte param0, int param1, int param2) {
         int stackIn_8_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_34_0 = 0;
@@ -779,7 +779,7 @@ final class TutorialController {
                 }
                 var5++;
               }
-              MoveEvent.instructionsPanel.updatePageState(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, DebugConsole.field_y);
+              MoveEvent.instructionsPanel.updatePageState(this.getBackCaption(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, DebugConsole.field_y);
               return;
             }
             return;
@@ -792,7 +792,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(byte param0) {
+    private final void drawRatingLeaderboard(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -817,7 +817,7 @@ final class TutorialController {
           }
           var3 = RadialSummonItem.field_h[var2_int];
           if (DamageEvent.isGuestSession(126)) {
-            this.b(320);
+            this.drawAccountRequiredMessage(320);
             return;
           }
           if (null == AnimationFrameSet.field_z) {
@@ -855,7 +855,7 @@ final class TutorialController {
                         var10 = 1;
                       }
                       var7 = null;
-                      this.a(var5, var9[4 * var11 + 1], var11, var4, var9[4 * var11], var9[var11 * 4 + 3], 310, var9[4 * var11 + 2], var12);
+                      this.drawRatingLeaderboardRow(var5, var9[4 * var11 + 1], var11, var4, var9[4 * var11], var9[var11 * 4 + 3], 310, var9[4 * var11 + 2], var12);
                     }
                     var4 += 25;
                     var11++;
@@ -867,7 +867,7 @@ final class TutorialController {
                   }
                   var5 = ConsoleValue.field_b;
                 }
-                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, StructureGlowRenderer.localAccountName);
+                this.drawRatingLeaderboardRow(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, StructureGlowRenderer.localAccountName);
                 break;
               }
               if (var13 != 0) {
@@ -889,7 +889,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(SpellMenuGroup param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final int handleOwnedSpellGridSelection(SpellMenuGroup param0, boolean param1, int param2, int param3, int param4, int param5) {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_42_0 = 0;
@@ -929,7 +929,7 @@ final class TutorialController {
                   }
                   param3 += 40;
                 }
-                param4 = this.a(param0.children[var7_int], false, param2, param3, param4, 53);
+                param4 = this.handleOwnedSpellGridSelection(param0.children[var7_int], false, param2, param3, param4, 53);
                 var7_int++;
                 continue;
               }
@@ -975,7 +975,7 @@ final class TutorialController {
               RasterViewportResizeHandler.field_d = param0.spellIds[var7_intLifetime1];
               TelepopEvent.field_D = true;
               TextLineLayout.currentSpellMenu = param0;
-              this.a((byte) 62, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
+              this.rebuildSpellDescriptionSprite((byte) 62, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
               RadialSummonMenu.playDefaultSoundWithIntGuard(59, MoveAttackRequest.field_v[45]);
               RadialSummonMenu.playDefaultSoundWithIntGuard(38, ClientUiNode.field_v[12]);
               stackIn_42_0 = -1;
@@ -1001,7 +1001,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void handleStageItemInput(boolean param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         boolean stackIn_421_0 = false;
@@ -1031,7 +1031,7 @@ final class TutorialController {
             RadialSummonMenu.playDefaultSoundWithIntGuard(64, ClientUiNode.field_v[2]);
           }
           if (param1 != 0) {
-            this.b(false);
+            this.drawScrollableDescription(false);
           }
           regionExit1: {
             regionExit2: {
@@ -1634,7 +1634,7 @@ final class TutorialController {
                                                                                               }
                                                                                               SetCoatConsoleCommand.field_F = -1;
                                                                                               PreferencesWriteRequest.field_q = -1;
-                                                                                              this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
+                                                                                              this.rebuildUnitDescriptionSprite((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
                                                                                               CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                               if (var9 == 0) {
@@ -1654,7 +1654,7 @@ final class TutorialController {
                                                                                           }
                                                                                           PreferencesWriteRequest.field_q = -1;
                                                                                           SetCoatConsoleCommand.field_F = -1;
-                                                                                          this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
+                                                                                          this.rebuildUnitDescriptionSprite((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
                                                                                           CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                           if (var9 == 0) {
@@ -2238,7 +2238,7 @@ final class TutorialController {
             if (!this.selectionState.hasActivationInput((byte) 88)) {
               return;
             }
-            this.a((byte) 93, RasterViewportResizeHandler.field_d, TextLineLayout.currentSpellMenu);
+            this.rebuildSpellDescriptionSprite((byte) 93, RasterViewportResizeHandler.field_d, TextLineLayout.currentSpellMenu);
             var6Lifetime2 = param0 ? 1 : 0;
             CipherPacketBuffer.a(var6Lifetime2 != 0, 18, 1, 0);
             if (var9 == 0) {
@@ -2264,7 +2264,7 @@ final class TutorialController {
         }
     }
 
-    private final void b(int param0) {
+    private final void drawAccountRequiredMessage(int param0) {
         try {
           GradientUiRenderer.drawWrappedCenteredSolidText(PasswordLoginCredentials.field_n, IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(220, (byte) 94), 400, 16777215, true);
         } catch (RuntimeException runtimeException) {
@@ -2272,7 +2272,7 @@ final class TutorialController {
         }
     }
 
-    private final String c(int param0, int param1) {
+    private final String formatRuneCount(int param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         int stackIn_6_0 = 0;
@@ -2299,7 +2299,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(byte param0, int param1, SpellMenuGroup param2) {
+    private final void rebuildSpellDescriptionSprite(byte param0, int param1, SpellMenuGroup param2) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
@@ -2416,7 +2416,7 @@ final class TutorialController {
         }
     }
 
-    private final void d(int param0) {
+    private final void handleCoatEditorInput(int param0) {
         String discarded$0 = null;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
@@ -2442,7 +2442,7 @@ final class TutorialController {
           }
           var2_int = PrivateTextRecipientSupport.a(HighscoreAccountEntry.pointerY, 24340, IgnoreListLookupSupport.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
           if (param0 != 330) {
-            discarded$0 = this.f(-6, -35);
+            discarded$0 = this.formatUnitStats(-6, -35);
           }
           if (var2_int > -2) {
             stackIn_25_0 = SharedUiLoadingSupport.field_a;
@@ -2511,7 +2511,7 @@ final class TutorialController {
         }
     }
 
-    private final void n(int param0) {
+    private final void layoutAchievementIcons(int param0) {
         boolean stackIn_4_0 = false;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
@@ -2544,7 +2544,7 @@ final class TutorialController {
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3 < ChannelBaseVolumeConsoleCommand.field_G.length)))) {
-            stackOut_3_0 = this.c((byte) 102, var3);
+            stackOut_3_0 = this.isAchievementVisible((byte) 102, var3);
             stackIn_10_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var12 == 0) {
@@ -2612,7 +2612,7 @@ final class TutorialController {
             break;
           }
           if (param0 != 21666) {
-            this.d(86);
+            this.handleCoatEditorInput(86);
           }
           var9Lifetime1 = 0;
           var10 = 0;
@@ -2621,7 +2621,7 @@ final class TutorialController {
             if (var12 != 0) {
               return;
             }
-            if (this.c((byte) -2, var11) ||
+            if (this.isAchievementVisible((byte) -2, var11) ||
               var12 != 0) {
               ResourceClientSetupSupport.field_d[var11] = var5;
               GameEvent.field_q[var11] = var6;
@@ -2647,7 +2647,7 @@ final class TutorialController {
         }
     }
 
-    private final void g(byte param0) {
+    private final void updateMatchSetupPanel(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, ReloadPageSupport.field_e, NetworkGameShell.field_D, PreferencesReadRequest.field_m, ByteStorage.field_g, SpriteDropdownControl.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, ReloadPageSupport.field_e, NetworkGameShell.field_D, PreferencesReadRequest.field_m, ByteStorage.field_g, SpriteDropdownControl.field_B, this.getBackCaption(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2665,19 +2665,19 @@ final class TutorialController {
         }
     }
 
-    final static void h(byte param0) {
+    final static void showDisplaySettingsDialog(byte param0) {
         try {
           SphinxActionRequest.field_v.closeAllDialogs(-128);
           SphinxActionRequest.field_v.showDialog(new DisplaySettingsDialog(SphinxActionRequest.field_v), 0);
           if (param0 < 44) {
-            TutorialController.h((byte) -22);
+            TutorialController.showDisplaySettingsDialog((byte) -22);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.BA(" + param0 + ')');
         }
     }
 
-    private final int a(SpellMenuGroup param0, boolean param1, int param2, int param3) {
+    private final int drawSpellBreadcrumbs(SpellMenuGroup param0, boolean param1, int param2, int param3) {
         SpellMenuGroup stackIn_10_1 = null;
         boolean stackIn_11_2 = false;
         int stackIn_14_0 = 0;
@@ -2704,7 +2704,7 @@ final class TutorialController {
             } else {
               stackIn_11_2 = param1;
             }
-            var5_int = this.a(stackIn_10_1, stackIn_11_2, -124, 256);
+            var5_int = this.drawSpellBreadcrumbs(stackIn_10_1, stackIn_11_2, -124, 256);
             MoveEvent.field_z.drawWithOpacity(IgnoreListLookupSupport.a(true, 30 + var5_int * 50 + 4), MatchConditionEntry.a(354, (byte) 94), param3);
           }
           if (param2 > -82) {
@@ -2741,7 +2741,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void drawAchievements(boolean param0, byte param1) {
         int discarded$0 = 0;
         int[] stackIn_8_0 = null;
         boolean stackIn_11_0 = false;
@@ -2785,7 +2785,7 @@ final class TutorialController {
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var6 < FixedSquareRootSupport.field_a.length)))) {
-            stackOut_10_0 = this.c((byte) 106, var6);
+            stackOut_10_0 = this.isAchievementVisible((byte) 106, var6);
             stackIn_40_0 = stackOut_10_0 ? 1 : 0;
             stackIn_11_0 = stackOut_10_0;
             if (var17 == 0) {
@@ -2918,16 +2918,16 @@ final class TutorialController {
         }
     }
 
-    private final void d(byte param0, int param1) {
+    private final void drawUnitGroupPurchaseControl(byte param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.b(true);
+          this.drawScrollableDescription(true);
           if (param0 != -35) {
-            this.a(true);
+            this.equipSelectedSpellAtPointer(true);
           }
           if (0 == UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[param1]) {
-            GradientUiRenderer.drawCenteredGradientText(this.c(-38, 50), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.formatRuneCount(-38, 50), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (UnitAnimationSelectionSupport.playerProfile.getAvailableRunes((byte) 120) >= 50) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 469), IgnoreListLookupSupport.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
@@ -2949,7 +2949,7 @@ final class TutorialController {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -2968,7 +2968,7 @@ final class TutorialController {
         }
     }
 
-    private final int b(int param0, int param1, int param2) {
+    private final int findStageItemAt(int param0, int param1, int param2) {
         int discarded$0 = 0;
         boolean stackIn_6_0 = false;
         int stackIn_31_0 = 0;
@@ -3024,7 +3024,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(String param0, int param1, String param2, String param3, byte param4, String param5) {
+    private final void rebuildUnitDescriptionSprite(String param0, int param1, String param2, String param3, byte param4, String param5) {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
@@ -3129,7 +3129,7 @@ final class TutorialController {
         }
     }
 
-    private final String f(boolean param0) {
+    private final String getBackCaption(boolean param0) {
         Object stackIn_54_0 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
@@ -3174,7 +3174,7 @@ final class TutorialController {
         }
     }
 
-    private final int d(int param0, int param1, int param2) {
+    private final int findAchievementAt(int param0, int param1, int param2) {
         int discarded$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -3189,12 +3189,12 @@ final class TutorialController {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -1) {
-            discarded$1 = this.d(-119, 51, -109);
+            discarded$1 = this.findAchievementAt(-119, 51, -109);
           }
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(FixedSquareRootSupport.field_a.length > var6)))) {
-            stackOut_6_0 = this.c((byte) -103, var6);
+            stackOut_6_0 = this.isAchievementVisible((byte) -103, var6);
             stackIn_27_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var7 == 0) {
@@ -3225,7 +3225,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(int param0) {
+    private final void handleRatingLeaderboardNavigation(int param0) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -3296,7 +3296,7 @@ final class TutorialController {
         try {
           this.selectionState.selectedIndex = -1;
           if (!obfuscationGuard) {
-            this.k(-81);
+            this.drawUnitShop(-81);
           }
           SpriteSheetDecoder.field_n = null;
           if (this.tutorialStage == 26 ||
@@ -3409,7 +3409,7 @@ final class TutorialController {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawCampaignScoreLeaderboard(byte param0) {
         String stackIn_39_0 = null;
         Object stackIn_60_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -3441,7 +3441,7 @@ final class TutorialController {
           }
           var3 = RadialSummonItem.field_h[var2_int];
           if (DamageEvent.isGuestSession(123)) {
-            this.b(320);
+            this.drawAccountRequiredMessage(320);
             return;
           }
           var4 = -1;
@@ -3518,7 +3518,7 @@ final class TutorialController {
                     var10 = 1;
                     var6Lifetime1 = ConsoleValue.field_b;
                   }
-                  this.a((byte) 63, var11, var9[var11] / IntrusiveNode.a(-49, var4), var5Lifetime1, var6Lifetime1, var12);
+                  this.drawCampaignScoreRow((byte) 63, var11, var9[var11] / IntrusiveNode.a(-49, var4), var5Lifetime1, var6Lifetime1, var12);
                   var7 = null;
                 }
                 var5Lifetime1 += 25;
@@ -3528,7 +3528,7 @@ final class TutorialController {
                 if (var10 == 0 &&
                   null != UnitAnimationSelectionSupport.playerProfile) {
                   var6Lifetime1Lifetime1 = ConsoleValue.field_b;
-                  this.a((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, StructureGlowRenderer.localAccountName);
+                  this.drawCampaignScoreRow((byte) 63, -1, UnitAnimationSelectionSupport.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, StructureGlowRenderer.localAccountName);
                 }
                 if (var13 != 0) {
                   var7 = SocketResourceClient.field_s;
@@ -3555,7 +3555,7 @@ final class TutorialController {
         }
     }
 
-    private final void m(int param0) {
+    private final void drawSpellShop(int param0) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         int discarded$2 = 0;
@@ -3637,7 +3637,7 @@ final class TutorialController {
           }
           GradientUiRenderer.drawCenteredSolidText(CampaignRewardPreview.field_b, IgnoreListLookupSupport.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
           if (param0 != 100) {
-            discarded$0 = this.d(78, 100, 70);
+            discarded$0 = this.findAchievementAt(78, 100, 70);
           }
           if (ClientContextMenu.field_k == 1) {
             SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
@@ -3687,11 +3687,11 @@ final class TutorialController {
             GradientUiRenderer.drawWrappedCenteredTextBackdrop(QuickChatCategoryMenuSupport.field_e, IgnoreListLookupSupport.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
             GradientUiRenderer.drawWrappedCenteredGradientText(QuickChatCategoryMenuSupport.field_e, IgnoreListLookupSupport.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
             if (var2_int >= 0) {
-              discarded$1 = this.a(TextLineLayout.currentSpellMenu, true, -125, -var2_int + 256);
+              discarded$1 = this.drawSpellBreadcrumbs(TextLineLayout.currentSpellMenu, true, -125, -var2_int + 256);
             }
             if (var2_int < 0 ||
               var8 != 0) {
-              discarded$2 = this.a(ToggleWidget.field_O, true, -127, -var2_int);
+              discarded$2 = this.drawSpellBreadcrumbs(ToggleWidget.field_O, true, -127, -var2_int);
             }
             if (MonotonicClockSupport.field_f == null) {
               GradientUiRenderer.drawWrappedCenteredTextBackdrop(TextLineLayout.currentSpellMenu.label, IgnoreListLookupSupport.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
@@ -3718,8 +3718,8 @@ final class TutorialController {
               SoftwareRaster.fillRectangle(IgnoreListLookupSupport.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 1250067);
               SocialListPanel.field_Jb.drawWithBrightness(IgnoreListLookupSupport.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
             }
-            discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
-            this.c(0);
+            discarded$3 = this.drawOwnedSpellGrid(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
+            this.updateOwnedSpellScrollbar(0);
             SoftwareRaster.resetClip();
             GradientUiRenderer.drawWrappedCenteredTextBackdrop(MapRepository.field_j, IgnoreListLookupSupport.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
             GradientUiRenderer.drawWrappedCenteredGradientText(MapRepository.field_j, IgnoreListLookupSupport.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
@@ -3792,7 +3792,7 @@ final class TutorialController {
           }
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          this.g(RasterViewportResizeHandler.field_d, -118);
+          this.drawSpellPurchaseAndEquipmentControls(RasterViewportResizeHandler.field_d, -118);
           var5Lifetime1 = 40 + (NineSliceFrame.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
           SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, var5Lifetime1, IgnoreListLookupSupport.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           GradientUiRenderer.drawSolidText(AnimationSkeleton.field_m, IgnoreListLookupSupport.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
@@ -3825,7 +3825,7 @@ final class TutorialController {
         try {
           var3 = DisplacedUnitMarker.field_t[itemId];
           if (itemId == 8) {
-            var3 = this.f(true);
+            var3 = this.getBackCaption(true);
           }
           if (itemId == 28) {
             var3 = DisplacedUnitMarker.field_t[28] + SpriteDropdownControl.field_B;
@@ -3868,7 +3868,7 @@ final class TutorialController {
             var3 = DisplacedUnitMarker.field_t[29] + LoginKind.field_e[ReloadPageSupport.field_e];
           }
           if (obfuscationGuard != 29) {
-            this.g((byte) 101);
+            this.updateMatchSetupPanel((byte) 101);
           }
           if (itemId == 9 &&
             FullscreenFocusCanvas.gameplayController != null) {
@@ -3903,7 +3903,7 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            TutorialController.h(-12);
+            TutorialController.releaseStatics(-12);
           }
           stackIn_4_0 = "(" + x + ", " + y + ")";
           return stackIn_4_0;
@@ -3914,7 +3914,7 @@ final class TutorialController {
         }
     }
 
-    private final void i(int param0) {
+    private final void handleUnitShopInput(int param0) {
         boolean stackIn_18_0 = false;
         boolean stackIn_42_0 = false;
         int stackIn_72_0 = 0;
@@ -3960,7 +3960,7 @@ final class TutorialController {
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 SpriteSheetDecoder.field_n = null;
                 GlobalSpell.field_h = 256;
-                this.a((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + PreferencesWriteRequest.field_q]);
+                this.rebuildUnitDescriptionSprite((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + PreferencesWriteRequest.field_q]);
                 return;
               }
               var2_int++;
@@ -4008,9 +4008,9 @@ final class TutorialController {
                 var6 = "";
                 var6Lifetime1 = DisplaySettingsDialog.field_cb[var5];
                 var7 = AlphaWidgetContainer.field_M[var5];
-                this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], SentenceCaseSupport.toSentenceCase((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
+                this.rebuildUnitDescriptionSprite(var7, WhirlpoolHasher.unitDefinitions[var5][0], SentenceCaseSupport.toSentenceCase((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.formatUnitStats(var5, 8), (byte) 116, var6Lifetime1);
               } else {
-                this.a((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[PreferencesWriteRequest.field_q + 1]);
+                this.rebuildUnitDescriptionSprite((String) null, -1, SentenceCaseSupport.toSentenceCase((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[PreferencesWriteRequest.field_q + 1]);
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(100, ClientUiNode.field_v[12]);
               return;
@@ -4080,7 +4080,7 @@ final class TutorialController {
         }
     }
 
-    private final void e(byte param0) {
+    private final void selectUnlockLevelAtPointer(byte param0) {
         int discarded$1 = 0;
         RuntimeException runtimeException = null;
         int var2_int = 0;
@@ -4128,7 +4128,7 @@ final class TutorialController {
           if (this.selectionState.selectedIndex != -1) {
             fallbackIndex = this.selectionState.selectedIndex;
           }
-          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31), 0);
+          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.findStageItemAt(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31), 0);
           QuickChatMenuDisplaySupport.field_a = -1;
           LobbyControlResources.field_c = -1;
           ManaStarParticle.field_p = fallbackIndex;
@@ -4145,7 +4145,7 @@ final class TutorialController {
             discarded$1 = this.getItemText(-53, 92);
           }
           if (this.tutorialStage == 8) {
-            this.n(21666);
+            this.layoutAchievementIcons(21666);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4155,7 +4155,7 @@ final class TutorialController {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawUnitShop(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException runtimeException = null;
         int var2_int = 0;
@@ -4333,12 +4333,12 @@ final class TutorialController {
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           if (SetCoatConsoleCommand.field_F <= -1) {
-            this.d((byte) -35, 1 + PreferencesWriteRequest.field_q);
+            this.drawUnitGroupPurchaseControl((byte) -35, 1 + PreferencesWriteRequest.field_q);
             if (var10 == 0) {
               return;
             }
           }
-          this.a(PreferencesWriteRequest.field_q + 1, SetCoatConsoleCommand.field_F, -104);
+          this.drawUnitPurchaseControl(PreferencesWriteRequest.field_q + 1, SetCoatConsoleCommand.field_F, -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4347,7 +4347,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
+    private final void drawRatingLeaderboardRow(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
         String stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -4447,7 +4447,7 @@ final class TutorialController {
             this.selectionState.selectedIndex = 1;
           }
           if (this.tutorialStage == 8) {
-            this.n(21666);
+            this.layoutAchievementIcons(21666);
           }
           var2_int = MoveEvent.tutorialLayout.getRightX((byte) -55, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29);
           var3 = var2_int;
@@ -4484,7 +4484,7 @@ final class TutorialController {
         }
     }
 
-    private final void c(int param0) {
+    private final void updateOwnedSpellScrollbar(int param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4522,7 +4522,7 @@ final class TutorialController {
             }
           }
           if (param0 != 0) {
-            this.d((byte) -26, 52);
+            this.drawUnitGroupPurchaseControl((byte) -26, 52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4556,7 +4556,7 @@ final class TutorialController {
         }
     }
 
-    final void d(byte param0) {
+    final void advanceStageUi(byte param0) {
         MembershipExpansionScreen stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
         boolean stackIn_86_0 = false;
@@ -4697,37 +4697,37 @@ final class TutorialController {
                     continue;
                   }
                 }
-                this.j(108);
+                this.handleStageKeyInput(108);
                 if (this.selectionState.selectedIndex == -1) {
                   continue;
                 }
-                this.a(false, 0, this.selectionState.selectedIndex);
+                this.handleStageItemInput(false, 0, this.selectionState.selectedIndex);
                 if (var4 == 0) {
                   continue;
                 }
               } else {
-                ManaStarParticle.field_p = this.b(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31);
-                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ManaStarParticle.field_p);
+                ManaStarParticle.field_p = this.findStageItemAt(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31);
+                this.selectionState.updatePointerSelection(0, this.findStageItemAt(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ManaStarParticle.field_p);
               }
               if (~GradientFrame.field_m != ~ManaStarParticle.field_p) {
                 RadialSummonMenu.playDefaultSoundWithIntGuard(90, ClientUiNode.field_v[1]);
                 GradientFrame.field_m = ManaStarParticle.field_p;
               }
               if (this.selectionState.selectedIndex != -1) {
-                this.a(true, 0, this.selectionState.selectedIndex);
+                this.handleStageItemInput(true, 0, this.selectionState.selectedIndex);
               }
               if (DeployEvent.pointerPressButton == 1 &&
                 this.tutorialStage == 12) {
-                this.i(589);
+                this.handleUnitShopInput(589);
               }
               if ((DeployEvent.pointerPressButton == 1 ||
                 DeployEvent.pointerPressButton == 2) &&
                 this.tutorialStage == 18) {
-                this.c(true);
+                this.handleSpellShopInput(true);
               }
               if (DeployEvent.pointerPressButton == 1 &&
                 this.tutorialStage == 20) {
-                this.e((byte) -92);
+                this.selectUnlockLevelAtPointer((byte) -92);
               }
               if (DeployEvent.pointerPressButton != 1) {
                 break;
@@ -4735,7 +4735,7 @@ final class TutorialController {
               if (this.tutorialStage != 13) {
                 break;
               }
-              this.d(330);
+              this.handleCoatEditorInput(330);
               break;
             }
           }
@@ -4839,14 +4839,14 @@ final class TutorialController {
                     decompiledFrameRemainder3 = !(!TelepopEvent.field_D);
                     if ((decompiledFrameRemainder3) &&
                       (decompiledFrameRemainder3 = (ProgressMessageDialog.pointerButton != 1))) {
-                      this.a(false);
+                      this.equipSelectedSpellAtPointer(false);
                       decompiledFrameRemainder3 = (var4 != 0);
                     }
                   }
                   if (decompiledFrameRemainder3) {
                     if (12 != this.tutorialStage) {
                       if (5 == this.tutorialStage) {
-                        this.g((byte) 123);
+                        this.updateMatchSetupPanel((byte) 123);
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                       if ((decompiledFrameRemainder3) &&
@@ -4887,7 +4887,7 @@ final class TutorialController {
                 if (decompiledFrameRemainder3) {
                   MoveEvent.campaignMenu.handleInput((byte) 124);
                   if (var4 != 0) {
-                    this.c((byte) -120);
+                    this.handleAchievementInput((byte) -120);
                     if (BufferedSocket.field_i != null) {
                       BufferedSocket.field_i.advance(false);
                     }
@@ -4895,7 +4895,7 @@ final class TutorialController {
                 }
               }
             } else {
-              this.c((byte) -120);
+              this.handleAchievementInput((byte) -120);
               if ((var4 != 0) &&
                 (BufferedSocket.field_i != null)) {
                 BufferedSocket.field_i.advance(false);
@@ -4922,14 +4922,14 @@ final class TutorialController {
         }
     }
 
-    private final boolean c(byte param0, int param1) {
+    private final boolean isAchievementVisible(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 83 % ((44 - param0) / 33);
-          stackIn_7_0 = (this.b(-82, param1)) || (ChannelBaseVolumeConsoleCommand.field_G[param1]);
+          stackIn_7_0 = (this.isAchievementEarnedForStage(-82, param1)) || (ChannelBaseVolumeConsoleCommand.field_G[param1]);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4938,7 +4938,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(int param0, SpellMenuGroup param1, boolean param2, int param3, int param4, byte param5) {
+    private final int drawOwnedSpellGrid(int param0, SpellMenuGroup param1, boolean param2, int param3, int param4, byte param5) {
         boolean stackIn_7_0 = false;
         int stackIn_23_0 = 0;
         int stackIn_40_0;
@@ -4989,7 +4989,7 @@ final class TutorialController {
                   SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(DraggableWidgetContainer.field_Q, var9, IgnoreListLookupSupport.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
                 }
               }
-              param3 = this.a(param0, param1.children[var7_int], false, param3, param4, (byte) 126);
+              param3 = this.drawOwnedSpellGrid(param0, param1.children[var7_int], false, param3, param4, (byte) 126);
               var7_int++;
             }
           }
@@ -5058,7 +5058,7 @@ final class TutorialController {
         }
     }
 
-    private final void j(int param0) {
+    private final void handleStageKeyInput(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -5089,7 +5089,7 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               if (ChatInputDispatchSupport.field_a == 6 &&
                 !DamageEvent.isGuestSession(79)) {
-                this.a(98);
+                this.handleRatingLeaderboardNavigation(98);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -5102,25 +5102,25 @@ final class TutorialController {
                     if (var3 != 0) {
                       this.selectionState.pollNavigationKeysWithFallback(0, (byte) -7);
                       this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
-                      this.f((byte) 100);
+                      this.handleInstructionsNavigation((byte) 100);
                     }
                   } else {
                     this.selectionState.pollNavigationKeysWithFallback(0, (byte) -7);
                     if (var3 != 0) {
                       this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
-                      this.f((byte) 100);
+                      this.handleInstructionsNavigation((byte) 100);
                     }
                   }
                 } else {
                   this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
                   if (var3 != 0) {
-                    this.f((byte) 100);
+                    this.handleInstructionsNavigation((byte) 100);
                   }
                 }
               }
             }
           } else {
-            this.f((byte) 100);
+            this.handleInstructionsNavigation((byte) 100);
           }
           if (0 > this.selectionState.selectedIndex) {
             return;
@@ -5146,7 +5146,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawUnitPurchaseControl(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -5156,7 +5156,7 @@ final class TutorialController {
         try {
           var4_int = AnimationFrameSet.unitUnlockGroups[param0][param1];
           var5 = 69 % ((14 - param2) / 40);
-          this.b(true);
+          this.drawScrollableDescription(true);
           if (WhirlpoolHasher.unitDefinitions[var4_int][11] <= 0) {
             if ((UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
               GradientUiRenderer.drawCenteredGradientText(CampaignMenuButton.field_b, IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
@@ -5170,7 +5170,7 @@ final class TutorialController {
             }
           }
           if (0 == (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[param0] & 1 << param1)) {
-            GradientUiRenderer.drawCenteredGradientText(this.c(-38, WhirlpoolHasher.unitDefinitions[var4_int][11]), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.formatRuneCount(-38, WhirlpoolHasher.unitDefinitions[var4_int][11]), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[param0] == 0) {
               return;
             }
@@ -5200,7 +5200,7 @@ final class TutorialController {
         }
     }
 
-    private final void g(int param0, int param1) {
+    private final void drawSpellPurchaseAndEquipmentControls(int param0, int param1) {
         int stackIn_47_0 = 0;
         int stackIn_47_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -5213,14 +5213,14 @@ final class TutorialController {
         int var4Lifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.b(true);
+          this.drawScrollableDescription(true);
           if (RasterViewportResizeHandler.field_d < 0) {
             return;
           }
           var3_int = 44 % ((-32 - param1) / 61);
           if (ClientContextMenu.field_k == 0) {
             var4 = SpellDefinitionTable.spellDefinitions[param0][0];
-            GradientUiRenderer.drawCenteredGradientText(this.c(-38, var4), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.formatRuneCount(-38, var4), IgnoreListLookupSupport.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (UnitAnimationSelectionSupport.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
               param0 < UnitAnimationSelectionSupport.playerProfile.spellQuantities.length &&
               UnitAnimationSelectionSupport.playerProfile.spellQuantities[param0] < 250) {
@@ -5342,7 +5342,7 @@ final class TutorialController {
               stackIn_57_0 = 1;
               return stackIn_57_0;
             }
-            stackIn_35_0 = this.a((byte) -50, 0, itemIndex);
+            stackIn_35_0 = this.getPackedItemEdgeX((byte) -50, 0, itemIndex);
             return stackIn_35_0;
           }
           stackIn_18_0 = true;
@@ -5360,15 +5360,15 @@ final class TutorialController {
         }
     }
 
-    private final void c(byte param0) {
+    private final void handleAchievementInput(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          LobbyControlResources.field_c = this.d(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY);
+          LobbyControlResources.field_c = this.findAchievementAt(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY);
           if (1 == DeployEvent.pointerPressButton) {
             RadialSummonMenu.playDefaultSoundWithIntGuard(94, ClientUiNode.field_v[2]);
-            var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
+            var2_int = this.findAchievementAt(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
             if (QuickChatMenuDisplaySupport.field_a == var2_int) {
               QuickChatMenuDisplaySupport.field_a = -1;
               if ((ArmiesOfGielinor.obfuscationControl) &&
@@ -5382,7 +5382,7 @@ final class TutorialController {
             }
           }
           if (param0 > -83) {
-            this.c(false);
+            this.handleSpellShopInput(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5392,7 +5392,7 @@ final class TutorialController {
         }
     }
 
-    private final boolean b(int param0, int param1) {
+    private final boolean isAchievementEarnedForStage(int param0, int param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int[] stackIn_7_0 = null;
@@ -5417,7 +5417,7 @@ final class TutorialController {
         }
     }
 
-    private final int b(byte param0, int param1) {
+    private final int getItemSeparatorX(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_14_0 = 0;
@@ -5441,7 +5441,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3, int[] param4, String param5) {
+    private final void drawCampaignScoreRow(byte param0, int param1, int param2, int param3, int[] param4, String param5) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -5491,7 +5491,7 @@ final class TutorialController {
         }
     }
 
-    final void e(boolean param0) {
+    final void drawStageUi(boolean param0) {
         String stackIn_68_0 = null;
         boolean stackIn_69_1 = false;
         String stackIn_143_0 = null;
@@ -5553,7 +5553,7 @@ final class TutorialController {
                   if (18 == this.tutorialStage) {
                     GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                     GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
-                    this.m(100);
+                    this.drawSpellShop(100);
                     GradientUiRenderer.drawCenteredTextBackdrop(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                     GradientUiRenderer.drawCenteredGradientText(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                     decompiledFrameRemainder0 = (var4 != 0);
@@ -5562,7 +5562,7 @@ final class TutorialController {
                     if (this.tutorialStage == 12) {
                       GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                       GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
-                      this.k(-128);
+                      this.drawUnitShop(-128);
                       stackIn_68_0 = LoginCredentialStagingSupport.field_b[this.tutorialStage];
                       stackIn_69_1 = !(param0);
                       GradientUiRenderer.drawCenteredTextBackdrop(stackIn_68_0, IgnoreListLookupSupport.a(stackIn_69_1, 320), MatchConditionEntry.a(30, (byte) 94));
@@ -5574,7 +5574,7 @@ final class TutorialController {
                         if (this.tutorialStage == 13) {
                           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                           GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
-                          this.i((byte) 41);
+                          this.drawCoatEditor((byte) 41);
                           GradientUiRenderer.drawCenteredTextBackdrop(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                           GradientUiRenderer.drawCenteredGradientText(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                           decompiledFrameRemainder0 = (var4 != 0);
@@ -5667,7 +5667,7 @@ final class TutorialController {
                       if (decompiledFrameRemainder0) {
                         GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                         GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
-                        this.l(-23588);
+                        this.drawUnlockLevelProgression(-23588);
                         GradientUiRenderer.drawCenteredTextBackdrop(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                         GradientUiRenderer.drawCenteredGradientText(LoginCredentialStagingSupport.field_b[this.tutorialStage], IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                         decompiledFrameRemainder0 = (var4 != 0);
@@ -5748,13 +5748,13 @@ final class TutorialController {
             stackIn_215_0 = this.tutorialStage;
           }
           if (stackIn_215_0 == 6) {
-            this.a((byte) -121);
+            this.drawRatingLeaderboard((byte) -121);
             if (var4 == 0) {
               return;
             }
           }
           if (8 == this.tutorialStage) {
-            this.a(false, (byte) -4);
+            this.drawAchievements(false, (byte) -4);
             if (var4 == 0) {
               return;
             }
@@ -5764,7 +5764,7 @@ final class TutorialController {
               if (this.tutorialStage == 26 ||
                 this.tutorialStage == 27 ||
                 this.tutorialStage == 28) {
-                this.b((byte) 117);
+                this.drawCampaignScoreLeaderboard((byte) 117);
                 if (var4 == 0) {
                   return;
                 }
@@ -5777,12 +5777,12 @@ final class TutorialController {
                 return;
               }
             }
-            this.g(0);
+            this.drawGuestSavePrompt(0);
             if (var4 == 0) {
               return;
             }
           }
-          this.a(true, (byte) -4);
+          this.drawAchievements(true, (byte) -4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5791,7 +5791,7 @@ final class TutorialController {
         }
     }
 
-    private final void f(byte param0) {
+    private final void handleInstructionsNavigation(byte param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -5840,7 +5840,7 @@ final class TutorialController {
         }
     }
 
-    private final String f(int param0, int param1) {
+    private final String formatUnitStats(int param0, int param1) {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -5884,7 +5884,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void equipSelectedSpellAtPointer(boolean param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -5913,7 +5913,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(SpellMenuGroup param0, byte param1) {
+    private final int handleSpellBreadcrumbSelection(SpellMenuGroup param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5926,11 +5926,11 @@ final class TutorialController {
           var3_int = 0;
           var4 = -24 / ((-4 - param1) / 55);
           if (param0.parent != null) {
-            var3_int = this.a(param0.parent, (byte) -88);
+            var3_int = this.handleSpellBreadcrumbSelection(param0.parent, (byte) -88);
           }
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), IgnoreListLookupSupport.a(true, 30 + var3_int * 50 + 30), 10, false)) {
             MidiPcmStream.field_p = param0;
-            this.a((byte) 116, -1, param0);
+            this.rebuildSpellDescriptionSprite((byte) 116, -1, param0);
             if (-1 != RasterViewportResizeHandler.field_d) {
               ScoreLeaderboardRequest.field_q = 248;
             }
@@ -5997,7 +5997,7 @@ final class TutorialController {
               stackIn_61_0 = MoveEvent.tutorialLayout.getRightX((byte) -71, this.tutorialStage);
               return stackIn_61_0;
             }
-            stackIn_37_0 = this.a((byte) -88, 1, itemIndex);
+            stackIn_37_0 = this.getPackedItemEdgeX((byte) -88, 1, itemIndex);
             return stackIn_37_0;
           }
           if (itemIndex >= 2) {
@@ -6014,7 +6014,7 @@ final class TutorialController {
         }
     }
 
-    private final void i(byte param0) {
+    private final void drawCoatEditor(byte param0) {
         String discarded$0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;

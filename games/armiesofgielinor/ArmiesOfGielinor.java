@@ -771,7 +771,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     }
                     if ((decompiledFrameRemainder2) &&
                       (MusicCrossfadeStream.a(ChatInputDispatchSupport.field_a, true))) {
-                      ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].d((byte) -109);
+                      ConsoleTextNode.field_p[ChatInputDispatchSupport.field_a].advanceStageUi((byte) -109);
                       if (var8 != 0) {
                         ResourceArchive.c(-20193);
                         var3_int = 1;
@@ -1181,7 +1181,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           PlayerProfile.releaseStatics(0);
           CampaignQuicksave.releaseStatics(obfuscationGuard + 157);
           SoundCache.a((byte) -58);
-          TutorialController.h(obfuscationGuard + 71);
+          TutorialController.releaseStatics(obfuscationGuard + 71);
           ScreenWipeTransition.releaseStatics((byte) -109);
           GameplayController.d(obfuscationGuard ^ 49);
           AccountRsaBufferSupport.releaseStatics(256);
