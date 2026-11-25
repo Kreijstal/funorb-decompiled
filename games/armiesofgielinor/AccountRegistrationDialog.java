@@ -174,7 +174,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
     }
 
     AccountRegistrationDialog(ModalDialogHost host, AccountRegistrationForm registrationForm) {
-        super(host, CipherPacketBuffer.field_t, wm.field_d, false, false);
+        super(host, CipherPacketBuffer.field_t, AccountRequestState.field_d, false, false);
         try {
           this.registrationForm = registrationForm;
         } catch (RuntimeException runtimeException) {

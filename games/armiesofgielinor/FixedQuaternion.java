@@ -140,7 +140,7 @@ final class FixedQuaternion {
           if (null != FullscreenMembershipDialog.activeContextMenu) {
             if (!FullscreenMembershipDialog.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {
               AccountRegistrationForm.a(param6 ^ -81, param4, param0);
-              wm.a(0, param2, param0);
+              AccountRequestState.processAbuseReportDialog(0, param2, param0);
               param0 = false;
               if (param6 != -83) {
                 var8 = (String) null;
@@ -153,7 +153,7 @@ final class FixedQuaternion {
             FixInvisibleUnitsConsoleCommand.g(76);
           }
           AccountRegistrationForm.a(param6 ^ -81, param4, param0);
-          wm.a(0, param2, param0);
+          AccountRequestState.processAbuseReportDialog(0, param2, param0);
           param0 = false;
         }
         if (param6 == -83) {

@@ -139,7 +139,7 @@ final class BattlefieldTheme {
 
     final PcmSample chooseAmbientSound(int obfuscationGuard) {
         int var2 = 27 % ((50 - obfuscationGuard) / 33);
-        return this.ambientSounds[AttackEvent.nextBoundedInt(false, this.ambientSounds.length, li.field_n)];
+        return this.ambientSounds[AttackEvent.nextBoundedInt(false, this.ambientSounds.length, PreferencesWriteRequest.field_n)];
     }
 
     public static void releaseStatics(byte obfuscationGuard) {

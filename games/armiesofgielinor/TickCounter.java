@@ -1925,7 +1925,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "MANA_SCORE");
                 if (null != var2) {
-                  vg.field_t = uu.a(var2, (byte) 10);
+                  PreferencesReadRequest.field_t = uu.a(var2, (byte) 10);
                 }
                 var2 = DropdownSelectorPainter.a(false, "NO_MANA");
                 if (null != var2) {
@@ -3363,7 +3363,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_NONMEMBERS");
                 if (null != var2) {
-                  vg.field_l = uu.a(var2, (byte) 117);
+                  PreferencesReadRequest.field_l = uu.a(var2, (byte) 117);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_YES");
                 if (null != var2) {
@@ -3585,7 +3585,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "OBJSHOW");
                 if (null != var2) {
-                  vg.field_k = uu.a(var2, (byte) 49);
+                  PreferencesReadRequest.field_k = uu.a(var2, (byte) 49);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TUTHIDE");
                 if (null != var2) {
@@ -5161,7 +5161,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_ALREADYMOVED");
                 if (null != var2) {
-                  vg.field_o = uu.a(var2, (byte) 123);
+                  PreferencesReadRequest.field_o = uu.a(var2, (byte) 123);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_ALREADYUSED");
                 if (null != var2) {

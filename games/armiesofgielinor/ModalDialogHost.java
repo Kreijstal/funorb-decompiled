@@ -94,7 +94,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
           PowerOfTwoSupport.outgoingChatChannel = 2;
           RegistrationAgreementPane.chatRecipientName = recipientName;
           var5 = (CharSequence) ((Object) recipientName);
-          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
+          AccountRequestState.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
           ClientStateChecksumSupport.textChatActive = true;
           if (obfuscationGuard != -23503) {
             ModalDialogHost.openPrivateTextChat(120, (String) null, 75L);

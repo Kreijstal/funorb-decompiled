@@ -260,7 +260,7 @@ final class StripedProgressWidget extends Widget {
         if (BitLengthSupport.field_a) {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 1);
         }
-        MusicCrossfadeStream.a(0, 6, var2);
+        MusicCrossfadeStream.queuePreferencesWrite(0, 6, var2);
         DisplayModeOptionPainter.field_v = false;
     }
 

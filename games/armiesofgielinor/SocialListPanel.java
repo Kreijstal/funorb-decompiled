@@ -3,7 +3,7 @@
  */
 final class SocialListPanel extends ClientUiComponent {
     ClientUiComponent removeButton;
-    static jl field_Mb;
+    static FullscreenStatusToken field_Mb;
     ClientUiComponent addButton;
     ClientUiComponent listContent;
     static RgbSprite field_Jb;
@@ -97,6 +97,6 @@ final class SocialListPanel extends ClientUiComponent {
 
     static {
         field_Pb = "Passwords must be between 5 and 20 characters long";
-        field_Mb = new jl();
+        field_Mb = new FullscreenStatusToken();
     }
 }

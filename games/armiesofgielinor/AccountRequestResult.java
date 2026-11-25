@@ -169,7 +169,7 @@ final class AccountRequestResult {
           }
           if (PowerOfTwoSupport.outgoingChatChannel == 2 &&
             !ToggleWidget.isChatRecipientAvailable(6)) {
-            if (!FriendLookupSupport.isFriend(62, wm.chatRecipientNameKey)) {
+            if (!FriendLookupSupport.isFriend(62, AccountRequestState.chatRecipientNameKey)) {
               var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{RegistrationAgreementPane.chatRecipientName});
               if (var10 != 0) {
                 var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
@@ -206,7 +206,7 @@ final class AccountRequestResult {
             } else {
               if (0 == var6) {
                 if (null == ToggleWidget.currentRoom &&
-                  bq.field_c) {
+                  LogoMaterial.field_c) {
                   var4 = "[" + ClientConnectionState.field_c + "] ";
                 }
                 if (null != ToggleWidget.currentRoom) {

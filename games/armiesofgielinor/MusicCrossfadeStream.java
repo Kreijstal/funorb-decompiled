@@ -491,24 +491,24 @@ final class MusicCrossfadeStream extends PcmStream {
         QuickChatPhraseRepository.popRasterState(-18862);
     }
 
-    final static li a(int param0, int param1, byte[] param2) {
-        li var3 = null;
+    final static PreferencesWriteRequest queuePreferencesWrite(int param0, int param1, byte[] param2) {
+        PreferencesWriteRequest var3 = null;
         RuntimeException var3_ref = null;
-        li stackIn_2_0 = null;
-        li stackIn_4_0 = null;
+        PreferencesWriteRequest stackIn_2_0 = null;
+        PreferencesWriteRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new li(param2);
+          var3 = new PreferencesWriteRequest(param2);
           s.field_e.addLast((byte) -119, (IntrusiveNode) (var3));
-          DeathEvent.a(var3, param1, 25522);
+          DeathEvent.sendPreferencesWrite(var3, param1, 25522);
           if (param0 == 0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (li) null;
+          stackIn_2_0 = (PreferencesWriteRequest) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

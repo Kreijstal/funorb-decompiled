@@ -211,7 +211,7 @@ final class CommunityTabGroup {
         try {
           var3 = new String[]{firstTabLabel, IterableDualNodeDeque.field_a, FriendRequestSupport.field_e};
           var4 = new ClientUiComponent[]{firstPanel, AiWeightProfile.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
-          this.tabs = new TabbedPanel(0L, LoginKind.field_d, var3, wm.field_c, var4, 0);
+          this.tabs = new TabbedPanel(0L, LoginKind.field_d, var3, AccountRequestState.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ea.<init>(" + (firstTabLabel != null ? "{...}" : "null") + ',' + (firstPanel != null ? "{...}" : "null") + ')');
         }

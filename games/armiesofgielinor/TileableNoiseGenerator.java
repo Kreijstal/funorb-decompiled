@@ -539,10 +539,10 @@ abstract class TileableNoiseGenerator {
                     if (featureRequirementFailed != 0) {
                       restrictionMessageReference = ParasiteEvent.field_F;
                       if (featureRequirementValue > 0 &&
-                        jl.field_c != null &&
-                        featureRequirementValue <= jl.field_c.length &&
-                        null != jl.field_c[featureRequirementValue - 1]) {
-                        restrictionMessageReference = jl.field_c[featureRequirementValue - 1][0];
+                        FullscreenStatusToken.field_c != null &&
+                        featureRequirementValue <= FullscreenStatusToken.field_c.length &&
+                        null != FullscreenStatusToken.field_c[featureRequirementValue - 1]) {
+                        restrictionMessageReference = FullscreenStatusToken.field_c[featureRequirementValue - 1][0];
                       }
                       if (restrictionMessage != null) {
                         restrictionMessage = (String) (restrictionMessage) + "<br>" + (String) (restrictionMessageReference);

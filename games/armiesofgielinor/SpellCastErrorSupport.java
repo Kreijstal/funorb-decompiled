@@ -307,7 +307,7 @@ final class SpellCastErrorSupport {
                   return stackIn_138_0;
                 }
                 if (var7.movementSpent) {
-                  stackIn_141_0 = vg.field_o;
+                  stackIn_141_0 = PreferencesReadRequest.field_o;
                   return stackIn_141_0;
                 }
                 if (spellId == 109 && (var7.unitType == 39 ||

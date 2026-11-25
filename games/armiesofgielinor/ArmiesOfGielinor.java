@@ -1415,7 +1415,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ResourceRequest.releaseStatics((byte) -126);
           LeapYearSupport.releaseStatics((byte) -5);
           VorbisSample.releaseSetup();
-          bq.releaseStatics(30156);
+          LogoMaterial.releaseStatics(30156);
           pu.releaseStatics((byte) -114);
           SpellDefinitionTable.releaseStatics((byte) -39);
           LocalAccountNameSupport.releaseStatics(494);
@@ -1537,8 +1537,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ArchiveLoadStep.releaseStatics((byte) 120);
           SpriteSheetDecoder.releaseStatics(true);
           iw.releaseStatics(-25771);
-          vg.releaseStatics((byte) 89);
-          li.releaseStatics((byte) 74);
+          PreferencesReadRequest.releaseStatics((byte) 89);
+          PreferencesWriteRequest.releaseStatics((byte) 74);
           ConsoleExpression.releaseStatics(true);
           ConsoleValue.releaseStatics((byte) -114);
           ConsoleCommand.releaseStatics((byte) 126);
@@ -1550,7 +1550,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           EmailCheckResult.releaseStatics(true);
           ClientConnectionState.releaseStatics((byte) 96);
           DelayedPacket.releaseStatics(obfuscationGuard + 1);
-          wm.releaseStatics(-10743);
+          AccountRequestState.releaseStatics(-10743);
           AccountRequestResult.a(200);
           DialogMessagePane.releaseStatics((byte) 63);
           RasterState.releaseStatics(-22856);
@@ -1575,7 +1575,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MatchConditionEntry.a((byte) -127);
           TerrainScatterSupport.releaseStatics(-7);
           PowerOfTwoSupport.releaseStatics((byte) -121);
-          jl.releaseStatics(-125);
+          FullscreenStatusToken.releaseStatics(-125);
           WidgetStateStyle.releaseStatics(obfuscationGuard ^ 36);
           TextLineLayout.b(obfuscationGuard ^ 26972);
           DropdownArrowPainter.releaseStatics((byte) 86);
@@ -1613,7 +1613,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         int var7 = 0;
         var7 = obfuscationControl ? 1 : 0;
         try {
-          li.field_n = new Random(MonotonicClockSupport.monotonicMillis(-108));
+          PreferencesWriteRequest.field_n = new Random(MonotonicClockSupport.monotonicMillis(-108));
           this.initializeDefaultSharedServices(4, 68, 24, 2, -119, 0, 1);
           UnitSpell.installViewportResizeListener(52, new BattleViewportResizeHandler());
           var2 = new AdaptiveMidiPcmStream();
@@ -1974,46 +1974,46 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                 UpkeepEvent.h(65);
                                                 CalendarSupport.a((byte) -24, 70.0f, AccountNameCharacterSupport.field_a);
                                                 this.renderClient(0);
-                                                jl.field_d = new SoundCache(CampaignLookupSupport.field_d, SpellConfirmationDialog.field_f);
-                                                ClientUiNode.field_v[0] = jl.field_d.getSoundEffectByName("sword_slash_4", (byte) -97, "");
-                                                ClientUiNode.field_v[1] = jl.field_d.getSoundEffectByName("runewars_menu_mouseover", (byte) -97, "");
-                                                ClientUiNode.field_v[2] = jl.field_d.getSoundEffectByName("runewars_select_menu_item", (byte) -97, "");
-                                                ClientUiNode.field_v[3] = jl.field_d.getSoundEffectByName("runewars_select_unit", (byte) -97, "");
-                                                ClientUiNode.field_v[4] = jl.field_d.getSoundEffectByName("runewars_select_position", (byte) -97, "");
-                                                ClientUiNode.field_v[5] = jl.field_d.getSoundEffectByName("runewars_errorsound", (byte) -97, "");
-                                                ClientUiNode.field_v[6] = jl.field_d.getSoundEffectByName("runewars_teleport_all", (byte) -97, "");
-                                                ClientUiNode.field_v[8] = jl.field_d.getMusicSampleByName((byte) -128, "", "runewars_capture_fanfare");
-                                                ClientUiNode.field_v[9] = jl.field_d.getSoundEffectByName("runewars_select_flag", (byte) -97, "");
-                                                ClientUiNode.field_v[10] = jl.field_d.getSoundEffectByName("runewars_paint_flag", (byte) -97, "");
-                                                ClientUiNode.field_v[11] = jl.field_d.getSoundEffectByName("runewars_swap_spellbook", (byte) -97, "");
-                                                ClientUiNode.field_v[12] = jl.field_d.getSoundEffectByName("runewars_select_spell", (byte) -97, "");
-                                                ClientUiNode.field_v[13] = jl.field_d.getSoundEffectByName("runewars_transition", (byte) -97, "");
-                                                ClientUiNode.field_v[14] = jl.field_d.getSoundEffectByName("runewars_purchase_unit", (byte) -97, "");
-                                                ClientUiNode.field_v[15] = jl.field_d.getSoundEffectByName("runewars_choose_alignment", (byte) -97, "");
-                                                ClientUiNode.field_v[16] = jl.field_d.getSoundEffectByName("runewars_clock_tick", (byte) -97, "");
-                                                ClientUiNode.field_v[17] = jl.field_d.getSoundEffectByName("runewars_time_over_dong", (byte) -97, "");
-                                                ClientUiNode.field_v[18] = jl.field_d.getSoundEffectByName("runewars_turnover_page_map", (byte) -97, "");
+                                                FullscreenStatusToken.field_d = new SoundCache(CampaignLookupSupport.field_d, SpellConfirmationDialog.field_f);
+                                                ClientUiNode.field_v[0] = FullscreenStatusToken.field_d.getSoundEffectByName("sword_slash_4", (byte) -97, "");
+                                                ClientUiNode.field_v[1] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_menu_mouseover", (byte) -97, "");
+                                                ClientUiNode.field_v[2] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_select_menu_item", (byte) -97, "");
+                                                ClientUiNode.field_v[3] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_select_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[4] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_select_position", (byte) -97, "");
+                                                ClientUiNode.field_v[5] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_errorsound", (byte) -97, "");
+                                                ClientUiNode.field_v[6] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_teleport_all", (byte) -97, "");
+                                                ClientUiNode.field_v[8] = FullscreenStatusToken.field_d.getMusicSampleByName((byte) -128, "", "runewars_capture_fanfare");
+                                                ClientUiNode.field_v[9] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_select_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[10] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_paint_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[11] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_swap_spellbook", (byte) -97, "");
+                                                ClientUiNode.field_v[12] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_select_spell", (byte) -97, "");
+                                                ClientUiNode.field_v[13] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_transition", (byte) -97, "");
+                                                ClientUiNode.field_v[14] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_purchase_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[15] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_choose_alignment", (byte) -97, "");
+                                                ClientUiNode.field_v[16] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_clock_tick", (byte) -97, "");
+                                                ClientUiNode.field_v[17] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_time_over_dong", (byte) -97, "");
+                                                ClientUiNode.field_v[18] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_turnover_page_map", (byte) -97, "");
                                                 var5_array2 = UnitLossCondition.battlefieldThemes;
                                                 var6_int = 0;
                                                 do {
                                                   if (var6_int >= var5_array2.length) {
-                                                    MouseWheelSource.field_b[0] = jl.field_d.getSoundEffectByName("runewars_mana_whoosh", (byte) -97, "");
+                                                    MouseWheelSource.field_b[0] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_mana_whoosh", (byte) -97, "");
                                                     break;
                                                   }
                                                   var7_ref = var5_array2[var6_int];
-                                                  var7_ref.loadAmbientSounds(17952, jl.field_d);
+                                                  var7_ref.loadAmbientSounds(17952, FullscreenStatusToken.field_d);
                                                   var6_int++;
                                                 } while (var18 == 0);
                                                 var5_int = 0;
                                                 do {
                                                   if (var5_int >= 8) {
-                                                    TurnTimerDial.a(126, jl.field_d);
-                                                    TabbedPanel.a(jl.field_d, (byte) 123);
+                                                    TurnTimerDial.a(126, FullscreenStatusToken.field_d);
+                                                    TabbedPanel.a(FullscreenStatusToken.field_d, (byte) 123);
                                                     CampaignLookupSupport.field_d = null;
                                                     ModalDialog.a(0);
                                                     break;
                                                   }
-                                                  MouseWheelSource.field_b[var5_int + 1] = jl.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
+                                                  MouseWheelSource.field_b[var5_int + 1] = FullscreenStatusToken.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
                                                   var5_int++;
                                                 } while (var18 == 0);
                                                 return false;
@@ -2106,19 +2106,19 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               var5_int++;
             } while (var18 == 0);
             var5 = BitmapTextWidgetPainter.musicCrossfadeStream.firstSequencer;
-            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
-            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
-            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);
-            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, IgnoreRequestSupport.field_h, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, IgnoreRequestSupport.field_h, (byte) 86);
             var6 = ConsoleEvaluationException.field_a;
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
-                var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
+                var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
                 break;
               }
               var8 = var6[var7_int];
-              var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, var8, (byte) 86);
+              var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, var8, (byte) 86);
               var7_int++;
             } while (var18 == 0);
             var6_array = UnitLossCondition.battlefieldThemes;
@@ -2128,12 +2128,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 var5.releasePatchSampleIds(-117);
                 SummonAction.field_w = null;
                 ep.field_b = null;
-                jl.field_d = null;
+                FullscreenStatusToken.field_d = null;
                 ModalDialog.a(0);
                 break;
               }
               var8_ref = var6_array[var7_int];
-              var8_ref.prepareMusicSamples(jl.field_d, ep.field_b, SummonAction.field_w, 0, var5);
+              var8_ref.prepareMusicSamples(FullscreenStatusToken.field_d, ep.field_b, SummonAction.field_w, 0, var5);
               var7_int++;
             } while (var18 == 0);
             return false;
@@ -2369,7 +2369,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ClientConnectionState.setTicksPerSecond(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
           DropdownSelector.a(128, 8, PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, PowerOfTwoSupport.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, PowerOfTwoSupport.field_n.capitalHeight, -99, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), PowerOfTwoSupport.field_n);
-          wm.a(320, 128, 240, 16777215, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, PowerOfTwoSupport.field_n, 2, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n, 255, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
+          AccountRequestState.a(320, 128, 240, 16777215, PowerOfTwoSupport.field_n.capitalHeight + PowerOfTwoSupport.field_n.maxDescent, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, PowerOfTwoSupport.field_n, 2, MusicPatch.field_m[0].pixelWidth, PowerOfTwoSupport.field_n, 255, PowerOfTwoSupport.field_n.capitalHeight, new GradientFrame(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

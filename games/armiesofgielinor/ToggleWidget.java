@@ -46,7 +46,7 @@ final class ToggleWidget extends InteractiveWidget {
         if (obfuscationGuard != 6) {
           field_P = (String) null;
         }
-        return FixedQuaternion.isOnlineFriendOrRoomMember(TextSplitSupport.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
+        return FixedQuaternion.isOnlineFriendOrRoomMember(TextSplitSupport.chatRecipientAccountId, AccountRequestState.chatRecipientNameKey, (byte) -116);
     }
 
     private ToggleWidget(String text, WidgetListener listener) {

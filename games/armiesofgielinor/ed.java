@@ -25,7 +25,7 @@ final class ed {
     final static boolean a(int param0) {
         if (param0 <= -66) {
           TurnEffectEvent.field_C = true;
-          jl.field_a = MonotonicClockSupport.monotonicMillis(124) + 15000L;
+          FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(124) + 15000L;
           return 11 == SoundCache.field_b ? true : false;
         }
         return true;

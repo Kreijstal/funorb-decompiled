@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm {
+final class AccountRequestState {
     static ClientUiComponent field_c;
     static String field_d;
     static String chatRecipientNameKey;
@@ -84,7 +84,7 @@ final class wm {
         }
     }
 
-    final static ChatMessage a(int param0, int param1, byte param2, int param3) {
+    final static ChatMessage updateChatHistoryRows(int param0, int param1, byte param2, int param3) {
         Object var4;
         int var5;
         int var6;
@@ -152,7 +152,7 @@ final class wm {
         var7Lifetime1 = 0;
         var8 = 0;
         if (param2 <= 126) {
-          wm.releaseStatics(44);
+          AccountRequestState.releaseStatics(44);
         }
         while (BitmapTextWidgetPainter.chatHistorySize > var8) {
           var9_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var8];
@@ -242,13 +242,13 @@ final class wm {
         return (ChatMessage) (var4);
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void processAbuseReportDialog(int param0, int param1, boolean param2) {
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
         int var4Lifetime1;
         if (param0 != 0) {
-          wm.a(-77, -115, (byte) -120, -123);
+          AccountRequestState.updateChatHistoryRows(-77, -115, (byte) -120, -123);
           if (null == Spell.field_b) {
             return;
           }

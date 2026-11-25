@@ -74,7 +74,7 @@ final class ConsoleExpression extends IntrusiveNode {
           RegistrationAgreementPane.chatRecipientName = recipientName;
           PowerOfTwoSupport.outgoingChatChannel = 2;
           var5 = (CharSequence) ((Object) recipientName);
-          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
+          AccountRequestState.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
           TextSplitSupport.chatRecipientAccountId = accountId;
           TrianglePulse.openDefaultQuickChatMenu((byte) 118);
           if (obfuscationGuard != 1) {

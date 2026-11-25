@@ -7,7 +7,7 @@ abstract class SocketFactory {
     String host;
     int port;
     static QuickChatCommandDefinition field_e;
-    static wm nameCheckPending;
+    static AccountRequestState nameCheckPending;
     static boolean field_h;
     static String field_f;
     static String[] field_b;
@@ -43,7 +43,7 @@ abstract class SocketFactory {
 
     static {
         field_e = new QuickChatCommandDefinition(10, 2, 2, 0);
-        nameCheckPending = new wm();
+        nameCheckPending = new AccountRequestState();
         field_f = "No special attribute";
         field_b = new String[16];
     }

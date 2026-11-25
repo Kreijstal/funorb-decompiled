@@ -228,12 +228,12 @@ final class VertexNormal {
                     var12.admissionButton.text = LeaderEscortCondition.field_g;
                     var12.cancelRejectButton.text = SpellConfirmationDialog.field_l;
                   } else {
-                    var12.admissionButton.text = bq.field_b;
+                    var12.admissionButton.text = LogoMaterial.field_b;
                   }
                 }
               } else {
                 if (!ToggleWidget.currentRoom.playing) {
-                  var12.cancelRejectButton.text = bq.field_a;
+                  var12.cancelRejectButton.text = LogoMaterial.field_a;
                 }
               }
               var25_int = 0;
@@ -336,10 +336,10 @@ final class VertexNormal {
                         var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = EmailCheckResult.a(4800, LoginKind.field_f, new String[]{var20});
                         if (0 < var25_int &&
-                          jl.field_c != null &&
-                          jl.field_c.length >= var25_int &&
-                          jl.field_c[var25_int - 1] != null) {
-                          var24Lifetime2 = EmailCheckResult.a(4800, jl.field_c[-1 + var25_int][2], new String[]{var20});
+                          FullscreenStatusToken.field_c != null &&
+                          FullscreenStatusToken.field_c.length >= var25_int &&
+                          FullscreenStatusToken.field_c[var25_int - 1] != null) {
+                          var24Lifetime2 = EmailCheckResult.a(4800, FullscreenStatusToken.field_c[-1 + var25_int][2], new String[]{var20});
                         }
                       }
                     } else {
@@ -370,10 +370,10 @@ final class VertexNormal {
                         var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = EventPresenter.field_l;
                         if (var25_int > 0 &&
-                          null != jl.field_c &&
-                          jl.field_c.length >= var25_int &&
-                          jl.field_c[var25_int - 1] != null) {
-                          var24Lifetime2 = jl.field_c[-1 + var25_int][1];
+                          null != FullscreenStatusToken.field_c &&
+                          FullscreenStatusToken.field_c.length >= var25_int &&
+                          FullscreenStatusToken.field_c[var25_int - 1] != null) {
+                          var24Lifetime2 = FullscreenStatusToken.field_c[-1 + var25_int][1];
                         }
                       }
                     } else {

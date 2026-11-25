@@ -11,7 +11,7 @@ final class PlayerProfile {
     static String[] field_i;
     int[] unitUnlockMasks;
     int[] equippedSpellIds;
-    static jl field_h;
+    static FullscreenStatusToken field_h;
     static int[] field_l;
     static ClientUiComponent field_f;
 
@@ -230,6 +230,6 @@ final class PlayerProfile {
         field_i = new String[]{"Full health", "1/2 health", "1/3 health", "1/4 health", "1/5 health", "1/6 health"};
         field_e = "Are You Sure?";
         field_l = new int[]{0, 0, 536870912, 553634816, 544700415};
-        field_h = new jl();
+        field_h = new FullscreenStatusToken();
     }
 }

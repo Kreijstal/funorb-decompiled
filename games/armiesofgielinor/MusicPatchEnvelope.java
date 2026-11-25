@@ -112,19 +112,19 @@ final class MusicPatchEnvelope {
         return (String) null;
     }
 
-    final static vg a(int param0, int param1) {
-        vg var2 = null;
-        vg var2Lifetime1;
+    final static PreferencesReadRequest requestPreferences(int param0, int param1) {
+        PreferencesReadRequest var2 = null;
+        PreferencesReadRequest var2Lifetime1;
         if (param0 == 14663) {
-          var2 = new vg();
+          var2 = new PreferencesReadRequest();
           AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
-          NineSliceSpriteSupport.a(param1, 0);
+          NineSliceSpriteSupport.sendPreferencesRead(param1, 0);
           return var2;
         }
         MusicPatchEnvelope.a((byte) -111, -125L);
-        var2Lifetime1 = new vg();
+        var2Lifetime1 = new PreferencesReadRequest();
         AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
-        NineSliceSpriteSupport.a(param1, 0);
+        NineSliceSpriteSupport.sendPreferencesRead(param1, 0);
         return var2Lifetime1;
     }
 
@@ -162,7 +162,7 @@ final class MusicPatchEnvelope {
           }
           ignoredAccount.unlink(-124);
           ignoredAccount.unlinkSecondary((byte) -76);
-          vg.ignoreCount = vg.ignoreCount - 1;
+          PreferencesReadRequest.ignoreCount = PreferencesReadRequest.ignoreCount - 1;
           packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;

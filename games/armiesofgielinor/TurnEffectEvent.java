@@ -234,7 +234,7 @@ final class TurnEffectEvent extends GameEvent {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (jl.field_b != null) {
+          if (FullscreenStatusToken.field_b != null) {
             return;
           }
           if (param0 != 8) {
@@ -259,7 +259,7 @@ final class TurnEffectEvent extends GameEvent {
           }
           PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, var5, 112, 0);
           UpkeepEvent.field_z.matchedButtonTextColour = (8355711 & SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
-          jl.field_b = UpkeepEvent.field_z;
+          FullscreenStatusToken.field_b = UpkeepEvent.field_z;
           UpkeepEvent.field_z.heldPressTextColour = (8355711 & SpellConfirmationDialog.field_i.heldPressTextColour >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));
           UpkeepEvent.field_z.selectedTextColour = -((16711423 & MeshObject.field_d) >> 1) + MeshObject.field_d + ((SpellConfirmationDialog.field_i.selectedTextColour & 16711423) >> 1);
           ArchiveProvider.field_d = DebouncedValidator.field_b;

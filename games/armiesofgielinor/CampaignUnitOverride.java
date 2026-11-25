@@ -75,7 +75,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "error_js5connect");
                 if (var2 != null) {
-                  wm.field_a = uu.a(var2, (byte) -116);
+                  AccountRequestState.field_a = uu.a(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "login_gameupdated");
                 if (null != var2) {
@@ -431,7 +431,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_friends");
                 if (var2 != null) {
-                  li.field_m = uu.a(var2, (byte) -116);
+                  PreferencesWriteRequest.field_m = uu.a(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_hide");
                 if (null != var2) {
@@ -575,7 +575,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "kick");
                 if (var2 != null) {
-                  bq.field_a = uu.a(var2, (byte) -105);
+                  LogoMaterial.field_a = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(param0 + 132, "inviting_x");
                 if (null != var2) {
@@ -595,7 +595,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "invite");
                 if (var2 != null) {
-                  bq.field_b = uu.a(var2, (byte) -103);
+                  LogoMaterial.field_b = uu.a(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "status_concluded");
                 if (null != var2) {
@@ -731,7 +731,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "esc_cancelprivatemessage");
                 if (var2 != null) {
-                  bq.field_d = uu.a(var2, (byte) 113);
+                  LogoMaterial.field_d = uu.a(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(50, "esc_cancelthisline");
                 if (null != var2) {
@@ -1313,7 +1313,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "creatingyouraccount");
                 if (var2 != null) {
-                  wm.field_d = uu.a(var2, (byte) 107);
+                  AccountRequestState.field_d = uu.a(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_youmustaccept");
                 if (null != var2) {
@@ -1397,7 +1397,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_createanaccount");
                 if (null != var2) {
-                  li.field_p = uu.a(var2, (byte) 34);
+                  PreferencesWriteRequest.field_p = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "create_username");
                 if (var2 != null) {

@@ -8,13 +8,13 @@ final class cd {
     static String field_b;
     static String field_d;
 
-    final static void b(int param0) {
+    final static void handlePreferencesResponse(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        vg var3_ref_vg = null;
-        li var4 = null;
+        PreferencesReadRequest var3_ref_vg = null;
+        PreferencesWriteRequest var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
@@ -36,10 +36,10 @@ final class cd {
               return;
             }
             var3 = var8.readInt(1);
-            var4 = (li) (s.field_e.first((byte) 92));
+            var4 = (PreferencesWriteRequest) (s.field_e.first((byte) 92));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (li) (s.field_e.next((byte) 123));
+                var4 = (PreferencesWriteRequest) (s.field_e.next((byte) 123));
                 continue;
               }
               break;
@@ -51,7 +51,7 @@ final class cd {
             var4.unlink(-102);
             return;
           }
-          var3_ref_vg = (vg) (AccountRegistrationDialog.field_Bb.first((byte) 98));
+          var3_ref_vg = (PreferencesReadRequest) (AccountRegistrationDialog.field_Bb.first((byte) 98));
           if (var3_ref_vg == null) {
             TextSplitSupport.closeSessionSocket((byte) -126);
             return;

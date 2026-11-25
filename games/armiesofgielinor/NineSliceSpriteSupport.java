@@ -30,7 +30,7 @@ final class NineSliceSpriteSupport {
         DamageEvent.b((byte) 92, param1);
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendPreferencesRead(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.writeByte(param1 ^ 1, 1);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class li extends IntrusiveNode {
+final class PreferencesWriteRequest extends IntrusiveNode {
     static Random field_n;
     static int[] field_k;
     static String field_p;
@@ -52,14 +52,14 @@ final class li extends IntrusiveNode {
         field_k = null;
         field_m = null;
         if (obfuscationGuard != 74) {
-          li.a(-95);
+          PreferencesWriteRequest.a(-95);
           field_n = null;
           return;
         }
         field_n = null;
     }
 
-    li(byte[] param0) {
+    PreferencesWriteRequest(byte[] param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

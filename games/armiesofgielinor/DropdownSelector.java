@@ -285,7 +285,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           var1_int = -118 / ((16 - param0) / 35);
           if (!UnitAnimationPreview.field_h) {
             if (null == RadialSummonItem.field_f) {
-              RadialSummonItem.field_f = MusicPatchEnvelope.a(14663, 6);
+              RadialSummonItem.field_f = MusicPatchEnvelope.requestPreferences(14663, 6);
             }
             if (RadialSummonItem.field_f.field_n) {
               if (null != RadialSummonItem.field_f.field_s) {

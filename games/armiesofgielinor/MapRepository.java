@@ -406,7 +406,7 @@ final class MapRepository {
                 var25 = param0.field_F[var23];
                 var26 = param0.field_I[var23];
                 TextSplitSupport.field_b[var23] = (var26 * var18 + var12 * var24 + var15 * var25 >> 16) + var9;
-                li.field_k[var23] = var10 + (var16 * var25 + var24 * var13 + var19 * var26 >> 16);
+                PreferencesWriteRequest.field_k[var23] = var10 + (var16 * var25 + var24 * var13 + var19 * var26 >> 16);
                 LeapYearSupport.field_e[var23] = var11 + (var26 * var20 + (var25 * var17 + var24 * var14) >> 16);
                 var23++;
                 if (var30 != 0) {

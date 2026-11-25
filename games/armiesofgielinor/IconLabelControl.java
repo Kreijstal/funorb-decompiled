@@ -26,7 +26,7 @@ final class IconLabelControl extends ClientUiComponent {
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
-        bq stackIn_41_0 = null;
+        LogoMaterial stackIn_41_0 = null;
         int stackIn_47_0 = 0;
         int stackIn_51_0 = 0;
         RuntimeException stackIn_56_0 = null;
@@ -43,7 +43,7 @@ final class IconLabelControl extends ClientUiComponent {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        bq var21 = null;
+        LogoMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;

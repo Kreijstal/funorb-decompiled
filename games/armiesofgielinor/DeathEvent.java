@@ -8,7 +8,7 @@ final class DeathEvent extends GameEvent {
     static RgbSprite field_A;
     private boolean field_B;
 
-    final static void a(li param0, int param1, int param2) {
+    final static void sendPreferencesWrite(PreferencesWriteRequest param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         CipherPacketBuffer var5 = null;

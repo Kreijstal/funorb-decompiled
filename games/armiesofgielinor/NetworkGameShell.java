@@ -120,7 +120,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           er.b(-11);
           KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
           MaskedTextEntryPainter.field_C = true;
-          jl.field_a = MonotonicClockSupport.monotonicMillis(-111) + 15000L;
+          FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(-111) + 15000L;
         } else {
           if (SoundCache.field_b == 11 &&
             ModalDialogHost.field_K == 0) {
@@ -450,7 +450,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 this.persistSessionCookie((byte) 127);
                 break;
               case 5:
-                cd.b(obfuscationGuard - 48);
+                cd.handlePreferencesResponse(obfuscationGuard - 48);
                 break;
               case 3:
                 jg.e(0);
@@ -542,7 +542,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             KeyedLoginCredentials.a(LobbyPlayer.field_bc, 10, 2);
             qf.b(56);
             MaskedTextEntryPainter.field_C = true;
-            jl.field_a = 15000L + MonotonicClockSupport.monotonicMillis(-49);
+            FullscreenStatusToken.field_a = 15000L + MonotonicClockSupport.monotonicMillis(-49);
           }
         }
         if (ModalDialogHost.field_K == -1 ||
@@ -558,7 +558,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (ModalDialogHost.field_K != -1 &&
             ModalDialogHost.field_K != 0) {
-            jl.field_a = MonotonicClockSupport.monotonicMillis(98) + 15000L;
+            FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(98) + 15000L;
           }
         }
         if (ModalDialogHost.field_K != -1 &&
@@ -590,7 +590,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                     if (ModalDialogHost.field_K == 5) {
                       KeyedLoginCredentials.a(DropdownSelectorPainter.field_f, 10, 5);
                     } else {
-                      KeyedLoginCredentials.a(wm.field_a, 10, 256);
+                      KeyedLoginCredentials.a(AccountRequestState.field_a, 10, 256);
                     }
                   } else {
                     KeyedLoginCredentials.a(ResourceArchive.field_d, 10, 256);
@@ -608,7 +608,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if ((ModalDialogHost.field_K != -1 &&
           ModalDialogHost.field_K != 0 ||
           MovementPresentation.j(-11)) &&
-          jl.field_a <= MonotonicClockSupport.monotonicMillis(74)) {
+          FullscreenStatusToken.field_a <= MonotonicClockSupport.monotonicMillis(74)) {
           MaskedTextEntryPainter.field_C = false;
           if (ModalDialogHost.field_K != -1 &&
             ModalDialogHost.field_K != 0) {

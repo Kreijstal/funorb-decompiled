@@ -1633,7 +1633,7 @@ final class TutorialController {
                                                                                                 return;
                                                                                               }
                                                                                               SetCoatConsoleCommand.field_F = -1;
-                                                                                              li.field_q = -1;
+                                                                                              PreferencesWriteRequest.field_q = -1;
                                                                                               this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
                                                                                               CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
@@ -1652,7 +1652,7 @@ final class TutorialController {
                                                                                               return;
                                                                                             }
                                                                                           }
-                                                                                          li.field_q = -1;
+                                                                                          PreferencesWriteRequest.field_q = -1;
                                                                                           SetCoatConsoleCommand.field_F = -1;
                                                                                           this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
@@ -2179,8 +2179,8 @@ final class TutorialController {
                     if (!this.selectionState.hasActivationInput((byte) 91)) {
                       return;
                     }
-                    stackIn_757_0 = !(vg.field_m);
-                    vg.field_m = stackIn_757_0;
+                    stackIn_757_0 = !(PreferencesReadRequest.field_m);
+                    PreferencesReadRequest.field_m = stackIn_757_0;
                     if (var9 == 0) {
                       return;
                     }
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, ReloadPageSupport.field_e, NetworkGameShell.field_D, vg.field_m, ByteStorage.field_g, SpriteDropdownControl.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, ReloadPageSupport.field_e, NetworkGameShell.field_D, PreferencesReadRequest.field_m, ByteStorage.field_g, SpriteDropdownControl.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3834,7 +3834,7 @@ final class TutorialController {
             var3 = DisplacedUnitMarker.field_t[28] + ByteStorage.field_g;
           }
           if (itemId == 33) {
-            if (vg.field_m) {
+            if (PreferencesReadRequest.field_m) {
               var3 = DisplacedUnitMarker.field_t[33] + ScrollContainer.field_Mb;
               if (var4 != 0) {
                 var3 = DisplacedUnitMarker.field_t[33] + RegistrationAgreementPane.field_J;
@@ -3946,12 +3946,12 @@ final class TutorialController {
             if (var8 == 0) {
               if (stackIn_18_0) {
                 ep.field_o = 0;
-                if (li.field_q == -1 + var2_int) {
+                if (PreferencesWriteRequest.field_q == -1 + var2_int) {
                   return;
                 }
-                MoveAttackAction.field_s = li.field_q;
+                MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 QuickChatMenuDisplaySupport.field_f = tf.field_k;
-                li.field_q = -1 + var2_int;
+                PreferencesWriteRequest.field_q = -1 + var2_int;
                 tf.field_k = 256;
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
@@ -3960,7 +3960,7 @@ final class TutorialController {
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 SpriteSheetDecoder.field_n = null;
                 GlobalSpell.field_h = 256;
-                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[li.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + li.field_q]);
+                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + PreferencesWriteRequest.field_q]);
                 return;
               }
               var2_int++;
@@ -3974,9 +3974,9 @@ final class TutorialController {
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_18_0) {
             var4Lifetime1 = 0;
-            while (!(AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length <= var4Lifetime1)) {
-              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length)) + 30;
-              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) * 100.0)) + 150 + 135;
+            while (!(AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1].length <= var4Lifetime1)) {
+              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q].length)) + 30;
+              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1].length) * 100.0)) + 150 + 135;
               stackIn_42_0 = TabbedPanel.a(MatchConditionEntry.a(var3Lifetime1, (byte) 94), IgnoreListLookupSupport.a(true, var2_intLifetime1), 25, false);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3988,15 +3988,15 @@ final class TutorialController {
               }
               ep.field_o = 0;
               if (var4Lifetime1 != SetCoatConsoleCommand.field_F) {
-                MoveAttackAction.field_s = li.field_q;
+                MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 SetCoatConsoleCommand.field_F = var4Lifetime1;
-                SpriteSheetDecoder.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][SetCoatConsoleCommand.field_F]);
+                SpriteSheetDecoder.field_n = new la(AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][SetCoatConsoleCommand.field_F]);
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
-                MoveAttackAction.field_s = li.field_q;
+                MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
                 SetCoatConsoleCommand.field_F = -1;
@@ -4004,13 +4004,13 @@ final class TutorialController {
                 GlobalSpell.field_h = 256;
               }
               if (SetCoatConsoleCommand.field_F > -1) {
-                var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F];
+                var5 = AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q][SetCoatConsoleCommand.field_F];
                 var6 = "";
                 var6Lifetime1 = DisplaySettingsDialog.field_cb[var5];
                 var7 = AlphaWidgetContainer.field_M[var5];
                 this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
-                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
+                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[PreferencesWriteRequest.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[PreferencesWriteRequest.field_q + 1]);
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(100, ClientUiNode.field_v[12]);
               return;
@@ -4021,20 +4021,20 @@ final class TutorialController {
           }
           if (stackIn_42_0) {
             if (SetCoatConsoleCommand.field_F <= -1) {
-              if ((!(li.field_q <= -1)) &&
+              if ((!(PreferencesWriteRequest.field_q <= -1)) &&
                 (-1 == SetCoatConsoleCommand.field_F) &&
-                (!(-1 >= li.field_q)) &&
-                (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
+                (!(-1 >= PreferencesWriteRequest.field_q)) &&
+                (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] == 0) &&
                 (UnitAnimationSelectionSupport.playerProfile.tryDebitRunes(50, (byte) 103))) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
-                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[li.field_q + 1][0]);
+                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
-                  if (var2_intLifetime2 < AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) {
-                    stackIn_72_0 = WhirlpoolHasher.unitDefinitions[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
+                  if (var2_intLifetime2 < AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1].length) {
+                    stackIn_72_0 = WhirlpoolHasher.unitDefinitions[AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
-                        UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[li.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
+                        UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[PreferencesWriteRequest.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[PreferencesWriteRequest.field_q], 1 << var2_intLifetime2);
                       }
                       var2_intLifetime2++;
                       continue;
@@ -4046,24 +4046,24 @@ final class TutorialController {
                 }
                 RadialSummonMenu.playDefaultSoundWithIntGuard(stackIn_72_0, ClientUiNode.field_v[14]);
                 if ((var8 != 0) && (SetCoatConsoleCommand.field_F > -1 &&
-                  0 < UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[li.field_q + 1] &&
-                  0 == (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
+                  0 < UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[PreferencesWriteRequest.field_q + 1] &&
+                  0 == (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
                   UnitAnimationSelectionSupport.playerProfile.getAvailableRunes((byte) 91) >= WhirlpoolHasher.unitDefinitions[SetCoatConsoleCommand.field_F][11])) {
                   EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
-                  EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
+                  EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q][SetCoatConsoleCommand.field_F]);
                   RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
-                  UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
+                  UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q], 1 << SetCoatConsoleCommand.field_F);
                 }
               }
             } else {
               if (SetCoatConsoleCommand.field_F > -1 &&
-                0 < UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[li.field_q + 1] &&
-                0 == (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
+                0 < UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[PreferencesWriteRequest.field_q + 1] &&
+                0 == (UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
                 UnitAnimationSelectionSupport.playerProfile.getAvailableRunes((byte) 91) >= WhirlpoolHasher.unitDefinitions[SetCoatConsoleCommand.field_F][11]) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
-                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
+                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q][SetCoatConsoleCommand.field_F]);
                 RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
-                UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
+                UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] = AccountRegistrationDialog.bitwiseOr(UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q], 1 << SetCoatConsoleCommand.field_F);
               }
             }
           }
@@ -4210,7 +4210,7 @@ final class TutorialController {
                 BufferedFile.field_k[var7].drawAdditive(IgnoreListLookupSupport.a(true, var8 - 19), MatchConditionEntry.a(-22 + var9, (byte) 94), 128);
                 AccountNameSelectionForm.field_F = 2 + var7;
               }
-              if (~li.field_q == ~(var7 - 1)) {
+              if (~PreferencesWriteRequest.field_q == ~(var7 - 1)) {
                 BufferedFile.field_k[var7].drawAdditive(IgnoreListLookupSupport.a(true, var8 - 19), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var4);
                 BufferedFile.field_k[var7].drawAdditive(IgnoreListLookupSupport.a(true, -19 + var8), MatchConditionEntry.a(-22 + var9, (byte) 94), 256 - var4);
               }
@@ -4231,12 +4231,12 @@ final class TutorialController {
             stackIn_18_0 = IgnoreListLookupSupport.a(true, 34);
           }
           SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), IgnoreListLookupSupport.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
-          GuestPlayConfirmationForm.field_F[li.field_q + 1].drawAdditive(IgnoreListLookupSupport.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
+          GuestPlayConfirmationForm.field_F[PreferencesWriteRequest.field_q + 1].drawAdditive(IgnoreListLookupSupport.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
           GuestPlayConfirmationForm.field_F[1 + MoveAttackAction.field_s].drawAdditive(IgnoreListLookupSupport.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
           if (null != SpriteSheetDecoder.field_n) {
             TriangleRasterizer.setClip(IgnoreListLookupSupport.a(true, 34), MatchConditionEntry.a(154, (byte) 94), IgnoreListLookupSupport.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             TriangleRasterizer.centerProjection();
-            stackIn_25_0 = ((UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) != 0) ? 0 : 1;
+            stackIn_25_0 = ((UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] & 1 << SetCoatConsoleCommand.field_F) != 0) ? 0 : 1;
             var7Lifetime1 = stackIn_25_0;
             fieldTemp$0 = kq.field_L;
             kq.field_L = kq.field_L + 1;
@@ -4252,8 +4252,8 @@ final class TutorialController {
               stackIn_43_1 = var7Lifetime2;
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
-                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
-                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1].length)));
+                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                   stackOut_44_0 = TabbedPanel.a(MatchConditionEntry.a(var9Lifetime1, (byte) 94), IgnoreListLookupSupport.a(true, var8Lifetime1), 25, false);
                   stackIn_71_0 = stackOut_44_0 ? 1 : 0;
                   stackIn_45_0 = stackOut_44_0;
@@ -4281,13 +4281,13 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               var7Lifetime2 = 0;
               while (true) {
-                stackIn_43_0Lifetime1 = ~AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length;
+                stackIn_43_0Lifetime1 = ~AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q].length;
                 stackIn_43_1Lifetime1 = ~var7Lifetime2;
                 if (stackIn_43_0Lifetime1 >= stackIn_43_1Lifetime1) {
                   break;
                 }
-                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
-                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1].length)));
+                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + PreferencesWriteRequest.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                 stackOut_44_0Lifetime1 = TabbedPanel.a(MatchConditionEntry.a(var9Lifetime1Lifetime1, (byte) 94), IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1), 25, false);
                 stackIn_71_0 = stackOut_44_0Lifetime1 ? 1 : 0;
                 stackIn_45_0Lifetime1 = stackOut_44_0Lifetime1;
@@ -4303,15 +4303,15 @@ final class TutorialController {
                   TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
                 }
                 if (TileableNoiseGenerator.field_f == var7Lifetime2 &&
-                  MoveAttackAction.field_s == li.field_q) {
+                  MoveAttackAction.field_s == PreferencesWriteRequest.field_q) {
                   TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
-                StandardContentDialog.field_ob.drawTintedGrayscale(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
-                if ((1 << var7Lifetime2 & UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].drawWithBrightness(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
+                StandardContentDialog.field_ob.drawTintedGrayscale(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + PreferencesWriteRequest.field_q]);
+                if ((1 << var7Lifetime2 & UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[PreferencesWriteRequest.field_q + 1]) <= 0) {
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][var7Lifetime2]].drawWithBrightness(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   ProjectileEffect.field_h[0].drawWithBrightness(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].drawTransparent(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][var7Lifetime2]].drawTransparent(IgnoreListLookupSupport.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
                   ProjectileEffect.field_h[0].drawTransparent(IgnoreListLookupSupport.a(true, -23 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
                 }
                 var7Lifetime2++;
@@ -4333,12 +4333,12 @@ final class TutorialController {
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           if (SetCoatConsoleCommand.field_F <= -1) {
-            this.d((byte) -35, 1 + li.field_q);
+            this.d((byte) -35, 1 + PreferencesWriteRequest.field_q);
             if (var10 == 0) {
               return;
             }
           }
-          this.a(li.field_q + 1, SetCoatConsoleCommand.field_F, -104);
+          this.a(PreferencesWriteRequest.field_q + 1, SetCoatConsoleCommand.field_F, -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4678,19 +4678,19 @@ final class TutorialController {
                 if (PowerOfTwoSupport.keyCode == 80 &&
                   this.tutorialStage == 12 &&
                   tf.field_k == 0) {
-                  MoveAttackAction.field_s = li.field_q;
+                  MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                   TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                   WeightedLruCache.field_d = GlobalSpell.field_h;
                   SetCoatConsoleCommand.field_F = -1;
-                  li.field_q = li.field_q + 1;
+                  PreferencesWriteRequest.field_q = PreferencesWriteRequest.field_q + 1;
                   GlobalSpell.field_h = 256;
-                  li.field_q = li.field_q % 7;
+                  PreferencesWriteRequest.field_q = PreferencesWriteRequest.field_q % 7;
                   kq.field_L = 0;
                   tf.field_k = 256;
                   SpriteSheetDecoder.field_n = null;
                   QuickChatMenuDisplaySupport.field_f = 0;
-                  if (li.field_q == 6) {
-                    li.field_q = -1;
+                  if (PreferencesWriteRequest.field_q == 6) {
+                    PreferencesWriteRequest.field_q = -1;
                   }
                   RadialSummonMenu.playDefaultSoundWithIntGuard(126, ClientUiNode.field_v[11]);
                   if (var4 == 0) {

@@ -26,7 +26,7 @@ final class TurnTimerDial {
         int var10;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.useSweepMask) {
-          vg.field_q[0].drawTransparent(screenX, screenY);
+          PreferencesReadRequest.field_q[0].drawTransparent(screenX, screenY);
         } else {
           var4 = 0;
           var5 = SoftwareRaster.width * screenY + screenX;
@@ -35,17 +35,17 @@ final class TurnTimerDial {
           while (ManaStarParticle.field_m > var12) {
             var13 = 0;
             while (var13 < CampaignProgress.field_b) {
-              var7 = vg.field_q[0].pixels[var4];
+              var7 = PreferencesReadRequest.field_q[0].pixels[var4];
               var11 = var7 >>> 24;
               if (0 != var11) {
                 if (var11 >= 255) {
                   if (this.pixelThresholds[var4] <= this.sweepPosition) {
-                    var7 = vg.field_q[1].pixels[var4];
+                    var7 = PreferencesReadRequest.field_q[1].pixels[var4];
                   }
                   SoftwareRaster.pixels[var5] = var7;
                 } else {
                   if (this.sweepPosition >= this.pixelThresholds[var4]) {
-                    var7 = vg.field_q[1].pixels[var4];
+                    var7 = PreferencesReadRequest.field_q[1].pixels[var4];
                     var11 = var7 >>> 24;
                   }
                   var8 = 16711935 & var7;

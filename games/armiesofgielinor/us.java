@@ -15,10 +15,10 @@ final class us {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          return null != jl.field_b ? true : false;
+          return null != FullscreenStatusToken.field_b ? true : false;
         }
         us.releaseStatics(125);
-        return null != jl.field_b ? true : false;
+        return null != FullscreenStatusToken.field_b ? true : false;
     }
 
     final static int a(int param0, byte param1) {

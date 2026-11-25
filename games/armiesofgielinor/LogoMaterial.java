@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bq {
+final class LogoMaterial {
     int field_e;
     static String field_d;
     static boolean field_c;
@@ -14,7 +14,7 @@ final class bq {
         field_a = null;
         field_d = null;
         if (obfuscationGuard != 30156) {
-          bq.releaseStatics(-73);
+          LogoMaterial.releaseStatics(-73);
         }
     }
 

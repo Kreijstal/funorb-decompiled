@@ -22,7 +22,7 @@ final class jg extends IntrusiveNode {
         }
         int var5 = AccountRegistrationForm.field_Z[param4][param3];
         if (var5 > -1) {
-          var6 = AttackEvent.nextBoundedInt(false, LinkButtonPainter.field_d[var5].length, li.field_n);
+          var6 = AttackEvent.nextBoundedInt(false, LinkButtonPainter.field_d[var5].length, PreferencesWriteRequest.field_n);
           if (LinkButtonPainter.field_d[var5][var6] != null &&
             LinkButtonPainter.field_d[var5][var6].samples.length != 0) {
             param0 = 512 - (param0 - 800);

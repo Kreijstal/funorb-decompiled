@@ -477,15 +477,15 @@ final class SocketResourceClient extends ResourceProtocolClient {
 
     final static void a(byte param0, RgbSprite[] param1, RgbSprite param2) {
         try {
-          vg.field_q = param1;
-          vg.field_q[0].normalizeCanvas();
-          vg.field_q[1].normalizeCanvas();
+          PreferencesReadRequest.field_q = param1;
+          PreferencesReadRequest.field_q[0].normalizeCanvas();
+          PreferencesReadRequest.field_q[1].normalizeCanvas();
           DeployEvent.field_z = param2;
-          ManaStarParticle.field_m = vg.field_q[0].pixelHeight;
+          ManaStarParticle.field_m = PreferencesReadRequest.field_q[0].pixelHeight;
           if (param0 < 118) {
             field_x = (String) null;
           }
-          CampaignProgress.field_b = vg.field_q[0].pixelWidth;
+          CampaignProgress.field_b = PreferencesReadRequest.field_q[0].pixelWidth;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ae.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

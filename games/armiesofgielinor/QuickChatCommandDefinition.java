@@ -56,7 +56,7 @@ final class QuickChatCommandDefinition {
           PowerOfTwoSupport.outgoingChatChannel = channelId;
           RegistrationAgreementPane.chatRecipientName = recipientName;
           recipientCharacters = (CharSequence) ((Object) recipientName);
-          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
+          AccountRequestState.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
           TextSplitSupport.chatRecipientAccountId = accountId;
           responseMenu = RasterState.buildQuickChatResponseMenu(-11, AccountNameAvailabilityValidator.field_n, responsePhraseIds, QuickChatMenuDisplaySupport.field_g, ClientStateChecksumSupport.field_f);
           QuickChatMenuDisplaySupport.showQuickChatMenu(256, responseMenu);

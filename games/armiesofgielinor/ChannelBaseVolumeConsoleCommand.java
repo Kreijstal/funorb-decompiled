@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ChannelBaseVolumeConsoleCommand extends ConsoleCommand {
-    static wm field_L;
+    static AccountRequestState field_L;
     static RgbSprite[] field_J;
     static boolean[] field_G;
     static String field_F;

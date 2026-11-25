@@ -192,7 +192,7 @@ final class FriendLookupSupport {
           if (param0 > -74) {
             return;
           }
-          UnitAnimationSelectionSupport.field_a = DropdownSelectorPainter.a(12, var10);
+          UnitAnimationSelectionSupport.field_a = DropdownSelectorPainter.decodeLogoMaterials(12, var10);
           CampaignMenuButton.field_a = new pu[var3];
           CampaignParticipant.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -252,7 +252,7 @@ final class FriendLookupSupport {
           if (Spell.field_b != null) {
             stackIn_20_0 = true;
           } else {
-            if (vg.hasQuickChatOverlay(10)) {
+            if (PreferencesReadRequest.hasQuickChatOverlay(10)) {
               return true;
             }
             stackIn_20_0 = false;
@@ -270,7 +270,7 @@ final class FriendLookupSupport {
         if (Spell.field_b != null) {
           stackIn_10_0 = true;
         } else {
-          if (vg.hasQuickChatOverlay(10)) {
+          if (PreferencesReadRequest.hasQuickChatOverlay(10)) {
             return true;
           }
           stackIn_10_0 = false;

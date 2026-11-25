@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl {
+final class FullscreenStatusToken {
     static String[][] field_c;
     static SoundCache field_d;
     static ClientUiComponent field_b;
@@ -11,7 +11,7 @@ final class jl {
         field_d = null;
         field_b = null;
         if (obfuscationGuard > -124) {
-          jl.releaseStatics(27);
+          FullscreenStatusToken.releaseStatics(27);
           field_c = (String[][]) null;
           return;
         }

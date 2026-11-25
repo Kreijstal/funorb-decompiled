@@ -187,7 +187,7 @@ final class ManaStarParticle extends IntrusiveNode {
             return;
           }
           this.a(param0, -12614);
-          RadialSummonMenu.playDefaultSoundWithIntGuard(91, MouseWheelSource.field_b[1 + AttackEvent.nextBoundedInt(false, 8, li.field_n)]);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(91, MouseWheelSource.field_b[1 + AttackEvent.nextBoundedInt(false, 8, PreferencesWriteRequest.field_n)]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class ManaStarParticle extends IntrusiveNode {
         this.field_q = param4;
         this.field_w = param6;
         this.field_o = -param5;
-        this.field_t = AttackEvent.nextBoundedInt(false, MusicPatchUsage.manaStarSprites.length, li.field_n);
+        this.field_t = AttackEvent.nextBoundedInt(false, MusicPatchUsage.manaStarSprites.length, PreferencesWriteRequest.field_n);
         this.field_y = param7;
     }
 

@@ -281,7 +281,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           return true;
         }
         if (null == ToggleWidget.currentRoom &&
-          bq.field_c) {
+          LogoMaterial.field_c) {
           var7 = "[" + ClientConnectionState.field_c + "] ";
         }
         if (ToggleWidget.currentRoom == null) {

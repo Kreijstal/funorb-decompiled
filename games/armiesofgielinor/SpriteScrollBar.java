@@ -12,7 +12,7 @@ final class SpriteScrollBar {
     private int x;
     private boolean interactive;
     private boolean changed;
-    static wm nameCheckResultConsumed;
+    static AccountRequestState nameCheckResultConsumed;
     private int visibleExtent;
     private int scrollOffset;
     private boolean decrementHovered;
@@ -714,6 +714,6 @@ final class SpriteScrollBar {
     }
 
     static {
-        nameCheckResultConsumed = new wm();
+        nameCheckResultConsumed = new AccountRequestState();
     }
 }

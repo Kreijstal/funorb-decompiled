@@ -6690,7 +6690,7 @@ final class Battlefield {
           }
           boolean decompiledFrameCompleted5 = true;
           boolean decompiledFrameRemainder0 = true;
-          this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, li.field_n);
+          this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, PreferencesWriteRequest.field_n);
           this.teams = new TeamRoster[this.teamCount];
           this.playerTeamIndices = new int[this.playerCount];
           this.turnDurationOption = param0;
@@ -7171,7 +7171,7 @@ final class Battlefield {
               }
             }
             if (stackIn_220_0 != 0) {
-              this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, li.field_n);
+              this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, PreferencesWriteRequest.field_n);
               this.loadOrGenerateMap(0, 0);
             }
             this.turnLimit = this.b((byte) 32);

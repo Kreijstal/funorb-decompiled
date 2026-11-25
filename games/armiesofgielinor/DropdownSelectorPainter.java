@@ -230,17 +230,17 @@ final class DropdownSelectorPainter implements WidgetPainter {
         }
     }
 
-    final static bq[] a(int param0, CipherPacketBuffer param1) {
+    final static LogoMaterial[] decodeLogoMaterials(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        bq[] var4 = null;
+        LogoMaterial[] var4 = null;
         int var6_int = 0;
-        bq var6 = null;
+        LogoMaterial var6 = null;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        bq[] stackIn_11_0 = null;
+        LogoMaterial[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -250,13 +250,13 @@ final class DropdownSelectorPainter implements WidgetPainter {
           var2_int = param1.readBits(114, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (bq[]) (stackIn_3_0);
+            return (LogoMaterial[]) (stackIn_3_0);
           }
           var3 = param1.readBits(55, param0);
-          var4 = new bq[var3];
+          var4 = new LogoMaterial[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (vq.a(param1, -2)) {
-              var6 = new bq();
+              var6 = new LogoMaterial();
               param1.readBits(60, 24);
               param1.readBits(-107, 24);
               var6.field_e = param1.readBits(-115, 24);

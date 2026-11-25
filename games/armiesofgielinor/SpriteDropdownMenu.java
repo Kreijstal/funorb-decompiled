@@ -736,12 +736,12 @@ final class SpriteDropdownMenu {
         qf.field_e = null;
         SummonEvent.field_F = null;
         ed.field_e = null;
-        if (jl.field_b != null) {
-          UpkeepEvent.field_z = jl.field_b;
+        if (FullscreenStatusToken.field_b != null) {
+          UpkeepEvent.field_z = FullscreenStatusToken.field_b;
           DebouncedValidator.field_b = ArchiveProvider.field_d;
           UpkeepEvent.field_z.matchedButtonTextColour = -1;
           UpkeepEvent.field_z.heldPressTextColour = -1;
-          jl.field_b = null;
+          FullscreenStatusToken.field_b = null;
           ArchiveProvider.field_d = null;
         }
         UnitCycler.field_g = null;

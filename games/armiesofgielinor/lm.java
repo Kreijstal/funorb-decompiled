@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lm {
-    static wm nameCheckComplete;
+    static AccountRequestState nameCheckComplete;
     static int[] field_e;
     static RgbSprite[] field_h;
     static String field_f;
@@ -29,7 +29,7 @@ final class lm {
 
     static {
         field_z = "lm.A(";
-        nameCheckComplete = new wm();
+        nameCheckComplete = new AccountRequestState();
         field_f = "<%0> runes";
         field_a = "Add name";
     }

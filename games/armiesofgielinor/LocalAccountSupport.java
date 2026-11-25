@@ -12,7 +12,7 @@ final class LocalAccountSupport {
         try {
           EmailValidator.currentLocationLabel = null;
           TextSplitSupport.friendCount = 0;
-          vg.ignoreCount = 0;
+          PreferencesReadRequest.ignoreCount = 0;
           wh.friendEntries.clear(126);
           FixInvisibleUnitsConsoleCommand.ignoreEntries.clear(81);
           var1 = DiskCacheRequest.friendsByName.first((byte) 66);

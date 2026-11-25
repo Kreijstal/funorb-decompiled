@@ -91,7 +91,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
 
     public GuestPlayConfirmationForm() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.registerButton = new InteractiveWidget(li.field_p, (WidgetListener) null);
+        this.registerButton = new InteractiveWidget(PreferencesWriteRequest.field_p, (WidgetListener) null);
         this.backButton = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
         this.guestPlayButton = new InteractiveWidget(MarkerSliderWidget.field_O, (WidgetListener) null);
         SpriteButtonPainter buttonPainter = new SpriteButtonPainter();

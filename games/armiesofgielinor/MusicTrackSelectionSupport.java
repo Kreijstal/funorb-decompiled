@@ -128,7 +128,7 @@ final class MusicTrackSelectionSupport {
           IntrusiveNode.field_e = param3;
           CombatEvent.field_A[3] = 16736511;
           CombatEvent.field_A[1] = 6356832;
-          bq.field_c = param0;
+          LogoMaterial.field_c = param0;
           SpellConfirmationDialog.field_i = param4;
           CombatEvent.field_A[2] = 9474303;
           SpriteSliceAndBlendSupport.field_d[0] = 16764000;
@@ -175,14 +175,14 @@ final class MusicTrackSelectionSupport {
             if (var21 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_28_0 == 0) {
-                if (bq.field_c) {
+                if (LogoMaterial.field_c) {
                   stackIn_13_0 = ClientConnectionState.field_c;
                 } else {
                   stackIn_13_0 = NetworkGameShell.field_u;
                 }
                 var20 = stackIn_13_0;
               } else if (var19 == 1 &&
-                bq.field_c) {
+                LogoMaterial.field_c) {
                 var20 = GridWidgetContainer.field_O;
               } else {
                 decompiledFrameRemainder0 = (var19 == 2);

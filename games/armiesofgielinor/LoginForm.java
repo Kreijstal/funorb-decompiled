@@ -96,7 +96,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             }
             this.navigationButton = new InteractiveWidget(navigationText, (WidgetListener) null);
             if (this.showRegistration) {
-              this.registerButton = new InteractiveWidget(li.field_p, (WidgetListener) (this));
+              this.registerButton = new InteractiveWidget(PreferencesWriteRequest.field_p, (WidgetListener) (this));
             }
           } else {
             this.submitButton = new InteractiveWidget(RegionAnchor.field_k, (WidgetListener) null);

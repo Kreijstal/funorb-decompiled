@@ -6,7 +6,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
     static ProceduralMapSupport field_ab;
     private InteractiveWidget membersButton;
     static RgbSprite[] activeFoliageShadows;
-    static jl field_cb;
+    static FullscreenStatusToken field_cb;
     static byte[] field_db;
     static ClientContextMenu activeContextMenu;
     static String field_X;
@@ -284,7 +284,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
 
     static {
         field_ab = new ProceduralMapSupport();
-        field_cb = new jl();
+        field_cb = new FullscreenStatusToken();
         field_Y = "You must play 1 more rated game before playing with the current options.";
         field_X = "Email (Login):";
         field_db = new byte[520];

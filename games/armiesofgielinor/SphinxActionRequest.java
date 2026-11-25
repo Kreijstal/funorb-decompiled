@@ -206,8 +206,8 @@ final class SphinxActionRequest extends ActionRequest {
           LoginKind.field_d.skinSprites = wj.a(-12310, DropdownSelectorPainter.loadRgbSpritesByName("tab_inactive", (byte) -127, param1, "lobby"));
           LoginKind.field_d.matchedButtonSkinSprites = wj.a(-12310, DropdownSelectorPainter.loadRgbSpritesByName("tab_mouseover", (byte) -124, param1, "lobby"));
           LoginKind.field_d.selectedSkinSprites = var14;
-          wm.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
-          wm.field_c.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(1856141, false, 206, -1, 3, 1127256);
+          AccountRequestState.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
+          AccountRequestState.field_c.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(1856141, false, 206, -1, 3, 1127256);
           UnitAnimationPreview.field_m = new ClientUiComponent(0L, (ClientUiComponent) null);
           UnitAnimationPreview.field_m.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, 290, -1, 3, 6052956);
           ConsoleValue.field_a = new ClientUiComponent(0L, var15);

@@ -10,7 +10,7 @@ final class RadialSummonItem {
     private int hitRadius;
     int godGroupId;
     int choiceId;
-    static vg field_f;
+    static PreferencesReadRequest field_f;
 
     final static int getCampaignPacketWord2(boolean obfuscationGuard) {
         if (obfuscationGuard) {

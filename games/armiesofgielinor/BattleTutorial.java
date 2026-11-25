@@ -1675,7 +1675,7 @@ class BattleTutorial {
               var4 = stackIn_20_0;
               if (!this.expanded) {
                 if (var4 != 0) {
-                  stackIn_24_0 = vg.field_k;
+                  stackIn_24_0 = PreferencesReadRequest.field_k;
                 } else {
                   stackIn_24_0 = DeployAction.field_z;
                 }

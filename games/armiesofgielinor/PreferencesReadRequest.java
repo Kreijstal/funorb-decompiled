@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends IntrusiveNode {
+final class PreferencesReadRequest extends IntrusiveNode {
     static int ignoreCount;
     static RgbSprite[] field_q;
     byte[] field_s;
@@ -15,7 +15,7 @@ final class vg extends IntrusiveNode {
 
     final static boolean hasQuickChatOverlay(int obfuscationGuard) {
         if (obfuscationGuard != 10) {
-          vg.releaseStatics((byte) 89);
+          PreferencesReadRequest.releaseStatics((byte) 89);
           if (Spell.quickChatHelpDialog == null) {
             return BattleTutorial.quickChatMenuVisible ? true : false;
           }
@@ -42,7 +42,7 @@ final class vg extends IntrusiveNode {
         field_q = null;
     }
 
-    vg() {
+    PreferencesReadRequest() {
     }
 
     static {

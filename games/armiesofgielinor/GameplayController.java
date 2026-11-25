@@ -6704,7 +6704,7 @@ final class GameplayController {
                   }
                 }
                 if (IterableDualNodeDeque.isPointerInBounds(param0 - 153, 502, 550, 12, 32)) {
-                  var2 = ek.field_b[0][vg.field_r[var13_ref_ne.terrainType]];
+                  var2 = ek.field_b[0][PreferencesReadRequest.field_r[var13_ref_ne.terrainType]];
                 }
                 if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 318, 39, 79)) {
                   var14 = 0;
@@ -6751,7 +6751,7 @@ final class GameplayController {
                     var14 = stackIn_617_0;
                   }
                   if (0 < var14) {
-                    var2 = EmailCheckResult.a(4800, vg.field_t, new String[]{Integer.toString(var14)});
+                    var2 = EmailCheckResult.a(4800, PreferencesReadRequest.field_t, new String[]{Integer.toString(var14)});
                     if (var20 != 0) {
                       var2 = DisplayModeOptionPainter.field_x;
                     }
@@ -7579,7 +7579,7 @@ final class GameplayController {
             } else {
               this.s(-123);
             }
-            li.a(param0 + 4);
+            PreferencesWriteRequest.a(param0 + 4);
             if (~this.field_C < param0 &&
               this.field_Zb > -1 &&
               param1) {
@@ -10224,7 +10224,7 @@ final class GameplayController {
           SoftwareRaster.setClip(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
           GradientUiRenderer.drawSolidText(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
           SoftwareRaster.resetClip();
-          TextWidthSupport.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
+          TextWidthSupport.field_b[PreferencesReadRequest.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
           SoftwareRaster.fillRectangleBlended(param3 + 7, param0 - 41 + param5, 60, 30, 0, 128);
           TrianglePulse.field_f.drawTransparent(param3 + 12, -36 + param5 + param0);
           var10 = 0;
@@ -12559,7 +12559,7 @@ final class GameplayController {
             if (decompiledFrameCompleted1) {
               var19Lifetime1 = 0;
               if (ByteStorage.field_g < this.battlefield.playerCount) {
-                var19Lifetime1 = AttackEvent.nextBoundedInt(false, 1 - ByteStorage.field_g + this.battlefield.playerCount, li.field_n);
+                var19Lifetime1 = AttackEvent.nextBoundedInt(false, 1 - ByteStorage.field_g + this.battlefield.playerCount, PreferencesWriteRequest.field_n);
               }
               var20Lifetime1 = 0;
               while (this.aiPlanners.length > var20Lifetime1) {

@@ -109,22 +109,22 @@ final class SpellCastEvent extends GameEvent {
     final static void b(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        li var4 = null;
+        PreferencesWriteRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (li) (s.field_e.first((byte) 108));
+          var4 = (PreferencesWriteRequest) (s.field_e.first((byte) 108));
           while (var4 != null) {
-            DeathEvent.a(var4, param0, 25522);
-            var4 = (li) (s.field_e.next((byte) 123));
+            DeathEvent.sendPreferencesWrite(var4, param0, 25522);
+            var4 = (PreferencesWriteRequest) (s.field_e.next((byte) 123));
           }
           if (param1 != -32666) {
             field_D = (ClientUiComponent) null;
           }
           var2 = AccountRegistrationDialog.field_Bb.first((byte) 105);
           while (var2 != null) {
-            NineSliceSpriteSupport.a(param0, 0);
+            NineSliceSpriteSupport.sendPreferencesRead(param0, 0);
             var2 = AccountRegistrationDialog.field_Bb.next((byte) 123);
           }
           return;

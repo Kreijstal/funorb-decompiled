@@ -5,7 +5,7 @@ import java.util.*;
 
 final class UnitAnimationSelectionSupport {
     static int field_f;
-    static bq[] field_a;
+    static LogoMaterial[] field_a;
     static int field_e;
     static PlayerProfile playerProfile;
     static RgbSprite field_c;

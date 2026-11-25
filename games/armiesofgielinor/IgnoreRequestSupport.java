@@ -48,7 +48,7 @@ final class IgnoreRequestSupport {
             stackIn_14_0 = EmailCheckResult.a(4800, TextLineLayout.field_k, new String[]{name});
             return stackIn_14_0;
           }
-          if (vg.ignoreCount >= 100) {
+          if (PreferencesReadRequest.ignoreCount >= 100) {
             stackIn_17_0 = wh.field_d;
             return stackIn_17_0;
           }

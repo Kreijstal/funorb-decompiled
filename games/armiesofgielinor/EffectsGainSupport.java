@@ -4,7 +4,7 @@
 final class EffectsGainSupport {
     static ClientConnectionState field_a;
     static String field_d;
-    static wm accountNameCheckState;
+    static AccountRequestState accountNameCheckState;
     static int field_c;
 
     final static void setEffectsGain(int gain, byte obfuscationGuard) {
@@ -58,7 +58,7 @@ final class EffectsGainSupport {
         if (obfuscationGuard < -111) {
           return UnitAnimationSelectionSupport.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
         }
-        accountNameCheckState = (wm) null;
+        accountNameCheckState = (AccountRequestState) null;
         return UnitAnimationSelectionSupport.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
     }
 

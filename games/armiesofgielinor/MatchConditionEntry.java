@@ -58,7 +58,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (updateType == 0) {
             if (null == MusicTrackSelectionSupport.ignoredAccountsByName) {
               MusicTrackSelectionSupport.ignoredAccountsByName = new DualNodeHashTable(128);
-              vg.ignoreCount = 0;
+              PreferencesReadRequest.ignoreCount = 0;
             }
             stackIn_12_0 = (1 != packet.readUnsignedByte(0)) ? 0 : 1;
             hasSeparateAccountName = stackIn_12_0;
@@ -85,8 +85,8 @@ final class MatchConditionEntry extends IntrusiveNode {
             if (null == ignoreEntry) {
               ignoreEntry = new SocialListEntry();
               MusicTrackSelectionSupport.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
-              newIgnoreOrder = vg.ignoreCount;
-              vg.ignoreCount = vg.ignoreCount + 1;
+              newIgnoreOrder = PreferencesReadRequest.ignoreCount;
+              PreferencesReadRequest.ignoreCount = PreferencesReadRequest.ignoreCount + 1;
               ignoreEntry.orderIndex = newIgnoreOrder;
               FixInvisibleUnitsConsoleCommand.ignoreEntries.addLast((byte) -119, (IntrusiveNode) (ignoreEntry));
             }

@@ -55,7 +55,7 @@ final class TextLineLayout {
           if (PowerOfTwoSupport.outgoingChatChannel != 2) {
             ed.field_e.text = FixedQuaternion.field_c;
           } else {
-            ed.field_e.text = bq.field_d;
+            ed.field_e.text = LogoMaterial.field_d;
           }
           var9_int = 495;
           var10 = 5;

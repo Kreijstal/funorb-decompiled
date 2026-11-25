@@ -108,7 +108,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         }
     }
 
-    FullscreenStatusDialog(ModalDialogHost host, jl statusToken) {
+    FullscreenStatusDialog(ModalDialogHost host, FullscreenStatusToken statusToken) {
         super(host, 200, 150);
         Object var3 = null;
         Widget var4 = null;

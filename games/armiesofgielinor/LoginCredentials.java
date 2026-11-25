@@ -54,7 +54,7 @@ abstract class LoginCredentials {
             }
           } else {
             if (0 == message.channelId &&
-              bq.field_c) {
+              LogoMaterial.field_c) {
               var3_ref = "[" + ClientConnectionState.field_c + "] ";
             }
             if (message.channelId == 1) {

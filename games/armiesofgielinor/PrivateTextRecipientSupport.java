@@ -101,9 +101,9 @@ final class PrivateTextRecipientSupport {
             return true;
           }
           if (PowerOfTwoSupport.outgoingChatChannel == 2 &&
-            null != wm.chatRecipientNameKey) {
+            null != AccountRequestState.chatRecipientNameKey) {
             var3 = (CharSequence) ((Object) recipientName);
-            if (wm.chatRecipientNameKey.equals(AccountNameNormalizer.normalize(var3, false))) {
+            if (AccountRequestState.chatRecipientNameKey.equals(AccountNameNormalizer.normalize(var3, false))) {
               return true;
             }
           }

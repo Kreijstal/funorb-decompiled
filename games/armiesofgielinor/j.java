@@ -84,7 +84,7 @@ final class j {
             DisplacedUnitMarker.field_t[var1_int] = null;
           }
           DisplacedUnitMarker.field_t[42] = nt.field_p;
-          DisplacedUnitMarker.field_t[40] = vg.field_l;
+          DisplacedUnitMarker.field_t[40] = PreferencesReadRequest.field_l;
           DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
           DisplacedUnitMarker.field_t[36] = StripedProgressWidget.field_G;
           DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;

@@ -105,7 +105,7 @@ final class BattleCharacter {
               stackIn_9_0 = this.destinationY;
               stackIn_10_1 = (!this.field_u) ? 1 : -1;
               jg.a(stackIn_9_0, stackIn_10_1 * this.destinationX, 512, 0, this.unitType);
-              this.field_J = this.field_J + AttackEvent.nextBoundedInt(false, 10, li.field_n);
+              this.field_J = this.field_J + AttackEvent.nextBoundedInt(false, 10, PreferencesWriteRequest.field_n);
             }
           } else {
             this.destinationY = this.currentY;
@@ -381,9 +381,9 @@ final class BattleCharacter {
         for (var8 = 0; ResourceClientErrorSupport.field_a > var8; var8++) {
           this.field_z[var8] = param4 << 16;
           this.field_I[var8] = param5 << 16;
-          this.field_k[var8] = AttackEvent.nextBoundedInt(false, param1 >> 1, li.field_n) + param1;
-          this.field_o[var8] = (!this.field_u ? 1 : -1) * (param3 << 16) + (int)(Math.sin((double)AttackEvent.nextBoundedInt(false, 256, li.field_n) * 3.141592653589793 / 128.0) * 10000.0 * (double)(param1 + AttackEvent.nextBoundedInt(false, param1 >> 1, li.field_n)));
-          this.field_r[var8] = (int)(10000.0 * Math.sin(3.141592653589793 * (double)AttackEvent.nextBoundedInt(false, 256, li.field_n) / 128.0) * (double)(AttackEvent.nextBoundedInt(false, param1 >> 1, li.field_n) + param1)) + (param0 << 16);
+          this.field_k[var8] = AttackEvent.nextBoundedInt(false, param1 >> 1, PreferencesWriteRequest.field_n) + param1;
+          this.field_o[var8] = (!this.field_u ? 1 : -1) * (param3 << 16) + (int)(Math.sin((double)AttackEvent.nextBoundedInt(false, 256, PreferencesWriteRequest.field_n) * 3.141592653589793 / 128.0) * 10000.0 * (double)(param1 + AttackEvent.nextBoundedInt(false, param1 >> 1, PreferencesWriteRequest.field_n)));
+          this.field_r[var8] = (int)(10000.0 * Math.sin(3.141592653589793 * (double)AttackEvent.nextBoundedInt(false, 256, PreferencesWriteRequest.field_n) / 128.0) * (double)(AttackEvent.nextBoundedInt(false, param1 >> 1, PreferencesWriteRequest.field_n) + param1)) + (param0 << 16);
         }
     }
 
@@ -830,7 +830,7 @@ final class BattleCharacter {
             this.modelIndex = 89;
           }
         }
-        var7 = AttackEvent.nextBoundedInt(false, ActionRequest.unitModels[this.modelIndex].length, li.field_n);
+        var7 = AttackEvent.nextBoundedInt(false, ActionRequest.unitModels[this.modelIndex].length, PreferencesWriteRequest.field_n);
         this.model = (ModelMesh) (ActionRequest.unitModels[this.modelIndex][var7]);
         if (null == this.model) {
           LoginCredentials.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
