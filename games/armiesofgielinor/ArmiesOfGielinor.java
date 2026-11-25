@@ -98,7 +98,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (PopupPresentation.requiresAccountUi(31337)) {
             this.advanceAccountUi((byte) 4);
             if (PopupPresentation.requiresAccountUi(31337)) {
-              if (AccountRequestResult.a((byte) 105)) {
+              if (AccountRequestResult.isGameUiPhaseActive((byte) 105)) {
                 discarded$0 = this.loadClientResources(-100, false);
               }
               return;
@@ -1551,12 +1551,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ClientConnectionState.releaseStatics((byte) 96);
           DelayedPacket.releaseStatics(obfuscationGuard + 1);
           AccountRequestState.releaseStatics(-10743);
-          AccountRequestResult.a(200);
+          AccountRequestResult.releaseStatics(200);
           DialogMessagePane.releaseStatics((byte) 63);
           RasterState.releaseStatics(-22856);
           CampaignResult.releaseStatics((byte) -116);
           RegionAnchor.releaseStatics(true);
-          LoginMethod.b((byte) -49);
+          LoginMethod.releaseStatics((byte) -49);
           KeyedLoginCredentials.releaseStatics((byte) -3);
           AlternateKeyedLoginCredentials.releaseStatics(120);
           PasswordLoginCredentials.releaseStatics(true);
@@ -2008,7 +2008,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                                                 do {
                                                   if (var5_int >= 8) {
                                                     TurnTimerDial.a(126, FullscreenStatusToken.field_d);
-                                                    TabbedPanel.a(FullscreenStatusToken.field_d, (byte) 123);
+                                                    TabbedPanel.loadGameSoundSamples(FullscreenStatusToken.field_d, (byte) 123);
                                                     CampaignLookupSupport.field_d = null;
                                                     ModalDialog.a(0);
                                                     break;
@@ -2048,7 +2048,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                             CalendarSupport.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, LeapYearSupport.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
-                          CalendarSupport.a((byte) -24, 33.0f, LoginForm.a(LeapYearSupport.field_d, 0, IntroSequence.field_b, -27638, PacketBuffer.field_m));
+                          CalendarSupport.a((byte) -24, 33.0f, LoginForm.formatArchiveGroupProgress(LeapYearSupport.field_d, 0, IntroSequence.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
                         CalendarSupport.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
@@ -2284,7 +2284,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SocketResourceClient.a((byte) 125, ManaStarParticle.a(AchievementUnlockRequest.field_l, "dials", (byte) -4, "basic"), GameplayController.loadRgbSpriteByName("hand", (byte) 51, "basic", AchievementUnlockRequest.field_l));
           IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, AchievementUnlockRequest.field_l, "basic");
           MarkerSliderWidget.field_T = GameplayController.loadRgbSpriteByName("isocrosshair", (byte) 51, "basic", AchievementUnlockRequest.field_l);
-          SpriteDropdownMenu.a(GameplayController.loadRgbSpriteByName("glowray", (byte) 51, "basic", AchievementUnlockRequest.field_l), 0, GameplayController.loadRgbSpriteByName("glowspark", (byte) 51, "basic", AchievementUnlockRequest.field_l));
+          SpriteDropdownMenu.buildPlayerGlowSprites(GameplayController.loadRgbSpriteByName("glowray", (byte) 51, "basic", AchievementUnlockRequest.field_l), 0, GameplayController.loadRgbSpriteByName("glowspark", (byte) 51, "basic", AchievementUnlockRequest.field_l));
           MoveAttackRequest.field_C = DropdownSelectorPainter.loadRgbSpritesByName("medals", (byte) -127, AchievementUnlockRequest.field_l, "campaign");
           DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", AchievementUnlockRequest.field_l, false);
           DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", AchievementUnlockRequest.field_l, false);

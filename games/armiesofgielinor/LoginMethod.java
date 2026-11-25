@@ -9,7 +9,7 @@ final class LoginMethod {
     private String cookieValue;
     static String field_e;
 
-    final static void a(byte param0) {
+    final static void processGameDialogInput(byte param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -31,7 +31,7 @@ final class LoginMethod {
           if (param0 >= 10) {
             return;
           }
-          LoginMethod.a(29);
+          LoginMethod.clearPointerInputHandler(29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class LoginMethod {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 == -49) {
           field_f = null;
@@ -84,7 +84,7 @@ final class LoginMethod {
         throw new IllegalStateException();
     }
 
-    final static CampaignMission a(int param0, byte param1, CipherPacketBuffer param2) {
+    final static CampaignMission decodeCampaignMissionRecord(int param0, byte param1, CipherPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CampaignMission var4 = null;
@@ -166,14 +166,14 @@ final class LoginMethod {
         try {
           IntrusiveNode.setBrowserCookie(applet, this.cookieValue, (byte) 29, "jagex-last-login-method", 31536000L);
           if (obfuscationGuard != -137) {
-            LoginMethod.a((byte) 95);
+            LoginMethod.processGameDialogInput((byte) 95);
           }
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "pf.B(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void clearPointerInputHandler(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

@@ -209,7 +209,7 @@ final class UiSelectionState {
           if (var9 != null) {
             UnitAnimationSelectionSupport.openChatMessageContextMenu(0, var9);
           }
-          var8 = AccountRequestResult.a(false);
+          var8 = AccountRequestResult.updateChatCompositionText(false);
           if (var8 != null) {
             DialogMessagePane.field_I = var8;
           }

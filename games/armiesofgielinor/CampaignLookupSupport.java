@@ -74,7 +74,7 @@ final class CampaignLookupSupport {
     }
 
     final static void a(byte param0) {
-        DiskCacheWorker.a(-10232);
+        DiskCacheWorker.collapseChatPanel(-10232);
         ContextualRuntimeException.b(-6145);
         if (param0 != -97) {
           field_e = (ClientUiComponent) null;

@@ -258,7 +258,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           if (param5 == 80) {
             if (param0) {
-              stackIn_71_0 = (TabbedPanel.a(59 + param7, 26 + param4, 21, false)) ? 1 : 0;
+              stackIn_71_0 = (TabbedPanel.isPointerInsideCircle(59 + param7, 26 + param4, 21, false)) ? 1 : 0;
             } else {
               stackIn_71_0 = 0;
             }

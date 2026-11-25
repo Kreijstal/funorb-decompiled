@@ -70,7 +70,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.updatePointerSelection(0, DiskCacheWorker.a((byte) -47, TeleportAction.pointerPressY, BattleTutorial.pointerPressX), DiskCacheWorker.a((byte) 93, HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX));
+          MovementPlanner.field_z.updatePointerSelection(0, DiskCacheWorker.hitTestMessageDialog((byte) -47, TeleportAction.pointerPressY, BattleTutorial.pointerPressX), DiskCacheWorker.hitTestMessageDialog((byte) 93, HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX));
           if (MovementPlanner.field_z.hasActivationInput((byte) 46)) {
             var1_int = 1;
           }

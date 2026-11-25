@@ -9,7 +9,7 @@ final class TabbedPanel extends ClientUiComponent {
     int activeTab;
     private ClientUiComponent[] panels;
 
-    final static void a(SoundCache param0, byte param1) {
+    final static void loadGameSoundSamples(SoundCache param0, byte param1) {
         int var2_int = 0;
         PcmSample var3 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -25,7 +25,7 @@ final class TabbedPanel extends ClientUiComponent {
           }
           if (param1 != 123) {
             String var5 = (String) null;
-            TabbedPanel.a(42, (LobbyRoom) null, false, (String) null);
+            TabbedPanel.openRoomContextMenu(42, (LobbyRoom) null, false, (String) null);
           }
           SharedUiLoadingSupport.field_f = true;
         } catch (RuntimeException runtimeException) {
@@ -49,7 +49,7 @@ final class TabbedPanel extends ClientUiComponent {
         field_Lb = null;
         if (param0 != 2) {
           SoundCache var2 = (SoundCache) null;
-          TabbedPanel.a((SoundCache) null, (byte) 111);
+          TabbedPanel.loadGameSoundSamples((SoundCache) null, (byte) 111);
         }
     }
 
@@ -64,7 +64,7 @@ final class TabbedPanel extends ClientUiComponent {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         tabIndex = 0;
         if (obfuscationGuard != -20199) {
-          TabbedPanel.a(96, -94, -90, false);
+          TabbedPanel.isPointerInsideCircle(96, -94, -90, false);
         }
         while (this.tabButtons.length > tabIndex) {
           tabLeft = this.width * tabIndex / this.tabButtons.length;
@@ -88,7 +88,7 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static void a(int param0, LobbyRoom param1, boolean param2, String param3) {
+    final static void openRoomContextMenu(int param0, LobbyRoom param1, boolean param2, String param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -161,7 +161,7 @@ final class TabbedPanel extends ClientUiComponent {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard != 10000) {
           var4 = (String) null;
-          TabbedPanel.a(10, (LobbyRoom) null, false, (String) null);
+          TabbedPanel.openRoomContextMenu(10, (LobbyRoom) null, false, (String) null);
         }
         for (var2 = 0; this.tabButtons.length > var2; var2++) {
           if (this.activeTab != var2 &&
@@ -177,7 +177,7 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static void a(CampaignMission param0, byte param1) {
+    final static void configureCampaignPlayerColours(CampaignMission param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -234,7 +234,7 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static LoginCredentials a(boolean param0, String param1, byte param2, String param3) {
+    final static LoginCredentials createLoginCredentials(boolean param0, String param1, byte param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -250,7 +250,7 @@ final class TabbedPanel extends ClientUiComponent {
         try {
           if (param2 != 10) {
             var7 = (String) null;
-            TabbedPanel.a(-33, (LobbyRoom) null, true, (String) null);
+            TabbedPanel.openRoomContextMenu(-33, (LobbyRoom) null, true, (String) null);
           }
           var4_long = 0L;
           var6 = null;
@@ -282,7 +282,7 @@ final class TabbedPanel extends ClientUiComponent {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, boolean param3) {
+    final static boolean isPointerInsideCircle(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           return true;
         }

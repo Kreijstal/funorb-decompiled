@@ -32,7 +32,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         try {
           if (obfuscationGuard != -1) {
             byte[] var5 = (byte[]) null;
-            AccountRegistrationForm.a(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
+            AccountRegistrationForm.readPackedOffsetByteArray(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
           }
           var3 = this.nameInput;
           var4 = name;
@@ -42,7 +42,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, byte param3) {
+    final static byte[] readPackedOffsetByteArray(int param0, CipherPacketBuffer param1, byte[] param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -61,7 +61,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         try {
           if (param3 > -101) {
             var9 = (byte[]) null;
-            AccountRegistrationForm.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
+            AccountRegistrationForm.readPackedOffsetByteArray(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
           }
           var4_int = param1.readBits(-122, param0);
           if (var4_int == 0) {
@@ -209,12 +209,12 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.passwordInput.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = EmailCheckResult.formatTemplate(4800, StateChangeEvent.field_D, new String[]{this.getLinkOpenMarkup(150), this.getLinkCloseMarkup(29406)});
         int var3 = 20;
-        var3 = var3 + this.a(FullscreenMembershipDialog.field_X, var3, 170, (byte) 18, this.emailInput);
-        var3 = var3 + (this.a(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
-        var3 = var3 + this.a(FriendLookupSupport.field_h, var3, 170, (byte) 18, this.passwordInput);
-        var3 = var3 + (this.a(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, TilePosition.field_m, 210, var3) + 5);
-        var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.nameInput, 170, MusicPatchEnvelope.field_k, 210, var3));
-        var3 = var3 + this.a(var3, this.ageInput, 170, field_S, 27270);
+        var3 = var3 + this.addLabeledField(FullscreenMembershipDialog.field_X, var3, 170, (byte) 18, this.emailInput);
+        var3 = var3 + (this.addLabeledFieldWithValidationMessage(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
+        var3 = var3 + this.addLabeledField(FriendLookupSupport.field_h, var3, 170, (byte) 18, this.passwordInput);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, TilePosition.field_m, 210, var3) + 5);
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(ScrollContainer.field_Ob, this.nameInput, 170, MusicPatchEnvelope.field_k, 210, var3));
+        var3 = var3 + this.addLabeledFieldWithValidationIcon(var3, this.ageInput, 170, field_S, 27270);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.emailOptInToggle, true, this.width - 120, 5, AccountIdentifierStatus.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.addChild((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
@@ -344,7 +344,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    private final int a(int param0, Widget param1, int param2, String param3, int param4) {
+    private final int addLabeledFieldWithValidationIcon(int param0, Widget param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         ValidationStatusIcon var7 = null;
         LabeledWidgetContainer var8 = null;
@@ -432,7 +432,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
 
     private final String getLinkCloseMarkup(int obfuscationGuard) {
         if (obfuscationGuard != 29406) {
-          AccountRegistrationForm.a(109, -112, true);
+          AccountRegistrationForm.processSocialListPrompt(109, -112, true);
         }
         return "</col></u>";
     }
@@ -496,7 +496,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         ((AccountNameAvailabilityValidator) (this.nameInput.getValidationSource(-918933630))).invalidateNameCheck(50);
     }
 
-    private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -543,7 +543,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    private final int a(String param0, Widget param1, int param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, Widget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -558,7 +558,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
           if (param4 != 210) {
             field_Y = (String) null;
           }
-          stackIn_3_0 = this.a(false, param2, param1, param3, 35, param0, param5);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(false, param2, param1, param3, 35, param0, param5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -586,7 +586,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    private final int a(String param0, int param1, int param2, byte param3, Widget param4) {
+    private final int addLabeledField(String param0, int param1, int param2, byte param3, Widget param4) {
         LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -624,7 +624,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void processSocialListPrompt(int param0, int param1, boolean param2) {
         int var3 = 0;
         CharSequence var6 = null;
         String var4 = null;

@@ -2355,7 +2355,7 @@ final class InstructionsPanel {
                 var10 = (String) null;
                 CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, ReflectionCheckRequest.field_o);
               } else {
-                CampaignRewardPreview.field_g = TabbedPanel.a(false, param4, (byte) 10, param3);
+                CampaignRewardPreview.field_g = TabbedPanel.createLoginCredentials(false, param4, (byte) 10, param3);
               }
               EmailValidator.outgoingPacket.position = 0;
               EmailValidator.outgoingPacket.writeByte(1, 14);

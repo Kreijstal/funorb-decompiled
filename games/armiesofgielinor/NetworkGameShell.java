@@ -44,7 +44,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         ModalDialog.field_E = secondaryCommonUiArchiveId;
         DualLinkedNode.field_t = buttonGraphicsArchiveId;
         this.configureSharedPacketLengths((byte) -51);
-        LoginForm.l(0);
+        LoginForm.setClientFeatureMask(0);
     }
 
     final static void resetIdleTracking(int obfuscationGuard) {
@@ -231,7 +231,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.getLoginPassword(-1));
+            actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.getLoginPassword(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -303,10 +303,10 @@ abstract class NetworkGameShell extends GameAppletShell {
                 countryResponse = MusicPatchEnvelope.field_h.getResultForState(3);
                 if (countryResponse != null) {
                   countryListText = BattlefieldTheme.decodeSingleByteText(0, countryResponse.position, -127, countryResponse.payload);
-                  LoginForm.a(countryListText, -73);
+                  LoginForm.handleCountryListResponse(countryListText, -73);
                 } else {
                   missingCountryList = (String) null;
-                  LoginForm.a((String) null, -108);
+                  LoginForm.handleCountryListResponse((String) null, -108);
                 }
                 MusicPatchEnvelope.field_h = null;
               }
@@ -315,7 +315,7 @@ abstract class NetworkGameShell extends GameAppletShell {
               countryListFailure = (Exception) (Object) caughtFailure;
               LoginCredentials.a((Throwable) ((Object) countryListFailure), -99, "S1");
               failedCountryList = (String) null;
-              LoginForm.a((String) null, -119);
+              LoginForm.handleCountryListResponse((String) null, -119);
               MusicPatchEnvelope.field_h = null;
             }
           }
@@ -374,7 +374,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         if (obfuscationGuard != 4) {
           this.processAccountUi((byte) 113, true);
         }
-        if (!AccountRequestResult.a((byte) 60)) {
+        if (!AccountRequestResult.isGameUiPhaseActive((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
             if (!BitmapTextWidgetPainter.b(true)) {
               StateChangeEvent.e((byte) -84);
@@ -526,7 +526,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if (!PopupPresentation.requiresAccountUi(31337) &&
           SoundCache.field_b != 11) {
-          LoginMethod.a((byte) 73);
+          LoginMethod.processGameDialogInput((byte) 73);
         }
         if (CampaignMission.field_I != null) {
           MouseWheelSource.field_d = CampaignMission.field_I.takeRotation(9);

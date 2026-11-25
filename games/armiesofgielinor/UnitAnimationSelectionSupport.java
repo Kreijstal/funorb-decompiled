@@ -56,7 +56,7 @@ final class UnitAnimationSelectionSupport {
           DateValiditySupport.a(IndexedSpriteBase.field_b, 23678);
         }
         BufferedSocket.disableKeyboard((byte) 41);
-        LoginMethod.a(-15291);
+        LoginMethod.clearPointerInputHandler(-15291);
         DequeWidgetContainer.closeResourceAndCacheServices(-118);
         if (GrowableIntArray.canSendSessionPackets((byte) -88)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);

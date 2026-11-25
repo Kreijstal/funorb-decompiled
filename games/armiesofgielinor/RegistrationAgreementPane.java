@@ -168,7 +168,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           FriendLookupSupport.a(-93, param0);
           GzipDecoder.a(32381, param0);
           DropdownArrowPainter.a(54);
-          SpriteDropdownMenu.b(true);
+          SpriteDropdownMenu.buildLogoGlowSprite(true);
           if (param1 <= 70) {
             String var5 = (String) null;
             RegistrationAgreementPane.isPasswordAllowedForName((String) null, (String) null, true);

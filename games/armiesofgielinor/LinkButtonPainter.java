@@ -71,7 +71,7 @@ final class LinkButtonPainter implements WidgetPainter {
                 var10 = var10 + (widget.height - var8 >> 1);
               }
             }
-            AccountNameSelectionForm.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
+            AccountNameSelectionForm.drawDottedRectangleOutline(4 + var7, -2 + var9, -70, var8, 2 + var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -26,7 +26,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (this.tooltipText == null) {
           return null;
         }
-        WidgetStateStyle.a(HighscoreAccountEntry.pointerY, this.width - this.pointerLocalX + AiPlanningStrategy.pointerX, (byte) 113);
+        WidgetStateStyle.setTooltipAnchor(HighscoreAccountEntry.pointerY, this.width - this.pointerLocalX + AiPlanningStrategy.pointerX, (byte) 113);
         if (obfuscationGuard != 21384) {
           return (String) null;
         }

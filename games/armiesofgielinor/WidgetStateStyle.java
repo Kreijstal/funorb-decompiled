@@ -140,7 +140,7 @@ final class WidgetStateStyle {
         }
     }
 
-    final WidgetStateStyle a(boolean param0, byte param1) {
+    final WidgetStateStyle setStartsNewLayer(boolean param0, byte param1) {
         if (param1 >= 53) {
           this.field_f = param0 ? true : false;
           return this;
@@ -228,9 +228,9 @@ final class WidgetStateStyle {
         }
     }
 
-    final WidgetStateStyle b(int param0, int param1) {
+    final WidgetStateStyle setTextShadowColour(int param0, int param1) {
         if (param1 < 121) {
-          this.a(true, (byte) -5);
+          this.setStartsNewLayer(true, (byte) -5);
           this.field_g = param0;
           return this;
         }
@@ -283,7 +283,7 @@ final class WidgetStateStyle {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void setTooltipAnchor(int param0, int param1, byte param2) {
         LobbyPlayer.field_Ib = param0;
         QuickChatCommandDefinition.field_e = param1;
         if (param2 <= 77) {
@@ -291,7 +291,7 @@ final class WidgetStateStyle {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, BinaryBitmapFont param4, RgbSprite[] param5, int param6, String param7, int param8) {
+    final static void drawEndTurnButton(int param0, int param1, boolean param2, int param3, BinaryBitmapFont param4, RgbSprite[] param5, int param6, String param7, int param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -351,7 +351,7 @@ final class WidgetStateStyle {
         }
     }
 
-    final WidgetStateStyle a(int param0, byte param1) {
+    final WidgetStateStyle setTextColour(int param0, byte param1) {
         this.field_b = param0;
         int var3 = -92 / ((param1 + 28) / 55);
         return this;

@@ -432,7 +432,7 @@ final class SpriteDropdownMenu {
         return this.enabled;
     }
 
-    final static ProceduralMapSupport a(String param0, int param1) {
+    final static ProceduralMapSupport validateEmailLocalPart(String param0, int param1) {
         ProceduralMapSupport stackIn_3_0 = null;
         ProceduralMapSupport stackIn_6_0 = null;
         ProceduralMapSupport stackIn_12_0 = null;
@@ -569,7 +569,7 @@ final class SpriteDropdownMenu {
         return false;
     }
 
-    final static void b(boolean param0) {
+    final static void buildLogoGlowSprite(boolean param0) {
         RgbSprite var1 = null;
         RgbSprite var2 = null;
         int var3 = 0;
@@ -732,7 +732,7 @@ final class SpriteDropdownMenu {
         SoftwareRaster.restoreClip(this.savedClip);
     }
 
-    final static void x(int param0) {
+    final static void resetChatComposition(int param0) {
         ResourceClientSetupSupport.field_e = null;
         SummonEvent.field_F = null;
         SessionTransitionSupport.field_e = null;
@@ -750,7 +750,7 @@ final class SpriteDropdownMenu {
         int var1 = 89 % ((param0 + 51) / 39);
     }
 
-    final static void a(RgbSprite param0, int param1, RgbSprite param2) {
+    final static void buildPlayerGlowSprites(RgbSprite param0, int param1, RgbSprite param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;

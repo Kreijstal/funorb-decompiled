@@ -33,7 +33,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         var2.setBounds(20, 270, var3, 8192, 50);
         var3 += 50;
         this.addChild((byte) 10, var2);
-        var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.nameInput));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.nameInput));
         this.submitButton.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
         this.cancelButton.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
         this.cancelButton.listener = (WidgetListener) (this);
@@ -84,7 +84,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         ((AccountNameAvailabilityValidator) (this.nameInput.getValidationSource(obfuscationGuard - 918933514))).invalidateNameCheck(50);
         if (obfuscationGuard != -116) {
           String var3 = (String) null;
-          discarded$0 = this.a(-47, 45, (String) null, (Widget) null, 47, (String) null, -7);
+          discarded$0 = this.addLabeledFieldWithValidationMessage(-47, 45, (String) null, (Widget) null, 47, (String) null, -7);
         }
     }
 
@@ -154,7 +154,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         TelepopEvent.a(obfuscationGuard, this.nameInput.text);
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangleOutline(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -266,7 +266,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         }
     }
 
-    private final int a(int param0, int param1, String param2, Widget param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, String param2, Widget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
@@ -440,7 +440,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         }
     }
 
-    final static CampaignMission a(CipherPacketBuffer param0, int param1) {
+    final static CampaignMission readCampaignMissionRecord(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CampaignMission var3 = null;
@@ -457,7 +457,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
           }
           var2_int = param0.readInt(1);
           param0.beginBitReading(117);
-          var3 = LoginMethod.a(var2_int, (byte) 6, param0);
+          var3 = LoginMethod.decodeCampaignMissionRecord(var2_int, (byte) 6, param0);
           param0.endBitReading(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -475,7 +475,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, int param4, Widget param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(int param0, String param1, String param2, int param3, int param4, Widget param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -489,7 +489,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -55) {
-            stackIn_4_0 = this.a(param4, 35, param1, param5, param3, param2, -67);
+            stackIn_4_0 = this.addLabeledFieldWithValidationMessage(param4, 35, param1, param5, param3, param2, -67);
             return stackIn_4_0;
           }
           stackIn_2_0 = -123;

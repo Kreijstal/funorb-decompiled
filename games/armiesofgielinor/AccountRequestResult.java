@@ -15,7 +15,7 @@ final class AccountRequestResult {
     static String field_e;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_f = null;
         if (param0 != 200) {
@@ -31,7 +31,7 @@ final class AccountRequestResult {
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void drawBattlefieldTile(boolean param0, int param1, byte param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -142,7 +142,7 @@ final class AccountRequestResult {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String updateChatCompositionText(boolean param0) {
         String stackIn_56_0 = null;
         Object stackIn_96_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -159,7 +159,7 @@ final class AccountRequestResult {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            AccountRequestResult.a((byte) -13);
+            AccountRequestResult.isGameUiPhaseActive((byte) -13);
           }
           var1 = null;
           var2 = null;
@@ -274,7 +274,7 @@ final class AccountRequestResult {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isGameUiPhaseActive(byte param0) {
         RuntimeException var1 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;

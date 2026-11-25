@@ -577,7 +577,7 @@ final class AchievementNotification extends IntrusiveNode {
                 continue;
               }
               if (var12.field_Yb.pressedButton == 0) {
-                TabbedPanel.a(-114, var12, param2, var32);
+                TabbedPanel.openRoomContextMenu(-114, var12, param2, var32);
               } else {
                 if (var12.playing && (!var12.allowsAdmissionRequests ||
                   !var12.joinable &&

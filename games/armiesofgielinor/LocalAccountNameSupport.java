@@ -66,7 +66,7 @@ final class LocalAccountNameSupport {
             if (param1 != -24) {
               field_f = (String[]) null;
             }
-            var5 = SpriteDropdownMenu.a(var3, 15026);
+            var5 = SpriteDropdownMenu.validateEmailLocalPart(var3, 15026);
             if (var5 == null) {
               return ArchiveProvider.validateEmailDomain(var4, (byte) 104);
             }

@@ -73,7 +73,7 @@ final class SpellMenuGroup {
             this.parent != null) {
             TeamRoster.field_e.drawAdditive(130 + horizontalOffset, 177, opacity);
             if (transition == 0 &&
-              TabbedPanel.a(212, 165, 20, false)) {
+              TabbedPanel.isPointerInsideCircle(212, 165, 20, false)) {
               MonotonicClockSupport.field_f = EmailCheckResult.formatTemplate(4800, IndexedDecodedSpriteSupport.field_a, new String[]{this.parent.label});
               hoveredSelection = 40;
               TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.a(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
@@ -99,7 +99,7 @@ final class SpellMenuGroup {
                 }
               }
               if (transition == 0 &&
-                TabbedPanel.a(iconY, iconX, 20, false)) {
+                TabbedPanel.isPointerInsideCircle(iconY, iconX, 20, false)) {
                 MonotonicClockSupport.field_f = this.children[childIndex].label;
                 hoveredSelection = 50 + childIndex;
                 TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 128);
@@ -135,7 +135,7 @@ final class SpellMenuGroup {
                 iconX = 165 + (int)(Math.sin((256.0 * (6.283185307179586 * (double)spellIndex) + (double)angularPhase) / (double)(entryCount * 256)) * (double)(extraRadius + 90)) + horizontalOffset;
                 iconY = -(int)((double)(90 + extraRadius) * Math.cos(((double)angularPhase + 6.283185307179586 * (double)spellIndex * 256.0) / (double)(256 * entryCount))) + 212;
                 if (0 == transition &&
-                  TabbedPanel.a(iconY, iconX, 20, false)) {
+                  TabbedPanel.isPointerInsideCircle(iconY, iconX, 20, false)) {
                   MonotonicClockSupport.field_f = MusicPatchEnvelope.field_f[this.spellIds[spellIndex]];
                   hoveredSelection = 50 + spellIndex;
                   TeamRoster.field_e.drawAdditive(IgnoreListLookupSupport.a(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);

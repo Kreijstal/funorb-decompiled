@@ -32,10 +32,10 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void handleCountryListResponse(String param0, int param1) {
         try {
           if (param1 > -52) {
-            LoginForm.a(84);
+            LoginForm.initializeCampaignMenuTutorialStages(84);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -241,7 +241,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         if (obfuscationGuard > -82) {
-          LoginForm.a(-77);
+          LoginForm.initializeCampaignMenuTutorialStages(-77);
         }
         if (null != this.description) {
           ArmiesOfGielinor.field_J.drawParagraph(this.description, originX - (-this.x - 20), 15 + originY + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
@@ -320,10 +320,10 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeCampaignMenuTutorialStages(int param0) {
         if (param0 != -20) {
           String var2 = (String) null;
-          LoginForm.a((String) null, -20, (ResourceArchive) null, -114, (String) null);
+          LoginForm.formatArchiveGroupProgress((String) null, -20, (ResourceArchive) null, -114, (String) null);
         }
         MoveEvent.campaignMenu = new CampaignMenu();
         EquipmentBattleTutorial.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
@@ -351,11 +351,11 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
         }
     }
 
-    final static void l(int param0) {
+    final static void setClientFeatureMask(int param0) {
         ClientStateChecksumSupport.field_a = param0;
     }
 
-    final static String a(String param0, int param1, ResourceArchive param2, int param3, String param4) {
+    final static String formatArchiveGroupProgress(String param0, int param1, ResourceArchive param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;

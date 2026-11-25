@@ -250,7 +250,7 @@ final class WidgetTheme {
           this.field_v = 15658734;
           this.field_r = 3;
           var4.caretColour = 15658734;
-          var4.createStateStyle(0, (byte) -102).a(15658734, (byte) -108).setFrameSprites(BufferedFile.a(10066329, 8947848, 1, 7829367), 53);
+          var4.createStateStyle(0, (byte) -102).setTextColour(15658734, (byte) -108).setFrameSprites(BufferedFile.a(10066329, 8947848, 1, 7829367), 53);
           var4.createStateStyle(1, (byte) -119).setFrameSprites(BufferedFile.a(10066329, 11184810, 1, 13421772), 31);
           var4.createStateStyle(3, (byte) -128).setFrameSprites(BufferedFile.a(7829367, 8947848, 1, 10066329), -128).setContentX(1, 1).setContentY((byte) 81, 1);
           var5 = new RgbSprite[9];
@@ -260,22 +260,22 @@ final class WidgetTheme {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (RgbSprite) ((Object) var18);
-          var4.createStateStyle(4, (byte) -105).a(true, (byte) 66).setFrameSprites(var5, param0 - 13421900);
-          var4.createStateStyle(5, (byte) -113).setFrameSprites(ByteStorage.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
+          var4.createStateStyle(4, (byte) -105).setStartsNewLayer(true, (byte) 66).setFrameSprites(var5, param0 - 13421900);
+          var4.createStateStyle(5, (byte) -113).setFrameSprites(ByteStorage.a(65793, 0, (byte) -125, 0, 0), -126).setStartsNewLayer(true, (byte) 121).setTextColour(-1, (byte) -109);
           this.field_j = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.horizontalAlignment = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.horizontalAlignment = 0;
           var7.setFrameSprites(-128, BitmapTextLayout.b(8947848, 5));
-          var7.createStateStyle(1, (byte) -85).setFrameSprites(BitmapTextLayout.b(11184810, 5), 67).a(2236962, (byte) -127);
+          var7.createStateStyle(1, (byte) -85).setFrameSprites(BitmapTextLayout.b(11184810, 5), 67).setTextColour(2236962, (byte) -127);
           this.field_i = (WidgetPainter) ((Object) new CheckBoxWidgetPainter(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyStyleTo(var8, param0 ^ 13413726);
-          var8.createStateStyle(0, (byte) -128).setFrameSprites(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
-          var8.createStateStyle(4, (byte) -108).a(true, (byte) 104).setFrameSprites(var5, -126);
+          var8.createStateStyle(0, (byte) -128).setFrameSprites(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).setTextColour(1118481, (byte) 27).setTextShadowColour(-1, param0 ^ 13421751);
+          var8.createStateStyle(4, (byte) -108).setStartsNewLayer(true, (byte) 104).setFrameSprites(var5, -126);
           this.field_w = (WidgetPainter) ((Object) var8);
           var9 = new RgbSprite[9];
           var10 = new RgbSprite[9];

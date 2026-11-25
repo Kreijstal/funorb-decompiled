@@ -11,7 +11,7 @@ final class DiskCacheWorker implements Runnable {
     int queuedCount;
     private Thread workerThread;
 
-    final static int a(byte param0, String param1, String param2, boolean param3, int param4, int param5, String param6) {
+    final static int pollAccountRegistration(byte param0, String param1, String param2, boolean param3, int param4, int param5, String param6) {
         AccountIdentifierStatus var7 = null;
         RuntimeException var7_ref = null;
         AccountIdentifierStatus var8 = null;
@@ -140,7 +140,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var4 = new DiskCacheRequest();
           if (obfuscationGuard != 56) {
-            DiskCacheWorker.a(50, 66, -33, 75, 23, -84, true);
+            DiskCacheWorker.updateChatEntryControls(50, 66, -33, 75, 23, -84, true);
           }
           var4.requestFlag = false;
           var4.store = store;
@@ -163,7 +163,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int hitTestMessageDialog(byte param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -236,7 +236,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static void updateChatEntryControls(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
         if (PowerOfTwoSupport.outgoingChatChannel == param1) {
           var7 = BitCountSupport.field_d;
@@ -327,12 +327,12 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0) {
+    final static void collapseChatPanel(int param0) {
         if (!(TurnTimerDial.field_d <= 0)) {
           TurnTimerDial.field_d = TurnTimerDial.field_d - 1;
         }
         if (param0 != -10232) {
-          DiskCacheWorker.a(-87, -49, 69, -51, 90, -121, false);
+          DiskCacheWorker.updateChatEntryControls(-87, -49, 69, -51, 90, -121, false);
         }
         if (FixedSquareRootSupport.field_b.height != EquipmentBattleTutorial.field_y) {
           UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (FixedSquareRootSupport.field_b.height - EquipmentBattleTutorial.field_y);
@@ -378,7 +378,7 @@ final class DiskCacheWorker implements Runnable {
           request.requestFlag = true;
           request.pending = false;
           if (obfuscationGuard <= 69) {
-            DiskCacheWorker.a(76);
+            DiskCacheWorker.collapseChatPanel(76);
           }
           stackIn_17_0 = request;
           return stackIn_17_0;
