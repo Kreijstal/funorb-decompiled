@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn {
+final class IntroLogoSupport {
     static String field_a;
     static String field_b;
 
     public static void clearStatics(int param0) {
         field_a = null;
         if (param0 < 6) {
-          sn.a(-121, 89, 108, 123, 4, -128);
+          IntroLogoSupport.scaleRectangleBrightness(-121, 89, 108, 123, 4, -128);
         }
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawIntroLogo(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -84,7 +84,7 @@ final class sn {
         return String.valueOf(param0);
     }
 
-    final static void a(int[] param0, byte param1, Territory param2) {
+    final static void accumulateTerritoryResources(int[] param0, byte param1, Territory param2) {
         int var3_int = 0;
         Star var4 = null;
         int var5 = 0;
@@ -98,7 +98,7 @@ final class sn {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != -76) {
-            sn.clearStatics(72);
+            IntroLogoSupport.clearStatics(72);
           }
           var4 = param2.firstStar(18229);
           while (var4 != null) {
@@ -128,7 +128,7 @@ final class sn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void scaleRectangleBrightness(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;

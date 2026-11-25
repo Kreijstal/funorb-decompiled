@@ -250,7 +250,7 @@ final class DialogRoot extends SingleChildWidget {
                 var23 = -var23;
                 var22 = -var22;
               }
-              sq.a(var10, 0, 2147483647, var23, var15, -27259, var22);
+              TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var23, var15, -27259, var22);
             } else {
               if (var8 >= 0) {
                 var22 = var9 * (-var16 + 16) * (16 - var16) / (2 * var8);
@@ -265,8 +265,8 @@ final class DialogRoot extends SingleChildWidget {
                   var26 = -var26;
                   var23 = -var23;
                 }
-                sq.a(var10, var24, var20 - var15, var23, var15, -27259, var22);
-                sq.a(var10, 0, 2147483647, var26, var20, -27259, var25);
+                TutorialScene.insertPolygonScanlineSpan(var10, var24, var20 - var15, var23, var15, -27259, var22);
+                TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var26, var20, -27259, var25);
               } else {
                 var22 = -var9 * ((-var21 + 16) * (-var21 + 16)) / (var8 * 2);
                 var23 = (-var21 + 24) * (16 * -var9) / var8;
@@ -280,8 +280,8 @@ final class DialogRoot extends SingleChildWidget {
                   var23 = -var23;
                   var25 = -var25;
                 }
-                sq.a(var10, var24, -var20 + var15, var23, var20, -27259, var22);
-                sq.a(var10, 0, 2147483647, var26, var15, -27259, var25);
+                TutorialScene.insertPolygonScanlineSpan(var10, var24, -var20 + var15, var23, var20, -27259, var22);
+                TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var26, var15, -27259, var25);
               }
             }
             for (var22Lifetime2 = 1 + var10; var12 > var22Lifetime2; var22Lifetime2++) {
@@ -302,8 +302,8 @@ final class DialogRoot extends SingleChildWidget {
                     var26Lifetime1 = -var26Lifetime1;
                     var28 = -var28;
                   }
-                  sq.a(var22Lifetime2, var28, var20 - var24Lifetime1, var27, var24Lifetime1, -27259, var26Lifetime1);
-                  sq.a(var22Lifetime2, 0, 2147483647, var30, var20, -27259, var29);
+                  TutorialScene.insertPolygonScanlineSpan(var22Lifetime2, var28, var20 - var24Lifetime1, var27, var24Lifetime1, -27259, var26Lifetime1);
+                  TutorialScene.insertPolygonScanlineSpan(var22Lifetime2, 0, 2147483647, var30, var20, -27259, var29);
                 } else {
                   var26Lifetime1 = var9 * (16 - var21) * (-var21 + 16) / (var8 * 2);
                   var27 = (-var21 + 24) * (16 * var9) / var8;
@@ -317,8 +317,8 @@ final class DialogRoot extends SingleChildWidget {
                     var26Lifetime1 = -var26Lifetime1;
                     var29 = -var29;
                   }
-                  sq.a(var22Lifetime2, var28, var24Lifetime1 - var20, var27, var20, -27259, var26Lifetime1);
-                  sq.a(var22Lifetime2, 0, 2147483647, var30, var24Lifetime1, -27259, var29);
+                  TutorialScene.insertPolygonScanlineSpan(var22Lifetime2, var28, var24Lifetime1 - var20, var27, var20, -27259, var26Lifetime1);
+                  TutorialScene.insertPolygonScanlineSpan(var22Lifetime2, 0, 2147483647, var30, var24Lifetime1, -27259, var29);
                 }
               } else {
                 var26Lifetime1 = 8 * (-var21 + 32 - var25Lifetime1);
@@ -327,7 +327,7 @@ final class DialogRoot extends SingleChildWidget {
                   var27 = -var27;
                   var26Lifetime1 = -var26Lifetime1;
                 }
-                sq.a(var22Lifetime2, 0, 2147483647, var27, var20, -27259, var26Lifetime1);
+                TutorialScene.insertPolygonScanlineSpan(var22Lifetime2, 0, 2147483647, var27, var20, -27259, var26Lifetime1);
               }
               var19Lifetime2 = var23Lifetime2;
               var21 = var25Lifetime1;
@@ -343,7 +343,7 @@ final class DialogRoot extends SingleChildWidget {
                 var22Lifetime3 = -var22Lifetime3;
                 var23Lifetime3 = -var23Lifetime3;
               }
-              sq.a(var12, 0, 2147483647, var23Lifetime3, var17, -27259, var22Lifetime3);
+              TutorialScene.insertPolygonScanlineSpan(var12, 0, 2147483647, var23Lifetime3, var17, -27259, var22Lifetime3);
               return;
             }
             if (var8 < 0) {
@@ -359,8 +359,8 @@ final class DialogRoot extends SingleChildWidget {
                 var22Lifetime4 = -var22Lifetime4;
                 var23Lifetime4 = -var23Lifetime4;
               }
-              sq.a(var12, var24Lifetime2, -var17 + var20Lifetime2, var23Lifetime4, var17, -27259, var22Lifetime4);
-              sq.a(var12, 0, 2147483647, var26Lifetime2, var20Lifetime2, -27259, var25Lifetime2);
+              TutorialScene.insertPolygonScanlineSpan(var12, var24Lifetime2, -var17 + var20Lifetime2, var23Lifetime4, var17, -27259, var22Lifetime4);
+              TutorialScene.insertPolygonScanlineSpan(var12, 0, 2147483647, var26Lifetime2, var20Lifetime2, -27259, var25Lifetime2);
               return;
             }
             var22Lifetime5 = (-var21Lifetime2 + 16) * (16 - var21Lifetime2) * var9 / (var8 * 2);
@@ -375,8 +375,8 @@ final class DialogRoot extends SingleChildWidget {
               var22Lifetime5 = -var22Lifetime5;
               var26Lifetime3 = -var26Lifetime3;
             }
-            sq.a(var12, var24Lifetime3, var17 - var20Lifetime2, var23Lifetime5, var20Lifetime2, -27259, var22Lifetime5);
-            sq.a(var12, 0, 2147483647, var26Lifetime3, var17, -27259, var25Lifetime3);
+            TutorialScene.insertPolygonScanlineSpan(var12, var24Lifetime3, var17 - var20Lifetime2, var23Lifetime5, var20Lifetime2, -27259, var22Lifetime5);
+            TutorialScene.insertPolygonScanlineSpan(var12, 0, 2147483647, var26Lifetime3, var17, -27259, var25Lifetime3);
             return;
           }
           if (var15 == var17) {
@@ -386,7 +386,7 @@ final class DialogRoot extends SingleChildWidget {
               var19Lifetime1 = -var19Lifetime1;
               var20Lifetime1 = -var20Lifetime1;
             }
-            sq.a(var10, 0, 2147483647, var20Lifetime1, var15, -27259, var19Lifetime1);
+            TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var20Lifetime1, var15, -27259, var19Lifetime1);
           } else {
             if (0 <= var8) {
               var19Lifetime1 = (-var16 + 16) * (-var16 + 16) * var9 / (var8 * 2);
@@ -401,8 +401,8 @@ final class DialogRoot extends SingleChildWidget {
                 var23Lifetime1 = -var23Lifetime1;
                 var19Lifetime1 = -var19Lifetime1;
               }
-              sq.a(var10, var21Lifetime1, var17 - var15, var20Lifetime1, var15, -27259, var19Lifetime1);
-              sq.a(var10, 0, 2147483647, var23Lifetime1, var17, -27259, var22Lifetime1);
+              TutorialScene.insertPolygonScanlineSpan(var10, var21Lifetime1, var17 - var15, var20Lifetime1, var15, -27259, var19Lifetime1);
+              TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var23Lifetime1, var17, -27259, var22Lifetime1);
             } else {
               var19Lifetime1 = (16 - var18) * ((16 - var18) * -var9) / (var8 * 2);
               var20Lifetime1 = (24 - var18) * -var9 / var8;
@@ -416,8 +416,8 @@ final class DialogRoot extends SingleChildWidget {
                 var21Lifetime1 = -var21Lifetime1;
                 var23Lifetime1 = -var23Lifetime1;
               }
-              sq.a(var10, var21Lifetime1, -var17 + var15, var20Lifetime1, var17, -27259, var19Lifetime1);
-              sq.a(var10, 0, 2147483647, var23Lifetime1, var15, -27259, var22Lifetime1);
+              TutorialScene.insertPolygonScanlineSpan(var10, var21Lifetime1, -var17 + var15, var20Lifetime1, var17, -27259, var19Lifetime1);
+              TutorialScene.insertPolygonScanlineSpan(var10, 0, 2147483647, var23Lifetime1, var15, -27259, var22Lifetime1);
             }
           }
           return;
@@ -458,7 +458,7 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DiplomacyNotice.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
+        DiplomacyNotice.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, DiplomacyNotice.field_h.field_d);
         SocialListPanel.field_xb.addChild(4, DialPainter.field_g);
@@ -514,7 +514,7 @@ final class DialogRoot extends SingleChildWidget {
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
         QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
-        sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
+        IconLabelPanel.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
         SoundEffectDefinition.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
         BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);
         GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);

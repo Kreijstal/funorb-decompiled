@@ -29,7 +29,7 @@ final class ClientInputSupport {
     final static void resetChatChannel(int param0) {
         ProductionContent.field_h = 0;
         int var1 = 42 % ((param0 - 4) / 47);
-        sr.field_h = true;
+        MeshData.field_h = true;
     }
 
     static {

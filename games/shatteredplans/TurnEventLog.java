@@ -280,7 +280,7 @@ final class TurnEventLog {
           IntroTextLine.field_q = new byte[LobbyLayoutSupport.field_c][];
           WeightedCacheEntry.field_s = new int[LobbyLayoutSupport.field_c];
           StatusMessagePanel.field_H = new int[LobbyLayoutSupport.field_c];
-          sj.field_a = new int[LobbyLayoutSupport.field_c];
+          SocialListSetupSupport.field_a = new int[LobbyLayoutSupport.field_c];
           var17.position = param0.length + (-7 - LobbyLayoutSupport.field_c * 8);
           NetworkArchiveRequest.field_y = var17.readUnsignedShort(-20976);
           BattleEvent.field_t = var17.readUnsignedShort(-20976);
@@ -289,7 +289,7 @@ final class TurnEventLog {
             StatusMessagePanel.field_H[var4] = var16.readUnsignedShort(-20976);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < LobbyLayoutSupport.field_c; var4Lifetime1++) {
-            sj.field_a[var4Lifetime1] = var17.readUnsignedShort(-20976);
+            SocialListSetupSupport.field_a[var4Lifetime1] = var17.readUnsignedShort(-20976);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < LobbyLayoutSupport.field_c; var4Lifetime2++) {
             WeightedCacheEntry.field_s[var4Lifetime2] = var17.readUnsignedShort(-20976);

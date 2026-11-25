@@ -881,7 +881,7 @@ final class MidiPcmStream extends PcmStream {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  sq.a(-57, param4, var12.getRoomId(-103));
+                  TutorialScene.writeJoinGameRequest(-57, param4, var12.getRoomId(-103));
                 }
               } else {
                 ClientContextMenuSupport.openLobbyPlayerContextMenu(param6, (byte) -100, var12, var32);

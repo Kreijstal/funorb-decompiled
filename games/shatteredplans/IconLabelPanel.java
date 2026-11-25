@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sg extends AnimatedPanel {
+final class IconLabelPanel extends AnimatedPanel {
     AnimatedPanel field_Bb;
     private AnimatedPanel field_Db;
     static AnimatedPanel field_zb;
@@ -10,7 +10,7 @@ final class sg extends AnimatedPanel {
     static String field_yb;
     static String field_xb;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutIconAndLabel(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -54,7 +54,7 @@ final class sg extends AnimatedPanel {
           return;
         }
         var7 = (BitmapFont) null;
-        sg.a(true, false, -42, (String) null, (BitmapFont) null);
+        IconLabelPanel.enqueueIntroText(true, false, -42, (String) null, (BitmapFont) null);
         if (this.field_Db != null) {
           var4 = this.field_Db.measureWidthUnbounded(false);
         }
@@ -90,7 +90,7 @@ final class sg extends AnimatedPanel {
         return;
     }
 
-    sg(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, Sprite param4, String param5) {
+    IconLabelPanel(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -157,9 +157,9 @@ final class sg extends AnimatedPanel {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setIconLabelBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setTarget(param5, param1, (byte) 42, param2, param6);
-        this.a(param0, param4, param3);
+        this.layoutIconAndLabel(param0, param4, param3);
     }
 
     public static void clearStatics(byte param0) {
@@ -169,11 +169,11 @@ final class sg extends AnimatedPanel {
         field_xb = null;
         if (param0 != 34) {
           BitmapFont var2 = (BitmapFont) null;
-          sg.a(false, false, -26, (String) null, (BitmapFont) null);
+          IconLabelPanel.enqueueIntroText(false, false, -26, (String) null, (BitmapFont) null);
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, String param3, BitmapFont param4) {
+    final static void enqueueIntroText(boolean param0, boolean param1, int param2, String param3, BitmapFont param4) {
         int var7 = 0;
         int var6 = 0;
         int var8 = 0;
@@ -224,7 +224,7 @@ final class sg extends AnimatedPanel {
         }
     }
 
-    final int a(int param0, byte param1, int param2) {
+    final int measureIconLabelWidth(int param0, byte param1, int param2) {
         int var4 = -param0;
         int var5 = -param0;
         if (null != this.field_Db) {
@@ -243,7 +243,7 @@ final class sg extends AnimatedPanel {
         return var5 + var4 + (param2 + (param0 + param2));
     }
 
-    final static FleetVisual a(byte param0, FleetMove param1) {
+    final static FleetVisual createOppositeArcFleetVisual(byte param0, FleetMove param1) {
         FleetVisual var2 = null;
         RuntimeException var2_ref = null;
         FleetMove var3 = null;
@@ -257,7 +257,7 @@ final class sg extends AnimatedPanel {
           var2.field_v = -var2.field_v;
           if (param0 != 101) {
             var3 = (FleetMove) null;
-            sg.a((byte) -73, (FleetMove) null);
+            IconLabelPanel.createOppositeArcFleetVisual((byte) -73, (FleetMove) null);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;

@@ -529,7 +529,7 @@ final class DialWidget extends FocusableWidget {
           try {
             try {
               var3 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param2, (byte) 70));
-              var4 = so.a(var3, ';', -116);
+              var4 = BattleExplosionVisual.splitOnCharacter(var3, ';', -116);
               var5 = 0;
               if (param0) {
                 stackIn_3_0 = (String) null;

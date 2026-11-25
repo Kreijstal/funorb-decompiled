@@ -24,7 +24,7 @@ final class DiskCacheWorker implements Runnable {
         QuickChatMenu.field_Jb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
         Dialog.field_D = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
         DualLinkDeque.field_a = SpriteResourceSupport.loadSpriteByName(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
-        sr.field_F = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
+        MeshData.field_F = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
         GameSpriteResources.field_d = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
@@ -269,7 +269,7 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
-          LobbyPlayerEntry.field_Hb[GameRules.field_c].g((byte) 119);
+          LobbyPlayerEntry.field_Hb[GameRules.field_c].releaseHighscoreRequest((byte) 119);
         }
         TutorialAi.field_x = Wormhole.field_i;
         BirthDateConfirmationForm.field_Q = 0;

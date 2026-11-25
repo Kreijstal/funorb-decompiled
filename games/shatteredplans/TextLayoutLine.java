@@ -54,7 +54,7 @@ final class TextLayoutLine {
     }
 
     final static boolean a(byte param0) {
-        if (!sr.field_h) {
+        if (!MeshData.field_h) {
           return false;
         }
         if (param0 <= 94) {

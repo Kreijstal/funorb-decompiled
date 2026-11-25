@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq {
+final class TutorialScene {
     String field_c;
     int field_q;
     static boolean field_o;
@@ -10,7 +10,7 @@ final class sq {
     int field_j;
     String field_d;
     String[] field_m;
-    sq field_l;
+    TutorialScene field_l;
     int field_n;
     static String field_i;
     int field_t;
@@ -23,7 +23,7 @@ final class sq {
     boolean field_k;
     String field_g;
 
-    final static byte[] a(int param0, Object param1, boolean param2) {
+    final static byte[] unwrapByteArray(int param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
@@ -50,7 +50,7 @@ final class sq {
           }
           if (param0 != -1) {
             var4 = (Object) null;
-            sq.a(101, (Object) null, true);
+            TutorialScene.unwrapByteArray(101, (Object) null, true);
           }
           if (!(param1 instanceof ByteArrayStorage)) {
             throw new IllegalArgumentException();
@@ -72,7 +72,7 @@ final class sq {
         }
     }
 
-    final void a(int param0, String param1) {
+    final void appendAction(int param0, String param1) {
         int var3_int = 0;
         String[] var4 = null;
         int var5 = 0;
@@ -97,7 +97,7 @@ final class sq {
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void appendFlag(String param0, byte param1) {
         int var5 = 0;
         int var3_int = 0;
         String[] var4 = null;
@@ -123,7 +123,7 @@ final class sq {
           this.field_e[var3_int] = param0;
           if (param1 != -47) {
             var7 = (String) null;
-            this.a(-110, (String) null);
+            this.appendAction(-110, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class sq {
         }
     }
 
-    final void a(byte param0, TutorialConditionalText param1) {
+    final void appendObjective(byte param0, TutorialConditionalText param1) {
         int var3_int = 0;
         TutorialConditionalText[] var4 = null;
         int var5 = 0;
@@ -165,7 +165,7 @@ final class sq {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void writeJoinGameRequest(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = LobbyOptionSupport.field_f;
         var3.h(param1, 255);
         var3.writeByte(3, (byte) -70);
@@ -176,14 +176,14 @@ final class sq {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isQuickChatMenuOpen(boolean param0) {
         if (param0) {
           return false;
         }
         return BoundsRect.field_j;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void insertPolygonScanlineSpan(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException decompiledCaughtException = null;
         wa var7 = null;
         RuntimeException var7_ref = null;
@@ -242,12 +242,12 @@ final class sq {
         field_s = null;
         field_p = null;
         if (param0 < 126) {
-          sq.a(-28, 66, 76);
+          TutorialScene.writeJoinGameRequest(-28, 66, 76);
         }
         field_i = null;
     }
 
-    sq() {
+    TutorialScene() {
         this.field_c = "";
         this.field_g = null;
     }

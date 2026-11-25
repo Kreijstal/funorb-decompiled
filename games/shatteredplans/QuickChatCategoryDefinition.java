@@ -133,7 +133,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 == param1) {
-            this.field_y = so.a(param2.readString(-1), '<', 51);
+            this.field_y = BattleExplosionVisual.splitOnCharacter(param2.readString(-1), '<', 51);
           } else {
             if (param1 == 2) {
               var4_int = param2.readUnsignedByte(-70);

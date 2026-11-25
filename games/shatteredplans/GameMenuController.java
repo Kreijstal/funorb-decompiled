@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sm {
+final class GameMenuController {
     private int field_a;
     private int field_g;
     static int field_b;
@@ -12,7 +12,7 @@ final class sm {
     static boolean field_e;
     static String field_c;
 
-    final void b(int param0, int param1) {
+    final void drawFadeTransition(int param0, int param1) {
         int discarded$0 = 0;
         int var3;
         int var4;
@@ -24,20 +24,20 @@ final class sm {
         int var10;
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = this.c(32);
+        var3 = this.getAnimatedWidth(32);
         if (0 == var3) {
           return;
         }
         if (null != PasswordInputPainter.field_x ||
           null != SecondaryNodeHashTable.field_g) {
-          sn.a(640, -46, 480, 192 + (param1 >> 1), 0, 0);
+          IntroLogoSupport.scaleRectangleBrightness(640, -46, 480, 192 + (param1 >> 1), 0, 0);
         }
         var4 = (640 - var3) / 2;
-        var5 = this.h(-127);
-        var6 = this.b((byte) -98);
+        var5 = this.getAnimatedTop(-127);
+        var6 = this.getAnimatedHeight((byte) -98);
         var7 = var4;
         if (param0 < 41) {
-          discarded$0 = this.h(101);
+          discarded$0 = this.getAnimatedTop(101);
         }
         var8 = 20 + var3;
         var9 = var5 - 10;
@@ -45,7 +45,7 @@ final class sm {
         TargetedChatMessage.field_m = MenuWindow.a(TargetedChatMessage.field_m, var9 - 3, 24, -3 + var7, -1, 24);
         SolMapGenerator.field_q = MenuWindow.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
         if (MatchingTextValidator.field_t.field_a == 2) {
-          sn.a(var8, -50, var10, param1 + 128, var7, var9);
+          IntroLogoSupport.scaleRectangleBrightness(var8, -50, var10, param1 + 128, var7, var9);
           RasterTargetSupport.field_a = MenuWindow.a(RasterTargetSupport.field_a, var9, var8, var7, -1, var10);
           RasterTargetSupport.pushSpriteRenderTarget(RasterTargetSupport.field_a, 107);
           SoftwareRasterizer.b(3, 3, 0, 0, var8, var10);
@@ -53,7 +53,7 @@ final class sm {
           OpacityWidget.popLegacyRasterState(0);
         } else {
           if (MatchingTextValidator.field_t.field_a == 1) {
-            sn.a(var8, -29, var10, 128 + param1, var7, var9);
+            IntroLogoSupport.scaleRectangleBrightness(var8, -29, var10, 128 + param1, var7, var9);
           } else {
             SoftwareRasterizer.fillRectAlpha(var7, var9, var8, var10, 855316, -param1 + 128 << 1);
           }
@@ -66,24 +66,24 @@ final class sm {
         return;
     }
 
-    private final void f(byte param0) {
+    private final void handleInstructionPointer(byte param0) {
         int var2;
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        BattleContribution.field_o = this.b(-100, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
+        BattleContribution.field_o = this.findInstructionControlAt(-100, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
         if (param0 <= 115) {
           return;
         }
         var2 = 0;
         if (LobbyCommandSupport.field_d != 0) {
-          var3 = this.b(107, PointsVictoryChecker.field_p, SliderWidget.field_P);
+          var3 = this.findInstructionControlAt(107, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (0 <= var3) {
-            this.d(4, var3);
+            this.jumpToInstructionSection(4, var3);
           }
         }
-        if (0 != so.field_o) {
-          var2 = so.field_o * -20;
+        if (0 != BattleExplosionVisual.field_o) {
+          var2 = BattleExplosionVisual.field_o * -20;
         }
         if (LeaderboardSortSupport.field_e != 0) {
           if (AllianceExpiredEvent.field_n != 0) {
@@ -99,10 +99,10 @@ final class sm {
           if (LobbyCommandSupport.field_d != 0) {
             if (-2 != BattleContribution.field_o) {
               if (BattleContribution.field_o == -3) {
-                this.a(1, (byte) -57);
+                this.scrollInstructionSection(1, (byte) -57);
               }
             } else {
-              this.a(-1, (byte) -57);
+              this.scrollInstructionSection(-1, (byte) -57);
             }
           }
         }
@@ -137,12 +137,12 @@ final class sm {
         return;
     }
 
-    private final int b(int param0) {
+    private final int getTransitionBoundaryX(int param0) {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
         if (param0 != 10) {
-          this.b(-38, false, 12, 127);
+          this.activateMenuItem(-38, false, 12, 127);
         }
         if (GameRules.field_c != this.field_a &&
           this.field_a != PlayerRankingRequest.field_o) {
@@ -162,18 +162,18 @@ final class sm {
         return 320;
     }
 
-    final void a(int param0, int param1) {
+    final void clearMenuActivation(int param0, int param1) {
         if (PointsVictoryChecker.a((byte) -74, param1)) {
           if (this.field_g == -1) {
           }
           LobbyPlayerEntry.field_Hb[param1].field_g = -1;
         }
         if (param0 != -30492) {
-          this.a(47, 88);
+          this.clearMenuActivation(47, 88);
         }
     }
 
-    private final int b(boolean param0) {
+    private final int getAnimatedLeft(boolean param0) {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
@@ -195,10 +195,10 @@ final class sm {
         if (param0) {
           return -21;
         }
-        return (640 - this.c(32)) / 2;
+        return (640 - this.getAnimatedWidth(32)) / 2;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawInstructionPane(int param0, int param1, int param2) {
         int stackIn_3_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_48_0 = 0;
@@ -262,7 +262,7 @@ final class sm {
           }
           if (294 >= var8 &&
             var8 >= -294) {
-            this.a(var8 + param1 + 3, true, var9, param0 + 30);
+            this.drawInstructionSection(var8 + param1 + 3, true, var9, param0 + 30);
           }
           var8 = var8 + DirectByteArrayStorage.field_i[var9];
         }
@@ -375,7 +375,7 @@ final class sm {
         return -1;
     }
 
-    private final void d(byte param0) {
+    private final void updateInstructionAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
@@ -474,14 +474,14 @@ final class sm {
         int var11;
         int var4Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = this.b(false);
+        var3 = this.getAnimatedLeft(false);
         var4 = TutorialVictoryChecker.field_t[this.field_a];
         var5 = this.field_h % (this.field_d.field_b * 16);
         if (param1 != 7903) {
           field_c = (String) null;
         }
         for (var6 = 0; var6 < this.field_d.field_b; var6++) {
-          if (this.a((byte) 44, var6)) {
+          if (this.isItemSelectable((byte) 44, var6)) {
             var7 = (this.field_h - var6 * 4) * 256 / (this.field_d.field_b * 4);
             if (var7 > 0) {
               if (var7 >= 256) {
@@ -524,24 +524,24 @@ final class sm {
         if (this.field_a != 6 &&
           this.field_a != 7) {
           if (this.field_a == 8) {
-            this.j(-8);
+            this.drawAchievements(-8);
           } else if (this.field_a == 5) {
-            this.c((byte) -23);
+            this.drawRankingsPanel((byte) -23);
           } else if (this.field_a == 10) {
-            this.e((byte) 80);
+            this.drawErrorPanel((byte) 80);
           }
         } else {
-          this.a(this.b(false), param0, 7552);
+          this.drawInstructionPane(this.getAnimatedLeft(false), param0, 7552);
         }
     }
 
-    private final void e(byte param0) {
+    private final void drawErrorPanel(byte param0) {
         SoftwareRasterizer.saveClip(MusicEnvelope.field_m);
         SoftwareRasterizer.resetClip();
         int var2 = QuickChatCategoryRegistry.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
-        int var4 = this.b(false) - (var2 - this.c(32) >> 1);
-        int var5 = -48 + this.h(-104) - var3;
+        int var4 = this.getAnimatedLeft(false) - (var2 - this.getAnimatedWidth(32) >> 1);
+        int var5 = -48 + this.getAnimatedTop(-104) - var3;
         if (param0 < 39) {
           return;
         }
@@ -596,12 +596,12 @@ final class sm {
         }
         if (param0 == this.field_g) {
           stackIn_17_1 = !(param3);
-          discarded$0 = this.a(stackIn_17_1, param0);
-          discarded$1 = this.b(10);
+          discarded$0 = this.itemRight(stackIn_17_1, param0);
+          discarded$1 = this.getTransitionBoundaryX(10);
         }
     }
 
-    private final void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9) {
+    private final void drawHorizontalInstructionCallout(int param0, String param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8, int param9) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -658,7 +658,7 @@ final class sm {
         }
     }
 
-    private final void a(String param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final void drawRankingsRow(String param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11_int = 0;
         String var13 = null;
         String var12 = null;
@@ -688,7 +688,7 @@ final class sm {
           IconTextPanel.field_Cb.drawCentred(var15, BattleSnapshot.field_r[2] + param4, param6, param8, -1);
           var12Lifetime2 = param1 + "%";
           if (param2 >= -116) {
-            this.a(-46, (byte) -46, 11, -112, -101, -46, -96);
+            this.drawInstructionProductionBar(-46, (byte) -46, 11, -112, -101, -46, -96);
           }
           IconTextPanel.field_Cb.drawCentred(var12Lifetime2, param4 + BattleSnapshot.field_r[3], param6, param8, -1);
           var16 = param9 + "%";
@@ -700,7 +700,7 @@ final class sm {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawMenuTransition(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -720,9 +720,9 @@ final class sm {
           null != SecondaryNodeHashTable.field_g) {
           ContentTransitionPhase.darkenRectangle(480, 0, 640, (byte) -126, 0);
         }
-        var4 = this.c(32);
-        var5 = this.h(-123);
-        var6 = this.b((byte) -98);
+        var4 = this.getAnimatedWidth(32);
+        var5 = this.getAnimatedTop(-123);
+        var6 = this.getAnimatedHeight((byte) -98);
         if (param1 != -6469) {
           return;
         }
@@ -747,7 +747,7 @@ final class sm {
         SoftwareRasterizer.restoreClip(GzipInflater.field_f);
     }
 
-    private final void c(byte param0) {
+    private final void drawRankingsPanel(byte param0) {
         String discarded$0 = null;
         int var12 = 0;
         int var2;
@@ -772,7 +772,7 @@ final class sm {
           discarded$0 = this.itemLabel(72, -48);
         }
         if (Dialog.d(true)) {
-          this.d(param0 ^ -21);
+          this.drawRankingsAccountPrompt(param0 ^ -21);
           return;
         }
         if (LoginForm.field_I == null) {
@@ -780,8 +780,8 @@ final class sm {
         }
         var2 = QuickChatCategoryRegistry.a(0, 32, GameTextResources.field_a, 560, param0 ^ -23);
         var3 = 200;
-        var4 = this.b(false) - (-this.c(32) + var2 >> 1);
-        var5 = this.h(param0 - 71) - var3 - 24;
+        var4 = this.getAnimatedLeft(false) - (-this.getAnimatedWidth(32) + var2 >> 1);
+        var5 = this.getAnimatedTop(param0 - 71) - var3 - 24;
         if (var2 > 20) {
           MidiPcmStream.a(var3, var5, var4, (byte) -109, var2);
         }
@@ -811,7 +811,7 @@ final class sm {
                     var11 = 1;
                     var6Lifetime1 = 16777215;
                   }
-                  this.a(var13, var10[1 + var12 * 4], (byte) -128, var10[4 * var12], var4, var10[2 + 4 * var12], var7, var12, var6Lifetime1, var10[3 + 4 * var12]);
+                  this.drawRankingsRow(var13, var10[1 + var12 * 4], (byte) -128, var10[4 * var12], var4, var10[2 + 4 * var12], var7, var12, var6Lifetime1, var10[3 + 4 * var12]);
                   var8 = "";
                 }
                 var7 += 15;
@@ -819,7 +819,7 @@ final class sm {
               if (((var11 == 0)) &&
                 (!(LoginForm.field_I.field_h + LoginForm.field_I.field_i + LoginForm.field_I.field_r <= 0))) {
                 var6Lifetime1Lifetime1 = 2805974;
-                this.a(Star.field_o, LoginForm.field_I.field_i, (byte) -120, LoginForm.field_I.field_l, var4, LoginForm.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, LoginForm.field_I.field_h);
+                this.drawRankingsRow(Star.field_o, LoginForm.field_I.field_i, (byte) -120, LoginForm.field_I.field_l, var4, LoginForm.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, LoginForm.field_I.field_h);
               }
               break regionExit1;
             }
@@ -832,15 +832,15 @@ final class sm {
         return;
     }
 
-    private final void d(int param0) {
+    private final void drawRankingsAccountPrompt(int param0) {
         int var2 = 420;
         if (param0 != 2) {
-          this.a(-30, 106, 23);
+          this.drawInstructionPane(-30, 106, 23);
         }
         int var3 = QuickChatCategoryRegistry.a(0, 32, GameTextResources.field_a, var2, 0);
         int var4 = 80;
-        int var5 = this.b(false) - (var3 - this.c(32) >> 1);
-        int var6 = -60 + this.h(-122) - var4 - 48;
+        int var5 = this.getAnimatedLeft(false) - (var3 - this.getAnimatedWidth(32) >> 1);
+        int var6 = -60 + this.getAnimatedTop(-122) - var4 - 48;
         if (var3 > 20) {
           MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
         }
@@ -849,7 +849,7 @@ final class sm {
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
 
-    final void a(int param0, byte param1, boolean param2) {
+    final void resetMenuInput(int param0, byte param1, boolean param2) {
         int var4 = 0;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -864,11 +864,11 @@ final class sm {
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
-        this.field_d.resetSelection(this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
+        this.field_d.resetSelection(this.findMenuItemAt(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
         this.field_h = 0;
         TerritoryResourcePanelSupport.field_c = -1;
         if (param1 <= 14) {
-          this.e((byte) -50);
+          this.drawErrorPanel((byte) -50);
         }
         RasterBuffer.field_e = -1;
         this.field_g = -1;
@@ -927,12 +927,12 @@ final class sm {
           SoftwareRasterizer.drawRect(var10 + (var8 - 1), 3 + var9, 3, -6 + var7, var6);
         }
         if (param0 == this.field_g) {
-          discarded$2 = this.a(true, param0);
-          discarded$3 = this.b(10);
+          discarded$2 = this.itemRight(true, param0);
+          discarded$3 = this.getTransitionBoundaryX(10);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void updateAchievementAnimation(boolean param0) {
         int fieldTemp$1 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -1002,7 +1002,7 @@ final class sm {
         int discarded$0 = 0;
         int var3 = TutorialVictoryChecker.field_p[this.field_a][param0];
         if (param1) {
-          discarded$0 = this.a(-113, (byte) 1, 62);
+          discarded$0 = this.findMenuItemAt(-113, (byte) 1, 62);
         }
         if (var3 == 21 ||
           22 == var3) {
@@ -1011,7 +1011,7 @@ final class sm {
         return AccountRequestState.field_b.stringWidth(this.itemLabel(-22609, var3));
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3) {
+    private final void drawInstructionSection(int param0, boolean param1, int param2, int param3) {
         String var5;
         int var6;
         int var7;
@@ -1112,7 +1112,7 @@ final class sm {
         var31 = null;
         var30 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param1) {
-          this.a(12, (byte) -40, false);
+          this.resetMenuInput(12, (byte) -40, false);
         }
         var6 = -60 + TutorialVictoryChecker.field_r[this.field_a];
         var7 = -50 + TutorialVictoryChecker.field_t[this.field_a];
@@ -1127,11 +1127,11 @@ final class sm {
                 AlternateLoginCredentials.field_r.drawOpaque(5 + param3, 5 + param0);
                 var9 = param3 + 345;
                 var10 = 120;
-                this.a(0, ClientSessionSupport.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
-                this.a(16711680, 25 + param0, var9, 25 + param0, ClientDrawingSupport.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
-                this.a(16711680, 78 + (5 + param0), var9, 69 + param0, VerticalMenuSlider.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
-                this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, ProgressDialog.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
-                this.a(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, StarLink.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
+                this.drawHorizontalInstructionCallout(0, ClientSessionSupport.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
+                this.drawVerticalInstructionCallout(16711680, 25 + param0, var9, 25 + param0, ClientDrawingSupport.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
+                this.drawVerticalInstructionCallout(16711680, 78 + (5 + param0), var9, 69 + param0, VerticalMenuSlider.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
+                this.drawVerticalInstructionCallout(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, ProgressDialog.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
+                this.drawVerticalInstructionCallout(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, StarLink.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
                 return;
               }
               if (param2 == 4) {
@@ -1142,11 +1142,11 @@ final class sm {
                 var10Lifetime1 = 220;
                 var11 = 16711680;
                 NodeSequence.field_d.drawOpaque(param3 + 5, param0 + 5);
-                this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, StripedProgressWidget.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
-                this.a(-5, AccountNameValidationSupport.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
-                this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
-                this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, AccountRequestResult.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
-                this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
+                this.drawVerticalInstructionCallout(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, StripedProgressWidget.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
+                this.drawHorizontalInstructionCallout(-5, AccountNameValidationSupport.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
+                this.drawVerticalInstructionCallout(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
+                this.drawVerticalInstructionCallout(var11, param0 + 130, var9Lifetime1, 95 + param0, AccountRequestResult.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
+                this.drawVerticalInstructionCallout(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
                 param0 += 150;
                 var12 = 400;
                 if (LeaderboardSortSupport.field_e == 1) {
@@ -1154,7 +1154,7 @@ final class sm {
                 }
                 LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
-                IconTextPanel.field_Cb.drawString(sk.field_i, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
+                IconTextPanel.field_Cb.drawString(DelayedInboundPacket.field_i, var12 + 22, param0 + IconTextPanel.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
@@ -1187,7 +1187,7 @@ final class sm {
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
                 ProgressDialog.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
-                this.a(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
+                this.drawInstructionFleet(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = LoginForm.field_N;
                 var10Lifetime2Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
@@ -1370,9 +1370,9 @@ final class sm {
                 IconTextPanel.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 IconTextPanel.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
-                this.a(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
+                this.drawInstructionFleet(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
-                this.a(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
+                this.drawInstructionProjectIcon(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
                 var11Lifetime3 = var11Lifetime3 + (IconTextPanel.field_Cb.field_J + var21Lifetime1);
                 var17Lifetime1 = wg.field_e.expandPlaceholders(5607, tb.field_b);
                 var18Lifetime1 = wg.field_e.expandPlaceholders(5607, wq.field_c);
@@ -1384,8 +1384,8 @@ final class sm {
                 IconTextPanel.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 IconTextPanel.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 ProgressDialog.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
-                this.a(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
-                this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
+                this.drawInstructionFleet(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
+                this.drawInstructionProjectIcon(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
                 var17Lifetime2 = wg.field_e.expandPlaceholders(5607, AccountInputSupport.field_a);
                 var10Lifetime3Lifetime4 = IconTextPanel.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
@@ -1415,36 +1415,36 @@ final class sm {
                 }
                 if (180 > var9Lifetime2) {
                   var29 = 4 * var26 / 15 + 2 * var27;
-                  this.a(var28, (byte) 126, var26, var25Lifetime1, var29, 8421504, var11Lifetime3);
+                  this.drawInstructionProductionBar(var28, (byte) 126, var26, var25Lifetime1, var29, 8421504, var11Lifetime3);
                   var28 += 30;
                   var29Lifetime1 = 2 * var27 + var26;
-                  this.a(var28, (byte) 127, var26, var23Lifetime1, var29Lifetime1, DualLinkNode.field_k[0], var11Lifetime3);
+                  this.drawInstructionProductionBar(var28, (byte) 127, var26, var23Lifetime1, var29Lifetime1, DualLinkNode.field_k[0], var11Lifetime3);
                   var28 += 30;
                   var29Lifetime2 = 2 * var27 + 10 * var26 / 15;
-                  this.a(var28, (byte) 126, var26, var24Lifetime1, var29Lifetime2, DualLinkNode.field_k[2], var11Lifetime3);
+                  this.drawInstructionProductionBar(var28, (byte) 126, var26, var24Lifetime1, var29Lifetime2, DualLinkNode.field_k[2], var11Lifetime3);
                 }
                 return;
               }
               if (8 == param2) {
                 var38 = StandardMapGenerator.field_g;
                 var9Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 0, param0 + (IconTextPanel.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
+                this.drawInstructionProjectIcon(param3 + 15, 20, 0, param0 + (IconTextPanel.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
                 var39 = WidgetStyle.field_b;
                 var9Lifetime3Lifetime1 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 1, param0 + (IconTextPanel.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
+                this.drawInstructionProjectIcon(15 + param3, 20, 1, param0 + (IconTextPanel.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
                 var40 = ClientOverlayDrawSupport.field_f;
                 var5 = var40;
                 var5 = var40;
                 var9Lifetime3Lifetime2 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 2, (IconTextPanel.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
+                this.drawInstructionProjectIcon(15 + param3, 20, 2, (IconTextPanel.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
                 var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
                 var9Lifetime3Lifetime3 = IconTextPanel.field_Cb.a(wg.field_e.expandPlaceholders(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * IconTextPanel.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
+                this.drawInstructionProjectIcon(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * IconTextPanel.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime3 + 3) >> 2);
                 return;
               }
@@ -1465,24 +1465,24 @@ final class sm {
         } else {
           var5 = vc.field_e;
         }
-        this.a(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, wg.field_e.expandPlaceholders(5607, var5));
+        this.drawWrappedInstructions(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, wg.field_e.expandPlaceholders(5607, var5));
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int itemRight(boolean param0, int param1) {
         if (!param0) {
           this.field_f = true;
         }
-        return this.b(false) + 65 + this.itemWidth(param1, false);
+        return this.getAnimatedLeft(false) + 65 + this.itemWidth(param1, false);
     }
 
     private final int rowHeight(int param0, int param1) {
         if (param0 != -20) {
-          this.e((byte) 56);
+          this.drawErrorPanel((byte) 56);
         }
         return TutorialVictoryChecker.field_l[this.field_a];
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    private final void drawInstructionProjectIcon(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param5 >= 150) {
           return;
@@ -1509,16 +1509,16 @@ final class sm {
         }
     }
 
-    final void g(byte param0) {
+    final void releaseHighscoreRequest(byte param0) {
         if (this.field_a == 5) {
           LoginForm.field_I = null;
         }
         if (param0 <= 52) {
-          sm.clearStatics(1);
+          GameMenuController.clearStatics(1);
         }
     }
 
-    private final int b(int param0, int param1, int param2) {
+    private final int findInstructionControlAt(int param0, int param1, int param2) {
         int var10 = 0;
         int stackIn_25_0 = 0;
         int var4;
@@ -1531,8 +1531,8 @@ final class sm {
         int var12;
         int var13;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
-        var4 = 20 + (this.b(false) + TutorialVictoryChecker.field_r[this.field_a]);
-        var5 = 10 + this.h(-121);
+        var4 = 20 + (this.getAnimatedLeft(false) + TutorialVictoryChecker.field_r[this.field_a]);
+        var5 = 10 + this.getAnimatedTop(-121);
         var6 = Star.field_H.length;
         if (param1 > var4) {
           return -1;
@@ -1589,7 +1589,7 @@ final class sm {
         return -1;
     }
 
-    final void i(int param0) {
+    final void updateMenu(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
@@ -1599,11 +1599,11 @@ final class sm {
           !ArchiveConnectionRetrySupport.field_a) {
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (TextReplacementEntry.field_j != 13) {
-              this.k(23);
+              this.handleMenuKey(23);
               if (this.field_d.field_c == -1) {
                 continue;
               }
-              this.a(false, this.field_d.field_c, false);
+              this.handleMenuItemInput(false, this.field_d.field_c, false);
               continue;
             }
             if (1 != this.field_a &&
@@ -1621,26 +1621,26 @@ final class sm {
           }
           if (this.field_a == 6 ||
             this.field_a == 7) {
-            this.f((byte) 122);
+            this.handleInstructionPointer((byte) 122);
           }
           if (this.field_a == 8) {
-            this.a(-16084);
+            this.handleAchievementPointer(-16084);
           }
           v.a((byte) -128);
-          this.field_d.updatePointerSelection(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
+          this.field_d.updatePointerSelection(param0 ^ -2665, this.findMenuItemAt(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.findMenuItemAt(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
           if (this.field_d.field_c != -1) {
-            this.a(true, this.field_d.field_c, false);
+            this.handleMenuItemInput(true, this.field_d.field_c, false);
           }
         }
         if (param0 != 2664) {
-          this.d(97, 114);
+          this.jumpToInstructionSection(97, 114);
         }
         if (this.field_a == 6 ||
           this.field_a == 7) {
-          this.d((byte) -70);
+          this.updateInstructionAnimation((byte) -70);
         }
         if (this.field_a == 8) {
-          this.a(true);
+          this.updateAchievementAnimation(true);
         }
         this.field_h = this.field_h + 1;
         if (this.field_a == 10) {
@@ -1659,12 +1659,12 @@ final class sm {
         }
     }
 
-    private final void a(int param0) {
+    private final void handleAchievementPointer(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
         RasterBuffer.field_e = this.findHexAt(param0 + 16191, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
         if (param0 != -16084) {
-          discarded$0 = this.b(true);
+          discarded$0 = this.getAnimatedLeft(true);
         }
         if (LobbyCommandSupport.field_d == 0) {
         } else {
@@ -1679,7 +1679,7 @@ final class sm {
         }
     }
 
-    private final int b(byte param0) {
+    private final int getAnimatedHeight(byte param0) {
         int var2 = 0;
         int var3 = 0;
         if (GameRules.field_c != this.field_a &&
@@ -1698,14 +1698,14 @@ final class sm {
         return TutorialVictoryChecker.field_l[this.field_a] * TutorialVictoryChecker.field_p[this.field_a].length + TutorialVictoryChecker.field_t[this.field_a] + 10;
     }
 
-    private final void d(int param0, int param1) {
+    private final void jumpToInstructionSection(int param0, int param1) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         WidgetTheme.field_s = param1;
         ClientClockSupport.field_g = 0 != MapGenerationException.field_b ? QuickChatCategoryRegistry.a(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
-          this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
+          this.drawRankingsRow((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
         }
         for (var3 = 0; var3 < param1; var3++) {
           DefendTask.field_w = DefendTask.field_w + DirectByteArrayStorage.field_i[var3];
@@ -1716,18 +1716,18 @@ final class sm {
     public static void clearStatics(int param0) {
         field_c = null;
         if (param0 != -25370) {
-          sm.clearStatics(36);
+          GameMenuController.clearStatics(36);
         }
     }
 
-    final void g(int param0) {
+    final void drawMenu(int param0) {
         if (null != PasswordInputPainter.field_x ||
           SecondaryNodeHashTable.field_g != null) {
           ContentTransitionPhase.darkenRectangle(480, 0, 640, (byte) -116, 0);
         }
-        int var2 = this.c(32);
-        int var3 = this.b((byte) -98);
-        int var4 = this.h(-121);
+        int var2 = this.getAnimatedWidth(32);
+        int var3 = this.getAnimatedHeight((byte) -98);
+        int var4 = this.getAnimatedTop(-121);
         int var5 = (-var2 + 640) / 2;
         int var6 = var5;
         int var7 = 20 + var2;
@@ -1738,14 +1738,14 @@ final class sm {
         this.drawItems(var4, 7903);
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean isItemSelectable(byte param0, int param1) {
         if (param0 != 44) {
           return false;
         }
         return true;
     }
 
-    private final void a(boolean param0, int param1, boolean param2) {
+    private final void handleMenuItemInput(boolean param0, int param1, boolean param2) {
         int stackIn_92_0 = 0;
         int stackIn_92_1 = 0;
         boolean stackIn_93_3 = false;
@@ -1763,7 +1763,7 @@ final class sm {
         }
         var4 = TutorialVictoryChecker.field_p[this.field_a][param1];
         if (this.field_d.isActivated(-1)) {
-          this.b(param1, param0, var4, -32580);
+          this.activateMenuItem(param1, param0, var4, -32580);
         }
         boolean decompiledFrameRemainder0 = true;
         var6 = var4;
@@ -1788,7 +1788,7 @@ final class sm {
               LobbyOptionSupport.setSoundEffectVolume(256, 197126152);
             }
             if (this.field_d.isPointerHeld((byte) -50)) {
-              var6 = this.itemX(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
+              var6 = this.itemX(param1, true) + this.itemRight(true, param1) + IsolationistAi.field_t - 120 >> 1;
               var7 = TertiaryListSequence.field_k - var6;
               var8 = 256 * var7 / 120;
               if (0 < var8) {
@@ -1831,7 +1831,7 @@ final class sm {
                 stackIn_92_0 = -120;
                 stackIn_92_1 = this.itemX(param1, true);
                 stackIn_93_3 = !(param2);
-                var6 = stackIn_92_0 + (stackIn_92_1 - (-this.a(stackIn_93_3, param1) - IsolationistAi.field_t)) >> 1;
+                var6 = stackIn_92_0 + (stackIn_92_1 - (-this.itemRight(stackIn_93_3, param1) - IsolationistAi.field_t)) >> 1;
                 var7Lifetime1 = TertiaryListSequence.field_k - var6;
                 var8Lifetime1 = 256 * var7Lifetime1 / 120;
                 if (var8Lifetime1 <= 0) {
@@ -1856,7 +1856,7 @@ final class sm {
 
     }
 
-    private final void j(int param0) {
+    private final void drawAchievements(int param0) {
         int var26 = 0;
         int stackIn_5_0 = 0;
         Sprite stackIn_8_0 = null;
@@ -2033,9 +2033,9 @@ final class sm {
         ContentDialog.field_gb.drawScaledAdditive(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
         DisplayModeInfo.field_h.drawScaledAdditive(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
         var18 = 350;
-        var2Lifetime1 = 24 + this.b(false) + (this.c(32) + 16) - var18;
+        var2Lifetime1 = 24 + this.getAnimatedLeft(false) + (this.getAnimatedWidth(32) + 16) - var18;
         var19 = 136;
-        var20 = -var19 + (-34 + this.h(-110));
+        var20 = -var19 + (-34 + this.getAnimatedTop(-110));
         SoftwareRasterizer.fillRoundedRectAlpha(var2Lifetime1, var20, var18, var19, 10, 0, 128);
         SoftwareRasterizer.drawRoundedRect(var2Lifetime1, var20, var18, var19, 10, SolVictoryChecker.blendColours(3974311, 0, -118, 128));
         if (-1 != var6 &&
@@ -2106,10 +2106,10 @@ final class sm {
         if (!param1) {
           return -70;
         }
-        return this.b(false) + 65;
+        return this.getAnimatedLeft(false) + 65;
     }
 
-    private final void k(int param0) {
+    private final void handleMenuKey(int param0) {
         int var2;
         int var3;
         boolean stackIn_4_0 = false;
@@ -2129,7 +2129,7 @@ final class sm {
           ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 67), 1);
         }
         if (GameRules.field_c == 6) {
-          this.e(170);
+          this.handleInstructionKeys(170);
         } else {
           if (11 == GameRules.field_c) {
             this.field_d.updateHorizontalKeys(85);
@@ -2139,7 +2139,7 @@ final class sm {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, String param8) {
+    private final void drawWrappedInstructions(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, String param8) {
         int var12 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2168,7 +2168,7 @@ final class sm {
             }
           }
           if (param1 != -91) {
-            this.a(106, true, 125, -94);
+            this.drawInstructionSection(106, true, 125, -94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2191,7 +2191,7 @@ final class sm {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void drawInstructionProductionBar(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;
         int var12 = 0;
         int[] var17 = null;
@@ -2216,7 +2216,7 @@ final class sm {
         IconTextPanel.field_Cb.drawCentred(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
     }
 
-    private final void a(int param0, byte param1) {
+    private final void scrollInstructionSection(int param0, byte param1) {
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = Star.field_H.length;
@@ -2233,18 +2233,18 @@ final class sm {
         int var6 = var5 + param0;
         if (var6 >= 0 &&
           Star.field_H.length > var6) {
-          this.d(4, var6);
+          this.jumpToInstructionSection(4, var6);
         }
     }
 
-    sm(int param0) {
+    GameMenuController(int param0) {
         this.field_a = param0;
         this.field_d = new MenuInputState(TutorialVictoryChecker.field_p[this.field_a].length);
         Star.field_H = new int[UnderageAccountInfoPanel.field_J.length];
-        this.a(0, (byte) 28, false);
+        this.resetMenuInput(0, (byte) 28, false);
     }
 
-    private final void b(int param0, boolean param1, int param2, int param3) {
+    private final void activateMenuItem(int param0, boolean param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -2370,7 +2370,7 @@ final class sm {
                                                       break regionExit1;
                                                     }
                                                     if (26 == var5) {
-                                                      if (this.a((byte) 44, param0)) {
+                                                      if (this.isItemSelectable((byte) 44, param0)) {
                                                         this.field_g = param0;
                                                         var5 = param1 ? 1 : 0;
                                                         var6 = var5;
@@ -2477,7 +2477,7 @@ final class sm {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean advanceCloseAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -2502,13 +2502,13 @@ final class sm {
         return true;
     }
 
-    private final int h(int param0) {
+    private final int getAnimatedTop(int param0) {
         if (GameRules.field_c != this.field_a &&
           this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
         if (param0 > -92) {
-          this.e((byte) 113);
+          this.drawErrorPanel((byte) 113);
         }
         if (PlayerRankingRequest.field_o != GameRules.field_c &&
           PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
@@ -2578,10 +2578,10 @@ final class sm {
         if (!param1) {
           return 40;
         }
-        return this.h(-105) + (TutorialVictoryChecker.field_t[this.field_a] + TutorialVictoryChecker.field_l[this.field_a] * param0);
+        return this.getAnimatedTop(-105) + (TutorialVictoryChecker.field_t[this.field_a] + TutorialVictoryChecker.field_l[this.field_a] * param0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, byte param8, int param9) {
+    private final void drawVerticalInstructionCallout(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, byte param8, int param9) {
         int stackIn_11_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -2680,7 +2680,7 @@ final class sm {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8) {
+    private final void drawInstructionFleet(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8) {
         Sprite stackIn_23_0 = null;
         double var10;
         double var12;
@@ -2759,7 +2759,7 @@ final class sm {
         }
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int findMenuItemAt(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -2769,9 +2769,9 @@ final class sm {
         }
         for (var4 = 0; TutorialVictoryChecker.field_p[this.field_a].length > var4; var4++) {
           var5 = this.itemY(var4, true);
-          if (this.a((byte) 44, var4) &&
+          if (this.isItemSelectable((byte) 44, var4) &&
             param2 >= this.itemX(var4, true) &&
-            param2 < this.a(true, var4) &&
+            param2 < this.itemRight(true, var4) &&
             var5 <= param0 &&
             param0 < var5 + this.rowHeight(-20, var4)) {
             return var4;
@@ -2780,7 +2780,7 @@ final class sm {
         return -1;
     }
 
-    private final void e(int param0) {
+    private final void handleInstructionKeys(int param0) {
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 170) {
@@ -2788,27 +2788,27 @@ final class sm {
         }
         if (TextReplacementEntry.field_j != 104) {
           if (105 == TextReplacementEntry.field_j) {
-            this.a(1, (byte) -57);
+            this.scrollInstructionSection(1, (byte) -57);
             this.field_d.updateVerticalKeys(0);
           } else {
             if (TextReplacementEntry.field_j == 102) {
-              this.d(param0 - 166, 0);
+              this.jumpToInstructionSection(param0 - 166, 0);
               this.field_d.updateVerticalKeys(0);
             } else {
               if (TextReplacementEntry.field_j == 103) {
-                this.d(4, Star.field_H.length - 1);
+                this.jumpToInstructionSection(4, Star.field_H.length - 1);
               } else {
                 this.field_d.updateVerticalKeys(0);
               }
             }
           }
         } else {
-          this.a(-1, (byte) -57);
+          this.scrollInstructionSection(-1, (byte) -57);
           this.field_d.updateVerticalKeys(0);
         }
     }
 
-    private final int c(int param0) {
+    private final int getAnimatedWidth(int param0) {
         if (GameRules.field_c != this.field_a &&
           this.field_a != PlayerRankingRequest.field_o) {
           return 0;

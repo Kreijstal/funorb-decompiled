@@ -442,7 +442,7 @@ final class PlayerContextMenuController {
             this.field_j.a(1, 13, ValidationMessageWidget.field_O);
           }
           if (param0.field_n == 1) {
-            if (sq.field_a == 0) {
+            if (TutorialScene.field_a == 0) {
               this.field_j.a(1, 12, IntNode.field_m);
             }
             this.field_j.a(1, 13, StatefulWidgetTheme.field_A);
@@ -488,7 +488,7 @@ final class PlayerContextMenuController {
           var3 = var6.field_Xb;
           if (var6.field_Jb) {
             this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(sq.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var6.field_cc) {
@@ -530,7 +530,7 @@ final class PlayerContextMenuController {
           var3 = var7.field_Xb;
           if (var7.field_Jb) {
             this.field_j.a(1, 2, QuickChatCategoryRegistry.a(Archive.field_i, 4371, new String[]{var3}));
-            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(sq.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 3, QuickChatCategoryRegistry.a(TutorialScene.field_i, 4371, new String[]{var3}));
             return;
           }
           if (var7.field_cc) {
@@ -568,7 +568,7 @@ final class PlayerContextMenuController {
             return true;
           }
           if (param2 == 2) {
-            sq.a(-25, param0, this.field_f);
+            TutorialScene.writeJoinGameRequest(-25, param0, this.field_f);
             return true;
           }
           if (param2 == 3) {
@@ -600,7 +600,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param2 == 2) {
-          sq.a(-25, param0, this.field_f);
+          TutorialScene.writeJoinGameRequest(-25, param0, this.field_f);
           return true;
         }
         if (param2 == 3) {

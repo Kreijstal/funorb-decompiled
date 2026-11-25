@@ -8,7 +8,7 @@ final class EmailValidator extends TextFieldValidator {
     static String field_u;
     static IndexedSprite[] field_o;
     static String[] field_w;
-    static sq[] field_q;
+    static TutorialScene[] field_q;
     static String field_v;
     private boolean field_n;
     private String field_t;
@@ -256,7 +256,7 @@ final class EmailValidator extends TextFieldValidator {
           if (param0) {
             return;
           }
-          field_q = (sq[]) null;
+          field_q = (TutorialScene[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

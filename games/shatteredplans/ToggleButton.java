@@ -113,7 +113,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           if (GameAssetSetupSupport.field_a != null) {
             return;
           }
-          sr.field_h = false;
+          MeshData.field_h = false;
           if (LoginMethodPreference.field_g) {
             var5 = uh.field_d;
           } else {
@@ -133,17 +133,17 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           ValidatedTextInputWidget.field_X = new AnimatedPanel(0L, param1);
           AgeValidator.field_n = new AnimatedPanel(0L, param2);
           MenuButton.field_w = new AnimatedPanel(0L, (AnimatedPanel) null);
-          sg.field_Ab = new AnimatedPanel(0L, param3);
+          IconLabelPanel.field_Ab = new AnimatedPanel(0L, param3);
           uq.field_j = new AnimatedPanel((long)param4, param0);
           uq.field_j.field_nb = QuickChatHelpSupport.field_f;
-          sg.field_Ab.addChild(4, uq.field_j);
+          IconLabelPanel.field_Ab.addChild(4, uq.field_j);
           OpacityWidget.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
-          sg.field_Ab.addChild(4, OpacityWidget.field_C);
+          IconLabelPanel.field_Ab.addChild(4, OpacityWidget.field_C);
           IntroTextLine.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ByteArrayReadRequest.field_n);
           DirectByteArrayStorage.field_l = new AnimatedPanel(0L, BoundsRect.field_k);
           ValidatedTextInputWidget.field_X.addChild(4, AgeValidator.field_n);
           ValidatedTextInputWidget.field_X.addChild(4, MenuButton.field_w);
-          MenuButton.field_w.addChild(4, sg.field_Ab);
+          MenuButton.field_w.addChild(4, IconLabelPanel.field_Ab);
           MenuButton.field_w.addChild(param4 + 4, IntroTextLine.field_m);
           MenuButton.field_w.addChild(4, DirectByteArrayStorage.field_l);
           return;

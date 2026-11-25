@@ -39,7 +39,7 @@ final class Player {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!sr.field_h) {
+          if (!MeshData.field_h) {
             return false;
           }
           if (ProductionContent.field_h == 2 &&

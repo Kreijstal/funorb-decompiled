@@ -86,7 +86,7 @@ final class SolMapReader implements MapGenerator {
           var12 = var7;
           var10 = var12;
           var2 = var10;
-          sn.a(var11, (byte) -76, param0);
+          IntroLogoSupport.accumulateTerritoryResources(var11, (byte) -76, param0);
           dupTemp$0 = var11[0];
           var5 = dupTemp$0;
           var4 = dupTemp$0;
@@ -254,7 +254,7 @@ final class SolMapReader implements MapGenerator {
           ShatteredPlansClient.field_K = true;
           DateInputWidget.field_I.field_xb.field_db = -DateInputWidget.field_I.field_xb.field_mb + DateInputWidget.field_I.field_zb.field_mb;
         }
-        if (sr.field_h &&
+        if (MeshData.field_h &&
           null != ValidatedTextInputWidget.field_X) {
           ShatteredPlansClient.field_K = true;
         }

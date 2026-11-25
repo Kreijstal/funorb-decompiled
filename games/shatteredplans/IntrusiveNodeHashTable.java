@@ -95,7 +95,7 @@ final class IntrusiveNodeHashTable {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var9[var6_int] = ProgressDialog.field_fb[we.intAnd((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var21);
+            var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], SocialListSetupSupport.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var21);
           } else {
             var22 = MusicEnvelope.field_l[var2];
             var16 = new int[var3];
@@ -104,7 +104,7 @@ final class IntrusiveNodeHashTable {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = PrivateChatMessage.intOr(ProgressDialog.field_fb[we.intAnd((int) var20[var7], 255)], we.intAnd(255, (int) var22[var7]) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], SocialListSetupSupport.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var16));
           }
         }
         TertiaryListSequence.a(0);
@@ -121,8 +121,8 @@ final class IntrusiveNodeHashTable {
           if (param5 != 1491341222) {
             field_j = (String) null;
           }
-          sr.field_q = param4;
-          sg.field_Cb = param2;
+          MeshData.field_q = param4;
+          IconLabelPanel.field_Cb = param2;
           StatusMessagePanel.field_D = param8;
           TertiaryLinkNode.field_o = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           BattleSnapshot.field_w = new DiskCacheWorker(param6);

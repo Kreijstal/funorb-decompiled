@@ -189,8 +189,8 @@ final class LobbyRoomEntry extends AnimatedPanel {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param5 && (PlayerReportPanel.field_Mb != SoftwareRasterizer.field_b ||
-          TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (so.field_q.field_d == SoftwareRasterizer.field_k &&
-          SoftwareRasterizer.field_b == so.field_q.field_g)) {
+          TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (BattleExplosionVisual.field_q.field_d == SoftwareRasterizer.field_k &&
+          SoftwareRasterizer.field_b == BattleExplosionVisual.field_q.field_g)) {
           if (null == MenuInputState.field_a) {
             if (null == IntNode.field_p) {
               DialogRoot.j(param9 ^ 97);

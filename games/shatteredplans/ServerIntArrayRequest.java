@@ -27,8 +27,8 @@ final class ServerIntArrayRequest extends IntrusiveNode {
           GradientMenuLabel.writeChatFilterSettings(68, param1);
         }
         if (param3 == 1 &&
-          sq.field_a != param2) {
-          sq.field_a = param2;
+          TutorialScene.field_a != param2) {
+          TutorialScene.field_a = param2;
           MenuWindow.field_v = true;
           GradientMenuLabel.writeChatFilterSettings(55, param1);
         }

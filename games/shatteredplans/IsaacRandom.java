@@ -54,9 +54,9 @@ final class IsaacRandom {
             if (ServerIntArrayRequest.field_i == 2) {
               LobbyOptionSupport.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
               var2 = new PacketBuffer(13);
-              AccountHandshakeSupport.writeAccountHandshake(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
+              AccountHandshakeSupport.writeAccountHandshake(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, MeshData.field_q);
               var2.writeByte(15, (byte) -69);
-              var2.writeInt(11135, sg.field_Cb);
+              var2.writeInt(11135, IconLabelPanel.field_Cb);
               LobbyOptionSupport.field_a.write(13, 0, var2.payload, -13976);
               ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
               SocialListPanel.field_Cb = 30000L + ClientClockSupport.currentTimeMillis(14274);

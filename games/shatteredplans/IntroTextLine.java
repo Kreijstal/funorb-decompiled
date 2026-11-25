@@ -52,7 +52,7 @@ final class IntroTextLine extends IntrusiveNode {
           var1_intLifetime2 = -250 + var2 / 4;
           QuickChatMenu.field_Jb.drawColourised(var1_intLifetime2, 120, 8421631);
           SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
-          sr.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
+          MeshData.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
           var3Lifetime1 = MenuButton.field_H;
           var8 = 0;
           var4Lifetime1 = var8;

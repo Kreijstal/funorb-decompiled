@@ -10,7 +10,7 @@ abstract class Dialog extends WidgetContainer {
     private int field_G;
     static String field_H;
 
-    final static void a(String[] args, int param1, sq param2, int param3) {
+    final static void a(String[] args, int param1, TutorialScene param2, int param3) {
         try {
           param2.field_t = LoginMethodPreference.parseIntegerOrAuto(args[0], 107);
           param2.field_b = LoginMethodPreference.parseIntegerOrAuto(args[1], 108);

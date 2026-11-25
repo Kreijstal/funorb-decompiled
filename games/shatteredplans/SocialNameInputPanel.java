@@ -564,8 +564,8 @@ final class SocialNameInputPanel extends AnimatedPanel {
           return;
         }
         try {
-          if (sj.field_b != null) {
-            sj.field_b.field_F.setSuggestions(args, 0);
+          if (SocialListSetupSupport.field_b != null) {
+            SocialListSetupSupport.field_b.field_F.setSuggestions(args, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');

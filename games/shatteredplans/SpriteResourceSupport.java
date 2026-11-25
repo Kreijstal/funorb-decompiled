@@ -114,7 +114,7 @@ final class SpriteResourceSupport {
         }
     }
 
-    final static void appendTutorialObjective(String[] args, int param1, sq param2) {
+    final static void appendTutorialObjective(String[] args, int param1, TutorialScene param2) {
         TutorialConditionalText var7 = null;
         TutorialConditionalText var3 = null;
         int var5 = 0;
@@ -136,7 +136,7 @@ final class SpriteResourceSupport {
           } else {
             var7.field_b = args[1];
           }
-          param2.a((byte) 33, var3);
+          param2.appendObjective((byte) 33, var3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "id.C(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -148,7 +148,7 @@ final class SpriteResourceSupport {
           var2 = QuickChatMenu.field_Bb;
         }
         if (param1 == 1) {
-          var2 = sq.field_a;
+          var2 = TutorialScene.field_a;
         }
         if (param1 == 2) {
           var2 = ul.field_Hb;

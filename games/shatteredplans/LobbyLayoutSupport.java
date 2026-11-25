@@ -28,10 +28,10 @@ final class LobbyLayoutSupport {
         int var7 = 0;
         int var8 = 0;
         AnimatedPanel var8_ref_qr = null;
-        sg var9_ref_sg = null;
+        IconLabelPanel var9_ref_sg = null;
         int var9 = 0;
         int var10 = 0;
-        sg var10_ref_sg = null;
+        IconLabelPanel var10_ref_sg = null;
         int var12 = 0;
         int var13 = 0;
         AnimatedPanel var14 = null;
@@ -47,9 +47,9 @@ final class LobbyLayoutSupport {
           }
           TextLayout.a(stackIn_3_0, stackIn_4_1);
           DiplomacyNotice.field_h.a(0, -42 + SocialListPanel.field_xb.field_mb, (byte) 95, SocialListPanel.field_xb.field_K, 0);
-          DefendTask.field_x.setTarget(so.field_t.field_K, UniformNineSliceFactory.field_c, (byte) 107, 0, 0);
+          DefendTask.field_x.setTarget(BattleExplosionVisual.field_t.field_K, UniformNineSliceFactory.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = ClientDrawingSupport.field_a;
-          stackIn_6_1 = so.field_t.field_K;
+          stackIn_6_1 = BattleExplosionVisual.field_t.field_K;
           if (AccountStatusDialog.field_pb) {
             stackIn_7_2 = 4 + (UnderageAccountInfoPanel.field_K + 40);
           } else {
@@ -59,8 +59,8 @@ final class LobbyLayoutSupport {
           if (param0 != 15471) {
             return;
           }
-          MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, UniformNineSliceFactory.field_c + 2, -40 + (so.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
-          EmailValidationError.field_a.a(so.field_t.field_K, 22 + UniformNineSliceFactory.field_c, 0, 2, -128, -UniformNineSliceFactory.field_c + (so.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
+          MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, UniformNineSliceFactory.field_c + 2, -40 + (BattleExplosionVisual.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
+          EmailValidationError.field_a.a(BattleExplosionVisual.field_t.field_K, 22 + UniformNineSliceFactory.field_c, 0, 2, -128, -UniformNineSliceFactory.field_c + (BattleExplosionVisual.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
           DialPainter.field_g.setTarget(SocialListPanel.field_xb.field_K, 40, (byte) 107, -40 + SocialListPanel.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
@@ -141,7 +141,7 @@ final class LobbyLayoutSupport {
                   QuickChatCategoryRegistry.field_g[var6].setTarget(103, var3, (byte) 74, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    ByteArrayNode.field_p[var6][0].a(50, var3, var5, 2, TextLayout.field_b, 38, var8);
+                    ByteArrayNode.field_p[var6][0].setIconLabelBounds(50, var3, var5, 2, TextLayout.field_b, 38, var8);
                     var8 += 40;
                   } else {
                     if (ByteArrayNode.field_p[var6][0] != null) {
@@ -154,7 +154,7 @@ final class LobbyLayoutSupport {
                   var10 = ByteArrayNode.field_p[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var11 * var9 / var10;
-                    ByteArrayNode.field_p[var6][1 + var11].a(50, var3, var5, 2, TextLayout.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
+                    ByteArrayNode.field_p[var6][1 + var11].setIconLabelBounds(50, var3, var5, 2, TextLayout.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
                   }
                   var5 = var5 + (var3 + 2);
                 }

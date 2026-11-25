@@ -219,9 +219,9 @@ final class MenuWindow extends MenuComponent {
         if (!(LabeledChildWidget.field_J <= 0)) {
           LabeledChildWidget.field_J = LabeledChildWidget.field_J - 1;
         }
-        if (DerelictMapGenerator.field_m != so.field_q.field_d) {
-          NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-DerelictMapGenerator.field_m + so.field_q.field_d);
-          DerelictMapGenerator.field_m = so.field_q.field_d;
+        if (DerelictMapGenerator.field_m != BattleExplosionVisual.field_q.field_d) {
+          NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-DerelictMapGenerator.field_m + BattleExplosionVisual.field_q.field_d);
+          DerelictMapGenerator.field_m = BattleExplosionVisual.field_q.field_d;
         }
         if (!(LabeledChildWidget.field_J <= 0)) {
           IndexedSpriteState.a(125);

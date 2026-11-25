@@ -91,14 +91,14 @@ final class TertiaryListSequence extends NodeSequence {
         if (param0 == 0) {
           StatusMessagePanel.field_H = null;
           WeightedCacheEntry.field_s = null;
-          sj.field_a = null;
+          SocialListSetupSupport.field_a = null;
           ProgressDialog.field_fb = null;
           return;
         }
         TertiaryListSequence.clearStatics(-53);
         StatusMessagePanel.field_H = null;
         WeightedCacheEntry.field_s = null;
-        sj.field_a = null;
+        SocialListSetupSupport.field_a = null;
         ProgressDialog.field_fb = null;
     }
 

@@ -33,7 +33,7 @@ final class te {
     final static void a(int param0, v param1, int param2, v param3, int param4, int param5) {
         try {
           Wormhole.field_l = param3;
-          sm.field_b = param5;
+          GameMenuController.field_b = param5;
           ArchiveNetworkClient.field_i = param2;
           if (param0 != -4440) {
             field_b = (String) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends IntrusiveNode {
+final class DelayedInboundPacket extends IntrusiveNode {
     int field_j;
     long field_l;
     static AnimatedPanel field_k;
@@ -12,11 +12,11 @@ final class sk extends IntrusiveNode {
         field_i = null;
         field_k = null;
         if (param0 >= -6) {
-          sk.a(false, 27);
+          DelayedInboundPacket.readChatMessage(false, 27);
         }
     }
 
-    final static ChatHistoryEntry a(boolean param0, int param1) {
+    final static ChatHistoryEntry readChatMessage(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -85,7 +85,7 @@ final class sk extends IntrusiveNode {
         return new ChatHistoryEntry(param0);
     }
 
-    sk(long param0, int param1, byte[] param2) {
+    DelayedInboundPacket(long param0, int param1, byte[] param2) {
         try {
           this.field_l = param0;
           this.field_j = param1;

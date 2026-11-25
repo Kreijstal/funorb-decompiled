@@ -695,7 +695,7 @@ abstract class MapViewState {
                 }
                 var5 = param1.nextForward((byte) -71);
               }
-              this.field_o.showStatusText(10, 0, sr.field_N);
+              this.field_o.showStatusText(10, 0, MeshData.field_N);
             }
           } else {
             if (param0 == 1) {

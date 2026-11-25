@@ -155,7 +155,7 @@ final class QuickChatParameterType {
         int[] var21 = null;
         int[] var20 = null;
         int[] var2 = null;
-        sr var4_ref_sr = null;
+        MeshData var4_ref_sr = null;
         int var10_int = 0;
         int var11 = 0;
         int var4 = 0;
@@ -163,7 +163,7 @@ final class QuickChatParameterType {
         int var14 = 0;
         int var15 = 0;
         int var17_int = 0;
-        sr var17 = null;
+        MeshData var17 = null;
         int var18 = 0;
         int var3 = 0;
         int var5 = 0;
@@ -193,7 +193,7 @@ final class QuickChatParameterType {
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_sr = vc.field_d[var3];
-            var4_ref_sr.a(true);
+            var4_ref_sr.updateBounds(true);
             UsernameAvailabilityValidator.a(-1, var3);
             var5 = var4_ref_sr.field_O + var4_ref_sr.field_k >> 1;
             var6 = var4_ref_sr.field_j + var4_ref_sr.field_t >> 1;
@@ -265,7 +265,7 @@ final class QuickChatParameterType {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = ProgressDialog.field_fb[we.intAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
         TertiaryListSequence.a(0);
         return var4;
     }

@@ -273,7 +273,7 @@ final class TutorialStageSupport {
           } else {
             if (!UiTextSupport.hasLogoIntroFinished(250)) {
               SoftwareRasterizer.clear();
-              sn.a(240, 28318, 320);
+              IntroLogoSupport.drawIntroLogo(240, 28318, 320);
               WeightedCacheEntry.a(param1 ^ 37, 0, param2, 0);
             } else {
               if (SoundPlayback.field_i == 0) {

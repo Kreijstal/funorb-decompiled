@@ -125,7 +125,7 @@ final class LinkPainter implements WidgetPainter {
                 var5[var6] = ProgressDialog.field_fb[we.intAnd(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var5);
+              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], SocialListSetupSupport.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var5);
               var2++;
               continue scanLoop1;
             }

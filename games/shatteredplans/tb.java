@@ -7,9 +7,9 @@ final class tb {
     static AnimatedPanel[] field_a;
 
     final static void a(int param0, int[] param1, String[][] param2, String[][] param3, Archive param4, String[] param5, String[] param6, Sprite[][] param7, int param8, Sprite[][] param9, int param10, String[] param11, byte[] param12, int param13, byte[] param14) {
-        sg[] array$0 = null;
-        sg[] array$1 = null;
-        sg[] array$2 = null;
+        IconLabelPanel[] array$0 = null;
+        IconLabelPanel[] array$1 = null;
+        IconLabelPanel[] array$2 = null;
         int var19 = 0;
         AnimatedPanel stackIn_6_0;
         AnimatedPanel stackIn_6_1;
@@ -69,7 +69,7 @@ final class tb {
           LobbyUiSupport.field_f = param2;
           DiplomacyRowSupport.field_a = param1;
           UsernameAvailabilityValidator.field_v = param6;
-          so.field_r = param12;
+          BattleExplosionVisual.field_r = param12;
           GameTextResources.field_d = param7;
           FleetMove.field_A = param8;
           uk.field_b = HighscoreResponseSupport.loadSpriteSetByName(62, "lobby", param4, "gameprivacy");
@@ -99,9 +99,9 @@ final class tb {
           PairedIntSortSupport.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           PairedIntSortSupport.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
-          sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
+          IconLabelPanel.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
           SoundEffectDefinition.field_e = new AnimatedPanel(0L, IconTextPanel.field_Eb);
-          BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
+          BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, GameMenuController.field_c);
           GameSession.field_e = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, FleetTrailPoint.field_j);
           WeightedCacheEntry.field_t = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, QuickChatMenu.field_Lb);
           ta.field_d = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, ValidatedTextInputWidget.field_T);
@@ -125,7 +125,7 @@ final class tb {
           }
           LinkPainter.field_b = new AnimatedPanel(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           AchievementProgress.field_i = new AnimatedPanel(0L, (AnimatedPanel) null);
-          AchievementProgress.field_i.addChild(param13 ^ -7962, sg.field_zb);
+          AchievementProgress.field_i.addChild(param13 ^ -7962, IconLabelPanel.field_zb);
           AchievementProgress.field_i.addChild(4, SoundEffectDefinition.field_e);
           SoundEffectDefinition.field_e.addChild(4, BattleSnapshot.field_y);
           SoundEffectDefinition.field_e.addChild(4, GameSession.field_e);
@@ -144,66 +144,66 @@ final class tb {
           SoundCache.field_c.field_G = 0;
           SoundCache.field_c.field_y = 1;
           SocketConnector.field_d = new AnimatedPanel(0L, DelegatingCanvas.field_f, GameAssetSetupSupport.field_c.toUpperCase());
-          so.field_v = new AnimatedPanel(0L, QuickChatHelpSupport.field_j);
-          so.field_v.addChild(4, SoundCache.field_c);
-          so.field_v.addChild(4, SocketConnector.field_d);
+          BattleExplosionVisual.field_v = new AnimatedPanel(0L, QuickChatHelpSupport.field_j);
+          BattleExplosionVisual.field_v.addChild(4, SoundCache.field_c);
+          BattleExplosionVisual.field_v.addChild(4, SocketConnector.field_d);
           IntrusiveNode.field_c = new AnimatedPanel(0L, VictoryChecker.field_d);
           IntrusiveNode.field_c.copyFrom(SpriteState.field_u, false);
           var16 = IntrusiveNode.field_c;
           IntrusiveNode.field_c.field_G = 1;
           var16.field_y = 1;
-          so.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
+          BattleExplosionVisual.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
           DefendTask.field_x = new AnimatedPanel(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
           ClientDrawingSupport.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, LobbyOptionResources.field_b);
           EmailValidationError.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
-          so.field_t.addChild(4, DefendTask.field_x);
-          so.field_t.addChild(4, ClientDrawingSupport.field_a);
+          BattleExplosionVisual.field_t.addChild(4, DefendTask.field_x);
+          BattleExplosionVisual.field_t.addChild(4, ClientDrawingSupport.field_a);
           if (AccountStatusDialog.field_pb) {
-            so.field_t.addChild(4, MenuComponent.field_q);
+            BattleExplosionVisual.field_t.addChild(4, MenuComponent.field_q);
           }
-          so.field_t.addChild(param13 + 7970, EmailValidationError.field_a);
+          BattleExplosionVisual.field_t.addChild(param13 + 7970, EmailValidationError.field_a);
           DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
           NameSuggestionsPanel.field_D = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, DiplomacyRowSupport.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
-          ByteArrayNode.field_p = new sg[4 + param0][];
+          ByteArrayNode.field_p = new IconLabelPanel[4 + param0][];
           QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
-          ByteArrayNode.field_p[0] = new sg[6];
+          ByteArrayNode.field_p[0] = new IconLabelPanel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
+            ByteArrayNode.field_p[0][1 + var17_int] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, uk.field_b[var17_int], LobbyOptionResources.field_e[var17_int]);
           }
           if (param13 != -7966) {
             tb.clearStatics(-52);
           }
           if (DiplomacyRowSupport.field_a.length >= 2) {
             QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, wl.field_b);
-            array$0 = new sg[1 + DiplomacyRowSupport.field_a.length];
+            array$0 = new IconLabelPanel[1 + DiplomacyRowSupport.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
-            ByteArrayNode.field_p[1][0] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
+            ByteArrayNode.field_p[1][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
             for (var17_intLifetime1 = 0; DiplomacyRowSupport.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, Integer.toString(DiplomacyRowSupport.field_a[var17_intLifetime1]));
+              ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, Integer.toString(DiplomacyRowSupport.field_a[var17_intLifetime1]));
             }
           }
-          QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, sq.field_s);
-          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[0], LobbyRoomDecoder.field_c), new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[1], IntNode.field_j)};
+          QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, TutorialScene.field_s);
+          ByteArrayNode.field_p[2] = new IconLabelPanel[]{new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r), new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[0], LobbyRoomDecoder.field_c), new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, LegacyAi.field_s[1], IntNode.field_j)};
           if (FleetMove.field_A > 1) {
             QuickChatCategoryRegistry.field_g[3] = new AnimatedPanel(0L, ObjectList.field_h, QuickChatPhraseRegistry.field_e);
-            array$1 = new sg[1 + FleetMove.field_A];
+            array$1 = new IconLabelPanel[1 + FleetMove.field_A];
             ByteArrayNode.field_p[3] = array$1;
-            ByteArrayNode.field_p[3][0] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
+            ByteArrayNode.field_p[3][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < FleetMove.field_A; var17_intLifetime2++) {
-              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, QuickChatPhraseDefinition.field_o[var17_intLifetime2]);
+              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, QuickChatPhraseDefinition.field_o[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
             QuickChatCategoryRegistry.field_g[4 + var17_intLifetime3] = new AnimatedPanel(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
-            array$2 = new sg[1 + we.intAnd(255, (int) so.field_r[var17_intLifetime3])];
+            array$2 = new IconLabelPanel[1 + we.intAnd(255, (int) BattleExplosionVisual.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
-            ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
-            for (var18 = 0; var18 < (255 & so.field_r[var17_intLifetime3]); var18++) {
+            ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
+            for (var18 = 0; var18 < (255 & BattleExplosionVisual.field_r[var17_intLifetime3]); var18++) {
               if (null == GameTextResources.field_d) {
                 var19_ref = null;
               } else {
@@ -222,7 +222,7 @@ final class tb {
               } else {
                 var20 = null;
               }
-              ByteArrayNode.field_p[4 + var17_intLifetime3][var18 + 1] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) (var19_ref), (String) (var20));
+              ByteArrayNode.field_p[4 + var17_intLifetime3][var18 + 1] = new IconLabelPanel(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param0; var17_intLifetime4++) {

@@ -229,7 +229,7 @@ final class IntrusiveDequeCursor {
             if (TutorialAi.field_x &&
               Wormhole.field_i) {
               if (v.field_b &&
-                sr.field_h) {
+                MeshData.field_h) {
                 stackIn_94_0 = 1;
               } else {
                 stackIn_94_0 = 0;
@@ -238,7 +238,7 @@ final class IntrusiveDequeCursor {
               stackIn_99_0 = (param1) && (var2 == 0) && (VictoryChecker.a(45));
               AnimatedPanel.a(stackIn_99_0, (byte) 112);
               if (v.field_b) {
-                if (!sr.field_h) {
+                if (!MeshData.field_h) {
                   return;
                 }
                 stackIn_106_0 = (param1) && (VictoryChecker.a(119));
@@ -251,7 +251,7 @@ final class IntrusiveDequeCursor {
           if (TutorialAi.field_x &&
             Wormhole.field_i) {
             if (v.field_b &&
-              sr.field_h) {
+              MeshData.field_h) {
               stackIn_74_0 = 1;
             } else {
               stackIn_74_0 = 0;
@@ -260,7 +260,7 @@ final class IntrusiveDequeCursor {
             stackIn_79_0 = (param1) && (var2Lifetime4 == 0) && (VictoryChecker.a(45));
             AnimatedPanel.a(stackIn_79_0, (byte) 112);
             if (v.field_b) {
-              if (!sr.field_h) {
+              if (!MeshData.field_h) {
                 return;
               }
               stackIn_86_0 = (param1) && (VictoryChecker.a(119));
@@ -281,7 +281,7 @@ final class IntrusiveDequeCursor {
             return;
           }
           if (v.field_b &&
-            sr.field_h) {
+            MeshData.field_h) {
             stackIn_14_0 = 1;
           } else {
             stackIn_14_0 = 0;
@@ -290,7 +290,7 @@ final class IntrusiveDequeCursor {
           stackIn_19_0 = (param1) && (var2Lifetime1 == 0) && (VictoryChecker.a(45));
           AnimatedPanel.a(stackIn_19_0, (byte) 112);
           if (v.field_b) {
-            if (!sr.field_h) {
+            if (!MeshData.field_h) {
               return;
             }
             stackIn_27_0 = (param1) && (VictoryChecker.a(119));
@@ -310,7 +310,7 @@ final class IntrusiveDequeCursor {
           stackIn_39_0 = (param1) && (var2Lifetime2 == 0) && (VictoryChecker.a(45));
           AnimatedPanel.a(stackIn_39_0, (byte) 112);
           if (v.field_b) {
-            if (!sr.field_h) {
+            if (!MeshData.field_h) {
               return;
             }
             stackIn_46_0 = (param1) && (VictoryChecker.a(119));
@@ -318,12 +318,12 @@ final class IntrusiveDequeCursor {
           }
           return;
         }
-        stackIn_51_0 = (!sr.field_h) ? 0 : 1;
+        stackIn_51_0 = (!MeshData.field_h) ? 0 : 1;
         var2Lifetime3 = stackIn_51_0;
         stackIn_56_0 = (param1) && (var2Lifetime3 == 0) && (VictoryChecker.a(45));
         AnimatedPanel.a(stackIn_56_0, (byte) 112);
         if (v.field_b) {
-          if (!sr.field_h) {
+          if (!MeshData.field_h) {
             return;
           }
           stackIn_63_0 = (param1) && (VictoryChecker.a(119));

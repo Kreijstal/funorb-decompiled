@@ -13,7 +13,7 @@ final class LobbyPlayerEntry extends AnimatedPanel {
     int field_Gb;
     AnimatedPanel field_Ob;
     AnimatedPanel field_Mb;
-    static sm[] field_Hb;
+    static GameMenuController[] field_Hb;
     int field_Eb;
     int field_Lb;
     String field_Cb;
@@ -205,7 +205,7 @@ final class LobbyPlayerEntry extends AnimatedPanel {
     }
 
     static {
-        field_Hb = new sm[14];
+        field_Hb = new GameMenuController[14];
         field_Bb = new byte[250][];
         field_Rb = new LoginMethodPreference("");
     }

@@ -288,7 +288,7 @@ final class QuaternaryListSequence extends NodeSequence {
           }
           var6 = new int[4];
           var2 = var6;
-          sn.a(var6, (byte) -76, param1);
+          IntroLogoSupport.accumulateTerritoryResources(var6, (byte) -76, param1);
           var4 = var6[0];
           for (var3 = 1; var3 < 4; var3++) {
             if (var6[var3] < var4) {

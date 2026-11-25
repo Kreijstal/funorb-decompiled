@@ -59,7 +59,7 @@ abstract class GameClientShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
-          var4 = sr.a(so.field_o, (byte) 0, param2, LeaderboardSortSupport.field_e);
+          var4 = MeshData.pollLoginUiAction(BattleExplosionVisual.field_o, (byte) 0, param2, LeaderboardSortSupport.field_e);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -76,7 +76,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
+            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
               va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -265,7 +265,7 @@ abstract class GameClientShell extends GameApplet {
                               return;
                             }
                             stackIn_32_0 = (var2 == 12);
-                            var3 = sk.a(stackIn_32_0, -1);
+                            var3 = DelayedInboundPacket.readChatMessage(stackIn_32_0, -1);
                             CandidateLink.a(var3, 2);
                           } else {
                             GradientMenuLabel.readLocalPlayerName(-92);
@@ -392,7 +392,7 @@ abstract class GameClientShell extends GameApplet {
           Archive.c(-78);
         }
         if (ClientContextMenuSupport.field_b != null) {
-          so.field_o = ClientContextMenuSupport.field_b.takeRotation(86);
+          BattleExplosionVisual.field_o = ClientContextMenuSupport.field_b.takeRotation(86);
         }
         if (DirectByteArrayStorage.b((byte) -117)) {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
@@ -644,7 +644,7 @@ abstract class GameClientShell extends GameApplet {
               if (SoundPlayback.field_i == 0) {
                 discarded$2 = this.a(false, 1, false);
               } else {
-                te.a(0, so.field_o);
+                te.a(0, BattleExplosionVisual.field_o);
               }
             } else {
               ArchiveSource.b(-82);

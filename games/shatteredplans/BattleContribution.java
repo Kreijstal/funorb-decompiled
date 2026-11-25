@@ -117,7 +117,7 @@ final class BattleContribution extends IntrusiveNode {
         if (!param0) {
           field_n = (String) null;
         }
-        sr.field_F = null;
+        MeshData.field_F = null;
         SliderPainter.field_e = null;
         DefensiveAi.field_r = null;
         TabbedPanel.field_Cb = null;

@@ -104,11 +104,11 @@ final class ClientDialogSupport {
         int var1 = -119 % ((param0 + 49) / 41);
         ValidatedTextInputWidget.field_X = null;
         if (GameAssetSetupSupport.field_a == null) {
-          sg.field_Ab = null;
+          IconLabelPanel.field_Ab = null;
           IntroTextLine.field_m = null;
           AgeValidator.field_n = null;
           DirectByteArrayStorage.field_l = null;
-          sr.field_h = true;
+          MeshData.field_h = true;
           return;
         }
         OpacityWidget.field_C = WhirlpoolHasher.field_j;
@@ -117,11 +117,11 @@ final class ClientDialogSupport {
         WhirlpoolHasher.field_j = null;
         uq.field_j.field_qb = -1;
         GameAssetSetupSupport.field_a = null;
-        sg.field_Ab = null;
+        IconLabelPanel.field_Ab = null;
         IntroTextLine.field_m = null;
         AgeValidator.field_n = null;
         DirectByteArrayStorage.field_l = null;
-        sr.field_h = true;
+        MeshData.field_h = true;
     }
 
     static {

@@ -81,9 +81,9 @@ final class PasswordValidator extends TextFieldValidator {
           if (MouseInputHandler.field_f > LabeledChildWidget.field_J) {
             LabeledChildWidget.field_J = LabeledChildWidget.field_J + 1;
           }
-          if (DerelictMapGenerator.field_m != so.field_q.field_d) {
-            NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (so.field_q.field_d - DerelictMapGenerator.field_m);
-            DerelictMapGenerator.field_m = so.field_q.field_d;
+          if (DerelictMapGenerator.field_m != BattleExplosionVisual.field_q.field_d) {
+            NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (BattleExplosionVisual.field_q.field_d - DerelictMapGenerator.field_m);
+            DerelictMapGenerator.field_m = BattleExplosionVisual.field_q.field_d;
           }
           if (LabeledChildWidget.field_J <= 0) {
             return;

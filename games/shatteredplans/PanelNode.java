@@ -3,7 +3,7 @@
  */
 class PanelNode extends DualLinkNode {
     static boolean field_o;
-    static sq field_q;
+    static TutorialScene field_q;
     static String[] field_p;
 
     final static String a(CharSequence[] param0, int param1, int param2, byte param3) {
@@ -84,7 +84,7 @@ class PanelNode extends DualLinkNode {
         try {
           FleetTrailPoint.writeStar(param0.field_u, false, param1);
           if (!param2) {
-            field_q = (sq) null;
+            field_q = (TutorialScene) null;
           }
           param1.writeShort(param0.field_v, 255);
         } catch (RuntimeException runtimeException) {
@@ -99,7 +99,7 @@ class PanelNode extends DualLinkNode {
         field_p = null;
         field_q = null;
         if (param0) {
-          field_q = (sq) null;
+          field_q = (TutorialScene) null;
         }
     }
 

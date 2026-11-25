@@ -663,7 +663,7 @@ final class MapView extends MapViewState {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         float var3_float = 0.0f;
-        so var3 = null;
+        BattleExplosionVisual var3 = null;
         RuntimeException var3_ref = null;
         float var4_float = 0.0f;
         int var4 = 0;
@@ -687,7 +687,7 @@ final class MapView extends MapViewState {
             this.field_k = this.field_k + 0.10000000149011612f * var3_float;
           }
           this.projectStars(false);
-          var3 = (so) (this.field_Y.startForward(0));
+          var3 = (BattleExplosionVisual) (this.field_Y.startForward(0));
           while (var3 != null) {
             fieldTemp$0 = var3.field_u + 1;
             var3.field_u = var3.field_u + 1;
@@ -701,7 +701,7 @@ final class MapView extends MapViewState {
             var8 = -var5 + this.field_J[var6];
             var9 = (float)Math.sqrt((double)((float)(var7 * var7 + var8 * var8) + this.field_I * this.field_I)) / 300.0f;
             var3.field_i.setVolume((byte) 120, (int)((float)(CheckboxPainter.field_p * TertiaryListSequence.field_m.field_a << 6) / (var9 * 96.0f)));
-            var3 = (so) (this.field_Y.nextForward((byte) -71));
+            var3 = (BattleExplosionVisual) (this.field_Y.nextForward((byte) -71));
           }
           this.a(-3, param0);
           this.field_o.h((byte) -26);
@@ -2300,7 +2300,7 @@ final class MapView extends MapViewState {
               var4 = (BattleSnapshot) (this.field_m.startForward(0));
               while (var4 != null) {
                 while (vc.a((byte) -39, 200 + var4.field_x) >= 200) {
-                  this.field_Y.addLast((byte) -113, new so(var4.field_o));
+                  this.field_Y.addLast((byte) -113, new BattleExplosionVisual(var4.field_o));
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (var4.field_u >= 0) {
@@ -2552,7 +2552,7 @@ final class MapView extends MapViewState {
         this.field_s = param1;
         this.field_mb = param0;
         LeaderboardSortSupport.updateOrbitingGlowOffsets(true);
-        if (sm.field_e) {
+        if (GameMenuController.field_e) {
           if (RasterStateFrame.field_n - this.field_L > 30) {
             if (null == this.field_gb) {
               this.field_gb = new Sprite(640, 480);
@@ -2674,7 +2674,7 @@ final class MapView extends MapViewState {
             AccountRequestState.field_b.drawCentredAlpha("Checksum", 320, 240, var8, -1, var7_int);
             AccountRequestState.field_b.drawCentredAlpha("Failure", 320, AccountRequestState.field_b.field_J + 240, var8, -1, var7_int);
           }
-          if (sm.field_e) {
+          if (GameMenuController.field_e) {
             this.field_L = RasterStateFrame.field_n;
             OpacityWidget.popLegacyRasterState(param3 - 12114);
             this.field_gb.drawOpaque(0, 0);
@@ -2895,7 +2895,7 @@ final class MapView extends MapViewState {
         int var2;
         int var3;
         int var4;
-        so var5;
+        BattleExplosionVisual var5;
         FleetTrailPoint var6;
         int var6_int;
         int var7;
@@ -2911,7 +2911,7 @@ final class MapView extends MapViewState {
           this.b((byte) 104);
         }
         var2 = this.field_o.getAreaHeight((byte) 14) >> 1;
-        var5 = (so) (this.field_Y.startForward(0));
+        var5 = (BattleExplosionVisual) (this.field_Y.startForward(0));
         while (var5 != null) {
           if (6 <= var5.field_u) {
             stackIn_7_0 = -(var5.field_u * 2) + 260;
@@ -2923,7 +2923,7 @@ final class MapView extends MapViewState {
           var3 = (var5.field_p * this.field_n >> 10) + (this.field_i[var7] << 4);
           var4 = (var5.field_n * this.field_n >> 10) + (this.field_J[var7] << 4);
           SoftwareRasterizer.addRadialGlowQ4(var3, var4, this.field_n + 4 << 1, var6_int, DropTargetWidget.field_F);
-          var5 = (so) (this.field_Y.nextForward((byte) -71));
+          var5 = (BattleExplosionVisual) (this.field_Y.nextForward((byte) -71));
         }
         var6 = (FleetTrailPoint) (this.field_V.startForward(0));
         while (var6 != null) {
@@ -3334,8 +3334,8 @@ final class MapView extends MapViewState {
             var7++;
           }
           if (FleetTrailPoint.field_m == 0) {
-            sg.a(true, false, 0, AttackTask.field_r, NetworkArchiveRequest.field_C);
-            sg.a(true, true, 400, IntArrayReadRequest.field_h, NetworkArchiveRequest.field_C);
+            IconLabelPanel.enqueueIntroText(true, false, 0, AttackTask.field_r, NetworkArchiveRequest.field_C);
+            IconLabelPanel.enqueueIntroText(true, true, 400, IntArrayReadRequest.field_h, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

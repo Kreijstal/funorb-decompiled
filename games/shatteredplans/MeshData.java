@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sr {
+final class MeshData {
     int[] field_a;
     int[] field_c;
     byte field_o;
@@ -46,15 +46,15 @@ final class sr {
     static String field_N;
     int field_O;
 
-    private final void a(int param0) {
+    private final void invalidateBounds(int param0) {
         this.field_d = false;
         if (param0 < 102) {
           String var3 = (String) null;
-          sr.a((String) null, 127, (byte) 99, -16, (String) null, (String) null, false);
+          MeshData.pollLoginWithTextFields((String) null, 127, (byte) 99, -16, (String) null, (String) null, false);
         }
     }
 
-    final static int a(String param0, int param1, byte param2, int param3, String param4, String param5, boolean param6) {
+    final static int pollLoginWithTextFields(String param0, int param1, byte param2, int param3, String param4, String param5, boolean param6) {
         AccountFieldValue var7 = null;
         RuntimeException var7_ref = null;
         AccountFieldValue var8 = null;
@@ -103,19 +103,19 @@ final class sr {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translate(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param3 != 32767) {
           String var7 = (String) null;
-          sr.a(71, (String) null);
+          MeshData.hasTutorialFlag(71, (String) null);
         }
         for (var5 = 0; this.field_x > var5; var5++) {
           this.field_w[var5] = (short)(this.field_w[var5] + param1);
           this.field_z[var5] = (short)(this.field_z[var5] + param2);
           this.field_f[var5] = (short)(this.field_f[var5] + param0);
         }
-        this.a(107);
+        this.invalidateBounds(107);
     }
 
     public static void clearStatics(byte param0) {
@@ -124,7 +124,7 @@ final class sr {
         field_F = null;
     }
 
-    final void a(boolean param0) {
+    final void updateBounds(boolean param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -180,7 +180,7 @@ final class sr {
         this.field_r = var7;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scale(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var6 = 0; var6 < this.field_x; var6++) {
@@ -188,13 +188,13 @@ final class sr {
           this.field_z[var6] = (short)(this.field_z[var6] * param3 / param4);
           this.field_f[var6] = (short)(this.field_f[var6] * param0 / param4);
         }
-        this.a(103);
+        this.invalidateBounds(103);
         if (param1 != -226) {
-          this.a(true);
+          this.updateBounds(true);
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean hasTutorialFlag(int param0, String param1) {
         StringNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -238,14 +238,14 @@ final class sr {
         }
     }
 
-    final static int a(int param0, byte param1, boolean param2, int param3) {
+    final static int pollLoginUiAction(int param0, byte param1, boolean param2, int param3) {
         if (param1 != 0) {
           field_F = (Sprite) null;
         }
         return uo.a((byte) -75);
     }
 
-    sr() {
+    MeshData() {
         this.field_d = false;
         this.field_o = (byte) 0;
     }

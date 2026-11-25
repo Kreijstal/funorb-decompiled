@@ -58,13 +58,13 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         if (DateInputWidget.field_G != null) {
           DateInputWidget.field_G.closeStatusDialog((byte) -104);
         }
-        sj.field_b = new DisplayNameForm();
+        SocialListSetupSupport.field_b = new DisplayNameForm();
         if (param0 == -26049) {
-          HighscoreResponseSupport.field_f.setContent(sj.field_b, -54);
+          HighscoreResponseSupport.field_f.setContent(SocialListSetupSupport.field_b, -54);
           return;
         }
         field_o = (Sprite) null;
-        HighscoreResponseSupport.field_f.setContent(sj.field_b, -54);
+        HighscoreResponseSupport.field_f.setContent(SocialListSetupSupport.field_b, -54);
     }
 
     final static void d(int param0) {

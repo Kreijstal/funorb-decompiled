@@ -58,7 +58,7 @@ final class SecondaryNodeHashTable {
           if (param0 != 15) {
             field_f = (Sprite) null;
           }
-          var2 = new CoverageBitmapFont(param1, StatusMessagePanel.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, ProgressDialog.field_fb, IntroTextLine.field_q);
+          var2 = new CoverageBitmapFont(param1, StatusMessagePanel.field_H, SocialListSetupSupport.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, ProgressDialog.field_fb, IntroTextLine.field_q);
           TertiaryListSequence.a(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;

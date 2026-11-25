@@ -974,7 +974,7 @@ final class GameSession implements AiHost {
               (this.field_P.field_z)) {
               QuickChatPhraseRegistry.a(32767, PlacementEvent.field_n, false, 10);
             }
-            if (sm.field_e &&
+            if (GameMenuController.field_e &&
               (1 << this.field_h & this.field_P.field_e) == 0) {
               this.sendReady(-116);
             }
@@ -1180,7 +1180,7 @@ final class GameSession implements AiHost {
                         var8_int = 0;
                         while (!(var7_ref_nr.field_j.length <= var8_int)) {
                           var9 = new FleetMove(var7_ref_nr.field_p, var7_ref_nr.field_j[var8_int], var7_ref_nr.field_p.field_t, var7_ref_nr.field_i[var8_int]);
-                          this.field_z.field_hb.addLast((byte) -113, sg.a((byte) 101, var9));
+                          this.field_z.field_hb.addLast((byte) -113, IconLabelPanel.createOppositeArcFleetVisual((byte) 101, var9));
                           stackIn_98_0 = var9.field_z;
                           stackIn_98_1 = this.field_z.field_y;
                           if (stackIn_98_0 > stackIn_98_1) {
@@ -1404,7 +1404,7 @@ final class GameSession implements AiHost {
             this.field_z.field_db = TertiaryListSequence.field_k;
           }
           if (var2_int == 0 &&
-            so.field_o != 0) {
+            BattleExplosionVisual.field_o != 0) {
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
@@ -1412,8 +1412,8 @@ final class GameSession implements AiHost {
             var7Lifetime1 = this.field_Y.getAreaHeight((byte) 14) / 2;
             var8 = var3 + (float)(TertiaryListSequence.field_k - var6Lifetime1) * this.field_z.field_I / 300.0f;
             var9 = (float)(LobbyRoomControlsSupport.field_b - var7Lifetime1) * this.field_z.field_I / 300.0f + var4;
-            if (0 >= so.field_o) {
-              var10 = 2 * so.field_o;
+            if (0 >= BattleExplosionVisual.field_o) {
+              var10 = 2 * BattleExplosionVisual.field_o;
               while (var10 < 0) {
                 var5 = var5 / 1.100000023841858f;
                 var10++;
@@ -1431,7 +1431,7 @@ final class GameSession implements AiHost {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted1)) {
               var10Lifetime1 = 0;
-              while ((so.field_o * 2) > var10Lifetime1) {
+              while ((BattleExplosionVisual.field_o * 2) > var10Lifetime1) {
                 var5 = var5 * 1.100000023841858f;
                 var10Lifetime1++;
                 if (var11 != 0) {
@@ -1588,7 +1588,7 @@ final class GameSession implements AiHost {
           var2.patchLengthShort(-549342136, -var3 + var2.position);
           this.field_g = -1;
           this.field_k = -1;
-          if (sm.field_e) {
+          if (GameMenuController.field_e) {
             this.submitTurn(126);
           }
           return;
@@ -2514,7 +2514,7 @@ final class GameSession implements AiHost {
             field_A = (String) null;
           }
           if (this.field_f) {
-            if (!sm.field_e) {
+            if (!GameMenuController.field_e) {
               throw new RuntimeException();
             }
             this.proposeAlliance(param2, (byte) 50);
@@ -2667,7 +2667,7 @@ final class GameSession implements AiHost {
               stackIn_11_0 = (TextReplacementEntry.field_j != 13);
               stackIn_12_0 = stackIn_11_0 & ImageProducerRasterBuffer.field_n;
             } else {
-              stackIn_12_0 = sr.field_h;
+              stackIn_12_0 = MeshData.field_h;
             }
             var2_int = stackIn_12_0 ? 1 : 0;
             if (var2_int != 0) {
@@ -2742,7 +2742,7 @@ final class GameSession implements AiHost {
             FleetTrailPoint.field_p[82] &&
             FleetTrailPoint.field_p[81] &&
             TextReplacementEntry.field_j == 16) {
-            sm.field_e = true;
+            GameMenuController.field_e = true;
             ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
             var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
@@ -3605,7 +3605,7 @@ final class GameSession implements AiHost {
               this.d((byte) -81);
               return;
             }
-            if (sm.field_e &&
+            if (GameMenuController.field_e &&
               !this.field_j &&
               this.field_b) {
               this.field_s[this.field_h].updateDiplomacy((byte) -63);
@@ -3695,7 +3695,7 @@ final class GameSession implements AiHost {
           } else {
             QuickChatPhraseRegistry.a(32767, wh.field_b, false, 10);
           }
-          if (sm.field_e &&
+          if (GameMenuController.field_e &&
             (this.field_P.field_e & 1 << this.field_h) == 0) {
             this.sendReady(-118);
           }
@@ -3804,12 +3804,12 @@ final class GameSession implements AiHost {
             this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
           }
           if (this.field_h < 0) {
-            sm.field_e = false;
+            GameMenuController.field_e = false;
           }
           if (param0 != -81) {
             return;
           }
-          if (sm.field_e) {
+          if (GameMenuController.field_e) {
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
           }
           var3_ref_fs__ = this.field_P.field_v;
@@ -3853,7 +3853,7 @@ final class GameSession implements AiHost {
           }
           boolean decompiledSharedTail0 = (stackIn_60_0 != this.field_n &&
             !(this.field_n.field_i.isEmpty(param0 ^ 27)) &&
-            !(sm.field_e));
+            !(GameMenuController.field_e));
           if (!decompiledSharedTail0) {
             this.field_z.field_I = this.field_z.field_F;
             decompiledSharedTail0 = (var6 != 0);

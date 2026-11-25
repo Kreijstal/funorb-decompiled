@@ -702,7 +702,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void a(byte param0, boolean param1, sr param2, int param3, int param4) {
+    final static void a(byte param0, boolean param1, MeshData param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_21_0 = 0;
@@ -854,7 +854,7 @@ final class BufferedCacheFile {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c7cf2d00b385(int param0, boolean param1, sr param2, int param3, int param4) {
+    final static void $cfr$intArgs$a$c7cf2d00b385(int param0, boolean param1, MeshData param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_21_0 = 0;

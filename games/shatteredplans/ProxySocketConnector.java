@@ -199,7 +199,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(String[] args, sq param1, byte param2) {
+    final static void a(String[] args, TutorialScene param1, byte param2) {
         int var4 = 0;
         String[] var3 = null;
         String var5 = null;
@@ -218,7 +218,7 @@ final class ProxySocketConnector extends SocketConnector {
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
-            param1.a(var5, (byte) -47);
+            param1.appendFlag(var5, (byte) -47);
           }
           if (param2 >= -116) {
             field_h = (String) null;

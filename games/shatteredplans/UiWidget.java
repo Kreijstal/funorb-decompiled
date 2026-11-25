@@ -109,9 +109,9 @@ class UiWidget extends IntrusiveNode {
             this.blur((byte) 21);
           }
         } else {
-          if (so.field_o != 0 &&
+          if (BattleExplosionVisual.field_o != 0 &&
             var5 != 0) {
-            this.a(0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, this, param2, param0, so.field_o);
+            this.a(0, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k, this, param2, param0, BattleExplosionVisual.field_o);
           }
           if (LobbyCommandSupport.field_d != 0) {
             if (!this.handlePress(LobbyCommandSupport.field_d, PointsVictoryChecker.field_p, (byte) 96, SliderWidget.field_P, param0, param2, this)) {
@@ -123,7 +123,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
           if (AllianceExpiredEvent.field_n == 0 &&
-            so.field_m != 0) {
+            BattleExplosionVisual.field_m != 0) {
             this.handleRelease(TertiaryListSequence.field_k, param2, param0, LobbyRoomControlsSupport.field_b, -600269855, this);
             var6 = ContentTransitionPhase.field_b;
             if (var6 != null) {
@@ -134,7 +134,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
         }
-        so.field_m = AllianceExpiredEvent.field_n;
+        BattleExplosionVisual.field_m = AllianceExpiredEvent.field_n;
         DropTargetWidget.a(this.getTooltip(true), 0);
         if (param3 != 0) {
           this.reapplyBounds((byte) 58);

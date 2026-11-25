@@ -9,7 +9,7 @@ final class QuickChatMenu extends AnimatedPanel {
     private int field_Eb;
     private int field_Qb;
     private QuickChatMenu field_Ob;
-    private sg[] field_Kb;
+    private IconLabelPanel[] field_Kb;
     private int field_Mb;
     static AnimatedPanel field_Cb;
     static boolean field_Nb;
@@ -27,10 +27,10 @@ final class QuickChatMenu extends AnimatedPanel {
 
     final void h(int param0) {
         int var3 = 0;
-        sg var4 = null;
+        IconLabelPanel var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        sg[] var6 = this.field_Kb;
-        sg[] var2 = var6;
+        IconLabelPanel[] var6 = this.field_Kb;
+        IconLabelPanel[] var2 = var6;
         for (var3 = param0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           var4.field_rb = 0;
@@ -57,7 +57,7 @@ final class QuickChatMenu extends AnimatedPanel {
           this.c(false, this.field_Db);
         }
         for (var7 = 0; this.field_Pb > var7; var7++) {
-          this.field_Kb[var7].a(50, this.field_Qb, this.field_Kb[var7].field_db, param1, param4, this.field_Eb, 0);
+          this.field_Kb[var7].setIconLabelBounds(50, this.field_Qb, this.field_Kb[var7].field_db, param1, param4, this.field_Eb, 0);
         }
         if (this.field_Gb != param0 &&
           this.field_yb[this.field_Gb] != null) {
@@ -109,9 +109,9 @@ final class QuickChatMenu extends AnimatedPanel {
 
     final void a(int param0, int param1, byte param2) {
         int var4_int = 0;
-        sg var5;
+        IconLabelPanel var5;
         int var6;
-        sg stackIn_7_0 = null;
+        IconLabelPanel stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         QuickChatMenu var4;
         QuickChatMenu var7;
@@ -215,10 +215,10 @@ final class QuickChatMenu extends AnimatedPanel {
 
     final boolean f(boolean param0) {
         int var4 = 0;
-        sg var5 = null;
+        IconLabelPanel var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = param0 ? 1 : 0;
-        sg[] var3 = this.field_Kb;
+        IconLabelPanel[] var3 = this.field_Kb;
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           var2 = var2 | (var5.field_rb != 0 ? 1 : 0);
@@ -304,20 +304,20 @@ final class QuickChatMenu extends AnimatedPanel {
           var18 = var17;
           this.field_Qb = var18.field_q + 2 + var18.field_J;
           this.field_xb = this.field_Qb * this.field_Pb;
-          this.field_Kb = new sg[this.field_Pb];
+          this.field_Kb = new IconLabelPanel[this.field_Pb];
           this.field_Ib = 0;
           var11 = "<col=999999>";
           var12 = "</col>";
           for (var13 = 0; this.field_Pb > var13; var13++) {
             if (0 < this.field_zb[var13]) {
-              param6[var13] = var11 + sn.charToString(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + IntroLogoSupport.charToString(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_yb[var13] != null ||
               this.field_Hb[var13] == -1) {
               var14 = GameKeyHandler.field_c;
             }
-            this.field_Kb[var13] = new sg(0L, param2, (AnimatedPanel) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Kb[var13] = new IconLabelPanel(0L, param2, (AnimatedPanel) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(4, this.field_Kb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_Ib < var15) {

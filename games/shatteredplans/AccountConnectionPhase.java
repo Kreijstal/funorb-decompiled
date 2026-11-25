@@ -49,7 +49,7 @@ final class AccountConnectionPhase {
             stackIn_7_0 = IntHashIndex.field_e;
             return stackIn_7_0;
           }
-          var3 = so.a(param0, '.', -92);
+          var3 = BattleExplosionVisual.splitOnCharacter(param0, '.', -92);
           if (var3.length < 2) {
             stackIn_11_0 = (EmailValidationError) (field_a);
             return stackIn_11_0;

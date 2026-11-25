@@ -41,7 +41,7 @@ final class TextReplacementEntry {
           if (param1 != -17) {
             field_b = (AnimatedPanel[]) null;
           }
-          var3 = so.a(var2, '\n', -123);
+          var3 = BattleExplosionVisual.splitOnCharacter(var2, '\n', -123);
           for (var4 = 0; var4 < var3.length; var4++) {
             var3[var4] = var3[var4].trim();
           }

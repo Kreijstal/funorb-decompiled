@@ -38,7 +38,7 @@ final class PasswordInputPainter extends TextInputPainter {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        sq.field_o = true;
+        TutorialScene.field_o = true;
         if (!param1) {
           return;
         }

@@ -262,7 +262,7 @@ final class ChatCompositionSupport {
               }
             }
             GuestPlayForm.a(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(OpacityWidget.field_E.toString()), var8);
-            if (!sr.field_h) {
+            if (!MeshData.field_h) {
               OpacityWidget.field_C.field_L = false;
             }
             if (OpacityWidget.field_C.field_L) {

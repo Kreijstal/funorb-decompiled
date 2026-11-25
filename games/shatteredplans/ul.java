@@ -17,7 +17,7 @@ final class ul extends AnimatedPanel {
     private int field_zb;
     static String field_Ab;
     private int field_Jb;
-    private sg[] field_Gb;
+    private IconLabelPanel[] field_Gb;
     static int[] field_Cb;
     private int[] field_Ib;
     private int field_Bb;
@@ -74,7 +74,7 @@ final class ul extends AnimatedPanel {
 
     final void a(boolean param0, Sprite param1, String param2, int param3) {
         try {
-          this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, param1, param2);
+          this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, param1, param2);
           if (param0) {
             field_Ab = (String) null;
           }
@@ -106,7 +106,7 @@ final class ul extends AnimatedPanel {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, (Sprite) null, param2);
+          this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Mb, (Sprite) null, param2);
           this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
           this.field_Gb[this.field_Pb].field_r = true;
           this.field_Gb[this.field_Pb].field_G = param0;
@@ -162,7 +162,7 @@ final class ul extends AnimatedPanel {
         if (this.field_Pb != 0) {
           var6 = 0;
           for (var7 = param2; this.field_Pb > var7; var7++) {
-            var8 = this.field_Gb[var7].a(this.field_Jb, (byte) -98, this.field_Eb);
+            var8 = this.field_Gb[var7].measureIconLabelWidth(this.field_Jb, (byte) -98, this.field_Eb);
             if (var6 < var8) {
               var6 = var8;
             }
@@ -173,18 +173,18 @@ final class ul extends AnimatedPanel {
           var9 = uq.a(param1, param2 + 0, var7Lifetime3, param4);
           this.setTarget(var6, var7Lifetime3, (byte) 46, var9, var8Lifetime3);
           for (var10 = 0; this.field_Pb > var10; var10++) {
-            this.field_Gb[var10].a(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
+            this.field_Gb[var10].setIconLabelBounds(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
           }
           return;
         }
-        this.field_Gb[this.field_Pb] = new sg(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Nb, (Sprite) null, we.field_a);
+        this.field_Gb[this.field_Pb] = new IconLabelPanel(0L, (AnimatedPanel) null, (AnimatedPanel) null, this.field_Nb, (Sprite) null, we.field_a);
         this.field_Gb[this.field_Pb].field_G = 1;
         this.addChild(param2 + 4, this.field_Gb[this.field_Pb]);
         this.field_Ib[this.field_Pb] = -1;
         this.field_Pb = this.field_Pb + 1;
         var6Lifetime1 = 0;
         for (var7Lifetime1 = param2; this.field_Pb > var7Lifetime1; var7Lifetime1++) {
-          var8Lifetime1 = this.field_Gb[var7Lifetime1].a(this.field_Jb, (byte) -98, this.field_Eb);
+          var8Lifetime1 = this.field_Gb[var7Lifetime1].measureIconLabelWidth(this.field_Jb, (byte) -98, this.field_Eb);
           if (var6Lifetime1 < var8Lifetime1) {
             var6Lifetime1 = var8Lifetime1;
           }
@@ -195,7 +195,7 @@ final class ul extends AnimatedPanel {
         var9Lifetime1 = uq.a(param1, param2 + 0, var7Lifetime2, param4);
         this.setTarget(var6Lifetime1, var7Lifetime2, (byte) 46, var9Lifetime1, var8Lifetime2);
         for (var10Lifetime1 = 0; this.field_Pb > var10Lifetime1; var10Lifetime1++) {
-          this.field_Gb[var10Lifetime1].a(50, this.field_zb, this.field_yb + var10Lifetime1 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6Lifetime1, this.field_Kb);
+          this.field_Gb[var10Lifetime1].setIconLabelBounds(50, this.field_zb, this.field_yb + var10Lifetime1 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6Lifetime1, this.field_Kb);
         }
         return;
     }
@@ -226,7 +226,7 @@ final class ul extends AnimatedPanel {
     ul(AnimatedPanel param0, Sprite[] param1, AnimatedPanel param2, AnimatedPanel param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ib = new int[256];
-        this.field_Gb = new sg[256];
+        this.field_Gb = new IconLabelPanel[256];
         this.field_Bb = -2;
         try {
           this.field_Kb = param4;

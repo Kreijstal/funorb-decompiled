@@ -123,21 +123,21 @@ final class WhirlpoolHasher {
             if (HighscoreResponseSupport.field_b) {
               ClientException.a(true);
             } else {
-              sr.field_h = true;
+              MeshData.field_h = true;
             }
           }
-          if (sr.field_h) {
+          if (MeshData.field_h) {
             PlayerEliminatedEvent.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
             ValidatedTextInputWidget.field_X.a(param5, -20429);
             if (param5) {
               if (IntroTextLine.field_m.field_rb != 0) {
-                sr.field_h = false;
+                MeshData.field_h = false;
               }
               if (DirectByteArrayStorage.field_l.field_rb == 0) {
                 return;
               }
               MusicVoice.c(false);
-              sr.field_h = false;
+              MeshData.field_h = false;
             }
           }
           return;
@@ -155,7 +155,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, sr param5, int param6, int param7) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, MeshData param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -207,7 +207,7 @@ final class WhirlpoolHasher {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        sr var44 = null;
+        MeshData var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;

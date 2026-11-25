@@ -66,7 +66,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         }
     }
 
-    final static void a(int param0, sq param1) {
+    final static void a(int param0, TutorialScene param1) {
         int var9 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -83,7 +83,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         TutorialConditionalText var10 = null;
         int var11 = 0;
         PacketBuffer var12 = null;
-        sq var13 = null;
+        TutorialScene var13 = null;
         String var6Lifetime1;
         int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -97,11 +97,11 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
             ClientOverlayDrawSupport.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             GameSpriteResources.field_a = BytePayloadNode.field_h;
-            var13 = (sq) null;
-            TutorialTextSupport.buildTutorialTextSprites((sq) null, -1);
+            var13 = (TutorialScene) null;
+            TutorialTextSupport.buildTutorialTextSprites((TutorialScene) null, -1);
             return;
           }
-          sj.a(-31560);
+          SocialListSetupSupport.updateTutorialResourceText(-31560);
           var2_int = param1.field_t;
           var3 = param1.field_b;
           var4 = param1.field_j;

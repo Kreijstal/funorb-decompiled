@@ -428,7 +428,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (this.field_n[param2][param1] != null) {
-            var8 = sq.a(-1, this.field_n[param2][param1], false);
+            var8 = TutorialScene.unwrapByteArray(-1, this.field_n[param2][param1], false);
             var5 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -773,7 +773,7 @@ final class Archive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var33 = sq.a(-1, this.field_m[param2], true);
+            var33 = TutorialScene.unwrapByteArray(-1, this.field_m[param2], true);
             var25 = var33;
             var9 = var25;
             var26 = new PacketBuffer(var33);
@@ -781,7 +781,7 @@ final class Archive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = sq.a(-1, this.field_m[param2], false);
+            var9 = TutorialScene.unwrapByteArray(-1, this.field_m[param2], false);
           }
           try {
             var34 = ProxySocketConnector.a(var9, 200);

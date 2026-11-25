@@ -22,9 +22,9 @@ final class FleetTrailPoint extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        sk var4_ref_sk = null;
+        DelayedInboundPacket var4_ref_sk = null;
         int var4 = 0;
-        sk var5 = null;
+        DelayedInboundPacket var5 = null;
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -34,7 +34,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           var2_long = ClientClockSupport.currentTimeMillis(14274);
           if (0 != ArchiveRequest.field_o &&
             ArchiveNetworkClient.field_b < 0) {
-            var4_ref_sk = (sk) (ClientRuntimeState.field_h.startForward(0));
+            var4_ref_sk = (DelayedInboundPacket) (ClientRuntimeState.field_h.startForward(0));
             if (var4_ref_sk != null &&
               var4_ref_sk.field_l < var2_long) {
               var4_ref_sk.unlink((byte) -61);
@@ -81,7 +81,7 @@ final class FleetTrailPoint extends IntrusiveNode {
                 var4 = 0;
               }
             }
-            var5 = new sk(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[TextInputPainter.field_t]);
+            var5 = new DelayedInboundPacket(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[TextInputPainter.field_t]);
             for (var6 = 0; var6 < TextInputPainter.field_t; var6++) {
               var5.field_h[var6] = SpriteWipeSupport.field_a.payload[var6];
             }

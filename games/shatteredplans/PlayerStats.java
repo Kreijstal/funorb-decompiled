@@ -137,8 +137,8 @@ final class PlayerStats {
             var4_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
           if (FleetTrailPoint.field_m == 0) {
-            sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
-            sg.a(true, true, 800, DiplomacyNotice.field_l, NetworkArchiveRequest.field_C);
+            IconLabelPanel.enqueueIntroText(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
+            IconLabelPanel.enqueueIntroText(true, true, 800, DiplomacyNotice.field_l, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

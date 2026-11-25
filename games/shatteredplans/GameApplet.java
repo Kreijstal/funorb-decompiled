@@ -169,7 +169,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         int var5Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = so.a(param0, param2, 90);
+          var3 = BattleExplosionVisual.splitOnCharacter(param0, param2, 90);
           var5 = 0;
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GameState.d(22943);
                 this.createCanvas(0);
-                so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
+                BattleExplosionVisual.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);
                 ClientRuntimeState.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {

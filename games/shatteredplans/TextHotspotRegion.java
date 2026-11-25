@@ -14,16 +14,16 @@ final class TextHotspotRegion extends IntrusiveNode {
     static volatile int field_q;
 
     final static void loadTutorialScenes(byte param0, String[] param1) {
-        sq stackIn_17_0 = null;
+        TutorialScene stackIn_17_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        sq var3 = null;
+        TutorialScene var3 = null;
         int var4 = 0;
         String var5 = null;
-        sq var6 = null;
+        TutorialScene var6 = null;
         int var7 = 0;
         int var8 = 0;
         ObjectList var9 = null;
@@ -46,9 +46,9 @@ final class TextHotspotRegion extends IntrusiveNode {
             var9.add(false, var3);
             var3 = IntroGlowPoint.readTutorialScene((byte) 118);
           }
-          EmailValidator.field_q = new sq[var9.field_g];
+          EmailValidator.field_q = new TutorialScene[var9.field_g];
           for (var4 = 0; var4 < var9.field_g; var4++) {
-            EmailValidator.field_q[var4] = (sq) (var9.field_b[var4]);
+            EmailValidator.field_q[var4] = (TutorialScene) (var9.field_b[var4]);
           }
           var8 = 0;
           var4Lifetime1 = var8;

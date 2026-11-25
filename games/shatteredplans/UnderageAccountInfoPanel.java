@@ -118,7 +118,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             SoundPlayback.a(57, "terms.ws");
           }
           if (param2 != 2) {
-            UnderageAccountInfoPanel.a(false, (int[]) null, false, 25, (int[]) null, true, (sr) null);
+            UnderageAccountInfoPanel.a(false, (int[]) null, false, 25, (int[]) null, true, (MeshData) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,7 +318,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static void a(boolean param0, int[] param1, boolean param2, int param3, int[] param4, boolean param5, sr param6) {
+    final static void a(boolean param0, int[] param1, boolean param2, int param3, int[] param4, boolean param5, MeshData param6) {
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         RuntimeException stackIn_70_0 = null;

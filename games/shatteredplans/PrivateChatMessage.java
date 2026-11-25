@@ -821,7 +821,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("turnFewerShips", 101);
                 if (var2 != null) {
-                  sq.field_p = IterableNodeHashTable.a(var2, 17746);
+                  TutorialScene.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("turn_name1,0", 119);
                 if (var2 != null) {
@@ -1063,7 +1063,7 @@ final class PrivateChatMessage extends ChatMessage {
             }
             void loadInstructionsAndFleetControls() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  sk.field_i = IterableNodeHashTable.a(var2, 17746);
+                  DelayedInboundPacket.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_icon_neutral", 111);
                 if (null != var2) {
@@ -1171,7 +1171,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_animating_moves", 115);
                 if (var2 != null) {
-                  sr.field_N = IterableNodeHashTable.a(var2, 17746);
+                  MeshData.field_N = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_animating_combat", 102);
                 if (var2 != null) {
@@ -1968,7 +1968,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipIncomingLimiting", 101);
                 if (null != var2) {
-                  sg.field_yb = IterableNodeHashTable.a(var2, 17746);
+                  IconLabelPanel.field_yb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tooltipTotalFleetProduction", 125);
                 if (var2 != null) {

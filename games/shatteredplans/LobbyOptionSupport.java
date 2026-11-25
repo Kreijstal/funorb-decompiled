@@ -10,7 +10,7 @@ final class LobbyOptionSupport {
     static BufferedSocket field_a;
     static CipherPacketBuffer field_f;
     static int field_j;
-    static sq[] field_b;
+    static TutorialScene[] field_b;
     static int field_e;
 
     final static void setSoundEffectVolume(int param0, int param1) {
@@ -94,13 +94,13 @@ final class LobbyOptionSupport {
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             var2_int = -84 / ((param0 + 5) / 55);
-            if (sq.field_o) {
+            if (TutorialScene.field_o) {
               return true;
             }
             try {
               var3 = "tuhstatbut";
               var4 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param1, (byte) 127));
-              var5 = so.a(var4, ';', 116);
+              var5 = BattleExplosionVisual.splitOnCharacter(var4, ';', 116);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -166,7 +166,7 @@ final class LobbyOptionSupport {
     }
 
     final static void evaluateRoomOptionCombinations(int param0, int param1, LobbyRoomEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
-        sg[][] stackIn_6_0 = null;
+        IconLabelPanel[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_25_0 = 0;
         int stackIn_41_0 = 0;
@@ -176,7 +176,7 @@ final class LobbyOptionSupport {
         String stackIn_106_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        sg[] var8 = null;
+        IconLabelPanel[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
@@ -184,11 +184,11 @@ final class LobbyOptionSupport {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        sg var13_ref_sg = null;
+        IconLabelPanel var13_ref_sg = null;
         int var14 = 0;
         int var15 = 0;
-        sg[] var16 = null;
-        sg[] var17 = null;
+        IconLabelPanel[] var16 = null;
+        IconLabelPanel[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
         int var10_intLifetime1;

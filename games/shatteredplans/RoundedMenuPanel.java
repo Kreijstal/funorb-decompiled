@@ -213,14 +213,14 @@ final class RoundedMenuPanel extends MenuComponent {
         if (QuickChatMenu.field_Bb > 2) {
           QuickChatMenu.field_Bb = 2;
         }
-        sq.field_a = param1 >> 2 & 3;
+        TutorialScene.field_a = param1 >> 2 & 3;
         if (param0 >= -76) {
           String var3 = (String) null;
           RoundedMenuPanel.getAccountBooleanRequest(-15, (String) null);
         }
         ul.field_Hb = 3 & param1;
-        if (!(2 >= sq.field_a)) {
-          sq.field_a = 2;
+        if (!(2 >= TutorialScene.field_a)) {
+          TutorialScene.field_a = 2;
         }
         if (!(ul.field_Hb <= 2)) {
           ul.field_Hb = 2;

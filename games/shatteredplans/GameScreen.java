@@ -957,12 +957,12 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder1 = true;
           var4 = QuickChatCategoryRegistry.a(20, 32, var3_int, 550, 0);
-          sn.a(640, 101, 480, 192 + (-var3_int + 32 << 6) / 32, 0, 0);
+          IntroLogoSupport.scaleRectangleBrightness(640, 101, 480, 192 + (-var3_int + 32 << 6) / 32, 0, 0);
           var5 = (640 - var4) / 2;
           var6 = 80;
           var7 = 360;
           if (MatchingTextValidator.field_t.field_h == 2) {
-            sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
+            IntroLogoSupport.scaleRectangleBrightness(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
             var8 = MenuWindow.a((Sprite) null, var6, var4, var5, -1, var7);
             RasterTargetSupport.pushSpriteRenderTarget(var8, 93);
             SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
@@ -977,17 +977,17 @@ final class GameScreen {
                   SoftwareRasterizer.fillRectAlpha(var5, var6, var4, var7, 855316, (var3_int << 8) / 32);
                   if (var40 != 0) {
                     SoftwareRasterizer.fillRect(var5, var6, var4, var7, 855316);
-                    sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
+                    IntroLogoSupport.scaleRectangleBrightness(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
                   }
                 } else {
                   SoftwareRasterizer.fillRect(var5, var6, var4, var7, 855316);
                   if (var40 != 0) {
-                    sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
+                    IntroLogoSupport.scaleRectangleBrightness(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
                   }
                 }
               }
             } else {
-              sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
+              IntroLogoSupport.scaleRectangleBrightness(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
             }
           }
           MidiPcmStream.a(var7, var6, var5, (byte) -60, var4);
@@ -2177,7 +2177,7 @@ final class GameScreen {
     }
 
     final static void g(int param0) {
-        if (!sq.a(false)) {
+        if (!TutorialScene.isQuickChatMenuOpen(false)) {
           return;
         }
         try {
@@ -2418,7 +2418,7 @@ final class GameScreen {
           if (PlacementOrder.field_t > 0 &&
             IntrusiveDequeCursor.field_b) {
             SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
-            so.field_v.drawFullRaster(param1, -66);
+            BattleExplosionVisual.field_v.drawFullRaster(param1, -66);
           }
           if (param0 != -57) {
             return;
@@ -2855,7 +2855,7 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = QuickChatCategoryRegistry.a(21, 32, var2_int, 450, 0);
-          sn.a(640, -84, 480, (-var2_int + 32 << 6) / 32 + 192, 0, 0);
+          IntroLogoSupport.scaleRectangleBrightness(640, -84, 480, (-var2_int + 32 << 6) / 32 + 192, 0, 0);
           var4 = (640 - var3) / 2;
           var5 = 80;
           var6 = 250;
@@ -4286,7 +4286,7 @@ final class GameScreen {
           if (this.field_v) {
             this.field_E.field_xb.field_w = var9Lifetime1 - this.field_E.field_xb.field_db;
           }
-          this.field_E.a(30 * so.field_o, true, (byte) -115, param0);
+          this.field_E.a(30 * BattleExplosionVisual.field_o, true, (byte) -115, param0);
           stackIn_40_1 = (var9Lifetime1 == this.field_E.field_xb.field_db + this.field_E.field_xb.field_w);
           this.field_v = stackIn_40_1;
           this.field_O.a(true, -20429);
@@ -4324,12 +4324,12 @@ final class GameScreen {
               if (stackIn_16_0 >= stackIn_16_1) {
                 var6 = QuickChatMenu.a(InvalidMapConnectionException.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
-                var4 = var4 + sm.field_b;
+                var4 = var4 + GameMenuController.field_b;
                 if (ArrayWidgetGroup.rectContains(SpriteResourceSupport.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
                   stackIn_11_0 = var5;
                   return stackIn_11_0;
                 }
-                var4 = var4 + (SpriteResourceSupport.field_b + (ArchiveNetworkClient.field_i << 1) + sm.field_b);
+                var4 = var4 + (SpriteResourceSupport.field_b + (ArchiveNetworkClient.field_i << 1) + GameMenuController.field_b);
               } else {
                 var4 = var4 + AccountFieldValue.field_d;
               }
@@ -4821,22 +4821,22 @@ final class GameScreen {
           var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
           IconTextPanel.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var6 = 20 + param3 + IconTextPanel.field_Cb.field_J + 9;
-          var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}));
+          var7 = 64 + IconTextPanel.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}));
           IntArrayReadRequest.field_k.drawScaled((-var7 + param1) / 2 + param0, -24 + var6, 64, 64);
           IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), param0 - (-((param1 - var7) / 2) - 75), var6 + 7, 16777215, -1);
           IconTextPanel.field_Cb.drawString("=", param0 + (param1 - var7) / 2 + 64, 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
           var6 += 44;
           IntrusiveNodeHashTable.field_h.drawScaled((-var7 + param1) / 2 + param0, var6 - 24, 64, 64);
           IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
           int var8 = 27 / ((param2 + 51) / 59);
           IconTextPanel.field_Cb.drawString("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(2)}), 75 + (param1 - var7) / 2 + param0, var6 + 19, 16777215, -1);
           var6 += 52;
           CanvasResizeController.field_t.drawScaled(param0 + (param1 - var7) / 2, var6 - 24, 64, 64);
           IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(5)}), 75 + ((-var7 + param1) / 2 + param0), var6 + 7, 16777215, -1);
           IconTextPanel.field_Cb.drawString("=", 64 + param0 + (-var7 + param1) / 2, 13 + var6, 16777215, -1);
-          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
+          IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.a(TutorialScene.field_p, 4371, new String[]{Integer.toString(5)}), param0 - (-((-var7 + param1) / 2) - 75), 19 + var6, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

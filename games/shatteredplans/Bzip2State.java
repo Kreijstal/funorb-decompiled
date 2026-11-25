@@ -104,7 +104,7 @@ final class Bzip2State {
           TextReplacementEntry.field_i = new String[33];
           TextReplacementEntry.field_i[14] = tm.field_o;
           TextReplacementEntry.field_i[0] = wm.field_f;
-          TextReplacementEntry.field_i[7] = sn.field_b;
+          TextReplacementEntry.field_i[7] = IntroLogoSupport.field_b;
           TextReplacementEntry.field_i[4] = ClientDrawingSupport.field_e;
           TextReplacementEntry.field_i[12] = ArchiveNetworkClient.field_g;
           TextReplacementEntry.field_i[1] = GameSession.field_a;

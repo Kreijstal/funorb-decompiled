@@ -14,7 +14,7 @@ final class IsolationistAi extends StandardAi {
     }
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
-        so.a(0, param8, 16777215, param9, param2, param6, param11, param5, param0, param4, param10, param1, param7, param3);
+        BattleExplosionVisual.updateLobbyUi(0, param8, 16777215, param9, param2, param6, param11, param5, param0, param4, param10, param1, param7, param3);
     }
 
     final int scorePlayer(int param0, int param1, Player param2) {

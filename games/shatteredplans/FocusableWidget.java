@@ -189,7 +189,7 @@ class FocusableWidget extends UiWidget {
           var5 = (CharSequence) ((Object) param2);
           IntroGlowPoint.field_k = DateInputWidget.a(var5, true);
           IntroTextLine.field_k = param1;
-          sr.field_h = true;
+          MeshData.field_h = true;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kg.GA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

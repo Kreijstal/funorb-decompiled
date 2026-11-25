@@ -14,17 +14,17 @@ final class IntroGlowPoint {
     int field_f;
     int field_j;
 
-    final static sq readTutorialScene(byte param0) {
+    final static TutorialScene readTutorialScene(byte param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
-        sq var1;
+        TutorialScene var1;
         int var2;
         StringBuilder var3;
         int var4;
         String var5;
         Object var6;
         int var7;
-        sq var8;
+        TutorialScene var8;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
           if (Territory.field_t == null) {
@@ -37,7 +37,7 @@ final class IntroGlowPoint {
           break;
         }
         var2 = -25 % ((0 - param0) / 59);
-        var8 = new sq();
+        var8 = new TutorialScene();
         var1 = var8;
         Territory.field_t.substring(1, Territory.field_t.indexOf(']'));
         var3 = new StringBuilder();

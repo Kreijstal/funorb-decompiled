@@ -146,13 +146,13 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         stackIn_12_4 = 13;
         stackIn_12_5 = 0;
         stackIn_12_6 = 15;
-        stackIn_12_7 = so.field_o;
+        stackIn_12_7 = BattleExplosionVisual.field_o;
         stackIn_12_8 = true;
         stackIn_12_9 = var2;
         stackIn_12_10 = 11;
         stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
         IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
-        if (sm.field_e &&
+        if (GameMenuController.field_e &&
           RasterStateFrame.field_n % 50 == 0) {
           LobbyOptionSupport.field_f.h(58, 255);
         }

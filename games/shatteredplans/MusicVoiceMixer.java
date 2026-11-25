@@ -175,7 +175,7 @@ final class MusicVoiceMixer extends PcmStream {
             var23 = BattleContribution.field_m[var11_int];
             var16 = var23;
             if (0 == param1.field_u[var11_int]) {
-              var16 = var23 + " " + sg.field_yb;
+              var16 = var23 + " " + IconLabelPanel.field_yb;
             }
             var15_ref.field_o = var16;
             var14_ref.field_o = var16;

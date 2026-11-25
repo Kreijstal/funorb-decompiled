@@ -18,7 +18,7 @@ final class ReflectionCheck extends IntrusiveNode {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
-        sq var5 = null;
+        TutorialScene var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -29,8 +29,8 @@ final class ReflectionCheck extends IntrusiveNode {
           we.field_e = 11;
           uc.field_w = new int[260];
           if (param0 != -47) {
-            var5 = (sq) null;
-            ReflectionCheck.a((String[]) null, (sq) null, 48);
+            var5 = (TutorialScene) null;
+            ReflectionCheck.a((String[]) null, (TutorialScene) null, 48);
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
@@ -50,7 +50,7 @@ final class ReflectionCheck extends IntrusiveNode {
         }
     }
 
-    final static void a(String[] args, sq param1, int param2) {
+    final static void a(String[] args, TutorialScene param1, int param2) {
         int var4 = 0;
         String[] var3 = null;
         String var5 = null;
@@ -69,7 +69,7 @@ final class ReflectionCheck extends IntrusiveNode {
           var3 = var7;
           for (var4 = param2; var7.length > var4; var4++) {
             var5 = var7[var4];
-            param1.a(30712, var5);
+            param1.appendAction(30712, var5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

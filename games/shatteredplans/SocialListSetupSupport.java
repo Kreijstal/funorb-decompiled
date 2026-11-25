@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj {
+final class SocialListSetupSupport {
     static AnimatedPanel field_c;
     static int[] field_a;
     static String field_d;
     static DisplayNameForm field_b;
 
-    final static void a(byte param0, AnimatedPanel param1, AnimatedPanel param2) {
+    final static void initializeSocialLists(byte param0, AnimatedPanel param1, AnimatedPanel param2) {
         try {
           if (null == param1.field_M) {
             param1.field_M = new IntrusiveDeque();
@@ -42,7 +42,7 @@ final class sj {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void updateTutorialResourceText(int param0) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -73,7 +73,7 @@ final class sj {
           var12 = QuickChatHelpSupport.field_d;
           var2 = var12.field_m;
           if (param0 != -31560) {
-            sj.a(60);
+            SocialListSetupSupport.updateTutorialResourceText(60);
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = new boolean[4];

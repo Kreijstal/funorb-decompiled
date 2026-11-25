@@ -13,9 +13,9 @@ final class DefendTask extends AiTask {
     static boolean[] field_t;
     static boolean[] field_q;
 
-    final static void a(int param0, sq param1) {
-        sq var3 = null;
-        sq var2 = null;
+    final static void a(int param0, TutorialScene param1) {
+        TutorialScene var3 = null;
+        TutorialScene var2 = null;
         int fieldTemp$0 = 0;
         if (param0 != 1) {
           return;

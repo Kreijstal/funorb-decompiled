@@ -377,7 +377,7 @@ final class GameAssetSetupSupport {
               var3 = var10 + "settings";
               var6 = -67 / ((-84 - param0) / 42);
               var4 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param1, (byte) 53));
-              var5 = so.a(var4, ';', 111);
+              var5 = BattleExplosionVisual.splitOnCharacter(var4, ';', 111);
               for (var7 = 0; var5.length > var7; var7++) {
                 var8 = var5[var7].indexOf('=');
                 if (var8 >= 0 &&

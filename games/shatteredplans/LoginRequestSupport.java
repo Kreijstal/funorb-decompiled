@@ -69,8 +69,8 @@ final class LoginRequestSupport {
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2_int = 0;
-        sq var2 = null;
-        sq var3 = null;
+        TutorialScene var2 = null;
+        TutorialScene var3 = null;
         int var4 = 0;
         TutorialConditionalText[] var5 = null;
         int var6 = 0;
@@ -102,12 +102,12 @@ final class LoginRequestSupport {
           if (param0) {
             return;
           }
-          if (sr.a(0, "unplaced")) {
+          if (MeshData.hasTutorialFlag(0, "unplaced")) {
             if (SocketArchiveNetworkClient.a("unplaced", -126)) {
               DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("unplaced", -21502));
             }
           } else {
-            if (sr.a(0, "losegame")) {
+            if (MeshData.hasTutorialFlag(0, "losegame")) {
               DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
             }
           }

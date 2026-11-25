@@ -296,7 +296,7 @@ final class QuickChatMenuSupport {
             var7Lifetime1 = QuickChatMenu.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + QuaternaryLinkNode.field_w;
             if (0 <= var4) {
-              var1_int = var1_int + sm.field_b;
+              var1_int = var1_int + GameMenuController.field_b;
               if (GameState.field_l.field_c == var4) {
                 stackIn_45_0 = Wormhole.field_l;
               } else {
@@ -310,7 +310,7 @@ final class QuickChatMenuSupport {
             }
             if (0 <= var4) {
               TextHotspotRegion.field_n.drawString(var6, var8Lifetime1, var1_int + LobbyCommandSupport.field_g, var5, -1);
-              var1_int = var1_int + (SpriteResourceSupport.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
+              var1_int = var1_int + (SpriteResourceSupport.field_b + (GameMenuController.field_b + ArchiveNetworkClient.field_i));
             } else {
               PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
               var1_int = var1_int + AccountFieldValue.field_d;

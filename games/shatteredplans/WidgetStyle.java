@@ -227,7 +227,7 @@ final class WidgetStyle {
             return false;
           }
           if (!param0.equalsIgnoreCase("fleetmove")) {
-            stackIn_60_0 = sr.a(0, param0);
+            stackIn_60_0 = MeshData.hasTutorialFlag(0, param0);
             return stackIn_60_0;
           }
           var3_ref = (FleetMove) (TextReplacementEntry.field_a.field_P.field_p.startForward(true));

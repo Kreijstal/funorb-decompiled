@@ -846,7 +846,7 @@ final class TaskAi implements Ai {
         stackIn_18_0 = AchievementProgress.field_i;
         stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == MenuInputState.field_a) && (null == IntNode.field_p);
         ((AnimatedPanel) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
-        stackIn_23_0 = so.field_v;
+        stackIn_23_0 = BattleExplosionVisual.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
         ((AnimatedPanel) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
         Archive.field_g.field_d.handleTabClicks(false);

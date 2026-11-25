@@ -338,7 +338,7 @@ final class AccountBooleanRequest {
               var9.field_j.a(1, 14, var10);
             }
             var11 = DerelictVictoryChecker.field_m;
-            var12 = sn.field_a;
+            var12 = IntroLogoSupport.field_a;
             var11.field_j.a(1, 20, var12);
           }
           DerelictVictoryChecker.field_m.addRoomJoinActions(false);

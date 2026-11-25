@@ -32,7 +32,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
           IndexedSpriteState.field_h = null;
           return true;
         }
-        if (!sr.field_h) {
+        if (!MeshData.field_h) {
           if (QuickChatCategoryDefinition.field_t ||
             TextReplacementEntry.field_j == 9 ||
             TextReplacementEntry.field_j == 10 ||
@@ -41,7 +41,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
           }
           if (TextReplacementEntry.field_j == 80 &&
             FilledMenuPanel.d((byte) 108)) {
-            sr.field_h = true;
+            MeshData.field_h = true;
             return true;
           }
           return false;
@@ -53,12 +53,12 @@ final class StatefulWidgetTheme extends WidgetTheme {
         if (80 == TextReplacementEntry.field_j ||
           TextReplacementEntry.field_j == 84) {
           var4 = 1;
-          sr.field_h = false;
+          MeshData.field_h = false;
         }
         if (TextReplacementEntry.field_j == 13) {
           MusicVoice.c(false);
           var4 = 1;
-          sr.field_h = false;
+          MeshData.field_h = false;
         }
         return var4 != 0;
     }

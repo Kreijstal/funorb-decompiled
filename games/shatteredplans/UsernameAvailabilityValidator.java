@@ -18,7 +18,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (param0 != -1) {
             field_t = (String) null;
           }
-          LobbyPlayerEntry.field_Hb[param2] = new sm(param2);
+          LobbyPlayerEntry.field_Hb[param2] = new GameMenuController(param2);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ec.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -240,9 +240,9 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static sr a(CipherPacketBuffer param0, byte param1) {
+    final static MeshData a(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
-        sr stackIn_24_0 = null;
+        MeshData stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -251,7 +251,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        sr var5 = null;
+        MeshData var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -263,7 +263,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           var3 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
           var4 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
-          var5 = new sr();
+          var5 = new MeshData();
           var5.field_x = (short)param0.b((byte) 115, 16);
           var5.field_w = tm.a((byte) 39, param0, 16, var5.field_w);
           var5.field_z = tm.a((byte) 39, param0, 16, var5.field_z);

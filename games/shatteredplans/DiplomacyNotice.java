@@ -36,14 +36,14 @@ final class DiplomacyNotice extends IntrusiveNode {
         }
     }
 
-    final static sq findTutorialSceneByTag(String param0, int param1) {
+    final static TutorialScene findTutorialSceneByTag(String param0, int param1) {
         int var3 = 0;
-        sq[] var2 = null;
-        sq var4 = null;
+        TutorialScene[] var2 = null;
+        TutorialScene var4 = null;
         int var5 = 0;
-        sq[] var6 = null;
-        sq stackIn_3_0 = null;
-        sq stackIn_10_0 = null;
+        TutorialScene[] var6 = null;
+        TutorialScene stackIn_3_0 = null;
+        TutorialScene stackIn_10_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -54,7 +54,7 @@ final class DiplomacyNotice extends IntrusiveNode {
           var6 = EmailValidator.field_q;
           var2 = var6;
           if (param1 != -21502) {
-            stackIn_3_0 = (sq) null;
+            stackIn_3_0 = (TutorialScene) null;
             return stackIn_3_0;
           }
           for (var3 = 0; var3 < var6.length; var3++) {

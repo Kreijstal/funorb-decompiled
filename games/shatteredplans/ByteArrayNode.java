@@ -8,7 +8,7 @@ final class ByteArrayNode extends IntrusiveNode {
     static int[] field_h;
     static String field_o;
     static String field_l;
-    static sg[][] field_p;
+    static IconLabelPanel[][] field_p;
     static int field_k;
     int field_j;
 
@@ -29,14 +29,14 @@ final class ByteArrayNode extends IntrusiveNode {
         field_l = null;
         if (param0 >= 76) {
           field_m = null;
-          field_p = (sg[][]) null;
+          field_p = (IconLabelPanel[][]) null;
           field_h = null;
           field_i = null;
           return;
         }
         ByteArrayNode.a((byte) 91);
         field_m = null;
-        field_p = (sg[][]) null;
+        field_p = (IconLabelPanel[][]) null;
         field_h = null;
         field_i = null;
     }

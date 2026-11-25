@@ -10,7 +10,7 @@ final class TutorialTextSupport {
     static int field_b;
     static String field_d;
 
-    final static void buildTutorialTextSprites(sq param0, int param1) {
+    final static void buildTutorialTextSprites(TutorialScene param0, int param1) {
         int var8 = 0;
         Sprite[] array$0 = null;
         Sprite[] array$1 = null;

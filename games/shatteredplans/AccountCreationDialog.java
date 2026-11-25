@@ -16,7 +16,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
-        sr var5 = null;
+        MeshData var5 = null;
         int[] var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
@@ -35,7 +35,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var3 = var10.readUnsignedByte(-108);
           var10.m(-84);
           wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
-          vc.field_d = new sr[var3];
+          vc.field_d = new MeshData[var3];
           ValidatedTextInputWidget.field_Z = new int[var3][];
           if (param0 <= 82) {
             return;
@@ -48,11 +48,11 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var4Lifetime1 = var9;
           while (var3 > var9) {
             var5 = vc.field_d[var9];
-            var5.a(6, -226, 6, 6, 1);
-            var5.a(true);
+            var5.scale(6, -226, 6, 6, 1);
+            var5.updateBounds(true);
             var6 = new int[]{var5.field_O + var5.field_k >> 1, var5.field_j + var5.field_t >> 1, var5.field_E + var5.field_r >> 1};
             ValidatedTextInputWidget.field_Z[var9] = var6;
-            var5.a(-var6[2], -var6[0], -var6[1], 32767);
+            var5.translate(-var6[2], -var6[0], -var6[1], 32767);
             var9++;
           }
           return;
@@ -162,7 +162,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
                 if (!param1) {
                   TargetedChatMessage.c(-1);
                 }
-                var4 = sg.field_xb;
+                var4 = IconLabelPanel.field_xb;
                 this.field_Eb = true;
               }
             } else {
@@ -220,7 +220,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     }
 
     final void f(boolean param0) {
-        this.a(17, true, GameAssetSetupSupport.createStatusResult(sg.field_xb, 248, -110));
+        this.a(17, true, GameAssetSetupSupport.createStatusResult(IconLabelPanel.field_xb, 248, -110));
         if (param0) {
           this.f(false);
         }

@@ -8,7 +8,7 @@ final class vc {
     static String field_e;
     static Sprite field_b;
     static String[] field_c;
-    static sr[] field_d;
+    static MeshData[] field_d;
 
     final static int a(byte param0, int param1) {
         if (param0 != -39) {

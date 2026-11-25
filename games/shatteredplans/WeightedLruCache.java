@@ -9,7 +9,7 @@ final class WeightedLruCache {
     static String field_f;
     static int field_e;
     static int[] field_a;
-    static sq field_g;
+    static TutorialScene field_g;
     static String field_l;
     private SecondaryNodeDeque field_c;
     private int field_b;

@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static IndexedSprite c(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], IntroTextLine.field_q[0], ProgressDialog.field_fb);
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], SocialListSetupSupport.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], IntroTextLine.field_q[0], ProgressDialog.field_fb);
         TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
@@ -177,13 +177,13 @@ final class ta {
         PlayerRankingRequest.field_o = param1;
         MusicPatch.field_m = param0;
         if (PointsVictoryChecker.a((byte) -94, GameRules.field_c)) {
-          LobbyPlayerEntry.field_Hb[GameRules.field_c].a(-30492, PlayerRankingRequest.field_o);
+          LobbyPlayerEntry.field_Hb[GameRules.field_c].clearMenuActivation(-30492, PlayerRankingRequest.field_o);
           if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
             var4 = 0;
             if (11 == PlayerRankingRequest.field_o) {
               var4 = -1;
             }
-            LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].a(var4, (byte) 27, param3);
+            LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].resetMenuInput(var4, (byte) 27, param3);
           }
           BirthDateConfirmationForm.field_Q = 0;
           if (param2 != 96) {
@@ -197,7 +197,7 @@ final class ta {
           if (11 == PlayerRankingRequest.field_o) {
             var4Lifetime1 = -1;
           }
-          LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].a(var4Lifetime1, (byte) 27, param3);
+          LobbyPlayerEntry.field_Hb[PlayerRankingRequest.field_o].resetMenuInput(var4Lifetime1, (byte) 27, param3);
         }
         BirthDateConfirmationForm.field_Q = 0;
         if (param2 == 96) {

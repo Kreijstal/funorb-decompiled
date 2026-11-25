@@ -295,7 +295,7 @@ final class TutorialAi extends LegacyAi {
             var24 = BoundsRect.field_m[1];
             var30Lifetime1Lifetime2 = var24;
             var30Lifetime1Lifetime3 = var24;
-            var25 = so.field_s;
+            var25 = BattleExplosionVisual.field_s;
             var23.field_j.a(false, var24, var25, 12);
             var26 = DerelictVictoryChecker.field_m;
             var27 = BoundsRect.field_m[2];
@@ -307,7 +307,7 @@ final class TutorialAi extends LegacyAi {
           if (2 == param0) {
             var29 = DerelictVictoryChecker.field_m;
             var30Lifetime2 = BoundsRect.field_m[0];
-            var31 = sj.field_d;
+            var31 = SocialListSetupSupport.field_d;
             var29.field_j.a(false, var30Lifetime2, var31, 11);
             var32 = DerelictVictoryChecker.field_m;
             var33 = BoundsRect.field_m[1];

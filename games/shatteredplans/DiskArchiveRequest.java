@@ -93,7 +93,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           CharSequence var2 = (CharSequence) null;
           DiskArchiveRequest.countChar(22, (CharSequence) null, '\001');
           if (FleetTrailPoint.field_m == 0) {
-            sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
+            IconLabelPanel.enqueueIntroText(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = FleetTrailPoint.field_m + 1;
           FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
@@ -104,7 +104,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           return;
         }
         if (FleetTrailPoint.field_m == 0) {
-          sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
+          IconLabelPanel.enqueueIntroText(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
         }
         int fieldTemp$1 = FleetTrailPoint.field_m + 1;
         FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;

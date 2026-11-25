@@ -127,7 +127,7 @@ final class wj extends IntrusiveNode {
           }
           var1_intLifetime1 = -5;
           var2Lifetime1 = -80 + 100 * FleetTrailPoint.field_m / 1000;
-          so.a(0, 0, var2Lifetime1 - var4 + DefendTask.field_s.field_x, DefensiveAi.field_r);
+          BattleExplosionVisual.darkenThroughSpriteMaskFromOffset(0, 0, var2Lifetime1 - var4 + DefendTask.field_s.field_x, DefensiveAi.field_r);
           OpacityWidget.popLegacyRasterState(0);
           var6 = 256;
           if (512 > FleetTrailPoint.field_m) {

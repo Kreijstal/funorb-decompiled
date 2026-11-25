@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends StarSoundState {
+final class BattleExplosionVisual extends StarSoundState {
     static AnimatedPanel field_v;
     static RasterBuffer field_q;
     int field_u;
@@ -13,7 +13,7 @@ final class so extends StarSoundState {
     static int field_o;
     int field_n;
 
-    final static void a(int param0, int param1, int param2, Sprite param3) {
+    final static void darkenThroughSpriteMaskFromOffset(int param0, int param1, int param2, Sprite param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -80,7 +80,7 @@ final class so extends StarSoundState {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
+    final static void updateLobbyUi(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         DualLinkDequeSequence.field_k = null;
         AiTask.a(-15887);
         param13 = DiskArchiveRequest.a(true, param7, param5, param13, param8, param10, param9);
@@ -100,7 +100,7 @@ final class so extends StarSoundState {
         }
     }
 
-    final static String[] a(String param0, char param1, int param2) {
+    final static String[] splitOnCharacter(String param0, char param1, int param2) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -150,7 +150,7 @@ final class so extends StarSoundState {
         }
     }
 
-    so(Star param0) {
+    BattleExplosionVisual(Star param0) {
         double var2_double = 0.0;
         int var4 = 0;
         try {
