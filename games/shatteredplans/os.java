@@ -95,7 +95,7 @@ final class os extends MenuComponent {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        CipherPacketBuffer var3 = js.field_f;
+        CipherPacketBuffer var3 = LobbyOptionSupport.field_f;
         var3.h(param1, 255);
         var3.writeByte(3, (byte) -68);
         var3.writeByte(10, (byte) -98);
@@ -176,7 +176,7 @@ final class os extends MenuComponent {
           var7.unlink((byte) -74);
           var7.unlinkSecondary(16);
           oi.field_e = oi.field_e - 1;
-          var5 = js.field_f;
+          var5 = LobbyOptionSupport.field_f;
           var5.h(param1, 255);
           var5.position = var5.position + 1;
           var6 = var5.position;
@@ -227,7 +227,7 @@ final class os extends MenuComponent {
         }
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!this.field_s) {
@@ -264,7 +264,7 @@ final class os extends MenuComponent {
         }
         MenuComponent var8 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var8 != null) {
-          var8.a(-101);
+          var8.drawComponent(-101);
           var8 = (MenuComponent) (this.field_l.nextReverse(-128));
         }
     }

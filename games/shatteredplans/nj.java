@@ -5,7 +5,7 @@ final class nj {
     static int field_a;
 
     final static void a(int param0) {
-        int var1 = (kh.field_Mb - 640) / 2;
+        int var1 = (PlayerReportPanel.field_Mb - 640) / 2;
         int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - PlacementOrder.field_t * PlacementOrder.field_t;
         MapViewState.field_j.setTarget(199, -124 + (SoftwareRasterizer.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
@@ -40,7 +40,7 @@ final class nj {
             stackIn_5_0 = of.field_c;
             return stackIn_5_0;
           }
-          if (jp.a(param0, (byte) -105)) {
+          if (SocialNameInputPanel.isLocalPlayerName(param0, (byte) -105)) {
             stackIn_8_0 = QuaternaryNodeList.field_f;
             return stackIn_8_0;
           }
@@ -65,7 +65,7 @@ final class nj {
             stackIn_26_0 = QuickChatCategoryRegistry.a(TextFieldWidget.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }
-          var6 = js.field_f;
+          var6 = LobbyOptionSupport.field_f;
           var6.h(param1, 255);
           var6.position = var6.position + 1;
           var4 = var6.position;

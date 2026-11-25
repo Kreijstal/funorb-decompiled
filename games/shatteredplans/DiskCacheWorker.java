@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
           QuickChatPhraseRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
         if (PlayerRankingRequest.field_o == -6) {
-          js.field_f.h(9, 255);
+          LobbyOptionSupport.field_f.h(9, 255);
           StripedProgressWidget.field_Q = true;
           PlayerRankingRequest.field_o = GameRules.field_c;
         }
@@ -440,7 +440,7 @@ final class DiskCacheWorker implements Runnable {
           AnimatedPanel.a(param3, (byte) 56);
           ReflectionCheck.d((byte) -47);
           UrlLoader.b((byte) -112);
-          js.field_j = -ClientContextMenuSupport.field_c + 0;
+          LobbyOptionSupport.field_j = -ClientContextMenuSupport.field_c + 0;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

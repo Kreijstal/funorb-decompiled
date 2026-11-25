@@ -209,7 +209,7 @@ final class QuickChatParameterType {
           var3Lifetime1 = CandidateLink.field_p[9] >> 8;
           var4 = CandidateLink.field_p[10] >> 8;
           var5Lifetime1 = CandidateLink.field_p[11] >> 8;
-          var6Lifetime1 = js.field_j << 4;
+          var6Lifetime1 = LobbyOptionSupport.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = LobbyCommandSupport.sine(var6Lifetime1, (byte) -104) >> 8;
           var9Lifetime1 = IntrusiveNode.cosine(var6Lifetime1, -123) >> 8;

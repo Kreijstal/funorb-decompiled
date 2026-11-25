@@ -312,14 +312,14 @@ final class LinkPainter implements WidgetPainter {
                 }
               } else {
                 if (ClientPacketFlushSupport.field_a.field_Fb.field_rb != 0) {
-                  ProxyAuthenticationRequiredException.field_e = new jp(ClientPacketFlushSupport.field_a.field_Fb.field_B, ClientPacketFlushSupport.field_a.field_Fb.field_N, ClientPacketFlushSupport.field_a.field_Fb.field_K, ClientPacketFlushSupport.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+                  ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(ClientPacketFlushSupport.field_a.field_Fb.field_B, ClientPacketFlushSupport.field_a.field_Fb.field_N, ClientPacketFlushSupport.field_a.field_Fb.field_K, ClientPacketFlushSupport.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
                   MapViewState.field_b = 0;
                 }
               }
               if (0 == ClientPacketFlushSupport.field_a.field_yb.field_rb) {
                 break;
               }
-              ProxyAuthenticationRequiredException.field_e = new jp(ClientPacketFlushSupport.field_a.field_yb.field_B, ClientPacketFlushSupport.field_a.field_yb.field_N, ClientPacketFlushSupport.field_a.field_yb.field_K, ClientPacketFlushSupport.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+              ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(ClientPacketFlushSupport.field_a.field_yb.field_B, ClientPacketFlushSupport.field_a.field_yb.field_N, ClientPacketFlushSupport.field_a.field_yb.field_K, ClientPacketFlushSupport.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
               MapViewState.field_b = 1;
               break;
             }

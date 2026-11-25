@@ -23,17 +23,17 @@ final class sn {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (js.field_j < 0) {
+        if (LobbyOptionSupport.field_j < 0) {
           return;
         }
         var3 = param2 - 135;
         var4 = -35 + param0;
         var5 = 256;
-        if (js.field_j < 75) {
-          var5 = (js.field_j << 8) / 75;
+        if (LobbyOptionSupport.field_j < 75) {
+          var5 = (LobbyOptionSupport.field_j << 8) / 75;
         }
-        if (js.field_j > 200) {
-          var5 = (-js.field_j + 250 << 8) / 50;
+        if (LobbyOptionSupport.field_j > 200) {
+          var5 = (-LobbyOptionSupport.field_j + 250 << 8) / 50;
         }
         IntValueWriteRequest.pushSpriteRaster((byte) -40, SecondaryNodeHashTable.field_i);
         wn.c();
@@ -46,12 +46,12 @@ final class sn {
         if (param1 != 28318) {
           return;
         }
-        if (js.field_j >= 150) {
+        if (LobbyOptionSupport.field_j >= 150) {
           PlacementOrder.field_q.drawAlpha(15 + var3, var4 + 10, var5);
         } else {
           SecondaryNodeHashTable.field_i.drawHalfSize(var3, var4);
         }
-        var6 = -125 + js.field_j;
+        var6 = -125 + LobbyOptionSupport.field_j;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 >= 20) {
@@ -66,7 +66,7 @@ final class sn {
             AllianceExpiredEvent.field_h.drawAdditive(var3, var4, var7);
           }
         }
-        var6Lifetime1 = js.field_j - 140;
+        var6Lifetime1 = LobbyOptionSupport.field_j - 140;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {

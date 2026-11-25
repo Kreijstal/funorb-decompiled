@@ -577,8 +577,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (null != TextHotspotWidget.field_G) {
-                js.field_d = js.field_d + 1;
-                if (js.field_d < 3) {
+                LobbyOptionSupport.field_d = LobbyOptionSupport.field_d + 1;
+                if (LobbyOptionSupport.field_d < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }

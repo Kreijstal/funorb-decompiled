@@ -27,7 +27,7 @@ final class DefendTask extends AiTask {
             if (var2 != null) {
               fieldTemp$0 = ImageProducerRasterBuffer.field_i;
               ImageProducerRasterBuffer.field_i = ImageProducerRasterBuffer.field_i + 1;
-              js.field_b[fieldTemp$0] = var3;
+              LobbyOptionSupport.field_b[fieldTemp$0] = var3;
             }
           }
           MenuList.a(param0 + 1546006976, param1);
@@ -133,7 +133,7 @@ final class DefendTask extends AiTask {
         if (param0 < 15) {
           return true;
         }
-        stackIn_6_0 = (ProxyAuthenticationRequiredException.field_e != null) && (ProxyAuthenticationRequiredException.field_e.f((byte) -99));
+        stackIn_6_0 = (ProxyAuthenticationRequiredException.field_e != null) && (ProxyAuthenticationRequiredException.field_e.handleNameKey((byte) -99));
         return stackIn_6_0;
     }
 

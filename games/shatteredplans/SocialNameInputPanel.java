@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jp extends AnimatedPanel {
+final class SocialNameInputPanel extends AnimatedPanel {
     static v field_Cb;
     private AnimatedPanel field_yb;
     private AnimatedPanel field_zb;
@@ -10,7 +10,7 @@ final class jp extends AnimatedPanel {
     private StringBuilder field_Db;
     private int field_Ab;
 
-    final boolean f(byte param0) {
+    final boolean handleNameKey(byte param0) {
         StringBuilder discarded$10 = null;
         StringBuilder discarded$11 = null;
         StringBuilder discarded$12 = null;
@@ -328,7 +328,7 @@ final class jp extends AnimatedPanel {
         return true;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isLocalPlayerName(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -357,7 +357,7 @@ final class jp extends AnimatedPanel {
         }
     }
 
-    jp(int param0, int param1, int param2, int param3, String param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7) {
+    SocialNameInputPanel(int param0, int param1, int param2, int param3, String param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -425,7 +425,7 @@ final class jp extends AnimatedPanel {
         }
     }
 
-    final int a(byte param0, boolean param1) {
+    final int pollNameInput(byte param0, boolean param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -435,7 +435,7 @@ final class jp extends AnimatedPanel {
         this.a(param1, -20429);
         if (!param1) {
           if (param0 >= -42) {
-            jp.g((byte) -50);
+            SocialNameInputPanel.closeQuickChatMenus((byte) -50);
           }
           this.field_zb.field_z = this.field_Db.toString();
           if (param1 &&
@@ -461,7 +461,7 @@ final class jp extends AnimatedPanel {
               this.field_Ab = 1;
               return this.field_Ab;
             }
-            jp.g((byte) -50);
+            SocialNameInputPanel.closeQuickChatMenus((byte) -50);
             this.field_zb.field_z = this.field_Db.toString();
             if (!param1) {
               return this.field_Ab;
@@ -511,7 +511,7 @@ final class jp extends AnimatedPanel {
         return 2;
     }
 
-    final static void a(String param0, float param1, byte param2, boolean param3) {
+    final static void showLoadingProgress(String param0, float param1, byte param2, boolean param3) {
         try {
           if (MouseInputHandler.field_h == null) {
             MouseInputHandler.field_h = new ProgressDialog(ByteArrayStorage.field_e, GameClientShell.field_z);
@@ -519,7 +519,7 @@ final class jp extends AnimatedPanel {
           }
           MouseInputHandler.field_h.updateProgress(param3, param0, 65536, param1);
           if (param2 <= 118) {
-            jp.g(-100);
+            SocialNameInputPanel.releaseSocialNameInputStatics(-100);
           }
           SoftwareRasterizer.clear();
           og.a(0, true);
@@ -528,7 +528,7 @@ final class jp extends AnimatedPanel {
         }
     }
 
-    final static void g(byte param0) {
+    final static void closeQuickChatMenus(byte param0) {
         String[] var2 = null;
         String[] var2Lifetime1;
         QuickChatCategoryDefinition.field_t = false;
@@ -540,7 +540,7 @@ final class jp extends AnimatedPanel {
           ConquestVictoryChecker.field_m = 0;
           if (param0 < 83) {
             var2 = (String[]) null;
-            jp.a((String[]) null, false);
+            SocialNameInputPanel.updateAccountNameSuggestions((String[]) null, false);
             return;
           }
           return;
@@ -551,12 +551,12 @@ final class jp extends AnimatedPanel {
         ConquestVictoryChecker.field_m = 0;
         if (param0 < 83) {
           var2Lifetime1 = (String[]) null;
-          jp.a((String[]) null, false);
+          SocialNameInputPanel.updateAccountNameSuggestions((String[]) null, false);
           return;
         }
     }
 
-    final static void a(String[] args, boolean param1) {
+    final static void updateAccountNameSuggestions(String[] args, boolean param1) {
         if (null != TerritoryResourcePanelSupport.field_b) {
           TerritoryResourcePanelSupport.field_b.field_D.setSuggestions(args, 0);
         }
@@ -572,14 +572,14 @@ final class jp extends AnimatedPanel {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseSocialNameInputStatics(int param0) {
         field_Bb = null;
         field_xb = null;
         field_Cb = null;
         if (param0 < -71) {
           return;
         }
-        jp.g((byte) -83);
+        SocialNameInputPanel.closeQuickChatMenus((byte) -83);
     }
 
     static {

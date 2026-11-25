@@ -55,7 +55,7 @@ final class BattleEvent extends IntrusiveNode {
     final static void a(int param0, wj param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        CipherPacketBuffer var7 = js.field_f;
+        CipherPacketBuffer var7 = LobbyOptionSupport.field_f;
         CipherPacketBuffer var8 = var7;
         var8.h(param0, 255);
         var8.position = var8.position + 1;

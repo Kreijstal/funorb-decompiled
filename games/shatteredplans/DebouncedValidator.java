@@ -70,7 +70,7 @@ abstract class DebouncedValidator implements ValidationSource {
             stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
-          jp.field_Bb.addChild(param1);
+          SocialNameInputPanel.field_Bb.addChild(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,9 +165,9 @@ abstract class DebouncedValidator implements ValidationSource {
             DebouncedValidator.a(-84, (java.applet.Applet) null);
           }
           IsolationistAi.field_q = PcmPlayerService.create(param1, param0, 1, param3);
-          jp.field_Bb = new PcmStreamMixer();
+          SocialNameInputPanel.field_Bb = new PcmStreamMixer();
           AttackTask.field_t = param3;
-          IsolationistAi.field_q.setSourceStream(jp.field_Bb);
+          IsolationistAi.field_q.setSourceStream(SocialNameInputPanel.field_Bb);
           ValidationState.field_b = param2;
           ValidationState.field_b.a(wm.field_b, 0);
           ClientContextMenuSupport.field_e.setSourceStream(ValidationState.field_b);

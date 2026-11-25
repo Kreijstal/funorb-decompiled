@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr extends IntrusiveNode {
+final class HighscoreQueryRequest extends IntrusiveNode {
     static String field_l;
     int field_j;
     int field_i;
     int field_k;
     static AnimatedPanel field_h;
 
-    final static void a(String param0, int param1, String param2) {
+    final static void putTextReplacement(String param0, int param1, String param2) {
         try {
           uq.field_m.a(param2, 27275, param0);
           if (param1 != 1904) {
             String var4 = (String) null;
-            jr.a((String) null, 27, (String) null);
+            HighscoreQueryRequest.putTextReplacement((String) null, 27, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -24,11 +24,11 @@ final class jr extends IntrusiveNode {
         field_l = null;
         field_h = null;
         if (param0 != 1885) {
-          jr.clearStatics(97);
+          HighscoreQueryRequest.clearStatics(97);
         }
     }
 
-    private jr() throws Throwable {
+    private HighscoreQueryRequest() throws Throwable {
         throw new Error();
     }
 

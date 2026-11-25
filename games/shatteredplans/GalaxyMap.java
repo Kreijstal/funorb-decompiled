@@ -58,7 +58,7 @@ final class GalaxyMap {
           var6.addStar(-21771, param3);
           param0.field_i.addLast((byte) -113, var5);
           param0.field_m = var6;
-          kd.a(param1, false, param3, (byte) -2);
+          QuickChatMenuSupport.updateMinimumGarrison(param1, false, param3, (byte) -2);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "l.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

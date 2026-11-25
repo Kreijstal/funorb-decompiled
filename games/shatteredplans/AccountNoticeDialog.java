@@ -134,7 +134,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = js.field_f;
+        CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.h(param0, 255);
         var2.writeByte(1, (byte) -76);
         var2.writeByte(param1, (byte) -97);

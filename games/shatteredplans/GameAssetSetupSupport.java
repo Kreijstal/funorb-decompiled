@@ -56,8 +56,8 @@ final class GameAssetSetupSupport {
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
           RandomAccessCacheFile.a(-110);
-          jf.field_a = new Sprite(var7_int, var8);
-          jf.field_a.bindAsRenderTarget();
+          SettingsCookieSupport.field_a = new Sprite(var7_int, var8);
+          SettingsCookieSupport.field_a.bindAsRenderTarget();
           SoftwareRasterizer.fillRect(0, 0, var7_int, var8, 16777215);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
           SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
@@ -77,7 +77,7 @@ final class GameAssetSetupSupport {
           }
           OpacityWidget.popLegacyRasterState(0);
           IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
-          jm.field_r = SpriteResourceSupport.loadSpriteByName(2, param0, "", "instr_mainview");
+          AlternateLoginCredentials.field_r = SpriteResourceSupport.loadSpriteByName(2, param0, "", "instr_mainview");
           NodeSequence.field_d = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "instr_starframe");
           HighscoreResponseSupport.loadSpriteSetByName(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
@@ -137,7 +137,7 @@ final class GameAssetSetupSupport {
           rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
           IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
-          kb.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
+          GradientMenuLabel.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
           wo.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
           oo.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
           AccountValidationText.field_e = SpriteResourceSupport.loadSpriteByName(2, param0, "", "chevron");
@@ -242,7 +242,7 @@ final class GameAssetSetupSupport {
           AllianceExpiredEvent.field_k = new Sprite(16, 10);
           pr.field_a = new Sprite(18, 12);
           RasterTargetSupport.pushSpriteRenderTarget(AllianceExpiredEvent.field_k, 98);
-          kb.field_y.drawHalfSize(0, 0);
+          GradientMenuLabel.field_y.drawHalfSize(0, 0);
           pr.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.drawColourised(1, 1, 8421504);
           HuffmanCodec.field_b = new Sprite(10, 12);

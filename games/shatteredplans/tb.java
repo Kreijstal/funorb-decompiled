@@ -102,10 +102,10 @@ final class tb {
           sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
           qf.field_e = new AnimatedPanel(0L, rs.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
-          GameSession.field_e = new AnimatedPanel(0L, jr.field_h, FleetTrailPoint.field_j);
-          WeightedCacheEntry.field_t = new AnimatedPanel(0L, jr.field_h, QuickChatMenu.field_Lb);
-          ta.field_d = new AnimatedPanel(0L, jr.field_h, ValidatedTextInputWidget.field_T);
-          IsaacBackedRandom.field_c = new AnimatedPanel(0L, jr.field_h, WidgetContainer.field_z);
+          GameSession.field_e = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, FleetTrailPoint.field_j);
+          WeightedCacheEntry.field_t = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, QuickChatMenu.field_Lb);
+          ta.field_d = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, ValidatedTextInputWidget.field_T);
+          IsaacBackedRandom.field_c = new AnimatedPanel(0L, HighscoreQueryRequest.field_h, WidgetContainer.field_z);
           AccountHandshakeSupport.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
           SingleChildWidget.field_y = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           ServerIntArrayRequest.field_m = new AnimatedPanel(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());

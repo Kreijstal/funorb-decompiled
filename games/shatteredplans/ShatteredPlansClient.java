@@ -178,7 +178,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             } else {
               if (DisplayModeInfo.field_e) {
                 if (!sq.a(false)) {
-                  if (kh.f((byte) -67)) {
+                  if (PlayerReportPanel.refreshClientActivityDeadline((byte) -67)) {
                     var2 = 1;
                     stackIn_45_1 = true;
                     stackIn_46_2 = (NameSuggestionsPanel.field_K != null);
@@ -287,8 +287,8 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.a(1048576);
-              BytePayloadNode.a(HitRegion.a(20605), js.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, js.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
-              sj.a((byte) 77, js.b((byte) 121), NodeHashTableIterator.a(83));
+              BytePayloadNode.a(HitRegion.a(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
+              sj.a((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
               StripedProgressWidget.field_Q = false;
               PlayerRankingRequest.field_o = -2;
@@ -672,7 +672,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                 if (RichTextLayout.field_k.isIndexLoaded((byte) -87) &&
                                   RichTextLayout.field_k.preloadAll(-1)) {
                                   QuickChatCategoryDefinition.e(-23771);
-                                  nj.a(65.0f, 2, jp.field_xb);
+                                  nj.a(65.0f, 2, SocialNameInputPanel.field_xb);
                                   this.draw(param0 - 81);
                                   if (!param1) {
                                     return false;
@@ -707,10 +707,10 @@ public final class ShatteredPlansClient extends GameClientShell {
                   nj.a(45.0f, 2, ve.a(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
                   return false;
                 }
-                nj.a(40.0f, 2, BoundsRect.a("", ld.field_m, (byte) 47, kh.field_Db, TurnEventLog.field_e));
+                nj.a(40.0f, 2, BoundsRect.a("", ld.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
                 return false;
               }
-              nj.a(20.0f, 2, BoundsRect.a("", IntHashIndex.field_a, (byte) 117, kh.field_Db, TurnEventLog.field_e));
+              nj.a(20.0f, 2, BoundsRect.a("", IntHashIndex.field_a, (byte) 117, PlayerReportPanel.field_Db, TurnEventLog.field_e));
               return false;
             }
             nj.a(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
@@ -740,7 +740,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         rl.clearStatics(param0 ^ -24069);
         GameKeyHandler.a((byte) -102);
         uo.clearStatics(true);
-        jf.a((byte) -23);
+        SettingsCookieSupport.releaseSettingsCookieStatics((byte) -23);
         wo.clearStatics((byte) -103);
         vo.clearStatics(256);
         GameClientShell.clearStatics(-38);
@@ -757,7 +757,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         RasterTargetSupport.clearStatics(53);
         sa.clearStatics(2029303720);
         ChatPanelSetupSupport.releaseChatPanelSetupStatics(0);
-        kd.clearStatics(109);
+        QuickChatMenuSupport.clearStatics(109);
         ss.clearStatics(1);
         LobbyCommandSupport.releaseLobbyCommandStatics(1);
         TooltipSupport.clearStatics((byte) 125);
@@ -814,7 +814,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         SocialListPanel.clearStatics(param0 + 47949);
         PlayerContextMenuController.clearStatics((byte) -87);
         ScrollPane.clearStatics(param0 ^ param0);
-        kh.clearStatics(param0 ^ 24070);
+        PlayerReportPanel.clearStatics(param0 ^ 24070);
         wg.clearStatics((byte) -117);
         ArchiveIndex.clearStatics(true);
         GzipInflater.clearStatics((byte) 114);
@@ -864,7 +864,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         tb.clearStatics(58);
         nl.clearStatics(-87);
         q.clearStatics((byte) 125);
-        jp.g(param0 + 23965);
+        SocialNameInputPanel.releaseSocialNameInputStatics(param0 + 23965);
         ChatMessageFactory.clearStatics(param0 ^ 27074);
         QuickChatHelpPanel.clearStatics((byte) -124);
         StandardAi.clearStatics((byte) 79);
@@ -891,7 +891,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ProductionContent.clearStatics(param0 + 24072);
         ProjectsContent.clearStatics(5);
         MenuButton.clearStatics(128);
-        kb.clearStatics(true);
+        GradientMenuLabel.clearStatics(true);
         MenuComponent.a((byte) -124);
         uc.clearStatics((byte) 106);
         SpriteButton.clearStatics((byte) -68);
@@ -1027,7 +1027,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         so.clearStatics(2);
         qe.clearStatics((byte) 93);
         FleetTrailPoint.clearStatics(true);
-        js.clearStatics((byte) 115);
+        LobbyOptionSupport.clearStatics((byte) 115);
         BirthDateValidator.clearStatics((byte) 124);
         NumericDateInputWidget.clearStatics(false);
         ArrayWidgetGroup.clearStatics(-1);
@@ -1056,7 +1056,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ReflectionQueueSupport.releaseReflectionQueueSupportStatics(0);
         NodeHashTableIterator.clearStatics(param0 + 24068);
         SecondaryNodeDequeIterator.a(124);
-        jr.clearStatics(1885);
+        HighscoreQueryRequest.clearStatics(1885);
         wj.clearStatics((byte) 59);
         wq.clearStatics((byte) -36);
         PlayerRankingRequest.clearStatics(-47);
@@ -1087,7 +1087,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         StatusMessagePanel.clearStatics(240);
         LoginMethodPreference.clearStatics(16928);
         TargetedChatMessage.clearStatics((byte) -47);
-        jm.clearStatics(22595);
+        AlternateLoginCredentials.clearStatics(22595);
         PrivateChatMessage.clearStatics(false);
         RasterStateFrame.clearStatics(16777215);
         IntrusiveDequeSequence.clearStatics(11);
@@ -1448,9 +1448,9 @@ public final class ShatteredPlansClient extends GameClientShell {
         }
         if (sq.a(false)) {
           TextHotspotWidget.a(sa.a(-27572), param0 ^ -2, FleetMove.e(param0 ^ -84));
-          kd.a((byte) -119);
+          QuickChatMenuSupport.drawQuickChatMenu((byte) -119);
         } else {
-          if (kh.f((byte) -67)) {
+          if (PlayerReportPanel.refreshClientActivityDeadline((byte) -67)) {
             stackIn_69_0 = 95;
             stackIn_71_1 = (null != NameSuggestionsPanel.field_K) || (MusicPatch.field_i);
             Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
@@ -1532,7 +1532,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (var3 > 16.0) {
             var3 = var3 + 5.0 * (var3 - 16.0);
           }
-          so.a(param0 - 67, (640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, jf.field_a);
+          so.a(param0 - 67, (640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, SettingsCookieSupport.field_a);
           var2Lifetime1 = (int)var3;
           SecondaryNodeHashTable.field_f.drawAdditive((640 - SecondaryNodeHashTable.field_f.field_o) / 2, 10, 256);
           return;

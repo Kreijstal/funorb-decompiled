@@ -395,9 +395,9 @@ final class SolVictoryChecker extends VictoryChecker {
                 var10 = (String) null;
                 mq.field_c = ChatMessageFactory.createLoginCredentials(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
               }
-              js.field_f.position = 0;
-              js.field_f.writeByte(14, (byte) -80);
-              js.field_f.writeByte(mq.field_c.getKind((byte) -73).field_d, (byte) -68);
+              LobbyOptionSupport.field_f.position = 0;
+              LobbyOptionSupport.field_f.writeByte(14, (byte) -80);
+              LobbyOptionSupport.field_f.writeByte(mq.field_c.getKind((byte) -73).field_d, (byte) -68);
               ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
               Wormhole.field_j = IntrusiveNodeHashTable.field_i;
             }
@@ -495,7 +495,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
               BufferedSocket.field_j = false;
               if (var6 != null) {
-                jf.a(-25602, var6, GameScreen.getHostApplet((byte) 125));
+                SettingsCookieSupport.writeSettingsCookie(-25602, var6, GameScreen.getHostApplet((byte) 125));
               }
               if (StarAnnotation.field_m <= 0 &&
                 !QuickChatPhraseDefinition.field_v) {
@@ -516,7 +516,7 @@ final class SolVictoryChecker extends VictoryChecker {
               if (StarAnnotation.field_m > 0) {
                 DualLinkDeque.field_b = true;
               }
-              js.field_f.a(qn.field_b, (byte) -77);
+              LobbyOptionSupport.field_f.a(qn.field_b, (byte) -77);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 qn.field_b[var8Lifetime1] = qn.field_b[var8Lifetime1] + 50;
               }

@@ -1660,7 +1660,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_fluidity", 114);
                 if (null != var2) {
-                  kh.field_Eb = IterableNodeHashTable.a(var2, 17746);
+                  PlayerReportPanel.field_Eb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_aggressiveness", 115);
                 if (null != var2) {
@@ -2066,7 +2066,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipVictoryPaneManyMany", 105);
                 if (var2 != null) {
-                  jm.field_q = IterableNodeHashTable.a(var2, 17746);
+                  AlternateLoginCredentials.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipVictoryPaneOneOne", 101);
                 if (var2 != null) {

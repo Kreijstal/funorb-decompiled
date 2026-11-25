@@ -236,7 +236,7 @@ final class uk {
                 SolMapReader.a(var21_ref_sd, -5);
                 var22_ref_lnLifetime1 = var21_ref_sd.firstStar(18229);
                 while (var22_ref_lnLifetime1 != null) {
-                  kd.a(param7, false, var22_ref_lnLifetime1, (byte) -2);
+                  QuickChatMenuSupport.updateMinimumGarrison(param7, false, var22_ref_lnLifetime1, (byte) -2);
                   var22_ref_lnLifetime1 = var21_ref_sd.nextStar(param6 ^ 23415);
                 }
                 var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.nextForward((byte) -71));
@@ -247,7 +247,7 @@ final class uk {
                 SolMapReader.a(param4[var20Lifetime1].field_m, -5);
                 var21_ref_ln = param4[var20Lifetime1].field_m.firstStar(18229);
                 while (var21_ref_ln != null) {
-                  kd.a(param7, false, var21_ref_ln, (byte) -2);
+                  QuickChatMenuSupport.updateMinimumGarrison(param7, false, var21_ref_ln, (byte) -2);
                   var21_ref_ln = param4[var20Lifetime1].field_m.nextStar(-23410);
                 }
               }

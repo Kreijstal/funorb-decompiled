@@ -54,7 +54,7 @@ final class DualLinkDequeSequence extends NodeSequence {
           if (param2 != 13) {
             field_f = (AnimatedPanel) null;
           }
-          var5 = js.field_f;
+          var5 = LobbyOptionSupport.field_f;
           CipherPacketBuffer var3 = var5;
           var5.h(param0, 255);
           var5.position = var5.position + 1;

@@ -40,7 +40,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
         return this.field_y;
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var2 = 122 / ((param0 - 67) / 47);
         if (!this.field_s) {
           return;

@@ -6,7 +6,7 @@ final class ChatMessageFactory {
 
     final static ChatMessage createLoginCredentials(boolean param0, String param1, String param2, int param3, long param4) {
         RuntimeException var6 = null;
-        jm stackIn_6_0 = null;
+        AlternateLoginCredentials stackIn_6_0 = null;
         PrivateChatMessage stackIn_8_0 = null;
         ChatMessage stackIn_11_0 = null;
         TargetedChatMessage stackIn_13_0 = null;
@@ -23,7 +23,7 @@ final class ChatMessageFactory {
             return (ChatMessage) ((Object) stackIn_8_0);
           }
           if (param0) {
-            stackIn_6_0 = new jm(param4, param1);
+            stackIn_6_0 = new AlternateLoginCredentials(param4, param1);
             return (ChatMessage) ((Object) stackIn_6_0);
           }
           if (param3 == 4684) {
@@ -182,7 +182,7 @@ final class ChatMessageFactory {
           if (var4 != null) {
             var4.field_jc = null;
           }
-          var5 = js.field_f;
+          var5 = LobbyOptionSupport.field_f;
           var5.h(param1, 255);
           var5.writeByte(3, (byte) -92);
           var5.writeByte(11, (byte) -69);

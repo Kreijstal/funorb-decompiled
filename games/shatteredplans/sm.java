@@ -127,11 +127,11 @@ final class sm {
           if (DefendTask.field_w < 0) {
             DefendTask.field_w = 0;
           }
-          if (kb.field_A < pr.field_g) {
-            pr.field_g = kb.field_A;
+          if (GradientMenuLabel.field_A < pr.field_g) {
+            pr.field_g = GradientMenuLabel.field_A;
           }
-          if (kb.field_A < DefendTask.field_w) {
-            DefendTask.field_w = kb.field_A;
+          if (GradientMenuLabel.field_A < DefendTask.field_w) {
+            DefendTask.field_w = GradientMenuLabel.field_A;
           }
         }
         return;
@@ -243,8 +243,8 @@ final class sm {
         if (0 > var4) {
           var4 = 0;
         }
-        if (kb.field_A < var4) {
-          var4 = kb.field_A;
+        if (GradientMenuLabel.field_A < var4) {
+          var4 = GradientMenuLabel.field_A;
         }
         var6 = param0 - (-TutorialVictoryChecker.field_r[this.field_a] - 18);
         param0 -= 8;
@@ -267,7 +267,7 @@ final class sm {
           var8 = var8 + DirectByteArrayStorage.field_i[var9];
         }
         SoftwareRasterizer.restoreClip(var25);
-        if (kb.field_A > var4) {
+        if (GradientMenuLabel.field_A > var4) {
           LoginMethodPreference.field_a.drawAdditive(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
           if (BattleContribution.field_o == -3) {
             LoginMethodPreference.field_a.drawAdditive(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
@@ -807,7 +807,7 @@ final class sm {
                 if (null != var9[var12]) {
                   var6Lifetime1 = 2805974;
                   var13 = var9[var12];
-                  if (jp.a(var13, (byte) -105)) {
+                  if (SocialNameInputPanel.isLocalPlayerName(var13, (byte) -105)) {
                     var11 = 1;
                     var6Lifetime1 = 16777215;
                   }
@@ -1124,7 +1124,7 @@ final class sm {
                 if (LeaderboardSortSupport.field_e == 1) {
                   param3 -= 5;
                 }
-                jm.field_r.drawOpaque(5 + param3, 5 + param0);
+                AlternateLoginCredentials.field_r.drawOpaque(5 + param3, 5 + param0);
                 var9 = param3 + 345;
                 var10 = 120;
                 this.a(0, ClientSessionSupport.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
@@ -1779,13 +1779,13 @@ final class sm {
             var5 = 0;
             if (this.field_d.a(-1) &&
               CheckboxPainter.field_p > 0) {
-              js.a(0, 197126152);
+              LobbyOptionSupport.setSoundEffectVolume(0, 197126152);
               var5 = 1;
             }
             if (this.field_d.a(true) &&
               CheckboxPainter.field_p < 256) {
               var5 = 1;
-              js.a(256, 197126152);
+              LobbyOptionSupport.setSoundEffectVolume(256, 197126152);
             }
             if (this.field_d.b((byte) -50)) {
               var6 = this.itemX(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
@@ -1793,12 +1793,12 @@ final class sm {
               var8 = 256 * var7 / 120;
               if (0 < var8) {
                 if (var8 < 256) {
-                  js.a(var8, 197126152);
+                  LobbyOptionSupport.setSoundEffectVolume(var8, 197126152);
                 } else {
-                  js.a(256, 197126152);
+                  LobbyOptionSupport.setSoundEffectVolume(256, 197126152);
                 }
               } else {
-                js.a(0, 197126152);
+                LobbyOptionSupport.setSoundEffectVolume(0, 197126152);
               }
               var5 = 1;
             }
@@ -2420,7 +2420,7 @@ final class sm {
                                                           }
                                                           if (32 == var5) {
                                                             if (oq.field_i[32] == MidiPcmStream.field_L) {
-                                                              PaddedContentDialog.field_nb = js.field_i;
+                                                              PaddedContentDialog.field_nb = LobbyOptionSupport.field_i;
                                                               oq.field_i[32] = RecklessAi.field_r;
                                                               QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             } else {

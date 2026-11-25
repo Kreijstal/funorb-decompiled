@@ -116,7 +116,7 @@ final class MusicVoiceMixer extends PcmStream {
         RuntimeException var4 = null;
         SpriteButton var5 = null;
         String var6 = null;
-        kb var7 = null;
+        GradientMenuLabel var7 = null;
         int var8 = 0;
         SpriteButton var9 = null;
         FilledMenuPanel var10 = null;
@@ -154,7 +154,7 @@ final class MusicVoiceMixer extends PcmStream {
           if (param3) {
             var6Lifetime2 = var22 + " (" + param1.field_o.name + ")";
           }
-          var7 = new kb(0, 0, 209, param1.field_o.field_k, var6Lifetime2, 16777215, false);
+          var7 = new GradientMenuLabel(0, 0, 209, param1.field_o.field_k, var6Lifetime2, 16777215, false);
           var21.addChild(var7, 8);
           var8 = 7;
           var9 = new SpriteButton(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));

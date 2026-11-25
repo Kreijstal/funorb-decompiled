@@ -50,12 +50,12 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             var3 = ShatteredPlansClient.field_E[GameState.field_l.field_c];
             if (2 == var3 ||
               var3 == 5) {
-              jf.b((byte) -15);
+              SettingsCookieSupport.clearQuickChatLookupState((byte) -15);
             }
           } else {
             if (var2 != 0 &&
               2 != BirthDateConfirmationForm.field_C) {
-              jf.b((byte) -15);
+              SettingsCookieSupport.clearQuickChatLookupState((byte) -15);
             }
           }
           if (var3 == 0 &&

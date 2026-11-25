@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends AnimatedPanel {
+final class PlayerReportPanel extends AnimatedPanel {
     private AnimatedPanel field_Bb;
     static AnimatedPanel field_Ib;
     long field_Gb;
@@ -28,11 +28,11 @@ final class kh extends AnimatedPanel {
         field_Db = null;
         field_Eb = null;
         if (param0 != -3) {
-          kh.f((byte) -110);
+          PlayerReportPanel.refreshClientActivityDeadline((byte) -110);
         }
     }
 
-    kh(int param0, int param1, int param2, int param3, int param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, AnimatedPanel param8, rs param9, AnimatedPanel param10, String param11, long param12) {
+    PlayerReportPanel(int param0, int param1, int param2, int param3, int param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, AnimatedPanel param8, rs param9, AnimatedPanel param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -199,31 +199,31 @@ final class kh extends AnimatedPanel {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(param6, var28[0], StripedProgressWidget.field_D, var16Lifetime2, 119, var18Lifetime3);
-            var18Lifetime3 = this.a((byte) 96, var28[0], this.field_Hb[6], var18Lifetime3, var16Lifetime2);
-            var18Lifetime3 = this.a((byte) 10, var28[0], this.field_Hb[9], var18Lifetime3, var16Lifetime2);
-            var18Lifetime3 = this.a((byte) -124, var28[0], this.field_Hb[5], var18Lifetime3, var16Lifetime2);
-            var18Lifetime3 = this.a((byte) -123, var28[0], this.field_Hb[7], var18Lifetime3, var16Lifetime2);
-            var18Lifetime3 = this.a((byte) -38, var28[0], this.field_Hb[15], var18Lifetime3, var16Lifetime2);
-            var18Lifetime3 = this.a((byte) 20, var28[0], this.field_Hb[4], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportSectionHeading(param6, var28[0], StripedProgressWidget.field_D, var16Lifetime2, 119, var18Lifetime3);
+            var18Lifetime3 = this.appendReportOption((byte) 96, var28[0], this.field_Hb[6], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportOption((byte) 10, var28[0], this.field_Hb[9], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportOption((byte) -124, var28[0], this.field_Hb[5], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportOption((byte) -123, var28[0], this.field_Hb[7], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportOption((byte) -38, var28[0], this.field_Hb[15], var18Lifetime3, var16Lifetime2);
+            var18Lifetime3 = this.appendReportOption((byte) 20, var28[0], this.field_Hb[4], var18Lifetime3, var16Lifetime2);
             if (var17Lifetime5 < var18Lifetime3) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, var28[1], tq.field_k, var16Lifetime2, -49, var18Lifetime4);
-            var18Lifetime4 = this.a((byte) -16, var28[1], this.field_Hb[16], var18Lifetime4, var16Lifetime2);
-            var18Lifetime4 = this.a((byte) -126, var28[1], this.field_Hb[17], var18Lifetime4, var16Lifetime2);
-            var18Lifetime4 = this.a((byte) 115, var28[1], this.field_Hb[18], var18Lifetime4, var16Lifetime2);
-            var18Lifetime4 = this.a((byte) -124, var28[1], this.field_Hb[19], var18Lifetime4, var16Lifetime2);
-            var18Lifetime4 = this.a((byte) -124, var28[1], this.field_Hb[20], var18Lifetime4, var16Lifetime2);
+            var18Lifetime4 = this.appendReportSectionHeading(param6, var28[1], tq.field_k, var16Lifetime2, -49, var18Lifetime4);
+            var18Lifetime4 = this.appendReportOption((byte) -16, var28[1], this.field_Hb[16], var18Lifetime4, var16Lifetime2);
+            var18Lifetime4 = this.appendReportOption((byte) -126, var28[1], this.field_Hb[17], var18Lifetime4, var16Lifetime2);
+            var18Lifetime4 = this.appendReportOption((byte) 115, var28[1], this.field_Hb[18], var18Lifetime4, var16Lifetime2);
+            var18Lifetime4 = this.appendReportOption((byte) -124, var28[1], this.field_Hb[19], var18Lifetime4, var16Lifetime2);
+            var18Lifetime4 = this.appendReportOption((byte) -124, var28[1], this.field_Hb[20], var18Lifetime4, var16Lifetime2);
             if (var18Lifetime4 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, var28[2], GzipInflater.field_a, var16Lifetime2, 114, var18Lifetime5);
-            var18Lifetime5 = this.a((byte) -125, var28[2], this.field_Hb[13], var18Lifetime5, var16Lifetime2);
-            var18Lifetime5 = this.a((byte) -126, var28[2], this.field_Hb[21], var18Lifetime5, var16Lifetime2);
-            var18Lifetime5 = this.a((byte) -123, var28[2], this.field_Hb[11], var18Lifetime5, var16Lifetime2);
+            var18Lifetime5 = this.appendReportSectionHeading(param6, var28[2], GzipInflater.field_a, var16Lifetime2, 114, var18Lifetime5);
+            var18Lifetime5 = this.appendReportOption((byte) -125, var28[2], this.field_Hb[13], var18Lifetime5, var16Lifetime2);
+            var18Lifetime5 = this.appendReportOption((byte) -126, var28[2], this.field_Hb[21], var18Lifetime5, var16Lifetime2);
+            var18Lifetime5 = this.appendReportOption((byte) -123, var28[2], this.field_Hb[11], var18Lifetime5, var16Lifetime2);
             if (var18Lifetime5 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -332,7 +332,7 @@ final class kh extends AnimatedPanel {
         }
     }
 
-    private final int a(AnimatedPanel param0, AnimatedPanel param1, String param2, int param3, int param4, int param5) {
+    private final int appendReportSectionHeading(AnimatedPanel param0, AnimatedPanel param1, String param2, int param3, int param4, int param5) {
         AnimatedPanel var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
@@ -378,7 +378,7 @@ final class kh extends AnimatedPanel {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawClientMenusAndTooltip(boolean param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -388,16 +388,16 @@ final class kh extends AnimatedPanel {
         }
     }
 
-    final static boolean f(byte param0) {
+    final static boolean refreshClientActivityDeadline(byte param0) {
         QuickChatMenu.field_Nb = true;
         if (param0 != -67) {
-          kh.a(false, false);
+          PlayerReportPanel.drawClientMenusAndTooltip(false, false);
         }
         SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(param0 + 14341) + 15000L;
         return SoundPlayback.field_i == 11 ? true : false;
     }
 
-    private final int a(byte param0, AnimatedPanel param1, AnimatedPanel param2, int param3, int param4) {
+    private final int appendReportOption(byte param0, AnimatedPanel param1, AnimatedPanel param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -437,7 +437,7 @@ final class kh extends AnimatedPanel {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean pollReportIdleState(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -451,14 +451,14 @@ final class kh extends AnimatedPanel {
         return true;
     }
 
-    final String g(byte param0) {
+    final String getReportedPlayerName(byte param0) {
         if (param0 != -42) {
           field_Kb = (String) null;
         }
         return this.field_xb.toString();
     }
 
-    final int b(boolean param0, byte param1) {
+    final int pollReportAction(boolean param0, byte param1) {
         int var3 = 0;
         rs stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -503,13 +503,13 @@ final class kh extends AnimatedPanel {
         return this.field_yb;
     }
 
-    final boolean i(int param0) {
+    final boolean isMuteSelected(int param0) {
         int discarded$1 = 0;
         AnimatedPanel var3;
         boolean stackIn_6_0 = false;
         if (param0 > -51) {
           var3 = (AnimatedPanel) null;
-          discarded$1 = this.a((byte) 10, (AnimatedPanel) null, (AnimatedPanel) null, -105, 9);
+          discarded$1 = this.appendReportOption((byte) 10, (AnimatedPanel) null, (AnimatedPanel) null, -105, 9);
         }
         stackIn_6_0 = (null != this.field_zb) && (this.field_zb.field_bb);
         return stackIn_6_0;

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ProxyAuthenticationRequiredException extends IOException {
-    static jp field_e;
+    static SocialNameInputPanel field_e;
     static ArchiveSourceManager field_c;
     static String field_f;
     static boolean field_b;

@@ -186,7 +186,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new MenuList(0, 0, 182, kb.field_y.field_o + 4);
+          var8 = new MenuList(0, 0, 182, GradientMenuLabel.field_y.field_o + 4);
           var5 = new uc(0, var8.field_i / 2 - 3, param3, 6, 0, param2.field_k);
           var8.addChild(var5, 8);
           if (param1 != -30577) {

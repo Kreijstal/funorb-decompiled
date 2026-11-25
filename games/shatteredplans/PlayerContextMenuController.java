@@ -134,7 +134,7 @@ final class PlayerContextMenuController {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new PlayerReportPanel(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
         return true;
     }
 

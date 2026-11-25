@@ -107,26 +107,26 @@ abstract class ArchiveSource {
         if (param0 > -63) {
           String var2 = (String) null;
           ArchiveSource.a(-68, (byte) 83, (String) null);
-          if (js.field_j == -ClientContextMenuSupport.field_c + 0) {
-            js.field_j = js.field_j + 1;
+          if (LobbyOptionSupport.field_j == -ClientContextMenuSupport.field_c + 0) {
+            LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
             return;
           }
-          if (250 - ClientContextMenuSupport.field_c != js.field_j) {
-            js.field_j = js.field_j + 1;
+          if (250 - ClientContextMenuSupport.field_c != LobbyOptionSupport.field_j) {
+            LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
             return;
           }
-          js.field_j = js.field_j + 1;
+          LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
           return;
         }
-        if (js.field_j == -ClientContextMenuSupport.field_c + 0) {
-          js.field_j = js.field_j + 1;
+        if (LobbyOptionSupport.field_j == -ClientContextMenuSupport.field_c + 0) {
+          LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
           return;
         }
-        if (250 - ClientContextMenuSupport.field_c != js.field_j) {
-          js.field_j = js.field_j + 1;
+        if (250 - ClientContextMenuSupport.field_c != LobbyOptionSupport.field_j) {
+          LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
           return;
         }
-        js.field_j = js.field_j + 1;
+        LobbyOptionSupport.field_j = LobbyOptionSupport.field_j + 1;
     }
 
     public static void clearStatics(boolean param0) {

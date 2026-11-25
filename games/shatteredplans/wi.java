@@ -46,12 +46,12 @@ final class wi {
 
     final static void a(int param0, byte param1, v param2, int param3, v param4, int param5) {
         try {
-          js.field_g = param5;
-          js.field_e = param0;
+          LobbyOptionSupport.field_g = param5;
+          LobbyOptionSupport.field_e = param0;
           UniformNineSliceFactory.field_e = param4;
           uo.field_g = param3;
           int var6_int = -121 % ((-57 - param1) / 48);
-          jp.field_Cb = param2;
+          SocialNameInputPanel.field_Cb = param2;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wi.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

@@ -105,21 +105,21 @@ final class ClientException extends RuntimeException {
             var7 = or.a(stackIn_13_0, var6, true);
             var8 = WeightedLruCache.field_e - (var7 >> 1);
             if (var4 >= 0) {
-              var2 = var2 + js.field_e;
+              var2 = var2 + LobbyOptionSupport.field_e;
               if (AccountStatusDialog.field_nb.field_c != var4) {
                 stackIn_17_0 = UniformNineSliceFactory.field_e;
               } else {
-                stackIn_17_0 = jp.field_Cb;
+                stackIn_17_0 = SocialNameInputPanel.field_Cb;
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((uo.field_g << 1) + vh.field_b, -js.field_g + var8, var2, var7 + (js.field_g << 1), -103);
+                var9.a((uo.field_g << 1) + vh.field_b, -LobbyOptionSupport.field_g + var8, var2, var7 + (LobbyOptionSupport.field_g << 1), -103);
               }
               var2 = var2 + uo.field_g;
             }
             if (var4 >= 0) {
               MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
-              var2 = var2 + (vh.field_b + js.field_e + uo.field_g);
+              var2 = var2 + (vh.field_b + LobbyOptionSupport.field_e + uo.field_g);
             } else {
               lq.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
               var2 = var2 + MenuButton.field_A;

@@ -23,7 +23,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         try {
           AgeValidator.field_n.field_z = param3;
           if (ProductionContent.field_h == 2) {
-            DirectByteArrayStorage.field_l.field_z = kh.field_Kb;
+            DirectByteArrayStorage.field_l.field_z = PlayerReportPanel.field_Kb;
           } else {
             DirectByteArrayStorage.field_l.field_z = StellarBombEvent.field_m;
           }

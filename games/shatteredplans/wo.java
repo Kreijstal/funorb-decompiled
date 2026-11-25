@@ -37,7 +37,7 @@ final class wo {
             if (100 <= param0 &&
               param0 <= 105) {
               var8 = param2;
-              jp.a(var8, false);
+              SocialNameInputPanel.updateAccountNameSuggestions(var8, false);
               ProjectsWindowSupport.field_a = DialogRoot.a(param2, (byte) -89);
               return;
             }
@@ -45,10 +45,10 @@ final class wo {
             return;
           }
           stackIn_6_0 = 93;
-          stackIn_7_1 = !(jm.field_t >= 13);
+          stackIn_7_1 = !(AlternateLoginCredentials.field_t >= 13);
           ProjectsWindowSupport.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
-          jp.a((String[]) null, false);
+          SocialNameInputPanel.updateAccountNameSuggestions((String[]) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

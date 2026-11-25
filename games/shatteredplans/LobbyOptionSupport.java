@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class js {
+final class LobbyOptionSupport {
     static ld field_c;
     static int field_d;
     static int field_g;
@@ -13,14 +13,14 @@ final class js {
     static sq[] field_b;
     static int field_e;
 
-    final static void a(int param0, int param1) {
+    final static void setSoundEffectVolume(int param0, int param1) {
         SoundPlayback var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         SoundPlayback var2Lifetime1;
         try {
           CheckboxPainter.field_p = param0;
           if (param1 != 197126152) {
-            js.b((byte) -92);
+            LobbyOptionSupport.getFriendListContent((byte) -92);
           }
           var2 = (SoundPlayback) (ProgressDialog.field_ab.startForward(0));
           while (var2 != null) {
@@ -59,7 +59,7 @@ final class js {
           var3_int = 0;
           if (param2 < 3) {
             var5 = (LobbyRoomEntry) null;
-            js.a(-8, 21, (LobbyRoomEntry) null, -124, 16, false, 64, -69);
+            LobbyOptionSupport.evaluateRoomOptionCombinations(-8, 21, (LobbyRoomEntry) null, -124, 16, false, 64, -69);
           }
           while (param1 > 0) {
             var3_int = var3_int << 1 | 1 & param0;
@@ -75,7 +75,7 @@ final class js {
         }
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean hasStatusButtonSetting(int param0, java.applet.Applet param1) {
         try {
           int var6 = 0;
           int var2_int = 0;
@@ -133,7 +133,7 @@ final class js {
         }
     }
 
-    final static AnimatedPanel b(byte param0) {
+    final static AnimatedPanel getFriendListContent(byte param0) {
         if (param0 != 121) {
           return (AnimatedPanel) null;
         }
@@ -148,7 +148,7 @@ final class js {
         param0 = param0 | param0 >>> 8;
         param0 = param0 | param0 >>> 16;
         if (param1 != 122) {
-          js.clearStatics((byte) -124);
+          LobbyOptionSupport.clearStatics((byte) -124);
         }
         return param0 + 1;
     }
@@ -165,7 +165,7 @@ final class js {
         field_i = null;
     }
 
-    final static void a(int param0, int param1, LobbyRoomEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
+    final static void evaluateRoomOptionCombinations(int param0, int param1, LobbyRoomEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
         sg[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_25_0 = 0;
@@ -197,7 +197,7 @@ final class js {
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != 1) {
-            js.a(106, 32);
+            LobbyOptionSupport.setSoundEffectVolume(106, 32);
           }
           if (param3 <= param0) {
             var8_int = 1;
@@ -313,7 +313,7 @@ final class js {
                 } else {
                   lr.field_c[param0] = (byte)var11;
                 }
-                js.a(param0 + 1, param1 ^ 0, param2, param3, param4, param5, param6, param7);
+                LobbyOptionSupport.evaluateRoomOptionCombinations(param0 + 1, param1 ^ 0, param2, param3, param4, param5, param6, param7);
                 if (wg.field_d) {
                   return;
                 }
@@ -351,7 +351,7 @@ final class js {
               }
             }
             if (var12 != 0) {
-              js.a(1 + param0, 1, param2, param3, param4, param5, param6, param7);
+              LobbyOptionSupport.evaluateRoomOptionCombinations(1 + param0, 1, param2, param3, param4, param5, param6, param7);
               var10_intLifetime1 = 1;
             }
             if (wg.field_d) {
@@ -374,7 +374,7 @@ final class js {
         }
     }
 
-    final static void a(byte param0) {
+    final static void commitTutorialSceneTransition(byte param0) {
         int var2 = 0;
         String[] var1 = null;
         String var3 = null;
@@ -395,7 +395,7 @@ final class js {
           SliderWidget.field_L = false;
           AchievementProgress.field_k = false;
           if (param0 != -10) {
-            js.a((byte) 43);
+            LobbyOptionSupport.commitTutorialSceneTransition((byte) 43);
           }
           GameClientShell.field_u = false;
           BufferedCacheFile.field_m = 0;

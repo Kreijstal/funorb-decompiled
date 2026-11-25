@@ -96,7 +96,7 @@ final class LoginRequestSupport {
             fieldTemp$0 = BufferedCacheFile.field_m + 1;
             BufferedCacheFile.field_m = BufferedCacheFile.field_m + 1;
             if (fieldTemp$0 >= 32) {
-              js.a((byte) -10);
+              LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
             }
           }
           if (param0) {
@@ -144,14 +144,14 @@ final class LoginRequestSupport {
                 ImageProducerRasterBuffer.field_i > 0) {
                 fieldTemp$1 = ImageProducerRasterBuffer.field_i - 1;
                 ImageProducerRasterBuffer.field_i = ImageProducerRasterBuffer.field_i - 1;
-                var2 = js.field_b[fieldTemp$1];
+                var2 = LobbyOptionSupport.field_b[fieldTemp$1];
               }
               if (!ArchiveConnectionRetrySupport.field_b) {
                 MenuList.a(1546006977, var2);
                 return;
               }
               ArchiveConnectionRetrySupport.field_b = false;
-              var3 = js.field_b[ImageProducerRasterBuffer.field_i];
+              var3 = LobbyOptionSupport.field_b[ImageProducerRasterBuffer.field_i];
               if (var3 != null &&
                 var3 != WeightedLruCache.field_g) {
                 MenuList.a(1546006977, var3);
@@ -194,16 +194,16 @@ final class LoginRequestSupport {
           }
           ProgressDialog.field_cb.writeShort(param0, 255);
           param4.write(ProgressDialog.field_cb, (byte) 118);
-          js.field_f.position = 0;
+          LobbyOptionSupport.field_f.position = 0;
           if (param1) {
-            js.field_f.writeByte(18, (byte) -106);
+            LobbyOptionSupport.field_f.writeByte(18, (byte) -106);
           } else {
-            js.field_f.writeByte(16, (byte) -89);
+            LobbyOptionSupport.field_f.writeByte(16, (byte) -89);
           }
-          js.field_f.position = js.field_f.position + 2;
-          var5_int = js.field_f.position;
-          js.field_f.writeInt(11135, AccountFieldValue.field_b);
-          js.field_f.writeLong(-16426, BytePayloadNode.field_l);
+          LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 2;
+          var5_int = LobbyOptionSupport.field_f.position;
+          LobbyOptionSupport.field_f.writeInt(11135, AccountFieldValue.field_b);
+          LobbyOptionSupport.field_f.writeLong(-16426, BytePayloadNode.field_l);
           var6 = 0;
           if (DualLinkDeque.field_b) {
             var6 = var6 | 1;
@@ -217,17 +217,17 @@ final class LoginRequestSupport {
           if (DraggableWidget.field_H != null) {
             var6 = var6 | 16;
           }
-          js.field_f.writeByte(var6, (byte) -93);
+          LobbyOptionSupport.field_f.writeByte(var6, (byte) -93);
           var7 = GameAssetSetupSupport.readSettingsCookie((byte) 70, GameScreen.getHostApplet((byte) 125));
           if (var7 == null) {
             var7 = "";
           }
-          js.field_f.writeString(var7, (byte) 0);
+          LobbyOptionSupport.field_f.writeString(var7, (byte) 0);
           if (DraggableWidget.field_H != null) {
-            js.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
+            LobbyOptionSupport.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
           }
-          GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
-          js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);
+          GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+          LobbyOptionSupport.field_f.patchLengthShort(-549342136, LobbyOptionSupport.field_f.position - var5_int);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

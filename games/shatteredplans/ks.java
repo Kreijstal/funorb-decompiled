@@ -37,7 +37,7 @@ final class ks {
               return true;
             }
             if (WeightedLruCache.field_g != PanelNode.field_q) {
-              js.a((byte) -10);
+              LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
               }
@@ -67,7 +67,7 @@ final class ks {
                 return true;
               }
               if (WeightedLruCache.field_g != PanelNode.field_q) {
-                js.a((byte) -10);
+                LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
                   return true;
@@ -100,7 +100,7 @@ final class ks {
                 return true;
               }
               if (WeightedLruCache.field_g != PanelNode.field_q) {
-                js.a((byte) -10);
+                LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
                   return true;
@@ -127,7 +127,7 @@ final class ks {
               return true;
             }
             if (WeightedLruCache.field_g != PanelNode.field_q) {
-              js.a((byte) -10);
+              LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
                 return true;

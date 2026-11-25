@@ -1411,7 +1411,7 @@ final class TaskAi implements Ai {
               return stackIn_66_0;
             }
             for (var12Lifetime1 = 0; this.field_m.field_g.field_e.length > var12Lifetime1; var12Lifetime1++) {
-              if (jf.field_e[var12Lifetime1] &&
+              if (SettingsCookieSupport.field_e[var12Lifetime1] &&
                 oe.field_g[var4_int][var12Lifetime1] <= var10[var12Lifetime1]) {
                 var11--;
               }
@@ -1657,7 +1657,7 @@ final class TaskAi implements Ai {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_11_0 = jf.floorMod(param0, var4, -102);
+          stackIn_11_0 = SettingsCookieSupport.floorMod(param0, var4, -102);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2070,7 +2070,7 @@ final class TaskAi implements Ai {
           var8 = (AttackTask) null;
           this.performAttackTask((byte) 68, (AttackTask) null, false);
         }
-        jf.field_e = new boolean[this.field_m.field_g.field_e.length];
+        SettingsCookieSupport.field_e = new boolean[this.field_m.field_g.field_e.length];
         for (var2 = 0; var2 < oe.field_g.length; var2++) {
           oe.field_g[var2] = this.b(this.field_m.field_v[var2], -97);
         }
@@ -2092,13 +2092,13 @@ final class TaskAi implements Ai {
                 }
                 break;
               }
-              jf.field_e[var4] = var5 != 0;
+              SettingsCookieSupport.field_e[var4] = var5 != 0;
               if ((var5 != 0)) {
                 var3++;
               }
               break regionExit1;
             }
-            jf.field_e[var4] = false;
+            SettingsCookieSupport.field_e[var4] = false;
           }
         }
         for (var4Lifetime1 = 0; this.field_m.field_r > var4Lifetime1; var4Lifetime1++) {

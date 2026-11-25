@@ -242,7 +242,7 @@ final class IntrusiveDequeCursor {
                   return;
                 }
                 stackIn_106_0 = (param1) && (VictoryChecker.a(119));
-                kh.a(stackIn_106_0, false);
+                PlayerReportPanel.drawClientMenusAndTooltip(stackIn_106_0, false);
               }
             }
             return;
@@ -264,7 +264,7 @@ final class IntrusiveDequeCursor {
                 return;
               }
               stackIn_86_0 = (param1) && (VictoryChecker.a(119));
-              kh.a(stackIn_86_0, false);
+              PlayerReportPanel.drawClientMenusAndTooltip(stackIn_86_0, false);
             }
           }
           return;
@@ -294,7 +294,7 @@ final class IntrusiveDequeCursor {
               return;
             }
             stackIn_27_0 = (param1) && (VictoryChecker.a(119));
-            kh.a(stackIn_27_0, false);
+            PlayerReportPanel.drawClientMenusAndTooltip(stackIn_27_0, false);
           }
           return;
         }
@@ -314,7 +314,7 @@ final class IntrusiveDequeCursor {
               return;
             }
             stackIn_46_0 = (param1) && (VictoryChecker.a(119));
-            kh.a(stackIn_46_0, false);
+            PlayerReportPanel.drawClientMenusAndTooltip(stackIn_46_0, false);
           }
           return;
         }
@@ -327,7 +327,7 @@ final class IntrusiveDequeCursor {
             return;
           }
           stackIn_63_0 = (param1) && (VictoryChecker.a(119));
-          kh.a(stackIn_63_0, false);
+          PlayerReportPanel.drawClientMenusAndTooltip(stackIn_63_0, false);
         }
     }
 

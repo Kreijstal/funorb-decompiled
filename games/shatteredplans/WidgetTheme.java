@@ -434,7 +434,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           var8.unlink((byte) -76);
           var8.unlinkSecondary(16);
           UrlLoader.field_c = UrlLoader.field_c - 1;
-          var9 = js.field_f;
+          var9 = LobbyOptionSupport.field_f;
           var9.h(param1, 255);
           var9.position = var9.position + 1;
           if (param0 > -71) {

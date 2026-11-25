@@ -248,7 +248,7 @@ final class IntrusiveNodeHashTable {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = js.field_f;
+        CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.h(param0, 255);
         var2.position = var2.position + 1;
         int var3 = var2.position;

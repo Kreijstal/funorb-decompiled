@@ -67,7 +67,7 @@ final class ProjectsContent implements MenuContent {
         }
         DerelictMapGenerator.c(-113);
         DialogRoot.field_G = null;
-        jp.g((byte) 122);
+        SocialNameInputPanel.closeQuickChatMenus((byte) 122);
     }
 
     public ProjectsContent() {

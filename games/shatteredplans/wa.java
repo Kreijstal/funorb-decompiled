@@ -38,7 +38,7 @@ final class wa {
     final static void a(byte param0, boolean param1, boolean param2) {
         int var3 = 123 / ((param0 - 33) / 54);
         String var4 = (String) null;
-        jm.$cfr$intArgs$a$88c6728ee5b1((String) null, param2, -110, param1);
+        AlternateLoginCredentials.openLoginFormFullInts((String) null, param2, -110, param1);
     }
 
     public static void clearStatics(int param0) {

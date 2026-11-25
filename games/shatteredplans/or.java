@@ -55,7 +55,7 @@ final class or {
         if (param0 != 250) {
           return false;
         }
-        return 250 < js.field_j ? true : false;
+        return 250 < LobbyOptionSupport.field_j ? true : false;
     }
 
     static {

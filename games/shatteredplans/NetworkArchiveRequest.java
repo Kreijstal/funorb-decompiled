@@ -57,7 +57,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (param2 == -2) {
-          var3 = js.field_f;
+          var3 = LobbyOptionSupport.field_f;
           var3.h(param0, 255);
           var3.writeByte(3, (byte) -71);
           var3.writeByte(9, (byte) -110);
@@ -65,7 +65,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           return;
         }
         NetworkArchiveRequest.d(false);
-        var3Lifetime1 = js.field_f;
+        var3Lifetime1 = LobbyOptionSupport.field_f;
         var3Lifetime1.h(param0, 255);
         var3Lifetime1.writeByte(3, (byte) -71);
         var3Lifetime1.writeByte(9, (byte) -110);
@@ -99,7 +99,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           stackIn_12_1 = !(param2);
           nd.field_k = DateInputWidget.a((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);
           IntroTextLine.field_k = param0;
-          var6 = AccountNoticeDialog.a(param3, (byte) -112, nl.field_d, ValidationIndicator.field_I, kh.field_Nb);
+          var6 = AccountNoticeDialog.a(param3, (byte) -112, nl.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
           CipherPacketBuffer.a(0, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

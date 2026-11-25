@@ -24,7 +24,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           ql.field_q = 0;
           ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
-          kh.field_Lb = true;
+          PlayerReportPanel.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           ql.field_q = 0;
           ClientContextMenuSupport.field_f = param0.getX();
           AllianceExpiredEvent.field_i = param0.getY();
-          kh.field_Lb = true;
+          PlayerReportPanel.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ql.field_q = 0;
             ClientContextMenuSupport.field_f = param0.getX();
             AllianceExpiredEvent.field_i = param0.getY();
-            kh.field_Lb = true;
+            PlayerReportPanel.field_Lb = true;
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ed.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -261,7 +261,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           ql.field_q = 0;
           ClientContextMenuSupport.field_f = -1;
           AllianceExpiredEvent.field_i = -1;
-          kh.field_Lb = true;
+          PlayerReportPanel.field_Lb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,7 +288,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != TertiaryListSequence.field_j) {
             ql.field_q = 0;
             v.field_d = 0;
-            kh.field_Lb = true;
+            PlayerReportPanel.field_Lb = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
             }
@@ -337,7 +337,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               v.field_d = 1;
             }
             var2_int = param0.getModifiers();
-            kh.field_Lb = true;
+            PlayerReportPanel.field_Lb = true;
             if ((var2_int & 16) == 0) {
             }
             if ((var2_int & 4) == 0) {

@@ -337,15 +337,15 @@ final class QuaternaryListSequence extends NodeSequence {
         ProgressDialog.field_cb.writeByte(param1, (byte) -123);
         ProgressDialog.field_cb.writeShort(param0, 255);
         ProgressDialog.field_cb.rsaEncrypt(ResizingDialog.field_V, ChatPanelLayoutSupport.field_a, (byte) -56);
-        js.field_f.h(18, param2 + 251);
-        int fieldTemp$0 = js.field_f.position + 1;
-        js.field_f.position = js.field_f.position + 1;
+        LobbyOptionSupport.field_f.h(18, param2 + 251);
+        int fieldTemp$0 = LobbyOptionSupport.field_f.position + 1;
+        LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 1;
         int var4 = fieldTemp$0;
-        js.field_f.writeBytes(0, ProgressDialog.field_cb.position, ProgressDialog.field_cb.payload, 22186);
+        LobbyOptionSupport.field_f.writeBytes(0, ProgressDialog.field_cb.position, ProgressDialog.field_cb.payload, 22186);
         if (param2 != 4) {
           return;
         }
-        js.field_f.patchLengthByte(-var4 + js.field_f.position, (byte) 118);
+        LobbyOptionSupport.field_f.patchLengthByte(-var4 + LobbyOptionSupport.field_f.position, (byte) 118);
     }
 
     public static void clearStatics(int param0) {

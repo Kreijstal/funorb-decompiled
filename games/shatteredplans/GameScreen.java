@@ -591,7 +591,7 @@ final class GameScreen {
             return;
           }
           if (this.field_s.field_W &&
-            kb.field_x < 6) {
+            GradientMenuLabel.field_x < 6) {
             return;
           }
           var3 = (ListContent) (this.field_J.field_x);
@@ -1335,7 +1335,7 @@ final class GameScreen {
               SoftwareRasterizer.restoreClip(var8_array);
               break;
             }
-            var24.a(127);
+            var24.drawComponent(127);
             var24 = (MenuComponent) (this.field_B.nextForward((byte) -71));
           } while (var40 == 0);
           if (this.field_r != null &&
@@ -2157,7 +2157,7 @@ final class GameScreen {
             }
             this.field_Z = var7;
           }
-          if (kb.field_x == 7) {
+          if (GradientMenuLabel.field_x == 7) {
             this.field_s.field_P.field_x = (VictoryChecker) ((Object) new TutorialVictoryChecker(param0));
             this.field_s.field_P.field_x.showResults((byte) -24, this.field_s.field_P, this);
           }
@@ -2249,7 +2249,7 @@ final class GameScreen {
           var2_intLifetime1 = 0 / ((param0 - 78) / 41);
           if (this.field_s.field_W &&
             ListContent.field_g) {
-            kb.field_w.draw(this.field_bb.field_k - 10, this.field_bb.field_t - 10);
+            GradientMenuLabel.field_w.draw(this.field_bb.field_k - 10, this.field_bb.field_t - 10);
           }
           var3 = (MenuComponent) (this.field_y.startReverse(3725));
           boolean decompiledNaturalLoopExit1 = false;
@@ -2259,7 +2259,7 @@ final class GameScreen {
             stackIn_38_0 = stackOut_37_0;
             if (var12 == 0) {
               if (!stackIn_38_0) {
-                var3.a(121);
+                var3.drawComponent(121);
               }
               var3 = (MenuComponent) (this.field_y.nextReverse(-125));
               continue;
@@ -2331,7 +2331,7 @@ final class GameScreen {
             stackIn_108_0 = stackOut_107_0;
             if (var12 == 0) {
               if (stackIn_108_0) {
-                var3.a(123);
+                var3.drawComponent(123);
               }
               var3 = (MenuComponent) (this.field_y.nextReverse(-127));
               continue;
@@ -3685,7 +3685,7 @@ final class GameScreen {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_s.field_W &&
-            6 > kb.field_x) {
+            6 > GradientMenuLabel.field_x) {
             return;
           }
           this.field_J.field_z.unlinkChildren(param0 ^ param0);
@@ -3976,18 +3976,18 @@ final class GameScreen {
               MatchingTextValidator.field_r.bindAsRenderTarget();
               SoftwareRasterizer.b(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
             }
-            kb.field_w.bindAsRenderTarget();
-            SoftwareRasterizer.fillRect(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
+            GradientMenuLabel.field_w.bindAsRenderTarget();
+            SoftwareRasterizer.fillRect(0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w, 0);
             if (ListContent.field_g) {
               rk.field_j.draw(10, 10);
               var5Lifetime1Lifetime1 = SolVictoryChecker.blendColours(0, 16777215, -103, RasterBuffer.field_f);
-              kb.field_w.addOutline(var5Lifetime1Lifetime1);
-              kb.field_w.addOutline(var5Lifetime1Lifetime1);
-              kb.field_w.bindAsRenderTarget();
-              SoftwareRasterizer.b(2, 2, 0, 0, kb.field_w.field_z, kb.field_w.field_w);
+              GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
+              GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
+              GradientMenuLabel.field_w.bindAsRenderTarget();
+              SoftwareRasterizer.b(2, 2, 0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w);
               var6Lifetime1 = 0;
-              while (!(var6Lifetime1 >= kb.field_w.field_B.length)) {
-                kb.field_w.field_B[var6Lifetime1] = 16777215 + we.intAnd(kb.field_w.field_B[var6Lifetime1] << 8, -16777216);
+              while (!(var6Lifetime1 >= GradientMenuLabel.field_w.field_B.length)) {
+                GradientMenuLabel.field_w.field_B[var6Lifetime1] = 16777215 + we.intAnd(GradientMenuLabel.field_w.field_B[var6Lifetime1] << 8, -16777216);
                 var6Lifetime1++;
                 if (var7 != 0) {
                   return;
@@ -4671,7 +4671,7 @@ final class GameScreen {
           }
           if (decompiledFrameCompleted1) {
             if (null != this.field_s.field_n && (!this.field_s.field_W ||
-              !(kb.field_x < 5))) {
+              !(GradientMenuLabel.field_x < 5))) {
               this.field_e.field_z.addChild(MeshMaterial.createHeadingWithDividers(this.field_e.field_z.field_k, 126, this.field_e.field_z.field_y + this.field_e.field_z.field_t), 8);
             }
             stackIn_40_0 = param0;
@@ -5064,7 +5064,7 @@ final class GameScreen {
         this.field_v = true;
         try {
           MatchingTextValidator.field_r = new Sprite(20 + IntValueWriteRequest.field_i.field_o, IntValueWriteRequest.field_i.field_p + 20);
-          kb.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
+          GradientMenuLabel.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
           this.field_y = new IntrusiveDeque();
@@ -5154,9 +5154,9 @@ final class GameScreen {
               if (var6 != 0) {
                 if (stackIn_45_0 > stackIn_45_1) {
                   var4 = this.field_s.field_P.field_v[var3];
-                  jr.a("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-                  jr.a("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
-                  jr.a("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
+                  HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
+                  HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+                  HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
                   var3++;
                   return;
                 }
@@ -5226,12 +5226,12 @@ final class GameScreen {
             this.field_bb.field_s = false;
             this.field_K.field_s = false;
             this.field_V.field_s = false;
-            jr.a("continue", 1904, wm.field_e);
-            jr.a("continue2", 1904, IntValueWriteRequest.field_k);
-            jr.a("continue3", 1904, StatefulWidgetTheme.field_v);
-            jr.a("continuekey", 1904, ul.field_Ob);
-            jr.a("captureAll", 1904, SecondaryNodeHashTable.field_e);
-            jr.a("exit", 1904, sa.field_b);
+            HighscoreQueryRequest.putTextReplacement("continue", 1904, wm.field_e);
+            HighscoreQueryRequest.putTextReplacement("continue2", 1904, IntValueWriteRequest.field_k);
+            HighscoreQueryRequest.putTextReplacement("continue3", 1904, StatefulWidgetTheme.field_v);
+            HighscoreQueryRequest.putTextReplacement("continuekey", 1904, ul.field_Ob);
+            HighscoreQueryRequest.putTextReplacement("captureAll", 1904, SecondaryNodeHashTable.field_e);
+            HighscoreQueryRequest.putTextReplacement("exit", 1904, sa.field_b);
             QuickChatHelpSupport.field_d = this.field_s.field_n;
             var3 = 0;
             while (true) {
@@ -5241,9 +5241,9 @@ final class GameScreen {
                 break;
               }
               var4 = this.field_s.field_P.field_v[var3];
-              jr.a("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-              jr.a("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
-              jr.a("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
+              HighscoreQueryRequest.putTextReplacement("playercol" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
+              HighscoreQueryRequest.putTextReplacement("player" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+              HighscoreQueryRequest.putTextReplacement("playerhome" + var3, 1904, QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
               var3++;
               if (var6 != 0) {
                 return;

@@ -10,7 +10,7 @@ final class ArchiveConnectionRetrySupport {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         ServerIntArrayRequest.field_i = 0;
         AccountCreationDialog.field_Gb = null;
-        js.field_a = null;
+        LobbyOptionSupport.field_a = null;
         if (param0 != -94) {
           ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -54, 83);
         }

@@ -2259,7 +2259,7 @@ final class GameState {
 
     private final void a(Star param0, boolean param1, byte param2) {
         try {
-          kd.a(this.field_o, param1, param0, (byte) -2);
+          QuickChatMenuSupport.updateMinimumGarrison(this.field_o, param1, param0, (byte) -2);
           if (param2 <= 113) {
             BattleEvent var5 = (BattleEvent) null;
             this.a((Star) null, (BattleEvent) null, 39);

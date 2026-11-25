@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DialogRoot extends SingleChildWidget {
-    static kh field_G;
+    static PlayerReportPanel field_G;
     private IntrusiveDeque field_H;
     static String field_D;
     static int field_C;
@@ -67,15 +67,15 @@ final class DialogRoot extends SingleChildWidget {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
         if (param0 <= 118) {
-          field_G = (kh) null;
+          field_G = (PlayerReportPanel) null;
         }
         if (!MusicCrossfadeStream.field_q) {
-          if (js.field_c == null) {
-            js.field_c = IntroTextLine.requestByteArray(6, 109);
+          if (LobbyOptionSupport.field_c == null) {
+            LobbyOptionSupport.field_c = IntroTextLine.requestByteArray(6, 109);
           }
-          if (js.field_c.field_l) {
-            if (js.field_c.field_o != null) {
-              SoundEffectSupport.readClientBytePreference(js.field_c.field_o, (byte) 30);
+          if (LobbyOptionSupport.field_c.field_l) {
+            if (LobbyOptionSupport.field_c.field_o != null) {
+              SoundEffectSupport.readClientBytePreference(LobbyOptionSupport.field_c.field_o, (byte) 30);
             }
             ta.b((byte) -69);
             if (StringNode.field_j == -1) {
@@ -506,7 +506,7 @@ final class DialogRoot extends SingleChildWidget {
 
     final static void j(int param0) {
         TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
-        kh.field_Mb = SoftwareRasterizer.field_b;
+        PlayerReportPanel.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         nm.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);

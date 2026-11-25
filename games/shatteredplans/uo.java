@@ -26,7 +26,7 @@ final class uo {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ByteArrayStorage.field_e.a(kd.field_a, true, oo.field_e, (byte) 0);
+          ByteArrayStorage.field_e.a(QuickChatMenuSupport.field_a, true, oo.field_e, (byte) 0);
           ByteArrayStorage.field_e.updateDialogs(120);
           if (param0 != -75) {
             stackIn_3_0 = -107;
@@ -392,7 +392,7 @@ final class uo {
                       if (n.field_h.field_d.field_zb == 0) {
                         DualLinkDequeSequence.field_k = IntrusiveDequeCursor.field_a;
                       } else {
-                        DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(jr.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
+                        DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(HighscoreQueryRequest.field_l, param0 ^ 4356, new String[]{QuickChatPhraseRegistry.field_c});
                       }
                     }
                   }
@@ -427,7 +427,7 @@ final class uo {
                     if (var12Lifetime2 != 0) {
                       var14 = MusicPatch.field_l + (String) (var11);
                     } else {
-                      var14 = QuickChatCategoryRegistry.a(js.field_h, 4371, new String[]{(String) (var11)});
+                      var14 = QuickChatCategoryRegistry.a(LobbyOptionSupport.field_h, 4371, new String[]{(String) (var11)});
                     }
                   }
                   DualLinkDequeSequence.field_k = "<col=A00000>" + var13_ref + "<br>" + var14;

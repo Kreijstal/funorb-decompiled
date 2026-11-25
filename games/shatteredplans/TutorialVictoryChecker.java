@@ -217,7 +217,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
             }
             return true;
           }
-          if (6 > kb.field_x) {
+          if (6 > GradientMenuLabel.field_x) {
             return false;
           }
           if (param1 < 23) {

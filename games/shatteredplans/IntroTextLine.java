@@ -162,7 +162,7 @@ final class IntroTextLine extends IntrusiveNode {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1_int = Star.field_H.length;
-        kb.field_A = 0;
+        GradientMenuLabel.field_A = 0;
         if (param0) {
           return;
         }
@@ -174,9 +174,9 @@ final class IntroTextLine extends IntrusiveNode {
               var3 += 50;
             }
             DirectByteArrayStorage.field_i[var2] = var3;
-            kb.field_A = kb.field_A + var3;
+            GradientMenuLabel.field_A = GradientMenuLabel.field_A + var3;
           }
-          kb.field_A = kb.field_A - 294;
+          GradientMenuLabel.field_A = GradientMenuLabel.field_A - 294;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hd.B(" + param0 + ')');
         }

@@ -41,7 +41,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
           oq.field_i[11] = te.field_a;
         } else {
           if (PasswordInputPainter.field_x.field_P.field_y == 0) {
-            oq.field_i[11] = kd.field_c;
+            oq.field_i[11] = QuickChatMenuSupport.field_c;
           } else {
             oq.field_i[11] = LobbyRoomControlsSupport.field_a;
           }

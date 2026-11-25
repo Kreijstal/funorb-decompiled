@@ -153,14 +153,14 @@ class TextHotspotWidget extends FocusableWidget {
               wg.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
               var4 = sa.field_a;
               var5 = var4;
-              js.field_f.position = 0;
+              LobbyOptionSupport.field_f.position = 0;
               stackIn_9_0 = (param0) ? -2 : -1;
               IterableNodeHashTable.field_e = stackIn_9_0;
               SliderPainter.field_g = stackIn_9_0;
               TargetedChatMessage.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
-              AccountHandshakeSupport.writeAccountHandshake(WidgetStyle.field_g, PrivateChatMessage.field_o, js.field_f, (byte) 20, uk.field_a);
+              AccountHandshakeSupport.writeAccountHandshake(WidgetStyle.field_g, PrivateChatMessage.field_o, LobbyOptionSupport.field_f, (byte) 20, uk.field_a);
               ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

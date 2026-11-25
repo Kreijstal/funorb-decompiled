@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends TargetedChatMessage {
+final class AlternateLoginCredentials extends TargetedChatMessage {
     static Sprite field_r;
     static String field_s;
     static int field_t;
     static String field_q;
 
-    final static void a(String param0, boolean param1, byte param2, boolean param3) {
+    final static void openLoginForm(String param0, boolean param1, byte param2, boolean param3) {
         try {
           MenuButton.f(-1);
           ByteArrayStorage.field_e.deactivateAll(104);
@@ -31,7 +31,7 @@ final class jm extends TargetedChatMessage {
         }
     }
 
-    jm(long param0, String param1) {
+    AlternateLoginCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -46,7 +46,7 @@ final class jm extends TargetedChatMessage {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
+    final static void openLoginFormFullInts(String param0, boolean param1, int param2, boolean param3) {
         try {
           MenuButton.f(-1);
           ByteArrayStorage.field_e.deactivateAll(104);

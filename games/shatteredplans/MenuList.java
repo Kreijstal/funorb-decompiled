@@ -214,7 +214,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         return var4Lifetime1;
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 64 / ((param0 - 67) / 47);
         if (!this.field_s) {
@@ -225,7 +225,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_m + this.field_k, this.field_t + this.field_i);
         MenuComponent var4 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var4 != null) {
-          var4.a(116);
+          var4.drawComponent(116);
           var4 = (MenuComponent) (this.field_l.nextReverse(-124));
         }
         SoftwareRasterizer.restoreClip(var3);

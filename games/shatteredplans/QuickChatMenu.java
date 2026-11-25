@@ -187,11 +187,11 @@ final class QuickChatMenu extends AnimatedPanel {
               String var8 = (String) null;
               AccountNoticeKind.writeChatMessageRequest(LoginRequestSupport.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
               IntrusiveDequeSequence.a(LoginRequestSupport.field_a, (byte) 123, IntroTextLine.field_k, ProductionContent.field_h, var5);
-              jp.g((byte) 119);
+              SocialNameInputPanel.closeQuickChatMenus((byte) 119);
               GameState.a(-5883);
             } else {
               EmailSyntaxValidator.d(param0 ^ -16705);
-              jp.g((byte) 119);
+              SocialNameInputPanel.closeQuickChatMenus((byte) 119);
             }
           }
         }
@@ -249,7 +249,7 @@ final class QuickChatMenu extends AnimatedPanel {
         }
         if (this.field_Ob == null && this == DerelictMapReader.field_h &&
           var4 != 0) {
-          jp.g((byte) 92);
+          SocialNameInputPanel.closeQuickChatMenus((byte) 92);
           return true;
         }
         int var5 = QuickChatHelpSupport.field_h;

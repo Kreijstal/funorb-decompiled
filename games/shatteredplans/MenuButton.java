@@ -34,7 +34,7 @@ final class MenuButton extends MenuComponent {
         field_y = null;
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         if (!this.field_s) {
           return;
         }

@@ -167,7 +167,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         if (param0 != -1) {
           field_p = -46L;
         }
-        var3 = js.field_j;
+        var3 = LobbyOptionSupport.field_j;
         if (var3 < 5) {
           var2 = 8192 * var3 * var3 / 1100;
         } else {

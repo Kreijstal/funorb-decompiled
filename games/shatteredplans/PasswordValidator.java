@@ -105,11 +105,11 @@ final class PasswordValidator extends TextFieldValidator {
               }
               var6 = SpriteResourceSupport.getChatChannelFilter(-7019, var4_int);
               DerelictMapReader.field_d[var4_int].field_pb = BoundsRect.field_m[var6];
-              n.field_n[var4_int].field_z = jf.field_d[var6];
+              n.field_n[var4_int].field_z = SettingsCookieSupport.field_d[var6];
             }
           }
           if (pr.field_c.field_rb != 0) {
-            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
+            DialogRoot.field_G = new PlayerReportPanel(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
@@ -255,10 +255,10 @@ final class PasswordValidator extends TextFieldValidator {
         int var1 = 0;
         int var1Lifetime1;
         if (224 <= CheckboxPainter.field_p) {
-          js.a(256, 197126152);
+          LobbyOptionSupport.setSoundEffectVolume(256, 197126152);
         } else {
           var1 = CheckboxPainter.field_p % 32;
-          js.a(-var1 + 32 + CheckboxPainter.field_p, 197126152);
+          LobbyOptionSupport.setSoundEffectVolume(-var1 + 32 + CheckboxPainter.field_p, 197126152);
         }
         var1Lifetime1 = -41 % ((param0 - 29) / 57);
     }

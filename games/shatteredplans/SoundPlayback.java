@@ -75,7 +75,7 @@ final class SoundPlayback extends IntrusiveNode {
               InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
             InvalidMapConnectionException.field_f[-3 + var4] = "";
-            InvalidMapConnectionException.field_f[-2 + var4] = jm.field_s;
+            InvalidMapConnectionException.field_f[-2 + var4] = AlternateLoginCredentials.field_s;
             ss.field_a[var4 - 2] = 0;
             ShatteredPlansClient.field_E[0] = 4;
             InvalidMapConnectionException.field_f[var4 - 1] = nf.field_i;
@@ -172,8 +172,8 @@ final class SoundPlayback extends IntrusiveNode {
             }
             TargetedChatMessage.field_o = new String[var4];
             ArrayOperations.copyObjects(TextHotspotWidget.field_K, 0, TargetedChatMessage.field_o, 0, var4);
-            kd.field_b = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
+            QuickChatMenuSupport.field_b = new String[-1 + (var3_int - var4)];
+            ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, QuickChatMenuSupport.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
             var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -196,10 +196,10 @@ final class SoundPlayback extends IntrusiveNode {
               stackIn_37_0 = TertiaryNodeList.field_d.length;
             }
             var5 = stackIn_37_0;
-            if (PanelNode.field_p.length > kd.field_b.length) {
+            if (PanelNode.field_p.length > QuickChatMenuSupport.field_b.length) {
               stackIn_40_0 = PanelNode.field_p.length;
             } else {
-              stackIn_40_0 = kd.field_b.length;
+              stackIn_40_0 = QuickChatMenuSupport.field_b.length;
             }
             var6 = stackIn_40_0;
             var7 = var6 + var5 + 7;
@@ -266,7 +266,7 @@ final class SoundPlayback extends IntrusiveNode {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = kd.field_b;
+            var4_ref_String__Lifetime1 = QuickChatMenuSupport.field_b;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = QuickChatMenu.a(var13, 0, false);

@@ -21,7 +21,7 @@ final class nl {
         int var8_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        kb var6 = null;
+        GradientMenuLabel var6 = null;
         SpriteButton var7 = null;
         SpriteButton var8 = null;
         SpriteButton var9 = null;
@@ -49,7 +49,7 @@ final class nl {
             param0.field_h[var5Lifetime1] = var11;
             break;
           }
-          var6 = new kb(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.name, 16777215, true);
+          var6 = new GradientMenuLabel(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.name, 16777215, true);
           var11.addChild(var6, param2 ^ 10);
           LoginMethodPreference.buildMenuDividerSprites(-2612, param1.length);
           var7 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 + 3, BattleContribution.a(-1, false));

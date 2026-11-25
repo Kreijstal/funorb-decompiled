@@ -83,24 +83,24 @@ final class ClientPacketFlushSupport {
             if (param1 != 82) {
               return;
             }
-            if (js.field_f.position == 0 &&
+            if (LobbyOptionSupport.field_f.position == 0 &&
               (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
-              js.field_f.h(param0, param1 ^ 173);
+              LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
             }
-            if (js.field_f.position > 0) {
+            if (LobbyOptionSupport.field_f.position > 0) {
               try {
-                wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
+                wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 q.g(-119);
               }
-              js.field_f.position = 0;
+              LobbyOptionSupport.field_f.position = 0;
             }
             return;
           }
-          js.field_f.position = 0;
+          LobbyOptionSupport.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -149,24 +149,24 @@ final class ClientPacketFlushSupport {
             if (param1 != 82) {
               return;
             }
-            if (js.field_f.position == 0 &&
+            if (LobbyOptionSupport.field_f.position == 0 &&
               (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
-              js.field_f.h(param0, param1 ^ 173);
+              LobbyOptionSupport.field_f.h(param0, param1 ^ 173);
             }
-            if (js.field_f.position > 0) {
+            if (LobbyOptionSupport.field_f.position > 0) {
               try {
-                wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
+                wg.field_f.write(LobbyOptionSupport.field_f.position, 0, LobbyOptionSupport.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 q.g(-119);
               }
-              js.field_f.position = 0;
+              LobbyOptionSupport.field_f.position = 0;
             }
             return;
           }
-          js.field_f.position = 0;
+          LobbyOptionSupport.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -392,14 +392,14 @@ class MenuComponent extends IntrusiveNode {
         Archive var4 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = js.field_f;
+          var1 = LobbyOptionSupport.field_f;
           while (ChatCompositionSupport.isNextReflectionCheckReady((byte) -50)) {
             var1.h(8, 255);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             StandardMapGenerator.a(var1, (byte) -128);
-            js.field_f.patchLengthByte(-var2 + var1.position, (byte) 118);
+            LobbyOptionSupport.field_f.patchLengthByte(-var2 + var1.position, (byte) 118);
           }
           if (param0 != 2147483647) {
             var4 = (Archive) null;
@@ -441,7 +441,7 @@ class MenuComponent extends IntrusiveNode {
         }
     }
 
-    void a(int param0) {
+    void drawComponent(int param0) {
         int var2 = 27 / ((param0 - 67) / 47);
     }
 

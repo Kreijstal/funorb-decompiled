@@ -1450,7 +1450,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("esc_cancelprivatemessage", 511);
                 if (var2 != null) {
-                  kh.field_Kb = IterableNodeHashTable.a(var2, 17746);
+                  PlayerReportPanel.field_Kb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("esc_cancelthisline", 511);
                 if (null != var2) {
@@ -1598,7 +1598,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playersdontqualify_selectgametab", 511);
                 if (var2 != null) {
-                  jr.field_l = IterableNodeHashTable.a(var2, 17746);
+                  HighscoreQueryRequest.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_unselectedoptions", 511);
                 if (var2 != null) {
@@ -1606,7 +1606,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleaseselectoption1", 511);
                 if (var2 != null) {
-                  js.field_h = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionSupport.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleaseselectoption2", 511);
                 if (var2 != null) {
@@ -2496,7 +2496,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_soundeffects", 511);
                 if (null != var2) {
-                  kh.field_Db = IterableNodeHashTable.a(var2, 17746);
+                  PlayerReportPanel.field_Db = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_music", 511);
                 if (var2 != null) {
@@ -2580,7 +2580,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("unpacking_soundeffects", 511);
                 if (null != var2) {
-                  jp.field_xb = IterableNodeHashTable.a(var2, 17746);
+                  SocialNameInputPanel.field_xb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_music", 511);
                 if (var2 != null) {
@@ -2798,7 +2798,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("offerdraw", 511);
                 if (null != var2) {
-                  kd.field_c = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenuSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("canceldraw", 511);
                 if (null != var2) {
@@ -3406,7 +3406,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("fs_button_members", 511);
                 if (null != var2) {
-                  jm.field_s = IterableNodeHashTable.a(var2, 17746);
+                  AlternateLoginCredentials.field_s = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_unavailable", 511);
                 if (var2 != null) {

@@ -132,7 +132,7 @@ abstract class ResizingDialog extends Dialog {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        kb.field_v.draw(this.field_x + param0 - 90, 10 + param2);
+        GradientMenuLabel.field_v.draw(this.field_x + param0 - 90, 10 + param2);
         wh.drawHorizontalSpriteStrip(os.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
         wh.drawHorizontalSpriteStrip(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
         var5Lifetime2 = 169;
@@ -189,7 +189,7 @@ abstract class ResizingDialog extends Dialog {
           ResizingDialog.a(-51, true, -46);
         }
         if (ProxyAuthenticationRequiredException.field_e != null) {
-          var3 = ProxyAuthenticationRequiredException.field_e.a((byte) -83, param1);
+          var3 = ProxyAuthenticationRequiredException.field_e.pollNameInput((byte) -83, param1);
           if (var3 != 0) {
             if (var3 == 2 &&
               null != ProxyAuthenticationRequiredException.field_e.field_z &&

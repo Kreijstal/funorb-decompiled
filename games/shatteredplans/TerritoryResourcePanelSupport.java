@@ -55,7 +55,7 @@ final class TerritoryResourcePanelSupport {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         String var4 = null;
-        kb var5 = null;
+        GradientMenuLabel var5 = null;
         FilledMenuPanel var6 = null;
         int var7 = 0;
         SpriteButton var7_ref_ff = null;
@@ -83,7 +83,7 @@ final class TerritoryResourcePanelSupport {
           if (param0 != -76) {
             TerritoryResourcePanelSupport.clearStatics(true);
           }
-          var5 = new kb(0, 0, 209, param2.field_o.field_k, var4Lifetime2, 16777215, false);
+          var5 = new GradientMenuLabel(0, 0, 209, param2.field_o.field_k, var4Lifetime2, 16777215, false);
           var13.addChild(var5, 8);
           for (var6_int = 0; 4 > var6_int; var6_int++) {
             var7_ref_ff = new SpriteButton(40 + var6_int * (5 + Player.field_a[var6_int].field_z), var5.field_i + 7, Player.field_a[var6_int]);

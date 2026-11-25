@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends MenuComponent {
+final class GradientMenuLabel extends MenuComponent {
     private int field_D;
     private boolean field_B;
     private int field_u;
@@ -13,7 +13,7 @@ final class kb extends MenuComponent {
     static Sprite field_y;
     static ArgbSprite field_w;
 
-    final static void f(int param0) {
+    final static void readLocalPlayerName(int param0) {
         Star.field_o = sa.field_a.readString(-1);
         if (param0 >= -82) {
           return;
@@ -22,7 +22,7 @@ final class kb extends MenuComponent {
         ArchiveIndex.field_d = DateInputWidget.a(var2, true);
     }
 
-    kb(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
+    GradientMenuLabel(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
         super(param0, param1, param2, rs.field_Cb.field_J);
         int var9 = 0;
         int var11 = 0;
@@ -65,7 +65,7 @@ final class kb extends MenuComponent {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3, String param4) {
+    final static void showAccountChoiceMenu(boolean param0, boolean param1, boolean param2, int param3, String param4) {
         String stackIn_7_0 = null;
         boolean stackIn_29_0 = false;
         int stackIn_40_0 = 0;
@@ -93,7 +93,7 @@ final class kb extends MenuComponent {
           if (param2) {
             stackIn_7_0 = lq.field_p;
           } else {
-            stackIn_7_0 = jm.field_s;
+            stackIn_7_0 = AlternateLoginCredentials.field_s;
           }
           var6 = stackIn_7_0;
           if (Bzip2State.field_r == 0) {
@@ -141,7 +141,7 @@ final class kb extends MenuComponent {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
             var9Lifetime1 = or.a(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
             if (pr.field_d[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + 2 * js.field_g;
+              var9Lifetime1 = var9Lifetime1 + 2 * LobbyOptionSupport.field_g;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
@@ -149,7 +149,7 @@ final class kb extends MenuComponent {
           }
           ValidationMessageWidget.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
-          DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
+          DiskCacheWorker.field_b = (LobbyOptionSupport.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
@@ -178,17 +178,17 @@ final class kb extends MenuComponent {
 
     public static void clearStatics(boolean param0) {
         if (!param0) {
-          kb.f(-97);
+          GradientMenuLabel.readLocalPlayerName(-97);
         }
         field_w = null;
         field_v = null;
         field_y = null;
     }
 
-    final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = js.field_f;
+    final static void writeChatFilterSettings(int param0, int param1) {
+        CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         if (param0 <= 54) {
-          kb.f(112);
+          GradientMenuLabel.readLocalPlayerName(112);
         }
         var2.h(param1, 255);
         var2.writeByte(2, (byte) -59);
@@ -196,7 +196,7 @@ final class kb extends MenuComponent {
         var2.writeByte(DerelictMapReader.a(0), (byte) -76);
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         if (!this.field_s) {
           return;
         }

@@ -334,7 +334,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           RuntimeException var15_ref = null;
           try {
             sa.field_a = new CipherPacketBuffer(param4);
-            js.field_f = new CipherPacketBuffer(param2);
+            LobbyOptionSupport.field_f = new CipherPacketBuffer(param2);
             StandardAi.field_a = param6;
             PrivateChatMessage.field_o = param7;
             of.field_f = param3;

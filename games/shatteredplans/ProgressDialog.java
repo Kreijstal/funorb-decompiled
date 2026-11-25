@@ -468,7 +468,7 @@ final class ProgressDialog extends ResizingDialog {
 
     final static void f(boolean param0) {
         if (QuickChatCategoryDefinition.field_t) {
-          jp.g((byte) 118);
+          SocialNameInputPanel.closeQuickChatMenus((byte) 118);
         }
         if (param0) {
           field_kb = (String) null;

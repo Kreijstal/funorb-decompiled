@@ -220,11 +220,11 @@ final class nf {
         int var3Lifetime1;
         int var3Lifetime2;
         if (null != DialogRoot.field_G) {
-          var3 = DialogRoot.field_G.b(param2, (byte) -68);
+          var3 = DialogRoot.field_G.pollReportAction(param2, (byte) -68);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = DialogRoot.field_G.i(-86) ? 1 : 0;
-              LobbyRoomControlsSupport.writePlayerReportRequest(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.g((byte) -42), var3);
+              var4 = DialogRoot.field_G.isMuteSelected(-86) ? 1 : 0;
+              LobbyRoomControlsSupport.writePlayerReportRequest(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.getReportedPlayerName((byte) -42), var3);
             }
             DialogRoot.field_G = null;
             LeaderboardSortSupport.clearActiveContextMenu(3);

@@ -2363,7 +2363,7 @@ class StandardAi implements Ai {
           this.field_b = new int[this.field_g.field_r];
           this.field_c = new int[this.field_g.field_r];
           this.field_k = -1;
-          kd.a(23299, this.field_o);
+          QuickChatMenuSupport.ensureAiPlayerCapacity(23299, this.field_o);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

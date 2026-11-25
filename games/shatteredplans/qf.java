@@ -24,7 +24,7 @@ final class qf {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (DerelictVictoryChecker.field_m == null) {
           if (DialogRoot.field_G != null &&
-            DialogRoot.field_G.h(0)) {
+            DialogRoot.field_G.pollReportIdleState(0)) {
             DialogRoot.field_G = null;
             LeaderboardSortSupport.clearActiveContextMenu(3);
             return true;
@@ -56,7 +56,7 @@ final class qf {
           }
           return false;
         }
-        if (DialogRoot.field_G.h(0)) {
+        if (DialogRoot.field_G.pollReportIdleState(0)) {
           DialogRoot.field_G = null;
           LeaderboardSortSupport.clearActiveContextMenu(3);
           return true;

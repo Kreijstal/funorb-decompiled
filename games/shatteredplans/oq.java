@@ -62,7 +62,7 @@ final class oq {
     }
 
     final static void a(int param0, boolean param1) {
-        CipherPacketBuffer var2 = js.field_f;
+        CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         if (param1) {
           return;
         }

@@ -868,7 +868,7 @@ final class GameSession implements AiHost {
               this.b(false);
               this.a((byte) 96, var4, var3);
               if (~var5 != ~this.field_P.computeChecksum(-28824)) {
-                var9 = js.field_f;
+                var9 = LobbyOptionSupport.field_f;
                 var9.h(66, param0 ^ 14680);
                 var9.position = var9.position + 2;
                 var10 = var9.position;
@@ -1283,7 +1283,7 @@ final class GameSession implements AiHost {
           if (!this.field_f) {
             throw new IllegalStateException();
           }
-          js.field_f.h(64, param0 ^ -8159);
+          LobbyOptionSupport.field_f.h(64, param0 ^ -8159);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1573,7 +1573,7 @@ final class GameSession implements AiHost {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = js.field_f;
+          var2 = LobbyOptionSupport.field_f;
           var2.h(59, 255);
           if (param0 >= -75) {
             return;
@@ -1688,7 +1688,7 @@ final class GameSession implements AiHost {
           }
           this.field_P.field_e = this.field_P.field_e | 1 << this.field_h;
           var2_int = 9 / ((-64 - param0) / 51);
-          js.field_f.h(65, 255);
+          LobbyOptionSupport.field_f.h(65, 255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1906,7 +1906,7 @@ final class GameSession implements AiHost {
             if (-1 != this.field_k) {
               this.sendOrders(-113);
             }
-            var2 = js.field_f;
+            var2 = LobbyOptionSupport.field_f;
             var2.h(61, 255);
             var2.writeByte(this.field_P.field_O, (byte) -93);
             var2.writeInt(11135, this.checksumOrders(-41));
@@ -1937,7 +1937,7 @@ final class GameSession implements AiHost {
             throw new RuntimeException();
           }
           var3 = 82 / ((param0 - 61) / 51);
-          var2 = js.field_f;
+          var2 = LobbyOptionSupport.field_f;
           var2.h(62, 255);
           var2.writeByte(this.field_P.field_O, (byte) -126);
           this.field_L = false;
@@ -2578,7 +2578,7 @@ final class GameSession implements AiHost {
           if (param0) {
             this.c(false);
           }
-          js.field_f.h(63, 255);
+          LobbyOptionSupport.field_f.h(63, 255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3346,7 +3346,7 @@ final class GameSession implements AiHost {
             }
             if (this.field_S % 200 == 0 &&
               this.field_L) {
-              var3 = js.field_f;
+              var3 = LobbyOptionSupport.field_f;
               var3.h(61, 255);
               var3.writeByte(this.field_P.field_O, (byte) -110);
               var3.writeInt(11135, this.checksumOrders(109));
@@ -3876,7 +3876,7 @@ final class GameSession implements AiHost {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = js.field_f;
+          var2 = LobbyOptionSupport.field_f;
           var2.h(60, 255);
           var2.position = var2.position + 2;
           var3 = var2.position;
@@ -4150,7 +4150,7 @@ final class GameSession implements AiHost {
           this.field_n.field_w = this.field_n.field_w | 1 << param0.field_x;
           param0.field_A = param0.field_A | 1 << this.field_n.field_x;
           if (this.field_f) {
-            var3 = js.field_f;
+            var3 = LobbyOptionSupport.field_f;
             var3.h(59, 255);
             var3.position = var3.position + 2;
             var4 = var3.position;

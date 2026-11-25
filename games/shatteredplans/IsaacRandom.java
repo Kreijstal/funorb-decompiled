@@ -52,23 +52,23 @@ final class IsaacRandom {
               }
             }
             if (ServerIntArrayRequest.field_i == 2) {
-              js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
+              LobbyOptionSupport.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
               var2 = new PacketBuffer(13);
               AccountHandshakeSupport.writeAccountHandshake(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
-              js.field_a.write(13, 0, var2.payload, -13976);
+              LobbyOptionSupport.field_a.write(13, 0, var2.payload, -13976);
               ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
               SocialListPanel.field_Cb = 30000L + pr.currentTimeMillis(14274);
             }
             if (ServerIntArrayRequest.field_i == 3) {
-              if (js.field_a.available(-1) <= 0) {
+              if (LobbyOptionSupport.field_a.available(-1) <= 0) {
                 if (SocialListPanel.field_Cb < pr.currentTimeMillis(14274)) {
                   stackIn_31_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, -2);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = js.field_a.readByte((byte) 127);
+                var1_int = LobbyOptionSupport.field_a.readByte((byte) 127);
                 if (0 != var1_int) {
                   stackIn_26_0 = ArchiveConnectionRetrySupport.handleArchiveConnectionFailure((byte) -94, var1_int);
                   return stackIn_26_0;
@@ -79,8 +79,8 @@ final class IsaacRandom {
             if (4 != ServerIntArrayRequest.field_i) {
               return -1;
             }
-            TertiaryLinkNode.field_o.a((byte) 90, AccountHandshakeSupport.field_c, js.field_a);
-            js.field_a = null;
+            TertiaryLinkNode.field_o.a((byte) 90, AccountHandshakeSupport.field_c, LobbyOptionSupport.field_a);
+            LobbyOptionSupport.field_a = null;
             ServerIntArrayRequest.field_i = 0;
             AccountCreationDialog.field_Gb = null;
             stackIn_35_0 = 0;

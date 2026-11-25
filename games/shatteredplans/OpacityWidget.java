@@ -135,7 +135,7 @@ final class OpacityWidget extends SingleChildWidget {
           PlayerStats.field_j = param2;
           wh.field_c = null;
           HighscoreResponseSupport.field_g = param0;
-          jm.field_t = param3;
+          AlternateLoginCredentials.field_t = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

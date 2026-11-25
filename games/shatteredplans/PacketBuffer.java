@@ -49,7 +49,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         try {
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + kd.a(param1.length(), 0, (byte) -97, this.position, this.payload, var4);
+          this.position = this.position + QuickChatMenuSupport.encodeCp1252(param1.length(), 0, (byte) -97, this.position, this.payload, var4);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -133,7 +133,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -24) {
           field_i = (String) null;
         }
-        return jm.field_t;
+        return AlternateLoginCredentials.field_t;
     }
 
     final byte readSignedByte(int param0) {
@@ -265,7 +265,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.position = this.position + kd.a(param0.length(), 0, (byte) -97, this.position, this.payload, var4);
+          this.position = this.position + QuickChatMenuSupport.encodeCp1252(param0.length(), 0, (byte) -97, this.position, this.payload, var4);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)param1;
@@ -668,7 +668,7 @@ class PacketBuffer extends IntrusiveNode {
     final static void a(int param0, GameSession param1) {
         try {
           int var2_int = -35 % ((param0 + 60) / 50);
-          kb.field_x = 1;
+          GradientMenuLabel.field_x = 1;
           PanelNode.field_q = null;
           oq.field_a = param1;
           LobbyUiSupport.field_e = -1;
@@ -689,7 +689,7 @@ class PacketBuffer extends IntrusiveNode {
           ListContent.field_g = false;
           VictoryChecker.field_j = false;
           AchievementProgress.field_k = false;
-          js.field_b = new sq[8];
+          LobbyOptionSupport.field_b = new sq[8];
           wl.field_a = new TutorialMapGenerator();
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ob.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

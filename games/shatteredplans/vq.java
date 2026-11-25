@@ -174,7 +174,7 @@ final class vq {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }
-          if (jp.a(param1, (byte) -105)) {
+          if (SocialNameInputPanel.isLocalPlayerName(param1, (byte) -105)) {
             stackIn_7_0 = QuaternaryNodeList.field_f;
             return stackIn_7_0;
           }
@@ -194,7 +194,7 @@ final class vq {
             stackIn_21_0 = QuickChatCategoryRegistry.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }
-          var5 = js.field_f;
+          var5 = LobbyOptionSupport.field_f;
           var5.h(param2, param0 ^ 253);
           var5.position = var5.position + 1;
           var4 = var5.position;

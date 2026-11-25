@@ -10,7 +10,7 @@ final class AlignedMenuLabel extends MenuLabel {
     private int field_B;
     static Sprite field_G;
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (!this.field_s) {

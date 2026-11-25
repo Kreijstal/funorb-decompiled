@@ -34,7 +34,7 @@ final class uf {
           return;
         }
         try {
-          var3 = js.field_f;
+          var3 = LobbyOptionSupport.field_f;
           var3.h(param1, 255);
           var3.writeByte(param0.field_k, (byte) -81);
           var3.writeByte(param0.field_j, (byte) -124);

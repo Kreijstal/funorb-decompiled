@@ -130,7 +130,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
               if (param5 == 1) {
                 var14 = QuickChatCategoryRegistry.a(ValidatedTextInputWidget.field_S, 4371, new String[]{Integer.toString(param3)});
               } else {
-                var14 = QuickChatCategoryRegistry.a(jm.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
+                var14 = QuickChatCategoryRegistry.a(AlternateLoginCredentials.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
               }
             } else {
               if (param5 != 1) {
@@ -188,7 +188,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
     final static void updateLobbyInterface(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!param5 && (kh.field_Mb != SoftwareRasterizer.field_b ||
+        if (!param5 && (PlayerReportPanel.field_Mb != SoftwareRasterizer.field_b ||
           TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (so.field_q.field_d == SoftwareRasterizer.field_k &&
           SoftwareRasterizer.field_b == so.field_q.field_g)) {
           if (null == np.field_a) {
@@ -202,7 +202,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           }
         }
         if (!param5) {
-          tm.field_h = (kh.field_Mb - 640) / 2;
+          tm.field_h = (PlayerReportPanel.field_Mb - 640) / 2;
         } else {
           tm.field_h = StatefulWidgetTheme.field_t;
         }

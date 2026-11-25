@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd {
+final class QuickChatMenuSupport {
     static String[] field_b;
     static String field_c;
     static int field_a;
 
-    final static void a(GameRules param0, boolean param1, Star param2, byte param3) {
+    final static void updateMinimumGarrison(GameRules param0, boolean param1, Star param2, byte param3) {
         int var5 = 0;
         Star[] var4 = null;
         Star var6 = null;
@@ -64,7 +64,7 @@ final class kd {
         }
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, byte[] param4, CharSequence param5) {
+    final static int encodeCp1252(int param0, int param1, byte param2, int param3, byte[] param4, CharSequence param5) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_70_0 = 0;
@@ -204,7 +204,7 @@ final class kd {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawQuickChatMenu(byte param0) {
         int var3 = 0;
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
@@ -328,11 +328,11 @@ final class kd {
         field_c = null;
         field_b = null;
         if (param0 <= 74) {
-          kd.a((byte) -48);
+          QuickChatMenuSupport.drawQuickChatMenu((byte) -48);
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void ensureAiPlayerCapacity(int param0, int param1) {
         if (ValidationMessageWidget.field_U >= param1) {
           return;
         }

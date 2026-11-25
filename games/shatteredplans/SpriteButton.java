@@ -8,7 +8,7 @@ final class SpriteButton extends MenuComponent {
     static int field_y;
     static String[] field_v;
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         if (!this.field_s) {
           return;
         }

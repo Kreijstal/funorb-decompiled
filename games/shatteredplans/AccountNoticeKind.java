@@ -14,7 +14,7 @@ final class AccountNoticeKind {
         CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
-          var8 = js.field_f;
+          var8 = LobbyOptionSupport.field_f;
           CipherPacketBuffer var6 = var8;
           var8.h(param5, 255);
           var8.position = var8.position + 1;

@@ -66,16 +66,16 @@ final class no {
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             var2_int = -105 / ((-38 - param0) / 46);
-            if (kb.field_x >= param1) {
+            if (GradientMenuLabel.field_x >= param1) {
               return;
             }
             try {
-              kb.field_x = param1;
-              var3 = wl.field_a.a(117, kb.field_x, true);
+              GradientMenuLabel.field_x = param1;
+              var3 = wl.field_a.a(117, GradientMenuLabel.field_x, true);
             } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (MapGenerationException) (Object) decompiledCaughtException;
-              throw new RuntimeException("Failed to advance Tutorial to stage " + kb.field_x + ". ");
+              throw new RuntimeException("Failed to advance Tutorial to stage " + GradientMenuLabel.field_x + ". ");
             }
             var15 = oq.field_a.field_P.field_g.field_e;
             for (var5_int = 0; var5_int < var15.length; var5_int++) {
@@ -161,7 +161,7 @@ final class no {
               uq.field_m.a(ProxySocketConnector.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
             }
             var5 = null;
-            if (kb.field_x == 5) {
+            if (GradientMenuLabel.field_x == 5) {
               var23 = new Player(1, IntList.field_f[1], or.field_b[1], DualLinkNode.field_k[1], QuickChatHelpSupport.field_e[1]);
               var5 = var23;
               var3.field_e[6].field_t = var23;
@@ -179,7 +179,7 @@ final class no {
               var23.field_i.addLast((byte) -113, var24);
               var23.field_q = new PlayerStats(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
-            if (6 == kb.field_x) {
+            if (6 == GradientMenuLabel.field_x) {
               var25 = new Player(2, IntList.field_f[2], or.field_b[2], DualLinkNode.field_k[2], QuickChatHelpSupport.field_e[2]);
               var5 = var25;
               var26Lifetime2 = var3.field_e[17];
@@ -195,7 +195,7 @@ final class no {
               var25.field_i.addLast((byte) -113, var27);
               var25.field_q = new PlayerStats(var26Lifetime2.field_x);
             }
-            if (kb.field_x == 7) {
+            if (GradientMenuLabel.field_x == 7) {
               var28 = new Player(3, IntList.field_f[3], or.field_b[3], DualLinkNode.field_k[3], QuickChatHelpSupport.field_e[3]);
               var5 = var28;
               var29Lifetime2 = var3.field_e[37];

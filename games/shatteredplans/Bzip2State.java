@@ -149,7 +149,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[12] = SocialListPanel.field_zb;
           QuickChatPhraseRegistry.field_g[2] = LinkPainter.field_c;
           QuickChatPhraseRegistry.field_g[15] = DelegatingCanvas.field_c;
-          QuickChatPhraseRegistry.field_g[13] = kh.field_Eb;
+          QuickChatPhraseRegistry.field_g[13] = PlayerReportPanel.field_Eb;
           QuickChatPhraseRegistry.field_g[1] = QuickChatParameterType.field_g;
           ChatCompositionSupport.field_b[6] = LobbyLayoutSupport.field_e;
           ChatCompositionSupport.field_b[11] = vo.field_a;

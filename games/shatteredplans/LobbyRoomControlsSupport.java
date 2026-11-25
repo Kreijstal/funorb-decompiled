@@ -49,17 +49,17 @@ final class LobbyRoomControlsSupport {
     final static void writePlayerReportRequest(int param0, long param1, int param2, boolean param3, String param4, int param5) {
         int var7_int = 0;
         try {
-          js.field_f.h(param2, 255);
-          js.field_f.position = js.field_f.position + 1;
-          var7_int = js.field_f.position;
+          LobbyOptionSupport.field_f.h(param2, 255);
+          LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 1;
+          var7_int = LobbyOptionSupport.field_f.position;
           if (param0 < 18) {
             LobbyRoomControlsSupport.updateLobbyRoomControls(false, true, (byte) -52, -121);
           }
-          js.field_f.writeLong(-16426, param1);
-          js.field_f.writeString(param4, (byte) 0);
-          js.field_f.writeByte(param5, (byte) -127);
-          js.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
-          js.field_f.patchLengthByte(js.field_f.position - var7_int, (byte) 118);
+          LobbyOptionSupport.field_f.writeLong(-16426, param1);
+          LobbyOptionSupport.field_f.writeString(param4, (byte) 0);
+          LobbyOptionSupport.field_f.writeByte(param5, (byte) -127);
+          LobbyOptionSupport.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
+          LobbyOptionSupport.field_f.patchLengthByte(LobbyOptionSupport.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -215,7 +215,7 @@ final class LobbyRoomControlsSupport {
                   ArrayWidgetGroup.field_F[var13] = false;
                   var13++;
                 }
-                js.a(-1, param2 + 3, IntNode.field_p, ProductionContent.field_k, 0, true, -1, -1);
+                LobbyOptionSupport.evaluateRoomOptionCombinations(-1, param2 + 3, IntNode.field_p, ProductionContent.field_k, 0, true, -1, -1);
                 if (!(RasterTargetSupport.field_b < 2) &&
                   FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;

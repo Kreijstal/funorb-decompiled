@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf {
+final class SettingsCookieSupport {
     static byte[][] field_c;
     static boolean[] field_e;
     static Sprite field_a;
     static AnimatedPanel field_b;
     static String[] field_d;
 
-    final static void a(int param0, String param1, java.applet.Applet param2) {
+    final static void writeSettingsCookie(int param0, String param1, java.applet.Applet param2) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -40,7 +40,7 @@ final class jf {
               var5Lifetime3 = var4;
               if (param0 != -25602) {
                 var6 = (java.applet.Applet) null;
-                jf.a(-11, (String) null, (java.applet.Applet) null);
+                SettingsCookieSupport.writeSettingsCookie(-11, (String) null, (java.applet.Applet) null);
               }
               var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
               var5Lifetime4 = var8;
@@ -82,7 +82,7 @@ final class jf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseSettingsCookieStatics(byte param0) {
         field_a = null;
         if (param0 == -23) {
           field_b = null;
@@ -91,7 +91,7 @@ final class jf {
           field_e = null;
           return;
         }
-        jf.floorMod(96, 113, -78);
+        SettingsCookieSupport.floorMod(96, 113, -78);
         field_b = null;
         field_c = (byte[][]) null;
         field_d = null;
@@ -104,20 +104,20 @@ final class jf {
         return (param1 + (param1 >>> 31)) % param0 + var4;
     }
 
-    final static void b(byte param0) {
+    final static void clearQuickChatLookupState(byte param0) {
         BoundsRect.field_j = false;
         if (param0 == -15) {
           PanelNode.field_p = null;
           TertiaryNodeList.field_d = null;
           TargetedChatMessage.field_o = null;
-          kd.field_b = null;
+          QuickChatMenuSupport.field_b = null;
           return;
         }
         field_c = (byte[][]) null;
         PanelNode.field_p = null;
         TertiaryNodeList.field_d = null;
         TargetedChatMessage.field_o = null;
-        kd.field_b = null;
+        QuickChatMenuSupport.field_b = null;
     }
 
     static {

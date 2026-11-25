@@ -635,7 +635,7 @@ final class AggressiveAi extends StandardAi {
                 for (var18_int = 0; var18_int < var8; var18_int++) {
                   ArrayWidgetGroup.field_F[var18_int] = false;
                 }
-                js.a(-1, 1, param2, var8, 0, param1, var10, -1);
+                LobbyOptionSupport.evaluateRoomOptionCombinations(-1, 1, param2, var8, 0, param1, var10, -1);
                 if (RasterTargetSupport.field_b >= 2 &&
                   FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;

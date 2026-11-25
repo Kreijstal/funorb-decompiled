@@ -207,7 +207,7 @@ abstract class Dialog extends WidgetContainer {
         og.a(false);
         oa.a(0);
         if (IntrusiveNode.b(true)) {
-          js.field_f.h(1, 255);
+          LobbyOptionSupport.field_f.h(1, 255);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);
         }
         q.g(-107);

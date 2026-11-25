@@ -27,7 +27,7 @@ abstract class TextLayout {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = (kh.field_Mb - 640) / 2;
+        int var2 = (PlayerReportPanel.field_Mb - 640) / 2;
         int var3 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var4 = var3 - param1 * param1;
         if (param0 != 22353) {

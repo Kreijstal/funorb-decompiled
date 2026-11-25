@@ -15,7 +15,7 @@ final class HighscoreResponseSupport {
         if (param0 != 3) {
           return (PcmStreamMixer) null;
         }
-        return jp.field_Bb;
+        return SocialNameInputPanel.field_Bb;
     }
 
     final static void readHighscoreResponse(byte param0) {
@@ -28,7 +28,7 @@ final class HighscoreResponseSupport {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        jr var4 = null;
+        HighscoreQueryRequest var4 = null;
         wj var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -60,10 +60,10 @@ final class HighscoreResponseSupport {
           var2 = var27.readUnsignedByte(-56);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(-20976);
-            var4 = (jr) (DialPainter.field_n.startForward(0));
+            var4 = (HighscoreQueryRequest) (DialPainter.field_n.startForward(0));
             while (var4 != null) {
               if (~var3 != ~var4.field_j) {
-                var4 = (jr) (DialPainter.field_n.nextForward((byte) -71));
+                var4 = (HighscoreQueryRequest) (DialPainter.field_n.nextForward((byte) -71));
                 continue;
               }
               break;
@@ -117,7 +117,7 @@ final class HighscoreResponseSupport {
                     var12++;
                   }
                   if (var21 != null &&
-                    jp.a(var21, (byte) -105)) {
+                    SocialNameInputPanel.isLocalPlayerName(var21, (byte) -105)) {
                     var8[1][var13] = Star.field_o;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
@@ -212,8 +212,8 @@ final class HighscoreResponseSupport {
           AllianceExpiredEvent.field_n = v.field_d;
           TertiaryListSequence.field_k = ClientContextMenuSupport.field_f;
           LobbyRoomControlsSupport.field_b = AllianceExpiredEvent.field_i;
-          UrlLoader.field_d = kh.field_Lb;
-          kh.field_Lb = false;
+          UrlLoader.field_d = PlayerReportPanel.field_Lb;
+          PlayerReportPanel.field_Lb = false;
           LobbyCommandSupport.field_d = vh.field_c;
           PointsVictoryChecker.field_p = ArchiveSource.field_c;
           SliderWidget.field_P = TertiaryNodeList.field_e;

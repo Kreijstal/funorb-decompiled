@@ -24,20 +24,20 @@ final class ServerIntArrayRequest extends IntrusiveNode {
           QuickChatMenu.field_Bb != param2) {
           MenuWindow.field_v = true;
           QuickChatMenu.field_Bb = param2;
-          kb.a(68, param1);
+          GradientMenuLabel.writeChatFilterSettings(68, param1);
         }
         if (param3 == 1 &&
           sq.field_a != param2) {
           sq.field_a = param2;
           MenuWindow.field_v = true;
-          kb.a(55, param1);
+          GradientMenuLabel.writeChatFilterSettings(55, param1);
         }
         var4 = 40 % ((-21 - param0) / 59);
         if (param3 == 2 &&
           ul.field_Hb != param2) {
           ul.field_Hb = param2;
           MenuWindow.field_v = true;
-          kb.a(95, param1);
+          GradientMenuLabel.writeChatFilterSettings(95, param1);
         }
     }
 

@@ -91,7 +91,7 @@ final class MenuWindow extends MenuComponent {
         }
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var10 = 0;
         int var9 = 0;
         int var6 = 0;
@@ -178,7 +178,7 @@ final class MenuWindow extends MenuComponent {
         rs.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
         MenuComponent var12 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var12 != null) {
-          var12.a(-14);
+          var12.drawComponent(-14);
           var12 = (MenuComponent) (this.field_l.nextReverse(-124));
         }
     }
@@ -242,7 +242,7 @@ final class MenuWindow extends MenuComponent {
           param2 = rs.field_Cb.stringWidth(this.field_y + "X") + 40;
         }
         if (!param0) {
-          this.a(1);
+          this.drawComponent(1);
         }
         this.field_m = param2;
         this.field_i = param1;
@@ -252,7 +252,7 @@ final class MenuWindow extends MenuComponent {
         int var4 = param0 + VerticalMenuSlider.field_w;
         int var5 = DisplayNameForm.field_D + param1;
         if (param2 != -498) {
-          this.a(-47);
+          this.drawComponent(-47);
         }
         int var6 = -this.field_k + var4;
         if (this.field_k + var6 < -this.field_m / 2) {

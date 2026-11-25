@@ -78,7 +78,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             return stackIn_8_0;
           }
           if (Wormhole.field_j == LegacyAi.field_r) {
-            js.field_f.position = 0;
+            LobbyOptionSupport.field_f.position = 0;
             sa.field_d = null;
             if (param5 == null) {
               ProgressDialog.field_cb.position = 0;
@@ -100,11 +100,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 stackIn_25_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_24_0).writeMarkedString((byte) stackIn_24_1, stackIn_25_2);
-              js.field_f.writeByte(16, (byte) -69);
-              js.field_f.position = js.field_f.position + 1;
-              var9 = js.field_f.position;
-              GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
-              js.field_f.patchLengthByte(js.field_f.position - var9, (byte) 119);
+              LobbyOptionSupport.field_f.writeByte(16, (byte) -69);
+              LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 1;
+              var9 = LobbyOptionSupport.field_f.position;
+              GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              LobbyOptionSupport.field_f.patchLengthByte(LobbyOptionSupport.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
               ProgressDialog.field_cb.position = 0;
@@ -120,16 +120,16 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               ProgressDialog.field_cb.writeShort(param0, 255);
               ProgressDialog.field_cb.writeByte(param1, (byte) -108);
               ProgressDialog.field_cb.writeByte(var9, (byte) -60);
-              js.field_f.writeByte(18, (byte) -76);
-              js.field_f.position = js.field_f.position + 2;
-              var10 = js.field_f.position;
+              LobbyOptionSupport.field_f.writeByte(18, (byte) -76);
+              LobbyOptionSupport.field_f.position = LobbyOptionSupport.field_f.position + 2;
+              var10 = LobbyOptionSupport.field_f.position;
               var11_ref_String = GameAssetSetupSupport.readSettingsCookie((byte) -128, GameScreen.getHostApplet((byte) 124));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              js.field_f.writeString(var11_ref_String, (byte) 0);
-              GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
-              js.field_f.patchLengthShort(-549342136, -var10 + js.field_f.position);
+              LobbyOptionSupport.field_f.writeString(var11_ref_String, (byte) 0);
+              GarrisonTask.a(25050, LobbyOptionSupport.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              LobbyOptionSupport.field_f.patchLengthShort(-549342136, -var10 + LobbyOptionSupport.field_f.position);
             }
             ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             Wormhole.field_j = qe.field_k;
@@ -184,7 +184,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             if (BufferedCacheFile.field_e == 255) {
               var9_ref_String = sa.field_a.readNullableString(1910283844);
               if (var9_ref_String != null) {
-                jf.a(-25602, var9_ref_String, GameScreen.getHostApplet((byte) 125));
+                SettingsCookieSupport.writeSettingsCookie(-25602, var9_ref_String, GameScreen.getHostApplet((byte) 125));
               }
             } else {
               nl.field_c = sa.field_a.readString(-1);

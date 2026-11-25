@@ -18,7 +18,7 @@ final class wn {
         field_e = param3 - param1;
         wn.a();
         if (field_h.length < field_e) {
-          field_h = new int[js.nextPowerOfTwo(field_e, (byte) 122)];
+          field_h = new int[LobbyOptionSupport.nextPowerOfTwo(field_e, (byte) 122)];
         }
         int var4 = param1 * SoftwareRasterizer.field_b + param0;
         for (var5 = 0; var5 < field_e; var5++) {

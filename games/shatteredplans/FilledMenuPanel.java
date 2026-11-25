@@ -17,7 +17,7 @@ final class FilledMenuPanel extends MenuComponent {
         this.field_v = param5;
     }
 
-    final void a(int param0) {
+    final void drawComponent(int param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!this.field_s) {
           return;

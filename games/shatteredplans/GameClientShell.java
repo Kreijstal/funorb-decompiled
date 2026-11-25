@@ -131,7 +131,7 @@ abstract class GameClientShell extends GameApplet {
             StringNode.openCustomerSupportPage(115, GameScreen.getHostApplet((byte) 125));
           }
           if (10 == var4) {
-            js.field_f.h(17, 255);
+            LobbyOptionSupport.field_f.h(17, 255);
           }
           if (var4 == 11) {
             ChatPanelLayoutSupport.reloadGamePage(GameScreen.getHostApplet((byte) 126), (byte) -105);
@@ -268,7 +268,7 @@ abstract class GameClientShell extends GameApplet {
                             var3 = sk.a(stackIn_32_0, -1);
                             CandidateLink.a(var3, 2);
                           } else {
-                            kb.f(-92);
+                            GradientMenuLabel.readLocalPlayerName(-92);
                           }
                         }
                       }
@@ -532,7 +532,7 @@ abstract class GameClientShell extends GameApplet {
             stackIn_107_1 = !(TextFieldWidget.field_D);
             stackIn_109_2 = -70;
             stackIn_110_3 = !(TextFieldWidget.field_D);
-            jm.$cfr$intArgs$a$88c6728ee5b1(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
+            AlternateLoginCredentials.openLoginFormFullInts(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
           if (IntHashIndex.field_f) {
             oo.a((byte) -58);

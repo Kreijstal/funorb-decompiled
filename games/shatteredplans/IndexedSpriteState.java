@@ -25,12 +25,12 @@ abstract class IndexedSpriteState {
           RecklessAi.field_p.field_y = 1;
           BattleSnapshot.field_t = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           FleetMove.field_F = new AnimatedPanel(0L, QuickChatMenu.field_Cb, GalaxyMap.field_i);
-          kh.field_Ib = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
+          PlayerReportPanel.field_Ib = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
           OpacityWidget.field_A.addChild(4, RecklessAi.field_p);
           OpacityWidget.field_A.addChild(4, BattleSnapshot.field_t);
           OpacityWidget.field_A.addChild(4, FleetMove.field_F);
           OpacityWidget.field_A.addChild(param0 ^ 27774, ClientPacketFlushSupport.field_a);
-          OpacityWidget.field_A.addChild(4, kh.field_Ib);
+          OpacityWidget.field_A.addChild(4, PlayerReportPanel.field_Ib);
           if (param0 != 27770) {
             field_h = (QuickChatHelpPanel) null;
           }

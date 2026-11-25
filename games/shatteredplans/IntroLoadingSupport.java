@@ -33,7 +33,7 @@ final class IntroLoadingSupport {
     }
 
     final static void writeLobbyActionSelector(int param0, int param1) {
-        CipherPacketBuffer var2 = js.field_f;
+        CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         var2.h(param0, 255);
         var2.writeByte(param1, (byte) -123);
         var2.writeByte(0, (byte) -78);

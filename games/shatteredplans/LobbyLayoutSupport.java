@@ -37,7 +37,7 @@ final class LobbyLayoutSupport {
         AnimatedPanel var14 = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          kh.field_Mb = SoftwareRasterizer.field_b;
+          PlayerReportPanel.field_Mb = SoftwareRasterizer.field_b;
           TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
           stackIn_3_0 = 22353;
           if (!param1) {

@@ -363,13 +363,13 @@ final class FleetTrailPoint extends IntrusiveNode {
             var6 = (ve) (var4.nextForward((byte) -71));
           }
           if (wg.field_a.field_Fb.field_rb != 0) {
-            ProxyAuthenticationRequiredException.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+            ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
             MapViewState.field_b = 2;
           }
           if (wg.field_a.field_yb.field_rb == 0) {
             return;
           }
-          ProxyAuthenticationRequiredException.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+          ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
           MapViewState.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

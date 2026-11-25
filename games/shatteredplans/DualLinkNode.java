@@ -17,9 +17,9 @@ class DualLinkNode extends IntrusiveNode {
           if (var1 == 0) {
             var1 = 32;
           }
-          js.a(CheckboxPainter.field_p - var1, 197126152);
+          LobbyOptionSupport.setSoundEffectVolume(CheckboxPainter.field_p - var1, 197126152);
         } else {
-          js.a(0, 197126152);
+          LobbyOptionSupport.setSoundEffectVolume(0, 197126152);
         }
         if (!param0) {
           DualLinkNode.clearStatics(101);
