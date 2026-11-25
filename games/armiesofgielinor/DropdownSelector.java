@@ -294,13 +294,13 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               if (DisplayModeOptionPainter.field_v) {
                 StripedProgressWidget.a(1);
               } else {
-                ek.field_d = AnimationFrameSet.field_E >> 2 & 3;
+                AccountNameSelectionSupport.field_d = AnimationFrameSet.field_E >> 2 & 3;
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);
                 BitLengthSupport.field_a = stackIn_37_0;
                 stackIn_40_0 = ((2 & AnimationFrameSet.field_E) != 0);
                 SpellDefinitionTable.field_a = stackIn_40_0;
-                if (3 <= ek.field_d) {
-                  ek.field_d = 0;
+                if (3 <= AccountNameSelectionSupport.field_d) {
+                  AccountNameSelectionSupport.field_d = 0;
                 }
               }
               UnitAnimationPreview.field_h = true;

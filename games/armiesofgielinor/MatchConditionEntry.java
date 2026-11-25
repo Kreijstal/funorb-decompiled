@@ -146,7 +146,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             newFriendOrder = TextSplitSupport.friendCount;
             TextSplitSupport.friendCount = TextSplitSupport.friendCount + 1;
             friendEntry.orderIndex = newFriendOrder;
-            wh.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
+            SharedUiLoadingSupport.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
           }
           if (friendLocation != null) {
             friendLocation = ((String) (friendLocation)).intern();
@@ -155,7 +155,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           friendEntry.previousDisplayName = previousFriendName;
           friendEntry.displayName = friendDisplayName;
           friendEntry.unlink(-124);
-          nextFriend = (SocialListEntry) (wh.friendEntries.first((byte) 111));
+          nextFriend = (SocialListEntry) (SharedUiLoadingSupport.friendEntries.first((byte) 111));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != nextFriend) {
@@ -165,7 +165,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               decompiledFrameRemainder0 = (obfuscationControl == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_56_0)) {
-                nextFriend = (SocialListEntry) (wh.friendEntries.next((byte) 123));
+                nextFriend = (SocialListEntry) (SharedUiLoadingSupport.friendEntries.next((byte) 123));
                 continue;
               }
             }
@@ -181,7 +181,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             }
             break;
           }
-          wh.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
+          SharedUiLoadingSupport.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

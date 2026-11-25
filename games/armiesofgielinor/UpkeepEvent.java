@@ -9,7 +9,7 @@ final class UpkeepEvent extends GameEvent {
     static StringBuilder chatTextBuffer;
 
     final static void h(int param0) {
-        er.a((byte) -127);
+        ClientRecoverySupport.snapDialogsAndFreezeProgress((byte) -127);
         int var1 = 2 % ((1 - param0) / 51);
     }
 

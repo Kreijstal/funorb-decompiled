@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek {
+final class AccountNameSelectionSupport {
     static ClientUiComponent field_c;
     static String[][] field_b;
     static int field_e;
@@ -9,12 +9,12 @@ final class ek {
     static String field_f;
     static ClientUiComponent field_a;
 
-    final static void a(byte param0) {
+    final static void showAccountNameSelection(byte param0) {
         if (GameClock.loginProgressDialog != null) {
           GameClock.loginProgressDialog.closeDialog(true);
           DequeWidgetContainer.field_C = new AccountNameSelectionForm();
           if (param0 > -22) {
-            ek.releaseStatics(-112);
+            AccountNameSelectionSupport.releaseStatics(-112);
             BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
             return;
           }
@@ -26,11 +26,11 @@ final class ek {
           BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
-        ek.releaseStatics(-112);
+        AccountNameSelectionSupport.releaseStatics(-112);
         BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createRotationTransform(int param0, int param1, int param2) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -65,9 +65,9 @@ final class ek {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void runLayoutSetupGuard(int param0, int param1, int param2, int param3) {
         if (param2 >= -95) {
-          ek.a(-61, 63, 80, -105);
+          AccountNameSelectionSupport.runLayoutSetupGuard(-61, 63, 80, -105);
         }
     }
 

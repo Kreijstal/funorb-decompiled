@@ -268,13 +268,13 @@ final class SpriteDropdownControl extends SpriteControlNode {
               SpriteDropdownControl.releaseStatics((byte) 47);
             }
             EmptyWidgetPainter.keyboardIdleTicks = EmptyWidgetPainter.keyboardIdleTicks + 1;
-            if (us.keyStateWriteIndex < 0) {
+            if (AttackOverlaySupport.keyStateWriteIndex < 0) {
               for (keyEvent = 0; keyEvent < 112; keyEvent++) {
                 CampaignLookupSupport.heldKeys[keyEvent] = false;
               }
-              us.keyStateWriteIndex = CoatOfArmsDrawingSupport.keyStateReadIndex;
+              AttackOverlaySupport.keyStateWriteIndex = CoatOfArmsDrawingSupport.keyStateReadIndex;
             } else {
-              while (CoatOfArmsDrawingSupport.keyStateReadIndex != us.keyStateWriteIndex) {
+              while (CoatOfArmsDrawingSupport.keyStateReadIndex != AttackOverlaySupport.keyStateWriteIndex) {
                 keyEvent = SphinxActionRequest.keyStateEvents[CoatOfArmsDrawingSupport.keyStateReadIndex];
                 CoatOfArmsDrawingSupport.keyStateReadIndex = 127 & 1 + CoatOfArmsDrawingSupport.keyStateReadIndex;
                 if (0 > keyEvent) {

@@ -363,7 +363,7 @@ final class BitmapTextLayout extends TextLayout {
         ClientContextMenu.field_n.setBounds(30, -20500, SpectateRoomRequestSupport.field_i.width, 0, 0);
         LobbyPlayer.field_Lb.setBounds(-30 + (-40 + SpectateRoomRequestSupport.field_i.height) - 2, -20500, SpectateRoomRequestSupport.field_i.width, 30, 0);
         SpriteDropdownControl.field_v.setBounds(30, -20500, 68, 5, 5);
-        ek.field_c.setBounds(30, -20500, 78, 5, 75);
+        AccountNameSelectionSupport.field_c.setBounds(30, -20500, 78, 5, 75);
         CombatViewTransition.field_p.setBounds(30, -20500, 48, 5, 155);
         MapHeaderSupport.field_a.setBounds(30, -20500, 48, 5, 205);
         int var2 = !GrowableIntArray.field_c ? 200 : 250;

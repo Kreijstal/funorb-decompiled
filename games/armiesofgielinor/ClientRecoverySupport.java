@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er {
+final class ClientRecoverySupport {
     static String field_c;
     static String field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != -3) {
@@ -14,7 +14,7 @@ final class er {
         }
     }
 
-    final static void b(int param0) {
+    final static void enterReconnectState(int param0) {
         if (~SoundCache.field_b == param0 ||
           !SocketFactory.c(10)) {
           EffectPresentation.d(7);
@@ -23,7 +23,7 @@ final class er {
         ArchiveMasterIndex.field_a = true;
     }
 
-    final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {
+    final static boolean isValidSignedInt(boolean param0, int param1, CharSequence param2, int param3) {
         int var8 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -44,7 +44,7 @@ final class er {
             param3 <= 36) {
             var4_int = 0;
             if (param1 > -38) {
-              er.b(-89);
+              ClientRecoverySupport.enterReconnectState(-89);
             }
             var5 = 0;
             var6 = 0;
@@ -103,7 +103,7 @@ final class er {
         }
     }
 
-    final static void a(byte param0) {
+    final static void snapDialogsAndFreezeProgress(byte param0) {
         int var1 = -52 % ((param0 + 85) / 37);
         if (null != KingBlackDragonEvent.field_C) {
           KingBlackDragonEvent.field_C.snapAndPruneDialogs(0);

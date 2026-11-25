@@ -199,8 +199,8 @@ final class GameplayController {
             }
             var17 = SpriteSheetDecoder.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
             SoftwareRaster.drawHorizontalLine(IgnoreListLookupSupport.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
-            GradientUiRenderer.drawCenteredTextBackdrop(qf.field_g, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
-            GradientUiRenderer.drawCenteredGradientText(qf.field_g, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(ResourceClientSetupSupport.field_g, IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
             GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.a(10602, var17), IgnoreListLookupSupport.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
             if (var7 != 0) {
               param0 += 58;
@@ -6704,7 +6704,7 @@ final class GameplayController {
                   }
                 }
                 if (IterableDualNodeDeque.isPointerInBounds(param0 - 153, 502, 550, 12, 32)) {
-                  var2 = ek.field_b[0][PreferencesReadRequest.field_r[var13_ref_ne.terrainType]];
+                  var2 = AccountNameSelectionSupport.field_b[0][PreferencesReadRequest.field_r[var13_ref_ne.terrainType]];
                 }
                 if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 318, 39, 79)) {
                   var14 = 0;
@@ -6762,18 +6762,18 @@ final class GameplayController {
                 if (TabbedPanel.a(50, 535, 16, false)) {
                   boolean decompiledSharedTail1 = (WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType] != 100);
                   if (!decompiledSharedTail1) {
-                    var2 = ek.field_b[1][17];
+                    var2 = AccountNameSelectionSupport.field_b[1][17];
                     decompiledSharedTail1 = (var20 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var2 = EmailCheckResult.a(4800, ek.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
+                    var2 = EmailCheckResult.a(4800, AccountNameSelectionSupport.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
                   }
                 }
                 var14 = 23;
                 var15 = 0;
                 if (var13_ref_ne.hasCorpse(105)) {
                   if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
-                    var2 = ek.field_b[0][0];
+                    var2 = AccountNameSelectionSupport.field_b[0][0];
                   }
                   var15++;
                 }
@@ -6800,7 +6800,7 @@ final class GameplayController {
                         }
                       }
                       if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, var15 * var14 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
-                        stackIn_671_0 = ek.field_b;
+                        stackIn_671_0 = AccountNameSelectionSupport.field_b;
                         if (var13_ref_ne.ownerPlayer > -1 &&
                           ~this.controlledPlayerId == ~var13_ref_ne.ownerPlayer) {
                           stackIn_672_1 = 0;
@@ -6815,7 +6815,7 @@ final class GameplayController {
                       }
                     }
                     if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, 325 + (1 + var15) * var14, 39, 79)) {
-                      stackIn_682_0 = ek.field_b;
+                      stackIn_682_0 = AccountNameSelectionSupport.field_b;
                       if (var13_ref_ne.ownerPlayer != -1) {
                         if (var13_ref_ne.ownerPlayer == this.controlledPlayerId) {
                           stackIn_686_1 = 0;
@@ -6833,7 +6833,7 @@ final class GameplayController {
                     }
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 325 + var14 * var15, 325 + (1 + var15) * var14, 39, 79)) {
-                    var2 = ek.field_b[0][3];
+                    var2 = AccountNameSelectionSupport.field_b[0][3];
                   }
                   var15++;
                 }
@@ -6846,7 +6846,7 @@ final class GameplayController {
                     if (var20 == 0) {
                       if (stackIn_712_0 != 0) {
                         if (IterableDualNodeDeque.isPointerInBounds(-33, 325 + var15 * var14, (var15 + 1) * var14 + 325, 39, 79)) {
-                          stackIn_707_0 = ek.field_b;
+                          stackIn_707_0 = AccountNameSelectionSupport.field_b;
                           if ((var16 & 1 << var18) != 0) {
                             stackIn_708_1 = 1;
                           } else {
@@ -6865,7 +6865,7 @@ final class GameplayController {
                   if (stackIn_712_0 != 0) {
                     var18 = var13_ref_ne.getExplicitOwner((byte) -74);
                     if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, 325 + var14 * (1 + var15), 39, 79)) {
-                      stackIn_721_0 = ek.field_b;
+                      stackIn_721_0 = AccountNameSelectionSupport.field_b;
                       if (this.controlledPlayerId > -1 &&
                         this.battlefield.arePlayersAllied(this.controlledPlayerId, -16985, var18)) {
                         stackIn_724_1 = 1;
@@ -11899,7 +11899,7 @@ final class GameplayController {
               (param3 + var8) > AiPlanningStrategy.pointerX &&
               HighscoreAccountEntry.pointerY >= param4 &&
               HighscoreAccountEntry.pointerY <= (24 + param4)) {
-              var11 = EmailCheckResult.a(4800, qf.field_b, new String[]{Integer.toString(var7 + UnitAnimationSelectionSupport.playerProfile.progressionCredit)});
+              var11 = EmailCheckResult.a(4800, ResourceClientSetupSupport.field_b, new String[]{Integer.toString(var7 + UnitAnimationSelectionSupport.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.pointerX;
               var13 = HighscoreAccountEntry.pointerY;
               var14 = DateInputWidget.field_E.getWrappedWidth(var11, 320);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed {
+final class SessionTransitionSupport {
     static NineSliceFrame field_d;
     static String field_b;
     static String field_a;
@@ -22,7 +22,7 @@ final class ed {
         field_b = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean markReconnectExpected(int param0) {
         if (param0 <= -66) {
           TurnEffectEvent.field_C = true;
           FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(124) + 15000L;
@@ -31,7 +31,7 @@ final class ed {
         return true;
     }
 
-    final static void a(boolean param0) {
+    final static void restartGuestSession(boolean param0) {
         if (!QuickChatCategoryRepository.guestSession) {
           throw new IllegalStateException();
         }
@@ -41,7 +41,7 @@ final class ed {
           SoundCache.field_b = 0;
           return;
         }
-        ed.a(-80);
+        SessionTransitionSupport.markReconnectExpected(-80);
         DraggableWidgetContainer.a(true, -49);
         SoundCache.field_b = 0;
     }

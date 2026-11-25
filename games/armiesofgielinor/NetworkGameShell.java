@@ -34,7 +34,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         ConsoleExpression.field_m = this.languageId;
         ChannelFadeTimeConsoleCommand.b(ConsoleExpression.field_m, 1);
         ClientNetworkBootstrap.initializeNetworkContext(serviceId, 5000, this.secondaryGamePort, 5000, launchFlag, ConsoleExpression.field_m, this.serverNumber, 0, this.primaryGamePort, this.memberLaunch, this.serverHost, IntPair.field_m, this.instanceId, this.gameCrc);
-        qf.a(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
+        ResourceClientSetupSupport.initializeResourceClient(ConsoleExpression.field_m, this.serverHost, this.gameCrc, (byte) 103, this.serverNumber, serviceId, this.secondaryGamePort, this.primaryGamePort, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = ColourRampSupport.createMouseWheelSource(68);
         BitmapTextWidgetPainter.a(101, IndexedSpriteBase.field_b);
@@ -117,7 +117,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (!TurnEffectEvent.field_C) {
             this.reportGameError("reconnect", (byte) -81);
           }
-          er.b(-11);
+          ClientRecoverySupport.enterReconnectState(-11);
           KeyedLoginCredentials.a(BitmapTextWidgetPainter.field_r, 10, connectionResult);
           MaskedTextEntryPainter.field_C = true;
           FullscreenStatusToken.field_a = MonotonicClockSupport.monotonicMillis(-111) + 15000L;
@@ -538,9 +538,9 @@ abstract class NetworkGameShell extends GameAppletShell {
             !(MusicPatchPcmStream.getPointerIdleTicks(4) <= idleTickLimit)) {
             this.forceDisconnect = false;
             TextSplitSupport.closeSessionSocket((byte) -126);
-            er.b(-11);
+            ClientRecoverySupport.enterReconnectState(-11);
             KeyedLoginCredentials.a(LobbyPlayer.field_bc, 10, 2);
-            qf.b(56);
+            ResourceClientSetupSupport.applyChatHintResetGuard(56);
             MaskedTextEntryPainter.field_C = true;
             FullscreenStatusToken.field_a = 15000L + MonotonicClockSupport.monotonicMillis(-49);
           }
@@ -583,7 +583,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           } else {
             if (SoundCache.field_b >= 10) {
-              er.b(-11);
+              ClientRecoverySupport.enterReconnectState(-11);
               if (3 != ModalDialogHost.field_K) {
                 if (ModalDialogHost.field_K != 4) {
                   if (ModalDialogHost.field_K != 2) {
@@ -621,7 +621,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           ArchiveMasterIndex.field_a = false;
         }
         if (StrongCacheEntry.field_E == 0 &&
-          us.b(94)) {
+          AttackOverlaySupport.pollArchiveMasterIndex(94)) {
           StrongCacheEntry.field_E = 1;
         }
         if (StrongCacheEntry.field_E == 1) {
@@ -653,8 +653,8 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
         }
         if (StrongCacheEntry.field_E == 3 &&
-          wh.a(DisplayModeOptionPainter.field_u, (byte) 127, LoginKind.field_g, CombatPresentation.field_M) &&
-          wh.a(LoginKind.field_g, -27701)) {
+          SharedUiLoadingSupport.ensureCommonUiResources(DisplayModeOptionPainter.field_u, (byte) 127, LoginKind.field_g, CombatPresentation.field_M) &&
+          SharedUiLoadingSupport.ensureAllUiGroupsAvailable(LoginKind.field_g, -27701)) {
           cd.releaseStatics(12);
           EmailValidator.c((byte) 91);
           ChatMessageWriteSupport.field_b = false;

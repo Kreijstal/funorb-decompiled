@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh {
+final class CoatOfArmsOverlaySupport {
     static String field_a;
     static int[] field_f;
     static String field_c;
@@ -9,7 +9,7 @@ final class uh {
     static String field_b;
     static int[][] field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 == 20043) {
           field_a = null;
@@ -19,14 +19,14 @@ final class uh {
           return;
         }
         String var2 = (String) null;
-        uh.a(-68, true, (int[]) null, (int[]) null, (String) null, false, 51);
+        CoatOfArmsOverlaySupport.drawCoatOfArmsOverlay(-68, true, (int[]) null, (int[]) null, (String) null, false, 51);
         field_a = null;
         field_b = null;
         field_f = null;
         field_e = (int[][]) null;
     }
 
-    final static void a(int[] param0, int param1) {
+    final static void setHighlightedMapTiles(int[] param0, int param1) {
         try {
           ProgressMessageDialog.field_lb = param0;
           int var2_int = 102 % ((69 - param1) / 54);
@@ -35,7 +35,7 @@ final class uh {
         }
     }
 
-    final static void a(int param0, boolean param1, int[] param2, int[] param3, String param4, boolean param5, int param6) {
+    final static void drawCoatOfArmsOverlay(int param0, boolean param1, int[] param2, int[] param3, String param4, boolean param5, int param6) {
         try {
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
@@ -47,7 +47,7 @@ final class uh {
           DropTargetWidgetContainer.field_J.drawTransparent(param6, param0);
           if (!param1) {
             int[] var8 = (int[]) null;
-            uh.a((int[]) null, -31);
+            CoatOfArmsOverlaySupport.setHighlightedMapTiles((int[]) null, -31);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf {
+final class ResourceClientSetupSupport {
     static String field_b;
     static ClientUiComponent field_e;
     static int[] field_d;
@@ -21,18 +21,18 @@ final class qf {
         interfaceMusicTrack = null;
     }
 
-    final static void a(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, PlatformTaskService param8) {
+    final static void initializeResourceClient(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, PlatformTaskService param8) {
         MoveAttackRequest.field_x = param5;
         vq.field_d = param2;
         vq.field_c = param8;
-        ek.field_e = param4;
+        AccountNameSelectionSupport.field_e = param4;
         ClientNetworkBootstrap.field_e = param0;
         IgnoreListLookupSupport.field_c = param1;
         if (param3 < 9) {
           return;
         }
         try {
-          er.field_a = param6;
+          ClientRecoverySupport.field_a = param6;
           LeaderEscortCondition.field_i = param7;
           ScrollWidgetContainer.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
           MapRepository.field_h = new DiskCacheWorker(param8);
@@ -42,13 +42,13 @@ final class qf {
         }
     }
 
-    final static void b(int param0) {
+    final static void applyChatHintResetGuard(int param0) {
         if (param0 != 56) {
           field_e = (ClientUiComponent) null;
         }
     }
 
-    final static void a(int param0) {
+    final static void showRecoveryProgress(int param0) {
         if (param0 == 56) {
           KingBlackDragonEvent.field_C.closeAllDialogs(-114);
           if (PointerInputHandler.field_a == null) {
@@ -65,7 +65,7 @@ final class qf {
         KingBlackDragonEvent.field_C.showDialog(PointerInputHandler.field_a, 0);
     }
 
-    final static void a(NineSliceFrame param0, int param1, int param2, NineSliceFrame param3, int param4, int param5) {
+    final static void setSelectionMenuSpacing(NineSliceFrame param0, int param1, int param2, NineSliceFrame param3, int param4, int param5) {
         try {
           if (param5 >= -107) {
             field_b = (String) null;

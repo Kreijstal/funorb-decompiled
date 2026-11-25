@@ -37,7 +37,7 @@ final class MovementPresentation implements EventPresentation {
 
     private final void h(int param0) {
         if (this.presenter.event.eventKind != 7) {
-          this.field_f = SpriteButtonPainter.field_z[ek.field_d];
+          this.field_f = SpriteButtonPainter.field_z[AccountNameSelectionSupport.field_d];
         } else {
           this.field_f = 50;
         }
@@ -174,7 +174,7 @@ final class MovementPresentation implements EventPresentation {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = wh.a(117);
+          var8 = SharedUiLoadingSupport.buildAnimationNameAlternatives(117);
           var1 = var8;
           var2 = var8.length;
           if (ResizableModalDialog.unitAnimationGroups.length < var2) {

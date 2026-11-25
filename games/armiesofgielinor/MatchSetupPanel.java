@@ -1160,8 +1160,8 @@ final class MatchSetupPanel {
               }
               if (var14 == 3 &&
                 !param4) {
-                var15 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, param11, -10 + uh.field_e[var14][0] << 1);
-                GradientUiRenderer.drawCenteredSolidText(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
+                var15 = BitmapFont.truncateWithEllipsis(NineSliceFrame.field_e, param11, -10 + CoatOfArmsOverlaySupport.field_e[var14][0] << 1);
+                GradientUiRenderer.drawCenteredSolidText(var15, (CoatOfArmsOverlaySupport.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (CoatOfArmsOverlaySupport.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
               }
             }
             var13++;

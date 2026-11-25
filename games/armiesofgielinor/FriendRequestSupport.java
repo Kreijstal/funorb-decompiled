@@ -36,7 +36,7 @@ final class FriendRequestSupport {
         try {
           LoginForm.field_E = param1;
           QuickChatPhrase.field_w = param0;
-          ed.field_d = param3;
+          SessionTransitionSupport.field_d = param3;
           FullscreenFocusCanvas.field_b = param5;
           int var6_int = -13 / ((53 - param4) / 48);
           SpectateRoomRequestSupport.field_m = param2;

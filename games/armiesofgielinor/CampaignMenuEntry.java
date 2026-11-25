@@ -218,7 +218,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           var4 = 1;
           var5 = 1;
         }
-        PasswordLengthSupport.field_a = ek.a(-125, var4 * var2, var2 * var5);
+        PasswordLengthSupport.field_a = AccountNameSelectionSupport.createRotationTransform(-125, var4 * var2, var2 * var5);
     }
 
     final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {

@@ -47,10 +47,10 @@ final class ConsoleParseException extends Exception {
           TextLineLayout.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
           UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
-            if (qf.field_e.pressedButton != 0) {
+            if (ResourceClientSetupSupport.field_e.pressedButton != 0) {
               ClientStateChecksumSupport.textChatActive = false;
             }
-            if (ed.field_e.pressedButton != 0) {
+            if (SessionTransitionSupport.field_e.pressedButton != 0) {
               FullscreenFocusCanvas.clearChatText(8445);
               ClientStateChecksumSupport.textChatActive = false;
               return;

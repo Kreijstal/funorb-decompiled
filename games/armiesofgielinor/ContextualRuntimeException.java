@@ -52,11 +52,11 @@ final class ContextualRuntimeException extends RuntimeException {
           CalendarSupport.field_c = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           CalendarSupport.field_c.horizontalAlignment = 1;
           AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, AiWeightProfile.field_b);
-          ek.field_a = new ClientUiComponent(0L, CampaignLookupSupport.field_e, SingleChildWidgetContainer.field_C);
+          AccountNameSelectionSupport.field_a = new ClientUiComponent(0L, CampaignLookupSupport.field_e, SingleChildWidgetContainer.field_C);
           PlayerProfile.field_f = new ClientUiComponent(0L, DualLinkedNode.field_k);
           AiWeightProfile.field_d.addChild(CalendarSupport.field_c, 49);
           AiWeightProfile.field_d.addChild(AdaptiveMidiPcmStream.field_kb, 109);
-          AiWeightProfile.field_d.addChild(ek.field_a, 49);
+          AiWeightProfile.field_d.addChild(AccountNameSelectionSupport.field_a, 49);
           AiWeightProfile.field_d.addChild(ListMissionsConsoleCommand.field_E, 105);
           AiWeightProfile.field_d.addChild(PlayerProfile.field_f, 56);
           ListMissionsConsoleCommand.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, PasswordLoginCredentials.field_h);

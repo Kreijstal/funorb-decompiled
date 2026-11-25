@@ -525,7 +525,7 @@ final class TutorialController {
           stackIn_32_3 = LocalCoatSupport.localCoat.colourIndices;
           stackIn_32_4 = StructureGlowRenderer.localAccountName;
           stackIn_33_5 = !(UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0) > LocalCoatSupport.field_b);
-          uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, IgnoreListLookupSupport.a(true, 50));
+          CoatOfArmsOverlaySupport.drawCoatOfArmsOverlay(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, IgnoreListLookupSupport.a(true, 50));
           SoftwareRaster.resetClip();
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
@@ -1764,10 +1764,10 @@ final class TutorialController {
                                                                         if (!this.selectionState.hasActivationInput((byte) 59)) {
                                                                           return;
                                                                         }
-                                                                        ek.field_d = ek.field_d + 1;
+                                                                        AccountNameSelectionSupport.field_d = AccountNameSelectionSupport.field_d + 1;
                                                                         DisplayModeOptionPainter.field_v = true;
-                                                                        if (ek.field_d == 3) {
-                                                                          ek.field_d = 0;
+                                                                        if (AccountNameSelectionSupport.field_d == 3) {
+                                                                          AccountNameSelectionSupport.field_d = 0;
                                                                         }
                                                                         StripedProgressWidget.a(1);
                                                                         if (var9 == 0) {
@@ -2431,12 +2431,12 @@ final class TutorialController {
         int var5 = 0;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (-1 < wh.field_a &&
+          if (-1 < SharedUiLoadingSupport.field_a &&
             AiPlanningStrategy.pointerX > IgnoreListLookupSupport.a(true, 40) &&
             AiPlanningStrategy.pointerX < IgnoreListLookupSupport.a(true, 376) &&
             HighscoreAccountEntry.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
             HighscoreAccountEntry.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
-            LocalCoatSupport.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + 16 * ((HighscoreAccountEntry.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
+            LocalCoatSupport.localCoat.setColour(SharedUiLoadingSupport.field_a, (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + 16 * ((HighscoreAccountEntry.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
             RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[10]);
             return;
           }
@@ -2445,11 +2445,11 @@ final class TutorialController {
             discarded$0 = this.f(-6, -35);
           }
           if (var2_int > -2) {
-            stackIn_25_0 = wh.field_a;
+            stackIn_25_0 = SharedUiLoadingSupport.field_a;
             stackIn_25_1 = UnitAnimationSelectionSupport.playerProfile.getUnlockLevel(0);
             stackIn_26_2 = !(BufferedSocket.field_j < 2);
             if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
-              LocalCoatSupport.localCoat.setPart(73, var2_int, wh.field_a);
+              LocalCoatSupport.localCoat.setPart(73, var2_int, SharedUiLoadingSupport.field_a);
               RadialSummonMenu.playDefaultSoundWithIntGuard(121, ClientUiNode.field_v[9]);
               if (var5 == 0) {
                 return;
@@ -2475,11 +2475,11 @@ final class TutorialController {
               }
               if (stackIn_58_0 < stackIn_58_1 &&
                 HighscoreAccountEntry.pointerY < MatchConditionEntry.a(-4 + (60 + var3 * (var4 + 1)), (byte) 94)) {
-                wh.field_a = var4;
-                if (wh.field_a != AccountRegistrationForm.field_X) {
+                SharedUiLoadingSupport.field_a = var4;
+                if (SharedUiLoadingSupport.field_a != AccountRegistrationForm.field_X) {
                   ArchiveMasterIndex.field_e = 0;
                   Widget.field_n = 0;
-                  AccountRegistrationForm.field_X = wh.field_a;
+                  AccountRegistrationForm.field_X = SharedUiLoadingSupport.field_a;
                   BattleGraphicsAssets.b((byte) -61);
                 }
                 RadialSummonMenu.playDefaultSoundWithIntGuard(33, ClientUiNode.field_v[2]);
@@ -2494,10 +2494,10 @@ final class TutorialController {
             stackIn_58_1 = 1;
           }
           if (stackIn_58_0 < stackIn_58_1) {
-            wh.field_a = var2_int;
-            if (AccountRegistrationForm.field_X != wh.field_a) {
+            SharedUiLoadingSupport.field_a = var2_int;
+            if (AccountRegistrationForm.field_X != SharedUiLoadingSupport.field_a) {
               Widget.field_n = 0;
-              AccountRegistrationForm.field_X = wh.field_a;
+              AccountRegistrationForm.field_X = SharedUiLoadingSupport.field_a;
               ArchiveMasterIndex.field_e = 0;
               BattleGraphicsAssets.b((byte) -61);
             }
@@ -2623,7 +2623,7 @@ final class TutorialController {
             }
             if (this.c((byte) -2, var11) ||
               var12 != 0) {
-              qf.field_d[var11] = var5;
+              ResourceClientSetupSupport.field_d[var11] = var5;
               GameEvent.field_q[var11] = var6;
               var5 += 40;
               var9Lifetime1++;
@@ -2791,7 +2791,7 @@ final class TutorialController {
             if (var17 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_11_0) {
-                var3_intLifetime1 = IgnoreListLookupSupport.a(true, qf.field_d[var6]);
+                var3_intLifetime1 = IgnoreListLookupSupport.a(true, ResourceClientSetupSupport.field_d[var6]);
                 var4Lifetime1 = MatchConditionEntry.a(GameEvent.field_q[var6], (byte) 94);
                 if (var6 == QuickChatMenuDisplaySupport.field_a) {
                   TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, var4Lifetime1 - 20, 256);
@@ -3199,7 +3199,7 @@ final class TutorialController {
             stackIn_7_0 = stackOut_6_0;
             if (var7 == 0) {
               if (stackIn_7_0) {
-                var4_int = IgnoreListLookupSupport.a(true, qf.field_d[var6]);
+                var4_int = IgnoreListLookupSupport.a(true, ResourceClientSetupSupport.field_d[var6]);
                 var5 = MatchConditionEntry.a(GameEvent.field_q[var6], (byte) 94);
                 if (param0 >= var4_int &&
                   param0 <= (32 + var4_int) &&
@@ -3498,7 +3498,7 @@ final class TutorialController {
           }
           if (decompiledFrameRemainder0) {
             if (TurnTimerDial.field_a.field_s != null) {
-              var7 = ed.field_b;
+              var7 = SessionTransitionSupport.field_b;
               var8_ref_String__ = TurnTimerDial.field_a.field_s[2];
               var9 = TurnTimerDial.field_a.field_m[2];
               var10 = 0;
@@ -3862,7 +3862,7 @@ final class TutorialController {
             var3 = ((StringBuilder) (Object) stackIn_33_0).append(stackIn_34_1).toString();
           }
           if (itemId == 38) {
-            var3 = DisplacedUnitMarker.field_t[38] + CampaignDefinition.field_m[ek.field_d];
+            var3 = DisplacedUnitMarker.field_t[38] + CampaignDefinition.field_m[AccountNameSelectionSupport.field_d];
           }
           if (itemId == 29) {
             var3 = DisplacedUnitMarker.field_t[29] + LoginKind.field_e[ReloadPageSupport.field_e];
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, StructureGlowRenderer.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
+          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, SharedUiLoadingSupport.field_a, StructureGlowRenderer.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -6052,13 +6052,13 @@ final class TutorialController {
                 var4 + 68 > AiPlanningStrategy.pointerX &&
                 var5 < HighscoreAccountEntry.pointerY &&
                 (60 + (var2_int * (1 + var3) - 4)) > HighscoreAccountEntry.pointerY) {
-                if (~var3 != ~wh.field_a) {
+                if (~var3 != ~SharedUiLoadingSupport.field_a) {
                   GradientUiRenderer.drawGradientFrame(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
                   GradientUiRenderer.drawGradientFrame(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
                 }
                 AccountNameSelectionForm.field_F = var3;
-              } else if (~wh.field_a != ~var3) {
+              } else if (~SharedUiLoadingSupport.field_a != ~var3) {
                 GradientUiRenderer.drawGradientFrame(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
               } else {
                 GradientUiRenderer.drawGradientFrame(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);

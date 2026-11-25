@@ -372,7 +372,7 @@ final class MapRepository {
                 }
               }
               if (param4) {
-                uh.field_f[var23] = var27 >> EditableTextWidget.field_M;
+                CoatOfArmsOverlaySupport.field_f[var23] = var27 >> EditableTextWidget.field_M;
                 ArchiveProvider.field_a[var23] = var28 >> EditableTextWidget.field_M;
                 BitReversalSupport.field_c[var23] = var29;
               }

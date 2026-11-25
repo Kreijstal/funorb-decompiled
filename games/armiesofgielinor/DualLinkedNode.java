@@ -133,7 +133,7 @@ class DualLinkedNode extends IntrusiveNode {
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
           }
           GameClock.loginProgressDialog.closeDialog(true);
-          qf.a(56);
+          ResourceClientSetupSupport.showRecoveryProgress(56);
           return;
         }
         DualLinkedNode.e(75);
@@ -152,7 +152,7 @@ class DualLinkedNode extends IntrusiveNode {
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) UnitAirAttackSupport.field_a)});
           }
           GameClock.loginProgressDialog.closeDialog(true);
-          qf.a(56);
+          ResourceClientSetupSupport.showRecoveryProgress(56);
         }
     }
 

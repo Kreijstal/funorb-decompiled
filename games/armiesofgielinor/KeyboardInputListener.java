@@ -19,7 +19,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         try {
           if (null != QuickChatCategory.keyboardListener) {
-            us.keyStateWriteIndex = -1;
+            AttackOverlaySupport.keyStateWriteIndex = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hg.focusLost(" + (event != null ? "{...}" : "null") + ')');
@@ -61,12 +61,12 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             } else {
               mappedKeyCode = -1;
             }
-            if (us.keyStateWriteIndex >= 0 &&
+            if (AttackOverlaySupport.keyStateWriteIndex >= 0 &&
               mappedKeyCode >= 0) {
-              SphinxActionRequest.keyStateEvents[us.keyStateWriteIndex] = ~mappedKeyCode;
-              us.keyStateWriteIndex = 127 & 1 + us.keyStateWriteIndex;
-              if (CoatOfArmsDrawingSupport.keyStateReadIndex == us.keyStateWriteIndex) {
-                us.keyStateWriteIndex = -1;
+              SphinxActionRequest.keyStateEvents[AttackOverlaySupport.keyStateWriteIndex] = ~mappedKeyCode;
+              AttackOverlaySupport.keyStateWriteIndex = 127 & 1 + AttackOverlaySupport.keyStateWriteIndex;
+              if (CoatOfArmsDrawingSupport.keyStateReadIndex == AttackOverlaySupport.keyStateWriteIndex) {
+                AttackOverlaySupport.keyStateWriteIndex = -1;
               }
             }
           }
@@ -133,12 +133,12 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             } else {
               mappedKeyCode = -1;
             }
-            if (us.keyStateWriteIndex >= 0 &&
+            if (AttackOverlaySupport.keyStateWriteIndex >= 0 &&
               0 <= mappedKeyCode) {
-              SphinxActionRequest.keyStateEvents[us.keyStateWriteIndex] = mappedKeyCode;
-              us.keyStateWriteIndex = us.keyStateWriteIndex + 1 & 127;
-              if (CoatOfArmsDrawingSupport.keyStateReadIndex == us.keyStateWriteIndex) {
-                us.keyStateWriteIndex = -1;
+              SphinxActionRequest.keyStateEvents[AttackOverlaySupport.keyStateWriteIndex] = mappedKeyCode;
+              AttackOverlaySupport.keyStateWriteIndex = AttackOverlaySupport.keyStateWriteIndex + 1 & 127;
+              if (CoatOfArmsDrawingSupport.keyStateReadIndex == AttackOverlaySupport.keyStateWriteIndex) {
+                AttackOverlaySupport.keyStateWriteIndex = -1;
               }
             }
             if (mappedKeyCode >= 0) {

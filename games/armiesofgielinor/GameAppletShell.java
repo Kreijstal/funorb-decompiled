@@ -792,10 +792,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             elapsedMillis = (int)(-previousTimestamp + nowMillis);
             UnitModelPreview.field_i = (32000 + (elapsedMillis >> 1)) / elapsedMillis;
           }
-          previousRefreshCounter = uh.canvasRefreshCounter;
-          uh.canvasRefreshCounter = uh.canvasRefreshCounter + 1;
+          previousRefreshCounter = CoatOfArmsOverlaySupport.canvasRefreshCounter;
+          CoatOfArmsOverlaySupport.canvasRefreshCounter = CoatOfArmsOverlaySupport.canvasRefreshCounter + 1;
           if (previousRefreshCounter > 50) {
-            uh.canvasRefreshCounter = uh.canvasRefreshCounter - 50;
+            CoatOfArmsOverlaySupport.canvasRefreshCounter = CoatOfArmsOverlaySupport.canvasRefreshCounter - 50;
             MaskedTextEntryPainter.redrawRequested = true;
             IndexedSpriteBase.field_b.setSize(CalendarSupport.viewportWidth, DateValiditySupport.viewportHeight);
             IndexedSpriteBase.field_b.setVisible(true);

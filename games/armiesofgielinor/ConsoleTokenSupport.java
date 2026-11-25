@@ -568,7 +568,7 @@ final class ConsoleTokenSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 125 % ((17 - param0) / 52);
-          stackIn_1_0 = er.a(true, -108, param1, 10);
+          stackIn_1_0 = ClientRecoverySupport.isValidSignedInt(true, -108, param1, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

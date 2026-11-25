@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh {
+final class SharedUiLoadingSupport {
     static int field_a;
     static String field_b;
     static String field_h;
@@ -11,7 +11,7 @@ final class wh {
     static String field_d;
     static NodeDeque friendEntries;
 
-    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean ensureCommonUiResources(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         RuntimeException stackIn_19_0 = null;
@@ -25,7 +25,7 @@ final class wh {
         try {
           if (param1 != 127) {
             var5 = (ResourceArchive) null;
-            wh.a((ResourceArchive) null, (byte) 105, (ResourceArchive) null, (ResourceArchive) null);
+            SharedUiLoadingSupport.ensureCommonUiResources((ResourceArchive) null, (byte) 105, (ResourceArchive) null, (ResourceArchive) null);
           }
           if (!param0.ensureIndex((byte) 82)) {
             return false;
@@ -68,7 +68,7 @@ final class wh {
         }
     }
 
-    final static boolean a(ResourceArchive param0, int param1) {
+    final static boolean ensureAllUiGroupsAvailable(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -95,7 +95,7 @@ final class wh {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_g = null;
         field_d = null;
@@ -111,7 +111,7 @@ final class wh {
         field_h = null;
     }
 
-    final static String[][][] a(int param0) {
+    final static String[][][] buildAnimationNameAlternatives(int param0) {
         int var5 = 0;
         int var1;
         int var2;
@@ -139,9 +139,9 @@ final class wh {
           var6Lifetime1 = var9;
           while (var3 > var9) {
             var10 = var4[var5][var9][0];
-            var4[var5][var9][0] = NetworkResourceRequest.a(var4[var5], var9, var10, var5, (byte) 15);
+            var4[var5][var9][0] = NetworkResourceRequest.resolveAnimationNameAlias(var4[var5], var9, var10, var5, (byte) 15);
             var11 = var4[var5][var9][0];
-            var4[var5][var9] = ByteArrayPoolSupport.a(-16399, var11);
+            var4[var5][var9] = ByteArrayPoolSupport.splitAnimationNameAlternatives(-16399, var11);
             if (null == var4[var5][var9]) {
               var4[var5][var9] = new String[1];
               var4[var5][var9][0] = var11;

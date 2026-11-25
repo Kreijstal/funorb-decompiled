@@ -110,7 +110,7 @@ final class BattleCameraTargetTransform {
           LoginCredentialStagingSupport.field_b = new String[29];
           CampaignDefinition.field_m[0] = TerrainScatterSupport.field_o;
           CampaignDefinition.field_m[2] = CacheEntry.field_v;
-          CampaignDefinition.field_m[1] = uh.field_b;
+          CampaignDefinition.field_m[1] = CoatOfArmsOverlaySupport.field_b;
           LoginCredentialStagingSupport.field_b[0] = null;
           LoginCredentialStagingSupport.field_b[10] = DamageEvent.field_z;
           if (param0 < 81) {

@@ -167,7 +167,7 @@ final class LocalizedUrlSupport {
                 }
               }
             }
-            ConsoleTokenSupport.a(param2, -96, false, param3, us.a(param3, (byte) 87), param1);
+            ConsoleTokenSupport.a(param2, -96, false, param3, AttackOverlaySupport.getAttackTargetOpacity(param3, (byte) 87), param1);
             var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 125));
             while (var4 != null) {
               if (param3 == var4.tileIndex) {

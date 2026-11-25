@@ -252,7 +252,7 @@ final class StripedProgressWidget extends Widget {
         }
         byte[] var2 = new byte[2];
         byte[] var1 = var2;
-        var2[param0] = (byte)(ek.field_d << 2);
+        var2[param0] = (byte)(AccountNameSelectionSupport.field_d << 2);
         var2[0] = (byte) 1;
         if (SpellDefinitionTable.field_a) {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 2);

@@ -107,7 +107,7 @@ final class UnitAnimationSelectionSupport {
             NumericDateInputWidget.roomSetup == null) {
             if (!MonotonicClockSupport.field_d) {
               var5 = FullscreenMembershipDialog.activeContextMenu;
-              var6 = wh.field_b;
+              var6 = SharedUiLoadingSupport.field_b;
               var5.menu.addTextAction(14, var6, (byte) -128);
             }
             var7 = FullscreenMembershipDialog.activeContextMenu;

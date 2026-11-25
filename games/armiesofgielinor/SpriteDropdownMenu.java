@@ -733,9 +733,9 @@ final class SpriteDropdownMenu {
     }
 
     final static void x(int param0) {
-        qf.field_e = null;
+        ResourceClientSetupSupport.field_e = null;
         SummonEvent.field_F = null;
-        ed.field_e = null;
+        SessionTransitionSupport.field_e = null;
         if (FullscreenStatusToken.field_b != null) {
           UpkeepEvent.field_z = FullscreenStatusToken.field_b;
           DebouncedValidator.field_b = ArchiveProvider.field_d;

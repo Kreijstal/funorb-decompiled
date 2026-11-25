@@ -82,7 +82,7 @@ final class SpellCastEvent extends GameEvent {
               if (MovementPlanner.field_z.selectedIndex != var4) {
                 stackIn_17_0 = SpectateRoomRequestSupport.field_m;
               } else {
-                stackIn_17_0 = ed.field_d;
+                stackIn_17_0 = SessionTransitionSupport.field_d;
               }
               var9 = stackIn_17_0;
               if (var9 != null) {

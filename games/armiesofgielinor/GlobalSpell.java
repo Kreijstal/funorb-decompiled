@@ -28,9 +28,9 @@ final class GlobalSpell extends Spell {
     final static boolean a(boolean param0) {
         if (param0) {
           field_h = -8;
-          return ed.a(-111);
+          return SessionTransitionSupport.markReconnectExpected(-111);
         }
-        return ed.a(-111);
+        return SessionTransitionSupport.markReconnectExpected(-111);
     }
 
     final void finishEffect(Battlefield battlefield, int obfuscationGuard) {

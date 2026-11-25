@@ -1267,7 +1267,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "BESTSCORE");
                 if (null != var2) {
-                  uh.field_c = uu.decodeTextBytes(var2, (byte) 100);
+                  CoatOfArmsOverlaySupport.field_c = uu.decodeTextBytes(var2, (byte) 100);
                 }
                 var2 = DropdownSelectorPainter.a(false, "START_MISSION");
                 if (var2 != null) {
@@ -1323,7 +1323,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "INPROGRESS");
                 if (var2 != null) {
-                  qf.field_a = uu.decodeTextBytes(var2, (byte) 97);
+                  ResourceClientSetupSupport.field_a = uu.decodeTextBytes(var2, (byte) 97);
                 }
                 var2 = DropdownSelectorPainter.a(false, "OVERWRITE");
                 if (var2 != null) {
@@ -1933,115 +1933,115 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,0");
                 if (var2 != null) {
-                  ek.field_b[0][0] = uu.decodeTextBytes(var2, (byte) 52);
+                  AccountNameSelectionSupport.field_b[0][0] = uu.decodeTextBytes(var2, (byte) 52);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,1");
                 if (null != var2) {
-                  ek.field_b[0][1] = uu.decodeTextBytes(var2, (byte) 46);
+                  AccountNameSelectionSupport.field_b[0][1] = uu.decodeTextBytes(var2, (byte) 46);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,2");
                 if (var2 != null) {
-                  ek.field_b[0][2] = uu.decodeTextBytes(var2, (byte) -102);
+                  AccountNameSelectionSupport.field_b[0][2] = uu.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,3");
                 if (var2 != null) {
-                  ek.field_b[0][3] = uu.decodeTextBytes(var2, (byte) -118);
+                  AccountNameSelectionSupport.field_b[0][3] = uu.decodeTextBytes(var2, (byte) -118);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,4");
                 if (var2 != null) {
-                  ek.field_b[0][4] = uu.decodeTextBytes(var2, (byte) 68);
+                  AccountNameSelectionSupport.field_b[0][4] = uu.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,5");
                 if (null != var2) {
-                  ek.field_b[0][5] = uu.decodeTextBytes(var2, (byte) -119);
+                  AccountNameSelectionSupport.field_b[0][5] = uu.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,6");
                 if (var2 != null) {
-                  ek.field_b[0][6] = uu.decodeTextBytes(var2, (byte) -117);
+                  AccountNameSelectionSupport.field_b[0][6] = uu.decodeTextBytes(var2, (byte) -117);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,7");
                 if (var2 != null) {
-                  ek.field_b[0][7] = uu.decodeTextBytes(var2, (byte) 58);
+                  AccountNameSelectionSupport.field_b[0][7] = uu.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,8");
                 if (null != var2) {
-                  ek.field_b[0][8] = uu.decodeTextBytes(var2, (byte) -125);
+                  AccountNameSelectionSupport.field_b[0][8] = uu.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,9");
                 if (null != var2) {
-                  ek.field_b[0][9] = uu.decodeTextBytes(var2, (byte) -121);
+                  AccountNameSelectionSupport.field_b[0][9] = uu.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,10");
                 if (null != var2) {
-                  ek.field_b[0][10] = uu.decodeTextBytes(var2, (byte) -109);
+                  AccountNameSelectionSupport.field_b[0][10] = uu.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,11");
                 if (var2 != null) {
-                  ek.field_b[0][11] = uu.decodeTextBytes(var2, (byte) 17);
+                  AccountNameSelectionSupport.field_b[0][11] = uu.decodeTextBytes(var2, (byte) 17);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,12");
                 if (var2 != null) {
-                  ek.field_b[0][12] = uu.decodeTextBytes(var2, (byte) -106);
+                  AccountNameSelectionSupport.field_b[0][12] = uu.decodeTextBytes(var2, (byte) -106);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,13");
                 if (null != var2) {
-                  ek.field_b[0][13] = uu.decodeTextBytes(var2, (byte) 111);
+                  AccountNameSelectionSupport.field_b[0][13] = uu.decodeTextBytes(var2, (byte) 111);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,14");
                 if (var2 != null) {
-                  ek.field_b[0][14] = uu.decodeTextBytes(var2, (byte) -96);
+                  AccountNameSelectionSupport.field_b[0][14] = uu.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,15");
                 if (null != var2) {
-                  ek.field_b[0][15] = uu.decodeTextBytes(var2, (byte) -115);
+                  AccountNameSelectionSupport.field_b[0][15] = uu.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,16");
                 if (null != var2) {
-                  ek.field_b[0][16] = uu.decodeTextBytes(var2, (byte) -120);
+                  AccountNameSelectionSupport.field_b[0][16] = uu.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,0,17");
                 if (null != var2) {
-                  ek.field_b[0][17] = uu.decodeTextBytes(var2, (byte) -103);
+                  AccountNameSelectionSupport.field_b[0][17] = uu.decodeTextBytes(var2, (byte) -103);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,1");
                 if (null != var2) {
-                  ek.field_b[1][1] = uu.decodeTextBytes(var2, (byte) -102);
+                  AccountNameSelectionSupport.field_b[1][1] = uu.decodeTextBytes(var2, (byte) -102);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,2");
                 if (null != var2) {
-                  ek.field_b[1][2] = uu.decodeTextBytes(var2, (byte) 91);
+                  AccountNameSelectionSupport.field_b[1][2] = uu.decodeTextBytes(var2, (byte) 91);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,4");
                 if (var2 != null) {
-                  ek.field_b[1][4] = uu.decodeTextBytes(var2, (byte) -108);
+                  AccountNameSelectionSupport.field_b[1][4] = uu.decodeTextBytes(var2, (byte) -108);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,5");
                 if (null != var2) {
-                  ek.field_b[1][5] = uu.decodeTextBytes(var2, (byte) 122);
+                  AccountNameSelectionSupport.field_b[1][5] = uu.decodeTextBytes(var2, (byte) 122);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,6");
                 if (null != var2) {
-                  ek.field_b[1][6] = uu.decodeTextBytes(var2, (byte) 77);
+                  AccountNameSelectionSupport.field_b[1][6] = uu.decodeTextBytes(var2, (byte) 77);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,7");
                 if (null != var2) {
-                  ek.field_b[1][7] = uu.decodeTextBytes(var2, (byte) -94);
+                  AccountNameSelectionSupport.field_b[1][7] = uu.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,8");
                 if (null != var2) {
-                  ek.field_b[1][8] = uu.decodeTextBytes(var2, (byte) -100);
+                  AccountNameSelectionSupport.field_b[1][8] = uu.decodeTextBytes(var2, (byte) -100);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,9");
                 if (null != var2) {
-                  ek.field_b[1][9] = uu.decodeTextBytes(var2, (byte) -119);
+                  AccountNameSelectionSupport.field_b[1][9] = uu.decodeTextBytes(var2, (byte) -119);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,1,17");
                 if (null != var2) {
-                  ek.field_b[1][17] = uu.decodeTextBytes(var2, (byte) 103);
+                  AccountNameSelectionSupport.field_b[1][17] = uu.decodeTextBytes(var2, (byte) 103);
                 }
                 var2 = DropdownSelectorPainter.a(false, "terrainicontext,2,2");
                 if (null != var2) {
-                  ek.field_b[2][2] = uu.decodeTextBytes(var2, (byte) 35);
+                  AccountNameSelectionSupport.field_b[2][2] = uu.decodeTextBytes(var2, (byte) 35);
                 }
                 var2 = DropdownSelectorPainter.a(false, "unitnames,0");
                 if (null != var2) {
@@ -3263,7 +3263,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_MEDIUM");
                 if (var2 != null) {
-                  uh.field_b = uu.decodeTextBytes(var2, (byte) -115);
+                  CoatOfArmsOverlaySupport.field_b = uu.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_FAST");
                 if (null != var2) {
@@ -3403,7 +3403,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "RESULTS_FINALSCORE");
                 if (var2 != null) {
-                  qf.field_g = uu.decodeTextBytes(var2, (byte) -127);
+                  ResourceClientSetupSupport.field_g = uu.decodeTextBytes(var2, (byte) -127);
                 }
                 var2 = DropdownSelectorPainter.a(false, "INTRO_0");
                 if (var2 != null) {
@@ -3577,7 +3577,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "CONTINUE");
                 if (null != var2) {
-                  qf.field_c = uu.decodeTextBytes(var2, (byte) 101);
+                  ResourceClientSetupSupport.field_c = uu.decodeTextBytes(var2, (byte) 101);
                 }
                 var2 = DropdownSelectorPainter.a(false, "OBJHIDE");
                 if (var2 != null) {
@@ -4907,7 +4907,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_WEAPONS");
                 if (null != var2) {
-                  ed.field_a = uu.decodeTextBytes(var2, (byte) -98);
+                  SessionTransitionSupport.field_a = uu.decodeTextBytes(var2, (byte) -98);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_ACCESSORIES");
                 if (null != var2) {
@@ -4915,7 +4915,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_PLATE");
                 if (null != var2) {
-                  wh.field_e = uu.decodeTextBytes(var2, (byte) -122);
+                  SharedUiLoadingSupport.field_e = uu.decodeTextBytes(var2, (byte) -122);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREED_PADDED");
                 if (var2 != null) {
@@ -5352,119 +5352,119 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,0");
                 if (null != var2) {
-                  us.field_b[0] = uu.decodeTextBytes(var2, (byte) -128);
+                  AttackOverlaySupport.field_b[0] = uu.decodeTextBytes(var2, (byte) -128);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,1");
                 if (var2 != null) {
-                  us.field_b[1] = uu.decodeTextBytes(var2, (byte) 88);
+                  AttackOverlaySupport.field_b[1] = uu.decodeTextBytes(var2, (byte) 88);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,2");
                 if (var2 != null) {
-                  us.field_b[2] = uu.decodeTextBytes(var2, (byte) -109);
+                  AttackOverlaySupport.field_b[2] = uu.decodeTextBytes(var2, (byte) -109);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,3");
                 if (null != var2) {
-                  us.field_b[3] = uu.decodeTextBytes(var2, (byte) -99);
+                  AttackOverlaySupport.field_b[3] = uu.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,4");
                 if (var2 != null) {
-                  us.field_b[4] = uu.decodeTextBytes(var2, (byte) -94);
+                  AttackOverlaySupport.field_b[4] = uu.decodeTextBytes(var2, (byte) -94);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,5");
                 if (null != var2) {
-                  us.field_b[5] = uu.decodeTextBytes(var2, (byte) 40);
+                  AttackOverlaySupport.field_b[5] = uu.decodeTextBytes(var2, (byte) 40);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,6");
                 if (var2 != null) {
-                  us.field_b[6] = uu.decodeTextBytes(var2, (byte) 105);
+                  AttackOverlaySupport.field_b[6] = uu.decodeTextBytes(var2, (byte) 105);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,7");
                 if (null != var2) {
-                  us.field_b[7] = uu.decodeTextBytes(var2, (byte) 58);
+                  AttackOverlaySupport.field_b[7] = uu.decodeTextBytes(var2, (byte) 58);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,8");
                 if (var2 != null) {
-                  us.field_b[8] = uu.decodeTextBytes(var2, (byte) 7);
+                  AttackOverlaySupport.field_b[8] = uu.decodeTextBytes(var2, (byte) 7);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,9");
                 if (var2 != null) {
-                  us.field_b[9] = uu.decodeTextBytes(var2, (byte) -95);
+                  AttackOverlaySupport.field_b[9] = uu.decodeTextBytes(var2, (byte) -95);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,10");
                 if (var2 != null) {
-                  us.field_b[10] = uu.decodeTextBytes(var2, (byte) 57);
+                  AttackOverlaySupport.field_b[10] = uu.decodeTextBytes(var2, (byte) 57);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,11");
                 if (null != var2) {
-                  us.field_b[11] = uu.decodeTextBytes(var2, (byte) 47);
+                  AttackOverlaySupport.field_b[11] = uu.decodeTextBytes(var2, (byte) 47);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,12");
                 if (null != var2) {
-                  us.field_b[12] = uu.decodeTextBytes(var2, (byte) -125);
+                  AttackOverlaySupport.field_b[12] = uu.decodeTextBytes(var2, (byte) -125);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,13");
                 if (null != var2) {
-                  us.field_b[13] = uu.decodeTextBytes(var2, (byte) 68);
+                  AttackOverlaySupport.field_b[13] = uu.decodeTextBytes(var2, (byte) 68);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,14");
                 if (null != var2) {
-                  us.field_b[14] = uu.decodeTextBytes(var2, (byte) -107);
+                  AttackOverlaySupport.field_b[14] = uu.decodeTextBytes(var2, (byte) -107);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,15");
                 if (null != var2) {
-                  us.field_b[15] = uu.decodeTextBytes(var2, (byte) -115);
+                  AttackOverlaySupport.field_b[15] = uu.decodeTextBytes(var2, (byte) -115);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,16");
                 if (null != var2) {
-                  us.field_b[16] = uu.decodeTextBytes(var2, (byte) 46);
+                  AttackOverlaySupport.field_b[16] = uu.decodeTextBytes(var2, (byte) 46);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,17");
                 if (null != var2) {
-                  us.field_b[17] = uu.decodeTextBytes(var2, (byte) 42);
+                  AttackOverlaySupport.field_b[17] = uu.decodeTextBytes(var2, (byte) 42);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,18");
                 if (null != var2) {
-                  us.field_b[18] = uu.decodeTextBytes(var2, (byte) 93);
+                  AttackOverlaySupport.field_b[18] = uu.decodeTextBytes(var2, (byte) 93);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,19");
                 if (var2 != null) {
-                  us.field_b[19] = uu.decodeTextBytes(var2, (byte) -112);
+                  AttackOverlaySupport.field_b[19] = uu.decodeTextBytes(var2, (byte) -112);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,20");
                 if (null != var2) {
-                  us.field_b[20] = uu.decodeTextBytes(var2, (byte) 95);
+                  AttackOverlaySupport.field_b[20] = uu.decodeTextBytes(var2, (byte) 95);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,21");
                 if (null != var2) {
-                  us.field_b[21] = uu.decodeTextBytes(var2, (byte) 79);
+                  AttackOverlaySupport.field_b[21] = uu.decodeTextBytes(var2, (byte) 79);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,22");
                 if (null != var2) {
-                  us.field_b[22] = uu.decodeTextBytes(var2, (byte) -104);
+                  AttackOverlaySupport.field_b[22] = uu.decodeTextBytes(var2, (byte) -104);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,23");
                 if (null != var2) {
-                  us.field_b[23] = uu.decodeTextBytes(var2, (byte) -105);
+                  AttackOverlaySupport.field_b[23] = uu.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,24");
                 if (var2 != null) {
-                  us.field_b[24] = uu.decodeTextBytes(var2, (byte) -105);
+                  AttackOverlaySupport.field_b[24] = uu.decodeTextBytes(var2, (byte) -105);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,25");
                 if (var2 != null) {
-                  us.field_b[25] = uu.decodeTextBytes(var2, (byte) 42);
+                  AttackOverlaySupport.field_b[25] = uu.decodeTextBytes(var2, (byte) 42);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,26");
                 if (null != var2) {
-                  us.field_b[26] = uu.decodeTextBytes(var2, (byte) -121);
+                  AttackOverlaySupport.field_b[26] = uu.decodeTextBytes(var2, (byte) -121);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,27");
                 if (var2 != null) {
-                  us.field_b[27] = uu.decodeTextBytes(var2, (byte) 111);
+                  AttackOverlaySupport.field_b[27] = uu.decodeTextBytes(var2, (byte) 111);
                 }
                 var2 = DropdownSelectorPainter.a(false, "trinketcongratulations,28");
                 if (null != var2) {
-                  us.field_b[28] = uu.decodeTextBytes(var2, (byte) 31);
+                  AttackOverlaySupport.field_b[28] = uu.decodeTextBytes(var2, (byte) 31);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_EQUIPMENTSELECT");
                 if (var2 != null) {
@@ -5544,7 +5544,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "PRESTIGE_REFUNDING");
                 if (var2 != null) {
-                  qf.field_b = uu.decodeTextBytes(var2, (byte) 47);
+                  ResourceClientSetupSupport.field_b = uu.decodeTextBytes(var2, (byte) 47);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TRINKET_USE_MESSAGE");
                 if (null != var2) {

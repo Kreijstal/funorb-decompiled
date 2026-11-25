@@ -111,7 +111,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_16_0;
           }
           if (param0 == 10) {
-            stackIn_19_0 = wh.field_h;
+            stackIn_19_0 = SharedUiLoadingSupport.field_h;
             return stackIn_19_0;
           }
           if (11 == param0) {

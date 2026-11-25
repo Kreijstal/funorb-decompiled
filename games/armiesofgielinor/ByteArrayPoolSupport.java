@@ -67,7 +67,7 @@ final class ByteArrayPoolSupport {
         return new byte[size];
     }
 
-    final static String[] a(int param0, String param1) {
+    final static String[] splitAnimationNameAlternatives(int param0, String param1) {
         Object var2 = null;
         String[] var2_array = null;
         RuntimeException var2_ref = null;

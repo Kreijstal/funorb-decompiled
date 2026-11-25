@@ -272,13 +272,13 @@ final class TurnEffectEvent extends GameEvent {
           SummonEvent.field_F.addChild(UpkeepEvent.field_z, 102);
           DebouncedValidator.field_b = new ClientUiComponent(0L, ArchiveProvider.field_d);
           SummonEvent.field_F.addChild(DebouncedValidator.field_b, 66);
-          qf.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, Bzip2State.field_t);
-          ed.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
+          ResourceClientSetupSupport.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, Bzip2State.field_t);
+          SessionTransitionSupport.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
           UnitCycler.field_g.addChild(DateOfBirthValidator.field_i, 103);
           UnitCycler.field_g.addChild(StrongCacheEntry.field_C, 79);
           StrongCacheEntry.field_C.addChild(SummonEvent.field_F, 64);
-          StrongCacheEntry.field_C.addChild(qf.field_e, 80);
-          StrongCacheEntry.field_C.addChild(ed.field_e, 123);
+          StrongCacheEntry.field_C.addChild(ResourceClientSetupSupport.field_e, 80);
+          StrongCacheEntry.field_C.addChild(SessionTransitionSupport.field_e, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

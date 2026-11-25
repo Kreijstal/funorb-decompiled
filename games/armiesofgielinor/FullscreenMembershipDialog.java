@@ -62,7 +62,7 @@ final class FullscreenMembershipDialog extends ResizableModalDialog implements W
               this.closeMembershipNotice(1);
             }
           } else {
-            ed.a(false);
+            SessionTransitionSupport.restartGuestSession(false);
             this.closeMembershipNotice(obfuscationGuard - 10);
           }
           return;

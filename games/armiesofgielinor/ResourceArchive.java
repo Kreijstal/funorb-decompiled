@@ -265,7 +265,7 @@ final class ResourceArchive {
           this.index.fileCapacities[groupId] > fileId) {
           return true;
         }
-        if (wh.field_f) {
+        if (SharedUiLoadingSupport.field_f) {
           throw new IllegalArgumentException(groupId + " " + fileId);
         }
         return false;
@@ -394,7 +394,7 @@ final class ResourceArchive {
           this.index.fileCapacities[groupId] != 0) {
           return true;
         }
-        if (!wh.field_f) {
+        if (!SharedUiLoadingSupport.field_f) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(groupId));

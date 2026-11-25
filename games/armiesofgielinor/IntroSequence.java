@@ -255,7 +255,7 @@ final class IntroSequence {
             MusicTrackSelectionSupport.ignoredAccountsByName = new DualNodeHashTable(64);
           }
           FixInvisibleUnitsConsoleCommand.ignoreEntries = param0.children;
-          wh.friendEntries = param2.children;
+          SharedUiLoadingSupport.friendEntries = param2.children;
           LocalAccountSupport.clearSocialLists(-123);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -283,7 +283,7 @@ final class IntroSequence {
         var4 = -param0;
         var4 = var4 + NameSuggestionList.field_F;
         var5 = -1;
-        for (var6 = us.field_a; var6 < 16; var6++) {
+        for (var6 = AttackOverlaySupport.field_a; var6 < 16; var6++) {
           var7 = var4;
           var8 = (var7 >> 4) + this.toScreenX(0, 4592);
           if (SoftwareRaster.width > var8) {
@@ -312,7 +312,7 @@ final class IntroSequence {
               }
               GradientUiRenderer.resampleSpriteWithCarry(StructureTerrainSupport.field_c[var6], var11, 0, var8, var12, var9, var17);
             } else {
-              us.field_a = 1 + var6;
+              AttackOverlaySupport.field_a = 1 + var6;
               NameSuggestionList.field_F = NameSuggestionList.field_F + (var9 << 4);
               StructureTerrainSupport.field_c[var6] = null;
             }
@@ -364,7 +364,7 @@ final class IntroSequence {
             if (LabeledWidgetContainer.field_N == 2) {
               FriendLookupSupport.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), vq.field_c);
               var2 = new PacketBuffer(13);
-              ChatMessageWriteSupport.a(ClientNetworkBootstrap.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
+              ChatMessageWriteSupport.a(ClientNetworkBootstrap.field_e, false, MoveAttackRequest.field_x, var2, AccountNameSelectionSupport.field_e);
               var2.writeByte(1, 15);
               var2.writeInt((byte) -124, vq.field_d);
               FriendLookupSupport.field_g.write(var2.payload, (byte) 20, 0, 13);
@@ -458,7 +458,7 @@ final class IntroSequence {
         try {
           NameSuggestionList.field_F = 0;
           PopupPresentation.field_j = param0;
-          us.field_a = 0;
+          AttackOverlaySupport.field_a = 0;
           this.field_d = 301.25;
           this.field_k = this.field_d;
         } catch (RuntimeException runtimeException) {

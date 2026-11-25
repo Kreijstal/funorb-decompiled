@@ -42,9 +42,9 @@ final class AccountRequestState {
           }
           SpellDefinitionTable.a(param11, param19, param5, false, param4);
           ContentTransitionDialog.c(param0, param2, 56);
-          qf.a(param6, param10, param7, param12, param15, -125);
+          ResourceClientSetupSupport.setSelectionMenuSpacing(param6, param10, param7, param12, param15, -125);
           ConsoleCommand.a(param16, (byte) 96, param13, param20);
-          ek.a(param1, param3, -118, param18);
+          AccountNameSelectionSupport.runLayoutSetupGuard(param1, param3, -118, param18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

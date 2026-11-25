@@ -387,7 +387,7 @@ final class uu {
                   if (stackIn_155_0 != 0) {
                     var13_ref = QuickChatCategoryMenuSupport.field_h;
                     if (var12 == 0) {
-                      var14 = EmailCheckResult.a(4800, er.field_c, new String[]{(String) (var11)});
+                      var14 = EmailCheckResult.a(4800, ClientRecoverySupport.field_c, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = LobbyRoom.field_Jb + (String) (var11);
                       }

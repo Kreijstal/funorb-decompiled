@@ -9,11 +9,11 @@ final class MatchingTextValidator extends TextFieldValidator {
     final static void c(byte param0) {
         if (param0 > -120) {
           MatchingTextValidator.c((byte) 114);
-          qf.a(56);
+          ResourceClientSetupSupport.showRecoveryProgress(56);
           AccountIdentifierStatus.setAccountFlowAction(124, 4);
           return;
         }
-        qf.a(56);
+        ResourceClientSetupSupport.showRecoveryProgress(56);
         AccountIdentifierStatus.setAccountFlowAction(124, 4);
     }
 

@@ -180,7 +180,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.ageInput = new ValidatedTextWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.emailOptInToggle = new ToggleWidget("", (WidgetListener) null, var1 != 0);
-        this.submitButton = new InteractiveWidget(ed.field_c, (WidgetListener) null);
+        this.submitButton = new InteractiveWidget(SessionTransitionSupport.field_c, (WidgetListener) null);
         this.backButton = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
         this.nameInput.tooltipText = DualLinkedNode.field_m;
         this.emailInput.tooltipText = NodeIterator.field_d;

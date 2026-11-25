@@ -238,7 +238,7 @@ final class CampaignMenu {
           var6 = EmailCheckResult.a(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
-            var8 = NineSliceFrame.field_e.textWidth(qf.field_c) / 2 + 26;
+            var8 = NineSliceFrame.field_e.textWidth(ResourceClientSetupSupport.field_c) / 2 + 26;
             if (var7 < var8) {
               var7 = var8;
             }
@@ -270,7 +270,7 @@ final class CampaignMenu {
           PowerOfTwoSupport.field_n.drawParagraph(var6, IgnoreListLookupSupport.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
           if (this.field_h == null) {
-            this.field_h = new CampaignMenuButton(qf.field_c, var15, var16, var7);
+            this.field_h = new CampaignMenuButton(ResourceClientSetupSupport.field_c, var15, var16, var7);
           }
           this.field_h.draw(0);
           var16 += 40;
@@ -797,7 +797,7 @@ final class CampaignMenu {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean useDefaultChannels = true;
-          TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, qf.interfaceMusicTrack, true);
+          TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, ResourceClientSetupSupport.interfaceMusicTrack, true);
           enabledChannelIds = null;
           if (0 != this.viewMode) {
             campaign = this.campaignIndex;
@@ -1053,7 +1053,7 @@ final class CampaignMenu {
             if (this.selectedMissionEntry.statusText != null) {
               array$0 = new String[1];
               stackIn_37_0 = 4800;
-              stackIn_37_1 = uh.field_c;
+              stackIn_37_1 = CoatOfArmsOverlaySupport.field_c;
               stackIn_37_2 = array$0;
               stackIn_37_3 = array$0;
               stackIn_37_4 = 0;
@@ -2277,8 +2277,8 @@ final class CampaignMenu {
               }
               var7 = stackIn_89_0;
               if (var7 != 0) {
-                GradientUiRenderer.drawCenteredTextBackdrop(qf.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
-                GradientUiRenderer.drawCenteredGradientText(qf.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredTextBackdrop(ResourceClientSetupSupport.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
+                GradientUiRenderer.drawCenteredGradientText(ResourceClientSetupSupport.field_a, IgnoreListLookupSupport.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
               }
               if (this.hoveredEntry != var3) {
                 RadialSummonMenu.playDefaultSoundWithIntGuard(127, ClientUiNode.field_v[1]);

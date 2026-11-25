@@ -52,13 +52,13 @@ final class OwnerChangeEvent extends GameEvent {
         AccountRegistrationForm.field_R = null;
         FriendLookupSupport.field_g = null;
         int var2 = LeaderEscortCondition.field_i;
-        LeaderEscortCondition.field_i = er.field_a;
+        LeaderEscortCondition.field_i = ClientRecoverySupport.field_a;
         ScrollWidgetContainer.field_T.errorCount = ScrollWidgetContainer.field_T.errorCount + 1;
         if (param1 != 101) {
           OwnerChangeEvent.a(-88, (byte) -45);
           if (param0 == 51) {
             ScrollWidgetContainer.field_T.errorCode = 2;
-            er.field_a = var2;
+            ClientRecoverySupport.field_a = var2;
             if (2 > ScrollWidgetContainer.field_T.errorCount) {
               if (2 <= ScrollWidgetContainer.field_T.errorCount &&
                 param0 == 50) {
@@ -88,7 +88,7 @@ final class OwnerChangeEvent extends GameEvent {
           }
           if (param0 != 50) {
             ScrollWidgetContainer.field_T.errorCode = 1;
-            er.field_a = var2;
+            ClientRecoverySupport.field_a = var2;
             if (2 > ScrollWidgetContainer.field_T.errorCount) {
               if (2 <= ScrollWidgetContainer.field_T.errorCount &&
                 param0 == 50) {
@@ -117,7 +117,7 @@ final class OwnerChangeEvent extends GameEvent {
             return 1;
           }
           ScrollWidgetContainer.field_T.errorCode = 5;
-          er.field_a = var2;
+          ClientRecoverySupport.field_a = var2;
           if (2 > ScrollWidgetContainer.field_T.errorCount) {
             if (2 <= ScrollWidgetContainer.field_T.errorCount &&
               param0 == 50) {
@@ -147,7 +147,7 @@ final class OwnerChangeEvent extends GameEvent {
         }
         if (param0 == 51) {
           ScrollWidgetContainer.field_T.errorCode = 2;
-          er.field_a = var2;
+          ClientRecoverySupport.field_a = var2;
           if (2 <= ScrollWidgetContainer.field_T.errorCount) {
             if (51 != param0) {
               if (2 > ScrollWidgetContainer.field_T.errorCount) {
@@ -177,7 +177,7 @@ final class OwnerChangeEvent extends GameEvent {
         }
         if (param0 != 50) {
           ScrollWidgetContainer.field_T.errorCode = 1;
-          er.field_a = var2;
+          ClientRecoverySupport.field_a = var2;
           if (2 <= ScrollWidgetContainer.field_T.errorCount) {
             if (51 != param0) {
               if (2 <= ScrollWidgetContainer.field_T.errorCount &&
@@ -201,7 +201,7 @@ final class OwnerChangeEvent extends GameEvent {
           return -1;
         }
         ScrollWidgetContainer.field_T.errorCode = 5;
-        er.field_a = var2;
+        ClientRecoverySupport.field_a = var2;
         if (2 <= ScrollWidgetContainer.field_T.errorCount) {
           if (51 != param0) {
             if (2 <= ScrollWidgetContainer.field_T.errorCount &&

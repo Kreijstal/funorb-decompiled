@@ -283,9 +283,9 @@ final class DamageEvent extends GameEvent {
             stackIn_10_0 = EmailCheckResult.a(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
           }
-          wh.friendEntries.startForwardAt(true, friend);
+          SharedUiLoadingSupport.friendEntries.startForwardAt(true, friend);
           while (true) {
-            subsequentFriend = (SocialListEntry) (wh.friendEntries.next((byte) 123));
+            subsequentFriend = (SocialListEntry) (SharedUiLoadingSupport.friendEntries.next((byte) 123));
             if (subsequentFriend != null) {
               subsequentFriend.orderIndex = subsequentFriend.orderIndex - 1;
               continue;

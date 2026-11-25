@@ -315,7 +315,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LobbyControlResources.field_h = DropdownSelectorPainter.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = ProxySocketFactory.field_i;
-          ResourceRequest.field_u[3] = ek.field_f;
+          ResourceRequest.field_u[3] = AccountNameSelectionSupport.field_f;
           ResourceRequest.field_u[2] = AccountRegistrationForm.field_L;
           ResourceRequest.field_u[0] = AttackEvent.field_D;
           ResourceRequest.field_u[4] = MusicPatch.field_p;
@@ -339,7 +339,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, NineSliceFrame.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
-          ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, LoginCredentialStagingSupport.field_c);
+          AccountNameSelectionSupport.field_c = new ClientUiComponent(0L, CampaignResult.field_a, LoginCredentialStagingSupport.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, DropdownSelectorPainter.field_g);
           MapHeaderSupport.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, ArrayWidgetContainer.field_D);
@@ -365,7 +365,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           SpectateRoomRequestSupport.field_i.addChild(ClientContextMenu.field_n, 92);
           SpectateRoomRequestSupport.field_i.addChild(LobbyPlayer.field_Lb, 47);
           LobbyPlayer.field_Lb.addChild(SpriteDropdownControl.field_v, 38);
-          LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
+          LobbyPlayer.field_Lb.addChild(AccountNameSelectionSupport.field_c, 114);
           LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
           if (GrowableIntArray.field_c) {
             LobbyPlayer.field_Lb.addChild(MapHeaderSupport.field_a, 114);

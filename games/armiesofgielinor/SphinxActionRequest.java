@@ -285,12 +285,12 @@ final class SphinxActionRequest extends ActionRequest {
           NumericDateInputWidget.field_M.matchedButtonSprite = GameplayController.a("upbutton_mouseover", (byte) 51, "lobby", param1);
           NumericDateInputWidget.field_M.heldPressSprite = GameplayController.a("upbutton_mouseheld", (byte) 51, "lobby", param1);
           NumericDateInputWidget.field_M.disabledSprite = GameplayController.a("upbutton_disabled", (byte) 51, "lobby", param1);
-          wh.field_g = new ClientUiComponent(0L, (ClientUiComponent) null);
-          wh.field_g.sprite = GameplayController.a("downbutton", (byte) 51, "lobby", param1);
-          wh.field_g.matchedButtonSprite = GameplayController.a("downbutton_mouseover", (byte) 51, "lobby", param1);
-          wh.field_g.heldPressSprite = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
-          wh.field_g.disabledSprite = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
-          WeightedLruCache.field_b = new VerticalScrollbar(0L, NumericDateInputWidget.field_M, wh.field_g, AccountRegistrationDialog.field_Cb, SoundEffectPreloadSupport.field_c);
+          SharedUiLoadingSupport.field_g = new ClientUiComponent(0L, (ClientUiComponent) null);
+          SharedUiLoadingSupport.field_g.sprite = GameplayController.a("downbutton", (byte) 51, "lobby", param1);
+          SharedUiLoadingSupport.field_g.matchedButtonSprite = GameplayController.a("downbutton_mouseover", (byte) 51, "lobby", param1);
+          SharedUiLoadingSupport.field_g.heldPressSprite = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
+          SharedUiLoadingSupport.field_g.disabledSprite = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
+          WeightedLruCache.field_b = new VerticalScrollbar(0L, NumericDateInputWidget.field_M, SharedUiLoadingSupport.field_g, AccountRegistrationDialog.field_Cb, SoundEffectPreloadSupport.field_c);
           CampaignLookupSupport.field_g = new SocialListPanel(0L, (ClientUiComponent) null, ConsoleEvaluationException.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

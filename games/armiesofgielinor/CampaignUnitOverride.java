@@ -227,7 +227,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_request_declined");
                 if (var2 != null) {
-                  wh.field_h = uu.decodeTextBytes(var2, (byte) -99);
+                  SharedUiLoadingSupport.field_h = uu.decodeTextBytes(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mu_request_withdrawn");
                 if (var2 != null) {
@@ -555,7 +555,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "message_lobby");
                 if (null != var2) {
-                  wh.field_b = uu.decodeTextBytes(var2, (byte) -126);
+                  SharedUiLoadingSupport.field_b = uu.decodeTextBytes(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "quickchat_lobby");
                 if (null != var2) {
@@ -695,7 +695,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "multiconst_similar_rating");
                 if (null != var2) {
-                  ek.field_f = uu.decodeTextBytes(var2, (byte) 45);
+                  AccountNameSelectionSupport.field_f = uu.decodeTextBytes(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "multiconst_open");
                 if (var2 != null) {
@@ -779,7 +779,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rated_membersonly");
                 if (null != var2) {
-                  uh.field_a = uu.decodeTextBytes(var2, (byte) 23);
+                  CoatOfArmsOverlaySupport.field_a = uu.decodeTextBytes(var2, (byte) 23);
                 }
                 var2 = NodeIterator.a(50, "gameopt_membersonly");
                 if (var2 != null) {
@@ -899,7 +899,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
-                  er.field_c = uu.decodeTextBytes(var2, (byte) -113);
+                  ClientRecoverySupport.field_c = uu.decodeTextBytes(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
@@ -1297,7 +1297,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create");
                 if (null != var2) {
-                  ed.field_c = uu.decodeTextBytes(var2, (byte) 94);
+                  SessionTransitionSupport.field_c = uu.decodeTextBytes(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(50, "create_pleasechooseapassword");
                 if (null != var2) {
@@ -1629,7 +1629,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  er.field_b = uu.decodeTextBytes(var2, (byte) -120);
+                  ClientRecoverySupport.field_b = uu.decodeTextBytes(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "create_alert_checkname");
                 if (null != var2) {
@@ -1709,7 +1709,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ignorelistfull");
                 if (var2 != null) {
-                  wh.field_d = uu.decodeTextBytes(var2, (byte) -96);
+                  SharedUiLoadingSupport.field_d = uu.decodeTextBytes(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "ignorelistdupe");
                 if (null != var2) {
@@ -2302,7 +2302,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "no_highscores");
                 if (null != var2) {
-                  ed.field_b = uu.decodeTextBytes(var2, (byte) 98);
+                  SessionTransitionSupport.field_b = uu.decodeTextBytes(var2, (byte) 98);
                 }
                 var2 = NodeIterator.a(50, "hs_name");
                 if (null != var2) {

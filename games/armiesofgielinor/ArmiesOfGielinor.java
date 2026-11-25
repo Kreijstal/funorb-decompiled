@@ -116,7 +116,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           if (decompiledFrameRemainder0) {
             if (UiSelectionState.d(95)) {
-              if (!ed.a(-83)) {
+              if (!SessionTransitionSupport.markReconnectExpected(-83)) {
                 if (DefeatPlayerConsoleCommand.e((byte) 89)) {
                   if (~UnitAnimationSelectionSupport.field_f != ~UnitAnimationSelectionSupport.field_e) {
                     this.d(0, false);
@@ -618,7 +618,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               var4Lifetime1 = 0;
             }
             if (var4Lifetime1 != 0) {
-              er.b(-11);
+              ClientRecoverySupport.enterReconnectState(-11);
             }
           }
           return;
@@ -894,7 +894,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               decompiledFrameRemainder4 = (ValidationStatusWidget.field_X == 16);
               if (decompiledFrameRemainder4) {
                 if (!SoundEffectPreloadSupport.field_a) {
-                  ed.a(false);
+                  SessionTransitionSupport.restartGuestSession(false);
                   if (var8 != 0) {
                     CampaignMenuButton.b(-20267);
                   }
@@ -1060,7 +1060,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (null != ToggleTurnSkipConsoleCommand.debugConsole) {
             ToggleTurnSkipConsoleCommand.debugConsole.drawConsole(89);
           }
-          if (!ed.a(-89)) {
+          if (!SessionTransitionSupport.markReconnectExpected(-89)) {
             if (DefeatPlayerConsoleCommand.e((byte) 93)) {
               SoftwareRaster.darkenRectangle(0, 0, SoftwareRaster.width, SoftwareRaster.height);
               DefeatPlayerConsoleCommand.h(1976460609);
@@ -1131,12 +1131,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ResourceArchive.releaseStatics(obfuscationGuard + 71);
           IndexedDecodedSpriteSupport.releaseStatics(-114);
           et.c(13626);
-          ed.releaseStatics(15000);
+          SessionTransitionSupport.releaseStatics(15000);
           AccountNameCheckStatusSupport.releaseStatics(180);
           AdaptiveMidiPcmStream.releaseStatics((byte) 52);
           MusicCrossfadeStream.releaseStatics(256);
           GuestSavePrompts.releaseStatics((byte) 115);
-          us.releaseStatics(obfuscationGuard ^ 30);
+          AttackOverlaySupport.releaseStatics(obfuscationGuard ^ 30);
           CampaignMenu.d((byte) 44);
           BattleGraphicsAssets.releaseStatics((byte) -12);
           SentenceCaseSupport.releaseStatics(1);
@@ -1168,7 +1168,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           PaginationTextSupport.releaseStatics(50);
           SpectateRoomRequestSupport.releaseStatics((byte) 50);
           ChatMessage.releaseStatics(0);
-          er.a(-3);
+          ClientRecoverySupport.releaseStatics(-3);
           PointerCaptureSupport.releaseStatics(2);
           GameClock.releaseStatics((byte) -108);
           RasterImageSurface.releaseStatics(0);
@@ -1198,7 +1198,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           BitmapFont.releaseStatics();
           SoundEffectPreloadSupport.releaseStatics(obfuscationGuard + 156);
           IntrusiveNode.releaseStatics((byte) 4);
-          wh.b(0);
+          SharedUiLoadingSupport.releaseStatics(0);
           AccountNameCheckSupport.releaseStatics(0);
           MidiPcmStream.releaseStatics(-128);
           BattleViewportResizeHandler.releaseStatics(-51);
@@ -1317,7 +1317,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           FloorModSupport.releaseStatics((byte) 73);
           LoginKind.releaseStatics(-25764);
           LoginCredentials.releaseStatics((byte) -120);
-          uh.a(obfuscationGuard + 20115);
+          CoatOfArmsOverlaySupport.releaseStatics(obfuscationGuard + 20115);
           DualNodeDeque.releaseStatics(125);
           ConsolePanel.releaseStatics((byte) -109);
           ConsoleTextNode.releaseStatics(-22823);
@@ -1346,7 +1346,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           TileMetadata.releaseStatics(23582);
           AnimationFrameSetCacheEntry.releaseStatics(-30097);
           AnimationSequence.releaseStatics(obfuscationGuard ^ 125);
-          qf.releaseStatics((byte) 31);
+          ResourceClientSetupSupport.releaseStatics((byte) 31);
           GradientFrame.releaseStatics((byte) -90);
           SpriteDropdownControl.releaseStatics((byte) -11);
           UnitAnimationPreview.releaseStatics((byte) 40);
@@ -1411,7 +1411,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SectorCacheStore.releaseStatics(1);
           DiskCacheRequest.releaseStatics(obfuscationGuard ^ -61);
           CachedArchiveProvider.e(obfuscationGuard - 56);
-          ek.releaseStatics(236611664);
+          AccountNameSelectionSupport.releaseStatics(236611664);
           ResourceRequest.releaseStatics((byte) -126);
           LeapYearSupport.releaseStatics((byte) -5);
           VorbisSample.releaseSetup();
@@ -2099,7 +2099,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 GrowableIntArray.field_b[6] = MusicTrack.load(SummonAction.field_w, "", "fight or flight");
                 GrowableIntArray.field_b[7] = MusicTrack.load(SummonAction.field_w, "", "soul wars");
                 GrowableIntArray.field_b[8] = MusicTrack.load(SummonAction.field_w, "", "brain_barrelchest_battle");
-                qf.interfaceMusicTrack = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
+                ResourceClientSetupSupport.interfaceMusicTrack = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
                 break;
               }
               ConsoleEvaluationException.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
@@ -2114,7 +2114,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
-                var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
+                var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, ResourceClientSetupSupport.interfaceMusicTrack, (byte) 86);
                 break;
               }
               var8 = var6[var7_int];

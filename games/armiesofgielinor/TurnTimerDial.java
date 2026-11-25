@@ -200,7 +200,7 @@ final class TurnTimerDial {
         PcmSample var5 = null;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          wh.field_f = false;
+          SharedUiLoadingSupport.field_f = false;
           LinkButtonPainter.field_d = new PcmSample[ProgressDialog.field_W.length][];
           int var2_int = 93 / ((27 - param0) / 62);
           for (var3 = 0; ProgressDialog.field_W.length > var3; var3++) {
@@ -217,7 +217,7 @@ final class TurnTimerDial {
             }
           }
           SoundEffectPreloadSupport.loadSoundEffectsByName((byte) 90, param1);
-          wh.field_f = true;
+          SharedUiLoadingSupport.field_f = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -14,7 +14,7 @@ final class TabbedPanel extends ClientUiComponent {
         PcmSample var3 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          wh.field_f = false;
+          SharedUiLoadingSupport.field_f = false;
           MoveAttackRequest.field_v = new PcmSample[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
             var3 = param0.getSoundEffectByName(ModalDialog.field_M[var2_int], (byte) -97, "");
@@ -27,7 +27,7 @@ final class TabbedPanel extends ClientUiComponent {
             String var5 = (String) null;
             TabbedPanel.a(42, (LobbyRoom) null, false, (String) null);
           }
-          wh.field_f = true;
+          SharedUiLoadingSupport.field_f = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ml.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

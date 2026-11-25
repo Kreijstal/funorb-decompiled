@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class us {
+final class AttackOverlaySupport {
     static int field_a;
     static int keyStateWriteIndex;
     static String[] field_b;
 
-    final static boolean b(int param0) {
+    final static boolean pollArchiveMasterIndex(int param0) {
         if (param0 <= 74) {
           return true;
         }
         return CheckMarkWidgetPainter.field_c.pollMasterIndex((byte) 14);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isAlternateChatUiActive(boolean param0) {
         if (param0) {
           return null != FullscreenStatusToken.field_b ? true : false;
         }
-        us.releaseStatics(125);
+        AttackOverlaySupport.releaseStatics(125);
         return null != FullscreenStatusToken.field_b ? true : false;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getAttackTargetOpacity(int param0, byte param1) {
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;

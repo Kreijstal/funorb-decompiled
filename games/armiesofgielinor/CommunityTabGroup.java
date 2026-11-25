@@ -200,7 +200,7 @@ final class CommunityTabGroup {
         this.tabs.setLayout(width, y, x, var7, 0, var6, height);
         CalendarSupport.field_c.setBounds(GradientSpanBlendSupport.field_d, -20500, AiWeightProfile.field_d.width, 0, 0);
         AdaptiveMidiPcmStream.field_kb.setBounds(18, -20500, -2 + (-2 + AiWeightProfile.field_d.width + (-GradientSpanBlendSupport.field_c - 80)), 2 + GradientSpanBlendSupport.field_d, 0);
-        ek.field_a.setBounds(18, -20500, 82 + GradientSpanBlendSupport.field_c, GradientSpanBlendSupport.field_d + 2, -82 + (AiWeightProfile.field_d.width - GradientSpanBlendSupport.field_c));
+        AccountNameSelectionSupport.field_a.setBounds(18, -20500, 82 + GradientSpanBlendSupport.field_c, GradientSpanBlendSupport.field_d + 2, -82 + (AiWeightProfile.field_d.width - GradientSpanBlendSupport.field_c));
         ListMissionsConsoleCommand.field_E.setLayout(0, GradientSpanBlendSupport.field_c, 2, 20, AiWeightProfile.field_d.width, 20 + (2 + GradientSpanBlendSupport.field_d), -2 + (AiWeightProfile.field_d.height - GradientSpanBlendSupport.field_d) - 20, (byte) -92);
         TaggedMapData.field_g.layoutControls((byte) -110, GradientSpanBlendSupport.field_c, 20, 2);
     }

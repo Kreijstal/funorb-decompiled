@@ -53,9 +53,9 @@ final class TextLineLayout {
         try {
           DateOfBirthValidator.field_i.text = param0;
           if (PowerOfTwoSupport.outgoingChatChannel != 2) {
-            ed.field_e.text = FixedQuaternion.field_c;
+            SessionTransitionSupport.field_e.text = FixedQuaternion.field_c;
           } else {
-            ed.field_e.text = LogoMaterial.field_d;
+            SessionTransitionSupport.field_e.text = LogoMaterial.field_d;
           }
           var9_int = 495;
           var10 = 5;
@@ -63,9 +63,9 @@ final class TextLineLayout {
           UpkeepEvent.field_z.setBounds(param5, -20500, -DebouncedValidator.field_b.width + SummonEvent.field_F.width, 0, 0);
           var10 = var10 + (param5 + param2);
           DebouncedValidator.field_b.setBounds(param5, -20500, DebouncedValidator.field_b.width, 0, UpkeepEvent.field_z.width);
-          qf.field_e.setBounds(param4, -20500, qf.field_e.getPreferredWidth(param7 - 15550), var10, 5);
-          var11 = ed.field_e.getPreferredWidth(param7 ^ 15717);
-          ed.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
+          ResourceClientSetupSupport.field_e.setBounds(param4, -20500, ResourceClientSetupSupport.field_e.getPreferredWidth(param7 - 15550), var10, 5);
+          var11 = SessionTransitionSupport.field_e.getPreferredWidth(param7 ^ 15717);
+          SessionTransitionSupport.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
           if (param7 != 15676) {
             TextLineLayout.b(-109);
           }

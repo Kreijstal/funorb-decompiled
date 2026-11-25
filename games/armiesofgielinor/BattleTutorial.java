@@ -945,7 +945,7 @@ class BattleTutorial {
 
     private final void g(int param0) {
         int var2 = 103 / ((param0 + 42) / 55);
-        uh.a(DateOfBirthValidator.field_g, 125);
+        CoatOfArmsOverlaySupport.setHighlightedMapTiles(DateOfBirthValidator.field_g, 125);
     }
 
     private final void g(byte param0) {
@@ -1598,7 +1598,7 @@ class BattleTutorial {
     }
 
     private final void a(int param0) {
-        uh.a(IterableNodeHashTable.field_a, 124);
+        CoatOfArmsOverlaySupport.setHighlightedMapTiles(IterableNodeHashTable.field_a, 124);
         if (param0 != 5) {
           this.expandedPanelHeight = 30;
         }
@@ -1617,7 +1617,7 @@ class BattleTutorial {
         if (param0 != -122) {
           this.f((byte) 104);
         }
-        uh.a(StrongCacheEntry.field_D, 125);
+        CoatOfArmsOverlaySupport.setHighlightedMapTiles(StrongCacheEntry.field_D, 125);
     }
 
     final void draw(byte obfuscationGuard) {
@@ -1666,7 +1666,7 @@ class BattleTutorial {
           }
           GradientUiRenderer.drawGradientFrame(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5, 0, 192, true);
           if (this.buttonMode == 0) {
-            GradientUiRenderer.drawCenteredSolidText(qf.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
+            GradientUiRenderer.drawCenteredSolidText(ResourceClientSetupSupport.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
             decompiledFrameRemainder0 = (var5 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -1757,7 +1757,7 @@ class BattleTutorial {
         if (param0 <= 90) {
           return;
         }
-        uh.a(DeployAction.field_s, -91);
+        CoatOfArmsOverlaySupport.setHighlightedMapTiles(DeployAction.field_s, -91);
     }
 
     private final void i(byte param0) {

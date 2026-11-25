@@ -2281,7 +2281,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             }
           }
           if (decompiledFrameRemainder6) {
-            var5 = us.field_b[this.i(-134)];
+            var5 = AttackOverlaySupport.field_b[this.i(-134)];
             if (this.equipmentSlot == 0) {
               var5 = EmailCheckResult.a(4800, SpriteDropdownControl.equipmentTutorialMessages[27], new String[]{var5});
             }

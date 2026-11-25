@@ -176,7 +176,7 @@ final class ViewportManager {
           }
           component.removeKeyListener(QuickChatCategory.keyboardListener);
           component.removeFocusListener(QuickChatCategory.keyboardListener);
-          us.keyStateWriteIndex = -1;
+          AttackOverlaySupport.keyStateWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.D(" + (component != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

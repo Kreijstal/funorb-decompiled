@@ -222,7 +222,7 @@ final class AccountRequestResult {
                   }
                 }
               }
-              if (!us.a(true)) {
+              if (!AttackOverlaySupport.isAlternateChatUiActive(true)) {
                 stackIn_56_0 = "<img=3>: ";
               } else {
                 stackIn_56_0 = ": ";
@@ -241,7 +241,7 @@ final class AccountRequestResult {
                 var4 = "<col=999999>" + var4 + DisplayModeOptionPainter.field_z + "</col>";
               }
               var9 = IntrusiveNode.field_e.textWidth(var4);
-              if (!us.a(true)) {
+              if (!AttackOverlaySupport.isAlternateChatUiActive(true)) {
                 if (UpkeepEvent.field_z.heldButtonMatches &&
                   var9 > (-UpkeepEvent.field_z.screenX + AiPlanningStrategy.pointerX)) {
                   if (!NodeIterator.field_a) {

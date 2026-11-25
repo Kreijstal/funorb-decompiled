@@ -49,7 +49,7 @@ final class IgnoreRequestSupport {
             return stackIn_14_0;
           }
           if (PreferencesReadRequest.ignoreCount >= 100) {
-            stackIn_17_0 = wh.field_d;
+            stackIn_17_0 = SharedUiLoadingSupport.field_d;
             return stackIn_17_0;
           }
           if (FriendLookupSupport.isFriend(89, name)) {
