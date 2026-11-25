@@ -54,7 +54,7 @@ final class DeployRequest extends ActionRequest {
         }
     }
 
-    final static SpriteSheetDecoder b(int param0, int param1) {
+    final static SpriteSheetDecoder requestUnlockMask(int param0, int param1) {
         SpriteSheetDecoder var2 = null;
         SpriteSheetDecoder var2Lifetime1;
         if (param0 == -1) {

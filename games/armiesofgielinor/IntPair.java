@@ -25,7 +25,7 @@ final class IntPair extends IntrusiveNode {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         RgbSprite[] var7 = new RgbSprite[9];
         RgbSprite[] var4 = var7;
-        var7[0] = SocialListEntry.a(false, param2, param3);
+        var7[0] = SocialListEntry.createSolidSquareSprite(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {
           IntPair.setAccountFlowAction(-23);
@@ -34,7 +34,7 @@ final class IntPair extends IntrusiveNode {
           var4[var5] = var4[0];
           var5++;
         }
-        var4[4] = SocialListEntry.a(false, param0, 64);
+        var4[4] = SocialListEntry.createSolidSquareSprite(false, param0, 64);
         return var4;
     }
 

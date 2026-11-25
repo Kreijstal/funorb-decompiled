@@ -330,7 +330,7 @@ final class VerticalScrollbar extends ClientUiComponent {
         return scrollOffset;
     }
 
-    final static java.awt.Canvas p(int param0) {
+    final static java.awt.Canvas getActiveCanvas(int param0) {
         if (param0 != 0) {
           field_Jb = (String) null;
           return FixedQuaternion.fullscreenCanvas == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.fullscreenCanvas);

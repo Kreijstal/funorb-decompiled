@@ -19,7 +19,7 @@ final class GameCanvas extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isMultiCharacterString(byte param0, String param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
         RuntimeException stackIn_10_0 = null;

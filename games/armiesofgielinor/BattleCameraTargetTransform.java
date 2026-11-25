@@ -320,7 +320,7 @@ final class BattleCameraTargetTransform {
                   DateValiditySupport.field_d[var13] = false;
                   var13++;
                 }
-                ConsoleTokenCursor.a(0, NineSliceSpriteSupport.gameOptionCount, NumericDateInputWidget.roomSetup, -1, true, -1, (byte) 89, -1);
+                ConsoleTokenCursor.scanLobbyOptionCombinations(0, NineSliceSpriteSupport.gameOptionCount, NumericDateInputWidget.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
                   CampaignLookupSupport.heldKeys[12]) {
                   EmptyWidgetPainter.field_a = true;

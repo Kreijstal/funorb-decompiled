@@ -110,7 +110,7 @@ final class StructureTerrainSupport {
         if (FixedQuaternion.fullscreenCanvas == null) {
           return;
         }
-        DateValiditySupport.a(FixedQuaternion.fullscreenCanvas, 23678);
+        DateValiditySupport.detachCanvasInput(FixedQuaternion.fullscreenCanvas, 23678);
         FixedQuaternion.fullscreenCanvas.exitFullscreen(-30918, IntPair.field_m);
         FixedQuaternion.fullscreenCanvas = null;
         if (null != ActionSpell.viewportManager) {

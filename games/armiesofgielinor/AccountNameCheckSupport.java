@@ -48,14 +48,14 @@ final class AccountNameCheckSupport {
         }
     }
 
-    final static BitmapTextWidgetPainter a(boolean param0) {
+    final static BitmapTextWidgetPainter getValidationMessagePainter(boolean param0) {
         if (param0) {
           if (VertexNormal.field_f == null) {
             VertexNormal.field_f = new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, AccountIdentifierStatus.field_e.maxAscent, -1, 2147483647, true);
           }
           return VertexNormal.field_f;
         }
-        AccountNameCheckSupport.a(false);
+        AccountNameCheckSupport.getValidationMessagePainter(false);
         if (VertexNormal.field_f == null) {
           VertexNormal.field_f = new BitmapTextWidgetPainter(AccountIdentifierStatus.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, AccountIdentifierStatus.field_e.maxAscent, -1, 2147483647, true);
         }

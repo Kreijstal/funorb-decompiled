@@ -7579,7 +7579,7 @@ final class GameplayController {
             } else {
               this.drawMenuBackground(-123);
             }
-            PreferencesWriteRequest.a(param0 + 4);
+            PreferencesWriteRequest.prepareAndDrawTerrain(param0 + 4);
             if (~this.field_C < param0 &&
               this.field_Zb > -1 &&
               param1) {
@@ -8345,14 +8345,14 @@ final class GameplayController {
                     }
                     if (stackIn_413_0 == stackIn_413_1) {
                       if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 64, var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
-                        UnitModelViewer.a(var11Lifetime1Lifetime1, false);
+                        UnitModelViewer.focusFirstUnitOwnedByPlayer(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                         return;
                       }
                       var10Lifetime1Lifetime2 += 60;
                     } else {
                       if (IterableDualNodeDeque.isPointerInBounds(-33, -50 + var3_int, var3_int, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                        UnitModelViewer.a(var11Lifetime1Lifetime1, false);
+                        UnitModelViewer.focusFirstUnitOwnedByPlayer(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                       }
                       var10Lifetime1Lifetime2 += 30;
@@ -8388,7 +8388,7 @@ final class GameplayController {
                         if (stackIn_367_0Lifetime1 != stackIn_367_1Lifetime1) {
                           if (this.battlefield.getPlayerTeamIndex(var12Lifetime1Lifetime1, -1) == var11Lifetime1Lifetime1) {
                             if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 14, var3_int - 58, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                              UnitModelViewer.a(var12Lifetime1Lifetime1, false);
+                              UnitModelViewer.focusFirstUnitOwnedByPlayer(var12Lifetime1Lifetime1, false);
                               this.field_Pb = true;
                               return;
                             }
@@ -8396,7 +8396,7 @@ final class GameplayController {
                           }
                         } else {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 28, -28 + var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
-                            UnitModelViewer.a(var12Lifetime1Lifetime1, false);
+                            UnitModelViewer.focusFirstUnitOwnedByPlayer(var12Lifetime1Lifetime1, false);
                             this.field_Pb = true;
                             return;
                           }
@@ -8414,7 +8414,7 @@ final class GameplayController {
                         stackIn_367_1Lifetime1 = this.battlefield.getPlayerTeamIndex(var13Lifetime1, -1);
                         if (stackIn_367_0Lifetime1 == stackIn_367_1Lifetime1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, var12Lifetime1Lifetime1, var12Lifetime1Lifetime1 + 30, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                            UnitModelViewer.a(var13Lifetime1, false);
+                            UnitModelViewer.focusFirstUnitOwnedByPlayer(var13Lifetime1, false);
                             this.field_Pb = true;
                             return;
                           }
@@ -9594,7 +9594,7 @@ final class GameplayController {
             if (0 > cameraPlayerIndex) {
               cameraPlayerIndex = this.battlefield.currentPlayer;
             }
-            UnitModelViewer.a(cameraPlayerIndex, false);
+            UnitModelViewer.focusFirstUnitOwnedByPlayer(cameraPlayerIndex, false);
             if (obfuscationControl == 0) {
               return;
             }
@@ -12000,7 +12000,7 @@ final class GameplayController {
                 var5 = param1 ? 1 : 0;
                 CipherPacketBuffer.changeSharedUiStage(var5 != 0, var4, 1, 0);
                 if (var6 != 0) {
-                  if (MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 124) ||
+                  if (MusicPatch.hasAnyUnlockMaskBits(ReportAbuseDialog.field_Nb, (byte) 124) ||
                     null != PointerInputHandler.field_f) {
                     var4 = param1 ? 1 : 0;
                     CipherPacketBuffer.changeSharedUiStage(var4 != 0, 10, 1, 0);
@@ -12014,7 +12014,7 @@ final class GameplayController {
                   }
                 }
               } else {
-                boolean decompiledSharedTail1 = (!(MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 124)) &&
+                boolean decompiledSharedTail1 = (!(MusicPatch.hasAnyUnlockMaskBits(ReportAbuseDialog.field_Nb, (byte) 124)) &&
                   null == PointerInputHandler.field_f);
                 if (!decompiledSharedTail1) {
                   var4 = param1 ? 1 : 0;

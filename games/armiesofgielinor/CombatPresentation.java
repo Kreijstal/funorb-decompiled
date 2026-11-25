@@ -3727,8 +3727,8 @@ final class CombatPresentation implements EventPresentation {
             return false;
           }
           if (var2_int != 0) {
-            BitCountSupport.a(this.field_d, this.field_c, true);
-            BitCountSupport.a(this.field_d, this.field_a, true);
+            BitCountSupport.releaseUnitModelVariants(this.field_d, this.field_c, true);
+            BitCountSupport.releaseUnitModelVariants(this.field_d, this.field_a, true);
           }
           stackIn_18_0 = var2_int;
           return stackIn_18_0 != 0;

@@ -16,7 +16,7 @@ final class ResourceClientErrorSupport {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean getRegistrationEmailOptIn(int param0) {
         if (param0 != 0) {
           field_e = (IndexedSprite[]) null;
           return RadialSummonMenu.field_e;

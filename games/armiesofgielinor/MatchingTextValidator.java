@@ -6,9 +6,9 @@ final class MatchingTextValidator extends TextFieldValidator {
     static String field_j;
     static ClientUiComponent field_l;
 
-    final static void c(byte param0) {
+    final static void beginGuestAccountAction(byte param0) {
         if (param0 > -120) {
-          MatchingTextValidator.c((byte) 114);
+          MatchingTextValidator.beginGuestAccountAction((byte) 114);
           ResourceClientSetupSupport.showRecoveryProgress(56);
           AccountIdentifierStatus.setAccountFlowAction(124, 4);
           return;
@@ -97,7 +97,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             }
           }
           if (obfuscationGuard <= 89) {
-            MatchingTextValidator.c((byte) 94);
+            MatchingTextValidator.beginGuestAccountAction((byte) 94);
           }
           if (text.equals(this.primaryInput.text)) {
             return null;

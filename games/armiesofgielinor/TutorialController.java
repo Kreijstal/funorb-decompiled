@@ -106,7 +106,7 @@ final class TutorialController {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 127) ? 1 : 0;
+          var2_int = MusicPatch.hasAnyUnlockMaskBits(ReportAbuseDialog.field_Nb, (byte) 127) ? 1 : 0;
           stackIn_4_0 = (PointerInputHandler.field_f == null) ? 0 : 1;
           var3 = stackIn_4_0;
           if (var3 == 0 &&
@@ -115,7 +115,7 @@ final class TutorialController {
             return;
           }
           var4 = ValidationStatusWidget.field_V;
-          var4 = var4 + " " + SpriteFramedLabel.a(EmailCheckResult.formatTemplate(param0 ^ 4800, QuickChatPhrase.getGuestSavePrompt(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = var4 + " " + SpriteFramedLabel.replaceCharacter(EmailCheckResult.formatTemplate(param0 ^ 4800, QuickChatPhrase.getGuestSavePrompt(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           GradientUiRenderer.drawHollowGradientFrame(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           PowerOfTwoSupport.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
@@ -471,7 +471,7 @@ final class TutorialController {
             FullscreenStatusDialog.field_X = new RgbSprite[ProxySocketFactory.field_k.length];
             var2_int = 0;
             while (!(ProxySocketFactory.field_k.length <= var2_int)) {
-              FullscreenStatusDialog.field_X[var2_int] = DeathEvent.a(LocalCoatSupport.localCoat.colourIndices, ProxySocketFactory.field_k[var2_int], StructureGlowRenderer.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
+              FullscreenStatusDialog.field_X[var2_int] = DeathEvent.renderCoatThumbnail(LocalCoatSupport.localCoat.colourIndices, ProxySocketFactory.field_k[var2_int], StructureGlowRenderer.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1822,7 +1822,7 @@ final class TutorialController {
                                                                     }
                                                                     if (this.selectionState.isDecrementKeyPressed((byte) -67) &&
                                                                       ResourceProtocolClient.effectsGain > 0) {
-                                                                      BufferedSocket.b(false);
+                                                                      BufferedSocket.decreaseEffectsGain(false);
                                                                       var5 = 1;
                                                                     }
                                                                     if (this.selectionState.isIncrementKeyPressed(-98) &&
@@ -1844,33 +1844,33 @@ final class TutorialController {
                                                                     }
                                                                   }
                                                                   if (this.selectionState.isKeyCode102Pressed(-100)) {
-                                                                    NetworkResourceRequest.b(0, 123);
+                                                                    NetworkResourceRequest.setMusicGain(0, 123);
                                                                   }
                                                                   if (this.selectionState.isKeyCode103Pressed(param1 + 96)) {
-                                                                    NetworkResourceRequest.b(256, param1 + 89);
+                                                                    NetworkResourceRequest.setMusicGain(256, param1 + 89);
                                                                   }
                                                                   if (this.selectionState.isPointerPressed(false)) {
                                                                     var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + AccountRequestResult.field_b) >> 1;
                                                                     var7Lifetime1 = -var6 + AiPlanningStrategy.pointerX;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
-                                                                      NetworkResourceRequest.b(0, 94);
+                                                                      NetworkResourceRequest.setMusicGain(0, 94);
                                                                       if (var9 != 0) {
                                                                         if (var8Lifetime1 >= 256) {
-                                                                          NetworkResourceRequest.b(256, 105);
-                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.setMusicGain(256, 105);
+                                                                          NetworkResourceRequest.setMusicGain(var8Lifetime1, 107);
                                                                         } else {
-                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.setMusicGain(var8Lifetime1, 107);
                                                                         }
                                                                       }
                                                                     } else {
                                                                       if (var8Lifetime1 >= 256) {
-                                                                        NetworkResourceRequest.b(256, 105);
+                                                                        NetworkResourceRequest.setMusicGain(256, 105);
                                                                         if (var9 != 0) {
-                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.setMusicGain(var8Lifetime1, 107);
                                                                         }
                                                                       } else {
-                                                                        NetworkResourceRequest.b(var8Lifetime1, 107);
+                                                                        NetworkResourceRequest.setMusicGain(var8Lifetime1, 107);
                                                                       }
                                                                     }
                                                                   }
@@ -2480,7 +2480,7 @@ final class TutorialController {
                   ArchiveMasterIndex.field_e = 0;
                   Widget.field_n = 0;
                   AccountRegistrationForm.field_X = SharedUiLoadingSupport.field_a;
-                  BattleGraphicsAssets.b((byte) -61);
+                  BattleGraphicsAssets.updateCoatPartScrollLimit((byte) -61);
                 }
                 RadialSummonMenu.playDefaultSoundWithIntGuard(33, ClientUiNode.field_v[2]);
                 return;
@@ -2499,7 +2499,7 @@ final class TutorialController {
               Widget.field_n = 0;
               AccountRegistrationForm.field_X = SharedUiLoadingSupport.field_a;
               ArchiveMasterIndex.field_e = 0;
-              BattleGraphicsAssets.b((byte) -61);
+              BattleGraphicsAssets.updateCoatPartScrollLimit((byte) -61);
             }
             RadialSummonMenu.playDefaultSoundWithIntGuard(68, ClientUiNode.field_v[2]);
           }
@@ -6130,14 +6130,14 @@ final class TutorialController {
             }
             if (stackIn_89_0 > ~AccountRegistrationForm.field_X) {
               stackIn_96_0 = !(ProgressMessageDialog.pointerButton <= 0);
-              var4Lifetime1 = PasswordValidator.a(stackIn_96_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, LocalCoatSupport.localCoat.parts[AccountRegistrationForm.field_X], -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.drawCoatPartPicker(stackIn_96_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, LocalCoatSupport.localCoat.parts[AccountRegistrationForm.field_X], -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
               if (var8 != 0) {
                 stackIn_103_0 = !(ProgressMessageDialog.pointerButton <= 0);
-                var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
+                var4Lifetime1 = PasswordValidator.drawCoatPartPicker(stackIn_103_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
               }
             } else {
               stackIn_103_0 = !(ProgressMessageDialog.pointerButton <= 0);
-              var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.drawCoatPartPicker(stackIn_103_0, 352, IgnoreListLookupSupport.toInterfaceX(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.toInterfaceY(60, (byte) 94));
             }
             if (AccountNameSelectionForm.field_F > -1) {
               AccountNameSelectionForm.field_F = AccountNameSelectionForm.field_F + 200;

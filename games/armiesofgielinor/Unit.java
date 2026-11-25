@@ -992,7 +992,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!MusicPatch.a(ConsoleTextNode.field_n, (byte) 108)) {
+          if (!MusicPatch.hasAnyUnlockMaskBits(ConsoleTextNode.field_n, (byte) 108)) {
             return;
           }
           if (!OwnerChangeEvent.field_B) {

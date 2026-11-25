@@ -151,9 +151,9 @@ final class CampaignMenu {
           FullscreenFocusCanvas.gameplayController = null;
           SectorCacheStore.field_a = null;
           System.gc();
-          ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          ChannelGainProfile.campaignBackgrounds[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          ChannelGainProfile.campaignBackgrounds[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.getActiveCanvas(0)));
+          ChannelGainProfile.campaignBackgrounds[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.getActiveCanvas(0)));
+          ChannelGainProfile.campaignBackgrounds[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.getActiveCanvas(0)));
           QuickChatSetupSupport.field_g = new IndexedSprite[3][3];
           var2_int = 0;
           while (3 > var2_int) {

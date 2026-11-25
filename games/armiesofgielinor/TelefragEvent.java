@@ -5,7 +5,7 @@ final class TelefragEvent extends GameEvent {
     static int field_z;
     static String field_y;
 
-    final boolean b(Battlefield param0, int param1) {
+    final boolean isUnitTileOccupied(Battlefield param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

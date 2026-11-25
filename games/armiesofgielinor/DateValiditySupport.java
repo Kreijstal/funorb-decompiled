@@ -35,7 +35,7 @@ final class DateValiditySupport {
         return false;
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void detachCanvasInput(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

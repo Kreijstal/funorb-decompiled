@@ -253,7 +253,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void decreaseEffectsGain(boolean param0) {
         int var1 = 0;
         if (ResourceProtocolClient.effectsGain <= 32) {
           EffectsGainSupport.setEffectsGain(0, (byte) -109);

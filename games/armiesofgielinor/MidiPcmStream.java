@@ -1214,7 +1214,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void drawSmallFoliageShadows(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var4_int = 0;
         int var5 = 0;

@@ -47,7 +47,7 @@ final class TextWidthSupport {
         mapThemesByArchive = (int[][]) null;
     }
 
-    final static ClientUiComponent b(int param0) {
+    final static ClientUiComponent getIgnoreListContent(int param0) {
         if (param0 > -122) {
           mapThemesByArchive = (int[][]) null;
           return TaggedMapData.field_g.listContent;

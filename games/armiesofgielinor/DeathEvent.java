@@ -74,7 +74,7 @@ final class DeathEvent extends GameEvent {
           this.applyToBattlefield(param2.battlefield, -26661);
           if (param1 > -84) {
             var5 = (String) null;
-            DeathEvent.a((int[]) null, (int[]) null, (String) null, 40);
+            DeathEvent.renderCoatThumbnail((int[]) null, (int[]) null, (String) null, 40);
           }
           if (param2.selectedUnit != null) {
             stackIn_6_0 = param2.movementPlanner;
@@ -137,7 +137,7 @@ final class DeathEvent extends GameEvent {
         this.unit = null;
     }
 
-    final static RgbSprite a(int[] param0, int[] param1, String param2, int param3) {
+    final static RgbSprite renderCoatThumbnail(int[] param0, int[] param1, String param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite stackIn_2_0 = null;
         ArgbSprite stackIn_4_0 = null;

@@ -202,7 +202,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             return true;
           }
           var4_ref_String = UpkeepEvent.chatTextBuffer.toString();
-          if (FaceNormal.a(var4_ref_String, param1 + 134)) {
+          if (FaceNormal.containsLoginIdentifier(var4_ref_String, param1 + 134)) {
             var13 = (String) null;
             var12 = (String) null;
             LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);

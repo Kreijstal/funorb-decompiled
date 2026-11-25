@@ -2661,7 +2661,7 @@ final class Battlefield {
           this.markKingBlackDragonSummonedUnlessGuardMatches(7);
           var4 = context + "\n" + var4;
           this.pendingEvents.clear(obfuscationGuard ^ 98);
-          Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
+          Spell.reportSessionErrorAndDisconnect("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ha.JC(" + obfuscationGuard + ',' + (context != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ')');
         }
@@ -3932,7 +3932,7 @@ final class Battlefield {
                       stackIn_140_2 = 128;
                     }
                     ((PacketBuffer) (Object) stackIn_139_0).writeByte(stackIn_139_1, stackIn_140_2 | var10Lifetime1.unitType);
-                    CampaignRewardPreview.a(29712, var10Lifetime1, packet);
+                    CampaignRewardPreview.writeVersionTwoUnitRecord(29712, var10Lifetime1, packet);
                   }
                   var10Lifetime1 = (Unit) (this.unitsByPlayer[var9Lifetime1].next((byte) 123));
                 }
@@ -7223,7 +7223,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          name = SpriteFramedLabel.a(name, '_', 3, "");
+          name = SpriteFramedLabel.replaceCharacter(name, '_', 3, "");
           if (obfuscationGuard != -26) {
             return true;
           }

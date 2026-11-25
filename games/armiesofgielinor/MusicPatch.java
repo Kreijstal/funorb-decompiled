@@ -48,7 +48,7 @@ final class MusicPatch extends IntrusiveNode {
         this.sampleIds = null;
     }
 
-    final static boolean a(int[] param0, byte param1) {
+    final static boolean hasAnyUnlockMaskBits(int[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -61,7 +61,7 @@ final class MusicPatch extends IntrusiveNode {
         try {
           if (param1 <= 106) {
             var4 = (int[]) null;
-            MusicPatch.a((int[]) null, (byte) -31);
+            MusicPatch.hasAnyUnlockMaskBits((int[]) null, (byte) -31);
           }
           var2_int = 0;
           while (true) {

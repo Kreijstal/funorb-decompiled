@@ -31,7 +31,7 @@ final class SpriteFramedLabel {
         return this.height;
     }
 
-    final static String a(String param0, char param1, int param2, String param3) {
+    final static String replaceCharacter(String param0, char param1, int param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -61,7 +61,7 @@ final class SpriteFramedLabel {
           var7 = var5 - 1;
           if (param2 != 3) {
             var12 = (String) null;
-            SpriteFramedLabel.a((String) null, '(', -2, (String) null);
+            SpriteFramedLabel.replaceCharacter((String) null, '(', -2, (String) null);
           }
           if (0 != var7) {
             var8_int = 0;
@@ -185,7 +185,7 @@ final class SpriteFramedLabel {
           return this.width;
         }
         String var3 = (String) null;
-        SpriteFramedLabel.a((String) null, 'd', -85, (String) null);
+        SpriteFramedLabel.replaceCharacter((String) null, 'd', -85, (String) null);
         return this.width;
     }
 

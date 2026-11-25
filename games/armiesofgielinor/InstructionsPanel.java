@@ -489,7 +489,7 @@ final class InstructionsPanel {
                   StructureGlowRenderer.drawStructureGlow(IgnoreListLookupSupport.toInterfaceX(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.toInterfaceY(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.toInterfaceY(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.toInterfaceX(true, param0), (MeshData) null, -10374);
+                  ResourceRequest.drawUnitModelPreview(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.toInterfaceY(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.toInterfaceX(true, param0), (MeshData) null, -10374);
                 }
                 QuickChatCategoryMenuSupport.activeStructureSprites[16].draw(IgnoreListLookupSupport.toInterfaceX(true, param0), MatchConditionEntry.toInterfaceY(param1 - 40, (byte) 94));
                 return;

@@ -383,7 +383,7 @@ class PacketBuffer extends IntrusiveNode {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = SpriteControlNode.field_m[var8Lifetime1];
               var10Lifetime1 = SpriteControlNode.field_m[1 + var8Lifetime1];
-              if (BattlefieldTheme.a(param6, var10Lifetime1, var9Lifetime1, -27)) {
+              if (BattlefieldTheme.ranksLeaderboardEntryBefore(param6, var10Lifetime1, var9Lifetime1, -27)) {
                 SpriteControlNode.field_m[var8Lifetime1] = var10Lifetime1;
                 SpriteControlNode.field_m[var8Lifetime1 + 1] = var9Lifetime1;
               }

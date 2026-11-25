@@ -42,7 +42,7 @@ final class TeleportEvent extends GameEvent {
           stackIn_3_0 = (!this.enqueuePresenter((byte) -39, param2, param0, true)) ? 0 : 1;
           var4_int = stackIn_3_0;
           if (param1 > -84) {
-            TeleportEvent.a(-83, -34, -127);
+            TeleportEvent.hitTestSelectionMenu(-83, -34, -127);
           }
           if (!this.skipDestinationPlacement) {
             var4_int = var4_int != 0 | this.enqueuePresenterAt(this.sourceY + this.targetDeltaY, 15, param2, param0, this.sourceX + this.targetDeltaX) ? 1 : 0;
@@ -123,7 +123,7 @@ final class TeleportEvent extends GameEvent {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestSelectionMenu(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

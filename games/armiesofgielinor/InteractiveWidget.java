@@ -14,7 +14,7 @@ class InteractiveWidget extends Widget {
     private boolean focused;
     boolean active;
 
-    final static void a(int param0, String[] param1) {
+    final static void setAccountNameSuggestions(int param0, String[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

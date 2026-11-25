@@ -20,10 +20,10 @@ final class ConsoleTokenSupport {
     final static void increaseMusicGain(int param0) {
         int var1 = 0;
         if (224 <= SoundPlaybackHandle.musicGain) {
-          NetworkResourceRequest.b(256, param0 ^ -30690);
+          NetworkResourceRequest.setMusicGain(256, param0 ^ -30690);
         } else {
           var1 = SoundPlaybackHandle.musicGain % 32;
-          NetworkResourceRequest.b(32 + (SoundPlaybackHandle.musicGain - var1), 84);
+          NetworkResourceRequest.setMusicGain(32 + (SoundPlaybackHandle.musicGain - var1), 84);
         }
         if (param0 == -30647) {
           return;

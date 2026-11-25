@@ -69,7 +69,7 @@ final class EventPresenterFactory {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseEventPresenterFactoryStatics(boolean param0) {
         field_d = null;
         field_e = null;
         field_f = null;

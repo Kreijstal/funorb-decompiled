@@ -51,7 +51,7 @@ abstract class TextLayout {
         return -1;
     }
 
-    final static int a(CipherPacketBuffer param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static int readTwoRangeBitValue(CipherPacketBuffer param0, int param1, int param2, int param3, byte param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         CipherPacketBuffer var7 = null;
@@ -64,7 +64,7 @@ abstract class TextLayout {
         try {
           if (param4 > -121) {
             var7 = (CipherPacketBuffer) null;
-            TextLayout.a((CipherPacketBuffer) null, 120, 29, -83, (byte) -93, 59);
+            TextLayout.readTwoRangeBitValue((CipherPacketBuffer) null, 120, 29, -83, (byte) -93, 59);
           }
           var6_int = param0.readBits(-106, 1);
           if (0 != var6_int) {

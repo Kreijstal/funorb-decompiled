@@ -29,7 +29,7 @@ final class BattlefieldTheme {
     String musicTrackName;
     MusicTrack musicTrack;
 
-    final static boolean a(boolean param0, int param1, int param2, int param3) {
+    final static boolean ranksLeaderboardEntryBefore(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_16_0 = false;
         boolean stackIn_34_0 = false;
         int var4;
@@ -148,7 +148,7 @@ final class BattlefieldTheme {
         field_s = null;
         field_k = null;
         if (obfuscationGuard >= -100) {
-          BattlefieldTheme.a(true, 87, 46, 119);
+          BattlefieldTheme.ranksLeaderboardEntryBefore(true, 87, 46, 119);
           quickChatHelpSubtitle = null;
           return;
         }
@@ -284,7 +284,7 @@ final class BattlefieldTheme {
         }
         byte[] var3 = AnimationFrameSetCacheEntry.themeBackgroundArchive.getFileByName(this.backgroundImageFile, obfuscationGuard ^ 108, "");
         byte[] var2 = var3;
-        return new RgbSprite(var3, (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+        return new RgbSprite(var3, (java.awt.Component) ((Object) VerticalScrollbar.getActiveCanvas(0)));
     }
 
     static {

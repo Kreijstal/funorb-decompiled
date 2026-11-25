@@ -69,7 +69,7 @@ final class EventPresenter extends IntrusiveNode {
                 if (this.event.eventKind != 26) {
                   if (this.event.eventKind == 5) {
                     var3 = (TelefragEvent) (this.event);
-                    if (var3.b(this.battlefield, -75)) {
+                    if (var3.isUnitTileOccupied(this.battlefield, -75)) {
                       new DeathEvent(this.battlefield.getUnitAt(var3.unit.tileY, true, var3.unit.tileX), true).beginPresentation(this.controller.eventPresenters, (byte) -86, this.controller);
                     }
                     this.fullCombatScene = false;

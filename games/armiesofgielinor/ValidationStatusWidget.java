@@ -47,7 +47,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
     }
 
     ValidationStatusWidget(ValidationSource validationSource, String fallbackText, int x, int y, int width, int height) {
-        super(fallbackText, AccountNameCheckSupport.a(true));
+        super(fallbackText, AccountNameCheckSupport.getValidationMessagePainter(true));
         try {
           this.validationSource = validationSource;
           this.fallbackText = fallbackText;

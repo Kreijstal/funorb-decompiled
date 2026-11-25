@@ -66,7 +66,7 @@ abstract class CacheEntry extends DualLinkedNode {
               AccountRsaBufferSupport.field_b.writeNullCircumfixedString(var14, 413740432);
               AccountRsaBufferSupport.field_b.writeNullCircumfixedString(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
-              AccountRsaBufferSupport.field_b.writeNullCircumfixedString(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
+              AccountRsaBufferSupport.field_b.writeNullCircumfixedString(CommunityTabGroup.normalizeAccountNameKey(param2 + 18820, var15), 413740432);
               AccountRsaBufferSupport.field_b.writeShort(true, param4);
               AccountRsaBufferSupport.field_b.writeByte(1, param3);
               AccountRsaBufferSupport.field_b.writeByte(param2 + 20033, var9);

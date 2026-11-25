@@ -13,7 +13,7 @@ abstract class SocketFactory {
     static String[] field_b;
     static String[] field_g;
 
-    final static boolean c(int param0) {
+    final static boolean isClientReconnectEnabled(int param0) {
         if (param0 != 10) {
           field_h = true;
           return true;

@@ -82,7 +82,7 @@ final class ConsoleTokenCursor {
         return this.position >= this.tokens.length ? true : false;
     }
 
-    final static void a(int param0, int param1, LobbyRoom param2, int param3, boolean param4, int param5, byte param6, int param7) {
+    final static void scanLobbyOptionCombinations(int param0, int param1, LobbyRoom param2, int param3, boolean param4, int param5, byte param6, int param7) {
         IconTextComponent[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_51_0 = 0;
@@ -219,7 +219,7 @@ final class ConsoleTokenCursor {
                   } else {
                     param7 = var12;
                   }
-                  ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) -72, param7);
+                  ConsoleTokenCursor.scanLobbyOptionCombinations(param0, param1, param2, param3 + 1, param4, param5, (byte) -72, param7);
                   if (EmptyWidgetPainter.field_a) {
                     return;
                   }
@@ -259,7 +259,7 @@ final class ConsoleTokenCursor {
               }
             }
             if (var13 != 0) {
-              ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) 120, param7);
+              ConsoleTokenCursor.scanLobbyOptionCombinations(param0, param1, param2, param3 + 1, param4, param5, (byte) 120, param7);
               var11Lifetime1 = 1;
             }
             if (EmptyWidgetPainter.field_a) {

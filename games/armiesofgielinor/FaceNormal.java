@@ -17,7 +17,7 @@ final class FaceNormal {
         field_c = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsLoginIdentifier(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;

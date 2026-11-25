@@ -79,7 +79,7 @@ final class ValidationState {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeSingleZeroByteRequest(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         if (param0 < -31) {
           var2.writeCipheredOpcode(32161, param1);

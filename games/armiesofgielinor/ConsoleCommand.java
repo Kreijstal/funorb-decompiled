@@ -32,11 +32,11 @@ abstract class ConsoleCommand extends DualLinkedNode {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, NineSliceFrame param3) {
+    final static void applyNineSliceFrameGuard(int param0, byte param1, int param2, NineSliceFrame param3) {
         try {
           if (param1 != 96) {
             NineSliceFrame var5 = (NineSliceFrame) null;
-            ConsoleCommand.a(125, (byte) -9, 20, (NineSliceFrame) null);
+            ConsoleCommand.applyNineSliceFrameGuard(125, (byte) -9, 20, (NineSliceFrame) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dr.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

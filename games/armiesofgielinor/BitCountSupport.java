@@ -8,7 +8,7 @@ final class BitCountSupport {
     static String field_d;
     static ClientUiComponent field_c;
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void releaseUnitModelVariants(boolean param0, int param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;

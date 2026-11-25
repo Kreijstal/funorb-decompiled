@@ -9,7 +9,7 @@ abstract class MouseWheelSource {
     static PcmSample[] field_b;
     static int field_d;
 
-    final static void a(byte param0, byte[] param1, int[] param2, int param3, int param4) {
+    final static void orderLogoFacesByPriority(byte param0, byte[] param1, int[] param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;

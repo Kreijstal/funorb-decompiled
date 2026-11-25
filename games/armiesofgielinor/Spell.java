@@ -11,7 +11,7 @@ abstract class Spell {
 
     abstract int getPayloadSize(int obfuscationGuard);
 
-    final static void a(String param0, byte param1) {
+    final static void reportSessionErrorAndDisconnect(String param0, byte param1) {
         try {
           if (param1 < 33) {
             Spell.releaseStatics(-9);

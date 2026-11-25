@@ -87,7 +87,7 @@ final class IconLabelControl extends ClientUiComponent {
           if (null != var45.field_K &&
             var45.field_E > 1) {
             var61 = var45.field_K;
-            MouseWheelSource.a((byte) -105, var61, ArchiveLoadSequence.field_g, 0, 0);
+            MouseWheelSource.orderLogoFacesByPriority((byte) -105, var61, ArchiveLoadSequence.field_g, 0, 0);
           } else {
             ListMissionsConsoleCommand.compactLogoFaceDepthBuckets((byte) -63);
           }

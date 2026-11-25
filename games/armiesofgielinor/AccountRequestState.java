@@ -43,7 +43,7 @@ final class AccountRequestState {
           SpellDefinitionTable.setSelectionMenuLineHeights(param11, param19, param5, false, param4);
           ContentTransitionDialog.setSelectionMenuCenter(param0, param2, 56);
           ResourceClientSetupSupport.setSelectionMenuSpacing(param6, param10, param7, param12, param15, -125);
-          ConsoleCommand.a(param16, (byte) 96, param13, param20);
+          ConsoleCommand.applyNineSliceFrameGuard(param16, (byte) 96, param13, param20);
           AccountNameSelectionSupport.runLayoutSetupGuard(param1, param3, -118, param18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

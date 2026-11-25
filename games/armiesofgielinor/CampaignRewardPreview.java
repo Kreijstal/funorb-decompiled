@@ -12,7 +12,7 @@ final class CampaignRewardPreview {
     static RgbSprite field_e;
     static LoginCredentials field_g;
 
-    final static void a(int param0, Unit param1, PacketBuffer param2) {
+    final static void writeVersionTwoUnitRecord(int param0, Unit param1, PacketBuffer param2) {
         try {
           UnitRecordWriter.writeUnitRecord(0, param1, 2, param2);
           if (param0 != 29712) {

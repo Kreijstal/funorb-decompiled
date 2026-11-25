@@ -43,7 +43,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         return var2Lifetime1;
     }
 
-    public static void a(int param0) {
+    public static void releaseReflectionCheckRequestStatics(int param0) {
         if (param0 == 540) {
           field_s = null;
           field_l = null;

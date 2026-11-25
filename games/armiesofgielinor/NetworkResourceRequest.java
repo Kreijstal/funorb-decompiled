@@ -20,7 +20,7 @@ final class NetworkResourceRequest extends ResourceRequest {
 
     final int getProgress(int obfuscationGuard) {
         if (obfuscationGuard != 0) {
-          NetworkResourceRequest.b(-42, -14);
+          NetworkResourceRequest.setMusicGain(-42, -14);
           if (null == this.responseBuffer) {
             return 0;
           }
@@ -43,7 +43,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         throw new RuntimeException();
     }
 
-    final static void b(int param0, int param1) {
+    final static void setMusicGain(int param0, int param1) {
         SoundPlaybackHandle.musicGain = param0;
         if (param1 >= 83) {
           if (null != LobbyRoom.directMusicSequencer) {

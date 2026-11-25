@@ -7,7 +7,7 @@ final class BattleGraphicsAssets {
     static int field_c;
     private ResourceArchive basicArchive;
 
-    final static void b(byte param0) {
+    final static void updateCoatPartScrollLimit(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_12_0 = 0;

@@ -54,7 +54,7 @@ final class RasterState extends IntrusiveNode {
                   QuickChatShortcutSupport.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
                   ResizableModalDialog.b(param0, param1, 0, param5, var7, param3);
                   IntrusiveNode.drawMovementAndSpellRangeOutline(62, param1, param0, 19 + param3, var7, 39 + param5);
-                  AttackRangeOverlaySupport.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
+                  AttackRangeOverlaySupport.drawAttackRangeOverlay(var7, 19 + param3, param5 + 39, -118, param1, param0);
                   TickCounter.drawTileStructuresAndEffects(var9, false, param0, param3, var7, 0, param1, param5, var8);
                   var10 = QuickChatMenuDisplaySupport.field_e[var7].metadata;
                   if (var10 != null &&

@@ -81,7 +81,7 @@ final class FriendLookupSupport {
         try {
           var4 = param2[param3][param1];
           var6 = -73 / ((12 - param0) / 61);
-          if (GameCanvas.a((byte) -125, var4)) {
+          if (GameCanvas.isMultiCharacterString((byte) -125, var4)) {
             var5 = var4;
           } else {
             if (CampaignMenuButton.isSingleLowercaseCharacter(30, var4)) {
@@ -246,7 +246,7 @@ final class FriendLookupSupport {
           if (FullscreenMembershipDialog.activeContextMenu != null) {
             return true;
           }
-          if (ScrollContainer.l(0)) {
+          if (ScrollContainer.hasAccountNamePrompt(0)) {
             return true;
           }
           if (Spell.field_b != null) {
@@ -264,7 +264,7 @@ final class FriendLookupSupport {
         if (FullscreenMembershipDialog.activeContextMenu != null) {
           return true;
         }
-        if (ScrollContainer.l(0)) {
+        if (ScrollContainer.hasAccountNamePrompt(0)) {
           return true;
         }
         if (Spell.field_b != null) {

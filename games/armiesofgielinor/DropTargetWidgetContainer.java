@@ -54,7 +54,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static void a(byte param0, boolean param1, MusicTrack param2) {
+    final static void selectMusicTrack(byte param0, boolean param1, MusicTrack param2) {
         try {
           MusicCrossfadeStream.setMusicTrack(param2, param1, 256, (byte) 41);
           if (param0 >= -28) {

@@ -40,7 +40,7 @@ final class WidgetTheme {
 
     final void drawLine(int colour, int endY, int startX, byte obfuscationGuard, int startY, int endX) {
         if (obfuscationGuard < 44) {
-          this.a(69, 37, 82, 84, -66);
+          this.pushRasterClip(69, 37, 82, 84, -66);
         }
         SoftwareRaster.drawLine(startX, startY, endX, endY, colour);
     }
@@ -191,7 +191,7 @@ final class WidgetTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void pushRasterClip(int param0, int param1, int param2, int param3, int param4) {
         CampaignUnitOverride.pushRasterClip(param4, param1, param0, param2, (byte) 83);
         int var6 = 26 / ((param3 + 48) / 53);
     }

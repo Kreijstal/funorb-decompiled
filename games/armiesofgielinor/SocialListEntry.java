@@ -16,7 +16,7 @@ final class SocialListEntry extends ClientUiComponent {
         super(0L, (ClientUiComponent) null);
     }
 
-    final static RgbSprite a(boolean param0, int param1, int param2) {
+    final static RgbSprite createSolidSquareSprite(boolean param0, int param1, int param2) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         RgbSprite var3 = new RgbSprite(param2, param2);
         int var4 = 0;
@@ -40,7 +40,7 @@ final class SocialListEntry extends ClientUiComponent {
         if (obfuscationGuard == -4175) {
           return;
         }
-        SocialListEntry.a(true, -43, 13);
+        SocialListEntry.createSolidSquareSprite(true, -43, 13);
     }
 
     static {

@@ -33,7 +33,7 @@ final class IntroSequence {
         if (param0 >= -15) {
           this.draw(29);
         }
-        return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+        return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) VerticalScrollbar.getActiveCanvas(0)));
     }
 
     final void advance(boolean param0) {

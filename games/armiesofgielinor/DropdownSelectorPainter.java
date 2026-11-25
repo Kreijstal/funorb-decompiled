@@ -38,7 +38,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
         try {
           if (obfuscationGuard > -123) {
             var6 = (String) null;
-            DropdownSelectorPainter.a(false, (String) null);
+            DropdownSelectorPainter.loadGameTextBytes(false, (String) null);
           }
           var4_int = archive.getGroupId(groupName, 110);
           var5 = archive.getFileId((byte) -72, var4_int, fileName);
@@ -201,7 +201,7 @@ final class DropdownSelectorPainter implements WidgetPainter {
         }
     }
 
-    final static byte[] a(boolean param0, String param1) {
+    final static byte[] loadGameTextBytes(boolean param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;

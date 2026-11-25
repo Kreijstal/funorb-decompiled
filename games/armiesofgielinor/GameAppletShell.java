@@ -607,7 +607,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                AgeValidator.c((byte) -76);
+                AgeValidator.probeMaximumHeapMiB((byte) -76);
                 this.recreateCanvas((byte) 87);
                 FixedSquareRootSupport.field_b = StripedProgressWidget.createRasterImageSurface(CalendarSupport.viewportWidth, DateValiditySupport.viewportHeight, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.initializeClient(false);

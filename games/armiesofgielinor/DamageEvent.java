@@ -115,7 +115,7 @@ final class DamageEvent extends GameEvent {
           ClientContextMenu.initializeChatAndQuickChatUi(param13, 2, param5, param8);
           ClientStateChecksumSupport.initializeAbuseOffenceDescriptions(param10 + 13099);
           DeployEvent.h(14570);
-          TurnChangeEvent.d((byte) -112);
+          TurnChangeEvent.layoutSharedChatAndQuickChat((byte) -112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

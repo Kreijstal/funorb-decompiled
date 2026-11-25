@@ -234,7 +234,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         try {
           if (!OwnerChangeEvent.field_B) {
             if (null == ValidationState.field_b) {
-              ValidationState.field_b = DeployRequest.b(-1, 4);
+              ValidationState.field_b = DeployRequest.requestUnlockMask(-1, 4);
             }
             if (ValidationState.field_b.field_m) {
               var12 = BoundedFile.field_e;
@@ -267,7 +267,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               UpkeepEvent.snapDialogsAndFreezeProgress(-78);
               DialWidget.b(true);
               if (ClientContextMenu.field_a == 9 &&
-                !MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
+                !MusicPatch.hasAnyUnlockMaskBits(ReportAbuseDialog.field_Nb, (byte) 116)) {
                 ClientContextMenu.field_a = 0;
               }
             }

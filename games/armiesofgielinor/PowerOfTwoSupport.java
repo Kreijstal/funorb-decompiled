@@ -34,7 +34,7 @@ final class PowerOfTwoSupport extends IntrusiveNode {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + ValidationStatusIcon.a(param1.charAt(var4), 100);
+            var3 = (var3 << 5) - var3 + ValidationStatusIcon.encodeCp1252Character(param1.charAt(var4), 100);
           }
           if (param0 == -116) {
             stackIn_8_0 = var3;

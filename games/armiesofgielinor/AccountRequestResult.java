@@ -58,7 +58,7 @@ final class AccountRequestResult {
               ResizableModalDialog.b(param3, param5, param2 + 128, param1, var6_int, param4);
             }
             IntrusiveNode.drawMovementAndSpellRangeOutline(78, param5, param3, param4 + 19, var6_int, param1 + 39);
-            AttackRangeOverlaySupport.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
+            AttackRangeOverlaySupport.drawAttackRangeOverlay(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
             TickCounter.drawTileStructuresAndEffects(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
             var10 = var7.metadata;
             if (null != var10 &&

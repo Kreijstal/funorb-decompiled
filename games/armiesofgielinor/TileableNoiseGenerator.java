@@ -440,7 +440,7 @@ abstract class TileableNoiseGenerator {
                 for (var17_int = 0; var17_int < optionIndex; var17_int++) {
                   DateValiditySupport.field_d[var17_int] = false;
                 }
-                ConsoleTokenCursor.a(0, optionIndex, room, -1, filterMode, choiceValue, (byte) 103, -1);
+                ConsoleTokenCursor.scanLobbyOptionCombinations(0, optionIndex, room, -1, filterMode, choiceValue, (byte) 103, -1);
                 if (BufferedSocket.field_j >= 2 &&
                   CampaignLookupSupport.heldKeys[12]) {
                   EmptyWidgetPainter.field_a = true;

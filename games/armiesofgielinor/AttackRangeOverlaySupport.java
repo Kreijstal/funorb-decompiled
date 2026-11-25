@@ -5,7 +5,7 @@ final class AttackRangeOverlaySupport {
     static String field_a;
     static String field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawAttackRangeOverlay(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var15 = 0;
         int stackIn_19_0 = 0;
         int stackIn_29_0 = 0;
@@ -130,7 +130,7 @@ final class AttackRangeOverlaySupport {
 
     public static void releaseStatics(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
-          AttackRangeOverlaySupport.a(-12, 36, -105, 64, -39, -61);
+          AttackRangeOverlaySupport.drawAttackRangeOverlay(-12, 36, -105, 64, -39, -61);
         }
         field_b = null;
         field_a = null;

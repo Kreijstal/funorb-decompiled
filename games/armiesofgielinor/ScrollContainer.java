@@ -29,7 +29,7 @@ final class ScrollContainer extends ClientUiComponent {
           this.scrollbar.setLayout(201, scrollbarWidth, this.height, 0, this.content.height, this.viewport.height, -scrollbarWidth + this.width, -this.content.y);
           return;
         }
-        ScrollContainer.l(-122);
+        ScrollContainer.hasAccountNamePrompt(-122);
         this.content.x = 0;
         this.viewport.width = -scrollbarWidth + (this.width - scrollbarGap);
         this.content.width = -scrollbarGap - scrollbarWidth + this.width;
@@ -52,7 +52,7 @@ final class ScrollContainer extends ClientUiComponent {
         return this.updateContentLayoutAndScroll(forceChildLayout, wheelDelta, this.viewport.height, arrowStep, 0, childSpacing, preserveChildLayout);
     }
 
-    final static boolean l(int param0) {
+    final static boolean hasAccountNamePrompt(int param0) {
         if (param0 != 0) {
           ScrollContainer.releaseStatics(118);
           return null != EffectPresentation.field_e ? true : false;
@@ -62,7 +62,7 @@ final class ScrollContainer extends ClientUiComponent {
 
     public static void releaseStatics(int obfuscationGuard) {
         if (obfuscationGuard != 0) {
-          ScrollContainer.l(-24);
+          ScrollContainer.hasAccountNamePrompt(-24);
           field_Mb = null;
           unitDisplayNames = null;
           field_Kb = null;

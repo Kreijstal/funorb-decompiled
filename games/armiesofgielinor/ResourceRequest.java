@@ -69,7 +69,7 @@ abstract class ResourceRequest extends DualLinkedNode {
         }
     }
 
-    final static void a(ModelMeshBase param0, boolean param1, int param2, AnimationPlayer param3, int param4, int param5, int param6, MeshData param7, int param8) {
+    final static void drawUnitModelPreview(ModelMeshBase param0, boolean param1, int param2, AnimationPlayer param3, int param4, int param5, int param6, MeshData param7, int param8) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

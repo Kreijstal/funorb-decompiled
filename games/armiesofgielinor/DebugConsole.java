@@ -540,7 +540,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseDebugConsoleStatics(int param0) {
         try {
           int var1_int = 10 % ((55 - param0) / 54);
           field_A = null;

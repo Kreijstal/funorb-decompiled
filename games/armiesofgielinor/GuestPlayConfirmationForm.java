@@ -129,7 +129,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           } else {
             if (this.registerButton != widget) {
               if (this.guestPlayButton == widget) {
-                MatchingTextValidator.c((byte) -127);
+                MatchingTextValidator.beginGuestAccountAction((byte) -127);
               }
             } else {
               ConsoleTextNode.showAccountRegistration(false);

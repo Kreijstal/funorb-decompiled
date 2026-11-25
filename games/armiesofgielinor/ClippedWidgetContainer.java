@@ -33,7 +33,7 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
             return;
           }
           if (this.height != 0) {
-            ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            ReloadPageSupport.field_c.pushRasterClip(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
             this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             ReloadPageSupport.field_c.restoreRasterState(58);
             return;
@@ -45,7 +45,7 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
             return;
           }
           if (this.height != 0) {
-            ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            ReloadPageSupport.field_c.pushRasterClip(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
             this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             ReloadPageSupport.field_c.restoreRasterState(58);
             return;
@@ -57,7 +57,7 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
           return;
         }
         if (this.height != 0) {
-          ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+          ReloadPageSupport.field_c.pushRasterClip(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
           this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
           ReloadPageSupport.field_c.restoreRasterState(58);
           return;

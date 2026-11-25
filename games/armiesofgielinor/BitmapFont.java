@@ -142,7 +142,7 @@ abstract class BitmapFont extends DualLinkedNode {
             }
             if ((measureCharacter) &&
               (tagStart == -1)) {
-              character = (char)(ValidationStatusIcon.a((char) character, 39) & 255);
+              character = (char)(ValidationStatusIcon.encodeCp1252Character((char) character, 39) & 255);
               width = width + this.advances[character];
               if (this.kerning != null &&
                 previousGlyph != 0) {
@@ -303,7 +303,7 @@ abstract class BitmapFont extends DualLinkedNode {
             if (tagStart == -1) {
               if (character != 0) {
                 characterAppendResult = wrapBuffer.append((char) character);
-                character = (char)(ValidationStatusIcon.a((char) character, 37) & 255);
+                character = (char)(ValidationStatusIcon.encodeCp1252Character((char) character, 37) & 255);
                 lineWidth = lineWidth + this.advances[character];
                 if (this.kerning != null &&
                   previousGlyph != 0) {
@@ -352,7 +352,7 @@ abstract class BitmapFont extends DualLinkedNode {
     }
 
     final int characterWidth(char character) {
-        return this.advances[ValidationStatusIcon.a(character, -106) & 255];
+        return this.advances[ValidationStatusIcon.encodeCp1252Character(character, -106) & 255];
     }
 
     private final void resetStyle(int colour, int shadow) {
@@ -862,7 +862,7 @@ abstract class BitmapFont extends DualLinkedNode {
             }
             if ((drawCharacter) &&
               (tagStart == -1)) {
-              character = (char)(ValidationStatusIcon.a((char) character, 90) & 255);
+              character = (char)(ValidationStatusIcon.encodeCp1252Character((char) character, 90) & 255);
               if (this.kerning != null &&
                 previousGlyph != 0) {
                 left = left + this.kerning[(previousGlyph << 8) + character];

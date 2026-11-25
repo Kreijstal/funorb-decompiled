@@ -16,7 +16,7 @@ final class ClientRecoverySupport {
 
     final static void enterReconnectState(int param0) {
         if (~SoundCache.field_b == param0 ||
-          !SocketFactory.c(10)) {
+          !SocketFactory.isClientReconnectEnabled(10)) {
           EffectPresentation.openAccountLoginProgress(7);
           SoundCache.field_b = 11;
         }

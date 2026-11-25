@@ -493,7 +493,7 @@ final class ResourceArchive {
         }
     }
 
-    final static void c(int param0) {
+    final static void processCoatEditorInput(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

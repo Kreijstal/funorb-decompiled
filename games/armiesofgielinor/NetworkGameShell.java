@@ -231,7 +231,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.getRegistrationAge((byte) -127), RadialSummonItem.getLoginPassword(-1));
+            actionTwoResult = DiskCacheWorker.pollAccountRegistration((byte) -46, CombatPresentation.getAccountNameIdentifier(-4938), OctaveNoiseMap.getEmailIdentifier(488997228), ResourceClientErrorSupport.getRegistrationEmailOptIn(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.getRegistrationAge((byte) -127), RadialSummonItem.getLoginPassword(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.handleAccountCreationResponse(BitmapTextWidgetPainter.field_r, -14, CampaignLookupSupport.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;
@@ -669,7 +669,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ProceduralMapSupport.openLoginDialog(loginGuard, loginDescription, showRegistration, offerGuestPlay);
           }
           if (UnitModelViewer.field_i) {
-            MatchingTextValidator.c((byte) -128);
+            MatchingTextValidator.beginGuestAccountAction((byte) -128);
           }
           if (null == ContentTransitionDialog.field_eb) {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
@@ -718,7 +718,7 @@ abstract class NetworkGameShell extends GameAppletShell {
         }
         if (!skipCanvasRecreation &&
           NineSliceSpriteSupport.canvasRebuildRequested) {
-          DateValiditySupport.a(IndexedSpriteBase.field_b, 23678);
+          DateValiditySupport.detachCanvasInput(IndexedSpriteBase.field_b, 23678);
           this.recreateCanvas((byte) 87);
           BitmapTextWidgetPainter.attachCanvasInput(123, IndexedSpriteBase.field_b);
         }

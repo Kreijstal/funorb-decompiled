@@ -591,7 +591,7 @@ final class PopupPresentation implements EventPresentation {
         boolean decompiledFrameRemainder0 = true;
         if (StrongCacheEntry.field_E >= 20 &&
           AccountRequestResult.isGameUiPhaseActive((byte) 28) && (!(SpriteControlNode.field_n > 0) ||
-          SocketFactory.c(10))) {
+          SocketFactory.isClientReconnectEnabled(10))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }

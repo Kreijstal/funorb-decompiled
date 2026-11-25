@@ -97,7 +97,7 @@ final class AnimationSkeleton extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountRegistrationBlocked(int param0) {
         if (param0 != -8327) {
           String var2 = (String) null;
           AnimationSkeleton.addExceptionContext((Throwable) null, (String) null);

@@ -272,7 +272,7 @@ final class AgeValidator extends TextFieldValidator {
         field_k = null;
     }
 
-    final static void c(byte param0) {
+    final static void probeMaximumHeapMiB(byte param0) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;

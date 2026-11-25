@@ -7,7 +7,7 @@ final class CommunityTabGroup {
     static String field_d;
     static String field_c;
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAccountNameKey(int param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;

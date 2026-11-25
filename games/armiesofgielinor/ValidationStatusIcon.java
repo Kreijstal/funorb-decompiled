@@ -197,7 +197,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCp1252Character(char param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -444,7 +444,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
           field_Q = null;
           return;
         }
-        ValidationStatusIcon.a('￣', -69);
+        ValidationStatusIcon.encodeCp1252Character('￣', -69);
         field_Q = null;
     }
 

@@ -324,26 +324,26 @@ abstract class AiPlanningStrategy {
             if (param3 >= 100 &&
               param3 <= 105) {
               var4 = param1;
-              InteractiveWidget.a(-1, var4);
+              InteractiveWidget.setAccountNameSuggestions(-1, var4);
               EmailValidator.accountNameCheckResult = BoundedFile.createAccountSuggestionsResult(2, param1);
               if (var5 != 0) {
                 EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
                 EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
-                InteractiveWidget.a(-1, (String[]) null);
+                InteractiveWidget.setAccountNameSuggestions(-1, (String[]) null);
               }
             } else {
               EmailValidator.accountNameCheckResult = DisplacedUnitMarker.createAccountErrorResult(-1, param3, param2);
               if (var5 != 0) {
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
                 EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
-                InteractiveWidget.a(-1, (String[]) null);
+                InteractiveWidget.setAccountNameSuggestions(-1, (String[]) null);
               }
             }
           } else {
             stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
             EmailValidator.accountNameCheckResult = ReflectionCheckRequest.createAccountSuccessResult(stackIn_18_0, false);
-            InteractiveWidget.a(-1, (String[]) null);
+            InteractiveWidget.setAccountNameSuggestions(-1, (String[]) null);
           }
           if (param0 <= 28) {
             AiPlanningStrategy.updateFriendListControls(-35, -5, true);

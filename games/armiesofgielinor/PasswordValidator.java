@@ -27,7 +27,7 @@ final class PasswordValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 89) {
-            PasswordValidator.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
+            PasswordValidator.drawCoatPartPicker(false, -126, -33, 30, 79, -34, 49, -91, -77);
           }
           lowerName = this.accountNameInput.text.toLowerCase();
           lowerPassword = text.toLowerCase();
@@ -128,7 +128,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static int drawCoatPartPicker(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_18_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_29_0 = 0;

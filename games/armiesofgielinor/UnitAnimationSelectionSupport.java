@@ -53,7 +53,7 @@ final class UnitAnimationSelectionSupport {
     final static void a(boolean param0) {
         StructureTerrainSupport.exitFullscreen(-111);
         if (IndexedSpriteBase.field_b != null) {
-          DateValiditySupport.a(IndexedSpriteBase.field_b, 23678);
+          DateValiditySupport.detachCanvasInput(IndexedSpriteBase.field_b, 23678);
         }
         BufferedSocket.disableKeyboard((byte) 41);
         LoginMethod.clearPointerInputHandler(-15291);

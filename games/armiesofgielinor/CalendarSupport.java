@@ -111,14 +111,14 @@ final class CalendarSupport {
           }
           if (ViewportManager.field_d.pressedButton != 0) {
             if (AlphaDecodedSpriteSupport.field_k) {
-              ValidationState.a(-61, param3);
+              ValidationState.writeSingleZeroByteRequest(-61, param3);
             } else {
               if (LoginForm.memberEntitlementValue > 0) {
-                ValidationState.a(-61, param3);
+                ValidationState.writeSingleZeroByteRequest(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j &&
                   CampaignLookupSupport.heldKeys[12]) {
-                  ValidationState.a(-61, param3);
+                  ValidationState.writeSingleZeroByteRequest(-61, param3);
                 } else {
                   ChatMessage.field_w = true;
                 }
@@ -148,14 +148,14 @@ final class CalendarSupport {
           }
           if (ViewportManager.field_d.pressedButton != 0) {
             if (AlphaDecodedSpriteSupport.field_k) {
-              ValidationState.a(-61, param3);
+              ValidationState.writeSingleZeroByteRequest(-61, param3);
             } else {
               if (LoginForm.memberEntitlementValue > 0) {
-                ValidationState.a(-61, param3);
+                ValidationState.writeSingleZeroByteRequest(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j) {
                   if (CampaignLookupSupport.heldKeys[12]) {
-                    ValidationState.a(-61, param3);
+                    ValidationState.writeSingleZeroByteRequest(-61, param3);
                   } else {
                     ChatMessage.field_w = true;
                   }

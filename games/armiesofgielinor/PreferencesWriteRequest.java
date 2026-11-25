@@ -12,7 +12,7 @@ final class PreferencesWriteRequest extends IntrusiveNode {
     static int field_q;
     static String field_m;
 
-    final static void a(int param0) {
+    final static void prepareAndDrawTerrain(int param0) {
         int var3 = 0;
         int var1_int = 0;
         AnimationFrameSet var2 = null;
@@ -52,7 +52,7 @@ final class PreferencesWriteRequest extends IntrusiveNode {
         field_k = null;
         field_m = null;
         if (obfuscationGuard != 74) {
-          PreferencesWriteRequest.a(-95);
+          PreferencesWriteRequest.prepareAndDrawTerrain(-95);
           field_n = null;
           return;
         }

@@ -189,7 +189,7 @@ final class UnitModelViewer {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void focusFirstUnitOwnedByPlayer(int param0, boolean param1) {
         int var2_int = 0;
         MapTile var3 = null;
         Unit var4 = null;
@@ -199,7 +199,7 @@ final class UnitModelViewer {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
-            UnitModelViewer.a(-115, false);
+            UnitModelViewer.focusFirstUnitOwnedByPlayer(-115, false);
           }
           for (var2_int = 0; var2_int < QuickChatMenuDisplaySupport.field_e.length; var2_int++) {
             var3 = QuickChatMenuDisplaySupport.field_e[var2_int];
@@ -235,7 +235,7 @@ final class UnitModelViewer {
     private final void advancePreview(byte obfuscationGuard) {
         this.updateRotationKeys(127);
         if (obfuscationGuard >= -30) {
-          UnitModelViewer.a(-57, true);
+          UnitModelViewer.focusFirstUnitOwnedByPlayer(-57, true);
         }
         this.preview.configureProjection(this.previewTilt, 1, this.previewCenterY, -29001, this.previewYaw, this.previewCenterX);
         this.preview.advanceAnimation(-19812);

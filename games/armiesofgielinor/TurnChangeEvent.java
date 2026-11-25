@@ -14,7 +14,7 @@ final class TurnChangeEvent extends GameEvent {
         return var3;
     }
 
-    final static void d(byte param0) {
+    final static void layoutSharedChatAndQuickChat(byte param0) {
         MonotonicClockSupport.a(-76);
         if (param0 != -112) {
           return;
