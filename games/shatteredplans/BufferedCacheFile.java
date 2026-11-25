@@ -766,11 +766,11 @@ final class BufferedCacheFile {
               }
               if (!stackIn_10_0 ||
                 var17 * var14 - var16 * var15 < 0) {
-                var12Lifetime1 = no.field_c[var9];
+                var12Lifetime1 = TutorialStageSupport.field_c[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = no.field_c[var10];
+                  var13Lifetime1 = TutorialStageSupport.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = no.field_c[var11];
+                    var14 = TutorialStageSupport.field_c[var11];
                     if (var14 != -2147483648) {
                       var15 = var13Lifetime1 + var12Lifetime1 - (-var14 + var6);
                       if (var7 >= 0) {
@@ -918,11 +918,11 @@ final class BufferedCacheFile {
               }
               if (!stackIn_10_0 ||
                 var17 * var14 - var16 * var15 < 0) {
-                var12Lifetime1 = no.field_c[var9];
+                var12Lifetime1 = TutorialStageSupport.field_c[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = no.field_c[var10];
+                  var13Lifetime1 = TutorialStageSupport.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = no.field_c[var11];
+                    var14 = TutorialStageSupport.field_c[var11];
                     if (var14 != -2147483648) {
                       var15 = var13Lifetime1 + var12Lifetime1 - (-var14 + var6);
                       if (var7 >= 0) {

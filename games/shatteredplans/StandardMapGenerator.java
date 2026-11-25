@@ -7,7 +7,7 @@ import java.util.*;
 class StandardMapGenerator implements MapGenerator {
     int field_e;
     int field_h;
-    static nf field_j;
+    static ChatHistoryEntry field_j;
     static int[] field_i;
     Star[] field_f;
     int field_d;
@@ -31,7 +31,7 @@ class StandardMapGenerator implements MapGenerator {
         int var5Lifetime1;
         try {
           og.a(-119, this.field_f, this.field_c, this.field_b);
-          var3_int = nn.a(param0.field_e, 0);
+          var3_int = AccountNameValidationSupport.labelStarComponents(param0.field_e, 0);
           QuaternaryListSequence.a(this.field_c, var3_int, (int)(200.0 * ProjectsContent.field_d / 2.0), true, param0.field_e, param0.field_j, this.field_f);
           var8 = param0.field_e;
           for (var5 = 0; var8.length > var5; var5++) {
@@ -752,7 +752,7 @@ class StandardMapGenerator implements MapGenerator {
             for (var11_int = 0; var11_int < 4; var11_int++) {
               var10 = var10 + var19[var11_int];
             }
-            var20 = nf.a(param3.field_c[param2[var8_int]], 3718);
+            var20 = ChatHistoryEntry.sortedIndices(param3.field_c[param2[var8_int]], 3718);
             var18 = var20;
             var11 = var18;
             for (var12 = 1; var12 < param6; var12++) {

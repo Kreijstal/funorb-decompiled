@@ -67,7 +67,7 @@ final class tb {
           wa.field_d = param3;
           Star.field_O = param9;
           LobbyUiSupport.field_f = param2;
-          nl.field_a = param1;
+          DiplomacyRowSupport.field_a = param1;
           UsernameAvailabilityValidator.field_v = param6;
           so.field_r = param12;
           GameTextResources.field_d = param7;
@@ -96,8 +96,8 @@ final class tb {
           var23 = GalaxyMapLayoutSupport.field_a.field_zb;
           var24 = var23;
           var24.field_y = 1;
-          nm.field_c = new AnimatedPanel(0L, SpriteState.field_u);
-          nm.field_c.field_y = 1;
+          PairedIntSortSupport.field_c = new AnimatedPanel(0L, SpriteState.field_u);
+          PairedIntSortSupport.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
           sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
           qf.field_e = new AnimatedPanel(0L, rs.field_Eb);
@@ -167,7 +167,7 @@ final class tb {
           DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
           NameSuggestionsPanel.field_D = new AnimatedPanel(0L, rs.field_Eb);
-          StarAnnotation.field_l = new AnimatedPanel(0L, nl.field_b, MessageKind.field_e.toUpperCase());
+          StarAnnotation.field_l = new AnimatedPanel(0L, DiplomacyRowSupport.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
           QuickChatCategoryRegistry.field_g[0] = new AnimatedPanel(0L, ObjectList.field_h, SocialListPanel.field_Ab);
@@ -178,13 +178,13 @@ final class tb {
           if (param13 != -7966) {
             tb.clearStatics(-52);
           }
-          if (nl.field_a.length >= 2) {
+          if (DiplomacyRowSupport.field_a.length >= 2) {
             QuickChatCategoryRegistry.field_g[1] = new AnimatedPanel(0L, ObjectList.field_h, wl.field_b);
-            array$0 = new sg[1 + nl.field_a.length];
+            array$0 = new sg[1 + DiplomacyRowSupport.field_a.length];
             ByteArrayNode.field_p[1] = array$0;
             ByteArrayNode.field_p[1][0] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, DefendTask.field_r);
-            for (var17_intLifetime1 = 0; nl.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
+            for (var17_intLifetime1 = 0; DiplomacyRowSupport.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
+              ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, TerritoryResourcePanelSupport.field_d, (AnimatedPanel) null, StatefulWidgetTheme.field_w, (Sprite) null, Integer.toString(DiplomacyRowSupport.field_a[var17_intLifetime1]));
             }
           }
           QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, sq.field_s);
@@ -251,7 +251,7 @@ final class tb {
           NameSuggestionsPanel.field_D.addChild(4, StarAnnotation.field_l);
           for (var18Lifetime2 = 0; 4 + param0 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
-              !(nl.field_a.length < 2)) && (var18Lifetime2 != 3 ||
+              !(DiplomacyRowSupport.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(FleetMove.field_A <= 1))) {
               NameSuggestionsPanel.field_D.addChild(4, QuickChatCategoryRegistry.field_g[var18Lifetime2]);
               for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {

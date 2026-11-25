@@ -66,9 +66,9 @@ abstract class GameClientShell extends GameApplet {
           if (var4 == param1) {
             var5_int = wi.a(CipherPacketBuffer.j((byte) 64), of.a(64), 0);
             if (var5_int != -1) {
-              wo.a(var5_int, (byte) -88, HighscoreResponseSupport.field_e, nl.field_c);
+              wo.a(var5_int, (byte) -88, HighscoreResponseSupport.field_e, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
-              nl.field_c = null;
+              DiplomacyRowSupport.field_c = null;
             }
             var11 = DraggableWidget.j(0);
             if (var11 != null) {
@@ -78,9 +78,9 @@ abstract class GameClientShell extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), of.a((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
-              va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, nl.field_c);
+              va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
-              nl.field_c = null;
+              DiplomacyRowSupport.field_c = null;
             }
           }
           if (3 == var4) {
@@ -95,8 +95,8 @@ abstract class GameClientShell extends GameApplet {
               var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, DropTargetWidget.i(-116), this.field_C, BoundsRect.d(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, nl.field_c);
-                  nl.field_c = null;
+                  AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, DiplomacyRowSupport.field_c);
+                  DiplomacyRowSupport.field_c = null;
                 } else {
                   GarrisonTask.field_o = TertiaryListSequence.field_l;
                   LinkPainter.c(98);
@@ -215,7 +215,7 @@ abstract class GameClientShell extends GameApplet {
     final void e(byte param0) {
         boolean stackIn_32_0 = false;
         int var2;
-        nf var3;
+        ChatHistoryEntry var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = BufferedCacheFile.field_e;
@@ -559,7 +559,7 @@ abstract class GameClientShell extends GameApplet {
         if (DefensiveAi.field_p == 11) {
           if (StandardAi.field_e != null && (!StandardAi.field_e.isIndexLoaded((byte) -88) ||
             !StandardAi.field_e.preloadAll(-1))) {
-            nj.a(0.0f, 2, CandidateLink.a(DialPainter.field_a, StandardAi.field_e, -80, AccountStatusDialog.field_xb));
+            ClientDialogSupport.setLoadingProgress(0.0f, 2, CandidateLink.a(DialPainter.field_a, StandardAi.field_e, -80, AccountStatusDialog.field_xb));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -576,7 +576,7 @@ abstract class GameClientShell extends GameApplet {
           if (null != IntroTextLine.field_n) {
             stackIn_141_0 = (!IntroTextLine.field_n.b(-1)) ? 0 : 1;
             var3Lifetime2 = stackIn_141_0;
-            nj.a(IntroTextLine.field_n.field_h, 2, IntroTextLine.field_n.field_c);
+            ClientDialogSupport.setLoadingProgress(IntroTextLine.field_n.field_h, 2, IntroTextLine.field_n.field_c);
           }
           if (var3Lifetime2 != 0) {
             DefensiveAi.field_p = 20;
@@ -690,7 +690,7 @@ abstract class GameClientShell extends GameApplet {
           this.fail((byte) 58, "reconnect");
         }
         IntrusiveNode.b(-11);
-        AccountStatusSupport.showLoginResult((byte) -126, var2, nl.field_c);
+        AccountStatusSupport.showLoginResult((byte) -126, var2, DiplomacyRowSupport.field_c);
         StripedProgressWidget.field_B = true;
         SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
         return var2;

@@ -399,7 +399,7 @@ final class GameScreen {
         try {
           if (qj.a(true, (CharSequence) ((Object) "stage"), (CharSequence) ((Object) param0))) {
             var2_int = Integer.parseInt(param0.substring(6));
-            no.a(-92, var2_int);
+            TutorialStageSupport.advanceTutorialStage(-92, var2_int);
             oq.field_a.refreshMapView(2);
             return;
           }
@@ -2723,7 +2723,7 @@ final class GameScreen {
               if (stackIn_39_0 <= -17) {
                 break;
               }
-              this.field_G[var4] = nf.a(var3[var4], 3718);
+              this.field_G[var4] = ChatHistoryEntry.sortedIndices(var3[var4], 3718);
               stackIn_55_0 = 0;
               if (var10 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3694,7 +3694,7 @@ final class GameScreen {
           if (this.field_s.field_n == null) {
             var3_int = 0;
             while (var3_int < this.field_s.field_P.field_r) {
-              var4_ref_lp = nl.a(var2, this.field_s.field_P.field_v, 2, this.field_s.field_P.field_v[var3_int]);
+              var4_ref_lp = DiplomacyRowSupport.createDiplomacySummaryRow(var2, this.field_s.field_P.field_v, 2, this.field_s.field_P.field_v[var3_int]);
               var4_ref_lp.moveTo((byte) 65, this.field_J.field_z.field_k, this.field_J.field_z.field_t + this.field_J.field_z.field_y);
               this.field_J.field_z.addChild(var4_ref_lp, param0 + 2);
               var3_int++;
@@ -3706,7 +3706,7 @@ final class GameScreen {
               return;
             }
           }
-          var3 = nl.a(var2, this.field_s.field_P.field_v, 2, this.field_s.field_n);
+          var3 = DiplomacyRowSupport.createDiplomacySummaryRow(var2, this.field_s.field_P.field_v, 2, this.field_s.field_n);
           var3.moveTo((byte) 125, this.field_J.field_z.field_k, this.field_J.field_z.field_t + this.field_J.field_z.field_y);
           this.field_J.field_z.addChild(var3, 8);
           var4 = 0;
@@ -4213,10 +4213,10 @@ final class GameScreen {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        nf var8_ref_nf = null;
+        ChatHistoryEntry var8_ref_nf = null;
         int var8 = 0;
         int var9 = 0;
-        nf var9_ref_nf = null;
+        ChatHistoryEntry var9_ref_nf = null;
         int var10 = 0;
         int var11 = 0;
         int var9Lifetime1;

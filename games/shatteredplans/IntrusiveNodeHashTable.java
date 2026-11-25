@@ -253,10 +253,10 @@ final class IntrusiveNodeHashTable {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(5, (byte) -92);
-        var2.writeByte(np.field_a.field_Eb, (byte) -120);
-        int var4 = (np.field_a.field_Fb << 6) + np.field_a.field_nc;
+        var2.writeByte(MenuInputState.field_a.field_Eb, (byte) -120);
+        int var4 = (MenuInputState.field_a.field_Fb << 6) + MenuInputState.field_a.field_nc;
         var2.writeByte(var4, (byte) -72);
-        var2.writeBytes(param1, np.field_a.field_dc.length, np.field_a.field_dc, param1 ^ 22186);
+        var2.writeBytes(param1, MenuInputState.field_a.field_dc.length, MenuInputState.field_a.field_dc, param1 ^ 22186);
         var2.patchLengthByte(var2.position - var3, (byte) 124);
     }
 

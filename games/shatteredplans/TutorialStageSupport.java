@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no {
+final class TutorialStageSupport {
     static LoginForm field_e;
     static boolean field_b;
     static String field_a;
@@ -9,7 +9,7 @@ final class no {
     static boolean[] field_f;
     static String field_d;
 
-    final static void a(int param0, int param1) {
+    final static void advanceTutorialStage(int param0, int param1) {
         try {
           int var5_int = 0;
           int var12 = 0;
@@ -253,7 +253,7 @@ final class no {
         }
     }
 
-    final static void a(boolean param0, int param1, java.awt.Canvas param2) {
+    final static void drawLoadingOrAccountUi(boolean param0, int param1, java.awt.Canvas param2) {
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -299,7 +299,7 @@ final class no {
         }
     }
 
-    final static void a(nf param0, int param1) {
+    final static void notifyChatEntriesAfter(ChatHistoryEntry param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

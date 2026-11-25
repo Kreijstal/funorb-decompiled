@@ -83,7 +83,7 @@ final class IntValueWriteRequest extends IntrusiveNode {
         if (param0 < 2) {
           return false;
         }
-        return np.field_m;
+        return MenuInputState.field_m;
     }
 
     final static void pushSpriteRaster(byte param0, Sprite param1) {

@@ -580,7 +580,7 @@ final class SecondaryNodeHashTable {
     final static void a(byte param0) {
         CanvasResizeController.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         if (AccountStatusDialog.field_pb) {
-          CanvasResizeController.field_a.addChild(4, nm.field_c);
+          CanvasResizeController.field_a.addChild(4, PairedIntSortSupport.field_c);
         }
         CanvasResizeController.field_a.addChild(4, MenuList.field_v);
         Archive.field_g = new wh(MessageKind.field_a, CanvasResizeController.field_a);

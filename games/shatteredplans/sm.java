@@ -7,7 +7,7 @@ final class sm {
     static int field_b;
     private boolean field_f;
     private int field_h;
-    private np field_d;
+    private MenuInputState field_d;
     private int field_i;
     static boolean field_e;
     static String field_c;
@@ -571,7 +571,7 @@ final class sm {
         int var11;
         var5 = TutorialVictoryChecker.field_p[this.field_a][param0];
         if (param3) {
-          this.field_d = (np) null;
+          this.field_d = (MenuInputState) null;
         }
         var6 = this.itemLabel(-22609, var5);
         stackIn_5_0 = (param1) ? 2805974 : 2458760;
@@ -864,7 +864,7 @@ final class sm {
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
-        this.field_d.a(this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
+        this.field_d.resetSelection(this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k), param0, param2, 59);
         this.field_h = 0;
         TerritoryResourcePanelSupport.field_c = -1;
         if (param1 <= 14) {
@@ -1143,7 +1143,7 @@ final class sm {
                 var11 = 16711680;
                 NodeSequence.field_d.drawOpaque(param3 + 5, param0 + 5);
                 this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, StripedProgressWidget.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
-                this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
+                this.a(-5, AccountNameValidationSupport.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
                 this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, AccountRequestResult.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
                 this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
@@ -1627,7 +1627,7 @@ final class sm {
             this.a(-16084);
           }
           v.a((byte) -128);
-          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
+          this.field_d.updatePointerSelection(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
           if (this.field_d.field_c != -1) {
             this.a(true, this.field_d.field_c, false);
           }
@@ -1762,7 +1762,7 @@ final class sm {
           field_e = true;
         }
         var4 = TutorialVictoryChecker.field_p[this.field_a][param1];
-        if (this.field_d.d(-1)) {
+        if (this.field_d.isActivated(-1)) {
           this.b(param1, param0, var4, -32580);
         }
         boolean decompiledFrameRemainder0 = true;
@@ -1777,17 +1777,17 @@ final class sm {
           32 != var6)) {
           if (var6 == 21) {
             var5 = 0;
-            if (this.field_d.a(-1) &&
+            if (this.field_d.isHomePressed(-1) &&
               CheckboxPainter.field_p > 0) {
               LobbyOptionSupport.setSoundEffectVolume(0, 197126152);
               var5 = 1;
             }
-            if (this.field_d.a(true) &&
+            if (this.field_d.isEndPressed(true) &&
               CheckboxPainter.field_p < 256) {
               var5 = 1;
               LobbyOptionSupport.setSoundEffectVolume(256, 197126152);
             }
-            if (this.field_d.b((byte) -50)) {
+            if (this.field_d.isPointerHeld((byte) -50)) {
               var6 = this.itemX(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
               var7 = TertiaryListSequence.field_k - var6;
               var8 = 256 * var7 / 120;
@@ -1802,17 +1802,17 @@ final class sm {
               }
               var5 = 1;
             }
-            if (this.field_d.c(-97) &&
+            if (this.field_d.isLeftPressed(-97) &&
               CheckboxPainter.field_p > 0) {
               var5 = 1;
               DualLinkNode.c(!param2);
             }
-            if (this.field_d.f(-97) &&
+            if (this.field_d.isRightPressed(-97) &&
               CheckboxPainter.field_p < 256) {
               var5 = 1;
               PasswordValidator.f((byte) 124);
             }
-            if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
+            if (((var5 != 0)) && ((!(this.field_d.isPointerHeld((byte) -114)) ||
               !(RasterStateFrame.field_n <= TutorialVictoryChecker.field_q)))) {
               MenuLabel.a(SocketArchiveNetworkClient.field_w, 89);
               TutorialVictoryChecker.field_q = 25 + RasterStateFrame.field_n;
@@ -1821,13 +1821,13 @@ final class sm {
           }
           else {
             if (var6 == 22) {
-              if (this.field_d.a(-1)) {
+              if (this.field_d.isHomePressed(-1)) {
                 DiskArchiveRequest.c(-68, 0);
               }
-              if (this.field_d.a(true)) {
+              if (this.field_d.isEndPressed(true)) {
                 DiskArchiveRequest.c(-61, 256);
               }
-              if (this.field_d.b((byte) -73)) {
+              if (this.field_d.isPointerHeld((byte) -73)) {
                 stackIn_92_0 = -120;
                 stackIn_92_1 = this.itemX(param1, true);
                 stackIn_93_3 = !(param2);
@@ -1844,10 +1844,10 @@ final class sm {
                   }
                 }
               }
-              if (this.field_d.c(-97)) {
+              if (this.field_d.isLeftPressed(-97)) {
                 SingleChildWidget.d(!param2);
               }
-              if (this.field_d.f(-77)) {
+              if (this.field_d.isRightPressed(-77)) {
                 MapGenerationException.a(11615);
               }
             }
@@ -2132,9 +2132,9 @@ final class sm {
           this.e(170);
         } else {
           if (11 == GameRules.field_c) {
-            this.field_d.e(85);
+            this.field_d.updateHorizontalKeys(85);
           } else {
-            this.field_d.b(0);
+            this.field_d.updateVerticalKeys(0);
           }
         }
     }
@@ -2239,7 +2239,7 @@ final class sm {
 
     sm(int param0) {
         this.field_a = param0;
-        this.field_d = new np(TutorialVictoryChecker.field_p[this.field_a].length);
+        this.field_d = new MenuInputState(TutorialVictoryChecker.field_p[this.field_a].length);
         Star.field_H = new int[UnderageAccountInfoPanel.field_J.length];
         this.a(0, (byte) 28, false);
     }
@@ -2789,22 +2789,22 @@ final class sm {
         if (oq.field_j != 104) {
           if (105 == oq.field_j) {
             this.a(1, (byte) -57);
-            this.field_d.b(0);
+            this.field_d.updateVerticalKeys(0);
           } else {
             if (oq.field_j == 102) {
               this.d(param0 - 166, 0);
-              this.field_d.b(0);
+              this.field_d.updateVerticalKeys(0);
             } else {
               if (oq.field_j == 103) {
                 this.d(4, Star.field_H.length - 1);
               } else {
-                this.field_d.b(0);
+                this.field_d.updateVerticalKeys(0);
               }
             }
           }
         } else {
           this.a(-1, (byte) -57);
-          this.field_d.b(0);
+          this.field_d.updateVerticalKeys(0);
         }
     }
 

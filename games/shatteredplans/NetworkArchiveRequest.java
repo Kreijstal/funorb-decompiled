@@ -99,7 +99,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           stackIn_12_1 = !(param2);
           IntroGlowPoint.field_k = DateInputWidget.a((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);
           IntroTextLine.field_k = param0;
-          var6 = AccountNoticeDialog.a(param3, (byte) -112, nl.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
+          var6 = AccountNoticeDialog.a(param3, (byte) -112, DiplomacyRowSupport.field_d, ValidationIndicator.field_I, PlayerReportPanel.field_Nb);
           CipherPacketBuffer.a(0, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

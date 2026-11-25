@@ -42,7 +42,7 @@ final class GameState {
     IntrusiveDeque field_q;
     static int[] field_s;
     private int[] field_h;
-    static np field_l;
+    static MenuInputState field_l;
     private int[] field_H;
     static String field_a;
 
@@ -568,7 +568,7 @@ final class GameState {
             this.field_D[var7.field_y.field_x] = this.field_D[var7.field_y.field_x] + var7.field_x;
           }
         }
-        this.field_m = nf.a(this.field_D, 3718);
+        this.field_m = ChatHistoryEntry.sortedIndices(this.field_D, 3718);
         return;
     }
 
@@ -3495,6 +3495,6 @@ final class GameState {
         field_E = new IntrusiveDeque();
         field_s = new int[8192];
         field_a = "This game has started.";
-        field_l = new np(1);
+        field_l = new MenuInputState(1);
     }
 }

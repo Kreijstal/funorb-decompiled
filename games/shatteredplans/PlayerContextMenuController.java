@@ -35,7 +35,7 @@ final class PlayerContextMenuController {
           this.field_b = 56L;
           return;
         }
-        if (np.field_a == null) {
+        if (MenuInputState.field_a == null) {
           if (param1 == -16661) {
             return;
           }
@@ -53,14 +53,14 @@ final class PlayerContextMenuController {
         var4 = MutableIntPairNode.findRoomMember(-115, this.field_b);
         var5 = this.getDisplayName(param1 ^ 16744);
         if (var4 != null) {
-          if (!np.field_a.field_Ab ||
-            !(np.field_a.field_lc < 0)) {
+          if (!MenuInputState.field_a.field_Ab ||
+            !(MenuInputState.field_a.field_lc < 0)) {
             this.field_j.a(1, 1, QuickChatCategoryRegistry.a(ContentDialog.field_fb, 4371, new String[]{var5}));
           }
         } else {
           if (var7 != null &&
-            np.field_a.field_mc &&
-            np.field_a.field_Lb < np.field_a.field_Eb) {
+            MenuInputState.field_a.field_mc &&
+            MenuInputState.field_a.field_Lb < MenuInputState.field_a.field_Eb) {
             if (var7.field_Tb) {
               this.field_j.a(1, 1, QuickChatCategoryRegistry.a(field_c, 4371, new String[]{var5}));
             } else {
@@ -194,7 +194,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param0 == 4) {
-          var9 = nj.a(this.field_k, param1, (byte) -119);
+          var9 = ClientDialogSupport.requestAddFriend(this.field_k, param1, (byte) -119);
           if (var9 != null) {
             var5 = (String) null;
             StripedProgressWidget.a(2, var9, 0, this.field_k, (String) null, -16169);
@@ -424,7 +424,7 @@ final class PlayerContextMenuController {
         this.field_j.drawFullRaster(param1, 122);
     }
 
-    final void addChatFilterActions(nf param0, byte param1) {
+    final void addChatFilterActions(ChatHistoryEntry param0, byte param1) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -478,7 +478,7 @@ final class PlayerContextMenuController {
         LobbyRoomEntry var7;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
-          if (null != np.field_a) {
+          if (null != MenuInputState.field_a) {
             return;
           }
           var6 = BattleEvent.a(this.field_f, 30888);
@@ -520,7 +520,7 @@ final class PlayerContextMenuController {
           }
         } else {
           this.field_e = (AnimatedPanel) null;
-          if (null != np.field_a) {
+          if (null != MenuInputState.field_a) {
             return;
           }
           var7 = BattleEvent.a(this.field_f, 30888);

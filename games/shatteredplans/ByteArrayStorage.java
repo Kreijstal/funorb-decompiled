@@ -85,7 +85,7 @@ abstract class ByteArrayStorage {
             }
             var5 = ProductionContent.field_h;
             if (var5 == 0 &&
-              null != np.field_a) {
+              null != MenuInputState.field_a) {
               var5 = 1;
             }
             if (SpriteResourceSupport.getChatChannelFilter(-7019, var5) == 2) {
@@ -152,9 +152,9 @@ abstract class ByteArrayStorage {
             }
             return true;
           }
-          if (null == np.field_a) {
+          if (null == MenuInputState.field_a) {
             if (!LobbyCommandSupport.field_e) {
-              if (null == np.field_a) {
+              if (null == MenuInputState.field_a) {
                 var47 = var7 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var47);
                 if (var5Lifetime1 >= QuickChatHelpSupport.field_f.stringWidth(OpacityWidget.field_E.toString())) {
@@ -164,7 +164,7 @@ abstract class ByteArrayStorage {
                 return true;
               }
               if (!DialPainter.field_c) {
-                var50 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var50 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var51);
                 if (var5Lifetime1 < QuickChatHelpSupport.field_f.stringWidth(OpacityWidget.field_E.toString())) {
@@ -173,7 +173,7 @@ abstract class ByteArrayStorage {
                 return true;
               }
               if (AiTask.field_m == null) {
-                var48 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var48 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var49);
                 if (var5Lifetime1 < QuickChatHelpSupport.field_f.stringWidth(OpacityWidget.field_E.toString())) {
@@ -191,9 +191,9 @@ abstract class ByteArrayStorage {
             }
             var7 = "[" + MessageKind.field_a + "] ";
           }
-          if (null != np.field_a) {
+          if (null != MenuInputState.field_a) {
             if (!DialPainter.field_c) {
-              var57 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var57 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var58);
               if (var5Lifetime1 < QuickChatHelpSupport.field_f.stringWidth(OpacityWidget.field_E.toString())) {
@@ -202,7 +202,7 @@ abstract class ByteArrayStorage {
               return true;
             }
             if (AiTask.field_m == null) {
-              var55 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var55 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - QuickChatHelpSupport.field_f.stringWidth(var56);
               if (var5Lifetime1 < QuickChatHelpSupport.field_f.stringWidth(OpacityWidget.field_E.toString())) {

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm {
+final class PairedIntSortSupport {
     static long[] field_b;
     static AnimatedPanel field_c;
     static int field_a;
 
-    final static void a(int[] param0, int[] param1, byte param2) {
+    final static void sortPairsByKeys(int[] param0, int[] param1, byte param2) {
         try {
           if (param2 < 17) {
             field_c = (AnimatedPanel) null;

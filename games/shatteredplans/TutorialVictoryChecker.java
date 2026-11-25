@@ -28,9 +28,9 @@ final class TutorialVictoryChecker extends VictoryChecker {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          np.field_j = param0.readUnsignedShort(-20976) << 5;
+          MenuInputState.field_j = param0.readUnsignedShort(-20976) << 5;
           var2_int = param0.readUnsignedByte(-101);
-          np.field_j = np.field_j + (var2_int >> 3);
+          MenuInputState.field_j = MenuInputState.field_j + (var2_int >> 3);
           ClientSessionSupport.field_c = 1835008 & var2_int << 18;
           if (param1) {
             field_q = 21;

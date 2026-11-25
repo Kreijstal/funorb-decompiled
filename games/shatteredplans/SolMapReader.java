@@ -170,16 +170,16 @@ final class SolMapReader implements MapGenerator {
         }
     }
 
-    final static nf a(boolean param0, int param1, int param2, int param3) {
+    final static ChatHistoryEntry a(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_46_0 = false;
         Object var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        nf var8_ref_nf;
+        ChatHistoryEntry var8_ref_nf;
         int var9;
-        nf var9_ref_nf;
+        ChatHistoryEntry var9_ref_nf;
         int var10_int;
         String var10;
         String var11;
@@ -202,7 +202,7 @@ final class SolMapReader implements MapGenerator {
           if (!LoginMethodPreference.field_g &&
             TargetedChatMessage.field_i > var5) {
             var10_int = SpriteResourceSupport.getChatChannelFilter(-7019, var8_ref_nf.field_n);
-            if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
+            if (var10_int <= var8_ref_nf.getFilterPriority((byte) 116) && (var8_ref_nf.field_h ||
               !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {
               var9 = 1;
             }
@@ -265,7 +265,7 @@ final class SolMapReader implements MapGenerator {
         DateInputWidget.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
         stackIn_46_0 = (var9Lifetime1 == DateInputWidget.field_I.field_xb.field_w + DateInputWidget.field_I.field_xb.field_db);
         ShatteredPlansClient.field_K = stackIn_46_0;
-        return (nf) (var4);
+        return (ChatHistoryEntry) (var4);
     }
 
     static {

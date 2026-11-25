@@ -133,7 +133,7 @@ final class BytePayloadNode extends IntrusiveNode {
           UsernameAvailabilityValidator.field_p = -1L;
           ProductionContent.field_k = param8.length;
           IntNode.field_p = null;
-          np.field_a = null;
+          MenuInputState.field_a = null;
           SpriteResourceSupport.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
           var10_int = 0;

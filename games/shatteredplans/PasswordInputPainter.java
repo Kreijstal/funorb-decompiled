@@ -88,12 +88,12 @@ final class PasswordInputPainter extends TextInputPainter {
           if (null != DateInputWidget.field_G) {
             DateInputWidget.field_G.closeStatusDialog((byte) -104);
           }
-          no.field_e = new LoginForm(param0, param1, false, true, true);
+          TutorialStageSupport.field_e = new LoginForm(param0, param1, false, true, true);
           if (param2 != 3) {
             java.applet.Applet var4 = (java.applet.Applet) null;
             PasswordInputPainter.setLegacyStatusFlag((java.applet.Applet) null, true);
           }
-          HighscoreResponseSupport.field_f.setContent(no.field_e, 122);
+          HighscoreResponseSupport.field_f.setContent(TutorialStageSupport.field_e, 122);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ce.O(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

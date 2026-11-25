@@ -99,12 +99,12 @@ final class ObjectList {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != np.field_a && (null != SliderWidget.field_E ||
+          if (null != MenuInputState.field_a && (null != SliderWidget.field_E ||
             ArchiveIndex.field_h != null ||
             null != LabeledChildWidget.field_A ||
             null != DateInputWidget.field_D)) {
             for (var9 = 0; var9 < ProductionContent.field_k; var9++) {
-              var10_int = np.field_a.field_dc[var9] & 255;
+              var10_int = MenuInputState.field_a.field_dc[var9] & 255;
               if (SliderWidget.field_E != null &&
                 null != SliderWidget.field_E[var9] &&
                 SliderWidget.field_E[var9][var10_int]) {
@@ -246,12 +246,12 @@ final class ObjectList {
                   }
                 }
               } else {
-                if (!np.field_a.field_Ab) {
+                if (!MenuInputState.field_a.field_Ab) {
                   var12.field_Mb.field_z = ArchiveSource.field_a;
                 }
               }
               var25_int = 0;
-              if (np.field_a != null &&
+              if (MenuInputState.field_a != null &&
                 SecondaryNodeDequeIterator.a((byte) -97) &&
                 ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
@@ -405,7 +405,7 @@ final class ObjectList {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < ProductionContent.field_k; var27_int++) {
-                  var28 = 255 & np.field_a.field_dc[var27_int];
+                  var28 = 255 & MenuInputState.field_a.field_dc[var27_int];
                   var29 = 0;
                   if (SliderWidget.field_E != null &&
                     SliderWidget.field_E[var27_int] != null &&
@@ -473,7 +473,7 @@ final class ObjectList {
                 }
                 if (ro.field_a == param2 &&
                   !SecondaryNodeDequeIterator.a((byte) -126)) {
-                  var27 = np.field_a.field_Xb;
+                  var27 = MenuInputState.field_a.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(ve.field_Gb, 4371, new String[]{var27});
                 }
                 DualLinkDequeSequence.field_k = (String) (var24Lifetime2);

@@ -128,22 +128,22 @@ final class LobbyRoomControlsSupport {
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
             DualLinkDequeSequence.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
             IntValueWriteRequest.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
-            if (nl.field_a.length == 1 &&
-              2 == nl.field_a[0]) {
+            if (DiplomacyRowSupport.field_a.length == 1 &&
+              2 == DiplomacyRowSupport.field_a[0]) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (var10 < nl.field_a.length) {
+                if (var10 < DiplomacyRowSupport.field_a.length) {
                   stackIn_13_0 = ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_13_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    nl.field_a[var10] != 2) {
+                    DiplomacyRowSupport.field_a[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;

@@ -507,9 +507,9 @@ final class DialogRoot extends SingleChildWidget {
     final static void j(int param0) {
         TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
         PlayerReportPanel.field_Mb = SoftwareRasterizer.field_b;
-        nj.a(438);
+        ClientDialogSupport.layoutLobbySidePanels(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
-        nm.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);
+        PairedIntSortSupport.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);
         int var1 = UniformNineSliceFactory.field_c + 2;
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);

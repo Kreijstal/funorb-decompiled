@@ -159,13 +159,13 @@ final class Bzip2State {
           ChatCompositionSupport.field_b[4] = vs.field_c;
           ChatCompositionSupport.field_b[12] = vs.field_b;
           ChatCompositionSupport.field_b[14] = RoundedFrameSupport.field_b;
-          ChatCompositionSupport.field_b[1] = np.field_l;
+          ChatCompositionSupport.field_b[1] = MenuInputState.field_l;
           ChatCompositionSupport.field_b[5] = rk.field_m;
           ChatCompositionSupport.field_b[10] = IntroGlowPoint.field_b;
           ChatCompositionSupport.field_b[9] = Star.field_P;
           ChatCompositionSupport.field_b[8] = StarAbandonedEvent.field_s;
           ChatCompositionSupport.field_b[7] = VictoryChecker.field_f;
-          ChatCompositionSupport.field_b[2] = nf.field_m;
+          ChatCompositionSupport.field_b[2] = ChatHistoryEntry.field_m;
           ChatCompositionSupport.field_b[3] = wa.field_i;
           Dialog.field_J[0] = new String[5];
           ScrollPane.field_Db = new String[5][];

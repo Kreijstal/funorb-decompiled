@@ -12,7 +12,7 @@ final class ProjectsContent implements MenuContent {
 
     final static void b(byte param0) {
         int var2 = 0;
-        nf var1 = null;
+        ChatHistoryEntry var1 = null;
         tm var2_ref_tm = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -22,7 +22,7 @@ final class ProjectsContent implements MenuContent {
           var1 = DialWidget.i(0);
           if (var1 != null &&
             var1 != StandardMapGenerator.field_j) {
-            no.a(StandardMapGenerator.field_j, 1);
+            TutorialStageSupport.notifyChatEntriesAfter(StandardMapGenerator.field_j, 1);
             StandardMapGenerator.field_j = var1;
           }
           if (RasterBuffer.field_a < 18) {

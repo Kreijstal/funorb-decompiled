@@ -75,7 +75,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        nf var9 = null;
+        ChatHistoryEntry var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (MouseInputHandler.field_f > LabeledChildWidget.field_J) {
@@ -240,7 +240,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
-          oq.field_j = ng.field_a[DialogRoot.field_B];
+          oq.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
           QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
@@ -297,7 +297,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_10_0;
           }
           if (IntrusiveDeque.a(var5, (byte) 24)) {
-            stackIn_13_0 = no.field_d;
+            stackIn_13_0 = TutorialStageSupport.field_d;
             return stackIn_13_0;
           }
           if (param0) {
@@ -355,7 +355,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
-          oq.field_j = ng.field_a[DialogRoot.field_B];
+          oq.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
           QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {

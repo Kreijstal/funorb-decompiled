@@ -261,11 +261,11 @@ class TextHotspotWidget extends FocusableWidget {
           us.a(0, NameSuggestionsPanel.field_L);
         }
         qn.a((byte) -120);
-        var1 = NetworkArchiveRequest.field_C.stringWidth(np.field_d) + 20;
+        var1 = NetworkArchiveRequest.field_C.stringWidth(MenuInputState.field_d) + 20;
         if (var1 < 80) {
           var1 = 80;
         }
-        PointsVictoryChecker.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, np.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
+        PointsVictoryChecker.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, MenuInputState.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
     }
 
     final void e(boolean param0) {

@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GameState.d(22943);
                 this.createCanvas(0);
-                so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, nn.field_b);
+                so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);
                 oe.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {
@@ -585,7 +585,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.fail((byte) -107, "alreadyloaded");
                 return;
               }
-              nn.field_b = param2;
+              AccountNameValidationSupport.field_b = param2;
               FilledMenuPanel.field_u = param2;
               if (param0 != -50) {
                 field_f = (int[]) null;
@@ -813,8 +813,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         try {
           var2_long = pr.currentTimeMillis(param0 ^ 14328);
-          var4 = nm.field_b[TextLayout.field_a];
-          nm.field_b[TextLayout.field_a] = var2_long;
+          var4 = PairedIntSortSupport.field_b[TextLayout.field_a];
+          PairedIntSortSupport.field_b[TextLayout.field_a] = var2_long;
           TextLayout.field_a = 1 + TextLayout.field_a & 31;
           if (param0 != 58) {
             return;
@@ -829,7 +829,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             LobbyOptionResources.field_a = LobbyOptionResources.field_a - 50;
             oq.field_e = true;
-            tm.field_i.setSize(VictoryChecker.field_e, nn.field_b);
+            tm.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
             tm.field_i.setVisible(true);
             if (uf.field_b != null &&
               null == OpacityWidget.field_K) {
@@ -1076,7 +1076,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           tm.field_i = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) tm.field_i));
-          tm.field_i.setSize(VictoryChecker.field_e, nn.field_b);
+          tm.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
           tm.field_i.setVisible(true);
           if (uf.field_b == var2) {
             var3 = uf.field_b.getInsets();

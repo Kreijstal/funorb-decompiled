@@ -249,7 +249,7 @@ final class LobbyOptionSupport {
                     }
                   }
                 } else {
-                  if (nl.field_a[param7] != var14) {
+                  if (DiplomacyRowSupport.field_a[param7] != var14) {
                     break scanLoop1;
                   }
                 }
@@ -274,7 +274,7 @@ final class LobbyOptionSupport {
           var9 = 1;
           if (param5) {
             if (-1 == param0) {
-              for (var10_int = 0; nl.field_a.length > var10_int; var10_int++) {
+              for (var10_int = 0; DiplomacyRowSupport.field_a.length > var10_int; var10_int++) {
                 if ((SpriteResourceSupport.field_c[var10_int / 8] & 1 << (var10_int & 7)) != 0) {
                   var9 = 0;
                   decompiledFrameCompleted0 = false;
@@ -301,7 +301,7 @@ final class LobbyOptionSupport {
             if (-1 != param0) {
               stackIn_25_0 = var17.length - 1;
             } else {
-              stackIn_25_0 = nl.field_a.length;
+              stackIn_25_0 = DiplomacyRowSupport.field_a.length;
             }
             if (stackIn_25_0 <= var11) {
               if (var10_intLifetime1 != 0) {
@@ -326,15 +326,15 @@ final class LobbyOptionSupport {
               param7 = var11;
             }
             if (param0 == -1 &&
-              nl.field_a.length == 1) {
+              DiplomacyRowSupport.field_a.length == 1) {
               var12 = 1;
             } else {
               var13_ref_sg = var8[1 + var11];
               if (!param5) {
                 if (param0 == -1) {
-                  stackIn_49_0 = (nl.field_a[var11] != np.field_a.field_Eb) ? 0 : 1;
+                  stackIn_49_0 = (DiplomacyRowSupport.field_a[var11] != MenuInputState.field_a.field_Eb) ? 0 : 1;
                 } else {
-                  stackIn_49_0 = ((255 & np.field_a.field_dc[param0]) != var11) ? 0 : 1;
+                  stackIn_49_0 = ((255 & MenuInputState.field_a.field_dc[param0]) != var11) ? 0 : 1;
                 }
                 var12 = stackIn_49_0;
               } else {

@@ -31,8 +31,8 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-            GameState.field_l.b(0);
-            if (GameState.field_l.a((byte) -46)) {
+            GameState.field_l.updateVerticalKeys(0);
+            if (GameState.field_l.isInitiallyActivated((byte) -46)) {
               var1_int = 1;
             }
             if (oq.field_j != 13) {
@@ -40,8 +40,8 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             }
             var2 = 1;
           }
-          GameState.field_l.a(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215));
-          if (GameState.field_l.a((byte) -76)) {
+          GameState.field_l.updatePointerSelection(-1, GameScreen.a(PointsVictoryChecker.field_p, SliderWidget.field_P, 16777215), GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215));
+          if (GameState.field_l.isInitiallyActivated((byte) -76)) {
             var1_int = 1;
           }
           var3 = 0;

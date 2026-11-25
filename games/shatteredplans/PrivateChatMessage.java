@@ -629,7 +629,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_skipintro", 121);
                 if (var2 != null) {
-                  np.field_d = IterableNodeHashTable.a(var2, 17746);
+                  MenuInputState.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_playerinfo", 113);
                 if (var2 != null) {
@@ -1041,7 +1041,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_sf_garrison", 100);
                 if (var2 != null) {
-                  nn.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountNameValidationSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_sf_name", 117);
                 if (var2 != null) {
@@ -1676,11 +1676,11 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_ships_destroyed", 121);
                 if (null != var2) {
-                  np.field_l = IterableNodeHashTable.a(var2, 17746);
+                  MenuInputState.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_ships_lost", 105);
                 if (null != var2) {
-                  nf.field_m = IterableNodeHashTable.a(var2, 17746);
+                  ChatHistoryEntry.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_avg_move_size", 117);
                 if (var2 != null) {

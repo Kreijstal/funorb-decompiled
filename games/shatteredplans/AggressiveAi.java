@@ -326,13 +326,13 @@ final class AggressiveAi extends StandardAi {
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
-                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_b, 4371, new String[]{np.field_a.field_Xb});
+                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_b, 4371, new String[]{MenuInputState.field_a.field_Xb});
               } else {
                 DualLinkDequeSequence.field_k = po.field_c;
               }
             }
           }
-          if (nl.field_a.length >= 2) {
+          if (DiplomacyRowSupport.field_a.length >= 2) {
             if (param1) {
               stackIn_44_0 = (AccountNoticeKind.field_d != -1) ? 1 : 0;
             } else {
@@ -347,7 +347,7 @@ final class AggressiveAi extends StandardAi {
               SpriteResourceSupport.field_c[var8 / 8] = (byte)PrivateChatMessage.intOr((int) SpriteResourceSupport.field_c[var8 / 8], 1 << var8 % 8);
             }
             stackIn_52_0 = (param1) ? -1 : 0;
-            for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {
+            for (var8 = stackIn_52_0; var8 < DiplomacyRowSupport.field_a.length; var8++) {
               if (var7Lifetime1 != 0) {
                 stackIn_60_0 = (var8 != AccountNoticeKind.field_d) ? 1 : 0;
               } else {
@@ -361,7 +361,7 @@ final class AggressiveAi extends StandardAi {
                   if (param1) {
                     if (var7Lifetime1 != 0) {
                       if (!param1) {
-                        var10 = nl.field_a[var8];
+                        var10 = DiplomacyRowSupport.field_a[var8];
                         stackIn_70_0 = ByteArrayNode.field_p[1][var8 + 1];
                         stackIn_71_1 = (var10 == param2.field_Eb);
                         stackIn_70_0.field_bb = stackIn_71_1;
@@ -377,7 +377,7 @@ final class AggressiveAi extends StandardAi {
                       }
                       ByteArrayNode.field_p[1][1 + var8].field_bb = true;
                       var10 = 0;
-                      if (var10 >= nl.field_a.length) {
+                      if (var10 >= DiplomacyRowSupport.field_a.length) {
                         break regionExit1;
                       }
                       dupTemp$0 = ByteArrayNode.field_p[1][1 + var8];
@@ -389,7 +389,7 @@ final class AggressiveAi extends StandardAi {
                           while (true) {
                             stackIn_103_0.field_bb = stackIn_103_1 & stackIn_104_2;
                             var10++;
-                            if (var10 >= nl.field_a.length) {
+                            if (var10 >= DiplomacyRowSupport.field_a.length) {
                               break regionExit1;
                             }
                             dupTemp$1 = ByteArrayNode.field_p[1][1 + var8];
@@ -406,7 +406,7 @@ final class AggressiveAi extends StandardAi {
                       while (true) {
                         stackIn_103_0.field_bb = stackIn_103_1 & stackIn_104_2Lifetime2;
                         var10++;
-                        if (var10 >= nl.field_a.length) {
+                        if (var10 >= DiplomacyRowSupport.field_a.length) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
@@ -430,7 +430,7 @@ final class AggressiveAi extends StandardAi {
                       }
                     }
                   } else {
-                    var10 = nl.field_a[var8];
+                    var10 = DiplomacyRowSupport.field_a[var8];
                     if (var10 != param2.field_Eb) {
                       var6 = 1;
                       param2.field_Eb = var10;
@@ -441,7 +441,7 @@ final class AggressiveAi extends StandardAi {
                   if (param1) {
                     if (-1 == var8) {
                       ByteArrayNode.field_p[1][1 + var8].field_bb = true;
-                      for (var10 = 0; var10 < nl.field_a.length; var10++) {
+                      for (var10 = 0; var10 < DiplomacyRowSupport.field_a.length; var10++) {
                         dupTemp$1Lifetime1 = ByteArrayNode.field_p[1][1 + var8];
                         stackIn_103_0Lifetime1 = dupTemp$1Lifetime1;
                         stackIn_103_1Lifetime1 = dupTemp$1Lifetime1.field_bb;
@@ -456,7 +456,7 @@ final class AggressiveAi extends StandardAi {
                       stackIn_95_0.field_bb = stackIn_98_1;
                     }
                   } else {
-                    var10 = nl.field_a[var8];
+                    var10 = DiplomacyRowSupport.field_a[var8];
                     stackIn_90_0 = ByteArrayNode.field_p[1][var8 + 1];
                     stackIn_91_1 = (var10 == param2.field_Eb);
                     stackIn_90_0.field_bb = stackIn_91_1;

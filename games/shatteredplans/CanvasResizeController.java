@@ -131,7 +131,7 @@ final class CanvasResizeController {
         if (VictoryChecker.field_e != var2) {
           this.field_s.a(var3, var2, -12725);
         } else {
-          if (nn.field_b != var3) {
+          if (AccountNameValidationSupport.field_b != var3) {
             this.field_s.a(var3, var2, -12725);
           }
         }
@@ -224,14 +224,14 @@ final class CanvasResizeController {
           }
         }
         if (VictoryChecker.field_e == this.field_e &&
-          nn.field_b == this.field_h) {
+          AccountNameValidationSupport.field_b == this.field_h) {
           return;
         }
         this.field_s.a(this.field_h, this.field_e, -12725);
     }
 
     final FullscreenFocusCanvas a(int param0) {
-        this.field_o = nn.field_b;
+        this.field_o = AccountNameValidationSupport.field_b;
         this.field_n = VictoryChecker.field_e;
         this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;

@@ -1893,7 +1893,7 @@ class StandardAi implements Ai {
           }
           var4 = this.field_g.field_g.field_c[param2.field_p];
           var5 = 27 / ((param1 + 41) / 58);
-          var6 = nf.a(var4, 3718);
+          var6 = ChatHistoryEntry.sortedIndices(var4, 3718);
           for (var7 = 0; this.field_o > var7; var7++) {
             if (var6[var7] != -1) {
               var8 = var6[var7];

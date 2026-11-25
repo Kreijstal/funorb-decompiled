@@ -203,7 +203,7 @@ final class AudioService implements Runnable {
             !UniformNineSliceFactory.field_d.equals(param0.getParameter("session"))) {
             var4Lifetime1 = UniformNineSliceFactory.field_d;
           }
-          stackIn_10_0 = np.a((String) (var3), -1, (String) (var4Lifetime1), false, param2);
+          stackIn_10_0 = MenuInputState.rewriteAppletUrlParameters((String) (var3), -1, (String) (var4Lifetime1), false, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -295,15 +295,15 @@ final class ClientDrawingSupport {
         if (param1 <= 67) {
           return (byte[]) null;
         }
-        if (nn.field_c != null) {
-          for (var2 = 0; var2 < nf.field_a.length; var2++) {
-            if (nf.field_a[var2] == param0 &&
+        if (AccountNameValidationSupport.field_c != null) {
+          for (var2 = 0; var2 < ChatHistoryEntry.field_a.length; var2++) {
+            if (ChatHistoryEntry.field_a[var2] == param0 &&
               CheckboxPainter.field_a[var2] > 0) {
               dupTemp$6 = CheckboxPainter.field_a[var2] - 1;
-              arrayValue$7 = nn.field_c[var2];
+              arrayValue$7 = AccountNameValidationSupport.field_c[var2];
               CheckboxPainter.field_a[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              nn.field_c[var2][CheckboxPainter.field_a[var2]] = null;
+              AccountNameValidationSupport.field_c[var2][CheckboxPainter.field_a[var2]] = null;
               return var3;
             }
           }

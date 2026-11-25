@@ -164,7 +164,7 @@ final class BattleContribution extends IntrusiveNode {
           }
           BufferedSocket.a(param1 - 5, var4);
           PlayerReportPanel.field_Nb = StandardMapReader.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (BitmapFont) null, 0, 2245737, 1513239, 8947848);
-          nl.field_d = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
+          DiplomacyRowSupport.field_d = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
           ValidationIndicator.field_I = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
           if (param1 != -64) {
             field_j = -87;
@@ -178,7 +178,7 @@ final class BattleContribution extends IntrusiveNode {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var14, var5, var6);
-          of.field_b = StatefulWidgetTheme.a(0, var4, ValidationIndicator.field_I, nl.field_d, PlayerReportPanel.field_Nb);
+          of.field_b = StatefulWidgetTheme.a(0, var4, ValidationIndicator.field_I, DiplomacyRowSupport.field_d, PlayerReportPanel.field_Nb);
           SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

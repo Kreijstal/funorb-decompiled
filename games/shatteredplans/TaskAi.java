@@ -254,7 +254,7 @@ final class TaskAi implements Ai {
                 while (var8 != null) {
                   if (var6.field_n != var8 &&
                     0 != q.field_Ab[var8.field_p] && (var3 != 0 ||
-                    !no.field_f[var8.field_p])) {
+                    !TutorialStageSupport.field_f[var8.field_p])) {
                     if (GameScreen.field_c[var2Lifetime1] < q.field_Ab[var8.field_p]) {
                       this.moveFleets(GameScreen.field_c[var2Lifetime1], (byte) 102, var6.field_n, var8);
                       q.field_Ab[var8.field_p] = q.field_Ab[var8.field_p] - GameScreen.field_c[var2Lifetime1];
@@ -288,7 +288,7 @@ final class TaskAi implements Ai {
         while (var2 != null) {
           var3 = var2.firstStar(param0 ^ 18257);
           while (var3 != null) {
-            this.field_l.addLast((byte) -113, new GarrisonTask(var3, this.field_m.field_o.field_l, no.field_f));
+            this.field_l.addLast((byte) -113, new GarrisonTask(var3, this.field_m.field_o.field_l, TutorialStageSupport.field_f));
             var3 = var2.nextStar(-23410);
           }
           var2 = (Territory) (this.field_w.field_i.nextForward((byte) -71));
@@ -317,10 +317,10 @@ final class TaskAi implements Ai {
         MouseInputHandler.field_g.clear(0);
         DropTargetWidget.field_E.clear(0);
         GameSession.field_u = null;
-        no.field_b = false;
+        TutorialStageSupport.field_b = false;
         DerelictMapReader.field_f = false;
         for (var2 = 0; var2 < this.field_x; var2++) {
-          no.field_f[var2] = false;
+          TutorialStageSupport.field_f[var2] = false;
           q.field_Ab[var2] = 0;
           GameScreen.field_c[var2] = 0;
           og.field_c[var2] = 0;
@@ -583,7 +583,7 @@ final class TaskAi implements Ai {
               }
             }
             if (5 <= this.field_w.field_u[0] &&
-              !no.field_b &&
+              !TutorialStageSupport.field_b &&
               !param0.field_n.field_u && (var9 > this.field_n[var6] ||
               var9 > 20)) {
               this.deployDefensiveNet(param0.field_n, 31308);
@@ -831,20 +831,20 @@ final class TaskAi implements Ai {
         boolean stackIn_24_1 = false;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        nj.a(param1 ^ -27033);
+        ClientDialogSupport.layoutLobbySidePanels(param1 ^ -27033);
         if (param1 != -26671) {
           field_d = (String) null;
         }
         if (0 <= HitRegion.field_j) {
-          nm.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(HitRegion.field_j)});
+          PairedIntSortSupport.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(HitRegion.field_j)});
         } else {
-          nm.field_c.field_z = null;
+          PairedIntSortSupport.field_c.field_z = null;
         }
         stackIn_11_0 = MapViewState.field_j;
-        stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (IntNode.field_p == null);
+        stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (MenuInputState.field_a == null) && (IntNode.field_p == null);
         ((AnimatedPanel) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
         stackIn_18_0 = AchievementProgress.field_i;
-        stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == IntNode.field_p);
+        stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == MenuInputState.field_a) && (null == IntNode.field_p);
         ((AnimatedPanel) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
@@ -866,9 +866,9 @@ final class TaskAi implements Ai {
           }
         }
         if (LinkPainter.field_b.field_rb != 0) {
-          if (1 == nl.field_a.length &&
-            nl.field_a[0] != MenuLabel.field_x) {
-            MenuLabel.field_x = nl.field_a[0];
+          if (1 == DiplomacyRowSupport.field_a.length &&
+            DiplomacyRowSupport.field_a[0] != MenuLabel.field_x) {
+            MenuLabel.field_x = DiplomacyRowSupport.field_a[0];
           }
           LobbyUiSupport.writeLobbyOptionPayload(param3, MenuLabel.field_x, LobbyOptionResources.field_d, true, false, 0);
         }
@@ -1247,7 +1247,7 @@ final class TaskAi implements Ai {
           if (this.field_w.field_u[0] < 5) {
             throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net it doesn't have at star " + param0.name);
           }
-          if (!no.field_b) {
+          if (!TutorialStageSupport.field_b) {
             if (this.field_w != param0.field_y) {
               throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net in a system it doesn't own: " + param0.name);
             }
@@ -1255,7 +1255,7 @@ final class TaskAi implements Ai {
               throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net in a system that already has one: " + param0.name);
             }
             DropTargetWidget.field_E.addLast((byte) -113, new ProjectUse(0, this.field_w, param0));
-            no.field_b = true;
+            TutorialStageSupport.field_b = true;
             TextLayout.field_e = param0;
             if (param1 != 31308) {
               this.field_t = -21;
@@ -1882,7 +1882,7 @@ final class TaskAi implements Ai {
           var2 = var17;
           var2 = var17;
           if (var17.field_y == this.field_w &&
-            !no.field_f[var17.field_p] &&
+            !TutorialStageSupport.field_f[var17.field_p] &&
             var17.field_L == 0) {
             {
               var9Lifetime1 = 0;
@@ -1931,7 +1931,7 @@ final class TaskAi implements Ai {
         while (var6 != null) {
           var4 = var6.firstStar(18229);
           while (var4 != null) {
-            if (no.field_f[var4.field_p]) {
+            if (TutorialStageSupport.field_f[var4.field_p]) {
               this.field_u.addLast((byte) -113, new DefendTask(var4, this.field_s[var3], this.field_w.field_h, this.field_m.field_x));
             }
             var4 = var6.nextStar(-23410);
@@ -2134,7 +2134,7 @@ final class TaskAi implements Ai {
         var9 = this.field_m.field_g.field_e;
         for (var3 = 0; var9.length > var3; var3++) {
           var4 = var9[var3];
-          no.field_f[var4.field_p] = false;
+          TutorialStageSupport.field_f[var4.field_p] = false;
           if (var4.field_y == this.field_w) {
             var5 = var4.field_D;
             for (var6 = 0; var5.length > var6; var6++) {
@@ -2142,7 +2142,7 @@ final class TaskAi implements Ai {
               if (null != var7.field_y &&
                 var7.field_y != this.field_w &&
                 !this.field_w.field_h[var7.field_y.field_x]) {
-                no.field_f[var4.field_p] = true;
+                TutorialStageSupport.field_f[var4.field_p] = true;
                 break;
               }
             }
@@ -2207,7 +2207,7 @@ final class TaskAi implements Ai {
                 if (var6 != var3Lifetime1.field_n &&
                   q.field_Ab[var6.field_p] != 0) {
                   if (var4Lifetime1 == 0 &&
-                    no.field_f[var6.field_p]) {
+                    TutorialStageSupport.field_f[var6.field_p]) {
                     var6 = var3Lifetime1.field_n.field_R.nextStar(-23410);
                     continue;
                   }
@@ -2310,7 +2310,7 @@ final class TaskAi implements Ai {
           var9_int = 0;
           var10_ref_ln = var3.firstStar(18229);
           while (var10_ref_ln != null) {
-            if (no.field_f[var10_ref_ln.field_p]) {
+            if (TutorialStageSupport.field_f[var10_ref_ln.field_p]) {
               var8 = var10_ref_ln.field_J;
               if (var10_ref_ln.field_u ||
                 var10_ref_ln == TextLayout.field_e) {
@@ -2332,7 +2332,7 @@ final class TaskAi implements Ai {
           var9_intLifetime1 = -1;
           var10_ref_lnLifetime1 = var2.firstStar(18229);
           while (var10_ref_lnLifetime1 != null) {
-            if (no.field_f[var10_ref_lnLifetime1.field_p]) {
+            if (TutorialStageSupport.field_f[var10_ref_lnLifetime1.field_p]) {
               var8Lifetime2 = var10_ref_lnLifetime1.field_J;
               if (var10_ref_lnLifetime1.field_u ||
                 TextLayout.field_e == var10_ref_lnLifetime1) {
@@ -2777,7 +2777,7 @@ final class TaskAi implements Ai {
                 for (var16 = 0; var33.length > var16; var16++) {
                   var33[var16] = var16;
                 }
-                nm.a(var15_ref_int__, (int[]) ((Object) this.field_i.clone()), (byte) 47);
+                PairedIntSortSupport.sortPairsByKeys(var15_ref_int__, (int[]) ((Object) this.field_i.clone()), (byte) 47);
                 for (var16 = 0; var16 < this.field_i.length; var16++) {
                   if (this.field_i[var33[var16]] != 0) {
                     var17 = var23;

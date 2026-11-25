@@ -178,7 +178,7 @@ final class QuickChatMenu extends AnimatedPanel {
               var5 = 32768 | this.field_Hb[param2];
               var6 = ProductionContent.field_h;
               if (var6 == 0 &&
-                null != np.field_a) {
+                null != MenuInputState.field_a) {
                 var6 = 1;
               }
               if (2 == SpriteResourceSupport.getChatChannelFilter(-7019, var6)) {

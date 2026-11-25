@@ -28,7 +28,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             var4.field_xb != null) {
             return true;
           }
-          stackIn_12_0 = (null != np.field_a) && (MutableIntPairNode.findRoomMember(-101, param1) != null);
+          stackIn_12_0 = (null != MenuInputState.field_a) && (MutableIntPairNode.findRoomMember(-101, param1) != null);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -587,7 +587,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         Bzip2State.a((byte) 51);
         if (null == IntHashIndex.field_a) {
           if (StrongCacheEntry.field_z != null) {
-            nj.a(75.0f, 2, GuestPlayForm.field_I);
+            ClientDialogSupport.setLoadingProgress(75.0f, 2, GuestPlayForm.field_I);
             this.draw(1);
             SpriteState.a(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
             DualLinkNode.field_n = null;
@@ -596,7 +596,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             return false;
           }
           if (IntrusiveNodeHashTable.field_g != null) {
-            nj.a(90.0f, 2, PasswordValidator.field_p);
+            ClientDialogSupport.setLoadingProgress(90.0f, 2, PasswordValidator.field_p);
             this.draw(1);
             GameAssetSetupSupport.initializeGameAssets(ChatMessage.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, RichTextLayout.field_k, (byte) -8);
             rl.field_f = null;
@@ -672,7 +672,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                 if (RichTextLayout.field_k.isIndexLoaded((byte) -87) &&
                                   RichTextLayout.field_k.preloadAll(-1)) {
                                   QuickChatCategoryDefinition.e(-23771);
-                                  nj.a(65.0f, 2, SocialNameInputPanel.field_xb);
+                                  ClientDialogSupport.setLoadingProgress(65.0f, 2, SocialNameInputPanel.field_xb);
                                   this.draw(param0 - 81);
                                   if (!param1) {
                                     return false;
@@ -683,43 +683,43 @@ public final class ShatteredPlansClient extends GameClientShell {
                                   ValidationState.c(122);
                                   return false;
                                 }
-                                nj.a(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
+                                ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
                                 return false;
                               }
-                              nj.a(75.0f, 2, BoundsRect.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
+                              ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
                               return false;
                             }
-                            nj.a(75.0f, 2, BoundsRect.a("", LeaderboardSortSupport.field_c, (byte) 39, MouseInputHandler.field_e, ToggleButton.field_v));
+                            ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", LeaderboardSortSupport.field_c, (byte) 39, MouseInputHandler.field_e, ToggleButton.field_v));
                             return false;
                           }
-                          nj.a(75.0f, 2, BoundsRect.a("", IntrusiveNodeHashTable.field_g, (byte) 12, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                          ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", IntrusiveNodeHashTable.field_g, (byte) 12, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                           return false;
                         }
-                        nj.a(75.0f, 2, BoundsRect.a("", PointsVictoryChecker.field_l, (byte) 61, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                        ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", PointsVictoryChecker.field_l, (byte) 61, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                         return false;
                       }
-                      nj.a(75.0f, 2, BoundsRect.a("", ChatMessage.field_d, (byte) 11, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+                      ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", ChatMessage.field_d, (byte) 11, ValidatedTextInputWidget.field_J, SpriteState.field_r));
                       return false;
                     }
-                    nj.a(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, ByteArrayStorage.field_a, MeshMaterial.field_b));
+                    ClientDialogSupport.setLoadingProgress(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, ByteArrayStorage.field_a, MeshMaterial.field_b));
                     return false;
                   }
-                  nj.a(45.0f, 2, ve.a(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
+                  ClientDialogSupport.setLoadingProgress(45.0f, 2, ve.a(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
                   return false;
                 }
-                nj.a(40.0f, 2, BoundsRect.a("", ByteArrayReadRequest.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
+                ClientDialogSupport.setLoadingProgress(40.0f, 2, BoundsRect.a("", ByteArrayReadRequest.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
                 return false;
               }
-              nj.a(20.0f, 2, BoundsRect.a("", IntHashIndex.field_a, (byte) 117, PlayerReportPanel.field_Db, TurnEventLog.field_e));
+              ClientDialogSupport.setLoadingProgress(20.0f, 2, BoundsRect.a("", IntHashIndex.field_a, (byte) 117, PlayerReportPanel.field_Db, TurnEventLog.field_e));
               return false;
             }
-            nj.a(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
+            ClientDialogSupport.setLoadingProgress(17.0f, 2, BoundsRect.a("lobby", rl.field_f, (byte) 94, LinkPainter.field_h, IntrusiveDequeCursor.field_h));
             return false;
           }
-          nj.a(13.0f, 2, BoundsRect.a("lobby", AttackTask.field_s, (byte) 19, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+          ClientDialogSupport.setLoadingProgress(13.0f, 2, BoundsRect.a("lobby", AttackTask.field_s, (byte) 19, ValidatedTextInputWidget.field_J, SpriteState.field_r));
           return false;
         }
-        nj.a(10.0f, param0 ^ 80, BoundsRect.a("basic", AttackTask.field_s, (byte) 38, ValidatedTextInputWidget.field_J, SpriteState.field_r));
+        ClientDialogSupport.setLoadingProgress(10.0f, param0 ^ 80, BoundsRect.a("basic", AttackTask.field_s, (byte) 38, ValidatedTextInputWidget.field_J, SpriteState.field_r));
         return false;
     }
 
@@ -729,7 +729,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         IntrusiveDeque.clearStatics(0);
         tg.clearStatics(82);
         wi.clearStatics((byte) 111);
-        no.clearStatics(-6);
+        TutorialStageSupport.clearStatics(-6);
         MusicCrossfadeStream.clearStatics(param0 ^ 24068);
         SpriteResourceSupport.clearStatics((byte) -77);
         va.clearStatics(102);
@@ -761,7 +761,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ss.clearStatics(1);
         LobbyCommandSupport.releaseLobbyCommandStatics(1);
         TooltipSupport.clearStatics((byte) 125);
-        nf.clearStatics((byte) -25);
+        ChatHistoryEntry.clearStatics((byte) -25);
         AccountHandshakeSupport.clearStatics(108);
         FrameTimer.clearStatics((byte) 47);
         uh.clearStatics(param0 ^ -24161);
@@ -790,14 +790,14 @@ public final class ShatteredPlansClient extends GameClientShell {
         sm.clearStatics(-25370);
         GameSession.clearStatics(11);
         te.clearStatics(param0 + 24069);
-        nn.clearStatics((byte) 63);
+        AccountNameValidationSupport.clearStatics((byte) 63);
         MidiPcmStream.clearStatics(-17876);
         IntrusiveNodeHashTable.clearStatics(0);
         MusicVoice.clearStatics(-109);
         MidiFileReader.clearStatics();
         PcmPlayerService.clearStatics();
         ClientPacketFlushSupport.clearStatics(-28065);
-        np.clearStatics(true);
+        MenuInputState.clearStatics(true);
         PanelNode.clearStatics(false);
         v.clearStatics(3);
         wp.clearStatics((byte) -90);
@@ -862,7 +862,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         sg.clearStatics((byte) 34);
         wh.clearStatics(true);
         tb.clearStatics(58);
-        nl.clearStatics(-87);
+        DiplomacyRowSupport.clearStatics(-87);
         q.clearStatics((byte) 125);
         SocialNameInputPanel.releaseSocialNameInputStatics(param0 + 23965);
         ChatMessageFactory.clearStatics(param0 ^ 27074);
@@ -937,14 +937,14 @@ public final class ShatteredPlansClient extends GameClientShell {
         CachedArchiveSource.clearStatics((byte) 114);
         ClientSessionSupport.clearStatics((byte) 123);
         ArchiveRequest.clearStatics(param0 ^ 6520);
-        ng.clearStatics(-109);
+        PacketBooleanSupport.clearStatics(-109);
         AccountNoticeDialog.clearStatics(param0 ^ -24069);
         WidgetTheme.clearStatics((byte) -77);
         wn.clearStatics();
         VorbisSample.clearStatics();
         MeshMaterial.clearStatics((byte) 66);
         sr.clearStatics((byte) -74);
-        nm.clearStatics((byte) 4);
+        PairedIntSortSupport.clearStatics((byte) 4);
         PlayerOverlaySupport.clearStatics(-27153);
         oe.clearStatics(param0 ^ -24069);
         uk.clearStatics((byte) 91);
@@ -1321,7 +1321,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           Wormhole.field_i = true;
         }
         if (PlayerRankingRequest.field_o == -7) {
-          NetworkArchiveRequest.a(11, np.field_a.getRoomId(-79), (byte) -2);
+          NetworkArchiveRequest.a(11, MenuInputState.field_a.getRoomId(-79), (byte) -2);
           PlayerRankingRequest.field_o = GameRules.field_c;
           ArchiveConnectionRetrySupport.field_a = true;
         }
@@ -1382,7 +1382,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           } else {
             stackIn_7_0 = true;
           }
-          no.a(stackIn_7_0, 10, (java.awt.Canvas) (var2));
+          TutorialStageSupport.drawLoadingOrAccountUi(stackIn_7_0, 10, (java.awt.Canvas) (var2));
           return;
         }
         if (!MutableIntPairNode.field_h) {
@@ -1390,7 +1390,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           return;
         }
         if (!StrongCacheEntry.f((byte) 116)) {
-          nj.a(100.0f, 2, ToggleButton.field_v);
+          ClientDialogSupport.setLoadingProgress(100.0f, 2, ToggleButton.field_v);
           ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
           return;
         }

@@ -82,7 +82,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           IntNode.field_p = null;
-          np.field_a = null;
+          MenuInputState.field_a = null;
           TurnEventLog.field_i = false;
           if (null != PlayerRankingRequest.field_p) {
             PlayerRankingRequest.field_p.clear(param0 + 66);
@@ -261,8 +261,8 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = ng.readBoolean(param0, (byte) -95) ? 1 : 0;
-          var4 = ng.readBoolean(param0, (byte) -95) ? 1 : 0;
+          var3 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
+          var4 = PacketBooleanSupport.readBoolean(param0, (byte) -95) ? 1 : 0;
           var5 = new sr();
           var5.field_x = (short)param0.b((byte) 115, 16);
           var5.field_w = tm.a((byte) 39, param0, 16, var5.field_w);
@@ -290,10 +290,10 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             var5.field_J = tm.a((byte) 39, param0, 16, var5.field_J);
             var5.field_G = tm.a((byte) 39, param0, 16, var5.field_G);
           }
-          if (ng.readBoolean(param0, (byte) -95)) {
+          if (PacketBooleanSupport.readBoolean(param0, (byte) -95)) {
             var5.field_b = tm.a((byte) 39, param0, 16, var5.field_b);
           }
-          if (ng.readBoolean(param0, (byte) -95)) {
+          if (PacketBooleanSupport.readBoolean(param0, (byte) -95)) {
             var5.field_p = DualLinkNode.a(16, false, param0, var5.field_p);
             var7 = 0;
             for (var8 = 0; var5.field_p.length > var8; var8++) {

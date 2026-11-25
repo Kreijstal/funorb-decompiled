@@ -191,7 +191,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
         if (!param5 && (PlayerReportPanel.field_Mb != SoftwareRasterizer.field_b ||
           TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (so.field_q.field_d == SoftwareRasterizer.field_k &&
           SoftwareRasterizer.field_b == so.field_q.field_g)) {
-          if (null == np.field_a) {
+          if (null == MenuInputState.field_a) {
             if (null == IntNode.field_p) {
               DialogRoot.j(param9 ^ 97);
             } else {
@@ -219,7 +219,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           uo.a((byte) 23, param0, param2, param7, param5);
         }
         if (IntrusiveNodeHashTable.field_e &&
-          np.field_a.field_Eb <= np.field_a.field_Lb) {
+          MenuInputState.field_a.field_Eb <= MenuInputState.field_a.field_Lb) {
           GalaxyMapLayoutSupport.field_a.field_zb.field_z = SoundPlayback.field_j;
           MenuList.field_v.field_s = false;
           MatchingTextValidator.a(false, GalaxyMapLayoutSupport.field_a.field_xb);

@@ -637,7 +637,7 @@ final class MidiPcmStream extends PcmStream {
                 if (!var12.field_cc &&
                   !var12.field_Jb) {
                   if (!var12.field_Qb) {
-                    var12.field_Ub.field_z = ng.field_b;
+                    var12.field_Ub.field_z = PacketBooleanSupport.field_b;
                   } else {
                     var12.field_Ub.field_z = FourIntSubmissionRequest.field_r;
                   }

@@ -74,9 +74,9 @@ final class ChatCompositionSupport {
             stackIn_22_0 = var4_ref_ik;
             if (var6 == 0) {
               var5_int = stackIn_22_0.field_k >> 4;
-              if (var5_int < nm.field_a) {
+              if (var5_int < PairedIntSortSupport.field_a) {
                 stackIn_11_0 = (var5_int <= 0) ? 0 : var5_int;
-                nm.field_a = stackIn_11_0;
+                PairedIntSortSupport.field_a = stackIn_11_0;
               }
               var5_int++;
               if (WhirlpoolHasher.field_i < var5_int) {
@@ -209,11 +209,11 @@ final class ChatCompositionSupport {
               }
             } else {
               if (var7 == 0) {
-                if (np.field_a == null &&
+                if (MenuInputState.field_a == null &&
                   LobbyCommandSupport.field_e) {
                   var5 = "[" + MessageKind.field_a + "] ";
                 }
-                if (null != np.field_a) {
+                if (null != MenuInputState.field_a) {
                   var7 = 1;
                   boolean decompiledSharedTail1 = (!(DialPainter.field_c) ||
                     null == AiTask.field_m);
@@ -222,7 +222,7 @@ final class ChatCompositionSupport {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var5 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                    var5 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
                   }
                 }
               }

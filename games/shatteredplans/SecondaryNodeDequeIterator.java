@@ -55,7 +55,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             field_d = (String) null;
           }
           for (var5 = 0; var3 > var5; var5++) {
-            if (!ng.readBoolean(param1, (byte) -95)) {
+            if (!PacketBooleanSupport.readBoolean(param1, (byte) -95)) {
               var6 = param1.b((byte) 127, HitRegion.signedBitLength(var5 - 1, 1));
               var4[var5] = var4[var6];
             } else {
@@ -90,7 +90,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (param0 >= -90) {
           return false;
         }
-        return ~np.field_a.field_fc == ~UsernameAvailabilityValidator.field_p ? true : false;
+        return ~MenuInputState.field_a.field_fc == ~UsernameAvailabilityValidator.field_p ? true : false;
     }
 
     public static void a(int param0) {

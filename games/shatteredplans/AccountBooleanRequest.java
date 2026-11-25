@@ -15,8 +15,8 @@ final class AccountBooleanRequest {
 
     final static boolean handleTutorialPointer(boolean param0, boolean param1) {
         if (!param1) {
-          nf var3 = (nf) null;
-          AccountBooleanRequest.openChatPlayerContextMenu((nf) null, -105);
+          ChatHistoryEntry var3 = (ChatHistoryEntry) null;
+          AccountBooleanRequest.openChatPlayerContextMenu((ChatHistoryEntry) null, -105);
           if (WeightedLruCache.field_g != null) {
             if (TertiaryListSequence.field_k < AccountFieldValue.field_f) {
               return false;
@@ -229,7 +229,7 @@ final class AccountBooleanRequest {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        nf var11 = null;
+        ChatHistoryEntry var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (SoftwareRasterizer.field_a > param5) {
@@ -242,8 +242,8 @@ final class AccountBooleanRequest {
           }
           var6_int = SoftwareRasterizer.field_b + param3;
           if (param0 != -18166) {
-            var11 = (nf) null;
-            AccountBooleanRequest.openChatPlayerContextMenu((nf) null, -32);
+            var11 = (ChatHistoryEntry) null;
+            AccountBooleanRequest.openChatPlayerContextMenu((ChatHistoryEntry) null, -32);
           }
           var8 = SoftwareRasterizer.field_b * param5 + param4;
           var9 = param4;
@@ -274,7 +274,7 @@ final class AccountBooleanRequest {
         return this.field_f;
     }
 
-    final static void openChatPlayerContextMenu(nf param0, int param1) {
+    final static void openChatPlayerContextMenu(ChatHistoryEntry param0, int param1) {
         Object stackIn_2_0;
         long stackIn_2_1;
         String stackIn_2_2;
@@ -317,7 +317,7 @@ final class AccountBooleanRequest {
           SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
             !TextLayoutLine.a((byte) 95) &&
-            null == np.field_a &&
+            null == MenuInputState.field_a &&
             IntNode.field_p == null) {
             if (!HighscoreResponseSupport.field_b) {
               var5 = DerelictVictoryChecker.field_m;
@@ -330,8 +330,8 @@ final class AccountBooleanRequest {
           }
           if (1 == param0.field_n &&
             !TextLayoutLine.a((byte) 111) &&
-            null != np.field_a &&
-            param0.field_g == np.field_a.getRoomId(-101)) {
+            null != MenuInputState.field_a &&
+            param0.field_g == MenuInputState.field_a.getRoomId(-101)) {
             if (!HighscoreResponseSupport.field_b) {
               var9 = DerelictVictoryChecker.field_m;
               var10 = MenuLabel.field_z;

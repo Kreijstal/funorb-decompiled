@@ -187,7 +187,7 @@ final class EmailValidator extends TextFieldValidator {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 ||
-            np.field_a == null) {
+            MenuInputState.field_a == null) {
             IntrusiveNodeHashTable.field_e = false;
           }
           if (param1) {
@@ -203,7 +203,7 @@ final class EmailValidator extends TextFieldValidator {
               }
             }
           } else {
-            if (np.field_a == null) {
+            if (MenuInputState.field_a == null) {
               if (null == IntNode.field_p) {
                 IntrusiveNodeHashTable.field_e = false;
                 if (Archive.field_b <= 0) {

@@ -294,7 +294,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 SoftwareRasterizer.drawLine(var17, var19, var31 >> 4, var32 >> 4, 0);
                 SoftwareRasterizer.addRadialGlowQ4(var31, var32, 64, var29, MenuButton.field_x);
                 CachedArchiveSource.field_A[Territory.field_p] = var31;
-                np.field_f[Territory.field_p] = var32;
+                MenuInputState.field_f[Territory.field_p] = var32;
                 fieldTemp$0 = Territory.field_p + 1;
                 Territory.field_p = Territory.field_p + 1;
                 if (fieldTemp$0 == 600) {
@@ -310,8 +310,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 var31Lifetime1 += 600;
               }
               var33 = 256 * (var30Lifetime1 - var32Lifetime1) / 600;
-              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
-              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
+              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], MenuInputState.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
+              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], MenuInputState.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
               var31Lifetime1--;
             }
           }

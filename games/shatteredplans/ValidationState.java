@@ -105,7 +105,7 @@ final class ValidationState {
         int var1_intLifetime1;
         oe.field_d.b(-1432175600);
         for (var1_int = 0; var1_int < 32; var1_int++) {
-          nm.field_b[var1_int] = 0L;
+          PairedIntSortSupport.field_b[var1_int] = 0L;
         }
         for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
           LobbyRoomEntry.field_Cb[var1_intLifetime1] = 0L;

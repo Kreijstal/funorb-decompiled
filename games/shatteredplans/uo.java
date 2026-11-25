@@ -186,7 +186,7 @@ final class uo {
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           TextLayout.a(22353, PrivateChatMessage.field_k);
-          if (null != np.field_a) {
+          if (null != MenuInputState.field_a) {
             boolean decompiledFrameRemainder0 = true;
             DialPainter.field_g.field_s = true;
             TextFieldWidget.field_I.field_mb = 0;
@@ -200,7 +200,7 @@ final class uo {
             var7 = DualLinkDequeSequence.field_f;
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
-              var9_ref_String = np.field_a.field_Xb;
+              var9_ref_String = MenuInputState.field_a.field_Xb;
               ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
               DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(QuickChatParameterType.field_a, 4371, new String[]{var9_ref_String});
@@ -209,7 +209,7 @@ final class uo {
               ArchiveSourceManager.field_f.field_z = DiplomacyNotice.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
               TextFieldWidget.field_I.setTarget(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
-              if (np.field_a.field_Lb >= np.field_a.field_Eb) {
+              if (MenuInputState.field_a.field_Lb >= MenuInputState.field_a.field_Eb) {
                 TextFieldWidget.field_I.field_z = SoundPlayback.field_j.toUpperCase();
                 TextFieldWidget.field_I.field_s = false;
               } else {
@@ -276,14 +276,14 @@ final class uo {
                           var15 = var24[var14_int];
                           var16 = var13[var14_int + 1];
                           if (var15 != -1) {
-                            if ((255 & np.field_a.field_dc[var15]) != var16) {
+                            if ((255 & MenuInputState.field_a.field_dc[var15]) != var16) {
                               break scanLoop2;
                             }
                           } else {
                             if (var10 == 0) {
-                              stackIn_40_0 = np.field_a.field_Eb;
+                              stackIn_40_0 = MenuInputState.field_a.field_Eb;
                             } else {
-                              stackIn_40_0 = np.field_a.field_Lb;
+                              stackIn_40_0 = MenuInputState.field_a.field_Lb;
                             }
                             var17_int = stackIn_40_0;
                             if (var16 != var17_int) {
@@ -316,7 +316,7 @@ final class uo {
                   var14_intLifetime1 = 0;
                   var15Lifetime1 = 0;
                   for (var16Lifetime1 = 0; ProductionContent.field_k > var16Lifetime1; var16Lifetime1++) {
-                    var17_intLifetime1 = 255 & np.field_a.field_dc[var16Lifetime1];
+                    var17_intLifetime1 = 255 & MenuInputState.field_a.field_dc[var16Lifetime1];
                     if (null != SliderWidget.field_E &&
                       SliderWidget.field_E[var16Lifetime1] != null &&
                       SliderWidget.field_E[var16Lifetime1][var17_intLifetime1]) {
@@ -442,7 +442,7 @@ final class uo {
               }
               var8.field_z = QuickChatCategoryRegistry.a(oe.field_b, 4371, new String[]{Integer.toString(var9)});
             }
-            DefendTask.field_x.field_z = QuickChatCategoryRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
+            DefendTask.field_x.field_z = QuickChatCategoryRegistry.a(BattleEvent.field_r, 4371, new String[]{Integer.toString(MenuInputState.field_a.field_Lb), Integer.toString(MenuInputState.field_a.field_Eb)});
           }
           stackIn_159_0 = SocialListPanel.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
@@ -458,9 +458,9 @@ final class uo {
             stackIn_172_0 = null;
             field_c = (String) (stackIn_172_0);
           }
-          if (np.field_a != null) {
+          if (MenuInputState.field_a != null) {
             if (0 != DialPainter.field_g.field_rb) {
-              NetworkArchiveRequest.a(param2, np.field_a.getRoomId(-92), (byte) -2);
+              NetworkArchiveRequest.a(param2, MenuInputState.field_a.getRoomId(-92), (byte) -2);
             }
             if (0 != IntValueWriteRequest.field_j.field_rb) {
               DefendTask.field_u = true;
@@ -471,7 +471,7 @@ final class uo {
             if (oo.field_c.field_rb != 0) {
               IntrusiveNodeHashTable.field_e = false;
             }
-            AggressiveAi.a(63, false, np.field_a, param2);
+            AggressiveAi.a(63, false, MenuInputState.field_a, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

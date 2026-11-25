@@ -286,7 +286,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             }
             var1Lifetime1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
-              uq.field_m.a(nf.a(var1Lifetime1, 23248), 27275, "combatreport1");
+              uq.field_m.a(ChatHistoryEntry.formatLocalAttackLosses(var1Lifetime1, 23248), 27275, "combatreport1");
             }
             uq.field_m.a(Integer.toString(oq.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
           }
@@ -412,7 +412,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               stackIn_65_1 = -51;
               if (var30 == 0) {
                 if (stackIn_65_0 > stackIn_65_1) {
-                  no.field_c[var23Lifetime2] = -2147483648;
+                  TutorialStageSupport.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   ul.field_Cb[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   IntNode.field_i[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
@@ -422,7 +422,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
                   }
-                  no.field_c[var23Lifetime2] = var29Lifetime1;
+                  TutorialStageSupport.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
                   ProxyAuthenticationRequiredException.field_a[var23Lifetime2] = var27Lifetime1 >> we.field_e;

@@ -69,7 +69,7 @@ final class StripedProgressWidget extends UiWidget {
     }
 
     final static void a(int param0, String param1, int param2, String param3, String param4, int param5) {
-        nf var6 = null;
+        ChatHistoryEntry var6 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -80,7 +80,7 @@ final class StripedProgressWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
-          var6 = new nf(param0, param3, param2, param4, param1);
+          var6 = new ChatHistoryEntry(param0, param3, param2, param4, param1);
           LobbyUiSupport.addChatHistoryEntry((byte) 37, var6);
           if (param5 != -16169) {
             StripedProgressWidget.clearStatics(127);

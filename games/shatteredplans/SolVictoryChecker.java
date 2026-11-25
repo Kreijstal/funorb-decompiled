@@ -536,7 +536,7 @@ final class SolVictoryChecker extends VictoryChecker {
               if (BufferedCacheFile.field_e == 7) {
                 BufferedCacheFile.field_e = 3;
               }
-              nl.field_c = sa.field_a.readString(-1);
+              DiplomacyRowSupport.field_c = sa.field_a.readString(-1);
               BufferedSocket.field_j = false;
               stackIn_92_0 = BufferedCacheFile.field_e;
               return stackIn_92_0;
@@ -547,9 +547,9 @@ final class SolVictoryChecker extends VictoryChecker {
             if (wg.field_f == null) {
               if (BufferedSocket.field_j) {
                 if (wh.a(18) <= 30000L) {
-                  nl.field_c = QuaternaryNodeList.field_d;
+                  DiplomacyRowSupport.field_c = QuaternaryNodeList.field_d;
                 } else {
-                  nl.field_c = QuickChatParameterType.field_f;
+                  DiplomacyRowSupport.field_c = QuickChatParameterType.field_f;
                 }
                 BufferedSocket.field_j = false;
                 stackIn_102_0 = 3;

@@ -134,7 +134,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             param3 = false;
           }
           ResizingDialog.a(-21, param3, param6);
-          nf.a(-126, param4, param3);
+          ChatHistoryEntry.handlePlayerReportPanel(-126, param4, param3);
           param3 = false;
         }
         if (param0) {
@@ -180,7 +180,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           field_z = (Sprite) null;
         }
         if (PlacementOrder.field_t > 0) {
-          nj.a(438);
+          ClientDialogSupport.layoutLobbySidePanels(438);
         }
         if (Archive.field_b > 0) {
           TextLayout.a(22353, Archive.field_b);

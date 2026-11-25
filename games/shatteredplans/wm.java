@@ -6,7 +6,7 @@ final class wm {
     static String field_a;
     static String field_f;
     static int field_c;
-    static nf[] field_d;
+    static ChatHistoryEntry[] field_d;
     static String field_e;
 
     final static Sprite a(int param0, int param1) {
@@ -59,7 +59,7 @@ final class wm {
         if (param0 != 0) {
           return;
         }
-        nj.b(-120);
+        ClientDialogSupport.closeChatPanelOverlay(-120);
     }
 
     final static double smoothStep(int param0, byte param1, int param2) {

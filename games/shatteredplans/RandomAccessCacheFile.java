@@ -191,7 +191,7 @@ final class RandomAccessCacheFile {
 
     final static void a(int param0, int param1) {
         PlayerOverlaySupport.field_b = new int[3];
-        wm.field_d = new nf[param1 * 15];
+        wm.field_d = new ChatHistoryEntry[param1 * 15];
         DebouncedValidator.field_g = 0;
         TargetedChatMessage.field_i = param1;
         int var2 = -27 % ((param0 + 56) / 49);

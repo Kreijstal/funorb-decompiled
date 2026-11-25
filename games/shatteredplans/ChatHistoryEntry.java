@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf {
+final class ChatHistoryEntry {
     long field_p;
     boolean field_h;
     static String field_m;
@@ -19,7 +19,7 @@ final class nf {
     AnimatedPanel field_j;
     int field_e;
 
-    final int a(byte param0) {
+    final int getFilterPriority(byte param0) {
         if (this.field_h) {
           return 2;
         }
@@ -62,7 +62,7 @@ final class nf {
         return 23;
     }
 
-    final static String a(BattleEvent param0, int param1) {
+    final static String formatLocalAttackLosses(BattleEvent param0, int param1) {
         int incrementValue$0 = 0;
         String stackIn_11_0 = null;
         String stackIn_14_0 = null;
@@ -149,7 +149,7 @@ final class nf {
         }
     }
 
-    final static int[] a(int[] param0, int param1) {
+    final static int[] sortedIndices(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -166,7 +166,7 @@ final class nf {
           var2_int = param0.length;
           var3 = new int[var2_int];
           if (param1 != 3718) {
-            nf.clearStatics((byte) -75);
+            ChatHistoryEntry.clearStatics((byte) -75);
           }
           var4 = 1;
           while (true) {
@@ -214,7 +214,7 @@ final class nf {
         return param1;
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void handlePlayerReportPanel(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var3 = 0;
         int var3Lifetime1;
@@ -235,7 +235,7 @@ final class nf {
         var3Lifetime1 = 107 % ((param0 + 29) / 53);
     }
 
-    nf(boolean param0) {
+    ChatHistoryEntry(boolean param0) {
         this.field_e = va.field_b;
         if (param0) {
           this.field_f = AgeValidator.field_p;
@@ -244,7 +244,7 @@ final class nf {
         }
         this.field_b = ProductionContent.field_a;
         this.field_k = BufferedSocket.field_h;
-        this.field_c = nj.field_a;
+        this.field_c = ClientDialogSupport.field_a;
         this.field_h = InvalidMapConnectionException.field_b;
         this.field_o = WeightedCacheEntry.field_q;
         this.field_p = WidgetStyle.field_j;
@@ -266,7 +266,7 @@ final class nf {
         field_a = null;
     }
 
-    nf(int param0, String param1, int param2, String param3, String param4) {
+    ChatHistoryEntry(int param0, String param1, int param2, String param3, String param4) {
         try {
           this.field_h = true;
           this.field_k = param4;

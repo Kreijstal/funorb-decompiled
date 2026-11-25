@@ -65,7 +65,7 @@ final class LobbyLayoutSupport {
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
           var2_int = 3 + ProductionContent.field_k;
-          if (nl.field_a.length < 2) {
+          if (DiplomacyRowSupport.field_a.length < 2) {
             var2_int--;
           }
           if (param1) {
@@ -83,7 +83,7 @@ final class LobbyLayoutSupport {
           var5 = 2 + var4 + 5;
           for (var6 = 0; ProductionContent.field_k + 4 > var6; var6++) {
             if ((var6 != 1 ||
-              !(nl.field_a.length < 2)) && (3 != var6 ||
+              !(DiplomacyRowSupport.field_a.length < 2)) && (3 != var6 ||
               !(FleetMove.field_A <= 1))) {
               if (!param1 &&
                 var6 == 3) {

@@ -134,7 +134,7 @@ final class IsolationistAi extends StandardAi {
         return new int[]{17, 18};
     }
 
-    final static String a(boolean param0, nf param1) {
+    final static String a(boolean param0, ChatHistoryEntry param1) {
         String stackIn_3_0 = null;
         String stackIn_34_0 = null;
         Object stackIn_37_0 = null;

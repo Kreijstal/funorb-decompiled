@@ -287,7 +287,7 @@ final class IsaacRandom {
         if (param0 != 1674225316) {
           IsaacRandom.b((byte) -95);
         }
-        np.field_f = new int[600];
+        MenuInputState.field_f = new int[600];
     }
 
     private final void refill(int param0) {

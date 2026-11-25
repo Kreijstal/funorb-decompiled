@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np {
+final class MenuInputState {
     static int field_j;
     private int field_k;
     private int field_g;
@@ -18,7 +18,7 @@ final class np {
     static String field_d;
     static boolean field_m;
 
-    final boolean d(int param0) {
+    final boolean isActivated(int param0) {
         if (param0 != -1) {
           this.field_h = 80;
           if (this.field_h != 0) {
@@ -41,7 +41,7 @@ final class np {
         return true;
     }
 
-    final void e(int param0) {
+    final void updateHorizontalKeys(int param0) {
         this.field_h = 0;
         this.field_g = 0;
         this.field_i = 0;
@@ -72,7 +72,7 @@ final class np {
         this.field_e = false;
     }
 
-    final void b(int param0) {
+    final void updateVerticalKeys(int param0) {
         this.field_i = param0;
         this.field_h = 0;
         this.field_g = 0;
@@ -101,22 +101,22 @@ final class np {
         this.field_c = 0;
     }
 
-    final boolean a(int param0) {
+    final boolean isHomePressed(int param0) {
         if (param0 == -1) {
           return 102 == this.field_i ? true : false;
         }
-        this.a(126);
+        this.isHomePressed(126);
         return 102 == this.field_i ? true : false;
     }
 
-    final boolean c(int param0) {
+    final boolean isLeftPressed(int param0) {
         if (param0 != -97) {
           return true;
         }
         return this.field_i == 96 ? true : false;
     }
 
-    final boolean f(int param0) {
+    final boolean isRightPressed(int param0) {
         if (param0 >= -38) {
           return false;
         }
@@ -130,11 +130,11 @@ final class np {
         field_d = null;
         if (!param0) {
           java.net.URL var2 = (java.net.URL) null;
-          np.a((String) null, -42, (String) null, true, (java.net.URL) null);
+          MenuInputState.rewriteAppletUrlParameters((String) null, -42, (String) null, true, (java.net.URL) null);
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isPointerHeld(byte param0) {
         if (param0 < -34) {
           return this.field_n != 0 ? true : false;
         }
@@ -142,7 +142,7 @@ final class np {
         return this.field_n != 0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointerSelection(int param0, int param1, int param2) {
         if (this.field_b <= param2) {
           throw new IllegalArgumentException();
         }
@@ -455,7 +455,7 @@ final class np {
         }
     }
 
-    final static java.net.URL a(String param0, int param1, String param2, boolean param3, java.net.URL param4) {
+    final static java.net.URL rewriteAppletUrlParameters(String param0, int param1, String param2, boolean param3, java.net.URL param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -595,7 +595,7 @@ final class np {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void resetSelection(int param0, int param1, boolean param2, int param3) {
         int var5 = 31 % ((param3 - 0) / 42);
         this.field_n = 0;
         this.field_e = param2 ? true : false;
@@ -606,7 +606,7 @@ final class np {
         this.field_c = param0;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isEndPressed(boolean param0) {
         if (param0) {
           return this.field_i == 103 ? true : false;
         }
@@ -614,7 +614,7 @@ final class np {
         return this.field_i == 103 ? true : false;
     }
 
-    final boolean a(byte param0) {
+    final boolean isInitiallyActivated(byte param0) {
         int var2 = -16 / ((param0 - 2) / 34);
         if (this.field_g != 0) {
           return true;
@@ -628,7 +628,7 @@ final class np {
         return true;
     }
 
-    np(int param0) {
+    MenuInputState(int param0) {
         this.field_e = false;
         this.field_c = 0;
         this.field_b = param0;

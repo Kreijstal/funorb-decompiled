@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj {
+final class ClientDialogSupport {
     static int field_a;
 
-    final static void a(int param0) {
+    final static void layoutLobbySidePanels(int param0) {
         int var1 = (PlayerReportPanel.field_Mb - 640) / 2;
         int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - PlacementOrder.field_t * PlacementOrder.field_t;
@@ -12,7 +12,7 @@ final class nj {
         AchievementProgress.field_i.setTarget(param0, SoftwareRasterizer.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
     }
 
-    final static String a(String param0, int param1, byte param2) {
+    final static String requestAddFriend(String param0, int param1, byte param2) {
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -55,7 +55,7 @@ final class nj {
           }
           if (param2 > -57) {
             var5 = (String) null;
-            nj.a((String) null, -114, (byte) -20);
+            ClientDialogSupport.requestAddFriend((String) null, -114, (byte) -20);
           }
           if (UrlLoader.field_c >= 200) {
             stackIn_22_0 = IntroTextLine.field_p;
@@ -88,7 +88,7 @@ final class nj {
         }
     }
 
-    final static void a(float param0, int param1, String param2) {
+    final static void setLoadingProgress(float param0, int param1, String param2) {
         try {
           ContentDialog.field_cb = param0;
           DerelictMapGenerator.field_r = param2;
@@ -100,7 +100,7 @@ final class nj {
         }
     }
 
-    final static void b(int param0) {
+    final static void closeChatPanelOverlay(int param0) {
         int var1 = -119 % ((param0 + 49) / 41);
         ValidatedTextInputWidget.field_X = null;
         if (GameAssetSetupSupport.field_a == null) {

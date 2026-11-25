@@ -28,7 +28,7 @@ final class OpacityWidget extends SingleChildWidget {
             field_B = (String[]) null;
           }
           if (param1 != null &&
-            param1.length() >= np.field_o &&
+            param1.length() >= MenuInputState.field_o &&
             param1.length() <= oq.field_c) {
             return false;
           }
@@ -130,7 +130,7 @@ final class OpacityWidget extends SingleChildWidget {
             return true;
           }
           PrivateChatMessage.field_l = ue.field_a;
-          np.field_m = param1;
+          MenuInputState.field_m = param1;
           AccountCreationForm.field_G = param4;
           PlayerStats.field_j = param2;
           wh.field_c = null;

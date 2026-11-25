@@ -338,8 +338,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           po.field_d = new AnimatedPanel(0L, (AnimatedPanel) null);
           po.field_d.field_pb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton");
           po.field_d.field_fb = SpriteResourceSupport.loadSpriteByName(2, param4, "lobby", "closebutton_mouseover");
-          nl.field_b = new AnimatedPanel(0L, var8);
-          nl.field_b.field_F = ArchiveSourceManager.a(true, 2039583, true, 40, 3815994, (byte) -47);
+          DiplomacyRowSupport.field_b = new AnimatedPanel(0L, var8);
+          DiplomacyRowSupport.field_b.field_F = ArchiveSourceManager.a(true, 2039583, true, 40, 3815994, (byte) -47);
           SliderWidget.field_N = new AnimatedPanel(0L, var10);
           SliderWidget.field_N.field_kb = 2;
           SliderWidget.field_N.field_F = ArchiveSourceManager.a(true, 2039583, false, 30, 3815994, (byte) -111);

@@ -32,7 +32,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          nm.field_a = -1 + SoftwareRasterizer.field_k;
+          PairedIntSortSupport.field_a = -1 + SoftwareRasterizer.field_k;
           if (param0 != 26987) {
             field_H = (Sprite) null;
           }

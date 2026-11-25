@@ -3,7 +3,7 @@
  */
 class AccountStatusDialog extends ContentDialog implements ButtonListener {
     static boolean field_pb;
-    static np field_nb;
+    static MenuInputState field_nb;
     private boolean field_vb;
     private StripedProgressWidget field_yb;
     static String field_qb;
@@ -222,6 +222,6 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
     static {
         field_qb = "You can join this game";
         field_pb = true;
-        field_nb = new np(1);
+        field_nb = new MenuInputState(1);
     }
 }

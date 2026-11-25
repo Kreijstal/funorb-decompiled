@@ -87,7 +87,7 @@ final class PlayerOverlaySupport {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 75 % ((52 - param1) / 51);
-          stackIn_1_0 = nn.a(-105, param0, false);
+          stackIn_1_0 = AccountNameValidationSupport.validateAccountName(-105, param0, false);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

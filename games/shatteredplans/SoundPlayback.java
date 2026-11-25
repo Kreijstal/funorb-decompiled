@@ -78,7 +78,7 @@ final class SoundPlayback extends IntrusiveNode {
             InvalidMapConnectionException.field_f[-2 + var4] = AlternateLoginCredentials.field_s;
             ss.field_a[var4 - 2] = 0;
             ShatteredPlansClient.field_E[0] = 4;
-            InvalidMapConnectionException.field_f[var4 - 1] = nf.field_i;
+            InvalidMapConnectionException.field_f[var4 - 1] = ChatHistoryEntry.field_i;
             ss.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
           } else if (BirthDateConfirmationForm.field_C == 1) {
@@ -94,7 +94,7 @@ final class SoundPlayback extends IntrusiveNode {
               InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
             InvalidMapConnectionException.field_f[var4 - 2] = "";
-            InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
+            InvalidMapConnectionException.field_f[-1 + var4] = ChatHistoryEntry.field_i;
             ss.field_a[var4 - 1] = 0;
             ShatteredPlansClient.field_E[0] = 5;
           } else if (BirthDateConfirmationForm.field_C != 2) {
@@ -115,7 +115,7 @@ final class SoundPlayback extends IntrusiveNode {
                 InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
               InvalidMapConnectionException.field_f[-2 + var4] = "";
-              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[-1 + var4] = ChatHistoryEntry.field_i;
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == BirthDateConfirmationForm.field_C) {
@@ -131,7 +131,7 @@ final class SoundPlayback extends IntrusiveNode {
                 InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
               InvalidMapConnectionException.field_f[var4 - 2] = "";
-              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[-1 + var4] = ChatHistoryEntry.field_i;
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else {
@@ -153,7 +153,7 @@ final class SoundPlayback extends IntrusiveNode {
               InvalidMapConnectionException.field_f[-2 + var4] = MusicVoice.field_t;
               ss.field_a[var4 - 2] = 0;
               ShatteredPlansClient.field_E[0] = 3;
-              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[-1 + var4] = ChatHistoryEntry.field_i;
               ss.field_a[-1 + var4] = 1;
               ShatteredPlansClient.field_E[1] = 5;
             }
@@ -310,9 +310,9 @@ final class SoundPlayback extends IntrusiveNode {
             var4Lifetime3++;
           }
           if (2 == BirthDateConfirmationForm.field_C) {
-            GameState.field_l.a(-1, -1, param0, 99);
+            GameState.field_l.resetSelection(-1, -1, param0, 99);
           } else {
-            GameState.field_l.a(GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215), 0, param0, -58);
+            GameState.field_l.resetSelection(GameScreen.a(TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b, 16777215), 0, param0, -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -202,7 +202,7 @@ abstract class ResizingDialog extends Dialog {
               }
               var5 = null;
               if (0 == MapViewState.field_b) {
-                var5 = nj.a(var4, param2, (byte) -62);
+                var5 = ClientDialogSupport.requestAddFriend(var4, param2, (byte) -62);
               }
               if (MapViewState.field_b == 1) {
                 var5 = WidgetTheme.a((byte) -88, param2, var4);
@@ -259,7 +259,7 @@ abstract class ResizingDialog extends Dialog {
         return super.animate((byte) 88);
     }
 
-    final static int a(nf param0, byte param1) {
+    final static int a(ChatHistoryEntry param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;

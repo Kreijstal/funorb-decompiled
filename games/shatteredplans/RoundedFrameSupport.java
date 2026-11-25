@@ -199,14 +199,14 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             return stackIn_3_0;
           }
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-            AccountStatusDialog.field_nb.b(0);
-            if (!AccountStatusDialog.field_nb.a((byte) -82)) {
+            AccountStatusDialog.field_nb.updateVerticalKeys(0);
+            if (!AccountStatusDialog.field_nb.isInitiallyActivated((byte) -82)) {
               continue;
             }
             var1_int = 1;
           }
-          AccountStatusDialog.field_nb.a(-1, RoundedFrameSupport.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k));
-          if (AccountStatusDialog.field_nb.a((byte) 36)) {
+          AccountStatusDialog.field_nb.updatePointerSelection(-1, RoundedFrameSupport.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k));
+          if (AccountStatusDialog.field_nb.isInitiallyActivated((byte) 36)) {
             var1_int = 1;
           }
           var2 = 0;

@@ -145,7 +145,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             } else {
               if (var9Lifetime1 == 248) {
                 PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 125), true);
-                nl.field_c = ClientCapabilitySupport.field_b;
+                DiplomacyRowSupport.field_c = ClientCapabilitySupport.field_b;
                 q.g(-125);
                 BufferedSocket.field_j = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -187,7 +187,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 SettingsCookieSupport.writeSettingsCookie(-25602, var9_ref_String, GameScreen.getHostApplet((byte) 125));
               }
             } else {
-              nl.field_c = sa.field_a.readString(-1);
+              DiplomacyRowSupport.field_c = sa.field_a.readString(-1);
             }
             q.g(-99);
             BufferedSocket.field_j = false;
@@ -197,9 +197,9 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           if (null == wg.field_f) {
             if (BufferedSocket.field_j) {
               if (wh.a(18) > 30000L) {
-                nl.field_c = QuickChatParameterType.field_f;
+                DiplomacyRowSupport.field_c = QuickChatParameterType.field_f;
               } else {
-                nl.field_c = QuaternaryNodeList.field_d;
+                DiplomacyRowSupport.field_c = QuaternaryNodeList.field_d;
               }
               BufferedSocket.field_j = false;
               stackIn_63_0 = 249;

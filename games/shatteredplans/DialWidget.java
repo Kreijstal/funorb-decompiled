@@ -12,7 +12,7 @@ final class DialWidget extends FocusableWidget {
     static DialogRoot field_I;
     int field_H;
 
-    final static nf i(int param0) {
+    final static ChatHistoryEntry i(int param0) {
         if (DebouncedValidator.field_g == param0) {
           return null;
         }
@@ -340,7 +340,7 @@ final class DialWidget extends FocusableWidget {
                     if (var7 == null) {
                       var7 = new LobbyPlayerEntry(var26, var27, var3_longLifetime2);
                       SpriteStripButtonPainter.field_w.put(var3_longLifetime2, var7, true);
-                      np.field_a.field_Lb = np.field_a.field_Lb + 1;
+                      MenuInputState.field_a.field_Lb = MenuInputState.field_a.field_Lb + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     var8 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
@@ -365,12 +365,12 @@ final class DialWidget extends FocusableWidget {
                         var28.unlink((byte) -124);
                       }
                       var28.unlinkSecondary(16);
-                      np.field_a.field_Lb = np.field_a.field_Lb - 1;
+                      MenuInputState.field_a.field_Lb = MenuInputState.field_a.field_Lb - 1;
                     }
                     return;
                   }
                   if (var2 == 20) {
-                    LobbyRoomDecoder.readLobbyRoom((byte) -89, np.field_a, var1, false);
+                    LobbyRoomDecoder.readLobbyRoom((byte) -89, MenuInputState.field_a, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -466,16 +466,16 @@ final class DialWidget extends FocusableWidget {
             var3_ref_mjLifetime1 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
           }
           if (var2 == 1 &&
-            null != np.field_a) {
-            RichTextLayout.field_h = np.field_a.field_Xb;
+            null != MenuInputState.field_a) {
+            RichTextLayout.field_h = MenuInputState.field_a.field_Xb;
           }
           if (4 != var2) {
-            np.field_a = null;
+            MenuInputState.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            np.field_a = new LobbyRoomEntry(ProductionContent.field_k);
-            np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
-            LobbyRoomDecoder.readLobbyRoom((byte) -89, np.field_a, var1, false);
+            MenuInputState.field_a = new LobbyRoomEntry(ProductionContent.field_k);
+            MenuInputState.field_a.setSecondaryKey(16, (long)var3Lifetime1);
+            LobbyRoomDecoder.readLobbyRoom((byte) -89, MenuInputState.field_a, var1, false);
             sf.field_e = 0L;
           }
           if (var2 != 2 &&

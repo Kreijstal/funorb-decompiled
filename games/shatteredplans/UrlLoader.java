@@ -69,13 +69,13 @@ final class UrlLoader implements Runnable {
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
               TutorialVictoryChecker.a(var15, false);
               if (var7_intLifetime1 != 0) {
-                ul.a(0, Bzip2State.field_L, np.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
+                ul.a(0, Bzip2State.field_L, MenuInputState.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
               } else {
-                var3.field_i = np.field_j;
+                var3.field_i = MenuInputState.field_j;
                 var3.field_l = Bzip2State.field_L;
                 var3.field_h = ClientUiLoadingSupport.field_d;
                 var3.field_r = ClientSessionSupport.field_c;
-                ul.a(0, Bzip2State.field_L, np.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
+                ul.a(0, Bzip2State.field_L, MenuInputState.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ClientUiLoadingSupport.field_d);
               }
             }
             BoundsRect.a(var6, (byte) -111);

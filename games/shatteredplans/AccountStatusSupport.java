@@ -54,7 +54,7 @@ final class AccountStatusSupport {
               } else {
                 param2 = AccountCreationForm.field_N;
               }
-              no.field_e.a(16311, MenuWindow.field_B);
+              TutorialStageSupport.field_e.a(16311, MenuWindow.field_B);
             }
             var3_int = 1;
             if (10 == param1) {
@@ -73,7 +73,7 @@ final class AccountStatusSupport {
             if (param1 != 256 &&
               param1 != 10 &&
               !TertiaryNodeList.field_b) {
-              no.field_e.l(8);
+              TutorialStageSupport.field_e.l(8);
               return;
             }
           }

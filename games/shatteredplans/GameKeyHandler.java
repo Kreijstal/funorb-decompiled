@@ -85,7 +85,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int >= 0) {
               var3 = OpacityWidget.field_I + 1 & 127;
               if (var3 != DialogRoot.field_B) {
-                ng.field_a[OpacityWidget.field_I] = var2_int;
+                PacketBooleanSupport.field_a[OpacityWidget.field_I] = var2_int;
                 LobbyRoomEntry.field_yb[OpacityWidget.field_I] = (char)0;
                 OpacityWidget.field_I = var3;
               }
@@ -130,7 +130,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               LabeledChildWidget.a(28654, (char) var2_int)) {
               var3 = 1 + OpacityWidget.field_I & 127;
               if (var3 != DialogRoot.field_B) {
-                ng.field_a[OpacityWidget.field_I] = -1;
+                PacketBooleanSupport.field_a[OpacityWidget.field_I] = -1;
                 LobbyRoomEntry.field_yb[OpacityWidget.field_I] = (char)var2_int;
                 OpacityWidget.field_I = var3;
               }
@@ -198,10 +198,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = var3 + param2;
             }
             ClientContextMenuSupport.printError(var3, false);
-            var7 = nf.replaceAll(":", var3, (byte) 103, "%3a");
-            var8 = nf.replaceAll("@", var7, (byte) 121, "%40");
-            var9 = nf.replaceAll("&", var8, (byte) 80, "%26");
-            var10 = nf.replaceAll("#", var9, (byte) 112, "%23");
+            var7 = ChatHistoryEntry.replaceAll(":", var3, (byte) 103, "%3a");
+            var8 = ChatHistoryEntry.replaceAll("@", var7, (byte) 121, "%40");
+            var9 = ChatHistoryEntry.replaceAll("&", var8, (byte) 80, "%26");
+            var10 = ChatHistoryEntry.replaceAll("#", var9, (byte) 112, "%23");
             if (null == LobbyUiSupport.field_c) {
               return;
             }

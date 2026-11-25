@@ -25,11 +25,11 @@ final class CandidateLink extends IntrusiveNode {
         return 1;
     }
 
-    final static void a(nf param0, int param1) {
+    final static void a(ChatHistoryEntry param0, int param1) {
         int var2_int = 0;
-        nf var3 = null;
+        ChatHistoryEntry var3 = null;
         int var4 = 0;
-        nf var5 = null;
+        ChatHistoryEntry var5 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -38,8 +38,8 @@ final class CandidateLink extends IntrusiveNode {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 != 2) {
-            var5 = (nf) null;
-            CandidateLink.a((nf) null, 0);
+            var5 = (ChatHistoryEntry) null;
+            CandidateLink.a((ChatHistoryEntry) null, 0);
           }
           if (param0.field_k == null) {
             return;

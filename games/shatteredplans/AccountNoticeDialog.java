@@ -48,7 +48,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
           var4.field_n = 80;
           var4.field_p = (WidgetPainter) ((Object) new WidgetTheme(EmailValidator.field_x, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) -49, var4);
-          this.field_X = this.appendButton((WidgetListener) (this), nf.field_i, 0);
+          this.field_X = this.appendButton((WidgetListener) (this), ChatHistoryEntry.field_i, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

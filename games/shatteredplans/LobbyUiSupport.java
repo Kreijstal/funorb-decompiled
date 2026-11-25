@@ -51,7 +51,7 @@ final class LobbyUiSupport {
         }
     }
 
-    final static void addChatHistoryEntry(byte param0, nf param1) {
+    final static void addChatHistoryEntry(byte param0, ChatHistoryEntry param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -79,17 +79,17 @@ final class LobbyUiSupport {
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < DebouncedValidator.field_g; var2_intLifetime1++) {
             if (wm.field_d[var2_intLifetime1].field_n == param1.field_n) {
-              dupTemp$3 = wm.field_d[var2_intLifetime1].a((byte) 115);
+              dupTemp$3 = wm.field_d[var2_intLifetime1].getFilterPriority((byte) 115);
               PlayerOverlaySupport.field_b[dupTemp$3] = PlayerOverlaySupport.field_b[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a((byte) 113);
+          dupTemp$0 = param1.getFilterPriority((byte) 113);
           PlayerOverlaySupport.field_b[dupTemp$0] = PlayerOverlaySupport.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < DebouncedValidator.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (wm.field_d[var3].field_n == param1.field_n) {
-              var4 = wm.field_d[var3].a((byte) 115);
+              var4 = wm.field_d[var3].getFilterPriority((byte) 115);
               if (TargetedChatMessage.field_i < PlayerOverlaySupport.field_b[var4]) {
                 PlayerOverlaySupport.field_b[var4] = PlayerOverlaySupport.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;

@@ -112,7 +112,7 @@ final class GradientMenuLabel extends MenuComponent {
             StarLinkPlanner.field_c[-2 + var8] = var6;
             pr.field_d[var8 - 2] = 0;
             Player.field_y[0] = 1;
-            StarLinkPlanner.field_c[-1 + var8] = nf.field_i;
+            StarLinkPlanner.field_c[-1 + var8] = ChatHistoryEntry.field_i;
             pr.field_d[-1 + var8] = 1;
             Player.field_y[1] = 2;
           } else {
@@ -131,7 +131,7 @@ final class GradientMenuLabel extends MenuComponent {
               StarLinkPlanner.field_c[var9] = AccountBooleanRequest.field_b[var9];
             }
             StarLinkPlanner.field_c[-2 + var8] = "";
-            StarLinkPlanner.field_c[var8 - 1] = nf.field_i;
+            StarLinkPlanner.field_c[var8 - 1] = ChatHistoryEntry.field_i;
             pr.field_d[-1 + var8] = 0;
             Player.field_y[0] = 2;
           }
@@ -160,7 +160,7 @@ final class GradientMenuLabel extends MenuComponent {
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
           vo.field_b = LoginForm.field_O - (DiskCacheWorker.field_b >> 1);
-          AccountStatusDialog.field_nb.a(RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k), 0, param0, 123);
+          AccountStatusDialog.field_nb.resetSelection(RoundedFrameSupport.a(-15073, LobbyRoomControlsSupport.field_b, TertiaryListSequence.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

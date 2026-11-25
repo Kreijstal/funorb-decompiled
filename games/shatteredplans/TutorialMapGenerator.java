@@ -1334,7 +1334,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("status_private", 511);
                 if (null != var2) {
-                  ng.field_b = IterableNodeHashTable.a(var2, 17746);
+                  PacketBooleanSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_full", 511);
                 if (null != var2) {
@@ -1700,7 +1700,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_1_2", 511);
                 if (null != var2) {
-                  no.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialStageSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_3", 511);
                 if (null != var2) {
@@ -2332,7 +2332,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passrepeated", 511);
                 if (null != var2) {
-                  no.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TutorialStageSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passlength", 511);
                 if (var2 != null) {
@@ -3402,7 +3402,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("fs_button_close", 511);
                 if (null != var2) {
-                  nf.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ChatHistoryEntry.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_members", 511);
                 if (null != var2) {

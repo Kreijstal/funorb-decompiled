@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn {
+final class AccountNameValidationSupport {
     static int field_b;
     static byte[][][] field_c;
     static String field_a;
@@ -12,7 +12,7 @@ final class nn {
         field_a = null;
     }
 
-    final static int a(Star[] param0, int param1) {
+    final static int labelStarComponents(Star[] param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -41,7 +41,7 @@ final class nn {
         }
     }
 
-    final static String a(int param0, CharSequence param1, boolean param2) {
+    final static String validateAccountName(int param0, CharSequence param1, boolean param2) {
         String var3 = null;
         int var4 = 0;
         int var5 = 0;

@@ -15,7 +15,7 @@ final class CheckboxWidget extends FocusableWidget {
 
     final static void a(int param0) {
         StandardMapReader.field_g = null;
-        SolVictoryChecker.field_p = nm.field_a;
+        SolVictoryChecker.field_p = PairedIntSortSupport.field_a;
         if (param0 != -15365) {
           CheckboxWidget.clearStatics(-36);
         }

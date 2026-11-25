@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl {
+final class DiplomacyRowSupport {
     static int[] field_a;
     static String field_c;
     static AnimatedPanel field_b;
@@ -17,7 +17,7 @@ final class nl {
         field_a = null;
     }
 
-    final static MenuList a(ListContent param0, Player[] param1, int param2, Player param3) {
+    final static MenuList createDiplomacySummaryRow(ListContent param0, Player[] param1, int param2, Player param3) {
         int var8_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -16,7 +16,7 @@ final class sk extends IntrusiveNode {
         }
     }
 
-    final static nf a(boolean param0, int param1) {
+    final static ChatHistoryEntry a(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -34,7 +34,7 @@ final class sk extends IntrusiveNode {
         stackIn_3_0 = (param1 != ~(128 & var3));
         InvalidMapConnectionException.field_b = stackIn_3_0;
         PacketBuffer.field_k = var3 & 127;
-        nj.field_a = var8.readUnsignedByte(-77);
+        ClientDialogSupport.field_a = var8.readUnsignedByte(-77);
         WidgetStyle.field_j = var8.readLong(param1 ^ -31);
         if (PacketBuffer.field_k != 2) {
           TertiaryNodeList.field_f = 0;
@@ -62,7 +62,7 @@ final class sk extends IntrusiveNode {
         if (!param0) {
           BufferedSocket.field_h = UnderageAccountInfoPanel.a(var8, param1 + 1, 80);
           AgeValidator.field_p = null;
-          return new nf(param0);
+          return new ChatHistoryEntry(param0);
         }
         var5 = var8.readUnsignedShort(-20976);
         try {
@@ -80,9 +80,9 @@ final class sk extends IntrusiveNode {
           GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
           BufferedSocket.field_h = null;
           AgeValidator.field_p = null;
-          return new nf(param0);
+          return new ChatHistoryEntry(param0);
         }
-        return new nf(param0);
+        return new ChatHistoryEntry(param0);
     }
 
     sk(long param0, int param1, byte[] param2) {
