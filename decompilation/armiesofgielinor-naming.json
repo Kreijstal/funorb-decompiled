@@ -76756,6 +76756,14 @@
       "renamedSymbol": "M:ModelMesh.drawPerspective(IIIIIII)V"
     },
     {
+      "symbol": "M:gd.a(IIIIIIII)Z",
+      "originalName": "a",
+      "to": "isPointInTriangleBounds",
+      "evidence": "gd.java: Inclusive axis-aligned bounding-box test of a point against three projected vertices, used only for coarse picking. This does not test triangle edge containment. Preserve all four three-way short-circuit comparisons and full int domains, including coordinate extrema and boundary equality; no subtraction/overflow-based replacement.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z"
+    },
+    {
       "symbol": "M:gd.a(IIIIIIIJ)V",
       "originalName": "a",
       "to": "drawPerspective",
@@ -76812,6 +76820,14 @@
       "renamedSymbol": "M:ModelMesh.beginAnimation()Z"
     },
     {
+      "symbol": "M:gd.b(I)V",
+      "originalName": "b",
+      "to": "drawFace",
+      "evidence": "gd.java: Dispatches a depth-ordered mesh face to near-plane clipping or textured, Gouraud-shaded or flat-colour triangle rasterization. Preserves horizontal clipping and alpha state writes, signed texture sentinel comparisons, unsigned byte/colour masks, texture-coordinate vertex overrides and original evaluation/error order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.drawFace(I)V"
+    },
+    {
       "symbol": "M:gd.b(III)V",
       "originalName": "b",
       "to": "scaleGeometry",
@@ -76826,6 +76842,14 @@
       "evidence": "gd.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ModelMesh.releaseStatics()V"
+    },
+    {
+      "symbol": "M:gd.c(I)V",
+      "originalName": "c",
+      "to": "drawNearClippedFace",
+      "evidence": "gd.java: Clips a face against camera z=50 using fixed-point reciprocal interpolation, writes shared projected XY/colour scratch incrementally, and draws the resulting triangle or two triangles for a quadrilateral. Preserve scratch reads before count checking, alpha/clip writes, texture overrides, flat/shaded paths, arithmetic overflow/shifts, unused frame remainder and all failure/partial-write ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ModelMesh.drawNearClippedFace(I)V"
     },
     {
       "symbol": "M:gd.d()V",
@@ -299012,7 +299036,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#0",
-      "renamedSymbol": "L:ModelMesh.b(I)V#0",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -299023,7 +299047,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#1",
-      "renamedSymbol": "L:ModelMesh.b(I)V#1",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -299034,7 +299058,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#2",
-      "renamedSymbol": "L:ModelMesh.b(I)V#2",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -299045,7 +299069,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#3",
-      "renamedSymbol": "L:ModelMesh.b(I)V#3",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -299056,7 +299080,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#4",
-      "renamedSymbol": "L:ModelMesh.b(I)V#4",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -299067,7 +299091,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#5",
-      "renamedSymbol": "L:ModelMesh.b(I)V#5",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -299078,7 +299102,7 @@
     },
     {
       "symbol": "L:gd.b(I)V#6",
-      "renamedSymbol": "L:ModelMesh.b(I)V#6",
+      "renamedSymbol": "L:ModelMesh.drawFace(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -299100,7 +299124,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#0",
-      "renamedSymbol": "L:ModelMesh.c(I)V#0",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -299111,7 +299135,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#1",
-      "renamedSymbol": "L:ModelMesh.c(I)V#1",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -299122,7 +299146,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#10",
-      "renamedSymbol": "L:ModelMesh.c(I)V#10",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#10",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -299133,7 +299157,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#11",
-      "renamedSymbol": "L:ModelMesh.c(I)V#11",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -299144,7 +299168,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#12",
-      "renamedSymbol": "L:ModelMesh.c(I)V#12",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -299155,7 +299179,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#13",
-      "renamedSymbol": "L:ModelMesh.c(I)V#13",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -299166,7 +299190,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#14",
-      "renamedSymbol": "L:ModelMesh.c(I)V#14",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -299177,7 +299201,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#15",
-      "renamedSymbol": "L:ModelMesh.c(I)V#15",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -299188,7 +299212,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#16",
-      "renamedSymbol": "L:ModelMesh.c(I)V#16",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -299199,7 +299223,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#17",
-      "renamedSymbol": "L:ModelMesh.c(I)V#17",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#17",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -299210,7 +299234,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#18",
-      "renamedSymbol": "L:ModelMesh.c(I)V#18",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#18",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -299221,7 +299245,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#19",
-      "renamedSymbol": "L:ModelMesh.c(I)V#19",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#19",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -299232,7 +299256,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#2",
-      "renamedSymbol": "L:ModelMesh.c(I)V#2",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#2",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -299243,7 +299267,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#20",
-      "renamedSymbol": "L:ModelMesh.c(I)V#20",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#20",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -299254,7 +299278,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#21",
-      "renamedSymbol": "L:ModelMesh.c(I)V#21",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -299265,7 +299289,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#22",
-      "renamedSymbol": "L:ModelMesh.c(I)V#22",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#22",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -299276,7 +299300,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#23",
-      "renamedSymbol": "L:ModelMesh.c(I)V#23",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#23",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -299287,7 +299311,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#24",
-      "renamedSymbol": "L:ModelMesh.c(I)V#24",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#24",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -299298,7 +299322,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#25",
-      "renamedSymbol": "L:ModelMesh.c(I)V#25",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#25",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -299309,7 +299333,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#26",
-      "renamedSymbol": "L:ModelMesh.c(I)V#26",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#26",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -299320,7 +299344,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#27",
-      "renamedSymbol": "L:ModelMesh.c(I)V#27",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#27",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -299331,7 +299355,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#28",
-      "renamedSymbol": "L:ModelMesh.c(I)V#28",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#28",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -299342,7 +299366,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#29",
-      "renamedSymbol": "L:ModelMesh.c(I)V#29",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#29",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -299353,7 +299377,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#3",
-      "renamedSymbol": "L:ModelMesh.c(I)V#3",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#3",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -299364,7 +299388,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#30",
-      "renamedSymbol": "L:ModelMesh.c(I)V#30",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#30",
       "originalName": "var11Lifetime3",
       "renamedName": "var11Lifetime3",
       "declaration": {
@@ -299375,7 +299399,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#31",
-      "renamedSymbol": "L:ModelMesh.c(I)V#31",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#31",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -299386,7 +299410,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#32",
-      "renamedSymbol": "L:ModelMesh.c(I)V#32",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#32",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -299397,7 +299421,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#33",
-      "renamedSymbol": "L:ModelMesh.c(I)V#33",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#33",
       "originalName": "var12Lifetime3",
       "renamedName": "var12Lifetime3",
       "declaration": {
@@ -299408,7 +299432,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#34",
-      "renamedSymbol": "L:ModelMesh.c(I)V#34",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#34",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -299419,7 +299443,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#35",
-      "renamedSymbol": "L:ModelMesh.c(I)V#35",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#35",
       "originalName": "var13Lifetime2",
       "renamedName": "var13Lifetime2",
       "declaration": {
@@ -299430,7 +299454,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#36",
-      "renamedSymbol": "L:ModelMesh.c(I)V#36",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#36",
       "originalName": "var13Lifetime3",
       "renamedName": "var13Lifetime3",
       "declaration": {
@@ -299441,7 +299465,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#37",
-      "renamedSymbol": "L:ModelMesh.c(I)V#37",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#37",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -299452,7 +299476,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#38",
-      "renamedSymbol": "L:ModelMesh.c(I)V#38",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#38",
       "originalName": "var14Lifetime2",
       "renamedName": "var14Lifetime2",
       "declaration": {
@@ -299463,7 +299487,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#39",
-      "renamedSymbol": "L:ModelMesh.c(I)V#39",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#39",
       "originalName": "var14Lifetime3",
       "renamedName": "var14Lifetime3",
       "declaration": {
@@ -299474,7 +299498,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#4",
-      "renamedSymbol": "L:ModelMesh.c(I)V#4",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -299485,7 +299509,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#40",
-      "renamedSymbol": "L:ModelMesh.c(I)V#40",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#40",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -299496,7 +299520,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#41",
-      "renamedSymbol": "L:ModelMesh.c(I)V#41",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#41",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -299507,7 +299531,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#42",
-      "renamedSymbol": "L:ModelMesh.c(I)V#42",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#42",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -299518,7 +299542,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#43",
-      "renamedSymbol": "L:ModelMesh.c(I)V#43",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#43",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -299529,7 +299553,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#44",
-      "renamedSymbol": "L:ModelMesh.c(I)V#44",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#44",
       "originalName": "var14Lifetime4",
       "renamedName": "var14Lifetime4",
       "declaration": {
@@ -299540,7 +299564,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#45",
-      "renamedSymbol": "L:ModelMesh.c(I)V#45",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#45",
       "originalName": "var14Lifetime1Lifetime1",
       "renamedName": "var14Lifetime1Lifetime1",
       "declaration": {
@@ -299551,7 +299575,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#46",
-      "renamedSymbol": "L:ModelMesh.c(I)V#46",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#46",
       "originalName": "var14Lifetime2Lifetime1",
       "renamedName": "var14Lifetime2Lifetime1",
       "declaration": {
@@ -299562,7 +299586,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#47",
-      "renamedSymbol": "L:ModelMesh.c(I)V#47",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#47",
       "originalName": "var20Lifetime1Lifetime1",
       "renamedName": "var20Lifetime1Lifetime1",
       "declaration": {
@@ -299573,7 +299597,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#48",
-      "renamedSymbol": "L:ModelMesh.c(I)V#48",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#48",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -299584,7 +299608,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#5",
-      "renamedSymbol": "L:ModelMesh.c(I)V#5",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#5",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -299595,7 +299619,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#6",
-      "renamedSymbol": "L:ModelMesh.c(I)V#6",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#6",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -299606,7 +299630,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#7",
-      "renamedSymbol": "L:ModelMesh.c(I)V#7",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#7",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -299617,7 +299641,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#8",
-      "renamedSymbol": "L:ModelMesh.c(I)V#8",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#8",
       "originalName": "incrementValue$8",
       "renamedName": "incrementValue$8",
       "declaration": {
@@ -299628,7 +299652,7 @@
     },
     {
       "symbol": "L:gd.c(I)V#9",
-      "renamedSymbol": "L:ModelMesh.c(I)V#9",
+      "renamedSymbol": "L:ModelMesh.drawNearClippedFace(I)V#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -538680,9 +538704,9 @@
     },
     {
       "symbol": "M:gd.a(IIIIIIII)Z",
-      "renamedSymbol": "M:ModelMesh.a(IIIIIIII)Z",
+      "renamedSymbol": "M:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isPointInTriangleBounds",
       "declaration": {
         "file": "gd.java",
         "start": 15776,
@@ -538768,9 +538792,9 @@
     },
     {
       "symbol": "M:gd.b(I)V",
-      "renamedSymbol": "M:ModelMesh.b(I)V",
+      "renamedSymbol": "M:ModelMesh.drawFace(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawFace",
       "declaration": {
         "file": "gd.java",
         "start": 17169,
@@ -538801,9 +538825,9 @@
     },
     {
       "symbol": "M:gd.c(I)V",
-      "renamedSymbol": "M:ModelMesh.c(I)V",
+      "renamedSymbol": "M:ModelMesh.drawNearClippedFace(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawNearClippedFace",
       "declaration": {
         "file": "gd.java",
         "start": 3534,
@@ -611830,7 +611854,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#0",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#0",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -611841,7 +611865,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#1",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#1",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -611852,7 +611876,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#2",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#2",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -611863,7 +611887,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#3",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#3",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -611874,7 +611898,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#4",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#4",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -611885,7 +611909,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#5",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#5",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -611896,7 +611920,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#6",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#6",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -611907,7 +611931,7 @@
     },
     {
       "symbol": "P:gd.a(IIIIIIII)Z#7",
-      "renamedSymbol": "P:ModelMesh.a(IIIIIIII)Z#7",
+      "renamedSymbol": "P:ModelMesh.isPointInTriangleBounds(IIIIIIII)Z#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -612336,7 +612360,7 @@
     },
     {
       "symbol": "P:gd.b(I)V#0",
-      "renamedSymbol": "P:ModelMesh.b(I)V#0",
+      "renamedSymbol": "P:ModelMesh.drawFace(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -612380,7 +612404,7 @@
     },
     {
       "symbol": "P:gd.c(I)V#0",
-      "renamedSymbol": "P:ModelMesh.c(I)V#0",
+      "renamedSymbol": "P:ModelMesh.drawNearClippedFace(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1041621,7 +1041645,7 @@
       "original": "gd.java",
       "renamed": "ModelMesh.java",
       "inputSha256": "b95afd8060d73be31d2519510663bb04da7b053d3d05180c7404df037ab6783a",
-      "outputSha256": "404a9ce2b6a0cd4bc6167c02815ed5182d2608d9916d84ff91b64cec944015cf",
+      "outputSha256": "90878b8e79c3db9b237a4506de5bd87503cab15c4309e8e8aa252c6eb72d741d",
       "edits": [
         {
           "start": 50,
@@ -1041937,6 +1041961,13 @@
           "symbol": "F:gd.field_k:Z",
           "original": "field_k",
           "renamed": "boundsValid"
+        },
+        {
+          "start": 3534,
+          "end": 3535,
+          "symbol": "M:gd.c(I)V",
+          "original": "c",
+          "renamed": "drawNearClippedFace"
         },
         {
           "start": 4811,
@@ -1042478,6 +1042509,13 @@
           "renamed": "copyIntoWorkspace"
         },
         {
+          "start": 15776,
+          "end": 15777,
+          "symbol": "M:gd.a(IIIIIIII)Z",
+          "original": "a",
+          "renamed": "isPointInTriangleBounds"
+        },
+        {
           "start": 16414,
           "end": 16415,
           "symbol": "M:gd.b()Z",
@@ -1042630,6 +1042668,20 @@
           "symbol": "M:gd.a(IIIIIIIJ)V",
           "original": "a",
           "renamed": "drawPerspective"
+        },
+        {
+          "start": 17169,
+          "end": 17170,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 17357,
+          "end": 17358,
+          "symbol": "M:gd.c(I)V",
+          "original": "c",
+          "renamed": "drawNearClippedFace"
         },
         {
           "start": 17416,
@@ -1046527,6 +1046579,13 @@
           "kind": "label"
         },
         {
+          "start": 41074,
+          "end": 41075,
+          "symbol": "M:gd.a(IIIIIIII)Z",
+          "original": "a",
+          "renamed": "isPointInTriangleBounds"
+        },
+        {
           "start": 41076,
           "end": 41078,
           "symbol": "C:ot",
@@ -1046652,6 +1046711,62 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "CorpseConditionMarker"
+        },
+        {
+          "start": 43720,
+          "end": 43721,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 45295,
+          "end": 45296,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 45637,
+          "end": 45638,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 49699,
+          "end": 49700,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 50438,
+          "end": 50439,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 51178,
+          "end": 51179,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 51937,
+          "end": 51938,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
+        },
+        {
+          "start": 52127,
+          "end": 52128,
+          "symbol": "M:gd.b(I)V",
+          "original": "b",
+          "renamed": "drawFace"
         },
         {
           "start": 52615,
@@ -1844847,10 +1844962,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "043867e7ecd73918c743b6545c18d2db2bb5bda9f9af95d41715c6fd977fbb58",
+    "rulesSha256": "7d2bd06af2c7046930d0d39f91c0e12ad4d30c433eefdccfbde2c4d22526d38b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "81ec6655660bd76b051fc3d2f1a09a23474661e68f6f37414bfd606422c939d8",
+    "outputTreeSha256": "acf11529adc2048bcd972dc92c7a3c127b27493c76ae514db489f3a7b2a871ba",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -117,7 +117,7 @@ final class ModelMesh extends ModelMeshBase {
         this.boundsValid = false;
     }
 
-    private final void c(int param0) {
+    private final void drawNearClippedFace(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -367,7 +367,7 @@ final class ModelMesh extends ModelMeshBase {
         return this.copyIntoWorkspace(param0, param1, field_ib, field_u, field_C, field_gb, field_m, field_K);
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final boolean isPointInTriangleBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param1 < param2 &&
           param1 < param3 &&
           param1 < param4) {
@@ -415,7 +415,7 @@ final class ModelMesh extends ModelMeshBase {
         this.drawPerspective(param0, param1, param2, param3, param4, param5, param6, -1L);
     }
 
-    private final void b(int param0) {
+    private final void drawFace(int param0) {
         int var2;
         int var3;
         int var4;
@@ -424,7 +424,7 @@ final class ModelMesh extends ModelMeshBase {
         int var7;
         int var8;
         if (field_D[param0]) {
-          this.c(param0);
+          this.drawNearClippedFace(param0);
           return;
         }
         var2 = this.faceVertexA[param0];
@@ -1043,7 +1043,7 @@ final class ModelMesh extends ModelMeshBase {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(FixInvisibleUnitsConsoleCommand.field_G + TriangleRasterizer.projectionCenterX, EmailValidator.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
+                this.isPointInTriangleBounds(FixInvisibleUnitsConsoleCommand.field_G + TriangleRasterizer.projectionCenterX, EmailValidator.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = DialWidget.field_O;
                 DialWidget.field_O = DialWidget.field_O + 1;
                 MoveAttackRequest.field_I[fieldTemp$13] = param2;
@@ -1099,7 +1099,7 @@ final class ModelMesh extends ModelMeshBase {
           CorpseConditionMarker.a(var7 - 1, 0, (byte) -127, field_hb, field_W);
           if (this.field_ob == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
-              this.b(field_W[var8Lifetime2]);
+              this.drawFace(field_W[var8Lifetime2]);
             }
             return;
           }
@@ -1134,14 +1134,14 @@ final class ModelMesh extends ModelMeshBase {
                 var10Lifetime1 = stackIn_90_0;
                 var45 = field_U[var8Lifetime2];
                 for (var12Lifetime1 = 0; var12Lifetime1 < var10Lifetime1; var12Lifetime1++) {
-                  this.b(var45[var12Lifetime1]);
+                  this.drawFace(var45[var12Lifetime1]);
                 }
               }
               if (var9Lifetime1 > 64) {
                 var10Lifetime1 = field_T[var8Lifetime2] - 64 - 1;
                 var46 = field_kb[var10Lifetime1];
                 for (var12Lifetime1 = 0; var12Lifetime1 < field_L[var10Lifetime1]; var12Lifetime1++) {
-                  this.b(var46[var12Lifetime1]);
+                  this.drawFace(var46[var12Lifetime1]);
                 }
               }
             }
@@ -1236,7 +1236,7 @@ final class ModelMesh extends ModelMeshBase {
             if (var11Lifetime2 > var8Lifetime3) {
               incrementValue$4 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$4]);
+              this.drawFace(var14[incrementValue$4]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_j[11]) {
                 var12Lifetime2 = 0;
@@ -1257,7 +1257,7 @@ final class ModelMesh extends ModelMeshBase {
             if (var11Lifetime2 > var9Lifetime2) {
               incrementValue$5 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$5]);
+              this.drawFace(var14[incrementValue$5]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_j[11]) {
                 var12Lifetime2 = 0;
@@ -1278,7 +1278,7 @@ final class ModelMesh extends ModelMeshBase {
             if (var11Lifetime2 > var10Lifetime2) {
               incrementValue$6 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$6]);
+              this.drawFace(var14[incrementValue$6]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_j[11]) {
                 var12Lifetime2 = 0;
@@ -1300,14 +1300,14 @@ final class ModelMesh extends ModelMeshBase {
           var29 = 0;
           var19Lifetime1 = var29;
           while (var29 < var17Lifetime1) {
-            this.b(var49[var29]);
+            this.drawFace(var49[var29]);
             var29++;
           }
         }
         while (var11Lifetime2 != -1000) {
           incrementValue$3 = var12Lifetime2;
           var12Lifetime2++;
-          this.b(var14[incrementValue$3]);
+          this.drawFace(var14[incrementValue$3]);
           if (var12Lifetime2 == var13Lifetime2 &&
             var14 != field_j[11]) {
             var12Lifetime2 = 0;
