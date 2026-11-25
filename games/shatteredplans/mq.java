@@ -51,9 +51,9 @@ final class mq {
             null == PanelNode.field_q) {
             return;
           }
-          if (-AccountFieldValue.field_f + ei.field_e > 20 &&
+          if (-AccountFieldValue.field_f + LobbyUiSupport.field_e > 20 &&
             -ByteArrayNode.field_k + AttackTask.field_o > 20) {
-            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -AccountFieldValue.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, AccountFieldValue.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
+            LobbyUiSupport.drawHexagonPanel(true, -ByteArrayNode.field_k + AttackTask.field_o, -AccountFieldValue.field_f + LobbyUiSupport.field_e, param0 - 12350, ByteArrayNode.field_k, AccountFieldValue.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
           }
           if (WeightedLruCache.field_g == PanelNode.field_q) {
             var1_int = AccountFieldValue.field_f + 13;

@@ -802,7 +802,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_unable", 511);
                 if (var2 != null) {
-                  dh.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientCapabilitySupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_ineligible", 511);
                 if (null != var2) {
@@ -1190,7 +1190,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("you_have_been_removed_from_xs_game", 511);
                 if (null != var2) {
-                  ei.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyUiSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("your_rating_is_x", 511);
                 if (var2 != null) {
@@ -1222,7 +1222,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("find_opponent_singular", 511);
                 if (var2 != null) {
-                  dk.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TooltipSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("find_opponents_plural", 511);
                 if (null != var2) {
@@ -1426,7 +1426,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("reportabuse", 511);
                 if (var2 != null) {
-                  dk.field_c = IterableNodeHashTable.a(var2, 17746);
+                  TooltipSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("presstabtochat", 511);
                 if (null != var2) {
@@ -1490,7 +1490,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("thisisrunescapeclan_notowner", 511);
                 if (null != var2) {
-                  ef.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("runescapeclan", 511);
                 if (null != var2) {
@@ -1514,7 +1514,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needrating", 511);
                 if (var2 != null) {
-                  dh.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientCapabilitySupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_unratedonly", 511);
                 if (null != var2) {
@@ -1534,7 +1534,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playernotmember", 511);
                 if (null != var2) {
-                  fb.field_kc = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomEntry.field_kc = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_younotmember", 511);
                 if (var2 != null) {
@@ -1582,7 +1582,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needchanging1", 511);
                 if (null != var2) {
-                  ef.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needchanging2", 511);
                 if (var2 != null) {
@@ -1732,7 +1732,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("cancel", 511);
                 if (null != var2) {
-                  fb.field_bc = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomEntry.field_bc = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleaselogintoplay", 511);
                 if (var2 != null) {
@@ -2690,7 +2690,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("optionsmenu_notpaused", 511);
                 if (var2 != null) {
-                  ep.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlaySupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("menu", 511);
                 if (null != var2) {
@@ -3014,7 +3014,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("secretachievement", 511);
                 if (var2 != null) {
-                  ep.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlaySupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no_highscores", 511);
                 if (var2 != null) {
@@ -3066,7 +3066,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_acceptrematch", 511);
                 if (var2 != null) {
-                  en.field_d = IterableNodeHashTable.a(var2, 17746);
+                  LobbyLayoutSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_acceptrematch_unrated", 511);
                 if (var2 != null) {

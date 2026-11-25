@@ -93,8 +93,8 @@ final class ConquestVictoryChecker extends VictoryChecker {
     final static IndexedSprite[] c(boolean param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[en.field_c];
-        for (var2 = 0; en.field_c > var2; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[LobbyLayoutSupport.field_c];
+        for (var2 = 0; LobbyLayoutSupport.field_c > var2; var2++) {
           var1[var2] = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], hd.field_q[var2], ProgressDialog.field_fb);
         }
         if (param0) {

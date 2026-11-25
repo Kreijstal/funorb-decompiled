@@ -494,7 +494,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               vs.a(4, (byte) -103);
               AchievementProgress.a(7, true);
               oq.a(6, 37);
-              ef.a(true);
+              ReflectionQueueSupport.initializeReflectionCheckQueue(true);
               if (1 == var6) {
                 is.field_a = true;
                 StripedProgressWidget.field_Q = true;
@@ -760,7 +760,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         kd.clearStatics(109);
         ss.clearStatics(1);
         je.a(1);
-        dk.clearStatics((byte) 125);
+        TooltipSupport.clearStatics((byte) 125);
         nf.clearStatics((byte) -25);
         hq.clearStatics(108);
         FrameTimer.clearStatics((byte) 47);
@@ -781,7 +781,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ObjectList.clearStatics(false);
         pl.clearStatics(param0 ^ -17251);
         nb.a((byte) 123);
-        dh.clearStatics((byte) -98);
+        ClientCapabilitySupport.clearStatics((byte) -98);
         of.b(64);
         ud.clearStatics(127);
         ClientContextMenuSupport.clearStatics(21805);
@@ -803,7 +803,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         wp.clearStatics((byte) -90);
         HighscoreResponseSupport.clearStatics(-17358);
         AnimatedPanel.clearStatics(-14115);
-        fb.clearStatics(32);
+        LobbyRoomEntry.clearStatics(32);
         SecondaryNodeHashTable.clearStatics(true);
         mj.clearStatics(-4923);
         qn.clearStatics(-989994556);
@@ -866,7 +866,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         q.clearStatics((byte) 125);
         jp.g(param0 + 23965);
         ChatMessageFactory.clearStatics(param0 ^ 27074);
-        dg.clearStatics((byte) -124);
+        QuickChatHelpPanel.clearStatics((byte) -124);
         StandardAi.clearStatics((byte) 79);
         TaskAi.clearStatics(param0 ^ 24118);
         FleetVisual.clearStatics(param0 ^ -24081);
@@ -988,12 +988,12 @@ public final class ShatteredPlansClient extends GameClientShell {
         DisplayModeInfo.a(param0 + 24155);
         WhirlpoolHasher.clearStatics(0);
         StarLinkPlanner.clearStatics((byte) -11);
-        ei.clearStatics((byte) -81);
+        LobbyUiSupport.clearStatics((byte) -81);
         we.clearStatics(-122);
         lm.clearStatics(true);
         TertiaryLinkNode.clearStatics((byte) -21);
         QuaternaryLinkNode.clearStatics(true);
-        ep.clearStatics(640);
+        ClientOverlaySupport.clearStatics(640);
         BytePayloadNode.clearStatics((byte) 123);
         SynthInstrument.clearStatics();
         AttackTask.clearStatics(-62);
@@ -1018,7 +1018,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         UnderageAccountInfoPanel.a((byte) -75);
         DialWidget.clearStatics(4);
         SliderWidget.clearStatics(-104);
-        en.clearStatics(-5);
+        LobbyLayoutSupport.clearStatics(-5);
         UniformNineSliceFactory.clearStatics((byte) 41);
         DerelictMapReader.clearStatics(false);
         StandardMapReader.clearStatics(-90);
@@ -1053,7 +1053,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         CandidateLink.clearStatics(param0 + 24068);
         oi.clearStatics(-1);
         AudioFilter.clearStatics();
-        ef.a(0);
+        ReflectionQueueSupport.releaseReflectionQueueSupportStatics(0);
         NodeHashTableIterator.clearStatics(param0 + 24068);
         SecondaryNodeDequeIterator.a(124);
         jr.clearStatics(1885);
@@ -1321,7 +1321,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           Wormhole.field_i = true;
         }
         if (gr.field_o == -7) {
-          NetworkArchiveRequest.a(11, np.field_a.g(-79), (byte) -2);
+          NetworkArchiveRequest.a(11, np.field_a.getRoomId(-79), (byte) -2);
           gr.field_o = GameRules.field_c;
           is.field_a = true;
         }

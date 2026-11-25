@@ -15,7 +15,7 @@ final class PasswordInputPainter extends TextInputPainter {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (ef.a(param0, false)) {
+        if (ReflectionQueueSupport.isAsciiAlphanumeric(param0, false)) {
           return true;
         }
         if (param0 == 45) {

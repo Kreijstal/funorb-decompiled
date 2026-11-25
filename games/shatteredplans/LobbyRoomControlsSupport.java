@@ -183,13 +183,13 @@ final class LobbyRoomControlsSupport {
                 var9 = (String) (var9) + "...";
               }
               DualLinkDequeSequence.field_f.field_z = (String) (var9);
-              IntValueWriteRequest.field_j.field_z = fb.field_bc.toUpperCase();
+              IntValueWriteRequest.field_j.field_z = LobbyRoomEntry.field_bc.toUpperCase();
             } else {
               stackIn_25_0 = IntValueWriteRequest.field_j;
               if (var8 != 0) {
                 stackIn_26_1 = CombinedTerritory.field_A;
               } else {
-                stackIn_26_1 = dk.field_a;
+                stackIn_26_1 = TooltipSupport.field_a;
               }
               stackIn_25_0.field_z = ((String) (Object) stackIn_26_1).toUpperCase();
               stackIn_28_0 = IntrusiveNode.field_c;

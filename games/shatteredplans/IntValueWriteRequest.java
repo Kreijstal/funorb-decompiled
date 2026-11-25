@@ -33,8 +33,8 @@ final class IntValueWriteRequest extends IntrusiveNode {
           if (GameState.field_c[param2] > GameState.field_c[param0]) {
             return false;
           }
-          var4 = ClientContextMenuSupport.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
-          var5 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
+          var4 = ClientContextMenuSupport.field_d[param2] + LobbyRoomEntry.field_zb[param2] + WidgetContainer.field_y[param2];
+          var5 = WidgetContainer.field_y[param0] + LobbyRoomEntry.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
           if (var4 < var5) {
             return true;
           }
@@ -55,8 +55,8 @@ final class IntValueWriteRequest extends IntrusiveNode {
         if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
           return false;
         }
-        var4Lifetime1 = ClientContextMenuSupport.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
-        var5Lifetime1 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
+        var4Lifetime1 = ClientContextMenuSupport.field_d[param2] + LobbyRoomEntry.field_zb[param2] + WidgetContainer.field_y[param2];
+        var5Lifetime1 = WidgetContainer.field_y[param0] + LobbyRoomEntry.field_zb[param0] + ClientContextMenuSupport.field_d[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

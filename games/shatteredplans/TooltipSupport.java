@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk {
+final class TooltipSupport {
     static String field_c;
     static String field_a;
     static int[] field_b;
@@ -19,7 +19,7 @@ final class dk {
         field_b = null;
     }
 
-    final static void a(byte param0, String param1) {
+    final static void drawTooltip(byte param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

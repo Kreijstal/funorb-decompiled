@@ -11,7 +11,7 @@ final class DialogRoot extends SingleChildWidget {
     static String field_F;
 
     public DialogRoot() {
-        super(0, 0, ep.field_a, UsernameAvailabilityValidator.field_q, (WidgetPainter) null, (WidgetListener) null);
+        super(0, 0, ClientOverlaySupport.field_a, UsernameAvailabilityValidator.field_q, (WidgetPainter) null, (WidgetListener) null);
         this.field_H = new IntrusiveDeque();
     }
 
@@ -471,7 +471,7 @@ final class DialogRoot extends SingleChildWidget {
         MouseInputHandler.field_d.addChild(4, QuickChatPhraseRegistry.field_a);
         QuickChatPhraseRegistry.field_a.addChild(4, MenuList.field_v);
         QuickChatPhraseRegistry.field_a.addChild(4, oo.field_c);
-        en.a(15471, param1);
+        LobbyLayoutSupport.layoutLobbyRoomPanels(15471, param1);
     }
 
     final static void a(byte param0, byte[] param1) {

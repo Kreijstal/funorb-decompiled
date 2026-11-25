@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ep {
+final class ClientOverlaySupport {
     static String field_d;
     static String field_b;
     static int field_a;
     static String field_c;
 
-    final static boolean a(int param0) {
+    final static boolean hasClientOverlay(int param0) {
         if (param0 != 640) {
-          ep.a(78);
+          ClientOverlaySupport.hasClientOverlay(78);
           if (null == IndexedSpriteState.field_h) {
             return QuickChatCategoryDefinition.field_t ? true : false;
           }

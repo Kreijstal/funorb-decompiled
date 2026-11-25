@@ -6,19 +6,19 @@ final class mi {
     static String field_b;
     static String field_c;
 
-    final static void a(byte param0, fb param1, PacketBuffer param2, boolean param3) {
+    final static void a(byte param0, LobbyRoomEntry param1, PacketBuffer param2, boolean param3) {
         int var8 = 0;
-        fb stackIn_7_0 = null;
+        LobbyRoomEntry stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        fb stackIn_11_0 = null;
+        LobbyRoomEntry stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        fb stackIn_14_0 = null;
+        LobbyRoomEntry stackIn_14_0 = null;
         int stackIn_15_1 = 0;
-        fb stackIn_17_0 = null;
+        LobbyRoomEntry stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
-        fb stackIn_20_0 = null;
+        LobbyRoomEntry stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
-        fb stackIn_23_0 = null;
+        LobbyRoomEntry stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
@@ -45,26 +45,26 @@ final class mi {
           }
           param1.field_nc = param2.readUnsignedByte(-123);
           var4_int = param2.readUnsignedByte(-111);
-          stackIn_7_0 = (fb) (param1);
+          stackIn_7_0 = (LobbyRoomEntry) (param1);
           stackIn_8_1 = (0 != (128 & var4_int));
           stackIn_7_0.field_Qb = stackIn_8_1;
-          stackIn_11_0 = (fb) (param1);
+          stackIn_11_0 = (LobbyRoomEntry) (param1);
           stackIn_12_1 = (param1.field_Qb) && (param1.field_Eb > param1.field_Lb);
           stackIn_11_0.field_cc = stackIn_12_1;
-          stackIn_14_0 = (fb) (param1);
+          stackIn_14_0 = (LobbyRoomEntry) (param1);
           if ((16 & var4_int) != 0) {
             stackIn_15_1 = 2;
           } else {
             stackIn_15_1 = 1;
           }
           stackIn_14_0.field_Fb = stackIn_15_1;
-          stackIn_17_0 = (fb) (param1);
+          stackIn_17_0 = (LobbyRoomEntry) (param1);
           stackIn_18_1 = (0 != (var4_int & 32));
           stackIn_17_0.field_ec = stackIn_18_1;
-          stackIn_20_0 = (fb) (param1);
+          stackIn_20_0 = (LobbyRoomEntry) (param1);
           stackIn_21_1 = ((8 & var4_int) != 0);
           stackIn_20_0.field_mc = stackIn_21_1;
-          stackIn_23_0 = (fb) (param1);
+          stackIn_23_0 = (LobbyRoomEntry) (param1);
           stackIn_24_1 = ((var4_int & 64) != 0);
           stackIn_23_0.field_Ab = stackIn_24_1;
           stackIn_27_0 = (0 == (4 & var4_int)) ? 0 : 1;

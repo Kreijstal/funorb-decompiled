@@ -156,7 +156,7 @@ final class BattleContribution extends IntrusiveNode {
           param0.field_k = 0;
           param0.field_j = false;
           GameScreen.field_A = new QuickChatPhraseRegistry(var3_int, param0, param0);
-          dh.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new RoundedFrameSupport());
+          ClientCapabilitySupport.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new RoundedFrameSupport());
           var4 = hc.a(false);
           if (var4 == null) {
             GameKeyHandler.a(-29901, (Throwable) null, "QC2");
@@ -217,7 +217,7 @@ final class BattleContribution extends IntrusiveNode {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (ef.a(param1, false)) {
+          if (ReflectionQueueSupport.isAsciiAlphanumeric(param1, false)) {
             return true;
           }
           var6 = tq.field_g;

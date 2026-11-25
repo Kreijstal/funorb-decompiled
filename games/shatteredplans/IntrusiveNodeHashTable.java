@@ -82,11 +82,11 @@ final class IntrusiveNodeHashTable {
         int[] var21;
         byte[] var22;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
-        var1 = new Sprite[en.field_c];
+        var1 = new Sprite[LobbyLayoutSupport.field_c];
         if (param0 >= -103) {
           return (Sprite[]) null;
         }
-        for (var2 = 0; var2 < en.field_c; var2++) {
+        for (var2 = 0; var2 < LobbyLayoutSupport.field_c; var2++) {
           var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
           var20 = hd.field_q[var2];
           if (!SectorCacheStore.field_h[var2]) {
@@ -114,7 +114,7 @@ final class IntrusiveNodeHashTable {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, String param7, int param8) {
         try {
           HighscoreResponseSupport.field_h = param3;
-          dh.field_a = param6;
+          ClientCapabilitySupport.field_a = param6;
           StandardMapReader.field_d = param7;
           QuickChatPhraseDefinition.field_u = param0;
           IntList.field_i = param1;

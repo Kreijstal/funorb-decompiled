@@ -11,7 +11,7 @@ final class pl {
           if (IndexedSpriteState.field_h == null) {
             return;
           }
-          if (IndexedSpriteState.field_h.c(param0, -1)) {
+          if (IndexedSpriteState.field_h.updateAndCheckDismissed(param0, -1)) {
             IndexedSpriteState.field_h = null;
             return;
           }
@@ -20,7 +20,7 @@ final class pl {
         if (IndexedSpriteState.field_h == null) {
           return;
         }
-        if (IndexedSpriteState.field_h.c(param0, -1)) {
+        if (IndexedSpriteState.field_h.updateAndCheckDismissed(param0, -1)) {
           IndexedSpriteState.field_h = null;
           return;
         }

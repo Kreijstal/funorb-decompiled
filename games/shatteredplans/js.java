@@ -51,15 +51,15 @@ final class js {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        fb var5 = null;
+        LobbyRoomEntry var5 = null;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3_int = 0;
           if (param2 < 3) {
-            var5 = (fb) null;
-            js.a(-8, 21, (fb) null, -124, 16, false, 64, -69);
+            var5 = (LobbyRoomEntry) null;
+            js.a(-8, 21, (LobbyRoomEntry) null, -124, 16, false, 64, -69);
           }
           while (param1 > 0) {
             var3_int = var3_int << 1 | 1 & param0;
@@ -165,7 +165,7 @@ final class js {
         field_i = null;
     }
 
-    final static void a(int param0, int param1, fb param2, int param3, int param4, boolean param5, int param6, int param7) {
+    final static void a(int param0, int param1, LobbyRoomEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
         sg[][] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_25_0 = 0;

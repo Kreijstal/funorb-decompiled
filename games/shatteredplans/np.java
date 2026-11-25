@@ -7,7 +7,7 @@ final class np {
     private int field_g;
     private int field_i;
     private int field_n;
-    static fb field_a;
+    static LobbyRoomEntry field_a;
     int field_b;
     private boolean field_e;
     static int field_o;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh {
+final class ClientCapabilitySupport {
     static PlatformTaskDispatcher field_a;
     static String field_d;
     static String field_b;
     static QuickChatCategoryRegistry field_c;
 
-    final static boolean a(int param0) {
+    final static boolean matchesClientCapabilityGuard(int param0) {
         if (param0 != -12165) {
           return false;
         }

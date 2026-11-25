@@ -44,7 +44,7 @@ final class ClientContextMenuSupport {
         }
     }
 
-    final static void openLobbyPlayerContextMenu(boolean param0, byte param1, fb param2, String param3) {
+    final static void openLobbyPlayerContextMenu(boolean param0, byte param1, LobbyRoomEntry param2, String param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -62,7 +62,7 @@ final class ClientContextMenuSupport {
         String var12 = null;
         fc var13 = null;
         try {
-          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, SingleChildWidget.field_y, param2, -1, param2.g(-77));
+          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, SingleChildWidget.field_y, param2, -1, param2.getRoomId(-77));
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(RasterTargetSupport.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;

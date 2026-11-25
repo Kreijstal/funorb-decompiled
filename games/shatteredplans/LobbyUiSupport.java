@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei {
+final class LobbyUiSupport {
     static int[] field_g;
     static String field_b;
     static int[] field_d;
@@ -10,8 +10,8 @@ final class ei {
     static java.applet.Applet field_c;
     static Sprite field_a;
 
-    final static void a(int param0, fb param1) {
-        fb var2 = null;
+    final static void insertLobbyRoomByRank(int param0, LobbyRoomEntry param1) {
+        LobbyRoomEntry var2 = null;
         int var3 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -22,10 +22,10 @@ final class ei {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           param1.unlink((byte) -86);
-          var2 = (fb) (kj.field_a.startForward(param0));
+          var2 = (LobbyRoomEntry) (kj.field_a.startForward(param0));
           while (var2 != null) {
-            if (var2.a(param1, -1)) {
-              var2 = (fb) (kj.field_a.nextForward((byte) -71));
+            if (var2.ranksBefore(param1, -1)) {
+              var2 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
               continue;
             }
             break;
@@ -51,7 +51,7 @@ final class ei {
         }
     }
 
-    final static void a(byte param0, nf param1) {
+    final static void addChatHistoryEntry(byte param0, nf param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -120,7 +120,7 @@ final class ei {
         }
     }
 
-    final static void a(int param0, int param1, byte[] param2, boolean param3, boolean param4, int param5) {
+    final static void writeLobbyOptionPayload(int param0, int param1, byte[] param2, boolean param3, boolean param4, int param5) {
         CipherPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
@@ -131,8 +131,8 @@ final class ei {
           var7 = var10.position;
           var10.writeByte(4, (byte) -106);
           if (param4) {
-            fb var9 = (fb) null;
-            ei.a(-47, (fb) null);
+            LobbyRoomEntry var9 = (LobbyRoomEntry) null;
+            LobbyUiSupport.insertLobbyRoomByRank(-47, (LobbyRoomEntry) null);
           }
           var10.writeByte(param1, (byte) -122);
           var8 = param5;
@@ -147,7 +147,7 @@ final class ei {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawHexagonPanel(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;
         int[] var7 = null;
         int var8 = 0;
@@ -227,7 +227,7 @@ final class ei {
         field_c = null;
     }
 
-    final static int a(int param0) {
+    final static int getUiArchiveLoadProgress(int param0) {
         if (DefensiveAi.field_p < 2) {
           return 0;
         }

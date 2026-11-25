@@ -113,14 +113,14 @@ final class gi {
           }
           ClientContextMenuSupport.field_a.clear(0);
           if (WeightedLruCache.field_g == PanelNode.field_q) {
-            ei.field_e = TargetedChatMessage.field_j;
+            LobbyUiSupport.field_e = TargetedChatMessage.field_j;
             AccountFieldValue.field_f = ArchiveRequest.field_r;
             ByteArrayNode.field_k = BytePayloadNode.field_h;
             AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
             AccountFieldValue.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
             ByteArrayNode.field_k = QuickChatCategoryRegistry.a(BytePayloadNode.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
-            ei.field_e = QuickChatCategoryRegistry.a(TargetedChatMessage.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
+            LobbyUiSupport.field_e = QuickChatCategoryRegistry.a(TargetedChatMessage.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
             AttackTask.field_o = QuickChatCategoryRegistry.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);

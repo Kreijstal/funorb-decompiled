@@ -145,7 +145,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             } else {
               if (var9Lifetime1 == 248) {
                 PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 125), true);
-                nl.field_c = dh.field_b;
+                nl.field_c = ClientCapabilitySupport.field_b;
                 q.g(-125);
                 BufferedSocket.field_j = false;
                 stackIn_34_0 = var9Lifetime1;

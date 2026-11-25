@@ -81,7 +81,7 @@ final class StripedProgressWidget extends UiWidget {
         RuntimeException var6_ref = null;
         try {
           var6 = new nf(param0, param3, param2, param4, param1);
-          ei.a((byte) 37, var6);
+          LobbyUiSupport.addChatHistoryEntry((byte) 37, var6);
           if (param5 != -16169) {
             StripedProgressWidget.clearStatics(127);
           }

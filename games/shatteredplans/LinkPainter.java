@@ -109,10 +109,10 @@ final class LinkPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = new Sprite[en.field_c];
+          var1 = new Sprite[LobbyLayoutSupport.field_c];
           var2 = 0;
           scanLoop1: while (true) {
-            if (var2 < en.field_c) {
+            if (var2 < LobbyLayoutSupport.field_c) {
               var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
               var4 = hd.field_q[var2];
               var5 = new int[var3];

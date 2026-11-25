@@ -108,7 +108,7 @@ final class ValidationState {
           nm.field_b[var1_int] = 0L;
         }
         for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-          fb.field_Cb[var1_intLifetime1] = 0L;
+          LobbyRoomEntry.field_Cb[var1_intLifetime1] = 0L;
         }
         if (param0 <= 120) {
           return;

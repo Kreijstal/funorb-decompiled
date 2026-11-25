@@ -28,7 +28,7 @@ final class wp {
             oq.field_i[13] = SocketArchiveNetworkClient.field_s;
           } else {
             if (PasswordInputPainter.field_x.field_P.field_e != 0) {
-              oq.field_i[13] = en.field_d;
+              oq.field_i[13] = LobbyLayoutSupport.field_d;
             } else {
               if (-1 + (1 << PasswordInputPainter.field_x.field_P.field_r) == (PasswordInputPainter.field_x.field_i | 1 << PasswordInputPainter.field_x.field_h)) {
                 oq.field_i[13] = SecondaryNodeDequeIterator.field_d;

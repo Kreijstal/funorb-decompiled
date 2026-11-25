@@ -66,7 +66,7 @@ final class tb {
           MenuLabel.field_x = param10;
           wa.field_d = param3;
           Star.field_O = param9;
-          ei.field_f = param2;
+          LobbyUiSupport.field_f = param2;
           nl.field_a = param1;
           UsernameAvailabilityValidator.field_v = param6;
           so.field_r = param12;

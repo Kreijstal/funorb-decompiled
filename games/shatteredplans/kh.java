@@ -384,7 +384,7 @@ final class kh extends AnimatedPanel {
         }
         us.a(param1, param0);
         if (DualLinkDequeSequence.field_k != null) {
-          dk.a((byte) 121, DualLinkDequeSequence.field_k);
+          TooltipSupport.drawTooltip((byte) 121, DualLinkDequeSequence.field_k);
         }
     }
 

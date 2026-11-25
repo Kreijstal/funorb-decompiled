@@ -85,7 +85,7 @@ final class AggressiveAi extends StandardAi {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        fb var5 = null;
+        LobbyRoomEntry var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -94,8 +94,8 @@ final class AggressiveAi extends StandardAi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 41) {
-            var5 = (fb) null;
-            AggressiveAi.a(-12, false, (fb) null, -124);
+            var5 = (LobbyRoomEntry) null;
+            AggressiveAi.a(-12, false, (LobbyRoomEntry) null, -124);
           }
           if (param0.field_R != null) {
             stackIn_5_0 = param0.field_R.field_r;
@@ -174,7 +174,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    final static void a(int param0, boolean param1, fb param2, int param3) {
+    final static void a(int param0, boolean param1, LobbyRoomEntry param2, int param3) {
         sg dupTemp$0 = null;
         int var18_int = 0;
         int var25 = 0;
@@ -326,7 +326,7 @@ final class AggressiveAi extends StandardAi {
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
-                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
+                DualLinkDequeSequence.field_k = QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_b, 4371, new String[]{np.field_a.field_Xb});
               } else {
                 DualLinkDequeSequence.field_k = po.field_c;
               }
@@ -678,13 +678,13 @@ final class AggressiveAi extends StandardAi {
                     var19_ref = wa.field_d[var8][var10];
                   }
                 }
-                if (ei.field_f == null) {
+                if (LobbyUiSupport.field_f == null) {
                   var20 = null;
                 } else {
-                  if (ei.field_f[var8] == null) {
+                  if (LobbyUiSupport.field_f[var8] == null) {
                     var20 = null;
                   } else {
-                    var20 = ei.field_f[var8][var10];
+                    var20 = LobbyUiSupport.field_f[var8][var10];
                   }
                 }
                 var21 = null;
@@ -716,7 +716,7 @@ final class AggressiveAi extends StandardAi {
                       }
                     }
                     if (var13 != 0) {
-                      var32 = QuickChatCategoryRegistry.a(dh.field_d, 4371, new String[]{Integer.toString(HitRegion.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
+                      var32 = QuickChatCategoryRegistry.a(ClientCapabilitySupport.field_d, 4371, new String[]{Integer.toString(HitRegion.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
                       var23 = var32;
                       var26 = var23;
                       var23 = var26;

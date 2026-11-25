@@ -21,7 +21,7 @@ final class ks {
             if (TertiaryListSequence.field_k < AccountFieldValue.field_f) {
               return false;
             }
-            if (TertiaryListSequence.field_k >= ei.field_e) {
+            if (TertiaryListSequence.field_k >= LobbyUiSupport.field_e) {
               return false;
             }
             if (ByteArrayNode.field_k > LobbyRoomControlsSupport.field_b) {
@@ -55,7 +55,7 @@ final class ks {
           if (TertiaryListSequence.field_k < AccountFieldValue.field_f) {
             return false;
           }
-          if (TertiaryListSequence.field_k >= ei.field_e) {
+          if (TertiaryListSequence.field_k >= LobbyUiSupport.field_e) {
             return false;
           }
           if (ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
@@ -90,7 +90,7 @@ final class ks {
           if (TertiaryListSequence.field_k < AccountFieldValue.field_f) {
             return false;
           }
-          if (TertiaryListSequence.field_k < ei.field_e &&
+          if (TertiaryListSequence.field_k < LobbyUiSupport.field_e &&
             ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
             if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
               return false;
@@ -117,7 +117,7 @@ final class ks {
           return false;
         }
         if (TertiaryListSequence.field_k >= AccountFieldValue.field_f &&
-          TertiaryListSequence.field_k < ei.field_e &&
+          TertiaryListSequence.field_k < LobbyUiSupport.field_e &&
           ByteArrayNode.field_k <= LobbyRoomControlsSupport.field_b) {
           if (AttackTask.field_o <= LobbyRoomControlsSupport.field_b) {
             return false;
@@ -331,7 +331,7 @@ final class ks {
           if (1 == param0.field_n &&
             !TextLayoutLine.a((byte) 111) &&
             null != np.field_a &&
-            param0.field_g == np.field_a.g(-101)) {
+            param0.field_g == np.field_a.getRoomId(-101)) {
             if (!HighscoreResponseSupport.field_b) {
               var9 = DerelictVictoryChecker.field_m;
               var10 = MenuLabel.field_z;

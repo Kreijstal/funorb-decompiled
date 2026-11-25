@@ -129,7 +129,7 @@ final class Bzip2State {
           oq.field_i[20] = rl.field_d;
           oq.field_i[24] = lq.field_p;
           oq.field_i[26] = PrivateChatMessage.field_n;
-          oq.field_i[31] = ep.field_d;
+          oq.field_i[31] = ClientOverlaySupport.field_d;
           oq.field_i[25] = SpriteState.field_v;
           oq.field_i[23] = ScrollBar.field_Db;
           oq.field_i[16] = AccountStatusSupport.field_a[1];
@@ -151,7 +151,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[15] = DelegatingCanvas.field_c;
           QuickChatPhraseRegistry.field_g[13] = kh.field_Eb;
           QuickChatPhraseRegistry.field_g[1] = gq.field_g;
-          ChatCompositionSupport.field_b[6] = en.field_e;
+          ChatCompositionSupport.field_b[6] = LobbyLayoutSupport.field_e;
           ChatCompositionSupport.field_b[11] = vo.field_a;
           ChatCompositionSupport.field_b[0] = MenuLabel.field_v;
           ChatCompositionSupport.field_b[15] = ta.field_e;

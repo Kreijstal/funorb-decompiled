@@ -11,7 +11,7 @@ final class IntNode extends IntrusiveNode {
     static String field_j;
     static String field_o;
     static int[] field_i;
-    static fb field_p;
+    static LobbyRoomEntry field_p;
 
     final static void a(int param0, String param1) {
         try {

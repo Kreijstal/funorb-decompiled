@@ -118,7 +118,7 @@ final class GameAssetSetupSupport {
           NodeSequence.field_b[2] = NodeSequence.field_b[4];
           NodeSequence.field_b[4] = var26_ref;
           rk.field_j = MessageKind.a(true, param0, "", "ready_button");
-          ei.field_a = MessageKind.a(true, param0, "", "ready_button_down");
+          LobbyUiSupport.field_a = MessageKind.a(true, param0, "", "ready_button_down");
           ResizingDialog.field_W = MessageKind.a(true, param0, "", "shine_left");
           DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
           VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
@@ -248,8 +248,8 @@ final class GameAssetSetupSupport {
           HuffmanCodec.field_b = new Sprite(10, 12);
           HuffmanCodec.field_b.bindAsRenderTarget();
           wo.field_b.drawColourised(1, 1, 8421504);
-          ef.field_f = new Sprite(12, 12);
-          ef.field_f.bindAsRenderTarget();
+          ReflectionQueueSupport.field_f = new Sprite(12, 12);
+          ReflectionQueueSupport.field_f.bindAsRenderTarget();
           oo.field_a.drawColourised(1, 1, 8421504);
           mj.field_Kb = new Sprite(12, 12);
           mj.field_Kb.bindAsRenderTarget();
@@ -263,8 +263,8 @@ final class GameAssetSetupSupport {
               wa.field_b.field_B[var13_intLifetime7] = PrivateChatMessage.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
             }
           }
-          fb.field_Vb = new Sprite(18, 12);
-          fb.field_Vb.bindAsRenderTarget();
+          LobbyRoomEntry.field_Vb = new Sprite(18, 12);
+          LobbyRoomEntry.field_Vb.bindAsRenderTarget();
           AlignedMenuLabel.field_G.drawColourised(1, 1, 8421504);
           OpacityWidget.popLegacyRasterState(0);
           pr.field_a.addOutline(16777215);
@@ -272,9 +272,9 @@ final class GameAssetSetupSupport {
           if (param6 != -8) {
             GameAssetSetupSupport.clearStatics(-23);
           }
-          ef.field_f.addOutline(16777215);
+          ReflectionQueueSupport.field_f.addOutline(16777215);
           mj.field_Kb.addOutline(16777215);
-          fb.field_Vb.addOutline(16777215);
+          LobbyRoomEntry.field_Vb.addOutline(16777215);
           kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);

@@ -274,7 +274,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = dk.isDigit((byte) 63, var2.charAt(var3));
+                      stackIn_66_0 = TooltipSupport.isDigit((byte) 63, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -596,7 +596,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ArchiveSourceManager.field_h = param6;
               SliderWidget.field_G = param5;
               NanoFrameTimer.field_k = 0;
-              ei.field_c = GameScreen.getHostApplet((byte) 126);
+              LobbyUiSupport.field_c = GameScreen.getHostApplet((byte) 126);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param4, param1, true);
               ValidatedTextInputWidget.field_W = dupTemp$0;
               ResizingDialog.field_S = dupTemp$0;
@@ -921,8 +921,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = pr.currentTimeMillis(14274);
-          var4 = fb.field_Cb[PlayerEliminatedEvent.field_j];
-          fb.field_Cb[PlayerEliminatedEvent.field_j] = var2_long;
+          var4 = LobbyRoomEntry.field_Cb[PlayerEliminatedEvent.field_j];
+          LobbyRoomEntry.field_Cb[PlayerEliminatedEvent.field_j] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
           }

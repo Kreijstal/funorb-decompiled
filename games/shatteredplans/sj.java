@@ -100,7 +100,7 @@ final class sj {
                     if (var5_intLifetime2 == 1) {
                       var6_ref = var9 + qn.field_d + (String) (var6_ref);
                     } else {
-                      var6_ref = var9 + ef.field_d + (String) (var6_ref);
+                      var6_ref = var9 + ReflectionQueueSupport.field_d + (String) (var6_ref);
                     }
                   } else {
                     var6_ref = var9;
@@ -143,7 +143,7 @@ final class sj {
                 var5Lifetime1 = var7_ref;
               } else {
                 if (var4Lifetime2 != 1) {
-                  var5Lifetime1 = var7_ref + ef.field_d + (String) (var5Lifetime1);
+                  var5Lifetime1 = var7_ref + ReflectionQueueSupport.field_d + (String) (var5Lifetime1);
                 } else {
                   var5Lifetime1 = var7_ref + qn.field_d + (String) (var5Lifetime1);
                 }

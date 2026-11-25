@@ -95,7 +95,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
           if (null == LeaderboardSortSupport.field_b ||
             !(LeaderboardSortSupport.field_b.length >= var2_int * 2)) {
             LeaderboardSortSupport.field_b = new int[2 * var2_int];
-            en.field_b = new int[var2_int * 2];
+            LobbyLayoutSupport.field_b = new int[var2_int * 2];
           }
           CipherPacketBuffer.field_r = 0;
           var5 = param1[var2_int - 2];
@@ -143,18 +143,18 @@ final class SpriteStripButtonPainter extends WidgetTheme {
             stackIn_19_0 = null;
             return (int[]) (stackIn_19_0);
           }
-          var7 = en.field_b;
-          en.field_b = LeaderboardSortSupport.field_b;
+          var7 = LobbyLayoutSupport.field_b;
+          LobbyLayoutSupport.field_b = LeaderboardSortSupport.field_b;
           LeaderboardSortSupport.field_b = var7;
           var2_intLifetime1 = CipherPacketBuffer.field_r;
           CipherPacketBuffer.field_r = 0;
-          var5Lifetime1 = en.field_b[var2_intLifetime1 - 2];
-          var6Lifetime1 = en.field_b[-1 + var2_intLifetime1];
+          var5Lifetime1 = LobbyLayoutSupport.field_b[var2_intLifetime1 - 2];
+          var6Lifetime1 = LobbyLayoutSupport.field_b[-1 + var2_intLifetime1];
           for (var8_intLifetime1 = 0; var2_intLifetime1 > var8_intLifetime1; var8_intLifetime1 += 2) {
             var3Lifetime1 = var5Lifetime1;
             var4Lifetime1 = var6Lifetime1;
-            var6Lifetime1 = en.field_b[1 + var8_intLifetime1];
-            var5Lifetime1 = en.field_b[var8_intLifetime1];
+            var6Lifetime1 = LobbyLayoutSupport.field_b[1 + var8_intLifetime1];
+            var5Lifetime1 = LobbyLayoutSupport.field_b[var8_intLifetime1];
             if (SoftwareRasterizer.field_l > var5Lifetime1) {
               if (var3Lifetime1 >= SoftwareRasterizer.field_l) {
                 var9Lifetime1 = var5Lifetime1;
@@ -195,18 +195,18 @@ final class SpriteStripButtonPainter extends WidgetTheme {
           if (CipherPacketBuffer.field_r == 0) {
             return null;
           }
-          var7Lifetime1 = en.field_b;
-          en.field_b = LeaderboardSortSupport.field_b;
+          var7Lifetime1 = LobbyLayoutSupport.field_b;
+          LobbyLayoutSupport.field_b = LeaderboardSortSupport.field_b;
           LeaderboardSortSupport.field_b = var7Lifetime1;
           var2_intLifetime2 = CipherPacketBuffer.field_r;
           CipherPacketBuffer.field_r = 0;
-          var5Lifetime2 = en.field_b[var2_intLifetime2 - 2];
-          var6Lifetime2 = en.field_b[var2_intLifetime2 - 1];
+          var5Lifetime2 = LobbyLayoutSupport.field_b[var2_intLifetime2 - 2];
+          var6Lifetime2 = LobbyLayoutSupport.field_b[var2_intLifetime2 - 1];
           for (var8_intLifetime2 = 0; var2_intLifetime2 > var8_intLifetime2; var8_intLifetime2 += 2) {
             var4Lifetime2 = var6Lifetime2;
             var3Lifetime2 = var5Lifetime2;
-            var6Lifetime2 = en.field_b[var8_intLifetime2 + 1];
-            var5Lifetime2 = en.field_b[var8_intLifetime2];
+            var6Lifetime2 = LobbyLayoutSupport.field_b[var8_intLifetime2 + 1];
+            var5Lifetime2 = LobbyLayoutSupport.field_b[var8_intLifetime2];
             if (var6Lifetime2 >= SoftwareRasterizer.field_a) {
               if (var4Lifetime2 < SoftwareRasterizer.field_a) {
                 var9Lifetime2 = var5Lifetime2;
@@ -244,18 +244,18 @@ final class SpriteStripButtonPainter extends WidgetTheme {
           if (0 == CipherPacketBuffer.field_r) {
             return null;
           }
-          var7Lifetime2 = en.field_b;
-          en.field_b = LeaderboardSortSupport.field_b;
+          var7Lifetime2 = LobbyLayoutSupport.field_b;
+          LobbyLayoutSupport.field_b = LeaderboardSortSupport.field_b;
           var2_intLifetime3 = CipherPacketBuffer.field_r;
           LeaderboardSortSupport.field_b = var7Lifetime2;
           CipherPacketBuffer.field_r = 0;
-          var6Lifetime3 = en.field_b[-1 + var2_intLifetime3];
-          var5Lifetime3 = en.field_b[var2_intLifetime3 - 2];
+          var6Lifetime3 = LobbyLayoutSupport.field_b[-1 + var2_intLifetime3];
+          var5Lifetime3 = LobbyLayoutSupport.field_b[var2_intLifetime3 - 2];
           for (var8_intLifetime3 = 0; var8_intLifetime3 < var2_intLifetime3; var8_intLifetime3 += 2) {
             var3Lifetime3 = var5Lifetime3;
             var4Lifetime3 = var6Lifetime3;
-            var5Lifetime3 = en.field_b[var8_intLifetime3];
-            var6Lifetime3 = en.field_b[1 + var8_intLifetime3];
+            var5Lifetime3 = LobbyLayoutSupport.field_b[var8_intLifetime3];
+            var6Lifetime3 = LobbyLayoutSupport.field_b[1 + var8_intLifetime3];
             if (var6Lifetime3 >= SoftwareRasterizer.field_f) {
               if (var4Lifetime3 < SoftwareRasterizer.field_f) {
                 var9Lifetime3 = var3Lifetime3;

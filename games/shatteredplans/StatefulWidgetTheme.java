@@ -282,7 +282,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
                 var9[var12Lifetime1 + var14] = param1.field_s[var14];
                 var10[var14 + var12Lifetime1] = param1.field_x[var14];
               } else {
-                var16 = dh.field_c.a((byte) 47, var15);
+                var16 = ClientCapabilitySupport.field_c.a((byte) 47, var15);
                 var8[var14 + var12Lifetime1] = var16.f(80);
                 var9[var12Lifetime1 + var14] = param1.field_s[var14];
                 if (0 >= var9[var12Lifetime1 + var14]) {

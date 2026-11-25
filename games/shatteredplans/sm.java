@@ -2041,7 +2041,7 @@ final class sm {
         if (-1 != var6 &&
           var6 != 24) {
           mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
-          var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+          var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
@@ -2049,11 +2049,11 @@ final class sm {
           if (var6 == 24) {
             mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
-              var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+              var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
             } else {
               var21_ref_String = "(" + kj.field_i + "???)";
-              var22_ref_String = ep.field_c;
+              var22_ref_String = ClientOverlaySupport.field_c;
             }
             var23 = rs.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             var23 = var23 + (1 + rs.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * rs.field_Cb.field_J + (var20 - (-14 - rs.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
@@ -2123,7 +2123,7 @@ final class sm {
           ProductionContent.a(us.b(0), 1);
         }
         if (oq.field_j == 3) {
-          ProductionContent.a(dg.g(1), 1);
+          ProductionContent.a(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
         }
         if (oq.field_j == 4) {
           ProductionContent.a(mq.c((byte) 67), 1);
@@ -2549,7 +2549,7 @@ final class sm {
                 gr.field_o == 3 ||
                 MusicPatch.field_m == 4 ||
                 4 == gr.field_o)) {
-                var3Lifetime2 = ep.field_d;
+                var3Lifetime2 = ClientOverlaySupport.field_d;
               }
             } else {
               var3Lifetime2 = TextLayoutLine.field_d;

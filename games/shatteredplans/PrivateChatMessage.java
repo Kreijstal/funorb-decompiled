@@ -669,7 +669,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("pact_awaiting", 123);
                 if (null != var2) {
-                  fb.field_gc = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomEntry.field_gc = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("pact_ineffect", 98);
                 if (var2 != null) {
@@ -745,7 +745,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_peace_short", 123);
                 if (var2 != null) {
-                  ef.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_peace", 120);
                 if (null != var2) {
@@ -789,7 +789,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_join", 97);
                 if (null != var2) {
-                  ef.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_decimal", 117);
                 if (null != var2) {
@@ -1696,7 +1696,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_desc_projects_used", 119);
                 if (null != var2) {
-                  en.field_e = IterableNodeHashTable.a(var2, 17746);
+                  LobbyLayoutSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_research_wasted", 116);
                 if (var2 != null) {
@@ -2042,7 +2042,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipProductionButtonHide", 112);
                 if (null != var2) {
-                  ep.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlaySupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProjectsButtonHide", 111);
                 if (null != var2) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef {
+final class ReflectionQueueSupport {
     static int field_a;
     static String field_e;
     static Sprite field_f;
@@ -9,7 +9,7 @@ final class ef {
     static String field_d;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseReflectionQueueSupportStatics(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -18,12 +18,12 @@ final class ef {
           field_e = null;
           return;
         }
-        ef.a(-116);
+        ReflectionQueueSupport.releaseReflectionQueueSupportStatics(-116);
         field_f = null;
         field_e = null;
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean isAsciiAlphanumeric(char param0, boolean param1) {
         boolean stackIn_27_0 = false;
         if (param1) {
           return true;
@@ -58,7 +58,7 @@ final class ef {
         return true;
     }
 
-    final static void a(boolean param0) {
+    final static void initializeReflectionCheckQueue(boolean param0) {
         MusicEnvelope.field_b = new IntrusiveDeque();
         if (!param0) {
           field_f = (Sprite) null;

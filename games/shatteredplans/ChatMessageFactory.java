@@ -173,11 +173,11 @@ final class ChatMessageFactory {
     }
 
     final static void requestLobbyPlayerList(int param0, int param1, int param2) {
-        fb var4 = null;
+        LobbyRoomEntry var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = -27 % ((12 - param2) / 47);
         if (param0 != GameApplet.field_g) {
-          var4 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)GameApplet.field_g));
+          var4 = (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)GameApplet.field_g));
           GameApplet.field_g = param0;
           if (var4 != null) {
             var4.field_jc = null;

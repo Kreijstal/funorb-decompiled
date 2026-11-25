@@ -61,7 +61,7 @@ final class CandidateLink extends IntrusiveNode {
             uo.field_f = param0.field_f;
             GameClientShell.field_D = param0.field_n;
           }
-          ei.a((byte) 70, param0);
+          LobbyUiSupport.addChatHistoryEntry((byte) 70, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -273,32 +273,32 @@ final class TurnEventLog {
           var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.position = param0.length - 2;
-          en.field_c = var17.readUnsignedShort(-20976);
-          IntHashIndex.field_g = new int[en.field_c];
-          MusicEnvelope.field_l = new byte[en.field_c][];
-          SectorCacheStore.field_h = new boolean[en.field_c];
-          hd.field_q = new byte[en.field_c][];
-          WeightedCacheEntry.field_s = new int[en.field_c];
-          StatusMessagePanel.field_H = new int[en.field_c];
-          sj.field_a = new int[en.field_c];
-          var17.position = param0.length + (-7 - en.field_c * 8);
+          LobbyLayoutSupport.field_c = var17.readUnsignedShort(-20976);
+          IntHashIndex.field_g = new int[LobbyLayoutSupport.field_c];
+          MusicEnvelope.field_l = new byte[LobbyLayoutSupport.field_c][];
+          SectorCacheStore.field_h = new boolean[LobbyLayoutSupport.field_c];
+          hd.field_q = new byte[LobbyLayoutSupport.field_c][];
+          WeightedCacheEntry.field_s = new int[LobbyLayoutSupport.field_c];
+          StatusMessagePanel.field_H = new int[LobbyLayoutSupport.field_c];
+          sj.field_a = new int[LobbyLayoutSupport.field_c];
+          var17.position = param0.length + (-7 - LobbyLayoutSupport.field_c * 8);
           NetworkArchiveRequest.field_y = var17.readUnsignedShort(-20976);
           BattleEvent.field_t = var17.readUnsignedShort(-20976);
           var3 = (var17.readUnsignedByte(-70) & 255) + 1;
-          for (var4 = 0; en.field_c > var4; var4++) {
+          for (var4 = 0; LobbyLayoutSupport.field_c > var4; var4++) {
             StatusMessagePanel.field_H[var4] = var16.readUnsignedShort(-20976);
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < en.field_c; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < LobbyLayoutSupport.field_c; var4Lifetime1++) {
             sj.field_a[var4Lifetime1] = var17.readUnsignedShort(-20976);
           }
-          for (var4Lifetime2 = 0; var4Lifetime2 < en.field_c; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < LobbyLayoutSupport.field_c; var4Lifetime2++) {
             WeightedCacheEntry.field_s[var4Lifetime2] = var17.readUnsignedShort(-20976);
           }
           var5 = -25 % ((-23 - param1) / 52);
-          for (var4Lifetime3 = 0; en.field_c > var4Lifetime3; var4Lifetime3++) {
+          for (var4Lifetime3 = 0; LobbyLayoutSupport.field_c > var4Lifetime3; var4Lifetime3++) {
             IntHashIndex.field_g[var4Lifetime3] = var17.readUnsignedShort(-20976);
           }
-          var17.position = -(3 * (var3 - 1)) - en.field_c * 8 + (param0.length - 7);
+          var17.position = -(3 * (var3 - 1)) - LobbyLayoutSupport.field_c * 8 + (param0.length - 7);
           ProgressDialog.field_fb = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             ProgressDialog.field_fb[var4Lifetime4] = var17.readMedium(255);
@@ -307,7 +307,7 @@ final class TurnEventLog {
             }
           }
           var17.position = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < en.field_c; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; var4Lifetime5 < LobbyLayoutSupport.field_c; var4Lifetime5++) {
             var5Lifetime1 = WeightedCacheEntry.field_s[var4Lifetime5];
             var6 = IntHashIndex.field_g[var4Lifetime5];
             var7 = var6 * var5Lifetime1;

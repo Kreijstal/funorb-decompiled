@@ -174,13 +174,13 @@ final class OpacityWidget extends SingleChildWidget {
         SoftwareRasterizer.setTarget(Archive.field_c[RandomAccessCacheFile.field_k], AccountCreationDialog.field_Cb[RandomAccessCacheFile.field_k], TertiaryLinkNode.field_s[RandomAccessCacheFile.field_k]);
         SoftwareRasterizer.field_i = DirectByteArrayStorage.field_f[RandomAccessCacheFile.field_k];
         if (param0 == 0) {
-          SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+          SoftwareRasterizer.field_l = TooltipSupport.field_b[RandomAccessCacheFile.field_k];
           SoftwareRasterizer.field_a = AccountStatusSupport.field_c[RandomAccessCacheFile.field_k];
           SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
           return;
         }
         field_A = (AnimatedPanel) null;
-        SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+        SoftwareRasterizer.field_l = TooltipSupport.field_b[RandomAccessCacheFile.field_k];
         SoftwareRasterizer.field_a = AccountStatusSupport.field_c[RandomAccessCacheFile.field_k];
         SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
     }

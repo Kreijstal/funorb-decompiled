@@ -127,7 +127,7 @@ abstract class Dialog extends WidgetContainer {
         if (param2 >= -103) {
           Dialog.clearStatics(11);
         }
-        this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ep.field_a - param1 >> 1, param1);
+        this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ClientOverlaySupport.field_a - param1 >> 1, param1);
     }
 
     final static ro a(byte param0, String param1) {
@@ -188,7 +188,7 @@ abstract class Dialog extends WidgetContainer {
     }
 
     Dialog(DialogRoot param0, int param1, int param2) {
-        super(ep.field_a - param1 >> 1, -param2 + UsernameAvailabilityValidator.field_q >> 1, param1, param2, (WidgetPainter) null);
+        super(ClientOverlaySupport.field_a - param1 >> 1, -param2 + UsernameAvailabilityValidator.field_q >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_E = false;
           this.field_F = param0;

@@ -92,11 +92,11 @@ final class UrlLoader implements Runnable {
               var12 = ProxyAuthenticationRequiredException.field_d[var10];
               var7[0][var11] = QuaternaryNodeList.field_a[var12];
               var8[0][4 * var11] = GameApplet.field_f[var12];
-              var8[0][var11 * 4 + 1] = fb.field_zb[var12];
+              var8[0][var11 * 4 + 1] = LobbyRoomEntry.field_zb[var12];
               var8[0][2 + var11 * 4] = ClientContextMenuSupport.field_d[var12];
               var8[0][var11 * 4 + 3] = WidgetContainer.field_y[var12];
               if (jp.a(QuaternaryNodeList.field_a[var12], (byte) -105) &&
-                WidgetContainer.field_y[var12] + ClientContextMenuSupport.field_d[var12] + fb.field_zb[var12] == 0) {
+                WidgetContainer.field_y[var12] + ClientContextMenuSupport.field_d[var12] + LobbyRoomEntry.field_zb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
               }
@@ -110,11 +110,11 @@ final class UrlLoader implements Runnable {
               var12Lifetime1 = ProxyAuthenticationRequiredException.field_d[var10Lifetime1 + var6];
               var7[1][var14] = QuaternaryNodeList.field_a[var12Lifetime1];
               var8[1][4 * var14] = GameApplet.field_f[var12Lifetime1];
-              var8[1][4 * var14 + 1] = fb.field_zb[var12Lifetime1];
+              var8[1][4 * var14 + 1] = LobbyRoomEntry.field_zb[var12Lifetime1];
               var8[1][var14 * 4 + 2] = ClientContextMenuSupport.field_d[var12Lifetime1];
               var8[1][var14 * 4 + 3] = WidgetContainer.field_y[var12Lifetime1];
               if (jp.a(QuaternaryNodeList.field_a[var12Lifetime1], (byte) -105) &&
-                0 == fb.field_zb[var12Lifetime1] + ClientContextMenuSupport.field_d[var12Lifetime1] + WidgetContainer.field_y[var12Lifetime1]) {
+                0 == LobbyRoomEntry.field_zb[var12Lifetime1] + ClientContextMenuSupport.field_d[var12Lifetime1] + WidgetContainer.field_y[var12Lifetime1]) {
                 var7[1][var14] = null;
                 var14--;
               }

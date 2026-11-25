@@ -49,10 +49,10 @@ final class ul extends AnimatedPanel {
         if (!(us.field_b >= param1)) {
           GzipInflater.field_e = param1;
         }
-        if (!(ef.field_a <= param1)) {
+        if (!(ReflectionQueueSupport.field_a <= param1)) {
           SpriteButton.field_u = param1;
         }
-        fb.field_zb[wm.field_c] = param2;
+        LobbyRoomEntry.field_zb[wm.field_c] = param2;
         ClientContextMenuSupport.field_d[wm.field_c] = param3;
         WidgetContainer.field_y[wm.field_c] = param5;
         int var6 = param5 + param3 + param2;

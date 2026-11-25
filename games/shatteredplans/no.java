@@ -269,7 +269,7 @@ final class no {
               oq.field_e = false;
               var3_int = 1;
             }
-            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
+            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, po.field_h);
           } else {
             if (!or.a(250)) {
               SoftwareRasterizer.clear();

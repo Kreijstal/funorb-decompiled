@@ -671,7 +671,7 @@ class PacketBuffer extends IntrusiveNode {
           kb.field_x = 1;
           PanelNode.field_q = null;
           oq.field_a = param1;
-          ei.field_e = -1;
+          LobbyUiSupport.field_e = -1;
           WeightedLruCache.field_g = null;
           AccountFieldValue.field_f = -1;
           ByteArrayNode.field_k = -1;

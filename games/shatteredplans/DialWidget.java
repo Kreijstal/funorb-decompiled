@@ -148,10 +148,10 @@ final class DialWidget extends FocusableWidget {
         long var3_long = 0L;
         int var3 = 0;
         mj var3_ref_mj = null;
-        fb var4 = null;
+        LobbyRoomEntry var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        fb var6 = null;
+        LobbyRoomEntry var6 = null;
         mj var7 = null;
         int var8 = 0;
         mj var8_ref_mj = null;
@@ -160,27 +160,27 @@ final class DialWidget extends FocusableWidget {
         int var11 = 0;
         java.applet.Applet var12 = null;
         mj var14 = null;
-        fb var15 = null;
+        LobbyRoomEntry var15 = null;
         Object var16 = null;
         Object var17 = null;
         Object var18 = null;
-        fb var18_ref = null;
+        LobbyRoomEntry var18_ref = null;
         String var19 = null;
         String var20 = null;
         String var21 = null;
         mj var22 = null;
         Object var23 = null;
-        fb var24 = null;
+        LobbyRoomEntry var24 = null;
         mj var25 = null;
         String var26 = null;
         String var27 = null;
         mj var28 = null;
         mj var29 = null;
         Object var30 = null;
-        fb var30_ref = null;
+        LobbyRoomEntry var30_ref = null;
         mj var31 = null;
-        fb var32 = null;
-        fb var33 = null;
+        LobbyRoomEntry var32 = null;
+        LobbyRoomEntry var33 = null;
         mj var34 = null;
         mj var3_ref_mjLifetime1;
         long var3_longLifetime1;
@@ -274,19 +274,19 @@ final class DialWidget extends FocusableWidget {
             }
             if (8 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-              var4 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3));
+              var4 = (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)var3));
               if (var4 == null) {
-                var4 = new fb(ProductionContent.field_k);
+                var4 = new LobbyRoomEntry(ProductionContent.field_k);
                 IsaacBackedRandom.field_b.put((long)var3, var4, true);
               }
               mi.a((byte) -89, var4, var1, true);
-              ei.a(0, var4);
+              LobbyUiSupport.insertLobbyRoomByRank(0, var4);
               return;
             }
             if (9 == var2) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-98);
-              var32 = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime4));
+              var32 = (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime4));
               if (var32 == null) {
                 return;
               }
@@ -300,11 +300,11 @@ final class DialWidget extends FocusableWidget {
               return;
             }
             if (10 == var2) {
-              var33 = (fb) (kj.field_a.startForward(0));
+              var33 = (LobbyRoomEntry) (kj.field_a.startForward(0));
               while (var33 != null) {
                 var33.unlink((byte) -63);
                 var33.unlinkSecondary(16);
-                var33 = (fb) (kj.field_a.nextForward((byte) -71));
+                var33 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
               }
               return;
             }
@@ -313,7 +313,7 @@ final class DialWidget extends FocusableWidget {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-60);
-                var30_ref = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime5));
+                var30_ref = (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime5));
                 if (var30_ref == null) {
                   return;
                 }
@@ -325,7 +325,7 @@ final class DialWidget extends FocusableWidget {
                   var30_ref.field_hc = var4_intLifetime1;
                   var30_ref.field_Nb = ks.field_i;
                 }
-                ei.a(0, var30_ref);
+                LobbyUiSupport.insertLobbyRoomByRank(0, var30_ref);
                 return;
               }
               if (var2 != 14 &&
@@ -433,7 +433,7 @@ final class DialWidget extends FocusableWidget {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            var18_ref = (fb) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime6));
+            var18_ref = (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)var3Lifetime6));
             var24 = var18_ref;
             if (var24 == null) {
               return;
@@ -443,7 +443,7 @@ final class DialWidget extends FocusableWidget {
             } else {
               var24.field_Yb = true;
             }
-            ei.a(0, var24);
+            LobbyUiSupport.insertLobbyRoomByRank(0, var24);
             return;
           }
           var3_ref_mj = (mj) (uo.field_a.startForward(0));
@@ -473,7 +473,7 @@ final class DialWidget extends FocusableWidget {
             np.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
-            np.field_a = new fb(ProductionContent.field_k);
+            np.field_a = new LobbyRoomEntry(ProductionContent.field_k);
             np.field_a.setSecondaryKey(16, (long)var3Lifetime1);
             mi.a((byte) -89, np.field_a, var1, false);
             sf.field_e = 0L;
@@ -483,7 +483,7 @@ final class DialWidget extends FocusableWidget {
             IntNode.field_p = null;
           } else {
             if (IntNode.field_p == null) {
-              IntNode.field_p = new fb(ProductionContent.field_k);
+              IntNode.field_p = new LobbyRoomEntry(ProductionContent.field_k);
             }
           }
           if (var2 != 3) {

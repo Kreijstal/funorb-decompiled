@@ -55,7 +55,7 @@ final class va {
           var3 = new StringBuilder(20);
           for (var4 = 0; var2_int > var4; var4++) {
             discarded$8 = var3.append(param1[var4]);
-            discarded$9 = var3.append(ef.field_d);
+            discarded$9 = var3.append(ReflectionQueueSupport.field_d);
           }
           discarded$5 = var3.append(param1[var2_int]);
           discarded$6 = var3.append(qn.field_d);

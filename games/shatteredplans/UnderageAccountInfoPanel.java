@@ -426,7 +426,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                 }
                 if (param2) {
                   ProxyAuthenticationRequiredException.field_a[var23Lifetime2] = var27Lifetime1 >> we.field_e;
-                  dg.field_yb[var23Lifetime2] = var28Lifetime1 >> we.field_e;
+                  QuickChatHelpPanel.field_yb[var23Lifetime2] = var28Lifetime1 >> we.field_e;
                   tg.field_d[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

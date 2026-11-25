@@ -20,11 +20,11 @@ final class BattleEvent extends IntrusiveNode {
     static int field_t;
     static String field_r;
 
-    final static fb a(int param0, int param1) {
+    final static LobbyRoomEntry a(int param0, int param1) {
         if (param1 != 30888) {
-          return (fb) null;
+          return (LobbyRoomEntry) null;
         }
-        return IsaacBackedRandom.field_b == null ? null : (fb) (IsaacBackedRandom.field_b.get(65280, (long)param0));
+        return IsaacBackedRandom.field_b == null ? null : (LobbyRoomEntry) (IsaacBackedRandom.field_b.get(65280, (long)param0));
     }
 
     public static void clearStatics(int param0) {

@@ -222,7 +222,7 @@ class StandardAi implements Ai {
             var9 = this.starWeight(var7, (byte) -127);
             DirectByteArrayStorage.field_o[var6] = var8;
             StandardMapGenerator.field_i[var6] = var9;
-            ei.field_d[var6] = this.starPriority(var7, 2);
+            LobbyUiSupport.field_d[var6] = this.starPriority(var7, 2);
             ValidationState.field_d[var6] = (var8 << 16) / var9;
           }
           return;
@@ -1391,7 +1391,7 @@ class StandardAi implements Ai {
                 if (0 == ValidationState.field_d[var8]) {
                   break scanLoop1;
                 }
-                if (ei.field_d[var8] <= param1) {
+                if (LobbyUiSupport.field_d[var8] <= param1) {
                   var11 = this.a(var9, param1, (byte) 30);
                   param1 = param1 - var11;
                   var6_int = var6_int + var11;
@@ -1991,7 +1991,7 @@ class StandardAi implements Ai {
           if (var5 > param1) {
             var5 = param1;
           }
-          if (this.a(param0, param2 ^ -5932) >= ei.field_d[var4_int]) {
+          if (this.a(param0, param2 ^ -5932) >= LobbyUiSupport.field_d[var4_int]) {
             WeightedLruCache.field_a[var4_int] = var5;
             var6 = this.a(0, false, var5, param0);
             if (var5 < var6) {
@@ -2070,7 +2070,7 @@ class StandardAi implements Ai {
         while (var2 < this.field_o) {
           DirectByteArrayStorage.field_o[var2] = 0;
           StandardMapGenerator.field_i[var2] = 0;
-          ei.field_d[var2] = 0;
+          LobbyUiSupport.field_d[var2] = 0;
           ValidationState.field_d[var2] = 0;
           oe.field_i[var2] = 0;
           ig.field_c[var2] = 0;

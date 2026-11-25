@@ -474,8 +474,8 @@ final class fc {
     final void a(boolean param0) {
         String var3;
         int var4;
-        fb var6;
-        fb var7;
+        LobbyRoomEntry var6;
+        LobbyRoomEntry var7;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
           if (null != np.field_a) {

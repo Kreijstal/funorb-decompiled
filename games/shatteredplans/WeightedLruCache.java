@@ -105,7 +105,7 @@ final class WeightedLruCache {
           if (DialogRoot.field_G != null) {
             return true;
           }
-          if (!ep.a(640)) {
+          if (!ClientOverlaySupport.hasClientOverlay(640)) {
             return false;
           }
           return true;
@@ -119,7 +119,7 @@ final class WeightedLruCache {
         if (DialogRoot.field_G != null) {
           return true;
         }
-        if (!ep.a(640)) {
+        if (!ClientOverlaySupport.hasClientOverlay(640)) {
           return false;
         }
         return true;

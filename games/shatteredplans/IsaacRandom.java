@@ -39,7 +39,7 @@ final class IsaacRandom {
           }
           try {
             if (gb.field_i == 0) {
-              AccountCreationDialog.field_Gb = dh.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
+              AccountCreationDialog.field_Gb = ClientCapabilitySupport.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
               gb.field_i = gb.field_i + 1;
             }
             if (gb.field_i == 1) {
@@ -52,7 +52,7 @@ final class IsaacRandom {
               }
             }
             if (gb.field_i == 2) {
-              js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), dh.field_a);
+              js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
               var2 = new PacketBuffer(13);
               hq.a(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);

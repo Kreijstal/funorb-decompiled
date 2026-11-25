@@ -235,7 +235,7 @@ final class ObjectList {
               if (ro.field_a != param2) {
                 if (var12.field_Tb) {
                   var12.field_Ab.field_z = QuickChatCategoryRegistry.a(WidgetTheme.field_q, 4371, new String[]{var20});
-                  var12.field_Mb.field_z = fb.field_bc;
+                  var12.field_Mb.field_z = LobbyRoomEntry.field_bc;
                 } else {
                   if (!var12.field_Vb) {
                     var12.field_Jb.field_z = PlayerStats.field_p;
@@ -336,7 +336,7 @@ final class ObjectList {
               if (UsernameAvailabilityValidator.field_p != var12.field_Ib) {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
-                  var24Lifetime2 = QuickChatCategoryRegistry.a(fb.field_kc, param1 ^ 4371, new String[]{var20});
+                  var24Lifetime2 = QuickChatCategoryRegistry.a(LobbyRoomEntry.field_kc, param1 ^ 4371, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -468,7 +468,7 @@ final class ObjectList {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + Territory.field_y + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ef.field_e, param1 + 4371, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + QuickChatCategoryRegistry.a(ReflectionQueueSupport.field_e, param1 + 4371, new String[]{(String) (var25)});
                   }
                 }
                 if (ro.field_a == param2 &&

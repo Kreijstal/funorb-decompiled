@@ -285,11 +285,11 @@ final class lr {
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
-          0 < en.field_a) {
-          fieldTemp$5 = en.field_a - 1;
-          en.field_a = en.field_a - 1;
+          0 < LobbyLayoutSupport.field_a) {
+          fieldTemp$5 = LobbyLayoutSupport.field_a - 1;
+          LobbyLayoutSupport.field_a = LobbyLayoutSupport.field_a - 1;
           var2_ref_byte__Lifetime2 = jf.field_c[fieldTemp$5];
-          jf.field_c[en.field_a] = null;
+          jf.field_c[LobbyLayoutSupport.field_a] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 <= 67) {

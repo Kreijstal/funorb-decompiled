@@ -144,18 +144,18 @@ final class PasswordValidator extends TextFieldValidator {
             }
             var6 = null;
             var7 = null;
-            if (null != dh.field_a.field_k) {
-              oq.field_g = new BufferedCacheFile(dh.field_a.field_k, 5200, 0);
-              dh.field_a.field_k = null;
-              var6 = new SectorCacheStore(255, oq.field_g, new BufferedCacheFile(dh.field_a.field_n, 12000, 0), 2097152);
+            if (null != ClientCapabilitySupport.field_a.field_k) {
+              oq.field_g = new BufferedCacheFile(ClientCapabilitySupport.field_a.field_k, 5200, 0);
+              ClientCapabilitySupport.field_a.field_k = null;
+              var6 = new SectorCacheStore(255, oq.field_g, new BufferedCacheFile(ClientCapabilitySupport.field_a.field_n, 12000, 0), 2097152);
             }
             if (oq.field_g != null) {
               if (MapView.field_Eb == null) {
-                MapView.field_Eb = new BufferedCacheFile[dh.field_a.field_p.length];
+                MapView.field_Eb = new BufferedCacheFile[ClientCapabilitySupport.field_a.field_p.length];
               }
               if (MapView.field_Eb[param2] == null) {
-                MapView.field_Eb[param2] = new BufferedCacheFile(dh.field_a.field_p[param2], 12000, 0);
-                dh.field_a.field_p[param2] = null;
+                MapView.field_Eb[param2] = new BufferedCacheFile(ClientCapabilitySupport.field_a.field_p[param2], 12000, 0);
+                ClientCapabilitySupport.field_a.field_p[param2] = null;
               }
               var7 = new SectorCacheStore(param2, oq.field_g, MapView.field_Eb[param2], 2097152);
             }
@@ -241,7 +241,7 @@ final class PasswordValidator extends TextFieldValidator {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];
-          ho.field_h = fb.field_yb[DialogRoot.field_B];
+          ho.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
             return true;
@@ -356,7 +356,7 @@ final class PasswordValidator extends TextFieldValidator {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];
-          ho.field_h = fb.field_yb[DialogRoot.field_B];
+          ho.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
             return true;

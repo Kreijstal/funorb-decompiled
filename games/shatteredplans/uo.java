@@ -460,7 +460,7 @@ final class uo {
           }
           if (np.field_a != null) {
             if (0 != DialPainter.field_g.field_rb) {
-              NetworkArchiveRequest.a(param2, np.field_a.g(-92), (byte) -2);
+              NetworkArchiveRequest.a(param2, np.field_a.getRoomId(-92), (byte) -2);
             }
             if (0 != IntValueWriteRequest.field_j.field_rb) {
               DefendTask.field_u = true;

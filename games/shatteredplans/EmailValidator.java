@@ -442,7 +442,7 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         Object var1 = null;
         mj var1_ref = null;
-        fb var1_ref2 = null;
+        LobbyRoomEntry var1_ref2 = null;
         RuntimeException var1_ref3 = null;
         int var2 = 0;
         mj var1_refLifetime1;
@@ -465,18 +465,18 @@ final class EmailValidator extends TextFieldValidator {
             }
             var1_ref = (mj) (gr.field_p.nextForward((byte) -71));
           }
-          var1_ref2 = (fb) (kj.field_a.startForward(0));
+          var1_ref2 = (LobbyRoomEntry) (kj.field_a.startForward(0));
           while (var1_ref2 != null) {
             if (0 < var1_ref2.field_Nb) {
               var1_ref2.field_Nb = var1_ref2.field_Nb - 1;
               if (var1_ref2.field_Nb == 0) {
                 var1_ref2.field_hc = 0;
-                if (var1_ref2.f((byte) -78)) {
+                if (var1_ref2.isSecondaryUnlinked((byte) -78)) {
                   var1_ref2.unlink((byte) -58);
                 }
               }
             }
-            var1_ref2 = (fb) (kj.field_a.nextForward((byte) -71));
+            var1_ref2 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
           }
           var1_refLifetime1 = (mj) (uo.field_a.startForward(0));
           while (var1_refLifetime1 != null) {

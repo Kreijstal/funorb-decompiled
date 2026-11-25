@@ -148,9 +148,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
             }
-            if (null == fb.field_zb ||
-              !(param1 <= fb.field_zb.length)) {
-              fb.field_zb = new int[param1 * 2];
+            if (null == LobbyRoomEntry.field_zb ||
+              !(param1 <= LobbyRoomEntry.field_zb.length)) {
+              LobbyRoomEntry.field_zb = new int[param1 * 2];
             }
             if (null == ClientContextMenuSupport.field_d ||
               !(param1 <= ClientContextMenuSupport.field_d.length)) {
@@ -178,9 +178,9 @@ class MenuComponent extends IntrusiveNode {
               !(param1 <= GameApplet.field_f.length)) {
               GameApplet.field_f = new int[param1 * 2];
             }
-            if (null == fb.field_zb ||
-              !(param1 <= fb.field_zb.length)) {
-              fb.field_zb = new int[param1 * 2];
+            if (null == LobbyRoomEntry.field_zb ||
+              !(param1 <= LobbyRoomEntry.field_zb.length)) {
+              LobbyRoomEntry.field_zb = new int[param1 * 2];
             }
             if (null == ClientContextMenuSupport.field_d ||
               !(param1 <= ClientContextMenuSupport.field_d.length)) {
@@ -219,9 +219,9 @@ class MenuComponent extends IntrusiveNode {
           QuickChatCategoryRegistry.field_d = new int[param1 * 2];
           if (null == GameApplet.field_f) {
             GameApplet.field_f = new int[param1 * 2];
-            if (null == fb.field_zb ||
-              !(param1 <= fb.field_zb.length)) {
-              fb.field_zb = new int[param1 * 2];
+            if (null == LobbyRoomEntry.field_zb ||
+              !(param1 <= LobbyRoomEntry.field_zb.length)) {
+              LobbyRoomEntry.field_zb = new int[param1 * 2];
             }
             if (null == ClientContextMenuSupport.field_d ||
               !(param1 <= ClientContextMenuSupport.field_d.length)) {
@@ -246,9 +246,9 @@ class MenuComponent extends IntrusiveNode {
           } else {
             if (param1 > GameApplet.field_f.length) {
               GameApplet.field_f = new int[param1 * 2];
-              if (null == fb.field_zb ||
-                !(param1 <= fb.field_zb.length)) {
-                fb.field_zb = new int[param1 * 2];
+              if (null == LobbyRoomEntry.field_zb ||
+                !(param1 <= LobbyRoomEntry.field_zb.length)) {
+                LobbyRoomEntry.field_zb = new int[param1 * 2];
               }
               if (null == ClientContextMenuSupport.field_d ||
                 !(param1 <= ClientContextMenuSupport.field_d.length)) {
@@ -271,9 +271,9 @@ class MenuComponent extends IntrusiveNode {
                 IntValueWriteRequest.field_p = new boolean[2 * param1];
               }
             } else {
-              if (null == fb.field_zb ||
-                !(param1 <= fb.field_zb.length)) {
-                fb.field_zb = new int[param1 * 2];
+              if (null == LobbyRoomEntry.field_zb ||
+                !(param1 <= LobbyRoomEntry.field_zb.length)) {
+                LobbyRoomEntry.field_zb = new int[param1 * 2];
               }
               if (null == ClientContextMenuSupport.field_d ||
                 !(param1 <= ClientContextMenuSupport.field_d.length)) {
@@ -317,7 +317,7 @@ class MenuComponent extends IntrusiveNode {
         SpriteButton.field_u = 2147483647;
         GzipInflater.field_e = -2147483648;
         us.field_b = -2147483648;
-        ef.field_a = 2147483647;
+        ReflectionQueueSupport.field_a = 2147483647;
     }
 
     final void dispose(boolean param0) {

@@ -26,7 +26,7 @@ class IntrusiveNode {
           oi.field_f = true;
           return;
         }
-        if (!dh.a(-12165)) {
+        if (!ClientCapabilitySupport.matchesClientCapabilityGuard(-12165)) {
           MenuLabel.g(-125);
           SoundPlayback.field_i = 11;
           oi.field_f = true;

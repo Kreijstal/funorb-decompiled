@@ -28,7 +28,7 @@ final class ij {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        ei.a(false, param4, param1, -12394, param5, param3, param0);
+        LobbyUiSupport.drawHexagonPanel(false, param4, param1, -12394, param5, param3, param0);
         if (!param2) {
           field_a = (kj) null;
         }

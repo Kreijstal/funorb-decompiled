@@ -358,14 +358,14 @@ final class MidiPcmStream extends PcmStream {
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_3 = false;
-        fb stackIn_12_0;
+        LobbyRoomEntry stackIn_12_0;
         AnimatedPanel stackIn_12_1;
         AnimatedPanel stackIn_12_2;
         long stackIn_12_3;
         AnimatedPanel stackIn_13_1 = null;
         AnimatedPanel stackIn_13_2 = null;
         AnimatedPanel stackIn_13_4 = null;
-        fb stackIn_31_0;
+        LobbyRoomEntry stackIn_31_0;
         AnimatedPanel stackIn_31_1;
         AnimatedPanel stackIn_31_2;
         long stackIn_31_3;
@@ -388,7 +388,7 @@ final class MidiPcmStream extends PcmStream {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        fb var12 = null;
+        LobbyRoomEntry var12 = null;
         int var13 = 0;
         int var14 = 0;
         AnimatedPanel var18 = null;
@@ -462,7 +462,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var9 = pr.currentTimeMillis(14274);
           var11 = null;
-          var12 = (fb) (var8.startForward(0));
+          var12 = (LobbyRoomEntry) (var8.startForward(0));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
@@ -631,7 +631,7 @@ final class MidiPcmStream extends PcmStream {
             var12.field_K = SingleChildWidget.field_y.field_xb.field_K;
             var31 = 0;
             var32 = var12.field_Xb;
-            if (!var12.f((byte) -78)) {
+            if (!var12.isSecondaryUnlinked((byte) -78)) {
               boolean decompiledFrameRemainder1 = true;
               if (!var12.field_Ab) {
                 if (!var12.field_cc &&
@@ -817,11 +817,11 @@ final class MidiPcmStream extends PcmStream {
             }
             for (var34_intLifetime2 = 0; ProductionContent.field_k > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_xb[var34_intLifetime2].field_L) {
-                if (null == ei.field_f) {
+                if (null == LobbyUiSupport.field_f) {
                   var35 = null;
                 } else {
-                  if (ei.field_f[var34_intLifetime2] != null) {
-                    var35 = ei.field_f[var34_intLifetime2][var12.field_dc[var34_intLifetime2] & 255];
+                  if (LobbyUiSupport.field_f[var34_intLifetime2] != null) {
+                    var35 = LobbyUiSupport.field_f[var34_intLifetime2][var12.field_dc[var34_intLifetime2] & 255];
                   } else {
                     var35 = null;
                   }
@@ -872,22 +872,22 @@ final class MidiPcmStream extends PcmStream {
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_rb != 0 &&
-              !var12.f((byte) -78)) {
+              !var12.isSecondaryUnlinked((byte) -78)) {
               if (var12.field_Db.field_rb != 0) {
                 if (var12.field_Ab && (!var12.field_mc ||
                   !var12.field_cc &&
                   !var12.field_Jb)) {
-                  os.a(var12.g(-121), param4, true);
+                  os.a(var12.getRoomId(-121), param4, true);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  sq.a(-57, param4, var12.g(-103));
+                  sq.a(-57, param4, var12.getRoomId(-103));
                 }
               } else {
                 ClientContextMenuSupport.openLobbyPlayerContextMenu(param6, (byte) -100, var12, var32);
               }
             }
-            var12 = (fb) (var8.nextForward((byte) -71));
+            var12 = (LobbyRoomEntry) (var8.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

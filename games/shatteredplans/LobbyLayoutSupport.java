@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class en {
+final class LobbyLayoutSupport {
     static String field_d;
     static int field_c;
     static int field_a;
     static int[] field_b;
     static String field_e;
 
-    final static void a(int param0, boolean param1) {
+    final static void layoutLobbyRoomPanels(int param0, boolean param1) {
         int var6 = 0;
         AnimatedPanel dupTemp$0 = null;
         int var11 = 0;

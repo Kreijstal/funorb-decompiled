@@ -668,7 +668,7 @@ final class GameScreen {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
-                  var5.setLabel((byte) -109, 3375155, fb.field_gc);
+                  var5.setLabel((byte) -109, 3375155, LobbyRoomEntry.field_gc);
                   var7.field_o = QuickChatCategoryRegistry.a(EmailValidator.field_u, 4371, new String[]{param1.name});
                   var9 = (MenuComponent) (var7.field_l.startForward(0));
                   while (var9 != null) {
@@ -1128,7 +1128,7 @@ final class GameScreen {
               stackIn_117_0 = (String) (field_L);
             } else {
               if (var13 != 0) {
-                stackIn_117_0 = ef.field_c;
+                stackIn_117_0 = ReflectionQueueSupport.field_c;
               } else {
                 if (var11 == 0) {
                   stackIn_117_0 = null;
@@ -2859,7 +2859,7 @@ final class GameScreen {
           var4 = (640 - var3) / 2;
           var5 = 80;
           var6 = 250;
-          ei.a(true, var6, var3, -12394, var5, var4, 3974311);
+          LobbyUiSupport.drawHexagonPanel(true, var6, var3, -12394, var5, var4, 3974311);
           var7 = new int[4];
           SoftwareRasterizer.saveClip(var7);
           SoftwareRasterizer.setClip(var4 + rs.field_Cb.field_J / 2, var5, -(rs.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
@@ -3346,7 +3346,7 @@ final class GameScreen {
             if (DualLinkDequeSequence.field_h == this.field_mb) {
               if (!this.field_e.field_s) {
                 this.a(93, this.field_e);
-                this.field_mb.field_o = ep.field_b;
+                this.field_mb.field_o = ClientOverlaySupport.field_b;
                 this.field_e.field_s = true;
                 if (var9 != 0) {
                   this.field_e.field_s = false;
@@ -4476,7 +4476,7 @@ final class GameScreen {
             stackIn_47_0 = new BoundsRect(0, 50, 640, 430);
             return stackIn_47_0;
           }
-          var4 = new BoundsRect(AccountFieldValue.field_f, ByteArrayNode.field_k, ei.field_e, AttackTask.field_o);
+          var4 = new BoundsRect(AccountFieldValue.field_f, ByteArrayNode.field_k, LobbyUiSupport.field_e, AttackTask.field_o);
           var5 = new IntrusiveDeque();
           if (var2.field_l < var4.field_l) {
             stackIn_8_0 = var5;
@@ -4874,7 +4874,7 @@ final class GameScreen {
           var11 = 0;
           scanLoop1: while (true) {
             if (param1.length > var11) {
-              var12 = fb.a(param7, param0, 28, param3[var11], param1[var11], param2[var11], param4, this.field_s.field_P);
+              var12 = LobbyRoomEntry.createPlayerScoreRow(param7, param0, 28, param3[var11], param1[var11], param2[var11], param4, this.field_s.field_P);
               var12.moveTo((byte) 38, var9.field_k, var9.field_t + var9.field_y);
               var9.addChild(var12, param6 ^ -39);
               var11++;
@@ -5106,7 +5106,7 @@ final class GameScreen {
             this.field_y.addLast((byte) -113, this.field_g);
           }
           if (this.field_s.field_n != null) {
-            this.field_bb = new ToggleButton(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, ei.field_a, (String) null, 0);
+            this.field_bb = new ToggleButton(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, LobbyUiSupport.field_a, (String) null, 0);
             this.field_bb.field_o = AccountCreationDialog.field_Bb;
             this.field_y.addLast((byte) -113, this.field_bb);
           }

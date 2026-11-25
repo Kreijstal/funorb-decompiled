@@ -69,11 +69,11 @@ final class EmailSyntaxValidator extends TextFieldValidator {
 
     final static void d(int param0) {
         if (param0 == -16705) {
-          IndexedSpriteState.field_h = new dg(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w);
+          IndexedSpriteState.field_h = new QuickChatHelpPanel(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w);
           return;
         }
         field_n = false;
-        IndexedSpriteState.field_h = new dg(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w);
+        IndexedSpriteState.field_h = new QuickChatHelpPanel(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w);
     }
 
     final ValidationState computeStateFor(int param0, String param1) {

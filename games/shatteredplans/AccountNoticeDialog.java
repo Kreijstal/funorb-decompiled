@@ -210,7 +210,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
               return stackIn_4_0;
             }
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = dh.field_c.a((byte) 47, param0[var10_int]);
+              var11 = ClientCapabilitySupport.field_c.a((byte) 47, param0[var10_int]);
               var6[var10_int] = var11.f(80);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

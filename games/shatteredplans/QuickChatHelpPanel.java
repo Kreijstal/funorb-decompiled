@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends AnimatedPanel {
+final class QuickChatHelpPanel extends AnimatedPanel {
     static int[] field_yb;
     private AnimatedPanel field_xb;
 
-    final static va g(int param0) {
+    final static va createDefaultViewSettings(int param0) {
         va var1 = new va();
         var1.field_k = false;
         var1.field_a = param0;
@@ -20,7 +20,7 @@ final class dg extends AnimatedPanel {
         int var1 = -29 / ((12 - param0) / 44);
     }
 
-    final boolean c(boolean param0, int param1) {
+    final boolean updateAndCheckDismissed(boolean param0, int param1) {
         boolean stackIn_9_0 = false;
         this.a(true, -20429);
         if (param1 != -1) {
@@ -32,7 +32,7 @@ final class dg extends AnimatedPanel {
         return stackIn_9_0;
     }
 
-    dg(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4, AnimatedPanel param5) {
+    QuickChatHelpPanel(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4, AnimatedPanel param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

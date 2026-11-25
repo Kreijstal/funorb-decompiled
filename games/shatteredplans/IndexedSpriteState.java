@@ -9,7 +9,7 @@ abstract class IndexedSpriteState {
     int field_a;
     int field_c;
     int field_d;
-    static dg field_h;
+    static QuickChatHelpPanel field_h;
     static long field_e;
 
     final static void a(int param0, Archive param1) {
@@ -32,7 +32,7 @@ abstract class IndexedSpriteState {
           OpacityWidget.field_A.addChild(param0 ^ 27774, ClientPacketFlushSupport.field_a);
           OpacityWidget.field_A.addChild(4, kh.field_Ib);
           if (param0 != 27770) {
-            field_h = (dg) null;
+            field_h = (QuickChatHelpPanel) null;
           }
           ClientPacketFlushSupport.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
           var5 = ClientPacketFlushSupport.field_a.field_Db.field_zb;

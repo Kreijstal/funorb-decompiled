@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends AnimatedPanel {
+final class LobbyRoomEntry extends AnimatedPanel {
     AnimatedPanel field_Hb;
     boolean field_mc;
     static String field_kc;
@@ -47,7 +47,7 @@ final class fb extends AnimatedPanel {
     AnimatedPanel field_ac;
     static Sprite field_Vb;
 
-    fb(int param0) {
+    LobbyRoomEntry(int param0) {
         super(0L, (AnimatedPanel) null);
         this.field_dc = new byte[param0];
     }
@@ -65,7 +65,7 @@ final class fb extends AnimatedPanel {
         field_gc = null;
     }
 
-    final static MenuList a(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
+    final static MenuList createPlayerScoreRow(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
         int var12_int = 0;
         int stackIn_9_0 = 0;
         MenuList stackIn_32_0 = null;
@@ -178,14 +178,14 @@ final class fb extends AnimatedPanel {
         }
     }
 
-    final boolean f(byte param0) {
+    final boolean isSecondaryUnlinked(byte param0) {
         if (param0 != -78) {
           return false;
         }
         return !this.isSecondaryLinked((byte) 98) ? true : false;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
+    final static void updateLobbyInterface(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param5 && (kh.field_Mb != SoftwareRasterizer.field_b ||
@@ -195,10 +195,10 @@ final class fb extends AnimatedPanel {
             if (null == IntNode.field_p) {
               DialogRoot.j(param9 ^ 97);
             } else {
-              en.a(param9 + 15471, true);
+              LobbyLayoutSupport.layoutLobbyRoomPanels(param9 + 15471, true);
             }
           } else {
-            en.a(15471, false);
+            LobbyLayoutSupport.layoutLobbyRoomPanels(15471, false);
           }
         }
         if (!param5) {
@@ -233,14 +233,14 @@ final class fb extends AnimatedPanel {
         Star.field_w = Star.field_w + 1;
     }
 
-    final int g(int param0) {
+    final int getRoomId(int param0) {
         if (param0 >= -74) {
-          this.g(-46);
+          this.getRoomId(-46);
         }
         return (int)this.secondaryKey((byte) 118);
     }
 
-    final boolean a(fb param0, int param1) {
+    final boolean ranksBefore(LobbyRoomEntry param0, int param1) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
@@ -267,11 +267,11 @@ final class fb extends AnimatedPanel {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        fb var7 = null;
+        LobbyRoomEntry var7 = null;
         try {
           if (param1 != -1) {
-            var7 = (fb) null;
-            this.a((fb) null, -74);
+            var7 = (LobbyRoomEntry) null;
+            this.ranksBefore((LobbyRoomEntry) null, -74);
           }
           if (!this.field_Jb) {
             stackIn_8_0 = (this.field_hc == 6) ? 1 : 0;

@@ -22,7 +22,7 @@ final class uf {
         if (CheckboxPainter.field_n <= 0) {
           return false;
         }
-        if (!dh.a(-12165)) {
+        if (!ClientCapabilitySupport.matchesClientCapabilityGuard(-12165)) {
           return true;
         }
         return false;
