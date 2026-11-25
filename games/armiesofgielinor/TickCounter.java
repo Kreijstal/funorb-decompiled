@@ -5718,7 +5718,7 @@ final class TickCounter {
                 QuickChatMenuDisplaySupport.field_e[ResourceRequest.field_y + param4].getExplicitOwner((byte) -55) != var10) {
                 var11 = var11 | 8;
               }
-              MatchSetupPanel.a(var10, false, 20 + param3, param7 + 40, var11, true);
+              MatchSetupPanel.drawTileOwnershipEdges(var10, false, 20 + param3, param7 + 40, var11, true);
             }
             regionExit1: {
               var10 = EditableTextWidget.field_Q[QuickChatMenuDisplaySupport.field_e[param4].terrainType];

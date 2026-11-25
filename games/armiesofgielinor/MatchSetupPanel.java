@@ -49,19 +49,19 @@ final class MatchSetupPanel {
     private int selectedPreviewIndex;
     private boolean option33Enabled;
 
-    private final int d(boolean param0) {
+    private final int getTitleBaselineOffset(boolean param0) {
         if (!param0) {
           this.itemStarts = (IntPair[]) null;
         }
         return (NineSliceFrame.field_e.xHeight >> 1) - NineSliceFrame.field_e.maxDescent + (NineSliceFrame.field_e.baselineHeight - NineSliceFrame.field_e.maxAscent + 3);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7 = this.b(true);
+    private final void layoutPreviewItem(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var7 = this.getPreviewRowContentWidth(true);
         param0 = (this.previewSize.first - var7 >> 1) + param0;
         this.field_u = param0;
         param3 = param0 + var7;
-        param0 = param3 - this.e(-119);
+        param0 = param3 - this.getPreviewStripWidth(-119);
         var7 = 0;
         int var8 = -this.field_n + param5;
         if (param4 != 7) {
@@ -78,18 +78,18 @@ final class MatchSetupPanel {
         this.itemEnds[param5] = new IntPair(param3, param1);
     }
 
-    final void d(byte param0) {
+    final void drawPanel(byte param0) {
         if (param0 != -73) {
           return;
         }
-        this.e(false);
-        this.b(param0 + 18742);
-        this.k(param0 + 106);
-        this.f((byte) 66);
-        this.c(0);
+        this.drawOuterFrame(false);
+        this.drawPanelTitle(param0 + 18742);
+        this.drawTopRowsFrame(param0 + 106);
+        this.drawOptionRowsFrame((byte) 66);
+        this.drawItems(0);
     }
 
-    private final void a(int param0, boolean param1, IntPair param2, int param3, IntPair param4) {
+    private final void drawPreviewItem(int param0, boolean param1, IntPair param2, int param3, IntPair param4) {
         int var10 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -160,7 +160,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void e(boolean param0) {
+    private final void drawOuterFrame(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -186,7 +186,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawTopRowsFrame(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -206,14 +206,14 @@ final class MatchSetupPanel {
             }
             GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
-              discarded$0 = this.d(true);
+              discarded$0 = this.getTitleBaselineOffset(true);
             }
             return;
           }
         }
     }
 
-    private final void d(int param0) {
+    private final void initializePanelStyle(int param0) {
         this.field_J = new IntPair(25, 33);
         if (param0 != 7) {
           return;
@@ -246,7 +246,7 @@ final class MatchSetupPanel {
         return 1;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    final static void drawTileOwnershipEdges(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         if (param5) {
           if ((4 & param4) != 0) {
             EffectPresentation.a(param5, param3, true, param2, (byte) -33, param0);
@@ -263,15 +263,15 @@ final class MatchSetupPanel {
           }
         }
         if (param1) {
-          MatchSetupPanel.c((byte) -56);
+          MatchSetupPanel.updateCombatSandboxInput((byte) -56);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void layoutPanel(boolean param0) {
         this.field_a = new IntPair(31, 431);
-        this.f(1);
-        this.g((byte) -71);
-        this.c(param0);
+        this.layoutTopRows(1);
+        this.layoutOptionRows((byte) -71);
+        this.layoutStartButton(param0);
     }
 
     final void setOptions(int selectedIndex, byte obfuscationGuard, int mapSizeSetting, int previewIndex, boolean option33Enabled, int computerPlayerCount, int playerCount, String startCaption) {
@@ -303,7 +303,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void a(int param0, String param1, IntPair param2, int param3, boolean param4, IntPair param5) {
+    private final void drawOptionRow(int param0, String param1, IntPair param2, int param3, boolean param4, IntPair param5) {
         int[] stackIn_12_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -439,7 +439,7 @@ final class MatchSetupPanel {
         return new IntPair(1, 1);
     }
 
-    private final void g(byte param0) {
+    private final void layoutOptionRows(byte param0) {
         int var15 = 0;
         int var2;
         int var3;
@@ -486,7 +486,7 @@ final class MatchSetupPanel {
         this.field_f = 5;
         this.field_L = 2;
         this.field_C.second = this.field_C.second + var11;
-        var6Lifetime1 = this.b(true);
+        var6Lifetime1 = this.getPreviewRowContentWidth(true);
         var2Lifetime1 = var2Lifetime1 + (-var6Lifetime1 + this.previewSize.first >> 1);
         this.field_u = var2Lifetime1;
         var2Lifetime2 = this.field_B.first + this.field_m.first;
@@ -512,7 +512,7 @@ final class MatchSetupPanel {
               this.field_g = new IntPair(var2Lifetime2, var4Lifetime2);
               this.field_S = new IntPair(var3Lifetime2, var5Lifetime2);
             }
-            this.a(var2Lifetime2, var5Lifetime2, var4Lifetime2, var3Lifetime2, 7, var15);
+            this.layoutPreviewItem(var2Lifetime2, var5Lifetime2, var4Lifetime2, var3Lifetime2, 7, var15);
             if (var15 == this.field_h) {
               var4Lifetime2 = 12 + (var5Lifetime2 + this.previewRowSpacing);
               var12 = 0;
@@ -521,7 +521,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void f(byte param0) {
+    private final void drawOptionRowsFrame(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -547,7 +547,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawItems(int param0) {
         int var2 = 0;
         int stackIn_27_0 = 0;
         int stackIn_60_0 = 0;
@@ -589,7 +589,7 @@ final class MatchSetupPanel {
                         var7 = stackIn_27_0;
                         if (var4 != null &&
                           var5 != null) {
-                          var11 = this.a(-1, var10, var3);
+                          var11 = this.formatOptionLabel(-1, var10, var3);
                           if (var3 != 7) {
                             if (var3 != 27) {
                               if (var2 >= this.field_n &&
@@ -611,17 +611,17 @@ final class MatchSetupPanel {
                                     stackIn_60_0 = 0;
                                   }
                                   var8 = stackIn_60_0;
-                                  this.a(this.field_u, this.field_U, this.field_S, ~param0, var8 != 0, this.field_g);
+                                  this.drawOptionRow(this.field_u, this.field_U, this.field_S, ~param0, var8 != 0, this.field_g);
                                 }
-                                this.a(var2, var7 != 0, var4, 67, var5);
+                                this.drawPreviewItem(var2, var7 != 0, var4, 67, var5);
                                 break regionExit1;
                               }
-                              this.a(-1, var11, var5, -1, var7 != 0, var4);
+                              this.drawOptionRow(-1, var11, var5, -1, var7 != 0, var4);
                             } else {
-                              this.a(var7 != 0, var4, var5, 0, var11);
+                              this.drawGradientFramedButton(var7 != 0, var4, var5, 0, var11);
                             }
                           } else {
-                            this.a(var4, var11, var7 != 0, var5, 26709);
+                            this.drawStartButton(var4, var11, var7 != 0, var5, 26709);
                           }
                         }
                       }
@@ -671,7 +671,7 @@ final class MatchSetupPanel {
         return new IntPair(1, 1);
     }
 
-    private final String a(int param0, String param1, int param2) {
+    private final String formatOptionLabel(int param0, String param1, int param2) {
         int var5 = 0;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -733,7 +733,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void f(int param0) {
+    private final void layoutTopRows(int param0) {
         int var8 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -774,13 +774,13 @@ final class MatchSetupPanel {
         }
     }
 
-    private final int b(boolean param0) {
+    private final int getPreviewRowContentWidth(boolean param0) {
         int var2 = 0;
         if (!param0) {
           return 50;
         }
         var2 = 64;
-        var2 = var2 + this.e(-24);
+        var2 = var2 + this.getPreviewStripWidth(-24);
         return var2;
     }
 
@@ -842,7 +842,7 @@ final class MatchSetupPanel {
         return 1;
     }
 
-    private final void a(IntPair param0, String param1, boolean param2, IntPair param3, int param4) {
+    private final void drawStartButton(IntPair param0, String param1, boolean param2, IntPair param3, int param4) {
         int[] stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -921,7 +921,7 @@ final class MatchSetupPanel {
         }
     }
 
-    final static void c(byte param0) {
+    final static void updateCombatSandboxInput(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -980,7 +980,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void a(boolean param0, IntPair param1, IntPair param2, int param3, String param4) {
+    private final void drawGradientFramedButton(boolean param0, IntPair param1, IntPair param2, int param3, String param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1252,7 +1252,7 @@ final class MatchSetupPanel {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void layoutStartButton(boolean param0) {
         if (null == this.itemIndexById) {
           return;
         }
@@ -1332,17 +1332,17 @@ final class MatchSetupPanel {
     }
 
     final void initializePanel(int obfuscationGuard) {
-        this.d(obfuscationGuard + 6);
+        this.initializePanelStyle(obfuscationGuard + 6);
         if (obfuscationGuard != 1) {
           return;
         }
         this.initializeItemIds(obfuscationGuard + 11);
-        this.a(true);
+        this.layoutPanel(true);
         this.resetOptions(-15585);
         this.field_y = false;
     }
 
-    private final void b(int param0) {
+    private final void drawPanelTitle(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -1355,7 +1355,7 @@ final class MatchSetupPanel {
             return;
           }
           var2 = this.field_J.second;
-          var3 = this.d(true);
+          var3 = this.getTitleBaselineOffset(true);
           if (param0 != 18669) {
             this.getItemLeftX(70, true);
           }
@@ -1408,7 +1408,7 @@ final class MatchSetupPanel {
         this.field_G = 11711413;
     }
 
-    private final int e(int param0) {
+    private final int getPreviewStripWidth(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var2 = 1 + (-this.field_n + this.field_h);

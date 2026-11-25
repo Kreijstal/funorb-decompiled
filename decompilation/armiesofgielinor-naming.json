@@ -441,7 +441,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:MatchSetupPanel.c(I)V#0"
+      "renamedSymbol": "B:MatchSetupPanel.drawItems(I)V#0"
     },
     {
       "symbol": "B:dq.a([BIZII[B)I#0",
@@ -74684,12 +74684,36 @@
       "renamedSymbol": "M:MatchSetupPanel.getItemTopY(II)I"
     },
     {
+      "symbol": "M:dm.a(IIIIII)V",
+      "originalName": "a",
+      "to": "layoutPreviewItem",
+      "evidence": "dm.java: Centers the row content including a 64-pixel label area, stores its label x, subtracts strip width, then places the indexed 33x33 preview with configured spacing. Retain label-x write before guard7, ignored input coordinates and pair allocation/write order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.layoutPreviewItem(IIIIII)V"
+    },
+    {
       "symbol": "M:dm.a(II[IIZ[IIZIZILjava/lang/String;)I",
       "originalName": "a",
       "to": "drawCoatOfArms",
       "evidence": "dm.java: Optional part hit test precedes early guard return-48;then traverses six layer indices,normalizes too-large part IDs in caller array,draws highlights/placeholders and solid/textured parts and truncated central text. Preserve all layer order,array mutation,selected/hover behavior,short circuits and raster calls. Naming only:preserve descriptor,modifiers,guards/full primitive domains,literals,allocations,locks,aliases and failure order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchSetupPanel.drawCoatOfArms(II[IIZ[IIZIZILjava/lang/String;)I"
+    },
+    {
+      "symbol": "M:dm.a(ILjava/lang/String;I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "formatOptionLabel",
+      "evidence": "dm.java: Appends player count for item28, computer count for46, localized enabled/disabled text for33 or the global map-size label for29. Preserve null/empty early return, guard-1, inclusive length comparison and indexing by ReloadPageSupport.field_e rather than mapSizeSetting. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:dm.a(ILjava/lang/String;Lft;IZLft;)V",
+      "originalName": "a",
+      "to": "drawOptionRow",
+      "evidence": "dm.java: Draws a blended rectangular row, optional debug outline, and highlighted/normal gradient text; negative x centers the caption and other x positions it explicitly. Used for ordinary options and the preview-row label. Preserve null order, coordinate transforms, midpoint font offset and x/complement comparison. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V"
     },
     {
       "symbol": "M:dm.a(IZ)I",
@@ -74700,12 +74724,44 @@
       "renamedSymbol": "M:MatchSetupPanel.getItemLeftX(IZ)I"
     },
     {
+      "symbol": "M:dm.a(IZIIIZ)V",
+      "originalName": "a",
+      "to": "drawTileOwnershipEdges",
+      "evidence": "dm.java: Dispatches up to two animated ownership-edge segments using owner id, pixel coordinates, edge mask and orientation. Both tile-render callers derive mask1/2/4/8 from neighboring explicit owners. Retain orientation-specific edge order and optional late sandbox update with byte-56. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V"
+    },
+    {
+      "symbol": "M:dm.a(IZLft;ILft;)V",
+      "originalName": "a",
+      "to": "drawPreviewItem",
+      "evidence": "dm.java: Looks up preview sprite by item index minus preview-start index, draws it and layers selected or hover outlines. Preserve original conjunctive out-of-range test, sprite fetch before guard<=36, null behavior, selected precedence and outline loop bounds. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V"
+    },
+    {
+      "symbol": "M:dm.a(Lft;Ljava/lang/String;ZLft;I)V",
+      "originalName": "a",
+      "to": "drawStartButton",
+      "evidence": "dm.java: Draws item7 using flat fill, hollow gradient border and centered gradient caption with hover colour. Preserve null/empty checks, noncanonical guard setting option33Enabled, raster order, baseline helper and exception context strings. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V"
+    },
+    {
       "symbol": "M:dm.a(Ljava/lang/String;B)V",
       "originalName": "a",
       "to": "setStartCaption",
       "evidence": "dm.java: Updates item 7 only for a nonnull, nonempty caption and an available lookup/label table.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchSetupPanel.setStartCaption(Ljava/lang/String;B)V"
+    },
+    {
+      "symbol": "M:dm.a(Z)V",
+      "originalName": "a",
+      "to": "layoutPanel",
+      "evidence": "dm.java: Sets the start-button anchor then lays out the top rows, options and start button. Preserve calls and boolean forwarded unchanged to start-button layout. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.layoutPanel(Z)V"
     },
     {
       "symbol": "M:dm.a(ZI)I",
@@ -74716,12 +74772,28 @@
       "renamedSymbol": "M:MatchSetupPanel.getItemHeight(ZI)I"
     },
     {
+      "symbol": "M:dm.a(ZLft;Lft;ILjava/lang/String;)V",
+      "originalName": "a",
+      "to": "drawGradientFramedButton",
+      "evidence": "dm.java: Draws item27 with highlighted gradient fill, separate hollow border and centered solid text. Preserve coordinate transforms, guard-triggered discarded getItemRightX call and original frame opacities. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V"
+    },
+    {
       "symbol": "M:dm.b(B)Lft;",
       "originalName": "b",
       "to": "getPanelStart",
       "evidence": "dm.java: Returns component-wise nonnegative minima from itemStarts; incomplete bounds return (1,1).",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchSetupPanel.getPanelStart(B)LIntPair;"
+    },
+    {
+      "symbol": "M:dm.b(I)V",
+      "originalName": "b",
+      "to": "drawPanelTitle",
+      "evidence": "dm.java: Loads stage5 caption from LoginCredentialStagingSupport.field_b, stores it and draws backdrop then centered gradient text at the title baseline. Preserve short-array/null early returns, caption assignment, font reads and bad-guard discarded getter. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawPanelTitle(I)V"
     },
     {
       "symbol": "M:dm.b(II)I",
@@ -74732,6 +74804,14 @@
       "renamedSymbol": "M:MatchSetupPanel.findItemIndex(II)I"
     },
     {
+      "symbol": "M:dm.b(Z)I",
+      "originalName": "b",
+      "to": "getPreviewRowContentWidth",
+      "evidence": "dm.java: True returns 64 pixels plus preview strip width; false returns50 without reading the strip. This content width centers the label and previews together. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.getPreviewRowContentWidth(Z)I"
+    },
+    {
       "symbol": "M:dm.b(ZI)I",
       "originalName": "b",
       "to": "getItemRightX",
@@ -74740,12 +74820,100 @@
       "renamedSymbol": "M:MatchSetupPanel.getItemRightX(ZI)I"
     },
     {
+      "symbol": "M:dm.c(B)V",
+      "originalName": "c",
+      "to": "updateCombatSandboxInput",
+      "evidence": "dm.java: Advances VerticalScrollbar.field_Rb CombatSandbox with wheel/pointer input, then polls keys. Key13 returns to client state and clears presentation/framebuffer/wipe/sandbox; key12 toggles CoatOfArms flag; privileged key11 toggles SoundPanSupport flag. Preserve byte-derived guard, dereference/repeated reads and key-break cleanup order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.updateCombatSandboxInput(B)V"
+    },
+    {
+      "symbol": "M:dm.c(I)V",
+      "originalName": "c",
+      "to": "drawItems",
+      "evidence": "dm.java: Validates item/geometry/label arrays then iterates from supplied index, formats each label and dispatches start button7, gradient button27, preview strip/header, or ordinary row. Preserve selected tests, array validation order, labeled breaks and preview-header null checks. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawItems(I)V"
+    },
+    {
+      "symbol": "M:dm.c(Z)V",
+      "originalName": "c",
+      "to": "layoutStartButton",
+      "evidence": "dm.java: Finds item7 and assigns its existing start anchor plus new end pair608,462 after map/array validation. False also clears outer-panel end. Preserve original validation and start alias before end allocation. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.layoutStartButton(Z)V"
+    },
+    {
+      "symbol": "M:dm.d(B)V",
+      "originalName": "d",
+      "to": "drawPanel",
+      "evidence": "dm.java: Canonical byte-73 renders outer frame, title, top rows frame, option rows frame then all items. Noncanonical byte returns without drawing. This is the stage5 call in TutorialController. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawPanel(B)V"
+    },
+    {
+      "symbol": "M:dm.d(I)V",
+      "originalName": "d",
+      "to": "initializePanelStyle",
+      "evidence": "dm.java: Always assigns top-left25,33, then guard7 initializes bottom-right614,446, opacities and black/white colours. Preserve partial state on wrong guard and pair allocation order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.initializePanelStyle(I)V"
+    },
+    {
+      "symbol": "M:dm.d(Z)I",
+      "originalName": "d",
+      "to": "getTitleBaselineOffset",
+      "evidence": "dm.java: Computes title baseline offset from xHeight, maxDescent, baselineHeight and maxAscent. False first nulls itemStarts. Retain repeated shared font reads and integer shift/arithmetic exactly. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.getTitleBaselineOffset(Z)I"
+    },
+    {
       "symbol": "M:dm.e(B)V",
       "originalName": "e",
       "to": "loadItemLabels",
       "evidence": "dm.java: Copies valid localized labels and the final preview heading from the source table.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchSetupPanel.loadItemLabels(B)V"
+    },
+    {
+      "symbol": "M:dm.e(I)I",
+      "originalName": "e",
+      "to": "getPreviewStripWidth",
+      "evidence": "dm.java: Sums33-pixel preview widths plus configured gaps over the inclusive preview index range then subtracts one gap. Preserve guard remainder before loop, overflow and behavior for empty/reversed ranges. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.getPreviewStripWidth(I)I"
+    },
+    {
+      "symbol": "M:dm.e(Z)V",
+      "originalName": "e",
+      "to": "drawOuterFrame",
+      "evidence": "dm.java: Draws outer hollow gradient frame from panel corner pairs with normal gradient and configured colour/opacity. Preserve null checks before boolean early return and zero-dimension behavior. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawOuterFrame(Z)V"
+    },
+    {
+      "symbol": "M:dm.f(B)V",
+      "originalName": "f",
+      "to": "drawOptionRowsFrame",
+      "evidence": "dm.java: Draws lower option rows enclosing hollow gradient frame from its corner pairs. Preserve null checks before noncanonical-byte outline-width mutation, zero dimensions and configured colours. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawOptionRowsFrame(B)V"
+    },
+    {
+      "symbol": "M:dm.f(I)V",
+      "originalName": "f",
+      "to": "layoutTopRows",
+      "evidence": "dm.java: Initializes centered top group with two rows,7-pixel padding,43-pixel row height and4-pixel spacing. Allocates both geometry arrays before guard1, then fills two pairs per row. Preserve partial state and overflow/alias/exception order. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.layoutTopRows(I)V"
+    },
+    {
+      "symbol": "M:dm.g(B)V",
+      "originalName": "g",
+      "to": "layoutOptionRows",
+      "evidence": "dm.java: Positions lower group using four-row height, vertically centers it above start button, sets preview gap5 and outline thickness2, then lays out ordinary options and four previews sharing a single row. Preserve mutable corner writes before guard-71, preview-header pair allocation and extra12 pixels after strip. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.layoutOptionRows(B)V"
     },
     {
       "symbol": "M:dm.g(I)V",
@@ -74786,6 +74954,14 @@
       "evidence": "dm.java: Resets selection, two-player count, size, computers, preview and option 33.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MatchSetupPanel.resetOptions(I)V"
+    },
+    {
+      "symbol": "M:dm.k(I)V",
+      "originalName": "k",
+      "to": "drawTopRowsFrame",
+      "evidence": "dm.java: Draws enclosing hollow gradient frame of the top two rows. Preserve null/zero checks and noncanonical guard33 discarded baseline read after raster drawing. Naming only: preserve descriptors, modifiers, full primitive domains, guards, literals, allocations, aliases and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchSetupPanel.drawTopRowsFrame(I)V"
     },
     {
       "symbol": "M:dn.a(IIZII)V",
@@ -158249,7 +158425,7 @@
     },
     {
       "symbol": "B:dm.c(I)V#0",
-      "renamedSymbol": "B:MatchSetupPanel.c(I)V#0",
+      "renamedSymbol": "B:MatchSetupPanel.drawItems(I)V#0",
       "originalName": "L7",
       "renamedName": "regionExit1",
       "declaration": {
@@ -267446,7 +267622,7 @@
     },
     {
       "symbol": "L:dm.a(IIIIII)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(IIIIII)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.layoutPreviewItem(IIIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -267457,7 +267633,7 @@
     },
     {
       "symbol": "L:dm.a(IIIIII)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(IIIIII)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.layoutPreviewItem(IIIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -267468,7 +267644,7 @@
     },
     {
       "symbol": "L:dm.a(IIIIII)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(IIIIII)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.layoutPreviewItem(IIIIII)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -267666,7 +267842,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -267677,7 +267853,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -267688,7 +267864,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#10",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#10",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#10",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -267699,7 +267875,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#11",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#11",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -267710,7 +267886,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -267721,7 +267897,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -267732,7 +267908,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#4",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -267743,7 +267919,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#5",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#5",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#5",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -267754,7 +267930,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#6",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#6",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#6",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -267765,7 +267941,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#7",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#7",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#7",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -267776,7 +267952,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#8",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#8",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#8",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -267787,7 +267963,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;I)Ljava/lang/String;#9",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#9",
+      "renamedSymbol": "L:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -267798,7 +267974,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#0",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -267809,7 +267985,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -267820,7 +267996,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -267831,7 +268007,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -267842,7 +268018,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#12",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#12",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -267853,7 +268029,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#13",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#13",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -267864,7 +268040,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#14",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#14",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -267875,7 +268051,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#15",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#15",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -267886,7 +268062,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#16",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#16",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#16",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -267897,7 +268073,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#17",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#17",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#17",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -267908,7 +268084,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#18",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#18",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#18",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -267919,7 +268095,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#19",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#19",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#19",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -267930,7 +268106,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#2",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -267941,7 +268117,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#20",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#20",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#20",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -267952,7 +268128,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#21",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#21",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -267963,7 +268139,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#3",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -267974,7 +268150,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#4",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -267985,7 +268161,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#5",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -267996,7 +268172,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#6",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -268007,7 +268183,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#7",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -268018,7 +268194,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -268029,7 +268205,7 @@
     },
     {
       "symbol": "L:dm.a(ILjava/lang/String;Lft;IZLft;)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#9",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -268051,7 +268227,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -268062,7 +268238,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#1",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -268073,7 +268249,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -268084,7 +268260,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -268095,7 +268271,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#12",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#12",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -268106,7 +268282,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#13",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#13",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -268117,7 +268293,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#2",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -268128,7 +268304,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#3",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -268139,7 +268315,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#4",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -268150,7 +268326,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#5",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -268161,7 +268337,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -268172,7 +268348,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#7",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -268183,7 +268359,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -268194,7 +268370,7 @@
     },
     {
       "symbol": "L:dm.a(IZLft;ILft;)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -268205,7 +268381,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -268216,7 +268392,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#1",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -268227,7 +268403,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -268238,7 +268414,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -268249,7 +268425,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#12",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#12",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -268260,7 +268436,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#13",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#13",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -268271,7 +268447,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#14",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#14",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -268282,7 +268458,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#15",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#15",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -268293,7 +268469,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#16",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#16",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -268304,7 +268480,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#17",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#17",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -268315,7 +268491,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#18",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#18",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -268326,7 +268502,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#19",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#19",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -268337,7 +268513,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#2",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -268348,7 +268524,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#20",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#20",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#20",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -268359,7 +268535,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#21",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#21",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -268370,7 +268546,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#3",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -268381,7 +268557,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#4",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -268392,7 +268568,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#5",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -268403,7 +268579,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#6",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -268414,7 +268590,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#7",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -268425,7 +268601,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -268436,7 +268612,7 @@
     },
     {
       "symbol": "L:dm.a(Lft;Ljava/lang/String;ZLft;I)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -268579,7 +268755,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -268590,7 +268766,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -268601,7 +268777,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -268612,7 +268788,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -268623,7 +268799,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#12",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#12",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -268634,7 +268810,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#13",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#13",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -268645,7 +268821,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#14",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#14",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -268656,7 +268832,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#15",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#15",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -268667,7 +268843,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#16",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#16",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#16",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -268678,7 +268854,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#17",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#17",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#17",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -268689,7 +268865,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#18",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#18",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -268700,7 +268876,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -268711,7 +268887,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -268722,7 +268898,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -268733,7 +268909,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#5",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -268744,7 +268920,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#6",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -268755,7 +268931,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -268766,7 +268942,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#8",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -268777,7 +268953,7 @@
     },
     {
       "symbol": "L:dm.a(ZLft;Lft;ILjava/lang/String;)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -268821,7 +268997,7 @@
     },
     {
       "symbol": "L:dm.b(I)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.b(I)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawPanelTitle(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -268832,7 +269008,7 @@
     },
     {
       "symbol": "L:dm.b(I)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.b(I)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawPanelTitle(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -268843,7 +269019,7 @@
     },
     {
       "symbol": "L:dm.b(I)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.b(I)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawPanelTitle(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -268854,7 +269030,7 @@
     },
     {
       "symbol": "L:dm.b(Z)I#0",
-      "renamedSymbol": "L:MatchSetupPanel.b(Z)I#0",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewRowContentWidth(Z)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -268876,7 +269052,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -268887,7 +269063,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -268898,7 +269074,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#10",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -268909,7 +269085,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -268920,7 +269096,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -268931,7 +269107,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -268942,7 +269118,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -268953,7 +269129,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#5",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -268964,7 +269140,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#6",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -268975,7 +269151,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#7",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -268986,7 +269162,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#8",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -268997,7 +269173,7 @@
     },
     {
       "symbol": "L:dm.c(B)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.c(B)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.updateCombatSandboxInput(B)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -269008,7 +269184,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269019,7 +269195,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#1",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -269030,7 +269206,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -269041,7 +269217,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#2",
       "originalName": "stackIn_60_0",
       "renamedName": "stackIn_60_0",
       "declaration": {
@@ -269052,7 +269228,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269063,7 +269239,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269074,7 +269250,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269085,7 +269261,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -269096,7 +269272,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -269107,7 +269283,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -269118,7 +269294,7 @@
     },
     {
       "symbol": "L:dm.c(I)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.c(I)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.drawItems(I)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -269129,7 +269305,7 @@
     },
     {
       "symbol": "L:dm.c(Z)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.c(Z)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.layoutStartButton(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269184,7 +269360,7 @@
     },
     {
       "symbol": "L:dm.e(I)I#0",
-      "renamedSymbol": "L:MatchSetupPanel.e(I)I#0",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewStripWidth(I)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269195,7 +269371,7 @@
     },
     {
       "symbol": "L:dm.e(I)I#1",
-      "renamedSymbol": "L:MatchSetupPanel.e(I)I#1",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewStripWidth(I)I#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -269206,7 +269382,7 @@
     },
     {
       "symbol": "L:dm.e(I)I#2",
-      "renamedSymbol": "L:MatchSetupPanel.e(I)I#2",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewStripWidth(I)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269217,7 +269393,7 @@
     },
     {
       "symbol": "L:dm.e(I)I#3",
-      "renamedSymbol": "L:MatchSetupPanel.e(I)I#3",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewStripWidth(I)I#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269228,7 +269404,7 @@
     },
     {
       "symbol": "L:dm.e(I)I#4",
-      "renamedSymbol": "L:MatchSetupPanel.e(I)I#4",
+      "renamedSymbol": "L:MatchSetupPanel.getPreviewStripWidth(I)I#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269239,7 +269415,7 @@
     },
     {
       "symbol": "L:dm.e(Z)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.e(Z)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawOuterFrame(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269250,7 +269426,7 @@
     },
     {
       "symbol": "L:dm.e(Z)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.e(Z)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawOuterFrame(Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269261,7 +269437,7 @@
     },
     {
       "symbol": "L:dm.e(Z)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.e(Z)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawOuterFrame(Z)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269272,7 +269448,7 @@
     },
     {
       "symbol": "L:dm.e(Z)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.e(Z)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawOuterFrame(Z)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269283,7 +269459,7 @@
     },
     {
       "symbol": "L:dm.f(B)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.f(B)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRowsFrame(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269294,7 +269470,7 @@
     },
     {
       "symbol": "L:dm.f(B)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.f(B)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRowsFrame(B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269305,7 +269481,7 @@
     },
     {
       "symbol": "L:dm.f(B)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.f(B)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRowsFrame(B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269316,7 +269492,7 @@
     },
     {
       "symbol": "L:dm.f(B)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.f(B)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawOptionRowsFrame(B)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269327,7 +269503,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -269338,7 +269514,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269349,7 +269525,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -269360,7 +269536,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269371,7 +269547,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269382,7 +269558,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269393,7 +269569,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -269404,7 +269580,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#6",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -269415,7 +269591,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#7",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -269426,7 +269602,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#8",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -269437,7 +269613,7 @@
     },
     {
       "symbol": "L:dm.f(I)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.f(I)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.layoutTopRows(I)V#9",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -269448,7 +269624,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -269459,7 +269635,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269470,7 +269646,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#10",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#10",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -269481,7 +269657,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#11",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#11",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -269492,7 +269668,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#12",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#12",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -269503,7 +269679,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#13",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#13",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -269514,7 +269690,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#14",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#14",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#14",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -269525,7 +269701,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#15",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#15",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#15",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -269536,7 +269712,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#16",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#16",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#16",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -269547,7 +269723,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#17",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#17",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#17",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -269558,7 +269734,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#18",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#18",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#18",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -269569,7 +269745,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#19",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#19",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#19",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -269580,7 +269756,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269591,7 +269767,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#20",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#20",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#20",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -269602,7 +269778,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#21",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#21",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#21",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -269613,7 +269789,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#22",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#22",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#22",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -269624,7 +269800,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#23",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#23",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#23",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -269635,7 +269811,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269646,7 +269822,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269657,7 +269833,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#5",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#5",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -269668,7 +269844,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#6",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#6",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -269679,7 +269855,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#7",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#7",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -269690,7 +269866,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#8",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#8",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -269701,7 +269877,7 @@
     },
     {
       "symbol": "L:dm.g(B)V#9",
-      "renamedSymbol": "L:MatchSetupPanel.g(B)V#9",
+      "renamedSymbol": "L:MatchSetupPanel.layoutOptionRows(B)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -269767,7 +269943,7 @@
     },
     {
       "symbol": "L:dm.k(I)V#0",
-      "renamedSymbol": "L:MatchSetupPanel.k(I)V#0",
+      "renamedSymbol": "L:MatchSetupPanel.drawTopRowsFrame(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -269778,7 +269954,7 @@
     },
     {
       "symbol": "L:dm.k(I)V#1",
-      "renamedSymbol": "L:MatchSetupPanel.k(I)V#1",
+      "renamedSymbol": "L:MatchSetupPanel.drawTopRowsFrame(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269789,7 +269965,7 @@
     },
     {
       "symbol": "L:dm.k(I)V#2",
-      "renamedSymbol": "L:MatchSetupPanel.k(I)V#2",
+      "renamedSymbol": "L:MatchSetupPanel.drawTopRowsFrame(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269800,7 +269976,7 @@
     },
     {
       "symbol": "L:dm.k(I)V#3",
-      "renamedSymbol": "L:MatchSetupPanel.k(I)V#3",
+      "renamedSymbol": "L:MatchSetupPanel.drawTopRowsFrame(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269811,7 +269987,7 @@
     },
     {
       "symbol": "L:dm.k(I)V#4",
-      "renamedSymbol": "L:MatchSetupPanel.k(I)V#4",
+      "renamedSymbol": "L:MatchSetupPanel.drawTopRowsFrame(I)V#4",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -534790,9 +534966,9 @@
     },
     {
       "symbol": "M:dm.a(IIIIII)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(IIIIII)V",
+      "renamedSymbol": "M:MatchSetupPanel.layoutPreviewItem(IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutPreviewItem",
       "declaration": {
         "file": "dm.java",
         "start": 1470,
@@ -534812,9 +534988,9 @@
     },
     {
       "symbol": "M:dm.a(ILjava/lang/String;I)Ljava/lang/String;",
-      "renamedSymbol": "M:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;",
+      "renamedSymbol": "M:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "formatOptionLabel",
       "declaration": {
         "file": "dm.java",
         "start": 22335,
@@ -534823,9 +534999,9 @@
     },
     {
       "symbol": "M:dm.a(ILjava/lang/String;Lft;IZLft;)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawOptionRow",
       "declaration": {
         "file": "dm.java",
         "start": 9375,
@@ -534845,9 +535021,9 @@
     },
     {
       "symbol": "M:dm.a(IZIIIZ)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(IZIIIZ)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawTileOwnershipEdges",
       "declaration": {
         "file": "dm.java",
         "start": 7497,
@@ -534856,9 +535032,9 @@
     },
     {
       "symbol": "M:dm.a(IZLft;ILft;)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawPreviewItem",
       "declaration": {
         "file": "dm.java",
         "start": 2469,
@@ -534867,9 +535043,9 @@
     },
     {
       "symbol": "M:dm.a(Lft;Ljava/lang/String;ZLft;I)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawStartButton",
       "declaration": {
         "file": "dm.java",
         "start": 28383,
@@ -534889,9 +535065,9 @@
     },
     {
       "symbol": "M:dm.a(Z)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(Z)V",
+      "renamedSymbol": "M:MatchSetupPanel.layoutPanel(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutPanel",
       "declaration": {
         "file": "dm.java",
         "start": 8182,
@@ -534911,9 +535087,9 @@
     },
     {
       "symbol": "M:dm.a(ZLft;Lft;ILjava/lang/String;)V",
-      "renamedSymbol": "M:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawGradientFramedButton",
       "declaration": {
         "file": "dm.java",
         "start": 33439,
@@ -534933,9 +535109,9 @@
     },
     {
       "symbol": "M:dm.b(I)V",
-      "renamedSymbol": "M:MatchSetupPanel.b(I)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawPanelTitle(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawPanelTitle",
       "declaration": {
         "file": "dm.java",
         "start": 45534,
@@ -534955,9 +535131,9 @@
     },
     {
       "symbol": "M:dm.b(Z)I",
-      "renamedSymbol": "M:MatchSetupPanel.b(Z)I",
+      "renamedSymbol": "M:MatchSetupPanel.getPreviewRowContentWidth(Z)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getPreviewRowContentWidth",
       "declaration": {
         "file": "dm.java",
         "start": 26288,
@@ -534977,9 +535153,9 @@
     },
     {
       "symbol": "M:dm.c(B)V",
-      "renamedSymbol": "M:MatchSetupPanel.c(B)V",
+      "renamedSymbol": "M:MatchSetupPanel.updateCombatSandboxInput(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateCombatSandboxInput",
       "declaration": {
         "file": "dm.java",
         "start": 31459,
@@ -534988,9 +535164,9 @@
     },
     {
       "symbol": "M:dm.c(I)V",
-      "renamedSymbol": "M:MatchSetupPanel.c(I)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawItems(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawItems",
       "declaration": {
         "file": "dm.java",
         "start": 17689,
@@ -534999,9 +535175,9 @@
     },
     {
       "symbol": "M:dm.c(Z)V",
-      "renamedSymbol": "M:MatchSetupPanel.c(Z)V",
+      "renamedSymbol": "M:MatchSetupPanel.layoutStartButton(Z)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "layoutStartButton",
       "declaration": {
         "file": "dm.java",
         "start": 43366,
@@ -535010,9 +535186,9 @@
     },
     {
       "symbol": "M:dm.d(B)V",
-      "renamedSymbol": "M:MatchSetupPanel.d(B)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawPanel(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "drawPanel",
       "declaration": {
         "file": "dm.java",
         "start": 2234,
@@ -535021,9 +535197,9 @@
     },
     {
       "symbol": "M:dm.d(I)V",
-      "renamedSymbol": "M:MatchSetupPanel.d(I)V",
+      "renamedSymbol": "M:MatchSetupPanel.initializePanelStyle(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "initializePanelStyle",
       "declaration": {
         "file": "dm.java",
         "start": 6697,
@@ -535032,9 +535208,9 @@
     },
     {
       "symbol": "M:dm.d(Z)I",
-      "renamedSymbol": "M:MatchSetupPanel.d(Z)I",
+      "renamedSymbol": "M:MatchSetupPanel.getTitleBaselineOffset(Z)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getTitleBaselineOffset",
       "declaration": {
         "file": "dm.java",
         "start": 1238,
@@ -535054,9 +535230,9 @@
     },
     {
       "symbol": "M:dm.e(I)I",
-      "renamedSymbol": "M:MatchSetupPanel.e(I)I",
+      "renamedSymbol": "M:MatchSetupPanel.getPreviewStripWidth(I)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getPreviewStripWidth",
       "declaration": {
         "file": "dm.java",
         "start": 47573,
@@ -535065,9 +535241,9 @@
     },
     {
       "symbol": "M:dm.e(Z)V",
-      "renamedSymbol": "M:MatchSetupPanel.e(Z)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawOuterFrame(Z)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawOuterFrame",
       "declaration": {
         "file": "dm.java",
         "start": 5188,
@@ -535076,9 +535252,9 @@
     },
     {
       "symbol": "M:dm.f(B)V",
-      "renamedSymbol": "M:MatchSetupPanel.f(B)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawOptionRowsFrame(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawOptionRowsFrame",
       "declaration": {
         "file": "dm.java",
         "start": 16947,
@@ -535087,9 +535263,9 @@
     },
     {
       "symbol": "M:dm.f(I)V",
-      "renamedSymbol": "M:MatchSetupPanel.f(I)V",
+      "renamedSymbol": "M:MatchSetupPanel.layoutTopRows(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "layoutTopRows",
       "declaration": {
         "file": "dm.java",
         "start": 24751,
@@ -535098,9 +535274,9 @@
     },
     {
       "symbol": "M:dm.g(B)V",
-      "renamedSymbol": "M:MatchSetupPanel.g(B)V",
+      "renamedSymbol": "M:MatchSetupPanel.layoutOptionRows(B)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "layoutOptionRows",
       "declaration": {
         "file": "dm.java",
         "start": 14072,
@@ -535164,9 +535340,9 @@
     },
     {
       "symbol": "M:dm.k(I)V",
-      "renamedSymbol": "M:MatchSetupPanel.k(I)V",
+      "renamedSymbol": "M:MatchSetupPanel.drawTopRowsFrame(I)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "drawTopRowsFrame",
       "declaration": {
         "file": "dm.java",
         "start": 5914,
@@ -598491,7 +598667,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598502,7 +598678,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598513,7 +598689,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598524,7 +598700,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -598535,7 +598711,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -598546,7 +598722,7 @@
     },
     {
       "symbol": "P:dm.a(IIIIII)V#5",
-      "renamedSymbol": "P:MatchSetupPanel.a(IIIIII)V#5",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPreviewItem(IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -598689,7 +598865,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598700,7 +598876,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "P:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598711,7 +598887,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "P:MatchSetupPanel.formatOptionLabel(ILjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598722,7 +598898,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598733,7 +598909,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598744,7 +598920,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598755,7 +598931,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -598766,7 +598942,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -598777,7 +598953,7 @@
     },
     {
       "symbol": "P:dm.a(ILjava/lang/String;Lft;IZLft;)V#5",
-      "renamedSymbol": "P:MatchSetupPanel.a(ILjava/lang/String;LIntPair;IZLIntPair;)V#5",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRow(ILjava/lang/String;LIntPair;IZLIntPair;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -598810,7 +598986,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598821,7 +598997,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598832,7 +599008,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598843,7 +599019,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -598854,7 +599030,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -598865,7 +599041,7 @@
     },
     {
       "symbol": "P:dm.a(IZIIIZ)V#5",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZIIIZ)V#5",
+      "renamedSymbol": "P:MatchSetupPanel.drawTileOwnershipEdges(IZIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -598876,7 +599052,7 @@
     },
     {
       "symbol": "P:dm.a(IZLft;ILft;)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598887,7 +599063,7 @@
     },
     {
       "symbol": "P:dm.a(IZLft;ILft;)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598898,7 +599074,7 @@
     },
     {
       "symbol": "P:dm.a(IZLft;ILft;)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598909,7 +599085,7 @@
     },
     {
       "symbol": "P:dm.a(IZLft;ILft;)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -598920,7 +599096,7 @@
     },
     {
       "symbol": "P:dm.a(IZLft;ILft;)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(IZLIntPair;ILIntPair;)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.drawPreviewItem(IZLIntPair;ILIntPair;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -598931,7 +599107,7 @@
     },
     {
       "symbol": "P:dm.a(Lft;Ljava/lang/String;ZLft;I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -598942,7 +599118,7 @@
     },
     {
       "symbol": "P:dm.a(Lft;Ljava/lang/String;ZLft;I)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -598953,7 +599129,7 @@
     },
     {
       "symbol": "P:dm.a(Lft;Ljava/lang/String;ZLft;I)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598964,7 +599140,7 @@
     },
     {
       "symbol": "P:dm.a(Lft;Ljava/lang/String;ZLft;I)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -598975,7 +599151,7 @@
     },
     {
       "symbol": "P:dm.a(Lft;Ljava/lang/String;ZLft;I)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(LIntPair;Ljava/lang/String;ZLIntPair;I)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.drawStartButton(LIntPair;Ljava/lang/String;ZLIntPair;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -599008,7 +599184,7 @@
     },
     {
       "symbol": "P:dm.a(Z)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(Z)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.layoutPanel(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599041,7 +599217,7 @@
     },
     {
       "symbol": "P:dm.a(ZLft;Lft;ILjava/lang/String;)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599052,7 +599228,7 @@
     },
     {
       "symbol": "P:dm.a(ZLft;Lft;ILjava/lang/String;)V#1",
-      "renamedSymbol": "P:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#1",
+      "renamedSymbol": "P:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -599063,7 +599239,7 @@
     },
     {
       "symbol": "P:dm.a(ZLft;Lft;ILjava/lang/String;)V#2",
-      "renamedSymbol": "P:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#2",
+      "renamedSymbol": "P:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -599074,7 +599250,7 @@
     },
     {
       "symbol": "P:dm.a(ZLft;Lft;ILjava/lang/String;)V#3",
-      "renamedSymbol": "P:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#3",
+      "renamedSymbol": "P:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -599085,7 +599261,7 @@
     },
     {
       "symbol": "P:dm.a(ZLft;Lft;ILjava/lang/String;)V#4",
-      "renamedSymbol": "P:MatchSetupPanel.a(ZLIntPair;LIntPair;ILjava/lang/String;)V#4",
+      "renamedSymbol": "P:MatchSetupPanel.drawGradientFramedButton(ZLIntPair;LIntPair;ILjava/lang/String;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -599107,7 +599283,7 @@
     },
     {
       "symbol": "P:dm.b(I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.b(I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawPanelTitle(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599140,7 +599316,7 @@
     },
     {
       "symbol": "P:dm.b(Z)I#0",
-      "renamedSymbol": "P:MatchSetupPanel.b(Z)I#0",
+      "renamedSymbol": "P:MatchSetupPanel.getPreviewRowContentWidth(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599173,7 +599349,7 @@
     },
     {
       "symbol": "P:dm.c(B)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.c(B)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.updateCombatSandboxInput(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599184,7 +599360,7 @@
     },
     {
       "symbol": "P:dm.c(I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.c(I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawItems(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599195,7 +599371,7 @@
     },
     {
       "symbol": "P:dm.c(Z)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.c(Z)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.layoutStartButton(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599206,7 +599382,7 @@
     },
     {
       "symbol": "P:dm.d(B)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.d(B)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawPanel(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599217,7 +599393,7 @@
     },
     {
       "symbol": "P:dm.d(I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.d(I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.initializePanelStyle(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599228,7 +599404,7 @@
     },
     {
       "symbol": "P:dm.d(Z)I#0",
-      "renamedSymbol": "P:MatchSetupPanel.d(Z)I#0",
+      "renamedSymbol": "P:MatchSetupPanel.getTitleBaselineOffset(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599250,7 +599426,7 @@
     },
     {
       "symbol": "P:dm.e(I)I#0",
-      "renamedSymbol": "P:MatchSetupPanel.e(I)I#0",
+      "renamedSymbol": "P:MatchSetupPanel.getPreviewStripWidth(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599261,7 +599437,7 @@
     },
     {
       "symbol": "P:dm.e(Z)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.e(Z)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawOuterFrame(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599272,7 +599448,7 @@
     },
     {
       "symbol": "P:dm.f(B)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.f(B)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawOptionRowsFrame(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599283,7 +599459,7 @@
     },
     {
       "symbol": "P:dm.f(I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.f(I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.layoutTopRows(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599294,7 +599470,7 @@
     },
     {
       "symbol": "P:dm.g(B)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.g(B)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.layoutOptionRows(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -599360,7 +599536,7 @@
     },
     {
       "symbol": "P:dm.k(I)V#0",
-      "renamedSymbol": "P:MatchSetupPanel.k(I)V#0",
+      "renamedSymbol": "P:MatchSetupPanel.drawTopRowsFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -712895,7 +713071,7 @@
       "original": "ArmiesOfGielinor.java",
       "renamed": "ArmiesOfGielinor.java",
       "inputSha256": "5dc18e9d91f377f97b4a752fd07b762c9ad0b241cfac5ed3e4138c3c9af9a048",
-      "outputSha256": "811f8c6c9ffafd848f06e8e6213b25af5b18b8d5bbc15d456dc9f71bdab30a5f",
+      "outputSha256": "82ab56b839cf4800e84294168668d0f3ac4f057e443391c6f89b8c14a2edaf6c",
       "edits": [
         {
           "start": 103,
@@ -717691,6 +717867,13 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MatchSetupPanel"
+        },
+        {
+          "start": 28824,
+          "end": 28825,
+          "symbol": "M:dm.c(B)V",
+          "original": "c",
+          "renamed": "updateCombatSandboxInput"
         },
         {
           "start": 29001,
@@ -831395,7 +831578,7 @@
       "original": "ci.java",
       "renamed": "TutorialController.java",
       "inputSha256": "80ac322e88dcfc245e81cb8a0641dbae8905c22f35e0b301188e432ab1eae40e",
-      "outputSha256": "f7ee60982f78f7b7e43322a35d1d065591edf968d7a8be25557b82b912b9adb9",
+      "outputSha256": "32bb3243ead725a2fdf4b739dd0005449a32c36ec1afe61f7b0ed41fa7860b47",
       "edits": [
         {
           "start": 50,
@@ -862942,6 +863125,13 @@
           "symbol": "F:kr.field_E:Ldm;",
           "original": "field_E",
           "renamed": "matchSetupPanel"
+        },
+        {
+          "start": 304569,
+          "end": 304570,
+          "symbol": "M:dm.d(B)V",
+          "original": "d",
+          "renamed": "drawPanel"
         },
         {
           "start": 304841,
@@ -917704,7 +917894,7 @@
       "original": "dm.java",
       "renamed": "MatchSetupPanel.java",
       "inputSha256": "c5c13313a32d8e129fd60d1becac70be05e98fb7186aeb7cc165bd6420be4087",
-      "outputSha256": "3e4768f98345e5b60ec3312ba487e2dc0c438a9de15650a8c4daaa0b6e393a2c",
+      "outputSha256": "df81bc30c2c13e1c6e4c9707bcd68b3347a0dfa5c088d40e2425f44524790256",
       "edits": [
         {
           "start": 50,
@@ -917910,6 +918100,13 @@
           "renamed": "option33Enabled"
         },
         {
+          "start": 1238,
+          "end": 1239,
+          "symbol": "M:dm.d(Z)I",
+          "original": "d",
+          "renamed": "getTitleBaselineOffset"
+        },
+        {
           "start": 1296,
           "end": 1303,
           "symbol": "F:dm.field_i:[Lft;",
@@ -917980,6 +918177,20 @@
           "renamed": "maxAscent"
         },
         {
+          "start": 1470,
+          "end": 1471,
+          "symbol": "M:dm.a(IIIIII)V",
+          "original": "a",
+          "renamed": "layoutPreviewItem"
+        },
+        {
+          "start": 1570,
+          "end": 1571,
+          "symbol": "M:dm.b(Z)I",
+          "original": "b",
+          "renamed": "getPreviewRowContentWidth"
+        },
+        {
           "start": 1602,
           "end": 1609,
           "symbol": "F:dm.field_q:Lft;",
@@ -917992,6 +918203,13 @@
           "symbol": "F:ft.field_k:I",
           "original": "field_k",
           "renamed": "first"
+        },
+        {
+          "start": 1735,
+          "end": 1736,
+          "symbol": "M:dm.e(I)I",
+          "original": "e",
+          "renamed": "getPreviewStripWidth"
         },
         {
           "start": 2008,
@@ -918034,6 +918252,55 @@
           "symbol": "C:ft",
           "original": "ft",
           "renamed": "IntPair"
+        },
+        {
+          "start": 2234,
+          "end": 2235,
+          "symbol": "M:dm.d(B)V",
+          "original": "d",
+          "renamed": "drawPanel"
+        },
+        {
+          "start": 2321,
+          "end": 2322,
+          "symbol": "M:dm.e(Z)V",
+          "original": "e",
+          "renamed": "drawOuterFrame"
+        },
+        {
+          "start": 2344,
+          "end": 2345,
+          "symbol": "M:dm.b(I)V",
+          "original": "b",
+          "renamed": "drawPanelTitle"
+        },
+        {
+          "start": 2376,
+          "end": 2377,
+          "symbol": "M:dm.k(I)V",
+          "original": "k",
+          "renamed": "drawTopRowsFrame"
+        },
+        {
+          "start": 2406,
+          "end": 2407,
+          "symbol": "M:dm.f(B)V",
+          "original": "f",
+          "renamed": "drawOptionRowsFrame"
+        },
+        {
+          "start": 2433,
+          "end": 2434,
+          "symbol": "M:dm.c(I)V",
+          "original": "c",
+          "renamed": "drawItems"
+        },
+        {
+          "start": 2469,
+          "end": 2470,
+          "symbol": "M:dm.a(IZLft;ILft;)V",
+          "original": "a",
+          "renamed": "drawPreviewItem"
         },
         {
           "start": 2499,
@@ -918211,6 +918478,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 5188,
+          "end": 5189,
+          "symbol": "M:dm.e(Z)V",
+          "original": "e",
+          "renamed": "drawOuterFrame"
+        },
+        {
           "start": 5488,
           "end": 5495,
           "symbol": "F:ft.field_k:I",
@@ -918281,6 +918555,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 5914,
+          "end": 5915,
+          "symbol": "M:dm.k(I)V",
+          "original": "k",
+          "renamed": "drawTopRowsFrame"
+        },
+        {
           "start": 6183,
           "end": 6190,
           "symbol": "F:ft.field_k:I",
@@ -918349,6 +918630,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 6602,
+          "end": 6603,
+          "symbol": "M:dm.d(Z)I",
+          "original": "d",
+          "renamed": "getTitleBaselineOffset"
+        },
+        {
+          "start": 6697,
+          "end": 6698,
+          "symbol": "M:dm.d(I)V",
+          "original": "d",
+          "renamed": "initializePanelStyle"
         },
         {
           "start": 6740,
@@ -918463,6 +918758,13 @@
           "renamed": "first"
         },
         {
+          "start": 7497,
+          "end": 7498,
+          "symbol": "M:dm.a(IZIIIZ)V",
+          "original": "a",
+          "renamed": "drawTileOwnershipEdges"
+        },
+        {
           "start": 7650,
           "end": 7652,
           "symbol": "C:tb",
@@ -918498,11 +918800,46 @@
           "renamed": "MatchSetupPanel"
         },
         {
+          "start": 8127,
+          "end": 8128,
+          "symbol": "M:dm.c(B)V",
+          "original": "c",
+          "renamed": "updateCombatSandboxInput"
+        },
+        {
+          "start": 8182,
+          "end": 8183,
+          "symbol": "M:dm.a(Z)V",
+          "original": "a",
+          "renamed": "layoutPanel"
+        },
+        {
           "start": 8229,
           "end": 8231,
           "symbol": "C:ft",
           "original": "ft",
           "renamed": "IntPair"
+        },
+        {
+          "start": 8255,
+          "end": 8256,
+          "symbol": "M:dm.f(I)V",
+          "original": "f",
+          "renamed": "layoutTopRows"
+        },
+        {
+          "start": 8274,
+          "end": 8275,
+          "symbol": "M:dm.g(B)V",
+          "original": "g",
+          "renamed": "layoutOptionRows"
+        },
+        {
+          "start": 8302,
+          "end": 8303,
+          "symbol": "M:dm.c(Z)V",
+          "original": "c",
+          "renamed": "layoutStartButton"
         },
         {
           "start": 8335,
@@ -918818,6 +919155,13 @@
           "symbol": "P:dm.a(IBIIZIILjava/lang/String;)V#7",
           "original": "param7",
           "renamed": "startCaption"
+        },
+        {
+          "start": 9375,
+          "end": 9376,
+          "symbol": "M:dm.a(ILjava/lang/String;Lft;IZLft;)V",
+          "original": "a",
+          "renamed": "drawOptionRow"
         },
         {
           "start": 9404,
@@ -919317,6 +919661,13 @@
           "renamed": "IntPair"
         },
         {
+          "start": 14072,
+          "end": 14073,
+          "symbol": "M:dm.g(B)V",
+          "original": "g",
+          "renamed": "layoutOptionRows"
+        },
+        {
           "start": 14748,
           "end": 14755,
           "symbol": "F:ft.field_n:I",
@@ -919427,6 +919778,13 @@
           "symbol": "F:ft.field_n:I",
           "original": "field_n",
           "renamed": "second"
+        },
+        {
+          "start": 15552,
+          "end": 15553,
+          "symbol": "M:dm.b(Z)I",
+          "original": "b",
+          "renamed": "getPreviewRowContentWidth"
         },
         {
           "start": 15624,
@@ -919555,11 +919913,25 @@
           "renamed": "IntPair"
         },
         {
+          "start": 16675,
+          "end": 16676,
+          "symbol": "M:dm.a(IIIIII)V",
+          "original": "a",
+          "renamed": "layoutPreviewItem"
+        },
+        {
           "start": 16846,
           "end": 16853,
           "symbol": "F:dm.field_l:I",
           "original": "field_l",
           "renamed": "previewRowSpacing"
+        },
+        {
+          "start": 16947,
+          "end": 16948,
+          "symbol": "M:dm.f(B)V",
+          "original": "f",
+          "renamed": "drawOptionRowsFrame"
         },
         {
           "start": 17262,
@@ -919630,6 +920002,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "TutorialController"
+        },
+        {
+          "start": 17689,
+          "end": 17690,
+          "symbol": "M:dm.c(I)V",
+          "original": "c",
+          "renamed": "drawItems"
         },
         {
           "start": 17813,
@@ -919808,6 +920187,13 @@
           "kind": "label"
         },
         {
+          "start": 19290,
+          "end": 19291,
+          "symbol": "M:dm.a(ILjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatOptionLabel"
+        },
+        {
           "start": 19677,
           "end": 19679,
           "symbol": "B:dm.c(I)V#0",
@@ -919845,12 +920231,47 @@
           "renamed": "selectedIndex"
         },
         {
+          "start": 20451,
+          "end": 20452,
+          "symbol": "M:dm.a(ILjava/lang/String;Lft;IZLft;)V",
+          "original": "a",
+          "renamed": "drawOptionRow"
+        },
+        {
+          "start": 20601,
+          "end": 20602,
+          "symbol": "M:dm.a(IZLft;ILft;)V",
+          "original": "a",
+          "renamed": "drawPreviewItem"
+        },
+        {
           "start": 20675,
           "end": 20677,
           "symbol": "B:dm.c(I)V#0",
           "original": "L7",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 20746,
+          "end": 20747,
+          "symbol": "M:dm.a(ILjava/lang/String;Lft;IZLft;)V",
+          "original": "a",
+          "renamed": "drawOptionRow"
+        },
+        {
+          "start": 20859,
+          "end": 20860,
+          "symbol": "M:dm.a(ZLft;Lft;ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "drawGradientFramedButton"
+        },
+        {
+          "start": 20993,
+          "end": 20994,
+          "symbol": "M:dm.a(Lft;Ljava/lang/String;ZLft;I)V",
+          "original": "a",
+          "renamed": "drawStartButton"
         },
         {
           "start": 21360,
@@ -920049,6 +920470,13 @@
           "renamed": "IntPair"
         },
         {
+          "start": 22335,
+          "end": 22336,
+          "symbol": "M:dm.a(ILjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatOptionLabel"
+        },
+        {
           "start": 22839,
           "end": 22846,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -920138,6 +920566,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 24751,
+          "end": 24752,
+          "symbol": "M:dm.f(I)V",
+          "original": "f",
+          "renamed": "layoutTopRows"
         },
         {
           "start": 25054,
@@ -920371,6 +920806,20 @@
           "renamed": "previewRowSpacing"
         },
         {
+          "start": 26288,
+          "end": 26289,
+          "symbol": "M:dm.b(Z)I",
+          "original": "b",
+          "renamed": "getPreviewRowContentWidth"
+        },
+        {
+          "start": 26430,
+          "end": 26431,
+          "symbol": "M:dm.e(I)I",
+          "original": "e",
+          "renamed": "getPreviewStripWidth"
+        },
+        {
           "start": 26489,
           "end": 26490,
           "symbol": "M:dm.a(Ljava/lang/String;B)V",
@@ -920572,6 +921021,13 @@
           "symbol": "F:ft.field_n:I",
           "original": "field_n",
           "renamed": "second"
+        },
+        {
+          "start": 28383,
+          "end": 28384,
+          "symbol": "M:dm.a(Lft;Ljava/lang/String;ZLft;I)V",
+          "original": "a",
+          "renamed": "drawStartButton"
         },
         {
           "start": 28385,
@@ -920782,6 +921238,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 31459,
+          "end": 31460,
+          "symbol": "M:dm.c(B)V",
+          "original": "c",
+          "renamed": "updateCombatSandboxInput"
         },
         {
           "start": 31853,
@@ -921076,6 +921539,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 33439,
+          "end": 33440,
+          "symbol": "M:dm.a(ZLft;Lft;ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "drawGradientFramedButton"
         },
         {
           "start": 33457,
@@ -922205,6 +922675,13 @@
           "renamed": "itemIndex"
         },
         {
+          "start": 43366,
+          "end": 43367,
+          "symbol": "M:dm.c(Z)V",
+          "original": "c",
+          "renamed": "layoutStartButton"
+        },
+        {
           "start": 43411,
           "end": 43418,
           "symbol": "F:dm.field_j:[I",
@@ -922492,6 +922969,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 45329,
+          "end": 45330,
+          "symbol": "M:dm.d(I)V",
+          "original": "d",
+          "renamed": "initializePanelStyle"
+        },
+        {
           "start": 45331,
           "end": 45337,
           "symbol": "P:dm.i(I)V#0",
@@ -922520,11 +923004,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 45441,
+          "end": 45442,
+          "symbol": "M:dm.a(Z)V",
+          "original": "a",
+          "renamed": "layoutPanel"
+        },
+        {
           "start": 45463,
           "end": 45464,
           "symbol": "M:dm.j(I)V",
           "original": "j",
           "renamed": "resetOptions"
+        },
+        {
+          "start": 45534,
+          "end": 45535,
+          "symbol": "M:dm.b(I)V",
+          "original": "b",
+          "renamed": "drawPanelTitle"
         },
         {
           "start": 45628,
@@ -922553,6 +923051,13 @@
           "symbol": "F:ft.field_n:I",
           "original": "field_n",
           "renamed": "second"
+        },
+        {
+          "start": 45895,
+          "end": 45896,
+          "symbol": "M:dm.d(Z)I",
+          "original": "d",
+          "renamed": "getTitleBaselineOffset"
         },
         {
           "start": 45954,
@@ -922735,6 +923240,13 @@
           "symbol": "M:dm.a(B)V",
           "original": "a",
           "renamed": "buildItemIndex"
+        },
+        {
+          "start": 47573,
+          "end": 47574,
+          "symbol": "M:dm.e(I)I",
+          "original": "e",
+          "renamed": "getPreviewStripWidth"
         },
         {
           "start": 47977,
@@ -968174,7 +968686,7 @@
       "original": "em.java",
       "renamed": "TickCounter.java",
       "inputSha256": "1ebc18775d6d41a5a32ccbe2a3f5cd8742312df00253103260d392054f13cb9d",
-      "outputSha256": "1e7eb4bc56cfeac124e6b2b91bc39eef2b1b7c85872661b1562ed72ff4fcfeaf",
+      "outputSha256": "3ce12e321c6f1c32111dbc759abb80bf80c70c49dc0b91d621c6b2093419a1c2",
       "edits": [
         {
           "start": 50,
@@ -1008915,6 +1009427,13 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MatchSetupPanel"
+        },
+        {
+          "start": 241046,
+          "end": 241047,
+          "symbol": "M:dm.a(IZIIIZ)V",
+          "original": "a",
+          "renamed": "drawTileOwnershipEdges"
         },
         {
           "start": 241128,
@@ -1059148,7 +1059667,7 @@
       "original": "fs.java",
       "renamed": "PrivateTextRecipientSupport.java",
       "inputSha256": "ed6748ddf5e008e01c2e80eecc91f2db18ba93b16ebdec1d5511872967de6030",
-      "outputSha256": "6263615260521434da9c4d0593445fcff2f43ec2adf934c44fe930b41c2560f7",
+      "outputSha256": "adebec0efccb19af9cfad91ab2ffd499a9a3e79e64da8206b6782f7912fb828b",
       "edits": [
         {
           "start": 50,
@@ -1059450,6 +1059969,13 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MatchSetupPanel"
+        },
+        {
+          "start": 2760,
+          "end": 2761,
+          "symbol": "M:dm.a(IZIIIZ)V",
+          "original": "a",
+          "renamed": "drawTileOwnershipEdges"
         },
         {
           "start": 2856,
@@ -1901446,10 +1901972,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "63e4459f0305fb854a8e249036ea41f4cffe372d11cde625fe2a41ef59c76c90",
+    "rulesSha256": "883f1fe23d9cd663b771142d6b4a6121d0f84ad4c1154dcc357055e44489f5a6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "fbc4160f4fce5bb8f23cd0c3021cf297fe10988d76f717915e33bb2fc3cd0fd0",
+    "outputTreeSha256": "3b7a2f909f1f6eec05fbf1d8287114368602c7bfb4368438ced083976231b797",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

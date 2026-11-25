@@ -766,7 +766,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (-2 != ChatInputDispatchSupport.field_a) {
                   if (ChatInputDispatchSupport.field_a != -6) {
                     if (-7 == ChatInputDispatchSupport.field_a) {
-                      MatchSetupPanel.c((byte) 61);
+                      MatchSetupPanel.updateCombatSandboxInput((byte) 61);
                       decompiledFrameRemainder2 = (var8 != 0);
                     }
                     if ((decompiledFrameRemainder2) &&

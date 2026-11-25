@@ -5657,7 +5657,7 @@ final class TutorialController {
                             }
                             if (decompiledFrameRemainder0) {
                               if (null != MoveEvent.matchSetupPanel) {
-                                MoveEvent.matchSetupPanel.d((byte) -73);
+                                MoveEvent.matchSetupPanel.drawPanel((byte) -73);
                               }
                               return;
                             }
