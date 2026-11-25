@@ -72,7 +72,7 @@ final class TaskAi implements Ai {
                 if (var2 > this.field_i[var4]) {
                   var3.field_n.field_J = var3.field_n.field_J + this.field_i[var4];
                   var2 = var2 - this.field_i[var4];
-                  bk.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, this.field_i[var4]));
+                  ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, this.field_i[var4]));
                   if (this.field_m.field_o.field_i) {
                     var10 = 0;
                     var7 = var10;
@@ -98,7 +98,7 @@ final class TaskAi implements Ai {
                     this.field_i[var4] = this.field_i[var4] - var2;
                   }
                   var3.field_n.field_J = var3.field_n.field_J + var2;
-                  bk.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, var2));
+                  ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, var2));
                 }
                 var3 = (GarrisonTask) (this.field_l.nextForward((byte) -71));
                 continue;
@@ -108,7 +108,7 @@ final class TaskAi implements Ai {
                 if (var2 > this.field_i[var4]) {
                   var3.field_n.field_J = var3.field_n.field_J + this.field_i[var4];
                   var2 = var2 - this.field_i[var4];
-                  bk.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, this.field_i[var4]));
+                  ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, this.field_i[var4]));
                   if (this.field_m.field_o.field_i) {
                     var10Lifetime1 = 0;
                     var7Lifetime1 = var10Lifetime1;
@@ -134,7 +134,7 @@ final class TaskAi implements Ai {
                     this.field_i[var4] = this.field_i[var4] - var2;
                   }
                   var3.field_n.field_J = var3.field_n.field_J + var2;
-                  bk.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, var2));
+                  ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, var2));
                 }
               } else {
                 this.a(var4, 100, var6);
@@ -313,7 +313,7 @@ final class TaskAi implements Ai {
         if (this.field_w.field_i.isEmpty(-74)) {
           return;
         }
-        bk.field_a.clear(0);
+        ChatCompositionSupport.field_a.clear(0);
         MouseInputHandler.field_g.clear(0);
         DropTargetWidget.field_E.clear(0);
         GameSession.field_u = null;
@@ -350,9 +350,9 @@ final class TaskAi implements Ai {
               this.planTurn((byte) 56);
             }
             this.deployTannhauser((byte) -44);
-            if (this.field_m.validatePlayerOrders(MouseInputHandler.field_g, this.field_w, -6, bk.field_a, DropTargetWidget.field_E)) {
+            if (this.field_m.validatePlayerOrders(MouseInputHandler.field_g, this.field_w, -6, ChatCompositionSupport.field_a, DropTargetWidget.field_E)) {
             }
-            this.field_m.restorePendingOrders(MouseInputHandler.field_g, 0, bk.field_a, DropTargetWidget.field_E);
+            this.field_m.restorePendingOrders(MouseInputHandler.field_g, 0, ChatCompositionSupport.field_a, DropTargetWidget.field_E);
             return;
           }
           this.executeTasks(false, 0);
@@ -856,7 +856,7 @@ final class TaskAi implements Ai {
         boolean decompiledFrameRemainder0 = true;
         if (gb.field_m.field_rb != 0) {
           if (!PanelNode.field_o &&
-            0 >= StarAnnotation.field_m && (!(bs.field_b >= 2) ||
+            0 >= StarAnnotation.field_m && (!(RasterTargetSupport.field_b >= 2) ||
             !FleetTrailPoint.field_p[12])) {
             uc.field_B = true;
             decompiledFrameRemainder0 = false;
@@ -1474,12 +1474,12 @@ final class TaskAi implements Ai {
             }
             var7 = param2.nextStar(-23410);
           }
-          var6 = (PlacementOrder) (bk.field_a.startForward(0));
+          var6 = (PlacementOrder) (ChatCompositionSupport.field_a.startForward(0));
           while (var6 != null) {
             if (param2 == var6.field_u.field_R) {
               var6.unlink((byte) -79);
             }
-            var6 = (PlacementOrder) (bk.field_a.nextForward((byte) -71));
+            var6 = (PlacementOrder) (ChatCompositionSupport.field_a.nextForward((byte) -71));
           }
           var6_ref = param2.firstStar(18229);
           while (var6_ref != null) {
@@ -1521,14 +1521,14 @@ final class TaskAi implements Ai {
             return;
           }
           param1.field_J = param1.field_J + param2;
-          var4 = (PlacementOrder) (bk.field_a.startForward(0));
+          var4 = (PlacementOrder) (ChatCompositionSupport.field_a.startForward(0));
           while (true) {
             if (var4 == null) {
-              bk.field_a.addLast((byte) -113, new PlacementOrder(param1, param2));
+              ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(param1, param2));
               return;
             }
             if (var4.field_u != param1) {
-              var4 = (PlacementOrder) (bk.field_a.nextForward((byte) -71));
+              var4 = (PlacementOrder) (ChatCompositionSupport.field_a.nextForward((byte) -71));
               continue;
             }
             break;

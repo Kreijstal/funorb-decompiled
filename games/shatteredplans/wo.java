@@ -41,7 +41,7 @@ final class wo {
               ij.field_a = DialogRoot.a(param2, (byte) -89);
               return;
             }
-            ij.field_a = ck.a(param3, param0, param1 - 35);
+            ij.field_a = GameAssetSetupSupport.createStatusResult(param3, param0, param1 - 35);
             return;
           }
           stackIn_6_0 = 93;

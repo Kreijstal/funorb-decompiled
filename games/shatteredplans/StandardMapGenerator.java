@@ -503,7 +503,7 @@ class StandardMapGenerator implements MapGenerator {
               var14[var5] = var5;
             }
             for (var5Lifetime2 = 0; var4 - 1 > var5Lifetime2; var5Lifetime2++) {
-              var6_int = d.a((byte) -12, var5Lifetime2 + 1, var4 - 1, param1.field_j);
+              var6_int = ClientPacketFlushSupport.randomInclusive((byte) -12, var5Lifetime2 + 1, var4 - 1, param1.field_j);
               var7_int = var15[var6_int];
               ((int[]) (var3))[var6_int] = var15[var5Lifetime2];
               var15[var5Lifetime2] = var7_int;
@@ -796,7 +796,7 @@ class StandardMapGenerator implements MapGenerator {
                 stackIn_37_0 = (0 != param1) ? param1 : 1;
                 var12 = stackIn_37_0;
                 while (0 < var10) {
-                  var13 = var11[d.a((byte) -12, var12, -1 + param6, param3.field_j)];
+                  var13 = var11[ClientPacketFlushSupport.randomInclusive((byte) -12, var12, -1 + param6, param3.field_j)];
                   var14 = param3.field_e[var13];
                   var15 = qf.a((byte) 107, 4, param3.field_j);
                   if (qf.a((byte) 51, 2, param3.field_j) != 0) {
@@ -977,7 +977,7 @@ class StandardMapGenerator implements MapGenerator {
               }
               var7Lifetime1 = var6 - 1;
               var8 = -1 + 2 * var6;
-              var5.field_x = d.a((byte) -12, var7Lifetime1, var8, param1.field_j);
+              var5.field_x = ClientPacketFlushSupport.randomInclusive((byte) -12, var7Lifetime1, var8, param1.field_j);
             } else {
               var5.field_x = 20;
             }

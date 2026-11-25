@@ -111,14 +111,14 @@ final class PasswordValidator extends TextFieldValidator {
           if (pr.field_c.field_rb != 0) {
             DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
-          var9 = SolMapReader.a(false, param2, tg.field_a, cr.field_c);
+          var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
             ks.a(var9, 0);
           }
           if (param0 >= -99) {
             PasswordValidator.clearStatics(34);
           }
-          var8 = bk.b(-127);
+          var8 = ChatCompositionSupport.updateChatComposition(-127);
           if (var8 == null) {
             return;
           }

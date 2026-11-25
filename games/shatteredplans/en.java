@@ -47,7 +47,7 @@ final class en {
           }
           TextLayout.a(stackIn_3_0, stackIn_4_1);
           n.field_h.a(0, -42 + SocialListPanel.field_xb.field_mb, (byte) 95, SocialListPanel.field_xb.field_K, 0);
-          DefendTask.field_x.setTarget(so.field_t.field_K, cr.field_c, (byte) 107, 0, 0);
+          DefendTask.field_x.setTarget(so.field_t.field_K, UniformNineSliceFactory.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = lr.field_a;
           stackIn_6_1 = so.field_t.field_K;
           if (AccountStatusDialog.field_pb) {
@@ -55,12 +55,12 @@ final class en {
           } else {
             stackIn_7_2 = 0;
           }
-          ((AnimatedPanel) (Object) stackIn_6_0).setTarget(stackIn_6_1 - stackIn_7_2, 18, (byte) 57, cr.field_c + 2, 0);
+          ((AnimatedPanel) (Object) stackIn_6_0).setTarget(stackIn_6_1 - stackIn_7_2, 18, (byte) 57, UniformNineSliceFactory.field_c + 2, 0);
           if (param0 != 15471) {
             return;
           }
-          MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
-          ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
+          MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, UniformNineSliceFactory.field_c + 2, -40 + (so.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
+          ro.field_a.a(so.field_t.field_K, 22 + UniformNineSliceFactory.field_c, 0, 2, -128, -UniformNineSliceFactory.field_c + (so.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
           DialPainter.field_g.setTarget(SocialListPanel.field_xb.field_K, 40, (byte) 107, -40 + SocialListPanel.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);

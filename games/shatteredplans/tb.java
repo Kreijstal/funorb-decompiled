@@ -143,7 +143,7 @@ final class tb {
           SoundCache.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           SoundCache.field_c.field_G = 0;
           SoundCache.field_c.field_y = 1;
-          SocketConnector.field_d = new AnimatedPanel(0L, DelegatingCanvas.field_f, ck.field_c.toUpperCase());
+          SocketConnector.field_d = new AnimatedPanel(0L, DelegatingCanvas.field_f, GameAssetSetupSupport.field_c.toUpperCase());
           so.field_v = new AnimatedPanel(0L, ho.field_j);
           so.field_v.addChild(4, SoundCache.field_c);
           so.field_v.addChild(4, SocketConnector.field_d);

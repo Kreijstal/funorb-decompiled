@@ -39,7 +39,7 @@ final class qn {
     final static void a(ik[] param0, int param1, boolean param2) {
         try {
           NameSuggestionsPanel.resetPolygonScanlineBuckets(26987);
-          bk.a(param0, 0);
+          ChatCompositionSupport.collectPolygonScanlineEdges(param0, 0);
           if (!param2) {
             field_c = -118;
           }

@@ -133,7 +133,7 @@ final class og implements WidgetPainter {
           if (!param0.isFocused(param4 ^ 13)) {
             return;
           }
-          dd.a(-4 + param0.field_n, 1, -4 + param0.field_x, var6_int + 2, 2 + var7);
+          ChatMessageFactory.drawDottedRectangleOutline(-4 + param0.field_n, 1, -4 + param0.field_x, var6_int + 2, 2 + var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2557,7 +2557,7 @@ final class MapView extends MapViewState {
             if (null == this.field_gb) {
               this.field_gb = new Sprite(640, 480);
             }
-            bs.a(this.field_gb, 78);
+            RasterTargetSupport.pushSpriteRenderTarget(this.field_gb, 78);
           } else {
             if (this.field_gb != null) {
               this.field_gb.drawOpaque(0, 0);

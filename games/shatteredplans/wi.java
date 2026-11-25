@@ -48,7 +48,7 @@ final class wi {
         try {
           js.field_g = param5;
           js.field_e = param0;
-          cr.field_e = param4;
+          UniformNineSliceFactory.field_e = param4;
           uo.field_g = param3;
           int var6_int = -121 % ((-57 - param1) / 48);
           jp.field_Cb = param2;

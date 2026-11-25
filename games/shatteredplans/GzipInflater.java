@@ -151,7 +151,7 @@ final class GzipInflater {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
-              stackOut_42_0 = d.a(var7_ref, var6Lifetime1, (byte) -81);
+              stackOut_42_0 = ClientPacketFlushSupport.socialEntryRanksAfter(var7_ref, var6Lifetime1, (byte) -81);
               stackIn_50_0 = stackOut_42_0 ? 1 : 0;
               stackIn_43_0 = stackOut_42_0;
               decompiledFrameRemainder0 = (var9 == 0);

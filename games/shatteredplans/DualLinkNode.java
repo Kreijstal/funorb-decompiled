@@ -126,7 +126,7 @@ class DualLinkNode extends IntrusiveNode {
           dupTemp$0 = new Sprite(64, 64);
           var2 = dupTemp$0;
           vh.field_a[param0] = dupTemp$0;
-          bs.a(var2, param1 ^ 93);
+          RasterTargetSupport.pushSpriteRenderTarget(var2, param1 ^ 93);
           oi.a(param0, (byte) 66).draw(16, 16);
           SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
           OpacityWidget.popLegacyRasterState(0);

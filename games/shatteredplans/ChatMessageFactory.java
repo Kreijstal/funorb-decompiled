@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd {
+final class ChatMessageFactory {
     static String field_a;
 
-    final static ChatMessage a(boolean param0, String param1, String param2, int param3, long param4) {
+    final static ChatMessage createLoginCredentials(boolean param0, String param1, String param2, int param3, long param4) {
         RuntimeException var6 = null;
         jm stackIn_6_0 = null;
         PrivateChatMessage stackIn_8_0 = null;
@@ -59,7 +59,7 @@ final class dd {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangleOutline(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -104,7 +104,7 @@ final class dd {
           }
           var9 = stackIn_10_0;
           if (param1 != 1) {
-            dd.clearStatics(-10);
+            ChatMessageFactory.clearStatics(-10);
           }
           if (SoftwareRasterizer.field_f > var6) {
             stackIn_15_0 = var6;
@@ -172,7 +172,7 @@ final class dd {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void requestLobbyPlayerList(int param0, int param1, int param2) {
         fb var4 = null;
         CipherPacketBuffer var5 = null;
         int var3 = -27 % ((12 - param2) / 47);

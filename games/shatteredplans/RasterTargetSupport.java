@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs {
+final class RasterTargetSupport {
     static Sprite field_a;
     static int field_b;
     static String field_c;
@@ -14,16 +14,16 @@ final class bs {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void setMenuHighlightColors(int param0, int param1, int param2, byte param3) {
         wo.field_a = param2;
         if (param3 <= 22) {
-          bs.a(true, (byte) -46);
+          RasterTargetSupport.setAccountResponseFlag(true, (byte) -46);
         }
         ProductionContent.field_j = param1;
         ih.field_b = param0;
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void pushSpriteRenderTarget(Sprite param0, int param1) {
         try {
           RandomAccessCacheFile.a(-127);
           param0.bindAsRenderTarget();
@@ -35,7 +35,7 @@ final class bs {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void setAccountResponseFlag(boolean param0, byte param1) {
         if (param1 != 72) {
           field_c = (String) null;
         }

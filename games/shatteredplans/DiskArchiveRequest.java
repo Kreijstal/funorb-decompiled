@@ -79,7 +79,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           ChatPanelSetupSupport.initializeSharedChatPanel(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
           BoundsRect.field_m = HighscoreResponseSupport.loadSpriteSetByName(93, "lobby", param3, "chatfilter");
           jf.field_d[1] = SoundPlayback.field_o;
-          jf.field_d[0] = bf.field_b;
+          jf.field_d[0] = AccountStatusSupport.field_b;
           jf.field_d[2] = ue.field_d;
           BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {

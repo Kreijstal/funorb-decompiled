@@ -113,7 +113,7 @@ final class GameScreen {
                 } else {
                   stackIn_22_0 = new StringBuilder().append(hd.field_j).append(" ");
                   if (var7.field_x != 1) {
-                    stackIn_23_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var7.field_x)});
+                    stackIn_23_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var7.field_x)});
                   } else {
                     stackIn_23_1 = StatusContent.field_a;
                   }
@@ -964,7 +964,7 @@ final class GameScreen {
           if (MatchingTextValidator.field_t.field_h == 2) {
             sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
             var8 = MenuWindow.a((Sprite) null, var6, var4, var5, -1, var7);
-            bs.a(var8, 93);
+            RasterTargetSupport.pushSpriteRenderTarget(var8, 93);
             SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
             OpacityWidget.popLegacyRasterState(0);
             var8.drawAlpha(var5, var6, (var3_int << 7) / 32);
@@ -1547,15 +1547,15 @@ final class GameScreen {
           if (stackIn_40_0 != stackIn_40_1) {
             this.field_w = var9;
             var10Lifetime1 = this.field_w + this.field_D * 4;
-            var11 = bk.field_b[var10Lifetime1];
+            var11 = ChatCompositionSupport.field_b[var10Lifetime1];
             if (var11 == this.field_r) {
               this.field_jb = this.field_jb + 1;
               if (var13 != 0) {
-                this.field_r = bk.field_b[var10Lifetime1];
+                this.field_r = ChatCompositionSupport.field_b[var10Lifetime1];
                 this.field_jb = 0;
               }
             } else {
-              this.field_r = bk.field_b[var10Lifetime1];
+              this.field_r = ChatCompositionSupport.field_b[var10Lifetime1];
               this.field_jb = 0;
             }
           }
@@ -2530,7 +2530,7 @@ final class GameScreen {
             } else {
               stackIn_15_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
               if (var4.field_x != 1) {
-                stackIn_16_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var4.field_x)});
+                stackIn_16_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var4.field_x)});
               } else {
                 stackIn_16_1 = StatusContent.field_a;
               }
@@ -2805,13 +2805,13 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          de.field_j = 0;
+          StringNode.field_j = 0;
           if (this.field_N.isSelected(244874369)) {
-            de.field_j = de.field_j | 32;
+            StringNode.field_j = StringNode.field_j | 32;
           }
           var2_int = -45 / ((param0 - 14) / 38);
           if (this.field_d.isSelected(244874369)) {
-            de.field_j = de.field_j | 64;
+            StringNode.field_j = StringNode.field_j | 64;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3521,7 +3521,7 @@ final class GameScreen {
             if (DualLinkDequeSequence.field_h == this.field_d) {
               this.field_d.toggle((byte) 73);
               if (this.field_d.isSelected(244874369)) {
-                this.field_d.field_o = de.field_k;
+                this.field_d.field_o = StringNode.field_k;
                 if (var9 != 0) {
                   this.field_d.field_o = UsernameAvailabilityValidator.field_t;
                 }
@@ -3915,7 +3915,7 @@ final class GameScreen {
                   this.field_z[this.field_U] = false;
                   var6 = rs.field_Cb.stringWidth(this.field_o);
                   this.field_T = new Sprite(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
-                  bs.a(this.field_T, 92);
+                  RasterTargetSupport.pushSpriteRenderTarget(this.field_T, 92);
                   SoftwareRasterizer.clear();
                   rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
                   this.field_eb = this.field_T.copy();
@@ -4977,7 +4977,7 @@ final class GameScreen {
                 if (var8.field_x != 0) {
                   stackIn_17_0 = new StringBuilder().append(hd.field_j).append(" ");
                   if (var8.field_x != 1) {
-                    stackIn_18_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
+                    stackIn_18_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
                     stackIn_18_1 = StatusContent.field_a;
                   }
@@ -4993,7 +4993,7 @@ final class GameScreen {
                 if (var8.field_x != 0) {
                   stackIn_30_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
                   if (var8.field_x != 1) {
-                    stackIn_31_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
+                    stackIn_31_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
                     stackIn_31_1 = StatusContent.field_a;
                   }
@@ -5113,7 +5113,7 @@ final class GameScreen {
           this.field_K = new os(590, 480 - rs.field_Cb.field_J, 60, 2 * rs.field_Cb.field_J);
           this.field_y.addFirst(this.field_K, 0);
           this.field_N = new ToggleButton(595, 480 - StarAbandonedEvent.field_r[3].field_w, StarAbandonedEvent.field_r[3].field_z, StarAbandonedEvent.field_r[3].field_w, -1, StarAbandonedEvent.field_r[3], (String) null, 0, -1, StarAbandonedEvent.field_r[0], (String) null, 0);
-          if ((32 & de.field_j) != 0) {
+          if ((32 & StringNode.field_j) != 0) {
             this.field_N.toggle((byte) 9);
             this.field_N.field_o = StarLink.field_i;
             if (var6 != 0) {
@@ -5125,15 +5125,15 @@ final class GameScreen {
           this.field_X = new ToggleButton(610, -StarAbandonedEvent.field_r[1].field_w + 480, StarAbandonedEvent.field_r[1].field_z, StarAbandonedEvent.field_r[1].field_w, -1, StarAbandonedEvent.field_r[1], (String) null, 0, -1, StarAbandonedEvent.field_r[4], (String) null, 0);
           this.field_X.field_o = DebouncedValidator.field_f;
           this.field_d = new ToggleButton(625, 480 - StarAbandonedEvent.field_r[5].field_w, StarAbandonedEvent.field_r[5].field_z, StarAbandonedEvent.field_r[5].field_w, -1, StarAbandonedEvent.field_r[5], (String) null, 0, -1, StarAbandonedEvent.field_r[2], (String) null, 0);
-          if ((de.field_j & 64) == 0) {
+          if ((StringNode.field_j & 64) == 0) {
             this.field_d.field_o = UsernameAvailabilityValidator.field_t;
             if (var6 != 0) {
               this.field_d.toggle((byte) 23);
-              this.field_d.field_o = de.field_k;
+              this.field_d.field_o = StringNode.field_k;
             }
           } else {
             this.field_d.toggle((byte) 23);
-            this.field_d.field_o = de.field_k;
+            this.field_d.field_o = StringNode.field_k;
           }
           this.field_K.addChild(this.field_N, 8);
           this.field_K.addChild(this.field_X, 8);

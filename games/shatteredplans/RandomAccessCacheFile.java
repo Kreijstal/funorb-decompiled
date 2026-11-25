@@ -240,7 +240,7 @@ final class RandomAccessCacheFile {
         if (param0 >= -103) {
           RandomAccessCacheFile.a(109, 107);
         }
-        bf.field_c[field_k] = SoftwareRasterizer.field_a;
+        AccountStatusSupport.field_c[field_k] = SoftwareRasterizer.field_a;
         DebouncedValidator.field_d[field_k] = SoftwareRasterizer.field_f;
         AccountCreationDialog.field_Cb[field_k] = SoftwareRasterizer.field_b;
         TertiaryLinkNode.field_s[field_k] = SoftwareRasterizer.field_k;

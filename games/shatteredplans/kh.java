@@ -123,7 +123,7 @@ final class kh extends AnimatedPanel {
             this.field_Cb.addChild(4, this.field_Bb);
             this.field_Bb.field_u = "|";
             if (!(5 > CellVertex.field_i) ||
-              !(bs.field_b < 2)) {
+              !(RasterTargetSupport.field_b < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
@@ -133,7 +133,7 @@ final class kh extends AnimatedPanel {
                 if (CellVertex.field_i < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
-                  if (bs.field_b < 2) {
+                  if (RasterTargetSupport.field_b < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
@@ -241,16 +241,16 @@ final class kh extends AnimatedPanel {
             this.field_Jb.setTarget(var19 + 26, 24, (byte) 43, 0, 0);
             this.field_Ob.setTarget(15, 15, (byte) 72, 5, -20 + this.field_Jb.field_K);
             var21 = 10;
-            this.field_Ab.setTarget(var19, cr.field_c * 2, (byte) 114, var21, 13);
-            var21 = var21 + cr.field_c * 2;
-            this.field_Fb.setTarget(var19, cr.field_c * 2, (byte) 96, var21, 13);
-            var21 = var21 + (cr.field_c * 2 + 10);
-            this.field_Bb.setTarget(0, cr.field_c, (byte) 80, var21, 0);
-            var21 = var21 + (cr.field_c + 10);
+            this.field_Ab.setTarget(var19, UniformNineSliceFactory.field_c * 2, (byte) 114, var21, 13);
+            var21 = var21 + UniformNineSliceFactory.field_c * 2;
+            this.field_Fb.setTarget(var19, UniformNineSliceFactory.field_c * 2, (byte) 96, var21, 13);
+            var21 = var21 + (UniformNineSliceFactory.field_c * 2 + 10);
+            this.field_Bb.setTarget(0, UniformNineSliceFactory.field_c, (byte) 80, var21, 0);
+            var21 = var21 + (UniformNineSliceFactory.field_c + 10);
             if (this.field_zb != null) {
               var20Lifetime3 = this.field_zb.c(4, 0);
-              this.field_zb.a(var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -101, 4, cr.field_c, var21);
-              var21 = var21 + (cr.field_c + 10);
+              this.field_zb.a(var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -101, 4, UniformNineSliceFactory.field_c, var21);
+              var21 = var21 + (UniformNineSliceFactory.field_c + 10);
             }
             var28[0].setTarget(var16Lifetime2, var17Lifetime5, (byte) 108, var21, 13);
             var28[1].setTarget(var16Lifetime2, var17Lifetime5, (byte) 65, var21, 13 + var16Lifetime2 + 13);
@@ -272,8 +272,8 @@ final class kh extends AnimatedPanel {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Ab.field_nb.lineCount(this.field_Ab.field_z, var15_int);
-          this.field_Ab.setTarget(var15_int, cr.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
-          var16Lifetime1 = var16Lifetime1 + cr.field_c * var17Lifetime1;
+          this.field_Ab.setTarget(var15_int, UniformNineSliceFactory.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
+          var16Lifetime1 = var16Lifetime1 + UniformNineSliceFactory.field_c * var17Lifetime1;
           this.field_Cb.setTarget(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
           this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
           var18Lifetime1 = 13 + (13 + var15_int);

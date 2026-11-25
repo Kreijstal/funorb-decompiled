@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf {
+final class AccountStatusSupport {
     static String field_b;
     static int[] field_c;
     static String field_d;
     static String[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawVertexColoredTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param14 < param8) {
@@ -34,10 +34,10 @@ final class bf {
         if (param15 == 256) {
           return;
         }
-        bf.clearStatics((byte) 117);
+        AccountStatusSupport.clearStatics((byte) 117);
     }
 
-    final static void a(byte param0, int param1, String param2) {
+    final static void showLoginResult(byte param0, int param1, String param2) {
         int var3_int = 0;
         oe.field_f = false;
         if (param0 > -123) {
@@ -82,7 +82,7 @@ final class bf {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void showClientMessageDialog(int param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -90,7 +90,7 @@ final class bf {
         try {
           IntrusiveDequeCursor.field_b = true;
           if (param0 < 56) {
-            bf.clearStatics((byte) -76);
+            AccountStatusSupport.clearStatics((byte) -76);
           }
           SoundCache.field_c.field_z = param1;
           var2_int = so.field_q.field_g;

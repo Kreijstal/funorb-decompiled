@@ -452,8 +452,8 @@ final class MidiPcmStream extends PcmStream {
         var41 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           stackIn_3_0 = SingleChildWidget.field_y;
-          stackIn_3_1 = (cr.field_c * 4 + 8) * param5;
-          stackIn_3_2 = (2 + cr.field_c) * 2;
+          stackIn_3_1 = (UniformNineSliceFactory.field_c * 4 + 8) * param5;
+          stackIn_3_2 = (2 + UniformNineSliceFactory.field_c) * 2;
           stackIn_4_3 = (DerelictVictoryChecker.field_l == SingleChildWidget.field_y);
           var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
@@ -665,12 +665,12 @@ final class MidiPcmStream extends PcmStream {
                 }
               }
               if (var12.field_Db.field_z == null) {
-                var12.field_Ub.setTarget(68, cr.field_c, (byte) 48, var31, 0);
+                var12.field_Ub.setTarget(68, UniformNineSliceFactory.field_c, (byte) 48, var31, 0);
               } else {
-                var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
+                var12.field_Db.setTarget(68, UniformNineSliceFactory.field_c, (byte) 72, var31, 0);
               }
               var12.field_Pb.field_z = BitmapFont.truncateWithEllipsis(var12.field_Pb.field_nb, var32, 78);
-              var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
+              var12.field_Pb.setTarget(78, UniformNineSliceFactory.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
                 DualLinkDequeSequence.field_k = var32;
@@ -680,17 +680,17 @@ final class MidiPcmStream extends PcmStream {
                 var12.field_Wb.field_z = "/" + var12.field_Eb;
                 var12.field_Rb.field_y = 2;
                 var33_int = (348 - var12.field_Wb.field_nb.stringWidth("/")) / 2;
-                var12.field_Rb.setTarget(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
-                var12.field_Wb.setTarget(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
+                var12.field_Rb.setTarget(var33_int - 150, UniformNineSliceFactory.field_c, (byte) 83, var31, 150);
+                var12.field_Wb.setTarget(-var33_int + 198, UniformNineSliceFactory.field_c, (byte) 84, var31, var33_int);
               } else {
                 var12.field_Rb.field_y = 1;
-                var12.field_Rb.setTarget(48, cr.field_c, (byte) 108, var31, 150);
+                var12.field_Rb.setTarget(48, UniformNineSliceFactory.field_c, (byte) 108, var31, 150);
               }
               var12.field_Ib.field_z = Integer.toString(var12.field_Zb);
-              var12.field_Ib.setTarget(48, cr.field_c, (byte) 47, var31, 200);
+              var12.field_Ib.setTarget(48, UniformNineSliceFactory.field_c, (byte) 47, var31, 200);
               stackIn_71_0 = (!AccountStatusDialog.field_pb) ? 200 : 250;
               var33_intLifetime1 = stackIn_71_0;
-              var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
+              var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), UniformNineSliceFactory.field_c, (byte) 46, var31, var33_intLifetime1);
               var34_int = TextLayout.field_b;
               if ((var14Lifetime1 & 1 << CanvasResizeController.field_q) != 0) {
                 var50_ref = uk.field_b[var12.field_nc];
@@ -773,8 +773,8 @@ final class MidiPcmStream extends PcmStream {
                   var12.field_Ob.field_z = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Ob.setTarget(var12.field_K - 365, cr.field_c, (byte) 57, var31, 365);
-              var31 = var31 + cr.field_c;
+              var12.field_Ob.setTarget(var12.field_K - 365, UniformNineSliceFactory.field_c, (byte) 57, var31, 365);
+              var31 = var31 + UniformNineSliceFactory.field_c;
               if (var12.field_jc != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -787,18 +787,18 @@ final class MidiPcmStream extends PcmStream {
                 var38 = var37.toString();
                 var12.field_Tb.field_z = var38;
                 var39Lifetime1 = var12.field_Tb.field_nb.lineCount(var38, var12.field_K - 2 * var12.field_Tb.field_kb);
-                var12.field_Tb.setTarget(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
-                var31 = var31 + var39Lifetime1 * cr.field_c;
+                var12.field_Tb.setTarget(var12.field_K, UniformNineSliceFactory.field_c * var39Lifetime1, (byte) 73, var31, 0);
+                var31 = var31 + var39Lifetime1 * UniformNineSliceFactory.field_c;
               }
               if (var12.field_Jb) {
                 var12.field_Sb.field_z = QuickChatCategoryRegistry.a(tq.field_a, 4371, new String[]{var32});
-                var12.field_Sb.setTarget(var12.field_K - tg.field_a * 2, cr.field_c, (byte) 80, var31, tg.field_a);
-                var31 = var31 + cr.field_c;
+                var12.field_Sb.setTarget(var12.field_K - tg.field_a * 2, UniformNineSliceFactory.field_c, (byte) 80, var31, tg.field_a);
+                var31 = var31 + UniformNineSliceFactory.field_c;
               }
               if (var12.field_Yb) {
                 var12.field_Hb.field_z = QuickChatCategoryRegistry.a(wj.field_n, 4371, new String[]{var32});
-                var12.field_Hb.setTarget(-(2 * tg.field_a) + var12.field_K, cr.field_c, (byte) 91, var31, tg.field_a);
-                var31 = var31 + cr.field_c;
+                var12.field_Hb.setTarget(-(2 * tg.field_a) + var12.field_K, UniformNineSliceFactory.field_c, (byte) 91, var31, tg.field_a);
+                var31 = var31 + UniformNineSliceFactory.field_c;
               }
             }
             var33 = StarLink.a(var12.field_hc, -11, var32);
@@ -806,8 +806,8 @@ final class MidiPcmStream extends PcmStream {
               var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
               var12.field_ic.field_I = 256 * var12.field_Nb / ks.field_i;
-              var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
-              var31 = var31 + var34_intLifetime1 * cr.field_c;
+              var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, UniformNineSliceFactory.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
+              var31 = var31 + var34_intLifetime1 * UniformNineSliceFactory.field_c;
             }
             if (var7_int == 0) {
               var12.field_gb = -var12.field_mb + var31;

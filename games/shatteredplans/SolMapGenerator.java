@@ -243,7 +243,7 @@ final class SolMapGenerator extends StandardMapGenerator {
               var14[var5] = var5;
             }
             for (var5Lifetime2 = 0; var5Lifetime2 < -1 + var4_int; var5Lifetime2++) {
-              var6_int = d.a((byte) -12, var5Lifetime2 + 1, var4_int - 1, param1.field_j);
+              var6_int = ClientPacketFlushSupport.randomInclusive((byte) -12, var5Lifetime2 + 1, var4_int - 1, param1.field_j);
               var7 = var15[var6_int];
               ((int[]) (var3))[var6_int] = var15[var5Lifetime2];
               var15[var5Lifetime2] = var7;

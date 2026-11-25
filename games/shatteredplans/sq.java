@@ -42,7 +42,7 @@ final class sq {
           if (param1 instanceof byte[]) {
             var3 = (byte[]) (param1);
             if (param2) {
-              stackIn_9_0 = ck.a(var3, false);
+              stackIn_9_0 = GameAssetSetupSupport.copyByteArray(var3, false);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;

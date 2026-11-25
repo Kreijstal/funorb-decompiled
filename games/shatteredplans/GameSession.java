@@ -221,8 +221,8 @@ final class GameSession implements AiHost {
             var3_int = param1 ? 1 : 0;
             ta.a(0, 0, (byte) 96, var3_int != 0);
           }
-          if (-1 != de.field_j &&
-            ~de.field_j != ~uc.field_A) {
+          if (-1 != StringNode.field_j &&
+            ~StringNode.field_j != ~uc.field_A) {
             ta.b((byte) -69);
           }
           return;
@@ -877,7 +877,7 @@ final class GameSession implements AiHost {
                 }
                 var9.patchLengthShort(param0 - 549356895, var9.position - var10);
                 if (!AchievementProgress.field_g) {
-                  d.$cfr$intArgs$a$a6964d7afeb1(0, 82);
+                  ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);
                   q.g(-112);
                 }
                 this.field_j = true;

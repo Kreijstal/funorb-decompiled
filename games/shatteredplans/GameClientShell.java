@@ -72,7 +72,7 @@ abstract class GameClientShell extends GameApplet {
             }
             var11 = DraggableWidget.j(0);
             if (var11 != null) {
-              bs.a(var11.booleanValue(), (byte) 72);
+              RasterTargetSupport.setAccountResponseFlag(var11.booleanValue(), (byte) 72);
             }
           }
           if (var4 == 2) {
@@ -95,7 +95,7 @@ abstract class GameClientShell extends GameApplet {
               var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, DropTargetWidget.i(-116), this.field_C, BoundsRect.d(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  bf.a((byte) -127, var5_intLifetime2, nl.field_c);
+                  AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, nl.field_c);
                   nl.field_c = null;
                 } else {
                   GarrisonTask.field_o = TertiaryListSequence.field_l;
@@ -128,7 +128,7 @@ abstract class GameClientShell extends GameApplet {
             AccountCreationDialog.a(param1 ^ 1, GameScreen.getHostApplet((byte) 126));
           }
           if (9 == var4) {
-            de.a(115, GameScreen.getHostApplet((byte) 125));
+            StringNode.openCustomerSupportPage(115, GameScreen.getHostApplet((byte) 125));
           }
           if (10 == var4) {
             js.field_f.h(17, 255);
@@ -402,7 +402,7 @@ abstract class GameClientShell extends GameApplet {
             this.field_y = false;
             q.g(-113);
             IntrusiveNode.b(-11);
-            bf.a((byte) -124, 2, IntNode.field_n);
+            AccountStatusSupport.showLoginResult((byte) -124, 2, IntNode.field_n);
             ClientException.b(false);
             StripedProgressWidget.field_B = true;
             SecondaryNodeDequeIterator.field_b = 15000L + pr.currentTimeMillis(14274);
@@ -431,20 +431,20 @@ abstract class GameClientShell extends GameApplet {
               IntrusiveNode.b(-11);
               if (3 != qj.field_g) {
                 if (4 == qj.field_g) {
-                  bf.a((byte) -124, 256, sa.field_e);
+                  AccountStatusSupport.showLoginResult((byte) -124, 256, sa.field_e);
                 } else {
                   if (qj.field_g == 2) {
-                    bf.a((byte) -125, 256, ArchiveNetworkClient.field_r);
+                    AccountStatusSupport.showLoginResult((byte) -125, 256, ArchiveNetworkClient.field_r);
                   } else {
                     if (qj.field_g != 5) {
-                      bf.a((byte) -127, 256, StarAbandonedEvent.field_n);
+                      AccountStatusSupport.showLoginResult((byte) -127, 256, StarAbandonedEvent.field_n);
                     } else {
-                      bf.a((byte) -126, 5, PasswordInputPainter.field_w);
+                      AccountStatusSupport.showLoginResult((byte) -126, 5, PasswordInputPainter.field_w);
                     }
                   }
                 }
               } else {
-                bf.a((byte) -126, 256, po.field_g);
+                AccountStatusSupport.showLoginResult((byte) -126, 256, po.field_g);
               }
               StripedProgressWidget.field_B = true;
             }
@@ -690,7 +690,7 @@ abstract class GameClientShell extends GameApplet {
           this.fail((byte) 58, "reconnect");
         }
         IntrusiveNode.b(-11);
-        bf.a((byte) -126, var2, nl.field_c);
+        AccountStatusSupport.showLoginResult((byte) -126, var2, nl.field_c);
         StripedProgressWidget.field_B = true;
         SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
         return var2;

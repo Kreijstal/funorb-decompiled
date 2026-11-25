@@ -393,12 +393,12 @@ final class SolVictoryChecker extends VictoryChecker {
                 mq.field_c = ClientContextMenuSupport.createLoginCredentials(param5, false, false, param3);
               } else {
                 var10 = (String) null;
-                mq.field_c = dd.a(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
+                mq.field_c = ChatMessageFactory.createLoginCredentials(false, param3, (String) null, 4684, TertiaryListSequence.field_l);
               }
               js.field_f.position = 0;
               js.field_f.writeByte(14, (byte) -80);
               js.field_f.writeByte(mq.field_c.getKind((byte) -73).field_d, (byte) -68);
-              d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
+              ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
               Wormhole.field_j = IntrusiveNodeHashTable.field_i;
             }
             if (IntrusiveNodeHashTable.field_i == Wormhole.field_j &&
@@ -450,7 +450,7 @@ final class SolVictoryChecker extends VictoryChecker {
               uc.d((byte) -46)) {
               TertiaryListSequence.field_l = sa.field_a.readLong(46);
               FleetTrailPoint.field_q = param3;
-              bs.field_b = sa.field_a.readUnsignedByte(-85);
+              RasterTargetSupport.field_b = sa.field_a.readUnsignedByte(-85);
               CellVertex.field_i = sa.field_a.readUnsignedByte(-89);
               StarAnnotation.field_m = sa.field_a.readUnsignedShort(-20976);
               var6 = sa.field_a.readNullableString(1910283844);

@@ -107,7 +107,7 @@ final class ClientException extends RuntimeException {
             if (var4 >= 0) {
               var2 = var2 + js.field_e;
               if (AccountStatusDialog.field_nb.field_c != var4) {
-                stackIn_17_0 = cr.field_e;
+                stackIn_17_0 = UniformNineSliceFactory.field_e;
               } else {
                 stackIn_17_0 = jp.field_Cb;
               }

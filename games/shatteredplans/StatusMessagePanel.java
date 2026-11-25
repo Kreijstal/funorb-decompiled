@@ -86,7 +86,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             } else {
               uq.field_i = uq.field_i + 1;
               if (ContentDialog.field_bb == null) {
-                var2_int = (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) * (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) + (-TertiaryListSequence.field_k + ck.field_e) * (-TertiaryListSequence.field_k + ck.field_e);
+                var2_int = (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) * (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) + (-TertiaryListSequence.field_k + GameAssetSetupSupport.field_e) * (-TertiaryListSequence.field_k + GameAssetSetupSupport.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
                   ContentDialog.field_bb = BattleSnapshot.field_s;
@@ -98,7 +98,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
             }
           } else {
             ChatPanelSetupSupport.field_c = SliderWidget.field_P;
-            ck.field_e = PointsVictoryChecker.field_p;
+            GameAssetSetupSupport.field_e = PointsVictoryChecker.field_p;
             uq.field_i = 0;
             BattleSnapshot.field_s = TextInputPainter.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
@@ -229,7 +229,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        NanoFrameTimer.a(param0, param3, param2, -77, cr.field_c, MusicVoiceMixer.field_l, tg.field_a);
+        NanoFrameTimer.a(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, tg.field_a);
         if (param1 != 8) {
           Archive var5 = (Archive) null;
           StatusMessagePanel.a((Archive) null, -64, (Archive) null, 13, 77);

@@ -37,8 +37,8 @@ final class uo {
             ByteArrayStorage.field_e.a(oq.field_j, ho.field_h, true);
             stackIn_6_0 = 55;
           }
-          if (cr.field_b != -1) {
-            var1_int = cr.field_b;
+          if (UniformNineSliceFactory.field_b != -1) {
+            var1_int = UniformNineSliceFactory.field_b;
             qj.a((byte) -127, -1);
             stackIn_12_0 = var1_int;
             return stackIn_12_0;
@@ -300,7 +300,7 @@ final class uo {
                   }
                   break;
                 }
-                if (!(2 > bs.field_b) &&
+                if (!(2 > RasterTargetSupport.field_b) &&
                   FleetTrailPoint.field_p[12]) {
                   var10 = 2;
                 }
@@ -382,7 +382,7 @@ final class uo {
                     }
                     break;
                   }
-                  if (2 <= bs.field_b &&
+                  if (2 <= RasterTargetSupport.field_b &&
                     FleetTrailPoint.field_p[12]) {
                     var16Lifetime1Lifetime1 = 0;
                   }

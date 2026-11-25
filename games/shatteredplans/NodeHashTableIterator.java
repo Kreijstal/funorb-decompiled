@@ -127,7 +127,7 @@ final class NodeHashTableIterator implements Iterator {
 
     final static void a(int param0, String param1) {
         try {
-          ClientContextMenuSupport.field_a.addLast((byte) -113, new de(param1));
+          ClientContextMenuSupport.field_a.addLast((byte) -113, new StringNode(param1));
           if (param0 != 0) {
             Star var3 = (Star) null;
             NodeHashTableIterator.a((Star) null, (byte) 103);

@@ -437,7 +437,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     }
 
     final static boolean a(String param0, int param1) {
-        de var2 = null;
+        StringNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -449,14 +449,14 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           if (param1 > -108) {
             return true;
           }
-          var2 = (de) (StellarBombEvent.field_h.startForward(0));
+          var2 = (StringNode) (StellarBombEvent.field_h.startForward(0));
           while (var2 != null) {
             if (param0.equalsIgnoreCase(var2.field_l)) {
               return false;
             }
-            var2 = (de) (StellarBombEvent.field_h.nextForward((byte) -71));
+            var2 = (StringNode) (StellarBombEvent.field_h.nextForward((byte) -71));
           }
-          StellarBombEvent.field_h.addLast((byte) -113, new de(param0));
+          StellarBombEvent.field_h.addLast((byte) -113, new StringNode(param0));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

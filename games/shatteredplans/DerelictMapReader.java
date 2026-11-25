@@ -97,7 +97,7 @@ final class DerelictMapReader implements MapGenerator {
           var3 = dupTemp$0;
           var2 = var3;
           MapView.field_sb[param0] = dupTemp$0;
-          bs.a(var3, 100);
+          RasterTargetSupport.pushSpriteRenderTarget(var3, 100);
           CellVertex.field_j[param0].draw(64, 64);
           SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           OpacityWidget.popLegacyRasterState(0);

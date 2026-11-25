@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr {
+final class UniformNineSliceFactory {
     static int field_c;
     static int field_b;
     static String field_d;
     static v field_e;
     static String field_a;
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createUniformNineSlice(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
@@ -21,7 +21,7 @@ final class cr {
           var4[4] = gr.createSolidSquare((byte) -124, param0, 64);
           return var4;
         }
-        cr.a(-10, 81, 16, 82);
+        UniformNineSliceFactory.createUniformNineSlice(-10, 81, 16, 82);
         var4[4] = gr.createSolidSquare((byte) -124, param0, 64);
         return var4;
     }

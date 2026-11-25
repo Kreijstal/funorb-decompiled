@@ -35,11 +35,11 @@ final class AccountFieldValue {
           param3.field_c[param2] = var11;
           var5 = new MenuLabel(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
           var12.addChild(var5, 8);
-          var6 = new FilledMenuPanel(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
+          var6 = new FilledMenuPanel(ClientPacketFlushSupport.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - ClientPacketFlushSupport.field_b[param2].field_z / 2, ClientPacketFlushSupport.field_b[param2].field_w, 2, 2105376);
           var12.addChild(var6, 8);
-          var7 = new SpriteButton(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
+          var7 = new SpriteButton(3 * ClientPacketFlushSupport.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
           var12.addChild(var7, 8);
-          var8 = new SpriteButton(0, 2 + rs.field_Cb.field_J, d.field_b[param2]);
+          var8 = new SpriteButton(0, 2 + rs.field_Cb.field_J, ClientPacketFlushSupport.field_b[param2]);
           var12.addChild(var8, 8);
           if (param0 != 5) {
             dupTemp$1 = QuickChatCategoryRegistry.a(ScrollBar.field_yb, 4371, new String[]{Integer.toString(param0)});
@@ -49,7 +49,7 @@ final class AccountFieldValue {
             var5.field_o = dupTemp$1;
             var12.field_o = dupTemp$1;
           } else {
-            var9 = new MenuLabel(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, EmailValidator.field_v);
+            var9 = new MenuLabel(ClientPacketFlushSupport.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + ClientPacketFlushSupport.field_b[param2].field_w / 8), 130 - ClientPacketFlushSupport.field_b[param2].field_z, ClientPacketFlushSupport.field_b[param2].field_w, EmailValidator.field_v);
             var12.addChild(var9, 8);
             param3.field_b[param2] = var9;
             var9.field_o = EmailSyntaxValidator.field_q;

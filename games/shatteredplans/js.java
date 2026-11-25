@@ -137,7 +137,7 @@ final class js {
         if (param0 != 121) {
           return (AnimatedPanel) null;
         }
-        return d.field_a.field_Eb;
+        return ClientPacketFlushSupport.field_a.field_Eb;
     }
 
     final static int nextPowerOfTwo(int param0, byte param1) {

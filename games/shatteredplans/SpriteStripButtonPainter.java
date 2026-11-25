@@ -374,7 +374,7 @@ final class SpriteStripButtonPainter extends WidgetTheme {
 
     final static Sprite[] a(int param0, int param1, int param2) {
         int var3 = 124 % ((-27 - param1) / 41);
-        return cr.a(param0, 1, -10, param2);
+        return UniformNineSliceFactory.createUniformNineSlice(param0, 1, -10, param2);
     }
 
     public static void clearStatics(byte param0) {

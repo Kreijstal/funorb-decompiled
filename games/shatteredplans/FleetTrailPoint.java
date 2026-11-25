@@ -282,8 +282,8 @@ final class FleetTrailPoint extends IntrusiveNode {
             return;
           }
           stackIn_5_0 = wg.field_a.field_Db;
-          stackIn_5_1 = param2 * ((cr.field_c + 2) * 3);
-          stackIn_5_2 = 2 + cr.field_c;
+          stackIn_5_1 = param2 * ((UniformNineSliceFactory.field_c + 2) * 3);
+          stackIn_5_2 = 2 + UniformNineSliceFactory.field_c;
           stackIn_6_3 = (wg.field_a.field_Db == DerelictVictoryChecker.field_l);
           var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
           var4 = wg.field_a.field_Eb.field_M;
@@ -309,14 +309,14 @@ final class FleetTrailPoint extends IntrusiveNode {
               var6.markDirty((byte) -123);
             }
             var6.field_K = wg.field_a.field_Eb.field_K;
-            var6.field_Cb.setTarget(var6.field_K, cr.field_c, (byte) 78, 0, 0);
+            var6.field_Cb.setTarget(var6.field_K, UniformNineSliceFactory.field_c, (byte) 78, 0, 0);
             var8 = 0;
             if (var6.field_Bb != null &&
               !var6.field_Bb.equals("")) {
               var6.field_Db.field_jb = 16737894;
               var6.field_Db.field_pb = BufferedSocket.field_i;
               var8 = 1;
-              var6.field_Db.setTarget(3 + BufferedSocket.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
+              var6.field_Db.setTarget(3 + BufferedSocket.field_i.field_o, UniformNineSliceFactory.field_c, (byte) 126, 0, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
@@ -333,9 +333,9 @@ final class FleetTrailPoint extends IntrusiveNode {
             stackIn_20_0.field_z = stackIn_21_1;
             stackIn_24_0 = (var6.field_Cb.field_z.equals(var6.field_Ab)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Cb.setTarget(var10, cr.field_c, (byte) 39, 0, var9);
+            var6.field_Cb.setTarget(var10, UniformNineSliceFactory.field_c, (byte) 39, 0, var9);
             if (var3_int == 0) {
-              var6.field_gb = cr.field_c - var6.field_mb;
+              var6.field_gb = UniformNineSliceFactory.field_c - var6.field_mb;
             }
             if (var7 != 0) {
               wg.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var5), var6, (byte) 55);

@@ -87,7 +87,7 @@ final class BattleEvent extends IntrusiveNode {
         if (param0 < 73) {
           BattleEvent.b(44, -8, 127);
         }
-        return null != ck.field_a ? true : false;
+        return null != GameAssetSetupSupport.field_a ? true : false;
     }
 
     final static tq c(int param0, int param1) {

@@ -199,9 +199,9 @@ final class AudioService implements Runnable {
           if (param1) {
             field_f = (String) null;
           }
-          if (cr.field_d != null &&
-            !cr.field_d.equals(param0.getParameter("session"))) {
-            var4Lifetime1 = cr.field_d;
+          if (UniformNineSliceFactory.field_d != null &&
+            !UniformNineSliceFactory.field_d.equals(param0.getParameter("session"))) {
+            var4Lifetime1 = UniformNineSliceFactory.field_d;
           }
           stackIn_10_0 = np.a((String) (var3), -1, (String) (var4Lifetime1), false, param2);
           return stackIn_10_0;

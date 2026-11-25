@@ -123,7 +123,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               js.field_f.writeByte(18, (byte) -76);
               js.field_f.position = js.field_f.position + 2;
               var10 = js.field_f.position;
-              var11_ref_String = ck.a((byte) -128, GameScreen.getHostApplet((byte) 124));
+              var11_ref_String = GameAssetSetupSupport.readSettingsCookie((byte) -128, GameScreen.getHostApplet((byte) 124));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -131,7 +131,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               js.field_f.patchLengthShort(-549342136, -var10 + js.field_f.position);
             }
-            d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
+            ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             Wormhole.field_j = qe.field_k;
           }
           if (Wormhole.field_j == qe.field_k &&

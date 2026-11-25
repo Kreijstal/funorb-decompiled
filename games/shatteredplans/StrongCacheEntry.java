@@ -300,7 +300,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           MusicVoiceMixer.field_l = 2;
           GzipInflater.field_i = 11;
           tg.field_a = 4;
-          cr.field_c = 15;
+          UniformNineSliceFactory.field_c = 15;
           TextLayout.field_b = 2;
           var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
           ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
@@ -311,13 +311,13 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var8 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var8.field_nb = (BitmapFont) ((Object) var7);
           var8.field_x = 16777215;
-          var8.field_Y = cr.field_c;
+          var8.field_Y = UniformNineSliceFactory.field_c;
           var8.field_G = 1;
           var9 = var8;
           var9.field_y = 1;
           var10 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var10.field_x = 16777215;
-          var10.field_Y = cr.field_c;
+          var10.field_Y = UniformNineSliceFactory.field_c;
           var10.field_nb = (BitmapFont) ((Object) ImageProducerRasterBuffer.field_p);
           var10.field_G = 1;
           var11 = var10;
@@ -351,7 +351,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           QuickChatMenu.field_Cb.field_F = ArchiveSourceManager.a(false, 2039583, true, 30, 3815994, (byte) -64);
           SpriteState.field_u = new AnimatedPanel(0L, (AnimatedPanel) null);
           SpriteState.field_u.field_x = 13421772;
-          SpriteState.field_u.field_Y = cr.field_c;
+          SpriteState.field_u.field_Y = UniformNineSliceFactory.field_c;
           SpriteState.field_u.field_G = 1;
           SpriteState.field_u.field_nb = (BitmapFont) ((Object) ImageProducerRasterBuffer.field_p);
           StatefulWidgetTheme.field_w = new AnimatedPanel(0L, SpriteState.field_u);
@@ -362,7 +362,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           StatefulWidgetTheme.field_w.field_qb = 16777215;
           var15 = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
           var15.field_x = 16777215;
-          var15.field_Y = cr.field_c;
+          var15.field_Y = UniformNineSliceFactory.field_c;
           var15.field_nb = (BitmapFont) ((Object) var7);
           fg.field_b = new AnimatedPanel(0L, SpriteState.field_u);
           fg.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
@@ -375,7 +375,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           ArrayWidgetGroup.field_E = new AnimatedPanel(0L, ObjectList.field_h);
           ArrayWidgetGroup.field_E.copyFrom(StatefulWidgetTheme.field_w, false);
           var16 = HighscoreResponseSupport.loadSpriteSetByName(-82, "lobby", param4, "button_mouseover");
-          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, StatefulWidgetTheme.field_w, 3, 2, TextLayout.field_b, 3, cr.field_c);
+          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, StatefulWidgetTheme.field_w, 3, 2, TextLayout.field_b, 3, UniformNineSliceFactory.field_c);
           StandardMapReader.field_h = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
           StandardMapReader.field_h.field_lb = var16;
           StandardMapReader.field_h.field_T = 1;

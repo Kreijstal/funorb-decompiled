@@ -149,8 +149,8 @@ final class no {
             if (id.field_d != null) {
               id.field_d = var3.field_e[id.field_d.field_p];
             }
-            if (null != d.field_d) {
-              d.field_d = var3.field_e[d.field_d.field_p];
+            if (null != ClientPacketFlushSupport.field_d) {
+              ClientPacketFlushSupport.field_d = var3.field_e[ClientPacketFlushSupport.field_d.field_p];
             }
             var21 = var3.field_e;
             for (var6 = 0; var6 < var21.length; var6++) {

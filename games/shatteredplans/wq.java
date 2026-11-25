@@ -36,7 +36,7 @@ final class wq {
             stackIn_14_0 = (byte[]) (param2);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ck.a(param2, false);
+          stackIn_12_0 = GameAssetSetupSupport.copyByteArray(param2, false);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

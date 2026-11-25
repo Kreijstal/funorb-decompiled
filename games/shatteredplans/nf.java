@@ -105,7 +105,7 @@ final class nf {
             return stackIn_14_0;
           }
           if (1 == var2_int) {
-            stackIn_18_0 = bk.field_d;
+            stackIn_18_0 = ChatCompositionSupport.field_d;
           } else {
             stackIn_18_0 = QuickChatCategoryRegistry.a(rl.field_e, 4371, new String[]{Integer.toString(var2_int)});
           }

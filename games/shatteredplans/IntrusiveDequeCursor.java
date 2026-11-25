@@ -32,7 +32,7 @@ final class IntrusiveDequeCursor {
           if (LoginForm.field_F > LinkPainter.field_e) {
             return null;
           }
-          if (!((LoginForm.field_F + de.field_i) <= LinkPainter.field_e)) {
+          if (!((LoginForm.field_F + StringNode.field_i) <= LinkPainter.field_e)) {
             return GameKeyHandler.field_d;
           }
           return null;
@@ -43,7 +43,7 @@ final class IntrusiveDequeCursor {
         if (LoginForm.field_F > LinkPainter.field_e) {
           return null;
         }
-        if (!((LoginForm.field_F + de.field_i) <= LinkPainter.field_e)) {
+        if (!((LoginForm.field_F + StringNode.field_i) <= LinkPainter.field_e)) {
           return GameKeyHandler.field_d;
         }
         return null;

@@ -185,7 +185,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           var3 = ((BitmapFont) ((Object) var2)).stringWidth(param1);
           var4 = ((BitmapFont) ((Object) var2)).field_J + ((BitmapFont) ((Object) var2)).field_q;
           var5 = new Sprite(var3, var4);
-          bs.a(var5, 112);
+          RasterTargetSupport.pushSpriteRenderTarget(var5, 112);
           ((BitmapFont) ((Object) var2)).drawString(param1, 0, ((BitmapFont) ((Object) var2)).field_J, 16777215, -1);
           OpacityWidget.popLegacyRasterState(param0);
           stackIn_1_0 = var5;

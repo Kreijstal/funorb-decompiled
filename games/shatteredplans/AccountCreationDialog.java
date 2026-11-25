@@ -172,7 +172,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
               }
             }
           } else {
-            var4 = ck.field_b;
+            var4 = GameAssetSetupSupport.field_b;
           }
           if (param0 != 17) {
             return;
@@ -193,7 +193,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
               var5.addActionButton(rs.field_yb, (byte) 103, 7);
             } else {
               if (param2.field_c == 6) {
-                var5.addActionButton(bf.field_d, (byte) 112, 9);
+                var5.addActionButton(AccountStatusSupport.field_d, (byte) 112, 9);
               }
             }
           } else {
@@ -220,7 +220,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     }
 
     final void f(boolean param0) {
-        this.a(17, true, ck.a(sg.field_xb, 248, -110));
+        this.a(17, true, GameAssetSetupSupport.createStatusResult(sg.field_xb, 248, -110));
         if (param0) {
           this.f(false);
         }

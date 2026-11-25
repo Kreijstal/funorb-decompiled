@@ -191,7 +191,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
           } else {
             if (param1 != 4) {
               if (param1 == 6) {
-                var6.addActionButton(bf.field_d, (byte) 107, 9);
+                var6.addActionButton(AccountStatusSupport.field_d, (byte) 107, 9);
               } else {
                 if (param1 != 9) {
                   this.setContent(var6, 110);

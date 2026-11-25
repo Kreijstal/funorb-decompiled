@@ -139,8 +139,8 @@ final class ObjectList {
             }
           }
           stackIn_42_0 = (ScrollPane) (param2);
-          stackIn_42_1 = 4 * (2 + cr.field_c) * param0;
-          stackIn_42_2 = cr.field_c * 2 + 4;
+          stackIn_42_1 = 4 * (2 + UniformNineSliceFactory.field_c) * param0;
+          stackIn_42_2 = UniformNineSliceFactory.field_c * 2 + 4;
           stackIn_43_3 = (param2 == DerelictVictoryChecker.field_l);
           stackIn_46_0 = (!((ScrollPane) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
@@ -256,7 +256,7 @@ final class ObjectList {
                 ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
                   var26 = var12.field_Jb.measureWidthUnbounded(false) + 2 * tg.field_a;
-                  var12.field_Jb.setTarget(var26, cr.field_c, (byte) 80, var19, var25_int);
+                  var12.field_Jb.setTarget(var26, UniformNineSliceFactory.field_c, (byte) 80, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_z) {
@@ -265,7 +265,7 @@ final class ObjectList {
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Mb.setTarget(var26Lifetime2, cr.field_c, (byte) 78, var19, var25_int);
+                  var12.field_Mb.setTarget(var26Lifetime2, UniformNineSliceFactory.field_c, (byte) 78, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -277,9 +277,9 @@ final class ObjectList {
               } else {
                 stackIn_97_3 = 0;
               }
-              ((AnimatedPanel) (Object) stackIn_96_0).setTarget(stackIn_96_1 + (stackIn_96_2 - stackIn_97_3), cr.field_c, (byte) 44, var19, var25_int);
+              ((AnimatedPanel) (Object) stackIn_96_0).setTarget(stackIn_96_1 + (stackIn_96_2 - stackIn_97_3), UniformNineSliceFactory.field_c, (byte) 44, var19, var25_int);
               var12.field_Ob.field_z = Integer.toString(var12.field_Qb);
-              var12.field_Ob.setTarget(40, cr.field_c, (byte) 126, var19, var12.field_K - 40);
+              var12.field_Ob.setTarget(40, UniformNineSliceFactory.field_c, (byte) 126, var19, var12.field_K - 40);
               if (var12.field_Ab.field_L &&
                 var22 != 0) {
                 DualLinkDequeSequence.field_k = var12.field_Cb;
@@ -294,7 +294,7 @@ final class ObjectList {
                   DualLinkDequeSequence.field_k = NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               }
-              var19 = var19 + cr.field_c;
+              var19 = var19 + UniformNineSliceFactory.field_c;
             }
             var23 = ArchiveSource.a(var12.field_Eb, (byte) -87, var20);
             var24 = var23;
@@ -305,8 +305,8 @@ final class ObjectList {
               var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - tg.field_a - tg.field_a);
               var12.field_xb.field_z = var23;
               var12.field_xb.field_I = 256 * var12.field_Gb / ks.field_i;
-              var12.field_xb.setTarget(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * cr.field_c, (byte) 96, var19, tg.field_a);
-              var19 = var19 + cr.field_c * var24_intLifetime1;
+              var12.field_xb.setTarget(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * UniformNineSliceFactory.field_c, (byte) 96, var19, tg.field_a);
+              var19 = var19 + UniformNineSliceFactory.field_c * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_gb = var19 - var12.field_mb;
@@ -498,7 +498,7 @@ final class ObjectList {
     }
 
     final static void a(int param0, int param1) {
-        de.field_h = SpriteButton.field_v[param1];
+        StringNode.field_h = SpriteButton.field_v[param1];
         DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ScrollPane var3 = (ScrollPane) null;

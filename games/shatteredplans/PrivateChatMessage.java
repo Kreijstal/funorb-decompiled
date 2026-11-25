@@ -997,7 +997,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_glossary1", 120);
                 if (null != var2) {
-                  ck.field_g = IterableNodeHashTable.a(var2, 17746);
+                  GameAssetSetupSupport.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_glossary2", 102);
                 if (var2 != null) {
@@ -1439,7 +1439,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_lost_single", 123);
                 if (var2 != null) {
-                  bk.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ChatCompositionSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_lost_multiple", 113);
                 if (var2 != null) {
@@ -1640,7 +1640,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_attacks_successful", 118);
                 if (var2 != null) {
-                  ck.field_d = IterableNodeHashTable.a(var2, 17746);
+                  GameAssetSetupSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_attacks_failed", 114);
                 if (null != var2) {
@@ -1984,7 +1984,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipFleetsRemaining", 109);
                 if (null != var2) {
-                  d.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientPacketFlushSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipOneFleetRemaining", 101);
                 if (var2 != null) {
@@ -2106,7 +2106,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipAnimSpeedIsDouble", 95);
                 if (var2 != null) {
-                  de.field_k = IterableNodeHashTable.a(var2, 17746);
+                  StringNode.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("victoryTargetPoints", 110);
                 if (var2 != null) {

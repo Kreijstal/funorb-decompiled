@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk {
+final class ChatCompositionSupport {
     static String field_d;
     static String field_c;
     static IntrusiveDeque field_a;
     static String[] field_b;
 
-    final static boolean a(byte param0) {
+    final static boolean isNextReflectionCheckReady(byte param0) {
         ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -16,7 +16,7 @@ final class bk {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != -50) {
-            bk.a((byte) -35);
+            ChatCompositionSupport.isNextReflectionCheckReady((byte) -35);
           }
           var1 = (ReflectionCheck) (MusicEnvelope.field_b.startForward(0));
           if (null == var1) {
@@ -46,7 +46,7 @@ final class bk {
         }
     }
 
-    final static void a(ik[] param0, int param1) {
+    final static void collectPolygonScanlineEdges(ik[] param0, int param1) {
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
         ik stackIn_22_0 = null;
@@ -128,14 +128,14 @@ final class bk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseChatCompositionStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_a = null;
           field_d = null;
           if (param0 != 2562) {
-            bk.a(88);
+            ChatCompositionSupport.releaseChatCompositionStatics(88);
           }
           field_c = null;
           field_b = null;
@@ -147,7 +147,7 @@ final class bk {
         }
     }
 
-    final static String b(int param0) {
+    final static String updateChatComposition(int param0) {
         String stackIn_53_0 = null;
         Object stackIn_97_0 = null;
         RuntimeException decompiledCaughtException = null;

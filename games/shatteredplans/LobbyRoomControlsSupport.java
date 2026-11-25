@@ -216,7 +216,7 @@ final class LobbyRoomControlsSupport {
                   var13++;
                 }
                 js.a(-1, param2 + 3, IntNode.field_p, ProductionContent.field_k, 0, true, -1, -1);
-                if (!(bs.field_b < 2) &&
+                if (!(RasterTargetSupport.field_b < 2) &&
                   FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;
                 }

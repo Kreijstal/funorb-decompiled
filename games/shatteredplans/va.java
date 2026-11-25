@@ -97,14 +97,14 @@ final class va {
           }
           if (param2 != 255) {
             if (100 > param2) {
-              wh.field_c = ck.a(param3, param2, -80);
+              wh.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
               return;
             }
             if (param2 <= 105) {
               wh.field_c = DialogRoot.a(args, (byte) -64);
               return;
             }
-            wh.field_c = ck.a(param3, param2, -80);
+            wh.field_c = GameAssetSetupSupport.createStatusResult(param3, param2, -80);
             return;
           }
           stackIn_12_0 = 93;

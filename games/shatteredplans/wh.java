@@ -111,10 +111,10 @@ final class wh {
         int var6 = 24;
         int var7 = 5;
         this.field_d.a(param3, param4, param1, var6, param0, false, var7);
-        RecklessAi.field_p.setTarget(OpacityWidget.field_A.field_K, cr.field_c, (byte) 59, 0, 0);
-        BattleSnapshot.field_t.setTarget(-UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + cr.field_c, 0);
-        FleetMove.field_F.setTarget(82 + UnderageAccountInfoPanel.field_K, 18, (byte) 117, 2 + cr.field_c, -80 - UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2));
-        d.field_a.setSocialListBounds(-22 + (OpacityWidget.field_A.field_mb - cr.field_c), 20 + cr.field_c + 2, UnderageAccountInfoPanel.field_K, 2, 20, OpacityWidget.field_A.field_K, (byte) 123, 0);
+        RecklessAi.field_p.setTarget(OpacityWidget.field_A.field_K, UniformNineSliceFactory.field_c, (byte) 59, 0, 0);
+        BattleSnapshot.field_t.setTarget(-UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + UniformNineSliceFactory.field_c, 0);
+        FleetMove.field_F.setTarget(82 + UnderageAccountInfoPanel.field_K, 18, (byte) 117, 2 + UniformNineSliceFactory.field_c, -80 - UnderageAccountInfoPanel.field_K + (OpacityWidget.field_A.field_K - 2));
+        ClientPacketFlushSupport.field_a.setSocialListBounds(-22 + (OpacityWidget.field_A.field_mb - UniformNineSliceFactory.field_c), 20 + UniformNineSliceFactory.field_c + 2, UnderageAccountInfoPanel.field_K, 2, 20, OpacityWidget.field_A.field_K, (byte) 123, 0);
         wg.field_a.layoutSocialListControls(2, UnderageAccountInfoPanel.field_K, 0, 20);
         if (param2 == 95) {
           return;

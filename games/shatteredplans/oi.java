@@ -77,7 +77,7 @@ final class oi {
           var3 = dupTemp$0;
           var2 = var3;
           AlignedMenuLabel.field_C[param0] = dupTemp$0;
-          bs.a(var3, 77);
+          RasterTargetSupport.pushSpriteRenderTarget(var3, 77);
           CellVertex.field_j[param0].drawQuarterSize(0, 0);
           OpacityWidget.popLegacyRasterState(0);
         }

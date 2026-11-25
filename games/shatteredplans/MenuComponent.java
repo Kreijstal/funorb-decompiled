@@ -393,7 +393,7 @@ class MenuComponent extends IntrusiveNode {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = js.field_f;
-          while (bk.a((byte) -50)) {
+          while (ChatCompositionSupport.isNextReflectionCheckReady((byte) -50)) {
             var1.h(8, 255);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

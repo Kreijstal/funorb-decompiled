@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends IntrusiveNode {
+final class StringNode extends IntrusiveNode {
     String field_l;
     static String field_k;
     static int field_j;
@@ -13,11 +13,11 @@ final class de extends IntrusiveNode {
         field_k = null;
         if (param0 != 102) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          de.a(62, (java.applet.Applet) null);
+          StringNode.openCustomerSupportPage(62, (java.applet.Applet) null);
         }
     }
 
-    de(String param0) {
+    StringNode(String param0) {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
@@ -25,7 +25,7 @@ final class de extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openCustomerSupportPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -48,7 +48,7 @@ final class de extends IntrusiveNode {
               return;
             }
             var3 = (java.applet.Applet) null;
-            de.a(-3, (java.applet.Applet) null);
+            StringNode.openCustomerSupportPage(-3, (java.applet.Applet) null);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

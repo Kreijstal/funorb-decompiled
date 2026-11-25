@@ -302,7 +302,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.field_H = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         WidgetTheme var1 = new WidgetTheme(EmailValidator.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (WidgetListener) null);
-        this.field_I = new FocusableWidget(ck.field_c, (WidgetListener) null);
+        this.field_I = new FocusableWidget(GameAssetSetupSupport.field_c, (WidgetListener) null);
         this.field_G = new FocusableWidget(fb.field_bc, (WidgetListener) null);
         this.field_H.field_v = WeightedLruCache.field_i;
         this.field_H.setValidationSource(new UsernameAvailabilityValidator(this.field_H), 8945);

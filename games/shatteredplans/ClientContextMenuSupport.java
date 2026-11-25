@@ -64,7 +64,7 @@ final class ClientContextMenuSupport {
         try {
           SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, SingleChildWidget.field_y, param2, -1, param2.g(-77));
           if (param2.field_Ab && (param2.field_Fb == 2 ||
-            !(bs.field_b < 2))) {
+            !(RasterTargetSupport.field_b < 2))) {
             var7 = DerelictVictoryChecker.field_m;
             var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
@@ -185,7 +185,7 @@ final class ClientContextMenuSupport {
             var6 = param0;
           }
           if (!param2) {
-            stackIn_7_0 = dd.a(param1, param3, (String) (var6), 4684, var4_long);
+            stackIn_7_0 = ChatMessageFactory.createLoginCredentials(param1, param3, (String) (var6), 4684, var4_long);
             return stackIn_7_0;
           }
           stackIn_5_0 = (ChatMessage) null;

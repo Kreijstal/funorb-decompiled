@@ -580,13 +580,13 @@ final class fc {
             return true;
           }
           if (param2 == 15) {
-            dd.a(this.field_f, param0, param1 + 93);
+            ChatMessageFactory.requestLobbyPlayerList(this.field_f, param0, param1 + 93);
             return true;
           }
           if (16 != param2) {
             return false;
           }
-          dd.a(0, param0, 71);
+          ChatMessageFactory.requestLobbyPlayerList(0, param0, 71);
           return true;
         }
         var6 = (CharSequence) null;
@@ -612,13 +612,13 @@ final class fc {
           return true;
         }
         if (param2 == 15) {
-          dd.a(this.field_f, param0, param1 + 93);
+          ChatMessageFactory.requestLobbyPlayerList(this.field_f, param0, param1 + 93);
           return true;
         }
         if (16 != param2) {
           return false;
         }
-        dd.a(0, param0, 71);
+        ChatMessageFactory.requestLobbyPlayerList(0, param0, 71);
         return true;
     }
 

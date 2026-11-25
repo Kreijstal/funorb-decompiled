@@ -350,7 +350,7 @@ final class WhirlpoolHasher {
               var39 = var30 * var36 >>> 8 & -570360064 | (-16711872 & var30 * var35) >>> 8;
               var38 = var38 + 65793 * var32;
               var39 = var39 + var33 * 65793;
-              bf.a((var38 & 65365) >> 8, var37 & 255, var39 >> 16, var37 >> 8 & 255, var37 >> 16, var26, var22, var39 & 255, var25, 255 & var38, var27, (var39 & 65523) >> 8, var24, var38 >> 16, var23, 256);
+              AccountStatusSupport.drawVertexColoredTriangle((var38 & 65365) >> 8, var37 & 255, var39 >> 16, var37 >> 8 & 255, var37 >> 16, var26, var22, var39 & 255, var25, 255 & var38, var27, (var39 & 65523) >> 8, var24, var38 >> 16, var23, 256);
             }
           }
           return;

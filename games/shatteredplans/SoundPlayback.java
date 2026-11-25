@@ -217,7 +217,7 @@ final class SoundPlayback extends IntrusiveNode {
             InvalidMapConnectionException.field_f[5] = "";
             ShatteredPlansClient.field_E[1] = 2;
             ShatteredPlansClient.field_E[0] = 5;
-            InvalidMapConnectionException.field_f[3] = dd.field_a;
+            InvalidMapConnectionException.field_f[3] = ChatMessageFactory.field_a;
             InvalidMapConnectionException.field_f[4] = ImageProducerRasterBuffer.field_m;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_47_0 = InvalidMapConnectionException.field_f;

@@ -110,7 +110,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
         String var7 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (ck.field_a != null) {
+          if (GameAssetSetupSupport.field_a != null) {
             return;
           }
           sr.field_h = false;
@@ -125,7 +125,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           }
           var7 = (String) null;
           GuestPlayForm.a(-114, ho.field_c, (String) null, var5, 0);
-          ck.field_a = uq.field_j;
+          GameAssetSetupSupport.field_a = uq.field_j;
           uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
           uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
           WhirlpoolHasher.field_j = OpacityWidget.field_C;

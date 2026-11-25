@@ -103,7 +103,7 @@ final class nj {
     final static void b(int param0) {
         int var1 = -119 % ((param0 + 49) / 41);
         ValidatedTextInputWidget.field_X = null;
-        if (ck.field_a == null) {
+        if (GameAssetSetupSupport.field_a == null) {
           sg.field_Ab = null;
           hd.field_m = null;
           AgeValidator.field_n = null;
@@ -112,11 +112,11 @@ final class nj {
           return;
         }
         OpacityWidget.field_C = WhirlpoolHasher.field_j;
-        uq.field_j = ck.field_a;
+        uq.field_j = GameAssetSetupSupport.field_a;
         uq.field_j.field_jb = -1;
         WhirlpoolHasher.field_j = null;
         uq.field_j.field_qb = -1;
-        ck.field_a = null;
+        GameAssetSetupSupport.field_a = null;
         sg.field_Ab = null;
         hd.field_m = null;
         AgeValidator.field_n = null;

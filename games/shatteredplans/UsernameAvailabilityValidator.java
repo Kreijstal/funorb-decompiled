@@ -129,13 +129,13 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     final static Sprite a(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var3 = (-(3 * d.field_b[param0].field_z / 4) + 130) * param1 / 5;
+        int var3 = (-(3 * ClientPacketFlushSupport.field_b[param0].field_z / 4) + 130) * param1 / 5;
         int var5Lifetime1;
         int var5Lifetime2;
         if (var3 <= 0) {
           var3 = 1;
         }
-        Sprite var4 = new Sprite(var3, -6 + d.field_b[param0].field_w);
+        Sprite var4 = new Sprite(var3, -6 + ClientPacketFlushSupport.field_b[param0].field_w);
         RandomAccessCacheFile.a(-104);
         var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
@@ -368,7 +368,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             this.field_o = var4.field_h;
           }
           if (this.field_o) {
-            stackIn_17_0 = ck.field_f;
+            stackIn_17_0 = GameAssetSetupSupport.field_f;
             return stackIn_17_0;
           }
           stackIn_15_0 = lr.field_d;

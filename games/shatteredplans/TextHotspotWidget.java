@@ -27,7 +27,7 @@ class TextHotspotWidget extends FocusableWidget {
           var7 = var5.getTextX(0, (UiWidget) (this), param3);
           var8 = var5.getTextY(param2, (UiWidget) (this), 100);
           do {
-            dd.a(2 + var6.field_l, param1 ^ -11858, 2 + var6.field_j, var6.field_k + var7 - 2, var8 + (var6.field_m - 2));
+            ChatMessageFactory.drawDottedRectangleOutline(2 + var6.field_l, param1 ^ -11858, 2 + var6.field_j, var6.field_k + var7 - 2, var8 + (var6.field_m - 2));
             var6 = var6.field_h;
           } while (var6 != null);
         }
@@ -161,7 +161,7 @@ class TextHotspotWidget extends FocusableWidget {
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
               hq.a(WidgetStyle.field_g, PrivateChatMessage.field_o, js.field_f, (byte) 20, uk.field_a);
-              d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
+              ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

@@ -75,7 +75,7 @@ final class LinkPainter implements WidgetPainter {
             } else {
               var10 = var10 + (param0.field_n - var8);
             }
-            dd.a(var8, 1, var7 + 4, -2 + var9, var10 + 2);
+            ChatMessageFactory.drawDottedRectangleOutline(var8, 1, var7 + 4, -2 + var9, var10 + 2);
           }
           if (param4 != 12) {
             LinkPainter.a(true, -120, true);
@@ -176,12 +176,12 @@ final class LinkPainter implements WidgetPainter {
         String var18Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          stackIn_4_0 = d.field_a.field_Db;
-          stackIn_4_1 = param1 * ((cr.field_c + 2) * 3);
-          stackIn_4_2 = cr.field_c + 2;
-          stackIn_5_3 = (DerelictVictoryChecker.field_l == d.field_a.field_Db);
+          stackIn_4_0 = ClientPacketFlushSupport.field_a.field_Db;
+          stackIn_4_1 = param1 * ((UniformNineSliceFactory.field_c + 2) * 3);
+          stackIn_4_2 = UniformNineSliceFactory.field_c + 2;
+          stackIn_5_3 = (DerelictVictoryChecker.field_l == ClientPacketFlushSupport.field_a.field_Db);
           var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
-          var4 = d.field_a.field_Eb.field_M;
+          var4 = ClientPacketFlushSupport.field_a.field_Eb.field_M;
           if (!param0) {
             field_e = 100;
           }
@@ -191,20 +191,20 @@ final class LinkPainter implements WidgetPainter {
             OpacityWidget.field_A.field_s = false;
             RecklessAi.field_p.field_z = IsaacBackedRandom.field_d;
             if (po.field_b == 1) {
-              d.field_a.field_Db.field_zb.field_z = GameSession.field_X;
+              ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = GameSession.field_X;
               if (var19 != 0) {
-                d.field_a.field_Db.field_zb.field_z = tb.field_c;
+                ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = tb.field_c;
               }
             } else {
-              d.field_a.field_Db.field_zb.field_z = tb.field_c;
+              ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = tb.field_c;
             }
-            MatchingTextValidator.a(!param0, d.field_a.field_Eb);
+            MatchingTextValidator.a(!param0, ClientPacketFlushSupport.field_a.field_Eb);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
             OpacityWidget.field_A.field_s = true;
             RecklessAi.field_p.field_z = QuickChatCategoryRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatPhraseRegistry.field_d});
-            d.field_a.field_Db.field_zb.field_z = null;
+            ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
             var7 = (ve) (var4.startForward(0));
             while (true) {
@@ -222,7 +222,7 @@ final class LinkPainter implements WidgetPainter {
                     var8 = 1;
                     var7.markDirty((byte) -125);
                   }
-                  var7.field_K = d.field_a.field_Eb.field_K;
+                  var7.field_K = ClientPacketFlushSupport.field_a.field_Eb.field_K;
                   var9 = 0;
                   if (var7.field_xb == null) {
                     var10 = 13369344;
@@ -239,7 +239,7 @@ final class LinkPainter implements WidgetPainter {
                     !var7.field_Bb.equals("")) {
                     var7.field_Db.field_pb = BufferedSocket.field_i;
                     var7.field_Db.field_jb = var11;
-                    var7.field_Db.setTarget(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
+                    var7.field_Db.setTarget(BufferedSocket.field_i.field_o + 3, UniformNineSliceFactory.field_c, (byte) 88, var9, 0);
                     var12 = 1;
                   }
                   var7.field_Fb.field_x = var10;
@@ -263,7 +263,7 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_47_1 = var7.field_Ab;
                   }
                   stackIn_46_0.field_z = stackIn_47_1;
-                  var7.field_Cb.setTarget(var14, cr.field_c, (byte) 110, var9, var13);
+                  var7.field_Cb.setTarget(var14, UniformNineSliceFactory.field_c, (byte) 110, var9, var13);
                   stackIn_50_0 = var7.field_Fb;
                   if (null != var7.field_xb) {
                     stackIn_51_1 = var7.field_xb;
@@ -271,21 +271,21 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_51_1 = ConquestVictoryChecker.field_p;
                   }
                   stackIn_50_0.field_z = stackIn_51_1;
-                  var7.field_Fb.setTarget(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
+                  var7.field_Fb.setTarget(80, UniformNineSliceFactory.field_c, (byte) 109, var9, -80 + var7.field_K);
                   stackIn_55_0 = (var7.field_Cb.field_z.equals(var7.field_Ab)) ? 0 : 1;
                   var15 = stackIn_55_0;
-                  var9 = var9 + cr.field_c;
+                  var9 = var9 + UniformNineSliceFactory.field_c;
                   if (var3_int == 0) {
                     var7.field_gb = -var7.field_mb + var9;
                   }
                   if (var8 != 0) {
-                    d.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var6), var7, (byte) 98);
+                    ClientPacketFlushSupport.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var6), var7, (byte) 98);
                   }
                   if (var7.field_Db == null ||
                     !var7.field_Db.field_L) {
                     if (var7.field_rb != 0) {
                       var16 = var7.field_Ab;
-                      SliderPainter.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
+                      SliderPainter.a((int[]) null, 0L, (String) null, var16, 293, ClientPacketFlushSupport.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
                         !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
                         !LoginMethodPreference.field_g) {
@@ -311,15 +311,15 @@ final class LinkPainter implements WidgetPainter {
                   continue;
                 }
               } else {
-                if (d.field_a.field_Fb.field_rb != 0) {
-                  ProxyAuthenticationRequiredException.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+                if (ClientPacketFlushSupport.field_a.field_Fb.field_rb != 0) {
+                  ProxyAuthenticationRequiredException.field_e = new jp(ClientPacketFlushSupport.field_a.field_Fb.field_B, ClientPacketFlushSupport.field_a.field_Fb.field_N, ClientPacketFlushSupport.field_a.field_Fb.field_K, ClientPacketFlushSupport.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
                   MapViewState.field_b = 0;
                 }
               }
-              if (0 == d.field_a.field_yb.field_rb) {
+              if (0 == ClientPacketFlushSupport.field_a.field_yb.field_rb) {
                 break;
               }
-              ProxyAuthenticationRequiredException.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+              ProxyAuthenticationRequiredException.field_e = new jp(ClientPacketFlushSupport.field_a.field_yb.field_B, ClientPacketFlushSupport.field_a.field_yb.field_N, ClientPacketFlushSupport.field_a.field_yb.field_K, ClientPacketFlushSupport.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
               MapViewState.field_b = 1;
               break;
             }

@@ -33,12 +33,12 @@ final class dk {
           var4 = SpriteState.field_u.field_nb.lineCount(param1, 500);
           int var5 = 7 % ((-9 - param0) / 60);
           var6 = SpriteState.field_u.field_nb.maxLineWidth(param1, 500) + 6;
-          var7 = 2 + var4 * cr.field_c;
+          var7 = 2 + var4 * UniformNineSliceFactory.field_c;
           var8 = uh.a(-38, var2_int, var6, 12);
           var9 = uq.a(20, 0, var7, var3);
           SoftwareRasterizer.drawRect(var8, var9, var6, var7, 0);
           SoftwareRasterizer.fillRect(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
-          SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
+          SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, UniformNineSliceFactory.field_c);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

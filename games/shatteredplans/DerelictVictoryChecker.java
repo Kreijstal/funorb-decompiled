@@ -187,7 +187,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
           String var4 = null;
           String var5 = null;
           try {
-            cr.field_d = param2;
+            UniformNineSliceFactory.field_d = param2;
             var3 = param1.getParameter("cookieprefix");
             var4 = param1.getParameter("cookiehost");
             var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;

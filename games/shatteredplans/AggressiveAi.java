@@ -600,7 +600,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 var14 = stackIn_216_0;
               }
-              if (bs.field_b >= 2 &&
+              if (RasterTargetSupport.field_b >= 2 &&
                 FleetTrailPoint.field_p[12]) {
                 var15 = 0;
                 var12 = 0;
@@ -636,7 +636,7 @@ final class AggressiveAi extends StandardAi {
                   ArrayWidgetGroup.field_F[var18_int] = false;
                 }
                 js.a(-1, 1, param2, var8, 0, param1, var10, -1);
-                if (bs.field_b >= 2 &&
+                if (RasterTargetSupport.field_b >= 2 &&
                   FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;
                 }

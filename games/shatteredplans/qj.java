@@ -184,7 +184,7 @@ final class qj {
         if (param0 != -127) {
           return;
         }
-        cr.field_b = param1;
+        UniformNineSliceFactory.field_b = param1;
     }
 
     final static PlacementOrder readPlacementOrder(byte param0, GameState param1, PacketBuffer param2) {

@@ -78,8 +78,8 @@ final class DialogRoot extends SingleChildWidget {
               gg.a(js.field_c.field_o, (byte) 30);
             }
             ta.b((byte) -69);
-            if (de.field_j == -1) {
-              de.field_j = uc.field_A;
+            if (StringNode.field_j == -1) {
+              StringNode.field_j = uc.field_A;
             }
             MusicCrossfadeStream.field_q = true;
           }
@@ -509,8 +509,8 @@ final class DialogRoot extends SingleChildWidget {
         kh.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
-        nm.field_c.setTarget(CanvasResizeController.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
-        int var1 = cr.field_c + 2;
+        nm.field_c.setTarget(CanvasResizeController.field_a.field_K, UniformNineSliceFactory.field_c, (byte) 76, 0, 0);
+        int var1 = UniformNineSliceFactory.field_c + 2;
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
         QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);

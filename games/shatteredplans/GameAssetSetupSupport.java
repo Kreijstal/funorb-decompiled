@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck {
+final class GameAssetSetupSupport {
     static AnimatedPanel field_a;
     static int field_e;
     static String field_d;
@@ -10,7 +10,7 @@ final class ck {
     static String field_f;
     static String field_c;
 
-    final static void a(Archive param0, java.applet.Applet param1, Archive param2, Archive param3, Archive param4, Archive param5, byte param6) {
+    final static void initializeGameAssets(Archive param0, java.applet.Applet param1, Archive param2, Archive param3, Archive param4, Archive param5, byte param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -102,7 +102,7 @@ final class ck {
           ObjectList.field_d = va.a("production_icons", 0, "", param0);
           IntValueWriteRequest.field_i = MessageKind.a(true, param0, "", "production_button");
           hq.field_a = MessageKind.a(true, param0, "", "production_button_down");
-          d.field_b = va.a("project_icons", 0, "", param0);
+          ClientPacketFlushSupport.field_b = va.a("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
           NodeSequence.field_b = va.a("faction_icons_large", 0, "", param0);
           var23_ref = IntrusiveDeque.field_a[1];
@@ -241,7 +241,7 @@ final class ck {
           }
           AllianceExpiredEvent.field_k = new Sprite(16, 10);
           pr.field_a = new Sprite(18, 12);
-          bs.a(AllianceExpiredEvent.field_k, 98);
+          RasterTargetSupport.pushSpriteRenderTarget(AllianceExpiredEvent.field_k, 98);
           kb.field_y.drawHalfSize(0, 0);
           pr.field_a.bindAsRenderTarget();
           AllianceExpiredEvent.field_k.drawColourised(1, 1, 8421504);
@@ -270,7 +270,7 @@ final class ck {
           pr.field_a.addOutline(16777215);
           HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
-            ck.clearStatics(-23);
+            GameAssetSetupSupport.clearStatics(-23);
           }
           ef.field_f.addOutline(16777215);
           mj.field_Kb.addOutline(16777215);
@@ -290,7 +290,7 @@ final class ck {
           GarrisonTask.field_p = va.a("system_icons", 0, "", param0);
           PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
-          bs.a(GameScreen.field_R, 78);
+          RasterTargetSupport.pushSpriteRenderTarget(GameScreen.field_R, 78);
           SoftwareRasterizer.fillCircle(15, 15, 15, 65793);
           SoftwareRasterizer.fillCircle(15, 15, 5, 0);
           ByteArrayStorage.field_d = new Sprite(15, 20);
@@ -318,7 +318,7 @@ final class ck {
         }
     }
 
-    final static kj a(String param0, int param1, int param2) {
+    final static kj createStatusResult(String param0, int param1, int param2) {
         kj var3 = null;
         RuntimeException var3_ref = null;
         kj stackIn_2_0 = null;
@@ -351,7 +351,7 @@ final class ck {
         }
     }
 
-    final static String a(byte param0, java.applet.Applet param1) {
+    final static String readSettingsCookie(byte param0, java.applet.Applet param1) {
         try {
           int var7 = 0;
           String var3 = null;
@@ -415,7 +415,7 @@ final class ck {
         }
     }
 
-    final static byte[] a(byte[] param0, boolean param1) {
+    final static byte[] copyByteArray(byte[] param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -431,7 +431,7 @@ final class ck {
           ArrayOperations.copyBytes(param0, 0, var3, 0, var2_int);
           if (param1) {
             var4 = (Archive) null;
-            ck.a((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);
+            GameAssetSetupSupport.initializeGameAssets((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;

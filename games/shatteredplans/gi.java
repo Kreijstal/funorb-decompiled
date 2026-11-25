@@ -218,7 +218,7 @@ final class gi {
             var6 = var6 | 16;
           }
           js.field_f.writeByte(var6, (byte) -93);
-          var7 = ck.a((byte) 70, GameScreen.getHostApplet((byte) 125));
+          var7 = GameAssetSetupSupport.readSettingsCookie((byte) 70, GameScreen.getHostApplet((byte) 125));
           if (var7 == null) {
             var7 = "";
           }
@@ -228,7 +228,7 @@ final class gi {
           }
           GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
           js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);
-          d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
+          ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

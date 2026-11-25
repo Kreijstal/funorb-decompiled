@@ -283,7 +283,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
             this.field_P.field_v = MouseInputHandler.field_a;
           } else {
             if (this.field_D) {
-              this.field_P.field_v = bs.field_c;
+              this.field_P.field_v = RasterTargetSupport.field_c;
               this.field_P.field_p = (WidgetPainter) ((Object) new LinkPainter());
             } else {
               this.field_P.field_p = (WidgetPainter) ((Object) new LinkPainter());

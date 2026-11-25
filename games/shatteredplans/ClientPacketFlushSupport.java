@@ -4,13 +4,13 @@
 import java.io.*;
 import java.util.*;
 
-final class d {
+final class ClientPacketFlushSupport {
     static String field_c;
     static SocialListPanel field_a;
     static Sprite[] field_b;
     static Star field_d;
 
-    final static boolean a(ve param0, ve param1, byte param2) {
+    final static boolean socialEntryRanksAfter(ve param0, ve param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -26,7 +26,7 @@ final class d {
           var3_int = param1.field_zb - param0.field_zb;
           if (param2 != -81) {
             var5 = (Random) null;
-            d.a((byte) -70, 114, 120, (Random) null);
+            ClientPacketFlushSupport.randomInclusive((byte) -70, 114, 120, (Random) null);
           }
           if (QuickChatPhraseRegistry.field_d == param1.field_xb) {
             var3_int -= 200;
@@ -70,11 +70,11 @@ final class d {
         field_c = null;
         if (param0 != -28065) {
           ve var2 = (ve) null;
-          d.a((ve) null, (ve) null, (byte) -8);
+          ClientPacketFlushSupport.socialEntryRanksAfter((ve) null, (ve) null, (byte) -8);
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void flushOutboundPackets(int param0, byte param1) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -108,7 +108,7 @@ final class d {
         }
     }
 
-    final static int a(byte param0, int param1, int param2, Random param3) {
+    final static int randomInclusive(byte param0, int param1, int param2, Random param3) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -117,7 +117,7 @@ final class d {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -12) {
-            d.clearStatics(-116);
+            ClientPacketFlushSupport.clearStatics(-116);
           }
           stackIn_3_0 = param1 + TaskAi.randomBelow(1 - param1 + param2, param3, -11);
           return stackIn_3_0;
@@ -140,7 +140,7 @@ final class d {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$a6964d7afeb1(int param0, int param1) {
+    final static void flushOutboundPacketsFullInts(int param0, int param1) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;

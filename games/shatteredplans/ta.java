@@ -131,36 +131,36 @@ final class ta {
           if (Dialog.d(true)) {
             return;
           }
-          if (de.field_j == -1) {
+          if (StringNode.field_j == -1) {
             return;
           }
-          if (de.field_j == uc.field_A) {
+          if (StringNode.field_j == uc.field_A) {
             return;
           }
           var2 = new byte[2];
           var1 = var2;
           var2[0] = (byte) 0;
-          var2[1] = (byte)de.field_j;
+          var2[1] = (byte)StringNode.field_j;
           UrlLoader.a(var2, (byte) -78, 6);
-          uc.field_A = de.field_j;
+          uc.field_A = StringNode.field_j;
           return;
         }
         ta.a(true, -56);
         if (Dialog.d(true)) {
           return;
         }
-        if (de.field_j == -1) {
+        if (StringNode.field_j == -1) {
           return;
         }
-        if (de.field_j == uc.field_A) {
+        if (StringNode.field_j == uc.field_A) {
           return;
         }
         var2Lifetime1 = new byte[2];
         var1Lifetime1 = var2Lifetime1;
         var2Lifetime1[0] = (byte) 0;
-        var2Lifetime1[1] = (byte)de.field_j;
+        var2Lifetime1[1] = (byte)StringNode.field_j;
         UrlLoader.a(var2Lifetime1, (byte) -78, 6);
-        uc.field_A = de.field_j;
+        uc.field_A = StringNode.field_j;
     }
 
     final static mj a(int param0, long param1) {

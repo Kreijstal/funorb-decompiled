@@ -150,10 +150,10 @@ final class wp {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_35_0 = cr.field_a;
+                stackIn_35_0 = UniformNineSliceFactory.field_a;
                 return stackIn_35_0;
               }
-              stackIn_21_0 = cr.field_a;
+              stackIn_21_0 = UniformNineSliceFactory.field_a;
               return stackIn_21_0;
             }
             stackIn_13_0 = FrameTimer.field_a;

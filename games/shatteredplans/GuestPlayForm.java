@@ -221,7 +221,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         this.field_H.field_u = (WidgetListener) (this);
         this.field_G.field_u = (WidgetListener) (this);
         this.field_H.field_v = CandidateLink.field_m;
-        this.field_G.field_v = bs.field_c;
+        this.field_G.field_v = RasterTargetSupport.field_c;
         this.addChild((byte) -46, this.field_J);
         this.addChild((byte) -62, this.field_H);
         this.addChild((byte) -100, this.field_G);

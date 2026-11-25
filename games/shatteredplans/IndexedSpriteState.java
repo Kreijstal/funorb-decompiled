@@ -18,7 +18,7 @@ abstract class IndexedSpriteState {
         AnimatedPanel var3 = null;
         try {
           BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
-          d.field_a = new SocialListPanel(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
+          ClientPacketFlushSupport.field_a = new SocialListPanel(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
           wg.field_a = new SocialListPanel(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
           OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
@@ -29,15 +29,15 @@ abstract class IndexedSpriteState {
           OpacityWidget.field_A.addChild(4, RecklessAi.field_p);
           OpacityWidget.field_A.addChild(4, BattleSnapshot.field_t);
           OpacityWidget.field_A.addChild(4, FleetMove.field_F);
-          OpacityWidget.field_A.addChild(param0 ^ 27774, d.field_a);
+          OpacityWidget.field_A.addChild(param0 ^ 27774, ClientPacketFlushSupport.field_a);
           OpacityWidget.field_A.addChild(4, kh.field_Ib);
           if (param0 != 27770) {
             field_h = (dg) null;
           }
-          d.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
-          var5 = d.field_a.field_Db.field_zb;
+          ClientPacketFlushSupport.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
+          var5 = ClientPacketFlushSupport.field_a.field_Db.field_zb;
           var6 = var5;
-          d.field_a.field_Db.field_zb.field_G = 1;
+          ClientPacketFlushSupport.field_a.field_Db.field_zb.field_G = 1;
           var6.field_y = 1;
           wg.field_a.field_Db.field_zb.copyFrom(SpriteState.field_u, false);
           var3 = wg.field_a.field_Db.field_zb;

@@ -46,10 +46,10 @@ final class sm {
         SolMapGenerator.field_q = MenuWindow.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
         if (MatchingTextValidator.field_t.field_a == 2) {
           sn.a(var8, -50, var10, param1 + 128, var7, var9);
-          bs.field_a = MenuWindow.a(bs.field_a, var9, var8, var7, -1, var10);
-          bs.a(bs.field_a, 107);
+          RasterTargetSupport.field_a = MenuWindow.a(RasterTargetSupport.field_a, var9, var8, var7, -1, var10);
+          RasterTargetSupport.pushSpriteRenderTarget(RasterTargetSupport.field_a, 107);
           SoftwareRasterizer.b(3, 3, 0, 0, var8, var10);
-          bs.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
+          RasterTargetSupport.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
           OpacityWidget.popLegacyRasterState(0);
         } else {
           if (MatchingTextValidator.field_t.field_a == 1) {
@@ -312,7 +312,7 @@ final class sm {
             var18 = var6 - 15;
             var19 = (var13 - var16 >> 1) + 8 + param1;
             var20 = new Sprite(var17_int, var16);
-            bs.a(var20, 125);
+            RasterTargetSupport.pushSpriteRenderTarget(var20, 125);
             rs.field_Cb.a(var15_ref_String, 1 + rs.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
             OpacityWidget.popLegacyRasterState(0);
             var20.drawAdditive(var18, var19, 256 * var14_intLifetime1 / 12);
@@ -334,7 +334,7 @@ final class sm {
           var15 = rs.field_Cb.stringWidth(var14);
           var16Lifetime1 = rs.field_Cb.field_q + rs.field_Cb.field_J;
           var17 = new Sprite(var16Lifetime1, var15);
-          bs.a(var17, 82);
+          RasterTargetSupport.pushSpriteRenderTarget(var17, 82);
           rs.field_Cb.a(var14, rs.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
           OpacityWidget.popLegacyRasterState(param2 ^ 7552);
           var18Lifetime1 = var6 - 14;
@@ -1178,7 +1178,7 @@ final class sm {
               }
               if (param2 == 5) {
                 var9_ref_bi = new Sprite(80, 80);
-                bs.a(var9_ref_bi, 90);
+                RasterTargetSupport.pushSpriteRenderTarget(var9_ref_bi, 90);
                 AlignedMenuLabel.field_G.drawRotated(40, 40, RasterStateFrame.field_n % 25 * 200, 16384);
                 OpacityWidget.popLegacyRasterState(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
@@ -1292,7 +1292,7 @@ final class sm {
                 if (var16_intLifetime2 != 0) {
                   if (1 == var16_intLifetime2) {
                     var34 = new Sprite(var10_ref_om.field_z + 20, var10_ref_om.field_w);
-                    bs.a(var34, 83);
+                    RasterTargetSupport.pushSpriteRenderTarget(var34, 83);
                     var20 = 0;
                     for (var21 = 0; 5 > var21; var21++) {
                       var10_ref_om.draw(var20, 0);
@@ -1304,7 +1304,7 @@ final class sm {
                   } else {
                     if (var16_intLifetime2 == 2) {
                       var35 = new Sprite(var10_ref_om.field_z + 30, var10_ref_om.field_w);
-                      bs.a(var35, 123);
+                      RasterTargetSupport.pushSpriteRenderTarget(var35, 123);
                       var20 = 0;
                       var21 = 0;
                       while (var21 < 10) {
@@ -1460,7 +1460,7 @@ final class sm {
               var5 = CellVertex.field_a;
             }
           } else {
-            var5 = ck.field_g;
+            var5 = GameAssetSetupSupport.field_g;
           }
         } else {
           var5 = vc.field_e;
@@ -1948,7 +1948,7 @@ final class sm {
               var30 = stackIn_27_0;
               var9_ref_biLifetime1 = var30;
               var10_ref_bi = new Sprite(48, 48);
-              bs.a(var10_ref_bi, 112);
+              RasterTargetSupport.pushSpriteRenderTarget(var10_ref_bi, 112);
               var30.c(0, 0, 48, 48);
               OpacityWidget.popLegacyRasterState(0);
               var8Lifetime2.drawScaledAdditive(var4 - 32, var3 - 32, 96, 96, var7_int << 1);

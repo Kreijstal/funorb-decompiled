@@ -385,10 +385,10 @@ final class jp extends AnimatedPanel {
           this.field_zb.field_u = "|";
           this.field_Db = new StringBuilder(12);
           var9_int = this.field_yb.measureWidthUnbounded(false);
-          this.field_yb.setTarget(var9_int, cr.field_c, (byte) 96, 3, 5);
-          this.field_zb.setTarget(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
+          this.field_yb.setTarget(var9_int, UniformNineSliceFactory.field_c, (byte) 96, 3, 5);
+          this.field_zb.setTarget(var9_int, UniformNineSliceFactory.field_c, (byte) 76, UniformNineSliceFactory.field_c + 3, 5);
           var10 = 5 + var9_int + 5;
-          var11 = 3 + cr.field_c * 2 + 3;
+          var11 = 3 + UniformNineSliceFactory.field_c * 2 + 3;
           var12 = uh.a(-57, param0, var10, param2);
           var13 = uq.a(param3, 0, var11, param1);
           this.setTarget(var10, var11, (byte) 63, var13, var12);

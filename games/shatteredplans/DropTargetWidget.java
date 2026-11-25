@@ -37,7 +37,7 @@ final class DropTargetWidget extends SingleChildWidget {
           if (decompiledFrameRemainder0) {
             if (!AggressiveAi.field_q) {
               if (LoginForm.field_F <= LinkPainter.field_e) {
-                stackIn_16_0 = (LinkPainter.field_e < LoginForm.field_F + de.field_i) ? 1 : 0;
+                stackIn_16_0 = (LinkPainter.field_e < LoginForm.field_F + StringNode.field_i) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -104,7 +104,7 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static String g(byte param0) {
         if (!(DefensiveAi.field_p >= 2)) {
-          return de.field_h;
+          return StringNode.field_h;
         }
         if (StarAnnotation.field_j != null) {
           if (!StarAnnotation.field_j.isIndexLoaded((byte) 107)) {

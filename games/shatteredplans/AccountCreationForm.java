@@ -302,8 +302,8 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         WidgetTheme var5 = new WidgetTheme(StatefulWidgetTheme.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
         this.field_I = new TextHotspotWidget(var2, var5);
         this.field_I.field_v = "";
-        this.field_I.a(0, true, bk.field_c);
-        this.field_I.a(1, true, bk.field_c);
+        this.field_I.a(0, true, ChatCompositionSupport.field_c);
+        this.field_I.a(1, true, ChatCompositionSupport.field_c);
         this.field_I.field_u = (WidgetListener) (this);
         this.field_I.a(46, var3, (byte) 57, -90 + this.field_x);
         var3 = var3 + (15 + this.field_I.field_n);
@@ -455,7 +455,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_5_0;
         }
         if (param0 == 1) {
-          var6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, ck.field_g), rs.field_Cb, new int[]{var4});
+          var6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, GameAssetSetupSupport.field_g), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime1;
           if (param1 != -71) {
             return -98;
