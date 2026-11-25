@@ -2379,7 +2379,7 @@ final class InstructionsPanel {
               ConsoleTokenCursor.receivePacketBytes(-115, 8)) {
               TextLineLayout.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
               ByteStorage.incomingPacket.position = 0;
-              MusicTrackSelectionSupport.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
+              MusicTrackSelectionSupport.sendSessionLoginRequest(param2, param5, CampaignRewardPreview.field_g, 0, param1);
               SpectateRoomRequestSupport.connectionState = NetworkResourceRequest.field_D;
             }
             boolean decompiledFrameRemainder0 = true;

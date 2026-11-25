@@ -423,7 +423,7 @@ final class MembershipExpansionScreen {
             EmailConfirmationValidator.field_n = ChatMessageWriteSupport.a("", AchievementUnlockRequest.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", AchievementUnlockRequest.field_p, false);
             QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", AchievementUnlockRequest.field_p, false);
-            DiskCacheRequest.field_G = ManaStarParticle.a(AchievementUnlockRequest.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
+            DiskCacheRequest.field_G = ManaStarParticle.loadRgbSpritesByName(AchievementUnlockRequest.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             AlphaWidgetContainer.field_H = null;
             AchievementUnlockRequest.field_p = null;
           }

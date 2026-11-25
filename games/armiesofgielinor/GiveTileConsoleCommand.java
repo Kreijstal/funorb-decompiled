@@ -125,7 +125,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
           ScreenWipeTransition.field_a = false;
         }
         if (ChatMessage.field_w) {
-          MoveAttackAction.a(1, CoatOfArmsOverlaySupport.field_a, true, (byte) 90, false);
+          MoveAttackAction.configureMessageDialog(1, CoatOfArmsOverlaySupport.field_a, true, (byte) 90, false);
           ChatMessage.field_w = false;
         }
         var3 = 121 / ((-20 - param0) / 45);

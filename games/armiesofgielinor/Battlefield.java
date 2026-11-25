@@ -4154,7 +4154,7 @@ final class Battlefield {
                     stackIn_54_8 = 8;
                   }
                   var17 = new Unit(stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_53_6, stackIn_53_7, stackIn_54_8 | 1, 0, 0, this, 0, 0, -1, false, 0);
-                  if (var17.p(-43)) {
+                  if (var17.affectsNearbyTileEffects(-43)) {
                     this.refreshTileEffectsNear(var11, var10, 0, 3);
                   }
                   if (var16 != 0) {

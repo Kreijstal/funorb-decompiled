@@ -18,7 +18,7 @@ final class MoveAttackAction extends PreparedAction {
     private int defenderAnimationCount;
     private int[] pathDirections;
 
-    final static void a(int param0, String param1, boolean param2, byte param3, boolean param4) {
+    final static void configureMessageDialog(int param0, String param1, boolean param2, byte param3, boolean param4) {
         String stackIn_4_0 = null;
         String stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
@@ -138,15 +138,15 @@ final class MoveAttackAction extends PreparedAction {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int cosine2048(byte param0, int param1) {
         if (param0 < 62) {
           java.applet.Applet var3 = (java.applet.Applet) null;
-          MoveAttackAction.a(-105, (java.applet.Applet) null);
+          MoveAttackAction.updateBrowserNavigationLinks(-105, (java.applet.Applet) null);
         }
         return TriangleRasterizer.cosineTable[param1 & 2047];
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void updateBrowserNavigationLinks(int param0, java.applet.Applet param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -236,7 +236,7 @@ final class MoveAttackAction extends PreparedAction {
             battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(this.startX, this.startY, eventPath)));
           }
           if (obfuscationGuard != 64) {
-            MoveAttackAction.a((byte) -102, 105);
+            MoveAttackAction.cosine2048((byte) -102, 105);
           }
           if (this.targetDeltaX != 0 ||
             0 != this.targetDeltaY) {
@@ -261,7 +261,7 @@ final class MoveAttackAction extends PreparedAction {
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, BinaryBitmapFont param2, String param3, int param4, int param5, int param6) {
+    final static void drawEndTurnButtonFrame(int param0, RgbSprite[] param1, BinaryBitmapFont param2, String param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;

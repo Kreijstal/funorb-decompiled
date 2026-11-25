@@ -160,7 +160,7 @@ final class AccountNameCharacterSupport {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            MoveAttackAction.a(16058, param1);
+            MoveAttackAction.updateBrowserNavigationLinks(16058, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -347,7 +347,7 @@ final class CampaignMenu {
             }
             if (decompiledSharedTail0) {
               ChannelGainProfile.campaignBackgrounds[this.selectedCampaignEntry.entryId].drawTransparent(var4, var5);
-              this.selectedCampaignEntry.previewSprite.drawAdditive(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, NanoGameClock.field_n << 5) * 100 >> 16) + 80);
+              this.selectedCampaignEntry.previewSprite.drawAdditive(var4, var5, Math.abs(ContextualRuntimeException.cosine8192(param0 ^ -397, NanoGameClock.field_n << 5) * 100 >> 16) + 80);
             }
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;

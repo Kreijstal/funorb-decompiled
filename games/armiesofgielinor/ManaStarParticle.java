@@ -21,7 +21,7 @@ final class ManaStarParticle extends IntrusiveNode {
     private int field_r;
     private int field_o;
 
-    final void a(Battlefield param0, int param1) {
+    final void applyCollectedMana(Battlefield param0, int param1) {
         int dupTemp$1 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -73,7 +73,7 @@ final class ManaStarParticle extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void drawParticle(int param0, int param1, byte param2) {
         int var5 = 0;
         int var4 = -param0 + (this.field_v >> 4);
         int var5Lifetime1;
@@ -129,7 +129,7 @@ final class ManaStarParticle extends IntrusiveNode {
         MusicPatchUsage.manaStarSprites[this.field_t].drawTransparent(-8 + var4, -8 + var5Lifetime1);
     }
 
-    final void b(Battlefield param0, int param1) {
+    final void advanceParticle(Battlefield param0, int param1) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -181,12 +181,12 @@ final class ManaStarParticle extends IntrusiveNode {
           }
           if (param1 != 100) {
             var4 = (Battlefield) null;
-            this.b((Battlefield) null, -123);
+            this.advanceParticle((Battlefield) null, -123);
           }
           if (this.field_o < 100) {
             return;
           }
-          this.a(param0, -12614);
+          this.applyCollectedMana(param0, -12614);
           RadialSummonMenu.playDefaultSoundWithIntGuard(91, MouseWheelSource.field_b[1 + AttackEvent.nextBoundedInt(false, 8, PreferencesWriteRequest.field_n)]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ final class ManaStarParticle extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
+    final static RgbSprite[] loadRgbSpritesByName(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

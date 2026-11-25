@@ -40,7 +40,7 @@ final class AttackRangeOverlaySupport {
             if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining > 0) {
               if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
                 NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
-                !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
+                !NetworkResourceRequest.field_C.selectedUnit.isMovementLockedVariant(-13494)) {
                 var7 = NetworkResourceRequest.field_C.selectedUnit.getMaximumAttackRange(3257);
                 var8 = NetworkResourceRequest.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
                 var9 = NetworkResourceRequest.field_C.movementPlanner.targetX;

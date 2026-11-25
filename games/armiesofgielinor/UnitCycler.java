@@ -74,7 +74,7 @@ final class UnitCycler {
             var15 = var11;
             var15 = var11 + var15 >> 1 << 8;
             var16 = (var13 << 8) / 6;
-            var17 = var16 / 2 + (var15 + (ContextualRuntimeException.a(-1, param2 + var8 << 5) * 4 >> 8));
+            var17 = var16 / 2 + (var15 + (ContextualRuntimeException.cosine8192(-1, param2 + var8 << 5) * 4 >> 8));
             var18 = var9 >> 3;
             for (var19 = 0; 3 > var19; var19++) {
               SoftwareRaster.drawHorizontalLineAdditive(var17 >> 8, var12, var16 >> 8, var5_int, var18);

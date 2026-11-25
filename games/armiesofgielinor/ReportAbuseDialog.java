@@ -80,7 +80,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             }
             var9 = stackIn_18_0;
             if (obfuscationGuard != -47) {
-              ReportAbuseDialog.a(true, -79, -40);
+              ReportAbuseDialog.drawUnitAccessoryIcon(true, -79, -40);
             }
             var10 = width + x;
             var11 = height + y;
@@ -192,7 +192,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         field_Lb = null;
     }
 
-    private final int a(ClientUiComponent param0, int param1, ClientUiComponent param2, int param3, String param4, int param5) {
+    private final int addOffenceSectionHeading(ClientUiComponent param0, int param1, ClientUiComponent param2, int param3, String param4, int param5) {
         ClientUiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_1_0 = 0;
@@ -246,7 +246,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         }
         if (obfuscationGuard != 18585) {
           String var3 = (String) null;
-          discarded$0 = this.a((ClientUiComponent) null, 77, (ClientUiComponent) null, -9, (String) null, 124);
+          discarded$0 = this.addOffenceSectionHeading((ClientUiComponent) null, 77, (ClientUiComponent) null, -9, (String) null, 124);
           return true;
         }
         return true;
@@ -296,7 +296,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         return this.pendingResult;
     }
 
-    private final int a(int param0, int param1, ClientUiComponent param2, ClientUiComponent param3, int param4) {
+    private final int addOffenceButtonRow(int param0, int param1, ClientUiComponent param2, ClientUiComponent param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -334,7 +334,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         }
     }
 
-    final static void n(int param0) {
+    final static void initializeTutorialUnitViewer(int param0) {
         int[] var2 = new int[3];
         int[] var1 = var2;
         var2[2] = 16777215;
@@ -526,31 +526,31 @@ final class ReportAbuseDialog extends ClientUiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(titleStyle, var18Lifetime3, var28[0], var16Lifetime2, LeapYearSupport.field_g, 24);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[6], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[9], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[5], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[7], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[15], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[4], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceSectionHeading(titleStyle, var18Lifetime3, var28[0], var16Lifetime2, LeapYearSupport.field_g, 24);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[6], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[9], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[5], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[7], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[15], var18Lifetime3);
+            var18Lifetime3 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[0], this.offenceButtons[4], var18Lifetime3);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(titleStyle, var18Lifetime4, var28[1], var16Lifetime2, SpellCastAction.field_y, 24);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[16], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[17], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[18], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[19], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[20], var18Lifetime4);
+            var18Lifetime4 = this.addOffenceSectionHeading(titleStyle, var18Lifetime4, var28[1], var16Lifetime2, SpellCastAction.field_y, 24);
+            var18Lifetime4 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[1], this.offenceButtons[16], var18Lifetime4);
+            var18Lifetime4 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[1], this.offenceButtons[17], var18Lifetime4);
+            var18Lifetime4 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[1], this.offenceButtons[18], var18Lifetime4);
+            var18Lifetime4 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[1], this.offenceButtons[19], var18Lifetime4);
+            var18Lifetime4 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[1], this.offenceButtons[20], var18Lifetime4);
             if (var18Lifetime4 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(titleStyle, var18Lifetime5, var28[2], var16Lifetime2, FriendRequestSupport.field_d, 24);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[13], var18Lifetime5);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[21], var18Lifetime5);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[11], var18Lifetime5);
+            var18Lifetime5 = this.addOffenceSectionHeading(titleStyle, var18Lifetime5, var28[2], var16Lifetime2, FriendRequestSupport.field_d, 24);
+            var18Lifetime5 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[2], this.offenceButtons[13], var18Lifetime5);
+            var18Lifetime5 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[2], this.offenceButtons[21], var18Lifetime5);
+            var18Lifetime5 = this.addOffenceButtonRow(var16Lifetime2, 2, var28[2], this.offenceButtons[11], var18Lifetime5);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -659,7 +659,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void drawUnitAccessoryIcon(boolean param0, int param1, int param2) {
         GameUiOverlaySupport.drawSpellTrinketIcon(108, param2, param1, 2);
         if (param0) {
           RgbSprite[] var4 = (RgbSprite[]) null;

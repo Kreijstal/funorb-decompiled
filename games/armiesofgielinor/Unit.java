@@ -196,7 +196,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 2)));
         }
         if (obfuscationGuard != -42) {
-          Unit.m(45);
+          Unit.processPendingUnlockNotifications(45);
         }
     }
 
@@ -270,7 +270,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return var3;
     }
 
-    final boolean p(int param0) {
+    final boolean affectsNearbyTileEffects(int param0) {
         int var2;
         boolean stackIn_8_0 = false;
         var2 = -69 % ((3 - param0) / 46);
@@ -433,7 +433,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
         if (this.immobilizedTurns != 0) {
         } else {
-          if (!this.h(obfuscationGuard - 13458)) {
+          if (!this.isMovementLockedVariant(obfuscationGuard - 13458)) {
             this.movementSpent = false;
           } else {
             this.movementSpent = true;
@@ -675,7 +675,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isMovementLockedVariant(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -13494) {
           return false;
@@ -817,7 +817,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return new Unit(this.tileX, this.tileY, this.unitType, this.ownerPlayer, this.maximumStrength, this.strength, this.packStatusFlags((byte) 110), this.accessoryType, this.bonusStrength, this.battlefield, this.statusEffectType, this.statusEffectValue, this.equipmentDescriptor, true, this.immobilizedTurns);
     }
 
-    final int f(int param0) {
+    final int getSpecialActionIconIndex(int param0) {
         if (this.unitType == 34 &&
           !this.packedFlag8) {
           return 0;
@@ -961,7 +961,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 16) > 0 ? true : false;
     }
 
-    final static void m(int param0) {
+    final static void processPendingUnlockNotifications(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

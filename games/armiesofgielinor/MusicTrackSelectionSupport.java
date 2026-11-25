@@ -11,7 +11,7 @@ final class MusicTrackSelectionSupport {
     static IndexedSprite[] attackTargetSprites;
     static String field_h;
 
-    final static void a(boolean param0, boolean param1, LoginCredentials param2, int param3, int param4) {
+    final static void sendSessionLoginRequest(boolean param0, boolean param1, LoginCredentials param2, int param3, int param4) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -85,7 +85,7 @@ final class MusicTrackSelectionSupport {
         }
     }
 
-    final static void a(boolean param0, ClientUiComponent param1, ClientUiComponent param2, BitmapFont param3, ClientUiComponent param4, int param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, VerticalScrollbar param9, ClientUiComponent param10, ClientUiComponent param11) {
+    final static void initializeChatPanel(boolean param0, ClientUiComponent param1, ClientUiComponent param2, BitmapFont param3, ClientUiComponent param4, int param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, VerticalScrollbar param9, ClientUiComponent param10, ClientUiComponent param11) {
         String stackIn_13_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -321,7 +321,7 @@ final class MusicTrackSelectionSupport {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         ignoredAccountsByName = null;
         field_e = null;
         field_b = null;
@@ -339,7 +339,7 @@ final class MusicTrackSelectionSupport {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, LobbyPlayer param4, ScrollContainer param5, int param6) {
+    final static void openLobbyPlayerContextMenu(boolean param0, int param1, int param2, int param3, LobbyPlayer param4, ScrollContainer param5, int param6) {
         ClientContextMenu var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -358,7 +358,7 @@ final class MusicTrackSelectionSupport {
           FullscreenMembershipDialog.activeContextMenu.addSocialActions((int[]) null, 7, 0);
           FullscreenMembershipDialog.activeContextMenu.addReportAction((byte) 44);
           if (param0) {
-            MusicTrackSelectionSupport.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (VerticalScrollbar) null, (ClientUiComponent) null, (ClientUiComponent) null);
+            MusicTrackSelectionSupport.initializeChatPanel(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (VerticalScrollbar) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           var7 = FullscreenMembershipDialog.activeContextMenu;
           var8 = param2;

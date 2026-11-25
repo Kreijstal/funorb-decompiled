@@ -202,9 +202,9 @@ final class ConsoleTokenSupport {
           return;
         }
         if (var12.movementSpent) {
-          if (var12.h(-13494)) {
+          if (var12.isMovementLockedVariant(-13494)) {
             if (var12.accessoryType == 1) {
-              ReportAbuseDialog.a(false, param5, param0);
+              ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
             }
             if (var12.hasMovementFlag1(false)) {
               UnitCycler.a(111, param5, param0, var12);
@@ -260,7 +260,7 @@ final class ConsoleTokenSupport {
             if (var12.attacksRemaining == 0) {
               LobbyPlayer.cannotMoveSprites[2].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
-                ReportAbuseDialog.a(false, param5, param0);
+                ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
                 UnitCycler.a(111, param5, param0, var12);
@@ -315,7 +315,7 @@ final class ConsoleTokenSupport {
             } else {
               LobbyPlayer.cannotMoveSprites[1].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
-                ReportAbuseDialog.a(false, param5, param0);
+                ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
                 UnitCycler.a(111, param5, param0, var12);
@@ -372,7 +372,7 @@ final class ConsoleTokenSupport {
           return;
         }
         if (var12.accessoryType == 1) {
-          ReportAbuseDialog.a(false, param5, param0);
+          ReportAbuseDialog.drawUnitAccessoryIcon(false, param5, param0);
         }
         if (var12.hasMovementFlag1(false)) {
           UnitCycler.a(111, param5, param0, var12);

@@ -307,7 +307,7 @@ final class VertexNormal {
                 ActionSpell.writePlayerAdmissionRequest(var12.accountId, param3, 6);
               } else {
                 if (0 == var12.cancelRejectButton.pressedButton) {
-                  MusicTrackSelectionSupport.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
+                  MusicTrackSelectionSupport.openLobbyPlayerContextMenu(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
                   SoundPlaybackHandle.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
                 }

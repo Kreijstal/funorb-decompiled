@@ -13,14 +13,14 @@ final class SocketResourceClient extends ResourceProtocolClient {
 
     final void close(int obfuscationGuard) {
         if (obfuscationGuard != -5758) {
-          this.d((byte) 55);
+          this.sendResourceSetupRecord((byte) 55);
         }
         if (null != this.socket) {
           this.socket.close((byte) -45);
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendChatFilterSettings(int param0, int param1) {
         CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param1);
         var2.writeByte(1, 2);
@@ -57,8 +57,8 @@ final class SocketResourceClient extends ResourceProtocolClient {
               this.socket = null;
             }
             this.socket = (BufferedSocket) (transport);
-            this.d((byte) 116);
-            this.a(82, sessionFlag);
+            this.sendResourceSetupRecord((byte) 116);
+            this.sendResourceSessionState(82, sessionFlag);
             this.activeResponse = null;
             var4_int = -66 / ((obfuscationGuard - 25) / 57);
             this.incomingHeader.position = 0;
@@ -367,7 +367,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
         }
     }
 
-    private final void d(byte param0) {
+    private final void sendResourceSetupRecord(byte param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -404,7 +404,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void sendResourceSessionState(int param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_6_0 = null;
@@ -417,7 +417,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           }
           try {
             if (param0 <= 5) {
-              this.a(-74, true);
+              this.sendResourceSessionState(-74, true);
             }
             this.outgoingRecord.position = 0;
             stackIn_6_0 = this.outgoingRecord;
@@ -475,7 +475,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
         this.xorByte = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final static void a(byte param0, RgbSprite[] param1, RgbSprite param2) {
+    final static void initializeDialSprites(byte param0, RgbSprite[] param1, RgbSprite param2) {
         try {
           PreferencesReadRequest.field_q = param1;
           PreferencesReadRequest.field_q[0].normalizeCanvas();

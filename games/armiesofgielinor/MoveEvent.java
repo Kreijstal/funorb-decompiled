@@ -169,7 +169,7 @@ final class MoveEvent extends GameEvent {
           WidgetStateStyle.field_c = DropdownSelectorPainter.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
           LocalAccountNameSupport.field_e = GameplayController.loadRgbSpriteByName("jagex_logo_grey", (byte) 51, "commonui", param2);
           NodeIterator.field_b = DropdownSelectorPainter.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
-          IgnoreListLookupSupport.validationStatusIcons = ManaStarParticle.a(param2, "validation", (byte) -4, "commonui");
+          IgnoreListLookupSupport.validationStatusIcons = ManaStarParticle.loadRgbSpritesByName(param2, "validation", (byte) -4, "commonui");
           AccountIdentifierStatus.field_e = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14", param2, param3, (byte) -87, "commonui"));
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
@@ -406,7 +406,7 @@ final class MoveEvent extends GameEvent {
               this.unit.tileX = var3_int;
               this.unit.refreshTileEffects((byte) 106);
               var10 = var9;
-              if (var6.p(-75)) {
+              if (var6.affectsNearbyTileEffects(-75)) {
                 var7 = 3;
               }
               if (!var10.hasModifierFlag4((byte) -118) ||

@@ -125,7 +125,7 @@ final class UnitInfoPopup extends IntrusiveNode {
               ResourceClientErrorSupport.field_e[var11].drawAlpha(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
             }
           }
-          var12 = this.unit.f(param2 + 11);
+          var12 = this.unit.getSpecialActionIconIndex(param2 + 11);
           if (var12 != -1) {
             PreparedAction.drawHorizontalThreeSliceWithOpacity(-this.fadeOffset + 32 << 3, true, var9Lifetime1, QuickChatMenuCloseSupport.field_b, 40, var10 + 60);
             AccountFlowUpdateSupport.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);

@@ -3851,7 +3851,7 @@ final class GameplayController {
             var4_ref_ac = (ManaStarParticle) (this.field_Ub.first((byte) 111));
             scanLoop4: while (true) {
               if (var4_ref_ac != null) {
-                var4_ref_ac.b(this.battlefield, 100);
+                var4_ref_ac.advanceParticle(this.battlefield, 100);
                 var4_ref_ac = (ManaStarParticle) (this.field_Ub.next((byte) 123));
                 if (var10 != 0) {
                   break scanLoop4;
@@ -4154,7 +4154,7 @@ final class GameplayController {
               var2_int != 0) {
               TrianglePulse.field_d.drawScaledAdditive(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
-            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.getEndTurnButtonOpacity((byte) -69), 67, param0 ^ -25);
+            MoveAttackAction.drawEndTurnButtonFrame(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.getEndTurnButtonOpacity((byte) -69), 67, param0 ^ -25);
           }
           if (param0 != 82) {
             return;
@@ -5199,7 +5199,7 @@ final class GameplayController {
               default:
                 break;
             }
-            LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, var3, this.field_Nb);
+            LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, var3, this.field_Nb);
             return;
           }
           return;
@@ -5570,7 +5570,7 @@ final class GameplayController {
             } else {
               stackIn_347_2 = "";
             }
-            LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(stackIn_346_0, ((StringBuilder) (Object) stackIn_346_1).append(stackIn_347_2).append("paused").toString(), this.field_Nb);
+            LineOfSightGrid.appendBattleLogLineWithIntGuard(stackIn_346_0, ((StringBuilder) (Object) stackIn_346_1).append(stackIn_347_2).append("paused").toString(), this.field_Nb);
           }
           if (this.field_E &&
             PowerOfTwoSupport.keyCode == 54 &&
@@ -6649,7 +6649,7 @@ final class GameplayController {
                   if (((String) (var2)).length() != 0) {
                     if (!this.selectedUnit.movementSpent &&
                       0 != this.selectedUnit.attacksRemaining) {
-                      if (this.selectedUnit.h(-13494)) {
+                      if (this.selectedUnit.isMovementLockedVariant(-13494)) {
                         var2 = DualNodeDeque.field_k;
                         if (var20 != 0) {
                           var2 = BattleCameraTargetTransform.field_d;
@@ -7095,7 +7095,7 @@ final class GameplayController {
                       if (this.battlefield.tiles[var16].occupant == null ||
                         ~this.battlefield.tiles[var16].occupant.ownerPlayer != ~this.controlledPlayerId ||
                         this.movementPlanner.controlsOtherPlayerUnit) {
-                        if (this.selectedUnit.h(-13494)) {
+                        if (this.selectedUnit.isMovementLockedVariant(-13494)) {
                           var2 = DualNodeDeque.field_k;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
@@ -7721,7 +7721,7 @@ final class GameplayController {
               this.field_r) {
               var4_ref_ac = (ManaStarParticle) (this.field_Ub.first((byte) 124));
               while (var4_ref_ac != null) {
-                var4_ref_ac.a(0, 0, (byte) -29);
+                var4_ref_ac.drawParticle(0, 0, (byte) -29);
                 var4_ref_ac = (ManaStarParticle) (this.field_Ub.next((byte) 123));
                 if (var10 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -8995,7 +8995,7 @@ final class GameplayController {
           if (decompiledFrameRemainder0) {
             while (true) {
               if (this.field_Ub.size(false) > 0) {
-                ((ManaStarParticle) (this.field_Ub.first((byte) 120))).a(this.battlefield, -12614);
+                ((ManaStarParticle) (this.field_Ub.first((byte) 120))).applyCollectedMana(this.battlefield, -12614);
                 if (var4 == 0) {
                   continue;
                 }
@@ -10115,18 +10115,18 @@ final class GameplayController {
             var3 = 1 << var2_int;
             if (var4 == 0) {
               if ((this.field_hb & var3) != 0) {
-                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, EmailCheckResult.formatTemplate(4800, AccountRequestResult.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
               } else {
                 if ((this.field_ob & var3) != 0) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, EmailCheckResult.formatTemplate(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               if (0 != (var3 & this.field_x) &&
                 0 == (this.battlefield.eliminatedPlayerMask & var3)) {
                 if (0 == (var3 & this.battlefield.field_C)) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, EmailCheckResult.formatTemplate(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 } else {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.formatTemplate(4800, MusicTrackSelectionSupport.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, EmailCheckResult.formatTemplate(4800, MusicTrackSelectionSupport.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               var2_int++;
@@ -11271,7 +11271,7 @@ final class GameplayController {
     private final void saveCampaignQuicksave(byte obfuscationGuard) {
         try {
           LobbyPlayer.uploadQuicksave(this.battlefield, this.battlefield.damageTakenByPlayer[this.battlefield.campaignMission.playerSlot], this.battlefield.unitLossCounts[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
-          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
+          LineOfSightGrid.appendBattleLogLineWithIntGuard(-80, PacketBuffer.field_p, this.field_Nb);
           if (obfuscationGuard >= -39) {
             this.drawMenuBackground(-24);
           }

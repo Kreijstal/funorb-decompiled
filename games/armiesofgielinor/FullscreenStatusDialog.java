@@ -19,25 +19,25 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
                   GameUiOverlaySupport.field_c != filterValue) {
                   GameUiOverlaySupport.field_c = filterValue;
                   MoveEvent.field_J = true;
-                  SocketResourceClient.a(896, packetOpcode);
+                  SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
                 }
                 return;
               }
               QuickChatCategory.field_D = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, packetOpcode);
+              SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
             }
           } else {
             if (filterValue != MaskedTextEntryPainter.field_B) {
               MaskedTextEntryPainter.field_B = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, packetOpcode);
+              SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
             }
             if (channelId == 1 &&
               QuickChatCategory.field_D != filterValue) {
               QuickChatCategory.field_D = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, packetOpcode);
+              SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
             }
           }
         } else {
@@ -45,13 +45,13 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
             filterValue != MaskedTextEntryPainter.field_B) {
             MaskedTextEntryPainter.field_B = filterValue;
             MoveEvent.field_J = true;
-            SocketResourceClient.a(896, packetOpcode);
+            SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
           }
           if (channelId == 1 &&
             QuickChatCategory.field_D != filterValue) {
             QuickChatCategory.field_D = filterValue;
             MoveEvent.field_J = true;
-            SocketResourceClient.a(896, packetOpcode);
+            SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
           }
         }
         if (2 != channelId) {
@@ -62,7 +62,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
         }
         GameUiOverlaySupport.field_c = filterValue;
         MoveEvent.field_J = true;
-        SocketResourceClient.a(896, packetOpcode);
+        SocketResourceClient.sendChatFilterSettings(896, packetOpcode);
     }
 
     private final InteractiveWidget createCloseButton(String text, WidgetListener listener, int obfuscationGuard) {

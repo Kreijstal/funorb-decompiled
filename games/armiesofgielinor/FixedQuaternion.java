@@ -120,7 +120,7 @@ final class FixedQuaternion {
     final void setAxisAngle(byte obfuscationGuard, int axisX, int axisZ, int axisY, int angle) {
         angle = angle >> 1;
         int var6 = CombatViewTransition.sine2048(angle, 125);
-        int var7 = MoveAttackAction.a((byte) 67, angle);
+        int var7 = MoveAttackAction.cosine2048((byte) 67, angle);
         this.w = var7;
         this.x = Spell.multiplyFixed16((long)axisX, (long)var6, -1700635440);
         this.y = Spell.multiplyFixed16((long)axisY, (long)var6, obfuscationGuard ^ -1700635393);

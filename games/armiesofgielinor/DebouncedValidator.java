@@ -192,7 +192,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var6Lifetime1 = PasswordValidator.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = SocketResourceClient.sine8192(var6Lifetime1, 100) >> 8;
-          var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
+          var9Lifetime1 = ContextualRuntimeException.cosine8192(param0 - 10, var6Lifetime1) >> 8;
           if (AiPlanningStrategy.pointerX != -1 &&
             HighscoreAccountEntry.pointerY != -1) {
             var9Lifetime1 = -128;

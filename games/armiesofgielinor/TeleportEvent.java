@@ -91,7 +91,7 @@ final class TeleportEvent extends GameEvent {
           } else {
             var3.occupant = null;
             var3.captureStrength = var4.getDefaultCaptureStrength(10);
-            if (this.unit.p(-43)) {
+            if (this.unit.affectsNearbyTileEffects(-43)) {
               battlefield.refreshTileEffectsNear(this.sourceY, this.sourceX, obfuscationGuard + 26661, 3);
             }
           }
@@ -103,7 +103,7 @@ final class TeleportEvent extends GameEvent {
           }
           if (!this.skipDestinationPlacement) {
             battlefield.tiles[battlefield.mapWidth * this.unit.tileY + this.unit.tileX].occupant = this.unit;
-            if (this.unit.p(-70)) {
+            if (this.unit.affectsNearbyTileEffects(-70)) {
               battlefield.refreshTileEffectsNear(this.unit.tileY, this.unit.tileX, 0, 3);
             }
           }

@@ -1316,7 +1316,7 @@ final class TutorialController {
                                                                                                                                                 return;
                                                                                                                                               }
                                                                                                                                               if (DamageEvent.isGuestSession(123)) {
-                                                                                                                                                MoveAttackAction.a(0, RasterImageSurface.field_e, param0, (byte) 90, true);
+                                                                                                                                                MoveAttackAction.configureMessageDialog(0, RasterImageSurface.field_e, param0, (byte) 90, true);
                                                                                                                                                 if (var9 == 0) {
                                                                                                                                                   return;
                                                                                                                                                 }
@@ -1358,7 +1358,7 @@ final class TutorialController {
                                                                                                                                             return;
                                                                                                                                           }
                                                                                                                                           if (DamageEvent.isGuestSession(116)) {
-                                                                                                                                            MoveAttackAction.a(0, SpellMenuGroup.field_l, param0, (byte) 90, true);
+                                                                                                                                            MoveAttackAction.configureMessageDialog(0, SpellMenuGroup.field_l, param0, (byte) 90, true);
                                                                                                                                             if (var9 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
@@ -1671,7 +1671,7 @@ final class TutorialController {
                                                                                             return;
                                                                                           }
                                                                                         }
-                                                                                        MoveAttackAction.a(0, SpriteDropdownControl.field_G, param0, (byte) 90, true);
+                                                                                        MoveAttackAction.configureMessageDialog(0, SpriteDropdownControl.field_G, param0, (byte) 90, true);
                                                                                         if (var9 == 0) {
                                                                                           return;
                                                                                         }
@@ -2218,7 +2218,7 @@ final class TutorialController {
                 if (!this.selectionState.hasActivationInput((byte) 102)) {
                   return;
                 }
-                ReportAbuseDialog.n(14737632);
+                ReportAbuseDialog.initializeTutorialUnitViewer(14737632);
                 var6 = param0 ? 1 : 0;
                 CipherPacketBuffer.a(var6 != 0, -6, 1, ChatInputDispatchSupport.field_a);
                 if (var9 == 0) {
@@ -4855,7 +4855,7 @@ final class TutorialController {
                           RadialSummonMenu.playDefaultSoundWithIntGuard(65, ClientUiNode.field_v[1]);
                           GameplayController.field_J = AccountNameSelectionForm.field_F;
                         }
-                        LineOfSightGrid.a((byte) -102, 224, IgnoreListLookupSupport.a(true, 380), ProgressMessageDialog.pointerButton, HighscoreAccountEntry.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
+                        LineOfSightGrid.updateCoatPartScrollInput((byte) -102, 224, IgnoreListLookupSupport.a(true, 380), ProgressMessageDialog.pointerButton, HighscoreAccountEntry.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                     }

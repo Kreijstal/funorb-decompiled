@@ -25,7 +25,7 @@ final class TextSplitSupport {
               AppletScriptBridge.evaluateScript((byte) -110, param0, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            MoveAttackAction.a(16058, param0);
+            MoveAttackAction.updateBrowserNavigationLinks(16058, param0);
           } catch (RuntimeException runtimeException) {
             throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

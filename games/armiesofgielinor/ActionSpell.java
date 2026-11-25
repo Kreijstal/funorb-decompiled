@@ -197,7 +197,7 @@ final class ActionSpell extends Spell {
         SoftwareRaster.setTarget((int[]) null, 0, 0);
         FixedSquareRootSupport.field_b = StripedProgressWidget.a(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
         FixedSquareRootSupport.field_b.bindRasterTarget(obfuscationGuard - 17900);
-        ContextualRuntimeException.a((byte) -85, width / 2, height / 2);
+        ContextualRuntimeException.setMessageDialogCenter((byte) -85, width / 2, height / 2);
         if (obfuscationGuard == 23505) {
           MeshObject.a(-8994, width, height);
           CampaignMission.a(height, -22696, width);

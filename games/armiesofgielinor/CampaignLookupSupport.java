@@ -75,7 +75,7 @@ final class CampaignLookupSupport {
 
     final static void updateCollapsedSharedUi(byte param0) {
         DiskCacheWorker.collapseChatPanel(-10232);
-        ContextualRuntimeException.b(-6145);
+        ContextualRuntimeException.advanceSharedOverlayCloseTimers(-6145);
         if (param0 != -97) {
           field_e = (ClientUiComponent) null;
         }

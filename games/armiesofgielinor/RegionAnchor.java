@@ -96,7 +96,7 @@ final class RegionAnchor extends IntrusiveNode {
             }
             if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
               NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
-              !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
+              !NetworkResourceRequest.field_C.selectedUnit.isMovementLockedVariant(-13494)) {
               var6 = NetworkResourceRequest.field_C.selectedUnit.getMaximumAttackRange(3257);
               var7 = NetworkResourceRequest.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
               var8 = NetworkResourceRequest.field_C.movementPlanner.targetX;

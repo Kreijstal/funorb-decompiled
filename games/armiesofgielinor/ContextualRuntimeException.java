@@ -21,7 +21,7 @@ final class ContextualRuntimeException extends RuntimeException {
         field_a = null;
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void setMessageDialogCenter(byte param0, int param1, int param2) {
         if (param0 != -85) {
           return;
         }
@@ -29,10 +29,10 @@ final class ContextualRuntimeException extends RuntimeException {
         LoginAndTutorialSetupSupport.field_g = param1;
     }
 
-    final static int a(int param0, int param1) {
+    final static int cosine8192(int param0, int param1) {
         param1 = param1 & 8191;
         if (param0 != -1) {
-          ContextualRuntimeException.a((byte) 1, -105, -40);
+          ContextualRuntimeException.setMessageDialogCenter((byte) 1, -105, -40);
         }
         if (param1 >= 4096) {
           return param1 < 6144 ? -QuickChatMenuCloseSupport.field_a[-param1 + 6144] : QuickChatMenuCloseSupport.field_a[-6144 + param1];
@@ -40,7 +40,7 @@ final class ContextualRuntimeException extends RuntimeException {
         return param1 >= 2048 ? -QuickChatMenuCloseSupport.field_a[-2048 + param1] : QuickChatMenuCloseSupport.field_a[2048 - param1];
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void initializeSocialListPanels(int param0, ResourceArchive param1) {
         ClientUiComponent var6 = null;
         ClientUiComponent var7 = null;
         ClientUiComponent var3 = null;
@@ -67,7 +67,7 @@ final class ContextualRuntimeException extends RuntimeException {
           TaggedMapData.field_g.scrollContainer.viewport.applyStyle(0, PasswordLoginCredentials.field_h);
           if (param0 != -6145) {
             ResourceArchive var4 = (ResourceArchive) null;
-            ContextualRuntimeException.a(-105, (ResourceArchive) null);
+            ContextualRuntimeException.initializeSocialListPanels(-105, (ResourceArchive) null);
           }
           TaggedMapData.field_g.scrollContainer.viewport.verticalAlignment = 1;
           var3 = TaggedMapData.field_g.scrollContainer.viewport;
@@ -77,7 +77,7 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    final static void b(int param0) {
+    final static void advanceSharedOverlayCloseTimers(int param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 < ModalDialogHost.field_J) {
