@@ -96,7 +96,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           if (null != QuickChatCategory.keyboardListener) {
             characterCode = event.getKeyChar();
             if (characterCode != 0 && characterCode != 65535 &&
-              AiActionCandidate.a((char) characterCode, 16150)) {
+              AiActionCandidate.canEncodeSingleByteCharacter((char) characterCode, 16150)) {
               nextEventIndex = 127 & ProgressDialog.keyEventWriteIndex + 1;
               if (nextEventIndex != SummonAction.keyEventReadIndex) {
                 LocalAccountNameSupport.keyEventCodes[ProgressDialog.keyEventWriteIndex] = -1;

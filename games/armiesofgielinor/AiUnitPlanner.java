@@ -165,7 +165,7 @@ final class AiUnitPlanner extends IntrusiveNode {
                     var24 = Math.abs(var22) + Math.abs(var23);
                     if (var24 >= var21_int &&
                       var20_int >= var24 &&
-                      this.planner.influenceMap.a(tileX, -42, var19_int != 0, var23, var22, tileY)) {
+                      this.planner.influenceMap.isAttackOffsetUnobstructed(tileX, -42, var19_int != 0, var23, var22, tileY)) {
                       var26_int = var23 + tileX + battlefield.mapWidth * (var22 + tileY);
                       if (battlefield.tiles[var26_int].occupant == null ||
                         battlefield.tiles[var26_int].occupant == this.unit) {
@@ -585,8 +585,8 @@ final class AiUnitPlanner extends IntrusiveNode {
         int var3 = param0 % this.planner.battlefield.mapWidth;
         int var5 = param0 / this.planner.battlefield.mapWidth;
         float var6 = this.planner.weights[54] * this.planner.field_n[0][9][param0];
-        this.planner.influenceMap.a(this.planner.field_V, true, var6, 0, (byte) -4, 9, var5, var3);
-        this.planner.influenceMap.a(this.planner.field_V, true, var6, 0, (byte) -4, 9, this.unit.tileY, this.unit.tileX);
+        this.planner.influenceMap.addDistanceInfluence(this.planner.field_V, true, var6, 0, (byte) -4, 9, var5, var3);
+        this.planner.influenceMap.addDistanceInfluence(this.planner.field_V, true, var6, 0, (byte) -4, 9, this.unit.tileY, this.unit.tileX);
     }
 
     final void executeSelectedAction(int obfuscationGuard) {

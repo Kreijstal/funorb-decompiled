@@ -15,7 +15,7 @@ final class AiActionCandidate extends IntrusiveNode {
     int summonUnitType;
     static int[] field_p;
 
-    final static void e(int param0) {
+    final static void disableViewportResizing(int param0) {
         if (param0 != 17023) {
           field_p = (int[]) null;
         }
@@ -105,7 +105,7 @@ final class AiActionCandidate extends IntrusiveNode {
         return this.destinationX != -1 ? true : false;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean canEncodeSingleByteCharacter(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

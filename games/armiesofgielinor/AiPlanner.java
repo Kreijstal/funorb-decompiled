@@ -221,7 +221,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         if (0.0f < var4) {
           for (var8 = 0; var8 < 7; var8++) {
-            this.influenceMap.a(-101, var6, (float)sign * var4, var8, 9, this.field_n, var5);
+            this.influenceMap.addCategoryDistanceInfluence(-101, var6, (float)sign * var4, var8, 9, this.field_n, var5);
           }
         }
         this.field_v[tileIndex] = (float)sign * var4;
@@ -273,12 +273,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     var13 + var9 >= 0 &&
                     this.battlefield.mapWidth > var12Lifetime1 + var8 &&
                     var9 + var13 < this.battlefield.mapHeight) {
-                    this.influenceMap.a(var7, false, var11, var6, (byte) -4, 0, var9 + var13, var8 + var12Lifetime1);
+                    this.influenceMap.addDistanceInfluence(var7, false, var11, var6, (byte) -4, 0, var9 + var13, var8 + var12Lifetime1);
                   }
                 }
               }
             } else {
-              this.influenceMap.a(var7, false, this.weights[55] * (float)param4, var6, (byte) -4, 0, var9, var8);
+              this.influenceMap.addDistanceInfluence(var7, false, this.weights[55] * (float)param4, var6, (byte) -4, 0, var9, var8);
             }
           }
           var6++;
@@ -530,7 +530,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     this.addUnitInfluenceForCategory(1, -1 + this.field_s, 19551, (Unit) (var3_ref));
                   }
                 } else {
-                  this.influenceMap.a(var15, 1, -19545, (Unit) (var3_ref));
+                  this.influenceMap.addUnitStrengthInfluence(var15, 1, -19545, (Unit) (var3_ref));
                 }
               }
               this.field_s = this.field_s + 1;
@@ -1200,7 +1200,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (obfuscationGuard != 80) {
             AiPlanner.releaseStatics(-94);
           }
-          this.influenceMap.a(this.field_A, 1, obfuscationGuard ^ -19465, var3.unit);
+          this.influenceMap.addUnitStrengthInfluence(this.field_A, 1, obfuscationGuard ^ -19465, var3.unit);
           if (6 == this.field_k) {
             this.setPlanningPhase(3, 4);
             this.field_M = (AiUnitPlanner) (this.unitPlanners.startForwardAt(true, var3));
@@ -1233,7 +1233,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (null != this.field_S) {
           if (this.field_S.unit.field_X) {
             if (!this.field_S.unit.removedFromActivePlay) {
-              this.influenceMap.a(this.field_A, 1, -19545, this.field_S.unit);
+              this.influenceMap.addUnitStrengthInfluence(this.field_A, 1, -19545, this.field_S.unit);
               if (this.field_S.unit.tag != 0) {
                 this.addObjectiveInfluence(3, -14092, this.battlefield.mapWidth * this.field_S.unit.tileY + this.field_S.unit.tileX, this.field_S.unit.tag, 1);
               }
@@ -1251,12 +1251,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var8 = var7;
           if (var8 != null &&
             var8.field_X) {
-            this.influenceMap.a(this.field_K, 1, -19545, var8);
+            this.influenceMap.addUnitStrengthInfluence(this.field_K, 1, -19545, var8);
             if (var8.tag != 0) {
               this.addObjectiveInfluence(3, -14092, var8.tileY * this.battlefield.mapWidth + var8.tileX, var8.tag, 1);
             }
             this.addUnitInfluenceForAllCategories(66, var8, 1);
-            this.influenceMap.a(this.field_n[var7.getUnitCategory(0)], 1, param0 - 19545, var8);
+            this.influenceMap.addUnitStrengthInfluence(this.field_n[var7.getUnitCategory(0)], 1, param0 - 19545, var8);
             var8.field_X = false;
           }
         }
@@ -1271,7 +1271,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         this.currentUnitPlanner = this.field_M;
         var2 = this.field_M.evaluateActions(true, (byte) -124);
         if (-3.4028234663852886e+38f != var2) {
-          this.influenceMap.a(this.field_A, -1, param0 ^ -19545, this.field_M.unit);
+          this.influenceMap.addUnitStrengthInfluence(this.field_A, -1, param0 ^ -19545, this.field_M.unit);
           var3 = this.field_M.unit.tileY * this.battlefield.mapWidth + this.field_M.unit.tileX;
           if (this.field_M.unit.tag != 0) {
             this.addObjectiveInfluence(3, -14092, var3, this.field_M.unit.tag, -1);
@@ -1280,7 +1280,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var5 = -1;
           var6 = this.field_M.selectedTarget;
           if (var6 != null) {
-            this.influenceMap.a(this.field_K, -1, -19545, var6);
+            this.influenceMap.addUnitStrengthInfluence(this.field_K, -1, -19545, var6);
             this.addUnitInfluenceForAllCategories(77, var6, -1);
             var4 = this.battlefield.mapWidth * var6.tileY + var6.tileX;
             if (var6.tag != 0) {
@@ -1670,7 +1670,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (param3.hasMovementFlag1(false)) {
             var5_float = var5_float * this.weights[59];
           }
-          this.influenceMap.a(param2 ^ -19507, param3.tileY, (float)param0 * var5_float, param1, param3.getUnitCategory(0), this.field_n, param3.tileX);
+          this.influenceMap.addCategoryDistanceInfluence(param2 ^ -19507, param3.tileY, (float)param0 * var5_float, param1, param3.getUnitCategory(0), this.field_n, param3.tileX);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ej.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

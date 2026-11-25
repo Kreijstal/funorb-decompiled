@@ -836,7 +836,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     } else {
                       stackIn_102_2 = 15;
                     }
-                    if (CameraOverviewTarget.$cfr$intArgs$a$78278125798b(stackIn_97_0, stackIn_98_1, stackIn_102_2, 13) &&
+                    if (CameraOverviewTarget.handleChatKeyWithIntGuard(stackIn_97_0, stackIn_98_1, stackIn_102_2, 13) &&
                       var8 == 0) {
                       continue;
                     }

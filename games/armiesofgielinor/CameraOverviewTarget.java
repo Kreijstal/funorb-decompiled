@@ -37,7 +37,7 @@ final class CameraOverviewTarget extends IntrusiveNode {
         return 40 > fieldTemp$1 ? true : false;
     }
 
-    final static boolean a(byte param0, int param1, int param2, int param3) {
+    final static boolean handleChatKey(byte param0, int param1, int param2, int param3) {
         if (param0 != -66) {
           return false;
         }
@@ -249,7 +249,7 @@ final class CameraOverviewTarget extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$a$78278125798b(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatKeyWithIntGuard(int param0, int param1, int param2, int param3) {
         if (param0 != -66) {
           return false;
         }

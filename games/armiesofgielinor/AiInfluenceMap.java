@@ -17,7 +17,7 @@ final class AiInfluenceMap {
     private int mapHeight;
     private int[] packedCosts;
 
-    final void a(float[] param0, boolean param1, float param2, int param3, byte param4, int param5, int param6, int param7) {
+    final void addDistanceInfluence(float[] param0, boolean param1, float param2, int param3, byte param4, int param5, int param6, int param7) {
         int var12 = 0;
         int var13 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -42,7 +42,7 @@ final class AiInfluenceMap {
           var19 = var18;
           var19.tileX = param7;
           var19.tileY = param6;
-          this.a(var19, 120);
+          this.computePackedMovementCosts(var19, 120);
           var10 = 3 * WhirlpoolHasher.unitDefinitions[var18.unitType][3];
           for (var12 = this.minimumY; var12 <= this.maximumY; var12++) {
             var11 = this.minimumX + this.mapWidth * var12;
@@ -183,7 +183,7 @@ final class AiInfluenceMap {
         return Integer.toString(param1);
     }
 
-    final void a(float[][] param0, int param1, int param2, Unit param3) {
+    final void addUnitStrengthInfluence(float[][] param0, int param1, int param2, Unit param3) {
         int var9 = 0;
         int var10 = 0;
         float[] dupTemp$0 = null;
@@ -216,7 +216,7 @@ final class AiInfluenceMap {
           }
           var5_int = param3.getUnitCategory(param2 ^ param2);
           var6 = param3.canCaptureStructures(-21428) ? 1 : 0;
-          this.a(param3, 124);
+          this.computePackedMovementCosts(param3, 124);
           var7 = 0;
           var8 = WhirlpoolHasher.unitDefinitions[param3.unitType][7];
           this.maximumY = Math.min(this.maximumY + var8, this.mapHeight - 1);
@@ -227,7 +227,7 @@ final class AiInfluenceMap {
             var16 = this.mapWidth * var9 + this.minimumX;
             var7Lifetime1 = var16;
             for (var10 = this.minimumX; var10 <= this.maximumX; var10++) {
-              var11 = this.a(this.packedCosts, param3, var10, var9, (byte) 5);
+              var11 = this.findCheapestAttackOrigin(this.packedCosts, param3, var10, var9, (byte) 5);
               if (var11 != 1000000) {
                 var12 = this.packedCosts[var11];
                 var13 = var12 >> 16;
@@ -268,12 +268,12 @@ final class AiInfluenceMap {
         }
     }
 
-    private final void a(int param0, int param1, float param2, int param3, float[][][] param4, boolean param5, int param6, boolean param7) {
+    private final void addInfluenceChannel(int param0, int param1, float param2, int param3, float[][][] param4, boolean param5, int param6, boolean param7) {
         try {
           if (!param7) {
             this.mapWidth = -97;
           }
-          this.a(param4[param0][param6], param5, param2, param0, (byte) -4, param6, param3, param1);
+          this.addDistanceInfluence(param4[param0][param6], param5, param2, param0, (byte) -4, param6, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ir.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
@@ -327,7 +327,7 @@ final class AiInfluenceMap {
         }
     }
 
-    private final void a(Unit param0, int param1) {
+    private final void computePackedMovementCosts(Unit param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_60_0 = null;
@@ -453,7 +453,7 @@ final class AiInfluenceMap {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final boolean isAttackOffsetUnobstructed(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         int stackIn_13_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_45_0 = 0;
@@ -596,7 +596,7 @@ final class AiInfluenceMap {
         return false;
     }
 
-    private final int a(int[] param0, Unit param1, int param2, int param3, byte param4) {
+    private final int findCheapestAttackOrigin(int[] param0, Unit param1, int param2, int param3, byte param4) {
         int var11 = 0;
         int var12 = 0;
         int stackIn_3_0 = 0;
@@ -635,7 +635,7 @@ final class AiInfluenceMap {
               var13 = Math.abs(var11) + Math.abs(var12);
               if (var9 <= var13 &&
                 var13 <= var10 &&
-                this.a(param2, -117, var8 != 0, var12, var11, param3)) {
+                this.isAttackOffsetUnobstructed(param2, -117, var8 != 0, var12, var11, param3)) {
                 var15 = (param3 + var11) * this.mapWidth + param2 + var12;
                 var16 = param0[var15];
                 if (var7 > var16) {
@@ -667,13 +667,13 @@ final class AiInfluenceMap {
         }
     }
 
-    final void a(int param0, int param1, float param2, int param3, int param4, float[][][] param5, int param6) {
+    final void addCategoryDistanceInfluence(int param0, int param1, float param2, int param3, int param4, float[][][] param5, int param6) {
         try {
           if (param0 >= -18) {
             Unit var9 = (Unit) null;
-            this.a((Unit) null, 43);
+            this.computePackedMovementCosts((Unit) null, 43);
           }
-          this.a(param3, param6, param2, param1, param5, false, param4, true);
+          this.addInfluenceChannel(param3, param6, param2, param1, param5, false, param4, true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ir.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

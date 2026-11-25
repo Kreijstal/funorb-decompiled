@@ -81812,12 +81812,44 @@
       "renamedSymbol": "M:AiInfluenceMap.intToString(II)Ljava/lang/String;"
     },
     {
+      "symbol": "M:ir.a(IIFII[[[FI)V",
+      "originalName": "a",
+      "to": "addCategoryDistanceInfluence",
+      "evidence": "ir.java: Adds linear-distance influence to one category/channel of supplied grid. Preserve arbitrary guard,int/float domains,argument order and bad first guard>=-18calling packed-cost computation with null before delegation. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V"
+    },
+    {
+      "symbol": "M:ir.a(IIFI[[[FZIZ)V",
+      "originalName": "a",
+      "to": "addInfluenceChannel",
+      "evidence": "ir.java: Selects supplied grid category/channel and delegates distance influence with caller falloff flag. Preserve false final flag setting mapWidth=-97before grid lookup,unused integer forwarding and exception order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V"
+    },
+    {
       "symbol": "M:ir.a(IIIIIILbv;)I",
       "originalName": "a",
       "to": "writeTieredSignedInt",
       "evidence": "ir.java: Chooses a signed integer tier, writes selector/payload and returns bit length; rejects out-of-range values.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiInfluenceMap.writeTieredSignedInt(IIIIIILCipherPacketBuffer;)I"
+    },
+    {
+      "symbol": "M:ir.a(IIZIII)Z",
+      "originalName": "a",
+      "to": "isAttackOffsetUnobstructed",
+      "evidence": "ir.java: Checks offset endpoint bounds and sampled intervening terrain for attack origin search. Terrain3blocks always,terrain2blocks nonflying. Preserve exact integer sampling,zero-offset shortcuts,original duplicate/dead branches,negative overflow behavior and late guard clearing archive. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z"
+    },
+    {
+      "symbol": "M:ir.a(Ljd;I)V",
+      "originalName": "a",
+      "to": "computePackedMovementCosts",
+      "evidence": "ir.java: Computes packed low16movement-cost/high16turn distances using bounded iterative neighbor relaxation,expanding bounds during traversal. Preserve sentinel fill before unit reads,source setup,badguard minimumX=-1,neighbor order,budget rollover,500sweep cap,<=6turn filter and zero-max convergence test. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V"
     },
     {
       "symbol": "M:ir.a(Z)V",
@@ -81828,12 +81860,36 @@
       "renamedSymbol": "M:AiInfluenceMap.handleRatingLeaderboardResponse(Z)V"
     },
     {
+      "symbol": "M:ir.a([FZFIBIII)V",
+      "originalName": "a",
+      "to": "addDistanceInfluence",
+      "evidence": "ir.java: Positions shared category-template unit,computes packed movement costs and adds10*scalar/(1+distance),with an additional division for squared falloff. Preserve unused channel int,guard mutation,template alias/mutations,low/high16arithmetic,loop bounds and float operation order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V"
+    },
+    {
       "symbol": "M:ir.a([IBLvh;[I)V",
       "originalName": "a",
       "to": "writeCoatOfArms",
       "evidence": "ir.java: Writes six part/colour pairs as bytes; low-byte truncation remains unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiInfluenceMap.writeCoatOfArms([IBLPacketBuffer;[I)V"
+    },
+    {
+      "symbol": "M:ir.a([ILjd;IIB)I",
+      "originalName": "a",
+      "to": "findCheapestAttackOrigin",
+      "evidence": "ir.java: Scans min/max Manhattan attack-range annulus for unobstructed origin with smallest supplied packed cost. Preserve first-tie selection,1000000sentinel,bad byte returning115before reads,range/bounds/terrain checks and signed arithmetic. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I"
+    },
+    {
+      "symbol": "M:ir.a([[FIILjd;)V",
+      "originalName": "a",
+      "to": "addUnitStrengthInfluence",
+      "evidence": "ir.java: Adds signed effective-strength influence to unit-category channel and capture channel8using squared(turnCost+1)distance. Preserve removed-unit early return,packed movement computation,bounds extension by attack range,cheapest-origin selection,int multiplication/square before float conversion,aliases and repeated strength reads. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V"
     },
     {
       "symbol": "M:is.a(B)V",
@@ -82124,12 +82180,28 @@
       "renamedSymbol": "M:BattleCameraTargetTransform.releaseStatics(B)V"
     },
     {
+      "symbol": "M:ja.$cfr$intArgs$a$78278125798b(IIII)Z",
+      "originalName": "$cfr$intArgs$a$78278125798b",
+      "to": "handleChatKeyWithIntGuard",
+      "evidence": "ja.java: Full-int companion of byte chat wrapper retains every signed int guard value. Only-66delegates;other int returnsfalse without cast/truncation. Preserve separate descriptor/body and existing ArmiesOfGielinor caller binding. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z"
+    },
+    {
       "symbol": "M:ja.a(B)Z",
       "originalName": "a",
       "to": "hasStartedHold",
       "evidence": "ja.java: Reads the hold-started flag; guard <=123 retains the original Y-only extra sample.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CameraOverviewTarget.hasStartedHold(B)Z"
+    },
+    {
+      "symbol": "M:ja.a(BIII)Z",
+      "originalName": "a",
+      "to": "handleChatKey",
+      "evidence": "ja.java: Byte-guard wrapper delegates shared chat key handling only for-66;other byte returnsfalse. Preserve original byte descriptor,all int arguments,guard before delegation and separate full-int companion rather than narrowing its domain. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CameraOverviewTarget.handleChatKey(BIII)Z"
     },
     {
       "symbol": "M:ja.a(BLjd;)V",
@@ -82220,12 +82292,28 @@
       "renamedSymbol": "M:AiActionCandidate.execute(BLAiPlanner;)I"
     },
     {
+      "symbol": "M:jb.a(CI)Z",
+      "originalName": "a",
+      "to": "canEncodeSingleByteCharacter",
+      "evidence": "jb.java: Keyboard character admission matches single-byte text repertoire:1..127,160..255or nonzero extension-table character. Preserve full UTF16char domain,wrong int guard returning true first,zero exclusion,captured table alias/scan and exception behavior. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z"
+    },
+    {
       "symbol": "M:jb.a(I)Z",
       "originalName": "a",
       "to": "hasDestination",
       "evidence": "jb.java: Tests whether destination X is not -1.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AiActionCandidate.hasDestination(I)Z"
+    },
+    {
+      "symbol": "M:jb.e(I)V",
+      "originalName": "e",
+      "to": "disableViewportResizing",
+      "evidence": "jb.java: Classic display mode disables viewport manager resizeEnabled when present,then notifies browser resizing(0). Preserve bad int guard clearing static array,unconditional browser helper call,guard-derived helper integer and original failure order. Naming only: preserve descriptors,modifiers,full primitive domains,guards,literals,allocations,locks,aliases,arithmetic and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AiActionCandidate.disableViewportResizing(I)V"
     },
     {
       "symbol": "M:jb.f(I)V",
@@ -362329,7 +362417,7 @@
     },
     {
       "symbol": "L:ir.a(IIFII[[[FI)V#0",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIFII[[[FI)V#0",
+      "renamedSymbol": "L:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -362340,7 +362428,7 @@
     },
     {
       "symbol": "L:ir.a(IIFII[[[FI)V#1",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIFII[[[FI)V#1",
+      "renamedSymbol": "L:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -362351,7 +362439,7 @@
     },
     {
       "symbol": "L:ir.a(IIFI[[[FZIZ)V#0",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIFI[[[FZIZ)V#0",
+      "renamedSymbol": "L:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -362538,7 +362626,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#0",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#0",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -362549,7 +362637,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#1",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#1",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#1",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -362560,7 +362648,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#10",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#10",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -362571,7 +362659,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#11",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#11",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#11",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -362582,7 +362670,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#12",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#12",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#12",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -362593,7 +362681,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#13",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#13",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#13",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -362604,7 +362692,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#14",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#14",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#14",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -362615,7 +362703,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#15",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#15",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#15",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -362626,7 +362714,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#16",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#16",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#16",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -362637,7 +362725,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#17",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#17",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#17",
       "originalName": "var8Lifetime1Lifetime1",
       "renamedName": "var8Lifetime1Lifetime1",
       "declaration": {
@@ -362648,7 +362736,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#18",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#18",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#18",
       "originalName": "var9Lifetime1Lifetime1",
       "renamedName": "var9Lifetime1Lifetime1",
       "declaration": {
@@ -362659,7 +362747,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#19",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#19",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#19",
       "originalName": "var9Lifetime1Lifetime1Lifetime1",
       "renamedName": "var9Lifetime1Lifetime1Lifetime1",
       "declaration": {
@@ -362670,7 +362758,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#2",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#2",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#2",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -362681,7 +362769,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#20",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#20",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#20",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -362692,7 +362780,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#21",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#21",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#21",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -362703,7 +362791,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#22",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#22",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#22",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -362714,7 +362802,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#23",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#23",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#23",
       "originalName": "decompiledFrameCompleted1",
       "renamedName": "decompiledFrameCompleted1",
       "declaration": {
@@ -362725,7 +362813,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#3",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#3",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#3",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -362736,7 +362824,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#4",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#4",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#4",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -362747,7 +362835,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#5",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#5",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -362758,7 +362846,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#6",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#6",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -362769,7 +362857,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#7",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#7",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -362780,7 +362868,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#8",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#8",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -362791,7 +362879,7 @@
     },
     {
       "symbol": "L:ir.a(IIZIII)Z#9",
-      "renamedSymbol": "L:AiInfluenceMap.a(IIZIII)Z#9",
+      "renamedSymbol": "L:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -362802,7 +362890,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#0",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#0",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -362813,7 +362901,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#1",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#1",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -362824,7 +362912,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#10",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#10",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -362835,7 +362923,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#11",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#11",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -362846,7 +362934,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#12",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#12",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -362857,7 +362945,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#13",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#13",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -362868,7 +362956,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#14",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#14",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -362879,7 +362967,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#15",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#15",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#15",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -362890,7 +362978,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#16",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#16",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#16",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -362901,7 +362989,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#17",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#17",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#17",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -362912,7 +363000,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#18",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#18",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#18",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -362923,7 +363011,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#19",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#19",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#19",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -362934,7 +363022,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#2",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#2",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#2",
       "originalName": "stackIn_60_0",
       "renamedName": "stackIn_60_0",
       "declaration": {
@@ -362945,7 +363033,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#20",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#20",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -362956,7 +363044,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#3",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#3",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#3",
       "originalName": "stackIn_60_1",
       "renamedName": "stackIn_60_1",
       "declaration": {
@@ -362967,7 +363055,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#4",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#4",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#4",
       "originalName": "stackIn_61_2",
       "renamedName": "stackIn_61_2",
       "declaration": {
@@ -362978,7 +363066,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#5",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#5",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -362989,7 +363077,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#6",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#6",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#6",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -363000,7 +363088,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#7",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#7",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -363011,7 +363099,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#8",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#8",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -363022,7 +363110,7 @@
     },
     {
       "symbol": "L:ir.a(Ljd;I)V#9",
-      "renamedSymbol": "L:AiInfluenceMap.a(LUnit;I)V#9",
+      "renamedSymbol": "L:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -363308,7 +363396,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#0",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#0",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -363319,7 +363407,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#1",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#1",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -363330,7 +363418,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#10",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#10",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#10",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -363341,7 +363429,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#11",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#11",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#11",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -363352,7 +363440,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#12",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#12",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#12",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -363363,7 +363451,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#13",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#13",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#13",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -363374,7 +363462,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#14",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#14",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#14",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -363385,7 +363473,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#15",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#15",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -363396,7 +363484,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#2",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#2",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#2",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -363407,7 +363495,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#3",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#3",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#3",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -363418,7 +363506,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#4",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#4",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#4",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -363429,7 +363517,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#5",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#5",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -363440,7 +363528,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#6",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#6",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -363451,7 +363539,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#7",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#7",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -363462,7 +363550,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#8",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#8",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -363473,7 +363561,7 @@
     },
     {
       "symbol": "L:ir.a([FZFIBIII)V#9",
-      "renamedSymbol": "L:AiInfluenceMap.a([FZFIBIII)V#9",
+      "renamedSymbol": "L:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#9",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -363616,7 +363704,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#0",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#0",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -363627,7 +363715,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#1",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#1",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -363638,7 +363726,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#10",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#10",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -363649,7 +363737,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#11",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#11",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#11",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -363660,7 +363748,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#12",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#12",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -363671,7 +363759,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#13",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#13",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -363682,7 +363770,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#14",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#14",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -363693,7 +363781,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#15",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#15",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -363704,7 +363792,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#16",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#16",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -363715,7 +363803,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#17",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#17",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -363726,7 +363814,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#18",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#18",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#18",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -363737,7 +363825,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#19",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#19",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#19",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -363748,7 +363836,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#2",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#2",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -363759,7 +363847,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#20",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#20",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#20",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -363770,7 +363858,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#21",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#21",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -363781,7 +363869,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#3",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#3",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -363792,7 +363880,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#4",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#4",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#4",
       "originalName": "stackIn_27_0",
       "renamedName": "stackIn_27_0",
       "declaration": {
@@ -363803,7 +363891,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#5",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#5",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#5",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -363814,7 +363902,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#6",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#6",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#6",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -363825,7 +363913,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#7",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#7",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#7",
       "originalName": "stackIn_31_2",
       "renamedName": "stackIn_31_2",
       "declaration": {
@@ -363836,7 +363924,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#8",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#8",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#8",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -363847,7 +363935,7 @@
     },
     {
       "symbol": "L:ir.a([ILjd;IIB)I#9",
-      "renamedSymbol": "L:AiInfluenceMap.a([ILUnit;IIB)I#9",
+      "renamedSymbol": "L:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#9",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -363858,7 +363946,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#0",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#0",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -363869,7 +363957,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#1",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#1",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -363880,7 +363968,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#10",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#10",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#10",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -363891,7 +363979,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#11",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#11",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -363902,7 +363990,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#12",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#12",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -363913,7 +364001,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#13",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#13",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -363924,7 +364012,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#14",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#14",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -363935,7 +364023,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#15",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#15",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -363946,7 +364034,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#16",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#16",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -363957,7 +364045,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#17",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#17",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -363968,7 +364056,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#18",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#18",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -363979,7 +364067,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#19",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#19",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -363990,7 +364078,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#2",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#2",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#2",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -364001,7 +364089,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#20",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#20",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -364012,7 +364100,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#21",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#21",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#21",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -364023,7 +364111,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#22",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#22",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#22",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -364034,7 +364122,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#23",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#23",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#23",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -364045,7 +364133,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#24",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#24",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#24",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -364056,7 +364144,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#25",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#25",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#25",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -364067,7 +364155,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#3",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#3",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#3",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -364078,7 +364166,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#4",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#4",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#4",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -364089,7 +364177,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#5",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#5",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#5",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -364100,7 +364188,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#6",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#6",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#6",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -364111,7 +364199,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#7",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#7",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#7",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -364122,7 +364210,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#8",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#8",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#8",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -364133,7 +364221,7 @@
     },
     {
       "symbol": "L:ir.a([[FIILjd;)V#9",
-      "renamedSymbol": "L:AiInfluenceMap.a([[FIILUnit;)V#9",
+      "renamedSymbol": "L:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -368841,7 +368929,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#0",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#0",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -368852,7 +368940,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#1",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#1",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -368863,7 +368951,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#2",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#2",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -368874,7 +368962,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#3",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#3",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -368885,7 +368973,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#4",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#4",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -368896,7 +368984,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#5",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#5",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -368907,7 +368995,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#6",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#6",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -368918,7 +369006,7 @@
     },
     {
       "symbol": "L:jb.a(CI)Z#7",
-      "renamedSymbol": "L:AiActionCandidate.a(CI)Z#7",
+      "renamedSymbol": "L:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -549659,9 +549747,9 @@
     },
     {
       "symbol": "M:ir.a(IIFII[[[FI)V",
-      "renamedSymbol": "M:AiInfluenceMap.a(IIFII[[[FI)V",
+      "renamedSymbol": "M:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addCategoryDistanceInfluence",
       "declaration": {
         "file": "ir.java",
         "start": 26385,
@@ -549670,9 +549758,9 @@
     },
     {
       "symbol": "M:ir.a(IIFI[[[FZIZ)V",
-      "renamedSymbol": "M:AiInfluenceMap.a(IIFI[[[FZIZ)V",
+      "renamedSymbol": "M:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addInfluenceChannel",
       "declaration": {
         "file": "ir.java",
         "start": 10183,
@@ -549692,9 +549780,9 @@
     },
     {
       "symbol": "M:ir.a(IIZIII)Z",
-      "renamedSymbol": "M:AiInfluenceMap.a(IIZIII)Z",
+      "renamedSymbol": "M:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isAttackOffsetUnobstructed",
       "declaration": {
         "file": "ir.java",
         "start": 18266,
@@ -549703,9 +549791,9 @@
     },
     {
       "symbol": "M:ir.a(Ljd;I)V",
-      "renamedSymbol": "M:AiInfluenceMap.a(LUnit;I)V",
+      "renamedSymbol": "M:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computePackedMovementCosts",
       "declaration": {
         "file": "ir.java",
         "start": 12691,
@@ -549725,9 +549813,9 @@
     },
     {
       "symbol": "M:ir.a([FZFIBIII)V",
-      "renamedSymbol": "M:AiInfluenceMap.a([FZFIBIII)V",
+      "renamedSymbol": "M:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addDistanceInfluence",
       "declaration": {
         "file": "ir.java",
         "start": 423,
@@ -549747,9 +549835,9 @@
     },
     {
       "symbol": "M:ir.a([ILjd;IIB)I",
-      "renamedSymbol": "M:AiInfluenceMap.a([ILUnit;IIB)I",
+      "renamedSymbol": "M:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findCheapestAttackOrigin",
       "declaration": {
         "file": "ir.java",
         "start": 23695,
@@ -549758,9 +549846,9 @@
     },
     {
       "symbol": "M:ir.a([[FIILjd;)V",
-      "renamedSymbol": "M:AiInfluenceMap.a([[FIILUnit;)V",
+      "renamedSymbol": "M:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addUnitStrengthInfluence",
       "declaration": {
         "file": "ir.java",
         "start": 6732,
@@ -550660,9 +550748,9 @@
     },
     {
       "symbol": "M:ja.$cfr$intArgs$a$78278125798b(IIII)Z",
-      "renamedSymbol": "M:CameraOverviewTarget.$cfr$intArgs$a$78278125798b(IIII)Z",
+      "renamedSymbol": "M:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z",
       "originalName": "$cfr$intArgs$a$78278125798b",
-      "renamedName": "$cfr$intArgs$a$78278125798b",
+      "renamedName": "handleChatKeyWithIntGuard",
       "declaration": {
         "file": "ja.java",
         "start": 7996,
@@ -550704,9 +550792,9 @@
     },
     {
       "symbol": "M:ja.a(BIII)Z",
-      "renamedSymbol": "M:CameraOverviewTarget.a(BIII)Z",
+      "renamedSymbol": "M:CameraOverviewTarget.handleChatKey(BIII)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleChatKey",
       "declaration": {
         "file": "ja.java",
         "start": 1044,
@@ -550847,9 +550935,9 @@
     },
     {
       "symbol": "M:jb.a(CI)Z",
-      "renamedSymbol": "M:AiActionCandidate.a(CI)Z",
+      "renamedSymbol": "M:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "canEncodeSingleByteCharacter",
       "declaration": {
         "file": "jb.java",
         "start": 3243,
@@ -550869,9 +550957,9 @@
     },
     {
       "symbol": "M:jb.e(I)V",
-      "renamedSymbol": "M:AiActionCandidate.e(I)V",
+      "renamedSymbol": "M:AiActionCandidate.disableViewportResizing(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "disableViewportResizing",
       "declaration": {
         "file": "jb.java",
         "start": 334,
@@ -633919,7 +634007,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#0",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#0",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -633930,7 +634018,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#1",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#1",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -633941,7 +634029,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#2",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#2",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -633952,7 +634040,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#3",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#3",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -633963,7 +634051,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#4",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#4",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -633974,7 +634062,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#5",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#5",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -633985,7 +634073,7 @@
     },
     {
       "symbol": "P:ir.a(IIFII[[[FI)V#6",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFII[[[FI)V#6",
+      "renamedSymbol": "P:AiInfluenceMap.addCategoryDistanceInfluence(IIFII[[[FI)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -633996,7 +634084,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#0",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#0",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634007,7 +634095,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#1",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#1",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634018,7 +634106,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#2",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#2",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -634029,7 +634117,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#3",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#3",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -634040,7 +634128,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#4",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#4",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -634051,7 +634139,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#5",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#5",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -634062,7 +634150,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#6",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#6",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -634073,7 +634161,7 @@
     },
     {
       "symbol": "P:ir.a(IIFI[[[FZIZ)V#7",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIFI[[[FZIZ)V#7",
+      "renamedSymbol": "P:AiInfluenceMap.addInfluenceChannel(IIFI[[[FZIZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -634161,7 +634249,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#0",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#0",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634172,7 +634260,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#1",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#1",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634183,7 +634271,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#2",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#2",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -634194,7 +634282,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#3",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#3",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -634205,7 +634293,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#4",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#4",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -634216,7 +634304,7 @@
     },
     {
       "symbol": "P:ir.a(IIZIII)Z#5",
-      "renamedSymbol": "P:AiInfluenceMap.a(IIZIII)Z#5",
+      "renamedSymbol": "P:AiInfluenceMap.isAttackOffsetUnobstructed(IIZIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -634227,7 +634315,7 @@
     },
     {
       "symbol": "P:ir.a(Ljd;I)V#0",
-      "renamedSymbol": "P:AiInfluenceMap.a(LUnit;I)V#0",
+      "renamedSymbol": "P:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634238,7 +634326,7 @@
     },
     {
       "symbol": "P:ir.a(Ljd;I)V#1",
-      "renamedSymbol": "P:AiInfluenceMap.a(LUnit;I)V#1",
+      "renamedSymbol": "P:AiInfluenceMap.computePackedMovementCosts(LUnit;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634260,7 +634348,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#0",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#0",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634271,7 +634359,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#1",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#1",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634282,7 +634370,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#2",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#2",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -634293,7 +634381,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#3",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#3",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -634304,7 +634392,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#4",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#4",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -634315,7 +634403,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#5",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#5",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -634326,7 +634414,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#6",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#6",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -634337,7 +634425,7 @@
     },
     {
       "symbol": "P:ir.a([FZFIBIII)V#7",
-      "renamedSymbol": "P:AiInfluenceMap.a([FZFIBIII)V#7",
+      "renamedSymbol": "P:AiInfluenceMap.addDistanceInfluence([FZFIBIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -634392,7 +634480,7 @@
     },
     {
       "symbol": "P:ir.a([ILjd;IIB)I#0",
-      "renamedSymbol": "P:AiInfluenceMap.a([ILUnit;IIB)I#0",
+      "renamedSymbol": "P:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634403,7 +634491,7 @@
     },
     {
       "symbol": "P:ir.a([ILjd;IIB)I#1",
-      "renamedSymbol": "P:AiInfluenceMap.a([ILUnit;IIB)I#1",
+      "renamedSymbol": "P:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634414,7 +634502,7 @@
     },
     {
       "symbol": "P:ir.a([ILjd;IIB)I#2",
-      "renamedSymbol": "P:AiInfluenceMap.a([ILUnit;IIB)I#2",
+      "renamedSymbol": "P:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -634425,7 +634513,7 @@
     },
     {
       "symbol": "P:ir.a([ILjd;IIB)I#3",
-      "renamedSymbol": "P:AiInfluenceMap.a([ILUnit;IIB)I#3",
+      "renamedSymbol": "P:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -634436,7 +634524,7 @@
     },
     {
       "symbol": "P:ir.a([ILjd;IIB)I#4",
-      "renamedSymbol": "P:AiInfluenceMap.a([ILUnit;IIB)I#4",
+      "renamedSymbol": "P:AiInfluenceMap.findCheapestAttackOrigin([ILUnit;IIB)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -634447,7 +634535,7 @@
     },
     {
       "symbol": "P:ir.a([[FIILjd;)V#0",
-      "renamedSymbol": "P:AiInfluenceMap.a([[FIILUnit;)V#0",
+      "renamedSymbol": "P:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -634458,7 +634546,7 @@
     },
     {
       "symbol": "P:ir.a([[FIILjd;)V#1",
-      "renamedSymbol": "P:AiInfluenceMap.a([[FIILUnit;)V#1",
+      "renamedSymbol": "P:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -634469,7 +634557,7 @@
     },
     {
       "symbol": "P:ir.a([[FIILjd;)V#2",
-      "renamedSymbol": "P:AiInfluenceMap.a([[FIILUnit;)V#2",
+      "renamedSymbol": "P:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -634480,7 +634568,7 @@
     },
     {
       "symbol": "P:ir.a([[FIILjd;)V#3",
-      "renamedSymbol": "P:AiInfluenceMap.a([[FIILUnit;)V#3",
+      "renamedSymbol": "P:AiInfluenceMap.addUnitStrengthInfluence([[FIILUnit;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -635877,7 +635965,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$78278125798b(IIII)Z#0",
-      "renamedSymbol": "P:CameraOverviewTarget.$cfr$intArgs$a$78278125798b(IIII)Z#0",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635888,7 +635976,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$78278125798b(IIII)Z#1",
-      "renamedSymbol": "P:CameraOverviewTarget.$cfr$intArgs$a$78278125798b(IIII)Z#1",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -635899,7 +635987,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$78278125798b(IIII)Z#2",
-      "renamedSymbol": "P:CameraOverviewTarget.$cfr$intArgs$a$78278125798b(IIII)Z#2",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -635910,7 +635998,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$78278125798b(IIII)Z#3",
-      "renamedSymbol": "P:CameraOverviewTarget.$cfr$intArgs$a$78278125798b(IIII)Z#3",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKeyWithIntGuard(IIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -635965,7 +636053,7 @@
     },
     {
       "symbol": "P:ja.a(BIII)Z#0",
-      "renamedSymbol": "P:CameraOverviewTarget.a(BIII)Z#0",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKey(BIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -635976,7 +636064,7 @@
     },
     {
       "symbol": "P:ja.a(BIII)Z#1",
-      "renamedSymbol": "P:CameraOverviewTarget.a(BIII)Z#1",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKey(BIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -635987,7 +636075,7 @@
     },
     {
       "symbol": "P:ja.a(BIII)Z#2",
-      "renamedSymbol": "P:CameraOverviewTarget.a(BIII)Z#2",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKey(BIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -635998,7 +636086,7 @@
     },
     {
       "symbol": "P:ja.a(BIII)Z#3",
-      "renamedSymbol": "P:CameraOverviewTarget.a(BIII)Z#3",
+      "renamedSymbol": "P:CameraOverviewTarget.handleChatKey(BIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -636240,7 +636328,7 @@
     },
     {
       "symbol": "P:jb.a(CI)Z#0",
-      "renamedSymbol": "P:AiActionCandidate.a(CI)Z#0",
+      "renamedSymbol": "P:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -636251,7 +636339,7 @@
     },
     {
       "symbol": "P:jb.a(CI)Z#1",
-      "renamedSymbol": "P:AiActionCandidate.a(CI)Z#1",
+      "renamedSymbol": "P:AiActionCandidate.canEncodeSingleByteCharacter(CI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -636273,7 +636361,7 @@
     },
     {
       "symbol": "P:jb.e(I)V#0",
-      "renamedSymbol": "P:AiActionCandidate.e(I)V#0",
+      "renamedSymbol": "P:AiActionCandidate.disableViewportResizing(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -713783,7 +713871,7 @@
       "original": "ArmiesOfGielinor.java",
       "renamed": "ArmiesOfGielinor.java",
       "inputSha256": "5dc18e9d91f377f97b4a752fd07b762c9ad0b241cfac5ed3e4138c3c9af9a048",
-      "outputSha256": "5f4ab3aa7b582717ae6cf2387baf20a35cccafbd3e8f41c80b3687ba37dc0c51",
+      "outputSha256": "28b35cff5799017be55c99d505ed14029c44a4e933a5b24c5dbcd7093bee4251",
       "edits": [
         {
           "start": 103,
@@ -718845,6 +718933,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "CameraOverviewTarget"
+        },
+        {
+          "start": 31319,
+          "end": 31346,
+          "symbol": "M:ja.$cfr$intArgs$a$78278125798b(IIII)Z",
+          "original": "$cfr$intArgs$a$78278125798b",
+          "renamed": "handleChatKeyWithIntGuard"
         },
         {
           "start": 31544,
@@ -868249,7 +868344,7 @@
       "original": "cl.java",
       "renamed": "AiUnitPlanner.java",
       "inputSha256": "ea903035a9b9c2d41e000f689d98f12c7f88ded4d68947a5c9453151d855df28",
-      "outputSha256": "3c11f6ee1bd4057cdb038823592132bcc55194d699b80ae9992666c372d9e1de",
+      "outputSha256": "9326198fef7033d937545e0c4c9bb0f59b842953b78746f639c55bb93d500ee6",
       "edits": [
         {
           "start": 50,
@@ -869195,6 +869290,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 5567,
+          "end": 5568,
+          "symbol": "M:ir.a(IIZIII)Z",
+          "original": "a",
+          "renamed": "isAttackOffsetUnobstructed"
         },
         {
           "start": 5569,
@@ -872655,6 +872757,13 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 22794,
+          "end": 22795,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
+        },
+        {
           "start": 22801,
           "end": 22808,
           "symbol": "F:cl.field_r:Lej;",
@@ -872674,6 +872783,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 22889,
+          "end": 22890,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
         },
         {
           "start": 22896,
@@ -961709,7 +961825,7 @@
       "original": "ej.java",
       "renamed": "AiPlanner.java",
       "inputSha256": "6e52113b2d59fa10010314954604c91eea64452b8f6866c4c25baa53a21a9a3d",
-      "outputSha256": "362537c31f96b68fcf30bfb129552b4a0fd3c2451496c31b6ba30bfd41818479",
+      "outputSha256": "8585c6c9222097e6029f30f9a5a4bbd26481ad32df18a321a3018e9dd455361a",
       "edits": [
         {
           "start": 71,
@@ -962853,6 +962969,13 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 6963,
+          "end": 6964,
+          "symbol": "M:ir.a(IIFII[[[FI)V",
+          "original": "a",
+          "renamed": "addCategoryDistanceInfluence"
+        },
+        {
           "start": 6984,
           "end": 6990,
           "symbol": "P:ej.a(IZI)V#2",
@@ -963000,11 +963123,25 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 8981,
+          "end": 8982,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
+        },
+        {
           "start": 9155,
           "end": 9162,
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 9163,
+          "end": 9164,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
         },
         {
           "start": 9183,
@@ -963754,6 +963891,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 17056,
+          "end": 17057,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
         },
         {
           "start": 17077,
@@ -965870,6 +966014,13 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 41193,
+          "end": 41194,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
+        },
+        {
           "start": 41212,
           "end": 41218,
           "symbol": "P:ej.a(ILjd;)V#0",
@@ -965994,6 +966145,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 42378,
+          "end": 42379,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
         },
         {
           "start": 42418,
@@ -966150,6 +966308,13 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 43185,
+          "end": 43186,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
+        },
+        {
           "start": 43240,
           "end": 43247,
           "symbol": "F:jd.field_E:I",
@@ -966213,6 +966378,13 @@
           "renamed": "influenceMap"
         },
         {
+          "start": 43430,
+          "end": 43431,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
+        },
+        {
           "start": 43450,
           "end": 43451,
           "symbol": "M:jd.g(I)I",
@@ -966246,6 +966418,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 43886,
+          "end": 43887,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
         },
         {
           "start": 43936,
@@ -966344,6 +966523,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 44317,
+          "end": 44318,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
         },
         {
           "start": 44369,
@@ -968374,6 +968560,13 @@
           "symbol": "F:ej.field_m:Lir;",
           "original": "field_m",
           "renamed": "influenceMap"
+        },
+        {
+          "start": 58703,
+          "end": 58704,
+          "symbol": "M:ir.a(IIFII[[[FI)V",
+          "original": "a",
+          "renamed": "addCategoryDistanceInfluence"
         },
         {
           "start": 58729,
@@ -1140614,7 +1140807,7 @@
       "original": "hg.java",
       "renamed": "KeyboardInputListener.java",
       "inputSha256": "2d62c14b1022fb2bbb9757c73076fb05a38c27eae9f5d21b5e86f7c02d8fdc78",
-      "outputSha256": "fcf8ac9afd18c6de075dc317b3f0aef0ff18d369c5df00d4c5dbf47705e3e17d",
+      "outputSha256": "a24d3ddf3c4fd75b5b547a0b5a5797d151339a139a934753553ed304c57a1552",
       "edits": [
         {
           "start": 50,
@@ -1141539,6 +1141732,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "AiActionCandidate"
+        },
+        {
+          "start": 4589,
+          "end": 4590,
+          "symbol": "M:jb.a(CI)Z",
+          "original": "a",
+          "renamed": "canEncodeSingleByteCharacter"
         },
         {
           "start": 4598,
@@ -1290077,7 +1290277,7 @@
       "original": "ir.java",
       "renamed": "AiInfluenceMap.java",
       "inputSha256": "f307421c6238b30f96fc8a14726739abb3a4a84a984bc5a9e71f6d6d593efe82",
-      "outputSha256": "c399aab7a266972232d438668cd6ec9e546d41d83aa06526495d95b326225be2",
+      "outputSha256": "9512e13b6e8fbf52ff2d3916fe4c0843c280e0f6f984d0b2daf25f35af1c8721",
       "edits": [
         {
           "start": 50,
@@ -1290171,6 +1290371,13 @@
           "renamed": "packedCosts"
         },
         {
+          "start": 423,
+          "end": 424,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
+        },
+        {
           "start": 953,
           "end": 955,
           "symbol": "C:jd",
@@ -1290218,6 +1290425,13 @@
           "symbol": "F:jd.field_w:I",
           "original": "field_w",
           "renamed": "tileY"
+        },
+        {
+          "start": 1278,
+          "end": 1279,
+          "symbol": "M:ir.a(Ljd;I)V",
+          "original": "a",
+          "renamed": "computePackedMovementCosts"
         },
         {
           "start": 1315,
@@ -1290983,6 +1291197,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 6732,
+          "end": 6733,
+          "symbol": "M:ir.a([[FIILjd;)V",
+          "original": "a",
+          "renamed": "addUnitStrengthInfluence"
+        },
+        {
           "start": 6776,
           "end": 6778,
           "symbol": "C:jd",
@@ -1291016,6 +1291237,13 @@
           "symbol": "M:jd.i(I)Z",
           "original": "i",
           "renamed": "canCaptureStructures"
+        },
+        {
+          "start": 7778,
+          "end": 7779,
+          "symbol": "M:ir.a(Ljd;I)V",
+          "original": "a",
+          "renamed": "computePackedMovementCosts"
         },
         {
           "start": 7831,
@@ -1291151,6 +1291379,13 @@
           "renamed": "maximumX"
         },
         {
+          "start": 8389,
+          "end": 8390,
+          "symbol": "M:ir.a([ILjd;IIB)I",
+          "original": "a",
+          "renamed": "findCheapestAttackOrigin"
+        },
+        {
           "start": 8396,
           "end": 8403,
           "symbol": "F:ir.field_i:[I",
@@ -1291200,11 +1291435,25 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 10183,
+          "end": 10184,
+          "symbol": "M:ir.a(IIFI[[[FZIZ)V",
+          "original": "a",
+          "renamed": "addInfluenceChannel"
+        },
+        {
           "start": 10357,
           "end": 10364,
           "symbol": "F:ir.field_a:I",
           "original": "field_a",
           "renamed": "mapWidth"
+        },
+        {
+          "start": 10399,
+          "end": 10400,
+          "symbol": "M:ir.a([FZFIBIII)V",
+          "original": "a",
+          "renamed": "addDistanceInfluence"
         },
         {
           "start": 10555,
@@ -1291366,6 +1291615,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 12691,
+          "end": 12692,
+          "symbol": "M:ir.a(Ljd;I)V",
+          "original": "a",
+          "renamed": "computePackedMovementCosts"
         },
         {
           "start": 12693,
@@ -1291956,6 +1292212,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 18266,
+          "end": 18267,
+          "symbol": "M:ir.a(IIZIII)Z",
+          "original": "a",
+          "renamed": "isAttackOffsetUnobstructed"
+        },
+        {
           "start": 18930,
           "end": 18937,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1292159,6 +1292422,13 @@
           "renamed": "terrainType"
         },
         {
+          "start": 23695,
+          "end": 23696,
+          "symbol": "M:ir.a([ILjd;IIB)I",
+          "original": "a",
+          "renamed": "findCheapestAttackOrigin"
+        },
+        {
           "start": 23711,
           "end": 23713,
           "symbol": "C:jd",
@@ -1292236,6 +1292506,13 @@
           "renamed": "unitType"
         },
         {
+          "start": 25089,
+          "end": 25090,
+          "symbol": "M:ir.a(IIZIII)Z",
+          "original": "a",
+          "renamed": "isAttackOffsetUnobstructed"
+        },
+        {
           "start": 25189,
           "end": 25196,
           "symbol": "F:ir.field_a:I",
@@ -1292257,6 +1292534,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 26385,
+          "end": 26386,
+          "symbol": "M:ir.a(IIFII[[[FI)V",
+          "original": "a",
+          "renamed": "addCategoryDistanceInfluence"
+        },
+        {
           "start": 26540,
           "end": 26542,
           "symbol": "C:jd",
@@ -1292271,11 +1292555,25 @@
           "renamed": "Unit"
         },
         {
+          "start": 26578,
+          "end": 26579,
+          "symbol": "M:ir.a(Ljd;I)V",
+          "original": "a",
+          "renamed": "computePackedMovementCosts"
+        },
+        {
           "start": 26581,
           "end": 26583,
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "Unit"
+        },
+        {
+          "start": 26623,
+          "end": 26624,
+          "symbol": "M:ir.a(IIFI[[[FZIZ)V",
+          "original": "a",
+          "renamed": "addInfluenceChannel"
         },
         {
           "start": 26757,
@@ -1306419,7 +1306717,7 @@
       "original": "ja.java",
       "renamed": "CameraOverviewTarget.java",
       "inputSha256": "c3dd84de98b9c649df8c899b79b048a4971f43bd3d704268741ddc089205453c",
-      "outputSha256": "1979c25b90746ddfc8073d963bf3afc2c50611b5f33a7b9106ab80b7242b6689",
+      "outputSha256": "1a642b1242cd3e8fa2aef7b1cadbc12932a688fa90e01726341646d7fbe6ae89",
       "edits": [
         {
           "start": 50,
@@ -1306679,6 +1306977,13 @@
           "symbol": "F:ja.field_n:I",
           "original": "field_n",
           "renamed": "holdTicks"
+        },
+        {
+          "start": 1044,
+          "end": 1045,
+          "symbol": "M:ja.a(BIII)Z",
+          "original": "a",
+          "renamed": "handleChatKey"
         },
         {
           "start": 1175,
@@ -1308074,6 +1308379,13 @@
           "renamed": "tileY"
         },
         {
+          "start": 7996,
+          "end": 8023,
+          "symbol": "M:ja.$cfr$intArgs$a$78278125798b(IIII)Z",
+          "original": "$cfr$intArgs$a$78278125798b",
+          "renamed": "handleChatKeyWithIntGuard"
+        },
+        {
           "start": 8152,
           "end": 8154,
           "symbol": "C:ej",
@@ -1308093,7 +1308405,7 @@
       "original": "jb.java",
       "renamed": "AiActionCandidate.java",
       "inputSha256": "377de6967deb13b1ec0cd93b5fa974f7ec7104e0c973c1030bf7f00bf83f6b06",
-      "outputSha256": "331b286817129f503d51a8ea4f129481c44493d5417c21cfc3c5ee362156f370",
+      "outputSha256": "06c532e0143f9a3c15cd55345a5944ef62f79634e69982c5c30d6cc6fe8047dd",
       "edits": [
         {
           "start": 50,
@@ -1308171,6 +1308483,13 @@
           "symbol": "F:jb.field_l:I",
           "original": "field_l",
           "renamed": "summonUnitType"
+        },
+        {
+          "start": 334,
+          "end": 335,
+          "symbol": "M:jb.e(I)V",
+          "original": "e",
+          "renamed": "disableViewportResizing"
         },
         {
           "start": 437,
@@ -1308738,6 +1309057,13 @@
           "symbol": "F:jb.field_s:I",
           "original": "field_s",
           "renamed": "destinationX"
+        },
+        {
+          "start": 3243,
+          "end": 3244,
+          "symbol": "M:jb.a(CI)Z",
+          "original": "a",
+          "renamed": "canEncodeSingleByteCharacter"
         },
         {
           "start": 3527,
@@ -1805832,7 +1806158,7 @@
       "original": "ut.java",
       "renamed": "DisplaySettingsDialog.java",
       "inputSha256": "bbc9bf7b797cec394c6c66cbac9ce2e71f9c3b09ebd8f04ab4d9c816784a9cbf",
-      "outputSha256": "5166882b30f0167e1e674388ad038f9905871dc57e1552fe6907b9b47054be66",
+      "outputSha256": "ef47dd9a6453a26a8a6aa6d9a474616b299d0414b4269661cccbbda385ee34f1",
       "edits": [
         {
           "start": 50,
@@ -1808836,6 +1809162,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "AiActionCandidate"
+        },
+        {
+          "start": 12016,
+          "end": 12017,
+          "symbol": "M:jb.e(I)V",
+          "original": "e",
+          "renamed": "disableViewportResizing"
         },
         {
           "start": 12018,
@@ -1905337,10 +1905670,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "8fce805b54042fa77e635d35672c9e7ccb92b2888db36526d1e5564ee7d4edd4",
+    "rulesSha256": "88c02305808a1c609b77b052cea08008ab2d84c04d8d9cd36e05dfa1b473ad6b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "13c0aa8e0ea7e591b19c4b215a2f14e499bd5827b62506899d40a9681fdd0d7e",
+    "outputTreeSha256": "8658aecdb33199baa49b0bfba63151a6498ba8aaf9dd10cb33535bd6f2cd6538",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
