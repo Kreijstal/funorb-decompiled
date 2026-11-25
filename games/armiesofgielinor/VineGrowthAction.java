@@ -32,7 +32,7 @@ final class VineGrowthAction extends PreparedAction {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = param2[param0][0];
-          if (!kq.a(var3, param1)) {
+          if (!FocusProxyWidget.isSingleSpace(var3, param1)) {
             return var3;
           }
           return null;

@@ -723,7 +723,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           BitmapTextWidgetPainter.a(123, IndexedSpriteBase.field_b);
         }
         if (CheckBoxWidgetPainter.acceptedPacketOpcodes[8]) {
-          pu.b(28704);
+          LogoMesh.sendReadyReflectionCheckResponses(28704);
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kq extends InteractiveWidget {
+class FocusProxyWidget extends InteractiveWidget {
     static int field_L;
     private Widget field_Q;
     static QuickChatCommandDefinition field_M;
@@ -161,18 +161,18 @@ class kq extends InteractiveWidget {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void setSelectionMenuTextMetrics(int param0, int param1, byte param2, int param3, int param4) {
         StandardContentDialog.field_mb = param4;
         AchievementNotification.field_k = param0;
         OctaveNoiseMap.field_o = param1;
         SpriteFramedLabel.field_g = param3;
         if (param2 != 87) {
           Battlefield var6 = (Battlefield) null;
-          kq.getSpellConfirmationPrompt(-11, 19, 8, (Battlefield) null, -83);
+          FocusProxyWidget.getSpellConfirmationPrompt(-11, 19, 8, (Battlefield) null, -83);
         }
     }
 
-    kq(Widget param0) {
+    FocusProxyWidget(Widget param0) {
         try {
           this.field_Q = param0;
         } catch (RuntimeException runtimeException) {
@@ -234,7 +234,7 @@ class kq extends InteractiveWidget {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean isSingleSpace(String param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -248,9 +248,9 @@ class kq extends InteractiveWidget {
           }
           if (param1) {
             var3 = (String) null;
-            kq.a((String) null, true);
+            FocusProxyWidget.isSingleSpace((String) null, true);
           }
-          var2 = IgnoreListLookupSupport.a(true, ' ');
+          var2 = IgnoreListLookupSupport.charToString(true, ' ');
           if (!param0.equals(var2)) {
             return false;
           }

@@ -91,7 +91,7 @@ final class NumericDateInputWidget extends DateInputWidget {
             var6 = packet.getReadBitPosition(false);
             var7 = AiPlanner.readCompactInt(packet, true);
             var8 = packet.getReadBitPosition(false) - var6;
-            kq.enterTaggedPayload(var6, obfuscationGuard + 489, var8, var7, packet);
+            FocusProxyWidget.enterTaggedPayload(var6, obfuscationGuard + 489, var8, var7, packet);
             target.decodeTaggedField(var7, packet, var5, (byte) 37);
             StatefulWidgetPainter.finishTaggedPayload(var6, 4, var8, packet, var7);
           }

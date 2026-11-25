@@ -19,7 +19,7 @@ final class MusicPatch extends IntrusiveNode {
     static RgbSprite[] field_m;
     PcmSample[] samples;
 
-    final static void a(AnimationFrameSet param0, byte param1) {
+    final static void setCurrentFrameSet(AnimationFrameSet param0, byte param1) {
         try {
           IntPair.field_q = param0;
           if (param1 != -34) {

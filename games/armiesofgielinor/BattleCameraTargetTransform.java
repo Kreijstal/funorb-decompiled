@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j {
+final class BattleCameraTargetTransform {
     private FixedQuaternion field_i;
     static int[] field_j;
     static int field_b;
@@ -14,7 +14,7 @@ final class j {
     private int field_k;
     static String field_d;
 
-    private final void a(int param0) {
+    private final void initializeBasisRotations(int param0) {
         this.field_a.setAxisAngle((byte) 47, 65536, 0, 0, 1194);
         this.field_a.normalize(126);
         this.field_f.setAxisAngle((byte) 47, 0, 0, 65536, 256);
@@ -24,8 +24,8 @@ final class j {
         this.field_i.prependRotation(1, this.field_f);
     }
 
-    private final void a(int param0, int param1, int param2) {
-        this.a((byte) 92, param1, this.field_c, param2, this.field_g);
+    private final void updateTransformedOrigin(int param0, int param1, int param2) {
+        this.transformTargetCoordinates((byte) 92, param1, this.field_c, param2, this.field_g);
         this.field_c[param0] = this.field_c[param0] - this.field_k;
     }
 
@@ -36,7 +36,7 @@ final class j {
         decodedSpriteOffsetXs = null;
     }
 
-    final static void a(byte param0) {
+    final static void initializeMenuTextTables(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -52,7 +52,7 @@ final class j {
           DisplacedUnitMarker.field_t[24] = ValidatedTextWidget.field_Y;
           DisplacedUnitMarker.field_t[11] = TilePosition.field_p;
           DisplacedUnitMarker.field_t[0] = ByteArrayPoolSupport.field_g;
-          DisplacedUnitMarker.field_t[1] = la.field_e;
+          DisplacedUnitMarker.field_t[1] = UnitUnlockPreviewModel.field_e;
           DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
           DisplacedUnitMarker.field_t[7] = gp.field_c;
           DisplacedUnitMarker.field_t[3] = ResourceClientErrorSupport.field_d;
@@ -118,7 +118,7 @@ final class j {
           }
           LoginCredentialStagingSupport.field_b[6] = MouseWheelSource.field_a;
           LoginCredentialStagingSupport.field_b[13] = QuickChatPhrase.field_y;
-          SocketFactory.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, ArchiveLoadStep.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, MarkerSliderWidget.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
+          SocketFactory.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, ContentTransitionStage.field_c, ContentTransitionStage.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, ArchiveLoadStep.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, MarkerSliderWidget.field_P, StateChangeEvent.field_H, DisplaySettingsDialog.field_ib};
           LoginCredentialStagingSupport.field_b[18] = ArchiveMasterIndex.field_g;
           LoginCredentialStagingSupport.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           LoginCredentialStagingSupport.field_b[14] = SpectateRoomRequestSupport.field_d;
@@ -136,7 +136,7 @@ final class j {
           LoginCredentialStagingSupport.field_b[26] = ResourceClientErrorSupport.field_d;
           LoginCredentialStagingSupport.field_b[21] = ConsoleExpression.field_u;
           LoginCredentialStagingSupport.field_b[7] = ValidationStatusIcon.field_N;
-          LoginCredentialStagingSupport.field_b[8] = pu.field_h;
+          LoginCredentialStagingSupport.field_b[8] = LogoMesh.field_h;
           LoginCredentialStagingSupport.field_b[3] = QuickChatCategoryMenuSupport.field_g;
           LoginCredentialStagingSupport.field_b[11] = DiskCacheRequest.field_J;
           LoginCredentialStagingSupport.field_b[19] = PlayerProfile.field_e;
@@ -166,7 +166,7 @@ final class j {
         }
     }
 
-    private final void a(byte param0, int param1, int[] param2, int param3, int param4) {
+    private final void transformTargetCoordinates(byte param0, int param1, int[] param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -203,7 +203,7 @@ final class j {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void updateLobbyControls(int param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_23_0 = null;
         ClientUiComponent stackIn_32_0 = null;
@@ -381,7 +381,7 @@ final class j {
             }
           }
           if (param0 != 1) {
-            j.releaseStatics((byte) 20);
+            BattleCameraTargetTransform.releaseStatics((byte) 20);
           }
           stackIn_66_0 = BitmapTextWidgetPainter.field_a;
           stackIn_66_1 = true;
@@ -417,7 +417,7 @@ final class j {
         }
     }
 
-    j(int param0, BattleCamera param1) {
+    BattleCameraTargetTransform(int param0, BattleCamera param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -429,10 +429,10 @@ final class j {
           this.field_a = new FixedQuaternion();
           this.field_f = new FixedQuaternion();
           this.field_i = new FixedQuaternion();
-          this.a(105);
+          this.initializeBasisRotations(105);
           this.field_g = param0 << 16;
           this.field_k = RasterViewportResizeHandler.multiplyFixed16(-55, this.field_g, FixedSquareRootSupport.sqrtFixed16(196608, -129));
-          this.a(2, 0, 0);
+          this.updateTransformedOrigin(2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -36,7 +36,7 @@ final class ClientStateChecksumSupport {
         ConsoleParseException.field_d[7] = QuickChatMenuDisplaySupport.field_d;
         ConsoleParseException.field_d[21] = HuffmanCodec.field_f;
         ConsoleParseException.field_d[20] = MatchSetupPanel.field_d;
-        ConsoleParseException.field_d[16] = tv.field_e;
+        ConsoleParseException.field_d[16] = ContentTransitionStage.field_e;
         ConsoleParseException.field_d[4] = IntrusiveNode.field_c;
         ConsoleParseException.field_d[15] = AnimationSkeleton.field_r;
         if (param0 == 7670) {

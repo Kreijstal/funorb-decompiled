@@ -82,7 +82,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kq.a(param2, false)) {
+          if (!FocusProxyWidget.isSingleSpace(param2, false)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }

@@ -3111,7 +3111,7 @@ final class GameplayController {
               return;
             }
             if (decompiledFrameRemainder0) {
-              this.a(false, j.field_d, (byte) -127);
+              this.a(false, BattleCameraTargetTransform.field_d, (byte) -127);
               return;
             }
           }
@@ -3122,7 +3122,7 @@ final class GameplayController {
             var5Lifetime1 = stackIn_52_0;
             if (this.selectedUnit.movementSpent ||
               this.selectedUnit.attacksRemaining == 0) {
-              this.a(false, j.field_d, (byte) -128);
+              this.a(false, BattleCameraTargetTransform.field_d, (byte) -128);
               if (var6 == 0) {
                 return;
               }
@@ -6652,12 +6652,12 @@ final class GameplayController {
                       if (this.selectedUnit.h(-13494)) {
                         var2 = DualNodeDeque.field_k;
                         if (var20 != 0) {
-                          var2 = j.field_d;
+                          var2 = BattleCameraTargetTransform.field_d;
                           var2 = NameSuggestionList.field_J;
                         }
                       }
                     } else {
-                      var2 = j.field_d;
+                      var2 = BattleCameraTargetTransform.field_d;
                       if (var20 != 0) {
                         var2 = NameSuggestionList.field_J;
                       }
@@ -7101,7 +7101,7 @@ final class GameplayController {
                         }
                         if (decompiledFrameRemainder13) {
                           if (this.selectedUnit.movementSpent) {
-                            var2 = j.field_d;
+                            var2 = BattleCameraTargetTransform.field_d;
                             decompiledFrameRemainder13 = (var20 != 0);
                           }
                           if ((decompiledFrameRemainder13) &&
@@ -10744,7 +10744,7 @@ final class GameplayController {
             return;
           }
           if (!confirmed) {
-            confirmationPrompt = kq.getSpellConfirmationPrompt(tileY, 7, spellId, this.battlefield, tileX);
+            confirmationPrompt = FocusProxyWidget.getSpellConfirmationPrompt(tileY, 7, spellId, this.battlefield, tileX);
             if (confirmationPrompt != null) {
               this.spellConfirmation = new SpellConfirmationDialog(selectionMode, spellId, tileX, tileY, confirmationPrompt, this);
               return;

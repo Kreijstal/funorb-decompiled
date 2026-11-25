@@ -3,7 +3,7 @@
  */
 final class SpriteSheetDecoder extends IntrusiveNode {
     boolean field_m;
-    static la field_n;
+    static UnitUnlockPreviewModel field_n;
     int[] field_l;
     static int field_k;
 
@@ -49,7 +49,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
           packetAlias = packet;
           packetAlias.position = encodedSheet.length - 2;
           AchievementUnlockRequest.decodedSpriteCount = packetAlias.readUnsignedShort((byte) -104);
-          j.decodedSpriteOffsetXs = new int[AchievementUnlockRequest.decodedSpriteCount];
+          BattleCameraTargetTransform.decodedSpriteOffsetXs = new int[AchievementUnlockRequest.decodedSpriteCount];
           c.decodedSpriteHeights = new int[AchievementUnlockRequest.decodedSpriteCount];
           CampaignMenuButton.decodedSpriteOffsetYs = new int[AchievementUnlockRequest.decodedSpriteCount];
           MapTile.decodedSpriteHasAlpha = new boolean[AchievementUnlockRequest.decodedSpriteCount];
@@ -61,7 +61,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
           BirthDateChatEnableForm.decodedSpriteCanvasHeight = packetAlias.readUnsignedShort((byte) -104);
           paletteSize = 1 + (255 & packetAlias.readUnsignedByte(obfuscationGuard + 1));
           for (offsetXIndex = 0; AchievementUnlockRequest.decodedSpriteCount > offsetXIndex; offsetXIndex++) {
-            j.decodedSpriteOffsetXs[offsetXIndex] = packet.readUnsignedShort((byte) -104);
+            BattleCameraTargetTransform.decodedSpriteOffsetXs[offsetXIndex] = packet.readUnsignedShort((byte) -104);
           }
           for (offsetYIndex = 0; offsetYIndex < AchievementUnlockRequest.decodedSpriteCount; offsetYIndex++) {
             CampaignMenuButton.decodedSpriteOffsetYs[offsetYIndex] = packetAlias.readUnsignedShort((byte) -104);
@@ -73,7 +73,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
             c.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           if (obfuscationGuard != -1) {
-            field_n = (la) null;
+            field_n = (UnitUnlockPreviewModel) null;
           }
           packetAlias.position = 3 + (-(paletteSize * 3) + (-(8 * AchievementUnlockRequest.decodedSpriteCount) - 7) + encodedSheet.length);
           MovementPresentation.decodedSpritePalette = new int[paletteSize];
@@ -213,7 +213,7 @@ final class SpriteSheetDecoder extends IntrusiveNode {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard) {
-            field_n = (la) null;
+            field_n = (UnitUnlockPreviewModel) null;
           }
           for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
             for (var3 = 0; AnimationFrameSet.unitUnlockGroups[var2_int].length > var3; var3++) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pu {
+final class LogoMesh {
     int field_p;
     short[] field_u;
     short[] field_c;
@@ -51,19 +51,19 @@ final class pu {
         field_h = null;
         field_G = null;
         if (obfuscationGuard > -63) {
-          pu.releaseStatics((byte) -1);
+          LogoMesh.releaseStatics((byte) -1);
         }
         field_B = null;
     }
 
-    private final void c(int param0) {
+    private final void invalidateBounds(int param0) {
         this.field_C = false;
         if (param0 != 8) {
           field_B = (int[]) null;
         }
     }
 
-    final static void d(int param0) {
+    final static void clearLobbyState(int param0) {
         int var2 = 0;
         LobbyPlayer var3 = null;
         RuntimeException decompiledCaughtException = null;
@@ -108,7 +108,7 @@ final class pu {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translateVertices(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var5 = param1; var5 < this.field_O; var5++) {
@@ -116,10 +116,10 @@ final class pu {
           this.field_y[var5] = (short)(this.field_y[var5] + param2);
           this.field_o[var5] = (short)(this.field_o[var5] + param0);
         }
-        this.c(8);
+        this.invalidateBounds(8);
     }
 
-    final void a(int param0) {
+    final void calculateBounds(int param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -141,7 +141,7 @@ final class pu {
         var4 = 32767;
         var5 = -32768;
         if (param0 != -3831) {
-          this.c(16);
+          this.invalidateBounds(16);
         }
         var6 = -32768;
         var7 = -32768;
@@ -176,7 +176,7 @@ final class pu {
         this.field_J = var7;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scaleVertices(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var7 = -96 / ((param4 - 36) / 55);
@@ -185,10 +185,10 @@ final class pu {
           this.field_y[var6] = (short)(this.field_y[var6] * param2 / param0);
           this.field_o[var6] = (short)(param1 * this.field_o[var6] / param0);
         }
-        this.c(8);
+        this.invalidateBounds(8);
     }
 
-    final static void b(int param0) {
+    final static void sendReadyReflectionCheckResponses(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -217,7 +217,7 @@ final class pu {
         }
     }
 
-    pu() {
+    LogoMesh() {
         this.field_C = false;
         this.field_E = (byte) 0;
     }

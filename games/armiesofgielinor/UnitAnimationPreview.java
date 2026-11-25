@@ -28,14 +28,14 @@ final class UnitAnimationPreview {
         int alternateFrameGroup;
         if (obfuscationGuard >= 20) {
           frameGroup = this.animationPlayer.frameId >> 16;
-          frameSet = ArchiveLoadStep.a(frameGroup, true);
-          MusicPatch.a(frameSet, (byte) -34);
+          frameSet = ArchiveLoadStep.findCachedFrameSet(frameGroup, true);
+          MusicPatch.setCurrentFrameSet(frameSet, (byte) -34);
           return;
         }
         field_m = (ClientUiComponent) null;
         alternateFrameGroup = this.animationPlayer.frameId >> 16;
-        alternateFrameSet = ArchiveLoadStep.a(alternateFrameGroup, true);
-        MusicPatch.a(alternateFrameSet, (byte) -34);
+        alternateFrameSet = ArchiveLoadStep.findCachedFrameSet(alternateFrameGroup, true);
+        MusicPatch.setCurrentFrameSet(alternateFrameSet, (byte) -34);
     }
 
     final void advanceAnimation(int obfuscationGuard) {

@@ -739,8 +739,8 @@ final class BattleCharacter {
 
     private final void a(int param0) {
         int var2 = this.field_x.frameId >> 16;
-        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
-        MusicPatch.a(var3, (byte) -34);
+        AnimationFrameSet var3 = ArchiveLoadStep.findCachedFrameSet(var2, true);
+        MusicPatch.setCurrentFrameSet(var3, (byte) -34);
         if (param0 != -313055120) {
           return;
         }

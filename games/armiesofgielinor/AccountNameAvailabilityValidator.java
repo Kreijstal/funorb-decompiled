@@ -133,10 +133,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static QuickChatCommandDefinition[] getQuickChatCommands(byte obfuscationGuard) {
         if (obfuscationGuard > 100) {
-          return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
+          return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, FocusProxyWidget.field_M};
         }
         AccountNameAvailabilityValidator.releaseStatics(67);
-        return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
+        return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, FocusProxyWidget.field_M};
     }
 
     AccountNameAvailabilityValidator(EditableTextWidget input) {

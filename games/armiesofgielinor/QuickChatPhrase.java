@@ -104,7 +104,7 @@ final class QuickChatPhrase extends DualLinkedNode {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          tv.a(param13, param7, param0, param1, param14, param16, 1, param5, param4, false, param15, param12, param11, param8, param3, (String[]) null, param10, param6, param9);
+          ContentTransitionStage.initializeSharedUiAssets(param13, param7, param0, param1, param14, param16, 1, param5, param4, false, param15, param12, param11, param8, param3, (String[]) null, param10, param6, param9);
           var17_int = -18 / ((param2 + 15) / 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

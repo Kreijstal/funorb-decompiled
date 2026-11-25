@@ -34,7 +34,7 @@ final class ArchiveLoadStep {
         return param0 & param1;
     }
 
-    final static AnimationFrameSet a(int param0, boolean param1) {
+    final static AnimationFrameSet findCachedFrameSet(int param0, boolean param1) {
         fd var2;
         int var3;
         NodeDeque stackIn_5_0 = null;

@@ -32,9 +32,9 @@ final class IgnoreListLookupSupport {
         field_d = null;
     }
 
-    final static String a(boolean param0, char param1) {
+    final static String charToString(boolean param0, char param1) {
         if (!param0) {
-          IgnoreListLookupSupport.a(false, '!');
+          IgnoreListLookupSupport.charToString(false, '!');
           return String.valueOf(param1);
         }
         return String.valueOf(param1);

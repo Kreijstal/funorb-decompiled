@@ -488,7 +488,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           }
           if (AiUnitPlanner.field_t) {
             PacketBuffer.i((byte) -97);
-            pu.d(-112);
+            LogoMesh.clearLobbyState(-112);
             LocalAccountSupport.clearSocialLists(-120);
             AiUnitPlanner.field_t = false;
           }

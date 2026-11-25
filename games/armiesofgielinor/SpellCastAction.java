@@ -96,7 +96,7 @@ final class SpellCastAction extends PreparedAction {
             SpellCastAction.a((java.applet.Applet) null, 31, (String) null, false);
           }
           var3 = ContentTransitionDialog.unitAnimationSlotNames[param0];
-          var4 = IgnoreListLookupSupport.a(true, '_');
+          var4 = IgnoreListLookupSupport.charToString(true, '_');
           var5 = var3 + var4 + param2;
           stackIn_3_0 = var5;
           return stackIn_3_0;

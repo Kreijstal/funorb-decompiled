@@ -186,7 +186,7 @@ abstract class AiPlanningStrategy {
               } else {
                 decompiledFrameRemainder0 = (0 != ListMissionsConsoleCommand.field_E.addButton.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
+                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, FocusProxyWidget.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -195,7 +195,7 @@ abstract class AiPlanningStrategy {
               if (ListMissionsConsoleCommand.field_E.removeButton.pressedButton == 0) {
                 break;
               }
-              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, IgnoreRequestSupport.field_b, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
+              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, IgnoreRequestSupport.field_b, FocusProxyWidget.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
               DisplaySettingsDialog.field_fb = 1;
               break;
             }

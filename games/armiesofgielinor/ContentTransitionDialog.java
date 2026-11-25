@@ -8,7 +8,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     private int fadeOutDuration;
     private int transitionTick;
     private AlphaWidgetContainer contentWrapper;
-    private tv transitionStage;
+    private ContentTransitionStage transitionStage;
     static LoginKind field_db;
     private int contentInsetTop;
     private Widget pendingContent;

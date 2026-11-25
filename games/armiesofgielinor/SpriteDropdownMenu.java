@@ -589,7 +589,7 @@ final class SpriteDropdownMenu {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRaster.c(4, 4, 0, 0, 540, 140);
           }
-          kq.field_P.bindAsRasterTarget();
+          FocusProxyWidget.field_P.bindAsRasterTarget();
           var1.drawHalfSize(0, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {

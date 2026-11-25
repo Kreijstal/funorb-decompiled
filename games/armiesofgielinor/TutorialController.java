@@ -3955,7 +3955,7 @@ final class TutorialController {
                 TilePosition.field_k = 256;
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
-                kq.field_L = 0;
+                FocusProxyWidget.field_L = 0;
                 SetCoatConsoleCommand.field_F = -1;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 SpriteSheetDecoder.field_n = null;
@@ -3991,14 +3991,14 @@ final class TutorialController {
                 MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 SetCoatConsoleCommand.field_F = var4Lifetime1;
-                SpriteSheetDecoder.field_n = new la(AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][SetCoatConsoleCommand.field_F]);
+                SpriteSheetDecoder.field_n = new UnitUnlockPreviewModel(AnimationFrameSet.unitUnlockGroups[PreferencesWriteRequest.field_q + 1][SetCoatConsoleCommand.field_F]);
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
-                kq.field_L = 0;
+                FocusProxyWidget.field_L = 0;
                 SetCoatConsoleCommand.field_F = -1;
                 SpriteSheetDecoder.field_n = null;
                 GlobalSpell.field_h = 256;
@@ -4238,9 +4238,9 @@ final class TutorialController {
             TriangleRasterizer.centerProjection();
             stackIn_25_0 = ((UnitAnimationSelectionSupport.playerProfile.unitUnlockMasks[1 + PreferencesWriteRequest.field_q] & 1 << SetCoatConsoleCommand.field_F) != 0) ? 0 : 1;
             var7Lifetime1 = stackIn_25_0;
-            fieldTemp$0 = kq.field_L;
-            kq.field_L = kq.field_L + 1;
-            SpriteSheetDecoder.field_n.b(2 * QuickChatHelpDialog.field_Jb[SpriteSheetDecoder.field_n.field_f] / 3, MatchConditionEntry.a(145, (byte) 94), IgnoreListLookupSupport.a(true, 165), fieldTemp$0, 98, var7Lifetime1 != 0);
+            fieldTemp$0 = FocusProxyWidget.field_L;
+            FocusProxyWidget.field_L = FocusProxyWidget.field_L + 1;
+            SpriteSheetDecoder.field_n.drawPreview(2 * QuickChatHelpDialog.field_Jb[SpriteSheetDecoder.field_n.field_f] / 3, MatchConditionEntry.a(145, (byte) 94), IgnoreListLookupSupport.a(true, 165), fieldTemp$0, 98, var7Lifetime1 != 0);
           }
           var7Lifetime2 = 0;
           scanLoop1: while (true) {
@@ -4685,7 +4685,7 @@ final class TutorialController {
                   PreferencesWriteRequest.field_q = PreferencesWriteRequest.field_q + 1;
                   GlobalSpell.field_h = 256;
                   PreferencesWriteRequest.field_q = PreferencesWriteRequest.field_q % 7;
-                  kq.field_L = 0;
+                  FocusProxyWidget.field_L = 0;
                   TilePosition.field_k = 256;
                   SpriteSheetDecoder.field_n = null;
                   QuickChatMenuDisplaySupport.field_f = 0;
@@ -4861,7 +4861,7 @@ final class TutorialController {
                     }
                     if (decompiledFrameRemainder3) {
                       if (SpriteSheetDecoder.field_n != null) {
-                        SpriteSheetDecoder.field_n.a((byte) 118);
+                        SpriteSheetDecoder.field_n.advancePreviewAnimation((byte) 118);
                       }
                       var3 = 8;
                       if (TilePosition.field_k > 0) {

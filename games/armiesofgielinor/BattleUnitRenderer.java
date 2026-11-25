@@ -291,9 +291,9 @@ final class BattleUnitRenderer {
     }
 
     BattleUnitRenderer(BattleCamera camera) {
-        j discarded$0 = null;
+        BattleCameraTargetTransform discarded$0 = null;
         try {
-          discarded$0 = new j(240, camera);
+          discarded$0 = new BattleCameraTargetTransform(240, camera);
           this.camera = camera;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "eo.<init>(" + (camera != null ? "{...}" : "null") + ')');

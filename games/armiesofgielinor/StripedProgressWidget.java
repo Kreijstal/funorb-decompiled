@@ -304,7 +304,7 @@ final class StripedProgressWidget extends Widget {
     final static void releaseSpriteDecodeBuffers(byte obfuscationGuard) {
         c.decodedSpriteHeights = null;
         ClippedWidgetContainer.decodedSpriteWidths = null;
-        j.decodedSpriteOffsetXs = null;
+        BattleCameraTargetTransform.decodedSpriteOffsetXs = null;
         AnimationPlayer.decodedSpriteIndices = (byte[][]) null;
         if (obfuscationGuard < 96) {
           return;

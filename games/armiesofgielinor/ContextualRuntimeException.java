@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ContextualRuntimeException extends RuntimeException {
-    static tv contentResizeStage;
+    static ContentTransitionStage contentResizeStage;
     static String field_e;
     Throwable originalCause;
     static java.awt.Frame field_f;
@@ -146,7 +146,7 @@ final class ContextualRuntimeException extends RuntimeException {
     }
 
     static {
-        contentResizeStage = new tv();
+        contentResizeStage = new ContentTransitionStage();
         field_e = "Level:<nbsp><col=ff0000><%0></col>  Speed:<nbsp><col=ff0000><%1></col>  Strength:<nbsp><col=ff0000><%2></col>  Range:<nbsp><col=ff0000><%4>-<%5></col>  Cost:<nbsp><col=ff0000><%6></col>";
         field_a = "If you are not, please change your password to something more obscure!";
         field_d = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";

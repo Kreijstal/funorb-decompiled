@@ -427,13 +427,13 @@ final class UnitModelPreview {
 
     private final void installFrameSet(int obfuscationGuard) {
         int var2 = this.animationPlayer.frameId >> 16;
-        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
+        AnimationFrameSet var3 = ArchiveLoadStep.findCachedFrameSet(var2, true);
         if (obfuscationGuard == -298276720) {
-          MusicPatch.a(var3, (byte) -34);
+          MusicPatch.setCurrentFrameSet(var3, (byte) -34);
           return;
         }
         this.model = (ModelMesh) null;
-        MusicPatch.a(var3, (byte) -34);
+        MusicPatch.setCurrentFrameSet(var3, (byte) -34);
     }
 
     final void setScreenPosition(int screenX, int screenY, byte obfuscationGuard) {

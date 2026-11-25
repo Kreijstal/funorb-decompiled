@@ -12,7 +12,7 @@ final class CampaignMenuButton {
     static long lastPacketReadMillis;
     static int[] decodedSpriteOffsetYs;
     static String field_b;
-    static pu[] field_a;
+    static LogoMesh[] field_a;
 
     final static boolean a(int param0, String param1) {
         int var2_int = 0;

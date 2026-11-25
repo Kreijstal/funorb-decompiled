@@ -87,7 +87,7 @@ final class FriendLookupSupport {
             if (CampaignMenuButton.a(30, var4)) {
               var5 = SpellCastAction.a(param3, (byte) 78, var4);
             } else {
-              if (!kq.a(var4, false)) {
+              if (!FocusProxyWidget.isSingleSpace(var4, false)) {
                 var5 = null;
               } else {
                 var5 = var4;
@@ -171,7 +171,7 @@ final class FriendLookupSupport {
     final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        pu var5 = null;
+        LogoMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
@@ -193,7 +193,7 @@ final class FriendLookupSupport {
             return;
           }
           UnitAnimationSelectionSupport.field_a = DropdownSelectorPainter.decodeLogoMaterials(12, var10);
-          CampaignMenuButton.field_a = new pu[var3];
+          CampaignMenuButton.field_a = new LogoMesh[var3];
           CampaignParticipant.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             CampaignMenuButton.field_a[var4] = GameEvent.a(-86, var8);
@@ -203,11 +203,11 @@ final class FriendLookupSupport {
           var4Lifetime1 = var9;
           while (var9 < var3) {
             var5 = CampaignMenuButton.field_a[var9];
-            var5.a(1, 6, 6, 6, 115);
-            var5.a(-3831);
+            var5.scaleVertices(1, 6, 6, 6, 115);
+            var5.calculateBounds(-3831);
             var6 = new int[]{var5.field_p + var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};
             CampaignParticipant.field_s[var9] = var6;
-            var5.a(-var6[2], 0, -var6[1], -var6[0]);
+            var5.translateVertices(-var6[2], 0, -var6[1], -var6[0]);
             var9++;
           }
           return;

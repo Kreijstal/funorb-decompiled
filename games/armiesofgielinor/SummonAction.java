@@ -53,7 +53,7 @@ final class SummonAction extends PreparedAction {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_4_0 = pu.field_G;
+            stackIn_4_0 = LogoMesh.field_G;
             return stackIn_4_0;
           }
           var3_int = param1.length();
@@ -91,10 +91,10 @@ final class SummonAction extends PreparedAction {
               stackIn_19_0 = AccountRegistrationForm.field_U;
               return stackIn_19_0;
             }
-            stackIn_14_0 = pu.field_G;
+            stackIn_14_0 = LogoMesh.field_G;
             return stackIn_14_0;
           }
-          stackIn_9_0 = pu.field_G;
+          stackIn_9_0 = LogoMesh.field_G;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

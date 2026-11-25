@@ -192,7 +192,7 @@ final class SpellCastErrorSupport {
                     if (var8Lifetime1 == 7) {
                       if (var11.terrainType != 8 &&
                         9 != var11.terrainType) {
-                        stackIn_320_0 = tv.field_d;
+                        stackIn_320_0 = ContentTransitionStage.field_d;
                         return stackIn_320_0;
                       }
                       if (battlefield.arePlayersAllied(var11.ownerPlayer, -16985, actingPlayer)) {

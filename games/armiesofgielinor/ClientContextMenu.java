@@ -436,7 +436,7 @@ final class ClientContextMenu {
           return true;
         }
         if (14 == actionId) {
-          la.openPublicTextChat(-26887);
+          UnitUnlockPreviewModel.openPublicTextChat(-26887);
           var4Lifetime5 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }

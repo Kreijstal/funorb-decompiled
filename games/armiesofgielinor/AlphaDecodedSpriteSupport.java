@@ -33,7 +33,7 @@ final class AlphaDecodedSpriteSupport extends IntrusiveNode {
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = MovementPresentation.decodedSpritePalette[ProceduralMapSupport.bitwiseAnd(255, (int) var17[var5])];
           }
-          var3 = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var9);
+          var3 = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var9);
         } else {
           var16 = CampaignMenuEntry.decodedSpriteAlphas[0];
           var13 = new int[var1];
@@ -42,7 +42,7 @@ final class AlphaDecodedSpriteSupport extends IntrusiveNode {
           for (var6 = 0; var6 < var1; var6++) {
             var5_ref_int__[var6] = AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(255, (int) var16[var6]) << 24, MovementPresentation.decodedSpritePalette[ProceduralMapSupport.bitwiseAnd(255, (int) var17[var6])]);
           }
-          var3 = new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
+          var3 = new ArgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, BattleCameraTargetTransform.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
         }
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 113);
         return (RgbSprite) (var3);

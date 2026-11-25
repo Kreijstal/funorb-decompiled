@@ -169,8 +169,8 @@ final class CombatEvent extends GameEvent {
     }
 
     final static java.applet.Applet d(byte param0) {
-        if (null != la.loaderApplet) {
-          return la.loaderApplet;
+        if (null != UnitUnlockPreviewModel.loaderApplet) {
+          return UnitUnlockPreviewModel.loaderApplet;
         }
         int var1 = 90 % ((param0 + 67) / 44);
         return (java.applet.Applet) ((Object) IntKeyLookup.activeGameShell);

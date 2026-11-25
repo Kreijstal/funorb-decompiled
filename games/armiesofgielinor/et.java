@@ -7,7 +7,7 @@ final class et {
     static int field_b;
     static char field_a;
 
-    final static void a(pu param0, int param1, boolean param2, int param3, int param4) {
+    final static void a(LogoMesh param0, int param1, boolean param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_24_0 = 0;
@@ -50,7 +50,7 @@ final class et {
           var7 = param1 + var5_int;
           if (0 < param0.field_E &&
             param0.field_K != null) {
-            la.d((byte) 111);
+            UnitUnlockPreviewModel.clearLogoFaceGroupCounts((byte) 111);
           }
           UnitModelViewer.field_q = 0;
           var8 = 0;

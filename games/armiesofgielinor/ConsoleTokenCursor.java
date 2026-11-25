@@ -173,7 +173,7 @@ final class ConsoleTokenCursor {
               var10++;
             }
           }
-          stackIn_33_0 = pu.field_k;
+          stackIn_33_0 = LogoMesh.field_k;
           if (param3 != -1) {
             stackIn_34_1 = 4 + param3;
           } else {

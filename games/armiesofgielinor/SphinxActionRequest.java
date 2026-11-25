@@ -139,8 +139,8 @@ final class SphinxActionRequest extends ActionRequest {
           ClientUiNode.field_x.skinSprites = SetCoatConsoleCommand.a(false, 4210752, -20600, 120, false, 8421504);
           GameClock.field_e = new ClientUiComponent(0L, (ClientUiComponent) null);
           GameClock.field_e.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(6316128, false, 114, 1, 3, 6316128);
-          kq.field_N = new ClientUiComponent(0L, (ClientUiComponent) null);
-          kq.field_N.skinSprites = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("popup", (byte) -127, param1, "lobby"));
+          FocusProxyWidget.field_N = new ClientUiComponent(0L, (ClientUiComponent) null);
+          FocusProxyWidget.field_N.skinSprites = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("popup", (byte) -127, param1, "lobby"));
           var12 = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("popup_mouseover", (byte) -124, param1, "lobby"));
           var13 = DropdownSelectorPainter.loadRgbSpritesByName("button", (byte) -125, param1, "lobby");
           var14 = ScoreLeaderboardRequest.resetSpriteCanvasBounds(-12310, DropdownSelectorPainter.loadRgbSpritesByName("tab_active", (byte) -124, param1, "lobby"));
@@ -189,7 +189,7 @@ final class SphinxActionRequest extends ActionRequest {
           IsaacRandom.field_i = new ClientUiComponent(0L, IconLabelControl.field_Lb);
           IsaacRandom.field_i.applyStyle(0, DualLinkedNode.field_k);
           var16 = DropdownSelectorPainter.loadRgbSpritesByName("button_mouseover", (byte) -128, param1, "lobby");
-          AnimationSequence.field_h = new ContextActionMenu(kq.field_N, var12, PasswordLoginCredentials.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, jn.field_d);
+          AnimationSequence.field_h = new ContextActionMenu(FocusProxyWidget.field_N, var12, PasswordLoginCredentials.field_h, DualLinkedNode.field_k, 3, 2, MusicPatch.field_n, 3, jn.field_d);
           TextEntryWidgetPainter.field_u = new ClientUiComponent(0L, DualLinkedNode.field_k);
           TextEntryWidgetPainter.field_u.skinSprites = var13;
           TextEntryWidgetPainter.field_u.heldPressOffsetX = 1;

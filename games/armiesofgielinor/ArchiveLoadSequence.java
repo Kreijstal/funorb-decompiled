@@ -64,10 +64,10 @@ final class ArchiveLoadSequence {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          la.field_d = param0.readUnsignedShort((byte) -104) << 5;
+          UnitUnlockPreviewModel.field_d = param0.readUnsignedShort((byte) -104) << 5;
           var2_int = param0.readUnsignedByte(0);
           RevivalEvent.field_D = (var2_int & 7) << 18;
-          la.field_d = la.field_d + (var2_int >> 3);
+          UnitUnlockPreviewModel.field_d = UnitUnlockPreviewModel.field_d + (var2_int >> 3);
           RevivalEvent.field_D = RevivalEvent.field_D + (param0.readUnsignedShort((byte) -104) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(0);
           Bzip2State.field_m = 2064384 & var2_intLifetime1 << 15;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DropdownOptionList extends kq {
+final class DropdownOptionList extends FocusProxyWidget {
     static String field_X;
     int hoveredIndex;
     static String field_Y;

@@ -19,7 +19,7 @@ final class IconLabelControl extends ClientUiComponent {
         this.layoutContent(obfuscationGuard ^ 120, iconTextGap);
     }
 
-    final static void a(int param0, pu param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static void a(int param0, LogoMesh param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         int stackIn_18_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_21_1 = 0;
@@ -65,7 +65,7 @@ final class IconLabelControl extends ClientUiComponent {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        pu var45 = null;
+        LogoMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -303,7 +303,7 @@ final class IconLabelControl extends ClientUiComponent {
     }
 
     static {
-        IgnoreListLookupSupport.a(true, ' ');
+        IgnoreListLookupSupport.charToString(true, ' ');
         field_Ib = "Open portal - Opens a single portal for a single god's forces at the current map tile";
     }
 }

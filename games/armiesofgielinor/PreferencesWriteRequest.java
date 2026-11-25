@@ -23,8 +23,8 @@ final class PreferencesWriteRequest extends IntrusiveNode {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = PaletteRegionMap.field_g.frameId >> 16;
-          var2 = ArchiveLoadStep.a(var1_int, true);
-          MusicPatch.a(var2, (byte) -34);
+          var2 = ArchiveLoadStep.findCachedFrameSet(var1_int, true);
+          MusicPatch.setCurrentFrameSet(var2, (byte) -34);
           if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {
             stackIn_4_0 = CipherPacketBuffer.currentBattlefield.currentPlayer;
           } else {

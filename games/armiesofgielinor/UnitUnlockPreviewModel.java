@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la {
+final class UnitUnlockPreviewModel {
     private int field_b;
     private boolean field_h;
     static String field_e;
@@ -11,7 +11,7 @@ final class la {
     static int field_d;
     static java.applet.Applet loaderApplet;
 
-    private final int c(byte param0) {
+    private final int findFirstAvailableAnimationVariant(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -32,7 +32,7 @@ final class la {
         loaderApplet = null;
         field_e = null;
         if (obfuscationGuard >= -106) {
-          la.d((byte) -100);
+          UnitUnlockPreviewModel.clearLogoFaceGroupCounts((byte) -100);
         }
     }
 
@@ -44,7 +44,7 @@ final class la {
         ClientStateChecksumSupport.textChatActive = true;
     }
 
-    final static void d(byte param0) {
+    final static void clearLogoFaceGroupCounts(byte param0) {
         int[] var6 = null;
         int var2 = 0;
         int var3 = 0;
@@ -93,16 +93,16 @@ final class la {
         }
     }
 
-    private final void a(int param0) {
+    private final void bindCurrentFrameSet(int param0) {
         int var2 = this.field_a.frameId >> 16;
         if (param0 < 68) {
-          this.a(91);
+          this.bindCurrentFrameSet(91);
         }
-        AnimationFrameSet var3 = ArchiveLoadStep.a(var2, true);
-        MusicPatch.a(var3, (byte) -34);
+        AnimationFrameSet var3 = ArchiveLoadStep.findCachedFrameSet(var2, true);
+        MusicPatch.setCurrentFrameSet(var3, (byte) -34);
     }
 
-    private final void a(byte param0, int param1) {
+    private final void selectAnimationVariant(byte param0, int param1) {
         int var3;
         var3 = 0;
         if (this.field_b != param1 &&
@@ -120,9 +120,9 @@ final class la {
         }
         if (var3 != 0) {
           if (BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0] < 0) {
-            this.field_b = this.c((byte) 82);
+            this.field_b = this.findFirstAvailableAnimationVariant((byte) 82);
           }
-          this.c(param0 ^ -126);
+          this.selectCurrentAnimationSequence(param0 ^ -126);
         }
         if (param0 != -126) {
           this.field_f = -111;
@@ -131,7 +131,7 @@ final class la {
 
     final static void initializeChatHistory(byte obfuscationGuard, int categoryLimit) {
         if (obfuscationGuard != 30) {
-          la.openPublicTextChat(104);
+          UnitUnlockPreviewModel.openPublicTextChat(104);
         }
         BitmapTextWidgetPainter.chatHistorySize = 0;
         MoveAttackRequest.chatHistoryPriorityCounts = new int[3];
@@ -139,15 +139,15 @@ final class la {
         AnimationPlayer.chatHistoryCategoryLimit = categoryLimit;
     }
 
-    final void a(byte param0) {
+    final void advancePreviewAnimation(byte param0) {
         int var3 = -30 / ((-31 - param0) / 54);
         int var2 = 0;
-        this.a((byte) -126, var2);
+        this.selectAnimationVariant((byte) -126, var2);
         this.field_a.advance(-122);
-        this.a(73);
+        this.bindCurrentFrameSet(73);
     }
 
-    la(int param0) {
+    UnitUnlockPreviewModel(int param0) {
         this.field_a = new AnimationPlayer(1);
         this.field_f = param0;
         if (param0 == 43) {
@@ -156,10 +156,10 @@ final class la {
         this.field_c = (ModelMesh) (ActionRequest.unitModels[param0][0]);
         this.field_h = DiskCacheRequest.unitProjectionVariants[param0];
         this.field_b = 0;
-        this.c(0);
+        this.selectCurrentAnimationSequence(0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void drawFoliageCluster(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -193,7 +193,7 @@ final class la {
         }
     }
 
-    private final void c(int param0) {
+    private final void selectCurrentAnimationSequence(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
           this.field_a.selectSequence(-1, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
@@ -201,12 +201,12 @@ final class la {
           this.field_a.selectSequence(~param0, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][0]);
         }
         if (param0 != 0) {
-          this.a((byte) 11, -94);
+          this.selectAnimationVariant((byte) 11, -94);
         }
-        this.a(81);
+        this.bindCurrentFrameSet(81);
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final void drawPreview(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         ModelMesh var15 = (ModelMesh) (this.field_a.applyCurrentFrame(false, true, false, this.field_c));
         if (75 == this.field_f) {
           var15.scaleGeometry(250, 250, 250);

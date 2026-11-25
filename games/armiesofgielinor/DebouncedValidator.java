@@ -135,7 +135,7 @@ abstract class DebouncedValidator implements ValidationSource {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        pu var4_ref_pu = null;
+        LogoMesh var4_ref_pu = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -149,7 +149,7 @@ abstract class DebouncedValidator implements ValidationSource {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        pu var17 = null;
+        LogoMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -173,7 +173,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_pu = CampaignMenuButton.field_a[var3];
-            var4_ref_pu.a(-3831);
+            var4_ref_pu.calculateBounds(-3831);
             CampaignMenuEntry.a((byte) -116, var3);
             var5 = var4_ref_pu.field_L + var4_ref_pu.field_p >> 1;
             var6 = var4_ref_pu.field_H + var4_ref_pu.field_P >> 1;

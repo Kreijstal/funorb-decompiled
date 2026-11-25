@@ -550,7 +550,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         try {
           NanoGameClock.field_s = param4;
           AiPlanner.field_G = param19;
-          kq.a(param3, param17, (byte) 87, param10, param2);
+          FocusProxyWidget.setSelectionMenuTextMetrics(param3, param17, (byte) 87, param10, param2);
           CampaignMenu.a((byte) 123, param18, param5, param16);
           if (param11 != -99) {
             return;

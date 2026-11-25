@@ -38,9 +38,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (la.loaderApplet != null &&
-            this != la.loaderApplet) {
-            stackIn_8_0 = la.loaderApplet.getParameter(param0);
+          if (UnitUnlockPreviewModel.loaderApplet != null &&
+            this != UnitUnlockPreviewModel.loaderApplet) {
+            stackIn_8_0 = UnitUnlockPreviewModel.loaderApplet.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -153,7 +153,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          la.loaderApplet = param0;
+          UnitUnlockPreviewModel.loaderApplet = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -360,8 +360,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             PcmPlayerService.clientShutdownStarted = true;
           }
-          if (la.loaderApplet != null) {
-            la.loaderApplet.destroy();
+          if (UnitUnlockPreviewModel.loaderApplet != null) {
+            UnitUnlockPreviewModel.loaderApplet.destroy();
           }
           try {
             this.shutdownClient((byte) 103);
@@ -485,9 +485,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         if (null != ContextualRuntimeException.field_f) {
           return null;
         }
-        if (la.loaderApplet != null &&
-          la.loaderApplet != this) {
-          return la.loaderApplet.getCodeBase();
+        if (UnitUnlockPreviewModel.loaderApplet != null &&
+          UnitUnlockPreviewModel.loaderApplet != this) {
+          return UnitUnlockPreviewModel.loaderApplet.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -595,8 +595,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               if (decompiledFrameRemainder3) {
                 var1 = IntKeyLookup.activeGameShell;
-                if (null != la.loaderApplet) {
-                  var1 = la.loaderApplet;
+                if (null != UnitUnlockPreviewModel.loaderApplet) {
+                  var1 = UnitUnlockPreviewModel.loaderApplet;
                 }
                 var2_ref = PlatformTaskService.field_x;
                 if (var2_ref != null) {
@@ -730,9 +730,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (null != la.loaderApplet &&
-            this != la.loaderApplet) {
-            stackIn_12_0 = la.loaderApplet.getDocumentBase();
+          if (null != UnitUnlockPreviewModel.loaderApplet &&
+            this != UnitUnlockPreviewModel.loaderApplet) {
+            stackIn_12_0 = UnitUnlockPreviewModel.loaderApplet.getDocumentBase();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getDocumentBase();
@@ -755,9 +755,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (la.loaderApplet != null &&
-            la.loaderApplet != this) {
-            stackIn_10_0 = la.loaderApplet.getAppletContext();
+          if (UnitUnlockPreviewModel.loaderApplet != null &&
+            UnitUnlockPreviewModel.loaderApplet != this) {
+            stackIn_10_0 = UnitUnlockPreviewModel.loaderApplet.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -846,16 +846,16 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (ContextualRuntimeException.field_f != null) {
               var2 = ContextualRuntimeException.field_f;
               if (var4 != 0) {
-                if (la.loaderApplet != null) {
-                  var2 = la.loaderApplet;
+                if (UnitUnlockPreviewModel.loaderApplet != null) {
+                  var2 = UnitUnlockPreviewModel.loaderApplet;
                   var2 = IntKeyLookup.activeGameShell;
                 } else {
                   var2 = IntKeyLookup.activeGameShell;
                 }
               }
             } else {
-              if (la.loaderApplet != null) {
-                var2 = la.loaderApplet;
+              if (UnitUnlockPreviewModel.loaderApplet != null) {
+                var2 = UnitUnlockPreviewModel.loaderApplet;
                 if (var4 != 0) {
                   var2 = IntKeyLookup.activeGameShell;
                 }

@@ -1348,12 +1348,12 @@ final class InstructionsPanel {
         if (this.illustrationAnimation != null) {
           this.illustrationAnimation.advance(-118);
           var2 = this.illustrationAnimation.frameId >> 16;
-          var3 = ArchiveLoadStep.a(var2, true);
+          var3 = ArchiveLoadStep.findCachedFrameSet(var2, true);
           if (this.illustrationAnimation == null) {
             Object var3_ref = null;
             return;
           }
-          MusicPatch.a(var3, (byte) -34);
+          MusicPatch.setCurrentFrameSet(var3, (byte) -34);
         } else {
           this.f(-11195);
         }

@@ -1199,11 +1199,11 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_AWARD_FIRSTHOUSES");
                 if (null != var2) {
-                  tv.field_c = uu.a(var2, (byte) -93);
+                  ContentTransitionStage.field_c = uu.a(var2, (byte) -93);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_AWARD_FIRSTPORTALS");
                 if (null != var2) {
-                  tv.field_b = uu.a(var2, (byte) 85);
+                  ContentTransitionStage.field_b = uu.a(var2, (byte) 85);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_AWARD_KILLS");
                 if (null != var2) {
@@ -1471,7 +1471,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "ACTION_TIRED");
                 if (null != var2) {
-                  j.field_d = uu.a(var2, (byte) -126);
+                  BattleCameraTargetTransform.field_d = uu.a(var2, (byte) -126);
                 }
                 var2 = DropdownSelectorPainter.a(false, "ACTION_NONE");
                 if (null != var2) {
@@ -3303,7 +3303,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_ACHIEVEMENTS");
                 if (var2 != null) {
-                  pu.field_h = uu.a(var2, (byte) 7);
+                  LogoMesh.field_h = uu.a(var2, (byte) 7);
                 }
                 var2 = DropdownSelectorPainter.a(false, "LABEL_GAME_ACHIEVEMENTS");
                 if (null != var2) {
@@ -5123,7 +5123,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_NOREVOLT");
                 if (null != var2) {
-                  tv.field_d = uu.a(var2, (byte) -105);
+                  ContentTransitionStage.field_d = uu.a(var2, (byte) -105);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TERROR_NOTOWNED");
                 if (var2 != null) {
@@ -5772,7 +5772,7 @@ final class TickCounter {
                           }
                           break;
                         case 4:
-                          la.a(param3 + 20, ConsoleExpression.field_p[param4] + param4, param8, 40 + param7, param0, false);
+                          UnitUnlockPreviewModel.drawFoliageCluster(param3 + 20, ConsoleExpression.field_p[param4] + param4, param8, 40 + param7, param0, false);
                           if (var13 == 0) {
                             break regionExit1;
                           }

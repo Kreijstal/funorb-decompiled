@@ -604,10 +604,10 @@ class ClientUiComponent extends ClientUiNode {
                 var7 = KingBlackDragonEvent.field_z[var6];
                 KingBlackDragonEvent.field_z[var6].height = 0;
                 var7.width = 0;
-                for (var8 = 0; var8 < pu.field_k[var6].length; var8++) {
-                  if (null != pu.field_k[var6][var8]) {
-                    var9 = pu.field_k[var6][var8];
-                    pu.field_k[var6][var8].height = 0;
+                for (var8 = 0; var8 < LogoMesh.field_k[var6].length; var8++) {
+                  if (null != LogoMesh.field_k[var6][var8]) {
+                    var9 = LogoMesh.field_k[var6][var8];
+                    LogoMesh.field_k[var6][var8].height = 0;
                     var9.width = 0;
                   }
                 }
@@ -617,10 +617,10 @@ class ClientUiComponent extends ClientUiNode {
                 var7 = var14;
                 KingBlackDragonEvent.field_z[var6].height = 0;
                 var14.width = 0;
-                for (var8 = 0; pu.field_k[var6].length > var8; var8++) {
-                  if (null != pu.field_k[var6][var8]) {
-                    var9 = pu.field_k[var6][var8];
-                    pu.field_k[var6][var8].height = 0;
+                for (var8 = 0; LogoMesh.field_k[var6].length > var8; var8++) {
+                  if (null != LogoMesh.field_k[var6][var8]) {
+                    var9 = LogoMesh.field_k[var6][var8];
+                    LogoMesh.field_k[var6][var8].height = 0;
                     var9.width = 0;
                   }
                 }
@@ -643,10 +643,10 @@ class ClientUiComponent extends ClientUiNode {
                   var8_ref_je = KingBlackDragonEvent.field_z[var6];
                   KingBlackDragonEvent.field_z[var6].height = 0;
                   var8_ref_je.width = 0;
-                  for (var9_int = 0; var9_int < pu.field_k[var6].length; var9_int++) {
-                    if (pu.field_k[var6][var9_int] != null) {
-                      var10_ref_nf = pu.field_k[var6][var9_int];
-                      pu.field_k[var6][var9_int].height = 0;
+                  for (var9_int = 0; var9_int < LogoMesh.field_k[var6].length; var9_int++) {
+                    if (LogoMesh.field_k[var6][var9_int] != null) {
+                      var10_ref_nf = LogoMesh.field_k[var6][var9_int];
+                      LogoMesh.field_k[var6][var9_int].height = 0;
                       var10_ref_nf.width = 0;
                     }
                   }
@@ -654,20 +654,20 @@ class ClientUiComponent extends ClientUiNode {
                   KingBlackDragonEvent.field_z[var6].setBounds(var3, -20500, 103, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    pu.field_k[var6][0].setLayout(var3, 2, -30061, 38, var5, var8, MusicPatch.field_n);
+                    LogoMesh.field_k[var6][0].setLayout(var3, 2, -30061, 38, var5, var8, MusicPatch.field_n);
                     var8 += 40;
                   } else {
-                    if (pu.field_k[var6][0] != null) {
-                      var9 = pu.field_k[var6][0];
-                      pu.field_k[var6][0].height = 0;
+                    if (LogoMesh.field_k[var6][0] != null) {
+                      var9 = LogoMesh.field_k[var6][0];
+                      LogoMesh.field_k[var6][0].height = 0;
                       var9.width = 0;
                     }
                   }
                   var9_int = -5 + (PasswordLengthSupport.field_c.width + (-var8 + 2));
-                  var10 = pu.field_k[var6].length - 1;
+                  var10 = LogoMesh.field_k[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    pu.field_k[var6][var11 + 1].setLayout(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, MusicPatch.field_n);
+                    LogoMesh.field_k[var6][var11 + 1].setLayout(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, MusicPatch.field_n);
                   }
                   var5 = var5 + (var3 + 2);
                 }

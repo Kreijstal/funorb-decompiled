@@ -973,7 +973,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_1_0");
                 if (null != var2) {
-                  tv.field_e = uu.a(var2, (byte) -126);
+                  ContentTransitionStage.field_e = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "rule_1_1");
                 if (var2 != null) {
@@ -1593,7 +1593,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_namelength");
                 if (null != var2) {
-                  pu.field_G = uu.a(var2, (byte) -127);
+                  LogoMesh.field_G = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_alert_namechars");
                 if (null != var2) {
@@ -2066,7 +2066,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "entermultiplayerlobby");
                 if (var2 != null) {
-                  la.field_e = uu.a(var2, (byte) -119);
+                  UnitUnlockPreviewModel.field_e = uu.a(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "singleplayergame");
                 if (null != var2) {

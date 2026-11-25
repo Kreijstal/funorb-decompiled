@@ -203,7 +203,7 @@ final class QuickChatMenu extends ClientUiComponent {
           ContextActionMenu.field_Wb = var9;
           QuickChatCategory.field_z = var9;
           ConsoleTextNode.field_m = var9;
-          j.field_b = var9;
+          BattleCameraTargetTransform.field_b = var9;
           SpellConfirmationDialog.field_e = var9;
           ChannelBaseVolumeConsoleCommand.field_E = var9;
           stackIn_9_0 = (param3 <= 0) ? 0 : 1;
@@ -235,10 +235,10 @@ final class QuickChatMenu extends ClientUiComponent {
               LocalAccountNameSupport.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, AccountNameFoldingSupport.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(LocalAccountNameSupport.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, BattleCameraTargetTransform.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(LocalAccountNameSupport.field_i, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, BattleCameraTargetTransform.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
           if (BitLengthSupport.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {
@@ -457,7 +457,7 @@ final class QuickChatMenu extends ClientUiComponent {
           shortcutSuffix = "</col>";
           for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {
             if (this.shortcuts[itemIndex] > 0) {
-              labels[itemIndex] = shortcutPrefix + IgnoreListLookupSupport.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutSuffix + labels[itemIndex];
+              labels[itemIndex] = shortcutPrefix + IgnoreListLookupSupport.charToString(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutSuffix + labels[itemIndex];
             }
             arrow = null;
             if (this.submenus[itemIndex] != null ||

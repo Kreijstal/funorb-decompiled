@@ -262,7 +262,7 @@ final class MapRepository {
         }
     }
 
-    final static void a(pu param0, boolean param1, boolean param2, boolean param3, boolean param4, int[] param5, int[] param6) {
+    final static void a(LogoMesh param0, boolean param1, boolean param2, boolean param3, boolean param4, int[] param5, int[] param6) {
         int stackIn_59_0 = 0;
         int stackIn_59_1 = 0;
         RuntimeException stackIn_69_0 = null;

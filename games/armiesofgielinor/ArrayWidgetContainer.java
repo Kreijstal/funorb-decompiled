@@ -252,7 +252,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             var13++;
           }
           if (param2.packedFlag32) {
-            BattleCharacter.field_h[j.field_j[LinkButtonPainter.a(param2.unitType, (byte) -125)]].drawHalfSize(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
+            BattleCharacter.field_h[BattleCameraTargetTransform.field_j[LinkButtonPainter.a(param2.unitType, (byte) -125)]].drawHalfSize(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
             ProjectileEffect.field_h[0].drawHalfSize(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
             var13++;
           }

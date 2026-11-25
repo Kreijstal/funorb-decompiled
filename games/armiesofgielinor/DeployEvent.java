@@ -274,13 +274,13 @@ final class DeployEvent extends GameEvent {
             var6 = (SocialListEntry) (var4.next((byte) 123));
           }
           if (0 != TaggedMapData.field_g.addButton.pressedButton) {
-            EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, AchievementUnlockRequest.field_o, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
+            EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, AchievementUnlockRequest.field_o, FocusProxyWidget.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
             DisplaySettingsDialog.field_fb = 2;
           }
           if (TaggedMapData.field_g.removeButton.pressedButton == 0) {
             return;
           }
-          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, kq.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
+          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, FocusProxyWidget.field_N, PasswordLoginCredentials.field_h, PasswordLoginCredentials.field_h);
           DisplaySettingsDialog.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

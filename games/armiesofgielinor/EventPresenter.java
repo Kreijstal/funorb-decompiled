@@ -374,7 +374,7 @@ final class EventPresenter extends IntrusiveNode {
     }
 
     EventPresenter(GameplayController controller, Battlefield battlefield, BattleUnitRenderer unitRenderer, GameEvent event, boolean blocking) {
-        j discarded$0 = null;
+        BattleCameraTargetTransform discarded$0 = null;
         this.fullCombatScene = false;
         this.tileIndex = -1;
         try {
@@ -382,7 +382,7 @@ final class EventPresenter extends IntrusiveNode {
           this.event = event;
           this.unitRenderer = unitRenderer;
           this.controller = controller;
-          discarded$0 = new j(240, controller.camera);
+          discarded$0 = new BattleCameraTargetTransform(240, controller.camera);
           this.event.markPresentationIncomplete(-97);
           this.elapsedFrames = 0;
           this.presentationActive = false;
@@ -394,7 +394,7 @@ final class EventPresenter extends IntrusiveNode {
     }
 
     EventPresenter(GameplayController param0, Battlefield param1, BattleUnitRenderer param2, GameEvent param3, int param4, int param5, boolean param6) {
-        j discarded$0 = null;
+        BattleCameraTargetTransform discarded$0 = null;
         this.fullCombatScene = false;
         this.tileIndex = -1;
         try {
@@ -402,7 +402,7 @@ final class EventPresenter extends IntrusiveNode {
           this.battlefield = param1;
           this.unitRenderer = param2;
           this.controller = param0;
-          discarded$0 = new j(240, param0.camera);
+          discarded$0 = new BattleCameraTargetTransform(240, param0.camera);
           this.event.markPresentationIncomplete(-97);
           this.presentationActive = false;
           this.field_w = param6 ? true : false;

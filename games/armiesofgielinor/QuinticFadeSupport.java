@@ -3,7 +3,7 @@
  */
 final class QuinticFadeSupport {
     static String field_c;
-    static tv contentFadeInStage;
+    static ContentTransitionStage contentFadeInStage;
     static String field_f;
     static ResourceArchive field_b;
     static String field_a;
@@ -18,7 +18,7 @@ final class QuinticFadeSupport {
           return SoundCache.field_a;
         }
         if (param0 != -61440) {
-          contentFadeInStage = (tv) null;
+          contentFadeInStage = (ContentTransitionStage) null;
           return null;
         }
         return null;
@@ -54,7 +54,7 @@ final class QuinticFadeSupport {
         field_c = "<%0> of <%1> strength with +<%2> bonus";
         field_f = "Leather armour helps to protect against ranged damage.";
         field_a = "Don't mind";
-        contentFadeInStage = new tv();
+        contentFadeInStage = new ContentTransitionStage();
         field_d = new String[][]{new String[]{"240", "180", "150", "120", "90", "60", "30"}, new String[]{"Small 2-player maps for quick duels. 15-turn limit. Average play time: 30 minutes.", "Standard maps for 2-4 players. 20-turn limit. Average play time: 30-60 minutes.", "Large scale battles for 2-6 players. 30-turn limit. Average play time: 1-2 hours.", "Huge, randomly-generated maps for 4-8 players. Average play time: 2+ hours."}, new String[]{"The standard number of turns for this map size.", "Twice number of turns for this map size.", "Three times the number of turns for this map size.", "Four times the number of turns for this map size."}, new String[]{"Misthalin: standard terrain.", "Kharidian Desert: open maps with lots of mountainous terrain.", "Frozen Wastes: enclosed maps with lots of mountains and forests.", "Hallowvale Swamps: a mixture of maps with lots of water.", "Forinthry Barrens: the damage caused by the God Wars was heavy here."}, new String[]{"Every player against every other player.", "Players must work together as a red and blue team."}, new String[]{"No trinkets may be used in this game", "Each player may use trinkets in this game up to the value of 25 runes", "Each player may use trinkets in this game up to the value of 75 runes", "Each player may use trinkets in this game up to the value of 150 runes", "Each player may use trinkets in this game, with no value limit"}};
     }
 }

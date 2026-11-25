@@ -264,9 +264,9 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract boolean beginPresentation(NodeDeque param0, byte param1, GameplayController param2);
 
-    final static pu a(int param0, CipherPacketBuffer param1) {
+    final static LogoMesh a(int param0, CipherPacketBuffer param1) {
         int var8 = 0;
-        pu stackIn_26_0 = null;
+        LogoMesh stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -276,7 +276,7 @@ abstract class GameEvent extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        pu var6 = null;
+        LogoMesh var6 = null;
         int var7 = 0;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -288,7 +288,7 @@ abstract class GameEvent extends IntrusiveNode {
           var3 = vq.a(param1, -2) ? 1 : 0;
           var5 = 1 / ((param0 - 61) / 50);
           var4 = vq.a(param1, -2) ? 1 : 0;
-          var6 = new pu();
+          var6 = new LogoMesh();
           var6.field_O = (short)param1.readBits(61, 16);
           var6.field_z = SpellCastRequest.a(var6.field_z, 16, param1, 10064);
           var6.field_y = SpellCastRequest.a(var6.field_y, 16, param1, 10064);

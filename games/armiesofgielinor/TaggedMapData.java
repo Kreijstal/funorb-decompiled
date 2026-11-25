@@ -67,13 +67,13 @@ final class TaggedMapData implements TaggedFieldReader {
             } else {
               if (20 > var6) {
                 var7 = var6 * 256 / 20;
-                kq.field_P.drawAdditive(var3, var4, var7);
+                FocusProxyWidget.field_P.drawAdditive(var3, var4, var7);
               } else {
                 if (var6 < 30) {
-                  kq.field_P.drawAdditive(var3, var4, 256);
+                  FocusProxyWidget.field_P.drawAdditive(var3, var4, 256);
                 } else {
                   var7 = (-var6 + 50) * 256 / 20;
-                  kq.field_P.drawAdditive(var3, var4, var7);
+                  FocusProxyWidget.field_P.drawAdditive(var3, var4, var7);
                 }
               }
               var6 = PasswordValidator.field_j - 140;
@@ -127,7 +127,7 @@ final class TaggedMapData implements TaggedFieldReader {
           } else {
             if (20 > var6Lifetime1) {
               var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
-              kq.field_P.drawAdditive(var3, var4, var7Lifetime1Lifetime1);
+              FocusProxyWidget.field_P.drawAdditive(var3, var4, var7Lifetime1Lifetime1);
               var6Lifetime1 = PasswordValidator.field_j - 140;
               if (var6Lifetime1 > 0) {
                 var7Lifetime1Lifetime1 = 256;
@@ -140,7 +140,7 @@ final class TaggedMapData implements TaggedFieldReader {
             }
             if (var6Lifetime1 >= 30) {
               var7Lifetime1Lifetime1 = (-var6Lifetime1 + 50) * 256 / 20;
-              kq.field_P.drawAdditive(var3, var4, var7Lifetime1Lifetime1);
+              FocusProxyWidget.field_P.drawAdditive(var3, var4, var7Lifetime1Lifetime1);
               var6Lifetime1 = PasswordValidator.field_j - 140;
               if (var6Lifetime1 > 0) {
                 var7Lifetime1Lifetime1 = 256;
@@ -151,7 +151,7 @@ final class TaggedMapData implements TaggedFieldReader {
               }
               return;
             }
-            kq.field_P.drawAdditive(var3, var4, 256);
+            FocusProxyWidget.field_P.drawAdditive(var3, var4, 256);
             var6Lifetime1 = PasswordValidator.field_j - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime1 = 256;
@@ -189,7 +189,7 @@ final class TaggedMapData implements TaggedFieldReader {
         } else {
           if (20 > var6Lifetime2) {
             var7Lifetime3 = var6Lifetime2 * 256 / 20;
-            kq.field_P.drawAdditive(var3, var4, var7Lifetime3);
+            FocusProxyWidget.field_P.drawAdditive(var3, var4, var7Lifetime3);
             var6Lifetime2 = PasswordValidator.field_j - 140;
             if (var6Lifetime2 > 0) {
               var7Lifetime3 = 256;
@@ -202,7 +202,7 @@ final class TaggedMapData implements TaggedFieldReader {
           }
           if (var6Lifetime2 >= 30) {
             var7Lifetime3 = (-var6Lifetime2 + 50) * 256 / 20;
-            kq.field_P.drawAdditive(var3, var4, var7Lifetime3);
+            FocusProxyWidget.field_P.drawAdditive(var3, var4, var7Lifetime3);
             var6Lifetime2 = PasswordValidator.field_j - 140;
             if (var6Lifetime2 > 0) {
               var7Lifetime3 = 256;
@@ -213,7 +213,7 @@ final class TaggedMapData implements TaggedFieldReader {
             }
             return;
           }
-          kq.field_P.drawAdditive(var3, var4, 256);
+          FocusProxyWidget.field_P.drawAdditive(var3, var4, 256);
           var6Lifetime2 = PasswordValidator.field_j - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime3 = 256;
@@ -289,7 +289,7 @@ final class TaggedMapData implements TaggedFieldReader {
                   var7 = packet.getReadBitPosition(false);
                   var8 = AiPlanner.readCompactInt(packet, true);
                   var9 = -var7 + packet.getReadBitPosition(false);
-                  kq.enterTaggedPayload(var7, -24232, var9, var8, packet);
+                  FocusProxyWidget.enterTaggedPayload(var7, -24232, var9, var8, packet);
                   this.tiles[var6] = DebouncedValidator.readTaggedMapTile(var8, (byte) 70, packet);
                   StatefulWidgetPainter.finishTaggedPayload(var7, -126, var9, packet, var8);
                 }

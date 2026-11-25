@@ -8,7 +8,7 @@ final class TeleportAction extends PreparedAction {
     private int targetDeltaY;
     static String field_u;
     static byte[] field_B;
-    static tv contentFadeOutStage;
+    static ContentTransitionStage contentFadeOutStage;
     private boolean skipDestinationPlacement;
     static String field_C;
     static int pointerPressY;
@@ -121,7 +121,7 @@ final class TeleportAction extends PreparedAction {
     static {
         field_x = "Tips";
         field_u = "Connecting to<br>friend server...";
-        contentFadeOutStage = new tv();
+        contentFadeOutStage = new ContentTransitionStage();
         pointerPressY = 0;
     }
 }

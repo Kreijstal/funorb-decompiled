@@ -406,37 +406,37 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           BattleTutorial.field_d = new ClientUiComponent(0L, ProceduralMapSupport.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
-          pu.field_k = new IconTextComponent[4 + param1][];
+          LogoMesh.field_k = new IconTextComponent[4 + param1][];
           KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, IconLabelControl.field_Lb, et.field_c);
-          pu.field_k[0] = new IconTextComponent[6];
+          LogoMesh.field_k[0] = new IconTextComponent[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            pu.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);
+            LogoMesh.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
             KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ep.field_h);
             array$0 = new IconTextComponent[1 + lm.field_e.length];
-            pu.field_k[1] = array$0;
-            pu.field_k[1][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
+            LogoMesh.field_k[1] = array$0;
+            LogoMesh.field_k[1][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              pu.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+              LogoMesh.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
           KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GameEvent.field_p);
-          pu.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], QuickChatShortcutSupport.field_b)};
+          LogoMesh.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], QuickChatShortcutSupport.field_b)};
           if (BoundedFile.field_h > 1) {
             KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, IconLabelControl.field_Lb, AnimationFrameSet.field_u);
             array$1 = new IconTextComponent[1 + BoundedFile.field_h];
-            pu.field_k[3] = array$1;
-            pu.field_k[3][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
+            LogoMesh.field_k[3] = array$1;
+            LogoMesh.field_k[3][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < BoundedFile.field_h; var17_intLifetime2++) {
-              pu.field_k[3][1 + var17_intLifetime2] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, LocalAccountNameSupport.field_f[var17_intLifetime2]);
+              LogoMesh.field_k[3][1 + var17_intLifetime2] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, LocalAccountNameSupport.field_f[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
             KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GridWidgetContainer.field_M[var17_intLifetime3]);
             array$2 = new IconTextComponent[ProceduralMapSupport.bitwiseAnd(255, (int) MusicPatchNode.field_r[var17_intLifetime3]) + 1];
-            pu.field_k[var17_intLifetime3 + 4] = array$2;
-            pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
+            LogoMesh.field_k[var17_intLifetime3 + 4] = array$2;
+            LogoMesh.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var18 = 0; var18 < (MusicPatchNode.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
@@ -456,18 +456,18 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               } else {
                 var20 = null;
               }
-              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              LogoMesh.field_k[var17_intLifetime3 + 4][1 + var18] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
             if (null != KingBlackDragonEvent.field_z[var17_intLifetime4]) {
               KingBlackDragonEvent.field_z[var17_intLifetime4].textLineSpacing = 11;
             }
-            if (pu.field_k[var17_intLifetime4] != null) {
-              for (var18Lifetime1 = 0; pu.field_k[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
-                if (pu.field_k[var17_intLifetime4][var18Lifetime1] != null &&
-                  null != pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent) {
-                  pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent.textLineSpacing = 11;
+            if (LogoMesh.field_k[var17_intLifetime4] != null) {
+              for (var18Lifetime1 = 0; LogoMesh.field_k[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
+                if (LogoMesh.field_k[var17_intLifetime4][var18Lifetime1] != null &&
+                  null != LogoMesh.field_k[var17_intLifetime4][var18Lifetime1].textComponent) {
+                  LogoMesh.field_k[var17_intLifetime4][var18Lifetime1].textComponent.textLineSpacing = 11;
                 }
               }
             }
@@ -492,9 +492,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
               !(BoundedFile.field_h <= 1))) {
               MusicPatchUsage.gameOptionsGrid.addChild(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
-              for (var19 = 0; var19 < pu.field_k[var18Lifetime2].length; var19++) {
-                if (pu.field_k[var18Lifetime2][var19] != null) {
-                  MusicPatchUsage.gameOptionsGrid.addChild(pu.field_k[var18Lifetime2][var19], 48);
+              for (var19 = 0; var19 < LogoMesh.field_k[var18Lifetime2].length; var19++) {
+                if (LogoMesh.field_k[var18Lifetime2][var19] != null) {
+                  MusicPatchUsage.gameOptionsGrid.addChild(LogoMesh.field_k[var18Lifetime2][var19], 48);
                 }
               }
             }

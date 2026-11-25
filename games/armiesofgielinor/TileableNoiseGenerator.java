@@ -174,23 +174,23 @@ abstract class TileableNoiseGenerator {
           } else {
             for (choiceState = 0; choiceState < 5; choiceState++) {
               if (controlsEditable != 0 &&
-                pu.field_k[0][choiceState + 1].pressedButton != 0 &&
+                LogoMesh.field_k[0][choiceState + 1].pressedButton != 0 &&
                 choiceState != room.gameType) {
                 roomOptionsChanged = 1;
                 room.gameType = choiceState;
               }
-              stackIn_35_0 = pu.field_k[0][1 + choiceState];
+              stackIn_35_0 = LogoMesh.field_k[0][1 + choiceState];
               stackIn_36_1 = (controlsEditable != 0);
               stackIn_35_0.inputEnabled = stackIn_36_1;
               if (!GrowableIntArray.field_c &&
                 choiceState == 3) {
-                pu.field_k[0][choiceState + 1].inputEnabled = false;
+                LogoMesh.field_k[0][choiceState + 1].inputEnabled = false;
               }
-              stackIn_41_0 = pu.field_k[0][1 + choiceState];
+              stackIn_41_0 = LogoMesh.field_k[0][1 + choiceState];
               stackIn_42_1 = (choiceState == room.gameType);
               stackIn_41_0.selected = stackIn_42_1;
             }
-            if (pu.field_k[0][2].hovered) {
+            if (LogoMesh.field_k[0][2].hovered) {
               if (!ToggleWidget.isCurrentRoomOwner(false)) {
                 DialogMessagePane.field_I = EmailCheckResult.a(4800, FriendRequestSupport.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
               } else {
@@ -228,7 +228,7 @@ abstract class TileableNoiseGenerator {
               }
               capacityChoiceLocked = stackIn_72_0;
               if (controlsEditable != 0 &&
-                0 != pu.field_k[1][optionIndex + 1].pressedButton) {
+                0 != LogoMesh.field_k[1][optionIndex + 1].pressedButton) {
                 if (!filterMode) {
                   choiceValue = lm.field_e[optionIndex];
                   if (choiceValue != room.playerCapacity) {
@@ -249,33 +249,33 @@ abstract class TileableNoiseGenerator {
               }
               if (!filterMode) {
                 choiceValue = lm.field_e[optionIndex];
-                stackIn_100_0 = pu.field_k[1][optionIndex + 1];
+                stackIn_100_0 = LogoMesh.field_k[1][optionIndex + 1];
                 stackIn_101_1 = (choiceValue == room.playerCapacity);
                 stackIn_100_0.selected = stackIn_101_1;
               } else {
                 if (optionIndex == -1) {
-                  pu.field_k[1][1 + optionIndex].selected = true;
+                  LogoMesh.field_k[1][1 + optionIndex].selected = true;
                   for (choiceValue = 0; choiceValue < lm.field_e.length; choiceValue++) {
-                    dupTemp$0 = pu.field_k[1][optionIndex + 1];
+                    dupTemp$0 = LogoMesh.field_k[1][optionIndex + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.selected;
                     stackIn_97_2 = (0 == (CoatOfArms.field_d[choiceValue / 8] & 1 << (7 & choiceValue)));
                     stackIn_96_0.selected = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
-                  stackIn_90_0 = pu.field_k[1][optionIndex + 1];
+                  stackIn_90_0 = LogoMesh.field_k[1][optionIndex + 1];
                   stackIn_91_1 = ((CoatOfArms.field_d[optionIndex / 8] & 1 << (optionIndex & 7)) != 0);
                   stackIn_90_0.selected = stackIn_91_1;
                 }
               }
-              stackIn_105_0 = pu.field_k[1][optionIndex + 1];
+              stackIn_105_0 = LogoMesh.field_k[1][optionIndex + 1];
               stackIn_106_1 = (controlsEditable != 0) && (capacityChoiceLocked == 0);
               stackIn_105_0.inputEnabled = stackIn_106_1;
             }
           }
           stackIn_110_0 = (!filterMode) ? 1 : 0;
           for (spectatorChoice = stackIn_110_0; spectatorChoice < 3; spectatorChoice++) {
-            spectatorChoiceButton = pu.field_k[2][spectatorChoice];
+            spectatorChoiceButton = LogoMesh.field_k[2][spectatorChoice];
             if (controlsEditable != 0 &&
               spectatorChoiceButton.pressedButton != 0) {
               if (filterMode) {
@@ -313,7 +313,7 @@ abstract class TileableNoiseGenerator {
           if (filterMode &&
             BoundedFile.field_h > 1) {
             for (extraFilterChoice = 0; 1 + BoundedFile.field_h > extraFilterChoice; extraFilterChoice++) {
-              extraFilterButton = pu.field_k[3][extraFilterChoice];
+              extraFilterButton = LogoMesh.field_k[3][extraFilterChoice];
               if (controlsEditable != 0 &&
                 extraFilterButton.pressedButton != 0) {
                 DiskCacheRequest.field_E = extraFilterChoice;
@@ -343,7 +343,7 @@ abstract class TileableNoiseGenerator {
             field_e = (String) null;
           }
           for (optionIndex = 0; NineSliceSpriteSupport.gameOptionCount > optionIndex; optionIndex++) {
-            groupChoices = pu.field_k[optionIndex + 4];
+            groupChoices = LogoMesh.field_k[optionIndex + 4];
             optionChoices = groupChoices;
             stackIn_170_0 = (filterMode) ? -1 : 0;
             for (choiceValue = stackIn_170_0; choiceValue < -1 + groupChoices.length; choiceValue++) {
