@@ -186,7 +186,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (FleetTrailPoint.field_m < var4) {
               stackIn_6_0 = var10;
             } else {
-              stackIn_6_0 = QuickChatPhraseRegistry.a(var10, -var4 + var5, -var4 + FleetTrailPoint.field_m, var11, param0 - 320);
+              stackIn_6_0 = QuickChatPhraseRegistry.interpolateSmoothStep(var10, -var4 + var5, -var4 + FleetTrailPoint.field_m, var11, param0 - 320);
             }
           } else {
             stackIn_6_0 = var11;
@@ -200,7 +200,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (FleetTrailPoint.field_m < var4) {
               stackIn_11_0 = 0;
             } else {
-              stackIn_11_0 = QuickChatPhraseRegistry.a(0, -var4 + var5, FleetTrailPoint.field_m - var4, 205 + var10 << 4, 0);
+              stackIn_11_0 = QuickChatPhraseRegistry.interpolateSmoothStep(0, -var4 + var5, FleetTrailPoint.field_m - var4, 205 + var10 << 4, 0);
             }
           }
           var13 = stackIn_11_0;
@@ -317,9 +317,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           if (900 < FleetTrailPoint.field_m) {
             if (FleetTrailPoint.field_m > 950) {
-              var16Lifetime1 = QuickChatPhraseRegistry.a(0, 50, -900 + FleetTrailPoint.field_m, 256, 0);
+              var16Lifetime1 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 50, -900 + FleetTrailPoint.field_m, 256, 0);
             } else {
-              var16Lifetime1 = QuickChatPhraseRegistry.a(256, 50, -950 + FleetTrailPoint.field_m, 0, 0);
+              var16Lifetime1 = QuickChatPhraseRegistry.interpolateSmoothStep(256, 50, -950 + FleetTrailPoint.field_m, 0, 0);
             }
             SoftwareRasterizer.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
             SoftwareRasterizer.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);

@@ -264,7 +264,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     final static void layoutQuickChatMenu(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SectorCacheStore.field_f.setTarget(param4, param0, (byte) 46, param1, param5);
         if (DerelictMapReader.field_h != null) {
-          DerelictMapReader.field_h.a(-1, param2, param0, -ConquestVictoryChecker.field_m + param2, param6, param0);
+          DerelictMapReader.field_h.layoutMenu(-1, param2, param0, -ConquestVictoryChecker.field_m + param2, param6, param0);
         }
         if (param3 != 3) {
           field_t = (String) null;

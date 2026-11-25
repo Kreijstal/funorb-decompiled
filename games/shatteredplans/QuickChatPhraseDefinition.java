@@ -14,15 +14,15 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     static String field_p;
     static int field_r;
 
-    final static void e(int param0) {
+    final static void resetDialogProgressAndInteractionState(int param0) {
         GuestPlayForm.a(-50);
         if (param0 != -23771) {
           byte[] var2 = (byte[]) null;
-          QuickChatPhraseDefinition.a((byte[]) null, -8, -126, -100);
+          QuickChatPhraseDefinition.computeWhirlpoolDigest((byte[]) null, -8, -126, -100);
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] computeWhirlpoolDigest(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
@@ -70,7 +70,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final void e(byte param0) {
+    final void markExtendedResponseIds(byte param0) {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null != this.field_o) {
@@ -185,11 +185,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         field_x = null;
         field_s = null;
         if (param0 != -50) {
-          QuickChatPhraseDefinition.a(-94, -30, 68);
+          QuickChatPhraseDefinition.handleQuickChatKey(-94, -30, 68);
         }
     }
 
-    final String f(int param0) {
+    final String getDisplayText(int param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -210,24 +210,24 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     QuickChatPhraseDefinition() {
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         boolean stackIn_11_0 = false;
         if (param0 >= -84) {
-          QuickChatPhraseDefinition.e(2);
+          QuickChatPhraseDefinition.resetDialogProgressAndInteractionState(2);
         }
         if (13 == TextReplacementEntry.field_j) {
           ProgressDialog.f(false);
           return true;
         }
         if (TextReplacementEntry.field_j == 102) {
-          DerelictMapReader.field_h.h(0);
+          DerelictMapReader.field_h.clearSelection(0);
           return true;
         }
-        stackIn_11_0 = (null != DerelictMapReader.field_h) && (DerelictMapReader.field_h.a(param1, false, param2));
+        stackIn_11_0 = (null != DerelictMapReader.field_h) && (DerelictMapReader.field_h.handleMenuKey(param1, false, param2));
         return stackIn_11_0;
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4) {
+    final static void blendHalfBackgroundSpan(int param0, int[] param1, int param2, int param3, int param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;

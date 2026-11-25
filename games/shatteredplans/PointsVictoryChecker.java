@@ -448,7 +448,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (var5Lifetime2 > 0) {
             VerticalMenuSlider.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
-          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatPhraseRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
+          var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, IconTextPanel.field_Cb.field_J, QuickChatPhraseRegistry.replaceNumberedPlaceholders(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
           var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;

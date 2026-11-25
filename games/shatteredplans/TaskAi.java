@@ -836,7 +836,7 @@ final class TaskAi implements PlayerAi {
           field_d = (String) null;
         }
         if (0 <= HitRegion.field_j) {
-          PairedIntSortSupport.field_c.field_z = QuickChatPhraseRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(HitRegion.field_j)});
+          PairedIntSortSupport.field_c.field_z = QuickChatPhraseRegistry.replaceNumberedPlaceholders(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(HitRegion.field_j)});
         } else {
           PairedIntSortSupport.field_c.field_z = null;
         }

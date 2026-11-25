@@ -66,8 +66,8 @@ final class DelayedInboundPacket extends IntrusiveNode {
         }
         var5 = var8.readUnsignedShort(-20976);
         try {
-          var9 = ClientCapabilitySupport.field_c.a((byte) 47, var5);
-          BufferedSocket.field_h = var9.f(80);
+          var9 = ClientCapabilitySupport.field_c.getDefinition((byte) 47, var5);
+          BufferedSocket.field_h = var9.getDisplayText(80);
           if (ProductionContent.field_a.equals(Star.field_o)) {
             stackIn_22_0 = null;
           } else {

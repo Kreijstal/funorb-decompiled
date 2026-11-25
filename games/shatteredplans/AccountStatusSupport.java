@@ -63,7 +63,7 @@ final class AccountStatusSupport {
             }
             if (var3_int != 0) {
               if (ClientRuntimeState.field_f) {
-                param2 = QuickChatPhraseRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
+                param2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
               }
               if (ToggleButton.field_D) {
                 param2 = ProgressDialog.field_ib;

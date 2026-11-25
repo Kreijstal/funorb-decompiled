@@ -174,12 +174,12 @@ final class ChatCompositionSupport {
           if (ProductionContent.field_h == 2 &&
             !VerticalMenuSlider.e((byte) 75)) {
             if (!DebouncedValidator.isFriendPlayer(-30106, IntroGlowPoint.field_k)) {
-              var2 = QuickChatPhraseRegistry.a(AccountInputSupport.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+              var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AccountInputSupport.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               if (var11 != 0) {
-                var2 = QuickChatPhraseRegistry.a(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+                var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               }
             } else {
-              var2 = QuickChatPhraseRegistry.a(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+              var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
             }
             if (QuickChatPhraseDefinition.field_t) {
               StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
@@ -201,8 +201,8 @@ final class ChatCompositionSupport {
             var7 = ProductionContent.field_h;
             var8 = 0;
             if (var7 == 2) {
-              var5 = QuickChatPhraseRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{LoginRequestSupport.field_a});
-              var9 = QuickChatPhraseRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var4});
+              var5 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(MatchingTextValidator.field_q, 4371, new String[]{LoginRequestSupport.field_a});
+              var9 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(StatusMessagePanel.field_M, 4371, new String[]{var4});
               var8 = -485 + PopupPlacementSupport.field_j.field_K - (-OpacityWidget.field_C.field_K - QuickChatHelpSupport.field_f.stringWidth(var9) + QuickChatHelpSupport.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
@@ -222,7 +222,7 @@ final class ChatCompositionSupport {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var5 = "[" + QuickChatPhraseRegistry.a(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
+                    var5 = "[" + QuickChatPhraseRegistry.replaceNumberedPlaceholders(IntNode.field_q, 4371, new String[]{MenuInputState.field_a.field_Xb}) + "] ";
                   }
                 }
               }
@@ -266,7 +266,7 @@ final class ChatCompositionSupport {
               OpacityWidget.field_C.field_L = false;
             }
             if (OpacityWidget.field_C.field_L) {
-              var1 = QuickChatPhraseRegistry.a(StarLink.field_m, 4371, new String[]{var4, LoginRequestSupport.field_a});
+              var1 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(StarLink.field_m, 4371, new String[]{var4, LoginRequestSupport.field_a});
             }
           }
           stackIn_97_0 = var1;

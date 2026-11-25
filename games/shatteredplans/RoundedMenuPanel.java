@@ -170,7 +170,7 @@ final class RoundedMenuPanel extends MenuComponent {
           }
           var7 = FleetTrailPoint.a(param2, param0 ^ 12);
           if (var7 == null) {
-            stackIn_10_0 = QuickChatPhraseRegistry.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
+            stackIn_10_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
           }
           var7.unlink((byte) -74);

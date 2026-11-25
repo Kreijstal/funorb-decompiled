@@ -56,7 +56,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           this.field_I = param0;
           this.field_H = new FocusableWidget(QuickChatParameterType.field_b, (WidgetListener) null);
           this.field_H.field_p = (WidgetPainter) ((Object) new SpriteStripButtonPainter());
-          var2 = QuickChatPhraseRegistry.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
           var4 = new WidgetTheme(StatefulWidgetTheme.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
           this.field_G = new TextHotspotWidget(var2, var4);
@@ -307,7 +307,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               stackIn_40_0 = var3.field_y.field_s;
             }
             var4 = stackIn_40_0;
-            PopupPlacementSupport.field_m.putReplacement(QuickChatPhraseRegistry.a("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
+            PopupPlacementSupport.field_m.putReplacement(QuickChatPhraseRegistry.replaceNumberedPlaceholders("<col=<%0>>" + var3.name + "</col>", 4371, new String[]{Integer.toString(var4, 16)}), 27275, "star" + var3.field_p);
             var2++;
           }
           return;

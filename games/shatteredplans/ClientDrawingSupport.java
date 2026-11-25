@@ -64,7 +64,7 @@ final class ClientDrawingSupport {
             stackIn_7_1 = param3.field_x;
           }
           stackIn_6_0[stackIn_7_1] = var7;
-          dupTemp$1 = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
+          dupTemp$1 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AudioService.field_f, 4371, new String[]{param3.name});
           var7.field_o = dupTemp$1;
           var6.field_o = dupTemp$1;
           var13.field_o = dupTemp$1;
@@ -75,7 +75,7 @@ final class ClientDrawingSupport {
           LoginMethodPreference.buildMenuDividerSprites(-2612, param4.length);
           var8 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + IconTextPanel.field_Cb.field_J, BattleContribution.a(-1, false));
           var13.addChild(var8, 8);
-          var8.field_o = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
+          var8.field_o = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
           if (param1.field_x < param3.field_x) {
             stackIn_13_1 = param3.field_x;
@@ -86,7 +86,7 @@ final class ClientDrawingSupport {
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
             var10 = new SpriteButton(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + IconTextPanel.field_Cb.field_J + 3, UiSpriteSupport.createColourisedIcon(-1, param2 - 21));
             var13.addChild(var10, 8);
-            var10.field_o = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
+            var10.field_o = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
             if (param3.field_x <= param1.field_x) {
               stackIn_18_1 = 1 + param3.field_x;
@@ -97,7 +97,7 @@ final class ClientDrawingSupport {
           }
           var9 = new SpriteButton(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
           var13.addChild(var9, param2 ^ 29);
-          var9.field_o = QuickChatPhraseRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});
+          var9.field_o = QuickChatPhraseRegistry.replaceNumberedPlaceholders(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_20_0 = var13;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -107,7 +107,7 @@ final class ChatHistoryEntry {
           if (1 == var2_int) {
             stackIn_18_0 = ChatCompositionSupport.field_d;
           } else {
-            stackIn_18_0 = QuickChatPhraseRegistry.a(TextReplacementContext.field_e, 4371, new String[]{Integer.toString(var2_int)});
+            stackIn_18_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(TextReplacementContext.field_e, 4371, new String[]{Integer.toString(var2_int)});
           }
           var9 = stackIn_18_0;
           var5 = var9;
@@ -121,9 +121,9 @@ final class ChatHistoryEntry {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = QuickChatPhraseRegistry.a(OrderableInsertionSupport.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(OrderableInsertionSupport.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = QuickChatPhraseRegistry.a(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
+                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;

@@ -326,7 +326,7 @@ final class AggressiveAi extends StandardAi {
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
-                DualLinkDequeSequence.field_k = QuickChatPhraseRegistry.a(ReflectionQueueSupport.field_b, 4371, new String[]{MenuInputState.field_a.field_Xb});
+                DualLinkDequeSequence.field_k = QuickChatPhraseRegistry.replaceNumberedPlaceholders(ReflectionQueueSupport.field_b, 4371, new String[]{MenuInputState.field_a.field_Xb});
               } else {
                 DualLinkDequeSequence.field_k = ClientInputSupport.field_c;
               }
@@ -710,13 +710,13 @@ final class AggressiveAi extends StandardAi {
                     if (var12 != 0) {
                       var23_int = -BoundsRect.field_h + LabeledChildWidget.field_A[var8][var10];
                       if (var23_int != 1) {
-                        var22 = QuickChatPhraseRegistry.a(CandidateLink.field_n, 4371, new String[]{Integer.toString(var23_int)});
+                        var22 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(CandidateLink.field_n, 4371, new String[]{Integer.toString(var23_int)});
                       } else {
                         var22 = SecondaryNodeDequeIterator.field_g;
                       }
                     }
                     if (var13 != 0) {
-                      var32 = QuickChatPhraseRegistry.a(ClientCapabilitySupport.field_d, 4371, new String[]{Integer.toString(HitRegion.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
+                      var32 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(ClientCapabilitySupport.field_d, 4371, new String[]{Integer.toString(HitRegion.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
                       var23 = var32;
                       var26 = var23;
                       var23 = var26;
@@ -776,7 +776,7 @@ final class AggressiveAi extends StandardAi {
                     }
                   }
                   if (var24 == 0) {
-                    var22 = QuickChatPhraseRegistry.a(DiplomacyNotice.field_q, 4371, new String[]{(String) (var23)});
+                    var22 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DiplomacyNotice.field_q, 4371, new String[]{(String) (var23)});
                   } else {
                     var22 = AccountRequestState.field_d + (String) (var23);
                   }

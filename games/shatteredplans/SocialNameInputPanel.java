@@ -533,7 +533,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
         String[] var2Lifetime1;
         QuickChatPhraseDefinition.field_t = false;
         if (DerelictMapReader.field_h != null) {
-          DerelictMapReader.field_h.h(0);
+          DerelictMapReader.field_h.clearSelection(0);
           if (0 != ProductionContent.field_h) {
             MusicVoice.c(false);
           }

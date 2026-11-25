@@ -11,15 +11,15 @@ final class QuickChatPhraseRegistry {
     static AnimatedPanel field_h;
     static int field_a;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int interpolateSmoothStep(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != 0) {
           String[] var6 = (String[]) null;
-          QuickChatPhraseRegistry.a((String) null, -43, (String[]) null);
+          QuickChatPhraseRegistry.replaceNumberedPlaceholders((String) null, -43, (String[]) null);
         }
         return (int)((double)(-param0 + param3) * UiSpriteSupport.smoothStep(param2, (byte) 114, param1)) + param0;
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void attachCanvasInput(java.awt.Canvas param0, boolean param1) {
         ClientClockSupport.attachKeyboardInput((java.awt.Component) ((Object) param0), -9194);
         if (param1) {
           return;
@@ -34,7 +34,7 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    final static String a(String param0, int param1, String[] param2) {
+    final static String replaceNumberedPlaceholders(String param0, int param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -145,7 +145,7 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    final QuickChatPhraseDefinition a(byte param0, int param1) {
+    final QuickChatPhraseDefinition getDefinition(byte param0, int param1) {
         byte[] var4 = null;
         QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_f.get((long)param1, 0));
         if (param0 != 47) {
@@ -164,7 +164,7 @@ final class QuickChatPhraseRegistry {
           var3.decode(new PacketBuffer(var4), 0);
         }
         if (32768 <= param1) {
-          var3.e((byte) -117);
+          var3.markExtendedResponseIds((byte) -117);
         }
         this.field_f.put((long)param1, var3, (byte) -108);
         return var3;
@@ -226,7 +226,7 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    final static Sprite[] a(Sprite[] param0, int param1) {
+    final static Sprite[] resetSpriteCanvasBounds(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;

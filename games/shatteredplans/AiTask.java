@@ -16,7 +16,7 @@ class AiTask extends IntrusiveNode {
           if (RichTextLayout.field_h != null) {
             var2 = RichTextLayout.field_h;
             String var1 = var2;
-            AccountStatusSupport.showClientMessageDialog(113, QuickChatPhraseRegistry.a(LobbyUiSupport.field_b, param0 ^ -12062, new String[]{var2}));
+            AccountStatusSupport.showClientMessageDialog(113, QuickChatPhraseRegistry.replaceNumberedPlaceholders(LobbyUiSupport.field_b, param0 ^ -12062, new String[]{var2}));
             RichTextLayout.field_h = null;
           }
           return;

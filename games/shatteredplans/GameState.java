@@ -1191,7 +1191,7 @@ final class GameState {
         if (0 >= this.field_O) {
           return ArrayWidgetGroup.field_H;
         }
-        return QuickChatPhraseRegistry.a(StringList.field_i, 4371, new String[]{QuickChatPhraseRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
+        return QuickChatPhraseRegistry.replaceNumberedPlaceholders(StringList.field_i, 4371, new String[]{QuickChatPhraseRegistry.replaceNumberedPlaceholders(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
     }
 
     final static void resetChatRateLimit(int param0) {

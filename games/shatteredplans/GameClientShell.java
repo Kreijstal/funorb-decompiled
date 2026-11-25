@@ -195,7 +195,7 @@ abstract class GameClientShell extends GameApplet {
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
         ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
-        QuickChatPhraseRegistry.a(NotificationEntry.field_i, false);
+        QuickChatPhraseRegistry.attachCanvasInput(NotificationEntry.field_i, false);
         ConquestVictoryChecker.field_k = param2;
         LeaderboardSortSupport.field_a = param5;
         ArchiveRequest.field_p = param1;
@@ -586,7 +586,7 @@ abstract class GameClientShell extends GameApplet {
           IntrusiveDeque.field_c) {
           StandardMapGenerator.attachInputListeners(NotificationEntry.field_i, (byte) 125);
           this.createCanvas(0);
-          QuickChatPhraseRegistry.a(NotificationEntry.field_i, false);
+          QuickChatPhraseRegistry.attachCanvasInput(NotificationEntry.field_i, false);
         }
         if (AwtEventQueueSupport.field_c[8]) {
           MenuComponent.d(2147483647);

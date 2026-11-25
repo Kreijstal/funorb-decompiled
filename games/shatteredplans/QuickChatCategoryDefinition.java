@@ -14,7 +14,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     String field_t;
     int[] field_r;
 
-    final static void f(byte param0) {
+    final static void requestLoginForm(byte param0) {
         if (!BirthDateConfirmationForm.field_P) {
           throw new IllegalStateException();
         }
@@ -23,7 +23,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         SoundPlayback.field_i = 0;
         if (param0 != -91) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          QuickChatCategoryDefinition.a(-82, (PlatformTaskDispatcher) null, -122, (byte) -43, -19, -109);
+          QuickChatCategoryDefinition.createFullscreenCanvas(-82, (PlatformTaskDispatcher) null, -122, (byte) -43, -19, -109);
         }
     }
 
@@ -247,7 +247,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         field_q = null;
     }
 
-    final void e(int param0) {
+    final void markExtendedChildIds(int param0) {
         int var3 = 0;
         int var2 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -344,7 +344,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, PlatformTaskDispatcher param1, int param2, byte param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, PlatformTaskDispatcher param1, int param2, byte param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

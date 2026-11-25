@@ -45,7 +45,7 @@ final class ClientDialogSupport {
             return stackIn_8_0;
           }
           if (DebouncedValidator.isFriendPlayer(-30106, param0)) {
-            stackIn_12_0 = QuickChatPhraseRegistry.a(MapView.field_pb, 4371, new String[]{param0});
+            stackIn_12_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(MapView.field_pb, 4371, new String[]{param0});
             return stackIn_12_0;
           }
           if (UrlLoader.field_c >= 100 &&
@@ -62,7 +62,7 @@ final class ClientDialogSupport {
             return stackIn_22_0;
           }
           if (IntrusiveNodeHashTable.isIgnoredPlayer(param0, true)) {
-            stackIn_26_0 = QuickChatPhraseRegistry.a(TextFieldWidget.field_G, 4371, new String[]{param0});
+            stackIn_26_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(TextFieldWidget.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }
           var6 = LobbyOptionSupport.field_f;

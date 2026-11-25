@@ -234,7 +234,7 @@ final class GameMenuController {
         int var14_intLifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         if (MapGenerationException.field_b != 0) {
-          stackIn_3_0 = QuickChatPhraseRegistry.a(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0);
+          stackIn_3_0 = QuickChatPhraseRegistry.interpolateSmoothStep(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0);
         } else {
           stackIn_3_0 = DefendTask.field_w;
         }
@@ -538,7 +538,7 @@ final class GameMenuController {
     private final void drawErrorPanel(byte param0) {
         SoftwareRasterizer.saveClip(MusicEnvelope.field_m);
         SoftwareRasterizer.resetClip();
-        int var2 = QuickChatPhraseRegistry.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
+        int var2 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
         int var4 = this.getAnimatedLeft(false) - (var2 - this.getAnimatedWidth(32) >> 1);
         int var5 = -48 + this.getAnimatedTop(-104) - var3;
@@ -778,7 +778,7 @@ final class GameMenuController {
         if (LoginForm.field_I == null) {
           LoginForm.field_I = GameApplet.a((byte) 85, 0, 7, 10);
         }
-        var2 = QuickChatPhraseRegistry.a(0, 32, GameTextResources.field_a, 560, param0 ^ -23);
+        var2 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, GameTextResources.field_a, 560, param0 ^ -23);
         var3 = 200;
         var4 = this.getAnimatedLeft(false) - (-this.getAnimatedWidth(32) + var2 >> 1);
         var5 = this.getAnimatedTop(param0 - 71) - var3 - 24;
@@ -837,7 +837,7 @@ final class GameMenuController {
         if (param0 != 2) {
           this.drawInstructionPane(-30, 106, 23);
         }
-        int var3 = QuickChatPhraseRegistry.a(0, 32, GameTextResources.field_a, var2, 0);
+        int var3 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, GameTextResources.field_a, var2, 0);
         int var4 = 80;
         int var5 = this.getAnimatedLeft(false) - (var3 - this.getAnimatedWidth(32) >> 1);
         int var6 = -60 + this.getAnimatedTop(-122) - var4 - 48;
@@ -991,7 +991,7 @@ final class GameMenuController {
         }
         if (TabbedPanel.field_Bb != var3) {
           if (ArrayWidgetGroup.field_A != 0) {
-            SecondaryNodeDeque.field_d = QuickChatPhraseRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
+            SecondaryNodeDeque.field_d = QuickChatPhraseRegistry.interpolateSmoothStep(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
           }
           ArrayWidgetGroup.field_A = 1;
           TabbedPanel.field_Bb = var3;
@@ -1328,14 +1328,14 @@ final class GameMenuController {
                 if (null != ClientRasterSupport.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    ClientRasterSupport.field_b[var20Lifetime2] = QuickChatPhraseRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, AccountConnectionPhase.field_c[var20Lifetime2], 0);
+                    ClientRasterSupport.field_b[var20Lifetime2] = QuickChatPhraseRegistry.interpolateSmoothStep(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, AccountConnectionPhase.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
                   var21Lifetime2 = ClientRasterSupport.field_b[0] + (10 + param0);
                   for (var22 = 1; var22 < 5; var22++) {
                     for (var23 = 0; var23 < 10; var23++) {
                       var24 = var22 * 10 + (param3 + var23);
-                      var25 = 10 + param0 + QuickChatPhraseRegistry.a(ClientRasterSupport.field_b[-1 + var22], 10, var23, ClientRasterSupport.field_b[var22], 0);
+                      var25 = 10 + param0 + QuickChatPhraseRegistry.interpolateSmoothStep(ClientRasterSupport.field_b[-1 + var22], 10, var23, ClientRasterSupport.field_b[var22], 0);
                       SoftwareRasterizer.drawLine(var20Lifetime2Lifetime1, var21Lifetime2, var24, var25, 12632256);
                       var21Lifetime2 = var25;
                       var20Lifetime2Lifetime1 = var24;
@@ -1495,11 +1495,11 @@ final class GameMenuController {
         if (var7 >= 25) {
         } else {
           if (param5 <= 125) {
-            var8 = QuickChatPhraseRegistry.a(param1, 25, param5, 0, 0);
+            var8 = QuickChatPhraseRegistry.interpolateSmoothStep(param1, 25, param5, 0, 0);
           } else {
-            var8 = QuickChatPhraseRegistry.a(0, 25, param5 - 125, -param1, 0);
+            var8 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 25, param5 - 125, -param1, 0);
           }
-          param1 = QuickChatPhraseRegistry.a(param1 / 2, 25, var7, param1, 0);
+          param1 = QuickChatPhraseRegistry.interpolateSmoothStep(param1 / 2, 25, var7, param1, 0);
         }
         int var9 = 103 / ((param4 - 25) / 40);
         if (param2 != -1) {
@@ -1690,7 +1690,7 @@ final class GameMenuController {
           GameRules.field_c != PlayerRankingRequest.field_o) {
           var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
           var3 = TutorialVictoryChecker.field_t[PlayerRankingRequest.field_o] + TutorialVictoryChecker.field_l[PlayerRankingRequest.field_o] * TutorialVictoryChecker.field_p[PlayerRankingRequest.field_o].length + 10;
-          return QuickChatPhraseRegistry.a(var2, 32, BirthDateConfirmationForm.field_Q, var3, 0);
+          return QuickChatPhraseRegistry.interpolateSmoothStep(var2, 32, BirthDateConfirmationForm.field_Q, var3, 0);
         }
         if (param0 != -98) {
           this.field_h = -2;
@@ -1702,7 +1702,7 @@ final class GameMenuController {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         WidgetTheme.field_s = param1;
-        ClientClockSupport.field_g = 0 != MapGenerationException.field_b ? QuickChatPhraseRegistry.a(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
+        ClientClockSupport.field_g = 0 != MapGenerationException.field_b ? QuickChatPhraseRegistry.interpolateSmoothStep(ClientClockSupport.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
           this.drawRankingsRow((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
@@ -2016,7 +2016,7 @@ final class GameMenuController {
         var8Lifetime1.drawOpaque(0, 0);
         OpacityWidget.popLegacyRasterState(0);
         var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(RasterStateFrame.field_n * 2) / 150.0));
-        var10 = QuickChatPhraseRegistry.a(0, 32, ByteArrayStorage.field_b, 600, 0);
+        var10 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, ByteArrayStorage.field_b, 600, 0);
         var11 = 155;
         var12 = (640 - var10) / 2;
         var13 = 220;
@@ -2041,7 +2041,7 @@ final class GameMenuController {
         if (-1 != var6 &&
           var6 != 24) {
           AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + AccountRequestState.field_b.field_J), 2805974, -1);
-          var21_ref_String = "(" + QuickChatPhraseRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
+          var21_ref_String = "(" + QuickChatPhraseRegistry.replaceNumberedPlaceholders(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
           var22 = IconTextPanel.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           var22 = var22 + (1 + IconTextPanel.field_Cb.a(ContextActionMenu.field_Qb[var6], 10 + var2Lifetime1, IconTextPanel.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * IconTextPanel.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J));
           IconTextPanel.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * IconTextPanel.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, IconTextPanel.field_Cb.field_J);
@@ -2049,7 +2049,7 @@ final class GameMenuController {
           if (var6 == 24) {
             AccountRequestState.field_b.drawString(AwtEventQueueSupport.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + AccountRequestState.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
-              var21_ref_String = "(" + QuickChatPhraseRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
+              var21_ref_String = "(" + QuickChatPhraseRegistry.replaceNumberedPlaceholders(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
               var22_ref_String = ContextActionMenu.field_Qb[var6];
             } else {
               var21_ref_String = "(" + AccountRequestResult.field_i + "???)";
@@ -2069,11 +2069,11 @@ final class GameMenuController {
           }
         }
         if (ArrayWidgetGroup.field_A != 0) {
-          var21 = QuickChatPhraseRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
+          var21 = QuickChatPhraseRegistry.interpolateSmoothStep(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, TabbedPanel.field_Bb, 0);
         } else {
           var21 = TabbedPanel.field_Bb;
         }
-        var21 = QuickChatPhraseRegistry.a(0, 32, ByteArrayStorage.field_b, var21, 0);
+        var21 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, ByteArrayStorage.field_b, var21, 0);
         if (var21 > 20) {
           var18Lifetime1 = 52;
           var2Lifetime2 = 89 + var14;
@@ -2422,11 +2422,11 @@ final class GameMenuController {
                                                             if (TextReplacementEntry.field_i[32] == MidiPcmStream.field_L) {
                                                               PaddedContentDialog.field_nb = LobbyOptionSupport.field_i;
                                                               TextReplacementEntry.field_i[32] = RecklessAi.field_r;
-                                                              QuickChatCategoryRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
+                                                              QuickChatCategoryRegistry.transitionMusicTrack(32767, PaddedContentDialog.field_nb, true, 50);
                                                             } else {
                                                               TextReplacementEntry.field_i[32] = MidiPcmStream.field_L;
                                                               PaddedContentDialog.field_nb = RematchMenuSupport.field_a;
-                                                              QuickChatCategoryRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
+                                                              QuickChatCategoryRegistry.transitionMusicTrack(32767, PaddedContentDialog.field_nb, true, 50);
                                                             }
                                                           }
                                                         }
@@ -2513,7 +2513,7 @@ final class GameMenuController {
         if (PlayerRankingRequest.field_o != GameRules.field_c &&
           PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -88, PlayerRankingRequest.field_o)) {
-          return QuickChatPhraseRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[PlayerRankingRequest.field_o], 0);
+          return QuickChatPhraseRegistry.interpolateSmoothStep(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[PlayerRankingRequest.field_o], 0);
         }
         return TutorialVictoryChecker.field_m[this.field_a];
     }
@@ -2818,7 +2818,7 @@ final class GameMenuController {
         }
         if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -125, PlayerRankingRequest.field_o)) {
-          return QuickChatPhraseRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o], 0);
+          return QuickChatPhraseRegistry.interpolateSmoothStep(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o], 0);
         }
         double var2 = UiSpriteSupport.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);
         if (this.field_a == GameRules.field_c) {

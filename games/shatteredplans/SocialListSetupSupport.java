@@ -94,7 +94,7 @@ final class SocialListSetupSupport {
                 stackIn_18_0 = -1;
                 stackIn_18_1 = ~((Territory) ((Object) var2)).field_u[var8];
                 if (stackIn_18_0 == stackIn_18_1) {
-                  var9 = QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(SoundPlayback.field_k[var8], 16), MusicCrossfadeStream.field_x[var8]});
+                  var9 = QuickChatPhraseRegistry.replaceNumberedPlaceholders("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(SoundPlayback.field_k[var8], 16), MusicCrossfadeStream.field_x[var8]});
                   var6_ref = var9;
                   if (var5_intLifetime2 != 0) {
                     if (var5_intLifetime2 == 1) {
@@ -109,7 +109,7 @@ final class SocialListSetupSupport {
                 }
                 var7_int++;
               }
-              var6_ref = QuickChatPhraseRegistry.a(TutorialTextSupport.field_d, 4371, new String[]{(String) (var6_ref)});
+              var6_ref = QuickChatPhraseRegistry.replaceNumberedPlaceholders(TutorialTextSupport.field_d, 4371, new String[]{(String) (var6_ref)});
               if (1 != var5_intLifetime2) {
                 var6_ref = (String) (var6_ref) + ClientRasterSupport.field_f;
               } else {
@@ -137,7 +137,7 @@ final class SocialListSetupSupport {
           while (var11 < 4) {
             if (var12.field_u[var11] > 0 &&
               var3[var11]) {
-              var7_ref = QuickChatPhraseRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(LoginMethodPreference.field_e[var11], 16), UiTextSupport.field_d[var11]});
+              var7_ref = QuickChatPhraseRegistry.replaceNumberedPlaceholders("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(LoginMethodPreference.field_e[var11], 16), UiTextSupport.field_d[var11]});
               var5Lifetime1 = var7_ref;
               if (var4Lifetime2 == 0) {
                 var5Lifetime1 = var7_ref;

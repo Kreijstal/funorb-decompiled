@@ -453,7 +453,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null != this.field_p.field_j &&
                 this.field_p.field_j[param2] != null) {
                 var30 = this.field_p.field_j[param2];
-                var29 = QuickChatPhraseDefinition.a(var5, var18.length - 2, param1 ^ -26131, 0);
+                var29 = QuickChatPhraseDefinition.computeWhirlpoolDigest(var5, var18.length - 2, param1 ^ -26131, 0);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -506,7 +506,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (null != this.field_p.field_j &&
               this.field_p.field_j[param2] != null) {
               var27 = this.field_p.field_j[param2];
-              var28 = QuickChatPhraseDefinition.a(var5, -2 + var18.length, param1 ^ -26131, 0);
+              var28 = QuickChatPhraseDefinition.computeWhirlpoolDigest(var5, -2 + var18.length, param1 ^ -26131, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();

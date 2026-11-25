@@ -158,7 +158,7 @@ final class SoundPlayback extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.a(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(ServerRequestRetrySupport.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
@@ -175,7 +175,7 @@ final class SoundPlayback extends IntrusiveNode {
             QuickChatMenuSupport.field_b = new String[-1 + (var3_int - var4)];
             ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, QuickChatMenuSupport.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatPhraseRegistry.replaceNumberedPlaceholders(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
                 continue;
@@ -251,7 +251,7 @@ final class SoundPlayback extends IntrusiveNode {
             stackIn_89_0 = InvalidMapConnectionException.field_f[var4Lifetime1];
             stackIn_89_1 = 0;
             stackIn_90_2 = !(MenuTextResources.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = QuickChatMenu.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
+            var5Lifetime1 = QuickChatMenu.measureMenuText(stackIn_89_0, stackIn_89_1, stackIn_90_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -261,7 +261,7 @@ final class SoundPlayback extends IntrusiveNode {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = QuickChatMenu.a(var12, 0, false);
+              var7Lifetime1 = QuickChatMenu.measureMenuText(var12, 0, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -269,7 +269,7 @@ final class SoundPlayback extends IntrusiveNode {
             var4_ref_String__Lifetime1 = QuickChatMenuSupport.field_b;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = QuickChatMenu.a(var13, 0, false);
+              var7Lifetime1Lifetime1 = QuickChatMenu.measureMenuText(var13, 0, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -295,7 +295,7 @@ final class SoundPlayback extends IntrusiveNode {
           while (var4Lifetime3 < InvalidMapConnectionException.field_f.length) {
             var7Lifetime2 = MenuTextResources.field_a[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
-              var8Lifetime1 = QuickChatMenu.a(InvalidMapConnectionException.field_f[var4Lifetime3], 0, true);
+              var8Lifetime1 = QuickChatMenu.measureMenuText(InvalidMapConnectionException.field_f[var4Lifetime3], 0, true);
               var9 = QuaternaryLinkNode.field_w - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + GameMenuController.field_b;
               StrongCacheEntry.field_w[var4Lifetime3] = new int[4];

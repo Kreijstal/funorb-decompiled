@@ -24,7 +24,7 @@ final class QuickChatCategoryRegistry {
         field_a = null;
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeRandomSeed(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -90,11 +90,11 @@ final class QuickChatCategoryRegistry {
         }
     }
 
-    final static void a(int param0, MusicTrack param1, boolean param2, int param3) {
+    final static void transitionMusicTrack(int param0, MusicTrack param1, boolean param2, int param3) {
         try {
           if (param0 != 32767) {
             MusicTrack var5 = (MusicTrack) null;
-            QuickChatCategoryRegistry.a(6, (MusicTrack) null, false, -66);
+            QuickChatCategoryRegistry.transitionMusicTrack(6, (MusicTrack) null, false, -66);
           }
           ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
@@ -141,11 +141,11 @@ final class QuickChatCategoryRegistry {
         }
     }
 
-    final QuickChatCategoryDefinition a(int param0, byte param1) {
+    final QuickChatCategoryDefinition getDefinition(int param0, byte param1) {
         byte[] var4 = null;
         if (param1 != 100) {
           MusicTrack var5 = (MusicTrack) null;
-          QuickChatCategoryRegistry.a(71, (MusicTrack) null, true, -32);
+          QuickChatCategoryRegistry.transitionMusicTrack(71, (MusicTrack) null, true, -32);
         }
         QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_b.get((long)param0, param1 - 100));
         if (var3 != null) {
@@ -161,7 +161,7 @@ final class QuickChatCategoryRegistry {
           var6.decode(new PacketBuffer(var4), -1);
         }
         if (param0 >= 32768) {
-          var6.e(-81);
+          var6.markExtendedChildIds(-81);
         }
         this.field_b.put((long)param0, var6, (byte) -108);
         return var6;

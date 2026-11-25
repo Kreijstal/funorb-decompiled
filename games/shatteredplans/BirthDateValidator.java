@@ -140,7 +140,7 @@ final class BirthDateValidator extends DebouncedValidator implements TextFieldLi
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = QuickChatPhraseRegistry.a(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_6_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(PlayerStats.field_b, 4371, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

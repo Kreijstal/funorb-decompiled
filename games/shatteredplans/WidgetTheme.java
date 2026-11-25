@@ -419,7 +419,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           }
           var8 = NodeSequence.a((byte) -90, param2);
           if (var8 == null) {
-            stackIn_9_0 = QuickChatPhraseRegistry.a(ClientRenderSupport.field_e, 4371, new String[]{param2});
+            stackIn_9_0 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(ClientRenderSupport.field_e, 4371, new String[]{param2});
             return stackIn_9_0;
           }
           MenuComponent.field_j.startForwardFrom(var8, -9189);

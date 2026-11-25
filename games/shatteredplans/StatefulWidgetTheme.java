@@ -37,7 +37,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
             TextReplacementEntry.field_j == 9 ||
             TextReplacementEntry.field_j == 10 ||
             TextReplacementEntry.field_j == 11) {
-            return QuickChatPhraseDefinition.a(param1 ^ 9952, param0, param3);
+            return QuickChatPhraseDefinition.handleQuickChatKey(param1 ^ 9952, param0, param3);
           }
           if (TextReplacementEntry.field_j == 80 &&
             FilledMenuPanel.d((byte) 108)) {
@@ -266,7 +266,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
           var11 = new QuickChatMenu[var7];
           if (param1.field_r != null) {
             for (var12 = 0; var12 < param1.field_r.length; var12++) {
-              var13_ref_si = GameScreen.field_A.a(param1.field_r[var12], (byte) 100);
+              var13_ref_si = GameScreen.field_A.getDefinition(param1.field_r[var12], (byte) 100);
               var8[var12] = var13_ref_si.field_t;
               var9[var12] = param1.field_p[var12];
               var11[var12] = StatefulWidgetTheme.a(param0 + 0, var13_ref_si, param2, param3, param4);
@@ -282,8 +282,8 @@ final class StatefulWidgetTheme extends WidgetTheme {
                 var9[var12Lifetime1 + var14] = param1.field_s[var14];
                 var10[var14 + var12Lifetime1] = param1.field_x[var14];
               } else {
-                var16 = ClientCapabilitySupport.field_c.a((byte) 47, var15);
-                var8[var14 + var12Lifetime1] = var16.f(80);
+                var16 = ClientCapabilitySupport.field_c.getDefinition((byte) 47, var15);
+                var8[var14 + var12Lifetime1] = var16.getDisplayText(80);
                 var9[var12Lifetime1 + var14] = param1.field_s[var14];
                 if (0 >= var9[var12Lifetime1 + var14]) {
                   var13 = (char)(var13 + 1);

@@ -6,7 +6,7 @@ final class MeshMaterial {
     int field_a;
     static String field_c;
 
-    final static QuickChatCategoryDefinition findFirstEnabledQuickChatPhrase(boolean param0) {
+    final static QuickChatCategoryDefinition findFirstEnabledQuickChatCategory(boolean param0) {
         int var1_int = 0;
         int var3 = 0;
         QuickChatCategoryDefinition stackIn_3_0 = null;
@@ -30,7 +30,7 @@ final class MeshMaterial {
         stackIn_6_0 = GameScreen.field_A;
         try {
           while (true) {
-            var2 = ((QuickChatCategoryRegistry) (Object) stackIn_6_0).a(var1_int, (byte) 100);
+            var2 = ((QuickChatCategoryRegistry) (Object) stackIn_6_0).getDefinition(var1_int, (byte) 100);
             if (var2.field_y) {
               stackIn_8_0 = var2;
               return stackIn_8_0;

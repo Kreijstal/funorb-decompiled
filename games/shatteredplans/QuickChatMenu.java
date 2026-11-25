@@ -25,7 +25,7 @@ final class QuickChatMenu extends AnimatedPanel {
     static AnimatedPanel field_Ab;
     static Sprite field_Jb;
 
-    final void h(int param0) {
+    final void clearSelection(int param0) {
         int var3 = 0;
         IconLabelPanel var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -37,15 +37,15 @@ final class QuickChatMenu extends AnimatedPanel {
           var4.field_bb = false;
         }
         if (null != this.field_Ob) {
-          this.field_Ob.h(0);
+          this.field_Ob.clearSelection(0);
           this.field_Ob.unlink((byte) -128);
         }
         this.field_Ob = null;
         this.field_Gb = -1;
-        this.c(false, 12);
+        this.setAnimationFrame(false, 12);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenu(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         int var9 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -54,7 +54,7 @@ final class QuickChatMenu extends AnimatedPanel {
         this.setTarget(this.field_Eb, this.field_xb, (byte) 77, param5 - this.field_xb, param3);
         if (this.field_Mb != param2) {
           this.field_Mb = param2;
-          this.c(false, this.field_Db);
+          this.setAnimationFrame(false, this.field_Db);
         }
         for (var7 = 0; this.field_Pb > var7; var7++) {
           this.field_Kb[var7].setIconLabelBounds(50, this.field_Qb, this.field_Kb[var7].field_db, param1, param4, this.field_Eb, 0);
@@ -64,11 +64,11 @@ final class QuickChatMenu extends AnimatedPanel {
           var7Lifetime1 = this.field_yb[this.field_Gb].field_Pb;
           for (var8 = this.field_Qb * (var7Lifetime1 + this.field_Gb) + this.field_db; param5 < var8; var8 = var8 - this.field_Qb) {
           }
-          this.field_yb[this.field_Gb].a(-1, param1, this.field_Kb[this.field_Gb].field_N, param3 + this.field_Eb, param4, var8);
+          this.field_yb[this.field_Gb].layoutMenu(-1, param1, this.field_Kb[this.field_Gb].field_N, param3 + this.field_Eb, param4, var8);
         }
     }
 
-    final static int a(String param0, int param1, boolean param2) {
+    final static int measureMenuText(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -100,14 +100,14 @@ final class QuickChatMenu extends AnimatedPanel {
         }
     }
 
-    final int g(boolean param0) {
+    final int getOpenMenuWidth(boolean param0) {
         if (param0) {
-          this.c(true, -94);
+          this.setAnimationFrame(true, -94);
         }
-        return this.field_Eb + (this.field_Ob != null ? this.field_Ob.g(param0) : 0);
+        return this.field_Eb + (this.field_Ob != null ? this.field_Ob.getOpenMenuWidth(param0) : 0);
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void pollMenuInput(int param0, int param1, byte param2) {
         int var4_int = 0;
         IconLabelPanel var5;
         int var6;
@@ -119,7 +119,7 @@ final class QuickChatMenu extends AnimatedPanel {
         for (var4_int = 0; this.field_Kb.length > var4_int; var4_int++) {
           var5 = this.field_Kb[var4_int];
           if (1 == var5.field_rb) {
-            this.a(0, param1, var4_int, param0);
+            this.activateEntry(0, param1, var4_int, param0);
             stackIn_7_0 = var5;
             stackIn_8_1 = (this.field_Gb == var4_int);
             stackIn_7_0.field_bb = stackIn_8_1;
@@ -132,15 +132,15 @@ final class QuickChatMenu extends AnimatedPanel {
           var7 = this.field_yb[this.field_Gb];
           var4 = var7;
           if (var4 != null) {
-            var7.a(param0, param1, (byte) -121);
+            var7.pollMenuInput(param0, param1, (byte) -121);
           }
         }
         if (this.field_Db > 0) {
-          this.c(false, -1 + this.field_Db);
+          this.setAnimationFrame(false, -1 + this.field_Db);
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String formatCookieExpiryDate(long param0, int param1) {
         DialPainter.field_e.setTime(new Date(param0));
         int var3 = DialPainter.field_e.get(7);
         int var4 = DialPainter.field_e.get(5);
@@ -155,7 +155,7 @@ final class QuickChatMenu extends AnimatedPanel {
         return LegacyAi.field_q[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + PlacementOrder.field_o[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateEntry(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -163,16 +163,16 @@ final class QuickChatMenu extends AnimatedPanel {
           field_Lb = (String) null;
         }
         if (this.field_Gb == param2) {
-          this.h(0);
-          this.c(false, 0);
+          this.clearSelection(0);
+          this.setAnimationFrame(false, 0);
         } else {
           if (null != this.field_yb[param2]) {
-            this.h(0);
-            this.c(false, 0);
+            this.clearSelection(0);
+            this.setAnimationFrame(false, 0);
             this.field_Gb = param2;
             this.field_Ob = this.field_yb[this.field_Gb];
             PrivateChatMessage.a(this.field_Ob, true);
-            this.field_Ob.c(false, 12);
+            this.field_Ob.setAnimationFrame(false, 12);
           } else {
             if (this.field_Hb[param2] != -1) {
               var5 = 32768 | this.field_Hb[param2];
@@ -197,7 +197,7 @@ final class QuickChatMenu extends AnimatedPanel {
         }
     }
 
-    private final void c(boolean param0, int param1) {
+    private final void setAnimationFrame(boolean param0, int param1) {
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -213,7 +213,7 @@ final class QuickChatMenu extends AnimatedPanel {
         }
     }
 
-    final boolean f(boolean param0) {
+    final boolean hasPointerInteraction(boolean param0) {
         int var4 = 0;
         IconLabelPanel var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -225,27 +225,27 @@ final class QuickChatMenu extends AnimatedPanel {
         }
         if (var2 == 0 && this.field_Gb != -1 &&
           null != this.field_yb[this.field_Gb]) {
-          var2 = this.field_yb[this.field_Gb].f(param0) ? 1 : 0;
+          var2 = this.field_yb[this.field_Gb].hasPointerInteraction(param0) ? 1 : 0;
         }
         return var2 != 0;
     }
 
-    final boolean a(int param0, boolean param1, int param2) {
+    final boolean handleMenuKey(int param0, boolean param1, int param2) {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
           String var8 = (String) null;
-          QuickChatMenu.a((String) null, -29, (String) null, (String) null);
+          QuickChatMenu.replaceNamedPlaceholder((String) null, -29, (String) null, (String) null);
         }
         int var4 = TextReplacementEntry.field_j == 85 ? 1 : 0;
         if (this.field_Ob != null) {
           if (var4 != 0 &&
             this.field_Ob.field_Gb == -1) {
-            this.h(0);
-            this.c(param1, 0);
+            this.clearSelection(0);
+            this.setAnimationFrame(param1, 0);
             return true;
           }
-          return this.field_Ob.a(param0, param1, param2);
+          return this.field_Ob.handleMenuKey(param0, param1, param2);
         }
         if (this.field_Ob == null && this == DerelictMapReader.field_h &&
           var4 != 0) {
@@ -261,7 +261,7 @@ final class QuickChatMenu extends AnimatedPanel {
         }
         for (var6 = 0; var6 < this.field_zb.length; var6++) {
           if (var5 == this.field_zb[var6]) {
-            this.a(0, param0, var6, param2);
+            this.activateEntry(0, param0, var6, param2);
             return true;
           }
         }
@@ -325,7 +325,7 @@ final class QuickChatMenu extends AnimatedPanel {
             }
           }
           this.field_Ib = this.field_Ib + (GameKeyHandler.field_c.field_o + 10);
-          this.c(false, 12);
+          this.setAnimationFrame(false, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,7 +388,7 @@ final class QuickChatMenu extends AnimatedPanel {
         field_Lb = null;
     }
 
-    final static String a(String param0, int param1, String param2, String param3) {
+    final static String replaceNamedPlaceholder(String param0, int param1, String param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

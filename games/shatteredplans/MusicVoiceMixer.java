@@ -212,7 +212,7 @@ final class MusicVoiceMixer extends PcmStream {
           if (1 == param1.field_x) {
             stackIn_18_3 = StatusContent.field_a;
           } else {
-            stackIn_18_3 = QuickChatPhraseRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
+            stackIn_18_3 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(param1.field_x)});
           }
           dupTemp$0 = ((StringBuilder) (Object) stackIn_17_2).append(stackIn_18_3).toString();
           stackIn_17_1.field_o = dupTemp$0;

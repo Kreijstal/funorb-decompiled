@@ -293,7 +293,7 @@ final class QuickChatMenuSupport {
             stackIn_40_0 = var6;
             stackIn_40_1 = 0;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = QuickChatMenu.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = QuickChatMenu.measureMenuText(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + QuaternaryLinkNode.field_w;
             if (0 <= var4) {
               var1_int = var1_int + GameMenuController.field_b;

@@ -91,7 +91,7 @@ final class SoundEffectDefinition {
         CachedArchiveSource.field_n = false;
         NameSuggestionsPanel.field_L = 0;
         MusicTrack var2 = (MusicTrack) null;
-        QuickChatCategoryRegistry.a(32767, (MusicTrack) null, true, 50);
+        QuickChatCategoryRegistry.transitionMusicTrack(32767, (MusicTrack) null, true, 50);
         FocusableWidget.f((byte) -123);
     }
 

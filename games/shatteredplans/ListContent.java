@@ -17,7 +17,7 @@ final class ListContent implements MenuContent {
           return RasterSpanFactory.field_c.a(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
         }
         if (QuickChatPhraseDefinition.field_t) {
-          return QuickChatPhraseDefinition.a(-85, param1, param3);
+          return QuickChatPhraseDefinition.handleQuickChatKey(-85, param1, param3);
         }
         if (MouseInputHandler.a(param0 ^ 5, param3, param1)) {
           return true;
