@@ -142,7 +142,7 @@ class UiWidget extends IntrusiveNode {
         return param1;
     }
 
-    boolean containsWidget(byte param0, UiWidget param1) {
+    boolean focusFirst(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -179,7 +179,7 @@ class UiWidget extends IntrusiveNode {
 
     final static StringList createStringList(int param0) {
         int var1 = 4 / ((-7 - param0) / 37);
-        return BattleEvent.c(1, 0);
+        return BattleEvent.createStringList(1, 0);
     }
 
     final static boolean isValidAccountName(CharSequence param0, byte param1) {
@@ -193,7 +193,7 @@ class UiWidget extends IntrusiveNode {
           if (param1 != -89) {
             field_i = 72L;
           }
-          stackIn_3_0 = CellVertex.a((byte) 116, false, param0);
+          stackIn_3_0 = CellVertex.isValidAccountName((byte) 116, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ class UiWidget extends IntrusiveNode {
         if (var4 != 80) {
           return false;
         }
-        return this.containsWidget((byte) -33, this);
+        return this.focusFirst((byte) -33, this);
     }
 
     int maxLayer(int param0) {

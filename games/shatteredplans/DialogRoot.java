@@ -141,7 +141,7 @@ final class DialogRoot extends SingleChildWidget {
           var3 = (Dialog) (param1);
           this.field_H.addFirst(var3, 0);
           var3.field_E = param0 ? true : false;
-          var3.containsWidget((byte) 126, (UiWidget) (this));
+          var3.focusFirst((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

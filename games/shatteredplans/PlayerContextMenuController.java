@@ -481,7 +481,7 @@ final class PlayerContextMenuController {
           if (null != MenuInputState.field_a) {
             return;
           }
-          var6 = BattleEvent.a(this.field_f, 30888);
+          var6 = BattleEvent.findLobbyRoom(this.field_f, 30888);
           if (var6 == null) {
             return;
           }
@@ -523,7 +523,7 @@ final class PlayerContextMenuController {
           if (null != MenuInputState.field_a) {
             return;
           }
-          var7 = BattleEvent.a(this.field_f, 30888);
+          var7 = BattleEvent.findLobbyRoom(this.field_f, 30888);
           if (var7 == null) {
             return;
           }

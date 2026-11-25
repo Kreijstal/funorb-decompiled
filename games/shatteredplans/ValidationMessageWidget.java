@@ -348,7 +348,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         this.field_V.drawAdditive(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 
-    final boolean containsWidget(byte param0, UiWidget param1) {
+    final boolean focusFirst(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;

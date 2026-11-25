@@ -2379,7 +2379,7 @@ final class GameMenuController {
                                                     } else {
                                                       if (var5 == 20) {
                                                         this.field_g = param0;
-                                                        DebouncedValidator.a(param3 ^ -32579, GameScreen.getHostApplet((byte) 127));
+                                                        DebouncedValidator.openQuitPage(param3 ^ -32579, GameScreen.getHostApplet((byte) 127));
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;

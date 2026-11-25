@@ -20,7 +20,7 @@ final class BattleEvent extends IntrusiveNode {
     static int field_t;
     static String field_r;
 
-    final static LobbyRoomEntry a(int param0, int param1) {
+    final static LobbyRoomEntry findLobbyRoom(int param0, int param1) {
         if (param1 != 30888) {
           return (LobbyRoomEntry) null;
         }
@@ -38,13 +38,13 @@ final class BattleEvent extends IntrusiveNode {
         field_s = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void recordGarrisonContribution(int param0, int param1, int param2, int param3) {
         this.field_n = this.field_n + param0;
         this.field_v.addLast((byte) -113, new BattleContribution(this.field_w, param1, param0, param2));
         int var5 = -83 / ((48 - param3) / 45);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void recordGarrisonContribution(int param0, int param1, int param2) {
         if (param1 != 14775) {
           field_r = (String) null;
         }
@@ -52,7 +52,7 @@ final class BattleEvent extends IntrusiveNode {
         this.field_v.addLast((byte) -113, new BattleContribution(this.field_w, param0, param2, 0));
     }
 
-    final static void a(int param0, MenuPointerSupport param1, boolean param2) {
+    final static void writeHighscoreSubmission(int param0, MenuPointerSupport param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         CipherPacketBuffer var7 = LobbyOptionSupport.field_f;
@@ -83,14 +83,14 @@ final class BattleEvent extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isChatPanelOverlayOpen(byte param0) {
         if (param0 < 73) {
-          BattleEvent.b(44, -8, 127);
+          BattleEvent.setUiCenter(44, -8, 127);
         }
         return null != GameAssetSetupSupport.field_a ? true : false;
     }
 
-    final static StringList c(int param0, int param1) {
+    final static StringList createStringList(int param0, int param1) {
         StringList var2 = new StringList(param0, false);
         if (param1 != 0) {
           field_u = (AnimatedPanel) null;
@@ -98,7 +98,7 @@ final class BattleEvent extends IntrusiveNode {
         return var2;
     }
 
-    final void a(byte param0, int[] param1) {
+    final void setKillCounts(byte param0, int[] param1) {
         try {
           if (param0 <= 35) {
             this.field_j = (int[]) null;
@@ -109,7 +109,7 @@ final class BattleEvent extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, FleetMove param2, int param3) {
+    final void recordFleetContribution(int param0, int param1, FleetMove param2, int param3) {
         try {
           this.field_v.addLast((byte) -113, new BattleContribution(param2, param3, param0));
           this.field_n = this.field_n + param3;
@@ -134,7 +134,7 @@ final class BattleEvent extends IntrusiveNode {
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void setUiCenter(int param0, int param1, int param2) {
         QuaternaryLinkNode.field_w = param0;
         if (param2 != 0) {
           field_u = (AnimatedPanel) null;

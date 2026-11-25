@@ -114,7 +114,7 @@ final class ValidationIndicator extends FocusableWidget {
         return (String) null;
     }
 
-    final boolean containsWidget(byte param0, UiWidget param1) {
+    final boolean focusFirst(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;

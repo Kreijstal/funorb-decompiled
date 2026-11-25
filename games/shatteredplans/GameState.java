@@ -1081,7 +1081,7 @@ final class GameState {
               var7 = var6 * var4.field_z / var5;
               if (0 != var7 &&
                 param1 != null) {
-                param1.a(var7, 0, var4, 0);
+                param1.recordFleetContribution(var7, 0, var4, 0);
               }
               var4.field_y.field_C = var4.field_y.field_C + var7;
             }
@@ -1374,7 +1374,7 @@ final class GameState {
             }
             if (var7 != 0 &&
               param1 != null) {
-              param1.a(var7, 0, var4, 0);
+              param1.recordFleetContribution(var7, 0, var4, 0);
             }
             var4.field_y.field_C = var4.field_y.field_C + var7;
             var4 = (FleetMove) (param2.field_s.nextForward(32));
@@ -1721,7 +1721,7 @@ final class GameState {
           var14 = var18;
           var22 = var14;
           if (var9 != null) {
-            ((BattleEvent) (var9)).a((byte) 74, var22);
+            ((BattleEvent) (var9)).setKillCounts((byte) 74, var22);
           }
           regionExit1: {
             if (param2 != null) {
@@ -3440,12 +3440,12 @@ final class GameState {
             if (var5 > 0) {
               var7 = var6 / 2;
               if (param2 != null) {
-                param2.a(var6, var4_int, var7, 124);
+                param2.recordGarrisonContribution(var6, var4_int, var7, 124);
               }
               param1.field_C = param1.field_C + var7;
             } else {
               if (param2 != null) {
-                param2.a(var4_int, 14775, var6);
+                param2.recordGarrisonContribution(var4_int, 14775, var6);
               }
               param1.field_Q = var4_int / 2;
             }
@@ -3464,7 +3464,7 @@ final class GameState {
               var9 = var8 / 2;
               var8 = var8 - var9;
               if (param2 != null) {
-                param2.a(var9, 0, var4, var8);
+                param2.recordFleetContribution(var9, 0, var4, var8);
               }
               var4.field_y.field_C = var4.field_y.field_C + var9;
             }

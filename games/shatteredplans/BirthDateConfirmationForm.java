@@ -54,7 +54,7 @@ final class BirthDateConfirmationForm extends ArrayWidgetGroup implements Button
         int var1 = -111 / ((param0 + 43) / 42);
     }
 
-    final void h(int param0) {
+    final void layoutChildren(int param0) {
         int var2 = 250;
         this.field_J.setBounds(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
         this.field_M.setBounds((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);

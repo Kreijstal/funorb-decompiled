@@ -115,7 +115,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (5 == var4) {
-            DebouncedValidator.a(param1 + 0, GameScreen.getHostApplet((byte) 126));
+            DebouncedValidator.openQuitPage(param1 + 0, GameScreen.getHostApplet((byte) 126));
           }
           if (var4 == 6 &&
             UiTextSupport.field_a) {
@@ -604,7 +604,7 @@ abstract class GameClientShell extends GameApplet {
         if (param0) {
           return;
         }
-        String var2 = DerelictMapGenerator.a(param0);
+        String var2 = DerelictMapGenerator.readInboundString(param0);
         DerelictVictoryChecker.a((byte) 112, GameScreen.getHostApplet((byte) 126), var2);
     }
 

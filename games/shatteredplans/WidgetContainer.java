@@ -177,7 +177,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         this.layoutChildren(-87);
     }
 
-    private final void a(StringBuilder param0, Hashtable param1, byte param2, int param3) {
+    private final void appendChildDescriptions(StringBuilder param0, Hashtable param1, byte param2, int param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -246,7 +246,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         return var2;
     }
 
-    final boolean containsWidget(byte param0, UiWidget param1) {
+    final boolean focusFirst(byte param0, UiWidget param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -265,7 +265,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
               var4 = -111 / ((param0 - 61) / 59);
               return false;
             }
-            if (!var6.containsWidget((byte) 125, param1)) {
+            if (!var6.focusFirst((byte) 125, param1)) {
               var6 = (UiWidget) (var3.nextForward((byte) 100));
               continue;
             }
@@ -313,7 +313,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
               var5.startBackwardFrom((byte) 109, var4);
               var6 = (UiWidget) (var5.nextBackward((byte) -124));
               while (var6 != null) {
-                if (!var6.containsWidget((byte) 124, param0)) {
+                if (!var6.focusFirst((byte) 124, param0)) {
                   var6 = (UiWidget) (var5.nextBackward((byte) -124));
                   continue;
                 }
@@ -363,7 +363,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
               var6.startForwardFrom(false, var5);
               var7 = (UiWidget) (var6.nextForward((byte) 54));
               while (var7 != null) {
-                if (var7.containsWidget((byte) 123, param0)) {
+                if (var7.focusFirst((byte) 123, param0)) {
                   return true;
                 }
                 var7 = (UiWidget) (var6.nextForward((byte) 68));
@@ -417,7 +417,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
           var5_int = 31 % ((64 - param0) / 61);
           if (this.markVisited(false, param2, param3, param1)) {
             this.appendDescription(param1, param2, false, param3);
-            this.a(param3, param1, (byte) -114, param2);
+            this.appendChildDescriptions(param3, param1, (byte) -114, param2);
           }
           stackIn_4_0 = (StringBuilder) (param3);
           return stackIn_4_0;
@@ -441,7 +441,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         }
     }
 
-    final static void a(byte param0, LobbyPlayerEntry param1) {
+    final static void insertLobbyPlayerByRank(byte param0, LobbyPlayerEntry param1) {
         LobbyPlayerEntry var2 = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -496,7 +496,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= -58) {
           UiWidget var5 = (UiWidget) null;
-          this.containsWidget((byte) -71, (UiWidget) null);
+          this.focusFirst((byte) -71, (UiWidget) null);
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var3 = (UiWidget) (var2.startForward(2));

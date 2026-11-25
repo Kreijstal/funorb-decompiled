@@ -37,13 +37,13 @@ final class Archive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var7));
+          var4_int = this.field_f.field_b.get(24396, DerelictMapGenerator.hashCp1252Text(false, var7));
           var5 = -116 / ((58 - param0) / 34);
           if (var4_int < 0) {
             return false;
           }
           var8 = (CharSequence) ((Object) param1);
-          var6 = this.field_f.field_i[var4_int].get(24396, DerelictMapGenerator.a(false, var8));
+          var6 = this.field_f.field_i[var4_int].get(24396, DerelictMapGenerator.hashCp1252Text(false, var8));
           if (var6 >= 0) {
             return true;
           }
@@ -86,7 +86,7 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.field_f.field_i[param0].get(24396, DerelictMapGenerator.a(false, var5));
+          var4_int = this.field_f.field_i[param0].get(24396, DerelictMapGenerator.hashCp1252Text(false, var5));
           if (param1 != 106) {
             ((boolean[]) (this.field_m[2]))[1] = true;
           }
@@ -145,7 +145,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.hashCp1252Text(false, var4));
           stackIn_7_0 = this.getGroupProgress((byte) 36, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,7 +230,7 @@ final class Archive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.hashCp1252Text(false, var4));
           if (param0 <= 121) {
             field_h = (String) null;
           }
@@ -279,12 +279,12 @@ final class Archive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_f.field_b.get(param1 + 24391, DerelictMapGenerator.a(false, var6));
+          var4_int = this.field_f.field_b.get(param1 + 24391, DerelictMapGenerator.hashCp1252Text(false, var6));
           if (!this.isValidGroup((byte) -63, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_f.field_i[var4_int].get(param1 ^ 24393, DerelictMapGenerator.a(false, var7));
+          var5 = this.field_f.field_i[var4_int].get(param1 ^ 24393, DerelictMapGenerator.hashCp1252Text(false, var7));
           stackIn_11_0 = this.isFileReady((byte) 125, var5, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ final class Archive {
           var4 = 2 % ((param1 + 1) / 49);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var5));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.hashCp1252Text(false, var5));
           stackIn_4_0 = this.ensureGroupLoaded(87, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -477,7 +477,7 @@ final class Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.a(false, var4));
+          var3_int = this.field_f.field_b.get(24396, DerelictMapGenerator.hashCp1252Text(false, var4));
           if (0 > var3_int) {
             return false;
           }
@@ -570,7 +570,7 @@ final class Archive {
           stackIn_7_1 = 24396;
           stackIn_8_2 = !(param0);
           var6 = (CharSequence) ((Object) param2);
-          var4_int = ((IntHashIndex) (Object) stackIn_7_0).get(stackIn_7_1, DerelictMapGenerator.a(stackIn_8_2, var6));
+          var4_int = ((IntHashIndex) (Object) stackIn_7_0).get(stackIn_7_1, DerelictMapGenerator.hashCp1252Text(stackIn_8_2, var6));
           if (!this.isValidGroup((byte) -63, var4_int)) {
             return null;
           }
@@ -578,7 +578,7 @@ final class Archive {
           stackIn_13_1 = 24396;
           stackIn_14_2 = !(param0);
           var7 = (CharSequence) ((Object) param1);
-          var5 = ((IntHashIndex) (Object) stackIn_13_0).get(stackIn_13_1, DerelictMapGenerator.a(stackIn_14_2, var7));
+          var5 = ((IntHashIndex) (Object) stackIn_13_0).get(stackIn_13_1, DerelictMapGenerator.hashCp1252Text(stackIn_14_2, var7));
           stackIn_15_0 = this.getFile(var4_int, -1, var5);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

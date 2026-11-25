@@ -43,7 +43,7 @@ abstract class DebouncedValidator implements ValidationSource {
     public final String getMessage(byte param0) {
         if (param0 != -63) {
           MusicCrossfadeStream var3 = (MusicCrossfadeStream) null;
-          DebouncedValidator.a((java.awt.Component) null, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, -88, true, -43, 7, true);
+          DebouncedValidator.initializeAudioPlayback((java.awt.Component) null, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, -88, true, -43, 7, true);
         }
         if (this.isEmpty(16647)) {
           return null;
@@ -54,7 +54,7 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.computeMessage((byte) 125);
     }
 
-    final static SoundPlayback a(int param0, PcmSampleStream param1) {
+    final static SoundPlayback playSampleStream(int param0, PcmSampleStream param1) {
         SoundPlayback var2 = null;
         RuntimeException var2_ref = null;
         SoundPlayback stackIn_2_0 = null;
@@ -115,7 +115,7 @@ abstract class DebouncedValidator implements ValidationSource {
         return this.computeState(false);
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openQuitPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_7_0 = null;
@@ -156,13 +156,13 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, int param3, boolean param4, int param5, int param6, boolean param7) {
+    final static void initializeAudioPlayback(java.awt.Component param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, int param3, boolean param4, int param5, int param6, boolean param7) {
         try {
           PcmPlayerService.configure(param5, param7, 10);
           ClientContextMenuSupport.field_e = PcmPlayerService.create(param1, param0, 0, param6);
           if (param4) {
             java.applet.Applet var9 = (java.applet.Applet) null;
-            DebouncedValidator.a(-84, (java.applet.Applet) null);
+            DebouncedValidator.openQuitPage(-84, (java.applet.Applet) null);
           }
           IsolationistAi.field_q = PcmPlayerService.create(param1, param0, 1, param3);
           SocialNameInputPanel.field_Bb = new PcmStreamMixer();

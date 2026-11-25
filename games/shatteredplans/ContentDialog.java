@@ -81,10 +81,10 @@ abstract class ContentDialog extends ResizingDialog {
           }
           if (this.field_eb != null) {
             if (98 == param0) {
-              this.field_eb.containsWidget((byte) -60, param3);
+              this.field_eb.focusFirst((byte) -60, param3);
             }
             if (param0 == 99) {
-              this.field_eb.containsWidget((byte) -23, param3);
+              this.field_eb.focusFirst((byte) -23, param3);
               return false;
             }
           }

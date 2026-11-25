@@ -57,7 +57,7 @@ final class DialWidget extends FocusableWidget {
           if (param0 != 96) {
             field_J = (String) null;
           }
-          stackIn_3_0 = AccountFieldValue.a(param2 * param1.field_a / 96, -108, param1.field_f);
+          stackIn_3_0 = AccountFieldValue.playPcmSample(param2 * param1.field_a / 96, -108, param1.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,7 +239,7 @@ final class DialWidget extends FocusableWidget {
               stackIn_19_0.field_Ub = stackIn_20_1;
               var8_ref_mj.field_Lb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-122);
               var8_ref_mj.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-109);
-              WidgetContainer.a((byte) -60, var8_ref_mj);
+              WidgetContainer.insertLobbyPlayerByRank((byte) -60, var8_ref_mj);
               return;
             }
             if (var2 == 6) {
@@ -414,7 +414,7 @@ final class DialWidget extends FocusableWidget {
                   var25.field_Gb = AccountBooleanRequest.field_i;
                   var25.field_Eb = var5Lifetime1Lifetime1;
                 }
-                WidgetContainer.a((byte) -60, var25);
+                WidgetContainer.insertLobbyPlayerByRank((byte) -60, var25);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(127);
@@ -428,7 +428,7 @@ final class DialWidget extends FocusableWidget {
                 } else {
                   var29.field_Tb = true;
                 }
-                WidgetContainer.a((byte) -60, var29);
+                WidgetContainer.insertLobbyPlayerByRank((byte) -60, var29);
               }
               return;
             }
@@ -461,7 +461,7 @@ final class DialWidget extends FocusableWidget {
                 ValidationMessageWidget.field_X = ValidationMessageWidget.field_X - 1;
                 var3_ref_mjLifetime1.field_Vb = false;
               }
-              WidgetContainer.a((byte) -60, var3_ref_mjLifetime1);
+              WidgetContainer.insertLobbyPlayerByRank((byte) -60, var3_ref_mjLifetime1);
             }
             var3_ref_mjLifetime1 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.nextInTraversal((byte) -107));
           }

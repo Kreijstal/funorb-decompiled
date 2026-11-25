@@ -74,7 +74,7 @@ final class WidgetStyle {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.newStateStyle(98, 4).setFlushBeforeApply(true, -28639).setSprites(var5, -108);
-          var4.newStateStyle(22, 5).setSprites(ArrayWidgetGroup.a(0, 0, 65793, 0, (byte) -92), -91).setFlushBeforeApply(true, -28639).setTextColor((byte) 75, -1);
+          var4.newStateStyle(22, 5).setSprites(ArrayWidgetGroup.createInsetWidgetNineSlice(0, 0, 65793, 0, (byte) -92), -91).setFlushBeforeApply(true, -28639).setTextColor((byte) 75, -1);
           this.field_q = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetTheme(var4, true);
           var6.field_r = 0;

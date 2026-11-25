@@ -55,7 +55,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    boolean containsWidget(byte param0, UiWidget param1) {
+    boolean focusFirst(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
@@ -108,7 +108,7 @@ class FocusableWidget extends UiWidget {
         try {
           if (this.field_y &&
             this.containsPoint(param1, 39, param3, param5, param4)) {
-            this.containsWidget((byte) 124, param6);
+            this.focusFirst((byte) 124, param6);
             this.field_o = param0;
             if (null != this.field_u &&
               this.field_u instanceof WidgetPointerListener) {

@@ -13,7 +13,7 @@ final class CellVertex {
     static String[] field_d;
     static int field_i;
 
-    final static boolean a(byte param0, boolean param1, CharSequence param2) {
+    final static boolean isValidAccountName(byte param0, boolean param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -65,12 +65,12 @@ final class CellVertex {
         field_d = null;
     }
 
-    final static void a(int param0, HuffmanCodec param1) {
+    final static void setChatHuffmanCodec(int param0, HuffmanCodec param1) {
         try {
           DiskArchiveRequest.field_v = param1;
           if (param0 != 1) {
             HuffmanCodec var3 = (HuffmanCodec) null;
-            CellVertex.a(-29, (HuffmanCodec) null);
+            CellVertex.setChatHuffmanCodec(-29, (HuffmanCodec) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

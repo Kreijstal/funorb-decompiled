@@ -62,7 +62,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         var3.field_r.d(128, (byte) -110, 9);
         var3.field_u.setMasterVolume(598, UiSpriteSupport.field_b);
         var3.field_r.setMasterVolume(param0 ^ -599, UiSpriteSupport.field_b);
-        DebouncedValidator.a((java.awt.Component) ((Object) NotificationEntry.field_i), ValidatedTextInputWidget.field_W, var3, 1102, false, 22050, 22050, true);
+        DebouncedValidator.initializeAudioPlayback((java.awt.Component) ((Object) NotificationEntry.field_i), ValidatedTextInputWidget.field_W, var3, 1102, false, 22050, 22050, true);
         IterableNodeHashTable.field_b = 2458760;
         LoginResultSupport.field_a = 2805974;
         ProductionContent.field_j = 2458760;
@@ -189,7 +189,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                         BufferedCacheFile.c(0);
                       }
                       if (2 == var3) {
-                        DebouncedValidator.a(1, (java.applet.Applet) (this));
+                        DebouncedValidator.openQuitPage(1, (java.applet.Applet) (this));
                       }
                     }
                     this.b(false, true);
@@ -619,7 +619,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             return false;
           }
           if (null != GameSpriteResources.field_h) {
-            CellVertex.a(1, new HuffmanCodec(GameSpriteResources.field_h.getFileByName(true, "huffman", "")));
+            CellVertex.setChatHuffmanCodec(1, new HuffmanCodec(GameSpriteResources.field_h.getFileByName(true, "huffman", "")));
             GameSpriteResources.field_h = null;
             ValidationState.c(126);
             return false;

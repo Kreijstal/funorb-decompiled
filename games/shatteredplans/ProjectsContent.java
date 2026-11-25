@@ -65,7 +65,7 @@ final class ProjectsContent implements MenuContent {
         if (param0 > -119) {
           return;
         }
-        DerelictMapGenerator.c(-113);
+        DerelictMapGenerator.closeSocialNameInputPanel(-113);
         DialogRoot.field_G = null;
         SocialNameInputPanel.closeQuickChatMenus((byte) 122);
     }

@@ -106,7 +106,7 @@ class MenuLabel extends MenuComponent {
             var3 = (String) null;
             MenuLabel.a((String) null, 122, (byte) 75);
           }
-          stackIn_3_0 = AccountFieldValue.a(param0.field_a, -124, param0.field_f);
+          stackIn_3_0 = AccountFieldValue.playPcmSample(param0.field_a, -124, param0.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -14,7 +14,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
     static Archive field_D;
     static boolean[] field_F;
 
-    private final boolean a(int param0, int param1, UiWidget param2) {
+    private final boolean focusPreviousChild(int param0, int param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -43,7 +43,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
               for (var5 = var5 - param0; var5 >= 0; var5 = var5 - param0) {
                 var7Lifetime2 = this.field_B[var5];
                 if (null != var7Lifetime2 &&
-                  var7Lifetime2.containsWidget((byte) 123, param2)) {
+                  var7Lifetime2.focusFirst((byte) 123, param2)) {
                   return true;
                 }
               }
@@ -129,7 +129,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
             return false;
           }
           if (param2 != 13) {
-            ArrayWidgetGroup.a(12, 50, -9, 113, (byte) 82);
+            ArrayWidgetGroup.createInsetWidgetNineSlice(12, 50, -9, 113, (byte) 82);
           }
           var9 = this.field_B;
           var5 = var9;
@@ -146,9 +146,9 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
             return false;
           }
           if (FleetTrailPoint.field_p[81]) {
-            stackIn_19_0 = this.a(111, param3);
+            stackIn_19_0 = this.focusPreviousChild(111, param3);
           } else {
-            stackIn_19_0 = this.a(param3, -1);
+            stackIn_19_0 = this.focusNextChild(param3, -1);
           }
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    private final boolean a(UiWidget param0, int param1) {
+    private final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -176,7 +176,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
           if (param1 != -1) {
             ArrayWidgetGroup.rectContains(-30, 122, -111, (byte) 51, -17, -36, -28);
           }
-          stackIn_3_0 = this.a(param0, (byte) -110, 1);
+          stackIn_3_0 = this.focusNextChild(param0, (byte) -110, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -192,7 +192,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    private final void a(int param0, StringBuilder param1, Hashtable param2, int param3) {
+    private final void appendChildDescriptions(int param0, StringBuilder param1, Hashtable param2, int param3) {
         int var6 = 0;
         StringBuilder discarded$4 = null;
         int var8 = 0;
@@ -250,13 +250,13 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
     final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         UiWidget discarded$0 = null;
         if (param2 <= 99) {
-          discarded$0 = this.a((byte) 48);
+          discarded$0 = this.findFocusedChild((byte) 48);
         }
         super.setBounds(param0, param1, (byte) 101, param3, param4);
-        this.h(116);
+        this.layoutChildren(116);
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] createInsetWidgetNineSlice(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -92) {
           field_E = (AnimatedPanel) null;
         }
@@ -369,7 +369,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    private final UiWidget a(byte param0) {
+    private final UiWidget findFocusedChild(byte param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -399,7 +399,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         if (param0 != 1) {
           return false;
         }
-        return null != this.a((byte) -96) ? true : false;
+        return null != this.findFocusedChild((byte) -96) ? true : false;
     }
 
     final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
@@ -427,9 +427,9 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    abstract void h(int param0);
+    abstract void layoutChildren(int param0);
 
-    final boolean containsWidget(byte param0, UiWidget param1) {
+    final boolean focusFirst(byte param0, UiWidget param1) {
         int var5 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -449,7 +449,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
           for (var5 = 0; var5 < var8.length; var5++) {
             var6 = var8[var5];
             if (var6 != null &&
-              var6.containsWidget((byte) -10, param1)) {
+              var6.focusFirst((byte) -10, param1)) {
               return true;
             }
           }
@@ -468,7 +468,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         }
     }
 
-    private final boolean a(UiWidget param0, byte param1, int param2) {
+    private final boolean focusNextChild(UiWidget param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -498,7 +498,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
               for (var4_int = var4_int + param2; var4_int < this.field_B.length; var4_int = var4_int + param2) {
                 var6Lifetime2 = this.field_B[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.containsWidget((byte) 126, param0)) {
+                  var6Lifetime2.focusFirst((byte) 126, param0)) {
                   return true;
                 }
               }
@@ -585,7 +585,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         return var2;
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -594,7 +594,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 98) {
-            stackIn_4_0 = this.a(1, 22, param1);
+            stackIn_4_0 = this.focusPreviousChild(1, 22, param1);
             return stackIn_4_0;
           }
           return true;
@@ -625,7 +625,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         try {
           if (this.markVisited(false, param2, param3, param1)) {
             this.appendDescription(param1, param2, false, param3);
-            this.a(param2, param3, param1, 0);
+            this.appendChildDescriptions(param2, param3, param1, 0);
           }
           var5_int = -103 % ((64 - param0) / 61);
           stackIn_3_0 = (StringBuilder) (param3);

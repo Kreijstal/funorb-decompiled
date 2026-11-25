@@ -11,7 +11,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
     static Sprite field_n;
     static int field_m;
 
-    final static void c(int param0) {
+    final static void closeSocialNameInputPanel(int param0) {
         ProxyAuthenticationRequiredException.field_e = null;
         int var1 = 119 % ((param0 + 40) / 34);
     }
@@ -205,7 +205,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         return var13;
     }
 
-    final static int a(boolean param0, CharSequence param1) {
+    final static int hashCp1252Text(boolean param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -221,7 +221,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         try {
           if (param0) {
             var6 = (CharSequence) null;
-            DerelictMapGenerator.a(false, (CharSequence) null);
+            DerelictMapGenerator.hashCp1252Text(false, (CharSequence) null);
           }
           var2_int = param1.length();
           var3 = 0;
@@ -244,10 +244,10 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String readInboundString(boolean param0) {
         if (param0) {
           CharSequence var2 = (CharSequence) null;
-          DerelictMapGenerator.a(false, (CharSequence) null);
+          DerelictMapGenerator.hashCp1252Text(false, (CharSequence) null);
         }
         return SpriteWipeSupport.field_a.readString(-1);
     }

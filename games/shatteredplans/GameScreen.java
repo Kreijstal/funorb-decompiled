@@ -1650,7 +1650,7 @@ final class GameScreen {
           }
           var3 = 0;
           while (4 > var3) {
-            var4 = AccountFieldValue.a(this.field_s.field_n.field_u[var3], (byte) -68, var3, var2);
+            var4 = AccountFieldValue.createProjectButton(this.field_s.field_n.field_u[var3], (byte) -68, var3, var2);
             var4.moveTo((byte) 62, this.field_j.field_z.field_k, this.field_j.field_z.field_y + this.field_j.field_z.field_t);
             this.field_j.field_z.addChild(var4, 8);
             if (var5 != 0) {

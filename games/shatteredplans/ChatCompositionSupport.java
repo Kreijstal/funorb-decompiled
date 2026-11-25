@@ -226,7 +226,7 @@ final class ChatCompositionSupport {
                   }
                 }
               }
-              if (BattleEvent.a((byte) 118)) {
+              if (BattleEvent.isChatPanelOverlayOpen((byte) 118)) {
                 stackIn_53_0 = ": ";
               } else {
                 stackIn_53_0 = "<img=3>: ";
@@ -245,7 +245,7 @@ final class ChatCompositionSupport {
                 var5 = "<col=999999>" + var5 + TutorialTextSupport.field_c + "</col>";
               }
               var10 = QuickChatHelpSupport.field_f.stringWidth(var5);
-              if (!BattleEvent.a((byte) 110)) {
+              if (!BattleEvent.isChatPanelOverlayOpen((byte) 110)) {
                 if (PopupPlacementSupport.field_j.field_L &&
                   var10 > (-PopupPlacementSupport.field_j.field_B + TertiaryListSequence.field_k)) {
                   if (LoginMethodPreference.field_g) {

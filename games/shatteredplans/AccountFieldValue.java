@@ -9,7 +9,7 @@ final class AccountFieldValue {
     private boolean field_a;
     static int field_b;
 
-    final static MenuList a(int param0, byte param1, int param2, ProjectsContent param3) {
+    final static MenuList createProjectButton(int param0, byte param1, int param2, ProjectsContent param3) {
         String dupTemp$1 = null;
         RuntimeException var4 = null;
         MenuLabel var5 = null;
@@ -30,7 +30,7 @@ final class AccountFieldValue {
           var12 = var11;
           if (param1 > -22) {
             var10 = (PcmSample) null;
-            AccountFieldValue.a(-126, -120, (PcmSample) null);
+            AccountFieldValue.playPcmSample(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
           var5 = new MenuLabel(132 - IconTextPanel.field_Cb.stringWidth(UiTextSupport.field_d[param2]), 0, UiTextSupport.field_d[param2]);
@@ -88,7 +88,7 @@ final class AccountFieldValue {
         return this.field_a;
     }
 
-    final static SoundPlayback a(int param0, int param1, PcmSample param2) {
+    final static SoundPlayback playPcmSample(int param0, int param1, PcmSample param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         SoundPlayback stackIn_1_0 = null;
@@ -98,7 +98,7 @@ final class AccountFieldValue {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 13 / ((-40 - param1) / 39);
-          stackIn_1_0 = DebouncedValidator.a(-128, PcmSampleStream.createScaled(param2, 100, param0));
+          stackIn_1_0 = DebouncedValidator.playSampleStream(-128, PcmSampleStream.createScaled(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

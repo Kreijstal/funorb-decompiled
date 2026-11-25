@@ -399,7 +399,7 @@ final class AccountBooleanRequest {
           if (param0 != 20) {
             field_i = -24;
           }
-          BattleEvent.a(param2, param1, true);
+          BattleEvent.writeHighscoreSubmission(param2, param1, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ks.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

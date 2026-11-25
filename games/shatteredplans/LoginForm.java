@@ -180,7 +180,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_R.containsWidget((byte) -21, (UiWidget) (this));
+            this.field_R.focusFirst((byte) -21, (UiWidget) (this));
           }
           if (this.field_R == param1) {
             this.a(param0 - 4468);
