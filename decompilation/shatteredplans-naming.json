@@ -18958,10 +18958,10 @@
     {
       "symbol": "M:sm.d(III)I",
       "originalName": "d",
-      "to": "findHexAt",
-      "evidence": "Returns the index of the hexagonal button under the pointer or minus one.",
+      "to": "findAchievementAt",
+      "evidence": "Return index0..24of achievement icon bounding box under supplied pointer coordinates, or-1. Full hit-test, achievement pointer caller and25icon renderer bodies read. Original layout is13icons then12in offset second row,32pixel hit bounds,42pixel spacing and sqrt(3)*21vertical offset. Preserve int<53drawItems callback before hit-testing, new int[4] allocation, saveClip then resetClip WITHOUT restore, all signed input/overflow/FPcasts, modifiers/descriptor, literals, aliases and call/exception order. Identifier-only clarification of prior findHexAt alias; no behavior changes.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:GameMenuController.findHexAt(III)I"
+      "renamedSymbol": "M:GameMenuController.findAchievementAt(III)I"
     },
     {
       "symbol": "M:sm.e(B)V",
@@ -277241,7 +277241,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#0",
-      "renamedSymbol": "L:GameMenuController.findHexAt(III)I#0",
+      "renamedSymbol": "L:GameMenuController.findAchievementAt(III)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -277252,7 +277252,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#1",
-      "renamedSymbol": "L:GameMenuController.findHexAt(III)I#1",
+      "renamedSymbol": "L:GameMenuController.findAchievementAt(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -277263,7 +277263,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#2",
-      "renamedSymbol": "L:GameMenuController.findHexAt(III)I#2",
+      "renamedSymbol": "L:GameMenuController.findAchievementAt(III)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -277274,7 +277274,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#3",
-      "renamedSymbol": "L:GameMenuController.findHexAt(III)I#3",
+      "renamedSymbol": "L:GameMenuController.findAchievementAt(III)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -277285,7 +277285,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#4",
-      "renamedSymbol": "L:GameMenuController.findHexAt(III)I#4",
+      "renamedSymbol": "L:GameMenuController.findAchievementAt(III)I#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -350853,9 +350853,9 @@
     },
     {
       "symbol": "M:sm.d(III)I",
-      "renamedSymbol": "M:GameMenuController.findHexAt(III)I",
+      "renamedSymbol": "M:GameMenuController.findAchievementAt(III)I",
       "originalName": "d",
-      "renamedName": "findHexAt",
+      "renamedName": "findAchievementAt",
       "declaration": {
         "file": "sm.java",
         "start": 11528,
@@ -438633,7 +438633,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#0",
-      "renamedSymbol": "P:GameMenuController.findHexAt(III)I#0",
+      "renamedSymbol": "P:GameMenuController.findAchievementAt(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438644,7 +438644,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#1",
-      "renamedSymbol": "P:GameMenuController.findHexAt(III)I#1",
+      "renamedSymbol": "P:GameMenuController.findAchievementAt(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438655,7 +438655,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#2",
-      "renamedSymbol": "P:GameMenuController.findHexAt(III)I#2",
+      "renamedSymbol": "P:GameMenuController.findAchievementAt(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -713910,7 +713910,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "34f8e8ec9847101c3d777fe5cf816a63a9110fc0f157578b1fe51f8714c3616b",
+      "outputSha256": "e2938656f93926996260ee8744bac8c2bf9240ad5e151522c55f414d45679fc8",
       "edits": [
         {
           "start": 50,
@@ -715576,7 +715576,7 @@
           "end": 11529,
           "symbol": "M:sm.d(III)I",
           "original": "d",
-          "renamed": "findHexAt"
+          "renamed": "findAchievementAt"
         },
         {
           "start": 11759,
@@ -720793,7 +720793,7 @@
           "end": 63952,
           "symbol": "M:sm.d(III)I",
           "original": "d",
-          "renamed": "findHexAt"
+          "renamed": "findAchievementAt"
         },
         {
           "start": 63969,
@@ -720828,7 +720828,7 @@
           "end": 64145,
           "symbol": "M:sm.d(III)I",
           "original": "d",
-          "renamed": "findHexAt"
+          "renamed": "findAchievementAt"
         },
         {
           "start": 64150,
@@ -795101,10 +795101,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "b8ede6b56eda3d626680584067995b7113be3dd238fa8adab8224d1012af1f5b",
+    "rulesSha256": "24b136db493bb7115471eb503ac60e002ba1d73e02fdd11f271ec44008f45721",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "143410d8678b1186b7d72b495d9637de014ba302bdd801bd20b039cf416230d2",
+    "outputTreeSha256": "b3f8d5c05d026f4ffcc4889efcca441d04180c4816e9a943eceb7b1fde67a23d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

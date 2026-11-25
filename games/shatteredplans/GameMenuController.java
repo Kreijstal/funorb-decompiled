@@ -344,7 +344,7 @@ final class GameMenuController {
         return;
     }
 
-    private final int findHexAt(int param0, int param1, int param2) {
+    private final int findAchievementAt(int param0, int param1, int param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -1662,13 +1662,13 @@ final class GameMenuController {
     private final void handleAchievementPointer(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        RasterBuffer.field_e = this.findHexAt(param0 + 16191, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
+        RasterBuffer.field_e = this.findAchievementAt(param0 + 16191, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
         if (param0 != -16084) {
           discarded$0 = this.getAnimatedLeft(true);
         }
         if (LobbyCommandSupport.field_d == 0) {
         } else {
-          var2 = this.findHexAt(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
+          var2 = this.findAchievementAt(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (var2 == TerritoryResourcePanelSupport.field_c) {
             TerritoryResourcePanelSupport.field_c = -1;
           } else {
