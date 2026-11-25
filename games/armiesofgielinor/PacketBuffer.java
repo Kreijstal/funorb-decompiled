@@ -570,7 +570,7 @@ class PacketBuffer extends IntrusiveNode {
             this.writeBytes((byte[]) null, -81, 60, -69);
           }
           var5 = (CharSequence) ((Object) text);
-          this.position = this.position + GameplayController.a(this.payload, 0, var5, text.length(), this.position, (byte) 114);
+          this.position = this.position + GameplayController.encodeCp1252Range(this.payload, 0, var5, text.length(), this.position, (byte) 114);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -633,7 +633,7 @@ class PacketBuffer extends IntrusiveNode {
             field_m = (String) null;
           }
           var4 = (CharSequence) ((Object) text);
-          this.position = this.position + GameplayController.a(this.payload, 0, var4, text.length(), this.position, (byte) 113);
+          this.position = this.position + GameplayController.encodeCp1252Range(this.payload, 0, var4, text.length(), this.position, (byte) 113);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

@@ -44,7 +44,7 @@ final class TurnChangeEvent extends GameEvent {
           if (param2.battlefield.field_X) {
             return false;
           }
-          param2.f(this.newTurnNumber, this.nextPlayer, 0);
+          param2.applyTurnChange(this.newTurnNumber, this.nextPlayer, 0);
           if (param1 < -84) {
             return true;
           }

@@ -1778,7 +1778,7 @@ class BattleTutorial {
         if (this.buttonMode != 0) {
           if (1 != this.buttonMode) {
             if (this.buttonMode == 3) {
-              this.controller.d(114, true);
+              this.controller.leaveBattle(114, true);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if ((decompiledFrameRemainder0) &&

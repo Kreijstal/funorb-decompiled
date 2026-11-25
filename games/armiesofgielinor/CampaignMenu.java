@@ -143,10 +143,10 @@ final class CampaignMenu {
         try {
           ConsoleParseException.b(-1);
           if (FullscreenFocusCanvas.gameplayController != null) {
-            FullscreenFocusCanvas.gameplayController.A(111);
+            FullscreenFocusCanvas.gameplayController.releaseBattleResources(111);
           }
           if (null != SectorCacheStore.field_a) {
-            SectorCacheStore.field_a.A(111);
+            SectorCacheStore.field_a.releaseBattleResources(111);
           }
           FullscreenFocusCanvas.gameplayController = null;
           SectorCacheStore.field_a = null;

@@ -125,7 +125,7 @@ final class GameplayController {
     private int field_db;
     int field_Bb;
 
-    private final void a(int param0, int param1, boolean param2, int param3) {
+    private final void drawCampaignResults(int param0, int param1, boolean param2, int param3) {
         RuntimeException runtimeException = null;
         CampaignMission var5 = null;
         int var6 = 0;
@@ -223,7 +223,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
+    private final void drawTurnAndStructureSummary(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
         BinaryBitmapFont stackIn_7_0;
         String stackIn_7_1;
         int stackIn_7_2;
@@ -355,7 +355,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0) {
+    private final void drawTurnBanner(int param0) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         String stackIn_10_0 = null;
@@ -385,7 +385,7 @@ final class GameplayController {
               stackIn_14_0 = var2;
             }
             var3 = stackIn_14_0;
-            discarded$0 = this.a(this.field_j, var3, false, 64);
+            discarded$0 = this.drawTurnBannerCaptionAndCoats(this.field_j, var3, false, 64);
             decompiledFrameRemainder0 = !(!ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledFrameRemainder0) {
@@ -412,10 +412,10 @@ final class GameplayController {
             if (var5 < 50) {
               var5 = 50;
             }
-            discarded$1 = this.a(var5, var4, this.battlefield.teamGame, 64);
+            discarded$1 = this.drawTurnBannerCaptionAndCoats(var5, var4, this.battlefield.teamGame, 64);
           }
           if (param0 != 25167) {
-            this.l(-61);
+            this.drawMinimap(-61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -586,7 +586,7 @@ final class GameplayController {
           }
           manaMultiplier = 1.0f;
           if (obfuscationGuard != 54) {
-            this.a(true, -57, (Unit) null);
+            this.selectUnit(true, -57, (Unit) null);
           }
           initialUnits = mission.campaign.initialUnitTypes;
           initialUnitIndex = 0;
@@ -705,7 +705,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, boolean param4, int param5, int param6, int param7, int param8, int param9) {
+    private final void drawGameInfoFrameAndBackground(int param0, int param1, int param2, byte param3, boolean param4, int param5, int param6, int param7, int param8, int param9) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var11 = null;
         try {
@@ -728,7 +728,7 @@ final class GameplayController {
         }
     }
 
-    final static int a(byte[] param0, int param1, CharSequence param2, int param3, int param4, byte param5) {
+    final static int encodeCp1252Range(byte[] param0, int param1, CharSequence param2, int param3, int param4, byte param5) {
         int stackIn_185_0 = 0;
         RuntimeException stackIn_189_0 = null;
         StringBuilder stackIn_189_1 = null;
@@ -878,7 +878,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
+    private final void drawVictoryProgressBar(int param0, int param1, int param2, int param3, int param4, byte param5) {
         int[][] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_17_0;
@@ -913,7 +913,7 @@ final class GameplayController {
           var10 = param4;
           var11 = param3;
           SoftwareRaster.fillRectangleBlended(param4, param3, param2, param1, 0, 255);
-          var12 = this.a((byte) -70, param0);
+          var12 = this.estimateTurnsUntilVictory((byte) -70, param0);
           if (4 <= var12 ||
             var12 <= 0) {
             SoftwareRaster.drawRectangleOutline(param4, param3, param2, param1, 15724527);
@@ -957,7 +957,7 @@ final class GameplayController {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawTeamResultCard(int param0, int param1, int param2, int param3, int param4) {
         boolean discarded$0 = false;
         CoatOfArms stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
@@ -980,7 +980,7 @@ final class GameplayController {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 18) {
-            discarded$0 = this.a(false);
+            discarded$0 = this.canAcceptPlayerInput(false);
           }
           var6 = ConsoleValue.field_b;
           GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
@@ -1015,12 +1015,12 @@ final class GameplayController {
               ((CoatOfArms) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
               DateInputWidget.field_E.drawCentered(var10, IgnoreListLookupSupport.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
-              this.a(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
+              this.drawPlayerRuneReward(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
               var8 = var8 + var7;
             }
             var9++;
           }
-          this.b(param0, 265 + param4, param1 + 95, param2 - 12875);
+          this.drawTeamStructureCounts(param0, 265 + param4, param1 + 95, param2 - 12875);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1029,7 +1029,7 @@ final class GameplayController {
         }
     }
 
-    private final void p(byte param0) {
+    private final void maskExpandedMinimapCorners(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1064,7 +1064,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawThirdPlaceResultCard(int param0, int param1, int param2, int param3, int param4) {
         int[] stackIn_8_0 = null;
         int stackIn_11_0;
         int stackIn_11_1;
@@ -1163,9 +1163,9 @@ final class GameplayController {
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
             ((CoatOfArms) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
             DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
-            this.b(var7, param0 + 104, param3 + 21, -12857);
+            this.drawTeamStructureCounts(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
-            this.a(stackIn_47_1, var7, (byte) 110, 280, param3 + 80);
+            this.drawPlayerRuneReward(stackIn_47_1, var7, (byte) 110, 280, param3 + 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1175,7 +1175,7 @@ final class GameplayController {
         }
     }
 
-    private final void o(byte param0) {
+    private final void drawGameStatusSummary(byte param0) {
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1206,18 +1206,18 @@ final class GameplayController {
           if (param0 != 107) {
             this.battleTutorial = (BattleTutorial) null;
           }
-          var4 = this.o(param0 + 20) - 162;
+          var4 = this.getBattleUiBottom(param0 + 20) - 162;
           var5 = 133;
           var6 = 25;
           var7 = 0;
           var8 = SelectionMenuLayoutSupport.field_b.canvasWidth;
           var7Lifetime1 = 1;
           var9 = var6 + SelectionMenuLayoutSupport.field_b.canvasHeight;
-          this.a(4, 2, var5, (byte) 89, var7Lifetime1 != 0, var8, var9, 99, var4, 3);
-          this.a(param0 - 111, 90, 9, this.o(125) - 133, 24, var6);
-          this.a(30, var3 != 0, var6, 16, (byte) -126, 63, var2_int);
-          this.a(this.battlefield.getPlayerTeamIndex(var2_int, param0 - 108), var6, 3 * var6 + (this.o(126) - 133), 15, 90, -111, 9, -6 + var6 >> 1);
-          SpellConfirmationDialog.field_j.drawTransparent(20, this.o(127) - 180);
+          this.drawGameInfoFrameAndBackground(4, 2, var5, (byte) 89, var7Lifetime1 != 0, var8, var9, 99, var4, 3);
+          this.drawGameInfoIconRows(param0 - 111, 90, 9, this.getBattleUiBottom(125) - 133, 24, var6);
+          this.drawTurnAndStructureSummary(30, var3 != 0, var6, 16, (byte) -126, 63, var2_int);
+          this.drawInsetVictoryProgressBar(this.battlefield.getPlayerTeamIndex(var2_int, param0 - 108), var6, 3 * var6 + (this.getBattleUiBottom(126) - 133), 15, 90, -111, 9, -6 + var6 >> 1);
+          SpellConfirmationDialog.field_j.drawTransparent(20, this.getBattleUiBottom(127) - 180);
           if (this.field_fc) {
             SoftwareRaster.fillRectangleBlended(4, var4, 99, var5, 16777215, (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0));
           }
@@ -1229,7 +1229,7 @@ final class GameplayController {
         }
     }
 
-    private final void j(byte param0) {
+    private final void acknowledgeTurnIntro(byte param0) {
         int var2_int = 0;
         if (param0 != 109) {
           return;
@@ -1248,7 +1248,7 @@ final class GameplayController {
         }
     }
 
-    private final int n(byte param0) {
+    private final int getEndTurnButtonOpacity(byte param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1266,7 +1266,7 @@ final class GameplayController {
         }
     }
 
-    private final String c(int param0, int param1) {
+    private final String formatCompactAmount(int param0, int param1) {
         String stackIn_2_0 = null;
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
@@ -1312,7 +1312,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean a(boolean param0, GameEvent param1) {
+    private final boolean canOverlapEventPresentation(boolean param0, GameEvent param1) {
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
         String stackIn_66_2 = null;
@@ -1631,7 +1631,7 @@ final class GameplayController {
         }
     }
 
-    private final void c(int param0) {
+    private final void sendRandomBattleDebugPacket(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1660,13 +1660,13 @@ final class GameplayController {
         }
     }
 
-    private final void b(int param0) {
+    private final void submitChosenGods(int param0) {
         CipherPacketBuffer var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
           if (param0 != -24936) {
-            GameplayController.a((byte[]) null, -44, (CharSequence) null, 112, -65, (byte) -121);
+            GameplayController.encodeCp1252Range((byte[]) null, -44, (CharSequence) null, 112, -65, (byte) -121);
           }
           if (this.field_lb) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
@@ -1687,7 +1687,7 @@ final class GameplayController {
         }
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void selectSpell(int param0, int param1, int param2) {
         String stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
@@ -1703,13 +1703,13 @@ final class GameplayController {
           }
           if (this.battlefield.currentPlayer == this.controlledPlayerId &&
             this.aiPlanners[this.controlledPlayerId] == null) {
-            stackIn_12_0 = this.i(param0, 118);
+            stackIn_12_0 = this.getSpellUnavailableMessage(param0, 118);
           } else {
             stackIn_12_0 = TurnTimerDial.field_g;
           }
           var4 = stackIn_12_0;
           if (null != var4) {
-            this.a(false, var4, (byte) -127);
+            this.showBattleError(false, var4, (byte) -127);
             return;
           }
           this.field_y = -2;
@@ -1724,7 +1724,7 @@ final class GameplayController {
           if (null != this.field_oc) {
             this.field_oc = null;
           }
-          this.a(true, 58, (Unit) null);
+          this.selectUnit(true, 58, (Unit) null);
           this.movementPlanner.clearPath(126);
           this.field_gc = param0;
           this.field_nc = param1;
@@ -1924,7 +1924,7 @@ final class GameplayController {
         }
     }
 
-    private final void i(boolean param0) {
+    private final void advanceSelectionPanel(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -1989,7 +1989,7 @@ final class GameplayController {
             }
           }
           if (param0) {
-            this.f((byte) 75);
+            this.submitPreparedMovement((byte) 75);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1999,7 +1999,7 @@ final class GameplayController {
         }
     }
 
-    private final void e(byte param0) {
+    private final void prepareTurnConsequences(byte param0) {
         Battlefield stackIn_6_0 = null;
         boolean stackIn_6_1 = false;
         boolean stackIn_7_2 = false;
@@ -2007,7 +2007,7 @@ final class GameplayController {
         RuntimeException var2 = null;
         try {
           if (param0 != 77) {
-            this.e(true);
+            this.drawMatchResults(true);
           }
           stackIn_6_0 = this.battlefield;
           stackIn_6_1 = true;
@@ -2021,7 +2021,7 @@ final class GameplayController {
         }
     }
 
-    private final int a(Unit param0, byte param1) {
+    private final int findTileContainingUnit(Unit param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         MapTile var4 = null;
@@ -2084,7 +2084,7 @@ final class GameplayController {
         }
     }
 
-    private final void c(byte param0) {
+    private final void drawSelectedMovementPath(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -2101,7 +2101,7 @@ final class GameplayController {
         }
     }
 
-    private final int b(boolean param0) {
+    private final int resolvePointerAction(boolean param0) {
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_27_0 = 0;
@@ -2242,17 +2242,17 @@ final class GameplayController {
               return stackIn_27_0;
             }
             if (this.field_lb &&
-              IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, -40 + this.o(126), -10 + this.o(125))) {
+              IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, -40 + this.getBattleUiBottom(126), -10 + this.getBattleUiBottom(125))) {
               stackIn_33_0 = 2;
               return stackIn_33_0;
             }
             if (this.field_lb &&
               this.battlefield.teamGame &&
-              TabbedPanel.a(this.o(125) - 26, 88, 14, false)) {
+              TabbedPanel.a(this.getBattleUiBottom(125) - 26, 88, 14, false)) {
               stackIn_42_0 = 26;
               return stackIn_42_0;
             }
-            var4 = -162 + this.o(125);
+            var4 = -162 + this.getBattleUiBottom(125);
             var5 = 107;
             var6 = 25;
             if (!this.battlefield.field_V) {
@@ -2282,13 +2282,13 @@ final class GameplayController {
                 var11 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var12 = -65 - var11 + (PowerOfTwoSupport.field_k - var9);
               }
-              if (this.f(128, IgnoreListLookupSupport.a(true, var12)) >= MatchConditionEntry.a(IgnoreRequestSupport.field_a, (byte) 94)) {
+              if (this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(true, var12)) >= MatchConditionEntry.a(IgnoreRequestSupport.field_a, (byte) 94)) {
                 var10 = var10 + IgnoreRequestSupport.field_a;
                 if (var13 != 0) {
-                  var10 = var10 + this.f(128, IgnoreListLookupSupport.a(param0, var12));
+                  var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(param0, var12));
                 }
               } else {
-                var10 = var10 + this.f(128, IgnoreListLookupSupport.a(param0, var12));
+                var10 = var10 + this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(param0, var12));
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 0) + var7 - (var9 + 45), var7 + IgnoreListLookupSupport.a(true, 0) - 15, var10 + MatchConditionEntry.a(0, (byte) 94), 28 + (MatchConditionEntry.a(0, (byte) 94) + var10))) {
                 stackIn_68_0 = 19;
@@ -2567,7 +2567,7 @@ final class GameplayController {
                 }
               }
             }
-            if (TabbedPanel.a(-95 + this.o(126), 130, 22, false) && (this.battlefield.runeCapOption != 0 ||
+            if (TabbedPanel.a(-95 + this.getBattleUiBottom(126), 130, 22, false) && (this.battlefield.runeCapOption != 0 ||
               this.field_E)) {
               stackIn_309_0 = 23;
               return stackIn_309_0;
@@ -2577,7 +2577,7 @@ final class GameplayController {
               var7Lifetime4 = 0;
               while (var7Lifetime4 < 5) {
                 var8Lifetime2 = 130 + (int)(Math.sin((double)var7Lifetime4 * 3.141592653589793 / 4.0) * 64.0);
-                var9Lifetime3 = (int)(Math.cos(3.141592653589793 * (double)var7Lifetime4 / 4.0) * -64.0) - (-this.o(126) + 95);
+                var9Lifetime3 = (int)(Math.cos(3.141592653589793 * (double)var7Lifetime4 / 4.0) * -64.0) - (-this.getBattleUiBottom(126) + 95);
                 stackOut_313_0 = TabbedPanel.a(var9Lifetime3, var8Lifetime2, 22, false);
                 stackIn_321_0 = stackOut_313_0 ? 1 : 0;
                 stackIn_314_0 = stackOut_313_0;
@@ -2599,7 +2599,7 @@ final class GameplayController {
             if (stackIn_321_0 == this.field_n) {
               var7Lifetime5 = -1;
               while (var7Lifetime5 < 6) {
-                stackOut_324_0 = TabbedPanel.a(this.o(127) - 100, 230 + 45 * var7Lifetime5, 22, false);
+                stackOut_324_0 = TabbedPanel.a(this.getBattleUiBottom(127) - 100, 230 + 45 * var7Lifetime5, 22, false);
                 stackIn_332_0 = stackOut_324_0 ? 1 : 0;
                 stackIn_325_0 = stackOut_324_0;
                 if (var13 != 0) {
@@ -2692,7 +2692,7 @@ final class GameplayController {
               if (!IterableDualNodeDeque.isPointerInBounds(-33, var7Lifetime7 + 25, var7Lifetime7 + 55, var8Lifetime4 - 8, 7 + var8Lifetime4)) {
                 if (!IterableDualNodeDeque.isPointerInBounds(-33, 25 + var7Lifetime7, var7Lifetime7 + 55, 33 + var8Lifetime4, var8Lifetime4 + 48)) {
                   if (IterableDualNodeDeque.isPointerInBounds(-33, var7Lifetime7 - 15, 15 + var7Lifetime7, 13 + var8Lifetime4, var8Lifetime4 + 28)) {
-                    var9Lifetime4 = this.d(-59, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
+                    var9Lifetime4 = this.isTwoByTwoTileBlockInBounds(-59, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
                     if (var9Lifetime4 != 0) {
                       stackIn_398_0 = 12;
                       return stackIn_398_0;
@@ -2701,7 +2701,7 @@ final class GameplayController {
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, 65 + var7Lifetime7, 95 + var7Lifetime7, var8Lifetime4 + 13, var8Lifetime4 + 28)))) {
-                    var9Lifetime4 = this.d(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
+                    var9Lifetime4 = this.isTwoByTwoTileBlockInBounds(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
                     if (var9Lifetime4 != 0) {
                       stackIn_405_0 = 13;
                       return stackIn_405_0;
@@ -2710,7 +2710,7 @@ final class GameplayController {
                   }
                 }
                 if (decompiledFrameRemainder2) {
-                  var9Lifetime4 = this.d(-78, this.selectedUnit.tileY, this.selectedUnit.tileX - 1) ? 1 : 0;
+                  var9Lifetime4 = this.isTwoByTwoTileBlockInBounds(-78, this.selectedUnit.tileY, this.selectedUnit.tileX - 1) ? 1 : 0;
                   if (var9Lifetime4 != 0) {
                     stackIn_411_0 = 11;
                     return stackIn_411_0;
@@ -2719,7 +2719,7 @@ final class GameplayController {
                 }
               }
               if (decompiledFrameRemainder2) {
-                var9Lifetime4Lifetime1 = this.d(-65, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
+                var9Lifetime4Lifetime1 = this.isTwoByTwoTileBlockInBounds(-65, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
                 if (var9Lifetime4Lifetime1 != 0) {
                   stackIn_417_0 = 10;
                   return stackIn_417_0;
@@ -2760,7 +2760,7 @@ final class GameplayController {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void drawSelectedRankAwards(int param0, int param1, int param2) {
         int stackIn_28_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
@@ -2854,7 +2854,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void drawGameInfoIconRows(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         int var7_int = 0;
         int var8 = 0;
@@ -2883,7 +2883,7 @@ final class GameplayController {
         }
     }
 
-    private final void v(int param0) {
+    private final void drawSelectionOverlays(int param0) {
         boolean stackIn_60_0 = false;
         int stackIn_67_0 = 0;
         boolean stackIn_95_0 = false;
@@ -2926,7 +2926,7 @@ final class GameplayController {
               this.unitMenus[this.field_y].draw(this.battlefield.playerMana[this.controlledPlayerId], -23451, this.field_hc, var2_int, var3);
               var4_int = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -116, HighscoreAccountEntry.pointerY, 16 + var2_int, AiPlanningStrategy.pointerX, 16 + var3);
               if (var4_int > -1) {
-                this.c(16 + var3, var4_int, 0, var2_int + 16);
+                this.drawSummonUnitStats(16 + var3, var4_int, 0, var2_int + 16);
               }
             }
           }
@@ -2938,29 +2938,29 @@ final class GameplayController {
             var2_intLifetime1 = this.camera.screenPosition[0];
             var3Lifetime1 = this.camera.screenPosition[1];
             if (IterableDualNodeDeque.isPointerInBounds(-33, 25 + var2_intLifetime1, 55 + var2_intLifetime1, -8 + var3Lifetime1, 7 + var3Lifetime1)) {
-              var4_intLifetime1 = this.d(-92, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
-              this.a(40, var4_intLifetime1 != 0, var3Lifetime1, 40 + var2_intLifetime1);
+              var4_intLifetime1 = this.isTwoByTwoTileBlockInBounds(-92, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
+              this.drawAbilityDirectionDiamond(40, var4_intLifetime1 != 0, var3Lifetime1, 40 + var2_intLifetime1);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (!IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 + 25, 55 + var2_intLifetime1, var3Lifetime1 + 33, 48 + var3Lifetime1)) {
                 if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 - 15, 15 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28)) {
-                  var4_intLifetime1Lifetime1 = this.d(-51, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
-                  this.a(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, var2_intLifetime1);
+                  var4_intLifetime1Lifetime1 = this.isTwoByTwoTileBlockInBounds(-51, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
+                  this.drawAbilityDirectionDiamond(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, var2_intLifetime1);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
                   (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 + 65, 95 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28))) {
-                  var4_intLifetime1Lifetime1 = this.d(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
-                  this.a(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, 80 + var2_intLifetime1);
+                  var4_intLifetime1Lifetime1 = this.isTwoByTwoTileBlockInBounds(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
+                  this.drawAbilityDirectionDiamond(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, 80 + var2_intLifetime1);
                   if (var8 != 0) {
-                    var4_intLifetime1Lifetime1 = this.d(-94, this.selectedUnit.tileY, -1 + this.selectedUnit.tileX) ? 1 : 0;
-                    this.a(40, var4_intLifetime1Lifetime1 != 0, var3Lifetime1 + 40, var2_intLifetime1 + 40);
+                    var4_intLifetime1Lifetime1 = this.isTwoByTwoTileBlockInBounds(-94, this.selectedUnit.tileY, -1 + this.selectedUnit.tileX) ? 1 : 0;
+                    this.drawAbilityDirectionDiamond(40, var4_intLifetime1Lifetime1 != 0, var3Lifetime1 + 40, var2_intLifetime1 + 40);
                   }
                 }
               } else {
-                var4_intLifetime1Lifetime1 = this.d(-94, this.selectedUnit.tileY, -1 + this.selectedUnit.tileX) ? 1 : 0;
-                this.a(40, var4_intLifetime1Lifetime1 != 0, var3Lifetime1 + 40, var2_intLifetime1 + 40);
+                var4_intLifetime1Lifetime1 = this.isTwoByTwoTileBlockInBounds(-94, this.selectedUnit.tileY, -1 + this.selectedUnit.tileX) ? 1 : 0;
+                this.drawAbilityDirectionDiamond(40, var4_intLifetime1Lifetime1 != 0, var3Lifetime1 + 40, var2_intLifetime1 + 40);
               }
             }
             MatchConditionRegistry.field_d[0].drawTransparent(var2_intLifetime1 + 25, var3Lifetime1 - 8);
@@ -3020,7 +3020,7 @@ final class GameplayController {
           }
           if (stackIn_67_0 > ~this.field_ab) {
             if (0 != this.field_i) {
-              this.a(0, 112, 0, 253, this.battlefield.tiles[this.field_ab], this.field_i, this.controlledPlayerId, this.battlefield.mapTheme);
+              this.drawTileInfoPanel(0, 112, 0, 253, this.battlefield.tiles[this.field_ab], this.field_i, this.controlledPlayerId, this.battlefield.mapTheme);
               if (var8 != 0) {
                 this.field_ab = -1;
               }
@@ -3039,7 +3039,7 @@ final class GameplayController {
             }
           }
           if (this.selectedTileIndex > -1) {
-            this.a(0, 110, this.field_qb, 253, this.battlefield.tiles[this.selectedTileIndex], this.field_fb, this.controlledPlayerId, this.battlefield.mapTheme);
+            this.drawTileInfoPanel(0, 110, this.field_qb, 253, this.battlefield.tiles[this.selectedTileIndex], this.field_fb, this.controlledPlayerId, this.battlefield.mapTheme);
           }
           if (null != this.selectedUnit) {
             stackIn_95_0 = (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer);
@@ -3053,7 +3053,7 @@ final class GameplayController {
         }
     }
 
-    private final void h(int param0, int param1) {
+    private final void activateSelectedUnitAbility(int param0, int param1) {
         int stackIn_31_0 = 0;
         int stackIn_52_0 = 0;
         CipherPacketBuffer stackIn_91_0 = null;
@@ -3107,11 +3107,11 @@ final class GameplayController {
             if ((!this.selectedUnit.movementSpent &&
               this.selectedUnit.attacksRemaining != 0) &&
               (decompiledFrameRemainder0 = (var5 != 0))) {
-              this.a(false, SoundPanSupport.field_e, (byte) -119);
+              this.showBattleError(false, SoundPanSupport.field_e, (byte) -119);
               return;
             }
             if (decompiledFrameRemainder0) {
-              this.a(false, BattleCameraTargetTransform.field_d, (byte) -127);
+              this.showBattleError(false, BattleCameraTargetTransform.field_d, (byte) -127);
               return;
             }
           }
@@ -3122,7 +3122,7 @@ final class GameplayController {
             var5Lifetime1 = stackIn_52_0;
             if (this.selectedUnit.movementSpent ||
               this.selectedUnit.attacksRemaining == 0) {
-              this.a(false, BattleCameraTargetTransform.field_d, (byte) -128);
+              this.showBattleError(false, BattleCameraTargetTransform.field_d, (byte) -128);
               if (var6 == 0) {
                 return;
               }
@@ -3133,7 +3133,7 @@ final class GameplayController {
                 return;
               }
             }
-            this.a(false, StatefulWidgetPainter.field_x, (byte) -122);
+            this.showBattleError(false, StatefulWidgetPainter.field_x, (byte) -122);
             return;
           }
           if (17 == this.selectedUnit.unitType &&
@@ -3180,7 +3180,7 @@ final class GameplayController {
               }
             }
           }
-          this.a(false, 58, (Unit) null);
+          this.selectUnit(false, 58, (Unit) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3189,16 +3189,16 @@ final class GameplayController {
         }
     }
 
-    private final void u(int param0) {
+    private final void drawManaCounter(int param0) {
         boolean discarded$1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 517) {
-            discarded$1 = this.l(true);
+            discarded$1 = this.handleCompactMinimapClick(true);
           }
           SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 77, 150, 15, -67);
-          GradientUiRenderer.drawCenteredSolidText(this.c(this.battlefield.playerMana[this.controlledPlayerId], -117), 180, 44, 16777215, true);
+          GradientUiRenderer.drawCenteredSolidText(this.formatCompactAmount(this.battlefield.playerMana[this.controlledPlayerId], -117), 180, 44, 16777215, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3207,7 +3207,7 @@ final class GameplayController {
         }
     }
 
-    private final void C(int param0) {
+    private final void updateEndTurnHint(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -3253,7 +3253,7 @@ final class GameplayController {
         }
     }
 
-    private final void q(byte param0) {
+    private final void cycleUnitOrPortalFocus(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3271,7 +3271,7 @@ final class GameplayController {
               this.field_kc = null;
             }
             if (this.field_kc != null) {
-              this.field_kc = this.a(-1, var2_int, this.field_kc, false);
+              this.field_kc = this.findOwnedActiveUnit(-1, var2_int, this.field_kc, false);
             }
             boolean decompiledSharedTail0 = (this.field_kc == null);
             if (!decompiledSharedTail0) {
@@ -3279,16 +3279,16 @@ final class GameplayController {
               decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
             }
             if (decompiledSharedTail0) {
-              this.field_Kb = this.b(var2_int, this.field_Kb, true);
+              this.field_Kb = this.findNextOwnedPortal(var2_int, this.field_Kb, true);
               if (this.field_Kb == -1) {
-                this.field_kc = this.a(-1, var2_int, (Unit) null, true);
+                this.field_kc = this.findOwnedActiveUnit(-1, var2_int, (Unit) null, true);
               }
             }
             var3 = -1;
             if (this.field_kc != null) {
-              var3 = this.a(this.field_kc, (byte) 75);
+              var3 = this.findTileContainingUnit(this.field_kc, (byte) 75);
               if (this.selectedUnit != this.field_kc) {
-                this.a(false, param0 - 61, this.field_kc);
+                this.selectUnit(false, param0 - 61, this.field_kc);
                 this.field_y = -2;
               }
             }
@@ -3296,7 +3296,7 @@ final class GameplayController {
               var3 = this.field_Kb;
               this.field_ec = var3 / this.battlefield.mapWidth;
               this.field_X = var3 % this.battlefield.mapWidth;
-              this.a(false, 58, (Unit) null);
+              this.selectUnit(false, 58, (Unit) null);
               this.field_y = -1;
               this.field_hc = this.battlefield.getSummoningFavourAt(this.field_ec, (byte) 63, this.field_X, this.controlledPlayerId);
             }
@@ -3317,7 +3317,7 @@ final class GameplayController {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void beginCombatPresentationPause(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -3338,7 +3338,7 @@ final class GameplayController {
               return;
             }
           }
-          this.a(16, -126);
+          this.notifyTutorialAction(16, -126);
           this.field_Tb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3348,7 +3348,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3) {
+    private final void drawAbilityDirectionDiamond(int param0, boolean param1, int param2, int param3) {
         int var5_int = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3368,7 +3368,7 @@ final class GameplayController {
         }
     }
 
-    final void l(byte param0) {
+    final void requestReturnToLobby(byte param0) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3387,8 +3387,8 @@ final class GameplayController {
         }
     }
 
-    private final void f(int param0) {
-        this.s(-96);
+    private final void drawLocalTurnHandover(int param0) {
+        this.drawMenuBackground(-96);
         if (!this.field_bb) {
           GradientUiRenderer.drawCenteredTextBackdrop(ChatMessage.field_o, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
           GradientUiRenderer.drawCenteredGradientText(ChatMessage.field_o, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(380, (byte) 94), ConsoleValue.field_b, false);
@@ -3407,7 +3407,7 @@ final class GameplayController {
         }
     }
 
-    final void a(boolean param0, Unit param1) {
+    final void selectUnitAfterEvent(boolean param0, Unit param1) {
         MovementPlanner stackIn_38_0 = null;
         boolean stackIn_39_1 = false;
         int stackIn_52_0 = 0;
@@ -3486,7 +3486,7 @@ final class GameplayController {
                 break;
               }
             }
-            this.a(false, 58, (Unit) (var3));
+            this.selectUnit(false, 58, (Unit) (var3));
             return;
           }
           return;
@@ -3504,7 +3504,7 @@ final class GameplayController {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void advanceBattle(int param0, boolean param1) {
         TurnTimerDial stackIn_26_0 = null;
         boolean stackIn_27_1 = false;
         MovementPlanner stackIn_104_0 = null;
@@ -3551,7 +3551,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder4 = true;
           this.trackCampaignMetrics(true);
           if (this.battlefield.field_X) {
-            this.k(true);
+            this.handleResultsPointerInput(true);
             decompiledFrameRemainder4 = (var10 != 0);
           }
           if (decompiledFrameRemainder4) {
@@ -3560,15 +3560,15 @@ final class GameplayController {
               stackIn_27_1 = (this.controlledPlayerId == this.battlefield.currentPlayer);
               ((TurnTimerDial) (Object) stackIn_26_0).advanceSweep(stackIn_27_1, this.remainingTurnTicks, (byte) 124);
             }
-            this.i(false);
-            this.y(112);
+            this.advanceSelectionPanel(false);
+            this.reportPlayerStatusChanges(112);
             if (null != this.field_Nb.first((byte) 113)) {
               ((ToastMessage) (this.field_Nb.first((byte) 96))).advance((byte) 66);
             }
             if (this.field_L > 0) {
               this.field_L = this.field_L - 1;
             }
-            this.w(39);
+            this.advanceAmbientSoundTimer(39);
             if (0 < this.field_yb) {
               this.field_yb = this.field_yb - 1;
               if (this.field_yb == 0) {
@@ -3580,13 +3580,13 @@ final class GameplayController {
               this.battleTutorial.advancePanelAnimation(-68);
             }
             if (!this.battlefield.field_Cb) {
-              this.x(98);
+              this.advanceGodSelection(98);
             }
           }
           if (param1) {
             this.updateCamera((byte) -42);
             if (!FriendLookupSupport.b((byte) -73)) {
-              this.b(this.b(true), 123);
+              this.handleBattlePointerAction(this.resolvePointerAction(true), 123);
               if (null == FullscreenFocusCanvas.gameplayController &&
                 SectorCacheStore.field_a == null) {
                 return;
@@ -3606,7 +3606,7 @@ final class GameplayController {
               if (stackIn_117_0) {
                 this.field_Q = true;
               }
-              if (this.a((EventPresenter) (var3), false)) {
+              if (this.canOverlapPresenter((EventPresenter) (var3), false)) {
                 this.field_O = true;
               }
               if (((EventPresenter) (var3)).event.eventKind == 24) {
@@ -3615,27 +3615,27 @@ final class GameplayController {
               if (((EventPresenter) (var3)).event.presentationComplete) {
                 ((EventPresenter) (var3)).event.applyToBattlefield(this.battlefield, -26661);
                 if (((EventPresenter) (var3)).event.eventKind == 1) {
-                  this.e(((CombatEvent) (((EventPresenter) (var3)).event)).battleId, -56);
+                  this.finishCombatPresentationPause(((CombatEvent) (((EventPresenter) (var3)).event)).battleId, -56);
                   var4 = ((CombatEvent) (((EventPresenter) (var3)).event)).targetDeltaX;
                   var5 = ((CombatEvent) (((EventPresenter) (var3)).event)).targetDeltaY;
                   var6_ref_jd = this.battlefield.getUnitAt(var5, true, var4);
-                  this.a(true, var6_ref_jd);
+                  this.selectUnitAfterEvent(true, var6_ref_jd);
                 }
                 if (0 == ((EventPresenter) (var3)).event.eventKind) {
                   this.notifyTutorialInteraction(5, this.battlefield.mapWidth * ((EventPresenter) (var3)).event.unit.tileY + ((EventPresenter) (var3)).event.unit.tileX, -112);
                   var4_ref_jd = ((EventPresenter) (var3)).event.unit;
-                  this.a(true, var4_ref_jd);
+                  this.selectUnitAfterEvent(true, var4_ref_jd);
                 }
                 if (((EventPresenter) (var3)).event.eventKind == 2) {
-                  this.a(12, -125);
+                  this.notifyTutorialAction(12, -125);
                 }
                 if (10 == ((EventPresenter) (var3)).event.eventKind) {
-                  this.a(15, -121);
+                  this.notifyTutorialAction(15, -121);
                 }
                 if (((EventPresenter) (var3)).event.eventKind == 3) {
-                  this.a(13, -124);
+                  this.notifyTutorialAction(13, -124);
                 }
-                this.C(-90);
+                this.updateEndTurnHint(-90);
                 if (this.selectedUnit != null) {
                   stackIn_104_0 = this.movementPlanner;
                   stackIn_105_1 = (null == this.field_oc);
@@ -3645,7 +3645,7 @@ final class GameplayController {
                   var4_ref_mb = (SummonEvent) (((EventPresenter) (var3)).event);
                   if (~var4_ref_mb.playerId == ~this.controlledPlayerId &&
                     !this.field_z) {
-                    this.a(false, 58, this.battlefield.getUnitAt(var4_ref_mb.tileY, true, var4_ref_mb.tileX));
+                    this.selectUnit(false, 58, this.battlefield.getUnitAt(var4_ref_mb.tileY, true, var4_ref_mb.tileX));
                   }
                 }
                 ((EventPresenter) (var3)).event = null;
@@ -3687,7 +3687,7 @@ final class GameplayController {
                 this.field_j = this.field_j - 1;
                 boolean decompiledSharedTail3 = (this.field_j != 0);
                 if (!decompiledSharedTail3) {
-                  this.j((byte) 109);
+                  this.acknowledgeTurnIntro((byte) 109);
                   decompiledSharedTail3 = (var10 != 0);
                 }
                 if (decompiledSharedTail3) {
@@ -3728,7 +3728,7 @@ final class GameplayController {
                 if ((this.field_Q) &&
                   (decompiledFrameRemainder6 = (this.field_Q)) &&
                   (decompiledFrameRemainder6 = (this.field_O))) {
-                  decompiledFrameRemainder6 = !(!this.a(false, (GameEvent) (var3)));
+                  decompiledFrameRemainder6 = !(!this.canOverlapEventPresentation(false, (GameEvent) (var3)));
                 }
                 if (decompiledFrameRemainder6) {
                   boolean decompiledFrameCompleted0 = true;
@@ -3771,7 +3771,7 @@ final class GameplayController {
                       if (4 != ((ManaEvent) (var3)).manaTypeCode) {
                         scanLoop3: while (true) {
                           if (((ManaEvent) (var3)).manaPoints > 0) {
-                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(20, -120 + this.f(128, 0) + ((ManaEvent) (var3)).manaTypeCode * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).manaTypeCode + (var4 >> 2), 1, ((ManaEvent) (var3)).manaTypeCode)));
+                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(20, -120 + this.getBattleUiBottomAtX(128, 0) + ((ManaEvent) (var3)).manaTypeCode * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).manaTypeCode + (var4 >> 2), 1, ((ManaEvent) (var3)).manaTypeCode)));
                             ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                             var4++;
                             if (var10 != 0) {
@@ -3791,7 +3791,7 @@ final class GameplayController {
                           if (((ManaEvent) (var3)).manaPoints <= 0) {
                             break;
                           }
-                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(AttackEvent.nextBoundedInt(false, 30, ConsoleTokenSupport.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, ConsoleTokenSupport.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).manaTypeCode)));
+                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ManaStarParticle(AttackEvent.nextBoundedInt(false, 30, ConsoleTokenSupport.field_b) + 115, this.getBattleUiBottomAtX(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, ConsoleTokenSupport.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).manaTypeCode)));
                           var4++;
                           ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                           if (var10 != 0) {
@@ -3808,7 +3808,7 @@ final class GameplayController {
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameCompleted0)) {
                     this.field_Q = ((GameEvent) (var3)).beginPresentation(this.eventPresenters, (byte) -127, this);
-                    this.field_O = this.a(false, (GameEvent) (var3));
+                    this.field_O = this.canOverlapEventPresentation(false, (GameEvent) (var3));
                     if (QuickChatCategoryMenuSupport.activeCampaignMission != null && (((GameEvent) (var3)).eventKind == 0 ||
                       ((GameEvent) (var3)).eventKind == 21 ||
                       ((GameEvent) (var3)).eventKind == 27 ||
@@ -3895,11 +3895,11 @@ final class GameplayController {
               if ((this.field_lb) &&
                 (decompiledFrameRemainder1 = !(this.remainingTurnTicks < 1)) &&
                 (decompiledFrameRemainder1 = !(this.field_Tb))) {
-                this.m((byte) -75);
+                this.advanceTurnCountdown((byte) -75);
                 decompiledFrameRemainder1 = (this.remainingTurnTicks == 0);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = (~this.battlefield.currentPlayer == ~this.controlledPlayerId))) {
-                  this.r((byte) 80);
+                  this.endCurrentTurn((byte) 80);
                   decompiledFrameRemainder1 = (var10 != 0);
                 }
               }
@@ -3910,26 +3910,26 @@ final class GameplayController {
                     !this.field_Q) {
                     var4 = this.aiPlanners[this.battlefield.currentPlayer].advanceTurn(-5094) ? 1 : 0;
                     if (var4 != 0) {
-                      this.r((byte) 125);
+                      this.endCurrentTurn((byte) 125);
                     }
                   }
                 } else {
                   if (!this.field_z) {
                     if (!this.field_V &&
                       !this.field_Tb) {
-                      this.m((byte) 126);
+                      this.advanceTurnCountdown((byte) 126);
                       if (this.battlefield.currentPlayer >= 0 &&
                         null != this.aiPlanners[this.battlefield.currentPlayer] &&
                         !this.field_Q) {
                         var4 = this.aiPlanners[this.battlefield.currentPlayer].advanceTurn(-5094) ? 1 : 0;
                         if (var4 != 0) {
-                          this.r((byte) 87);
+                          this.endCurrentTurn((byte) 87);
                         }
                       }
                     }
                     if (this.remainingTurnTicks == 0 &&
                       this.controlledPlayerId == this.battlefield.currentPlayer) {
-                      this.r((byte) -66);
+                      this.endCurrentTurn((byte) -66);
                     }
                   }
                 }
@@ -4050,7 +4050,7 @@ final class GameplayController {
         }
     }
 
-    final void A(int param0) {
+    final void releaseBattleResources(int param0) {
         NodeDeque[] var2 = null;
         int var3 = 0;
         NodeDeque var4 = null;
@@ -4094,7 +4094,7 @@ final class GameplayController {
         }
     }
 
-    private final void m(byte param0) {
+    private final void advanceTurnCountdown(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4116,7 +4116,7 @@ final class GameplayController {
         }
     }
 
-    private final void h(int param0) {
+    private final void drawTurnControls(int param0) {
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_38_1 = 0;
@@ -4149,12 +4149,12 @@ final class GameplayController {
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
-            WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, UnitRecordWriter.field_c, 67, GrowthEvent.field_I, this.field_Fb);
+            WidgetStateStyle.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.getEndTurnButtonOpacity((byte) 95), DateInputWidget.field_E, UnitRecordWriter.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
               TrianglePulse.field_d.drawScaledAdditive(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
-            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
+            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.getEndTurnButtonOpacity((byte) -69), 67, param0 ^ -25);
           }
           if (param0 != 82) {
             return;
@@ -4174,7 +4174,7 @@ final class GameplayController {
         }
     }
 
-    private final int b(int param0, int param1, boolean param2) {
+    private final int findNextOwnedPortal(int param0, int param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -4221,7 +4221,7 @@ final class GameplayController {
         }
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
+    private final void drawSummonUnitStats(int param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -4323,7 +4323,7 @@ final class GameplayController {
         }
     }
 
-    private final void i(byte param0) {
+    private final void drawUnitInfoPopups(byte param0) {
         RuntimeException runtimeException = null;
         UnitInfoPopup var2 = null;
         int var3 = 0;
@@ -4349,7 +4349,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void requestSummon(int param0, int param1, boolean param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -4366,7 +4366,7 @@ final class GameplayController {
           }
           var4_int = this.battlefield.getSummonFailureFlags(this.controlledPlayerId, param1 + 190, param0, this.field_ec, this.field_X);
           if (var4_int > 0) {
-            this.a(param2, TeamRoster.field_c[var4_int], (byte) -124);
+            this.showBattleError(param2, TeamRoster.field_c[var4_int], (byte) -124);
             return;
           }
           RadialSummonMenu.playDefaultSoundWithIntGuard(109, ClientUiNode.field_v[12]);
@@ -4397,7 +4397,7 @@ final class GameplayController {
         }
     }
 
-    private final String i(int param0, int param1) {
+    private final String getSpellUnavailableMessage(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -4426,7 +4426,7 @@ final class GameplayController {
         }
     }
 
-    private final Unit a(int param0, int param1, Unit param2, boolean param3) {
+    private final Unit findOwnedActiveUnit(int param0, int param1, Unit param2, boolean param3) {
         NodeIterator var5 = null;
         RuntimeException var5_ref = null;
         Unit var6 = null;
@@ -4491,7 +4491,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawParticipantResultCard(int param0, int param1, int param2, int param3) {
         int stackIn_7_0 = 0;
         int[] stackIn_11_0 = null;
         CoatOfArms stackIn_20_0 = null;
@@ -4515,7 +4515,7 @@ final class GameplayController {
         int var9 = 0;
         try {
           if (2 == param1) {
-            this.a(127, 200, (byte) -40, param2, param3);
+            this.drawLargeParticipantResultCard(127, 200, (byte) -40, param2, param3);
             return;
           }
           stackIn_7_0 = (param1 <= 3) ? 70 : 0;
@@ -4556,9 +4556,9 @@ final class GameplayController {
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
           ((CoatOfArms) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
           DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
-          this.b(var6, 285, 78 + var5_int, -12857);
+          this.drawTeamStructureCounts(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
-          this.a(stackIn_37_1, var6, (byte) -112, IgnoreListLookupSupport.a(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
+          this.drawPlayerRuneReward(stackIn_37_1, var6, (byte) -112, IgnoreListLookupSupport.a(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4567,7 +4567,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean canAcceptPlayerInput(boolean param0) {
         boolean stackIn_25_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -4584,7 +4584,7 @@ final class GameplayController {
         }
     }
 
-    private final void e(int param0) {
+    private final void rebuildPlayerCoatSprites(int param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4611,7 +4611,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean t(int param0) {
+    private final boolean handleExpandedMinimapClick(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -4693,13 +4693,13 @@ final class GameplayController {
         }
     }
 
-    private final int g(int param0) {
+    private final int getFavourPanelCenterX(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            this.k(1);
+            this.drawPlayerStatusSidebar(1);
           }
           stackIn_4_0 = -50 + SoftwareRaster.width / 2;
           return stackIn_4_0;
@@ -4710,7 +4710,7 @@ final class GameplayController {
         }
     }
 
-    private final void e(boolean param0) {
+    private final void drawMatchResults(boolean param0) {
         int stackIn_5_0 = 0;
         Object stackIn_9_0;
         Object stackIn_11_0;
@@ -4766,7 +4766,7 @@ final class GameplayController {
               stackIn_9_0 = this;
               stackIn_12_4 = -1;
             }
-            this.b(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, 41);
+            this.drawTeamResultCard(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_12_4, 41);
             stackIn_15_0 = this;
             stackIn_15_1 = this.battlefield.rankedParticipants[1];
             stackIn_15_2 = 237;
@@ -4778,14 +4778,14 @@ final class GameplayController {
               stackIn_16_0 = this;
               stackIn_16_4 = -1;
             }
-            this.b(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, 41);
+            this.drawTeamResultCard(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, 41);
             try {
               if (var4 == 0) {
-                this.a(390, 3, 117);
+                this.drawSelectedPlayerAwards(390, 3, 117);
               }
               if (var4 != 0 ||
                 var6 != 0) {
-                this.a(117, 390, this.battlefield.field_kb, 0);
+                this.drawCampaignResults(117, 390, this.battlefield.field_kb, 0);
               }
               decompiledRegionSelector0 = 0;
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4810,7 +4810,7 @@ final class GameplayController {
           if (var4 != 0) {
             var3 = -1;
           }
-          this.b(var3, (byte) 111, var2_int);
+          this.drawLowerParticipantResultCards(var3, (byte) 111, var2_int);
           if (var4 == 0) {
             var3++;
           }
@@ -4820,7 +4820,7 @@ final class GameplayController {
           } else {
             stackIn_45_2 = -1;
           }
-          this.a(stackIn_44_1, stackIn_45_2, -20777, var5 + 174, var2_int);
+          this.drawThirdPlaceResultCard(stackIn_44_1, stackIn_45_2, -20777, var5 + 174, var2_int);
           if (var4 == 0) {
             var3++;
           }
@@ -4831,7 +4831,7 @@ final class GameplayController {
           } else {
             stackIn_53_3 = -1;
           }
-          this.a(stackIn_52_1, stackIn_52_2, stackIn_53_3, 1);
+          this.drawParticipantResultCard(stackIn_52_1, stackIn_52_2, stackIn_53_3, 1);
           if (var4 != 0) {
             var3 = 0;
           }
@@ -4848,14 +4848,14 @@ final class GameplayController {
           } else {
             stackIn_66_4 = 0;
           }
-          this.a(stackIn_65_1, stackIn_65_2, (byte) stackIn_65_3, stackIn_66_4, 0);
+          this.drawLargeParticipantResultCard(stackIn_65_1, stackIn_65_2, (byte) stackIn_65_3, stackIn_66_4, 0);
           if (var4 == 0) {
-            this.b(var5 + 57, 371, -29607);
+            this.drawSelectedRankAwards(var5 + 57, 371, -29607);
             if (var6 == 0) {
               return;
             }
           }
-          this.a(var5 + 57, 371, this.battlefield.field_kb, 0);
+          this.drawCampaignResults(var5 + 57, 371, this.battlefield.field_kb, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -4864,7 +4864,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(boolean param0, String param1, byte param2) {
+    private final void showBattleError(boolean param0, String param1, byte param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -4893,7 +4893,7 @@ final class GameplayController {
         }
     }
 
-    private final void z(int param0) {
+    private final void drawEquippedSpellStrip(int param0) {
         int stackIn_19_0 = 0;
         int stackIn_54_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4920,7 +4920,7 @@ final class GameplayController {
                 break;
               }
               if (stackIn_54_0 >= 0 &&
-                this.i(var3, 19) == null) {
+                this.getSpellUnavailableMessage(var3, 19) == null) {
                 stackIn_19_0 = 0;
               } else {
                 stackIn_19_0 = 1;
@@ -4928,7 +4928,7 @@ final class GameplayController {
               var4 = stackIn_19_0;
               var5 = 64 - (this.field_B >> 2);
               var6 = 130 + (int)(Math.sin((double)var2_int * 3.141592653589793 / 4.0) * (double)var5);
-              var7 = (int)((double)(-var5) * Math.cos((double)var2_int * 3.141592653589793 / 4.0)) + (this.o(127) - 95);
+              var7 = (int)((double)(-var5) * Math.cos((double)var2_int * 3.141592653589793 / 4.0)) + (this.getBattleUiBottom(127) - 95);
               if (var3 <= -1) {
                 SoftwareRaster.fillCircleBlended(var6, var7, 20, 0, 128);
               } else {
@@ -4967,10 +4967,10 @@ final class GameplayController {
             !this.field_P) {
             return;
           }
-          BattleCharacter.field_h[170].drawTransparent(111, -20 + (-95 + this.o(125)));
-          ProjectileEffect.field_h[1].drawTransparent(107, -118 + this.o(param0 + 132));
+          BattleCharacter.field_h[170].drawTransparent(111, -20 + (-95 + this.getBattleUiBottom(125)));
+          ProjectileEffect.field_h[1].drawTransparent(107, -118 + this.getBattleUiBottom(param0 + 132));
           if (this.field_Jb == 255) {
-            TrianglePulse.field_d.drawScaledAdditive(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
+            TrianglePulse.field_d.drawScaledAdditive(95, -95 + this.getBattleUiBottom(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4980,7 +4980,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(boolean param0, int param1, Unit param2) {
+    private final void selectUnit(boolean param0, int param1, Unit param2) {
         MovementPlanner stackIn_38_0 = null;
         boolean stackIn_39_1 = false;
         RuntimeException stackIn_51_0 = null;
@@ -5009,7 +5009,7 @@ final class GameplayController {
           }
           if (decompiledSharedTail1) {
             this.selectedUnit.resetMovementTarget(-1);
-            this.a(param2.tileY * this.battlefield.mapWidth + param2.tileX, true, (byte) 99);
+            this.selectTile(param2.tileY * this.battlefield.mapWidth + param2.tileX, true, (byte) 99);
           }
           this.field_qb = 0;
           this.field_D = false;
@@ -5047,7 +5047,7 @@ final class GameplayController {
             LocalAccountSupport.a((byte) -112, 0);
           }
           if (null != this.selectedUnit) {
-            this.a(4, -116);
+            this.notifyTutorialAction(4, -116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5064,7 +5064,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawSelectedPlayerAwards(int param0, int param1, int param2) {
         int stackIn_26_0 = 0;
         int stackIn_33_0 = 0;
         int[] stackIn_37_0 = null;
@@ -5152,7 +5152,7 @@ final class GameplayController {
         }
     }
 
-    private final void c(int param0, boolean param1) {
+    private final void updateAiDebugOverlay(int param0, boolean param1) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         String var3 = null;
@@ -5165,7 +5165,7 @@ final class GameplayController {
             this.aiPlanners[ActionSpell.field_j] != null) {
             this.aiPlanners[ActionSpell.field_j].updateDebugScoreOverlay(QuickChatSetupSupport.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
             if (param0 != 0) {
-              discarded$0 = this.a((EventPresenter) null, false);
+              discarded$0 = this.canOverlapPresenter((EventPresenter) null, false);
             }
             var3 = "ai " + (ActionSpell.field_j + 1) + " ";
             var4 = QuickChatSetupSupport.field_f;
@@ -5210,7 +5210,7 @@ final class GameplayController {
         }
     }
 
-    final void g(boolean param0) {
+    final void handleBattleKeyInput(boolean param0) {
         int discarded$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -5313,7 +5313,7 @@ final class GameplayController {
             boolean decompiledSharedTail0 = (null != this.eventPresenters.first((byte) 102) &&
               ((EventPresenter) (this.eventPresenters.first((byte) 102))).fullCombatScene);
             if (!decompiledSharedTail0) {
-              this.q((byte) 119);
+              this.cycleUnitOrPortalFocus((byte) 119);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
@@ -5321,7 +5321,7 @@ final class GameplayController {
             }
           }
           if (param0) {
-            discarded$0 = this.g(74, -31);
+            discarded$0 = this.drawTurnBannerBackdrop(74, -31);
           }
           if (70 == PowerOfTwoSupport.keyCode) {
             stackIn_90_1 = !(this.field_tb);
@@ -5343,8 +5343,8 @@ final class GameplayController {
           if (84 == PowerOfTwoSupport.keyCode &&
             CampaignLookupSupport.heldKeys[82]) {
             stackIn_113_1 = !(param0);
-            if (this.a(stackIn_113_1)) {
-              this.r((byte) 83);
+            if (this.canAcceptPlayerInput(stackIn_113_1)) {
+              this.endCurrentTurn((byte) 83);
             }
           }
           boolean decompiledFrameCompleted2 = true;
@@ -5358,7 +5358,7 @@ final class GameplayController {
               ~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer) {
               this.unitCycler.selectUnit(-124, this.selectedUnit);
             }
-            this.a(false, 58, (Unit) null);
+            this.selectUnit(false, 58, (Unit) null);
             this.unitCycler.selectNext(32);
             var2_int = this.unitCycler.getUnitCount((byte) 102);
             while (true) {
@@ -5375,7 +5375,7 @@ final class GameplayController {
                 break;
               }
               if (!stackIn_144_0) {
-                this.a(true, 58, var4_ref_jd);
+                this.selectUnit(true, 58, var4_ref_jd);
                 this.cameraFocusPending = true;
                 this.cameraFocusTileIndex = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
                 break;
@@ -5402,7 +5402,7 @@ final class GameplayController {
               this.selectedUnit.ownerPlayer == this.controlledPlayerId) {
               this.unitCycler.selectUnit(-114, this.selectedUnit);
             }
-            this.a(false, 58, (Unit) null);
+            this.selectUnit(false, 58, (Unit) null);
             this.unitCycler.selectPrevious(-94);
             var2_int = this.unitCycler.getUnitCount((byte) 73);
             do {
@@ -5412,7 +5412,7 @@ final class GameplayController {
               }
               var4_ref_jd = (Unit) (var3_ref_tc);
               if (!var4_ref_jd.movementSpent) {
-                this.a(true, 58, var4_ref_jd);
+                this.selectUnit(true, 58, var4_ref_jd);
                 this.cameraFocusTileIndex = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
                 this.cameraFocusPending = true;
                 if (var8 == 0) {
@@ -5437,13 +5437,13 @@ final class GameplayController {
           }
           if (PowerOfTwoSupport.keyCode == 34 && (this.battlefield.runeCapOption != 0 ||
             this.field_E)) {
-            this.c(param0);
+            this.cycleSpellMenuMode(param0);
           }
           boolean decompiledFrameCompleted1 = true;
           if (!this.field_lb &&
             this.field_E) {
             if (PowerOfTwoSupport.keyCode == 4) {
-              this.c(0, true);
+              this.updateAiDebugOverlay(0, true);
             }
             if (PowerOfTwoSupport.keyCode == 3) {
               var2_int = (ActionSpell.field_j + 1) % this.battlefield.playerCount;
@@ -5459,7 +5459,7 @@ final class GameplayController {
                 }
                 break;
               }
-              this.c(0, false);
+              this.updateAiDebugOverlay(0, false);
             }
             if (PowerOfTwoSupport.keyCode == 2) {
               if (CampaignLookupSupport.heldKeys[81]) {
@@ -5470,7 +5470,7 @@ final class GameplayController {
               } else {
                 QuickChatSetupSupport.field_f = (QuickChatSetupSupport.field_f + 1) % 5;
               }
-              this.c(0, false);
+              this.updateAiDebugOverlay(0, false);
             }
             if (PowerOfTwoSupport.keyCode == 1) {
               var2_int = 0;
@@ -5514,7 +5514,7 @@ final class GameplayController {
           if (stackIn_283_0 &&
             PowerOfTwoSupport.keyCode == 54 &&
             CampaignLookupSupport.heldKeys[82]) {
-            this.c(70);
+            this.sendRandomBattleDebugPacket(70);
           }
           boolean decompiledFrameCompleted0 = true;
           if (PowerOfTwoSupport.keyCode == 1 &&
@@ -5575,7 +5575,7 @@ final class GameplayController {
           if (this.field_E &&
             PowerOfTwoSupport.keyCode == 54 &&
             CampaignLookupSupport.heldKeys[82]) {
-            this.c(-103);
+            this.sendRandomBattleDebugPacket(-103);
           }
           if (50 == PowerOfTwoSupport.keyCode &&
             this.field_lb &&
@@ -5590,7 +5590,7 @@ final class GameplayController {
         }
     }
 
-    private final int g(int param0, int param1) {
+    private final int drawTurnBannerBackdrop(int param0, int param1) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -5614,7 +5614,7 @@ final class GameplayController {
         }
     }
 
-    private final void s(int param0) {
+    private final void drawMenuBackground(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -5624,7 +5624,7 @@ final class GameplayController {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (!this.B(34)) {
+          if (!this.usesAlternateMenuBackground(34)) {
             var2_int = 0;
             while (FixedSquareRootSupport.field_b.width > var2_int) {
               stackIn_17_0 = 0;
@@ -5660,13 +5660,13 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void notifyTutorialAction(int param0, int param1) {
         int discarded$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param1 >= -111) {
-            discarded$1 = this.a((Unit) null, (byte) 66);
+            discarded$1 = this.findTileContainingUnit((Unit) null, (byte) 66);
           }
           if (null != this.battleTutorial) {
             this.battleTutorial.handleInteraction(-1, -3, param0);
@@ -5679,7 +5679,7 @@ final class GameplayController {
         }
     }
 
-    private final int a(int param0, String param1, boolean param2, int param3) {
+    private final int drawTurnBannerCaptionAndCoats(int param0, String param1, boolean param2, int param3) {
         int stackIn_3_0 = 0;
         CoatOfArms stackIn_31_0;
         int stackIn_31_1;
@@ -5738,7 +5738,7 @@ final class GameplayController {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          var5_int = this.g(param0, -50);
+          var5_int = this.drawTurnBannerBackdrop(param0, -50);
           var6 = FixedSquareRootSupport.field_b.width;
           GradientUiRenderer.drawCenteredGradientText(param1, var6 / 2 + var5_int, 170, ConsoleValue.field_b, false);
           var7 = this.battlefield.getPlayerTeamSize(this.battlefield.currentPlayer, 0);
@@ -5890,7 +5890,7 @@ final class GameplayController {
         }
     }
 
-    final void f(int param0, int param1, int param2) {
+    final void applyTurnChange(int param0, int param1, int param2) {
         this.battlefield.applyTurnChange(true, param1, param0);
         RadialSummonMenu.playDefaultSoundWithIntGuard(43, ClientUiNode.field_v[17]);
         if (param2 != 0) {
@@ -5908,18 +5908,18 @@ final class GameplayController {
         }
     }
 
-    private final boolean m(boolean param0) {
+    private final boolean handleMinimapClick(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!EmailConfirmationValidator.field_l) {
-            stackIn_4_0 = this.l(false);
+            stackIn_4_0 = this.handleCompactMinimapClick(false);
             return stackIn_4_0;
           }
           if (!param0) {
-            stackIn_9_0 = this.t(217);
+            stackIn_9_0 = this.handleExpandedMinimapClick(217);
             return stackIn_9_0;
           }
           return false;
@@ -5930,7 +5930,7 @@ final class GameplayController {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawBattleTooltips(byte param0) {
         boolean stackIn_22_0 = false;
         Object stackIn_31_0;
         Object stackIn_33_0;
@@ -6013,7 +6013,7 @@ final class GameplayController {
           var2 = this.field_wb;
           var3 = 16777215;
           if (param0 != 120) {
-            this.a(-99, false);
+            this.advanceBattle(-99, false);
           }
           var4 = this.field_S ? 1 : 0;
           if (AiPlanningStrategy.pointerX >= 0 &&
@@ -6027,7 +6027,7 @@ final class GameplayController {
               while (true) {
                 if (5 > var6) {
                   var7 = 130 + (int)(Math.sin(3.141592653589793 * (double)var6 / 4.0) * (double)(-(this.field_B / 4) + 64));
-                  var8 = -95 + ((int)(Math.cos(3.141592653589793 * (double)var6 / 4.0) * (double)(-(64 - this.field_B / 4))) + this.o(127));
+                  var8 = -95 + ((int)(Math.cos(3.141592653589793 * (double)var6 / 4.0) * (double)(-(64 - this.field_B / 4))) + this.getBattleUiBottom(127));
                   stackOut_21_0 = TabbedPanel.a(var8, var7, 22, false);
                   stackIn_38_0 = stackOut_21_0 ? 1 : 0;
                   stackIn_22_0 = stackOut_21_0;
@@ -6035,14 +6035,14 @@ final class GameplayController {
                     if (stackIn_22_0) {
                       var9 = this.battlefield.equippedSpellIds[this.controlledPlayerId][var6];
                       if (var9 < 0) {
-                        GradientUiRenderer.drawCenteredTextBackdrop(TurnEffectEvent.field_y, 320, -100 + this.o(125), true);
-                        GradientUiRenderer.drawCenteredGradientText(TurnEffectEvent.field_y, 320, this.o(param0 ^ 7) - 100, AgeValidator.field_k, true);
+                        GradientUiRenderer.drawCenteredTextBackdrop(TurnEffectEvent.field_y, 320, -100 + this.getBattleUiBottom(125), true);
+                        GradientUiRenderer.drawCenteredGradientText(TurnEffectEvent.field_y, 320, this.getBattleUiBottom(param0 ^ 7) - 100, AgeValidator.field_k, true);
                         var5 = 1;
                       } else {
                         var5 = 1;
                         stackIn_34_0 = this;
                         stackIn_34_1 = var9;
-                        stackIn_34_2 = this.o(127) - 60;
+                        stackIn_34_2 = this.getBattleUiBottom(127) - 60;
                         stackIn_34_3 = 320;
                         if (~var9 == ~this.field_gc) {
                           stackIn_35_0 = this;
@@ -6058,7 +6058,7 @@ final class GameplayController {
                             stackIn_35_4 = AgeValidator.field_k;
                           }
                         }
-                        this.a(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, 11951);
+                        this.drawSpellTooltip(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, 11951);
                       }
                     }
                     var6++;
@@ -6073,7 +6073,7 @@ final class GameplayController {
                 if (this.field_gc <= -1) {
                   break;
                 }
-                this.a(this.field_gc, -60 + this.o(126), 320, ConsoleValue.field_b, param0 ^ 11991);
+                this.drawSpellTooltip(this.field_gc, -60 + this.getBattleUiBottom(126), 320, ConsoleValue.field_b, param0 ^ 11991);
                 break;
               }
             }
@@ -6083,7 +6083,7 @@ final class GameplayController {
               if (null == this.spellConfirmation) {
                 var6 = -1;
                 while (var6 < 6) {
-                  stackOut_54_0 = TabbedPanel.a(-95 + this.o(127), 230 + var6 * 45, 22, false);
+                  stackOut_54_0 = TabbedPanel.a(-95 + this.getBattleUiBottom(127), 230 + var6 * 45, 22, false);
                   stackIn_83_0 = stackOut_54_0 ? 1 : 0;
                   stackIn_55_0 = stackOut_54_0;
                   if (var20 != 0) {
@@ -6104,11 +6104,11 @@ final class GameplayController {
                           stackIn_72_0 = StateChangeEvent.field_A;
                         }
                         var8_ref_String = stackIn_72_0;
-                        GradientUiRenderer.drawCenteredTextBackdrop(var8_ref_String, 320, this.o(param0 ^ 5) - 45, true);
+                        GradientUiRenderer.drawCenteredTextBackdrop(var8_ref_String, 320, this.getBattleUiBottom(param0 ^ 5) - 45, true);
                         var5 = 1;
                         stackIn_75_0 = var8_ref_String;
                         stackIn_75_1 = 320;
-                        stackIn_75_2 = -45 + this.o(125);
+                        stackIn_75_2 = -45 + this.getBattleUiBottom(125);
                         if (~var7 != ~this.field_gc) {
                           if (0 < this.battlefield.getSpellCastDelay(26, this.controlledPlayerId, var7)) {
                             stackIn_79_3 = AgeValidator.field_k;
@@ -6135,13 +6135,13 @@ final class GameplayController {
               if (stackIn_83_0 == 0 &&
                 -1 < this.field_gc) {
                 var6_ref_String = MusicPatchEnvelope.field_f[this.field_gc];
-                GradientUiRenderer.drawCenteredTextBackdrop(var6_ref_String, 320, this.o(125) - 45, true);
-                GradientUiRenderer.drawCenteredGradientText(var6_ref_String, 320, this.o(126) - 45, ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredTextBackdrop(var6_ref_String, 320, this.getBattleUiBottom(125) - 45, true);
+                GradientUiRenderer.drawCenteredGradientText(var6_ref_String, 320, this.getBattleUiBottom(126) - 45, ConsoleValue.field_b, true);
               }
             }
             if (var2 == null &&
               this.controlledPlayerId >= 0 &&
-              TabbedPanel.a(-95 + this.o(param0 ^ 6), 130, 22, false) &&
+              TabbedPanel.a(-95 + this.getBattleUiBottom(param0 ^ 6), 130, 22, false) &&
               0 != this.battlefield.runeCapOption) {
               var2 = MatchSetupPanel.field_x;
             }
@@ -6154,10 +6154,10 @@ final class GameplayController {
                   !IterableDualNodeDeque.isPointerInBounds(-33, 150, 227, 15, 15 + QuickChatMenuCloseSupport.field_b[0].pixelHeight) ||
                   this.controlledPlayerId < 0) {
                   if (!this.field_lb ||
-                    !IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, this.o(param0 ^ 5) - 40, -10 + this.o(125))) {
+                    !IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, this.getBattleUiBottom(param0 ^ 5) - 40, -10 + this.getBattleUiBottom(125))) {
                     if (this.field_lb &&
                       this.battlefield.teamGame &&
-                      TabbedPanel.a(-40 + this.o(125) + 14, 88, 14, false)) {
+                      TabbedPanel.a(-40 + this.getBattleUiBottom(125) + 14, 88, 14, false)) {
                       if (ChannelFadeTimeConsoleCommand.field_F) {
                         stackIn_132_0 = DialWidgetPainter.field_e;
                       } else {
@@ -6214,7 +6214,7 @@ final class GameplayController {
                                   if (IterableDualNodeDeque.isPointerInBounds(stackIn_182_0, stackIn_182_1, FixedSquareRootSupport.field_b.width, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
-                                    var2 = this.a((String) (var2), var7, -255069420);
+                                    var2 = this.formatPlayerVictorySummary((String) (var2), var7, -255069420);
                                     var3 = FriendRequestSupport.field_c[0][var7];
                                   }
                                   var6 += 40;
@@ -6252,7 +6252,7 @@ final class GameplayController {
                                   if (IterableDualNodeDeque.isPointerInBounds(stackIn_215_0, stackIn_215_1, FixedSquareRootSupport.field_b.width, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
-                                    var2 = this.a((String) (var2), var7, -255069420);
+                                    var2 = this.formatPlayerVictorySummary((String) (var2), var7, -255069420);
                                     var3 = FriendRequestSupport.field_c[0][var7];
                                   }
                                   var6 += 40;
@@ -6277,7 +6277,7 @@ final class GameplayController {
                                   if (stackIn_252_0 == stackIn_252_1) {
                                     if (IterableDualNodeDeque.isPointerInBounds(-33, -64 + FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.width, var6, var6 + 60)) {
                                       var2 = this.battlefield.playerNames[var7];
-                                      var2 = this.a((String) (var2), var7, -255069420);
+                                      var2 = this.formatPlayerVictorySummary((String) (var2), var7, -255069420);
                                       var4 = 1;
                                       var3 = FriendRequestSupport.field_c[0][var7];
                                       break scanLoop2;
@@ -6286,7 +6286,7 @@ final class GameplayController {
                                   } else {
                                     if (IterableDualNodeDeque.isPointerInBounds(-33, FixedSquareRootSupport.field_b.width - 50, FixedSquareRootSupport.field_b.width, var6, 30 + var6)) {
                                       var2 = this.battlefield.playerNames[var7];
-                                      var2 = this.a((String) (var2), var7, -255069420);
+                                      var2 = this.formatPlayerVictorySummary((String) (var2), var7, -255069420);
                                       var3 = FriendRequestSupport.field_c[0][var7];
                                       var4 = 1;
                                       break scanLoop2;
@@ -6325,7 +6325,7 @@ final class GameplayController {
                 }
                 if (decompiledFrameCompleted2) {
                   stackIn_252_0 = -162;
-                  stackIn_252_1 = this.o(param0 ^ 5);
+                  stackIn_252_1 = this.getBattleUiBottom(param0 ^ 5);
                 }
               }
               var6 = stackIn_252_0 + stackIn_252_1;
@@ -6402,7 +6402,7 @@ final class GameplayController {
               var8 = 25;
               var9 = 9;
               var10 = 90 + var9;
-              var11 = -133 + this.o(125) + 3 * var8;
+              var11 = -133 + this.getBattleUiBottom(125) + 3 * var8;
               var12 = var8 + var11;
               if (IterableDualNodeDeque.isPointerInBounds(-33, var9, var10, var11, var12)) {
                 var13 = this.battlefield.getCollectedManaScore(this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1), -12710);
@@ -6898,7 +6898,7 @@ final class GameplayController {
                 var16 = 0;
                 while (var13_ref_int__.length > var16) {
                   var17 = var16 * var14 + var15;
-                  var18 = this.f(128, this.g(2)) - 30;
+                  var18 = this.getBattleUiBottomAtX(128, this.getFavourPanelCenterX(2)) - 30;
                   stackIn_758_0 = TabbedPanel.a(var18, var17, 13, false);
                   if (var20 != 0) {
                     decompiledFrameCompleted1 = false;
@@ -7198,7 +7198,7 @@ final class GameplayController {
                   var6 = -20 + (FixedSquareRootSupport.field_b.width - var8);
                 }
               }
-              if (10 + var7 > this.o(126)) {
+              if (10 + var7 > this.getBattleUiBottom(126)) {
                 var7 -= 30;
               }
               boolean decompiledSharedTail0 = (!(this.field_yb > 0) ||
@@ -7222,7 +7222,7 @@ final class GameplayController {
         }
     }
 
-    final void h(boolean param0) {
+    final void initializeBattlePresentation(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -7252,7 +7252,7 @@ final class GameplayController {
               }
             }
             if (var3_ref != null) {
-              var2_int = this.a((Unit) (var3_ref), (byte) 75);
+              var2_int = this.findTileContainingUnit((Unit) (var3_ref), (byte) 75);
             }
             this.camera.snapToTile(var2_int, param0);
           }
@@ -7309,7 +7309,7 @@ final class GameplayController {
         }
     }
 
-    private final void n(int param0) {
+    private final void drawGodFavourPanel(int param0) {
         int stackIn_34_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int[] var2 = null;
@@ -7335,7 +7335,7 @@ final class GameplayController {
             boolean decompiledFrameCompleted0 = true;
             var2 = this.battlefield.chosenGods[this.controlledPlayerId];
             var3 = this.battlefield.godFavourLevels[this.controlledPlayerId];
-            var4 = this.f(param0 + 140, this.g(param0 + 14));
+            var4 = this.getBattleUiBottomAtX(param0 + 140, this.getFavourPanelCenterX(param0 + 14));
             if (this.field_Ab) {
               var5 = 0;
               while (var5 < var2.length) {
@@ -7382,12 +7382,12 @@ final class GameplayController {
               if (stackIn_34_0 == 0) {
                 break;
               }
-              this.u(517);
+              this.drawManaCounter(517);
               break;
             }
           }
-          this.z(param0 ^ 15);
-          this.m(11425);
+          this.drawEquippedSpellStrip(param0 ^ 15);
+          this.drawDebugSpellStrip(11425);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7396,15 +7396,15 @@ final class GameplayController {
         }
     }
 
-    private final int o(int param0) {
+    private final int getBattleUiBottom(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 124) {
-            this.d(113, true);
+            this.leaveBattle(113, true);
           }
-          stackIn_4_0 = this.f(128, 0);
+          stackIn_4_0 = this.getBattleUiBottomAtX(128, 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7413,7 +7413,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3, int param4) {
+    private final void drawLargeParticipantResultCard(int param0, int param1, byte param2, int param3, int param4) {
         int[] stackIn_7_0 = null;
         CoatOfArms stackIn_10_0 = null;
         int stackIn_10_1 = 0;
@@ -7431,7 +7431,7 @@ final class GameplayController {
         try {
           var6_int = this.battlefield.rankedParticipants[param4];
           if (param2 != -40) {
-            this.c(28, -48, -108, 17);
+            this.drawSummonUnitStats(28, -48, -108, 17);
           }
           var7 = this.battlefield.playerNames[var6_int].toUpperCase();
           if (~this.field_Rb != ~param4) {
@@ -7462,9 +7462,9 @@ final class GameplayController {
             GradientUiRenderer.drawCenteredGradientText(AccountNameCharacterSupport.field_b[param3], IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           }
           DateInputWidget.field_E.drawCentered(var7, IgnoreListLookupSupport.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
-          this.b(var6_int, 35 + param1, 133 + param0, -12857);
+          this.drawTeamStructureCounts(var6_int, 35 + param1, 133 + param0, -12857);
           stackIn_29_1 = (~this.field_Rb == ~param4);
-          this.a(stackIn_29_1, var6_int, (byte) 113, param1 + 35, param0 + 194);
+          this.drawPlayerRuneReward(stackIn_29_1, var6_int, (byte) 113, param1 + 35, param0 + 194);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7473,7 +7473,7 @@ final class GameplayController {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void drawBattleFrame(int param0, boolean param1) {
         String stackIn_25_0 = null;
         int stackIn_36_0 = 0;
         RgbSprite[] stackIn_39_0 = null;
@@ -7518,12 +7518,12 @@ final class GameplayController {
           if (this.battlefield.field_Ab &&
             this.movementPlanner != null) {
             if (this.field_V) {
-              this.f(101);
+              this.drawLocalTurnHandover(101);
               return;
             }
             if (this.battlefield.field_X &&
               0 == this.field_Sb) {
-              this.e(true);
+              this.drawMatchResults(true);
               var3_int = IgnoreRequestSupport.field_a - 40;
               var4_ref_String = IntrusiveNode.field_g;
               if (!this.field_lb) {
@@ -7545,7 +7545,7 @@ final class GameplayController {
                   stackIn_36_0 = 0;
                 }
                 var8 = stackIn_36_0;
-                var9 = this.o(125);
+                var9 = this.getBattleUiBottom(125);
                 SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 64, 10, -40 + var9, -71);
                 stackIn_39_0 = SoundPanSupport.field_b;
                 if (var8 == 0) {
@@ -7556,7 +7556,7 @@ final class GameplayController {
                 ((RgbSprite) (Object) stackIn_39_0[stackIn_40_1]).drawTransparent(28, var9 - 36);
                 var6 = NineSliceFrame.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var7 = -65 - var5 - var6 + PowerOfTwoSupport.field_k;
-                var9Lifetime1 = this.f(128, IgnoreListLookupSupport.a(true, var7));
+                var9Lifetime1 = this.getBattleUiBottomAtX(128, IgnoreListLookupSupport.a(true, var7));
                 if (MatchConditionEntry.a(0, (byte) 94) + IgnoreRequestSupport.field_a > var9Lifetime1) {
                   var3_int = -40 + (-MatchConditionEntry.a(0, (byte) 94) + var9Lifetime1);
                 }
@@ -7574,10 +7574,10 @@ final class GameplayController {
             if (!BitLengthSupport.field_a) {
               SoftwareRaster.clearPixels();
               if (var10 != 0) {
-                this.s(-123);
+                this.drawMenuBackground(-123);
               }
             } else {
-              this.s(-123);
+              this.drawMenuBackground(-123);
             }
             PreferencesWriteRequest.a(param0 + 4);
             if (~this.field_C < param0 &&
@@ -7586,33 +7586,33 @@ final class GameplayController {
               LobbyRoomControlSupport.drawBattleGridHighlight(this.field_Zb, -103, this.field_C);
             }
             if (!this.battlefield.field_Cb) {
-              this.p(20);
+              this.drawGodSelection(20);
               if (null != this.field_Nb.first((byte) 121)) {
-                ((ToastMessage) (this.field_Nb.first((byte) 104))).draw(500, this.o(param0 ^ 127));
+                ((ToastMessage) (this.field_Nb.first((byte) 104))).draw(500, this.getBattleUiBottom(param0 ^ 127));
                 if (var10 != 0) {
-                  this.c((byte) -117);
-                  this.v(-128);
-                  this.i((byte) -69);
+                  this.drawSelectedMovementPath((byte) -117);
+                  this.drawSelectionOverlays(-128);
+                  this.drawUnitInfoPopups((byte) -69);
                   if (-1 < this.controlledPlayerId) {
-                    this.n(-12);
+                    this.drawGodFavourPanel(-12);
                   }
                   if (this.field_Nb.first((byte) 91) != null) {
-                    ((ToastMessage) (this.field_Nb.first((byte) 88))).draw(500, this.o(param0 ^ 126));
+                    ((ToastMessage) (this.field_Nb.first((byte) 88))).draw(500, this.getBattleUiBottom(param0 ^ 126));
                   }
                 }
               }
             } else {
-              this.c((byte) -117);
-              this.v(-128);
-              this.i((byte) -69);
+              this.drawSelectedMovementPath((byte) -117);
+              this.drawSelectionOverlays(-128);
+              this.drawUnitInfoPopups((byte) -69);
               if (-1 < this.controlledPlayerId) {
-                this.n(-12);
+                this.drawGodFavourPanel(-12);
               }
               if (this.field_Nb.first((byte) 91) != null) {
-                ((ToastMessage) (this.field_Nb.first((byte) 88))).draw(500, this.o(param0 ^ 126));
+                ((ToastMessage) (this.field_Nb.first((byte) 88))).draw(500, this.getBattleUiBottom(param0 ^ 126));
               }
             }
-            this.o((byte) 107);
+            this.drawGameStatusSummary((byte) 107);
             if (!this.field_tb) {
               if (this.field_H > 0) {
                 this.field_H = this.field_H - 16;
@@ -7626,8 +7626,8 @@ final class GameplayController {
                 this.field_H = this.field_H + 16;
               }
             }
-            this.l(-22038);
-            this.k(-32400);
+            this.drawMinimap(-22038);
+            this.drawPlayerStatusSidebar(-32400);
             var3_intLifetime1 = 0;
             var4_ref_vb = (EventPresenter) (this.eventPresenters.first((byte) 121));
             boolean decompiledNaturalLoopExit0 = false;
@@ -7651,7 +7651,7 @@ final class GameplayController {
               if (this.spellConfirmation != null) {
                 this.spellConfirmation.draw(1619620993);
               }
-              this.h(82);
+              this.drawTurnControls(82);
               stackIn_107_0 = this.battlefield.currentPlayer;
             }
             if (stackIn_107_0 != this.controlledPlayerId ||
@@ -7678,19 +7678,19 @@ final class GameplayController {
               }
               var4 = stackIn_136_0;
               QuickChatCategory.field_u = 0;
-              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 64, 10, this.o(125) - 40, -41);
+              SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 64, 10, this.getBattleUiBottom(125) - 40, -41);
               stackIn_139_0 = SoundPanSupport.field_b;
               if (var4 != 0) {
                 stackIn_140_1 = 1;
               } else {
                 stackIn_140_1 = 0;
               }
-              ((RgbSprite) (Object) stackIn_139_0[stackIn_140_1]).drawTransparent(28, -36 + this.o(param0 ^ 125));
+              ((RgbSprite) (Object) stackIn_139_0[stackIn_140_1]).drawTransparent(28, -36 + this.getBattleUiBottom(param0 ^ 125));
               if (this.battlefield.teamGame &&
                 -1 < this.controlledPlayerId) {
-                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 29, 74, this.o(param0 ^ 126) - 40, -87);
+                SpriteSliceAndBlendSupport.drawHorizontalThreeSlice(QuickChatMenuCloseSupport.field_b, 29, 74, this.getBattleUiBottom(param0 ^ 126) - 40, -87);
                 stackIn_149_0 = 88;
-                stackIn_149_1 = -40 + (this.o(127) + 14);
+                stackIn_149_1 = -40 + (this.getBattleUiBottom(127) + 14);
                 stackIn_149_2 = 10;
                 if (ChannelFadeTimeConsoleCommand.field_F) {
                   stackIn_150_3 = FriendRequestSupport.field_c[0][this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, ~param0)];
@@ -7714,7 +7714,7 @@ final class GameplayController {
                 !this.field_z) {
                 ChatMessage.field_s.drawTransparent(8 + AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY + 8);
               }
-              this.b((byte) 120);
+              this.drawBattleTooltips((byte) 120);
             }
             boolean decompiledFrameCompleted0 = true;
             if (0 <= this.controlledPlayerId &&
@@ -7734,7 +7734,7 @@ final class GameplayController {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.a(25167);
+              this.drawTurnBanner(25167);
             }
             if (this.battleTutorial != null) {
               this.battleTutorial.draw((byte) 21);
@@ -7756,7 +7756,7 @@ final class GameplayController {
                 DateInputWidget.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
                 DateInputWidget.field_E.drawCentered(Integer.toString(RadialSummonMenu.field_d, 16) + " (server)", 320, DateInputWidget.field_E.maxAscent + 40, 16777215, -1);
                 if (var5Lifetime1 != 0) {
-                  stackIn_233_0 = (this.a((byte) 101)) ? 8421631 : 16711680;
+                  stackIn_233_0 = (this.hasPendingPresentationWork((byte) 101)) ? 8421631 : 16711680;
                   var6Lifetime1 = stackIn_233_0;
                   DateInputWidget.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1 ^ RadialSummonMenu.field_d, 16) + " (diff)", 320, DateInputWidget.field_E.maxAscent * 2 + 40, var6Lifetime1, -1);
                 }
@@ -7782,7 +7782,7 @@ final class GameplayController {
         }
     }
 
-    private final void w(int param0) {
+    private final void advanceAmbientSoundTimer(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -7804,7 +7804,7 @@ final class GameplayController {
         }
     }
 
-    private final String a(String param0, int param1, int param2) {
+    private final String formatPlayerVictorySummary(String param0, int param1, int param2) {
         String stackIn_4_0 = null;
         String stackIn_10_0 = null;
         String stackIn_16_0 = null;
@@ -7831,9 +7831,9 @@ final class GameplayController {
             return stackIn_4_0;
           }
           if (param2 != -255069420) {
-            this.b(-7, (byte) -110, -122);
+            this.drawLowerParticipantResultCards(-7, (byte) -110, -122);
           }
-          var9 = this.a((byte) -70, param1);
+          var9 = this.estimateTurnsUntilVictory((byte) -70, param1);
           if (var9 == 1) {
             stackIn_10_0 = param0 + " - " + EmailCheckResult.formatTemplate(4800, ProgressDialog.field_bb, new String[]{var6, var7, var8});
             return stackIn_10_0;
@@ -7859,7 +7859,7 @@ final class GameplayController {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void handleBattlePointerAction(int param0, int param1) {
         int stackIn_19_0 = 0;
         MovementPlanner stackIn_35_0 = null;
         int stackIn_35_1 = 0;
@@ -8130,7 +8130,7 @@ final class GameplayController {
             this.movementPlanner.clearPath(107);
             this.field_y = -2;
             if (null != this.selectedUnit) {
-              this.a(false, 58, (Unit) null);
+              this.selectUnit(false, 58, (Unit) null);
             }
           }
           if (null != QuickChatSetupSupport.field_a) {
@@ -8192,7 +8192,7 @@ final class GameplayController {
               return;
             }
             if (param0 == 24) {
-              this.l((byte) 108);
+              this.requestReturnToLobby((byte) 108);
               return;
             }
             if (param0 == 27) {
@@ -8209,7 +8209,7 @@ final class GameplayController {
                   return;
                 }
               }
-              this.d(122, true);
+              this.leaveBattle(122, true);
               return;
             }
             if (param0 == 2) {
@@ -8243,7 +8243,7 @@ final class GameplayController {
               }
               if (decompiledNaturalLoopExit0) {
                 stackIn_276_0 = var4;
-                stackIn_276_1 = -this.f(128, this.g(2));
+                stackIn_276_1 = -this.getBattleUiBottomAtX(128, this.getFavourPanelCenterX(2));
               }
               var11Lifetime1 = stackIn_276_0 + stackIn_276_1;
               var12Lifetime1 = 0;
@@ -8275,7 +8275,7 @@ final class GameplayController {
               return;
             }
             if (param0 == 4 &&
-              this.a(true)) {
+              this.canAcceptPlayerInput(true)) {
               var10Lifetime1Lifetime1 = 0;
               var11_ref_at = this.battlefield.unitsByPlayer[this.battlefield.currentPlayer];
               var12_ref_jd = (Unit) (var11_ref_at.first((byte) 113));
@@ -8297,7 +8297,7 @@ final class GameplayController {
                     stackIn_317_1 = var12_ref_jd.getMovementTargetY(-70);
                     stackIn_318_2 = (null != this.field_oc);
                     ((MovementPlanner) (Object) stackIn_317_0).selectTarget(stackIn_317_1, stackIn_318_2, var12_ref_jd.getMovementTargetX(false), (byte) -112);
-                    this.f((byte) -123);
+                    this.submitPreparedMovement((byte) -123);
                     if (var12_ref_jd.movementSpent) {
                       var10Lifetime1Lifetime1 = 1;
                     }
@@ -8312,8 +8312,8 @@ final class GameplayController {
               }
               this.field_jc = false;
               this.field_bc = true;
-              this.a(14, -128);
-              this.r((byte) -81);
+              this.notifyTutorialAction(14, -128);
+              this.endCurrentTurn((byte) -81);
               return;
             }
             if (param0 == 5 &&
@@ -8324,8 +8324,8 @@ final class GameplayController {
               return;
             }
             if (param0 == 23) {
-              this.c(false);
-              this.a(19, -119);
+              this.cycleSpellMenuMode(false);
+              this.notifyTutorialAction(19, -119);
               LocalAccountSupport.a((byte) -90, 0);
             }
             boolean decompiledFrameRemainder2 = true;
@@ -8441,7 +8441,7 @@ final class GameplayController {
                 var10Lifetime1Lifetime2 = 0;
                 while (5 > var10Lifetime1Lifetime2) {
                   var11Lifetime1Lifetime1 = (int)(Math.sin(3.141592653589793 * (double)var10Lifetime1Lifetime2 / 4.0) * 64.0) + 130;
-                  var12Lifetime1Lifetime1 = (int)(-64.0 * Math.cos(3.141592653589793 * (double)var10Lifetime1Lifetime2 / 4.0)) - (-this.o(126) + 95);
+                  var12Lifetime1Lifetime1 = (int)(-64.0 * Math.cos(3.141592653589793 * (double)var10Lifetime1Lifetime2 / 4.0)) - (-this.getBattleUiBottom(126) + 95);
                   stackOut_416_0 = TabbedPanel.a(var12Lifetime1Lifetime1, var11Lifetime1Lifetime1, 22, false);
                   stackIn_428_0 = stackOut_416_0 ? 1 : 0;
                   stackIn_417_0 = stackOut_416_0;
@@ -8453,7 +8453,7 @@ final class GameplayController {
                     if (-1 == this.battlefield.equippedSpellIds[this.controlledPlayerId][var10Lifetime1Lifetime2]) {
                       return;
                     }
-                    this.e(this.battlefield.equippedSpellIds[this.controlledPlayerId][var10Lifetime1Lifetime2], var10Lifetime1Lifetime2, 98);
+                    this.selectSpell(this.battlefield.equippedSpellIds[this.controlledPlayerId][var10Lifetime1Lifetime2], var10Lifetime1Lifetime2, 98);
                   }
                   var10Lifetime1Lifetime2++;
                 }
@@ -8465,7 +8465,7 @@ final class GameplayController {
               if (stackIn_428_0 == param0) {
                 var10Lifetime1Lifetime2 = -1;
                 while (var10Lifetime1Lifetime2 < 6) {
-                  stackOut_431_0 = TabbedPanel.a(this.o(125) - 82, 45 * var10Lifetime1Lifetime2 + 230, 22, false);
+                  stackOut_431_0 = TabbedPanel.a(this.getBattleUiBottom(125) - 82, 45 * var10Lifetime1Lifetime2 + 230, 22, false);
                   stackIn_457_0 = stackOut_431_0 ? 1 : 0;
                   stackIn_432_0 = stackOut_431_0;
                   if (var16 != 0) {
@@ -8478,7 +8478,7 @@ final class GameplayController {
                       if (var10Lifetime1Lifetime2 != 5) {
                         if (((0 == this.field_g)) &&
                           ((this.field_b == 0))) {
-                          this.e(FloorModSupport.floorModWithOffset(var10Lifetime1Lifetime2 + this.field_Lb, 1, 135), -1, 127);
+                          this.selectSpell(FloorModSupport.floorModWithOffset(var10Lifetime1Lifetime2 + this.field_Lb, 1, 135), -1, 127);
                         }
                       } else {
                         this.field_b = this.field_b + 1;
@@ -8497,12 +8497,12 @@ final class GameplayController {
               }
               if (stackIn_457_0 == param0) {
                 if (~this.selectedUnit.ownerPlayer != ~this.controlledPlayerId) {
-                  this.a(false, IndexedSpriteBase.field_a, (byte) -118);
+                  this.showBattleError(false, IndexedSpriteBase.field_a, (byte) -118);
                   return;
                 }
                 if (this.selectedUnit.movementSpent ||
                   !(this.selectedUnit.attacksRemaining > 0)) {
-                  this.a(false, NameSuggestionList.field_J, (byte) -124);
+                  this.showBattleError(false, NameSuggestionList.field_J, (byte) -124);
                   if (var16 == 0) {
                     return;
                   }
@@ -8526,7 +8526,7 @@ final class GameplayController {
                   (decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  this.h(-1, 38);
+                  this.activateSelectedUnitAbility(-1, 38);
                   if (var16 == 0) {
                     return;
                   }
@@ -8537,7 +8537,7 @@ final class GameplayController {
                   if (this.selectedUnit.packedFlag8) {
                     return;
                   }
-                  this.h(-1, -124);
+                  this.activateSelectedUnitAbility(-1, -124);
                   if (var16 == 0) {
                     return;
                   }
@@ -8547,19 +8547,19 @@ final class GameplayController {
                   if (this.selectedUnit.hasMovementFlag1(false)) {
                     return;
                   }
-                  this.h(-1, 39);
+                  this.activateSelectedUnitAbility(-1, 39);
                   if (var16 == 0) {
                     return;
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  this.h(-1, -115);
+                  this.activateSelectedUnitAbility(-1, -115);
                   if (var16 == 0) {
                     return;
                   }
                 }
                 if (!this.selectedUnit.packedFlag8) {
-                  this.h(-1, 88);
+                  this.activateSelectedUnitAbility(-1, 88);
                 }
                 return;
               }
@@ -8567,36 +8567,36 @@ final class GameplayController {
               if (param0 >= 7 &&
                 param0 < (7 + var10_ref_int__.length)) {
                 if (var10_ref_int__.length != 3) {
-                  this.h(var10_ref_int__[param0 - 7], -127);
+                  this.activateSelectedUnitAbility(var10_ref_int__[param0 - 7], -127);
                   return;
                 }
                 if (param0 == 7) {
-                  this.h(this.battlefield.chosenGods[this.controlledPlayerId][1], 63);
+                  this.activateSelectedUnitAbility(this.battlefield.chosenGods[this.controlledPlayerId][1], 63);
                   return;
                 }
                 if (8 == param0) {
-                  this.h(this.battlefield.chosenGods[this.controlledPlayerId][2], -114);
+                  this.activateSelectedUnitAbility(this.battlefield.chosenGods[this.controlledPlayerId][2], -114);
                   return;
                 }
                 if (param0 == 9) {
-                  this.h(this.battlefield.chosenGods[this.controlledPlayerId][0], 112);
+                  this.activateSelectedUnitAbility(this.battlefield.chosenGods[this.controlledPlayerId][0], 112);
                   return;
                 }
               }
               if (param0 == 10) {
-                this.h(2, -125);
+                this.activateSelectedUnitAbility(2, -125);
                 return;
               }
               if (param0 == 11) {
-                this.h(1, 89);
+                this.activateSelectedUnitAbility(1, 89);
                 return;
               }
               if (param0 == 12) {
-                this.h(3, -120);
+                this.activateSelectedUnitAbility(3, -120);
                 return;
               }
               if (param0 == 13) {
-                this.h(0, -114);
+                this.activateSelectedUnitAbility(0, -114);
                 return;
               }
               if (param0 == 14) {
@@ -8610,7 +8610,7 @@ final class GameplayController {
                   var13Lifetime1Lifetime1 = this.godMenu.getChoiceAtPoint((byte) -122, TeleportAction.pointerPressY, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX, var12Lifetime1Lifetime1 + 16);
                 }
                 if (-1 < var13Lifetime1Lifetime1) {
-                  this.a(11, -119);
+                  this.notifyTutorialAction(11, -119);
                   this.field_y = var13Lifetime1Lifetime1;
                   RadialSummonMenu.playDefaultSoundWithIntGuard(103, ClientUiNode.field_v[11]);
                   return;
@@ -8628,7 +8628,7 @@ final class GameplayController {
                   var13Lifetime1Lifetime2 = -1;
                 }
                 if (var13Lifetime1Lifetime2 > -1) {
-                  this.a(var13Lifetime1Lifetime2, 65, this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, TeleportAction.pointerPressY, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX));
+                  this.requestSummon(var13Lifetime1Lifetime2, 65, this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, TeleportAction.pointerPressY, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX));
                   return;
                 }
               }
@@ -8660,7 +8660,7 @@ final class GameplayController {
                     this.field_oc = this.selectedUnit;
                   }
                   if (!var10_ref_jd.presentationOwnsModel) {
-                    this.a(true, 58, var10_ref_jd);
+                    this.selectUnit(true, 58, var10_ref_jd);
                   }
                   this.movementPlanner.clearPath(-54);
                   return;
@@ -8678,7 +8678,7 @@ final class GameplayController {
                     stackIn_634_2 = (null != this.field_oc);
                     ((MovementPlanner) (Object) stackIn_633_0).selectTarget(stackIn_633_1, stackIn_634_2, var8Lifetime2, (byte) 57);
                     if (this.movementPlanner.actionAllowed) {
-                      this.a(18, -125);
+                      this.notifyTutorialAction(18, -125);
                       LocalAccountSupport.a((byte) -102, 1);
                       if (var16 == 0) {
                         return;
@@ -8694,7 +8694,7 @@ final class GameplayController {
                     !(this.movementPlanner.movementCosts[var10Lifetime1Lifetime3] > this.movementPlanner.getMovementBudget(27732)) ||
                     (this.movementPlanner.attackTargetMask[var10Lifetime1Lifetime3] & 3) == 0 ||
                     null != this.battlefield.tiles[var10Lifetime1Lifetime3].occupant) {
-                    this.f((byte) 77);
+                    this.submitPreparedMovement((byte) 77);
                   }
                   LocalAccountSupport.a((byte) -35, 1);
                   return;
@@ -8703,12 +8703,12 @@ final class GameplayController {
                   -1 >= var9Lifetime1 ||
                   !(var8Lifetime2 < this.battlefield.mapWidth) ||
                   !(var9Lifetime1 < this.battlefield.mapHeight)) {
-                  this.a(-1, false, (byte) 54);
+                  this.selectTile(-1, false, (byte) 54);
                   if (var16 != 0) {
-                    this.a(var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth, false, (byte) 46);
+                    this.selectTile(var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth, false, (byte) 46);
                   }
                 } else {
-                  this.a(var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth, false, (byte) 46);
+                  this.selectTile(var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth, false, (byte) 46);
                 }
                 if (this.battlefield.currentPlayer == this.controlledPlayerId &&
                   this.battlefield.getSummoningGodMaskAt(var8Lifetime2, -27300, var9Lifetime1, this.controlledPlayerId) > 0) {
@@ -8718,7 +8718,7 @@ final class GameplayController {
                   this.field_hc = this.battlefield.getSummoningFavourAt(var9Lifetime1, (byte) 95, var8Lifetime2, this.controlledPlayerId);
                   this.field_Pb = false;
                   this.field_Xb = true;
-                  this.a(10, -122);
+                  this.notifyTutorialAction(10, -122);
                   RadialSummonMenu.playDefaultSoundWithIntGuard(101, ClientUiNode.field_v[11]);
                   decompiledFrameRemainder12 = (var16 != 0);
                 }
@@ -8732,13 +8732,13 @@ final class GameplayController {
                     if ((var16 != 0) && (this.field_sb >= 3 &&
                       this.controlledPlayerId > -1 &&
                       !this.field_bb)) {
-                      this.a(false, DebugConsole.field_A, (byte) -125);
+                      this.showBattleError(false, DebugConsole.field_A, (byte) -125);
                     }
                   } else {
                     if (this.field_sb >= 3 &&
                       this.controlledPlayerId > -1 &&
                       !this.field_bb) {
-                      this.a(false, DebugConsole.field_A, (byte) -125);
+                      this.showBattleError(false, DebugConsole.field_A, (byte) -125);
                     }
                   }
                 }
@@ -8761,14 +8761,14 @@ final class GameplayController {
               !this.field_bb) {
               this.field_lc = false;
               if (null != this.field_oc) {
-                this.a(true, 58, this.field_oc);
+                this.selectUnit(true, 58, this.field_oc);
                 this.field_oc.resetMovementTarget(-1);
                 this.field_oc = null;
                 if (var16 != 0) {
-                  this.a(true, 58, (Unit) null);
+                  this.selectUnit(true, 58, (Unit) null);
                 }
               } else {
-                this.a(true, 58, (Unit) null);
+                this.selectUnit(true, 58, (Unit) null);
               }
               this.movementPlanner.clearPath(105);
               this.field_y = -2;
@@ -8793,7 +8793,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean l(boolean param0) {
+    private final boolean handleCompactMinimapClick(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -8862,7 +8862,7 @@ final class GameplayController {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void cycleSpellMenuMode(boolean param0) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -8892,7 +8892,7 @@ final class GameplayController {
         }
     }
 
-    private final void f(byte param0) {
+    private final void submitPreparedMovement(byte param0) {
         RuntimeException decompiledCaughtException = null;
         PreparedAction var2 = null;
         int var2_int = 0;
@@ -8948,7 +8948,7 @@ final class GameplayController {
             if (this.movementPlanner.spellId > -1) {
               this.notifyTutorialInteraction(27, this.movementPlanner.spellId, -119);
             }
-            this.a(false, 58, (Unit) null);
+            this.selectUnit(false, 58, (Unit) null);
             this.field_oc = null;
           }
           var2_int = 127 / ((-64 - param0) / 54);
@@ -8960,7 +8960,7 @@ final class GameplayController {
         }
     }
 
-    private final void r(byte param0) {
+    private final void endCurrentTurn(byte param0) {
         Battlefield stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -8989,7 +8989,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_lb) {
-            this.i(0);
+            this.requestNetworkEndTurn(0);
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -9016,7 +9016,7 @@ final class GameplayController {
               break;
             }
             if (null != this.selectedUnit) {
-              this.a(false, 58, (Unit) null);
+              this.selectUnit(false, 58, (Unit) null);
             }
             this.field_F = false;
             this.controlledPlayerId = this.battlefield.currentPlayer;
@@ -9064,7 +9064,7 @@ final class GameplayController {
         }
     }
 
-    private final int f(int param0, int param1) {
+    private final int getBattleUiBottomAtX(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_7_0 = 0;
         int stackIn_9_0 = 0;
@@ -9086,7 +9086,7 @@ final class GameplayController {
         }
     }
 
-    private final void g(byte param0) {
+    private final void drawCompactMinimap(byte param0) {
         int stackIn_54_0 = 0;
         int stackIn_54_1 = 0;
         int[][] stackIn_65_0 = null;
@@ -9520,7 +9520,7 @@ final class GameplayController {
             }
             if (((BattleCamera) (Object) stackIn_7_0).moveTowardTile(stackIn_8_1, (byte) 113, this.cameraFocusTileIndex)) {
               this.cameraFocusPending = false;
-              this.a(3, -128);
+              this.notifyTutorialAction(3, -128);
             }
             return;
           }
@@ -9583,10 +9583,10 @@ final class GameplayController {
           if (manualCameraMovement == 0 &&
             this.field_H == 240 &&
             ProgressMessageDialog.pointerButton == 1) {
-            manualCameraMovement = this.m(false) ? 1 : 0;
+            manualCameraMovement = this.handleMinimapClick(false) ? 1 : 0;
           }
           if (obfuscationGuard != -42) {
-            this.l((byte) 23);
+            this.requestReturnToLobby((byte) 23);
           }
           if (this.battlefield.consumeTurnStartNotification(-293) &&
             !this.field_z) {
@@ -9676,7 +9676,7 @@ final class GameplayController {
         }
     }
 
-    private final void k(int param0) {
+    private final void drawPlayerStatusSidebar(int param0) {
         int stackIn_35_0 = 0;
         boolean stackIn_36_1 = false;
         int stackIn_39_2;
@@ -9770,7 +9770,7 @@ final class GameplayController {
           var2_int = FixedSquareRootSupport.field_b.width;
           if (this.battlefield.playerCoats != null) {
             if (this.field_Wb == null) {
-              this.e(16);
+              this.rebuildPlayerCoatSprites(16);
             }
             if (this.battlefield.teamGame) {
               var3 = 80;
@@ -9817,7 +9817,7 @@ final class GameplayController {
                   }
                   var3 += 5;
                   if (this.battlefield.campaignMission == null) {
-                    this.a(var4, 10, 96, var3, -112 + var2_int, (byte) -119);
+                    this.drawVictoryProgressBar(var4, 10, 96, var3, -112 + var2_int, (byte) -119);
                     var3 += 10;
                   }
                   stackIn_66_0Lifetime1 = var2_int - 120;
@@ -9854,7 +9854,7 @@ final class GameplayController {
                   }
                   var3 += 35;
                   if (null == this.battlefield.campaignMission) {
-                    this.a(var4, 10, 96, var3, var2_int - 112, (byte) -128);
+                    this.drawVictoryProgressBar(var4, 10, 96, var3, var2_int - 112, (byte) -128);
                     var3 += 10;
                   }
                   stackIn_94_0Lifetime1 = var2_int - 120;
@@ -9981,7 +9981,7 @@ final class GameplayController {
                 DefeatPlayerWithMetricsConsoleCommand.a(stackIn_160_0, stackIn_161_1, stackIn_164_2, stackIn_164_3, stackIn_165_4, stackIn_168_5, stackIn_168_6, stackIn_168_7, stackIn_169_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 30;
-                  this.a(var8Lifetime1, 6, 30, 24 + var3Lifetime1, -36 + (-(var9Lifetime1 / 2) + var2_int), (byte) -116);
+                  this.drawVictoryProgressBar(var8Lifetime1, 6, 30, 24 + var3Lifetime1, -36 + (-(var9Lifetime1 / 2) + var2_int), (byte) -116);
                   if (0 < var7[var8Lifetime1] &&
                     !this.field_z) {
                     TeleportAction.field_w[var7[var8Lifetime1] - 1].drawTransparent(-(var9Lifetime1 / 2) - 60 + var2_int, 16 + var3Lifetime1);
@@ -10001,7 +10001,7 @@ final class GameplayController {
                 DefeatPlayerWithMetricsConsoleCommand.a(stackIn_183_0, stackIn_184_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, stackIn_191_5, stackIn_191_6, stackIn_191_7, stackIn_192_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 56;
-                  this.a(var8Lifetime1, 8, var9Lifetime1, var3Lifetime1 + 48, var2_int - 36 - var9Lifetime1 / 2, (byte) -116);
+                  this.drawVictoryProgressBar(var8Lifetime1, 8, var9Lifetime1, var3Lifetime1 + 48, var2_int - 36 - var9Lifetime1 / 2, (byte) -116);
                   if (var7[var8Lifetime1] > 0 &&
                     this.battleTutorial == null) {
                     var10Lifetime1 = -52 - var9Lifetime1 / 2 + var2_int;
@@ -10023,7 +10023,7 @@ final class GameplayController {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void drawTeamStructureCounts(int param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -10059,7 +10059,7 @@ final class GameplayController {
         }
     }
 
-    final void h(byte param0) {
+    final void requestResign(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -10078,7 +10078,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean B(int param0) {
+    private final boolean usesAlternateMenuBackground(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -10095,7 +10095,7 @@ final class GameplayController {
         }
     }
 
-    private final void y(int param0) {
+    private final void reportPlayerStatusChanges(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -10107,7 +10107,7 @@ final class GameplayController {
           this.field_x = this.field_x ^ this.battlefield.field_C;
           this.field_hb = this.field_hb ^ this.battlefield.inactivePlayerMask;
           if (param0 <= 49) {
-            this.e(90, -46, 119);
+            this.selectSpell(90, -46, 119);
           }
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -10147,7 +10147,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean a(byte param0) {
+    private final boolean hasPendingPresentationWork(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
@@ -10163,7 +10163,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, MapTile param4, int param5, int param6, int param7) {
+    private final void drawTileInfoPanel(int param0, int param1, int param2, int param3, MapTile param4, int param5, int param6, int param7) {
         int stackIn_12_0 = 0;
         int stackIn_37_0 = 0;
         int stackIn_44_0 = 0;
@@ -10402,7 +10402,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int[] param3, int param4) {
+    private final void drawSpellTooltip(int param0, int param1, int param2, int[] param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         String var7 = null;
@@ -10445,7 +10445,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, boolean param1, byte param2) {
+    private final void selectTile(int param0, boolean param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
@@ -10489,7 +10489,7 @@ final class GameplayController {
           if (param1) {
             LocalAccountSupport.a((byte) -96, 0);
           }
-          this.a(28, -113);
+          this.notifyTutorialAction(28, -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10498,7 +10498,7 @@ final class GameplayController {
         }
     }
 
-    final void i(int param0) {
+    final void requestNetworkEndTurn(int param0) {
         try {
           EmailValidator.outgoingPacket.writeCipheredOpcode(param0 ^ 32161, 65);
           EmailValidator.outgoingPacket.writeByte(param0 ^ 1, 1);
@@ -10510,7 +10510,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean d(int param0, int param1, int param2) {
+    private final boolean isTwoByTwoTileBlockInBounds(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -10528,7 +10528,7 @@ final class GameplayController {
                 return false;
               }
               if (param0 > -46) {
-                this.e(-49);
+                this.rebuildPlayerCoatSprites(-49);
               }
               var6 = param2 + param1 * var4_int;
               if (var6 >= this.battlefield.tiles.length) {
@@ -10559,7 +10559,7 @@ final class GameplayController {
         }
     }
 
-    private final void k(boolean param0) {
+    private final void handleResultsPointerInput(boolean param0) {
         int stackIn_7_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_27_1 = 0;
@@ -10736,11 +10736,11 @@ final class GameplayController {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 2) {
-            this.a(103, 19, -106, 102, -35, -67, -34, 6);
+            this.drawInsetVictoryProgressBar(103, 19, -106, 102, -35, -67, -34, 6);
           }
           validationMessage = SpellCastErrorSupport.getSpellCastError((byte) 66, tileY, this.battlefield, tileX, spellId, this.controlledPlayerId);
           if (null != validationMessage) {
-            this.a(false, validationMessage, (byte) -118);
+            this.showBattleError(false, validationMessage, (byte) -118);
             return;
           }
           if (!confirmed) {
@@ -10766,7 +10766,7 @@ final class GameplayController {
           }
           if (SpellDefinitionTable.spellDefinitions[spellId][4] == 5) {
             this.notifyTutorialInteraction(26, selectionMode, -39);
-            this.a(false, obfuscationGuard ^ 56, this.battlefield.tiles[tileY * this.battlefield.mapWidth + tileX].occupant);
+            this.selectUnit(false, obfuscationGuard ^ 56, this.battlefield.tiles[tileY * this.battlefield.mapWidth + tileX].occupant);
             if (null == this.selectedUnit) {
               return;
             }
@@ -10796,7 +10796,7 @@ final class GameplayController {
         }
     }
 
-    private final void l(int param0) {
+    private final void drawMinimap(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -10804,12 +10804,12 @@ final class GameplayController {
             this.field_fb = 31;
           }
           if (!EmailConfirmationValidator.field_l) {
-            this.g((byte) 118);
+            this.drawCompactMinimap((byte) 118);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
-          this.q(2);
+          this.drawExpandedMinimap(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10818,7 +10818,7 @@ final class GameplayController {
         }
     }
 
-    private final void p(int param0) {
+    private final void drawGodSelection(int param0) {
         int stackIn_11_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_57_1 = 0;
@@ -10890,12 +10890,12 @@ final class GameplayController {
             return;
           }
           var6 = FixedSquareRootSupport.field_b.height;
-          var7 = var6 - this.f(128, this.g(2));
+          var7 = var6 - this.getBattleUiBottomAtX(128, this.getFavourPanelCenterX(2));
           if (this.field_dc[2] < 256) {
             SoftwareRaster.fillRectangleBlended(0, 0, var5, var6, 0, (-var4[2] + 255) / 2);
             PowerOfTwoSupport.field_n.drawCenteredWithAlpha(SummonAction.field_F, var5 / 2, -(var7 >> 1) + (-20 + var6 / 2), 16763904, 0, -var4[2] + 255);
           }
-          this.n(-12);
+          this.drawGodFavourPanel(-12);
           var8 = 0;
           while (var8 < 6) {
             stackIn_57_0 = -1;
@@ -10965,7 +10965,7 @@ final class GameplayController {
                 stackIn_81_1Lifetime1 = -(var7 / 2);
                 var11Lifetime1 = stackIn_81_0Lifetime1 + stackIn_81_1Lifetime1;
                 var12 = (var8Lifetime1 - 1) * 50 + var5 / 2;
-                var13 = -30 + this.f(param0 ^ 148, this.g(2));
+                var13 = -30 + this.getBattleUiBottomAtX(param0 ^ 148, this.getFavourPanelCenterX(2));
                 var14 = ((-var4[var8Lifetime1] + 256) * var10Lifetime1 + var4[var8Lifetime1] * var12) / 256;
                 var15 = (var11Lifetime1 * (256 - var4[var8Lifetime1]) + var4[var8Lifetime1] * var13) / 256 - (int)(Math.sin((double)this.field_dc[var8Lifetime1] * 3.141592653589793 / 256.0) * 120.0);
                 var16 = 10 + (-(var4[var8Lifetime1] * 54) + 13824) / 256;
@@ -10979,7 +10979,7 @@ final class GameplayController {
               else {
                 if (this.field_dc[var8Lifetime1] < 384) {
                   var9Lifetime1Lifetime1 = (var8Lifetime1 - 1) * 50 + var5 / 2;
-                  var10Lifetime1Lifetime1 = -30 + this.f(128, this.g(2));
+                  var10Lifetime1Lifetime1 = -30 + this.getBattleUiBottomAtX(128, this.getFavourPanelCenterX(2));
                   if (this.field_dc[var8Lifetime1] < 320) {
                     AccountNameFoldingSupport.field_e.bindAsRasterTarget();
                     TrianglePulse.field_d.drawShadedGrayscale(0, 0, TutorialLayout.field_g[this.field_e[var8Lifetime1] + 1]);
@@ -11021,7 +11021,7 @@ final class GameplayController {
         }
     }
 
-    private final void x(int param0) {
+    private final void advanceGodSelection(int param0) {
         int stackIn_24_0 = 0;
         int stackIn_28_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -11031,7 +11031,7 @@ final class GameplayController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 20) {
-            this.c(-10, true);
+            this.updateAiDebugOverlay(-10, true);
           }
           var2_int = 0;
           while (3 > var2_int) {
@@ -11055,13 +11055,13 @@ final class GameplayController {
               }
               if ((stackIn_24_0 & stackIn_28_1) != 0) {
                 this.rebuildSummonMenus(true);
-                this.b(-24936);
+                this.submitChosenGods(-24936);
                 if (!this.field_lb) {
                   this.battlefield.applyTurnChange(true, 0, 0);
                   if (this.field_z) {
-                    this.a(29, -119);
+                    this.notifyTutorialAction(29, -119);
                   } else {
-                    this.e((byte) 77);
+                    this.prepareTurnConsequences((byte) 77);
                     this.field_V = true;
                     QuickChatSetupSupport.field_a = new ScreenWipeTransition();
                     GameClock.field_j = 0;
@@ -11081,7 +11081,7 @@ final class GameplayController {
         }
     }
 
-    private final void m(int param0) {
+    private final void drawDebugSpellStrip(int param0) {
         int stackIn_20_0 = 0;
         int stackIn_75_0 = 0;
         int stackIn_75_1 = 0;
@@ -11112,42 +11112,42 @@ final class GameplayController {
               var3 = stackIn_20_0;
               var4 = SpellDefinitionTable.spellDefinitions[FloorModSupport.floorModWithOffset(var2_int + this.field_Lb, 1, 135)][2];
               if (~FloorModSupport.floorModWithOffset(this.field_Lb + var2_int, 1, 135) == ~this.field_gc) {
-                TeamRoster.field_e.drawScaledAdditive(var2_int * 45 + 200 + this.field_g, -125 + this.o(127), 60, 60, 256);
+                TeamRoster.field_e.drawScaledAdditive(var2_int * 45 + 200 + this.field_g, -125 + this.getBattleUiBottom(127), 60, 60, 256);
               }
               if (var2_int == -1) {
                 if (this.field_g > 0) {
                   if (BattleCharacter.field_h.length <= var4) {
-                    SoftwareRaster.fillCircleBlended(this.field_g + 45 * var2_int + 230, this.o(126) - 95, 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
+                    SoftwareRaster.fillCircleBlended(this.field_g + 45 * var2_int + 230, this.getBattleUiBottom(126) - 95, 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
                   } else {
-                    BattleCharacter.field_h[var4].drawWithOpacity(this.field_g + (211 + var2_int * 45), this.o(127) - 115, -this.field_n + 256);
+                    BattleCharacter.field_h[var4].drawWithOpacity(this.field_g + (211 + var2_int * 45), this.getBattleUiBottom(127) - 115, -this.field_n + 256);
                   }
                   if (var3 != 0) {
-                    SoftwareRaster.fillCircleBlended(230 + (var2_int * 45 + this.field_g), -95 + this.o(param0 ^ 11484), 20, 0, 128);
+                    SoftwareRaster.fillCircleBlended(230 + (var2_int * 45 + this.field_g), -95 + this.getBattleUiBottom(param0 ^ 11484), 20, 0, 128);
                   }
-                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.o(125) - 60, 16777215, 0);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.getBattleUiBottom(125) - 60, 16777215, 0);
                 }
               } else if (var2_int == 5) {
                 if (0 > this.field_g) {
                   if (BattleCharacter.field_h.length <= var4) {
-                    SoftwareRaster.fillCircleBlended(45 * var2_int + 230 + this.field_g, -95 + this.o(126), 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
+                    SoftwareRaster.fillCircleBlended(45 * var2_int + 230 + this.field_g, -95 + this.getBattleUiBottom(126), 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
                   } else {
-                    BattleCharacter.field_h[var4].drawWithOpacity(45 * var2_int + (211 + this.field_g), this.o(127) - 115, -this.field_n + 256);
+                    BattleCharacter.field_h[var4].drawWithOpacity(45 * var2_int + (211 + this.field_g), this.getBattleUiBottom(127) - 115, -this.field_n + 256);
                   }
                   if (var3 != 0) {
-                    SoftwareRaster.fillCircleBlended(this.field_g + 230 + var2_int * 45, -95 + this.o(125), 20, 0, 128);
+                    SoftwareRaster.fillCircleBlended(this.field_g + 230 + var2_int * 45, -95 + this.getBattleUiBottom(125), 20, 0, 128);
                   }
-                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.o(param0 ^ 11487) - 60, 16777215, 0);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.getBattleUiBottom(param0 ^ 11487) - 60, 16777215, 0);
                 }
               } else {
                 if (var4 < BattleCharacter.field_h.length) {
-                  BattleCharacter.field_h[var4].drawWithOpacity(this.field_g + (var2_int * 45 + 211), -115 + this.o(126), 256 - this.field_n);
+                  BattleCharacter.field_h[var4].drawWithOpacity(this.field_g + (var2_int * 45 + 211), -115 + this.getBattleUiBottom(126), 256 - this.field_n);
                 } else {
-                  SoftwareRaster.fillCircleBlended(this.field_g + (230 + 45 * var2_int), -95 + this.o(127), 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
+                  SoftwareRaster.fillCircleBlended(this.field_g + (230 + 45 * var2_int), -95 + this.getBattleUiBottom(127), 20, AttackEvent.nextBoundedInt(false, 16777215, ConsoleTokenSupport.field_b), -(this.field_n >> 1) + 128);
                 }
                 if (var3 != 0) {
-                  SoftwareRaster.fillCircleBlended(var2_int * 45 + (230 + this.field_g), this.o(127) - 95, 20, 0, 128);
+                  SoftwareRaster.fillCircleBlended(var2_int * 45 + (230 + this.field_g), this.getBattleUiBottom(127) - 95, 20, 0, 128);
                 }
-                DateInputWidget.field_E.drawCenteredWithAlpha(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.o(125), 16777215, 0, 256 - this.field_n);
+                DateInputWidget.field_E.drawCenteredWithAlpha(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.getBattleUiBottom(125), 16777215, 0, 256 - this.field_n);
               }
               var2_int++;
             }
@@ -11163,12 +11163,12 @@ final class GameplayController {
               }
               if (var2_intLifetime1 != -1) {
                 if (var2_intLifetime1 == 5) {
-                  BitLengthSupport.field_d[2].drawWithOpacity(211 + 45 * var2_intLifetime1, this.o(param0 - 11300) - 115, -this.field_n + 256);
+                  BitLengthSupport.field_d[2].drawWithOpacity(211 + 45 * var2_intLifetime1, this.getBattleUiBottom(param0 - 11300) - 115, -this.field_n + 256);
                 }
               } else {
-                BitLengthSupport.field_d[0].drawWithOpacity(211 + var2_intLifetime1 * 45, this.o(127) - 95 - 20, -this.field_n + 256);
+                BitLengthSupport.field_d[0].drawWithOpacity(211 + var2_intLifetime1 * 45, this.getBattleUiBottom(127) - 95 - 20, -this.field_n + 256);
               }
-              ProjectileEffect.field_h[0].drawWithOpacity(208 + var2_intLifetime1 * 45, -95 + this.o(125) - 23, -this.field_n + 256);
+              ProjectileEffect.field_h[0].drawWithOpacity(208 + var2_intLifetime1 * 45, -95 + this.getBattleUiBottom(125) - 23, -this.field_n + 256);
               var2_intLifetime1++;
             }
             return;
@@ -11181,18 +11181,18 @@ final class GameplayController {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_A = null;
           if (param0 >= -95) {
-            GameplayController.a((String) null, (byte) 73, (String) null, (ResourceArchive) null);
+            GameplayController.loadRgbSpriteByName((String) null, (byte) 73, (String) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
         }
     }
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void drawLowerParticipantResultCards(int param0, byte param1, int param2) {
         CoatOfArms stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
         int[][] stackIn_29_2 = null;
@@ -11254,7 +11254,7 @@ final class GameplayController {
               ((CoatOfArms) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
               DateInputWidget.field_E.drawCentered(var6, IgnoreListLookupSupport.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
-              this.a(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
+              this.drawPlayerRuneReward(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
               param0++;
               var4_int += 110;
               var7++;
@@ -11273,7 +11273,7 @@ final class GameplayController {
           LobbyPlayer.uploadQuicksave(this.battlefield, this.battlefield.damageTakenByPlayer[this.battlefield.campaignMission.playerSlot], this.battlefield.unitLossCounts[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
           LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
           if (obfuscationGuard >= -39) {
-            this.s(-24);
+            this.drawMenuBackground(-24);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.EC(" + obfuscationGuard + ')');
@@ -11314,7 +11314,7 @@ final class GameplayController {
           this.battlefield.playerCoats = new CoatOfArms[2];
           this.battlefield.playerCoats[0] = LocalCoatSupport.localCoat;
           if (obfuscationGuard != 60) {
-            this.v(-13);
+            this.drawSelectionOverlays(-13);
           }
           this.battlefield.playerCoats[1] = new CoatOfArms(GrowthEvent.field_E, AiWeightProfile.field_a);
           this.battlefield.currentPlayer = 0;
@@ -11360,7 +11360,7 @@ final class GameplayController {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void finishCombatPresentationPause(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -11368,7 +11368,7 @@ final class GameplayController {
             return;
           }
           if (!this.field_lb) {
-            this.a(17, -125);
+            this.notifyTutorialAction(17, -125);
             this.field_Tb = false;
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
@@ -11392,7 +11392,7 @@ final class GameplayController {
         }
     }
 
-    private final void q(int param0) {
+    private final void drawExpandedMinimap(int param0) {
         int stackIn_73_0 = 0;
         int stackIn_75_0 = 0;
         int[][] stackIn_88_0 = null;
@@ -11609,7 +11609,7 @@ final class GameplayController {
             SoftwareRaster.drawLine(var11 - var4 * 10, var12 - var4 * 6, -(var4 * 10) + var11, var12 - 5 * var4, 16777215);
             SoftwareRaster.drawLine(-(var4 * 8) + var11, -(6 * var4) + var12, var11 - var4 * 8, var12 - 5 * var4, 16777215);
             SoftwareRaster.drawLine(-(10 * var4) + var11, -(5 * var4) + var12, var11 - var4 * 8, var12 - 5 * var4, 16777215);
-            this.p((byte) -71);
+            this.maskExpandedMinimapCorners((byte) -71);
             FixedSquareRootSupport.field_b.bindRasterTarget(5605);
             if (this.battlefield.mapSizeSetting < 2) {
               var5 -= 2;
@@ -11664,7 +11664,7 @@ final class GameplayController {
         }
     }
 
-    final static RgbSprite a(String param0, byte param1, String param2, ResourceArchive param3) {
+    final static RgbSprite loadRgbSpriteByName(String param0, byte param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -11680,7 +11680,7 @@ final class GameplayController {
         try {
           var4_int = param3.getGroupId(param2, 109);
           if (param1 != 51) {
-            GameplayController.d(45);
+            GameplayController.releaseStatics(45);
           }
           var5 = param3.getFileId((byte) -115, var4_int, param0);
           stackIn_4_0 = ManaEvent.a(var4_int, var5, param1 ^ -9074, param3);
@@ -11711,7 +11711,7 @@ final class GameplayController {
         }
     }
 
-    final void r(int param0) {
+    final void requestRematch(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -11735,7 +11735,7 @@ final class GameplayController {
         try {
           this.cameraFocusTileIndex = this.battlefield.mapWidth * tileY + tileX;
           if (obfuscationGuard != 25) {
-            this.e(-24);
+            this.rebuildPlayerCoatSprites(-24);
           }
           this.field_Pb = false;
           this.cameraFocusPending = true;
@@ -11748,7 +11748,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void drawInsetVictoryProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -11791,7 +11791,7 @@ final class GameplayController {
         }
     }
 
-    private final boolean a(EventPresenter param0, boolean param1) {
+    private final boolean canOverlapPresenter(EventPresenter param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -11805,7 +11805,7 @@ final class GameplayController {
           if (null == param0) {
             return false;
           }
-          stackIn_9_0 = this.a(false, param0.event);
+          stackIn_9_0 = this.canOverlapEventPresentation(false, param0.event);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11821,7 +11821,7 @@ final class GameplayController {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int estimateTurnsUntilVictory(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -11847,7 +11847,7 @@ final class GameplayController {
         }
     }
 
-    private final void a(boolean param0, int param1, byte param2, int param3, int param4) {
+    private final void drawPlayerRuneReward(boolean param0, int param1, byte param2, int param3, int param4) {
         int stackIn_14_0 = 0;
         RgbSprite[] stackIn_22_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -11916,7 +11916,7 @@ final class GameplayController {
         }
     }
 
-    final void k(byte param0) {
+    final void startBasicBattleTutorial(byte param0) {
         int discarded$0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -11969,7 +11969,7 @@ final class GameplayController {
           this.field_V = false;
           this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
           if (param0 >= -108) {
-            discarded$0 = this.n((byte) -1);
+            discarded$0 = this.getEndTurnButtonOpacity((byte) -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11979,7 +11979,7 @@ final class GameplayController {
         }
     }
 
-    final void d(int param0, boolean param1) {
+    final void leaveBattle(int param0, boolean param1) {
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -12369,7 +12369,7 @@ final class GameplayController {
               this.field_V = true;
               this.battlefield.applyTurnChange(true, 0, 0);
               this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
-              this.e((byte) 77);
+              this.prepareTurnConsequences((byte) 77);
               this.battlefield.field_Cb = true;
               decompiledFrameRemainder5 = (var26 != 0);
             }
@@ -12385,7 +12385,7 @@ final class GameplayController {
             (decompiledFrameRemainder4)) {
             if (stackIn_90_0 > stackIn_90_1) {
               this.battlefield.field_D = 3;
-              this.e((byte) 77);
+              this.prepareTurnConsequences((byte) 77);
               this.battlefield.field_Cb = true;
               decompiledFrameRemainder5 = (var26 != 0);
             }
@@ -12418,7 +12418,7 @@ final class GameplayController {
               this.field_V = true;
               this.battlefield.applyTurnChange(true, 0, 0);
               this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
-              this.e((byte) 77);
+              this.prepareTurnConsequences((byte) 77);
             }
             this.battlefield.field_Cb = true;
           }

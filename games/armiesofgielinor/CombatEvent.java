@@ -126,14 +126,14 @@ final class CombatEvent extends GameEvent {
               }
             }
           }
-          param2.d(this.battleId, 4);
+          param2.beginCombatPresentationPause(this.battleId, 4);
           if (!SpellDefinitionTable.field_a) {
             stackIn_34_0 = this.enqueuePresenter((byte) -39, param2, param0, true);
             return stackIn_34_0;
           }
-          param2.e(this.battleId, -56);
+          param2.finishCombatPresentationPause(this.battleId, -56);
           this.applyToBattlefield(param2.battlefield, -26661);
-          param2.a(true, var6);
+          param2.selectUnitAfterEvent(true, var6);
           this.acknowledgePresentation((byte) -125);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

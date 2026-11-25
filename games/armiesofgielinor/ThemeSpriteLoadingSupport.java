@@ -43,7 +43,7 @@ final class ThemeSpriteLoadingSupport {
                   for (var6 = 0; var5.length > var6; var6++) {
                     var7 = var5[var6];
                     if (var7 != null) {
-                      DecodedSpriteSupport.field_a[var3][var4][var6] = GameplayController.a(var7, (byte) 51, var9, archive);
+                      DecodedSpriteSupport.field_a[var3][var4][var6] = GameplayController.loadRgbSpriteByName(var7, (byte) 51, var9, archive);
                     }
                   }
                   if (var3 == 14 &&

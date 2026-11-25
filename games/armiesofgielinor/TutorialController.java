@@ -1597,7 +1597,7 @@ final class TutorialController {
                                                                                                       }
                                                                                                       QuickChatMenuDisplaySupport.field_j = true;
                                                                                                       SocketFactory.field_h = false;
-                                                                                                      FullscreenFocusCanvas.gameplayController.r(-128);
+                                                                                                      FullscreenFocusCanvas.gameplayController.requestRematch(-128);
                                                                                                       var6 = param0 ? 1 : 0;
                                                                                                       CipherPacketBuffer.a(var6 != 0, -5, 1, ChatInputDispatchSupport.field_a);
                                                                                                       if (var9 == 0) {
@@ -1896,7 +1896,7 @@ final class TutorialController {
                                                               if (!this.selectionState.hasActivationInput((byte) 111)) {
                                                                 return;
                                                               }
-                                                              FullscreenFocusCanvas.gameplayController.d(122, param0);
+                                                              FullscreenFocusCanvas.gameplayController.leaveBattle(122, param0);
                                                               QuickChatMenuDisplaySupport.field_j = true;
                                                               SocketFactory.field_h = false;
                                                               if (var9 == 0) {
@@ -1906,7 +1906,7 @@ final class TutorialController {
                                                             if (!this.selectionState.hasActivationInput((byte) 117)) {
                                                               return;
                                                             }
-                                                            FullscreenFocusCanvas.gameplayController.h((byte) 69);
+                                                            FullscreenFocusCanvas.gameplayController.requestResign((byte) 69);
                                                             var6 = param0 ? 1 : 0;
                                                             CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                             if (var9 == 0) {
@@ -1916,7 +1916,7 @@ final class TutorialController {
                                                           if (!this.selectionState.hasActivationInput((byte) 96)) {
                                                             return;
                                                           }
-                                                          FullscreenFocusCanvas.gameplayController.r(122);
+                                                          FullscreenFocusCanvas.gameplayController.requestRematch(122);
                                                           var6 = param0 ? 1 : 0;
                                                           CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                           if (var9 == 0) {
@@ -1926,7 +1926,7 @@ final class TutorialController {
                                                         if (!this.selectionState.hasActivationInput((byte) 72)) {
                                                           return;
                                                         }
-                                                        FullscreenFocusCanvas.gameplayController.l((byte) 108);
+                                                        FullscreenFocusCanvas.gameplayController.requestReturnToLobby((byte) 108);
                                                         var6 = param0 ? 1 : 0;
                                                         CipherPacketBuffer.a(var6 != 0, -1, 1, 0);
                                                         if (var9 == 0) {

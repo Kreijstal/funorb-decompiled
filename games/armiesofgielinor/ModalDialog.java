@@ -179,10 +179,10 @@ abstract class ModalDialog extends DequeWidgetContainer {
         stackIn_13_0 = (param1) && (ToastMessage.c((byte) -103)) && (var2 == 0);
         NineSliceSpriteSupport.a(stackIn_13_0, false);
         if (null != FullscreenFocusCanvas.gameplayController) {
-          FullscreenFocusCanvas.gameplayController.b(0, param1);
+          FullscreenFocusCanvas.gameplayController.drawBattleFrame(0, param1);
         }
         if (null != SectorCacheStore.field_a) {
-          SectorCacheStore.field_a.b(0, param1);
+          SectorCacheStore.field_a.drawBattleFrame(0, param1);
         }
         GradientUiRenderer.drawHollowGradientFrame(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
         if (var2 != 0) {

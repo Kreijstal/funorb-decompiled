@@ -167,7 +167,7 @@ final class MoveEvent extends GameEvent {
         try {
           ReloadPageSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("frame_top", (byte) -124, param2, "commonui");
           WidgetStateStyle.field_c = DropdownSelectorPainter.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
-          LocalAccountNameSupport.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
+          LocalAccountNameSupport.field_e = GameplayController.loadRgbSpriteByName("jagex_logo_grey", (byte) 51, "commonui", param2);
           NodeIterator.field_b = DropdownSelectorPainter.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
           IgnoreListLookupSupport.validationStatusIcons = ManaStarParticle.a(param2, "validation", (byte) -4, "commonui");
           AccountIdentifierStatus.field_e = (BitmapFont) ((Object) ChatMessageWriteSupport.a("arezzo12", param2, param3, (byte) -87, "commonui"));

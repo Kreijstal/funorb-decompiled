@@ -45,7 +45,7 @@ final class ContextualRuntimeException extends RuntimeException {
         ClientUiComponent var7 = null;
         ClientUiComponent var3 = null;
         try {
-          NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
+          NodeHashIterator.field_e = GameplayController.loadRgbSpriteByName("display_name_changed", (byte) 51, "basic", param1);
           ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, CampaignLookupSupport.field_g, LoginKind.field_b, AnimationFrameSet.field_y);
           TaggedMapData.field_g = new SocialListPanel(0L, CampaignLookupSupport.field_g, LobbyControlResources.field_a, ArchiveIndex.field_u);
           AiWeightProfile.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);

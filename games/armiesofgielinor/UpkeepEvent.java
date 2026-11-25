@@ -68,10 +68,10 @@ final class UpkeepEvent extends GameEvent {
         try {
           SectorCacheStore.field_j = new IndexedSprite[6][];
           BattleViewportResizeHandler.field_h = new RgbSprite[6];
-          BattleViewportResizeHandler.field_h[1] = GameplayController.a("coatofarms_lbarespace", (byte) 51, "basic", param0);
-          BattleViewportResizeHandler.field_h[2] = GameplayController.a("coatofarms_rbarespace", (byte) 51, "basic", param0);
-          BattleViewportResizeHandler.field_h[5] = GameplayController.a("coatofarms_iconspace", (byte) 51, "basic", param0);
-          BattleViewportResizeHandler.field_h[4] = GameplayController.a("coatofarms_topperspace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[1] = GameplayController.loadRgbSpriteByName("coatofarms_lbarespace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[2] = GameplayController.loadRgbSpriteByName("coatofarms_rbarespace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[5] = GameplayController.loadRgbSpriteByName("coatofarms_iconspace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[4] = GameplayController.loadRgbSpriteByName("coatofarms_topperspace", (byte) 51, "basic", param0);
           SectorCacheStore.field_j[0] = MapLayout.loadIndexedSpritesByName("coatofarms_bases", -28106, "basic", param0);
           if (param1 <= 20) {
             ResourceArchive var3 = (ResourceArchive) null;
@@ -83,8 +83,8 @@ final class UpkeepEvent extends GameEvent {
           SectorCacheStore.field_j[5] = MapLayout.loadIndexedSpritesByName("coatofarms_icons", -28106, "basic", param0);
           SectorCacheStore.field_j[4] = MapLayout.loadIndexedSpritesByName("coatofarms_toppers", -28106, "basic", param0);
           RegionAnchor.field_m = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_effects", (byte) -124, param0, "basic");
-          GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
-          ClientConnectionState.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
+          GameplayController.loadRgbSpriteByName("coatofarms_palette", (byte) 51, "basic", param0);
+          ClientConnectionState.field_a = GameplayController.loadRgbSpriteByName("coatofarms_scrollbutton", (byte) 51, "basic", param0);
           KeyedLoginCredentials.field_h = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_buttons", (byte) -128, param0, "basic");
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

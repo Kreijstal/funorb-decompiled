@@ -370,7 +370,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     ModalDialogHost.field_H) {
                     if (ViewportManager.field_c &&
                       null != FullscreenFocusCanvas.gameplayController) {
-                      FullscreenFocusCanvas.gameplayController.d(127, false);
+                      FullscreenFocusCanvas.gameplayController.leaveBattle(127, false);
                     }
                     ValidatedTextWidget.field_Z = true;
                     QuickChatMenuDisplaySupport.field_j = true;
@@ -409,7 +409,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                       if (((GameplayController) (var2)).battlefield.field_D == 3) {
                         ((GameplayController) (var2)).rebuildSummonMenus(true);
                       }
-                      ((GameplayController) (var2)).h(true);
+                      ((GameplayController) (var2)).initializeBattlePresentation(true);
                       UnitModelViewer.a(((GameplayController) (var2)).controlledPlayerId, false);
                       ((GameplayController) (var2)).battlefield.field_Ab = true;
                       if (((GameplayController) (var2)).controlledPlayerId <= -1) {
@@ -449,7 +449,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if ((1 << ((GameplayController) (var2)).battlefield.localPlayer & ((GameplayController) (var2)).battlefield.eliminatedPlayerMask) == 0) {
                       continue;
                     }
-                    ((GameplayController) (var2)).i(0);
+                    ((GameplayController) (var2)).requestNetworkEndTurn(0);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 78) {
@@ -740,12 +740,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     decompiledFrameRemainder2 = (var8 != 0);
                   }
                   if (decompiledFrameRemainder2) {
-                    FullscreenFocusCanvas.gameplayController.a(112, true);
+                    FullscreenFocusCanvas.gameplayController.advanceBattle(112, true);
                     while (Unit.pollKeyEvent((byte) -89)) {
                       if (ValidationState.debugConsoleHandlesKey(param0 + 56)) {
                         continue;
                       }
-                      FullscreenFocusCanvas.gameplayController.g(false);
+                      FullscreenFocusCanvas.gameplayController.handleBattleKeyInput(false);
                       if (var8 != 0) {
                         decompiledFrameCompleted1 = false;
                         break;
@@ -807,11 +807,11 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               }
               GiveTileConsoleCommand.a(73, var3_int != 0);
               if (ModalDialogHost.field_H) {
-                SectorCacheStore.field_a.a(109, var4 != 0);
+                SectorCacheStore.field_a.advanceBattle(109, var4 != 0);
               }
               if (ViewportManager.field_c) {
                 PaletteRegionMap.a(320, 180, var4 != 0, 0);
-                FullscreenFocusCanvas.gameplayController.a(param0 + 119, var4 != 0);
+                FullscreenFocusCanvas.gameplayController.advanceBattle(param0 + 119, var4 != 0);
               }
               while (Unit.pollKeyEvent((byte) -127)) {
                 if (ValidationState.debugConsoleHandlesKey(param0 - 126) &&
@@ -843,12 +843,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   }
                 }
                 if (ModalDialogHost.field_H) {
-                  SectorCacheStore.field_a.g(false);
+                  SectorCacheStore.field_a.handleBattleKeyInput(false);
                 }
                 if (!ViewportManager.field_c) {
                   continue;
                 }
-                FullscreenFocusCanvas.gameplayController.g(false);
+                FullscreenFocusCanvas.gameplayController.handleBattleKeyInput(false);
                 if (var8 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -941,7 +941,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           }
           if (ChatInputDispatchSupport.field_a == -3) {
             this.startLocalMatch(false, (byte) -62);
-            FullscreenFocusCanvas.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.initializeBattlePresentation(true);
             var3_intLifetime1 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
@@ -959,15 +959,15 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (ChatInputDispatchSupport.field_a == -10) {
               QuicksaveRequestSupport.requestDeleteQuicksave((byte) 27);
             }
-            FullscreenFocusCanvas.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.initializeBattlePresentation(true);
             var3_intLifetime2 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime2 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
           }
           if (ChatInputDispatchSupport.field_a == -8) {
             this.startLocalMatch(true, (byte) -67);
-            FullscreenFocusCanvas.gameplayController.k((byte) -113);
-            FullscreenFocusCanvas.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.startBasicBattleTutorial((byte) -113);
+            FullscreenFocusCanvas.gameplayController.initializeBattlePresentation(true);
             var3_intLifetime3 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime3 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
@@ -975,7 +975,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (ChatInputDispatchSupport.field_a == -9) {
             this.startLocalMatch(true, (byte) -90);
             FullscreenFocusCanvas.gameplayController.startEquipmentTutorial((byte) 60);
-            FullscreenFocusCanvas.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.initializeBattlePresentation(true);
             var3_intLifetime4 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
             SocketFactory.field_h = true;
@@ -1183,7 +1183,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SoundCache.a((byte) -58);
           TutorialController.releaseStatics(obfuscationGuard + 71);
           ScreenWipeTransition.releaseStatics((byte) -109);
-          GameplayController.d(obfuscationGuard ^ 49);
+          GameplayController.releaseStatics(obfuscationGuard ^ 49);
           AccountRsaBufferSupport.releaseStatics(256);
           ResourceClientErrorSupport.releaseStatics(obfuscationGuard + 13988);
           CampaignMission.releaseStatics(0);
@@ -2184,7 +2184,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           EventPresenterFactory.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", AchievementUnlockRequest.field_l);
           MapLayout.loadIndexedSpritesByName("armouricons", -28106, "basic", AchievementUnlockRequest.field_l);
           ResourceClientErrorSupport.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", AchievementUnlockRequest.field_l);
-          TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          TrianglePulse.field_d = GameplayController.loadRgbSpriteByName("godspark", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           DropdownSelector.field_M = DiskCacheRequest.loadRgbSpriteByName("mapbutton", "basic", AchievementUnlockRequest.field_l, false);
           DiskCacheRequest.loadRgbSpriteByName("endturnbutton", "basic", AchievementUnlockRequest.field_l, false);
           LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", AchievementUnlockRequest.field_l, false);
@@ -2205,8 +2205,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SpellMenuGroup.field_h = DropdownSelectorPainter.loadRgbSpritesByName("maprotbutton", (byte) -128, AchievementUnlockRequest.field_l, "basic");
           TeleportAction.field_w = DropdownSelectorPainter.loadRgbSpritesByName("placeicons", (byte) -124, AchievementUnlockRequest.field_l, "basic");
           SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", AchievementUnlockRequest.field_l, false);
-          MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", AchievementUnlockRequest.field_l);
-          BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          MoveEvent.field_z = GameplayController.loadRgbSpriteByName("bcarrow", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          BestScoreStrategy.field_m = GameplayController.loadRgbSpriteByName("goldiv", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           DraggableWidgetContainer.field_Q = DropdownSelectorPainter.loadRgbSpritesByName("silverbar", (byte) -125, AchievementUnlockRequest.field_l, "basic");
           TaggedMapData.field_f = DropdownSelectorPainter.loadRgbSpritesByName("pathfinder", (byte) -125, AchievementUnlockRequest.field_l, "basic");
           DeployAction.field_x = ManaStarParticle.a(AchievementUnlockRequest.field_l, "unitheads", (byte) -4, "basic");
@@ -2230,22 +2230,22 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", AchievementUnlockRequest.field_l, false);
           ProjectileEffect.field_h = ManaStarParticle.a(AchievementUnlockRequest.field_l, "summonrings", (byte) -4, "basic");
           SoundPanSupport.field_b = DropdownSelectorPainter.loadRgbSpritesByName("chatbubbles", (byte) -128, AchievementUnlockRequest.field_l, "basic");
-          AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          AttackEvent.field_O = GameplayController.loadRgbSpriteByName("results_award_badge", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           MidiPcmStream.field_H = (ArgbSprite) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", AchievementUnlockRequest.field_l, false));
           CampaignDefinition.field_t = AccountNameFoldingSupport.a("basic", "statboxbg", AchievementUnlockRequest.field_l, 24914);
           BitReversalSupport.field_e = AccountNameFoldingSupport.a("basic", "popupbg", AchievementUnlockRequest.field_l, 24914);
           SelectionMenuLayoutSupport.field_b = AccountNameFoldingSupport.a("basic", "gameinfobg", AchievementUnlockRequest.field_l, 24914);
           MusicPatchUsage.manaStarSprites = DropdownSelectorPainter.loadRgbSpritesByName("manastars", (byte) -127, AchievementUnlockRequest.field_l, "basic");
-          TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          TrianglePulse.field_f = GameplayController.loadRgbSpriteByName("manaicon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ByteArrayPoolSupport.field_d = DropdownSelectorPainter.loadRgbSpritesByName("overlayicons", (byte) -125, AchievementUnlockRequest.field_l, "basic");
           StructureGlowRenderer.field_a = DropdownSelectorPainter.loadRgbSpritesByName("bloodsplat", (byte) -126, AchievementUnlockRequest.field_l, "basic");
-          ChatMessageWriteSupport.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          ChatMessageWriteSupport.field_a = GameplayController.loadRgbSpriteByName("results_rune_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ConsoleTextNode.field_k = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, AchievementUnlockRequest.field_l, "basic");
           IsaacRandom.field_a = DropdownSelectorPainter.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, AchievementUnlockRequest.field_l, "basic");
           BattleCharacter.field_h = ManaStarParticle.a(AchievementUnlockRequest.field_l, "trinketicons", (byte) -4, "basic");
           AttackEvent.field_E = DiskCacheRequest.loadRgbSpriteByName("eye", "basic", AchievementUnlockRequest.field_l, false);
           BitLengthSupport.field_d = ManaStarParticle.a(AchievementUnlockRequest.field_l, "trinketbuttons", (byte) -4, "basic");
-          ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          ChatMessage.field_s = GameplayController.loadRgbSpriteByName("wait_icon", (byte) 51, "basic", AchievementUnlockRequest.field_l);
           ChatMessage.field_s.trimTransparentBorder();
           EmailConfirmationValidator.field_o = DropdownSelectorPainter.loadRgbSpritesByName("diamondscale", (byte) -128, AchievementUnlockRequest.field_l, "basic");
           AchievementNotification.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
@@ -2281,18 +2281,18 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var15 = new int[]{4456448};
           ImageProducerSurface.field_l = ColourRampSupport.interpolateColourRamps(100, var15, 123, var14);
           GradientUiRenderer.bakeGradientFrameBorders(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
-          SocketResourceClient.a((byte) 125, ManaStarParticle.a(AchievementUnlockRequest.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", AchievementUnlockRequest.field_l));
+          SocketResourceClient.a((byte) 125, ManaStarParticle.a(AchievementUnlockRequest.field_l, "dials", (byte) -4, "basic"), GameplayController.loadRgbSpriteByName("hand", (byte) 51, "basic", AchievementUnlockRequest.field_l));
           IsaacRandom.field_k = DropdownSelectorPainter.loadRgbSpritesByName("arrows", (byte) -124, AchievementUnlockRequest.field_l, "basic");
-          MarkerSliderWidget.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", AchievementUnlockRequest.field_l);
-          SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", AchievementUnlockRequest.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", AchievementUnlockRequest.field_l));
+          MarkerSliderWidget.field_T = GameplayController.loadRgbSpriteByName("isocrosshair", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+          SpriteDropdownMenu.a(GameplayController.loadRgbSpriteByName("glowray", (byte) 51, "basic", AchievementUnlockRequest.field_l), 0, GameplayController.loadRgbSpriteByName("glowspark", (byte) 51, "basic", AchievementUnlockRequest.field_l));
           MoveAttackRequest.field_C = DropdownSelectorPainter.loadRgbSpritesByName("medals", (byte) -127, AchievementUnlockRequest.field_l, "campaign");
           DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", AchievementUnlockRequest.field_l, false);
           DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", AchievementUnlockRequest.field_l, false);
           DisplayModeOptionPainter.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", AchievementUnlockRequest.field_l, false);
           DelayedPacket.field_k = MapLayout.loadIndexedSpritesByName("achievements_large", -28106, "basic", AchievementUnlockRequest.field_l);
-          MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
-          DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
-          ChatMessage.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
+          MoveAttackRequest.field_A = GameplayController.loadRgbSpriteByName("unachieved", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
+          DeathEvent.field_A = GameplayController.loadRgbSpriteByName("locked", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
+          ChatMessage.field_t = GameplayController.loadRgbSpriteByName("orbcoin", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
           CampaignUnitOverride.a(300, MoveAttackRequest.field_A);
           CampaignUnitOverride.a(300, ChatMessage.field_t);
           CorpseConditionMarker.field_v = new RgbSprite(32, 32);
@@ -2311,7 +2311,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             var17++;
           } while (var18 == 0);
           if (!LabeledWidgetContainer.field_L) {
-            ImageProducerSurface.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", AchievementUnlockRequest.field_l);
+            ImageProducerSurface.field_k = GameplayController.loadRgbSpriteByName("lobby_game_logo", (byte) 51, "basic", AchievementUnlockRequest.field_l);
             QuickChatPhrase.a(var16, MapHeaderSupport.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, ProjectileEffect.field_c, CorpseConditionMarker.field_w, QuinticFadeSupport.field_d, var16);
             UnitUnlockPreviewModel.initializeChatHistory((byte) 30, 200);
             DisplayModeOptionPainter.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
