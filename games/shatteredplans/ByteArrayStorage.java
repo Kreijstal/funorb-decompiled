@@ -10,7 +10,7 @@ abstract class ByteArrayStorage {
 
     abstract void setBytes(byte[] param0, byte param1);
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean handleFreeChatKeyInput(int param0, int param1, boolean param2) {
         StringBuilder discarded$0 = null;
         int var3;
         String var4_ref_String;

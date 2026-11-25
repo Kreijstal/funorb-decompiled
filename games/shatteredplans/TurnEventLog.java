@@ -185,7 +185,7 @@ final class TurnEventLog {
         try {
           if (param2 != 0) {
             var6 = (byte[]) null;
-            TurnEventLog.a((byte[]) null, (byte) 21);
+            TurnEventLog.decodeSpriteSheet((byte[]) null, (byte) 21);
           }
           var5 = new BattleEvent(param1, param3, param0);
           this.field_a.addLast((byte) -113, var5);
@@ -229,7 +229,7 @@ final class TurnEventLog {
         }
     }
 
-    final static void a(byte[] param0, byte param1) {
+    final static void decodeSpriteSheet(byte[] param0, byte param1) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_23_0 = 0;

@@ -252,7 +252,7 @@ final class ObjectList {
               }
               var25_int = 0;
               if (MenuInputState.field_a != null &&
-                SecondaryNodeDequeIterator.a((byte) -97) &&
+                SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -97) &&
                 ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
                   var26 = var12.field_Jb.measureWidthUnbounded(false) + 2 * DateValidationSupport.field_a;
@@ -458,7 +458,7 @@ final class ObjectList {
                   }
                 }
                 if (EmailValidationError.field_a == param2 &&
-                  SecondaryNodeDequeIterator.a((byte) -124)) {
+                  SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -124)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
@@ -472,7 +472,7 @@ final class ObjectList {
                   }
                 }
                 if (EmailValidationError.field_a == param2 &&
-                  !SecondaryNodeDequeIterator.a((byte) -126)) {
+                  !SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -126)) {
                   var27 = MenuInputState.field_a.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatPhraseRegistry.replaceNumberedPlaceholders(SocialListEntry.field_Gb, 4371, new String[]{var27});
                 }

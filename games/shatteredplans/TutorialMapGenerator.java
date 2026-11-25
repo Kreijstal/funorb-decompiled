@@ -704,7 +704,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           var6 = 0;
           do {
             if (var6 >= var4_int) {
-              DateInputWidget.a(var5, 62);
+              DateInputWidget.continueTextColoursAcrossLines(var5, 62);
               break;
             }
             var5[var6] = IterableNodeHashTable.field_g[var6];
@@ -3875,7 +3875,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           this.field_f[0].field_D = new Star[]{};
           this.e(1);
           var2.field_e = this.field_f;
-          var2.a(26253);
+          var2.recomputeStarDistances(26253);
           var3 = 12 % ((-67 - param0) / 44);
           var2.computeDistances((byte) 80);
           var4 = new StarLinkPlanner(var2.field_e);
@@ -4093,7 +4093,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             if (1 < var5.length) {
               this.a(30429, param1);
             }
-            var4.a(26253);
+            var4.recomputeStarDistances(26253);
             var4.computeDistances((byte) 80);
             var6 = new StarLinkPlanner(var4.field_e);
             var6.buildLinks(true, 1);

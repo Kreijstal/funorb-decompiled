@@ -181,7 +181,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         ArrayOperations.copyObjects(var13.field_e, 0, var7, 0, var13.field_e.length);
         var7[var13.field_e.length] = var4;
         var13.field_e = var7;
-        var13.a(26253);
+        var13.recomputeStarDistances(26253);
         var13.computeDistances((byte) 80);
         var8 = var13.field_e;
         for (var9 = 0; var9 < var8.length; var9++) {

@@ -60,7 +60,7 @@ final class StandardMapReader implements MapGenerator {
           var6.field_L = var6.field_B >>> 6;
           var6.field_B = var6.field_B & 63;
         }
-        var12.a(26253);
+        var12.recomputeStarDistances(26253);
         var4 = 100 % ((-67 - param0) / 44);
         return var12;
     }

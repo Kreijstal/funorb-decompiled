@@ -589,7 +589,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (StrongCacheEntry.field_z != null) {
             ClientDialogSupport.setLoadingProgress(75.0f, 2, GuestPlayForm.field_I);
             this.draw(1);
-            SpriteState.a(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
+            SpriteState.loadGameMusic(StrongCacheEntry.field_z, DualLinkNode.field_n, param0 - 47);
             DualLinkNode.field_n = null;
             StrongCacheEntry.field_z = null;
             ValidationState.c(126);
@@ -911,7 +911,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         BirthDateConfirmationForm.clearStatics(-105);
         DualLinkNode.clearStatics(9768448);
         IndexedSpriteState.clearStatics(1);
-        SpriteState.e(997342595);
+        SpriteState.clearSpriteStateStatics(997342595);
         ReflectionCheck.clearStatics((byte) -70);
         RandomAccessCacheFile.clearStatics(false);
         AccountStatusSupport.clearStatics((byte) -57);
@@ -1055,7 +1055,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         AudioFilter.clearStatics();
         ReflectionQueueSupport.releaseReflectionQueueSupportStatics(0);
         NodeHashTableIterator.clearStatics(param0 + 24068);
-        SecondaryNodeDequeIterator.a(124);
+        SecondaryNodeDequeIterator.clearDequeIteratorStatics(124);
         HighscoreQueryRequest.clearStatics(1885);
         MenuPointerSupport.clearStatics((byte) 59);
         HighscorePlayerRecord.clearStatics((byte) -36);

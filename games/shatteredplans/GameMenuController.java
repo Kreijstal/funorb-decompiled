@@ -1505,7 +1505,7 @@ final class GameMenuController {
         if (param2 != -1) {
           GarrisonTask.field_p[param2].drawScaled(-param1 + param0, var8 + param3 - param1, 2 * param1, 2 * param1);
         } else {
-          AlignedMenuLabel.field_G.a(15, var8 + param3, 8192 * param1 / AlignedMenuLabel.field_G.field_z, param0, 200 * (RasterStateFrame.field_n % 25));
+          AlignedMenuLabel.field_G.drawRotatedCentered(15, var8 + param3, 8192 * param1 / AlignedMenuLabel.field_G.field_z, param0, 200 * (RasterStateFrame.field_n % 25));
         }
     }
 

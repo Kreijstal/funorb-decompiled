@@ -133,7 +133,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             LeaderboardSortSupport.clearActiveContextMenu(3);
             param3 = false;
           }
-          ResizingDialog.a(-21, param3, param6);
+          ResizingDialog.pollSocialNameDialog(-21, param3, param6);
           ChatHistoryEntry.handlePlayerReportPanel(-126, param4, param3);
           param3 = false;
         }

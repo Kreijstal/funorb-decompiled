@@ -122,7 +122,7 @@ class MenuComponent extends IntrusiveNode {
           if (var5 == null) {
             return false;
           }
-          TurnEventLog.a(var5, (byte) 62);
+          TurnEventLog.decodeSpriteSheet(var5, (byte) 62);
           if (param3 == 2) {
             return true;
           }

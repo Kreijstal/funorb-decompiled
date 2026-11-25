@@ -32,12 +32,12 @@ final class DiskCacheWorker implements Runnable {
         Dialog.field_D.bindAsRenderTarget();
         BattleContribution.adjustRectangleSaturationAndBrightness(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
         QuickChatMenu.field_Jb.bindAsRenderTarget();
-        MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
+        MouseWheelInput.desaturateRasterRectangle(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
         ClientRuntimeState.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
-        BirthDateValidator.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
-        BirthDateValidator.a(param0 ^ -174137062, ClientRuntimeState.field_c.field_z / 2, ClientRuntimeState.field_c, ClientRuntimeState.field_c.field_w / 4);
+        BirthDateValidator.applyRadialSpriteFade(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
+        BirthDateValidator.applyRadialSpriteFade(param0 ^ -174137062, ClientRuntimeState.field_c.field_z / 2, ClientRuntimeState.field_c, ClientRuntimeState.field_c.field_w / 4);
         MessageKind.field_b = new Sprite(640, 430);
         MessageKind.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {

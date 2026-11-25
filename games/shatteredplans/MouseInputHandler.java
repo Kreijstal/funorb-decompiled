@@ -205,7 +205,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           return true;
         }
-        if (!LegacyAi.a(2, LobbyRoomInteractionSupport.field_f, ConquestVictoryChecker.field_o, GameClientShell.field_D, IndexedSpriteState.field_e)) {
+        if (!LegacyAi.canOpenQuickChatReply(2, LobbyRoomInteractionSupport.field_f, ConquestVictoryChecker.field_o, GameClientShell.field_D, IndexedSpriteState.field_e)) {
           if (TextReplacementEntry.field_j == 10) {
             if (var3 != 0) {
               return false;

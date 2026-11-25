@@ -2587,18 +2587,18 @@ final class MapView extends MapViewState {
             this.field_ob.bindAsRenderTarget();
             var15.draw(0, (int)(this.field_wb * 100.0 + 0.5));
             var15.drawMirroredHorizontal(-10 + var9Lifetime2, (int)(100.0 * this.field_wb + 0.5));
-            var15.a(15, -5 + var10Lifetime2 - (int)(100.0 * this.field_wb * 0.5 + 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 10923);
-            var15.a(15, -5 - (int)(0.5 + 0.5 * (this.field_wb * 100.0)) + var10Lifetime2, 4096, -3 + var9Lifetime2 - (int)(100.0 * this.field_wb * ProjectsContent.field_e), 21845);
-            var15.a(15, 4 + (int)(0.5 * (this.field_wb * 100.0)), 4096, -3 + (var9Lifetime2 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb))), 43691);
-            var15.a(15, 4 + (int)(100.0 * this.field_wb * 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 54613);
+            var15.drawRotatedCentered(15, -5 + var10Lifetime2 - (int)(100.0 * this.field_wb * 0.5 + 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 10923);
+            var15.drawRotatedCentered(15, -5 - (int)(0.5 + 0.5 * (this.field_wb * 100.0)) + var10Lifetime2, 4096, -3 + var9Lifetime2 - (int)(100.0 * this.field_wb * ProjectsContent.field_e), 21845);
+            var15.drawRotatedCentered(15, 4 + (int)(0.5 * (this.field_wb * 100.0)), 4096, -3 + (var9Lifetime2 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb))), 43691);
+            var15.drawRotatedCentered(15, 4 + (int)(100.0 * this.field_wb * 0.5), 4096, (int)(this.field_wb * 100.0 * ProjectsContent.field_e) + 3, 54613);
             this.field_Ib = new ArgbSprite(var9Lifetime2, var10Lifetime2);
             this.field_Ib.bindAsRenderTarget();
             var8_ref_om.draw(0, (int)(0.5 + this.field_wb * 100.0));
             var8_ref_om.drawMirroredHorizontal(var9Lifetime2 - 15, (int)(0.5 + this.field_wb * 100.0));
-            var8_ref_om.a(15, -7 - (int)(0.5 * (100.0 * this.field_wb) + 0.5) + var10Lifetime2, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 10923);
-            var8_ref_om.a(param3 - 12099, var10Lifetime2 - ((int)(0.5 + 0.5 * (this.field_wb * 100.0)) + 7), 4096, -5 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb)) + var9Lifetime2, 21845);
-            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, -5 + var9Lifetime2 - (int)(ProjectsContent.field_e * (this.field_wb * 100.0)), 43691);
-            var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 54613);
+            var8_ref_om.drawRotatedCentered(15, -7 - (int)(0.5 * (100.0 * this.field_wb) + 0.5) + var10Lifetime2, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 10923);
+            var8_ref_om.drawRotatedCentered(param3 - 12099, var10Lifetime2 - ((int)(0.5 + 0.5 * (this.field_wb * 100.0)) + 7), 4096, -5 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb)) + var9Lifetime2, 21845);
+            var8_ref_om.drawRotatedCentered(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, -5 + var9Lifetime2 - (int)(ProjectsContent.field_e * (this.field_wb * 100.0)), 43691);
+            var8_ref_om.drawRotatedCentered(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 54613);
             OpacityWidget.popLegacyRasterState(0);
             for (var11 = 0; var10Lifetime2 * var9Lifetime2 > var11; var11++) {
               this.field_ob.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_ob.field_B[var11] << 8);
@@ -2872,7 +2872,7 @@ final class MapView extends MapViewState {
               GarrisonTask.field_p[var4Lifetime1.field_o].drawScaled(-var8Lifetime1 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var9 - var8Lifetime1, var8Lifetime1 * 2, var8Lifetime1 * 2);
             } else {
               if (var4Lifetime1.field_i != null) {
-                var4Lifetime1.field_i.field_d.a(15, var9 + this.field_J[var7Lifetime1], 4096 * var8Lifetime1 / AlignedMenuLabel.field_G.field_z, this.field_i[var7Lifetime1], this.field_t % 25 * 200);
+                var4Lifetime1.field_i.field_d.drawRotatedCentered(15, var9 + this.field_J[var7Lifetime1], 4096 * var8Lifetime1 / AlignedMenuLabel.field_G.field_z, this.field_i[var7Lifetime1], this.field_t % 25 * 200);
               }
             }
           }
@@ -3090,7 +3090,7 @@ final class MapView extends MapViewState {
                       break;
                     }
                     if (MatchingTextValidator.field_t.field_f) {
-                      InvalidMapConnectionException.a(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
+                      InvalidMapConnectionException.drawClippedAntialiasedLineQ4(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
                       break;
                     }
                     ValidationState.a(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);

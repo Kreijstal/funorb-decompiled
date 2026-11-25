@@ -9,7 +9,7 @@ abstract class MouseWheelInput {
     static int[] field_f;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void desaturateRasterRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;

@@ -539,7 +539,7 @@ abstract class GameClientShell extends GameApplet {
           }
           if (null == AccountStatusDialog.field_rb) {
             AccountStatusDialog.field_rb = HighscoreResponseSupport.getSharedPcmMixer(3);
-            StripedProgressWidget.field_M = DateInputWidget.a(-123);
+            StripedProgressWidget.field_M = DateInputWidget.getSoundEffectBufferSize(-123);
           }
           DiskCacheWorker.loadIntroResources(AccountStatusDialog.field_rb, StripedProgressWidget.field_M, 1000, GalaxyMap.field_g);
           StringList.field_f = null;

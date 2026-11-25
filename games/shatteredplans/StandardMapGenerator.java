@@ -49,7 +49,7 @@ class StandardMapGenerator implements MapGenerator {
             }
             var10++;
           }
-          param0.a(param1 + 26253);
+          param0.recomputeStarDistances(param1 + 26253);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

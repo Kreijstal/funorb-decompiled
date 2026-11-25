@@ -39,7 +39,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           this.dateValidator.input = this;
           if (param1 > -47) {
             String[] var4 = (String[]) null;
-            DateInputWidget.a((String[]) null, 46);
+            DateInputWidget.continueTextColoursAcrossLines((String[]) null, 46);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -50,7 +50,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
 
     abstract int year(int param0);
 
-    final static int a(int param0) {
+    final static int getSoundEffectBufferSize(int param0) {
         if (param0 > -115) {
           return -24;
         }
@@ -107,7 +107,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           var5 = new StringBuilder(var4);
           var6 = var2_int;
           if (!param1) {
-            DateInputWidget.a(22);
+            DateInputWidget.getSoundEffectBufferSize(22);
           }
           while (var6 < var3) {
             var7 = param0.charAt(var6);
@@ -137,7 +137,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void continueTextColoursAcrossLines(String[] args, int param1) {
         int var2_int = 0;
         int var3 = 0;
         String var4 = null;
@@ -193,7 +193,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
         }
     }
 
-    final static AccountRequestResult a(int param0, String param1) {
+    final static AccountRequestResult pollAccountNameAvailability(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         AccountRequestResult stackIn_8_0 = null;
@@ -204,7 +204,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -7416) {
-            DateInputWidget.a(7);
+            DateInputWidget.getSoundEffectBufferSize(7);
           }
           if (ExternalLinkSupport.field_a == MatchingTextValidator.field_s) {
             stackIn_4_0 = null;

@@ -618,7 +618,7 @@ final class GameSession implements AiHost {
           while (var7 < var6.length) {
             var9 = var6[var7];
             NodeHashTableIterator.a(var9, (byte) 49);
-            InvalidMapConnectionException.a((byte) -127, var9);
+            InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) -127, var9);
             var7++;
             if (var10 != 0) {
               return;
@@ -1539,7 +1539,7 @@ final class GameSession implements AiHost {
           }
           stackIn_18_0.field_J = stackIn_18_1.field_J - param1;
           this.field_C[param3.field_p] = this.field_C[param3.field_p] - param1;
-          InvalidMapConnectionException.a((byte) 83, param3);
+          InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 83, param3);
           NodeHashTableIterator.a(param2, (byte) 75);
           this.updateProjectedGarrisons(this.field_n, -95);
           if (this.field_f) {
@@ -2788,7 +2788,7 @@ final class GameSession implements AiHost {
               }
               var7 = var5[var6];
               NodeHashTableIterator.a(var7, (byte) 96);
-              InvalidMapConnectionException.a((byte) -99, var7);
+              InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) -99, var7);
               var6++;
             } while (var8 == 0);
             do {
@@ -3546,7 +3546,7 @@ final class GameSession implements AiHost {
               if (var6 != 0) {
                 while (true) {
                   NodeHashTableIterator.a(stackIn_46_0, (byte) 73);
-                  InvalidMapConnectionException.a((byte) 65, var4);
+                  InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 65, var4);
                   var3_int++;
                   break scanLoop1;
                 }
@@ -3617,7 +3617,7 @@ final class GameSession implements AiHost {
                 var4 = var2[var3_int];
                 stackIn_46_0Lifetime1 = var4;
                 NodeHashTableIterator.a(stackIn_46_0Lifetime1, (byte) 73);
-                InvalidMapConnectionException.a((byte) 65, var4);
+                InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 65, var4);
                 var3_int++;
                 if (var6 != 0) {
                   break scanLoop1;

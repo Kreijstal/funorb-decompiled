@@ -84,7 +84,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!LegacyAi.a(2, param3, param1, param4, param0)) {
+          if (!LegacyAi.canOpenQuickChatReply(2, param3, param1, param4, param0)) {
             return false;
           }
           if (param2) {

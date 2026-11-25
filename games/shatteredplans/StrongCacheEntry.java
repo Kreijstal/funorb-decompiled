@@ -84,11 +84,11 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param9) {
-            param8.a((byte) -87, param1, param2);
+            param8.writeExplicitStarData((byte) -87, param1, param2);
           } else {
-            param8.a(param2, param1, 127);
+            param8.writeSeededStarData(param2, param1, 127);
           }
-          param8.a(10529, param2, param1);
+          param8.writeStarOwners(10529, param2, param1);
           var10_int = 0;
           for (var11 = 0; var11 < param1.length; var11++) {
             var10_int = var10_int + param1[var11].field_i.size(0);

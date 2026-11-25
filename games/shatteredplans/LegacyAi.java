@@ -194,7 +194,7 @@ class LegacyAi extends StandardAi {
         }
     }
 
-    final static boolean a(int param0, int[] param1, String param2, int param3, long param4) {
+    final static boolean canOpenQuickChatReply(int param0, int[] param1, String param2, int param3, long param4) {
         RuntimeException var6 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;

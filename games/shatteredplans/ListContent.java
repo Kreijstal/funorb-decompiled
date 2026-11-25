@@ -26,10 +26,10 @@ final class ListContent implements MenuContent {
           return false;
         }
         if (param0 == 4) {
-          return ByteArrayStorage.a(param1, param2, false);
+          return ByteArrayStorage.handleFreeChatKeyInput(param1, param2, false);
         }
         field_d = (String) null;
-        return ByteArrayStorage.a(param1, param2, false);
+        return ByteArrayStorage.handleFreeChatKeyInput(param1, param2, false);
     }
 
     final static void a(int param0) {

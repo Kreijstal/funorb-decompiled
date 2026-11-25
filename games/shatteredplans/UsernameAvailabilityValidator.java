@@ -43,7 +43,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_n)) {
-            var3 = DateInputWidget.a(param0 + 3780, param1);
+            var3 = DateInputWidget.pollAccountNameAvailability(param0 + 3780, param1);
             if (var3 != null &&
               var3.field_g == null) {
               this.field_o = var3.field_h;
@@ -356,7 +356,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_n)) {
-            var4 = DateInputWidget.a(-7416, param1);
+            var4 = DateInputWidget.pollAccountNameAvailability(-7416, param1);
             if (var4 == null) {
               return null;
             }

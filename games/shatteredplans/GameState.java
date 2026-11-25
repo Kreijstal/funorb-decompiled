@@ -2045,7 +2045,7 @@ final class GameState {
           }
           this.updateMinimumGarrison(param2, false, (byte) 125);
           this.updateMinimumGarrison(param0, false, (byte) 114);
-          this.field_g.a(param1 ^ 26249);
+          this.field_g.recomputeStarDistances(param1 ^ 26249);
           this.field_g.computeDistances((byte) 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2466,7 +2466,7 @@ final class GameState {
                 }
                 this.updateMinimumGarrison(var3_ref.field_n, false, (byte) 123);
                 this.updateMinimumGarrison(var3_ref.field_k, false, (byte) 118);
-                this.field_g.a(26253);
+                this.field_g.recomputeStarDistances(26253);
                 this.field_g.computeDistances((byte) 80);
                 var3_ref.unlink((byte) -101);
               }

@@ -199,7 +199,7 @@ final class LobbyRoomInteractionSupport {
             DualLinkDequeSequence.field_f.field_mb = 0;
             var7 = DualLinkDequeSequence.field_f;
             var7.field_K = 0;
-            if (!SecondaryNodeDequeIterator.a((byte) -94)) {
+            if (!SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -94)) {
               var9_ref_String = MenuInputState.field_a.field_Xb;
               ArchiveSourceManager.field_f.field_z = QuickChatPhraseRegistry.replaceNumberedPlaceholders(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);

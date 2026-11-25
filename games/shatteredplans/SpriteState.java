@@ -15,7 +15,7 @@ abstract class SpriteState extends DualLinkNode {
     int field_o;
     int field_p;
 
-    final static void a(Archive param0, Archive param1, int param2) {
+    final static void loadGameMusic(Archive param0, Archive param1, int param2) {
         SoundTriggerTick.field_d = MusicTrack.load(param0, "", "shattered_plans_intro");
         RematchMenuSupport.field_a = MusicTrack.load(param0, "", "shattered_plans_ingame_two");
         LobbyOptionSupport.field_i = MusicTrack.load(param0, "", "shattered_plans_ingame");
@@ -36,7 +36,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawRotatedCentered(int param0, int param1, int param2, int param3, int param4) {
         int var6 = this.field_o << 3;
         int var7 = this.field_p << 3;
         param3 = (param3 << 4) + (var6 & 15);
@@ -44,7 +44,7 @@ abstract class SpriteState extends DualLinkNode {
         this.rotateNearest(var6, var7, param3, param1, param4, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearSpriteStateStatics(int param0) {
         field_s = null;
         if (param0 == 997342595) {
           field_y = null;
@@ -55,7 +55,7 @@ abstract class SpriteState extends DualLinkNode {
           return;
         }
         Archive var2 = (Archive) null;
-        SpriteState.a((Archive) null, (Archive) null, 124);
+        SpriteState.loadGameMusic((Archive) null, (Archive) null, 124);
         field_y = null;
         field_r = null;
         field_q = null;

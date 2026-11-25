@@ -179,14 +179,14 @@ abstract class ResizingDialog extends Dialog {
         this.onResizeFinished((byte) -103);
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void pollSocialNameDialog(int param0, boolean param1, int param2) {
         int var3;
         String var4;
         Object var5;
         String var6;
         CharSequence var7;
         if (param0 != -21) {
-          ResizingDialog.a(-51, true, -46);
+          ResizingDialog.pollSocialNameDialog(-51, true, -46);
         }
         if (ProxyAuthenticationRequiredException.field_e != null) {
           var3 = ProxyAuthenticationRequiredException.field_e.pollNameInput((byte) -83, param1);
@@ -259,7 +259,7 @@ abstract class ResizingDialog extends Dialog {
         return super.animate((byte) 88);
     }
 
-    final static int a(ChatHistoryEntry param0, byte param1) {
+    final static int getChatTextColour(ChatHistoryEntry param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;

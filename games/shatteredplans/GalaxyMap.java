@@ -21,7 +21,7 @@ final class GalaxyMap {
         this.field_h = QuaternaryNodeList.computeShortestHops(this.field_e, 0);
         if (param0 != 80) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a((byte) 42, (Player[]) null, (PacketBuffer) null);
+          this.writeExplicitStarData((byte) 42, (Player[]) null, (PacketBuffer) null);
         }
     }
 
@@ -35,7 +35,7 @@ final class GalaxyMap {
         field_g = null;
     }
 
-    final void a(int param0) {
+    final void recomputeStarDistances(int param0) {
         if (param0 != 26253) {
           this.field_j = (Random) null;
         }
@@ -64,7 +64,7 @@ final class GalaxyMap {
         }
     }
 
-    final void a(PacketBuffer param0, Player[] param1, int param2) {
+    final void writeSeededStarData(PacketBuffer param0, Player[] param1, int param2) {
         int var6 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -232,7 +232,7 @@ final class GalaxyMap {
         }
     }
 
-    final void a(byte param0, Player[] param1, PacketBuffer param2) {
+    final void writeExplicitStarData(byte param0, Player[] param1, PacketBuffer param2) {
         int var6 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -317,7 +317,7 @@ final class GalaxyMap {
         }
     }
 
-    final void a(int param0, PacketBuffer param1, Player[] param2) {
+    final void writeStarOwners(int param0, PacketBuffer param1, Player[] param2) {
         int var5 = 0;
         Star[] var4 = null;
         Star var6 = null;

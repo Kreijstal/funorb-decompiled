@@ -13,14 +13,14 @@ final class InvalidMapConnectionException extends Exception {
         field_f = null;
         field_e = null;
         if (param0 != 16) {
-          InvalidMapConnectionException.a(-128, -13, 12, 114, -121, -123);
+          InvalidMapConnectionException.drawClippedAntialiasedLineQ4(-128, -13, 12, 114, -121, -123);
         }
         field_d = null;
         field_a = null;
         field_c = null;
     }
 
-    final static void a(byte param0, Star param1) {
+    final static void sortOutgoingFleetMovesByAngle(byte param0, Star param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -79,7 +79,7 @@ final class InvalidMapConnectionException extends Exception {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawClippedAntialiasedLineQ4(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -154,7 +154,7 @@ final class InvalidMapConnectionException extends Exception {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void drawXMajorAntialiasedLineQ4(int param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -466,7 +466,7 @@ final class InvalidMapConnectionException extends Exception {
             SoftwareRasterizer.field_h[var22Lifetime1] = PrivateChatMessage.intOr(var21Lifetime3, var19Lifetime3) >>> 8;
           }
           if (param1 != -55) {
-            InvalidMapConnectionException.b((byte) 124);
+            InvalidMapConnectionException.acquireIntPairNode((byte) 124);
           }
           var8Lifetime1 = var8Lifetime1 << 4;
           var12Lifetime1++;
@@ -528,12 +528,12 @@ final class InvalidMapConnectionException extends Exception {
         super(param0);
     }
 
-    final static MutableIntPairNode b(byte param0) {
+    final static MutableIntPairNode acquireIntPairNode(byte param0) {
         if (MouseInputHandler.field_c.isEmpty(69)) {
           return new MutableIntPairNode();
         }
         if (param0 != -103) {
-          InvalidMapConnectionException.b((byte) -5);
+          InvalidMapConnectionException.acquireIntPairNode((byte) -5);
         }
         return (MutableIntPairNode) (MouseInputHandler.field_c.pollFirst(44));
     }

@@ -61,7 +61,7 @@ final class SolMapReader implements MapGenerator {
           var9.field_L = var9.field_B >>> 6;
           var9.field_B = var9.field_B & 63;
         }
-        var4.a(26253);
+        var4.recomputeStarDistances(26253);
         return var4;
     }
 
@@ -218,7 +218,7 @@ final class SolMapReader implements MapGenerator {
               }
               var10 = IsolationistAi.formatChatPrefix(param0, var8_ref_nf);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_nf.field_k);
-              var12 = ResizingDialog.a(var8_ref_nf, (byte) -73);
+              var12 = ResizingDialog.getChatTextColour(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = QuickChatHelpSupport.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & BoundsRect.field_k.field_jb >> 1);

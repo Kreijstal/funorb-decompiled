@@ -49,7 +49,7 @@ final class StatefulWidgetTheme extends WidgetTheme {
         if (!FilledMenuPanel.isFreeChatAllowed((byte) -97)) {
           return false;
         }
-        int var4 = ByteArrayStorage.a(param0, param2, false) ? 1 : 0;
+        int var4 = ByteArrayStorage.handleFreeChatKeyInput(param0, param2, false) ? 1 : 0;
         if (80 == TextReplacementEntry.field_j ||
           TextReplacementEntry.field_j == 84) {
           var4 = 1;

@@ -9,7 +9,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     NameSuggestionsPanel field_F;
     private FocusableWidget field_I;
 
-    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, boolean param6) {
+    private final int addValidatedFieldRow(int param0, int param1, int param2, UiWidget param3, String param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
@@ -74,7 +74,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           return;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
+        int discarded$0 = this.addValidatedFieldRow(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
         ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
     }
 
@@ -103,7 +103,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         IntNode.requestDisplayNameChange(8192, this.field_H.field_s);
     }
 
-    final static void l(int param0) {
+    final static void initializeReportReasonLabels(int param0) {
         FullscreenFocusCanvas.field_f = new String[DirectByteArrayStorage.field_j];
         FullscreenFocusCanvas.field_f[11] = ClientLobbyResources.field_g;
         FullscreenFocusCanvas.field_f[21] = Player.field_j;
@@ -122,7 +122,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
           return;
         }
-        DisplayNameForm.l(-42);
+        DisplayNameForm.initializeReportReasonLabels(-42);
         FullscreenFocusCanvas.field_f[20] = MenuWindow.field_w;
         FullscreenFocusCanvas.field_f[19] = QuickChatHelpPanelSupport.field_a;
         FullscreenFocusCanvas.field_f[5] = SoundEffectDefinition.field_b;
@@ -164,7 +164,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    private final int a(byte param0, int param1, int param2, UiWidget param3, String param4, String param5) {
+    private final int addValidatedFieldRow(byte param0, int param1, int param2, UiWidget param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -178,7 +178,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -77) {
-            stackIn_4_0 = this.a(35, param2, param1, param3, param4, param5, true);
+            stackIn_4_0 = this.addValidatedFieldRow(35, param2, param1, param3, param4, param5, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -45;
@@ -316,7 +316,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         var2.setBounds(var3, 50, (byte) 121, 20, 270);
         this.addChild((byte) -47, var2);
         var3 += 50;
-        var3 = var3 + (this.a((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
+        var3 = var3 + (this.addValidatedFieldRow((byte) -110, 170, var3, this.field_H, AllianceExpiredEvent.field_m, MapView.field_zb) + 5);
         this.field_I.setBounds(var3, 40, (byte) 123, 496 - var5 >> 1, var5);
         this.field_G.setBounds(var3 + 15, 40, (byte) 127, var4 + 3, 60);
         this.field_G.field_u = (WidgetListener) (this);

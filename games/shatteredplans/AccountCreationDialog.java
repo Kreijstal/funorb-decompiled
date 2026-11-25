@@ -34,7 +34,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var10 = var8;
           var3 = var10.readUnsignedByte(-108);
           var10.startBitAccess(-84);
-          AdditiveSpriteWipeSupport.field_a = SecondaryNodeDequeIterator.a(24243, var10);
+          AdditiveSpriteWipeSupport.field_a = SecondaryNodeDequeIterator.decodeMeshMaterials(24243, var10);
           ClientRandomSupport.field_d = new MeshData[var3];
           ValidatedTextInputWidget.field_Z = new int[var3][];
           if (param0 <= 82) {

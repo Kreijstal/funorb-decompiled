@@ -29,7 +29,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    final static MeshMaterial[] a(int param0, CipherPacketBuffer param1) {
+    final static MeshMaterial[] decodeMeshMaterials(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         MeshMaterial[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -86,14 +86,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isLobbyRoomOwner(byte param0) {
         if (param0 >= -90) {
           return false;
         }
         return ~MenuInputState.field_a.field_fc == ~UsernameAvailabilityValidator.field_p ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearDequeIteratorStatics(int param0) {
         if (param0 > 123) {
           field_d = null;
           field_h = null;
@@ -102,7 +102,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           return;
         }
         CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-        SecondaryNodeDequeIterator.a(-22, (CipherPacketBuffer) null);
+        SecondaryNodeDequeIterator.decodeMeshMaterials(-22, (CipherPacketBuffer) null);
         field_d = null;
         field_h = null;
         field_g = null;

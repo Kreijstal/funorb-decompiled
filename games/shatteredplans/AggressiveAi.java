@@ -293,7 +293,7 @@ final class AggressiveAi extends StandardAi {
         var27 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param1) {
-            if (SecondaryNodeDequeIterator.a((byte) -92)) {
+            if (SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -92)) {
               stackIn_12_0 = (!param2.field_Ab) ? 1 : 0;
             } else {
               stackIn_12_0 = 0;
@@ -325,7 +325,7 @@ final class AggressiveAi extends StandardAi {
               stackIn_30_0.field_bb = stackIn_31_1;
             }
             if (ByteArrayNode.field_p[0][2].field_v) {
-              if (!SecondaryNodeDequeIterator.a((byte) -126)) {
+              if (!SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -126)) {
                 DualLinkDequeSequence.field_k = QuickChatPhraseRegistry.replaceNumberedPlaceholders(ReflectionQueueSupport.field_b, 4371, new String[]{MenuInputState.field_a.field_Xb});
               } else {
                 DualLinkDequeSequence.field_k = ClientInputSupport.field_c;

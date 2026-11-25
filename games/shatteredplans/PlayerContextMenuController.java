@@ -42,7 +42,7 @@ final class PlayerContextMenuController {
           this.field_b = 56L;
           return;
         }
-        if (!SecondaryNodeDequeIterator.a((byte) -123)) {
+        if (!SecondaryNodeDequeIterator.isLobbyRoomOwner((byte) -123)) {
           if (param1 == -16661) {
             return;
           }
