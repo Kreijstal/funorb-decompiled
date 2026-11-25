@@ -708,11 +708,11 @@ final class TaskAi implements PlayerAi {
             var4 = 0;
           }
           if (var4 != -1) {
-            this.field_c.a(0, (byte) -125, param0, this.field_w, var4);
+            this.field_c.displayAiChat(0, (byte) -125, param0, this.field_w, var4);
           }
           if (!this.field_w.field_h[param0.field_x] &&
             0 > var3_int) {
-            this.field_c.a((byte) -63, this.field_w, param0);
+            this.field_c.submitAllianceOffer((byte) -63, this.field_w, param0);
             this.b(true);
             return;
           }
@@ -1216,7 +1216,7 @@ final class TaskAi implements PlayerAi {
             }
           }
           if (var4 != -1) {
-            this.field_c.a(0, (byte) -109, param0, this.field_w, var4);
+            this.field_c.displayAiChat(0, (byte) -109, param0, this.field_w, var4);
           }
           if (param1 != -42) {
             this.deployTannhauser((byte) -14);
@@ -1621,11 +1621,11 @@ final class TaskAi implements PlayerAi {
               var6 = 7;
             }
             if (var6 != -1) {
-              this.field_c.a(0, (byte) -109, var5, this.field_w, var6);
+              this.field_c.displayAiChat(0, (byte) -109, var5, this.field_w, var6);
               this.field_f[this.field_r] = ClientException.randomInRange(6, 3, (byte) 104);
             }
           }
-          this.field_c.a((byte) -63, this.field_w, var5);
+          this.field_c.submitAllianceOffer((byte) -63, this.field_w, var5);
         }
         return;
     }
@@ -1776,7 +1776,7 @@ final class TaskAi implements PlayerAi {
           var5 = var3[var4];
           if (this.field_w != var5) {
             var6 = ClientRandomSupport.randomBelow((byte) -39, 2) + 14;
-            this.field_c.a(0, (byte) -27, var5, this.field_w, var6);
+            this.field_c.displayAiChat(0, (byte) -27, var5, this.field_w, var6);
           }
         }
     }

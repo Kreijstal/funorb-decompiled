@@ -359,7 +359,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 MusicEnvelope.field_d) {
                 DiskCacheWorker.a(1048576);
                 if (TiledNineSlicePainter.field_b) {
-                  PasswordInputPainter.field_x.a(false, false);
+                  PasswordInputPainter.field_x.handleGameExit(false, false);
                 }
                 ProxyAuthenticationRequiredException.field_b = true;
                 TiledNineSlicePainter.field_b = false;
@@ -429,7 +429,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (decompiledRegionSelector0 != 0) {
               continue;
             }
-            var13.b((byte) -81);
+            var13.initializeGameScreen((byte) -81);
             stackIn_126_0 = var13;
             stackIn_127_1 = (var14 != 0);
             stackIn_126_0.field_L = stackIn_127_1;
@@ -1216,9 +1216,9 @@ public final class ShatteredPlansClient extends GameClientShell {
                 }
               } else {
                 if (!EmailValidator.field_p) {
-                  PasswordInputPainter.field_x.b(true, true);
+                  PasswordInputPainter.field_x.tick(true, true);
                   while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-                    PasswordInputPainter.field_x.g(-86);
+                    PasswordInputPainter.field_x.handleKeyInput(-86);
                   }
                 } else {
                   var3 = 1;
@@ -1245,11 +1245,11 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             StatusMessagePanel.a(2, var3 != 0);
             if (MusicEnvelope.field_d) {
-              SecondaryNodeHashTable.field_g.b(var4 != 0, true);
+              SecondaryNodeHashTable.field_g.tick(var4 != 0, true);
             }
             if (TiledNineSlicePainter.field_b) {
               StatusMessagePanel.a(320, 8, 180, var4 != 0);
-              PasswordInputPainter.field_x.b(var4 != 0, true);
+              PasswordInputPainter.field_x.tick(var4 != 0, true);
             }
             while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
               if (TiledNineSlicePainter.field_b) {
@@ -1261,12 +1261,12 @@ public final class ShatteredPlansClient extends GameClientShell {
               }
               stackIn_47_0 = MusicEnvelope.field_d;
               if (stackIn_47_0) {
-                SecondaryNodeHashTable.field_g.g(-98);
+                SecondaryNodeHashTable.field_g.handleKeyInput(-98);
               }
               if (!TiledNineSlicePainter.field_b) {
                 continue;
               }
-              PasswordInputPainter.field_x.g(-99);
+              PasswordInputPainter.field_x.handleKeyInput(-99);
             }
           }
           stackIn_47_0Lifetime1 = EmailValidator.field_p;

@@ -655,7 +655,7 @@ class StandardAi implements PlayerAi {
             }
           }
           if (-1 != var4) {
-            this.field_j.a(0, (byte) 12, param0, this.field_n, var4);
+            this.field_j.displayAiChat(0, (byte) 12, param0, this.field_n, var4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1055,7 +1055,7 @@ class StandardAi implements PlayerAi {
           var5 = var3[var4];
           if (var5 != this.field_n) {
             var6 = var8[ClientRandomSupport.randomBelow((byte) -39, var8.length)];
-            this.field_j.a(0, (byte) -110, var5, this.field_n, var6);
+            this.field_j.displayAiChat(0, (byte) -110, var5, this.field_n, var6);
           }
         }
         var4Lifetime1 = -49 / ((-36 - param0) / 38);
@@ -1518,7 +1518,7 @@ class StandardAi implements PlayerAi {
             return;
           }
           if (2 == this.field_h) {
-            this.field_j.a((byte) -63, this.field_n, param0);
+            this.field_j.submitAllianceOffer((byte) -63, this.field_n, param0);
           }
           var3_int = this.field_b[param0.field_x];
           var7 = var3_int;
@@ -1563,14 +1563,14 @@ class StandardAi implements PlayerAi {
             var4 = 0;
           }
           if (-1 != var4) {
-            this.field_j.a(0, (byte) 6, param0, this.field_n, var4);
+            this.field_j.displayAiChat(0, (byte) 6, param0, this.field_n, var4);
           }
           if (this.field_l &&
             !this.field_n.field_h[param0.field_x]) {
             if (var3_int >= 0) {
               return;
             }
-            this.field_j.a((byte) -63, this.field_n, param0);
+            this.field_j.submitAllianceOffer((byte) -63, this.field_n, param0);
             if (this.field_h != 3) {
               return;
             }
@@ -2152,11 +2152,11 @@ class StandardAi implements PlayerAi {
                 }
               }
               if (var5 != -1) {
-                this.field_j.a(0, (byte) 93, var4, this.field_n, var5);
+                this.field_j.displayAiChat(0, (byte) 93, var4, this.field_n, var5);
                 this.field_c[this.field_k] = ClientException.randomInRange(6, 3, (byte) 121);
               }
             }
-            this.field_j.a((byte) -63, this.field_n, var4);
+            this.field_j.submitAllianceOffer((byte) -63, this.field_n, var4);
           }
         }
     }

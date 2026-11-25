@@ -247,7 +247,7 @@ final class IntrusiveDequeCursor {
             }
             return;
           }
-          SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
+          SecondaryNodeHashTable.field_g.drawMap(param1, param0 ^ -74);
           if (TutorialAi.field_x &&
             Wormhole.field_i) {
             if (TiledNineSlicePainter.field_b &&
@@ -269,7 +269,7 @@ final class IntrusiveDequeCursor {
           }
           return;
         }
-        PasswordInputPainter.field_x.a(param1, 81);
+        PasswordInputPainter.field_x.drawMap(param1, 81);
         if (param0 != 1) {
           return;
         }
@@ -298,7 +298,7 @@ final class IntrusiveDequeCursor {
           }
           return;
         }
-        SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
+        SecondaryNodeHashTable.field_g.drawMap(param1, param0 ^ -74);
         if (!TutorialAi.field_x) {
           return;
         }

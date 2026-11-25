@@ -2326,19 +2326,19 @@ final class GameMenuController {
                                     }
                                     if (var5 == 10) {
                                       this.field_g = param0;
-                                      PasswordInputPainter.field_x.a(false, param1);
+                                      PasswordInputPainter.field_x.handleGameExit(false, param1);
                                       ProxyAuthenticationRequiredException.field_b = true;
                                       Wormhole.field_i = false;
                                     } else {
                                       if (11 == var5) {
                                         this.field_g = param0;
-                                        PasswordInputPainter.field_x.c(false);
+                                        PasswordInputPainter.field_x.toggleDrawOffer(false);
                                         var5 = param1 ? 1 : 0;
                                         MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                                       } else {
                                         if (var5 == 12) {
                                           this.field_g = param0;
-                                          PasswordInputPainter.field_x.d(-7970);
+                                          PasswordInputPainter.field_x.sendResignRequest(-7970);
                                           var5 = param1 ? 1 : 0;
                                           MenuTransitionSupport.beginMenuTransition(0, -1, (byte) 96, var5 != 0);
                                         } else {

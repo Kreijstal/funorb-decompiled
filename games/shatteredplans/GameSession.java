@@ -182,7 +182,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void readTurnOrders(int param0, PacketBuffer param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -208,7 +208,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void handleGameExit(boolean param0, boolean param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -233,7 +233,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(Player param0, int param1) {
+    private final void updateProjectedGarrisons(Player param0, int param1) {
         Player stackIn_9_0 = null;
         Player stackIn_9_1 = null;
         int stackIn_59_0 = 0;
@@ -290,7 +290,7 @@ final class GameSession implements AiHost {
         try {
           var3 = this.field_P.field_g.field_e;
           if (param1 > -65) {
-            this.d((byte) -75);
+            this.advanceLocalPlayerTurn((byte) -75);
           }
           var4_ref_ln__ = var3;
           var5_int = 0;
@@ -561,7 +561,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void b(int param0, PacketBuffer param1, int param2) {
+    private final void readAndApplyPlanningOrders(int param0, PacketBuffer param1, int param2) {
         GameState stackIn_14_0 = null;
         GameState stackIn_19_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -624,7 +624,7 @@ final class GameSession implements AiHost {
               return;
             }
           }
-          this.a(this.field_n, -94);
+          this.updateProjectedGarrisons(this.field_n, -94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -660,7 +660,7 @@ final class GameSession implements AiHost {
           this.field_r = new int[param0.field_e.length];
           this.field_V = new boolean[param0.field_e.length];
           this.field_U = new int[param0.field_e.length];
-          this.a(this.field_n, -74);
+          this.updateProjectedGarrisons(this.field_n, -74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,7 +676,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void drawMap(boolean param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         MapView stackIn_6_0 = null;
@@ -745,7 +745,7 @@ final class GameSession implements AiHost {
                     var4.field_r = null;
                     if (this.field_f) {
                       this.field_ab.addLast(var4, 32);
-                      this.e(param0 + 3587);
+                      this.scheduleOrderSend(param0 + 3587);
                     }
                     var4.unlink((byte) -105);
                     this.field_Y.c(var4.field_o, 127);
@@ -763,7 +763,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    public final void a(int param0, byte param1, Player param2, Player param3, int param4) {
+    public final void displayAiChat(int param0, byte param1, Player param2, Player param3, int param4) {
         Player stackIn_4_0 = null;
         String stackIn_14_0 = null;
         RuntimeException stackIn_19_0 = null;
@@ -865,8 +865,8 @@ final class GameSession implements AiHost {
             boolean decompiledSharedTail1 = (!(this.field_P.field_O < var2_int) ||
               -1 == this.field_P.field_O);
             if (!decompiledSharedTail1) {
-              this.b(false);
-              this.a((byte) 96, var4, var3);
+              this.advanceTurnNotices(false);
+              this.applyTurnResult((byte) 96, var4, var3);
               if (~var5 != ~this.field_P.computeChecksum(-28824)) {
                 var9 = LobbyOptionSupport.field_f;
                 var9.h(66, param0 ^ 14680);
@@ -890,13 +890,13 @@ final class GameSession implements AiHost {
               this.field_P.setYearNameIndices(var7_int, var6, false);
               this.field_L = false;
               this.field_S = var8;
-              this.a(true);
+              this.beginPlanningPhase(true);
               decompiledSharedTail1 = (var11 != 0);
             }
             if ((decompiledSharedTail1) &&
               (this.field_P.field_O == -1)) {
               this.field_P.setTurnNumber(-9778, var2_int);
-              this.a(true, (int[]) null);
+              this.updatePlayerStatistics(true, (int[]) null);
               this.field_q = this.field_P.field_O;
             }
             this.field_S = var8;
@@ -907,15 +907,15 @@ final class GameSession implements AiHost {
             return true;
           }
           if (BufferedCacheFile.field_e == 67) {
-            this.a(1, SpriteWipeSupport.field_a, TextInputPainter.field_t);
+            this.readTurnOrders(1, SpriteWipeSupport.field_a, TextInputPainter.field_t);
             return true;
           }
           if (70 == BufferedCacheFile.field_e) {
-            this.b(TextInputPainter.field_t, SpriteWipeSupport.field_a, -123);
+            this.readAndApplyPlanningOrders(TextInputPainter.field_t, SpriteWipeSupport.field_a, -123);
             return true;
           }
           if (68 == BufferedCacheFile.field_e) {
-            this.a(SpriteWipeSupport.field_a, TextInputPainter.field_t, -80);
+            this.readDiplomacyUpdates(SpriteWipeSupport.field_a, TextInputPainter.field_t, -80);
             return true;
           }
           if (BufferedCacheFile.field_e == 62) {
@@ -991,7 +991,7 @@ final class GameSession implements AiHost {
             var2_intLifetime3 = SpriteWipeSupport.field_a.readUnsignedByte(-95);
             var3Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(-112);
             var4Lifetime1 = SpriteWipeSupport.field_a.readUnsignedByte(param0 ^ -14805);
-            this.a(var4Lifetime1, (byte) 4, this.field_n, this.field_P.field_v[var2_intLifetime3], var3Lifetime1);
+            this.displayAiChat(var4Lifetime1, (byte) 4, this.field_n, this.field_P.field_v[var2_intLifetime3], var3Lifetime1);
             return true;
           }
           if (BufferedCacheFile.field_e == 74 &&
@@ -1067,7 +1067,7 @@ final class GameSession implements AiHost {
           this.field_P.field_i.addLast((byte) -113, var5);
           if (this.field_f) {
             this.field_ab.addLast(var5, 32);
-            this.e(0);
+            this.scheduleOrderSend(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1242,7 +1242,7 @@ final class GameSession implements AiHost {
               }
               this.field_z.field_C = true;
               this.field_P.clearTurnState(-7954);
-              this.a(true, var3);
+              this.updatePlayerStatistics(true, var3);
               stackIn_94_0 = var5;
             }
             break;
@@ -1273,7 +1273,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void d(int param0) {
+    final void sendResignRequest(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1325,7 +1325,7 @@ final class GameSession implements AiHost {
           }
           if (decompiledSharedTail1) {
             if (LobbyCommandSupport.field_d == 1) {
-              this.a(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
+              this.handleMapClick(SliderWidget.field_P, (byte) -103, PointsVictoryChecker.field_p);
             }
             this.handleMapPointer(-3587, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
             this.field_z.updateHoverTarget(this.field_m, 0, TertiaryListSequence.field_k, LobbyRoomControlsSupport.field_b);
@@ -1339,7 +1339,7 @@ final class GameSession implements AiHost {
             }
           }
           if (param0 != 50) {
-            this.d(88);
+            this.sendResignRequest(88);
           }
           var5 = this.field_z.field_I;
           if (FleetTrailPoint.field_p[97]) {
@@ -1541,10 +1541,10 @@ final class GameSession implements AiHost {
           this.field_C[param3.field_p] = this.field_C[param3.field_p] - param1;
           InvalidMapConnectionException.a((byte) 83, param3);
           NodeHashTableIterator.a(param2, (byte) 75);
-          this.a(this.field_n, -95);
+          this.updateProjectedGarrisons(this.field_n, -95);
           if (this.field_f) {
             this.field_v.addLast((byte) 9, var5);
-            this.e(0);
+            this.scheduleOrderSend(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1620,10 +1620,10 @@ final class GameSession implements AiHost {
             param0.unlinkSecondary(16);
             param0.unlinkTertiary(true);
           }
-          this.a(this.field_n, -117);
+          this.updateProjectedGarrisons(this.field_n, -117);
           if (this.field_f) {
             this.field_v.addLast((byte) 9, param0);
-            this.e(0);
+            this.scheduleOrderSend(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1900,7 +1900,7 @@ final class GameSession implements AiHost {
         RuntimeException var2_ref = null;
         try {
           if (param0 < 122) {
-            this.a((Player) null, -117);
+            this.updateProjectedGarrisons((Player) null, -117);
           }
           if (this.field_f) {
             if (-1 != this.field_k) {
@@ -1918,7 +1918,7 @@ final class GameSession implements AiHost {
               return;
             }
           }
-          this.d((byte) -81);
+          this.advanceLocalPlayerTurn((byte) -81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1949,7 +1949,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(Player param0, Player param1, boolean param2) {
+    private final void showAllianceOfferNotice(Player param0, Player param1, boolean param2) {
         String var4 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -1999,7 +1999,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void e(int param0) {
+    private final void scheduleOrderSend(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2018,7 +2018,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void applyTurnResult(byte param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -2107,7 +2107,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, int param2) {
+    private final void readDiplomacyUpdates(PacketBuffer param0, int param1, int param2) {
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -2149,7 +2149,7 @@ final class GameSession implements AiHost {
                   var8_ref_fs.field_w = var8_ref_fs.field_w & ~(1 << var7);
                   var9.field_A = var9.field_A & ~(1 << var6);
                   var9.field_w = var9.field_w & ~(1 << var6);
-                  this.a(var8_ref_fs, -27584, var9);
+                  this.handleAllianceFormed(var8_ref_fs, -27584, var9);
                   param1 -= 3;
                 }
               } else {
@@ -2163,7 +2163,7 @@ final class GameSession implements AiHost {
                     stackIn_3_0 = 0;
                     stackIn_3_1 = var7 & 1 << var8;
                     if (stackIn_3_0 != stackIn_3_1) {
-                      this.a(this.field_P.field_v[var8], this.field_n, true);
+                      this.showAllianceOfferNotice(this.field_P.field_v[var8], this.field_n, true);
                     }
                     var8++;
                   }
@@ -2188,7 +2188,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(int param0, Star param1, int param2) {
+    private final void queueStarProject(int param0, Star param1, int param2) {
         RuntimeException runtimeException = null;
         ProjectUse var4 = null;
         int var5 = 0;
@@ -2222,7 +2222,7 @@ final class GameSession implements AiHost {
           }
           if (stackIn_14_0 != 0) {
             this.field_ab.addLast(var4, 32);
-            this.e(param2 ^ 0);
+            this.scheduleOrderSend(param2 ^ 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2239,7 +2239,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(boolean param0, int[] param1) {
+    private final void updatePlayerStatistics(boolean param0, int[] param1) {
         boolean stackIn_27_0 = false;
         Object stackIn_49_0 = null;
         boolean stackIn_51_0 = false;
@@ -2501,7 +2501,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    public final void a(byte param0, Player param1, Player param2) {
+    public final void submitAllianceOffer(byte param0, Player param1, Player param2) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -2539,7 +2539,7 @@ final class GameSession implements AiHost {
             param1.field_w = param1.field_w & ~(1 << param2.field_x);
             param2.field_A = param2.field_A & ~(1 << param1.field_x);
             param2.field_w = param2.field_w & ~(1 << param1.field_x);
-            this.a(param2, param0 ^ 27521, param1);
+            this.handleAllianceFormed(param2, param0 ^ 27521, param1);
             if (!ShatteredPlansClient.field_F) {
               return;
             }
@@ -2568,7 +2568,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void c(boolean param0) {
+    final void toggleDrawOffer(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2576,7 +2576,7 @@ final class GameSession implements AiHost {
             throw new IllegalStateException();
           }
           if (param0) {
-            this.c(false);
+            this.toggleDrawOffer(false);
           }
           LobbyOptionSupport.field_f.h(63, 255);
           return;
@@ -2642,7 +2642,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void g(int param0) {
+    final void handleKeyInput(int param0) {
         boolean stackIn_11_0 = false;
         boolean stackIn_12_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2768,9 +2768,9 @@ final class GameSession implements AiHost {
             var4_ref = (ProjectUse) (this.field_P.field_i.startForward(0));
             do {
               if (var4_ref == null) {
-                this.e(0);
+                this.scheduleOrderSend(0);
                 this.field_s[this.field_h].planTurn((byte) -98);
-                this.a(this.field_n, -122);
+                this.updateProjectedGarrisons(this.field_n, -122);
                 break;
               }
               var4_ref.field_q = null;
@@ -2814,7 +2814,7 @@ final class GameSession implements AiHost {
                 return;
               }
             }
-            this.e(0);
+            this.scheduleOrderSend(0);
             return;
           }
           return;
@@ -2825,7 +2825,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void handleMapClick(int param0, byte param1, int param2) {
         int stackIn_33_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_53_0 = 0;
@@ -2929,7 +2929,7 @@ final class GameSession implements AiHost {
                     }
                     this.field_z.endReplay(-18641);
                     this.refreshMapView(2);
-                    this.a(1, this.field_z.field_p, 0);
+                    this.queueStarProject(1, this.field_z.field_p, 0);
                     this.field_Y.a(-122, 0);
                     this.field_Y.b(1, 2);
                     if (var8 == 0) {
@@ -3006,7 +3006,7 @@ final class GameSession implements AiHost {
                     !this.field_n.field_h[var5_ref.field_x])) {
                     this.field_z.endReplay(-18641);
                     this.refreshMapView(2);
-                    this.a(2, this.field_z.field_p, 0);
+                    this.queueStarProject(2, this.field_z.field_p, 0);
                     this.field_Y.a(-81, 0);
                     this.field_Y.b(2, 2);
                   }
@@ -3022,7 +3022,7 @@ final class GameSession implements AiHost {
                 }
                 this.field_z.endReplay(-18641);
                 this.refreshMapView(2);
-                this.a(0, this.field_z.field_p, 0);
+                this.queueStarProject(0, this.field_z.field_p, 0);
                 this.field_Y.a(-119, 0);
                 this.field_Y.b(0, 2);
                 if (var8 == 0) {
@@ -3126,7 +3126,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void d(byte param0) {
+    private final void advanceLocalPlayerTurn(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         Player[] var2 = null;
@@ -3144,7 +3144,7 @@ final class GameSession implements AiHost {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
-          this.b(false);
+          this.advanceTurnNotices(false);
           if (this.field_W &&
             0 == this.field_P.field_O) {
             if (this.field_P.field_o.field_i) {
@@ -3209,7 +3209,7 @@ final class GameSession implements AiHost {
           }
           this.field_n = this.field_P.field_v[this.field_h];
           this.field_S = AgeValidator.field_o[this.field_P.field_J];
-          this.a(true);
+          this.beginPlanningPhase(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3238,7 +3238,7 @@ final class GameSession implements AiHost {
                 var3.field_q = null;
                 if (this.field_f) {
                   this.field_ab.addLast(var3, 32);
-                  this.e(0);
+                  this.scheduleOrderSend(0);
                 }
                 var3.unlink((byte) -117);
               }
@@ -3278,7 +3278,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void b(boolean param0, boolean param1) {
+    final void tick(boolean param0, boolean param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -3374,7 +3374,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(Player param0, int param1, Player param2) {
+    private final void handleAllianceFormed(Player param0, int param1, Player param2) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -3415,7 +3415,7 @@ final class GameSession implements AiHost {
           if (this.field_W) {
             NodeHashTableIterator.a(0, "signtreaty");
           }
-          this.a(this.field_n, param1 + 27510);
+          this.updateProjectedGarrisons(this.field_n, param1 + 27510);
           if (null != this.field_s[param0.field_x]) {
             this.field_s[param0.field_x].sendWarningChat(param2, (byte) -42);
           }
@@ -3443,7 +3443,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void advanceTurnNotices(boolean param0) {
         int fieldTemp$0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3515,7 +3515,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void beginPlanningPhase(boolean param0) {
         Star stackIn_46_0 = null;
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
@@ -3582,7 +3582,7 @@ final class GameSession implements AiHost {
                 this.field_z.setDisplayState(this.field_C, param0, this.field_l, this.field_R, false);
                 this.field_z.a(this.field_p, this.field_t, this.field_U, this.field_V, this.field_w, this.field_d, this.field_r, this.field_J, 0);
                 this.field_z.d(0);
-                this.a(this.field_n, -83);
+                this.updateProjectedGarrisons(this.field_n, -83);
                 break;
               }
               var4 = var2[var3_int];
@@ -3601,8 +3601,8 @@ final class GameSession implements AiHost {
                 var2_ref = (Exception) (Object) decompiledCaughtException;
                 GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), "AI has errored in single player game");
               }
-              this.a(this.field_n, -84);
-              this.d((byte) -81);
+              this.updateProjectedGarrisons(this.field_n, -84);
+              this.advanceLocalPlayerTurn((byte) -81);
               return;
             }
             if (GameMenuController.field_e &&
@@ -3610,7 +3610,7 @@ final class GameSession implements AiHost {
               this.field_b) {
               this.field_s[this.field_h].updateDiplomacy((byte) -63);
               this.field_s[this.field_h].planTurn((byte) -15);
-              this.a(this.field_n, -70);
+              this.updateProjectedGarrisons(this.field_n, -70);
               var2 = this.field_P.field_g.field_e;
               var3_int = 0;
               while (var3_int < var2.length) {
@@ -3647,7 +3647,7 @@ final class GameSession implements AiHost {
                   break scanLoop1;
                 }
               }
-              this.e(0);
+              this.scheduleOrderSend(0);
             }
             this.field_z.projectStars(false);
             this.field_Y.refreshAllPanels(106);
@@ -3707,7 +3707,7 @@ final class GameSession implements AiHost {
         }
     }
 
-    final void b(byte param0) {
+    final void initializeGameScreen(byte param0) {
         Object stackIn_5_0;
         Object stackIn_6_0;
         MapView stackIn_6_1;
@@ -3831,7 +3831,7 @@ final class GameSession implements AiHost {
           }
           if (decompiledNaturalLoopExit1) {
             this.field_z.captureStarState(false);
-            this.a(true);
+            this.beginPlanningPhase(true);
             stackIn_49_0 = 0;
           }
           var3 = stackIn_49_0;
@@ -3961,7 +3961,7 @@ final class GameSession implements AiHost {
               var5.field_v = var5.field_v + var3_int;
               if (this.field_f) {
                 this.field_o.addLast(var5, 32);
-                this.e(0);
+                this.scheduleOrderSend(0);
               }
               this.field_c.field_x = this.field_c.field_x - var3_int;
               this.field_Y.refreshTerritoryRows((byte) 43);
@@ -4026,7 +4026,7 @@ final class GameSession implements AiHost {
             }
             break;
           }
-          this.a(this.field_n, param1 ^ 2);
+          this.updateProjectedGarrisons(this.field_n, param1 ^ 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4139,7 +4139,7 @@ final class GameSession implements AiHost {
             return;
           }
           if (param1 <= 44) {
-            this.a((PacketBuffer) null, -6, 94);
+            this.readDiplomacyUpdates((PacketBuffer) null, -6, 94);
           }
           if (param0 == this.field_n) {
             return;
@@ -4160,14 +4160,14 @@ final class GameSession implements AiHost {
             var3.writeByte(param0.field_x, (byte) -104);
             var3.patchLengthShort(-549342136, -var4 + var3.position);
             if ((this.field_n.field_A & 1 << param0.field_x) == 0) {
-              this.a(this.field_n, param0, true);
+              this.showAllianceOfferNotice(this.field_n, param0, true);
             }
             if (var5 == 0) {
               return;
             }
           }
           if ((1 << param0.field_x & this.field_n.field_A) == 0) {
-            this.a(this.field_n, param0, true);
+            this.showAllianceOfferNotice(this.field_n, param0, true);
             if (var5 == 0) {
               return;
             }
@@ -4180,7 +4180,7 @@ final class GameSession implements AiHost {
           this.field_n.field_w = this.field_n.field_w & ~(1 << param0.field_x);
           param0.field_A = param0.field_A & ~(1 << this.field_n.field_x);
           param0.field_w = param0.field_w & ~(1 << this.field_n.field_x);
-          this.a(param0, -27584, this.field_n);
+          this.handleAllianceFormed(param0, -27584, this.field_n);
           if (this.field_W) {
             NodeHashTableIterator.a(0, "signtreaty");
           }
@@ -4369,7 +4369,7 @@ final class GameSession implements AiHost {
           }
           if (stackIn_80_0 == 0 ||
             var13 != 0) {
-            this.b((byte) -81);
+            this.initializeGameScreen((byte) -81);
             this.field_z.field_p = null;
             this.field_P.setTurnNumber(-9778, 0);
             this.field_S = AgeValidator.field_o[this.field_P.field_J];
