@@ -77,8 +77,8 @@ final class GameAssetSetupSupport {
           }
           OpacityWidget.popLegacyRasterState(0);
           IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
-          jm.field_r = id.a(2, param0, "", "instr_mainview");
-          NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
+          jm.field_r = SpriteResourceSupport.loadSpriteByName(2, param0, "", "instr_mainview");
+          NodeSequence.field_d = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "instr_starframe");
           HighscoreResponseSupport.loadSpriteSetByName(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
           TurnEventLog.field_d = var9[3];
@@ -101,7 +101,7 @@ final class GameAssetSetupSupport {
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           ObjectList.field_d = va.a("production_icons", 0, "", param0);
           IntValueWriteRequest.field_i = MessageKind.a(true, param0, "", "production_button");
-          hq.field_a = MessageKind.a(true, param0, "", "production_button_down");
+          AccountHandshakeSupport.field_a = MessageKind.a(true, param0, "", "production_button_down");
           ClientPacketFlushSupport.field_b = va.a("project_icons", 0, "", param0);
           IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
           NodeSequence.field_b = va.a("faction_icons_large", 0, "", param0);
@@ -137,13 +137,13 @@ final class GameAssetSetupSupport {
           rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
           IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
-          kb.field_y = id.a(2, param0, "", "ship");
-          wo.field_b = id.a(2, param0, "", "shield");
-          oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
-          AccountValidationText.field_e = id.a(2, param0, "", "chevron");
+          kb.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
+          wo.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
+          oo.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
+          AccountValidationText.field_e = SpriteResourceSupport.loadSpriteByName(2, param0, "", "chevron");
           TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
-          AlignedMenuLabel.field_G = id.a(2, param0, "", "hammer");
-          AccountFieldValue.field_e = id.a(param6 ^ -6, param0, "", "beaker");
+          AlignedMenuLabel.field_G = SpriteResourceSupport.loadSpriteByName(2, param0, "", "hammer");
+          AccountFieldValue.field_e = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
           SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
           ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
@@ -278,9 +278,9 @@ final class GameAssetSetupSupport {
           kj.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
-          IntHashIndex.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
+          IntHashIndex.field_b = SpriteResourceSupport.loadSpriteByName(param6 + 10, param2, "basic", "orbcoin");
           var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
-          ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
+          ArchiveRequest.a(14, SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param2, "basic", var13));
           CellVertex.field_j = HighscoreResponseSupport.loadSpriteSetByName(param6 + 70, "", param0, "achievements");
           var14 = CellVertex.field_j.length;
           ql.field_o = new Sprite[var14];
@@ -298,7 +298,7 @@ final class GameAssetSetupSupport {
           SoftwareRasterizer.fillRect(0, 0, 15, 20, 65793);
           SoftwareRasterizer.fillCircle(0, -1, 5, 0);
           SoftwareRasterizer.fillCircle(0, 20, 5, 0);
-          var15Lifetime1 = id.a(2, param0, "", "menu_pip");
+          var15Lifetime1 = SpriteResourceSupport.loadSpriteByName(2, param0, "", "menu_pip");
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
           GameKeyHandler.field_e.bindAsRenderTarget();
           var15Lifetime1.drawSilhouette(1, 1, 65793);

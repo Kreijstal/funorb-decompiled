@@ -134,7 +134,7 @@ final class BytePayloadNode extends IntrusiveNode {
           ProductionContent.field_k = param8.length;
           IntNode.field_p = null;
           np.field_a = null;
-          id.field_c = new byte[(Particle.field_h + 7) / 8];
+          SpriteResourceSupport.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
           var10_int = 0;
           for (var11 = 0; var11 < ks.field_e.length; var11++) {
@@ -145,8 +145,8 @@ final class BytePayloadNode extends IntrusiveNode {
           if (null == param7.field_M) {
             param7.field_M = new IntrusiveDeque();
           }
-          gr.field_p = param7.field_M;
-          gr.field_p.clear(0);
+          PlayerRankingRequest.field_p = param7.field_M;
+          PlayerRankingRequest.field_p.clear(0);
           ShatteredPlansClient.field_H = new SecondaryNodeHashTable(param1);
           HitRegion.field_j = -1;
           BoundsRect.field_h = -1;

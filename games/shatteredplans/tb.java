@@ -80,7 +80,7 @@ final class tb {
           mk.field_e[0] = EmailSyntaxValidator.field_p;
           mk.field_e[4] = QuickChatPhraseDefinition.field_q;
           mk.field_e[3] = ls.field_b;
-          mk.field_e[1] = id.field_a;
+          mk.field_e[1] = SpriteResourceSupport.field_a;
           mk.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
@@ -106,7 +106,7 @@ final class tb {
           WeightedCacheEntry.field_t = new AnimatedPanel(0L, jr.field_h, QuickChatMenu.field_Lb);
           ta.field_d = new AnimatedPanel(0L, jr.field_h, ValidatedTextInputWidget.field_T);
           IsaacBackedRandom.field_c = new AnimatedPanel(0L, jr.field_h, WidgetContainer.field_z);
-          hq.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
+          AccountHandshakeSupport.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
           SingleChildWidget.field_y = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           ServerIntArrayRequest.field_m = new AnimatedPanel(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
           ServerIntArrayRequest.field_m.field_s = AccountStatusDialog.field_pb;
@@ -134,7 +134,7 @@ final class tb {
             qf.field_e.addChild(4, ta.field_d);
           }
           qf.field_e.addChild(4, IsaacBackedRandom.field_c);
-          qf.field_e.addChild(4, hq.field_b);
+          qf.field_e.addChild(4, AccountHandshakeSupport.field_b);
           qf.field_e.addChild(4, SingleChildWidget.field_y);
           if (AccountStatusDialog.field_pb) {
             AchievementProgress.field_i.addChild(4, ServerIntArrayRequest.field_m);
@@ -144,7 +144,7 @@ final class tb {
           SoundCache.field_c.field_G = 0;
           SoundCache.field_c.field_y = 1;
           SocketConnector.field_d = new AnimatedPanel(0L, DelegatingCanvas.field_f, GameAssetSetupSupport.field_c.toUpperCase());
-          so.field_v = new AnimatedPanel(0L, ho.field_j);
+          so.field_v = new AnimatedPanel(0L, QuickChatHelpSupport.field_j);
           so.field_v.addChild(4, SoundCache.field_c);
           so.field_v.addChild(4, SocketConnector.field_d);
           IntrusiveNode.field_c = new AnimatedPanel(0L, VictoryChecker.field_d);

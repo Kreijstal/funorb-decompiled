@@ -192,7 +192,7 @@ final class BufferedCacheFile {
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        hd var1 = null;
+        IntroTextLine var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -200,7 +200,7 @@ final class BufferedCacheFile {
           if (DirectByteArrayStorage.field_h == null) {
             return;
           }
-          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(0));
+          var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.startForward(0));
           if (var1 != null) {
             fieldTemp$0 = var1.field_h + 1;
             var1.field_h = var1.field_h + 1;
@@ -208,7 +208,7 @@ final class BufferedCacheFile {
               RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + (float)var1.field_i.field_w;
               var1.unlink((byte) -63);
             }
-            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
+            var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var1))) {
@@ -220,7 +220,7 @@ final class BufferedCacheFile {
               if (stackIn_20_0 > stackIn_20_1) {
                 var1.field_h = 75;
               }
-              var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
+              var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
               continue;
             }
             break;

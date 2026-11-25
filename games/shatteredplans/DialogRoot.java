@@ -71,7 +71,7 @@ final class DialogRoot extends SingleChildWidget {
         }
         if (!MusicCrossfadeStream.field_q) {
           if (js.field_c == null) {
-            js.field_c = hd.a(6, 109);
+            js.field_c = IntroTextLine.requestByteArray(6, 109);
           }
           if (js.field_c.field_l) {
             if (js.field_c.field_o != null) {
@@ -462,7 +462,7 @@ final class DialogRoot extends SingleChildWidget {
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, n.field_h.field_d);
         SocialListPanel.field_xb.addChild(4, DialPainter.field_g);
-        MouseInputHandler.field_d = new AnimatedPanel(0L, ho.field_j);
+        MouseInputHandler.field_d = new AnimatedPanel(0L, QuickChatHelpSupport.field_j);
         if (!param0) {
           DialogRoot.isNameSeparator('x', 117);
         }
@@ -522,7 +522,7 @@ final class DialogRoot extends SingleChildWidget {
         ta.field_d.setTarget(48, 30, (byte) 39, 5, 205);
         int var2 = !AccountStatusDialog.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
-        hq.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
+        AccountHandshakeSupport.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
         SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
         if (param0 < 93) {
           field_C = -10;

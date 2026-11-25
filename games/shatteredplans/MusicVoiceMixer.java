@@ -200,7 +200,7 @@ final class MusicVoiceMixer extends PcmStream {
           var11.field_o = QuickChatPhraseDefinition.field_w;
           var15 = new MenuLabel(54 + ObjectList.field_d[0].field_z * 4, var7.field_i + (var8 + ObjectList.field_d[0].field_w), "=");
           var21.addChild(var15, 8);
-          var24_ref = new ToggleButton(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, IntValueWriteRequest.field_i.field_z, IntValueWriteRequest.field_i.field_w, -1, IntValueWriteRequest.field_i, (String) null, -1, -1, hq.field_a, (String) null, -1);
+          var24_ref = new ToggleButton(4 * ObjectList.field_d[0].field_z + 20 + 40 - (-5 - TurnEventLog.field_d.field_z), var7.field_i + 3, IntValueWriteRequest.field_i.field_z, IntValueWriteRequest.field_i.field_w, -1, IntValueWriteRequest.field_i, (String) null, -1, -1, AccountHandshakeSupport.field_a, (String) null, -1);
           var24_ref.field_h = param1;
           var21.addChild(var24_ref, 8);
           var17 = new MenuLabel(var24_ref.field_k, 29 + var24_ref.field_t, var24_ref.field_m, rs.field_Cb.field_J, Integer.toString(param1.field_x));
@@ -208,7 +208,7 @@ final class MusicVoiceMixer extends PcmStream {
           var21.addChild(var17, 8);
           stackIn_17_0 = var24_ref;
           stackIn_17_1 = var17;
-          stackIn_17_2 = new StringBuilder().append(hd.field_j).append(" ");
+          stackIn_17_2 = new StringBuilder().append(IntroTextLine.field_j).append(" ");
           if (1 == param1.field_x) {
             stackIn_18_3 = StatusContent.field_a;
           } else {

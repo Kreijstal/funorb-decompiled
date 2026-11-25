@@ -275,7 +275,7 @@ final class js {
           if (param5) {
             if (-1 == param0) {
               for (var10_int = 0; nl.field_a.length > var10_int; var10_int++) {
-                if ((id.field_c[var10_int / 8] & 1 << (var10_int & 7)) != 0) {
+                if ((SpriteResourceSupport.field_c[var10_int / 8] & 1 << (var10_int & 7)) != 0) {
                   var9 = 0;
                   decompiledFrameCompleted0 = false;
                   break;

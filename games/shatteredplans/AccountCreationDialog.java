@@ -102,7 +102,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     final static void a(int param0, java.applet.Applet param1) {
         try {
           DerelictVictoryChecker.a((byte) 28, param1, "");
-          hr.a(param1, (byte) -127);
+          ChatPanelLayoutSupport.reloadGamePage(param1, (byte) -127);
           if (param0 != 0) {
             AccountCreationDialog.clearStatics(13);
           }

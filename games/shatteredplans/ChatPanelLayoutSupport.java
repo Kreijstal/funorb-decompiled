@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hr {
+final class ChatPanelLayoutSupport {
     static String field_c;
     static java.math.BigInteger field_a;
     static String field_d;
@@ -28,7 +28,7 @@ final class hr {
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void reloadGamePage(java.applet.Applet param0, byte param1) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -55,7 +55,7 @@ final class hr {
               }
               if (param1 > -83) {
                 var6 = (java.applet.Applet) null;
-                hr.a((java.applet.Applet) null, (byte) -44);
+                ChatPanelLayoutSupport.reloadGamePage((java.applet.Applet) null, (byte) -44);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
               param0.getAppletContext().showDocument(AudioService.a(param0, false, var5), "_self");
@@ -85,7 +85,7 @@ final class hr {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutSharedChatPanel(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;

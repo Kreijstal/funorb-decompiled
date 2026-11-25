@@ -100,7 +100,7 @@ final class CheckboxPainter implements WidgetPainter {
           PlayerStats.field_c = param3;
           FrameTimer.field_c = param2;
           BattleEvent.b(SoftwareRasterizer.field_b / 2, SoftwareRasterizer.field_k / 2, 0);
-          id.a(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
+          SpriteResourceSupport.setSharedWidgetMetrics(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

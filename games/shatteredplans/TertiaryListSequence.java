@@ -86,7 +86,7 @@ final class TertiaryListSequence extends NodeSequence {
     }
 
     final static void a(int param0) {
-        hd.field_q = (byte[][]) null;
+        IntroTextLine.field_q = (byte[][]) null;
         IntHashIndex.field_g = null;
         if (param0 == 0) {
           StatusMessagePanel.field_H = null;

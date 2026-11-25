@@ -111,7 +111,7 @@ final class GameScreen {
                 if (0 == var7.field_x) {
                   var8 = UnderageAccountInfoPanel.field_F;
                 } else {
-                  stackIn_22_0 = new StringBuilder().append(hd.field_j).append(" ");
+                  stackIn_22_0 = new StringBuilder().append(IntroTextLine.field_j).append(" ");
                   if (var7.field_x != 1) {
                     stackIn_23_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var7.field_x)});
                   } else {
@@ -407,11 +407,11 @@ final class GameScreen {
             return;
           }
           if (param0.equalsIgnoreCase("zoomtohome")) {
-            oq.field_a.field_z.centerOnStar(39, ho.field_d.field_m.field_q, 200.0f);
+            oq.field_a.field_z.centerOnStar(39, QuickChatHelpSupport.field_d.field_m.field_q, 200.0f);
             return;
           }
           if (param0.equalsIgnoreCase("closetohome")) {
-            oq.field_a.field_z.focusOnStar(ho.field_d.field_m.field_q, 126);
+            oq.field_a.field_z.focusOnStar(QuickChatHelpSupport.field_d.field_m.field_q, 126);
             return;
           }
           if (param0.equalsIgnoreCase("zoomtowarning")) {
@@ -419,7 +419,7 @@ final class GameScreen {
             var3 = 0;
             while (var2.length > var3) {
               var4 = var2[var3];
-              if (var4.field_y == ho.field_d &&
+              if (var4.field_y == QuickChatHelpSupport.field_d &&
                 !oq.field_a.field_V[var4.field_p]) {
                 oq.field_a.field_z.centerOnStar(92, var4, 300.0f);
                 return;
@@ -466,8 +466,8 @@ final class GameScreen {
           }
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = DefensiveAi.a((CharSequence) ((Object) param0.substring(9)), 2);
-            id.field_d = oq.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            uq.field_m.a(ProxySocketConnector.a(id.field_d, param1 ^ -9), 27275, "capture1");
+            SpriteResourceSupport.field_d = oq.field_a.field_P.field_g.field_e[var2_intLifetime1];
+            uq.field_m.a(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -4245,7 +4245,7 @@ final class GameScreen {
                   var8_ref_nf.field_j = new AnimatedPanel(0L, StatefulWidgetTheme.field_w, var8_ref_nf.field_k);
                   var8_ref_nf.field_j.field_jb = ((16711422 & StatefulWidgetTheme.field_w.field_jb) >> 1) + var10 - (var10 >> 1 & 8355711);
                   var6 += 15;
-                  var8_ref_nf.field_j.field_nb = ho.field_f;
+                  var8_ref_nf.field_j.field_nb = QuickChatHelpSupport.field_f;
                   var8_ref_nf.field_j.field_x = var10;
                   var8_ref_nf.field_j.field_qb = (8355711 & StatefulWidgetTheme.field_w.field_qb >> 1) + (-((var10 & 16711422) >> 1) + var10);
                 }
@@ -4325,11 +4325,11 @@ final class GameScreen {
                 var6 = QuickChatMenu.a(InvalidMapConnectionException.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
-                if (ArrayWidgetGroup.rectContains(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
+                if (ArrayWidgetGroup.rectContains(SpriteResourceSupport.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
                   stackIn_11_0 = var5;
                   return stackIn_11_0;
                 }
-                var4 = var4 + (id.field_b + (ArchiveNetworkClient.field_i << 1) + sm.field_b);
+                var4 = var4 + (SpriteResourceSupport.field_b + (ArchiveNetworkClient.field_i << 1) + sm.field_b);
               } else {
                 var4 = var4 + AccountFieldValue.field_d;
               }
@@ -4672,7 +4672,7 @@ final class GameScreen {
           if (decompiledFrameCompleted1) {
             if (null != this.field_s.field_n && (!this.field_s.field_W ||
               !(kb.field_x < 5))) {
-              this.field_e.field_z.addChild(hc.a(this.field_e.field_z.field_k, 126, this.field_e.field_z.field_y + this.field_e.field_z.field_t), 8);
+              this.field_e.field_z.addChild(MeshMaterial.createHeadingWithDividers(this.field_e.field_z.field_k, 126, this.field_e.field_z.field_y + this.field_e.field_z.field_t), 8);
             }
             stackIn_40_0 = param0;
             stackIn_40_1 = -15907;
@@ -4975,7 +4975,7 @@ final class GameScreen {
               if (stackIn_36_0) {
                 var6.toggle((byte) 72);
                 if (var8.field_x != 0) {
-                  stackIn_17_0 = new StringBuilder().append(hd.field_j).append(" ");
+                  stackIn_17_0 = new StringBuilder().append(IntroTextLine.field_j).append(" ");
                   if (var8.field_x != 1) {
                     stackIn_18_1 = QuickChatCategoryRegistry.a(ClientPacketFlushSupport.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
@@ -5232,7 +5232,7 @@ final class GameScreen {
             jr.a("continuekey", 1904, ul.field_Ob);
             jr.a("captureAll", 1904, SecondaryNodeHashTable.field_e);
             jr.a("exit", 1904, sa.field_b);
-            ho.field_d = this.field_s.field_n;
+            QuickChatHelpSupport.field_d = this.field_s.field_n;
             var3 = 0;
             while (true) {
               stackIn_45_0Lifetime1 = this.field_s.field_P.field_r;

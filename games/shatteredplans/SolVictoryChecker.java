@@ -287,7 +287,7 @@ final class SolVictoryChecker extends VictoryChecker {
           }
           var19 = new MenuLabel[3];
           var7_array = var19;
-          var7_array[0] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(hr.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
+          var7_array[0] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ChatPanelLayoutSupport.field_d, 4371, new String[]{Integer.toString(-param1.field_O + 20)}));
           if (var16 == null) {
             var7_array[1] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, TutorialAi.field_t);
             var7_array[2] = new MenuLabel(0, 0, 182, rs.field_Cb.field_J, (String) null);

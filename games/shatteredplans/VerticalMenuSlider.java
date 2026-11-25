@@ -100,7 +100,7 @@ final class VerticalMenuSlider extends MenuComponent {
 
     final static boolean e(byte param0) {
         int var1 = -36 / ((-32 - param0) / 57);
-        return ShatteredPlansClient.a(16, hd.field_k, nd.field_k);
+        return ShatteredPlansClient.a(16, IntroTextLine.field_k, nd.field_k);
     }
 
     VerticalMenuSlider(int param0, int param1, int param2, int param3) {

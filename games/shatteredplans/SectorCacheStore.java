@@ -44,8 +44,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_a.seek((byte) 77, (long)(6 * param3));
-                  this.field_a.read(6, ho.field_i, (byte) -73, 0);
-                  var7_int = (255 & ho.field_i[5]) + (((ho.field_i[4] & 255) << 8) + ((ho.field_i[3] & 255) << 16));
+                  this.field_a.read(6, QuickChatHelpSupport.field_i, (byte) -73, 0);
+                  var7_int = (255 & QuickChatHelpSupport.field_i[5]) + (((QuickChatHelpSupport.field_i[4] & 255) << 8) + ((QuickChatHelpSupport.field_i[3] & 255) << 16));
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_b.length((byte) -89) / 520L))) {
                     return false;
@@ -56,14 +56,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                ho.field_i[4] = (byte)(var7_int >> 8);
-                ho.field_i[1] = (byte)(param0 >> 8);
-                ho.field_i[5] = (byte)var7_int;
-                ho.field_i[3] = (byte)(var7_int >> 16);
-                ho.field_i[2] = (byte)param0;
-                ho.field_i[0] = (byte)(param0 >> 16);
+                QuickChatHelpSupport.field_i[4] = (byte)(var7_int >> 8);
+                QuickChatHelpSupport.field_i[1] = (byte)(param0 >> 8);
+                QuickChatHelpSupport.field_i[5] = (byte)var7_int;
+                QuickChatHelpSupport.field_i[3] = (byte)(var7_int >> 16);
+                QuickChatHelpSupport.field_i[2] = (byte)param0;
+                QuickChatHelpSupport.field_i[0] = (byte)(param0 >> 16);
                 this.field_a.seek((byte) 79, (long)(6 * param3));
-                this.field_a.write(-105, 6, 0, ho.field_i);
+                this.field_a.write(-105, 6, 0, QuickChatHelpSupport.field_i);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -74,7 +74,7 @@ final class SectorCacheStore {
                       this.field_b.seek((byte) -115, (long)(var7_int * 520));
                       if (param3 > 65535) {
                         try {
-                          this.field_b.read(10, ho.field_i, (byte) 96, 0);
+                          this.field_b.read(10, QuickChatHelpSupport.field_i, (byte) 96, 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,13 +84,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (ho.field_i[3] & 255) + (16711680 & ho.field_i[1] << 16) + ((-16777216 & ho.field_i[0] << 24) + ((255 & ho.field_i[2]) << 8));
-                        var12 = (ho.field_i[4] << 8 & 65280) + (255 & ho.field_i[5]);
-                        var10 = (ho.field_i[8] & 255) + ((ho.field_i[7] & 255) << 8) + (16711680 & ho.field_i[6] << 16);
-                        var13 = ho.field_i[9] & 255;
+                        var11 = (QuickChatHelpSupport.field_i[3] & 255) + (16711680 & QuickChatHelpSupport.field_i[1] << 16) + ((-16777216 & QuickChatHelpSupport.field_i[0] << 24) + ((255 & QuickChatHelpSupport.field_i[2]) << 8));
+                        var12 = (QuickChatHelpSupport.field_i[4] << 8 & 65280) + (255 & QuickChatHelpSupport.field_i[5]);
+                        var10 = (QuickChatHelpSupport.field_i[8] & 255) + ((QuickChatHelpSupport.field_i[7] & 255) << 8) + (16711680 & QuickChatHelpSupport.field_i[6] << 16);
+                        var13 = QuickChatHelpSupport.field_i[9] & 255;
                       } else {
                         try {
-                          this.field_b.read(8, ho.field_i, (byte) -114, 0);
+                          this.field_b.read(8, QuickChatHelpSupport.field_i, (byte) -114, 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -100,10 +100,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = 255 & ho.field_i[7];
-                        var12 = ((ho.field_i[2] & 255) << 8) + (255 & ho.field_i[3]);
-                        var11 = (ho.field_i[1] & 255) + ((ho.field_i[0] & 255) << 8);
-                        var10 = (ho.field_i[6] & 255) + (16711680 & ho.field_i[4] << 16) + (ho.field_i[5] << 8 & 65280);
+                        var13 = 255 & QuickChatHelpSupport.field_i[7];
+                        var12 = ((QuickChatHelpSupport.field_i[2] & 255) << 8) + (255 & QuickChatHelpSupport.field_i[3]);
+                        var11 = (QuickChatHelpSupport.field_i[1] & 255) + ((QuickChatHelpSupport.field_i[0] & 255) << 8);
+                        var10 = (QuickChatHelpSupport.field_i[6] & 255) + (16711680 & QuickChatHelpSupport.field_i[4] << 16) + (QuickChatHelpSupport.field_i[5] << 8 & 65280);
                       }
                       if ((var11 == param3 &&
                         var12 == var9 &&
@@ -130,16 +130,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param3 <= 65535) {
-                      ho.field_i[0] = (byte)(param3 >> 8);
-                      ho.field_i[3] = (byte)var9;
-                      ho.field_i[6] = (byte)var10;
-                      ho.field_i[2] = (byte)(var9 >> 8);
-                      ho.field_i[1] = (byte)param3;
-                      ho.field_i[4] = (byte)(var10 >> 16);
-                      ho.field_i[5] = (byte)(var10 >> 8);
-                      ho.field_i[7] = (byte)this.field_i;
+                      QuickChatHelpSupport.field_i[0] = (byte)(param3 >> 8);
+                      QuickChatHelpSupport.field_i[3] = (byte)var9;
+                      QuickChatHelpSupport.field_i[6] = (byte)var10;
+                      QuickChatHelpSupport.field_i[2] = (byte)(var9 >> 8);
+                      QuickChatHelpSupport.field_i[1] = (byte)param3;
+                      QuickChatHelpSupport.field_i[4] = (byte)(var10 >> 16);
+                      QuickChatHelpSupport.field_i[5] = (byte)(var10 >> 8);
+                      QuickChatHelpSupport.field_i[7] = (byte)this.field_i;
                       this.field_b.seek((byte) 107, (long)(var7_int * 520));
-                      this.field_b.write(-66, 8, 0, ho.field_i);
+                      this.field_b.write(-66, 8, 0, QuickChatHelpSupport.field_i);
                       var11 = -var8 + param0;
                       if (var11 > 512) {
                         var11 = 512;
@@ -147,18 +147,18 @@ final class SectorCacheStore {
                       this.field_b.write(101, var11, var8, param4);
                       var8 = var8 + var11;
                     } else {
-                      ho.field_i[4] = (byte)(var9 >> 8);
-                      ho.field_i[9] = (byte)this.field_i;
-                      ho.field_i[1] = (byte)(param3 >> 16);
-                      ho.field_i[5] = (byte)var9;
-                      ho.field_i[7] = (byte)(var10 >> 8);
-                      ho.field_i[3] = (byte)param3;
-                      ho.field_i[8] = (byte)var10;
-                      ho.field_i[6] = (byte)(var10 >> 16);
-                      ho.field_i[0] = (byte)(param3 >> 24);
-                      ho.field_i[2] = (byte)(param3 >> 8);
+                      QuickChatHelpSupport.field_i[4] = (byte)(var9 >> 8);
+                      QuickChatHelpSupport.field_i[9] = (byte)this.field_i;
+                      QuickChatHelpSupport.field_i[1] = (byte)(param3 >> 16);
+                      QuickChatHelpSupport.field_i[5] = (byte)var9;
+                      QuickChatHelpSupport.field_i[7] = (byte)(var10 >> 8);
+                      QuickChatHelpSupport.field_i[3] = (byte)param3;
+                      QuickChatHelpSupport.field_i[8] = (byte)var10;
+                      QuickChatHelpSupport.field_i[6] = (byte)(var10 >> 16);
+                      QuickChatHelpSupport.field_i[0] = (byte)(param3 >> 24);
+                      QuickChatHelpSupport.field_i[2] = (byte)(param3 >> 8);
                       this.field_b.seek((byte) 64, (long)(var7_int * 520));
-                      this.field_b.write(-68, 10, 0, ho.field_i);
+                      this.field_b.write(-68, 10, 0, QuickChatHelpSupport.field_i);
                       var11 = -var8 + param0;
                       if (var11 > 510) {
                         var11 = 510;
@@ -240,9 +240,9 @@ final class SectorCacheStore {
                 stackIn_7_0 = (byte[]) null;
                 return stackIn_7_0;
               }
-              this.field_a.read(6, ho.field_i, (byte) 67, 0);
-              var4_int = (ho.field_i[2] & 255) + ((ho.field_i[0] & 255) << 16) + ((ho.field_i[1] & 255) << 8);
-              var5 = (255 & ho.field_i[5]) + (ho.field_i[3] << 16 & 16711680) + ((255 & ho.field_i[4]) << 8);
+              this.field_a.read(6, QuickChatHelpSupport.field_i, (byte) 67, 0);
+              var4_int = (QuickChatHelpSupport.field_i[2] & 255) + ((QuickChatHelpSupport.field_i[0] & 255) << 16) + ((QuickChatHelpSupport.field_i[1] & 255) << 8);
+              var5 = (255 & QuickChatHelpSupport.field_i[5]) + (QuickChatHelpSupport.field_i[3] << 16 & 16711680) + ((255 & QuickChatHelpSupport.field_i[4]) << 8);
               if (var4_int < 0) {
                 return null;
               }
@@ -270,21 +270,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_b.read(var14 + var9, ho.field_i, (byte) 46, 0);
-                  var10 = (ho.field_i[3] & 255) + ((255 & ho.field_i[2]) << 8) + (((ho.field_i[1] & 255) << 16) + (ho.field_i[0] << 24 & -16777216));
-                  var12 = ((255 & ho.field_i[7]) << 8) + ((255 & ho.field_i[6]) << 16) + (255 & ho.field_i[8]);
-                  var13 = ho.field_i[9] & 255;
-                  var11 = ((255 & ho.field_i[4]) << 8) + (ho.field_i[5] & 255);
+                  this.field_b.read(var14 + var9, QuickChatHelpSupport.field_i, (byte) 46, 0);
+                  var10 = (QuickChatHelpSupport.field_i[3] & 255) + ((255 & QuickChatHelpSupport.field_i[2]) << 8) + (((QuickChatHelpSupport.field_i[1] & 255) << 16) + (QuickChatHelpSupport.field_i[0] << 24 & -16777216));
+                  var12 = ((255 & QuickChatHelpSupport.field_i[7]) << 8) + ((255 & QuickChatHelpSupport.field_i[6]) << 16) + (255 & QuickChatHelpSupport.field_i[8]);
+                  var13 = QuickChatHelpSupport.field_i[9] & 255;
+                  var11 = ((255 & QuickChatHelpSupport.field_i[4]) << 8) + (QuickChatHelpSupport.field_i[5] & 255);
                 } else {
                   if (var9 > 512) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_b.read(var14 + var9, ho.field_i, (byte) 100, 0);
-                  var10 = (255 & ho.field_i[1]) + (65280 & ho.field_i[0] << 8);
-                  var11 = (ho.field_i[2] << 8 & 65280) + (ho.field_i[3] & 255);
-                  var13 = ho.field_i[7] & 255;
-                  var12 = ((ho.field_i[5] & 255) << 8) + (16711680 & ho.field_i[4] << 16) + (ho.field_i[6] & 255);
+                  this.field_b.read(var14 + var9, QuickChatHelpSupport.field_i, (byte) 100, 0);
+                  var10 = (255 & QuickChatHelpSupport.field_i[1]) + (65280 & QuickChatHelpSupport.field_i[0] << 8);
+                  var11 = (QuickChatHelpSupport.field_i[2] << 8 & 65280) + (QuickChatHelpSupport.field_i[3] & 255);
+                  var13 = QuickChatHelpSupport.field_i[7] & 255;
+                  var12 = ((QuickChatHelpSupport.field_i[5] & 255) << 8) + (16711680 & QuickChatHelpSupport.field_i[4] << 16) + (QuickChatHelpSupport.field_i[6] & 255);
                 }
                 if (var10 != param0) {
                   return null;
@@ -307,7 +307,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = ho.field_i[var16];
+                  var6[incrementValue$2] = QuickChatHelpSupport.field_i[var16];
                 }
                 var5 = var12;
               }

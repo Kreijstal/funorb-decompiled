@@ -40,7 +40,7 @@ final class mj extends AnimatedPanel {
             if (null != DialogRoot.field_G) {
               DialogRoot.field_G.drawFullRaster(param1, -68);
             }
-            ho.a(param1, param0 + 8323199);
+            QuickChatHelpSupport.drawQuickChatHelp(param1, param0 + 8323199);
             return;
           }
           return;
@@ -50,7 +50,7 @@ final class mj extends AnimatedPanel {
           if (null != DialogRoot.field_G) {
             DialogRoot.field_G.drawFullRaster(param1, -68);
           }
-          ho.a(param1, param0 + 8323199);
+          QuickChatHelpSupport.drawQuickChatHelp(param1, param0 + 8323199);
           return;
         }
     }

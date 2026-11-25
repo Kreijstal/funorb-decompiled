@@ -2118,7 +2118,7 @@ final class TaskAi implements Ai {
         if (param1 != -16) {
           return (Sprite[]) null;
         }
-        var3[4] = gr.createSolidSquare((byte) -52, param0, 64);
+        var3[4] = PlayerRankingRequest.createSolidSquare((byte) -52, param0, 64);
         return var2;
     }
 

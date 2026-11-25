@@ -276,13 +276,13 @@ abstract class ResizingDialog extends Dialog {
             stackIn_3_0 = -19;
             return stackIn_3_0;
           }
-          var2_int = ho.field_c;
+          var2_int = QuickChatHelpSupport.field_c;
           if (param0.field_n != 2) {
             if (param0.field_n == 4) {
-              var2_intLifetime1 = hd.field_l[param0.field_n];
+              var2_intLifetime1 = IntroTextLine.field_l[param0.field_n];
             } else {
               if (~param0.field_p != ~UsernameAvailabilityValidator.field_p) {
-                var2_intLifetime1 = hd.field_l[param0.field_n];
+                var2_intLifetime1 = IntroTextLine.field_l[param0.field_n];
               } else {
                 var2_intLifetime1 = BufferedSocket.field_q[param0.field_n];
               }
@@ -293,10 +293,10 @@ abstract class ResizingDialog extends Dialog {
                 param0.field_e == 0) {
                 var2_intLifetime1 = BufferedSocket.field_q[param0.field_n];
               } else {
-                var2_intLifetime1 = hd.field_l[param0.field_n];
+                var2_intLifetime1 = IntroTextLine.field_l[param0.field_n];
               }
             } else {
-              var2_intLifetime1 = ho.field_c;
+              var2_intLifetime1 = QuickChatHelpSupport.field_c;
             }
           }
           stackIn_17_0 = var2_intLifetime1;

@@ -23,7 +23,7 @@ final class UrlLoader implements Runnable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        gr var3 = null;
+        PlayerRankingRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -45,10 +45,10 @@ final class UrlLoader implements Runnable {
         try {
           var15 = sa.field_a;
           var2 = var15.readUnsignedByte(-102);
-          var3 = (gr) (PlacementOrder.field_r.startForward(0));
+          var3 = (PlayerRankingRequest) (PlacementOrder.field_r.startForward(0));
           while (var3 != null) {
             if (~var3.field_k != ~var2) {
-              var3 = (gr) (PlacementOrder.field_r.nextForward((byte) -71));
+              var3 = (PlayerRankingRequest) (PlacementOrder.field_r.nextForward((byte) -71));
               continue;
             }
             break;

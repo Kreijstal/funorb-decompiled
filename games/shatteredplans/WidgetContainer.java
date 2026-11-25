@@ -452,10 +452,10 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           param1.unlink((byte) -127);
-          var2 = (mj) (gr.field_p.startForward(param0 + 60));
+          var2 = (mj) (PlayerRankingRequest.field_p.startForward(param0 + 60));
           while (var2 != null) {
             if (var2.a(param1, param0 ^ -60)) {
-              var2 = (mj) (gr.field_p.nextForward((byte) -71));
+              var2 = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
               continue;
             }
             break;
@@ -466,7 +466,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
           if (var2 != null) {
             wp.$cfr$intArgs$a$2661ebe01e52(-127, param1, var2);
           } else {
-            gr.field_p.addLast((byte) -113, param1);
+            PlayerRankingRequest.field_p.addLast((byte) -113, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

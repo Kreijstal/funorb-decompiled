@@ -16,7 +16,7 @@ final class AllianceExpiredEvent extends IntrusiveNode {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(2, (byte) -99);
-        var2.writeBytes(0, id.field_c.length, id.field_c, 22186);
+        var2.writeBytes(0, SpriteResourceSupport.field_c.length, SpriteResourceSupport.field_c, 22186);
         var2.writeByte(qj.field_b, (byte) -114);
         if (param1 <= 64) {
           return;

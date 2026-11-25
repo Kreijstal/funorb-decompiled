@@ -201,7 +201,7 @@ final class sg extends AnimatedPanel {
             return;
           }
           for (var7 = 0; var6 > var7; var7++) {
-            DirectByteArrayStorage.field_h.addLast((byte) -113, new hd(var9[var7], param4, var7 * 50 + param2));
+            DirectByteArrayStorage.field_h.addLast((byte) -113, new IntroTextLine(var9[var7], param4, var7 * 50 + param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

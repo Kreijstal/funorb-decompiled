@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends IntrusiveNode {
+final class IntroTextLine extends IntrusiveNode {
     Sprite field_o;
     int field_h;
     static oa field_s;
@@ -16,7 +16,7 @@ final class hd extends IntrusiveNode {
     static long field_k;
     static int[] field_l;
 
-    final static void a(int param0) {
+    final static void drawIntroGalaxyLayers(int param0) {
         int var1_int = 0;
         int var2 = 0;
         nd[] var3 = null;
@@ -86,7 +86,7 @@ final class hd extends IntrusiveNode {
         field_n = null;
     }
 
-    hd(String param0, BitmapFont param1, int param2) {
+    IntroTextLine(String param0, BitmapFont param1, int param2) {
         int var7 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -147,7 +147,7 @@ final class hd extends IntrusiveNode {
         }
     }
 
-    final static ld a(int param0, int param1) {
+    final static ld requestByteArray(int param0, int param1) {
         if (param1 < 102) {
           field_k = -43L;
         }
@@ -157,7 +157,7 @@ final class hd extends IntrusiveNode {
         return var2;
     }
 
-    final static void c(boolean param0) {
+    final static void computeInstructionSectionHeights(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;

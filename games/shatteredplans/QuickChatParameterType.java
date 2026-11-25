@@ -260,7 +260,7 @@ final class QuickChatParameterType {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1 = IntHashIndex.field_g[0] * WeightedCacheEntry.field_s[0];
-        byte[] var2 = hd.field_q[0];
+        byte[] var2 = IntroTextLine.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = ProgressDialog.field_fb[we.intAnd((int) var2[var4_int], 255)];

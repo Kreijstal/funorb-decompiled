@@ -114,7 +114,7 @@ final class LinkPainter implements WidgetPainter {
           scanLoop1: while (true) {
             if (var2 < LobbyLayoutSupport.field_c) {
               var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
-              var4 = hd.field_q[var2];
+              var4 = IntroTextLine.field_q[var2];
               var5 = new int[var3];
               stackIn_13_0 = 0;
               if (var7 != 0) {

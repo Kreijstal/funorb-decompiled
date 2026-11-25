@@ -1382,7 +1382,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("hide_players_in_xs_game", 511);
                 if (var2 != null) {
-                  id.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SpriteResourceSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("show_players_in_xs_game", 511);
                 if (null != var2) {
@@ -1406,7 +1406,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("multiconst_clan", 511);
                 if (null != var2) {
-                  id.field_a = IterableNodeHashTable.a(var2, 17746);
+                  SpriteResourceSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_friends", 511);
                 if (var2 != null) {
@@ -2344,7 +2344,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsemail", 511);
                 if (var2 != null) {
-                  hq.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountHandshakeSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsname_partial", 511);
                 if (var2 != null) {
@@ -2368,7 +2368,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invalidage", 511);
                 if (var2 != null) {
-                  hr.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelLayoutSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_yearrange", 511);
                 if (null != var2) {
@@ -2416,7 +2416,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("friendlistfull", 511);
                 if (var2 != null) {
-                  hd.field_p = IterableNodeHashTable.a(var2, 17746);
+                  IntroTextLine.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("friendlistdupe", 511);
                 if (null != var2) {
@@ -2544,7 +2544,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("loading_music", 511);
                 if (var2 != null) {
-                  hc.field_b = IterableNodeHashTable.a(var2, 17746);
+                  MeshMaterial.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_instruments", 511);
                 if (var2 != null) {
@@ -3266,7 +3266,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rating_lost", 511);
                 if (null != var2) {
-                  hc.field_c = IterableNodeHashTable.a(var2, 17746);
+                  MeshMaterial.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_drawn", 511);
                 if (null != var2) {

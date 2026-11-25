@@ -88,7 +88,7 @@ final class IntrusiveNodeHashTable {
         }
         for (var2 = 0; var2 < LobbyLayoutSupport.field_c; var2++) {
           var3 = WeightedCacheEntry.field_s[var2] * IntHashIndex.field_g[var2];
-          var20 = hd.field_q[var2];
+          var20 = IntroTextLine.field_q[var2];
           if (!SectorCacheStore.field_h[var2]) {
             var9 = new int[var3];
             var21 = var9;

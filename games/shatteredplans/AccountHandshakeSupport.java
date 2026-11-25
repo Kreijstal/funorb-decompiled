@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hq {
+final class AccountHandshakeSupport {
     static Sprite field_a;
     static AnimatedPanel field_b;
     static boolean field_c;
     static String field_d;
 
-    final static void a(int param0, int param1, PacketBuffer param2, byte param3, int param4) {
+    final static void writeAccountHandshake(int param0, int param1, PacketBuffer param2, byte param3, int param4) {
         param2.writeByte(12, (byte) -126);
         param2.writeShort(17, param3 + 235);
         if (param3 != 20) {
@@ -22,9 +22,9 @@ final class hq {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiLetter(int param0, char param1) {
         if (param0 >= -17) {
-          hq.a(75, 'ﾥ');
+          AccountHandshakeSupport.isAsciiLetter(75, 'ﾥ');
           if (param1 < 65) {
             if (97 > param1) {
               return false;

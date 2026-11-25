@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie {
-    final static void a(Sprite param0, int param1, int param2) {
+final class SpriteMaskEffects {
+    final static void darkenThroughSpriteMask(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -43,12 +43,12 @@ final class ie {
           if (var5 <= 0) {
             return;
           }
-          ie.a(SoftwareRasterizer.field_h, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
+          SpriteMaskEffects.darkenSpriteMaskPixels(SoftwareRasterizer.field_h, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final static void a(ArgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawRotatedBilinear(ArgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         double var7;
         int var9;
         int var10;
@@ -250,7 +250,7 @@ final class ie {
                     if (var37 >> 12 < param0.field_z) {
                       var34 = var38 >> 12;
                       if (var38 >> 12 < param0.field_w) {
-                        ie.a(param0.field_B, param0.field_z, param0.field_w, var23, var33, var34, var37, var38);
+                        SpriteMaskEffects.blendBilinearPixel(param0.field_B, param0.field_z, param0.field_w, var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -314,7 +314,7 @@ final class ie {
                     var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < param0.field_z) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
-                      ie.a(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      SpriteMaskEffects.blendBilinearPixel(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -379,7 +379,7 @@ final class ie {
                     var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < param0.field_w) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
-                      ie.a(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      SpriteMaskEffects.blendBilinearPixel(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -443,7 +443,7 @@ final class ie {
                   var38Lifetime2 >= -4096) {
                   var33Lifetime2 = var37Lifetime2 >> 12;
                   var34Lifetime2 = var38Lifetime2 >> 12;
-                  ie.a(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  SpriteMaskEffects.blendBilinearPixel(param0.field_B, param0.field_z, param0.field_w, var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;
@@ -463,7 +463,7 @@ final class ie {
         return;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void darkenSpriteMaskPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -487,7 +487,7 @@ final class ie {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blendBilinearPixel(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;

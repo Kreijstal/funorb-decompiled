@@ -51,14 +51,14 @@ final class jp extends AnimatedPanel {
             this.field_Ab = 1;
             return true;
           }
-          var2 = Character.toLowerCase(ho.field_h);
+          var2 = Character.toLowerCase(QuickChatHelpSupport.field_h);
           if (var2 == 32) {
             var2 = 95;
           }
           if (var2 == 95 &&
             this.field_Db.length() > 0) {
             discarded$10 = this.field_Db.append((char) var2);
-            if (hq.a(-103, (char) var2)) {
+            if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2)) {
               discarded$11 = this.field_Db.append((char) var2);
             } else {
               if (TooltipSupport.isDigit((byte) 55, (char) var2)) {
@@ -81,7 +81,7 @@ final class jp extends AnimatedPanel {
             }
             return true;
           }
-          if (hq.a(-103, (char) var2)) {
+          if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2)) {
             discarded$13 = this.field_Db.append((char) var2);
             if (oq.field_j == 84) {
               if (this.field_Db.length() > 0) {
@@ -144,14 +144,14 @@ final class jp extends AnimatedPanel {
               }
             }
           } else {
-            var2Lifetime1 = Character.toLowerCase(ho.field_h);
+            var2Lifetime1 = Character.toLowerCase(QuickChatHelpSupport.field_h);
             if (var2Lifetime1 == 32) {
               var2Lifetime1 = 95;
             }
             if (var2Lifetime1 == 95 &&
               this.field_Db.length() > 0) {
               discarded$5 = this.field_Db.append((char) var2Lifetime1);
-              if (hq.a(-103, (char) var2Lifetime1)) {
+              if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime1)) {
                 discarded$6 = this.field_Db.append((char) var2Lifetime1);
               } else {
                 if (TooltipSupport.isDigit((byte) 55, (char) var2Lifetime1)) {
@@ -174,7 +174,7 @@ final class jp extends AnimatedPanel {
               }
               return true;
             }
-            if (hq.a(-103, (char) var2Lifetime1)) {
+            if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime1)) {
               discarded$8 = this.field_Db.append((char) var2Lifetime1);
               if (oq.field_j == 84) {
                 if (this.field_Db.length() > 0) {
@@ -245,14 +245,14 @@ final class jp extends AnimatedPanel {
           }
           return true;
         }
-        var2Lifetime2 = Character.toLowerCase(ho.field_h);
+        var2Lifetime2 = Character.toLowerCase(QuickChatHelpSupport.field_h);
         if (var2Lifetime2 == 32) {
           var2Lifetime2 = 95;
         }
         if (var2Lifetime2 == 95 &&
           this.field_Db.length() > 0) {
           discarded$0 = this.field_Db.append((char) var2Lifetime2);
-          if (hq.a(-103, (char) var2Lifetime2)) {
+          if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime2)) {
             discarded$1 = this.field_Db.append((char) var2Lifetime2);
           } else {
             if (TooltipSupport.isDigit((byte) 55, (char) var2Lifetime2)) {
@@ -275,7 +275,7 @@ final class jp extends AnimatedPanel {
           }
           return true;
         }
-        if (hq.a(-103, (char) var2Lifetime2)) {
+        if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime2)) {
           discarded$3 = this.field_Db.append((char) var2Lifetime2);
           if (oq.field_j == 84) {
             if (this.field_Db.length() <= 0) {
@@ -479,19 +479,19 @@ final class jp extends AnimatedPanel {
             0 < this.field_Db.length()) {
             ClientContextMenuSupport.padWithChar(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
-          if (TutorialMapGenerator.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
-            discarded$0 = this.field_Db.append(ho.field_h);
+          if (TutorialMapGenerator.a(QuickChatHelpSupport.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
+            discarded$0 = this.field_Db.append(QuickChatHelpSupport.field_h);
           } else {
             if (this.field_Db.length() == 0 &&
-              91 == ho.field_h) {
-              discarded$1 = this.field_Db.append(ho.field_h);
+              91 == QuickChatHelpSupport.field_h) {
+              discarded$1 = this.field_Db.append(QuickChatHelpSupport.field_h);
             } else {
               if (this.field_Db.length() == 1 &&
-                ho.field_h == 35) {
-                discarded$2 = this.field_Db.append(ho.field_h);
+                QuickChatHelpSupport.field_h == 35) {
+                discarded$2 = this.field_Db.append(QuickChatHelpSupport.field_h);
               } else {
-                if (ho.field_h == 93) {
-                  discarded$3 = this.field_Db.append(ho.field_h);
+                if (QuickChatHelpSupport.field_h == 93) {
+                  discarded$3 = this.field_Db.append(QuickChatHelpSupport.field_h);
                 }
               }
             }

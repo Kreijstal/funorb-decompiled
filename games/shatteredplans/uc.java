@@ -83,7 +83,7 @@ final class uc extends MenuComponent {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (hr.field_c.indexOf(var5Lifetime1) == -1) {
+              if (ChatPanelLayoutSupport.field_c.indexOf(var5Lifetime1) == -1) {
                 stackIn_42_0 = FleetVisual.field_t;
                 return stackIn_42_0;
               }
@@ -123,7 +123,7 @@ final class uc extends MenuComponent {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param0, StatusMessagePanel.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
+          var2 = new BinaryBitmapFont(param0, StatusMessagePanel.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, IntroTextLine.field_q);
           TertiaryListSequence.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;

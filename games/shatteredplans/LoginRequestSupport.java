@@ -226,7 +226,7 @@ final class LoginRequestSupport {
           if (DraggableWidget.field_H != null) {
             js.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
           }
-          GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+          GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
           js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
           return;

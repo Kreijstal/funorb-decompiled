@@ -73,7 +73,7 @@ final class ClientContextMenuSupport {
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;
-              var12 = QuickChatCategoryRegistry.a(id.field_e, 4371, new String[]{param3});
+              var12 = QuickChatCategoryRegistry.a(SpriteResourceSupport.field_e, 4371, new String[]{param3});
               var11.field_j.a(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;

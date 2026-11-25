@@ -50,7 +50,7 @@ final class nj {
           }
           if (UrlLoader.field_c >= 100 &&
             StarAnnotation.field_m <= 0) {
-            stackIn_17_0 = hd.field_p;
+            stackIn_17_0 = IntroTextLine.field_p;
             return stackIn_17_0;
           }
           if (param2 > -57) {
@@ -58,7 +58,7 @@ final class nj {
             nj.a((String) null, -114, (byte) -20);
           }
           if (UrlLoader.field_c >= 200) {
-            stackIn_22_0 = hd.field_p;
+            stackIn_22_0 = IntroTextLine.field_p;
             return stackIn_22_0;
           }
           if (IntrusiveNodeHashTable.a(param0, true)) {
@@ -105,7 +105,7 @@ final class nj {
         ValidatedTextInputWidget.field_X = null;
         if (GameAssetSetupSupport.field_a == null) {
           sg.field_Ab = null;
-          hd.field_m = null;
+          IntroTextLine.field_m = null;
           AgeValidator.field_n = null;
           DirectByteArrayStorage.field_l = null;
           sr.field_h = true;
@@ -118,7 +118,7 @@ final class nj {
         uq.field_j.field_qb = -1;
         GameAssetSetupSupport.field_a = null;
         sg.field_Ab = null;
-        hd.field_m = null;
+        IntroTextLine.field_m = null;
         AgeValidator.field_n = null;
         DirectByteArrayStorage.field_l = null;
         sr.field_h = true;

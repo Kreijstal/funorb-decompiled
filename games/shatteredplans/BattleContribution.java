@@ -157,7 +157,7 @@ final class BattleContribution extends IntrusiveNode {
           param0.field_j = false;
           GameScreen.field_A = new QuickChatPhraseRegistry(var3_int, param0, param0);
           ClientCapabilitySupport.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new RoundedFrameSupport());
-          var4 = hc.a(false);
+          var4 = MeshMaterial.findFirstEnabledQuickChatPhrase(false);
           if (var4 == null) {
             GameKeyHandler.a(-29901, (Throwable) null, "QC2");
             return;

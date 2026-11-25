@@ -277,13 +277,13 @@ final class SoundPlayback extends IntrusiveNode {
           }
           DerelictMapReader.field_a = (sm.field_b + ArchiveNetworkClient.field_i << 1) * GameState.field_l.field_b;
           DualLinkDeque.field_f = QuaternaryLinkNode.field_w - (var3_intLifetime1 >> 1);
-          ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + QuaternaryLinkNode.field_w);
+          QuickChatHelpSupport.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + QuaternaryLinkNode.field_w);
           for (var4Lifetime2 = 0; var4Lifetime2 < InvalidMapConnectionException.field_f.length; var4Lifetime2++) {
             stackIn_115_0 = DerelictMapReader.field_a;
             if (0 > ss.field_a[var4Lifetime2]) {
               stackIn_116_1 = AccountFieldValue.field_d;
             } else {
-              stackIn_116_1 = id.field_b;
+              stackIn_116_1 = SpriteResourceSupport.field_b;
             }
             DerelictMapReader.field_a = stackIn_115_0 + stackIn_116_1;
           }
@@ -302,8 +302,8 @@ final class SoundPlayback extends IntrusiveNode {
               StrongCacheEntry.field_w[var4Lifetime3][0] = var9 - MapView.field_Lb;
               StrongCacheEntry.field_w[var4Lifetime3][1] = var6Lifetime1;
               StrongCacheEntry.field_w[var4Lifetime3][2] = var8Lifetime1 + (MapView.field_Lb << 1);
-              var6Lifetime1 = var6Lifetime1 + (id.field_b + ((ArchiveNetworkClient.field_i << 1) + sm.field_b));
-              StrongCacheEntry.field_w[var4Lifetime3][3] = (ArchiveNetworkClient.field_i << 1) + id.field_b;
+              var6Lifetime1 = var6Lifetime1 + (SpriteResourceSupport.field_b + ((ArchiveNetworkClient.field_i << 1) + sm.field_b));
+              StrongCacheEntry.field_w[var4Lifetime3][3] = (ArchiveNetworkClient.field_i << 1) + SpriteResourceSupport.field_b;
             } else {
               var6Lifetime1 = var6Lifetime1 + AccountFieldValue.field_d;
             }

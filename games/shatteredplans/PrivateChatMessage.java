@@ -1503,7 +1503,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_enemyproduction", 101);
                 if (var2 != null) {
-                  ho.field_g = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatHelpSupport.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_rates", 127);
                 if (null != var2) {
@@ -1976,7 +1976,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipPlaceFleets", 117);
                 if (null != var2) {
-                  hd.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntroTextLine.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipPlaceFleetsStop", 127);
                 if (null != var2) {
@@ -2122,7 +2122,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("victoryTurnsRemaining", 118);
                 if (var2 != null) {
-                  hr.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelLayoutSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("victorySolEmpty", 118);
                 if (null != var2) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gr extends IntrusiveNode {
+final class PlayerRankingRequest extends IntrusiveNode {
     int[][] field_m;
     String[][] field_n;
     int field_r;
@@ -14,7 +14,7 @@ final class gr extends IntrusiveNode {
     int field_j;
     int field_l;
 
-    final static void a(int param0, int param1, int[] param2, int param3) {
+    final static void drawStippledPolygonAlpha(int param0, int param1, int[] param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -57,7 +57,7 @@ final class gr extends IntrusiveNode {
           if (param1 <= -58) {
             return;
           }
-          gr.a(false, true, 50);
+          PlayerRankingRequest.drawDialogsWithBackdrop(false, true, 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class gr extends IntrusiveNode {
 
     public static void clearStatics(int param0) {
         if (param0 >= -25) {
-          gr.createSolidSquare((byte) -99, 47, -15);
+          PlayerRankingRequest.createSolidSquare((byte) -99, 47, -15);
           field_p = null;
           return;
         }
@@ -101,7 +101,7 @@ final class gr extends IntrusiveNode {
         return var3;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void drawDialogsWithBackdrop(boolean param0, boolean param1, int param2) {
         if (!param0) {
           SoftwareRasterizer.clear();
           og.a(param2, param0);
@@ -111,7 +111,7 @@ final class gr extends IntrusiveNode {
         og.a(param2, param0);
     }
 
-    gr() {
+    PlayerRankingRequest() {
     }
 
     static {

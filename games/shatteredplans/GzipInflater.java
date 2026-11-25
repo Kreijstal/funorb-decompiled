@@ -192,7 +192,7 @@ final class GzipInflater {
           if (!AttackTask.d((byte) 104)) {
             UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
             UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);
-            UsernameAvailabilityValidator.a(param0 ^ -2, hr.field_e, 3);
+            UsernameAvailabilityValidator.a(param0 ^ -2, ChatPanelLayoutSupport.field_e, 3);
             UsernameAvailabilityValidator.a(param0 ^ -2, lm.field_e, 4);
           }
         } catch (RuntimeException runtimeException) {

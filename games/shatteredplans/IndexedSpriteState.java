@@ -17,7 +17,7 @@ abstract class IndexedSpriteState {
         AnimatedPanel var6 = null;
         AnimatedPanel var3 = null;
         try {
-          BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
+          BufferedSocket.field_i = SpriteResourceSupport.loadSpriteByName(2, param1, "basic", "display_name_changed");
           ClientPacketFlushSupport.field_a = new SocialListPanel(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
           wg.field_a = new SocialListPanel(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
           OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);

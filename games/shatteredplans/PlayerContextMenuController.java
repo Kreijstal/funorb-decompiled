@@ -134,7 +134,7 @@ final class PlayerContextMenuController {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -624,7 +624,7 @@ final class PlayerContextMenuController {
 
     PlayerContextMenuController(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_j = new ul(hd.field_t);
+          this.field_j = new ul(IntroTextLine.field_t);
           this.field_i = param6;
           this.field_b = param1;
           this.field_l = param5;

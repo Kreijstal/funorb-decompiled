@@ -137,7 +137,7 @@ final class LobbyRoomControlsSupport {
               var10 = 0;
               while (true) {
                 if (var10 < nl.field_a.length) {
-                  stackIn_13_0 = ((id.field_c[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                  stackIn_13_0 = ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_13_0;
                   if (var11_int != 0) {
                     var9_int++;

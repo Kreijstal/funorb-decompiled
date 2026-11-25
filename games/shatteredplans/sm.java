@@ -145,15 +145,15 @@ final class sm {
           this.b(-38, false, 12, 127);
         }
         if (GameRules.field_c != this.field_a &&
-          this.field_a != gr.field_o) {
+          this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
-        if (GameRules.field_c != gr.field_o &&
+        if (GameRules.field_c != PlayerRankingRequest.field_o &&
           PointsVictoryChecker.a((byte) -76, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -76, gr.field_o)) {
+          PointsVictoryChecker.a((byte) -76, PlayerRankingRequest.field_o)) {
           var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 121, 32);
           var4 = (int)((double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]) * var2);
-          var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[gr.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
+          var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           if (GameRules.field_c == this.field_a) {
             return TutorialVictoryChecker.field_r[GameRules.field_c] / 2 + var5 - var4;
           }
@@ -178,14 +178,14 @@ final class sm {
         int var4 = 0;
         int var5 = 0;
         if (this.field_a != GameRules.field_c &&
-          gr.field_o != this.field_a) {
+          PlayerRankingRequest.field_o != this.field_a) {
           return 0;
         }
-        if (gr.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -126, gr.field_o)) {
+        if (PlayerRankingRequest.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
+          PointsVictoryChecker.a((byte) -126, PlayerRankingRequest.field_o)) {
           var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 118, 32);
           var4 = (int)((-var2 + 1.0) * (double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]));
-          var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[gr.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
+          var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           var5 = var5 + var4;
           if (GameRules.field_c != this.field_a) {
             return var5;
@@ -792,7 +792,7 @@ final class sm {
           rs.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(ld.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
-          rs.field_Cb.drawCentred(hc.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(MeshMaterial.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(ProgressDialog.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
           if (!LoginForm.field_I.field_q) {
@@ -885,7 +885,7 @@ final class sm {
         Star.field_H[0] = 24;
         if (DirectByteArrayStorage.field_i == null && (6 == this.field_a ||
           this.field_a == 7)) {
-          hd.c(false);
+          IntroTextLine.computeInstructionSectionHeights(false);
         }
     }
 
@@ -1208,7 +1208,7 @@ final class sm {
                 if (var11Lifetime2 < 170) {
                   SoftwareRasterizer.drawCircle(var12Lifetime1, var13Lifetime1, 30, 16777215);
                   SoftwareRasterizer.fillCircleAlpha(var12Lifetime1, var13Lifetime1, 30, 16777215, 92);
-                  ie.a(var10_ref_om, var10_ref_om.field_z << 3, var10_ref_om.field_w << 3, var12Lifetime1 * 16, var13Lifetime1 * 16, 0, 4096);
+                  SpriteMaskEffects.drawRotatedBilinear(var10_ref_om, var10_ref_om.field_z << 3, var10_ref_om.field_w << 3, var12Lifetime1 * 16, var13Lifetime1 * 16, 0, 4096);
                   SoftwareRasterizer.fillCircleAlpha(var12Lifetime1, var13Lifetime1, 9, 0, 92);
                   FleetTrailPoint.field_i[0].draw(-(FleetTrailPoint.field_i[0].field_z / 2) + 30 + var12Lifetime1, var13Lifetime1 - FleetTrailPoint.field_i[0].field_w / 2);
                   FleetTrailPoint.field_i[1].draw(var12Lifetime1 - 30 - FleetTrailPoint.field_i[0].field_z / 2, var13Lifetime1 - FleetTrailPoint.field_i[0].field_w / 2);
@@ -1308,8 +1308,8 @@ final class sm {
                       var20 = 0;
                       var21 = 0;
                       while (var21 < 10) {
-                        ie.a(var10_ref_om, 8 * var10_ref_om.field_z, var10_ref_om.field_w * 8, (var20 + var10_ref_om.field_z / 4) * 16, 4 * var10_ref_om.field_w, 0, 2048);
-                        ie.a(var10_ref_om, 8 * var10_ref_om.field_z, var10_ref_om.field_w * 8, 16 * (var20 + var10_ref_om.field_z / 4), var10_ref_om.field_w * 12, 0, 2048);
+                        SpriteMaskEffects.drawRotatedBilinear(var10_ref_om, 8 * var10_ref_om.field_z, var10_ref_om.field_w * 8, (var20 + var10_ref_om.field_z / 4) * 16, 4 * var10_ref_om.field_w, 0, 2048);
+                        SpriteMaskEffects.drawRotatedBilinear(var10_ref_om, 8 * var10_ref_om.field_z, var10_ref_om.field_w * 8, 16 * (var20 + var10_ref_om.field_z / 4), var10_ref_om.field_w * 12, 0, 2048);
                         var21++;
                         var20 += 5;
                       }
@@ -1683,13 +1683,13 @@ final class sm {
         int var2 = 0;
         int var3 = 0;
         if (GameRules.field_c != this.field_a &&
-          this.field_a != gr.field_o) {
+          this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
-        if (PointsVictoryChecker.a((byte) -124, GameRules.field_c) && PointsVictoryChecker.a((byte) -75, gr.field_o) &&
-          GameRules.field_c != gr.field_o) {
+        if (PointsVictoryChecker.a((byte) -124, GameRules.field_c) && PointsVictoryChecker.a((byte) -75, PlayerRankingRequest.field_o) &&
+          GameRules.field_c != PlayerRankingRequest.field_o) {
           var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
-          var3 = TutorialVictoryChecker.field_t[gr.field_o] + TutorialVictoryChecker.field_l[gr.field_o] * TutorialVictoryChecker.field_p[gr.field_o].length + 10;
+          var3 = TutorialVictoryChecker.field_t[PlayerRankingRequest.field_o] + TutorialVictoryChecker.field_l[PlayerRankingRequest.field_o] * TutorialVictoryChecker.field_p[PlayerRankingRequest.field_o].length + 10;
           return QuickChatCategoryRegistry.a(var2, 32, BirthDateConfirmationForm.field_Q, var3, 0);
         }
         if (param0 != -98) {
@@ -2210,7 +2210,7 @@ final class sm {
           var17 = new int[4];
           SoftwareRasterizer.saveClip(var17);
           SoftwareRasterizer.setClip(param0, param6, param0 + var8, param2 + param6);
-          ie.a(SpriteState.field_q, param0, param6);
+          SpriteMaskEffects.darkenThroughSpriteMask(SpriteState.field_q, param0, param6);
           SoftwareRasterizer.restoreClip(var17);
         }
         rs.field_Cb.drawCentred(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
@@ -2257,7 +2257,7 @@ final class sm {
           if (var5 == 0) {
             this.field_g = param0;
             var5 = param1 ? 1 : 0;
-            ta.a(gr.field_o, 12, (byte) 96, var5 != 0);
+            ta.a(PlayerRankingRequest.field_o, 12, (byte) 96, var5 != 0);
           } else {
             if (30 == var5) {
               this.field_g = param0;
@@ -2273,7 +2273,7 @@ final class sm {
                   this.field_g = param0;
                   var5 = param1 ? 1 : 0;
                   var6 = var5;
-                  ta.a(gr.field_o, -6, (byte) 96, var6 != 0);
+                  ta.a(PlayerRankingRequest.field_o, -6, (byte) 96, var6 != 0);
                 }
               } else {
                 if (var5 == 2) {
@@ -2284,18 +2284,18 @@ final class sm {
                   if (8 == var5) {
                     this.field_g = param0;
                     var5 = param1 ? 1 : 0;
-                    ta.a(gr.field_o, 0, (byte) 96, var5 != 0);
+                    ta.a(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
                   } else {
                     if (var5 == 25) {
                       this.field_g = param0;
                       var5 = param1 ? 1 : 0;
-                      ta.a(gr.field_o, 0, (byte) 96, var5 != 0);
+                      ta.a(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
                       uo.field_e = true;
                     } else {
                       if (var5 == 23) {
                         this.field_g = param0;
                         var5 = param1 ? 1 : 0;
-                        ta.a(gr.field_o, 8, (byte) 96, var5 != 0);
+                        ta.a(PlayerRankingRequest.field_o, 8, (byte) 96, var5 != 0);
                       } else {
                         if (var5 != 31) {
                           if (var5 != 5) {
@@ -2304,12 +2304,12 @@ final class sm {
                                 this.field_g = param0;
                                 var5 = MusicPatch.field_m;
                                 var6 = param1 ? 1 : 0;
-                                ta.a(gr.field_o, var5, (byte) 96, var6 != 0);
+                                ta.a(PlayerRankingRequest.field_o, var5, (byte) 96, var6 != 0);
                               } else {
                                 if (var5 == 4) {
                                   this.field_g = param0;
                                   var5 = param1 ? 1 : 0;
-                                  ta.a(gr.field_o, 5, (byte) 96, var5 != 0);
+                                  ta.a(PlayerRankingRequest.field_o, 5, (byte) 96, var5 != 0);
                                 } else {
                                   if (var5 != 21 &&
                                     var5 != 22) {
@@ -2383,7 +2383,7 @@ final class sm {
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;
-                                                          ta.a(gr.field_o, -3, (byte) 96, var5 != 0);
+                                                          ta.a(PlayerRankingRequest.field_o, -3, (byte) 96, var5 != 0);
                                                         } else {
                                                           if (var5 == 28) {
                                                             PlacementEvent.field_k = PlacementEvent.field_k + 1;
@@ -2439,7 +2439,7 @@ final class sm {
                                               this.field_g = param0;
                                               if (v.field_b) {
                                                 var5 = param1 ? 1 : 0;
-                                                ta.a(gr.field_o, -7, (byte) 96, var5 != 0);
+                                                ta.a(PlayerRankingRequest.field_o, -7, (byte) 96, var5 != 0);
                                               }
                                               if (MusicEnvelope.field_d) {
                                                 os.a(0, 11, true);
@@ -2455,17 +2455,17 @@ final class sm {
                             } else {
                               this.field_g = param0;
                               var5 = param1 ? 1 : 0;
-                              ta.a(gr.field_o, 7, (byte) 96, var5 != 0);
+                              ta.a(PlayerRankingRequest.field_o, 7, (byte) 96, var5 != 0);
                             }
                           } else {
                             this.field_g = param0;
                             var5 = param1 ? 1 : 0;
-                            ta.a(gr.field_o, 6, (byte) 96, var5 != 0);
+                            ta.a(PlayerRankingRequest.field_o, 6, (byte) 96, var5 != 0);
                           }
                         } else {
                           this.field_g = param0;
                           var5 = param1 ? 1 : 0;
-                          ta.a(gr.field_o, 13, (byte) 96, var5 != 0);
+                          ta.a(PlayerRankingRequest.field_o, 13, (byte) 96, var5 != 0);
                         }
                       }
                     }
@@ -2504,16 +2504,16 @@ final class sm {
 
     private final int h(int param0) {
         if (GameRules.field_c != this.field_a &&
-          this.field_a != gr.field_o) {
+          this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
         if (param0 > -92) {
           this.e((byte) 113);
         }
-        if (gr.field_o != GameRules.field_c &&
+        if (PlayerRankingRequest.field_o != GameRules.field_c &&
           PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -88, gr.field_o)) {
-          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
+          PointsVictoryChecker.a((byte) -88, PlayerRankingRequest.field_o)) {
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[PlayerRankingRequest.field_o], 0);
         }
         return TutorialVictoryChecker.field_m[this.field_a];
     }
@@ -2536,19 +2536,19 @@ final class sm {
         boolean decompiledFrameRemainder0 = true;
         if (param1 == 9) {
           if (MusicPatch.field_m != 0 &&
-            gr.field_o != 0 &&
+            PlayerRankingRequest.field_o != 0 &&
             MusicPatch.field_m != 11 &&
-            gr.field_o != 11 &&
+            PlayerRankingRequest.field_o != 11 &&
             MusicPatch.field_m != 13 &&
-            gr.field_o != 13) {
+            PlayerRankingRequest.field_o != 13) {
             if (1 != MusicPatch.field_m &&
-              gr.field_o != 1) {
+              PlayerRankingRequest.field_o != 1) {
               if ((2 == MusicPatch.field_m ||
-                gr.field_o == 2 ||
+                PlayerRankingRequest.field_o == 2 ||
                 MusicPatch.field_m == 3 ||
-                gr.field_o == 3 ||
+                PlayerRankingRequest.field_o == 3 ||
                 MusicPatch.field_m == 4 ||
-                4 == gr.field_o)) {
+                4 == PlayerRankingRequest.field_o)) {
                 var3Lifetime2 = ClientOverlaySupport.field_d;
               }
             } else {
@@ -2752,7 +2752,7 @@ final class sm {
         } else {
           stackIn_23_0 = ReflectionCheck.field_o;
         }
-        ie.a((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
+        SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {
           SoftwareRasterizer.fillCircleAlpha(var30 >> 4, var31 >> 4, 9, 0, 92);
           rs.field_Cb.drawCentred(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
@@ -2810,15 +2810,15 @@ final class sm {
 
     private final int c(int param0) {
         if (GameRules.field_c != this.field_a &&
-          this.field_a != gr.field_o) {
+          this.field_a != PlayerRankingRequest.field_o) {
           return 0;
         }
-        if (gr.field_o == GameRules.field_c) {
+        if (PlayerRankingRequest.field_o == GameRules.field_c) {
           return TutorialVictoryChecker.field_r[GameRules.field_c];
         }
         if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
-          PointsVictoryChecker.a((byte) -125, gr.field_o)) {
-          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
+          PointsVictoryChecker.a((byte) -125, PlayerRankingRequest.field_o)) {
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[PlayerRankingRequest.field_o], 0);
         }
         double var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);
         if (this.field_a == GameRules.field_c) {

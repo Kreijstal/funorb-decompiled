@@ -14,7 +14,7 @@ final class ListContent implements MenuContent {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (LoginMethodPreference.field_g) {
-          return wi.field_c.a(oq.field_j, ho.field_h, true);
+          return wi.field_c.a(oq.field_j, QuickChatHelpSupport.field_h, true);
         }
         if (QuickChatCategoryDefinition.field_t) {
           return QuickChatCategoryDefinition.a(-85, param1, param3);
@@ -33,7 +33,7 @@ final class ListContent implements MenuContent {
     }
 
     final static void a(int param0) {
-        hd var1 = null;
+        IntroTextLine var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -42,12 +42,12 @@ final class ListContent implements MenuContent {
           if (null == DirectByteArrayStorage.field_h) {
             return;
           }
-          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(param0));
+          var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.startForward(param0));
           while (var1 != null) {
             if (0 > var1.field_h) {
               var1.unlink((byte) -70);
             }
-            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
+            var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

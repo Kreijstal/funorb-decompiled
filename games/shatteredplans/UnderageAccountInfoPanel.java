@@ -266,7 +266,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           }
           NodeHashTableIterator.a(0, "endturn");
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
-            if (ho.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
+            if (QuickChatHelpSupport.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
                 DefendTask.a(1, n.a("combatSuccess", -21502));
                 if (var5 != 0) {
@@ -291,7 +291,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             uq.field_m.a(Integer.toString(oq.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
           }
           if (oq.field_a.field_P.field_z &&
-            oq.field_a.field_P.field_k != ho.field_d.field_x) {
+            oq.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
             DefendTask.a(1, n.a("lose", -21502));
           }
           var1_array = oq.field_a.field_P.field_g.field_e;

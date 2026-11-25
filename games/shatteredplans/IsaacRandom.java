@@ -54,7 +54,7 @@ final class IsaacRandom {
             if (ServerIntArrayRequest.field_i == 2) {
               js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
               var2 = new PacketBuffer(13);
-              hq.a(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
+              AccountHandshakeSupport.writeAccountHandshake(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
               js.field_a.write(13, 0, var2.payload, -13976);
@@ -79,7 +79,7 @@ final class IsaacRandom {
             if (4 != ServerIntArrayRequest.field_i) {
               return -1;
             }
-            TertiaryLinkNode.field_o.a((byte) 90, hq.field_c, js.field_a);
+            TertiaryLinkNode.field_o.a((byte) 90, AccountHandshakeSupport.field_c, js.field_a);
             js.field_a = null;
             ServerIntArrayRequest.field_i = 0;
             AccountCreationDialog.field_Gb = null;

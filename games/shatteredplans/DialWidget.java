@@ -263,11 +263,11 @@ final class DialWidget extends FocusableWidget {
               return;
             }
             if (var2 == 7) {
-              var34 = (mj) (gr.field_p.startForward(0));
+              var34 = (mj) (PlayerRankingRequest.field_p.startForward(0));
               while (var34 != null) {
                 var34.unlink((byte) -126);
                 var34.unlinkSecondary(16);
-                var34 = (mj) (gr.field_p.nextForward((byte) -71));
+                var34 = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
               }
               ValidationMessageWidget.field_X = 0;
               return;
@@ -491,8 +491,8 @@ final class DialWidget extends FocusableWidget {
             return;
           }
           TurnEventLog.field_i = true;
-          for (var3Lifetime2 = 0; var3Lifetime2 < id.field_c.length; var3Lifetime2++) {
-            id.field_c[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
+          for (var3Lifetime2 = 0; var3Lifetime2 < SpriteResourceSupport.field_c.length; var3Lifetime2++) {
+            SpriteResourceSupport.field_c[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readSignedByte(-2852);
           }
           qj.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-82);
           RecklessAi.field_q = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-54);

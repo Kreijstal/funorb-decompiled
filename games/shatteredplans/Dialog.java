@@ -240,7 +240,7 @@ abstract class Dialog extends WidgetContainer {
           var1 = no.field_e.d(false);
         }
         if (param0 == var1.length()) {
-          var1 = id.a(-106);
+          var1 = SpriteResourceSupport.getLocalPlayerName(-106);
         }
         if (var1.length() == 0) {
           var1 = NodeSequence.field_c;

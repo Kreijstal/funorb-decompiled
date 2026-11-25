@@ -449,7 +449,7 @@ final class EmailValidator extends TextFieldValidator {
         var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_ref = (mj) (gr.field_p.startForward(0));
+          var1_ref = (mj) (PlayerRankingRequest.field_p.startForward(0));
           if (param0 < 4) {
             EmailValidator.a(true, true);
           }
@@ -463,7 +463,7 @@ final class EmailValidator extends TextFieldValidator {
                 }
               }
             }
-            var1_ref = (mj) (gr.field_p.nextForward((byte) -71));
+            var1_ref = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
           }
           var1_ref2 = (LobbyRoomEntry) (kj.field_a.startForward(0));
           while (var1_ref2 != null) {

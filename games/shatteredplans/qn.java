@@ -51,7 +51,7 @@ final class qn {
 
     final static void a(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        hd var1 = null;
+        IntroTextLine var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -63,14 +63,14 @@ final class qn {
           if (DirectByteArrayStorage.field_h == null) {
             return;
           }
-          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(0));
+          var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.startForward(0));
           var2 = (int)RandomAccessCacheFile.field_e + 20;
           var3 = 20;
           var4 = 63 % ((param0 + 56) / 39);
           while (var1 != null) {
             if (var1.field_h < 0) {
               var2 = var2 + var1.field_i.field_w;
-              var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
+              var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
               continue;
             }
             if (230 > var1.field_h) {
@@ -86,7 +86,7 @@ final class qn {
               }
             }
             var2 = var2 + var1.field_i.field_w;
-            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
+            var1 = (IntroTextLine) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

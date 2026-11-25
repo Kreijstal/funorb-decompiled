@@ -28,7 +28,7 @@ final class uf {
         return false;
     }
 
-    final static void a(gr param0, int param1, boolean param2) {
+    final static void a(PlayerRankingRequest param0, int param1, boolean param2) {
         CipherPacketBuffer var3 = null;
         if (param2) {
           return;

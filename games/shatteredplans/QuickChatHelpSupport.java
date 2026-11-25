@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho {
+final class QuickChatHelpSupport {
     static int field_b;
     static AnimatedPanel field_j;
     static BitmapFont field_f;
@@ -13,12 +13,12 @@ final class ho {
     static byte[] field_i;
     static int[] field_e;
 
-    final static void a(boolean param0, int param1) {
+    final static void drawQuickChatHelp(boolean param0, int param1) {
         if (null != IndexedSpriteState.field_h) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           IndexedSpriteState.field_h.drawFullRaster(param0, -100);
           if (param1 != 8323199) {
-            ho.a(-86);
+            QuickChatHelpSupport.releaseQuickChatHelpSupportStatics(-86);
             return;
           }
           return;
@@ -26,7 +26,7 @@ final class ho {
         if (param1 == 8323199) {
           return;
         }
-        ho.a(-86);
+        QuickChatHelpSupport.releaseQuickChatHelpSupportStatics(-86);
     }
 
     final static SocketConnector createSocketConnector(int param0, int param1, String param2) {
@@ -60,7 +60,7 @@ final class ho {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseQuickChatHelpSupportStatics(int param0) {
         field_e = null;
         field_f = null;
         if (param0 == 520) {
@@ -70,7 +70,7 @@ final class ho {
           field_d = null;
           return;
         }
-        ho.a(false, 124);
+        QuickChatHelpSupport.drawQuickChatHelp(false, 124);
         field_i = null;
         field_g = null;
         field_j = null;

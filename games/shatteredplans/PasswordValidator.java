@@ -103,13 +103,13 @@ final class PasswordValidator extends TextFieldValidator {
               if (var5.field_rb != 0) {
                 TutorialAi.a(var4_int, -127, var5);
               }
-              var6 = id.a(-7019, var4_int);
+              var6 = SpriteResourceSupport.getChatChannelFilter(-7019, var4_int);
               DerelictMapReader.field_d[var4_int].field_pb = BoundsRect.field_m[var6];
               n.field_n[var4_int].field_z = jf.field_d[var6];
             }
           }
           if (pr.field_c.field_rb != 0) {
-            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
+            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, QuickChatHelpSupport.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
@@ -241,7 +241,7 @@ final class PasswordValidator extends TextFieldValidator {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];
-          ho.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
+          QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
             return true;
@@ -305,7 +305,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           stackIn_19_1 = !(param0);
           if (this.b(stackIn_19_1, param1)) {
-            stackIn_22_0 = hq.field_d;
+            stackIn_22_0 = AccountHandshakeSupport.field_d;
             return stackIn_22_0;
           }
           if (var6.length() <= 0) {
@@ -356,7 +356,7 @@ final class PasswordValidator extends TextFieldValidator {
             return false;
           }
           oq.field_j = ng.field_a[DialogRoot.field_B];
-          ho.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
+          QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
             return true;

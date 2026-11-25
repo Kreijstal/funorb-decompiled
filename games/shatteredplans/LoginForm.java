@@ -9,7 +9,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
     static int field_F;
     static String field_N;
     private FocusableWidget field_P;
-    static gr field_I;
+    static PlayerRankingRequest field_I;
     private TextFieldWidget field_H;
     private FocusableWidget field_Q;
     private TextFieldWidget field_R;

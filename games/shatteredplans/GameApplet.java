@@ -866,18 +866,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static gr a(byte param0, int param1, int param2, int param3) {
-        gr var4 = null;
+    final static PlayerRankingRequest a(byte param0, int param1, int param2, int param3) {
+        PlayerRankingRequest var4 = null;
         int var5 = 0;
-        gr stackIn_9_0 = null;
+        PlayerRankingRequest stackIn_9_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
-        gr stackIn_16_0 = null;
+        PlayerRankingRequest stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (gr) (PlacementOrder.field_r.startForward(0));
+          var4 = (PlayerRankingRequest) (PlacementOrder.field_r.startForward(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             stackIn_12_0 = param1;
@@ -887,13 +887,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var4 = (gr) (PlacementOrder.field_r.nextForward((byte) -71));
+              var4 = (PlayerRankingRequest) (PlacementOrder.field_r.nextForward((byte) -71));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            var4 = new gr();
+            var4 = new PlayerRankingRequest();
             var4.field_k = param1;
             var4.field_j = param3;
             PlacementOrder.field_r.addLast((byte) -113, var4);

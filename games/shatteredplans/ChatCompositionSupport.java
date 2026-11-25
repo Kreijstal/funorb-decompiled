@@ -192,7 +192,7 @@ final class ChatCompositionSupport {
             var2 = PasswordInputPainter.field_u;
           }
           if (var2 != null) {
-            GuestPlayForm.a(-73, ho.field_c, (String) null, (String) (var2), 0);
+            GuestPlayForm.a(-73, QuickChatHelpSupport.field_c, (String) null, (String) (var2), 0);
           } else {
             var4 = Star.field_o;
             var4 = v.a(var4, (byte) 19);
@@ -203,7 +203,7 @@ final class ChatCompositionSupport {
             if (var7 == 2) {
               var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{LoginRequestSupport.field_a});
               var9 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var4});
-              var8 = -485 + uq.field_j.field_K - (-OpacityWidget.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
+              var8 = -485 + uq.field_j.field_K - (-OpacityWidget.field_C.field_K - QuickChatHelpSupport.field_f.stringWidth(var9) + QuickChatHelpSupport.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -244,7 +244,7 @@ final class ChatCompositionSupport {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + qj.field_c + "</col>";
               }
-              var10 = ho.field_f.stringWidth(var5);
+              var10 = QuickChatHelpSupport.field_f.stringWidth(var5);
               if (!BattleEvent.a((byte) 110)) {
                 if (uq.field_j.field_L &&
                   var10 > (-uq.field_j.field_B + TertiaryListSequence.field_k)) {

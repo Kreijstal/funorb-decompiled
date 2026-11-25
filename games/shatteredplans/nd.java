@@ -76,7 +76,7 @@ final class nd {
                         var8.field_d = (String) (((Object[]) (var6))[0]);
                       } else {
                         if (var5.equalsIgnoreCase("objective")) {
-                          id.a((String[]) (var6), 0, var8);
+                          SpriteResourceSupport.appendTutorialObjective((String[]) (var6), 0, var8);
                         } else {
                           if (var5.equalsIgnoreCase("action")) {
                             ReflectionCheck.a((String[]) (var6), var8, 0);

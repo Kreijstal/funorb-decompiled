@@ -160,7 +160,7 @@ class TextHotspotWidget extends FocusableWidget {
               TargetedChatMessage.field_n = stackIn_9_0;
               Wormhole.field_j = LegacyAi.field_r;
               var5.position = 0;
-              hq.a(WidgetStyle.field_g, PrivateChatMessage.field_o, js.field_f, (byte) 20, uk.field_a);
+              AccountHandshakeSupport.writeAccountHandshake(WidgetStyle.field_g, PrivateChatMessage.field_o, js.field_f, (byte) 20, uk.field_a);
               ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ class TextHotspotWidget extends FocusableWidget {
           IntroLoadingSupport.drawIntroLoadingScreen(-114);
         } else {
           if (SolVictoryChecker.field_m == 1) {
-            hd.a(param0 - 6373);
+            IntroTextLine.drawIntroGalaxyLayers(param0 - 6373);
           } else {
             if (2 == SolVictoryChecker.field_m) {
               wj.a(128);

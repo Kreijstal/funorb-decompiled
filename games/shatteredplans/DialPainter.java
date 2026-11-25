@@ -33,7 +33,7 @@ final class DialPainter implements WidgetPainter {
           ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param1);
           nd.field_k = DateInputWidget.a(var5, true);
-          hd.field_k = param2;
+          IntroTextLine.field_k = param2;
           AccountNoticeDialog.r(0);
           if (param0 < 15) {
             field_e = (Calendar) null;

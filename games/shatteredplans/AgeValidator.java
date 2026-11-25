@@ -20,7 +20,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.computeStateFor(-11196, param1) != ArchiveSourceManager.field_b) {
             return null;
           }
-          stackIn_5_0 = hr.field_f;
+          stackIn_5_0 = ChatPanelLayoutSupport.field_f;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException var21 = null;
         try {
           CheckboxPainter.a(-86, param17, param16, param11);
-          id.a(param20, param5, param3 + 26883, param10, param7);
+          SpriteResourceSupport.setSharedWidgetMetrics(param20, param5, param3 + 26883, param10, param7);
           BattleEvent.b(param2, param8, param3);
           te.a(-4440, param19, param13, param14, param9, param12);
           StatusContent.a(param4, param15, param1, (byte) 106);

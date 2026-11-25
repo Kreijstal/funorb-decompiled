@@ -277,7 +277,7 @@ final class TurnEventLog {
           IntHashIndex.field_g = new int[LobbyLayoutSupport.field_c];
           MusicEnvelope.field_l = new byte[LobbyLayoutSupport.field_c][];
           SectorCacheStore.field_h = new boolean[LobbyLayoutSupport.field_c];
-          hd.field_q = new byte[LobbyLayoutSupport.field_c][];
+          IntroTextLine.field_q = new byte[LobbyLayoutSupport.field_c][];
           WeightedCacheEntry.field_s = new int[LobbyLayoutSupport.field_c];
           StatusMessagePanel.field_H = new int[LobbyLayoutSupport.field_c];
           sj.field_a = new int[LobbyLayoutSupport.field_c];
@@ -314,7 +314,7 @@ final class TurnEventLog {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            hd.field_q[var4Lifetime5] = var20;
+            IntroTextLine.field_q[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

@@ -116,7 +116,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int var6Lifetime1;
         int var5Lifetime1;
         if (param0) {
-          var20 = hd.field_q[0];
+          var20 = IntroTextLine.field_q[0];
           if (SectorCacheStore.field_h[0]) {
             var21 = MusicEnvelope.field_l[0];
             var13 = new int[var1];
@@ -137,7 +137,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           return (Sprite) (var3);
         }
         MouseInputHandler.a(79);
-        byte[] var18 = hd.field_q[0];
+        byte[] var18 = IntroTextLine.field_q[0];
         if (SectorCacheStore.field_h[0]) {
           var19 = MusicEnvelope.field_l[0];
           var13Lifetime1 = new int[var1];

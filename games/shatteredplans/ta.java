@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static IndexedSprite c(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], ProgressDialog.field_fb);
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], IntroTextLine.field_q[0], ProgressDialog.field_fb);
         TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
@@ -171,19 +171,19 @@ final class ta {
     final static void a(int param0, int param1, byte param2, boolean param3) {
         int var4 = 0;
         int var4Lifetime1;
-        if (param1 == gr.field_o) {
+        if (param1 == PlayerRankingRequest.field_o) {
           return;
         }
-        gr.field_o = param1;
+        PlayerRankingRequest.field_o = param1;
         MusicPatch.field_m = param0;
         if (PointsVictoryChecker.a((byte) -94, GameRules.field_c)) {
-          mj.field_Hb[GameRules.field_c].a(-30492, gr.field_o);
-          if (PointsVictoryChecker.a((byte) -73, gr.field_o)) {
+          mj.field_Hb[GameRules.field_c].a(-30492, PlayerRankingRequest.field_o);
+          if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
             var4 = 0;
-            if (11 == gr.field_o) {
+            if (11 == PlayerRankingRequest.field_o) {
               var4 = -1;
             }
-            mj.field_Hb[gr.field_o].a(var4, (byte) 27, param3);
+            mj.field_Hb[PlayerRankingRequest.field_o].a(var4, (byte) 27, param3);
           }
           BirthDateConfirmationForm.field_Q = 0;
           if (param2 != 96) {
@@ -192,12 +192,12 @@ final class ta {
           }
           return;
         }
-        if (PointsVictoryChecker.a((byte) -73, gr.field_o)) {
+        if (PointsVictoryChecker.a((byte) -73, PlayerRankingRequest.field_o)) {
           var4Lifetime1 = 0;
-          if (11 == gr.field_o) {
+          if (11 == PlayerRankingRequest.field_o) {
             var4Lifetime1 = -1;
           }
-          mj.field_Hb[gr.field_o].a(var4Lifetime1, (byte) 27, param3);
+          mj.field_Hb[PlayerRankingRequest.field_o].a(var4Lifetime1, (byte) 27, param3);
         }
         BirthDateConfirmationForm.field_Q = 0;
         if (param2 == 96) {

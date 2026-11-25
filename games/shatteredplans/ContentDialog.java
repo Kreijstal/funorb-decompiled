@@ -159,7 +159,7 @@ abstract class ContentDialog extends ResizingDialog {
             var2Lifetime1 = -108 % ((param0 + 23) / 52);
             return super.animate((byte) 81);
           }
-          this.field_ab = hd.field_s;
+          this.field_ab = IntroTextLine.field_s;
           this.resizeAnimated(-127, this.field_mb, 12 + this.field_ib.field_x, this.field_ib.field_n + this.field_db + 12);
           this.field_Z = 0;
           this.field_eb.alpha = 0;
@@ -193,7 +193,7 @@ abstract class ContentDialog extends ResizingDialog {
         try {
           var3_int = 87 / ((51 - param1) / 57);
           this.field_ib = param0;
-          if (hd.field_s == this.field_ab) {
+          if (IntroTextLine.field_s == this.field_ab) {
             this.resizeAnimated(-55, this.field_mb, this.field_ib.field_x + 12, this.field_ib.field_n + this.field_db + 12);
             this.field_Z = 0;
             return;

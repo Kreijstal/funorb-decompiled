@@ -124,27 +124,27 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
             }
           }
           var7 = (String) null;
-          GuestPlayForm.a(-114, ho.field_c, (String) null, var5, 0);
+          GuestPlayForm.a(-114, QuickChatHelpSupport.field_c, (String) null, var5, 0);
           GameAssetSetupSupport.field_a = uq.field_j;
-          uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
-          uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
+          uq.field_j.field_ab = -(8355711 & QuickChatHelpSupport.field_c >> 1) + (QuickChatHelpSupport.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
+          uq.field_j.field_jb = -(8355711 & QuickChatHelpSupport.field_c >> 1) + QuickChatHelpSupport.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
           WhirlpoolHasher.field_j = OpacityWidget.field_C;
-          uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
+          uq.field_j.field_qb = -(QuickChatHelpSupport.field_c >> 1 & 8355711) + QuickChatHelpSupport.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           ValidatedTextInputWidget.field_X = new AnimatedPanel(0L, param1);
           AgeValidator.field_n = new AnimatedPanel(0L, param2);
           MenuButton.field_w = new AnimatedPanel(0L, (AnimatedPanel) null);
           sg.field_Ab = new AnimatedPanel(0L, param3);
           uq.field_j = new AnimatedPanel((long)param4, param0);
-          uq.field_j.field_nb = ho.field_f;
+          uq.field_j.field_nb = QuickChatHelpSupport.field_f;
           sg.field_Ab.addChild(4, uq.field_j);
           OpacityWidget.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
           sg.field_Ab.addChild(4, OpacityWidget.field_C);
-          hd.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ld.field_n);
+          IntroTextLine.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ld.field_n);
           DirectByteArrayStorage.field_l = new AnimatedPanel(0L, BoundsRect.field_k);
           ValidatedTextInputWidget.field_X.addChild(4, AgeValidator.field_n);
           ValidatedTextInputWidget.field_X.addChild(4, MenuButton.field_w);
           MenuButton.field_w.addChild(4, sg.field_Ab);
-          MenuButton.field_w.addChild(param4 + 4, hd.field_m);
+          MenuButton.field_w.addChild(param4 + 4, IntroTextLine.field_m);
           MenuButton.field_w.addChild(4, DirectByteArrayStorage.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

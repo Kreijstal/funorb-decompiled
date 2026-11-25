@@ -70,7 +70,7 @@ final class sj {
         int var5_intLifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var12 = ho.field_d;
+          var12 = QuickChatHelpSupport.field_d;
           var2 = var12.field_m;
           if (param0 != -31560) {
             sj.a(60);

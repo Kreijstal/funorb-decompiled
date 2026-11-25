@@ -336,7 +336,7 @@ final class QuaternaryListSequence extends NodeSequence {
         ProgressDialog.field_cb.writeByte(param3, (byte) -85);
         ProgressDialog.field_cb.writeByte(param1, (byte) -123);
         ProgressDialog.field_cb.writeShort(param0, 255);
-        ProgressDialog.field_cb.rsaEncrypt(ResizingDialog.field_V, hr.field_a, (byte) -56);
+        ProgressDialog.field_cb.rsaEncrypt(ResizingDialog.field_V, ChatPanelLayoutSupport.field_a, (byte) -56);
         js.field_f.h(18, param2 + 251);
         int fieldTemp$0 = js.field_f.position + 1;
         js.field_f.position = js.field_f.position + 1;

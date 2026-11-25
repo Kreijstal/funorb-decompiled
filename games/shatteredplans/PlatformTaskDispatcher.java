@@ -220,7 +220,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.field_e = ho.createSocketConnector(var8.field_g, -4276, (String) (var8.field_b)).connect(-10463);
+                      var8.field_e = QuickChatHelpSupport.createSocketConnector(var8.field_g, -4276, (String) (var8.field_b)).connect(-10463);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

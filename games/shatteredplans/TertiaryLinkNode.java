@@ -147,7 +147,7 @@ class TertiaryLinkNode extends DualLinkNode {
                 var4 = var3.field_h;
                 for (var5 = 0; var5 < var4.length; var5++) {
                   var6 = var4[var5];
-                  if (var6 == ho.field_d) {
+                  if (var6 == QuickChatHelpSupport.field_d) {
                     stackIn_19_0 = var3;
                     return stackIn_19_0;
                   }

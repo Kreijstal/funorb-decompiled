@@ -87,7 +87,7 @@ final class nf {
           var3 = 0;
           var4 = (BattleContribution) (param0.field_v.startForward(0));
           while (var4 != null) {
-            if (ho.field_d == var4.field_h) {
+            if (QuickChatHelpSupport.field_d == var4.field_h) {
               if (var4.field_r != 0 &&
                 null != var4.field_k) {
                 var3++;
@@ -117,7 +117,7 @@ final class nf {
             var6[0] = var9;
             var4 = (BattleContribution) (param0.field_v.startForward(0));
             while (var4 != null) {
-              if (var4.field_h == ho.field_d &&
+              if (var4.field_h == QuickChatHelpSupport.field_d &&
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {

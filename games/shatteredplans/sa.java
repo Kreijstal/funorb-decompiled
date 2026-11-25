@@ -77,7 +77,7 @@ final class sa {
         if (param0 != -27572) {
           field_a = (CipherPacketBuffer) null;
         }
-        return ho.field_a - DualLinkDeque.field_f;
+        return QuickChatHelpSupport.field_a - DualLinkDeque.field_f;
     }
 
     public static void clearStatics(int param0) {

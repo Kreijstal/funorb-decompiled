@@ -168,16 +168,16 @@ final class WidgetStyle {
             return stackIn_3_0;
           }
           if (param0.equalsIgnoreCase("placeAllFleets")) {
-            stackIn_8_0 = (ho.field_d.field_m.field_x == 0);
+            stackIn_8_0 = (QuickChatHelpSupport.field_d.field_m.field_x == 0);
             return stackIn_8_0;
           }
           if (param0.equalsIgnoreCase("homeworldEmpty")) {
-            stackIn_14_0 = (0 == ho.field_d.field_m.field_q.field_J);
+            stackIn_14_0 = (0 == QuickChatHelpSupport.field_d.field_m.field_q.field_J);
             return stackIn_14_0;
           }
           var2_int = 127 % ((param1 - 2) / 45);
           if (param0.equalsIgnoreCase("homeworldOne")) {
-            stackIn_19_0 = (ho.field_d.field_m.field_q.field_J == 1);
+            stackIn_19_0 = (QuickChatHelpSupport.field_d.field_m.field_q.field_J == 1);
             return stackIn_19_0;
           }
           if (param0.equalsIgnoreCase("captureAll")) {
@@ -189,7 +189,7 @@ final class WidgetStyle {
                 return true;
               }
               var10 = var7[var4];
-              if (ho.field_d == var10.field_y) {
+              if (QuickChatHelpSupport.field_d == var10.field_y) {
                 var4++;
                 continue;
               }
@@ -235,7 +235,7 @@ final class WidgetStyle {
             if (var3_ref == null) {
               return false;
             }
-            if (ho.field_d != var3_ref.field_G) {
+            if (QuickChatHelpSupport.field_d != var3_ref.field_G) {
               var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a((byte) -68));
               continue;
             }

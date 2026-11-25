@@ -593,7 +593,7 @@ final class MapView extends MapViewState {
             12 >= var4) {
             SoftwareRasterizer.drawCircle(var5, var6, 30, 16777215);
             SoftwareRasterizer.fillCircleAlpha(var5, var6, 30, 16777215, 92);
-            ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
+            SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var5 * 16, var6 * 16, 3800 + (var17Lifetime1 - 16384), 4096);
             SoftwareRasterizer.fillCircleAlpha(var5, var6, 9, 0, 92);
             rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var5, var6 + 4, 16777215, -1);
             FleetTrailPoint.field_i[0].draw(30 + (var5 - FleetTrailPoint.field_i[0].field_z / 2), -(FleetTrailPoint.field_i[0].field_w / 2) + var6);
@@ -605,7 +605,7 @@ final class MapView extends MapViewState {
             var19--;
             SoftwareRasterizer.drawCircle(var18, var19, 30, 16777215);
             SoftwareRasterizer.fillCircleAlpha(var18, var19, 30, 16777215, 92);
-            ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
+            SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var18, 16 * var19, var17Lifetime1 - 16384, 4096);
             SoftwareRasterizer.fillCircleAlpha(var18, var19, 9, 0, 92);
             rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var18, var19 + 4, 16777215, -1);
             FleetTrailPoint.field_i[0].draw(30 + var18 - FleetTrailPoint.field_i[0].field_z / 2, -(FleetTrailPoint.field_i[0].field_w / 2) + var19);
@@ -646,7 +646,7 @@ final class MapView extends MapViewState {
           }
           SoftwareRasterizer.drawCircle(var2, var3, 30, 16777215);
           SoftwareRasterizer.fillCircleAlpha(var2, var3, 30, 16777215, 92);
-          ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
+          SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var2 * 16, 16 * var3, var6 - 16384, 4096);
           SoftwareRasterizer.fillCircleAlpha(var2, var3, 9, 0, 92);
           rs.field_Cb.drawCentred(Integer.toString(this.field_rb.field_z), var2, 4 + var3, 16777215, -1);
           FleetTrailPoint.field_i[0].draw(var2 + (30 - FleetTrailPoint.field_i[0].field_z / 2), -(FleetTrailPoint.field_i[0].field_w / 2) + var3);
@@ -1202,7 +1202,7 @@ final class MapView extends MapViewState {
                 if (param0) {
                   if (700.0f > this.field_I &&
                     var7 <= 12) {
-                    ie.a((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
+                    SpriteMaskEffects.drawRotatedBilinear((ArgbSprite) (this.field_B.field_n), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, 16 * var20Lifetime1, var21Lifetime1 * 16, -16384 + (var29 + 3800), 4096);
                     SoftwareRasterizer.fillCircleAlpha(var20Lifetime1, var21Lifetime1, 9, 0, 92);
                     rs.field_Cb.drawCentred(Integer.toString(var6_refLifetime2.field_z), var20Lifetime1, 4 + var21Lifetime1, 16777215, -1);
                   } else {
@@ -1465,7 +1465,7 @@ final class MapView extends MapViewState {
                 stackIn_30_0 = var5.field_m.field_b;
               }
               var37_ref = (ArgbSprite) (stackIn_30_0);
-              ie.a(var37_ref, MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
+              SpriteMaskEffects.drawRotatedBilinear(var37_ref, MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var34, var35, var36Lifetime1, 4096);
               SoftwareRasterizer.fillCircleAlpha(var34 >> 4, var35 >> 4, 9, 0, 92);
               rs.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
@@ -2058,12 +2058,12 @@ final class MapView extends MapViewState {
               null != this.field_B) {
               if (this.field_kb[param0.field_p]) {
                 if (!this.field_A[param0.field_p]) {
-                  gr.a(64, -59, this.field_D[param0.field_p], 16776960);
+                  PlayerRankingRequest.drawStippledPolygonAlpha(64, -59, this.field_D[param0.field_p], 16776960);
                 } else {
-                  gr.a(64, -86, this.field_D[param0.field_p], 65280);
+                  PlayerRankingRequest.drawStippledPolygonAlpha(64, -86, this.field_D[param0.field_p], 65280);
                 }
               } else {
-                gr.a(96, -101, this.field_D[param0.field_p], 16711680);
+                PlayerRankingRequest.drawStippledPolygonAlpha(96, -101, this.field_D[param0.field_p], 16711680);
               }
             }
             if (this.field_z[var3_int] == 0) {
@@ -2101,14 +2101,14 @@ final class MapView extends MapViewState {
                 if (this.field_U[param0.field_p] == 0) {
                   var7 = 192;
                 }
-                gr.a(var7, -65, var6, 16711680);
+                PlayerRankingRequest.drawStippledPolygonAlpha(var7, -65, var6, 16711680);
               } else {
                 if (!this.field_A[param0.field_p]) {
                   var7 = 64;
                   if (this.field_a[param0.field_p] == 0) {
                     var7 = 128;
                   }
-                  gr.a(var7, -63, var6, 16776960);
+                  PlayerRankingRequest.drawStippledPolygonAlpha(var7, -63, var6, 16776960);
                   return;
                 }
               }
@@ -2508,7 +2508,7 @@ final class MapView extends MapViewState {
           var21 = new int[4];
           SoftwareRasterizer.saveClip(var21);
           SoftwareRasterizer.setClip(param5 - (-(param2 / 2) + var10 / 2), param1 - var13, param2 / 2 + (param5 + var10 / 2), param1);
-          ie.a(SpriteState.field_q, param5 + (param2 / 2 - var10 / 2), -var13 + param1);
+          SpriteMaskEffects.darkenThroughSpriteMask(SpriteState.field_q, param5 + (param2 / 2 - var10 / 2), -var13 + param1);
           SoftwareRasterizer.restoreClip(var21);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

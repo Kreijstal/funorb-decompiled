@@ -62,21 +62,21 @@ final class ChatPanelSetupSupport {
         try {
           BufferedSocket.field_q[4] = 16711935;
           BufferedSocket.field_q[1] = 6356832;
-          ho.field_f = param9;
+          QuickChatHelpSupport.field_f = param9;
           BufferedSocket.field_q[0] = 16764000;
           BoundsRect.field_k = param11;
           je.field_e = param8;
           BufferedSocket.field_q[2] = 9474303;
           BufferedSocket.field_q[3] = 16736511;
-          hd.field_l[1] = 6356832;
+          IntroTextLine.field_l[1] = 6356832;
           BufferedSocket.field_q[4] = 16711935;
-          ho.field_c = 8421504;
+          QuickChatHelpSupport.field_c = 8421504;
           if (param2 <= 122) {
             field_a = (String) null;
           }
-          hd.field_l[3] = 16736511;
-          hd.field_l[0] = 16764000;
-          hd.field_l[2] = 16736352;
+          IntroTextLine.field_l[3] = 16736511;
+          IntroTextLine.field_l[0] = 16764000;
+          IntroTextLine.field_l[2] = 16736352;
           var12 = new Sprite(4, 4);
           var13 = var12.field_B;
           var14 = var12.field_B;
@@ -97,7 +97,7 @@ final class ChatPanelSetupSupport {
           TaskAi.field_o = new AnimatedPanel(0L, param3);
           StatusContent.field_c.addChild(4, TaskAi.field_o);
           uq.field_j = new AnimatedPanel(0L, param10);
-          uq.field_j.field_nb = ho.field_f;
+          uq.field_j.field_nb = QuickChatHelpSupport.field_f;
           TaskAi.field_o.addChild(4, uq.field_j);
           TaskAi.field_o.markDirty((byte) -128);
           OpacityWidget.field_C = new AnimatedPanel(0L, (AnimatedPanel) null);

@@ -84,9 +84,9 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           IntNode.field_p = null;
           np.field_a = null;
           TurnEventLog.field_i = false;
-          if (null != gr.field_p) {
-            gr.field_p.clear(param0 + 66);
-            gr.field_p = null;
+          if (null != PlayerRankingRequest.field_p) {
+            PlayerRankingRequest.field_p.clear(param0 + 66);
+            PlayerRankingRequest.field_p = null;
           }
           if (param0 != -66) {
             field_v = (String[]) null;

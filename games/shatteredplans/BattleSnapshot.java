@@ -217,7 +217,7 @@ final class BattleSnapshot extends IntrusiveNode {
             stackIn_11_0 = var5;
             return stackIn_11_0;
           }
-          stackIn_4_0 = hd.field_r;
+          stackIn_4_0 = IntroTextLine.field_r;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

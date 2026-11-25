@@ -304,13 +304,13 @@ final class kd {
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
-                var9.a((ArchiveNetworkClient.field_i << 1) + id.field_b, -MapView.field_Lb + var8Lifetime1, var1_int, (MapView.field_Lb << 1) + var7Lifetime1, -106);
+                var9.a((ArchiveNetworkClient.field_i << 1) + SpriteResourceSupport.field_b, -MapView.field_Lb + var8Lifetime1, var1_int, (MapView.field_Lb << 1) + var7Lifetime1, -106);
               }
               var1_int = var1_int + ArchiveNetworkClient.field_i;
             }
             if (0 <= var4) {
               ql.field_n.drawString(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
-              var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
+              var1_int = var1_int + (SpriteResourceSupport.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
               PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
               var1_int = var1_int + AccountFieldValue.field_d;

@@ -103,7 +103,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               js.field_f.writeByte(16, (byte) -69);
               js.field_f.position = js.field_f.position + 1;
               var9 = js.field_f.position;
-              GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               js.field_f.patchLengthByte(js.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
@@ -128,7 +128,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 var11_ref_String = "";
               }
               js.field_f.writeString(var11_ref_String, (byte) 0);
-              GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
+              GarrisonTask.a(25050, js.field_f, ChatPanelLayoutSupport.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               js.field_f.patchLengthShort(-549342136, -var10 + js.field_f.position);
             }
             ClientPacketFlushSupport.flushOutboundPacketsFullInts(-1, 82);

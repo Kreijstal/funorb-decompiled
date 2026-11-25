@@ -21,21 +21,21 @@ final class DiskCacheWorker implements Runnable {
         int var3 = 0;
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
         RandomAccessCacheFile.a(-111);
-        QuickChatMenu.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
-        Dialog.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
-        DualLinkDeque.field_a = id.a(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
-        sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
-        oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
-        SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
+        QuickChatMenu.field_Jb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
+        Dialog.field_D = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
+        DualLinkDeque.field_a = SpriteResourceSupport.loadSpriteByName(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
+        sr.field_F = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
+        oi.field_d = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
+        SliderPainter.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
         Dialog.field_D.bindAsRenderTarget();
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
         QuickChatMenu.field_Jb.bindAsRenderTarget();
         MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
-        id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
-        DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
-        oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
+        SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
+        DefendTask.field_s = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
+        oe.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
         BirthDateValidator.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
         BirthDateValidator.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
         MessageKind.field_b = new Sprite(640, 430);
@@ -51,10 +51,10 @@ final class DiskCacheWorker implements Runnable {
           var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
           DefendTask.field_s.drawSilhouette(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
         }
-        va.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
-        q.field_Cb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
-        EmailSyntaxValidator.field_o = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
-        RoundedFrameSupport.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
+        va.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
+        q.field_Cb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
+        EmailSyntaxValidator.field_o = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
+        RoundedFrameSupport.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
         var1_int = q.field_Cb.field_z;
         var2 = q.field_Cb.field_w + 60;
         IntNode.field_h = new Sprite(var1_int, var2);
@@ -265,7 +265,7 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static void a(int param0) {
-        if (GameRules.field_c == gr.field_o) {
+        if (GameRules.field_c == PlayerRankingRequest.field_o) {
           return;
         }
         if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
@@ -273,18 +273,18 @@ final class DiskCacheWorker implements Runnable {
         }
         TutorialAi.field_x = Wormhole.field_i;
         BirthDateConfirmationForm.field_Q = 0;
-        GameRules.field_c = gr.field_o;
-        if (gr.field_o == -3) {
+        GameRules.field_c = PlayerRankingRequest.field_o;
+        if (PlayerRankingRequest.field_o == -3) {
           qf.a((byte) -126);
         }
-        if (0 == gr.field_o &&
+        if (0 == PlayerRankingRequest.field_o &&
           !ValidationState.field_b.a(PaddedContentDialog.field_nb, (byte) -23)) {
           QuickChatPhraseRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
-        if (gr.field_o == -6) {
+        if (PlayerRankingRequest.field_o == -6) {
           js.field_f.h(9, 255);
           StripedProgressWidget.field_Q = true;
-          gr.field_o = GameRules.field_c;
+          PlayerRankingRequest.field_o = GameRules.field_c;
         }
         if (ProxyAuthenticationRequiredException.field_b) {
           if (null != PasswordInputPainter.field_x &&

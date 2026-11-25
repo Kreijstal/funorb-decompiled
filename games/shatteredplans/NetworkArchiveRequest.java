@@ -98,7 +98,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           stackIn_11_0 = (String) (param1);
           stackIn_12_1 = !(param2);
           nd.field_k = DateInputWidget.a((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);
-          hd.field_k = param0;
+          IntroTextLine.field_k = param0;
           var6 = AccountNoticeDialog.a(param3, (byte) -112, nl.field_d, ValidationIndicator.field_I, kh.field_Nb);
           CipherPacketBuffer.a(0, var6);
           return true;

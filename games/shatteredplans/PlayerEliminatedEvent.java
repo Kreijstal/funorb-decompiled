@@ -33,7 +33,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           uq.field_j.setTarget(-OpacityWidget.field_C.field_K + sg.field_Ab.field_K, param2, (byte) 66, 0, 0);
           OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
           var10 = var10 + (param2 + param4);
-          hd.field_m.setTarget(hd.field_m.measureWidthUnbounded(false), param1, (byte) 77, var10, 5);
+          IntroTextLine.field_m.setTarget(IntroTextLine.field_m.measureWidthUnbounded(false), param1, (byte) 77, var10, 5);
           var11 = DirectByteArrayStorage.field_l.measureWidthUnbounded(false);
           DirectByteArrayStorage.field_l.setTarget(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
           var12 = 5 + (var10 + param1);
@@ -79,7 +79,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           }
           wl.field_b = ValidationMessageWidget.field_Q;
           AnimatedPanel.a(IntList.field_j, LabeledChildWidget.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
-          StatefulWidgetTheme.field_y = id.a(2, param5, "", "lobbyicon");
+          StatefulWidgetTheme.field_y = SpriteResourceSupport.loadSpriteByName(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;
           UnderageAccountInfoPanel.field_D = ChatMessage.field_c;
           RandomAccessCacheFile.a(115, 200);

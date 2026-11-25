@@ -121,7 +121,7 @@ final class AchievementProgress {
 
     final static void a(int param0, boolean param1) {
         int var3 = 0;
-        gr var4 = null;
+        PlayerRankingRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -129,10 +129,10 @@ final class AchievementProgress {
           if (!param1) {
             return;
           }
-          var4 = (gr) (PlacementOrder.field_r.startForward(0));
+          var4 = (PlayerRankingRequest) (PlacementOrder.field_r.startForward(0));
           while (var4 != null) {
             uf.a(var4, param0, false);
-            var4 = (gr) (PlacementOrder.field_r.nextForward((byte) -71));
+            var4 = (PlayerRankingRequest) (PlacementOrder.field_r.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

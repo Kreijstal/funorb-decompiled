@@ -341,10 +341,10 @@ final class AggressiveAi extends StandardAi {
             var7Lifetime1 = stackIn_44_0;
             if (var7Lifetime1 != 0) {
               var8 = ih.field_d;
-              for (var9_int = 0; var9_int < id.field_c.length; var9_int++) {
-                id.field_c[var9_int] = (byte) 0;
+              for (var9_int = 0; var9_int < SpriteResourceSupport.field_c.length; var9_int++) {
+                SpriteResourceSupport.field_c[var9_int] = (byte) 0;
               }
-              id.field_c[var8 / 8] = (byte)PrivateChatMessage.intOr((int) id.field_c[var8 / 8], 1 << var8 % 8);
+              SpriteResourceSupport.field_c[var8 / 8] = (byte)PrivateChatMessage.intOr((int) SpriteResourceSupport.field_c[var8 / 8], 1 << var8 % 8);
             }
             stackIn_52_0 = (param1) ? -1 : 0;
             for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {
@@ -370,7 +370,7 @@ final class AggressiveAi extends StandardAi {
                       if (-1 != var8) {
                         stackIn_75_0 = ByteArrayNode.field_p[1][var8 + 1];
                         stackIn_75_1 = -1;
-                        stackIn_75_2 = ~(id.field_c[var8 / 8] & 1 << (var8 & 7));
+                        stackIn_75_2 = ~(SpriteResourceSupport.field_c[var8 / 8] & 1 << (var8 & 7));
                         stackIn_78_1 = (stackIn_75_1 != stackIn_75_2);
                         stackIn_75_0.field_bb = stackIn_78_1;
                         break regionExit1;
@@ -383,7 +383,7 @@ final class AggressiveAi extends StandardAi {
                       dupTemp$0 = ByteArrayNode.field_p[1][1 + var8];
                       stackIn_103_0 = dupTemp$0;
                       stackIn_103_1 = dupTemp$0.field_bb;
-                      if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                      if ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
                         while (true) {
                           stackIn_104_2 = false;
                           while (true) {
@@ -395,7 +395,7 @@ final class AggressiveAi extends StandardAi {
                             dupTemp$1 = ByteArrayNode.field_p[1][1 + var8];
                             stackIn_103_0 = dupTemp$1;
                             stackIn_103_1 = dupTemp$1.field_bb;
-                            if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                            if ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
                               break;
                             }
                             stackIn_104_2 = true;
@@ -413,7 +413,7 @@ final class AggressiveAi extends StandardAi {
                         dupTemp$1Lifetime2 = ByteArrayNode.field_p[1][1 + var8];
                         stackIn_103_0 = dupTemp$1Lifetime2;
                         stackIn_103_1 = dupTemp$1Lifetime2.field_bb;
-                        if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                        if ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
                           stackIn_104_2Lifetime2 = false;
                           continue;
                         }
@@ -422,11 +422,11 @@ final class AggressiveAi extends StandardAi {
                     }
                     if (decompiledFrameCompleted0) {
                       if (var8 == -1) {
-                        for (var10 = 0; id.field_c.length > var10; var10++) {
-                          id.field_c[var10] = (byte) 0;
+                        for (var10 = 0; SpriteResourceSupport.field_c.length > var10; var10++) {
+                          SpriteResourceSupport.field_c[var10] = (byte) 0;
                         }
                       } else {
-                        id.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) id.field_c[var8 / 8], 1 << we.intAnd(7, var8));
+                        SpriteResourceSupport.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) SpriteResourceSupport.field_c[var8 / 8], 1 << we.intAnd(7, var8));
                       }
                     }
                   } else {
@@ -445,13 +445,13 @@ final class AggressiveAi extends StandardAi {
                         dupTemp$1Lifetime1 = ByteArrayNode.field_p[1][1 + var8];
                         stackIn_103_0Lifetime1 = dupTemp$1Lifetime1;
                         stackIn_103_1Lifetime1 = dupTemp$1Lifetime1.field_bb;
-                        stackIn_104_2Lifetime1 = ((id.field_c[var10 / 8] & 1 << (var10 & 7)) == 0);
+                        stackIn_104_2Lifetime1 = ((SpriteResourceSupport.field_c[var10 / 8] & 1 << (var10 & 7)) == 0);
                         stackIn_103_0Lifetime1.field_bb = stackIn_103_1Lifetime1 & stackIn_104_2Lifetime1;
                       }
                     } else {
                       stackIn_95_0 = ByteArrayNode.field_p[1][var8 + 1];
                       stackIn_95_1 = -1;
-                      stackIn_95_2 = ~(id.field_c[var8 / 8] & 1 << (var8 & 7));
+                      stackIn_95_2 = ~(SpriteResourceSupport.field_c[var8 / 8] & 1 << (var8 & 7));
                       stackIn_98_1 = (stackIn_95_1 != stackIn_95_2);
                       stackIn_95_0.field_bb = stackIn_98_1;
                     }

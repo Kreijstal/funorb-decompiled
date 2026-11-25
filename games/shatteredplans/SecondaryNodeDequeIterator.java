@@ -29,9 +29,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    final static hc[] a(int param0, CipherPacketBuffer param1) {
+    final static MeshMaterial[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
-        hc[] stackIn_14_0 = null;
+        MeshMaterial[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -39,9 +39,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        hc[] var4 = null;
+        MeshMaterial[] var4 = null;
         int var6 = 0;
-        hc var6_ref_hc = null;
+        MeshMaterial var6_ref_hc = null;
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -50,7 +50,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             return null;
           }
           var3 = param1.b((byte) 116, 12);
-          var4 = new hc[var3];
+          var4 = new MeshMaterial[var3];
           if (param0 != 24243) {
             field_d = (String) null;
           }
@@ -59,7 +59,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               var6 = param1.b((byte) 127, HitRegion.signedBitLength(var5 - 1, 1));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_hc = new hc();
+              var6_ref_hc = new MeshMaterial();
               param1.b((byte) 122, 24);
               param1.b((byte) 80, 24);
               var6_ref_hc.field_a = param1.b((byte) 87, 24);

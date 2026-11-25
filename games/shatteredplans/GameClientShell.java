@@ -122,7 +122,7 @@ abstract class GameClientShell extends GameApplet {
             SoundPlayback.field_i = 10;
           }
           if (var4 == 7) {
-            id.a(GameScreen.getHostApplet((byte) 127), (byte) -119);
+            SpriteResourceSupport.openServerListPage(GameScreen.getHostApplet((byte) 127), (byte) -119);
           }
           if (8 == var4) {
             AccountCreationDialog.a(param1 ^ 1, GameScreen.getHostApplet((byte) 126));
@@ -134,7 +134,7 @@ abstract class GameClientShell extends GameApplet {
             js.field_f.h(17, 255);
           }
           if (var4 == 11) {
-            hr.a(GameScreen.getHostApplet((byte) 126), (byte) -105);
+            ChatPanelLayoutSupport.reloadGamePage(GameScreen.getHostApplet((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
             CipherPacketBuffer.a(SolVictoryChecker.c(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
@@ -527,8 +527,8 @@ abstract class GameClientShell extends GameApplet {
           or.field_a = false;
           DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
           if (TextFieldWidget.field_D ||
-            null != hr.field_b) {
-            stackIn_106_0 = hr.field_b;
+            null != ChatPanelLayoutSupport.field_b) {
+            stackIn_106_0 = ChatPanelLayoutSupport.field_b;
             stackIn_107_1 = !(TextFieldWidget.field_D);
             stackIn_109_2 = -70;
             stackIn_110_3 = !(TextFieldWidget.field_D);
@@ -573,10 +573,10 @@ abstract class GameClientShell extends GameApplet {
         }
         if (DefensiveAi.field_p == 13) {
           var3Lifetime2 = 1;
-          if (null != hd.field_n) {
-            stackIn_141_0 = (!hd.field_n.b(-1)) ? 0 : 1;
+          if (null != IntroTextLine.field_n) {
+            stackIn_141_0 = (!IntroTextLine.field_n.b(-1)) ? 0 : 1;
             var3Lifetime2 = stackIn_141_0;
-            nj.a(hd.field_n.field_h, 2, hd.field_n.field_c);
+            nj.a(IntroTextLine.field_n.field_h, 2, IntroTextLine.field_n.field_c);
           }
           if (var3Lifetime2 != 0) {
             DefensiveAi.field_p = 20;

@@ -36,8 +36,8 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 != 200) {
             field_h = (String) null;
           }
-          if (var4 >= 0 && (ho.field_b == 0 ||
-            !(ho.field_b < var4))) {
+          if (var4 >= 0 && (QuickChatHelpSupport.field_b == 0 ||
+            !(QuickChatHelpSupport.field_b < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
@@ -47,8 +47,8 @@ final class ProxySocketConnector extends SocketConnector {
               return stackIn_23_0;
             }
             var5_int = var9.readInt(16711680);
-            if (0 <= var5_int && (ho.field_b == 0 ||
-              !(var5_int > ho.field_b))) {
+            if (0 <= var5_int && (QuickChatHelpSupport.field_b == 0 ||
+              !(var5_int > QuickChatHelpSupport.field_b))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;

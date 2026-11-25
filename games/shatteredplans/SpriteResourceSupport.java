@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id {
+final class SpriteResourceSupport {
     static int field_b;
     static String field_a;
     static String field_e;
@@ -18,7 +18,7 @@ final class id {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openServerListPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -59,7 +59,7 @@ final class id {
         }
     }
 
-    final static String a(int param0) {
+    final static String getLocalPlayerName(int param0) {
         int var1 = -6 / ((-56 - param0) / 40);
         if (Star.field_o == null) {
           return "";
@@ -67,7 +67,7 @@ final class id {
         return Star.field_o;
     }
 
-    final static Sprite a(int param0, Archive param1, String param2, String param3) {
+    final static Sprite loadSpriteByName(int param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -114,7 +114,7 @@ final class id {
         }
     }
 
-    final static void a(String[] args, int param1, sq param2) {
+    final static void appendTutorialObjective(String[] args, int param1, sq param2) {
         lm var7 = null;
         lm var3 = null;
         int var5 = 0;
@@ -142,7 +142,7 @@ final class id {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int getChatChannelFilter(int param0, int param1) {
         int var2 = 0;
         if (param1 == 0) {
           var2 = QuickChatMenu.field_Bb;
@@ -157,11 +157,11 @@ final class id {
           return var2;
         }
         String var3 = (String) null;
-        id.a(20, (Archive) null, (String) null, (String) null);
+        SpriteResourceSupport.loadSpriteByName(20, (Archive) null, (String) null, (String) null);
         return var2;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void setSharedWidgetMetrics(int param0, int param1, int param2, int param3, int param4) {
         field_b = param4;
         AccountFieldValue.field_d = param0;
         if (param2 == 26883) {

@@ -201,7 +201,7 @@ final class SolMapReader implements MapGenerator {
           var9 = 0;
           if (!LoginMethodPreference.field_g &&
             TargetedChatMessage.field_i > var5) {
-            var10_int = id.a(-7019, var8_ref_nf.field_n);
+            var10_int = SpriteResourceSupport.getChatChannelFilter(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
               !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {
               var9 = 1;
@@ -220,7 +220,7 @@ final class SolMapReader implements MapGenerator {
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_nf.field_k);
               var12 = ResizingDialog.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
-              var8_ref_nf.field_j.field_nb = ho.field_f;
+              var8_ref_nf.field_j.field_nb = QuickChatHelpSupport.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & BoundsRect.field_k.field_jb >> 1);
               var8_ref_nf.field_j.field_x = var12;
               var6 = var6 + param3;
