@@ -105,7 +105,7 @@ final class Bzip2State {
           oq.field_i[14] = tm.field_o;
           oq.field_i[0] = wm.field_f;
           oq.field_i[7] = sn.field_b;
-          oq.field_i[4] = lr.field_e;
+          oq.field_i[4] = ClientDrawingSupport.field_e;
           oq.field_i[12] = ArchiveNetworkClient.field_g;
           oq.field_i[1] = GameSession.field_a;
           oq.field_i[8] = TutorialAi.field_v;
@@ -123,11 +123,11 @@ final class Bzip2State {
           oq.field_i[32] = MidiPcmStream.field_L;
           oq.field_i[19] = ul.field_Fb[1];
           oq.field_i[17] = AccountStatusSupport.field_a[2];
-          oq.field_i[28] = lm.field_a;
+          oq.field_i[28] = TutorialConditionalText.field_a;
           oq.field_i[30] = PrivateChatMessage.field_j;
           oq.field_i[29] = SliderPainter.field_k;
           oq.field_i[20] = rl.field_d;
-          oq.field_i[24] = lq.field_p;
+          oq.field_i[24] = FourIntSubmissionRequest.field_p;
           oq.field_i[26] = PrivateChatMessage.field_n;
           oq.field_i[31] = ClientOverlaySupport.field_d;
           oq.field_i[25] = SpriteState.field_v;

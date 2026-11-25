@@ -50,7 +50,7 @@ final class SettingsCookieSupport {
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + QuickChatMenu.a(94608000000L + pr.currentTimeMillis(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
               }
-              ll.evalJavaScript(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
+              BrowserJavaScriptBridge.evalJavaScript(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

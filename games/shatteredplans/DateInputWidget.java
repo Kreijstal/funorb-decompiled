@@ -193,10 +193,10 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
         }
     }
 
-    final static kj a(int param0, String param1) {
+    final static AccountRequestResult a(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
-        kj stackIn_8_0 = null;
+        AccountRequestResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -208,7 +208,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           }
           if (ue.field_a == MatchingTextValidator.field_s) {
             stackIn_4_0 = null;
-            return (kj) (stackIn_4_0);
+            return (AccountRequestResult) (stackIn_4_0);
           }
           if (ProjectsContent.field_g == MatchingTextValidator.field_s &&
             param1.equals(ClientSessionSupport.field_b)) {
@@ -220,7 +220,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
           ProjectsWindowSupport.field_a = null;
           MatchingTextValidator.field_s = ue.field_a;
           stackIn_10_0 = null;
-          return (kj) (stackIn_10_0);
+          return (AccountRequestResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

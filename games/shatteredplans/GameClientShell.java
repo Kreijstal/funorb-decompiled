@@ -193,7 +193,7 @@ abstract class GameClientShell extends GameApplet {
         ObjectList.a(0, LeaderboardSortSupport.field_e);
         GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
-        lm.a((byte) 100);
+        TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
         ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
         QuickChatCategoryRegistry.a(tm.field_i, false);
         ConquestVictoryChecker.field_k = param2;
@@ -230,7 +230,7 @@ abstract class GameClientShell extends GameApplet {
           if (1 != var2) {
             if (var2 != 2) {
               if (var2 == 3) {
-                lr.a(105);
+                ClientDrawingSupport.readArrayAndSubmissionResponse(105);
               } else {
                 if (4 == var2) {
                   BufferedCacheFile.d(-523);

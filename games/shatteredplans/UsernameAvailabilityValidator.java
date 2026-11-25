@@ -25,7 +25,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     }
 
     final ValidationState computeStateFor(int param0, String param1) {
-        kj var3 = null;
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         CharSequence var5 = null;
@@ -49,7 +49,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
               this.field_o = var3.field_h;
               this.field_n = param1;
             } else {
-              stackIn_9_0 = lm.field_d;
+              stackIn_9_0 = TutorialConditionalText.field_d;
               return stackIn_9_0;
             }
           }
@@ -92,9 +92,9 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             field_v = (String[]) null;
           }
           ShatteredPlansClient.field_H = null;
-          if (null != kj.field_a) {
-            kj.field_a.clear(param0 + 66);
-            kj.field_a = null;
+          if (null != AccountRequestResult.field_a) {
+            AccountRequestResult.field_a.clear(param0 + 66);
+            AccountRequestResult.field_a = null;
           }
           IsaacBackedRandom.field_b = null;
           if (uo.field_a != null) {
@@ -335,7 +335,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     final String computeMessageFor(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        kj var4 = null;
+        AccountRequestResult var4 = null;
         CharSequence var5 = null;
         String stackIn_5_0 = null;
         Object stackIn_11_0 = null;
@@ -371,7 +371,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             stackIn_17_0 = GameAssetSetupSupport.field_f;
             return stackIn_17_0;
           }
-          stackIn_15_0 = lr.field_d;
+          stackIn_15_0 = ClientDrawingSupport.field_d;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

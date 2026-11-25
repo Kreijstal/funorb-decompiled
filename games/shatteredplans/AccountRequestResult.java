@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj {
+final class AccountRequestResult {
     static IntrusiveDeque field_a;
     boolean field_h;
     boolean field_b;
@@ -12,7 +12,7 @@ final class kj {
     static String field_i;
     String field_g;
 
-    final static GameRules a(byte param0, PacketBuffer param1) {
+    final static GameRules readGameRules(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -70,7 +70,7 @@ final class kj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseAccountRequestStatics(int param0) {
         field_a = null;
         field_i = null;
         if (param0 == 1) {
@@ -78,12 +78,12 @@ final class kj {
           field_f = null;
           return;
         }
-        kj.a(-84);
+        AccountRequestResult.releaseAccountRequestStatics(-84);
         field_e = null;
         field_f = null;
     }
 
-    kj(boolean param0) {
+    AccountRequestResult(boolean param0) {
         this.field_h = param0 ? true : false;
     }
 

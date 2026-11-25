@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends IntrusiveNode {
+final class ByteArrayReadRequest extends IntrusiveNode {
     byte[] field_o;
     static String field_i;
     static QuickChatParameterType field_h;
@@ -33,7 +33,7 @@ final class ld extends IntrusiveNode {
         field_p = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7) {
+    final static void blendSpriteRow(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var8_int = 0;
@@ -53,7 +53,7 @@ final class ld extends IntrusiveNode {
         try {
           param5 = param5 - param7.field_t;
           if (param4 >= -20) {
-            ld.clearStatics(97);
+            ByteArrayReadRequest.clearStatics(97);
           }
           param0 = param0 - param7.field_x;
           var8_int = param5 + param7.field_z * param0;
@@ -93,10 +93,10 @@ final class ld extends IntrusiveNode {
         }
     }
 
-    ld() {
+    ByteArrayReadRequest() {
     }
 
-    final static void d(int param0) {
+    final static void advanceClosingIntroText(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (param0 == 0) {

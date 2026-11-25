@@ -81,10 +81,10 @@ final class ClientException extends RuntimeException {
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_int = ValidationMessageWidget.field_R - ld.field_j;
-          ld.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
+          var1_int = ValidationMessageWidget.field_R - ByteArrayReadRequest.field_j;
+          ByteArrayReadRequest.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
           vo.field_b = -(DiskCacheWorker.field_b >> 1) + LoginForm.field_O;
-          ValidationMessageWidget.field_R = ld.field_j + var1_int;
+          ValidationMessageWidget.field_R = ByteArrayReadRequest.field_j + var1_int;
           var2 = vo.field_b;
           if (param0 <= 32) {
             return;
@@ -121,7 +121,7 @@ final class ClientException extends RuntimeException {
               MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
               var2 = var2 + (vh.field_b + LobbyOptionSupport.field_e + uo.field_g);
             } else {
-              lq.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
+              FourIntSubmissionRequest.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
               var2 = var2 + MenuButton.field_A;
             }
           }

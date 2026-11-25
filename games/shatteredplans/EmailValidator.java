@@ -144,7 +144,7 @@ final class EmailValidator extends TextFieldValidator {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ks var3 = null;
+        AccountBooleanRequest var3 = null;
         RuntimeException var3_ref = null;
         try {
           if (this.field_s.computeStateFor(param0, param1) == ArchiveSourceManager.field_b) {
@@ -153,12 +153,12 @@ final class EmailValidator extends TextFieldValidator {
           }
           if (!param1.equals(this.field_t)) {
             var3 = os.a(202, param1);
-            if (!var3.b(14)) {
-              stackIn_8_0 = lm.field_d;
+            if (!var3.isComplete(14)) {
+              stackIn_8_0 = TutorialConditionalText.field_d;
               return stackIn_8_0;
             }
             this.field_t = param1;
-            this.field_n = var3.a(true);
+            this.field_n = var3.getResult(true);
           }
           if (!this.field_n) {
             stackIn_14_0 = ArchiveSourceManager.field_b;
@@ -465,7 +465,7 @@ final class EmailValidator extends TextFieldValidator {
             }
             var1_ref = (mj) (PlayerRankingRequest.field_p.nextForward((byte) -71));
           }
-          var1_ref2 = (LobbyRoomEntry) (kj.field_a.startForward(0));
+          var1_ref2 = (LobbyRoomEntry) (AccountRequestResult.field_a.startForward(0));
           while (var1_ref2 != null) {
             if (0 < var1_ref2.field_Nb) {
               var1_ref2.field_Nb = var1_ref2.field_Nb - 1;
@@ -476,7 +476,7 @@ final class EmailValidator extends TextFieldValidator {
                 }
               }
             }
-            var1_ref2 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
+            var1_ref2 = (LobbyRoomEntry) (AccountRequestResult.field_a.nextForward((byte) -71));
           }
           var1_refLifetime1 = (mj) (uo.field_a.startForward(0));
           while (var1_refLifetime1 != null) {

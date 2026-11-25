@@ -39,7 +39,7 @@ final class IntroLoadingSupport {
         var2.writeByte(0, (byte) -78);
     }
 
-    final static void queueFourIntSubmission(lq param0, int param1, int param2) {
+    final static void queueFourIntSubmission(FourIntSubmissionRequest param0, int param1, int param2) {
         try {
           rs.field_Bb.addLast((byte) -113, param0);
           if (param1 != 1500005281) {

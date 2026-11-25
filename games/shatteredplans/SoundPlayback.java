@@ -212,7 +212,7 @@ final class SoundPlayback extends IntrusiveNode {
             InvalidMapConnectionException.field_f[0] = wp.field_b;
             ss.field_a[1] = 0;
             InvalidMapConnectionException.field_f[1] = ProxySocketConnector.field_h;
-            InvalidMapConnectionException.field_f[2] = ld.field_i;
+            InvalidMapConnectionException.field_f[2] = ByteArrayReadRequest.field_i;
             ss.field_a[3] = 1;
             InvalidMapConnectionException.field_f[5] = "";
             ShatteredPlansClient.field_E[1] = 2;

@@ -79,8 +79,8 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         int var5 = 0;
         String var6 = null;
         int var7 = 0;
-        lm[] var8 = null;
-        lm var10 = null;
+        TutorialConditionalText[] var8 = null;
+        TutorialConditionalText var10 = null;
         int var11 = 0;
         PacketBuffer var12 = null;
         sq var13 = null;

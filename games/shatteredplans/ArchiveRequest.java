@@ -121,12 +121,12 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
         try {
           param1.draw(0, 0);
-          ks.field_h = new Sprite(256, 256);
-          ks.field_h.bindAsRenderTarget();
+          AccountBooleanRequest.field_h = new Sprite(256, 256);
+          AccountBooleanRequest.field_h.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawScaled(0, 0, 256, 256);
           SoftwareRasterizer.b(3, 3, 0, 0, 256, 256);
-          lq.field_o = new Sprite(32, 32);
-          lq.field_o.bindAsRenderTarget();
+          FourIntSubmissionRequest.field_o = new Sprite(32, 32);
+          FourIntSubmissionRequest.field_o.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawQuarterSize(0, 0);
           n.field_k = new Sprite(256, 256);
           n.field_k.bindAsRenderTarget();
@@ -134,7 +134,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);
           MouseInputHandler.field_b.bindAsRenderTarget();
-          lq.field_o.draw(16, 16);
+          FourIntSubmissionRequest.field_o.draw(16, 16);
           SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
           OpacityWidget.popLegacyRasterState(0);
         } catch (RuntimeException runtimeException) {

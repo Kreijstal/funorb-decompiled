@@ -194,7 +194,7 @@ final class QuaternaryListSequence extends NodeSequence {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ld var3_ref_ld = null;
+        ByteArrayReadRequest var3_ref_ld = null;
         ByteArrayNode var4 = null;
         int var4_int = 0;
         Object var5 = null;
@@ -231,7 +231,7 @@ final class QuaternaryListSequence extends NodeSequence {
             GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
             q.g(-108);
           } else {
-            var3_ref_ld = (ld) (SectorCacheStore.field_d.startForward(0));
+            var3_ref_ld = (ByteArrayReadRequest) (SectorCacheStore.field_d.startForward(0));
             if (var3_ref_ld == null) {
               q.g(-96);
               return;

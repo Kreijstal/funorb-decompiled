@@ -135,7 +135,7 @@ final class ScrollPane extends AnimatedPanel {
         RuntimeException var20 = null;
         try {
           MusicEnvelope.field_g = param1;
-          lq.field_k = param6;
+          FourIntSubmissionRequest.field_k = param6;
           PointsVictoryChecker.a(param10, param3, param0, param12, 2);
           FleetVisual.a(param17, param9 + 20, param18, param2);
           wi.a(param5, (byte) 67, param19, param7, param11, param15);
@@ -183,16 +183,16 @@ final class ScrollPane extends AnimatedPanel {
         }
     }
 
-    final static kj a(byte param0, boolean param1) {
-        kj var2 = null;
-        kj var2Lifetime1;
+    final static AccountRequestResult a(byte param0, boolean param1) {
+        AccountRequestResult var2 = null;
+        AccountRequestResult var2Lifetime1;
         if (param0 == 93) {
-          var2 = new kj(true);
+          var2 = new AccountRequestResult(true);
           var2.field_b = param1 ? true : false;
           return var2;
         }
         field_Db = (String[][]) null;
-        var2Lifetime1 = new kj(true);
+        var2Lifetime1 = new AccountRequestResult(true);
         var2Lifetime1.field_b = param1 ? true : false;
         return var2Lifetime1;
     }
@@ -341,7 +341,7 @@ final class ScrollPane extends AnimatedPanel {
                   DiskArchiveRequest.f((byte) 118);
                 } else {
                   if (SolVictoryChecker.field_m == 4) {
-                    ld.d(0);
+                    ByteArrayReadRequest.advanceClosingIntroText(0);
                   } else {
                     if (SolVictoryChecker.field_m == 5) {
                       DisplayModeInfo.a((byte) -72);
@@ -410,16 +410,16 @@ final class ScrollPane extends AnimatedPanel {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static kj $cfr$intArgs$a$be17d4c2d3e3(int param0, boolean param1) {
-        kj var2 = null;
-        kj var2Lifetime1;
+    final static AccountRequestResult $cfr$intArgs$a$be17d4c2d3e3(int param0, boolean param1) {
+        AccountRequestResult var2 = null;
+        AccountRequestResult var2Lifetime1;
         if (param0 == 93) {
-          var2 = new kj(true);
+          var2 = new AccountRequestResult(true);
           var2.field_b = param1 ? true : false;
           return var2;
         }
         field_Db = (String[][]) null;
-        var2Lifetime1 = new kj(true);
+        var2Lifetime1 = new AccountRequestResult(true);
         var2Lifetime1.field_b = param1 ? true : false;
         return var2Lifetime1;
     }

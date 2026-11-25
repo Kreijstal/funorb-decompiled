@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LobbyOptionSupport {
-    static ld field_c;
+    static ByteArrayReadRequest field_c;
     static int field_d;
     static int field_g;
     static MusicTrack field_i;
@@ -99,7 +99,7 @@ final class LobbyOptionSupport {
             }
             try {
               var3 = "tuhstatbut";
-              var4 = (String) (ll.callJavaScript("getcookies", param1, (byte) 127));
+              var4 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param1, (byte) 127));
               var5 = so.a(var4, ';', 116);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -244,7 +244,7 @@ final class LobbyOptionSupport {
                     if (param0 <= var13Lifetime1) {
                       break scanLoop1;
                     }
-                    if ((lr.field_c[var13Lifetime1] & 255) != var14) {
+                    if ((ClientDrawingSupport.field_c[var13Lifetime1] & 255) != var14) {
                       break scanLoop1;
                     }
                   }
@@ -292,7 +292,7 @@ final class LobbyOptionSupport {
                 var9 = 0;
                 break;
               }
-              param4 = param4 + (ks.field_e[param0] & 255);
+              param4 = param4 + (AccountBooleanRequest.field_e[param0] & 255);
             }
           }
           var10_intLifetime1 = 0;
@@ -311,7 +311,7 @@ final class LobbyOptionSupport {
                 if (param0 == -1) {
                   param7 = var11;
                 } else {
-                  lr.field_c[param0] = (byte)var11;
+                  ClientDrawingSupport.field_c[param0] = (byte)var11;
                 }
                 LobbyOptionSupport.evaluateRoomOptionCombinations(param0 + 1, param1 ^ 0, param2, param3, param4, param5, param6, param7);
                 if (wg.field_d) {
@@ -321,7 +321,7 @@ final class LobbyOptionSupport {
               break;
             }
             if (param0 != -1) {
-              lr.field_c[param0] = (byte)var11;
+              ClientDrawingSupport.field_c[param0] = (byte)var11;
             } else {
               param7 = var11;
             }

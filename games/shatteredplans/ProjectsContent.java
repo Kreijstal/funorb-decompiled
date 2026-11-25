@@ -30,7 +30,7 @@ final class ProjectsContent implements MenuContent {
           }
           if (RasterBuffer.field_a >= 18) {
             RasterBuffer.field_a = 18;
-            var2_ref_tm = (tm) (ld.field_p.pollFirst(35));
+            var2_ref_tm = (tm) (ByteArrayReadRequest.field_p.pollFirst(35));
             if (var2_ref_tm != null) {
               NanoFrameTimer.a(var2_ref_tm, true);
             }

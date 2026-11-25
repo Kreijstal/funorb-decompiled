@@ -92,7 +92,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         for (var5 = 0; var5 < 4; var5++) {
           var4.field_G[var5] = -5;
         }
-        var4.name = ks.field_c + " " + String.valueOf((char)(65 + qf.a((byte) 114, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 30, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 24, 26, var13.field_j))) + "-" + 5;
+        var4.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(65 + qf.a((byte) 114, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 30, 26, var13.field_j))) + String.valueOf((char)(65 + qf.a((byte) 24, 26, var13.field_j))) + "-" + 5;
         var4.field_x = 30;
         var4.field_B = 8;
         var4.field_u = true;
@@ -198,7 +198,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
               stackIn_38_1 = 6;
             }
             stackIn_37_0.field_B = stackIn_38_1;
-            var10.name = ks.field_c + " " + String.valueOf((char)(qf.a((byte) 46, 26, var13.field_j) + 65)) + String.valueOf((char)(qf.a((byte) 20, 26, var13.field_j) + 65)) + String.valueOf((char)(65 + qf.a((byte) 5, 26, var13.field_j))) + "-" + 2;
+            var10.name = AccountBooleanRequest.field_c + " " + String.valueOf((char)(qf.a((byte) 46, 26, var13.field_j) + 65)) + String.valueOf((char)(qf.a((byte) 20, 26, var13.field_j) + 65)) + String.valueOf((char)(65 + qf.a((byte) 5, 26, var13.field_j))) + "-" + 2;
             var10.field_x = 15;
           }
         }

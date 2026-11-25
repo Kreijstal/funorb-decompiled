@@ -100,7 +100,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static kj a(int param0) {
+    final static AccountRequestResult a(int param0) {
         if (AccountCreationDialog.field_Fb == PrivateChatMessage.field_l) {
           throw new IllegalStateException();
         }

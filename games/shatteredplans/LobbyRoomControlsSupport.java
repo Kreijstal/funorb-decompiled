@@ -43,7 +43,7 @@ final class LobbyRoomControlsSupport {
         if (param0 != 100) {
           LobbyRoomControlsSupport.updateLobbyRoomControls(false, false, (byte) 25, -35);
         }
-        return ls.field_a.field_xb;
+        return GalaxyMapLayoutSupport.field_a.field_xb;
     }
 
     final static void writePlayerReportRequest(int param0, long param1, int param2, boolean param3, String param4, int param5) {
@@ -205,8 +205,8 @@ final class LobbyRoomControlsSupport {
               if (null != UnderageAccountInfoPanel.field_D) {
                 wg.field_d = false;
                 RasterBuffer.field_h = false;
-                if (lr.field_c == null) {
-                  lr.field_c = new byte[ProductionContent.field_k];
+                if (ClientDrawingSupport.field_c == null) {
+                  ClientDrawingSupport.field_c = new byte[ProductionContent.field_k];
                   ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 var13 = 0;

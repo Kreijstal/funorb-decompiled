@@ -129,7 +129,7 @@ final class BytePayloadNode extends IntrusiveNode {
             return;
           }
           Particle.field_h = param6;
-          ks.field_e = param8;
+          AccountBooleanRequest.field_e = param8;
           UsernameAvailabilityValidator.field_p = -1L;
           ProductionContent.field_k = param8.length;
           IntNode.field_p = null;
@@ -137,8 +137,8 @@ final class BytePayloadNode extends IntrusiveNode {
           SpriteResourceSupport.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
           var10_int = 0;
-          for (var11 = 0; var11 < ks.field_e.length; var11++) {
-            var10_int = var10_int + (ks.field_e[var11] & 255);
+          for (var11 = 0; var11 < AccountBooleanRequest.field_e.length; var11++) {
+            var10_int = var10_int + (AccountBooleanRequest.field_e[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
           qj.field_f = new byte[var10_int];
@@ -155,8 +155,8 @@ final class BytePayloadNode extends IntrusiveNode {
           if (param0.field_M == null) {
             param0.field_M = new IntrusiveDeque();
           }
-          kj.field_a = param0.field_M;
-          kj.field_a.clear(0);
+          AccountRequestResult.field_a = param0.field_M;
+          AccountRequestResult.field_a.clear(0);
           IsaacBackedRandom.field_b = new SecondaryNodeHashTable(param3);
           if (param2.field_M == null) {
             param2.field_M = new IntrusiveDeque();
@@ -165,7 +165,7 @@ final class BytePayloadNode extends IntrusiveNode {
           uo.field_a.clear(0);
           SpriteStripButtonPainter.field_w = new SecondaryNodeHashTable(param4);
           sf.field_e = 0L;
-          ks.field_i = param9;
+          AccountBooleanRequest.field_i = param9;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

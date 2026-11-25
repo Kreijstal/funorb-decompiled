@@ -207,7 +207,7 @@ final class ValidationIndicator extends FocusableWidget {
         }
         var8 = this.field_G.getState(param1 + 11730);
         if (TertiaryListSequence.field_h != var8 &&
-          lm.field_d != var8) {
+          TutorialConditionalText.field_d != var8) {
           if (ArchiveSourceManager.field_b == var8) {
             var13 = MenuList.field_w[2];
             var13.drawAdditive(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);

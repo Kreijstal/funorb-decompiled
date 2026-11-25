@@ -182,7 +182,7 @@ class AnimatedPanel extends PanelNode {
             var9 = 0;
             while (50 > var9) {
               try {
-                var10_int = lr.nextRandomInt((byte) 27);
+                var10_int = ClientDrawingSupport.nextRandomInt((byte) 27);
                 var11 = var8 * 100 / 45;
                 var12 = (int)Math.sqrt((double)var11);
                 var13 = param4;

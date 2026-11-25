@@ -124,7 +124,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
           return super.animate((byte) 30);
         }
-        kj var2_ref_kj = MusicPatch.a(65536);
+        AccountRequestResult var2_ref_kj = MusicPatch.a(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
@@ -143,7 +143,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         }
     }
 
-    private final void a(int param0, boolean param1, kj param2) {
+    private final void a(int param0, boolean param1, AccountRequestResult param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -166,7 +166,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
                 this.field_Eb = true;
               }
             } else {
-              var4 = lr.field_d;
+              var4 = ClientDrawingSupport.field_d;
               if (this.field_Db != null) {
                 this.field_Db.onMoreSuggestionsRequested(2147483647);
               }

@@ -109,21 +109,21 @@ final class os extends MenuComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static ks a(int param0, String param1) {
+    final static AccountBooleanRequest a(int param0, String param1) {
         RuntimeException var2 = null;
-        ks stackIn_2_0 = null;
-        ks stackIn_7_0 = null;
+        AccountBooleanRequest stackIn_2_0 = null;
+        AccountBooleanRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 202) {
-            stackIn_2_0 = (ks) null;
+            stackIn_2_0 = (AccountBooleanRequest) null;
             return stackIn_2_0;
           }
-          if (wh.field_a.b(14) &&
-            !param1.equals(wh.field_a.a(-103))) {
+          if (wh.field_a.isComplete(14) &&
+            !param1.equals(wh.field_a.getInput(-103))) {
             wh.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
           }
           stackIn_7_0 = wh.field_a;

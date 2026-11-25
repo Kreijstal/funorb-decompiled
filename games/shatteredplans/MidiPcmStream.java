@@ -639,7 +639,7 @@ final class MidiPcmStream extends PcmStream {
                   if (!var12.field_Qb) {
                     var12.field_Ub.field_z = ng.field_b;
                   } else {
-                    var12.field_Ub.field_z = lq.field_r;
+                    var12.field_Ub.field_z = FourIntSubmissionRequest.field_r;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -805,7 +805,7 @@ final class MidiPcmStream extends PcmStream {
             if (var33 != null) {
               var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
-              var12.field_ic.field_I = 256 * var12.field_Nb / ks.field_i;
+              var12.field_ic.field_I = 256 * var12.field_Nb / AccountBooleanRequest.field_i;
               var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, UniformNineSliceFactory.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
               var31 = var31 + var34_intLifetime1 * UniformNineSliceFactory.field_c;
             }
@@ -855,7 +855,7 @@ final class MidiPcmStream extends PcmStream {
                 if (var12.field_mc) {
                   stackIn_165_0 = StarAbandonedEvent.field_o;
                 } else {
-                  stackIn_165_0 = ls.field_d;
+                  stackIn_165_0 = GalaxyMapLayoutSupport.field_d;
                 }
               } else {
                 stackIn_165_0 = AccountStatusDialog.field_qb;

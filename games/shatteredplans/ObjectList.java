@@ -192,7 +192,7 @@ final class ObjectList {
             var20 = var32;
             var20 = var32;
             var21 = 72;
-            if (ls.field_a == param2) {
+            if (GalaxyMapLayoutSupport.field_a == param2) {
               var21 += 42;
             }
             var33 = BitmapFont.truncateWithEllipsis(var12.field_Ab.field_nb, var32, var21);
@@ -304,7 +304,7 @@ final class ObjectList {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - tg.field_a - tg.field_a);
               var12.field_xb.field_z = var23;
-              var12.field_xb.field_I = 256 * var12.field_Gb / ks.field_i;
+              var12.field_xb.field_I = 256 * var12.field_Gb / AccountBooleanRequest.field_i;
               var12.field_xb.setTarget(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * UniformNineSliceFactory.field_c, (byte) 96, var19, tg.field_a);
               var19 = var19 + UniformNineSliceFactory.field_c * var24_intLifetime1;
             }

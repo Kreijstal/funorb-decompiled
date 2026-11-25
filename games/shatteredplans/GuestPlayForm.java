@@ -171,7 +171,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             GuestPlayForm.a(-64, -115, (String) null, (String) null, 39);
           }
           StandardMapGenerator.field_j = DialWidget.i(0);
-          ld.field_p = new IntrusiveDeque();
+          ByteArrayReadRequest.field_p = new IntrusiveDeque();
           PlacementEvent.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

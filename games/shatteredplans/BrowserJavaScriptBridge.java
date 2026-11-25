@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll {
+final class BrowserJavaScriptBridge {
     final static void evalJavaScript(java.applet.Applet param0, String param1, byte param2) throws Throwable {
         if (param2 != 123) {
           return;

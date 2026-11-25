@@ -394,7 +394,7 @@ final class LinkPainter implements WidgetPainter {
               var3 != 0) {
               GameClientShell.field_z = GameApplet.field_h;
             }
-            GameClientShell.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
+            GameClientShell.field_z = ClientDrawingSupport.concatenateAll(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
           }
           DateInputWidget.field_G.closeStatusDialog((byte) -104);
           ClientUiLoadingSupport.showConnectionProgressDialog(7655);

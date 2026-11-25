@@ -193,7 +193,7 @@ final class GzipInflater {
             UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
             UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);
             UsernameAvailabilityValidator.a(param0 ^ -2, ChatPanelLayoutSupport.field_e, 3);
-            UsernameAvailabilityValidator.a(param0 ^ -2, lm.field_e, 4);
+            UsernameAvailabilityValidator.a(param0 ^ -2, TutorialConditionalText.field_e, 4);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "s.C(" + param0 + ')');

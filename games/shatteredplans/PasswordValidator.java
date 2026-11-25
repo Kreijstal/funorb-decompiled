@@ -113,7 +113,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, UniformNineSliceFactory.field_c);
           if (var9 != null) {
-            ks.a(var9, 0);
+            AccountBooleanRequest.openChatPlayerContextMenu(var9, 0);
           }
           if (param0 >= -99) {
             PasswordValidator.clearStatics(34);

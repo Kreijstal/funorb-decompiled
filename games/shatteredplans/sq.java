@@ -14,7 +14,7 @@ final class sq {
     int field_n;
     static String field_i;
     int field_t;
-    lm[] field_f;
+    TutorialConditionalText[] field_f;
     boolean field_h;
     private String[] field_e;
     boolean field_r;
@@ -140,21 +140,21 @@ final class sq {
         }
     }
 
-    final void a(byte param0, lm param1) {
+    final void a(byte param0, TutorialConditionalText param1) {
         int var3_int = 0;
-        lm[] var4 = null;
+        TutorialConditionalText[] var4 = null;
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < 5) {
           return;
         }
         if (null == this.field_f) {
-          this.field_f = new lm[]{param1};
+          this.field_f = new TutorialConditionalText[]{param1};
           return;
         }
         try {
           var3_int = this.field_f.length;
-          var4 = new lm[1 + var3_int];
+          var4 = new TutorialConditionalText[1 + var3_int];
           for (var5 = 0; var5 < var3_int; var5++) {
             var4[var5] = this.field_f[var5];
           }

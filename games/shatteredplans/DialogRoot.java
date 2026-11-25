@@ -86,10 +86,10 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static kj a(String[] args, byte param1) {
-        kj var2 = null;
+    final static AccountRequestResult a(String[] args, byte param1) {
+        AccountRequestResult var2 = null;
         RuntimeException var2_ref = null;
-        kj stackIn_3_0 = null;
+        AccountRequestResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -98,7 +98,7 @@ final class DialogRoot extends SingleChildWidget {
           if (param1 > -63) {
             field_B = 100;
           }
-          var2 = new kj(false);
+          var2 = new AccountRequestResult(false);
           var2.field_d = args;
           stackIn_3_0 = var2;
           return stackIn_3_0;

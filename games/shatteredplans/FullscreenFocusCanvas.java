@@ -170,7 +170,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var3 = 0.15000000596046448f + (float)FleetTrailPoint.field_m / 1000.0f;
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = -200 + (int)(200.0 * Math.cos((double)var3));
-          ks.field_j.draw(var1_int, var2);
+          AccountBooleanRequest.field_j.draw(var1_int, var2);
           SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
           var4 = 125;
           var5 = 400;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr {
+final class ClientDrawingSupport {
     static AnimatedPanel field_a;
     static String field_d;
     static byte[] field_c;
@@ -9,7 +9,7 @@ final class lr {
     static int[] field_b;
     static String field_e;
 
-    final static MenuList a(ListContent param0, Player param1, byte param2, Player param3, Player[] param4) {
+    final static MenuList createDiplomacyPlayerRow(ListContent param0, Player param1, byte param2, Player param3, Player[] param4) {
         String dupTemp$1 = null;
         int var9_int = 0;
         RuntimeException var5 = null;
@@ -195,8 +195,8 @@ final class lr {
             param2[var6] = var7;
             param4[param1] = param4[var6];
             param4[var6] = var8;
-            lr.quickSort(param0, var6 - 1, param2, (byte) 69, param4);
-            lr.quickSort(var6 + 1, param1, param2, (byte) 77, param4);
+            ClientDrawingSupport.quickSort(param0, var6 - 1, param2, (byte) 69, param4);
+            ClientDrawingSupport.quickSort(var6 + 1, param1, param2, (byte) 77, param4);
             return;
           }
           return;
@@ -220,7 +220,7 @@ final class lr {
         }
     }
 
-    final static String a(int param0, CharSequence[] param1) {
+    final static String concatenateAll(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -252,7 +252,7 @@ final class lr {
     final static int nextRandomInt(byte param0) {
         if (param0 != 27) {
           Object[] var2 = (Object[]) null;
-          lr.quickSort(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
+          ClientDrawingSupport.quickSort(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
         }
         return tg.field_b.nextInt();
     }
@@ -311,7 +311,7 @@ final class lr {
         return new byte[param0];
     }
 
-    final static void a(int param0) {
+    final static void readArrayAndSubmissionResponse(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -324,7 +324,7 @@ final class lr {
         Object[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        lq var12 = null;
+        FourIntSubmissionRequest var12 = null;
         CipherPacketBuffer var13 = null;
         int[] var14 = null;
         ServerIntArrayRequest var15 = null;
@@ -336,7 +336,7 @@ final class lr {
         try {
           if (param0 < 65) {
             var9 = (Object[]) null;
-            lr.quickSort(121, -50, (int[]) null, (byte) -33, (Object[]) null);
+            ClientDrawingSupport.quickSort(121, -50, (int[]) null, (byte) -33, (Object[]) null);
           }
           var13 = sa.field_a;
           var2 = var13.readUnsignedByte(-100);
@@ -365,7 +365,7 @@ final class lr {
             return;
           }
           if (var2 == 1) {
-            var12 = (lq) (rs.field_Bb.startForward(0));
+            var12 = (FourIntSubmissionRequest) (rs.field_Bb.startForward(0));
             if (var12 == null) {
               q.g(-100);
               return;
@@ -396,7 +396,7 @@ final class lr {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void drawSortedVertexColoredTriangle(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;

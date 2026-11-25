@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ProjectsWindowSupport {
-    static kj field_a;
+    static AccountRequestResult field_a;
 
     final static void cacheClientSeedBytes(int param0) {
         try {
@@ -30,7 +30,7 @@ final class ProjectsWindowSupport {
     final static void drawPlainHexagonPanel(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         LobbyUiSupport.drawHexagonPanel(false, param4, param1, -12394, param5, param3, param0);
         if (!param2) {
-          field_a = (kj) null;
+          field_a = (AccountRequestResult) null;
         }
     }
 
@@ -55,7 +55,7 @@ final class ProjectsWindowSupport {
 
     public static void clearStatics(byte param0) {
         if (param0 != -29) {
-          field_a = (kj) null;
+          field_a = (AccountRequestResult) null;
           field_a = null;
           return;
         }

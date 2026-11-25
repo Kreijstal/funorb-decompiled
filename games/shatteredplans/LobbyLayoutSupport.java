@@ -48,7 +48,7 @@ final class LobbyLayoutSupport {
           TextLayout.a(stackIn_3_0, stackIn_4_1);
           n.field_h.a(0, -42 + SocialListPanel.field_xb.field_mb, (byte) 95, SocialListPanel.field_xb.field_K, 0);
           DefendTask.field_x.setTarget(so.field_t.field_K, UniformNineSliceFactory.field_c, (byte) 107, 0, 0);
-          stackIn_6_0 = lr.field_a;
+          stackIn_6_0 = ClientDrawingSupport.field_a;
           stackIn_6_1 = so.field_t.field_K;
           if (AccountStatusDialog.field_pb) {
             stackIn_7_2 = 4 + (UnderageAccountInfoPanel.field_K + 40);

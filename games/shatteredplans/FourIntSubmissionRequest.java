@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq extends IntrusiveNode {
+final class FourIntSubmissionRequest extends IntrusiveNode {
     static volatile boolean field_q;
     int field_n;
     static String field_p;
@@ -24,7 +24,7 @@ final class lq extends IntrusiveNode {
         }
     }
 
-    private lq() throws Throwable {
+    private FourIntSubmissionRequest() throws Throwable {
         throw new Error();
     }
 

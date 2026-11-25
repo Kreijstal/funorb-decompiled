@@ -14,7 +14,7 @@ final class QuickChatParameterType {
         if (param0 >= -33) {
           return -8;
         }
-        return -ld.field_j + ValidationMessageWidget.field_R;
+        return -ByteArrayReadRequest.field_j + ValidationMessageWidget.field_R;
     }
 
     final static boolean hasValidNameStructure(CharSequence param0, boolean param1, int param2) {

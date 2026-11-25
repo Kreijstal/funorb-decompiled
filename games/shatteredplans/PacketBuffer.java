@@ -753,7 +753,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = lr.allocateByteArray(param0, 101);
+        this.payload = ClientDrawingSupport.allocateByteArray(param0, 101);
         this.position = 0;
     }
 

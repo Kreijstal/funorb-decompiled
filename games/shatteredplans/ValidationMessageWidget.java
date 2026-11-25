@@ -141,7 +141,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
             this.field_V.drawAdditive(var9 - (var20.field_o >> 1), -var20.field_p + var10, 256);
             return;
           }
-          if (var6 != lm.field_d) {
+          if (var6 != TutorialConditionalText.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
               var22 = MenuList.field_w[2];
               var22.drawAdditive(var9, var10 - (var22.field_w >> 1), 256);
@@ -171,7 +171,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           this.field_V.drawAdditive(var9 - (var19.field_o >> 1), -var19.field_p + var10, 256);
           return;
         }
-        if (var6 == lm.field_d) {
+        if (var6 == TutorialConditionalText.field_d) {
           var23 = AnimatedPanel.field_R;
           if (!var23.equals(this.field_s)) {
             this.field_s = var23;
@@ -208,7 +208,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
             this.field_V.drawAdditive(var9Lifetime1 - (var26.field_o >> 1), -var26.field_p + var10Lifetime1, 256);
             return;
           }
-          if (var6 != lm.field_d) {
+          if (var6 != TutorialConditionalText.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
               var28 = MenuList.field_w[2];
               var28.drawAdditive(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
@@ -252,7 +252,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           var9Lifetime2 = this.field_m + param3;
           var10Lifetime2 = var45.getTextY(param2, (UiWidget) (this), 66) + (var45.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
           if (TertiaryListSequence.field_h != var6Lifetime1 &&
-            var6Lifetime1 != lm.field_d) {
+            var6Lifetime1 != TutorialConditionalText.field_d) {
             if (var6Lifetime1 == ArchiveSourceManager.field_b) {
               var37 = MenuList.field_w[2];
               var37.drawAdditive(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
@@ -318,7 +318,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
           this.field_V.drawAdditive(var9Lifetime3 - (var40.field_o >> 1), -var40.field_p + var10Lifetime3, 256);
           return;
         }
-        if (var6Lifetime2 != lm.field_d) {
+        if (var6Lifetime2 != TutorialConditionalText.field_d) {
           if (var6Lifetime2 == ArchiveSourceManager.field_b) {
             var42 = MenuList.field_w[2];
             var42.drawAdditive(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);

@@ -25,7 +25,7 @@ final class qj {
         String var4 = null;
         int var6 = 0;
         int var7 = 0;
-        lm var9 = null;
+        TutorialConditionalText var9 = null;
         int var11 = 0;
         String[] var12 = null;
         String[] var13 = null;

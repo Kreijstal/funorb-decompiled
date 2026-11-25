@@ -989,7 +989,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("derelict", 122);
                 if (var2 != null) {
-                  ks.field_c = IterableNodeHashTable.a(var2, 17746);
+                  AccountBooleanRequest.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions0", 116);
                 if (var2 != null) {
@@ -1025,7 +1025,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_mv_ready", 122);
                 if (null != var2) {
-                  lr.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ClientDrawingSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_mv_zoom", 109);
                 if (var2 != null) {
@@ -1049,7 +1049,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_sf_resources", 103);
                 if (null != var2) {
-                  kj.field_e = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestResult.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_sf_incoming", 109);
                 if (null != var2) {
@@ -1752,7 +1752,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_map_hex", 121);
                 if (null != var2) {
-                  lm.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialConditionalText.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_map_sol", 95);
                 if (null != var2) {

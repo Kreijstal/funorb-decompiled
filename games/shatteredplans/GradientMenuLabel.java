@@ -91,13 +91,13 @@ final class GradientMenuLabel extends MenuComponent {
           TurnEventLog.field_b = param1;
           var11 = param4;
           if (param2) {
-            stackIn_7_0 = lq.field_p;
+            stackIn_7_0 = FourIntSubmissionRequest.field_p;
           } else {
             stackIn_7_0 = AlternateLoginCredentials.field_s;
           }
           var6 = stackIn_7_0;
           if (Bzip2State.field_r == 0) {
-            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = 3 + var7;
             StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -106,7 +106,7 @@ final class GradientMenuLabel extends MenuComponent {
             }
             Player.field_y = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = AccountBooleanRequest.field_b[var9];
             }
             StarLinkPlanner.field_c[var8 - 3] = "";
             StarLinkPlanner.field_c[-2 + var8] = var6;
@@ -119,7 +119,7 @@ final class GradientMenuLabel extends MenuComponent {
             if (1 != Bzip2State.field_r) {
               throw new IllegalArgumentException();
             }
-            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, FourIntSubmissionRequest.field_k, var11, AccountBooleanRequest.field_b, 3);
             var8 = var7 + 2;
             StarLinkPlanner.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -128,7 +128,7 @@ final class GradientMenuLabel extends MenuComponent {
             }
             Player.field_y = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              StarLinkPlanner.field_c[var9] = ks.field_b[var9];
+              StarLinkPlanner.field_c[var9] = AccountBooleanRequest.field_b[var9];
             }
             StarLinkPlanner.field_c[-2 + var8] = "";
             StarLinkPlanner.field_c[var8 - 1] = nf.field_i;
@@ -148,7 +148,7 @@ final class GradientMenuLabel extends MenuComponent {
             }
           }
           ValidationMessageWidget.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
-          ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
+          ByteArrayReadRequest.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
           DiskCacheWorker.field_b = (LobbyOptionSupport.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;

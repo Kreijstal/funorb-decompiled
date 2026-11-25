@@ -26,7 +26,7 @@ final class StandardMapReader implements MapGenerator {
         int var8Lifetime1;
         int var9Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        var12 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_f), ls.a(this.field_c, 2), this.field_a, this.field_b);
+        var12 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_f), GalaxyMapLayoutSupport.computeMapHeight(this.field_c, 2), this.field_a, this.field_b);
         var3 = new StandardMapGenerator(this.field_f, this.field_c, this.field_a, this.field_b, 1);
         var3.placeStars(false, var12);
         var4_ref_ln__ = var12.field_e;

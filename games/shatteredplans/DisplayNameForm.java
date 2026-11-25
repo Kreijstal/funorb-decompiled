@@ -107,7 +107,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         FullscreenFocusCanvas.field_f = new String[DirectByteArrayStorage.field_j];
         FullscreenFocusCanvas.field_f[11] = wg.field_g;
         FullscreenFocusCanvas.field_f[21] = Player.field_j;
-        FullscreenFocusCanvas.field_f[7] = ls.field_c;
+        FullscreenFocusCanvas.field_f[7] = GalaxyMapLayoutSupport.field_c;
         FullscreenFocusCanvas.field_f[16] = MidiPcmStream.field_o;
         FullscreenFocusCanvas.field_f[18] = no.field_a;
         FullscreenFocusCanvas.field_f[4] = RichTextLayout.field_o;

@@ -83,10 +83,10 @@ final class DiskCacheWorker implements Runnable {
           SoftwareRasterizer.b(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
           we.field_f.bindAsRenderTarget();
           SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
-          ks.field_j = va.field_e.copy();
-          ks.field_j.rotate180();
-          for (var3 = 0; var3 < ks.field_j.field_B.length; var3++) {
-            var4 = ks.field_j.field_B[var3];
+          AccountBooleanRequest.field_j = va.field_e.copy();
+          AccountBooleanRequest.field_j.rotate180();
+          for (var3 = 0; var3 < AccountBooleanRequest.field_j.field_B.length; var3++) {
+            var4 = AccountBooleanRequest.field_j.field_B[var3];
             var5 = 8323072 & var4 >> 1;
             var6 = (var5 >> 9 & 32512) + (var4 & 65280);
             var6 = var6 * 3 >> 1;
@@ -96,7 +96,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = 65280;
             }
             var7 = 255 & var4;
-            ks.field_j.field_B[var3] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var6, var5), var7);
+            AccountBooleanRequest.field_j.field_B[var3] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var6, var5), var7);
           }
           MusicVoice.field_n = DefendTask.field_s.flippedCopy();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
@@ -367,7 +367,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 != 624) {
             DiskCacheWorker.b((byte) -62);
           }
-          wh.field_a.a(false, 37);
+          wh.field_a.setResult(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
           PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;

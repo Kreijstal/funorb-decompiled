@@ -115,15 +115,15 @@ final class SpriteResourceSupport {
     }
 
     final static void appendTutorialObjective(String[] args, int param1, sq param2) {
-        lm var7 = null;
-        lm var3 = null;
+        TutorialConditionalText var7 = null;
+        TutorialConditionalText var3 = null;
         int var5 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder var4 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var7 = new lm();
+          var7 = new TutorialConditionalText();
           var3 = var7;
           var7.field_c = args[param1];
           if (args.length > 2) {

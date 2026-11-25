@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ks {
+final class AccountBooleanRequest {
     static int field_i;
     private boolean field_d;
     static QuickChatParameterType field_a;
@@ -13,10 +13,10 @@ final class ks {
     private boolean field_g;
     static Sprite field_h;
 
-    final static boolean a(boolean param0, boolean param1) {
+    final static boolean handleTutorialPointer(boolean param0, boolean param1) {
         if (!param1) {
           nf var3 = (nf) null;
-          ks.a((nf) null, -105);
+          AccountBooleanRequest.openChatPlayerContextMenu((nf) null, -105);
           if (WeightedLruCache.field_g != null) {
             if (TertiaryListSequence.field_k < AccountFieldValue.field_f) {
               return false;
@@ -144,15 +144,15 @@ final class ks {
         return false;
     }
 
-    final boolean b(int param0) {
+    final boolean isComplete(int param0) {
         if (param0 != 14) {
-          this.b(-102);
+          this.isComplete(-102);
           return this.field_g;
         }
         return this.field_g;
     }
 
-    final static tm a(int param0, boolean param1, String param2) {
+    final static tm queueClientNotification(int param0, boolean param1, String param2) {
         tm var3 = null;
         RuntimeException var3_ref = null;
         tm stackIn_6_0 = null;
@@ -168,7 +168,7 @@ final class ks {
           if (RasterBuffer.field_a >= 18) {
             NanoFrameTimer.a(var3, true);
           } else {
-            ld.field_p.addLast((byte) -113, var3);
+            ByteArrayReadRequest.field_p.addLast((byte) -113, var3);
           }
           stackIn_6_0 = var3;
           return stackIn_6_0;
@@ -186,7 +186,7 @@ final class ks {
         }
     }
 
-    final static WidgetStyle c(int param0) {
+    final static WidgetStyle getAccountDialogStyle(int param0) {
         if (GameRules.field_a == null) {
           GameRules.field_a = new WidgetStyle();
           GameRules.field_a.a(StatefulWidgetTheme.field_u, true);
@@ -203,7 +203,7 @@ final class ks {
         return GameRules.field_a;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setResult(boolean param0, int param1) {
         if (param1 > 1) {
           this.field_g = true;
           this.field_d = param0 ? true : false;
@@ -214,14 +214,14 @@ final class ks {
         this.field_d = param0 ? true : false;
     }
 
-    final boolean a(boolean param0) {
+    final boolean getResult(boolean param0) {
         if (!param0) {
           return false;
         }
         return this.field_d;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawAdditiveSteppedLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -243,7 +243,7 @@ final class ks {
           var6_int = SoftwareRasterizer.field_b + param3;
           if (param0 != -18166) {
             var11 = (nf) null;
-            ks.a((nf) null, -32);
+            AccountBooleanRequest.openChatPlayerContextMenu((nf) null, -32);
           }
           var8 = SoftwareRasterizer.field_b * param5 + param4;
           var9 = param4;
@@ -269,12 +269,12 @@ final class ks {
         }
     }
 
-    final String a(int param0) {
+    final String getInput(int param0) {
         int var2 = 2 / ((28 - param0) / 39);
         return this.field_f;
     }
 
-    final static void a(nf param0, int param1) {
+    final static void openChatPlayerContextMenu(nf param0, int param1) {
         Object stackIn_2_0;
         long stackIn_2_1;
         String stackIn_2_2;
@@ -365,7 +365,7 @@ final class ks {
         }
     }
 
-    ks(String param0) {
+    AccountBooleanRequest(String param0) {
         this.field_d = false;
         this.field_g = false;
         try {
@@ -375,7 +375,7 @@ final class ks {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseAccountBooleanRequestStatics(byte param0) {
         field_c = null;
         if (param0 >= 122) {
           field_e = null;
@@ -385,7 +385,7 @@ final class ks {
           field_j = null;
           return;
         }
-        ks.c(-61);
+        AccountBooleanRequest.getAccountDialogStyle(-61);
         field_e = null;
         field_a = null;
         field_b = null;
@@ -393,7 +393,7 @@ final class ks {
         field_j = null;
     }
 
-    final static void a(int param0, wj param1, int param2) {
+    final static void queueHighscoreSubmission(int param0, wj param1, int param2) {
         try {
           NumericDateInputWidget.field_P.addLast((byte) -113, param1);
           if (param0 != 20) {

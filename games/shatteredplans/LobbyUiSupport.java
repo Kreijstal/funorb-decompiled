@@ -22,10 +22,10 @@ final class LobbyUiSupport {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           param1.unlink((byte) -86);
-          var2 = (LobbyRoomEntry) (kj.field_a.startForward(param0));
+          var2 = (LobbyRoomEntry) (AccountRequestResult.field_a.startForward(param0));
           while (var2 != null) {
             if (var2.ranksBefore(param1, -1)) {
-              var2 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
+              var2 = (LobbyRoomEntry) (AccountRequestResult.field_a.nextForward((byte) -71));
               continue;
             }
             break;
@@ -34,7 +34,7 @@ final class LobbyUiSupport {
             stackIn_8_0 = -123;
             wp.$cfr$intArgs$a$2661ebe01e52(stackIn_8_0, param1, var2);
           } else {
-            kj.field_a.addLast((byte) -113, param1);
+            AccountRequestResult.field_a.addLast((byte) -113, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

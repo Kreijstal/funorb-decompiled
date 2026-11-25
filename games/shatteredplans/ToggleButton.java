@@ -139,7 +139,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           sg.field_Ab.addChild(4, uq.field_j);
           OpacityWidget.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
           sg.field_Ab.addChild(4, OpacityWidget.field_C);
-          IntroTextLine.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ld.field_n);
+          IntroTextLine.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ByteArrayReadRequest.field_n);
           DirectByteArrayStorage.field_l = new AnimatedPanel(0L, BoundsRect.field_k);
           ValidatedTextInputWidget.field_X.addChild(4, AgeValidator.field_n);
           ValidatedTextInputWidget.field_X.addChild(4, MenuButton.field_w);

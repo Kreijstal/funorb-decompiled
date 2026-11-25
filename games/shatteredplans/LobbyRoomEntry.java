@@ -220,13 +220,13 @@ final class LobbyRoomEntry extends AnimatedPanel {
         }
         if (IntrusiveNodeHashTable.field_e &&
           np.field_a.field_Eb <= np.field_a.field_Lb) {
-          ls.field_a.field_zb.field_z = SoundPlayback.field_j;
+          GalaxyMapLayoutSupport.field_a.field_zb.field_z = SoundPlayback.field_j;
           MenuList.field_v.field_s = false;
-          MatchingTextValidator.a(false, ls.field_a.field_xb);
+          MatchingTextValidator.a(false, GalaxyMapLayoutSupport.field_a.field_xb);
         } else {
           MenuList.field_v.field_s = true;
-          ls.field_a.field_zb.field_z = null;
-          ObjectList.a(param4, 0, ls.field_a, param1, param2);
+          GalaxyMapLayoutSupport.field_a.field_zb.field_z = null;
+          ObjectList.a(param4, 0, GalaxyMapLayoutSupport.field_a, param1, param2);
         }
         MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
         ObjectList.a(param4, 0, ro.field_a, param1, param2);

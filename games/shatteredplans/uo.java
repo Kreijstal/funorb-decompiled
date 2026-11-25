@@ -51,7 +51,7 @@ final class uo {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (!wh.field_a.b(14)) {
+          if (!wh.field_a.isComplete(14)) {
             stackIn_22_0 = 1;
             return stackIn_22_0;
           }
@@ -237,8 +237,8 @@ final class uo {
               var8 = IntValueWriteRequest.field_j;
               var10 = 2;
               if (UnderageAccountInfoPanel.field_D != null) {
-                if (lr.field_c == null) {
-                  lr.field_c = new byte[ProductionContent.field_k];
+                if (ClientDrawingSupport.field_c == null) {
+                  ClientDrawingSupport.field_c = new byte[ProductionContent.field_k];
                   ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 for (var11_int = 0; var11_int < ProductionContent.field_k; var11_int++) {

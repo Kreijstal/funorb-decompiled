@@ -11,7 +11,7 @@ final class AudioService implements Runnable {
     volatile boolean field_a;
 
     final static void a(int param0) {
-        MusicVoice.field_I = ks.c(108);
+        MusicVoice.field_I = AccountBooleanRequest.getAccountDialogStyle(108);
         if (param0 == 0) {
           ByteArrayStorage.field_e = new DialogRoot();
           wa.a((byte) -50, true, true);

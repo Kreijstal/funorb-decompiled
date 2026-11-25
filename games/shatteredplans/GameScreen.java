@@ -1111,7 +1111,7 @@ final class GameScreen {
               }
               var22Lifetime1 = 0;
               if (var21Lifetime1 >= 0) {
-                ld.a(var18Lifetime1, var20_intLifetime1, var21Lifetime1, var19Lifetime1, -68, var22Lifetime1, -this.field_Q + 256, var14);
+                ByteArrayReadRequest.blendSpriteRow(var18Lifetime1, var20_intLifetime1, var21Lifetime1, var19Lifetime1, -68, var22Lifetime1, -this.field_Q + 256, var14);
               }
               var18Lifetime1++;
             }
@@ -2873,7 +2873,7 @@ final class GameScreen {
               var8 = ue.field_c;
               if (var16 != 0) {
                 if (!(var9 instanceof DerelictVictoryChecker)) {
-                  var8 = lm.field_a;
+                  var8 = TutorialConditionalText.field_a;
                   var8 = StatusMessagePanel.field_I;
                 } else {
                   var8 = StatusMessagePanel.field_I;
@@ -2881,7 +2881,7 @@ final class GameScreen {
               }
             } else {
               if (!(var9 instanceof DerelictVictoryChecker)) {
-                var8 = lm.field_a;
+                var8 = TutorialConditionalText.field_a;
                 if (var16 != 0) {
                   var8 = StatusMessagePanel.field_I;
                 }
@@ -3617,7 +3617,7 @@ final class GameScreen {
           stackIn_296_0 = (var3_int != 0) ? 0 : 1;
           if (stackIn_296_0 == 1 &&
             this.field_s.field_W) {
-            var4 = ks.a(param0, true) ? 1 : 0;
+            var4 = AccountBooleanRequest.handleTutorialPointer(param0, true) ? 1 : 0;
             if (var4 != 0) {
               return true;
             }
@@ -3716,7 +3716,7 @@ final class GameScreen {
             }
             if (this.field_s.field_P.field_v[var4] != this.field_s.field_n ||
               var6 != 0) {
-              var5 = lr.a(var2, this.field_s.field_n, (byte) 21, this.field_s.field_P.field_v[var4], this.field_s.field_P.field_v);
+              var5 = ClientDrawingSupport.createDiplomacyPlayerRow(var2, this.field_s.field_n, (byte) 21, this.field_s.field_P.field_v[var4], this.field_s.field_P.field_v);
               var5.moveTo((byte) 83, this.field_J.field_z.field_k, this.field_J.field_z.field_t + this.field_J.field_z.field_y);
               this.field_J.field_z.addChild(var5, 8);
             }

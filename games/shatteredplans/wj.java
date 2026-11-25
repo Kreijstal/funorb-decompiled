@@ -198,7 +198,7 @@ final class wj extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(int param0, int param1, lq param2) {
+    final static void a(int param0, int param1, FourIntSubmissionRequest param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {

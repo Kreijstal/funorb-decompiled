@@ -131,7 +131,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              ll.evalJavaScript(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
+              BrowserJavaScriptBridge.evalJavaScript(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

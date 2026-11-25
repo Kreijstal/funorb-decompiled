@@ -518,7 +518,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          lq.field_q = false;
+          FourIntSubmissionRequest.field_q = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -765,7 +765,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_e = true;
             System.out.println("error_game_" + param1);
             try {
-              ll.callJavaScript("loggedout", GameScreen.getHostApplet((byte) 126), (byte) 55);
+              BrowserJavaScriptBridge.callJavaScript("loggedout", GameScreen.getHostApplet((byte) 126), (byte) 55);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -929,7 +929,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           PlayerEliminatedEvent.field_j = PlayerEliminatedEvent.field_j + 1 & 31;
           var6 = this;
           synchronized (var6) {
-            MusicPatch.field_i = lq.field_q;
+            MusicPatch.field_i = FourIntSubmissionRequest.field_q;
             if (param0 >= -20) {
               field_i = -95;
             }
@@ -1014,7 +1014,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          lq.field_q = true;
+          FourIntSubmissionRequest.field_q = true;
           oq.field_e = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1090,7 +1090,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           tm.field_i.addFocusListener((java.awt.event.FocusListener) (this));
           tm.field_i.requestFocus();
           MusicPatch.field_i = true;
-          lq.field_q = true;
+          FourIntSubmissionRequest.field_q = true;
           oq.field_e = true;
           IntrusiveDeque.field_c = false;
           PointsVictoryChecker.field_m = pr.currentTimeMillis(14274);

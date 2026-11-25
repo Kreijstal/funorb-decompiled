@@ -966,7 +966,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_friend_add", 511);
                 if (var2 != null) {
-                  ld.field_k = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_friend_rm", 511);
                 if (null != var2) {
@@ -1338,7 +1338,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("status_full", 511);
                 if (null != var2) {
-                  lq.field_r = IterableNodeHashTable.a(var2, 17746);
+                  FourIntSubmissionRequest.field_r = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("players_in_game", 511);
                 if (var2 != null) {
@@ -1366,7 +1366,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("you_cannot_join_in_progress", 511);
                 if (null != var2) {
-                  ls.field_d = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_spectate", 511);
                 if (var2 != null) {
@@ -1414,7 +1414,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("multiconst_similar_rating", 511);
                 if (null != var2) {
-                  ls.field_b = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_open", 511);
                 if (var2 != null) {
@@ -1446,7 +1446,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("tab_hidechattemporarily", 511);
                 if (null != var2) {
-                  ld.field_n = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("esc_cancelprivatemessage", 511);
                 if (var2 != null) {
@@ -1674,7 +1674,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_0_3", 511);
                 if (null != var2) {
-                  ls.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_4", 511);
                 if (var2 != null) {
@@ -2304,7 +2304,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_username_unavailable", 511);
                 if (var2 != null) {
-                  lr.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientDrawingSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username_available", 511);
                 if (null != var2) {
@@ -2636,7 +2636,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rankings", 511);
                 if (null != var2) {
-                  lr.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientDrawingSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievements", 511);
                 if (null != var2) {
@@ -2660,7 +2660,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("login_createaccount", 511);
                 if (var2 != null) {
-                  lq.field_p = IterableNodeHashTable.a(var2, 17746);
+                  FourIntSubmissionRequest.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
             }
             void loadMenuAndMembershipText() throws java.lang.RuntimeException {
@@ -3002,7 +3002,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("orbpoints_colon", 511);
                 if (var2 != null) {
-                  kj.field_i = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestResult.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("orbcoins_colon", 511);
                 if (var2 != null) {
@@ -3262,7 +3262,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rating_won", 511);
                 if (var2 != null) {
-                  ld.field_q = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_lost", 511);
                 if (null != var2) {
@@ -3378,7 +3378,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_afteraccept", 511);
                 if (var2 != null) {
-                  ld.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_cancel", 511);
                 if (null != var2) {
@@ -3868,7 +3868,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         int var3 = 0;
         StarLinkPlanner var4 = null;
         try {
-          var2 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
+          var2 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
           this.field_f = new Star[1];
           this.field_f[0] = this.createHexStar(0, this.field_c, this.field_b, -50, 0);
           this.field_f[0].name = IsaacRandom.field_h[21];
@@ -3923,7 +3923,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 this.field_d = 1;
                 this.field_b = 1;
               }
-              var4 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
+              var4 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
               this.field_f[0] = this.createHexStar(0, this.field_c, this.field_b, -25, 0);
               this.field_f[0].name = IsaacRandom.field_h[21];
               if (var7 == 0) {
@@ -4039,7 +4039,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
               this.field_f[9 + this.field_c * 4] = this.createHexStar(9 + 4 * this.field_c, this.field_c, this.field_b, 120, 23);
               this.field_f[9 + 4 * this.field_c].name = IsaacRandom.field_h[181];
               this.field_f[9 + this.field_c * 3] = this.createHexStar(this.field_c * 3 + 9, this.field_c, this.field_b, -105, 24);
-              this.field_f[this.field_c * 3 + 9].name = ks.field_c + " WHL-2";
+              this.field_f[this.field_c * 3 + 9].name = AccountBooleanRequest.field_c + " WHL-2";
               this.field_f[10 + 2 * this.field_c] = this.createHexStar(10 + this.field_c * 2, this.field_c, this.field_b, 119, 25);
               this.field_f[2 * this.field_c + 10].name = IsaacRandom.field_h[214];
               this.field_f[3 * this.field_c + 10] = this.createHexStar(10 + this.field_c * 3, this.field_c, this.field_b, -11, 26);

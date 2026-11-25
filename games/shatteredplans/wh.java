@@ -4,12 +4,12 @@
 final class wh {
     static MusicTrack field_b;
     q field_d;
-    static ks field_a;
-    static kj field_c;
+    static AccountBooleanRequest field_a;
+    static AccountRequestResult field_c;
 
     final static long a(int param0) {
         if (param0 != 18) {
-          field_c = (kj) null;
+          field_c = (AccountRequestResult) null;
           return pr.currentTimeMillis(14274) - IntrusiveDeque.field_e;
         }
         return pr.currentTimeMillis(14274) - IntrusiveDeque.field_e;
@@ -63,7 +63,7 @@ final class wh {
           if (param0 != null &&
             0 < param2) {
             if (param3 >= -86) {
-              field_a = (ks) null;
+              field_a = (AccountBooleanRequest) null;
             }
             var5_int = param0[0].field_o;
             var6 = param0[2].field_o;
@@ -119,7 +119,7 @@ final class wh {
         if (param2 == 95) {
           return;
         }
-        field_c = (kj) null;
+        field_c = (AccountRequestResult) null;
     }
 
     static {

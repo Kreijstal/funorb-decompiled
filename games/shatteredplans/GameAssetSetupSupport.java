@@ -275,7 +275,7 @@ final class GameAssetSetupSupport {
           ReflectionQueueSupport.field_f.addOutline(16777215);
           mj.field_Kb.addOutline(16777215);
           LobbyRoomEntry.field_Vb.addOutline(16777215);
-          kj.field_f = ValidationIndicator.a((byte) 111, 80);
+          AccountRequestResult.field_f = ValidationIndicator.a((byte) 111, 80);
           DerelictVictoryChecker.field_n = param0;
           DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
           IntHashIndex.field_b = SpriteResourceSupport.loadSpriteByName(param6 + 10, param2, "basic", "orbcoin");
@@ -318,24 +318,24 @@ final class GameAssetSetupSupport {
         }
     }
 
-    final static kj createStatusResult(String param0, int param1, int param2) {
-        kj var3 = null;
+    final static AccountRequestResult createStatusResult(String param0, int param1, int param2) {
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
-        kj stackIn_2_0 = null;
-        kj stackIn_4_0 = null;
+        AccountRequestResult stackIn_2_0 = null;
+        AccountRequestResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new kj(false);
+          var3 = new AccountRequestResult(false);
           var3.field_c = param1;
           var3.field_g = param0;
           if (param2 <= -13) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (kj) null;
+          stackIn_2_0 = (AccountRequestResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -376,7 +376,7 @@ final class GameAssetSetupSupport {
               var10 = param1.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var6 = -67 / ((-84 - param0) / 42);
-              var4 = (String) (ll.callJavaScript("getcookies", param1, (byte) 53));
+              var4 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param1, (byte) 53));
               var5 = so.a(var4, ';', 111);
               for (var7 = 0; var5.length > var7; var7++) {
                 var8 = var5[var7].indexOf('=');

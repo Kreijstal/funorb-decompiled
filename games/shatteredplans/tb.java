@@ -79,21 +79,21 @@ final class tb {
           mk.field_e = new String[5];
           mk.field_e[0] = EmailSyntaxValidator.field_p;
           mk.field_e[4] = QuickChatPhraseDefinition.field_q;
-          mk.field_e[3] = ls.field_b;
+          mk.field_e[3] = GalaxyMapLayoutSupport.field_b;
           mk.field_e[1] = SpriteResourceSupport.field_a;
           mk.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
-          ls.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
+          GalaxyMapLayoutSupport.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           MenuList.field_v.addChild(param13 ^ -7962, SoundPlayback.field_m);
           if (AccountStatusDialog.field_pb) {
             MenuList.field_v.addChild(4, sf.field_f);
           }
-          MenuList.field_v.addChild(4, ls.field_a);
-          ls.field_a.field_zb.copyFrom(SpriteState.field_u, false);
-          ls.field_a.field_zb.field_G = 1;
-          var23 = ls.field_a.field_zb;
+          MenuList.field_v.addChild(4, GalaxyMapLayoutSupport.field_a);
+          GalaxyMapLayoutSupport.field_a.field_zb.copyFrom(SpriteState.field_u, false);
+          GalaxyMapLayoutSupport.field_a.field_zb.field_G = 1;
+          var23 = GalaxyMapLayoutSupport.field_a.field_zb;
           var24 = var23;
           var24.field_y = 1;
           nm.field_c = new AnimatedPanel(0L, SpriteState.field_u);
@@ -155,11 +155,11 @@ final class tb {
           so.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
           DefendTask.field_x = new AnimatedPanel(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
-          lr.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
+          ClientDrawingSupport.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
           ro.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.addChild(4, DefendTask.field_x);
-          so.field_t.addChild(4, lr.field_a);
+          so.field_t.addChild(4, ClientDrawingSupport.field_a);
           if (AccountStatusDialog.field_pb) {
             so.field_t.addChild(4, MenuComponent.field_q);
           }

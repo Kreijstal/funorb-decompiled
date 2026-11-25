@@ -65,14 +65,14 @@ final class LoginRequestSupport {
         int stackIn_28_0 = 0;
         int stackIn_28_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        lm[] var1 = null;
+        TutorialConditionalText[] var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2_int = 0;
         sq var2 = null;
         sq var3 = null;
         int var4 = 0;
-        lm[] var5 = null;
+        TutorialConditionalText[] var5 = null;
         int var6 = 0;
         int var2_intLifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;

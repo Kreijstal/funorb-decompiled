@@ -324,7 +324,7 @@ final class no {
           }
           for (var3Lifetime1 = var2_int; var3Lifetime1 < DebouncedValidator.field_g; var3Lifetime1++) {
             if (null != wm.field_d[var3Lifetime1].field_j) {
-              ks.a(param1 ^ -115, false, wm.field_d[var3Lifetime1].field_j.field_z);
+              AccountBooleanRequest.queueClientNotification(param1 ^ -115, false, wm.field_d[var3Lifetime1].field_j.field_z);
             }
           }
           return;

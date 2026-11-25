@@ -22,9 +22,9 @@ final class CheckboxPainter implements WidgetPainter {
     static int[] field_a;
     private int field_q;
 
-    final static ks a(String param0, int param1) {
+    final static AccountBooleanRequest a(String param0, int param1) {
         RuntimeException var2 = null;
-        ks stackIn_4_0 = null;
+        AccountBooleanRequest stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -33,7 +33,7 @@ final class CheckboxPainter implements WidgetPainter {
           if (param1 != -12179) {
             CheckboxPainter.a(true);
           }
-          stackIn_4_0 = new ks(param0);
+          stackIn_4_0 = new AccountBooleanRequest(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

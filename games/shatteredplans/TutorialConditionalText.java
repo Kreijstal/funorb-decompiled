@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm {
+final class TutorialConditionalText {
     static String field_a;
     static ValidationState field_d;
     String field_c;
     static int[] field_e;
     String field_b;
 
-    final static void a(byte param0) {
+    final static void initializePunctuationKeyMap(byte param0) {
         ChatMessage.field_e[44] = 71;
         ChatMessage.field_e[61] = 27;
         ChatMessage.field_e[46] = 72;
@@ -24,7 +24,7 @@ final class lm {
           ChatMessage.field_e[520] = 59;
           return;
         }
-        lm.clearStatics(false);
+        TutorialConditionalText.clearStatics(false);
         ChatMessage.field_e[91] = 42;
         ChatMessage.field_e[92] = 74;
         ChatMessage.field_e[93] = 43;
@@ -38,7 +38,7 @@ final class lm {
         field_a = null;
         field_d = null;
         if (!param0) {
-          lm.clearStatics(false);
+          TutorialConditionalText.clearStatics(false);
           field_e = null;
           return;
         }

@@ -302,7 +302,7 @@ final class sm {
           for (var14_int = 0; var14_int <= 16; var14_int++) {
             IsaacRandom.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
           }
-          ks.a(-18166, 16, 2458760, -1, var6, param1);
+          AccountBooleanRequest.drawAdditiveSteppedLine(-18166, 16, 2458760, -1, var6, param1);
           IsaacRandom.a(var13, -16 + var6, 16 + param1, 2458760, false);
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
@@ -323,11 +323,11 @@ final class sm {
         for (var12Lifetime1 = 0; var12Lifetime1 <= 16; var12Lifetime1++) {
           IsaacRandom.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
         }
-        ks.a(-18166, 16, 2458760, -1, var6, param1);
+        AccountBooleanRequest.drawAdditiveSteppedLine(-18166, 16, 2458760, -1, var6, param1);
         IsaacRandom.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
-        ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
+        AccountBooleanRequest.drawAdditiveSteppedLine(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
         var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
           var14 = UnderageAccountInfoPanel.field_J[var5 - 1];
@@ -791,7 +791,7 @@ final class sm {
           var7 = 16 + var5 + rs.field_Cb.field_J;
           rs.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(ld.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
+          rs.field_Cb.drawCentred(ByteArrayReadRequest.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
           rs.field_Cb.drawCentred(MeshMaterial.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(ProgressDialog.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
@@ -1128,7 +1128,7 @@ final class sm {
                 var9 = param3 + 345;
                 var10 = 120;
                 this.a(0, ClientSessionSupport.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
-                this.a(16711680, 25 + param0, var9, 25 + param0, lr.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
+                this.a(16711680, 25 + param0, var9, 25 + param0, ClientDrawingSupport.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
                 this.a(16711680, 78 + (5 + param0), var9, 69 + param0, VerticalMenuSlider.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
                 this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, ProgressDialog.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
                 this.a(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, StarLink.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
@@ -1145,7 +1145,7 @@ final class sm {
                 this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, StripedProgressWidget.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
-                this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, kj.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
+                this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, AccountRequestResult.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
                 this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
                 param0 += 150;
                 var12 = 400;
@@ -1191,7 +1191,7 @@ final class sm {
                 var43 = LoginForm.field_N;
                 var10Lifetime2Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
-                kj.field_f[RasterStateFrame.field_n % kj.field_f.length].draw(5 + param3, 42 + param0);
+                AccountRequestResult.field_f[RasterStateFrame.field_n % AccountRequestResult.field_f.length].draw(5 + param3, 42 + param0);
                 var44 = rk.field_n;
                 var5 = var44;
                 var10Lifetime2Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
@@ -1926,7 +1926,7 @@ final class sm {
           var28 = stackIn_8_0;
           var8 = var28;
           if (var5 == 0) {
-            stackIn_11_0 = lq.field_o;
+            stackIn_11_0 = FourIntSubmissionRequest.field_o;
           } else {
             stackIn_11_0 = oi.a(var6, (byte) 66);
           }
@@ -2052,7 +2052,7 @@ final class sm {
               var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(LobbyUiSupport.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
             } else {
-              var21_ref_String = "(" + kj.field_i + "???)";
+              var21_ref_String = "(" + AccountRequestResult.field_i + "???)";
               var22_ref_String = ClientOverlaySupport.field_c;
             }
             var23 = rs.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
@@ -2393,7 +2393,7 @@ final class sm {
                                                             var5 = PlacementEvent.field_k;
                                                             switch (var5) {
                                                               case 0:
-                                                                oq.field_i[28] = lm.field_a;
+                                                                oq.field_i[28] = TutorialConditionalText.field_a;
                                                                 break regionExit1;
                                                               case 1:
                                                                 oq.field_i[28] = RichTextLayout.field_n;

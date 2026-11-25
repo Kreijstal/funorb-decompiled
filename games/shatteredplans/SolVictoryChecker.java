@@ -500,14 +500,14 @@ final class SolVictoryChecker extends VictoryChecker {
               if (StarAnnotation.field_m <= 0 &&
                 !QuickChatPhraseDefinition.field_v) {
                 try {
-                  ll.callJavaScript("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
+                  BrowserJavaScriptBridge.callJavaScript("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{TertiaryListSequence.a((byte) -67, TertiaryListSequence.field_l)}, -116);
+                  BrowserJavaScriptBridge.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{TertiaryListSequence.a((byte) -67, TertiaryListSequence.field_l)}, -116);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

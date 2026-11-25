@@ -257,7 +257,7 @@ final class DialWidget extends FocusableWidget {
                 var31.unlink((byte) -113);
               } else {
                 var31.field_Eb = var5;
-                var31.field_Gb = ks.field_i;
+                var31.field_Gb = AccountBooleanRequest.field_i;
               }
               var31.unlinkSecondary(16);
               return;
@@ -294,17 +294,17 @@ final class DialWidget extends FocusableWidget {
                 var32.unlink((byte) -62);
               } else {
                 var32.field_hc = var4_int;
-                var32.field_Nb = ks.field_i;
+                var32.field_Nb = AccountBooleanRequest.field_i;
               }
               var32.unlinkSecondary(16);
               return;
             }
             if (10 == var2) {
-              var33 = (LobbyRoomEntry) (kj.field_a.startForward(0));
+              var33 = (LobbyRoomEntry) (AccountRequestResult.field_a.startForward(0));
               while (var33 != null) {
                 var33.unlink((byte) -63);
                 var33.unlinkSecondary(16);
-                var33 = (LobbyRoomEntry) (kj.field_a.nextForward((byte) -71));
+                var33 = (LobbyRoomEntry) (AccountRequestResult.field_a.nextForward((byte) -71));
               }
               return;
             }
@@ -323,7 +323,7 @@ final class DialWidget extends FocusableWidget {
                 var15.field_Jb = false;
                 if (var4_intLifetime1 != 0) {
                   var30_ref.field_hc = var4_intLifetime1;
-                  var30_ref.field_Nb = ks.field_i;
+                  var30_ref.field_Nb = AccountBooleanRequest.field_i;
                 }
                 LobbyUiSupport.insertLobbyRoomByRank(0, var30_ref);
                 return;
@@ -359,7 +359,7 @@ final class DialWidget extends FocusableWidget {
                     var28 = MutableIntPairNode.findRoomMember(-101, var3_longLifetime2);
                     if (var28 != null) {
                       if (0 != var5Lifetime1) {
-                        var28.field_Gb = ks.field_i;
+                        var28.field_Gb = AccountBooleanRequest.field_i;
                         var28.field_Eb = var5Lifetime1;
                       } else {
                         var28.unlink((byte) -124);
@@ -411,7 +411,7 @@ final class DialWidget extends FocusableWidget {
                   var14.field_Tb = false;
                 }
                 if (0 != var5Lifetime1Lifetime1) {
-                  var25.field_Gb = ks.field_i;
+                  var25.field_Gb = AccountBooleanRequest.field_i;
                   var25.field_Eb = var5Lifetime1Lifetime1;
                 }
                 WidgetContainer.a((byte) -60, var25);
@@ -528,7 +528,7 @@ final class DialWidget extends FocusableWidget {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             try {
-              var3 = (String) (ll.callJavaScript("getcookies", param2, (byte) 70));
+              var3 = (String) (BrowserJavaScriptBridge.callJavaScript("getcookies", param2, (byte) 70));
               var4 = so.a(var3, ';', -116);
               var5 = 0;
               if (param0) {

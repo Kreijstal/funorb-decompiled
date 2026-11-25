@@ -31,15 +31,15 @@ final class vs {
     final static void a(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        lq var4 = null;
+        FourIntSubmissionRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (lq) (rs.field_Bb.startForward(0));
+          var4 = (FourIntSubmissionRequest) (rs.field_Bb.startForward(0));
           while (var4 != null) {
             wj.a(320, param0, var4);
-            var4 = (lq) (rs.field_Bb.nextForward((byte) -71));
+            var4 = (FourIntSubmissionRequest) (rs.field_Bb.nextForward((byte) -71));
           }
           if (param1 > -18) {
             field_b = (String) null;

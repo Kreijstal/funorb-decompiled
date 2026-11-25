@@ -627,8 +627,8 @@ final class AggressiveAi extends StandardAi {
                 null != UnderageAccountInfoPanel.field_D && (!param1 ||
                 !TurnEventLog.field_i)) {
                 wg.field_d = false;
-                if (lr.field_c == null) {
-                  lr.field_c = new byte[ProductionContent.field_k];
+                if (ClientDrawingSupport.field_c == null) {
+                  ClientDrawingSupport.field_c = new byte[ProductionContent.field_k];
                   ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 RasterBuffer.field_h = false;
@@ -823,7 +823,7 @@ final class AggressiveAi extends StandardAi {
               stackIn_348_1 = (var4_int != 0) && (var17Lifetime1 == 0);
               stackIn_347_0.field_s = stackIn_348_1;
             }
-            var7Lifetime4 = var7Lifetime4 + (ks.field_e[var8] & 255);
+            var7Lifetime4 = var7Lifetime4 + (AccountBooleanRequest.field_e[var8] & 255);
           }
           if (var6 != 0) {
             if (param1) {

@@ -397,7 +397,7 @@ class StandardMapGenerator implements MapGenerator {
     public GalaxyMap generate(byte param0) throws MapGenerationException {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        GalaxyMap var8 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
+        GalaxyMap var8 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
         int var6Lifetime1;
         this.placeStars(false, var8);
         this.finishMap(var8, 0);
