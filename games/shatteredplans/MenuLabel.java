@@ -134,7 +134,7 @@ class MenuLabel extends MenuComponent {
 
     final static void g(int param0) {
         MenuButton.f(-1);
-        oe.field_f = true;
+        ClientRuntimeState.field_f = true;
         TertiaryNodeList.field_b = true;
         ByteArrayStorage.field_e.deactivateAll(99);
         if (param0 > -12) {

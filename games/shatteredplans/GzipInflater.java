@@ -50,7 +50,7 @@ final class GzipInflater {
           if (var2 == 0) {
             if (CipherPacketBuffer.field_m == null) {
               CipherPacketBuffer.field_m = new SecondaryNodeHashTable(128);
-              oi.field_e = 0;
+              GameSpriteResources.field_e = 0;
             }
             stackIn_11_0 = (1 != var1.readUnsignedByte(-65)) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -77,8 +77,8 @@ final class GzipInflater {
             if (null == var6) {
               var6 = new ve();
               CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, param0);
-              fieldTemp$0 = oi.field_e;
-              oi.field_e = oi.field_e + 1;
+              fieldTemp$0 = GameSpriteResources.field_e;
+              GameSpriteResources.field_e = GameSpriteResources.field_e + 1;
               var6.field_zb = fieldTemp$0;
               FrameTimer.field_b.addLast((byte) -113, var6);
             }

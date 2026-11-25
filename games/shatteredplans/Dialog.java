@@ -204,8 +204,8 @@ abstract class Dialog extends WidgetContainer {
           StandardMapGenerator.attachInputListeners(tm.field_i, (byte) -101);
         }
         rs.g(-96);
-        og.a(false);
-        oa.a(0);
+        CheckboxWidgetPainter.releaseMouseHandler(false);
+        ContentTransitionPhase.closeClientResources(0);
         if (IntrusiveNode.b(true)) {
           LobbyOptionSupport.field_f.h(1, 255);
           ClientPacketFlushSupport.flushOutboundPacketsFullInts(0, 82);

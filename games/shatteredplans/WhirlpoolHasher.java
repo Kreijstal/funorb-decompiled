@@ -328,7 +328,7 @@ final class WhirlpoolHasher {
               stackIn_46_4 = var33 >> 1 & 8355711;
               stackIn_46_5 = var24;
               stackIn_47_6 = !(param2);
-              oo.a(stackIn_46_0, stackIn_46_1, stackIn_46_2, stackIn_46_3, stackIn_46_4, stackIn_46_5, stackIn_47_6, var22);
+              ClientRasterSupport.drawFlatColorTriangle(stackIn_46_0, stackIn_46_1, stackIn_46_2, stackIn_46_3, stackIn_46_4, stackIn_46_5, stackIn_47_6, var22);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -379,8 +379,8 @@ final class WhirlpoolHasher {
         if (!param0) {
           return;
         }
-        IsolationistAi.field_t = AccountRequestState.field_b.stringWidth(oq.field_i[21]);
-        int var1 = AccountRequestState.field_b.stringWidth(oq.field_i[22]);
+        IsolationistAi.field_t = AccountRequestState.field_b.stringWidth(TextReplacementEntry.field_i[21]);
+        int var1 = AccountRequestState.field_b.stringWidth(TextReplacementEntry.field_i[22]);
         if (!(var1 <= IsolationistAi.field_t)) {
           IsolationistAi.field_t = var1;
         }

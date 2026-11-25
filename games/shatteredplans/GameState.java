@@ -3355,7 +3355,7 @@ final class GameState {
           this.field_D = new int[this.field_r];
           this.field_I = param3;
           for (var5_int = 0; this.field_r > var5_int; var5_int++) {
-            this.field_v[var5_int] = new Player(var5_int, this.field_I[var5_int], or.field_b[var5_int], DualLinkNode.field_k[var5_int], QuickChatHelpSupport.field_e[var5_int]);
+            this.field_v[var5_int] = new Player(var5_int, this.field_I[var5_int], UiTextSupport.field_b[var5_int], DualLinkNode.field_k[var5_int], QuickChatHelpSupport.field_e[var5_int]);
             this.field_v[var5_int].field_f = new int[this.field_r];
             this.field_v[var5_int].field_h = new boolean[this.field_r];
           }

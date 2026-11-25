@@ -64,7 +64,7 @@ final class AccountConnectionPhase {
             }
           }
           var6 = 15 / ((55 - param1) / 53);
-          stackIn_20_0 = oq.a(var3[var3.length - 1], false);
+          stackIn_20_0 = TextReplacementEntry.validateDomainSuffix(var3[var3.length - 1], false);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

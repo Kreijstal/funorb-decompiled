@@ -136,10 +136,10 @@ class TertiaryLinkNode extends DualLinkNode {
             stackIn_3_0 = (BattleEvent) null;
             return stackIn_3_0;
           }
-          if (oq.field_a.field_Q == null) {
+          if (TextReplacementEntry.field_a.field_Q == null) {
             return null;
           }
-          var2 = oq.field_a.field_Q.field_a.startForward(param0 ^ -69);
+          var2 = TextReplacementEntry.field_a.field_Q.field_a.startForward(param0 ^ -69);
           while (var2 != null) {
             if (var2 instanceof BattleEvent) {
               var3 = (BattleEvent) (var2);
@@ -155,7 +155,7 @@ class TertiaryLinkNode extends DualLinkNode {
                 return null;
               }
             }
-            var2 = oq.field_a.field_Q.field_a.nextForward((byte) -71);
+            var2 = TextReplacementEntry.field_a.field_Q.field_a.nextForward((byte) -71);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

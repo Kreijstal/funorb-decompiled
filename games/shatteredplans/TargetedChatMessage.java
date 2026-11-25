@@ -98,7 +98,7 @@ class TargetedChatMessage extends ChatMessage {
 
     MessageKind getKind(byte param0) {
         int var2 = 46 % ((param0 + 7) / 41);
-        return oi.field_b;
+        return GameSpriteResources.field_b;
     }
 
     final void write(PacketBuffer param0, byte param1) {

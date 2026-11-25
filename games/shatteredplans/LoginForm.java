@@ -38,12 +38,12 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if ((PasswordInputPainter.field_x.field_P.field_y & 1 << PasswordInputPainter.field_x.field_h) != 0) {
-          oq.field_i[11] = te.field_a;
+          TextReplacementEntry.field_i[11] = te.field_a;
         } else {
           if (PasswordInputPainter.field_x.field_P.field_y == 0) {
-            oq.field_i[11] = QuickChatMenuSupport.field_c;
+            TextReplacementEntry.field_i[11] = QuickChatMenuSupport.field_c;
           } else {
-            oq.field_i[11] = LobbyRoomControlsSupport.field_a;
+            TextReplacementEntry.field_i[11] = LobbyRoomControlsSupport.field_a;
           }
         }
         if (param0 != 8) {
@@ -296,7 +296,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
           }
           var8 = ListContent.field_e;
           var9 = ArchiveRequest.a(GameScreen.getHostApplet((byte) 124), true);
-          if (var9 == og.field_b) {
+          if (var9 == CheckboxWidgetPainter.field_b) {
             var8 = QuaternaryLinkNode.field_v;
           } else {
             if (ObjectList.field_f == var9) {

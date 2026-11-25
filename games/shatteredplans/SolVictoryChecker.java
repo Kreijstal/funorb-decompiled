@@ -487,11 +487,11 @@ final class SolVictoryChecker extends VictoryChecker {
               CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
               Wormhole.field_j = AccountNoticeKind.field_f;
               if (TutorialOverlaySupport.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
-                if (TutorialOverlaySupport.field_c.getKind((byte) 123) == oi.field_b) {
+                if (TutorialOverlaySupport.field_c.getKind((byte) 123) == GameSpriteResources.field_b) {
                   ObjectList.field_f.saveBrowserPreference(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {
-                og.field_b.saveBrowserPreference(GameScreen.getHostApplet((byte) 127), true);
+                CheckboxWidgetPainter.field_b.saveBrowserPreference(GameScreen.getHostApplet((byte) 127), true);
               }
               BufferedSocket.field_j = false;
               if (var6 != null) {
@@ -555,8 +555,8 @@ final class SolVictoryChecker extends VictoryChecker {
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
-              var6_intLifetime2 = of.field_f;
-              of.field_f = LobbyRoomControlsSupport.field_c;
+              var6_intLifetime2 = AccountInputSupport.field_f;
+              AccountInputSupport.field_f = LobbyRoomControlsSupport.field_c;
               BufferedSocket.field_j = true;
               LobbyRoomControlsSupport.field_c = var6_intLifetime2;
             }

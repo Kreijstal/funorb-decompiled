@@ -265,7 +265,7 @@ final class tb {
           IntrusiveDeque.field_g.addChild(param13 + 7970, IntValueWriteRequest.field_j);
           IntrusiveDeque.field_g.addChild(4, DualLinkDequeSequence.field_f);
           ValidationIndicator.field_K = new AnimatedPanel(0L, IntrusiveDequeSequence.field_g, ListContent.field_c.toUpperCase());
-          oo.field_c = new AnimatedPanel(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
+          ClientRasterSupport.field_c = new AnimatedPanel(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

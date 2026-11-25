@@ -138,7 +138,7 @@ class TextHotspotWidget extends FocusableWidget {
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (DebouncedValidator.field_e == null) {
-            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, of.field_f, LobbyOptionResources.field_c);
+            DebouncedValidator.field_e = StarAbandonedEvent.field_l.requestSocket(65535, AccountInputSupport.field_f, LobbyOptionResources.field_c);
           }
           if (DebouncedValidator.field_e.field_d == 0) {
             return false;
@@ -147,7 +147,7 @@ class TextHotspotWidget extends FocusableWidget {
           LobbyPlayerEntry.field_Pb = dupTemp$1;
           IntrusiveDeque.field_e = dupTemp$1;
           if (param1 != ~DebouncedValidator.field_e.field_d) {
-            Wormhole.field_j = oa.field_a;
+            Wormhole.field_j = ContentTransitionPhase.field_a;
           } else {
             try {
               wg.field_f = new BufferedSocket((java.net.Socket) (DebouncedValidator.field_e.field_e), StarAbandonedEvent.field_l);
@@ -165,7 +165,7 @@ class TextHotspotWidget extends FocusableWidget {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              Wormhole.field_j = oa.field_a;
+              Wormhole.field_j = ContentTransitionPhase.field_a;
               DebouncedValidator.field_e = null;
               return true;
             }

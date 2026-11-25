@@ -139,7 +139,7 @@ final class GradientMenuLabel extends MenuComponent {
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; StarLinkPlanner.field_c.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
-            var9Lifetime1 = or.a(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
+            var9Lifetime1 = UiTextSupport.measureMenuLabel(stackIn_29_0, StarLinkPlanner.field_c[var8Lifetime1], true);
             if (pr.field_d[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + 2 * LobbyOptionSupport.field_g;
             }

@@ -22,7 +22,7 @@ final class tg {
           if (param0 < 1) {
             return false;
           }
-          if (!(oq.a((byte) -123, param3, param1) >= param0)) {
+          if (!(TextReplacementEntry.daysInMonth((byte) -123, param3, param1) >= param0)) {
             return false;
           }
           return true;
@@ -36,7 +36,7 @@ final class tg {
         if (param0 < 1) {
           return false;
         }
-        if (oq.a((byte) -123, param3, param1) >= param0) {
+        if (TextReplacementEntry.daysInMonth((byte) -123, param3, param1) >= param0) {
           return true;
         }
         return false;

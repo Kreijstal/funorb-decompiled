@@ -438,8 +438,8 @@ final class sm {
             pr.field_g = DefendTask.field_w;
           }
         }
-        if (oo.field_b == null) {
-          oo.field_b = new int[5];
+        if (ClientRasterSupport.field_b == null) {
+          ClientRasterSupport.field_b = new int[5];
           WhirlpoolHasher.field_q = new int[5];
           AccountConnectionPhase.field_c = new int[5];
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
@@ -551,7 +551,7 @@ final class sm {
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           AccountRequestState.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, AccountRequestState.field_b.field_J + 10 + var5, 2805974, -1);
-          rs.field_Cb.a(oi.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
+          rs.field_Cb.a(GameSpriteResources.field_c, 10 + var4, AccountRequestState.field_b.field_J + (var5 + 10), -20 + var2, -AccountRequestState.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
         }
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
@@ -718,7 +718,7 @@ final class sm {
         int stackIn_9_2 = 0;
         if (PasswordInputPainter.field_x != null ||
           null != SecondaryNodeHashTable.field_g) {
-          oa.a(480, 0, 640, (byte) -126, 0);
+          ContentTransitionPhase.darkenRectangle(480, 0, 640, (byte) -126, 0);
         }
         var4 = this.c(32);
         var5 = this.h(-123);
@@ -860,7 +860,7 @@ final class sm {
           param0 = 1;
         }
         if (this.field_a == 8 &&
-          oe.field_e &&
+          ClientRuntimeState.field_e &&
           ScrollBar.field_zb == null) {
           ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
@@ -1173,7 +1173,7 @@ final class sm {
                 } else {
                   MenuLabel.field_y[12].drawScaledAdditive(-15 + var12, -15 + param0, 30, 30, 128);
                 }
-                rs.field_Cb.drawString(or.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                rs.field_Cb.drawString(UiTextSupport.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 return;
               }
               if (param2 == 5) {
@@ -1325,17 +1325,17 @@ final class sm {
                 var36 = DraggableWidget.field_F;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
-                if (null != oo.field_b) {
+                if (null != ClientRasterSupport.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    oo.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, AccountConnectionPhase.field_c[var20Lifetime2], 0);
+                    ClientRasterSupport.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, AccountConnectionPhase.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
-                  var21Lifetime2 = oo.field_b[0] + (10 + param0);
+                  var21Lifetime2 = ClientRasterSupport.field_b[0] + (10 + param0);
                   for (var22 = 1; var22 < 5; var22++) {
                     for (var23 = 0; var23 < 10; var23++) {
                       var24 = var22 * 10 + (param3 + var23);
-                      var25 = 10 + param0 + QuickChatCategoryRegistry.a(oo.field_b[-1 + var22], 10, var23, oo.field_b[var22], 0);
+                      var25 = 10 + param0 + QuickChatCategoryRegistry.a(ClientRasterSupport.field_b[-1 + var22], 10, var23, ClientRasterSupport.field_b[var22], 0);
                       SoftwareRasterizer.drawLine(var20Lifetime2Lifetime1, var21Lifetime2, var24, var25, 12632256);
                       var21Lifetime2 = var25;
                       var20Lifetime2Lifetime1 = var24;
@@ -1387,7 +1387,7 @@ final class sm {
                 this.a(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
-                var17Lifetime2 = wg.field_e.a(5607, of.field_a);
+                var17Lifetime2 = wg.field_e.a(5607, AccountInputSupport.field_a);
                 var10Lifetime3Lifetime4 = rs.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
                 var21Lifetime1Lifetime2 = var10Lifetime3Lifetime4 * var8 + var8;
                 if (40 > var21Lifetime1Lifetime2) {
@@ -1598,7 +1598,7 @@ final class sm {
         if (!StripedProgressWidget.field_Q &&
           !ArchiveConnectionRetrySupport.field_a) {
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-            if (oq.field_j != 13) {
+            if (TextReplacementEntry.field_j != 13) {
               this.k(23);
               if (this.field_d.field_c == -1) {
                 continue;
@@ -1723,7 +1723,7 @@ final class sm {
     final void g(int param0) {
         if (null != PasswordInputPainter.field_x ||
           SecondaryNodeHashTable.field_g != null) {
-          oa.a(480, 0, 640, (byte) -116, 0);
+          ContentTransitionPhase.darkenRectangle(480, 0, 640, (byte) -116, 0);
         }
         int var2 = this.c(32);
         int var3 = this.b((byte) -98);
@@ -1928,7 +1928,7 @@ final class sm {
           if (var5 == 0) {
             stackIn_11_0 = FourIntSubmissionRequest.field_o;
           } else {
-            stackIn_11_0 = oi.a(var6, (byte) 66);
+            stackIn_11_0 = GameSpriteResources.getAchievementIcon(var6, (byte) 66);
           }
           var29 = stackIn_11_0;
           var9_ref_bi = var29;
@@ -2059,7 +2059,7 @@ final class sm {
             var23 = var23 + (1 + rs.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * rs.field_Cb.field_J + (var20 - (-14 - rs.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
             rs.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
-            if (!oe.field_e) {
+            if (!ClientRuntimeState.field_e) {
               AccountRequestState.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, AccountRequestState.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
@@ -2114,18 +2114,18 @@ final class sm {
         int var3;
         boolean stackIn_4_0 = false;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (oq.field_j == 1) {
+        if (TextReplacementEntry.field_j == 1) {
           stackIn_4_0 = !(EmailSyntaxValidator.field_n);
           EmailSyntaxValidator.field_n = stackIn_4_0;
         }
         var2 = 85 / ((-27 - param0) / 45);
-        if (2 == oq.field_j) {
+        if (2 == TextReplacementEntry.field_j) {
           ProductionContent.a(us.b(0), 1);
         }
-        if (oq.field_j == 3) {
+        if (TextReplacementEntry.field_j == 3) {
           ProductionContent.a(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
         }
-        if (oq.field_j == 4) {
+        if (TextReplacementEntry.field_j == 4) {
           ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 67), 1);
         }
         if (GameRules.field_c == 6) {
@@ -2393,38 +2393,38 @@ final class sm {
                                                             var5 = PlacementEvent.field_k;
                                                             switch (var5) {
                                                               case 0:
-                                                                oq.field_i[28] = TutorialConditionalText.field_a;
+                                                                TextReplacementEntry.field_i[28] = TutorialConditionalText.field_a;
                                                                 break regionExit1;
                                                               case 1:
-                                                                oq.field_i[28] = RichTextLayout.field_n;
+                                                                TextReplacementEntry.field_i[28] = RichTextLayout.field_n;
                                                                 break regionExit1;
                                                               case 2:
-                                                                oq.field_i[28] = ue.field_c;
+                                                                TextReplacementEntry.field_i[28] = ue.field_c;
                                                                 break regionExit1;
                                                               default:
                                                                 break regionExit1;
                                                               case 3:
-                                                                oq.field_i[28] = StatusMessagePanel.field_I;
+                                                                TextReplacementEntry.field_i[28] = StatusMessagePanel.field_I;
                                                                 break regionExit1;
                                                             }
                                                           }
                                                           if (var5 == 29) {
                                                             if (TaskAi.field_a != SliderWidget.field_K) {
-                                                              oq.field_i[29] = SliderPainter.field_k;
+                                                              TextReplacementEntry.field_i[29] = SliderPainter.field_k;
                                                               SliderWidget.field_K = TaskAi.field_a;
                                                             } else {
                                                               SliderWidget.field_K = UsernameAvailabilityValidator.field_s;
-                                                              oq.field_i[29] = og.field_a;
+                                                              TextReplacementEntry.field_i[29] = CheckboxWidgetPainter.field_a;
                                                             }
                                                             break regionExit1;
                                                           }
                                                           if (32 == var5) {
-                                                            if (oq.field_i[32] == MidiPcmStream.field_L) {
+                                                            if (TextReplacementEntry.field_i[32] == MidiPcmStream.field_L) {
                                                               PaddedContentDialog.field_nb = LobbyOptionSupport.field_i;
-                                                              oq.field_i[32] = RecklessAi.field_r;
+                                                              TextReplacementEntry.field_i[32] = RecklessAi.field_r;
                                                               QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             } else {
-                                                              oq.field_i[32] = MidiPcmStream.field_L;
+                                                              TextReplacementEntry.field_i[32] = MidiPcmStream.field_L;
                                                               PaddedContentDialog.field_nb = wp.field_a;
                                                               QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             }
@@ -2525,7 +2525,7 @@ final class sm {
         String var3Lifetime1;
         String var3Lifetime2;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var5 = oq.field_i[param1];
+        var5 = TextReplacementEntry.field_i[param1];
         var3 = var5;
         var3Lifetime1 = var5;
         var3Lifetime2 = var5;
@@ -2557,7 +2557,7 @@ final class sm {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var3Lifetime2 = oq.field_i[8];
+            var3Lifetime2 = TextReplacementEntry.field_i[8];
           }
         }
         if (param1 == 10 &&
@@ -2786,16 +2786,16 @@ final class sm {
         if (param0 != 170) {
           return;
         }
-        if (oq.field_j != 104) {
-          if (105 == oq.field_j) {
+        if (TextReplacementEntry.field_j != 104) {
+          if (105 == TextReplacementEntry.field_j) {
             this.a(1, (byte) -57);
             this.field_d.updateVerticalKeys(0);
           } else {
-            if (oq.field_j == 102) {
+            if (TextReplacementEntry.field_j == 102) {
               this.d(param0 - 166, 0);
               this.field_d.updateVerticalKeys(0);
             } else {
-              if (oq.field_j == 103) {
+              if (TextReplacementEntry.field_j == 103) {
                 this.d(4, Star.field_H.length - 1);
               } else {
                 this.field_d.updateVerticalKeys(0);

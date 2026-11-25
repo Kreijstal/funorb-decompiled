@@ -78,9 +78,9 @@ final class BattleSnapshot extends IntrusiveNode {
             stackIn_4_0 = BirthDateConfirmationForm.field_L.length;
           }
           var1_int = stackIn_4_0;
-          if (null != oi.field_i) {
-            for (var2 = 0; oi.field_i.length > var2; var2++) {
-              var1_int = var1_int + oi.field_i[var2].length;
+          if (null != GameSpriteResources.field_i) {
+            for (var2 = 0; GameSpriteResources.field_i.length > var2; var2++) {
+              var1_int = var1_int + GameSpriteResources.field_i[var2].length;
             }
           }
           if (param0 != 0) {

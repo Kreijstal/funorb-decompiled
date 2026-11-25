@@ -15,7 +15,7 @@ final class IntNode extends IntrusiveNode {
 
     final static void a(int param0, String param1) {
         try {
-          oo.a(param1, (byte) -70);
+          ClientRasterSupport.setClientStatusText(param1, (byte) -70);
           ByteArrayNode.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;

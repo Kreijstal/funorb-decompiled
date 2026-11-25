@@ -163,15 +163,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         if (param0 != 1) {
           return true;
         }
-        if (oq.field_j != 9) {
-          if (oq.field_j == 10) {
+        if (TextReplacementEntry.field_j != 9) {
+          if (TextReplacementEntry.field_j == 10) {
             if (var3 != 0) {
               return false;
             }
             ClientException.a(true);
             return true;
           }
-          if (11 != oq.field_j) {
+          if (11 != TextReplacementEntry.field_j) {
             return false;
           }
           if (!ConquestVictoryChecker.field_n) {
@@ -206,14 +206,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           return true;
         }
         if (!LegacyAi.a(2, uo.field_f, ConquestVictoryChecker.field_o, GameClientShell.field_D, IndexedSpriteState.field_e)) {
-          if (oq.field_j == 10) {
+          if (TextReplacementEntry.field_j == 10) {
             if (var3 != 0) {
               return false;
             }
             ClientException.a(true);
             return true;
           }
-          if (11 == oq.field_j) {
+          if (11 == TextReplacementEntry.field_j) {
             if (!ConquestVictoryChecker.field_n) {
               return false;
             }

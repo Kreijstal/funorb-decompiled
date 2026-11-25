@@ -138,7 +138,7 @@ final class wj extends IntrusiveNode {
             return;
           }
           DefendTask.field_s.draw(var1_intLifetime1, var2Lifetime1);
-          tg.a(var2Lifetime1, oe.field_c, (byte) 15, var1_intLifetime1);
+          tg.a(var2Lifetime1, ClientRuntimeState.field_c, (byte) 15, var1_intLifetime1);
           stackIn_13_0 = WeightedCacheEntry.field_u;
           stackIn_13_1 = 0;
           stackIn_13_2 = var4;

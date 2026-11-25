@@ -77,7 +77,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
           while (StarLinkPlanner.field_c.length > var3_int) {
             var5 = pr.field_d[var3_int];
             if (0 <= var5) {
-              var6 = or.a(true, StarLinkPlanner.field_c[var3_int], true);
+              var6 = UiTextSupport.measureMenuLabel(true, StarLinkPlanner.field_c[var3_int], true);
               var4 = var4 + LobbyOptionSupport.field_e;
               var7 = -(var6 >> 1) + WeightedLruCache.field_e;
               if (ArrayWidgetGroup.rectContains((uo.field_g << 1) + vh.field_b, param2, var7 - LobbyOptionSupport.field_g, (byte) -100, var4, (LobbyOptionSupport.field_g << 1) + var6, param1)) {
@@ -214,7 +214,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             0 <= AccountStatusDialog.field_nb.field_c) {
             var2 = Player.field_y[AccountStatusDialog.field_nb.field_c];
             if (var2 == 2) {
-              oi.a(true);
+              GameSpriteResources.clearAccountChoiceFlag(true);
             }
           }
           stackIn_15_0 = var2;

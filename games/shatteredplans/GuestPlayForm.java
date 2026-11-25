@@ -35,7 +35,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
             if (GameState.field_l.isInitiallyActivated((byte) -46)) {
               var1_int = 1;
             }
-            if (oq.field_j != 13) {
+            if (TextReplacementEntry.field_j != 13) {
               continue;
             }
             var2 = 1;
@@ -147,7 +147,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
           if (param0 != this.field_G) {
             return;
           }
-          oo.a((byte) -86);
+          ClientRasterSupport.showConnectionWaitDialog((byte) -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

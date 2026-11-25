@@ -444,7 +444,7 @@ final class PlayerReportPanel extends AnimatedPanel {
         if (-2 != this.field_yb) {
           return false;
         }
-        if (oq.field_j == 13) {
+        if (TextReplacementEntry.field_j == 13) {
           this.field_yb = -1;
           return true;
         }

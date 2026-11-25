@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oo {
+final class ClientRasterSupport {
     static AnimatedPanel field_c;
     static Sprite field_a;
     static String field_f;
@@ -9,18 +9,18 @@ final class oo {
     static int[] field_b;
     static String field_d;
 
-    final static void a(byte param0) {
+    final static void showConnectionWaitDialog(byte param0) {
         if (param0 <= -49) {
           ClientUiLoadingSupport.showConnectionProgressDialog(7655);
           qj.a((byte) -127, 4);
           return;
         }
-        oo.a(-77, 49, 26, true, 104);
+        ClientRasterSupport.isSecondVectorLonger(-77, 49, 26, true, 104);
         ClientUiLoadingSupport.showConnectionProgressDialog(7655);
         qj.a((byte) -127, 4);
     }
 
-    final static void a(String param0, byte param1) {
+    final static void setClientStatusText(String param0, byte param1) {
         try {
           DraggableWidget.field_H = param0;
           int var2_int = 81 % ((param1 - 0) / 43);
@@ -29,7 +29,7 @@ final class oo {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final static void drawFlatColorTriangle(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
         int var9;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
@@ -59,7 +59,7 @@ final class oo {
         field_c = (AnimatedPanel) null;
     }
 
-    final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
+    final static boolean isSecondVectorLonger(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = 0;
         int var5 = param0 * param0 + param1 * param1;
         if (param3) {

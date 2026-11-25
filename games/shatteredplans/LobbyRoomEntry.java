@@ -114,7 +114,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
             var13_ref = new SpriteButton(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
             var17.addChild(var13_ref, 8);
           } else {
-            var13_ref2 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
+            var13_ref2 = new MenuLabel(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, AccountInputSupport.field_d.toUpperCase());
             var17.addChild(var13_ref2, 8);
           }
           if (var10 != 0 &&

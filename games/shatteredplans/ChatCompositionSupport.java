@@ -174,12 +174,12 @@ final class ChatCompositionSupport {
           if (ProductionContent.field_h == 2 &&
             !VerticalMenuSlider.e((byte) 75)) {
             if (!DebouncedValidator.a(-30106, IntroGlowPoint.field_k)) {
-              var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+              var2 = QuickChatCategoryRegistry.a(AccountInputSupport.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               if (var11 != 0) {
-                var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+                var2 = QuickChatCategoryRegistry.a(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               }
             } else {
-              var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{LoginRequestSupport.field_a});
+              var2 = QuickChatCategoryRegistry.a(GameSpriteResources.field_g, 4371, new String[]{LoginRequestSupport.field_a});
             }
             if (QuickChatCategoryDefinition.field_t) {
               StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);

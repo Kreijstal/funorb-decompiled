@@ -52,7 +52,7 @@ final class DefensiveAi extends StandardAi {
         if (param0 != 25140) {
           return;
         }
-        if (oq.field_j == 84) {
+        if (TextReplacementEntry.field_j == 84) {
           NodeHashTableIterator.a(0, "enter");
           return;
         }

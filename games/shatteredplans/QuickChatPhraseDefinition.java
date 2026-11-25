@@ -18,7 +18,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (!BirthDateConfirmationForm.field_P) {
           throw new IllegalStateException();
         }
-        or.field_a = true;
+        UiTextSupport.field_a = true;
         WidgetStateStyle.a(false, true);
         SoundPlayback.field_i = 0;
         if (param0 != -91) {
@@ -205,8 +205,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9Lifetime3 = of.field_f;
-            of.field_f = LobbyRoomControlsSupport.field_c;
+            var9Lifetime3 = AccountInputSupport.field_f;
+            AccountInputSupport.field_f = LobbyRoomControlsSupport.field_c;
             LobbyRoomControlsSupport.field_c = var9Lifetime3;
             BufferedSocket.field_j = true;
           }
@@ -296,7 +296,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 stackIn_17_0 = this.field_p;
                 stackIn_17_1 = var5;
                 if (var6 != 0) {
-                  stackIn_18_2 = oa.cp1252ToChar(-12541, (byte) var6);
+                  stackIn_18_2 = ContentTransitionPhase.cp1252ToChar(-12541, (byte) var6);
                 } else {
                   stackIn_18_2 = 0;
                 }
@@ -313,7 +313,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                   stackIn_8_0 = this.field_s;
                   stackIn_8_1 = var5;
                   if (var6 != 0) {
-                    stackIn_9_2 = oa.cp1252ToChar(-12541, (byte) var6);
+                    stackIn_9_2 = ContentTransitionPhase.cp1252ToChar(-12541, (byte) var6);
                   } else {
                     stackIn_9_2 = 0;
                   }

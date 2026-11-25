@@ -139,7 +139,7 @@ final class GameAssetSetupSupport {
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
           GradientMenuLabel.field_y = SpriteResourceSupport.loadSpriteByName(2, param0, "", "ship");
           wo.field_b = SpriteResourceSupport.loadSpriteByName(2, param0, "", "shield");
-          oo.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
+          ClientRasterSupport.field_a = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "defensegrid");
           AccountValidationText.field_e = SpriteResourceSupport.loadSpriteByName(2, param0, "", "chevron");
           TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
           AlignedMenuLabel.field_G = SpriteResourceSupport.loadSpriteByName(2, param0, "", "hammer");
@@ -250,7 +250,7 @@ final class GameAssetSetupSupport {
           wo.field_b.drawColourised(1, 1, 8421504);
           ReflectionQueueSupport.field_f = new Sprite(12, 12);
           ReflectionQueueSupport.field_f.bindAsRenderTarget();
-          oo.field_a.drawColourised(1, 1, 8421504);
+          ClientRasterSupport.field_a.drawColourised(1, 1, 8421504);
           LobbyPlayerEntry.field_Kb = new Sprite(12, 12);
           LobbyPlayerEntry.field_Kb.bindAsRenderTarget();
           AccountValidationText.field_e.drawColourised(1, 1, 8421504);

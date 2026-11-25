@@ -23,24 +23,24 @@ class IntrusiveNode {
         if (param0 == ~SoundPlayback.field_i) {
           MenuLabel.g(-125);
           SoundPlayback.field_i = 11;
-          oi.field_f = true;
+          GameSpriteResources.field_f = true;
           return;
         }
         if (!ClientCapabilitySupport.matchesClientCapabilityGuard(-12165)) {
           MenuLabel.g(-125);
           SoundPlayback.field_i = 11;
-          oi.field_f = true;
+          GameSpriteResources.field_f = true;
           return;
         }
-        oi.field_f = true;
+        GameSpriteResources.field_f = true;
     }
 
     final static LoginMethodPreference[] c(byte param0) {
         if (param0 == -90) {
-          return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
+          return new LoginMethodPreference[]{CheckboxWidgetPainter.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
         }
         IntrusiveNode.a(false);
-        return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
+        return new LoginMethodPreference[]{CheckboxWidgetPainter.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
     }
 
     final void unlink(byte param0) {

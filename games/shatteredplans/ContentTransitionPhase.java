@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class oa {
+final class ContentTransitionPhase {
     static AccountConnectionPhase field_a;
     static DraggableWidget field_b;
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void darkenRectangle(int param0, int param1, int param2, byte param3, int param4) {
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -55,13 +55,13 @@ final class oa {
         }
     }
 
-    final static void a(int param0) {
+    final static void closeClientResources(int param0) {
         try {
           int var1_int = 0;
           int var3 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             if (param0 != 0) {
-              oa.clearStatics(-14);
+              ContentTransitionPhase.clearStatics(-14);
             }
             if (TertiaryLinkNode.field_o != null) {
               TertiaryLinkNode.field_o.e(param0 - 16363);
@@ -69,9 +69,9 @@ final class oa {
             if (BattleSnapshot.field_w != null) {
               BattleSnapshot.field_w.shutdown((byte) -122);
             }
-            if (null != oq.field_g) {
+            if (null != TextReplacementEntry.field_g) {
               try {
-                oq.field_g.close((byte) 127);
+                TextReplacementEntry.field_g.close((byte) 127);
               } catch (IOException iOException) {
               }
             }
@@ -119,9 +119,9 @@ final class oa {
         return (char)var2;
     }
 
-    final static Sprite[] a(int param0, boolean param1, int param2, int param3) {
+    final static Sprite[] createWidgetNineSlice(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          oa.a(-72, 121, 20, (byte) 125, 74);
+          ContentTransitionPhase.darkenRectangle(-72, 121, 20, (byte) 125, 74);
         }
         return SolidNineSliceFactory.createSolidNineSlice((byte) 97, param0, param2, 1, param3);
     }

@@ -71,7 +71,7 @@ final class AccountNoticeDialog extends ResizingDialog implements ButtonListener
     }
 
     final static void r(int param0) {
-        CipherPacketBuffer.a(param0 ^ param0, of.field_b);
+        CipherPacketBuffer.a(param0 ^ param0, AccountInputSupport.field_b);
     }
 
     final static boolean q(int param0) {

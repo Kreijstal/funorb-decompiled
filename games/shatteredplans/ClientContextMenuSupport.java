@@ -180,7 +180,7 @@ final class ClientContextMenuSupport {
           var6 = null;
           if (param0.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = oq.a(5722, var7);
+            var4_long = TextReplacementEntry.encodeBase37(5722, var7);
           } else {
             var6 = param0;
           }

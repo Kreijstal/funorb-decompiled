@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class or {
+final class UiTextSupport {
     static String[] field_d;
     static boolean field_a;
     static int[] field_b;
@@ -10,7 +10,7 @@ final class or {
     public static void clearStatics(int param0) {
         field_d = null;
         if (param0 <= 124) {
-          or.a(-80);
+          UiTextSupport.hasLogoIntroFinished(-80);
           field_b = null;
           field_c = null;
           return;
@@ -19,7 +19,7 @@ final class or {
         field_c = null;
     }
 
-    final static int a(boolean param0, String param1, boolean param2) {
+    final static int measureMenuLabel(boolean param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -51,7 +51,7 @@ final class or {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasLogoIntroFinished(int param0) {
         if (param0 != 250) {
           return false;
         }

@@ -2664,7 +2664,7 @@ final class GameSession implements AiHost {
         try {
           if (this.field_f) {
             if (0 > this.field_h) {
-              stackIn_11_0 = (oq.field_j != 13);
+              stackIn_11_0 = (TextReplacementEntry.field_j != 13);
               stackIn_12_0 = stackIn_11_0 & ImageProducerRasterBuffer.field_n;
             } else {
               stackIn_12_0 = sr.field_h;
@@ -2674,7 +2674,7 @@ final class GameSession implements AiHost {
               return;
             }
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             var2_intLifetime1 = 1;
             if (this.field_f) {
               if (this.field_h < 0) {
@@ -2741,7 +2741,7 @@ final class GameSession implements AiHost {
             null != this.field_n &&
             FleetTrailPoint.field_p[82] &&
             FleetTrailPoint.field_p[81] &&
-            oq.field_j == 16) {
+            TextReplacementEntry.field_j == 16) {
             sm.field_e = true;
             ProductionContent.a(TutorialOverlaySupport.createBasicGraphicsSettings((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
@@ -4340,7 +4340,7 @@ final class GameSession implements AiHost {
             if (decompiledFrameRemainder1) {
               var10_intLifetime1Lifetime1 = 1;
               while (!(this.field_P.field_r <= var10_intLifetime1Lifetime1)) {
-                this.field_s[var10_intLifetime1Lifetime1] = og.a(2, (AiHost) (this), this.field_P.field_v[var10_intLifetime1Lifetime1], this.field_P, -114);
+                this.field_s[var10_intLifetime1Lifetime1] = CheckboxWidgetPainter.createAi(2, (AiHost) (this), this.field_P.field_v[var10_intLifetime1Lifetime1], this.field_P, -114);
                 this.field_s[var10_intLifetime1Lifetime1].setChatEnabled(false, -6861);
                 var10_intLifetime1Lifetime1++;
                 if (var13 != 0) {

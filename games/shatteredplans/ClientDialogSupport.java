@@ -37,7 +37,7 @@ final class ClientDialogSupport {
             return stackIn_2_0;
           }
           if (po.field_b != 2) {
-            stackIn_5_0 = of.field_c;
+            stackIn_5_0 = AccountInputSupport.field_c;
             return stackIn_5_0;
           }
           if (SocialNameInputPanel.isLocalPlayerName(param0, (byte) -105)) {

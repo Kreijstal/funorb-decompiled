@@ -183,10 +183,10 @@ final class vq {
             return stackIn_10_0;
           }
           if (IntrusiveNodeHashTable.a(param1, true)) {
-            stackIn_13_0 = QuickChatCategoryRegistry.a(or.field_c, 4371, new String[]{param1});
+            stackIn_13_0 = QuickChatCategoryRegistry.a(UiTextSupport.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
-          if (100 <= oi.field_e) {
+          if (100 <= GameSpriteResources.field_e) {
             stackIn_17_0 = LobbyRoomDecoder.field_a;
             return stackIn_17_0;
           }

@@ -96,7 +96,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
             SliderPainter.field_b = DerelictMapGenerator.field_q;
             ClientOverlayDrawSupport.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
-            oi.field_a = BytePayloadNode.field_h;
+            GameSpriteResources.field_a = BytePayloadNode.field_h;
             var13 = (sq) null;
             qj.a((sq) null, -1);
             return;
@@ -143,7 +143,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           }
           ClientOverlayDrawSupport.field_d = var4 + var2_int;
           SliderPainter.field_b = var3 + var5;
-          oi.field_a = var3;
+          GameSpriteResources.field_a = var3;
           MenuButton.field_B = var2_int;
           qj.a(param1, param0 ^ -1546006978);
           if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
@@ -153,7 +153,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
             return;
           }
           DerelictMapGenerator.field_q = SliderPainter.field_b;
-          BytePayloadNode.field_h = oi.field_a;
+          BytePayloadNode.field_h = GameSpriteResources.field_a;
           TargetedChatMessage.field_j = ClientOverlayDrawSupport.field_d + MenuButton.field_B >> 1;
           ArchiveRequest.field_r = ClientOverlayDrawSupport.field_d + MenuButton.field_B >> 1;
           return;

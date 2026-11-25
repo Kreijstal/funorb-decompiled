@@ -19,7 +19,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (PlayerOverlaySupport.field_c != null) {
-            of.field_e = 0;
+            AccountInputSupport.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               ChatMessage.field_e.length > var2_int) {
@@ -63,7 +63,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (null != PlayerOverlaySupport.field_c) {
-            of.field_e = 0;
+            AccountInputSupport.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < ChatMessage.field_e.length) {
@@ -337,7 +337,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             LobbyOptionSupport.field_f = new CipherPacketBuffer(param2);
             StandardAi.field_a = param6;
             PrivateChatMessage.field_o = param7;
-            of.field_f = param3;
+            AccountInputSupport.field_f = param3;
             StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {
               GameKeyHandler.a((byte) 38);

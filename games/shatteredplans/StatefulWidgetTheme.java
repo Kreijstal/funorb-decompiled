@@ -28,18 +28,18 @@ final class StatefulWidgetTheme extends WidgetTheme {
           StatefulWidgetTheme.a(122, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         if (IndexedSpriteState.field_h != null &&
-          13 == oq.field_j) {
+          13 == TextReplacementEntry.field_j) {
           IndexedSpriteState.field_h = null;
           return true;
         }
         if (!sr.field_h) {
           if (QuickChatCategoryDefinition.field_t ||
-            oq.field_j == 9 ||
-            oq.field_j == 10 ||
-            oq.field_j == 11) {
+            TextReplacementEntry.field_j == 9 ||
+            TextReplacementEntry.field_j == 10 ||
+            TextReplacementEntry.field_j == 11) {
             return QuickChatCategoryDefinition.a(param1 ^ 9952, param0, param3);
           }
-          if (oq.field_j == 80 &&
+          if (TextReplacementEntry.field_j == 80 &&
             FilledMenuPanel.d((byte) 108)) {
             sr.field_h = true;
             return true;
@@ -50,12 +50,12 @@ final class StatefulWidgetTheme extends WidgetTheme {
           return false;
         }
         int var4 = ByteArrayStorage.a(param0, param2, false) ? 1 : 0;
-        if (80 == oq.field_j ||
-          oq.field_j == 84) {
+        if (80 == TextReplacementEntry.field_j ||
+          TextReplacementEntry.field_j == 84) {
           var4 = 1;
           sr.field_h = false;
         }
-        if (oq.field_j == 13) {
+        if (TextReplacementEntry.field_j == 13) {
           MusicVoice.c(false);
           var4 = 1;
           sr.field_h = false;

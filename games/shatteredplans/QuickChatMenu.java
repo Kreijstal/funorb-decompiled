@@ -237,7 +237,7 @@ final class QuickChatMenu extends AnimatedPanel {
           String var8 = (String) null;
           QuickChatMenu.a((String) null, -29, (String) null, (String) null);
         }
-        int var4 = oq.field_j == 85 ? 1 : 0;
+        int var4 = TextReplacementEntry.field_j == 85 ? 1 : 0;
         if (this.field_Ob != null) {
           if (var4 != 0 &&
             this.field_Ob.field_Gb == -1) {

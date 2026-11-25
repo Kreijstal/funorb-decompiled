@@ -74,9 +74,9 @@ final class TutorialOverlaySupport {
               }
               var2 += 13;
             }
-            if (oi.field_i != null) {
-              for (var4Lifetime1 = 0; oi.field_i.length > var4Lifetime1; var4Lifetime1++) {
-                var5 = oi.field_i[var4Lifetime1];
+            if (GameSpriteResources.field_i != null) {
+              for (var4Lifetime1 = 0; GameSpriteResources.field_i.length > var4Lifetime1; var4Lifetime1++) {
+                var5 = GameSpriteResources.field_i[var4Lifetime1];
                 var6 = ClientException.field_f[var4Lifetime1];
                 if (var6 <= 0) {
                   for (var7_int = 0; var7_int < var5.length; var7_int++) {

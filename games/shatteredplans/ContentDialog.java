@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ContentDialog extends ResizingDialog {
-    private oa field_ab;
+    private ContentTransitionPhase field_ab;
     private int field_jb;
     private UiWidget field_ib;
     private int field_db;

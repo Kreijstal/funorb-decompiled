@@ -175,7 +175,7 @@ final class os extends MenuComponent {
           }
           var7.unlink((byte) -74);
           var7.unlinkSecondary(16);
-          oi.field_e = oi.field_e - 1;
+          GameSpriteResources.field_e = GameSpriteResources.field_e - 1;
           var5 = LobbyOptionSupport.field_f;
           var5.h(param1, 255);
           var5.position = var5.position + 1;

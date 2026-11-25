@@ -104,11 +104,11 @@ final class PlayerRankingRequest extends IntrusiveNode {
     final static void drawDialogsWithBackdrop(boolean param0, boolean param1, int param2) {
         if (!param0) {
           SoftwareRasterizer.clear();
-          og.a(param2, param0);
+          CheckboxWidgetPainter.drawClientDialogs(param2, param0);
           return;
         }
         SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, 192);
-        og.a(param2, param0);
+        CheckboxWidgetPainter.drawClientDialogs(param2, param0);
     }
 
     PlayerRankingRequest() {

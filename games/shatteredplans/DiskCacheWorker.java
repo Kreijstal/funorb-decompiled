@@ -25,7 +25,7 @@ final class DiskCacheWorker implements Runnable {
         Dialog.field_D = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
         DualLinkDeque.field_a = SpriteResourceSupport.loadSpriteByName(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
         sr.field_F = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
-        oi.field_d = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
+        GameSpriteResources.field_d = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
@@ -35,9 +35,9 @@ final class DiskCacheWorker implements Runnable {
         MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
-        oe.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
+        ClientRuntimeState.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
         BirthDateValidator.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
-        BirthDateValidator.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
+        BirthDateValidator.a(param0 ^ -174137062, ClientRuntimeState.field_c.field_z / 2, ClientRuntimeState.field_c, ClientRuntimeState.field_c.field_w / 4);
         MessageKind.field_b = new Sprite(640, 430);
         MessageKind.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {

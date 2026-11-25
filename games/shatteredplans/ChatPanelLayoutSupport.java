@@ -120,14 +120,14 @@ final class ChatPanelLayoutSupport {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != oq.field_b[var12]) {
+              null != TextReplacementEntry.field_b[var12]) {
               var13 = (-4 + tg.field_c.field_mb) * var11 / (QuickChatParameterType.field_d + 1) + 3;
               var11++;
               var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + QuickChatParameterType.field_d) + 3 - 2;
               if (5 <= var12) {
                 pr.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
               } else {
-                oq.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
+                TextReplacementEntry.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
                 tb.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
                 DerelictMapReader.field_d[var12].setTarget(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
                 DiplomacyNotice.field_n[var12].setTarget(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);

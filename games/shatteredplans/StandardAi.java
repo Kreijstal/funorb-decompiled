@@ -686,7 +686,7 @@ class StandardAi implements Ai {
             var6 = var4.field_p;
             var7 = ue.field_e[var6];
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
-            oe.field_i[var6] = oe.field_i[var6] + var7;
+            ClientRuntimeState.field_i[var6] = ClientRuntimeState.field_i[var6] + var7;
             var4 = LobbyPlayerEntry.field_yb.nextStar(-23410);
           }
           var5 = var5 + param2;
@@ -696,7 +696,7 @@ class StandardAi implements Ai {
           while (var4 != null) {
             var6 = var4.field_p;
             var7 = ue.field_e[var6] * param0 / param2;
-            oe.field_i[var6] = oe.field_i[var6] + var7;
+            ClientRuntimeState.field_i[var6] = ClientRuntimeState.field_i[var6] + var7;
             param0 = param0 - var7;
             QuaternaryNodeList.field_b[var6] = QuaternaryNodeList.field_b[var6] + var7;
             var5 = var5 + var7;
@@ -768,7 +768,7 @@ class StandardAi implements Ai {
             for (var8 = 0; 4 > var8; var8++) {
               var7 = var7 + var6.field_G[var8];
             }
-            var8Lifetime1 = (oe.field_i[var5] * 10 + 1) * var7;
+            var8Lifetime1 = (ClientRuntimeState.field_i[var5] * 10 + 1) * var7;
             if (var3 < var8Lifetime1) {
               var3 = var8Lifetime1;
               var2 = var6;
@@ -1717,7 +1717,7 @@ class StandardAi implements Ai {
         for (var4_int = 0; var4_int < this.field_o; var4_int++) {
           var5 = this.field_g.field_g.field_e[var4_int];
           if (((Star) (var5)).field_y == this.field_n) {
-            var6 = oe.field_i[var4_int];
+            var6 = ClientRuntimeState.field_i[var4_int];
             if (((Star) (var5)).field_u) {
               var6 = 2 * var6 + 5;
             }
@@ -2072,7 +2072,7 @@ class StandardAi implements Ai {
           StandardMapGenerator.field_i[var2] = 0;
           LobbyUiSupport.field_d[var2] = 0;
           ValidationState.field_d[var2] = 0;
-          oe.field_i[var2] = 0;
+          ClientRuntimeState.field_i[var2] = 0;
           ClientUiLoadingSupport.field_c[var2] = 0;
           var2++;
         }

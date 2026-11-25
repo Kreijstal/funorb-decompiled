@@ -279,7 +279,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           if (param0 == 1) {
             this.field_A = -param4 + (param1 - this.field_m);
-            oa.field_b = this;
+            ContentTransitionPhase.field_b = this;
             this.field_G = -param5 - this.field_q + param3;
           }
           this.field_o = param0;

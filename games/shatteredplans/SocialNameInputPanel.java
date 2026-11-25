@@ -32,9 +32,9 @@ final class SocialNameInputPanel extends AnimatedPanel {
         if (0 != this.field_Ab) {
           return false;
         }
-        if (oq.field_j != 85) {
+        if (TextReplacementEntry.field_j != 85) {
           if (this.field_Db.length() >= 12) {
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() > 0) {
                 this.field_z = this.field_Db.toString();
                 this.field_Ab = 2;
@@ -45,7 +45,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
             if (param0 >= -93) {
               return false;
             }
-            if (13 != oq.field_j) {
+            if (13 != TextReplacementEntry.field_j) {
               return true;
             }
             this.field_Ab = 1;
@@ -65,7 +65,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
                 discarded$12 = this.field_Db.append((char) var2);
               }
             }
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() > 0) {
                 this.field_z = this.field_Db.toString();
                 this.field_Ab = 2;
@@ -76,14 +76,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
             if (param0 >= -93) {
               return false;
             }
-            if (13 == oq.field_j) {
+            if (13 == TextReplacementEntry.field_j) {
               this.field_Ab = 1;
             }
             return true;
           }
           if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2)) {
             discarded$13 = this.field_Db.append((char) var2);
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() > 0) {
                 this.field_z = this.field_Db.toString();
                 this.field_Ab = 2;
@@ -94,14 +94,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
             if (param0 >= -93) {
               return false;
             }
-            if (13 == oq.field_j) {
+            if (13 == TextReplacementEntry.field_j) {
               this.field_Ab = 1;
             }
             return true;
           }
           if (TooltipSupport.isDigit((byte) 55, (char) var2)) {
             discarded$14 = this.field_Db.append((char) var2);
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() > 0) {
                 this.field_z = this.field_Db.toString();
                 this.field_Ab = 2;
@@ -112,12 +112,12 @@ final class SocialNameInputPanel extends AnimatedPanel {
             if (param0 >= -93) {
               return false;
             }
-            if (13 == oq.field_j) {
+            if (13 == TextReplacementEntry.field_j) {
               this.field_Ab = 1;
             }
             return true;
           }
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
             } else {
@@ -128,14 +128,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
         }
         if (this.field_Db.length() <= 0) {
           if (this.field_Db.length() >= 12) {
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() > 0) {
                 this.field_z = this.field_Db.toString();
                 this.field_Ab = 2;
@@ -158,7 +158,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
                   discarded$7 = this.field_Db.append((char) var2Lifetime1);
                 }
               }
-              if (oq.field_j == 84) {
+              if (TextReplacementEntry.field_j == 84) {
                 if (this.field_Db.length() > 0) {
                   this.field_z = this.field_Db.toString();
                   this.field_Ab = 2;
@@ -169,14 +169,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
               if (param0 >= -93) {
                 return false;
               }
-              if (13 == oq.field_j) {
+              if (13 == TextReplacementEntry.field_j) {
                 this.field_Ab = 1;
               }
               return true;
             }
             if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime1)) {
               discarded$8 = this.field_Db.append((char) var2Lifetime1);
-              if (oq.field_j == 84) {
+              if (TextReplacementEntry.field_j == 84) {
                 if (this.field_Db.length() > 0) {
                   this.field_z = this.field_Db.toString();
                   this.field_Ab = 2;
@@ -187,14 +187,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
               if (param0 >= -93) {
                 return false;
               }
-              if (13 == oq.field_j) {
+              if (13 == TextReplacementEntry.field_j) {
                 this.field_Ab = 1;
               }
               return true;
             }
             if (TooltipSupport.isDigit((byte) 55, (char) var2Lifetime1)) {
               discarded$9 = this.field_Db.append((char) var2Lifetime1);
-              if (oq.field_j == 84) {
+              if (TextReplacementEntry.field_j == 84) {
                 if (this.field_Db.length() > 0) {
                   this.field_z = this.field_Db.toString();
                   this.field_Ab = 2;
@@ -205,12 +205,12 @@ final class SocialNameInputPanel extends AnimatedPanel {
               if (param0 >= -93) {
                 return false;
               }
-              if (13 == oq.field_j) {
+              if (13 == TextReplacementEntry.field_j) {
                 this.field_Ab = 1;
               }
               return true;
             }
-            if (oq.field_j == 84) {
+            if (TextReplacementEntry.field_j == 84) {
               if (this.field_Db.length() <= 0) {
                 this.field_Ab = 1;
               } else {
@@ -222,14 +222,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
         }
         ClientContextMenuSupport.padWithChar(this.field_Db, this.field_Db.length() - 1, -121, ' ');
         if (this.field_Db.length() >= 12) {
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             if (this.field_Db.length() > 0) {
               this.field_z = this.field_Db.toString();
               this.field_Ab = 2;
@@ -240,7 +240,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
@@ -259,7 +259,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
               discarded$2 = this.field_Db.append((char) var2Lifetime2);
             }
           }
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
             } else {
@@ -270,14 +270,14 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
         }
         if (AccountHandshakeSupport.isAsciiLetter(-103, (char) var2Lifetime2)) {
           discarded$3 = this.field_Db.append((char) var2Lifetime2);
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
             } else {
@@ -288,13 +288,13 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
         }
         if (!TooltipSupport.isDigit((byte) 55, (char) var2Lifetime2)) {
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
             } else {
@@ -305,13 +305,13 @@ final class SocialNameInputPanel extends AnimatedPanel {
           if (param0 >= -93) {
             return false;
           }
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Ab = 1;
           }
           return true;
         }
         discarded$4 = this.field_Db.append((char) var2Lifetime2);
-        if (oq.field_j == 84) {
+        if (TextReplacementEntry.field_j == 84) {
           if (this.field_Db.length() <= 0) {
             this.field_Ab = 1;
           } else {
@@ -322,7 +322,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
         if (param0 >= -93) {
           return false;
         }
-        if (13 == oq.field_j) {
+        if (13 == TextReplacementEntry.field_j) {
           this.field_Ab = 1;
         }
         return true;
@@ -475,7 +475,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
             this.field_Ab = 1;
             return this.field_Ab;
           }
-          if (85 == oq.field_j &&
+          if (85 == TextReplacementEntry.field_j &&
             0 < this.field_Db.length()) {
             ClientContextMenuSupport.padWithChar(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
@@ -496,8 +496,8 @@ final class SocialNameInputPanel extends AnimatedPanel {
               }
             }
           }
-          if (oq.field_j != 84) {
-            if (oq.field_j == 13) {
+          if (TextReplacementEntry.field_j != 84) {
+            if (TextReplacementEntry.field_j == 13) {
               return 1;
             }
             continue;
@@ -522,7 +522,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
             SocialNameInputPanel.releaseSocialNameInputStatics(-100);
           }
           SoftwareRasterizer.clear();
-          og.a(0, true);
+          CheckboxWidgetPainter.drawClientDialogs(0, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

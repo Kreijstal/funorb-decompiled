@@ -63,9 +63,9 @@ final class WidgetStyle {
           this.field_d = 3;
           this.field_c = 3;
           this.field_e = 3;
-          var4.newStateStyle(127, 0).setTextColor((byte) 124, 15658734).setSprites(oa.a(8947848, !param1 ? true : false, 10066329, 7829367), -73);
-          var4.newStateStyle(-101, 1).setSprites(oa.a(11184810, false, 10066329, 13421772), -101);
-          var4.newStateStyle(-116, 3).setSprites(oa.a(8947848, !param1 ? true : false, 7829367, 10066329), -108).setOffsetX(1, (byte) 95).setOffsetY(1, false);
+          var4.newStateStyle(127, 0).setTextColor((byte) 124, 15658734).setSprites(ContentTransitionPhase.createWidgetNineSlice(8947848, !param1 ? true : false, 10066329, 7829367), -73);
+          var4.newStateStyle(-101, 1).setSprites(ContentTransitionPhase.createWidgetNineSlice(11184810, false, 10066329, 13421772), -101);
+          var4.newStateStyle(-116, 3).setSprites(ContentTransitionPhase.createWidgetNineSlice(8947848, !param1 ? true : false, 7829367, 10066329), -108).setOffsetX(1, (byte) 95).setOffsetY(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -87,7 +87,7 @@ final class WidgetStyle {
           discarded$1 = new SliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetTheme();
           var17.copyTo(var8, (byte) 42);
-          var8.newStateStyle(-109, 0).setSprites(oa.a(15658734, false, 7829367, 10066329), -106).setTextColor((byte) 64, 1118481).setShadowColor(-1, 1);
+          var8.newStateStyle(-109, 0).setSprites(ContentTransitionPhase.createWidgetNineSlice(15658734, false, 7829367, 10066329), -106).setTextColor((byte) 64, 1118481).setShadowColor(-1, 1);
           var8.newStateStyle(35, 4).setFlushBeforeApply(true, -28639).setSprites(var5, -72);
           this.field_f = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
@@ -164,7 +164,7 @@ final class WidgetStyle {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0.equalsIgnoreCase("openProduction")) {
-            stackIn_3_0 = oq.field_a.field_Y.isPanelVisible("production", -125);
+            stackIn_3_0 = TextReplacementEntry.field_a.field_Y.isPanelVisible("production", -125);
             return stackIn_3_0;
           }
           if (param0.equalsIgnoreCase("placeAllFleets")) {
@@ -181,7 +181,7 @@ final class WidgetStyle {
             return stackIn_19_0;
           }
           if (param0.equalsIgnoreCase("captureAll")) {
-            var7 = oq.field_a.field_P.field_g.field_e;
+            var7 = TextReplacementEntry.field_a.field_P.field_g.field_e;
             var3 = var7;
             var4 = 0;
             while (true) {
@@ -198,7 +198,7 @@ final class WidgetStyle {
             return false;
           }
           if (param0.equalsIgnoreCase("terraforming")) {
-            var8 = oq.field_a.field_P.field_g.field_e;
+            var8 = TextReplacementEntry.field_a.field_P.field_g.field_e;
             var3Lifetime1 = var8;
             var9 = 0;
             var4Lifetime1 = var9;
@@ -216,13 +216,13 @@ final class WidgetStyle {
             return true;
           }
           if (param0.equalsIgnoreCase("placeTannhauser")) {
-            var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.startForward(0));
+            var3_ref2 = (ProjectUse) (TextReplacementEntry.field_a.field_P.field_i.startForward(0));
             while (var3_ref2 != null) {
               if (var3_ref2.field_o == 3 &&
-                oq.field_a.field_P.field_g.field_e[12] == var3_ref2.field_r) {
+                TextReplacementEntry.field_a.field_P.field_g.field_e[12] == var3_ref2.field_r) {
                 return true;
               }
-              var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.nextForward((byte) -71));
+              var3_ref2 = (ProjectUse) (TextReplacementEntry.field_a.field_P.field_i.nextForward((byte) -71));
             }
             return false;
           }
@@ -230,13 +230,13 @@ final class WidgetStyle {
             stackIn_60_0 = sr.a(0, param0);
             return stackIn_60_0;
           }
-          var3_ref = (FleetMove) (oq.field_a.field_P.field_p.startForward(true));
+          var3_ref = (FleetMove) (TextReplacementEntry.field_a.field_P.field_p.startForward(true));
           while (true) {
             if (var3_ref == null) {
               return false;
             }
             if (QuickChatHelpSupport.field_d != var3_ref.field_G) {
-              var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a((byte) -68));
+              var3_ref = (FleetMove) (TextReplacementEntry.field_a.field_P.field_p.a((byte) -68));
               continue;
             }
             break;

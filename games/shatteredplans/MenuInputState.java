@@ -49,10 +49,10 @@ final class MenuInputState {
           return;
         }
         if (0 == this.field_n) {
-          this.field_i = oq.field_j;
+          this.field_i = TextReplacementEntry.field_j;
         }
         if (0 == this.field_n &&
-          96 == oq.field_j) {
+          96 == TextReplacementEntry.field_j) {
           if (this.field_c <= 0) {
             this.field_c = this.field_b;
           }
@@ -62,7 +62,7 @@ final class MenuInputState {
         if (0 != this.field_n) {
           return;
         }
-        if (97 != oq.field_j) {
+        if (97 != TextReplacementEntry.field_j) {
           return;
         }
         this.field_c = this.field_c + 1;
@@ -77,7 +77,7 @@ final class MenuInputState {
         this.field_h = 0;
         this.field_g = 0;
         if (0 == this.field_n &&
-          oq.field_j == 98) {
+          TextReplacementEntry.field_j == 98) {
           if (this.field_c <= 0) {
             this.field_c = this.field_b;
           }
@@ -85,12 +85,12 @@ final class MenuInputState {
           this.field_c = this.field_c - 1;
         }
         if (this.field_n == 0) {
-          this.field_i = oq.field_j;
+          this.field_i = TextReplacementEntry.field_j;
         }
         if (this.field_n != 0) {
           return;
         }
-        if (99 != oq.field_j) {
+        if (99 != TextReplacementEntry.field_j) {
           return;
         }
         this.field_c = this.field_c + 1;

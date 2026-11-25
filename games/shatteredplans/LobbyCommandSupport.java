@@ -5,7 +5,7 @@ final class LobbyCommandSupport {
     static Sprite field_f;
     static boolean field_e;
     static Sprite field_b;
-    static oa field_a;
+    static ContentTransitionPhase field_a;
     static int field_d;
     static int field_g;
     static int field_c;
@@ -77,7 +77,7 @@ final class LobbyCommandSupport {
     }
 
     static {
-        field_a = new oa();
+        field_a = new ContentTransitionPhase();
         field_d = 0;
         field_c = 0;
     }

@@ -268,7 +268,7 @@ final class LobbyRoomControlsSupport {
               if (!TurnEventLog.field_i) {
                 AllianceExpiredEvent.a(param3, 104);
               } else {
-                oq.a(param3, false);
+                TextReplacementEntry.writeCancelMatchmakingRequest(param3, false);
               }
             }
             AggressiveAi.a(-109, true, IntNode.field_p, param3);

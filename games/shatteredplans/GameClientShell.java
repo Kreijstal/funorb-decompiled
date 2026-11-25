@@ -64,7 +64,7 @@ abstract class GameClientShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == param1) {
-            var5_int = wi.a(CipherPacketBuffer.j((byte) 64), of.a(64), 0);
+            var5_int = wi.a(CipherPacketBuffer.j((byte) 64), AccountInputSupport.createAccountFieldValue(64), 0);
             if (var5_int != -1) {
               wo.a(var5_int, (byte) -88, HighscoreResponseSupport.field_e, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -76,7 +76,7 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), of.a((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
+            var5_intLifetime1 = sr.a(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
               va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -118,7 +118,7 @@ abstract class GameClientShell extends GameApplet {
             DebouncedValidator.a(param1 + 0, GameScreen.getHostApplet((byte) 126));
           }
           if (var4 == 6 &&
-            or.field_a) {
+            UiTextSupport.field_a) {
             SoundPlayback.field_i = 10;
           }
           if (var4 == 7) {
@@ -481,7 +481,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (qj.field_g == 0 &&
           !ArchiveRequest.f(-11)) {
-          oi.field_f = false;
+          GameSpriteResources.field_f = false;
         }
         if (DefensiveAi.field_p == 0 &&
           AccountRequestState.pollArchiveIndexReady(true)) {
@@ -524,7 +524,7 @@ abstract class GameClientShell extends GameApplet {
           AnimatedPanel.f(-98);
           GameScreen.c(28164);
           DerelictMapGenerator.field_r = tb.field_c;
-          or.field_a = false;
+          UiTextSupport.field_a = false;
           DiskCacheWorker.a(624, LinkPainter.field_g, DualLinkDeque.field_b, GalaxyMap.field_g, tq.field_f);
           if (TextFieldWidget.field_D ||
             null != ChatPanelLayoutSupport.field_b) {
@@ -535,7 +535,7 @@ abstract class GameClientShell extends GameApplet {
             AlternateLoginCredentials.openLoginFormFullInts(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
           if (IntHashIndex.field_f) {
-            oo.a((byte) -58);
+            ClientRasterSupport.showConnectionWaitDialog((byte) -58);
           }
           if (null == AccountStatusDialog.field_rb) {
             AccountStatusDialog.field_rb = HighscoreResponseSupport.getSharedPcmMixer(3);
@@ -640,7 +640,7 @@ abstract class GameClientShell extends GameApplet {
           discarded$1 = this.a(stackIn_12_1, stackIn_12_2, stackIn_13_3);
         } else {
           if (DefensiveAi.field_p >= 10) {
-            if (or.a(250)) {
+            if (UiTextSupport.hasLogoIntroFinished(250)) {
               if (SoundPlayback.field_i == 0) {
                 discarded$2 = this.a(false, 1, false);
               } else {

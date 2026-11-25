@@ -102,7 +102,7 @@ final class ClientException extends RuntimeException {
             }
             var6 = StarLinkPlanner.field_c[var3];
             stackIn_13_0 = !(var4 < 0);
-            var7 = or.a(stackIn_13_0, var6, true);
+            var7 = UiTextSupport.measureMenuLabel(stackIn_13_0, var6, true);
             var8 = WeightedLruCache.field_e - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + LobbyOptionSupport.field_e;

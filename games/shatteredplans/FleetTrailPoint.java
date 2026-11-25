@@ -34,7 +34,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           var2_long = pr.currentTimeMillis(14274);
           if (0 != ArchiveRequest.field_o &&
             ArchiveNetworkClient.field_b < 0) {
-            var4_ref_sk = (sk) (oe.field_h.startForward(0));
+            var4_ref_sk = (sk) (ClientRuntimeState.field_h.startForward(0));
             if (var4_ref_sk != null &&
               var4_ref_sk.field_l < var2_long) {
               var4_ref_sk.unlink((byte) -61);
@@ -85,7 +85,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             for (var6 = 0; var6 < TextInputPainter.field_t; var6++) {
               var5.field_h[var6] = sa.field_a.payload[var6];
             }
-            oe.field_h.addLast((byte) -113, var5);
+            ClientRuntimeState.field_h.addLast((byte) -113, var5);
             ArchiveNetworkClient.field_b = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

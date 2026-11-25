@@ -246,11 +246,11 @@ final class ScrollPane extends AnimatedPanel {
             ScrollPane.f((byte) -67);
           }
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-            if (oq.field_j == 13) {
+            if (TextReplacementEntry.field_j == 13) {
               ArchiveRequest.a(-1, (byte) 125);
               continue;
             }
-            if (oq.field_j != 83) {
+            if (TextReplacementEntry.field_j != 83) {
               continue;
             }
             if (CachedArchiveSource.field_n) {

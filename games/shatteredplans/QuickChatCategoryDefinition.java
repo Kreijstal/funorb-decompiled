@@ -215,11 +215,11 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         if (param0 >= -84) {
           QuickChatCategoryDefinition.e(2);
         }
-        if (13 == oq.field_j) {
+        if (13 == TextReplacementEntry.field_j) {
           ProgressDialog.f(false);
           return true;
         }
-        if (oq.field_j == 102) {
+        if (TextReplacementEntry.field_j == 102) {
           DerelictMapReader.field_h.h(0);
           return true;
         }

@@ -282,7 +282,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               DiskCacheWorker.a(1048576);
               StripedProgressWidget.field_Q = false;
               PlayerRankingRequest.field_o = 10;
-              oi.field_c = sa.field_a.readString(-1);
+              GameSpriteResources.field_c = sa.field_a.readString(-1);
               continue;
             }
             if (BufferedCacheFile.field_e == 14) {
@@ -454,7 +454,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (null != ScrollBar.field_zb &&
             ScrollBar.field_zb.field_j) {
             vq.field_a = vq.field_a | ScrollBar.field_zb.field_h;
-            oe.field_e = ScrollBar.field_zb.field_l;
+            ClientRuntimeState.field_e = ScrollBar.field_zb.field_l;
             ScrollBar.field_zb = null;
             IsolationistAi.field_r = true;
           }
@@ -493,7 +493,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               var6 == 1) {
               vs.a(4, (byte) -103);
               AchievementProgress.a(7, true);
-              oq.a(6, 37);
+              TextReplacementEntry.resendByteRequests(6, 37);
               ReflectionQueueSupport.initializeReflectionCheckQueue(true);
               if (1 == var6) {
                 ArchiveConnectionRetrySupport.field_a = true;
@@ -506,7 +506,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   if (!v.field_b) {
                     ta.a(0, 0, (byte) 96, false);
                   } else {
-                    oi.field_c = RoundedFrameSupport.field_a;
+                    GameSpriteResources.field_c = RoundedFrameSupport.field_a;
                     ta.a(0, 10, (byte) 96, false);
                   }
                   DiskCacheWorker.a(1048576);
@@ -566,17 +566,17 @@ public final class ShatteredPlansClient extends GameClientShell {
         wg.field_e.a(Integer.toString(SoundPlayback.field_k[2], 16), 27275, "colenergy");
         wg.field_e.a(Integer.toString(SoundPlayback.field_k[3], 16), 27275, "colexotics");
         String var2 = "<col=<%0>><%1></col>";
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), or.field_d[0].toLowerCase()}), 27275, "project_metal");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), or.field_d[param0].toLowerCase()}), 27275, "project_biomass");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), or.field_d[2].toLowerCase()}), 27275, "project_energy");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), or.field_d[0]}), 27275, "Project_Metal");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), or.field_d[1]}), param0 + 27274, "Project_Biomass");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), or.field_d[2]}), 27275, "Project_Energy");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), or.field_d[3]}), param0 ^ 27274, "Project_Exotics");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), or.field_d[0].toUpperCase()}), 27275, "PROJECT_METAL");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), or.field_d[1].toUpperCase()}), 27275, "PROJECT_BIOMASS");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), or.field_d[2].toUpperCase()}), param0 ^ 27274, "PROJECT_ENERGY");
-        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 + 4370, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), or.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toLowerCase()}), 27275, "project_metal");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[param0].toLowerCase()}), 27275, "project_biomass");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toLowerCase()}), 27275, "project_energy");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0]}), 27275, "Project_Metal");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1]}), param0 + 27274, "Project_Biomass");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2]}), 27275, "Project_Energy");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3]}), param0 ^ 27274, "Project_Exotics");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, 4371, new String[]{Integer.toString(SoundPlayback.field_k[0], 16), UiTextSupport.field_d[0].toUpperCase()}), 27275, "PROJECT_METAL");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[1], 16), UiTextSupport.field_d[1].toUpperCase()}), 27275, "PROJECT_BIOMASS");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 ^ 4370, new String[]{Integer.toString(SoundPlayback.field_k[2], 16), UiTextSupport.field_d[2].toUpperCase()}), param0 ^ 27274, "PROJECT_ENERGY");
+        wg.field_e.a(QuickChatCategoryRegistry.a(var2, param0 + 4370, new String[]{Integer.toString(SoundPlayback.field_k[3], 16), UiTextSupport.field_d[3].toUpperCase()}), 27275, "PROJECT_EXOTICS");
     }
 
     private final boolean c(int param0, boolean param1) {
@@ -606,21 +606,21 @@ public final class ShatteredPlansClient extends GameClientShell {
             return false;
           }
           if (PointsVictoryChecker.field_l != null) {
-            oi.a((byte) -126, PointsVictoryChecker.field_l);
+            GameSpriteResources.loadGameBackdropSprites((byte) -126, PointsVictoryChecker.field_l);
             PointsVictoryChecker.field_l = null;
             ValidationState.c(125);
             return false;
           }
           if (null != LeaderboardSortSupport.field_c) {
             ListContent.a(LeaderboardSortSupport.field_c, param0 - 167);
-            IsaacRandom.field_h = oq.a(LeaderboardSortSupport.field_c.getFileByName(true, "starnames.txt", ""), (byte) -17);
+            IsaacRandom.field_h = TextReplacementEntry.decodeTrimmedLines(LeaderboardSortSupport.field_c.getFileByName(true, "starnames.txt", ""), (byte) -17);
             LeaderboardSortSupport.field_c = null;
             ValidationState.c(121);
             return false;
           }
-          if (null != oi.field_h) {
-            CellVertex.a(1, new HuffmanCodec(oi.field_h.getFileByName(true, "huffman", "")));
-            oi.field_h = null;
+          if (null != GameSpriteResources.field_h) {
+            CellVertex.a(1, new HuffmanCodec(GameSpriteResources.field_h.getFileByName(true, "huffman", "")));
+            GameSpriteResources.field_h = null;
             ValidationState.c(126);
             return false;
           }
@@ -667,8 +667,8 @@ public final class ShatteredPlansClient extends GameClientShell {
                             IntrusiveNodeHashTable.field_g.preloadAll(-1)) {
                             if (LeaderboardSortSupport.field_c.isIndexLoaded((byte) -40) &&
                               LeaderboardSortSupport.field_c.preloadAll(param0 ^ -83)) {
-                              if (oi.field_h.isIndexLoaded((byte) -125) &&
-                                oi.field_h.preloadAll(-1)) {
+                              if (GameSpriteResources.field_h.isIndexLoaded((byte) -125) &&
+                                GameSpriteResources.field_h.preloadAll(-1)) {
                                 if (RichTextLayout.field_k.isIndexLoaded((byte) -87) &&
                                   RichTextLayout.field_k.preloadAll(-1)) {
                                   QuickChatCategoryDefinition.e(-23771);
@@ -686,7 +686,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                                 ClientDialogSupport.setLoadingProgress(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
                                 return false;
                               }
-                              ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
+                              ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", GameSpriteResources.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
                               return false;
                             }
                             ClientDialogSupport.setLoadingProgress(75.0f, 2, BoundsRect.a("", LeaderboardSortSupport.field_c, (byte) 39, MouseInputHandler.field_e, ToggleButton.field_v));
@@ -782,7 +782,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         pl.clearStatics(param0 ^ -17251);
         GameTextResources.releaseGameTextStatics((byte) 123);
         ClientCapabilitySupport.clearStatics((byte) -98);
-        of.b(64);
+        AccountInputSupport.releaseAccountInputStatics(64);
         ud.clearStatics(127);
         ClientContextMenuSupport.clearStatics(21805);
         ProjectsWindowSupport.clearStatics((byte) -29);
@@ -849,7 +849,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         VictoryChecker.clearStatics(true);
         ClientOverlayDrawSupport.clearStatics(30);
         vs.clearStatics(param0 ^ -24162);
-        oo.clearStatics(4);
+        ClientRasterSupport.clearStatics(4);
         LobbyOptionResources.releaseLobbyOptionResources((byte) -58);
         MessageKind.clearStatics(false);
         ChatMessage.a(param0 ^ 24068);
@@ -858,7 +858,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         po.clearStatics((byte) 87);
         IsaacRandom.clearStatics(-117);
         qj.clearStatics((byte) -20);
-        or.clearStatics(126);
+        UiTextSupport.clearStatics(126);
         sg.clearStatics((byte) 34);
         wh.clearStatics(true);
         tb.clearStatics(58);
@@ -946,7 +946,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         sr.clearStatics((byte) -74);
         PairedIntSortSupport.clearStatics((byte) 4);
         PlayerOverlaySupport.clearStatics(-27153);
-        oe.clearStatics(param0 ^ -24069);
+        ClientRuntimeState.clearStatics(param0 ^ -24069);
         uk.clearStatics((byte) 91);
         DelegatingCanvas.a(param0 ^ 24068);
         LobbyRoomControlsSupport.clearStatics((byte) 26);
@@ -1051,7 +1051,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         StrongCacheEntry.clearStatics(-120);
         ProxySocketConnector.clearStatics(1);
         CandidateLink.clearStatics(param0 + 24068);
-        oi.clearStatics(-1);
+        GameSpriteResources.clearStatics(-1);
         AudioFilter.clearStatics();
         ReflectionQueueSupport.releaseReflectionQueueSupportStatics(0);
         NodeHashTableIterator.clearStatics(param0 + 24068);
@@ -1064,11 +1064,11 @@ public final class ShatteredPlansClient extends GameClientShell {
         qf.clearStatics(9952);
         uq.a(param0 + 24123);
         BoundsRect.clearStatics(0);
-        oq.clearStatics(param0 + 24098);
+        TextReplacementEntry.clearStatics(param0 + 24098);
         SpriteStripButtonPainter.clearStatics((byte) -128);
         LinkPainter.clearStatics(-110);
         PasswordInputPainter.clearStatics(true);
-        og.clearStatics(-1);
+        CheckboxWidgetPainter.clearStatics(-1);
         OpacityWidget.releaseOpacityWidgetStatics(124);
         ve.clearStatics(0);
         uf.clearStatics((byte) 68);
@@ -1106,7 +1106,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         EmailValidator.clearStatics(0);
         AgeValidator.clearStatics(127);
         MatchingTextValidator.clearStatics(param0 + 24147);
-        oa.clearStatics(78);
+        ContentTransitionPhase.clearStatics(78);
         ql.clearStatics((byte) -53);
         ValidationState.clearStatics(-31);
         DebouncedValidator.clearStatics((byte) -37);
@@ -1159,7 +1159,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 AchievementProgress.field_g = stackIn_82_0;
                 PlayerRankingRequest.field_o = SolMapReader.field_b;
                 ArchiveRequest.a(75, SpriteResourceSupport.loadSpriteByName(2, AttackTask.field_s, "basic", "unachieved"));
-                oi.a(!param0);
+                GameSpriteResources.clearAccountChoiceFlag(!param0);
                 if (BattleContribution.field_s) {
                   BattleContribution.field_s = false;
                   StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 240, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, DerelictMapReader.field_i, 320, AccountRequestState.field_b, AccountRequestState.field_b, 0, AccountRequestState.field_b.field_K, ValidationMessageWidget.field_P, AccountRequestState.field_b.field_q + AccountRequestState.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
@@ -1186,7 +1186,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             Bzip2State.field_F = Bzip2State.field_F + 1;
             if (Bzip2State.field_F == 16) {
               if (BattleContribution.field_s) {
-                oq.a(param0);
+                TextReplacementEntry.openRequiredLoginForm(param0);
               } else {
                 if (!AccountStatusDialog.field_ob) {
                   QuickChatPhraseDefinition.f((byte) -91);
@@ -1333,7 +1333,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           StandardAi.field_e = null;
           ValidationState.c(121);
         }
-        oi.field_h = SoundCache.a(3, 50);
+        GameSpriteResources.field_h = SoundCache.a(3, 50);
         ChatMessage.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
         PointsVictoryChecker.field_l = SoundCache.a(6, 93);
         IntrusiveNodeHashTable.field_g = SoundCache.a(7, 110);
@@ -1477,7 +1477,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 SoftwareRasterizer.saveClip(var18);
                 MidiPcmStream.a(var6, var8, var11, (byte) -78, var10);
                 SoftwareRasterizer.setClip(var11, var8, var10 + var11, var8 + var6);
-                var13 = oi.a(var3_ref_he.field_k, (byte) 66);
+                var13 = GameSpriteResources.getAchievementIcon(var3_ref_he.field_k, (byte) 66);
                 var13.draw(-36 + (var7_int + var5_int / 2), 4 + var8);
                 AccountRequestState.field_b.drawString(var4, -(var5_int / 2) + (var7_int + 10), -2 + (AccountRequestState.field_b.field_J + var6 >> 1) + var8, 2805974, -1);
                 SoftwareRasterizer.restoreClip(var18);

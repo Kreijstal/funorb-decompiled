@@ -533,19 +533,19 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("project_names,0", 123);
                 if (var2 != null) {
-                  or.field_d[0] = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_d[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("project_names,1", 101);
                 if (var2 != null) {
-                  or.field_d[1] = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_d[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("project_names,2", 97);
                 if (var2 != null) {
-                  or.field_d[2] = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_d[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("project_names,3", 114);
                 if (null != var2) {
-                  or.field_d[3] = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_d[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("instructions_tabnames,0", 124);
                 if (null != var2) {
@@ -777,7 +777,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_defeated", 96);
                 if (var2 != null) {
-                  of.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_resigned", 116);
                 if (var2 != null) {
@@ -1127,7 +1127,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_combat", 108);
                 if (var2 != null) {
-                  of.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_animation_damaged", 103);
                 if (null != var2) {
@@ -1423,7 +1423,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_shortfall2b", 119);
                 if (null != var2) {
-                  oo.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ClientRasterSupport.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tutorial_retreating_single", 109);
                 if (null != var2) {
@@ -1724,7 +1724,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_fluidity", 117);
                 if (var2 != null) {
-                  oo.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientRasterSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_stat_desc_aggressiveness", 121);
                 if (null != var2) {
@@ -1768,7 +1768,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_garrison_yes", 114);
                 if (var2 != null) {
-                  og.field_a = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxWidgetPainter.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_garrison_no", 106);
                 if (null != var2) {

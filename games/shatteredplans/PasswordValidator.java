@@ -98,7 +98,7 @@ final class PasswordValidator extends TextFieldValidator {
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            var5 = oq.field_b[var4_int];
+            var5 = TextReplacementEntry.field_b[var4_int];
             if (var5 != null) {
               if (var5.field_rb != 0) {
                 TutorialAi.a(var4_int, -127, var5);
@@ -145,11 +145,11 @@ final class PasswordValidator extends TextFieldValidator {
             var6 = null;
             var7 = null;
             if (null != ClientCapabilitySupport.field_a.field_k) {
-              oq.field_g = new BufferedCacheFile(ClientCapabilitySupport.field_a.field_k, 5200, 0);
+              TextReplacementEntry.field_g = new BufferedCacheFile(ClientCapabilitySupport.field_a.field_k, 5200, 0);
               ClientCapabilitySupport.field_a.field_k = null;
-              var6 = new SectorCacheStore(255, oq.field_g, new BufferedCacheFile(ClientCapabilitySupport.field_a.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, TextReplacementEntry.field_g, new BufferedCacheFile(ClientCapabilitySupport.field_a.field_n, 12000, 0), 2097152);
             }
-            if (oq.field_g != null) {
+            if (TextReplacementEntry.field_g != null) {
               if (MapView.field_Eb == null) {
                 MapView.field_Eb = new BufferedCacheFile[ClientCapabilitySupport.field_a.field_p.length];
               }
@@ -157,7 +157,7 @@ final class PasswordValidator extends TextFieldValidator {
                 MapView.field_Eb[param2] = new BufferedCacheFile(ClientCapabilitySupport.field_a.field_p[param2], 12000, 0);
                 ClientCapabilitySupport.field_a.field_p[param2] = null;
               }
-              var7 = new SectorCacheStore(param2, oq.field_g, MapView.field_Eb[param2], 2097152);
+              var7 = new SectorCacheStore(param2, TextReplacementEntry.field_g, MapView.field_Eb[param2], 2097152);
             }
             var8 = ProxyAuthenticationRequiredException.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
             if (param5) {
@@ -240,7 +240,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
-          oq.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
+          TextReplacementEntry.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
           QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {
@@ -355,7 +355,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (DialogRoot.field_B == MenuButton.field_J) {
             return false;
           }
-          oq.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
+          TextReplacementEntry.field_j = PacketBooleanSupport.field_a[DialogRoot.field_B];
           QuickChatHelpSupport.field_h = LobbyRoomEntry.field_yb[DialogRoot.field_B];
           DialogRoot.field_B = 1 + DialogRoot.field_B & 127;
           if (param0 != 55) {

@@ -23,7 +23,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          oe.field_a = 0L;
+          ClientRuntimeState.field_a = 0L;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kf.start()");
         }
@@ -65,7 +65,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          oe.field_a = pr.currentTimeMillis(14274) + 4000L;
+          ClientRuntimeState.field_a = pr.currentTimeMillis(14274) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kf.stop()");
         }
@@ -348,11 +348,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.createCanvas(0);
                 so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);
-                oe.field_d = ProjectsWindowSupport.createFrameTimer(115);
+                ClientRuntimeState.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != oe.field_a) {
-                    stackIn_97_0 = compareLongValues(oe.field_a, pr.currentTimeMillis(14274));
+                  if (0L != ClientRuntimeState.field_a) {
+                    stackIn_97_0 = compareLongValues(ClientRuntimeState.field_a, pr.currentTimeMillis(14274));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_97_0 <= 0)) {
@@ -360,7 +360,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    DerelictVictoryChecker.field_p = oe.field_d.a(UiWidget.field_i, -1);
+                    DerelictVictoryChecker.field_p = ClientRuntimeState.field_d.a(UiWidget.field_i, -1);
                     stackIn_97_0 = 0;
                   }
                   var3 = stackIn_97_0;
@@ -646,7 +646,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (TextHotspotWidget.field_G == this &&
             !PlayerContextMenuController.field_a) {
-            oq.field_e = true;
+            TextReplacementEntry.field_e = true;
             if (VictoryChecker.field_a &&
               pr.currentTimeMillis(14274) - PointsVictoryChecker.field_m > 1000L) {
               var2 = param0.getClipBounds();
@@ -828,7 +828,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           LobbyOptionResources.field_a = LobbyOptionResources.field_a + 1;
           if (fieldTemp$1 > 50) {
             LobbyOptionResources.field_a = LobbyOptionResources.field_a - 50;
-            oq.field_e = true;
+            TextReplacementEntry.field_e = true;
             tm.field_i.setSize(VictoryChecker.field_e, AccountNameValidationSupport.field_b);
             tm.field_i.setVisible(true);
             if (uf.field_b != null &&
@@ -857,7 +857,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          oe.field_a = pr.currentTimeMillis(14274);
+          ClientRuntimeState.field_a = pr.currentTimeMillis(14274);
           ClientOverlayDrawSupport.sleep((byte) -108, 5000L);
           ResizingDialog.field_S = null;
           this.terminate(-113, false);
@@ -1015,7 +1015,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           FourIntSubmissionRequest.field_q = true;
-          oq.field_e = true;
+          TextReplacementEntry.field_e = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1091,7 +1091,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           tm.field_i.requestFocus();
           MusicPatch.field_i = true;
           FourIntSubmissionRequest.field_q = true;
-          oq.field_e = true;
+          TextReplacementEntry.field_e = true;
           IntrusiveDeque.field_c = false;
           PointsVictoryChecker.field_m = pr.currentTimeMillis(14274);
           return;

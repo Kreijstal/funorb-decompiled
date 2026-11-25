@@ -1525,7 +1525,7 @@ final class MapView extends MapViewState {
           wo.field_b.drawColourised(1, 1, var3);
           this.field_ib[var2].field_p = new Sprite(12, 12);
           this.field_ib[var2].field_p.bindAsRenderTarget();
-          oo.field_a.drawColourised(1, 1, var3);
+          ClientRasterSupport.field_a.drawColourised(1, 1, var3);
           this.field_ib[var2].field_r = new Sprite(12, 12);
           this.field_ib[var2].field_r.bindAsRenderTarget();
           AccountValidationText.field_e.drawColourised(1, 1, var3);
@@ -3142,7 +3142,7 @@ final class MapView extends MapViewState {
               if (var5 == null) {
                 this.field_o.showStatusText(10, 0, ScrollPane.field_Bb);
               } else {
-                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
+                this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(vo.field_c, 4371, new String[]{UiTextSupport.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }
             }
           }

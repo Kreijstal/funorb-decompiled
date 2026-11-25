@@ -111,7 +111,7 @@ final class sj {
               }
               var6_ref = QuickChatCategoryRegistry.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
               if (1 != var5_intLifetime2) {
-                var6_ref = (String) (var6_ref) + oo.field_f;
+                var6_ref = (String) (var6_ref) + ClientRasterSupport.field_f;
               } else {
                 var6_ref = (String) (var6_ref) + IntValueWriteRequest.field_n;
                 var7 = var6_ref;
@@ -137,7 +137,7 @@ final class sj {
           while (var11 < 4) {
             if (var12.field_u[var11] > 0 &&
               var3[var11]) {
-              var7_ref = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(LoginMethodPreference.field_e[var11], 16), or.field_d[var11]});
+              var7_ref = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(LoginMethodPreference.field_e[var11], 16), UiTextSupport.field_d[var11]});
               var5Lifetime1 = var7_ref;
               if (var4Lifetime2 == 0) {
                 var5Lifetime1 = var7_ref;

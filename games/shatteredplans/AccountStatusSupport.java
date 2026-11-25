@@ -39,7 +39,7 @@ final class AccountStatusSupport {
 
     final static void showLoginResult(byte param0, int param1, String param2) {
         int var3_int = 0;
-        oe.field_f = false;
+        ClientRuntimeState.field_f = false;
         if (param0 > -123) {
           return;
         }
@@ -62,7 +62,7 @@ final class AccountStatusSupport {
               EmailSyntaxValidator.showDisplayNameForm(-26049);
             }
             if (var3_int != 0) {
-              if (oe.field_f) {
+              if (ClientRuntimeState.field_f) {
                 param2 = QuickChatCategoryRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
               }
               if (ToggleButton.field_D) {

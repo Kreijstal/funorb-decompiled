@@ -33,7 +33,7 @@ final class AccountFieldValue {
             AccountFieldValue.a(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
-          var5 = new MenuLabel(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
+          var5 = new MenuLabel(132 - rs.field_Cb.stringWidth(UiTextSupport.field_d[param2]), 0, UiTextSupport.field_d[param2]);
           var12.addChild(var5, 8);
           var6 = new FilledMenuPanel(ClientPacketFlushSupport.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - ClientPacketFlushSupport.field_b[param2].field_z / 2, ClientPacketFlushSupport.field_b[param2].field_w, 2, 2105376);
           var12.addChild(var6, 8);

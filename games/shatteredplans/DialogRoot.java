@@ -470,7 +470,7 @@ final class DialogRoot extends SingleChildWidget {
         MouseInputHandler.field_d.addChild(4, ValidationIndicator.field_K);
         MouseInputHandler.field_d.addChild(4, QuickChatPhraseRegistry.field_a);
         QuickChatPhraseRegistry.field_a.addChild(4, MenuList.field_v);
-        QuickChatPhraseRegistry.field_a.addChild(4, oo.field_c);
+        QuickChatPhraseRegistry.field_a.addChild(4, ClientRasterSupport.field_c);
         LobbyLayoutSupport.layoutLobbyRoomPanels(15471, param1);
     }
 

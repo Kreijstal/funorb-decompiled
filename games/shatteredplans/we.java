@@ -38,7 +38,7 @@ final class we {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (oq.a(5722, var3) != 0L) {
+            if (TextReplacementEntry.encodeBase37(5722, var3) != 0L) {
               return;
             }
           }
@@ -67,7 +67,7 @@ final class we {
         try {
           var1 = PlayerOverlaySupport.field_c;
           synchronized (var1) {
-            of.field_e = of.field_e + 1;
+            AccountInputSupport.field_e = AccountInputSupport.field_e + 1;
             DialogRoot.field_B = MenuButton.field_J;
             if (param0 != -59) {
               we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);

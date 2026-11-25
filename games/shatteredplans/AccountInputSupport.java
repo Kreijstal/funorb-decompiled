@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of {
+final class AccountInputSupport {
     static String field_c;
     static String field_a;
     static volatile int field_e;
@@ -10,7 +10,7 @@ final class of {
     static QuickChatMenu field_b;
     static String field_d;
 
-    public static void b(int param0) {
+    public static void releaseAccountInputStatics(int param0) {
         if (param0 == 64) {
           field_g = null;
           field_d = null;
@@ -27,12 +27,12 @@ final class of {
         field_b = null;
     }
 
-    final static String a(byte param0) {
+    final static String getCurrentAccountText(byte param0) {
         if (PrivateChatMessage.field_l == ue.field_a) {
           return HighscoreResponseSupport.field_g;
         }
         if (param0 != 42) {
-          of.a((byte) 108);
+          AccountInputSupport.getCurrentAccountText((byte) 108);
           if (!wh.field_a.isComplete(14)) {
             return wh.field_a.getInput(98);
           }
@@ -50,7 +50,7 @@ final class of {
         return wh.field_a.getInput(-45);
     }
 
-    final static AccountFieldValue a(int param0) {
+    final static AccountFieldValue createAccountFieldValue(int param0) {
         String var1 = BoundsRect.d(-77);
         if (param0 == 64) {
           if (var1 != null &&

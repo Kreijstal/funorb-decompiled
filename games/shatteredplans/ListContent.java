@@ -14,7 +14,7 @@ final class ListContent implements MenuContent {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (LoginMethodPreference.field_g) {
-          return wi.field_c.a(oq.field_j, QuickChatHelpSupport.field_h, true);
+          return wi.field_c.a(TextReplacementEntry.field_j, QuickChatHelpSupport.field_h, true);
         }
         if (QuickChatCategoryDefinition.field_t) {
           return QuickChatCategoryDefinition.a(-85, param1, param3);

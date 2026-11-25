@@ -13,7 +13,7 @@ final class TerritoryResourcePanelSupport {
         DualLinkNode var1Lifetime1;
         QuickChatPhraseRegistry.field_d = null;
         UrlLoader.field_c = 0;
-        oi.field_e = 0;
+        GameSpriteResources.field_e = 0;
         if (!param0) {
           return;
         }

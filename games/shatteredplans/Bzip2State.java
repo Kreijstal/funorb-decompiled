@@ -95,46 +95,46 @@ final class Bzip2State {
     final static void a(byte param0) {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (oq.field_i != null) {
+        if (TextReplacementEntry.field_i != null) {
           return;
         }
         try {
           MidiPcmStream.field_L = rs.field_zb + uq.field_h;
           RecklessAi.field_r = rs.field_zb + TerritoryResourcePanelSupport.field_a;
-          oq.field_i = new String[33];
-          oq.field_i[14] = tm.field_o;
-          oq.field_i[0] = wm.field_f;
-          oq.field_i[7] = sn.field_b;
-          oq.field_i[4] = ClientDrawingSupport.field_e;
-          oq.field_i[12] = ArchiveNetworkClient.field_g;
-          oq.field_i[1] = GameSession.field_a;
-          oq.field_i[8] = TutorialAi.field_v;
-          oq.field_i[5] = ro.field_e;
+          TextReplacementEntry.field_i = new String[33];
+          TextReplacementEntry.field_i[14] = tm.field_o;
+          TextReplacementEntry.field_i[0] = wm.field_f;
+          TextReplacementEntry.field_i[7] = sn.field_b;
+          TextReplacementEntry.field_i[4] = ClientDrawingSupport.field_e;
+          TextReplacementEntry.field_i[12] = ArchiveNetworkClient.field_g;
+          TextReplacementEntry.field_i[1] = GameSession.field_a;
+          TextReplacementEntry.field_i[8] = TutorialAi.field_v;
+          TextReplacementEntry.field_i[5] = ro.field_e;
           if (param0 < 6) {
             field_u = (Random) null;
           }
-          oq.field_i[10] = uc.field_y;
-          oq.field_i[9] = null;
-          oq.field_i[6] = ro.field_e;
-          oq.field_i[2] = StarLinkPlanner.field_a;
-          oq.field_i[15] = AccountStatusSupport.field_a[0];
-          oq.field_i[27] = MenuButton.field_z;
-          oq.field_i[21] = NumericDateInputWidget.field_Q;
-          oq.field_i[32] = MidiPcmStream.field_L;
-          oq.field_i[19] = ul.field_Fb[1];
-          oq.field_i[17] = AccountStatusSupport.field_a[2];
-          oq.field_i[28] = TutorialConditionalText.field_a;
-          oq.field_i[30] = PrivateChatMessage.field_j;
-          oq.field_i[29] = SliderPainter.field_k;
-          oq.field_i[20] = rl.field_d;
-          oq.field_i[24] = FourIntSubmissionRequest.field_p;
-          oq.field_i[26] = PrivateChatMessage.field_n;
-          oq.field_i[31] = ClientOverlaySupport.field_d;
-          oq.field_i[25] = SpriteState.field_v;
-          oq.field_i[23] = ScrollBar.field_Db;
-          oq.field_i[16] = AccountStatusSupport.field_a[1];
-          oq.field_i[18] = ul.field_Fb[0];
-          oq.field_i[22] = rs.field_zb;
+          TextReplacementEntry.field_i[10] = uc.field_y;
+          TextReplacementEntry.field_i[9] = null;
+          TextReplacementEntry.field_i[6] = ro.field_e;
+          TextReplacementEntry.field_i[2] = StarLinkPlanner.field_a;
+          TextReplacementEntry.field_i[15] = AccountStatusSupport.field_a[0];
+          TextReplacementEntry.field_i[27] = MenuButton.field_z;
+          TextReplacementEntry.field_i[21] = NumericDateInputWidget.field_Q;
+          TextReplacementEntry.field_i[32] = MidiPcmStream.field_L;
+          TextReplacementEntry.field_i[19] = ul.field_Fb[1];
+          TextReplacementEntry.field_i[17] = AccountStatusSupport.field_a[2];
+          TextReplacementEntry.field_i[28] = TutorialConditionalText.field_a;
+          TextReplacementEntry.field_i[30] = PrivateChatMessage.field_j;
+          TextReplacementEntry.field_i[29] = SliderPainter.field_k;
+          TextReplacementEntry.field_i[20] = rl.field_d;
+          TextReplacementEntry.field_i[24] = FourIntSubmissionRequest.field_p;
+          TextReplacementEntry.field_i[26] = PrivateChatMessage.field_n;
+          TextReplacementEntry.field_i[31] = ClientOverlaySupport.field_d;
+          TextReplacementEntry.field_i[25] = SpriteState.field_v;
+          TextReplacementEntry.field_i[23] = ScrollBar.field_Db;
+          TextReplacementEntry.field_i[16] = AccountStatusSupport.field_a[1];
+          TextReplacementEntry.field_i[18] = ul.field_Fb[0];
+          TextReplacementEntry.field_i[22] = rs.field_zb;
           QuickChatPhraseRegistry.field_g[0] = AccountNoticeKind.field_e;
           QuickChatPhraseRegistry.field_g[9] = SecondaryNodeHashTable.field_a;
           QuickChatPhraseRegistry.field_g[7] = DialWidget.field_J;
@@ -155,7 +155,7 @@ final class Bzip2State {
           ChatCompositionSupport.field_b[11] = vo.field_a;
           ChatCompositionSupport.field_b[0] = MenuLabel.field_v;
           ChatCompositionSupport.field_b[15] = ta.field_e;
-          ChatCompositionSupport.field_b[13] = oo.field_d;
+          ChatCompositionSupport.field_b[13] = ClientRasterSupport.field_d;
           ChatCompositionSupport.field_b[4] = vs.field_c;
           ChatCompositionSupport.field_b[12] = vs.field_b;
           ChatCompositionSupport.field_b[14] = RoundedFrameSupport.field_b;

@@ -6,12 +6,12 @@ final class rl {
     static Sprite field_c;
     static boolean[] field_b;
     static String field_d;
-    private oq field_a;
+    private TextReplacementEntry field_a;
     static Archive field_f;
     private rl field_g;
 
     final void a(String param0, int param1, String param2) {
-        oq var4 = null;
+        TextReplacementEntry var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -28,7 +28,7 @@ final class rl {
               if (param1 != 27275) {
                 rl.a(45, true, 103, -126, true);
               }
-              this.field_a = new oq(param2, param0, this.field_a);
+              this.field_a = new TextReplacementEntry(param2, param0, this.field_a);
               return;
             }
             if (!param2.equals(var4.field_d)) {
@@ -145,7 +145,7 @@ final class rl {
     }
 
     private final String b(int param0, String param1) {
-        oq var3 = null;
+        TextReplacementEntry var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe {
+final class ClientRuntimeState {
     static boolean field_f;
     static Sprite field_c;
     static int[][] field_g;

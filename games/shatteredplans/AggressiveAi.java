@@ -897,7 +897,7 @@ final class AggressiveAi extends StandardAi {
           var9 = var15;
           var5 = var9;
           if (var13.field_y == this.field_n) {
-            var6 = oe.field_i[var4];
+            var6 = ClientRuntimeState.field_i[var4];
             if (var13.field_u) {
               var6 = var6 * 2 + 5;
             }

@@ -284,7 +284,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.field_M.field_p = (WidgetPainter) ((Object) dupTemp$0);
         this.field_F.field_p = (WidgetPainter) ((Object) dupTemp$0);
         this.field_L.field_p = (WidgetPainter) ((Object) new TextInputPainter(10000536));
-        this.field_K.field_p = (WidgetPainter) ((Object) new og());
+        this.field_K.field_p = (WidgetPainter) ((Object) new CheckboxWidgetPainter());
         PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);

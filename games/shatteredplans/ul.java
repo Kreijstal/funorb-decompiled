@@ -29,13 +29,13 @@ final class ul extends AnimatedPanel {
         }
         if (param0 != 31) {
           this.b(-117, 88, 37, -45, -114);
-          if (13 == oq.field_j) {
+          if (13 == TextReplacementEntry.field_j) {
             this.field_Bb = -1;
             return true;
           }
           return true;
         }
-        if (13 != oq.field_j) {
+        if (13 != TextReplacementEntry.field_j) {
           return true;
         }
         this.field_Bb = -1;

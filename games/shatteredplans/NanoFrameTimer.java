@@ -3,7 +3,7 @@
  */
 final class NanoFrameTimer extends FrameTimer {
     private int field_g;
-    static oa field_j;
+    static ContentTransitionPhase field_j;
     private int field_f;
     private long field_l;
     private long field_h;
@@ -197,7 +197,7 @@ final class NanoFrameTimer extends FrameTimer {
 
     static {
         field_i = "<%0> must play 1 more rated game before playing with the current options.";
-        field_j = new oa();
+        field_j = new ContentTransitionPhase();
         field_k = 0;
         field_d = 2;
         field_m = "WAITING FOR <%0> PLAYERS.";

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og implements WidgetPainter {
+final class CheckboxWidgetPainter implements WidgetPainter {
     static int[] field_c;
     static LoginMethodPreference field_b;
     static String field_a;
 
-    final static Ai a(int param0, AiHost param1, Player param2, GameState param3, int param4) {
+    final static Ai createAi(int param0, AiHost param1, Player param2, GameState param3, int param4) {
         RuntimeException var5 = null;
         TutorialAi stackIn_5_0 = null;
         AggressiveAi stackIn_8_0 = null;
@@ -80,7 +80,7 @@ final class og implements WidgetPainter {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void releaseMouseHandler(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -105,7 +105,7 @@ final class og implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawClientDialogs(int param0, boolean param1) {
         ByteArrayStorage.field_e.draw(0, param0, (byte) -66);
     }
 
@@ -149,7 +149,7 @@ final class og implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, Star[] param1, int param2, int param3) {
+    final static void linkHexGridStars(int param0, Star[] param1, int param2, int param3) {
         int var5 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_62_0 = null;

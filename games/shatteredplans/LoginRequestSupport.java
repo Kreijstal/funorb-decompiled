@@ -119,13 +119,13 @@ final class LoginRequestSupport {
             AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
             AccountFieldValue.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
-            ByteArrayNode.field_k = QuickChatCategoryRegistry.a(BytePayloadNode.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
+            ByteArrayNode.field_k = QuickChatCategoryRegistry.a(BytePayloadNode.field_h, 32, BufferedCacheFile.field_m, GameSpriteResources.field_a, 0);
             LobbyUiSupport.field_e = QuickChatCategoryRegistry.a(TargetedChatMessage.field_j, 32, BufferedCacheFile.field_m, ClientOverlayDrawSupport.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
             AttackTask.field_o = QuickChatCategoryRegistry.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, SliderPainter.field_b, 0);
           }
-          if (null != oi.field_i) {
+          if (null != GameSpriteResources.field_i) {
             var1_int = 1;
             var6 = 0;
             var2_intLifetime1 = var6;

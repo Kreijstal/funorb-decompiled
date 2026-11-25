@@ -400,28 +400,28 @@ final class GameScreen {
           if (qj.a(true, (CharSequence) ((Object) "stage"), (CharSequence) ((Object) param0))) {
             var2_int = Integer.parseInt(param0.substring(6));
             TutorialStageSupport.advanceTutorialStage(-92, var2_int);
-            oq.field_a.refreshMapView(2);
+            TextReplacementEntry.field_a.refreshMapView(2);
             return;
           }
           if (param1 != 7) {
             return;
           }
           if (param0.equalsIgnoreCase("zoomtohome")) {
-            oq.field_a.field_z.centerOnStar(39, QuickChatHelpSupport.field_d.field_m.field_q, 200.0f);
+            TextReplacementEntry.field_a.field_z.centerOnStar(39, QuickChatHelpSupport.field_d.field_m.field_q, 200.0f);
             return;
           }
           if (param0.equalsIgnoreCase("closetohome")) {
-            oq.field_a.field_z.focusOnStar(QuickChatHelpSupport.field_d.field_m.field_q, 126);
+            TextReplacementEntry.field_a.field_z.focusOnStar(QuickChatHelpSupport.field_d.field_m.field_q, 126);
             return;
           }
           if (param0.equalsIgnoreCase("zoomtowarning")) {
-            var2 = oq.field_a.field_P.field_g.field_e;
+            var2 = TextReplacementEntry.field_a.field_P.field_g.field_e;
             var3 = 0;
             while (var2.length > var3) {
               var4 = var2[var3];
               if (var4.field_y == QuickChatHelpSupport.field_d &&
-                !oq.field_a.field_V[var4.field_p]) {
-                oq.field_a.field_z.centerOnStar(92, var4, 300.0f);
+                !TextReplacementEntry.field_a.field_V[var4.field_p]) {
+                TextReplacementEntry.field_a.field_z.centerOnStar(92, var4, 300.0f);
                 return;
               }
               var3++;
@@ -433,15 +433,15 @@ final class GameScreen {
             return;
           }
           if (param0.equalsIgnoreCase("zoomOut")) {
-            oq.field_a.field_z.resetCamera(false);
+            TextReplacementEntry.field_a.field_z.resetCamera(false);
             return;
           }
           if (param0.equalsIgnoreCase("zoom12")) {
-            oq.field_a.field_z.focusOnStar(oq.field_a.field_P.field_g.field_e[12], 124);
+            TextReplacementEntry.field_a.field_z.focusOnStar(TextReplacementEntry.field_a.field_P.field_g.field_e[12], 124);
           }
           boolean decompiledFrameCompleted0 = true;
           if (param0.equalsIgnoreCase("zoomDerelict")) {
-            var2Lifetime1 = oq.field_a.field_P.field_g.field_e;
+            var2Lifetime1 = TextReplacementEntry.field_a.field_P.field_g.field_e;
             var3Lifetime1 = 0;
             while (var2Lifetime1.length > var3Lifetime1) {
               var4Lifetime1 = var2Lifetime1[var3Lifetime1];
@@ -451,7 +451,7 @@ final class GameScreen {
                 break;
               }
               if (stackIn_48_0 >= 6) {
-                oq.field_a.field_z.focusOnStar(var4Lifetime1, param1 ^ 121);
+                TextReplacementEntry.field_a.field_z.focusOnStar(var4Lifetime1, param1 ^ 121);
                 break;
               }
               var3Lifetime1++;
@@ -466,7 +466,7 @@ final class GameScreen {
           }
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = DefensiveAi.a((CharSequence) ((Object) param0.substring(9)), 2);
-            SpriteResourceSupport.field_d = oq.field_a.field_P.field_g.field_e[var2_intLifetime1];
+            SpriteResourceSupport.field_d = TextReplacementEntry.field_a.field_P.field_g.field_e[var2_intLifetime1];
             uq.field_m.a(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
@@ -475,8 +475,8 @@ final class GameScreen {
           }
           if (param0.equalsIgnoreCase("startai")) {
             var2_intLifetime2 = 1;
-            while (var2_intLifetime2 < oq.field_a.field_s.length) {
-              oq.field_a.field_s[var2_intLifetime2].setChatEnabled(true, -6861);
+            while (var2_intLifetime2 < TextReplacementEntry.field_a.field_s.length) {
+              TextReplacementEntry.field_a.field_s[var2_intLifetime2].setChatEnabled(true, -6861);
               var2_intLifetime2++;
               if (var5 == 0) {
                 continue;
@@ -488,28 +488,28 @@ final class GameScreen {
           if (qj.a(true, (CharSequence) ((Object) "enable"), (CharSequence) ((Object) param0))) {
             var2_ref = param0.substring(7).trim();
             if (var2_ref.endsWith("Button")) {
-              oq.field_a.field_Y.setPanelVisible(var2_ref, true, param1 - 15023);
+              TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_ref, true, param1 - 15023);
             }
             if (var2_ref.equalsIgnoreCase("animationControls")) {
-              oq.field_a.field_Y.field_K.field_s = true;
-              oq.field_a.field_Y.field_N.select(86);
+              TextReplacementEntry.field_a.field_Y.field_K.field_s = true;
+              TextReplacementEntry.field_a.field_Y.field_N.select(86);
             }
             return;
           }
           if (qj.a(true, (CharSequence) ((Object) "disable"), (CharSequence) ((Object) param0))) {
             var2_refLifetime1 = param0.substring(8).trim();
             if (var2_refLifetime1.endsWith("Button")) {
-              oq.field_a.field_Y.setPanelVisible(var2_refLifetime1, false, param1 ^ -15009);
+              TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime1, false, param1 ^ -15009);
             }
           }
           if (qj.a(true, (CharSequence) ((Object) "hide"), (CharSequence) ((Object) param0))) {
             var2_refLifetime2 = param0.substring(4).trim();
-            oq.field_a.field_Y.setPanelVisible(var2_refLifetime2, false, (byte) 31);
+            TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime2, false, (byte) 31);
             return;
           }
           if (qj.a(true, (CharSequence) ((Object) "show"), (CharSequence) ((Object) param0))) {
             var2_refLifetime3 = param0.substring(4).trim();
-            oq.field_a.field_Y.setPanelVisible(var2_refLifetime3, true, (byte) 31);
+            TextReplacementEntry.field_a.field_Y.setPanelVisible(var2_refLifetime3, true, (byte) 31);
             return;
           }
           if (qj.a(true, (CharSequence) ((Object) "highlight"), (CharSequence) ((Object) param0))) {
@@ -739,7 +739,7 @@ final class GameScreen {
               (decompiledFrameCompleted2) &&
               (decompiledFrameCompleted0)) {
               if ((this.field_s.field_P.field_f & 1 << param1.field_x) == 0) {
-                stackIn_92_0 = of.field_d;
+                stackIn_92_0 = AccountInputSupport.field_d;
               } else {
                 stackIn_92_0 = IntNode.field_l;
               }
@@ -2673,12 +2673,12 @@ final class GameScreen {
           if (this.field_s.field_W) {
             DefensiveAi.j(param0 ^ -25141);
           }
-          if (oq.field_j == 84) {
+          if (TextReplacementEntry.field_j == 84) {
             this.field_s.field_z.endReplay(param0 - 18640);
             this.field_s.refreshMapView(2);
           }
           boolean decompiledFrameCompleted0 = true;
-          if (oq.field_j == 83) {
+          if (TextReplacementEntry.field_j == 83) {
             if (this.field_s.field_P.field_r == 1) {
               return;
             }
@@ -2757,7 +2757,7 @@ final class GameScreen {
           if (decompiledFrameCompleted0) {
             stackIn_55_0 = -67;
           }
-          if (stackIn_55_0 == ~oq.field_j) {
+          if (stackIn_55_0 == ~TextReplacementEntry.field_j) {
             stackIn_62_0 = !(ImageProducerRasterBuffer.field_n);
             ImageProducerRasterBuffer.field_n = stackIn_62_0;
             this.field_f.toggle((byte) 20);
@@ -2892,7 +2892,7 @@ final class GameScreen {
           }
           var8 = var8 + "   ";
           if (!this.field_s.field_P.field_o.field_l) {
-            var8 = var8 + og.field_a;
+            var8 = var8 + CheckboxWidgetPainter.field_a;
             if (var16 != 0) {
               var8 = var8 + SliderPainter.field_k;
             }

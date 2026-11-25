@@ -70,7 +70,7 @@ final class NodeHashTableIterator implements Iterator {
             while (var6 != null) {
               var7 = var6.field_y.field_A - var6.field_B.field_A;
               var8 = -var6.field_B.field_S + var6.field_y.field_S;
-              if (!oo.a(var4, var5, var7, true, var8)) {
+              if (!ClientRasterSupport.isSecondVectorLonger(var4, var5, var7, true, var8)) {
                 var6 = (FleetMove) (var11.nextForward(32));
                 continue;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi {
+final class GameSpriteResources {
     static int field_a;
     static String field_c;
     static Archive field_h;
@@ -12,14 +12,14 @@ final class oi {
     static boolean field_f;
     static Sprite field_d;
 
-    final static void a(boolean param0) {
+    final static void clearAccountChoiceFlag(boolean param0) {
         TurnEventLog.field_b = false;
         if (!param0) {
-          oi.a(-116, (byte) -74);
+          GameSpriteResources.getAchievementIcon(-116, (byte) -74);
         }
     }
 
-    final static void a(byte param0, Archive param1) {
+    final static void loadGameBackdropSprites(byte param0, Archive param1) {
         int var2_int = 0;
         int var3 = 0;
         Archive var4 = null;
@@ -39,7 +39,7 @@ final class oi {
           QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
-            oi.a((byte) -117, (Archive) null);
+            GameSpriteResources.loadGameBackdropSprites((byte) -117, (Archive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class oi {
         field_h = null;
         field_b = null;
         if (param0 != -1) {
-          oi.clearStatics(52);
+          GameSpriteResources.clearStatics(52);
         }
         field_d = null;
         field_i = (Sprite[][]) null;
@@ -68,7 +68,7 @@ final class oi {
         field_c = null;
     }
 
-    final static Sprite a(int param0, byte param1) {
+    final static Sprite getAchievementIcon(int param0, byte param1) {
         Sprite dupTemp$0 = null;
         Sprite var3 = null;
         Sprite var2 = AlignedMenuLabel.field_C[param0];
@@ -82,7 +82,7 @@ final class oi {
           OpacityWidget.popLegacyRasterState(0);
         }
         if (param1 != 66) {
-          oi.clearStatics(-57);
+          GameSpriteResources.clearStatics(-57);
         }
         return var2;
     }

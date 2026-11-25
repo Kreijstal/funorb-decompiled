@@ -4,7 +4,7 @@
 final class IntroTextLine extends IntrusiveNode {
     Sprite field_o;
     int field_h;
-    static oa field_s;
+    static ContentTransitionPhase field_s;
     Sprite field_i;
     static AnimatedPanel field_m;
     static byte[][] field_q;
@@ -40,7 +40,7 @@ final class IntroTextLine extends IntrusiveNode {
           DualLinkDeque.field_a.drawColourised(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
           Dialog.field_D.drawColourised(var1_intLifetime1, 0, 4227327);
-          oi.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
+          GameSpriteResources.field_d.drawAlpha(var1_intLifetime1, 0, QuickChatCategoryDefinition.field_r / 8);
           var7 = MenuButton.field_y;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
@@ -185,7 +185,7 @@ final class IntroTextLine extends IntrusiveNode {
     static {
         field_p = "Your friend list is full. Max of 100 for free users, and 200 for members.";
         field_j = "Click to build fleets in this territory.";
-        field_s = new oa();
+        field_s = new ContentTransitionPhase();
         field_r = new ro();
         field_l = new int[5];
     }

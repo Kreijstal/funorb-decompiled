@@ -61,7 +61,7 @@ abstract class ByteArrayStorage {
           !VerticalMenuSlider.e((byte) 53)) {
           var3 = 0;
         }
-        if (oq.field_j == 84) {
+        if (TextReplacementEntry.field_j == 84) {
           if (var3 == 0) {
             if (ProductionContent.field_h == 0) {
               return true;
@@ -99,7 +99,7 @@ abstract class ByteArrayStorage {
           }
           return true;
         }
-        if (oq.field_j == 85) {
+        if (TextReplacementEntry.field_j == 85) {
           if (var3 == 0) {
             return true;
           }

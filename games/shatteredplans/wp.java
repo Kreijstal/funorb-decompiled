@@ -11,29 +11,29 @@ final class wp {
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (PasswordInputPainter.field_x.field_M) {
           if ((1 << PasswordInputPainter.field_x.field_h & PasswordInputPainter.field_x.field_P.field_e) != 0) {
-            oq.field_i[13] = ReflectionCheck.field_i;
+            TextReplacementEntry.field_i[13] = ReflectionCheck.field_i;
           } else {
             if (PasswordInputPainter.field_x.field_P.field_e != 0) {
-              oq.field_i[13] = MusicVoice.field_s;
+              TextReplacementEntry.field_i[13] = MusicVoice.field_s;
             } else {
               if ((1 << PasswordInputPainter.field_x.field_P.field_r) - 1 != (1 << PasswordInputPainter.field_x.field_h | PasswordInputPainter.field_x.field_i)) {
-                oq.field_i[13] = uo.field_b;
+                TextReplacementEntry.field_i[13] = uo.field_b;
               } else {
-                oq.field_i[13] = TutorialOverlaySupport.field_a;
+                TextReplacementEntry.field_i[13] = TutorialOverlaySupport.field_a;
               }
             }
           }
         } else {
           if (0 != (PasswordInputPainter.field_x.field_P.field_e & 1 << PasswordInputPainter.field_x.field_h)) {
-            oq.field_i[13] = SocketArchiveNetworkClient.field_s;
+            TextReplacementEntry.field_i[13] = SocketArchiveNetworkClient.field_s;
           } else {
             if (PasswordInputPainter.field_x.field_P.field_e != 0) {
-              oq.field_i[13] = LobbyLayoutSupport.field_d;
+              TextReplacementEntry.field_i[13] = LobbyLayoutSupport.field_d;
             } else {
               if (-1 + (1 << PasswordInputPainter.field_x.field_P.field_r) == (PasswordInputPainter.field_x.field_i | 1 << PasswordInputPainter.field_x.field_h)) {
-                oq.field_i[13] = SecondaryNodeDequeIterator.field_d;
+                TextReplacementEntry.field_i[13] = SecondaryNodeDequeIterator.field_d;
               } else {
-                oq.field_i[13] = IntList.field_a;
+                TextReplacementEntry.field_i[13] = IntList.field_a;
               }
             }
           }

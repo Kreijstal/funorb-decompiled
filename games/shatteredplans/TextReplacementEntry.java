@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq {
+final class TextReplacementEntry {
     static int field_c;
-    oq field_f;
+    TextReplacementEntry field_f;
     static volatile boolean field_e;
     String field_h;
     static int field_j;
@@ -13,9 +13,9 @@ final class oq {
     static GameSession field_a;
     static BufferedCacheFile field_g;
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int daysInMonth(byte param0, int param1, int param2) {
         if (param0 != -123) {
-          oq.a(-75, true);
+          TextReplacementEntry.writeCancelMatchmakingRequest(-75, true);
         }
         if (param2 == 1 &&
           qe.a((byte) -65, param1)) {
@@ -24,7 +24,7 @@ final class oq {
         return WhirlpoolHasher.field_b[param2];
     }
 
-    final static String[] a(byte[] param0, byte param1) {
+    final static String[] decodeTrimmedLines(byte[] param0, byte param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -61,7 +61,7 @@ final class oq {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void writeCancelMatchmakingRequest(int param0, boolean param1) {
         CipherPacketBuffer var2 = LobbyOptionSupport.field_f;
         if (param1) {
           return;
@@ -78,20 +78,20 @@ final class oq {
         field_a = null;
         if (param0 != 29) {
           CharSequence var2 = (CharSequence) null;
-          oq.a(35, (CharSequence) null);
+          TextReplacementEntry.encodeBase37(35, (CharSequence) null);
         }
     }
 
-    final static void a(boolean param0) {
+    final static void openRequiredLoginForm(boolean param0) {
         if (!BirthDateConfirmationForm.field_P) {
           throw new IllegalStateException();
         }
-        or.field_a = true;
+        UiTextSupport.field_a = true;
         WidgetStateStyle.a(param0, false);
         SoundPlayback.field_i = 0;
     }
 
-    oq(String param0, String param1, oq param2) {
+    TextReplacementEntry(String param0, String param1, TextReplacementEntry param2) {
         try {
           this.field_d = param0;
           this.field_h = param1;
@@ -101,7 +101,7 @@ final class oq {
         }
     }
 
-    final static long a(int param0, CharSequence param1) {
+    final static long encodeBase37(int param0, CharSequence param1) {
         int var5 = 0;
         long stackIn_21_0 = 0L;
         long stackIn_27_0 = 0L;
@@ -165,7 +165,7 @@ final class oq {
         }
     }
 
-    final static ro a(String param0, boolean param1) {
+    final static ro validateDomainSuffix(String param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -182,7 +182,7 @@ final class oq {
         try {
           if (param1) {
             var6 = (CharSequence) null;
-            oq.a(76, (CharSequence) null);
+            TextReplacementEntry.encodeBase37(76, (CharSequence) null);
           }
           var2_int = param0.length();
           var3 = 0;
@@ -217,7 +217,7 @@ final class oq {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendByteRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         ByteArrayNode var4 = null;

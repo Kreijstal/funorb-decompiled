@@ -154,7 +154,7 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.handleRelease(param0, param1, param2, param3, param4 + 0, param5);
-        DraggableWidget var8 = oa.field_b;
+        DraggableWidget var8 = ContentTransitionPhase.field_b;
         if (param4 != -600269855) {
           return;
         }
@@ -163,12 +163,12 @@ final class DropTargetWidget extends SingleChildWidget {
             this.containsPoint(param0, 87, param3, param1, param2)) {
             if (this.field_u instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.field_u)).onWidgetDropped(-27619, this, var8);
-              oa.field_b = null;
+              ContentTransitionPhase.field_b = null;
               return;
             }
             if (var8.field_u instanceof WidgetDropListener) {
               ((WidgetDropListener) (var8.field_u)).onWidgetDropped(param4 ^ 600248316, this, var8);
-              oa.field_b = null;
+              ContentTransitionPhase.field_b = null;
               return;
             }
           }

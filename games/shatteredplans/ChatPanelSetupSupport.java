@@ -106,7 +106,7 @@ final class ChatPanelSetupSupport {
           DerelictMapReader.field_d = new AnimatedPanel[5];
           tb.field_a = new AnimatedPanel[5];
           DiplomacyNotice.field_n = new AnimatedPanel[5];
-          oq.field_b = new AnimatedPanel[5];
+          TextReplacementEntry.field_b = new AnimatedPanel[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -130,17 +130,17 @@ final class ChatPanelSetupSupport {
                 var19 = QuickChatPhraseRegistry.field_c;
               }
               if (decompiledFrameRemainder0) {
-                oq.field_b[var18] = new AnimatedPanel(0L, param5);
+                TextReplacementEntry.field_b[var18] = new AnimatedPanel(0L, param5);
                 tb.field_a[var18] = new AnimatedPanel(0L, BoundsRect.field_k, var19);
                 DerelictMapReader.field_d[var18] = new AnimatedPanel(0L, (AnimatedPanel) null);
                 DerelictMapReader.field_d[var18].field_G = 1;
                 DiplomacyNotice.field_n[var18] = new AnimatedPanel(0L, BoundsRect.field_k);
                 DiplomacyNotice.field_n[var18].field_G = 1;
-                oq.field_b[var18].addChild(4, tb.field_a[var18]);
-                oq.field_b[var18].addChild(4, DerelictMapReader.field_d[var18]);
-                oq.field_b[var18].addChild(4, DiplomacyNotice.field_n[var18]);
-                oq.field_b[var18].markDirty((byte) -126);
-                tg.field_c.addChild(4, oq.field_b[var18]);
+                TextReplacementEntry.field_b[var18].addChild(4, tb.field_a[var18]);
+                TextReplacementEntry.field_b[var18].addChild(4, DerelictMapReader.field_d[var18]);
+                TextReplacementEntry.field_b[var18].addChild(4, DiplomacyNotice.field_n[var18]);
+                TextReplacementEntry.field_b[var18].markDirty((byte) -126);
+                tg.field_c.addChild(4, TextReplacementEntry.field_b[var18]);
                 QuickChatParameterType.field_d = QuickChatParameterType.field_d + 1;
               }
               var18++;

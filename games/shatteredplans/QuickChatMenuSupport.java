@@ -346,7 +346,7 @@ final class QuickChatMenuSupport {
         rl.field_b = new boolean[param1];
         WeightedLruCache.field_a = new int[param1];
         StandardMapGenerator.field_i = new int[param1];
-        oe.field_i = new int[param1];
+        ClientRuntimeState.field_i = new int[param1];
         ValidationState.field_d = new int[param1];
         LobbyUiSupport.field_d = new int[param1];
         ClientUiLoadingSupport.field_c = new int[param1];

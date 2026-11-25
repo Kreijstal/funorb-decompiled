@@ -265,12 +265,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             field_K = 59;
           }
           NodeHashTableIterator.a(0, "endturn");
-          if (2 == oq.field_a.field_P.field_g.field_e.length) {
-            if (QuickChatHelpSupport.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
+          if (2 == TextReplacementEntry.field_a.field_P.field_g.field_e.length) {
+            if (QuickChatHelpSupport.field_d == TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
                 DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
                 if (var5 != 0) {
-                  var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+                  var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
                     SocketArchiveNetworkClient.a("combatFailed", -116)) {
                     DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
@@ -278,23 +278,23 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                 }
               }
             } else {
-              var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+              var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
                 SocketArchiveNetworkClient.a("combatFailed", -116)) {
                 DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
               }
             }
-            var1Lifetime1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+            var1Lifetime1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
               uq.field_m.a(ChatHistoryEntry.formatLocalAttackLosses(var1Lifetime1, 23248), 27275, "combatreport1");
             }
-            uq.field_m.a(Integer.toString(oq.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
+            uq.field_m.a(Integer.toString(TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_x), 27275, "garrison1");
           }
-          if (oq.field_a.field_P.field_z &&
-            oq.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
+          if (TextReplacementEntry.field_a.field_P.field_z &&
+            TextReplacementEntry.field_a.field_P.field_k != QuickChatHelpSupport.field_d.field_x) {
             DefendTask.a(1, DiplomacyNotice.findTutorialSceneByTag("lose", -21502));
           }
-          var1_array = oq.field_a.field_P.field_g.field_e;
+          var1_array = TextReplacementEntry.field_a.field_P.field_g.field_e;
           var2 = 0;
           while (var1_array.length > var2) {
             var3 = var1_array[var2];

@@ -323,7 +323,7 @@ final class TaskAi implements Ai {
           TutorialStageSupport.field_f[var2] = false;
           q.field_Ab[var2] = 0;
           GameScreen.field_c[var2] = 0;
-          og.field_c[var2] = 0;
+          CheckboxWidgetPainter.field_c[var2] = 0;
         }
         this.j(114);
         this.markThreatenedStars(15401);
@@ -635,7 +635,7 @@ final class TaskAi implements Ai {
             }
             if (var10 > 0) {
               this.queuePlacement(-1, param0.field_n, var10);
-              og.field_c[param0.field_n.field_p] = og.field_c[param0.field_n.field_p] + var10;
+              CheckboxWidgetPainter.field_c[param0.field_n.field_p] = CheckboxWidgetPainter.field_c[param0.field_n.field_p] + var10;
             }
           }
           return;
@@ -1404,7 +1404,7 @@ final class TaskAi implements Ai {
               stackIn_63_0 = 3;
               return stackIn_63_0;
             }
-            var10 = oe.field_g[this.field_w.field_x];
+            var10 = ClientRuntimeState.field_g[this.field_w.field_x];
             var11 = param0;
             if (param2 != 3) {
               stackIn_66_0 = 120;
@@ -1412,7 +1412,7 @@ final class TaskAi implements Ai {
             }
             for (var12Lifetime1 = 0; this.field_m.field_g.field_e.length > var12Lifetime1; var12Lifetime1++) {
               if (SettingsCookieSupport.field_e[var12Lifetime1] &&
-                oe.field_g[var4_int][var12Lifetime1] <= var10[var12Lifetime1]) {
+                ClientRuntimeState.field_g[var4_int][var12Lifetime1] <= var10[var12Lifetime1]) {
                 var11--;
               }
             }
@@ -2064,17 +2064,17 @@ final class TaskAi implements Ai {
         int var4Lifetime2;
         int var5Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        oe.field_g = new int[this.field_m.field_r][];
+        ClientRuntimeState.field_g = new int[this.field_m.field_r][];
         this.field_r = -1;
         if (!param0) {
           var8 = (AttackTask) null;
           this.performAttackTask((byte) 68, (AttackTask) null, false);
         }
         SettingsCookieSupport.field_e = new boolean[this.field_m.field_g.field_e.length];
-        for (var2 = 0; var2 < oe.field_g.length; var2++) {
-          oe.field_g[var2] = this.b(this.field_m.field_v[var2], -97);
+        for (var2 = 0; var2 < ClientRuntimeState.field_g.length; var2++) {
+          ClientRuntimeState.field_g[var2] = this.b(this.field_m.field_v[var2], -97);
         }
-        var9 = oe.field_g[this.field_w.field_x];
+        var9 = ClientRuntimeState.field_g[this.field_w.field_x];
         var3 = 0;
         for (var4 = 0; var4 < this.field_m.field_g.field_e.length; var4++) {
           regionExit1: {
@@ -2084,7 +2084,7 @@ final class TaskAi implements Ai {
               while (var6 < this.field_m.field_r) {
                 if (~this.field_w.field_x != ~var6 &&
                   this.field_w.field_h[var6] &&
-                  oe.field_g[var6][var4] <= var9[var4]) {
+                  ClientRuntimeState.field_g[var6][var4] <= var9[var4]) {
                   var5 = 0;
                 } else {
                   var6++;

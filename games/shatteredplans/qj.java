@@ -38,7 +38,7 @@ final class qj {
           if (param0 == null) {
             WidgetStyle.field_m = (Sprite[][]) null;
             BirthDateConfirmationForm.field_L = null;
-            oi.field_i = (Sprite[][]) null;
+            GameSpriteResources.field_i = (Sprite[][]) null;
             ClientException.field_f = null;
             return;
           }
@@ -68,28 +68,28 @@ final class qj {
             var7Lifetime1 = param0.field_f.length;
             ClientException.field_f = new int[var7Lifetime1];
             WidgetStyle.field_m = new Sprite[var7Lifetime1][];
-            oi.field_i = new Sprite[var7Lifetime1][];
+            GameSpriteResources.field_i = new Sprite[var7Lifetime1][];
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
               var4Lifetime1 = uq.field_m.a(5607, var9.field_b);
               var13 = TutorialMapGenerator.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
               array$0 = new Sprite[var6Lifetime1];
-              oi.field_i[var8] = array$0;
+              GameSpriteResources.field_i[var8] = array$0;
               array$1 = new Sprite[var6Lifetime1];
               WidgetStyle.field_m[var8] = array$1;
               for (var10 = 0; var10 < var6Lifetime1; var10++) {
-                oi.field_i[var8][var10] = new Sprite(var3, var2_int);
-                oi.field_i[var8][var10].bindAsRenderTarget();
+                GameSpriteResources.field_i[var8][var10] = new Sprite(var3, var2_int);
+                GameSpriteResources.field_i[var8][var10].bindAsRenderTarget();
                 rs.field_Cb.drawString(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
-                WidgetStyle.field_m[var8][var10] = oi.field_i[var8][var10].copy();
+                WidgetStyle.field_m[var8][var10] = GameSpriteResources.field_i[var8][var10].copy();
                 WidgetStyle.field_m[var8][var10].bindAsRenderTarget();
                 SoftwareRasterizer.b(1, 1, 0, 0, var3, var2_int);
               }
             }
           } else {
             ClientException.field_f = null;
-            oi.field_i = (Sprite[][]) null;
+            GameSpriteResources.field_i = (Sprite[][]) null;
             WidgetStyle.field_m = (Sprite[][]) null;
           }
           OpacityWidget.popLegacyRasterState(0);

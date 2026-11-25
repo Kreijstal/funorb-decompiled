@@ -670,7 +670,7 @@ class PacketBuffer extends IntrusiveNode {
           int var2_int = -35 % ((param0 + 60) / 50);
           GradientMenuLabel.field_x = 1;
           PanelNode.field_q = null;
-          oq.field_a = param1;
+          TextReplacementEntry.field_a = param1;
           LobbyUiSupport.field_e = -1;
           WeightedLruCache.field_g = null;
           AccountFieldValue.field_f = -1;

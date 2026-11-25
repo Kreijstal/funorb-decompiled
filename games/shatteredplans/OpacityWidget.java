@@ -29,7 +29,7 @@ final class OpacityWidget extends SingleChildWidget {
           }
           if (param1 != null &&
             param1.length() >= MenuInputState.field_o &&
-            param1.length() <= oq.field_c) {
+            param1.length() <= TextReplacementEntry.field_c) {
             return false;
           }
           return true;

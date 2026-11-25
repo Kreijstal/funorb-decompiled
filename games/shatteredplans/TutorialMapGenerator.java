@@ -1266,7 +1266,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("game_options_changed", 511);
                 if (null != var2) {
-                  oe.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientRuntimeState.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("players_x_of_y", 511);
                 if (null != var2) {
@@ -1474,11 +1474,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("privatechat_friend_offline", 511);
                 if (null != var2) {
-                  oi.field_g = IterableNodeHashTable.a(var2, 17746);
+                  GameSpriteResources.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatechat_friend_notlisted", 511);
                 if (var2 != null) {
-                  of.field_g = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("chatviewscrolledup", 511);
                 if (null != var2) {
@@ -2400,7 +2400,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("unable_to_add_friend", 511);
                 if (null != var2) {
-                  of.field_c = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_add_ignore", 511);
                 if (null != var2) {
@@ -2432,7 +2432,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("ignorelistdupe", 511);
                 if (null != var2) {
-                  or.field_c = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ignorenotfound", 511);
                 if (var2 != null) {
@@ -3246,7 +3246,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("keychar_the_character_under_questionmark", 511);
                 if (null != var2) {
-                  IsolationistAi.field_p = oa.cp1252ToChar(-12541, var2[0]);
+                  IsolationistAi.field_p = ContentTransitionPhase.cp1252ToChar(-12541, var2[0]);
                 }
                 var2 = TertiaryLinkNode.a("rating_noratings", 511);
                 if (var2 != null) {
@@ -3821,7 +3821,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          og.a(-118, this.field_f, this.field_c, this.field_b);
+          CheckboxWidgetPainter.linkHexGridStars(-118, this.field_f, this.field_c, this.field_b);
           if (param1 >= 3) {
             this.field_f[1].addNeighbour((byte) -115, this.field_f[3]);
             this.field_f[3].addNeighbour((byte) -79, this.field_f[1]);

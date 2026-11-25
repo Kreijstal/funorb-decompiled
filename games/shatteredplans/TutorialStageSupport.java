@@ -77,7 +77,7 @@ final class TutorialStageSupport {
               var4 = (MapGenerationException) (Object) decompiledCaughtException;
               throw new RuntimeException("Failed to advance Tutorial to stage " + GradientMenuLabel.field_x + ". ");
             }
-            var15 = oq.field_a.field_P.field_g.field_e;
+            var15 = TextReplacementEntry.field_a.field_P.field_g.field_e;
             for (var5_int = 0; var5_int < var15.length; var5_int++) {
               var16 = var15[var5_int];
               var13 = var16;
@@ -145,7 +145,7 @@ final class TutorialStageSupport {
                 var16.unlinkSecondary(16);
               }
             }
-            oq.field_a.setGalaxyMap(var3, 6);
+            TextReplacementEntry.field_a.setGalaxyMap(var3, 6);
             if (SpriteResourceSupport.field_d != null) {
               SpriteResourceSupport.field_d = var3.field_e[SpriteResourceSupport.field_d.field_p];
             }
@@ -162,7 +162,7 @@ final class TutorialStageSupport {
             }
             var5 = null;
             if (GradientMenuLabel.field_x == 5) {
-              var23 = new Player(1, IntList.field_f[1], or.field_b[1], DualLinkNode.field_k[1], QuickChatHelpSupport.field_e[1]);
+              var23 = new Player(1, IntList.field_f[1], UiTextSupport.field_b[1], DualLinkNode.field_k[1], QuickChatHelpSupport.field_e[1]);
               var5 = var23;
               var3.field_e[6].field_t = var23;
               var3.field_e[6].field_y = var23;
@@ -180,7 +180,7 @@ final class TutorialStageSupport {
               var23.field_q = new PlayerStats(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
             if (6 == GradientMenuLabel.field_x) {
-              var25 = new Player(2, IntList.field_f[2], or.field_b[2], DualLinkNode.field_k[2], QuickChatHelpSupport.field_e[2]);
+              var25 = new Player(2, IntList.field_f[2], UiTextSupport.field_b[2], DualLinkNode.field_k[2], QuickChatHelpSupport.field_e[2]);
               var5 = var25;
               var26Lifetime2 = var3.field_e[17];
               var29Lifetime1 = var26Lifetime2;
@@ -196,7 +196,7 @@ final class TutorialStageSupport {
               var25.field_q = new PlayerStats(var26Lifetime2.field_x);
             }
             if (GradientMenuLabel.field_x == 7) {
-              var28 = new Player(3, IntList.field_f[3], or.field_b[3], DualLinkNode.field_k[3], QuickChatHelpSupport.field_e[3]);
+              var28 = new Player(3, IntList.field_f[3], UiTextSupport.field_b[3], DualLinkNode.field_k[3], QuickChatHelpSupport.field_e[3]);
               var5 = var28;
               var29Lifetime2 = var3.field_e[37];
               var30 = var3.field_e[36];
@@ -234,9 +234,9 @@ final class TutorialStageSupport {
               var28.field_q = new PlayerStats(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
-              oq.field_a.addPlayer(2, (Player) (var5));
-              oq.field_a.field_z.setPlayers(-128, oq.field_a.field_P.field_v);
-              oq.field_a.field_Y.updatePlayerList(oq.field_a.field_P.field_v, 1);
+              TextReplacementEntry.field_a.addPlayer(2, (Player) (var5));
+              TextReplacementEntry.field_a.field_z.setPlayers(-128, TextReplacementEntry.field_a.field_P.field_v);
+              TextReplacementEntry.field_a.field_Y.updatePlayerList(TextReplacementEntry.field_a.field_P.field_v, 1);
               uq.field_m.a(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
             qj.a(WeightedLruCache.field_g, -1);
@@ -265,13 +265,13 @@ final class TutorialStageSupport {
         try {
           if (param1 > DefensiveAi.field_p) {
             var3_int = 0;
-            if (oq.field_e) {
-              oq.field_e = false;
+            if (TextReplacementEntry.field_e) {
+              TextReplacementEntry.field_e = false;
               var3_int = 1;
             }
             ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, po.field_h);
           } else {
-            if (!or.a(250)) {
+            if (!UiTextSupport.hasLogoIntroFinished(250)) {
               SoftwareRasterizer.clear();
               sn.a(240, 28318, 320);
               WeightedCacheEntry.a(param1 ^ 37, 0, param2, 0);

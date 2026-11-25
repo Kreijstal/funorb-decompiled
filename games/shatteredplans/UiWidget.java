@@ -125,12 +125,12 @@ class UiWidget extends IntrusiveNode {
           if (AllianceExpiredEvent.field_n == 0 &&
             so.field_m != 0) {
             this.handleRelease(TertiaryListSequence.field_k, param2, param0, LobbyRoomControlsSupport.field_b, -600269855, this);
-            var6 = oa.field_b;
+            var6 = ContentTransitionPhase.field_b;
             if (var6 != null) {
               if (var6.field_u instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var6.field_u)).onWidgetDropped(-27619, (DropTargetWidget) null, var6);
               }
-              oa.field_b = null;
+              ContentTransitionPhase.field_b = null;
             }
           }
         }

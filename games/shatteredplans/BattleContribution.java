@@ -105,7 +105,7 @@ final class BattleContribution extends IntrusiveNode {
     final static void d(boolean param0) {
         RoundedFrameSupport.field_c = null;
         MapGenerationException.field_a = false;
-        oi.field_d = null;
+        GameSpriteResources.field_d = null;
         we.field_f = null;
         DualLinkDeque.field_a = null;
         MusicVoice.field_n = null;
@@ -121,7 +121,7 @@ final class BattleContribution extends IntrusiveNode {
         SliderPainter.field_e = null;
         DefensiveAi.field_r = null;
         q.field_Cb = null;
-        oe.field_c = null;
+        ClientRuntimeState.field_c = null;
         MessageKind.field_b = null;
         EmailSyntaxValidator.field_o = null;
         IntNode.field_h = null;
@@ -178,7 +178,7 @@ final class BattleContribution extends IntrusiveNode {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var14, var5, var6);
-          of.field_b = StatefulWidgetTheme.a(0, var4, ValidationIndicator.field_I, DiplomacyRowSupport.field_d, PlayerReportPanel.field_Nb);
+          AccountInputSupport.field_b = StatefulWidgetTheme.a(0, var4, ValidationIndicator.field_I, DiplomacyRowSupport.field_d, PlayerReportPanel.field_Nb);
           SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

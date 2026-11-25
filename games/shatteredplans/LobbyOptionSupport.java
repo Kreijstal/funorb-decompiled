@@ -384,7 +384,7 @@ final class LobbyOptionSupport {
         RuntimeException var1_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          BytePayloadNode.field_h = oi.field_a;
+          BytePayloadNode.field_h = GameSpriteResources.field_a;
           TargetedChatMessage.field_j = ClientOverlayDrawSupport.field_d;
           ListContent.field_g = false;
           WhirlpoolHasher.field_g = false;
