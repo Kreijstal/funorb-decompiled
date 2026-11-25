@@ -26,7 +26,7 @@ final class LoginRequestSupport {
           if (param2.length() == 0) {
             return true;
           }
-          if (va.a(param2, param1 + 12075, param0)) {
+          if (GraphicsSettings.containsForwardOrReversed(param2, param1 + 12075, param0)) {
             return false;
           }
           if (param1 != -12076) {

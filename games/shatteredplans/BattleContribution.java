@@ -110,7 +110,7 @@ final class BattleContribution extends IntrusiveNode {
         DualLinkDeque.field_a = null;
         MusicVoice.field_n = null;
         Dialog.field_D = null;
-        va.field_e = null;
+        GraphicsSettings.field_e = null;
         AccountBooleanRequest.field_j = null;
         CheckboxPainter.field_b = null;
         DefendTask.field_s = null;

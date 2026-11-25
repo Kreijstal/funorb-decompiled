@@ -17,7 +17,7 @@ final class wp {
               TextReplacementEntry.field_i[13] = MusicVoice.field_s;
             } else {
               if ((1 << PasswordInputPainter.field_x.field_P.field_r) - 1 != (1 << PasswordInputPainter.field_x.field_h | PasswordInputPainter.field_x.field_i)) {
-                TextReplacementEntry.field_i[13] = uo.field_b;
+                TextReplacementEntry.field_i[13] = LobbyRoomInteractionSupport.field_b;
               } else {
                 TextReplacementEntry.field_i[13] = TutorialOverlaySupport.field_a;
               }

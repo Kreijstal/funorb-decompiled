@@ -330,7 +330,7 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException var1_ref = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = uo.field_h;
+          var5 = LobbyRoomInteractionSupport.field_h;
           var1 = var5;
           if (param0 <= 92) {
             EmailValidator.e(20);
@@ -478,12 +478,12 @@ final class EmailValidator extends TextFieldValidator {
             }
             var1_ref2 = (LobbyRoomEntry) (AccountRequestResult.field_a.nextForward((byte) -71));
           }
-          var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.startForward(0));
+          var1_refLifetime1 = (LobbyPlayerEntry) (LobbyRoomInteractionSupport.field_a.startForward(0));
           while (var1_refLifetime1 != null) {
             if (var1_refLifetime1.field_Gb > 0) {
               var1_refLifetime1.field_Gb = var1_refLifetime1.field_Gb - 1;
               if (var1_refLifetime1.field_Gb != 0) {
-                var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
+                var1_refLifetime1 = (LobbyPlayerEntry) (LobbyRoomInteractionSupport.field_a.nextForward((byte) -71));
                 continue;
               }
               var1_refLifetime1.field_Eb = 0;
@@ -491,7 +491,7 @@ final class EmailValidator extends TextFieldValidator {
                 var1_refLifetime1.unlink((byte) -108);
               }
             }
-            var1_refLifetime1 = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
+            var1_refLifetime1 = (LobbyPlayerEntry) (LobbyRoomInteractionSupport.field_a.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

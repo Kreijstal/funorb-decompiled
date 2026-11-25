@@ -125,18 +125,18 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
           }
           var7 = (String) null;
           GuestPlayForm.a(-114, QuickChatHelpSupport.field_c, (String) null, var5, 0);
-          GameAssetSetupSupport.field_a = uq.field_j;
-          uq.field_j.field_ab = -(8355711 & QuickChatHelpSupport.field_c >> 1) + (QuickChatHelpSupport.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
-          uq.field_j.field_jb = -(8355711 & QuickChatHelpSupport.field_c >> 1) + QuickChatHelpSupport.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
+          GameAssetSetupSupport.field_a = PopupPlacementSupport.field_j;
+          PopupPlacementSupport.field_j.field_ab = -(8355711 & QuickChatHelpSupport.field_c >> 1) + (QuickChatHelpSupport.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
+          PopupPlacementSupport.field_j.field_jb = -(8355711 & QuickChatHelpSupport.field_c >> 1) + QuickChatHelpSupport.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
           WhirlpoolHasher.field_j = OpacityWidget.field_C;
-          uq.field_j.field_qb = -(QuickChatHelpSupport.field_c >> 1 & 8355711) + QuickChatHelpSupport.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
+          PopupPlacementSupport.field_j.field_qb = -(QuickChatHelpSupport.field_c >> 1 & 8355711) + QuickChatHelpSupport.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           ValidatedTextInputWidget.field_X = new AnimatedPanel(0L, param1);
           AgeValidator.field_n = new AnimatedPanel(0L, param2);
           MenuButton.field_w = new AnimatedPanel(0L, (AnimatedPanel) null);
           IconLabelPanel.field_Ab = new AnimatedPanel(0L, param3);
-          uq.field_j = new AnimatedPanel((long)param4, param0);
-          uq.field_j.field_nb = QuickChatHelpSupport.field_f;
-          IconLabelPanel.field_Ab.addChild(4, uq.field_j);
+          PopupPlacementSupport.field_j = new AnimatedPanel((long)param4, param0);
+          PopupPlacementSupport.field_j.field_nb = QuickChatHelpSupport.field_f;
+          IconLabelPanel.field_Ab.addChild(4, PopupPlacementSupport.field_j);
           OpacityWidget.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
           IconLabelPanel.field_Ab.addChild(4, OpacityWidget.field_C);
           IntroTextLine.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ByteArrayReadRequest.field_n);

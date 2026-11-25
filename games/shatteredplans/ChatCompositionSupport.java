@@ -195,7 +195,7 @@ final class ChatCompositionSupport {
             GuestPlayForm.a(-73, QuickChatHelpSupport.field_c, (String) null, (String) (var2), 0);
           } else {
             var4 = Star.field_o;
-            var4 = v.a(var4, (byte) 19);
+            var4 = TiledNineSlicePainter.prefixLocalPlayerIcon(var4, (byte) 19);
             var5 = "";
             var6 = "|";
             var7 = ProductionContent.field_h;
@@ -203,7 +203,7 @@ final class ChatCompositionSupport {
             if (var7 == 2) {
               var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{LoginRequestSupport.field_a});
               var9 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var4});
-              var8 = -485 + uq.field_j.field_K - (-OpacityWidget.field_C.field_K - QuickChatHelpSupport.field_f.stringWidth(var9) + QuickChatHelpSupport.field_f.stringWidth(var5));
+              var8 = -485 + PopupPlacementSupport.field_j.field_K - (-OpacityWidget.field_C.field_K - QuickChatHelpSupport.field_f.stringWidth(var9) + QuickChatHelpSupport.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -246,16 +246,16 @@ final class ChatCompositionSupport {
               }
               var10 = QuickChatHelpSupport.field_f.stringWidth(var5);
               if (!BattleEvent.a((byte) 110)) {
-                if (uq.field_j.field_L &&
-                  var10 > (-uq.field_j.field_B + TertiaryListSequence.field_k)) {
+                if (PopupPlacementSupport.field_j.field_L &&
+                  var10 > (-PopupPlacementSupport.field_j.field_B + TertiaryListSequence.field_k)) {
                   if (LoginMethodPreference.field_g) {
                     var1 = "Broken!";
                   } else {
                     var1 = TutorialTextSupport.field_c;
                   }
                 }
-                if (uq.field_j.field_rb != 0 &&
-                  uq.field_j.field_Q < var10 &&
+                if (PopupPlacementSupport.field_j.field_rb != 0 &&
+                  PopupPlacementSupport.field_j.field_Q < var10 &&
                   !LoginMethodPreference.field_g) {
                   ClientException.a(true);
                 }

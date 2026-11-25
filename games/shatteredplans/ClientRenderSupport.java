@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class us {
+final class ClientRenderSupport {
     static boolean field_c;
     static Sprite field_a;
     static SoundEffectDefinition field_d;
     static String field_e;
     static int field_b;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawInterface(boolean param0, boolean param1) {
         if (param0) {
           field_b = -58;
           ValidatedTextInputWidget.field_X.drawFullRaster(param1, 97);
@@ -17,13 +17,13 @@ final class us {
         ValidatedTextInputWidget.field_X.drawFullRaster(param1, 97);
     }
 
-    final static void a(int param0, int param1) {
+    final static void applyIntroTransitionEffect(int param0, int param1) {
         if (~SolVictoryChecker.field_m == ~(!CachedArchiveSource.field_n ? 3 : 2)) {
           DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
           if (param0 == 0) {
             return;
           }
-          us.a(false, true);
+          ClientRenderSupport.drawInterface(false, true);
           return;
         }
         if (CachedArchiveSource.field_n) {
@@ -32,21 +32,21 @@ final class us {
             if (param0 == 0) {
               return;
             }
-            us.a(false, true);
+            ClientRenderSupport.drawInterface(false, true);
             return;
           }
           BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
           if (param0 == 0) {
             return;
           }
-          us.a(false, true);
+          ClientRenderSupport.drawInterface(false, true);
           return;
         }
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
         if (param0 == 0) {
           return;
         }
-        us.a(false, true);
+        ClientRenderSupport.drawInterface(false, true);
     }
 
     final static Player readPlayer(PacketBuffer param0, Player[] param1, int param2) {
@@ -61,7 +61,7 @@ final class us {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            us.clearStatics(-12);
+            ClientRenderSupport.clearStatics(-12);
           }
           var3_int = param0.readUnsignedByte(-85);
           if (param1.length <= var3_int) {
@@ -92,8 +92,8 @@ final class us {
         }
     }
 
-    final static va b(int param0) {
-        va var1 = new va();
+    final static GraphicsSettings createHighGraphicsSettings(int param0) {
+        GraphicsSettings var1 = new GraphicsSettings();
         var1.field_k = true;
         var1.field_h = 2;
         var1.field_a = 2;
@@ -113,7 +113,7 @@ final class us {
         field_a = null;
         field_d = null;
         if (param0 != 0) {
-          us.clearStatics(-56);
+          ClientRenderSupport.clearStatics(-56);
         }
     }
 

@@ -242,7 +242,7 @@ final class MeshData {
         if (param1 != 0) {
           field_F = (Sprite) null;
         }
-        return uo.a((byte) -75);
+        return LobbyRoomInteractionSupport.pollLoginUiAction((byte) -75);
     }
 
     MeshData() {

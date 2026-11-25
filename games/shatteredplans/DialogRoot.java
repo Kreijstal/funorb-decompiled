@@ -458,7 +458,7 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DiplomacyNotice.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
+        DiplomacyNotice.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, BattleExplosionVisual.field_t) : new wh(SocialListEntry.field_yb, IntrusiveNode.field_c);
         SocialListPanel.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
         SocialListPanel.field_xb.addChild(4, DiplomacyNotice.field_h.field_d);
         SocialListPanel.field_xb.addChild(4, DialPainter.field_g);

@@ -42,10 +42,10 @@ final class QuickChatPhraseRegistry {
           try {
             var6 = new byte[param0];
             var2 = var6;
-            if (vc.field_a != null) {
+            if (ClientRandomSupport.field_a != null) {
               try {
-                vc.field_a.seek((byte) 95, 0L);
-                vc.field_a.readFully(var6, true);
+                ClientRandomSupport.field_a.seek((byte) 95, 0L);
+                ClientRandomSupport.field_a.readFully(var6, true);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

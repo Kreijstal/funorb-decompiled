@@ -157,7 +157,7 @@ final class BattleExplosionVisual extends StarSoundState {
           this.field_h = param0;
           this.field_i = DialWidget.a(96, TertiaryListSequence.field_m, 0);
           var2_double = Math.random() * 3.141592653589793 * 2.0;
-          var4 = 16384 + vc.a((byte) -39, 16384);
+          var4 = 16384 + ClientRandomSupport.randomBelow((byte) -39, 16384);
           this.field_p = (int)((double)var4 * Math.sin(var2_double));
           this.field_n = (int)(Math.cos(var2_double) * (double)var4);
           this.field_u = 0;

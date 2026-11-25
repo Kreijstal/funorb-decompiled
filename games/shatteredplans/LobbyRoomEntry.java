@@ -216,7 +216,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           LobbyRoomControlsSupport.updateLobbyRoomControls(param5, param0, (byte) -2, param2);
         }
         if (PrivateChatMessage.field_k > 0) {
-          uo.a((byte) 23, param0, param2, param7, param5);
+          LobbyRoomInteractionSupport.updateLobbyRoomControls((byte) 23, param0, param2, param7, param5);
         }
         if (IntrusiveNodeHashTable.field_e &&
           MenuInputState.field_a.field_Eb <= MenuInputState.field_a.field_Lb) {

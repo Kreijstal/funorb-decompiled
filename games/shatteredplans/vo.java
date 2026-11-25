@@ -19,7 +19,7 @@ final class vo {
           LobbyPlayerEntry.field_Sb = new SoundCache(param1, param0);
           SoundEffectSupport.loadSoundEffectDefinition(param2 + 28, 153, "shatteredplans_menu_open");
           SoundEffectSupport.loadSoundEffectDefinition(128, 153, "shatteredplans_menu_close");
-          us.field_d = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_selection");
+          ClientRenderSupport.field_d = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_selection");
           StandardMapGenerator.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_move_order");
           ConquestVictoryChecker.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_attack_order");
           SocketArchiveNetworkClient.field_w = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_factory_noise");

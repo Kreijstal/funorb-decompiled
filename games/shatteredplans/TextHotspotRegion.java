@@ -30,11 +30,11 @@ final class TextHotspotRegion extends IntrusiveNode {
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          vc.field_c = param1;
+          ClientRandomSupport.field_c = param1;
           if (param0 != 50) {
             return;
           }
-          if (0 == vc.field_c.length) {
+          if (0 == ClientRandomSupport.field_c.length) {
             EmailValidator.field_q = null;
             return;
           }

@@ -261,7 +261,7 @@ final class PlayerReportPanel extends AnimatedPanel {
             var23 = 13 + (13 + var19);
             var24 = var17Lifetime5 + (24 + var22 + 10);
             var25 = ArchiveLoadProgress.positionPopupX(-47, param0, var23, param2);
-            var26 = uq.a(param3, 0, var24, param1);
+            var26 = PopupPlacementSupport.positionPopupY(param3, 0, var24, param1);
             this.setTarget(var23, var24, (byte) 84, var26, var25);
             return;
           }
@@ -279,7 +279,7 @@ final class PlayerReportPanel extends AnimatedPanel {
           var18Lifetime1 = 13 + (13 + var15_int);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ArchiveLoadProgress.positionPopupX(-107, param0, var18Lifetime1, param2);
-          var21Lifetime1 = uq.a(param3, 0, var19Lifetime1, param1);
+          var21Lifetime1 = PopupPlacementSupport.positionPopupY(param3, 0, var19Lifetime1, param1);
           this.setTarget(var18Lifetime1, var19Lifetime1, (byte) 92, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,7 +382,7 @@ final class PlayerReportPanel extends AnimatedPanel {
         if (param1) {
           return;
         }
-        us.a(param1, param0);
+        ClientRenderSupport.drawInterface(param1, param0);
         if (DualLinkDequeSequence.field_k != null) {
           TooltipSupport.drawTooltip((byte) 121, DualLinkDequeSequence.field_k);
         }

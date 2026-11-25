@@ -402,8 +402,8 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        ve var7 = null;
-        ve var8 = null;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
         CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -419,12 +419,12 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
           }
           var8 = NodeSequence.a((byte) -90, param2);
           if (var8 == null) {
-            stackIn_9_0 = QuickChatCategoryRegistry.a(us.field_e, 4371, new String[]{param2});
+            stackIn_9_0 = QuickChatCategoryRegistry.a(ClientRenderSupport.field_e, 4371, new String[]{param2});
             return stackIn_9_0;
           }
           MenuComponent.field_j.startForwardFrom(var8, -9189);
           while (true) {
-            var7 = (ve) (MenuComponent.field_j.nextForward((byte) -71));
+            var7 = (SocialListEntry) (MenuComponent.field_j.nextForward((byte) -71));
             if (var7 != null) {
               var7.field_zb = var7.field_zb - 1;
               continue;

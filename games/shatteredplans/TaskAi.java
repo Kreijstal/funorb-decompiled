@@ -1775,7 +1775,7 @@ final class TaskAi implements PlayerAi {
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (this.field_w != var5) {
-            var6 = vc.a((byte) -39, 2) + 14;
+            var6 = ClientRandomSupport.randomBelow((byte) -39, 2) + 14;
             this.field_c.a(0, (byte) -27, var5, this.field_w, var6);
           }
         }
@@ -2869,8 +2869,8 @@ final class TaskAi implements PlayerAi {
           this.field_x = this.field_m.field_g.field_e.length;
           SoundTriggerTick.ensureAiWorkCapacity((byte) 124, this.field_x);
           this.field_p = true;
-          this.field_j = vc.a((byte) -39, 75) + 25;
-          this.field_t = vc.a((byte) -39, 75) + 25;
+          this.field_j = ClientRandomSupport.randomBelow((byte) -39, 75) + 25;
+          this.field_t = ClientRandomSupport.randomBelow((byte) -39, 75) + 25;
           this.field_v = new int[this.field_m.field_r];
           this.field_q = new int[this.field_m.field_r];
           this.field_f = new int[this.field_m.field_r];

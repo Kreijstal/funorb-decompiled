@@ -117,11 +117,11 @@ final class SocialListSetupSupport {
                 var7 = var6_ref;
                 var5 = var7;
               }
-              uq.field_m.putReplacement((String) (var6_ref), param0 + 58835, "generateshortfall");
+              PopupPlacementSupport.field_m.putReplacement((String) (var6_ref), param0 + 58835, "generateshortfall");
               decompiledFrameRemainder0 = false;
             }
             else {
-              uq.field_m.putReplacement(DirectByteArrayStorage.field_m, 27275, "generateshortfall");
+              PopupPlacementSupport.field_m.putReplacement(DirectByteArrayStorage.field_m, 27275, "generateshortfall");
             }
           }
           var4Lifetime1 = 0;
@@ -152,7 +152,7 @@ final class SocialListSetupSupport {
             }
             var11++;
           }
-          uq.field_m.putReplacement((String) (var5Lifetime1), 27275, "generateprojectprogress");
+          PopupPlacementSupport.field_m.putReplacement((String) (var5Lifetime1), 27275, "generateprojectprogress");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

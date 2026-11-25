@@ -20,7 +20,7 @@ final class Particle extends IntrusiveNode {
           param1.removeMouseListener(TertiaryListSequence.field_j);
           param1.removeMouseMotionListener(TertiaryListSequence.field_j);
           param1.removeFocusListener(TertiaryListSequence.field_j);
-          v.field_d = 0;
+          TiledNineSlicePainter.field_d = 0;
           int var2_int = -125 % ((param0 + 60) / 36);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

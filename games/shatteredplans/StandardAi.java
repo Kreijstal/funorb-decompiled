@@ -1054,7 +1054,7 @@ class StandardAi implements PlayerAi {
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != this.field_n) {
-            var6 = var8[vc.a((byte) -39, var8.length)];
+            var6 = var8[ClientRandomSupport.randomBelow((byte) -39, var8.length)];
             this.field_j.a(0, (byte) -110, var5, this.field_n, var6);
           }
         }

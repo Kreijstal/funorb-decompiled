@@ -98,7 +98,7 @@ final class LobbyUiSetupSupport {
           var24.field_y = 1;
           PairedIntSortSupport.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           PairedIntSortSupport.field_c.field_y = 1;
-          QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
+          QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, TiledNineSlicePainter.field_a.toUpperCase());
           IconLabelPanel.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, HorizontalGradientComponent.field_z.toUpperCase());
           SoundEffectDefinition.field_e = new AnimatedPanel(0L, IconTextPanel.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, GameMenuController.field_c);
@@ -265,7 +265,7 @@ final class LobbyUiSetupSupport {
           IntrusiveDeque.field_g.addChild(param13 + 7970, IntValueWriteRequest.field_j);
           IntrusiveDeque.field_g.addChild(4, DualLinkDequeSequence.field_f);
           ValidationIndicator.field_K = new AnimatedPanel(0L, IntrusiveDequeSequence.field_g, ListContent.field_c.toUpperCase());
-          ClientRasterSupport.field_c = new AnimatedPanel(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
+          ClientRasterSupport.field_c = new AnimatedPanel(0L, DelegatingCanvas.field_f, PopupPlacementSupport.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

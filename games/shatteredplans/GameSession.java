@@ -727,7 +727,7 @@ final class GameSession implements AiHost {
             this.field_y = false;
             if (!this.field_T) {
               if (this.field_m != 0) {
-                MenuLabel.a(us.field_d, param0 ^ -3671);
+                MenuLabel.a(ClientRenderSupport.field_d, param0 ^ -3671);
                 this.field_Y.a(-76, 0);
                 if (var5 == 0) {
                   return;
@@ -793,7 +793,7 @@ final class GameSession implements AiHost {
           if (0 == var8.length) {
             return;
           }
-          var9 = var8[vc.a((byte) -39, var8.length)];
+          var9 = var8[ClientRandomSupport.randomBelow((byte) -39, var8.length)];
           var10 = this.field_P.field_v[this.field_P.field_m[-1 + this.field_P.field_r]];
           var9 = QuickChatMenu.a(var10.name, 108, "largestplayer", var9);
           var9 = QuickChatMenu.a(this.field_n.name, 124, "you", var9);
@@ -3039,7 +3039,7 @@ final class GameSession implements AiHost {
                 return;
               }
               this.field_K = this.field_z.field_p;
-              MenuLabel.a(us.field_d, 74);
+              MenuLabel.a(ClientRenderSupport.field_d, 74);
               this.field_Y.a(-107, 1);
               this.field_z.field_z[this.field_K.field_p] = 1;
               var4 = this.field_K.field_D;
@@ -4240,16 +4240,16 @@ final class GameSession implements AiHost {
               PacketBuffer.a(-126, this);
               if (var13 != 0) {
                 this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
-                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
+                this.field_P = PopupPlacementSupport.createGameState(param4, param2, -27579, param5, param3);
               }
             } else {
               this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
               if (var13 != 0) {
-                this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
+                this.field_P = PopupPlacementSupport.createGameState(param4, param2, -27579, param5, param3);
               }
             }
           } else {
-            this.field_P = uq.createGameState(param4, param2, -27579, param5, param3);
+            this.field_P = PopupPlacementSupport.createGameState(param4, param2, -27579, param5, param3);
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder0 = true;

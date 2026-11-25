@@ -96,9 +96,9 @@ final class ChatPanelSetupSupport {
           StatusContent.field_c.addChild(4, DateInputWidget.field_I);
           TaskAi.field_o = new AnimatedPanel(0L, param3);
           StatusContent.field_c.addChild(4, TaskAi.field_o);
-          uq.field_j = new AnimatedPanel(0L, param10);
-          uq.field_j.field_nb = QuickChatHelpSupport.field_f;
-          TaskAi.field_o.addChild(4, uq.field_j);
+          PopupPlacementSupport.field_j = new AnimatedPanel(0L, param10);
+          PopupPlacementSupport.field_j.field_nb = QuickChatHelpSupport.field_f;
+          TaskAi.field_o.addChild(4, PopupPlacementSupport.field_j);
           TaskAi.field_o.markDirty((byte) -128);
           OpacityWidget.field_C = new AnimatedPanel(0L, (AnimatedPanel) null);
           OpacityWidget.field_C.field_F = var16;

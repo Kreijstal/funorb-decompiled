@@ -353,7 +353,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               return;
             }
             try {
-              vc.field_a = new BufferedCacheFile(StarAbandonedEvent.field_l.field_a, 64, 0);
+              ClientRandomSupport.field_a = new BufferedCacheFile(StarAbandonedEvent.field_l.field_a, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

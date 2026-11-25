@@ -149,7 +149,7 @@ final class BoundsRect extends IntrusiveNode {
             var4 = (String) null;
             BoundsRect.a((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
           }
-          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, wm.field_c, (byte) -60, ReflectionQueueSupport.field_a, us.field_b);
+          LeaderboardSortSupport.sortLeaderboardEntryIndices(param0, true, 0, wm.field_c, (byte) -60, ReflectionQueueSupport.field_a, ClientRenderSupport.field_b);
           for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
             ProxyAuthenticationRequiredException.field_d[var2_int + param0] = var2_int;
           }

@@ -213,7 +213,7 @@ final class QuickChatMenuSupport {
         String stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         boolean stackIn_41_2 = false;
-        v stackIn_45_0 = null;
+        TiledNineSlicePainter stackIn_45_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -224,7 +224,7 @@ final class QuickChatMenuSupport {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        v var9 = null;
+        TiledNineSlicePainter var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -233,7 +233,7 @@ final class QuickChatMenuSupport {
           if (param0 != -119) {
             return;
           }
-          var1_int = uq.field_k;
+          var1_int = PopupPlacementSupport.field_k;
           var2 = 0;
           if (2 == BirthDateConfirmationForm.field_C) {
             var3_long = ClientClockSupport.currentTimeMillis(14274) - MusicPatch.field_p;
@@ -304,7 +304,7 @@ final class QuickChatMenuSupport {
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
-                var9.a((ArchiveNetworkClient.field_i << 1) + SpriteResourceSupport.field_b, -MapView.field_Lb + var8Lifetime1, var1_int, (MapView.field_Lb << 1) + var7Lifetime1, -106);
+                var9.draw((ArchiveNetworkClient.field_i << 1) + SpriteResourceSupport.field_b, -MapView.field_Lb + var8Lifetime1, var1_int, (MapView.field_Lb << 1) + var7Lifetime1, -106);
               }
               var1_int = var1_int + ArchiveNetworkClient.field_i;
             }

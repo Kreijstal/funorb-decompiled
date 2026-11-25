@@ -102,14 +102,14 @@ final class FleetTrailPoint extends IntrusiveNode {
         }
     }
 
-    final static ve a(String param0, int param1) {
+    final static SocialListEntry a(String param0, int param1) {
         String var2 = null;
-        ve var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        ve stackIn_18_0 = null;
+        SocialListEntry stackIn_18_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -128,7 +128,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (ve) (CipherPacketBuffer.field_m.get(65280, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (CipherPacketBuffer.field_m.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
             var4 = DateInputWidget.a(var7, true);
@@ -139,7 +139,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (ve) (CipherPacketBuffer.field_m.getNextWithKey((byte) -116));
+            var3 = (SocialListEntry) (CipherPacketBuffer.field_m.getNextWithKey((byte) -116));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,7 +264,7 @@ final class FleetTrailPoint extends IntrusiveNode {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        ve var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -297,7 +297,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           wg.field_a.field_Db.field_zb.field_z = null;
           wg.field_a.field_s = true;
           var5 = null;
-          var6 = (ve) (var4.startForward(param0 ^ -7904));
+          var6 = (SocialListEntry) (var4.startForward(param0 ^ -7904));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_M) {
@@ -360,7 +360,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               var14 = SliderWidget.field_P;
               var17.field_j.layoutAtAnchor(0, 0, 0, var13, var14);
             }
-            var6 = (ve) (var4.nextForward((byte) -71));
+            var6 = (SocialListEntry) (var4.nextForward((byte) -71));
           }
           if (wg.field_a.field_Fb.field_rb != 0) {
             ProxyAuthenticationRequiredException.field_e = new SocialNameInputPanel(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);

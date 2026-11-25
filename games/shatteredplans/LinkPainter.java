@@ -142,7 +142,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    final static ve a(boolean param0, int param1, boolean param2) {
+    final static SocialListEntry a(boolean param0, int param1, boolean param2) {
         ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
@@ -159,7 +159,7 @@ final class LinkPainter implements WidgetPainter {
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        ve var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -206,7 +206,7 @@ final class LinkPainter implements WidgetPainter {
             RecklessAi.field_p.field_z = QuickChatCategoryRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatPhraseRegistry.field_d});
             ClientPacketFlushSupport.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
-            var7 = (ve) (var4.startForward(0));
+            var7 = (SocialListEntry) (var4.startForward(0));
             while (true) {
               if (var7 != null) {
                 var8 = 0;
@@ -307,7 +307,7 @@ final class LinkPainter implements WidgetPainter {
                     DualLinkDequeSequence.field_k = var7.field_Bb;
                   }
                   var6 = var7;
-                  var7 = (ve) (var4.nextForward((byte) -71));
+                  var7 = (SocialListEntry) (var4.nextForward((byte) -71));
                   continue;
                 }
               } else {
@@ -325,7 +325,7 @@ final class LinkPainter implements WidgetPainter {
             }
           }
           stackIn_102_0 = var5;
-          return (ve) (stackIn_102_0);
+          return (SocialListEntry) (stackIn_102_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

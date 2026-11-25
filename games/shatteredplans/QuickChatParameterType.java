@@ -187,12 +187,12 @@ final class QuickChatParameterType {
         int var16Lifetime1;
         try {
           CandidateLink.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = vc.field_d.length;
+          var1_int = ClientRandomSupport.field_d.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_sr = vc.field_d[var3];
+            var4_ref_sr = ClientRandomSupport.field_d[var3];
             var4_ref_sr.updateBounds(true);
             UsernameAvailabilityValidator.a(-1, var3);
             var5 = var4_ref_sr.field_O + var4_ref_sr.field_k >> 1;
@@ -230,15 +230,15 @@ final class QuickChatParameterType {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; vc.field_d.length > var15; var15++) {
+          for (var15 = 0; ClientRandomSupport.field_d.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < vc.field_d.length; var17_int++) {
+            for (var17_int = 1; var17_int < ClientRandomSupport.field_d.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = vc.field_d[var16];
+            var17 = ClientRandomSupport.field_d[var16];
             UsernameAvailabilityValidator.a(-1, var16);
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + ValidatedTextInputWidget.field_Z[var15][var18];

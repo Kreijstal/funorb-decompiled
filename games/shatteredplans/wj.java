@@ -110,7 +110,7 @@ final class wj extends IntrusiveNode {
           var3 = (float)FleetTrailPoint.field_m / 1000.0f + 0.15000000596046448f;
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = (int)(Math.cos((double)var3) * 200.0) - 200;
-          va.field_e.draw(var1_int, var2);
+          GraphicsSettings.field_e.draw(var1_int, var2);
           var4 = -(FleetTrailPoint.field_m * 120 / 1000) + 176;
           var5 = 540 - var4;
           RandomAccessCacheFile.a(-111);

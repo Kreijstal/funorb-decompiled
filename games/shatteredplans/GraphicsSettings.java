@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va {
+final class GraphicsSettings {
     static boolean field_j;
     static UrlLoader field_g;
     static int field_b;
@@ -22,7 +22,7 @@ final class va {
         field_i = null;
     }
 
-    final static String a(int param0, String[] param1) {
+    final static String joinWithFinalConjunction(int param0, String[] param1) {
         int var4 = 0;
         StringBuilder discarded$8 = null;
         StringBuilder discarded$9 = null;
@@ -76,7 +76,7 @@ final class va {
         }
     }
 
-    final static void a(String[] args, byte param1, int param2, String param3) {
+    final static void showLoginResult(String[] args, byte param1, int param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         Archive var6 = null;
@@ -93,7 +93,7 @@ final class va {
           PrivateChatMessage.field_l = ProjectsContent.field_g;
           if (param1 != -113) {
             var6 = (Archive) null;
-            va.a((String) null, -24, (String) null, (Archive) null);
+            GraphicsSettings.loadSpriteSetByName((String) null, -24, (String) null, (Archive) null);
           }
           if (param2 != 255) {
             if (100 > param2) {
@@ -131,7 +131,7 @@ final class va {
         }
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, Archive param3) {
+    final static Sprite[] loadSpriteSetByName(String param0, int param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -180,7 +180,7 @@ final class va {
         }
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean containsForwardOrReversed(String param0, int param1, String param2) {
         String var3 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;

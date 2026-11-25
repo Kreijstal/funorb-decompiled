@@ -226,7 +226,7 @@ final class WhirlpoolHasher {
           if (null != var44.field_p &&
             var44.field_o > 1) {
             var60 = var44.field_p;
-            FullscreenFocusCanvas.a(0, 0, var60, 12, uo.field_h);
+            FullscreenFocusCanvas.a(0, 0, var60, 12, LobbyRoomInteractionSupport.field_h);
           } else {
             MusicEnvelope.a((byte) -97);
           }

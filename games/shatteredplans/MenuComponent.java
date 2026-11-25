@@ -316,7 +316,7 @@ class MenuComponent extends IntrusiveNode {
         }
         SpriteButton.field_u = 2147483647;
         GzipInflater.field_e = -2147483648;
-        us.field_b = -2147483648;
+        ClientRenderSupport.field_b = -2147483648;
         ReflectionQueueSupport.field_a = 2147483647;
     }
 

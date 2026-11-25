@@ -64,7 +64,7 @@ final class IntrusiveDeque {
         if (param2 != -1043) {
           return;
         }
-        ve var3 = LinkPainter.a(true, param0, param1);
+        SocialListEntry var3 = LinkPainter.a(true, param0, param1);
         if (var3 != null) {
           DerelictVictoryChecker.field_m.addInviteActions(false, param2 - 15618);
           var4 = DerelictVictoryChecker.field_m;

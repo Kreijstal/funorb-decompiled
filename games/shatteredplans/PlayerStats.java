@@ -114,7 +114,7 @@ final class PlayerStats {
               }
             }
             if (var7.field_a == 0 &&
-              vc.a((byte) -39, 250) == 0 &&
+              ClientRandomSupport.randomBelow((byte) -39, 250) == 0 &&
               75 < FleetTrailPoint.field_m) {
               var7.field_h = 10;
             }

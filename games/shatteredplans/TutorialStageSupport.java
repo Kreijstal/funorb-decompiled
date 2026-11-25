@@ -158,7 +158,7 @@ final class TutorialStageSupport {
               var26Lifetime1 = var22Lifetime1;
               var29 = var26Lifetime1;
               var26Lifetime1Lifetime1 = var22Lifetime1;
-              uq.field_m.putReplacement(ProxySocketConnector.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
+              PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
             }
             var5 = null;
             if (GradientMenuLabel.field_x == 5) {
@@ -237,7 +237,7 @@ final class TutorialStageSupport {
               TextReplacementEntry.field_a.addPlayer(2, (Player) (var5));
               TextReplacementEntry.field_a.field_z.setPlayers(-128, TextReplacementEntry.field_a.field_P.field_v);
               TextReplacementEntry.field_a.field_Y.updatePlayerList(TextReplacementEntry.field_a.field_P.field_v, 1);
-              uq.field_m.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
+              PopupPlacementSupport.field_m.putReplacement(QuickChatCategoryRegistry.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);
             }
             TutorialTextSupport.buildTutorialTextSprites(WeightedLruCache.field_g, -1);
             return;

@@ -44,17 +44,17 @@ abstract class NodeSequence {
         }
     }
 
-    final static ve a(byte param0, String param1) {
+    final static SocialListEntry a(byte param0, String param1) {
         String var2 = null;
-        ve var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_7_0 = null;
         Object stackIn_10_0 = null;
-        ve stackIn_13_0 = null;
-        ve stackIn_20_0 = null;
+        SocialListEntry stackIn_13_0 = null;
+        SocialListEntry stackIn_20_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -70,19 +70,19 @@ abstract class NodeSequence {
           }
           if (param1.length() == 0) {
             stackIn_7_0 = null;
-            return (ve) (stackIn_7_0);
+            return (SocialListEntry) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
           var2 = DateInputWidget.a(var6, true);
           if (var2 == null) {
             stackIn_10_0 = null;
-            return (ve) (stackIn_10_0);
+            return (SocialListEntry) (stackIn_10_0);
           }
           if (param0 != -90) {
-            stackIn_13_0 = (ve) null;
+            stackIn_13_0 = (SocialListEntry) null;
             return stackIn_13_0;
           }
-          var3 = (ve) (BattleEvent.field_q.get(65280, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (BattleEvent.field_q.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
             var4 = DateInputWidget.a(var7, true);
@@ -90,7 +90,7 @@ abstract class NodeSequence {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (ve) (BattleEvent.field_q.getNextWithKey((byte) -112));
+            var3 = (SocialListEntry) (BattleEvent.field_q.getNextWithKey((byte) -112));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

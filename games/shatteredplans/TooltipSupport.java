@@ -35,7 +35,7 @@ final class TooltipSupport {
           var6 = SpriteState.field_u.field_nb.maxLineWidth(param1, 500) + 6;
           var7 = 2 + var4 * UniformNineSliceFactory.field_c;
           var8 = ArchiveLoadProgress.positionPopupX(-38, var2_int, var6, 12);
-          var9 = uq.a(20, 0, var7, var3);
+          var9 = PopupPlacementSupport.positionPopupY(20, 0, var7, var3);
           SoftwareRasterizer.drawRect(var8, var9, var6, var7, 0);
           SoftwareRasterizer.fillRect(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
           SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, UniformNineSliceFactory.field_c);

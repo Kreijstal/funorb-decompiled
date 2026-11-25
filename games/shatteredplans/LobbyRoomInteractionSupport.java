@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo {
+final class LobbyRoomInteractionSupport {
     static String field_b;
     static int[] field_f;
     static int[] field_h;
@@ -11,7 +11,7 @@ final class uo {
     static int field_g;
     static boolean field_e;
 
-    final static int a(byte param0) {
+    final static int pollLoginUiAction(byte param0) {
         int var2 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -76,11 +76,11 @@ final class uo {
         field_c = null;
         field_b = null;
         if (!param0) {
-          uo.a((byte) 46, false, 50, true, true);
+          LobbyRoomInteractionSupport.updateLobbyRoomControls((byte) 46, false, 50, true, true);
         }
     }
 
-    final static void a(byte param0, Sprite param1, int param2) {
+    final static void tintSprite(byte param0, Sprite param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -97,7 +97,7 @@ final class uo {
         try {
           var3_int = 16711935 & param2;
           if (param0 <= 70) {
-            uo.clearStatics(true);
+            LobbyRoomInteractionSupport.clearStatics(true);
           }
           param2 = param2 & 65280;
           var4 = -1;
@@ -130,7 +130,7 @@ final class uo {
         }
     }
 
-    final static void a(byte param0, boolean param1, int param2, boolean param3, boolean param4) {
+    final static void updateLobbyRoomControls(byte param0, boolean param1, int param2, boolean param3, boolean param4) {
         AnimatedPanel stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_40_0 = 0;

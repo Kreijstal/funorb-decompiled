@@ -206,7 +206,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var13 = stackIn_11_0;
           var14 = 454 + var1_intLifetime1 << 4;
           var15 = -var13 + (var10 + 374 + var2Lifetime1 << 4);
-          var16 = 32 + vc.a((byte) -39, 32);
+          var16 = 32 + ClientRandomSupport.randomBelow((byte) -39, 32);
           if (var6 > FleetTrailPoint.field_m) {
             SoftwareRasterizer.addRadialGlowQ4(var14, var15, var16, 128, MenuButton.field_u);
           }

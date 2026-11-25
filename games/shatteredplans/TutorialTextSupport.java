@@ -44,7 +44,7 @@ final class TutorialTextSupport {
           }
           var2_int = IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q;
           var3 = -6 + param0.field_j - 20;
-          var4 = uq.field_m.expandPlaceholders(5607, param0.field_c);
+          var4 = PopupPlacementSupport.field_m.expandPlaceholders(5607, param0.field_c);
           var12 = TutorialMapGenerator.a(IconTextPanel.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
           RandomAccessCacheFile.a(-106);
@@ -71,7 +71,7 @@ final class TutorialTextSupport {
             GameSpriteResources.field_i = new Sprite[var7Lifetime1][];
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
-              var4Lifetime1 = uq.field_m.expandPlaceholders(5607, var9.field_b);
+              var4Lifetime1 = PopupPlacementSupport.field_m.expandPlaceholders(5607, var9.field_b);
               var13 = TutorialMapGenerator.a(IconTextPanel.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
               array$0 = new Sprite[var6Lifetime1];

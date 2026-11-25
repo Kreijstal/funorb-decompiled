@@ -80,31 +80,31 @@ final class GameAssetSetupSupport {
           AlternateLoginCredentials.field_r = SpriteResourceSupport.loadSpriteByName(2, param0, "", "instr_mainview");
           NodeSequence.field_d = SpriteResourceSupport.loadSpriteByName(param6 ^ -6, param0, "", "instr_starframe");
           HighscoreResponseSupport.loadSpriteSetByName(-100, "", param0, "zoomicons");
-          var9 = va.a("hud_icons", 0, "", param0);
+          var9 = GraphicsSettings.loadSpriteSetByName("hud_icons", 0, "", param0);
           TurnEventLog.field_d = var9[3];
           MusicCrossfadeStream.field_F = var9[2];
           HuffmanCodec.field_e = var9[0];
           wl.field_d = var9[4];
           NotificationEntry.field_r = var9[1];
-          var21 = va.a("hud_icons_red", param6 + 8, "", param0);
+          var21 = GraphicsSettings.loadSpriteSetByName("hud_icons_red", param6 + 8, "", param0);
           AlignedMenuLabel.field_D = var21[0];
           Wormhole.field_h = var21[3];
           DiskArchiveRequest.field_x = var21[2];
           LobbyCommandSupport.field_b = var21[1];
           StarAbandonedEvent.field_k = var21[4];
-          var22 = va.a("hud_icons_nobase", 0, "", param0);
+          var22 = GraphicsSettings.loadSpriteSetByName("hud_icons_nobase", 0, "", param0);
           NodeHashTableIterator.field_b = var22[0];
           LobbyCommandSupport.field_f = var22[4];
-          us.field_a = var22[3];
+          ClientRenderSupport.field_a = var22[3];
           GameKeyHandler.field_b = var22[1];
           ArchiveIndex.field_p = var22[2];
-          Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
-          ObjectList.field_d = va.a("production_icons", 0, "", param0);
+          Player.field_a = GraphicsSettings.loadSpriteSetByName("icon_circles", param6 + 8, "", param0);
+          ObjectList.field_d = GraphicsSettings.loadSpriteSetByName("production_icons", 0, "", param0);
           IntValueWriteRequest.field_i = MessageKind.a(true, param0, "", "production_button");
           AccountHandshakeSupport.field_a = MessageKind.a(true, param0, "", "production_button_down");
-          ClientPacketFlushSupport.field_b = va.a("project_icons", 0, "", param0);
-          IntrusiveDeque.field_a = va.a("faction_icons", 0, "", param0);
-          NodeSequence.field_b = va.a("faction_icons_large", 0, "", param0);
+          ClientPacketFlushSupport.field_b = GraphicsSettings.loadSpriteSetByName("project_icons", 0, "", param0);
+          IntrusiveDeque.field_a = GraphicsSettings.loadSpriteSetByName("faction_icons", 0, "", param0);
+          NodeSequence.field_b = GraphicsSettings.loadSpriteSetByName("faction_icons_large", 0, "", param0);
           var23_ref = IntrusiveDeque.field_a[1];
           IntrusiveDeque.field_a[1] = IntrusiveDeque.field_a[5];
           IntrusiveDeque.field_a[5] = var23_ref;
@@ -150,8 +150,8 @@ final class GameAssetSetupSupport {
           MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
           ReflectionCheck.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
           StatusMessagePanel.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
-          FleetTrailPoint.field_i = va.a("fleetbuttons", 0, "", param0);
-          StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
+          FleetTrailPoint.field_i = GraphicsSettings.loadSpriteSetByName("fleetbuttons", 0, "", param0);
+          StarAbandonedEvent.field_r = GraphicsSettings.loadSpriteSetByName("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
           GarrisonTask.field_s.field_B[33] = 469762047;
           GarrisonTask.field_s.field_B[28] = -14671840;
@@ -195,7 +195,7 @@ final class GameAssetSetupSupport {
             LobbyPlayerEntry.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
             TextHotspotWidget.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
           }
-          MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
+          MenuLabel.field_y = GraphicsSettings.loadSpriteSetByName("defnet_anim_small", 0, "", param0);
           for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {
             if (MenuLabel.field_y[0].field_B[var13_intLifetime1] != 0) {
               MenuLabel.field_y[0].field_B[var13_intLifetime1] = ((MenuLabel.field_y[0].field_B[var13_intLifetime1] >>> 24) / 4 << 24) + 6006988;
@@ -209,7 +209,7 @@ final class GameAssetSetupSupport {
               }
             }
           }
-          PlacementOrder.field_p = va.a("defnet_anim_mid", 0, "", param0);
+          PlacementOrder.field_p = GraphicsSettings.loadSpriteSetByName("defnet_anim_mid", 0, "", param0);
           for (var13_intLifetime3 = 0; PlacementOrder.field_p[0].field_B.length > var13_intLifetime3; var13_intLifetime3++) {
             if (0 != PlacementOrder.field_p[0].field_B[var13_intLifetime3]) {
               PlacementOrder.field_p[0].field_B[var13_intLifetime3] = 6006988 + ((PlacementOrder.field_p[0].field_B[var13_intLifetime3] >>> 24) / 4 << 24);
@@ -223,7 +223,7 @@ final class GameAssetSetupSupport {
               }
             }
           }
-          ImageProducerRasterBuffer.field_k = va.a("defnet_anim_large", param6 ^ -8, "", param0);
+          ImageProducerRasterBuffer.field_k = GraphicsSettings.loadSpriteSetByName("defnet_anim_large", param6 ^ -8, "", param0);
           for (var13_intLifetime5 = 0; ImageProducerRasterBuffer.field_k[0].field_B.length > var13_intLifetime5; var13_intLifetime5++) {
             if (ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] != 0) {
               ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] = ((ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] >>> 24) / 4 << 24) + 6006988;
@@ -285,9 +285,9 @@ final class GameAssetSetupSupport {
           var14 = CellVertex.field_j.length;
           TextHotspotRegion.field_o = new Sprite[var14];
           MapView.field_sb = new Sprite[var14];
-          vh.field_a = new Sprite[var14];
+          ClientUiResourceState.field_a = new Sprite[var14];
           AlignedMenuLabel.field_C = new Sprite[var14];
-          GarrisonTask.field_p = va.a("system_icons", 0, "", param0);
+          GarrisonTask.field_p = GraphicsSettings.loadSpriteSetByName("system_icons", 0, "", param0);
           PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
           RasterTargetSupport.pushSpriteRenderTarget(GameScreen.field_R, 78);

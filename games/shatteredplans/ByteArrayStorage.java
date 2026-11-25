@@ -126,7 +126,7 @@ abstract class ByteArrayStorage {
         discarded$0 = OpacityWidget.field_E.append((char) var4);
         var5Lifetime1 = 485;
         var17 = Star.field_o;
-        var16 = v.a(var17, (byte) 17);
+        var16 = TiledNineSlicePainter.prefixLocalPlayerIcon(var17, (byte) 17);
         var18 = var16;
         if (ProductionContent.field_h == 2) {
           var61 = (CharSequence) ((Object) LoginRequestSupport.field_a);

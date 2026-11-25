@@ -446,7 +446,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         var4 = -60 + TutorialVictoryChecker.field_r[6];
         var5 = 40;
         if (0 == param0) {
-          var6 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, vc.field_e), IconTextPanel.field_Cb, new int[]{var4});
+          var6 = WidgetStateStyle.a(-9615, wg.field_e.expandPlaceholders(5607, ClientRandomSupport.field_e), IconTextPanel.field_Cb, new int[]{var4});
           var5 = var5 + var6 * var3;
           if (param1 != -71) {
             return -98;

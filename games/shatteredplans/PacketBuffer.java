@@ -678,7 +678,7 @@ class PacketBuffer extends IntrusiveNode {
           AttackTask.field_o = -1;
           StripedProgressWidget.a((byte) 73, 16777215, 8);
           StripedProgressWidget.a((byte) 112, 16777215, 11);
-          uq.field_m = new TextReplacementContext(wg.field_e);
+          PopupPlacementSupport.field_m = new TextReplacementContext(wg.field_e);
           ClientContextMenuSupport.field_a = new IntrusiveDeque();
           StellarBombEvent.field_h = new IntrusiveDeque();
           ArchiveConnectionRetrySupport.field_b = false;

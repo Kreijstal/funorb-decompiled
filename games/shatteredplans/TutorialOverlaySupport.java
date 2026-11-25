@@ -134,11 +134,11 @@ final class TutorialOverlaySupport {
         }
     }
 
-    final static va createBasicGraphicsSettings(byte param0) {
+    final static GraphicsSettings createBasicGraphicsSettings(byte param0) {
         if (param0 <= 20) {
           field_a = (String) null;
         }
-        va var1 = new va();
+        GraphicsSettings var1 = new GraphicsSettings();
         var1.field_f = false;
         var1.field_h = 0;
         var1.field_k = false;

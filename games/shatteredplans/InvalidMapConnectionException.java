@@ -6,7 +6,7 @@ final class InvalidMapConnectionException extends Exception {
     static Sprite field_d;
     static int[] field_e;
     static String field_c;
-    static v field_a;
+    static TiledNineSlicePainter field_a;
     static String[] field_f;
 
     public static void clearStatics(byte param0) {

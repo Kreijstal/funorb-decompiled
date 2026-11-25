@@ -312,7 +312,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_37_0 = Archive.field_l;
             return stackIn_37_0;
           }
-          if (va.a(var6, -1, var5)) {
+          if (GraphicsSettings.containsForwardOrReversed(var6, -1, var5)) {
             stackIn_27_0 = ClientInputSupport.field_e;
             return stackIn_27_0;
           }

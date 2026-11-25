@@ -205,7 +205,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           return true;
         }
-        if (!LegacyAi.a(2, uo.field_f, ConquestVictoryChecker.field_o, GameClientShell.field_D, IndexedSpriteState.field_e)) {
+        if (!LegacyAi.a(2, LobbyRoomInteractionSupport.field_f, ConquestVictoryChecker.field_o, GameClientShell.field_D, IndexedSpriteState.field_e)) {
           if (TextReplacementEntry.field_j == 10) {
             if (var3 != 0) {
               return false;
@@ -245,7 +245,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var3 != 0) {
           return false;
         }
-        return NetworkArchiveRequest.a(IndexedSpriteState.field_e, ConquestVictoryChecker.field_o, false, uo.field_f, GameClientShell.field_D);
+        return NetworkArchiveRequest.a(IndexedSpriteState.field_e, ConquestVictoryChecker.field_o, false, LobbyRoomInteractionSupport.field_f, GameClientShell.field_D);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
@@ -287,7 +287,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != TertiaryListSequence.field_j) {
             TextHotspotRegion.field_q = 0;
-            v.field_d = 0;
+            TiledNineSlicePainter.field_d = 0;
             PlayerReportPanel.field_Lb = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
@@ -330,11 +330,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             TertiaryNodeList.field_e = param0.getY();
             ClientClockSupport.currentTimeMillis(14274);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              vh.field_c = 2;
-              v.field_d = 2;
+              ClientUiResourceState.field_c = 2;
+              TiledNineSlicePainter.field_d = 2;
             } else {
-              vh.field_c = 1;
-              v.field_d = 1;
+              ClientUiResourceState.field_c = 1;
+              TiledNineSlicePainter.field_d = 1;
             }
             var2_int = param0.getModifiers();
             PlayerReportPanel.field_Lb = true;
@@ -374,7 +374,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == TertiaryListSequence.field_j) {
             return;
           }
-          v.field_d = 0;
+          TiledNineSlicePainter.field_d = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

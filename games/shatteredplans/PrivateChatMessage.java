@@ -773,7 +773,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_esctoexit", 105);
                 if (null != var2) {
-                  uo.field_d = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomInteractionSupport.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_defeated", 96);
                 if (var2 != null) {
@@ -993,7 +993,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions0", 116);
                 if (var2 != null) {
-                  vc.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientRandomSupport.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("text_instructions_glossary1", 120);
                 if (null != var2) {
@@ -1475,7 +1475,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("tabname_messages", 98);
                 if (null != var2) {
-                  uq.field_l = IterableNodeHashTable.a(var2, 17746);
+                  PopupPlacementSupport.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("tabname_victory", 113);
                 if (var2 != null) {
@@ -1780,7 +1780,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = GameTextResources.loadGameTextResource("track_name_new", 96);
                 if (var2 != null) {
-                  uq.field_h = IterableNodeHashTable.a(var2, 17746);
+                  PopupPlacementSupport.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = GameTextResources.loadGameTextResource("track_name_old", 112);
                 if (var2 != null) {

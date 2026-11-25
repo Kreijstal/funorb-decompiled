@@ -82,7 +82,7 @@ final class BirthDateConfirmationForm extends ArrayWidgetGroup implements Button
 
     BirthDateConfirmationForm(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_J = new NumericDateInputWidget(new TextInputPainter(10000536), va.field_j, 0, 0, 140, 25);
+        this.field_J = new NumericDateInputWidget(new TextInputPainter(10000536), GraphicsSettings.field_j, 0, 0, 140, 25);
         this.field_J.setDateValidator(new BirthDateValidator(), -70);
         this.field_M = new FocusableWidget(QuickChatParameterType.field_b, (WidgetListener) (this));
         this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_M)};

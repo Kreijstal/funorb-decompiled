@@ -287,11 +287,11 @@ final class SoundPlayback extends IntrusiveNode {
             }
             DerelictMapReader.field_a = stackIn_115_0 + stackIn_116_1;
           }
-          uq.field_k = ObjectList.field_i - (DerelictMapReader.field_a >> 1);
+          PopupPlacementSupport.field_k = ObjectList.field_i - (DerelictMapReader.field_a >> 1);
           StrongCacheEntry.field_w = new int[InvalidMapConnectionException.field_f.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = -123 / ((-15 - param1) / 55);
-          var6Lifetime1 = uq.field_k;
+          var6Lifetime1 = PopupPlacementSupport.field_k;
           while (var4Lifetime3 < InvalidMapConnectionException.field_f.length) {
             var7Lifetime2 = MenuTextResources.field_a[var4Lifetime3];
             if (var7Lifetime2 >= 0) {

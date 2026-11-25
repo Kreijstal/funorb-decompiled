@@ -2197,7 +2197,7 @@ final class GameState {
         }
         var12 = stackIn_15_0;
         scanLoop1: while (true) {
-          var7 = vc.a((byte) -39, var2);
+          var7 = ClientRandomSupport.randomBelow((byte) -39, var2);
           var13 = 0;
           while (var11 > var13) {
             if (this.field_N[var13] == var7) {
@@ -2206,7 +2206,7 @@ final class GameState {
             var13++;
           }
           scanLoop2: while (true) {
-            var8 = vc.a((byte) -39, var3);
+            var8 = ClientRandomSupport.randomBelow((byte) -39, var3);
             var13Lifetime2 = 0;
             while (var12 > var13Lifetime2) {
               if (this.field_j[var13Lifetime2] == var8) {

@@ -10,15 +10,15 @@ final class ChatAreaLayoutSupport {
         if (param0 != 0) {
           return;
         }
-        uo.a((byte) -75);
+        LobbyRoomInteractionSupport.pollLoginUiAction((byte) -75);
     }
 
     final static void layoutChatPanels(boolean param0) {
         IndexedSpriteState.a(127);
         ChatPanelLayoutSupport.layoutSharedChatPanel(BoundsRect.field_m[0].field_o, UniformNineSliceFactory.field_c, DateValidationSupport.field_a, 113, UnderageAccountInfoPanel.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
-          v var2 = (v) null;
-          ChatAreaLayoutSupport.configureQuickChatRows(-28, (v) null, 8, (v) null, 98, -88);
+          TiledNineSlicePainter var2 = (TiledNineSlicePainter) null;
+          ChatAreaLayoutSupport.configureQuickChatRows(-28, (TiledNineSlicePainter) null, 8, (TiledNineSlicePainter) null, 98, -88);
         }
     }
 
@@ -30,7 +30,7 @@ final class ChatAreaLayoutSupport {
         field_a = null;
     }
 
-    final static void configureQuickChatRows(int param0, v param1, int param2, v param3, int param4, int param5) {
+    final static void configureQuickChatRows(int param0, TiledNineSlicePainter param1, int param2, TiledNineSlicePainter param3, int param4, int param5) {
         try {
           Wormhole.field_l = param3;
           GameMenuController.field_b = param5;

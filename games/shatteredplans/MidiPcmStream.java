@@ -510,7 +510,7 @@ final class MidiPcmStream extends PcmStream {
                 var12.field_Mb.addChild(4, var12.field_ac);
               }
               var12.field_Kb = new AnimatedPanel(0L, (AnimatedPanel) null);
-              if (0 != (1 << v.field_e & var14)) {
+              if (0 != (1 << TiledNineSlicePainter.field_e & var14)) {
                 var12.field_Mb.addChild(4, var12.field_Kb);
               }
               var45 = var12.field_Bb;
@@ -722,7 +722,7 @@ final class MidiPcmStream extends PcmStream {
                 var12.field_ac.setTarget(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
                 var34_int = var34_int + (TextLayout.field_b + var52_ref.field_o);
               }
-              if ((1 << v.field_e & var14Lifetime1) != 0) {
+              if ((1 << TiledNineSlicePainter.field_e & var14Lifetime1) != 0) {
                 stackIn_88_0 = CheckboxPainter.field_l;
                 if (var12.field_ec) {
                   stackIn_91_1 = 1;
@@ -835,7 +835,7 @@ final class MidiPcmStream extends PcmStream {
             }
             if (var12.field_Bb.field_L) {
               if (var12.field_nc == 1) {
-                var34 = va.field_i;
+                var34 = GraphicsSettings.field_i;
               } else {
                 var34 = LobbyOptionResources.field_e[var12.field_nc];
               }

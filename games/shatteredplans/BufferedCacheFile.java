@@ -798,7 +798,7 @@ final class BufferedCacheFile {
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {
                           dupTemp$0 = param2.field_p[var8];
-                          uo.field_h[dupTemp$0] = uo.field_h[dupTemp$0] + 1;
+                          LobbyRoomInteractionSupport.field_h[dupTemp$0] = LobbyRoomInteractionSupport.field_h[dupTemp$0] + 1;
                         }
                         TutorialTextSupport.field_e = TutorialTextSupport.field_e + 1;
                         break;
@@ -819,9 +819,9 @@ final class BufferedCacheFile {
             param2.field_p != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(uo.field_h.length <= var9Lifetime1)) {
-              var10Lifetime1 = uo.field_h[var9Lifetime1];
-              uo.field_h[var9Lifetime1] = var8Lifetime1;
+            while (!(LobbyRoomInteractionSupport.field_h.length <= var9Lifetime1)) {
+              var10Lifetime1 = LobbyRoomInteractionSupport.field_h[var9Lifetime1];
+              LobbyRoomInteractionSupport.field_h[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -950,7 +950,7 @@ final class BufferedCacheFile {
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {
                           dupTemp$0 = param2.field_p[var8];
-                          uo.field_h[dupTemp$0] = uo.field_h[dupTemp$0] + 1;
+                          LobbyRoomInteractionSupport.field_h[dupTemp$0] = LobbyRoomInteractionSupport.field_h[dupTemp$0] + 1;
                         }
                         TutorialTextSupport.field_e = TutorialTextSupport.field_e + 1;
                         break;
@@ -971,9 +971,9 @@ final class BufferedCacheFile {
             param2.field_p != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(uo.field_h.length <= var9Lifetime1)) {
-              var10Lifetime1 = uo.field_h[var9Lifetime1];
-              uo.field_h[var9Lifetime1] = var8Lifetime1;
+            while (!(LobbyRoomInteractionSupport.field_h.length <= var9Lifetime1)) {
+              var10Lifetime1 = LobbyRoomInteractionSupport.field_h[var9Lifetime1];
+              LobbyRoomInteractionSupport.field_h[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

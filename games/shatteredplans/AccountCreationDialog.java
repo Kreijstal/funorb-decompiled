@@ -35,19 +35,19 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           var3 = var10.readUnsignedByte(-108);
           var10.m(-84);
           wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
-          vc.field_d = new MeshData[var3];
+          ClientRandomSupport.field_d = new MeshData[var3];
           ValidatedTextInputWidget.field_Z = new int[var3][];
           if (param0 <= 82) {
             return;
           }
           for (var4 = 0; var3 > var4; var4++) {
-            vc.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
+            ClientRandomSupport.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
           }
           var10.i((byte) -47);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = vc.field_d[var9];
+            var5 = ClientRandomSupport.field_d[var9];
             var5.scale(6, -226, 6, 6, 1);
             var5.updateBounds(true);
             var6 = new int[]{var5.field_O + var5.field_k >> 1, var5.field_j + var5.field_t >> 1, var5.field_E + var5.field_r >> 1};

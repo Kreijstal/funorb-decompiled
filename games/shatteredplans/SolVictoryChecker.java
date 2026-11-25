@@ -459,7 +459,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 ProjectsWindowSupport.cacheClientSeedBytes(24);
               }
               stackIn_44_0 = (0 != (16 & var7));
-              va.field_j = stackIn_44_0;
+              GraphicsSettings.field_j = stackIn_44_0;
               if (!param2) {
                 stackIn_48_0 = ((4 & var7) != 0);
                 QuickChatPhraseDefinition.field_v = stackIn_48_0;

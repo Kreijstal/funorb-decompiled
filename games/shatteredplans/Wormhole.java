@@ -6,7 +6,7 @@ final class Wormhole extends IntrusiveNode {
     static AccountConnectionPhase field_j;
     Star field_k;
     static boolean field_i;
-    static v field_l;
+    static TiledNineSlicePainter field_l;
     int field_m;
     static Sprite field_h;
 

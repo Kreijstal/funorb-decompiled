@@ -131,7 +131,7 @@ final class ChatHistoryEntry {
               }
               var4 = (BattleContribution) (param0.field_v.nextForward((byte) -71));
             }
-            var5 = va.a(-2, var6);
+            var5 = GraphicsSettings.joinWithFinalConjunction(-2, var6);
           }
           stackIn_33_0 = var5;
           return stackIn_33_0;
@@ -236,7 +236,7 @@ final class ChatHistoryEntry {
     }
 
     ChatHistoryEntry(boolean param0) {
-        this.field_e = va.field_b;
+        this.field_e = GraphicsSettings.field_b;
         if (param0) {
           this.field_f = AgeValidator.field_p;
         } else {

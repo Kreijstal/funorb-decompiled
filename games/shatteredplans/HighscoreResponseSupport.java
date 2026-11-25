@@ -209,15 +209,15 @@ final class HighscoreResponseSupport {
         var2 = TertiaryListSequence.field_j;
         synchronized (var2) {
           TextHotspotRegion.field_q = TextHotspotRegion.field_q + 1;
-          AllianceExpiredEvent.field_n = v.field_d;
+          AllianceExpiredEvent.field_n = TiledNineSlicePainter.field_d;
           TertiaryListSequence.field_k = ClientContextMenuSupport.field_f;
           LobbyRoomControlsSupport.field_b = AllianceExpiredEvent.field_i;
           UrlLoader.field_d = PlayerReportPanel.field_Lb;
           PlayerReportPanel.field_Lb = false;
-          LobbyCommandSupport.field_d = vh.field_c;
+          LobbyCommandSupport.field_d = ClientUiResourceState.field_c;
           PointsVictoryChecker.field_p = ArchiveSource.field_c;
           SliderWidget.field_P = TertiaryNodeList.field_e;
-          vh.field_c = 0;
+          ClientUiResourceState.field_c = 0;
         }
     }
 

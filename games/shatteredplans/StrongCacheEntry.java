@@ -530,7 +530,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         RuntimeException var21 = null;
         Sprite[] var22 = null;
         try {
-          AgeValidator.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new v(param8), new v(param19), param18, param11, param14, new v(param5), param15);
+          AgeValidator.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new TiledNineSlicePainter(param8), new TiledNineSlicePainter(param19), param18, param11, param14, new TiledNineSlicePainter(param5), param15);
           if (param1 != 13421772) {
             var22 = (Sprite[]) null;
             StrongCacheEntry.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (BitmapFont) null, (BitmapFont) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);

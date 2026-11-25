@@ -121,11 +121,11 @@ class DualLinkNode extends IntrusiveNode {
         if (param1 != 32) {
           field_k = (int[]) null;
         }
-        Sprite var2 = vh.field_a[param0];
+        Sprite var2 = ClientUiResourceState.field_a[param0];
         if (var2 == null) {
           dupTemp$0 = new Sprite(64, 64);
           var2 = dupTemp$0;
-          vh.field_a[param0] = dupTemp$0;
+          ClientUiResourceState.field_a[param0] = dupTemp$0;
           RasterTargetSupport.pushSpriteRenderTarget(var2, param1 ^ 93);
           GameSpriteResources.getAchievementIcon(param0, (byte) 66).draw(16, 16);
           SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);

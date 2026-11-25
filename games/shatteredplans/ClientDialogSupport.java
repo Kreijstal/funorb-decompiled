@@ -112,10 +112,10 @@ final class ClientDialogSupport {
           return;
         }
         OpacityWidget.field_C = WhirlpoolHasher.field_j;
-        uq.field_j = GameAssetSetupSupport.field_a;
-        uq.field_j.field_jb = -1;
+        PopupPlacementSupport.field_j = GameAssetSetupSupport.field_a;
+        PopupPlacementSupport.field_j.field_jb = -1;
         WhirlpoolHasher.field_j = null;
-        uq.field_j.field_qb = -1;
+        PopupPlacementSupport.field_j.field_qb = -1;
         GameAssetSetupSupport.field_a = null;
         IconLabelPanel.field_Ab = null;
         IntroTextLine.field_m = null;

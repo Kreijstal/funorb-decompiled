@@ -456,7 +456,7 @@ class AnimatedPanel extends PanelNode {
         var12 = SoftwareRasterizer.field_f;
         SoftwareRasterizer.intersectClip(this.field_B, this.field_N, this.field_B + this.field_K, this.field_N + this.field_mb);
         var13 = 0;
-        if (!us.field_c &&
+        if (!ClientRenderSupport.field_c &&
           param3 &&
           LobbyCommandSupport.field_d != 0 &&
           SoftwareRasterizer.field_i <= PointsVictoryChecker.field_p &&
@@ -492,7 +492,7 @@ class AnimatedPanel extends PanelNode {
           ProxySocketConnector.field_j = true;
         }
         if (var13 != 0) {
-          us.field_c = true;
+          ClientRenderSupport.field_c = true;
         }
         SoftwareRasterizer.setClip(var9, var10, var11, var12);
         if (this.field_ub != 0 &&
@@ -802,7 +802,7 @@ class AnimatedPanel extends PanelNode {
     }
 
     final void a(boolean param0, int param1) {
-        us.field_c = !param0 ? true : false;
+        ClientRenderSupport.field_c = !param0 ? true : false;
         ProxySocketConnector.field_j = !param0 ? true : false;
         if (param1 != -20429) {
           this.field_z = (String) null;

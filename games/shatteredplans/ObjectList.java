@@ -474,7 +474,7 @@ final class ObjectList {
                 if (EmailValidationError.field_a == param2 &&
                   !SecondaryNodeDequeIterator.a((byte) -126)) {
                   var27 = MenuInputState.field_a.field_Xb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(ve.field_Gb, 4371, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + QuickChatCategoryRegistry.a(SocialListEntry.field_Gb, 4371, new String[]{var27});
                 }
                 DualLinkDequeSequence.field_k = (String) (var24Lifetime2);
               }

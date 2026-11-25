@@ -149,11 +149,11 @@ final class GradientMenuLabel extends MenuComponent {
           }
           ValidationMessageWidget.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ByteArrayReadRequest.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
-          DiskCacheWorker.field_b = (LobbyOptionSupport.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
+          DiskCacheWorker.field_b = (LobbyOptionSupport.field_e + LobbyRoomInteractionSupport.field_g << 1) * AccountStatusDialog.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
             if (ClientClockSupport.field_d[var8Lifetime2] >= 0) {
-              stackIn_41_1 = vh.field_b;
+              stackIn_41_1 = ClientUiResourceState.field_b;
             } else {
               stackIn_41_1 = MenuButton.field_A;
             }

@@ -443,15 +443,15 @@ final class GameMenuController {
           WhirlpoolHasher.field_q = new int[5];
           AccountConnectionPhase.field_c = new int[5];
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
-            WhirlpoolHasher.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
-            AccountConnectionPhase.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
+            WhirlpoolHasher.field_q[var4Lifetime2] = ClientRandomSupport.randomBelow((byte) -39, 35);
+            AccountConnectionPhase.field_c[var4Lifetime2] = ClientRandomSupport.randomBelow((byte) -39, 35);
           }
         }
         var6Lifetime1 = RasterStateFrame.field_n % 50;
         if (var6Lifetime1 == 0) {
           for (var4Lifetime3 = 0; 5 > var4Lifetime3; var4Lifetime3++) {
             WhirlpoolHasher.field_q[var4Lifetime3] = AccountConnectionPhase.field_c[var4Lifetime3];
-            AccountConnectionPhase.field_c[var4Lifetime3] = vc.a((byte) -39, 35);
+            AccountConnectionPhase.field_c[var4Lifetime3] = ClientRandomSupport.randomBelow((byte) -39, 35);
           }
         }
     }
@@ -1463,7 +1463,7 @@ final class GameMenuController {
             var5 = GameAssetSetupSupport.field_g;
           }
         } else {
-          var5 = vc.field_e;
+          var5 = ClientRandomSupport.field_e;
         }
         this.drawWrappedInstructions(var8, -91, param0, param3, var6, 16777215, var7, IconTextPanel.field_Cb, wg.field_e.expandPlaceholders(5607, var5));
     }
@@ -1626,7 +1626,7 @@ final class GameMenuController {
           if (this.field_a == 8) {
             this.handleAchievementPointer(-16084);
           }
-          v.a((byte) -128);
+          TiledNineSlicePainter.updatePointerInteraction((byte) -128);
           this.field_d.updatePointerSelection(param0 ^ -2665, this.findMenuItemAt(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.findMenuItemAt(LobbyRoomControlsSupport.field_b, (byte) -109, TertiaryListSequence.field_k));
           if (this.field_d.field_c != -1) {
             this.handleMenuItemInput(true, this.field_d.field_c, false);
@@ -2120,7 +2120,7 @@ final class GameMenuController {
         }
         var2 = 85 / ((-27 - param0) / 45);
         if (2 == TextReplacementEntry.field_j) {
-          ProductionContent.a(us.b(0), 1);
+          ProductionContent.a(ClientRenderSupport.createHighGraphicsSettings(0), 1);
         }
         if (TextReplacementEntry.field_j == 3) {
           ProductionContent.a(QuickChatHelpPanel.createDefaultViewSettings(1), 1);
@@ -2290,7 +2290,7 @@ final class GameMenuController {
                       this.field_g = param0;
                       var5 = param1 ? 1 : 0;
                       MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, 0, (byte) 96, var5 != 0);
-                      uo.field_e = true;
+                      LobbyRoomInteractionSupport.field_e = true;
                     } else {
                       if (var5 == 23) {
                         this.field_g = param0;
@@ -2437,7 +2437,7 @@ final class GameMenuController {
                                               }
                                             } else {
                                               this.field_g = param0;
-                                              if (v.field_b) {
+                                              if (TiledNineSlicePainter.field_b) {
                                                 var5 = param1 ? 1 : 0;
                                                 MenuTransitionSupport.beginMenuTransition(PlayerRankingRequest.field_o, -7, (byte) 96, var5 != 0);
                                               }

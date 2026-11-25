@@ -258,7 +258,7 @@ class TextHotspotWidget extends FocusableWidget {
           return;
         }
         if (NameSuggestionsPanel.field_L < 50) {
-          us.a(0, NameSuggestionsPanel.field_L);
+          ClientRenderSupport.applyIntroTransitionEffect(0, NameSuggestionsPanel.field_L);
         }
         IntroRenderSupport.drawIntroText((byte) -120);
         var1 = NetworkArchiveRequest.field_C.stringWidth(MenuInputState.field_d) + 20;

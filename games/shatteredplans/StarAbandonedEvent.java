@@ -11,7 +11,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
     static String field_o;
     static String field_s;
     int[] field_i;
-    static v field_h;
+    static TiledNineSlicePainter field_h;
     static Sprite[] field_r;
     static PlatformTaskDispatcher field_l;
 

@@ -8,7 +8,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     private TextFieldWidget field_n;
     static AccountRequestState field_s;
     static String field_o;
-    static va field_t;
+    static GraphicsSettings field_t;
 
     MatchingTextValidator(TextFieldWidget param0, TextFieldWidget param1) {
         super(param0);

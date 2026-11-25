@@ -146,7 +146,7 @@ final class RoundedMenuPanel extends MenuComponent {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        ve var7 = null;
+        SocialListEntry var7 = null;
         CharSequence var8 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

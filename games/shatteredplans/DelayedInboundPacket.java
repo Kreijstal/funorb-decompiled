@@ -38,10 +38,10 @@ final class DelayedInboundPacket extends IntrusiveNode {
         WidgetStyle.field_j = var8.readLong(param1 ^ -31);
         if (PacketBuffer.field_k != 2) {
           TertiaryNodeList.field_f = 0;
-          va.field_b = 0;
+          GraphicsSettings.field_b = 0;
         } else {
           TertiaryNodeList.field_f = var8.readUnsignedShort(param1 - 20975);
-          va.field_b = var8.readMedium(param1 + 256);
+          GraphicsSettings.field_b = var8.readMedium(param1 + 256);
         }
         stackIn_9_0 = (1 != var8.readUnsignedByte(param1 - 66)) ? 0 : 1;
         var4 = stackIn_9_0;

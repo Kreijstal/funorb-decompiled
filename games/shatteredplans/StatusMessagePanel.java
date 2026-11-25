@@ -73,7 +73,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
           if (LobbyCommandSupport.field_d != 1) {
             if (AllianceExpiredEvent.field_n != 1) {
               if (null != ContentDialog.field_bb &&
-                uq.field_i >= 5) {
+                PopupPlacementSupport.field_i >= 5) {
                 PlayerEliminatedEvent.field_h = null;
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
@@ -84,11 +84,11 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
               BattleSnapshot.field_s = null;
               ContentDialog.field_bb = null;
             } else {
-              uq.field_i = uq.field_i + 1;
+              PopupPlacementSupport.field_i = PopupPlacementSupport.field_i + 1;
               if (ContentDialog.field_bb == null) {
                 var2_int = (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) * (ChatPanelSetupSupport.field_c - LobbyRoomControlsSupport.field_b) + (-TertiaryListSequence.field_k + GameAssetSetupSupport.field_e) * (-TertiaryListSequence.field_k + GameAssetSetupSupport.field_e);
                 if (5 < var2_int &&
-                  uq.field_i > 5) {
+                  PopupPlacementSupport.field_i > 5) {
                   ContentDialog.field_bb = BattleSnapshot.field_s;
                 }
               }
@@ -99,7 +99,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
           } else {
             ChatPanelSetupSupport.field_c = SliderWidget.field_P;
             GameAssetSetupSupport.field_e = PointsVictoryChecker.field_p;
-            uq.field_i = 0;
+            PopupPlacementSupport.field_i = 0;
             BattleSnapshot.field_s = TextInputPainter.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
           return;
@@ -150,7 +150,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
         stackIn_12_8 = true;
         stackIn_12_9 = var2;
         stackIn_12_10 = 11;
-        stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
+        stackIn_14_11 = (TiledNineSlicePainter.field_b) || (MusicEnvelope.field_d);
         IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (GameMenuController.field_e &&
           RasterStateFrame.field_n % 50 == 0) {

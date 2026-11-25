@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SocialNameInputPanel extends AnimatedPanel {
-    static v field_Cb;
+    static TiledNineSlicePainter field_Cb;
     private AnimatedPanel field_yb;
     private AnimatedPanel field_zb;
     static String field_xb;
@@ -338,7 +338,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -105) {
-            field_Cb = (v) null;
+            field_Cb = (TiledNineSlicePainter) null;
           }
           var3 = (CharSequence) ((Object) param0);
           stackIn_3_0 = ArchiveIndex.field_d.equals(DateInputWidget.a(var3, true));
@@ -390,7 +390,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
           var10 = 5 + var9_int + 5;
           var11 = 3 + UniformNineSliceFactory.field_c * 2 + 3;
           var12 = ArchiveLoadProgress.positionPopupX(-57, param0, var10, param2);
-          var13 = uq.a(param3, 0, var11, param1);
+          var13 = PopupPlacementSupport.positionPopupY(param3, 0, var11, param1);
           this.setTarget(var10, var11, (byte) 63, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

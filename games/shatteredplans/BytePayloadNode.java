@@ -161,8 +161,8 @@ final class BytePayloadNode extends IntrusiveNode {
           if (param2.field_M == null) {
             param2.field_M = new IntrusiveDeque();
           }
-          uo.field_a = param2.field_M;
-          uo.field_a.clear(0);
+          LobbyRoomInteractionSupport.field_a = param2.field_M;
+          LobbyRoomInteractionSupport.field_a.clear(0);
           SpriteStripButtonPainter.field_w = new SecondaryNodeHashTable(param4);
           SoundTriggerTick.field_e = 0L;
           AccountBooleanRequest.field_i = param9;

@@ -51,7 +51,7 @@ final class DiskCacheWorker implements Runnable {
           var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
           DefendTask.field_s.drawSilhouette(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
         }
-        va.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
+        GraphicsSettings.field_e = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
         TabbedPanel.field_Cb = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
         EmailSyntaxValidator.field_o = SpriteResourceSupport.loadSpriteByName(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
         RoundedFrameSupport.field_c = SpriteResourceSupport.loadSpriteByName(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
@@ -83,7 +83,7 @@ final class DiskCacheWorker implements Runnable {
           SoftwareRasterizer.b(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
           we.field_f.bindAsRenderTarget();
           SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
-          AccountBooleanRequest.field_j = va.field_e.copy();
+          AccountBooleanRequest.field_j = GraphicsSettings.field_e.copy();
           AccountBooleanRequest.field_j.rotate180();
           for (var3 = 0; var3 < AccountBooleanRequest.field_j.field_B.length; var3++) {
             var4 = AccountBooleanRequest.field_j.field_B[var3];
@@ -99,7 +99,7 @@ final class DiskCacheWorker implements Runnable {
             AccountBooleanRequest.field_j.field_B[var3] = PrivateChatMessage.intOr(PrivateChatMessage.intOr(var6, var5), var7);
           }
           MusicVoice.field_n = DefendTask.field_s.flippedCopy();
-          uo.a((byte) 110, MusicVoice.field_n, 32768);
+          LobbyRoomInteractionSupport.tintSprite((byte) 110, MusicVoice.field_n, 32768);
           var1_int = MusicVoice.field_n.field_z;
           var2 = MusicVoice.field_n.field_z + 120;
           CheckboxPainter.field_b = new Sprite(var1_int, var2);
@@ -299,11 +299,11 @@ final class DiskCacheWorker implements Runnable {
           PasswordInputPainter.field_x = null;
           SecondaryNodeHashTable.field_g = null;
         }
-        if (uo.field_e) {
+        if (LobbyRoomInteractionSupport.field_e) {
           StringList.field_b = null;
           GameKeyHandler.field_a = new IntrusiveDeque();
           vq.field_a = 0;
-          uo.field_e = false;
+          LobbyRoomInteractionSupport.field_e = false;
         }
         if (param0 != 1048576) {
           return;

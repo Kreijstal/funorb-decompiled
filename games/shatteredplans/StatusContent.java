@@ -35,11 +35,11 @@ final class StatusContent implements MenuContent {
         return new String(var6);
     }
 
-    final static void a(int param0, v param1, int param2, byte param3) {
+    final static void a(int param0, TiledNineSlicePainter param1, int param2, byte param3) {
         try {
           if (param3 <= 92) {
-            v var5 = (v) null;
-            StatusContent.a(-96, (v) null, -95, (byte) -3);
+            TiledNineSlicePainter var5 = (TiledNineSlicePainter) null;
+            StatusContent.a(-96, (TiledNineSlicePainter) null, -95, (byte) -3);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ad.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

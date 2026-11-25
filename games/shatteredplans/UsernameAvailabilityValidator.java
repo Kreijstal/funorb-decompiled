@@ -97,9 +97,9 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             AccountRequestResult.field_a = null;
           }
           IsaacBackedRandom.field_b = null;
-          if (uo.field_a != null) {
-            uo.field_a.clear(0);
-            uo.field_a = null;
+          if (LobbyRoomInteractionSupport.field_a != null) {
+            LobbyRoomInteractionSupport.field_a.clear(0);
+            LobbyRoomInteractionSupport.field_a = null;
           }
           SpriteStripButtonPainter.field_w = null;
           if (ShatteredPlansClient.field_H != null) {

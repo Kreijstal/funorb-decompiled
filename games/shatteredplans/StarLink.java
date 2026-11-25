@@ -25,7 +25,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (3 == param0) {
-            stackIn_3_0 = uo.field_c;
+            stackIn_3_0 = LobbyRoomInteractionSupport.field_c;
             return stackIn_3_0;
           }
           if (param0 == 6) {

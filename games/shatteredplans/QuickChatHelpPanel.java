@@ -5,8 +5,8 @@ final class QuickChatHelpPanel extends AnimatedPanel {
     static int[] field_yb;
     private AnimatedPanel field_xb;
 
-    final static va createDefaultViewSettings(int param0) {
-        va var1 = new va();
+    final static GraphicsSettings createDefaultViewSettings(int param0) {
+        GraphicsSettings var1 = new GraphicsSettings();
         var1.field_k = false;
         var1.field_a = param0;
         var1.field_h = 1;

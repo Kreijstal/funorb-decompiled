@@ -15,13 +15,13 @@ final class IntroLoadingSupport {
 
     final static void drawIntroLoadingScreen(int param0) {
         int var2 = 0;
-        if (null == va.field_d) {
-          va.field_d = new Sprite[]{ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[0]), ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[1])};
+        if (null == GraphicsSettings.field_d) {
+          GraphicsSettings.field_d = new Sprite[]{ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[0]), ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[1])};
         }
         SoftwareRasterizer.clear();
         int var1 = 240;
-        wc.a(-27030, FleetTrailPoint.field_m << 1, -va.field_d[0].field_z + 640 >> 1, va.field_d[0], var1, 256);
-        wc.a(-27030, -128 + (FleetTrailPoint.field_m << 1), -va.field_d[1].field_z + 640 >> 1, va.field_d[1], var1 + va.field_d[1].field_w, 256);
+        wc.a(-27030, FleetTrailPoint.field_m << 1, -GraphicsSettings.field_d[0].field_z + 640 >> 1, GraphicsSettings.field_d[0], var1, 256);
+        wc.a(-27030, -128 + (FleetTrailPoint.field_m << 1), -GraphicsSettings.field_d[1].field_z + 640 >> 1, GraphicsSettings.field_d[1], var1 + GraphicsSettings.field_d[1].field_w, 256);
         if (!EmailValidator.field_r) {
           var2 = DerelictVictoryChecker.field_n.getGroupProgressByName("intro", (byte) 53);
           AttackTask.a((byte) 73, 455, 15, 16711680, 10, var2, 100);

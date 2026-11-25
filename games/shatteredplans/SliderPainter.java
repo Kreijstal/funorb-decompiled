@@ -155,10 +155,10 @@ final class SliderPainter implements WidgetPainter {
         int fieldTemp$0 = 0;
         int var1 = 0;
         int var1Lifetime1;
-        if (PlayerStats.field_k < vc.field_c.length) {
+        if (PlayerStats.field_k < ClientRandomSupport.field_c.length) {
           fieldTemp$0 = PlayerStats.field_k;
           PlayerStats.field_k = PlayerStats.field_k + 1;
-          Territory.field_t = vc.field_c[fieldTemp$0];
+          Territory.field_t = ClientRandomSupport.field_c[fieldTemp$0];
           var1 = -8 % ((-21 - param0) / 42);
           return;
         }

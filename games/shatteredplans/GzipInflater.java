@@ -34,15 +34,15 @@ final class GzipInflater {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        ve var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        ve var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        ve var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = SpriteWipeSupport.field_a;
@@ -75,7 +75,7 @@ final class GzipInflater {
               }
             }
             if (null == var6) {
-              var6 = new ve();
+              var6 = new SocialListEntry();
               CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, param0);
               fieldTemp$0 = GameSpriteResources.field_e;
               GameSpriteResources.field_e = GameSpriteResources.field_e + 1;
@@ -133,7 +133,7 @@ final class GzipInflater {
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new ve();
+            var6Lifetime1 = new SocialListEntry();
             BattleEvent.field_q.put((long)DateInputWidget.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
             fieldTemp$1 = UrlLoader.field_c;
             UrlLoader.field_c = UrlLoader.field_c + 1;
@@ -147,7 +147,7 @@ final class GzipInflater {
           var6Lifetime1.field_xb = (String) (var3Lifetime1);
           var6Lifetime1.field_Bb = var5Lifetime1;
           var6Lifetime1.unlink((byte) -125);
-          var7_ref = (ve) (MenuComponent.field_j.startForward(0));
+          var7_ref = (SocialListEntry) (MenuComponent.field_j.startForward(0));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
@@ -157,7 +157,7 @@ final class GzipInflater {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_43_0)) {
-                var7_ref = (ve) (MenuComponent.field_j.nextForward((byte) -71));
+                var7_ref = (SocialListEntry) (MenuComponent.field_j.nextForward((byte) -71));
                 continue;
               }
             }

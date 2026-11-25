@@ -236,7 +236,7 @@ final class PlayerContextMenuController {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        ve var5 = null;
+        SocialListEntry var5 = null;
         int var6 = 0;
         String var7 = null;
         try {

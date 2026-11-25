@@ -44,12 +44,12 @@ final class wi {
         }
     }
 
-    final static void a(int param0, byte param1, v param2, int param3, v param4, int param5) {
+    final static void a(int param0, byte param1, TiledNineSlicePainter param2, int param3, TiledNineSlicePainter param4, int param5) {
         try {
           LobbyOptionSupport.field_g = param5;
           LobbyOptionSupport.field_e = param0;
           UniformNineSliceFactory.field_e = param4;
-          uo.field_g = param3;
+          LobbyRoomInteractionSupport.field_g = param3;
           int var6_int = -121 % ((-57 - param1) / 48);
           SocialNameInputPanel.field_Cb = param2;
         } catch (RuntimeException runtimeException) {
@@ -59,7 +59,7 @@ final class wi {
 
     final static int a(AccountFieldValue param0, AccountFieldValue param1, int param2) {
         RuntimeException var3 = null;
-        v var4 = null;
+        TiledNineSlicePainter var4 = null;
         String var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -70,8 +70,8 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            var4 = (v) null;
-            wi.a(-18, (byte) 102, (v) null, 64, (v) null, 60);
+            var4 = (TiledNineSlicePainter) null;
+            wi.a(-18, (byte) 102, (TiledNineSlicePainter) null, 64, (TiledNineSlicePainter) null, 60);
           }
           var5 = (String) null;
           stackIn_3_0 = QuickChatPhraseDefinition.a(0, 0, param0, param1, 120, (String) null, false);

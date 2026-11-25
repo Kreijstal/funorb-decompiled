@@ -10,7 +10,7 @@ final class HighscoreQueryRequest extends IntrusiveNode {
 
     final static void putTextReplacement(String param0, int param1, String param2) {
         try {
-          uq.field_m.putReplacement(param2, 27275, param0);
+          PopupPlacementSupport.field_m.putReplacement(param2, 27275, param0);
           if (param1 != 1904) {
             String var4 = (String) null;
             HighscoreQueryRequest.putTextReplacement((String) null, 27, (String) null);

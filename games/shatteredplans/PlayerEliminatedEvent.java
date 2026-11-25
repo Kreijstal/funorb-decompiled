@@ -30,8 +30,8 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           var9_int = 495;
           var10 = 5;
           IconLabelPanel.field_Ab.setTarget(var9_int + param6, param2, (byte) 88, var10, 5);
-          uq.field_j.setTarget(-OpacityWidget.field_C.field_K + IconLabelPanel.field_Ab.field_K, param2, (byte) 66, 0, 0);
-          OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
+          PopupPlacementSupport.field_j.setTarget(-OpacityWidget.field_C.field_K + IconLabelPanel.field_Ab.field_K, param2, (byte) 66, 0, 0);
+          OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param2, (byte) 112, 0, PopupPlacementSupport.field_j.field_K);
           var10 = var10 + (param2 + param4);
           IntroTextLine.field_m.setTarget(IntroTextLine.field_m.measureWidthUnbounded(false), param1, (byte) 77, var10, 5);
           var11 = DirectByteArrayStorage.field_l.measureWidthUnbounded(false);

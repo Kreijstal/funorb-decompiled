@@ -2299,7 +2299,7 @@ final class MapView extends MapViewState {
             if (this.field_T == 1) {
               var4 = (BattleSnapshot) (this.field_m.startForward(0));
               while (var4 != null) {
-                while (vc.a((byte) -39, 200 + var4.field_x) >= 200) {
+                while (ClientRandomSupport.randomBelow((byte) -39, 200 + var4.field_x) >= 200) {
                   this.field_Y.addLast((byte) -113, new BattleExplosionVisual(var4.field_o));
                 }
                 boolean decompiledFrameRemainder0 = true;
@@ -2333,7 +2333,7 @@ final class MapView extends MapViewState {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    if (vc.a((byte) -39, 10) == 0) {
+                    if (ClientRandomSupport.randomBelow((byte) -39, 10) == 0) {
                       for (var5Lifetime2 = 0; var4.field_q.length > var5Lifetime2; var5Lifetime2++) {
                         var4.field_v[var5Lifetime2] = 0;
                       }
@@ -3304,7 +3304,7 @@ final class MapView extends MapViewState {
               }
             }
             if (var8.field_a == 0 &&
-              vc.a((byte) -39, 100) == 0) {
+              ClientRandomSupport.randomBelow((byte) -39, 100) == 0) {
               var8.field_h = 10;
             }
           }
@@ -3328,7 +3328,7 @@ final class MapView extends MapViewState {
               }
             }
             if (0 == var9.field_a &&
-              0 == vc.a((byte) -39, 100)) {
+              0 == ClientRandomSupport.randomBelow((byte) -39, 100)) {
               var9.field_h = 10;
             }
             var7++;

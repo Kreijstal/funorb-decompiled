@@ -5,7 +5,7 @@ final class UniformNineSliceFactory {
     static int field_c;
     static int field_b;
     static String field_d;
-    static v field_e;
+    static TiledNineSlicePainter field_e;
     static String field_a;
 
     final static Sprite[] createUniformNineSlice(int param0, int param1, int param2, int param3) {

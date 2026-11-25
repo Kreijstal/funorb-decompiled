@@ -46,7 +46,7 @@ final class ContextActionMenu extends AnimatedPanel {
         QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
         ProxyAuthenticationRequiredException.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
-        if (!(us.field_b >= param1)) {
+        if (!(ClientRenderSupport.field_b >= param1)) {
           GzipInflater.field_e = param1;
         }
         if (!(ReflectionQueueSupport.field_a <= param1)) {
@@ -170,7 +170,7 @@ final class ContextActionMenu extends AnimatedPanel {
           var6 = var6 + 2 * this.field_Kb;
           var7Lifetime3 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
           var8Lifetime3 = ArchiveLoadProgress.positionPopupX(param2 - 60, param3, var6, param0);
-          var9 = uq.a(param1, param2 + 0, var7Lifetime3, param4);
+          var9 = PopupPlacementSupport.positionPopupY(param1, param2 + 0, var7Lifetime3, param4);
           this.setTarget(var6, var7Lifetime3, (byte) 46, var9, var8Lifetime3);
           for (var10 = 0; this.field_Pb > var10; var10++) {
             this.field_Gb[var10].setIconLabelBounds(50, this.field_zb, this.field_yb + var10 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6, this.field_Kb);
@@ -192,7 +192,7 @@ final class ContextActionMenu extends AnimatedPanel {
         var6Lifetime1 = var6Lifetime1 + 2 * this.field_Kb;
         var7Lifetime2 = this.field_yb + this.field_yb + this.field_Pb * this.field_zb;
         var8Lifetime2 = ArchiveLoadProgress.positionPopupX(param2 - 60, param3, var6Lifetime1, param0);
-        var9Lifetime1 = uq.a(param1, param2 + 0, var7Lifetime2, param4);
+        var9Lifetime1 = PopupPlacementSupport.positionPopupY(param1, param2 + 0, var7Lifetime2, param4);
         this.setTarget(var6Lifetime1, var7Lifetime2, (byte) 46, var9Lifetime1, var8Lifetime2);
         for (var10Lifetime1 = 0; this.field_Pb > var10Lifetime1; var10Lifetime1++) {
           this.field_Gb[var10Lifetime1].setIconLabelBounds(50, this.field_zb, this.field_yb + var10Lifetime1 * this.field_zb, this.field_Eb, this.field_Jb, -(2 * this.field_Kb) + var6Lifetime1, this.field_Kb);

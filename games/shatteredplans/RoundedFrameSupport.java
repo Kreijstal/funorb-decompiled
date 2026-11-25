@@ -80,11 +80,11 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
               var6 = UiTextSupport.measureMenuLabel(true, StarLinkPlanner.field_c[var3_int], true);
               var4 = var4 + LobbyOptionSupport.field_e;
               var7 = -(var6 >> 1) + WeightedLruCache.field_e;
-              if (ArrayWidgetGroup.rectContains((uo.field_g << 1) + vh.field_b, param2, var7 - LobbyOptionSupport.field_g, (byte) -100, var4, (LobbyOptionSupport.field_g << 1) + var6, param1)) {
+              if (ArrayWidgetGroup.rectContains((LobbyRoomInteractionSupport.field_g << 1) + ClientUiResourceState.field_b, param2, var7 - LobbyOptionSupport.field_g, (byte) -100, var4, (LobbyOptionSupport.field_g << 1) + var6, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (vh.field_b + (LobbyOptionSupport.field_e + (uo.field_g << 1)));
+              var4 = var4 + (ClientUiResourceState.field_b + (LobbyOptionSupport.field_e + (LobbyRoomInteractionSupport.field_g << 1)));
             } else {
               var4 = var4 + MenuButton.field_A;
             }

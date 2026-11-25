@@ -64,7 +64,7 @@ final class FleetVisual extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, v param3) {
+    final static void a(int param0, int param1, int param2, TiledNineSlicePainter param3) {
         try {
           StarAbandonedEvent.field_h = param3;
           DualLinkDequeSequence.field_l = param0;

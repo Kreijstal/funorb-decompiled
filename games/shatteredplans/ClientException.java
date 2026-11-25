@@ -67,7 +67,7 @@ final class ClientException extends RuntimeException {
     final static void a(int param0) {
         int var3 = 0;
         boolean stackIn_13_0 = false;
-        v stackIn_17_0 = null;
+        TiledNineSlicePainter stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -77,7 +77,7 @@ final class ClientException extends RuntimeException {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        v var9 = null;
+        TiledNineSlicePainter var9 = null;
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -113,13 +113,13 @@ final class ClientException extends RuntimeException {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((uo.field_g << 1) + vh.field_b, -LobbyOptionSupport.field_g + var8, var2, var7 + (LobbyOptionSupport.field_g << 1), -103);
+                var9.draw((LobbyRoomInteractionSupport.field_g << 1) + ClientUiResourceState.field_b, -LobbyOptionSupport.field_g + var8, var2, var7 + (LobbyOptionSupport.field_g << 1), -103);
               }
-              var2 = var2 + uo.field_g;
+              var2 = var2 + LobbyRoomInteractionSupport.field_g;
             }
             if (var4 >= 0) {
               MusicEnvelope.field_g.drawString(var6, var8, var2 + we.field_c, var5, -1);
-              var2 = var2 + (vh.field_b + LobbyOptionSupport.field_e + uo.field_g);
+              var2 = var2 + (ClientUiResourceState.field_b + LobbyOptionSupport.field_e + LobbyRoomInteractionSupport.field_g);
             } else {
               FourIntSubmissionRequest.field_k.drawString(var6, var8, var2 + WidgetStyle.field_r, var5, -1);
               var2 = var2 + MenuButton.field_A;

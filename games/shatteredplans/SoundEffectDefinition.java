@@ -82,7 +82,7 @@ final class SoundEffectDefinition {
 
     final static void initializeIntro(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
-        ValidationState.field_a = vc.a((byte) -39, 50);
+        ValidationState.field_a = ClientRandomSupport.randomBelow((byte) -39, 50);
         NetworkArchiveRequest.field_C = (BitmapFont) ((Object) IconTextPanel.field_Cb);
         DialWidget.field_K = new IntrusiveDeque();
         SolVictoryChecker.field_m = 0;

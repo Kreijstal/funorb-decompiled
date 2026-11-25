@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v {
+final class TiledNineSlicePainter {
     private Sprite[] field_c;
     static int field_e;
     static String field_a;
@@ -12,11 +12,11 @@ final class v {
         field_a = null;
         if (param0 != 3) {
           String var2 = (String) null;
-          v.a((String) null, (byte) 104);
+          TiledNineSlicePainter.prefixLocalPlayerIcon((String) null, (byte) 104);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         if (param4 < -102) {
           ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
           return;
@@ -25,7 +25,7 @@ final class v {
         ProductionContent.a(param0, param3, 7, param2, this.field_c, param1);
     }
 
-    final static String a(String param0, byte param1) {
+    final static String prefixLocalPlayerIcon(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_5_0 = null;
@@ -62,12 +62,12 @@ final class v {
         }
     }
 
-    final static void a(byte param0) {
+    final static void updatePointerInteraction(byte param0) {
         StatusMessagePanel.a(TertiaryListSequence.field_f, (byte) 39);
         int var1 = -68 % ((param0 + 66) / 40);
     }
 
-    v(Sprite[] param0) {
+    TiledNineSlicePainter(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

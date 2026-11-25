@@ -119,7 +119,7 @@ final class ScrollPane extends AnimatedPanel {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, v param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, v param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, v param19) {
+    final static void a(int param0, BitmapFont param1, TiledNineSlicePainter param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, TiledNineSlicePainter param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, TiledNineSlicePainter param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -271,7 +271,7 @@ final class ScrollPane extends AnimatedPanel {
             ArchiveRequest.a(stackIn_21_0, (byte) 125);
           }
           if (50 + ValidationState.field_a < RasterStateFrame.field_n) {
-            ValidationState.field_a = RasterStateFrame.field_n + vc.a((byte) -39, 50);
+            ValidationState.field_a = RasterStateFrame.field_n + ClientRandomSupport.randomBelow((byte) -39, 50);
           }
           var1_int = RasterStateFrame.field_n - ValidationState.field_a;
           if (0 > var1_int) {

@@ -124,7 +124,7 @@ final class BattleSnapshot extends IntrusiveNode {
           }
           return;
         }
-        this.field_l = this.field_q[vc.a((byte) -39, -1 + this.field_q.length)];
+        this.field_l = this.field_q[ClientRandomSupport.randomBelow((byte) -39, -1 + this.field_q.length)];
         if (this.field_k == this.field_l) {
           this.field_l = this.field_q[-1 + this.field_q.length];
         }

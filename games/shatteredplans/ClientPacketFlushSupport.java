@@ -10,7 +10,7 @@ final class ClientPacketFlushSupport {
     static Sprite[] field_b;
     static Star field_d;
 
-    final static boolean socialEntryRanksAfter(ve param0, ve param1, byte param2) {
+    final static boolean socialEntryRanksAfter(SocialListEntry param0, SocialListEntry param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -69,8 +69,8 @@ final class ClientPacketFlushSupport {
         field_a = null;
         field_c = null;
         if (param0 != -28065) {
-          ve var2 = (ve) null;
-          ClientPacketFlushSupport.socialEntryRanksAfter((ve) null, (ve) null, (byte) -8);
+          SocialListEntry var2 = (SocialListEntry) null;
+          ClientPacketFlushSupport.socialEntryRanksAfter((SocialListEntry) null, (SocialListEntry) null, (byte) -8);
         }
     }
 

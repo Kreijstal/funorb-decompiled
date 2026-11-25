@@ -8,10 +8,10 @@ final class ProjectsWindowSupport {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (null != vc.field_a) {
+          if (null != ClientRandomSupport.field_a) {
             try {
-              vc.field_a.seek((byte) -26, 0L);
-              vc.field_a.write(param0 + 84, 24, SpriteWipeSupport.field_a.position, SpriteWipeSupport.field_a.payload);
+              ClientRandomSupport.field_a.seek((byte) -26, 0L);
+              ClientRandomSupport.field_a.write(param0 + 84, 24, SpriteWipeSupport.field_a.position, SpriteWipeSupport.field_a.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

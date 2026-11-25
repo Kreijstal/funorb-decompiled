@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends AnimatedPanel {
+final class SocialListEntry extends AnimatedPanel {
     String field_Ab;
     String field_Eb;
     AnimatedPanel field_Fb;
@@ -13,7 +13,7 @@ final class ve extends AnimatedPanel {
     AnimatedPanel field_Cb;
     static String field_yb;
 
-    final static String a(Archive param0, int param1, String param2, String param3, int param4) {
+    final static String formatArchiveGroupProgress(Archive param0, int param1, String param2, String param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_3_0 = null;
@@ -33,7 +33,7 @@ final class ve extends AnimatedPanel {
           }
           if (param4 != -14930) {
             var6 = (String) null;
-            ve.a((Archive) null, -19, (String) null, (String) null, -86);
+            SocialListEntry.formatArchiveGroupProgress((Archive) null, -19, (String) null, (String) null, -86);
           }
           stackIn_7_0 = param3 + " - " + param0.getGroupProgress((byte) 36, param1) + "%";
           return stackIn_7_0;
@@ -67,11 +67,11 @@ final class ve extends AnimatedPanel {
         field_yb = null;
         field_Gb = null;
         if (param0 != 0) {
-          ve.clearStatics(15);
+          SocialListEntry.clearStatics(15);
         }
     }
 
-    ve() {
+    SocialListEntry() {
         super(0L, (AnimatedPanel) null);
     }
 

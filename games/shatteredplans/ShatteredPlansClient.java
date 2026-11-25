@@ -12,7 +12,7 @@ public final class ShatteredPlansClient extends GameClientShell {
     public static boolean field_F;
 
     final static boolean a(int param0, long param1, String param2) {
-        ve var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -69,7 +69,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         AccountNoticeKind.field_b = 2458760;
         ValidationMessageWidget.field_P = 2458760;
         StarAnnotation.field_n = 2805974;
-        ProductionContent.a(us.b(0), 1);
+        ProductionContent.a(ClientRenderSupport.createHighGraphicsSettings(0), 1);
         this.allowOpcodeGroups(false, true, -2839, true, true, false, false);
         SliderWidget.field_K = TaskAi.field_a;
         HighscoreResponseSupport.field_a[71] = 4;
@@ -304,7 +304,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 ProxyAuthenticationRequiredException.field_b = true;
                 Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
-                v.field_b = false;
+                TiledNineSlicePainter.field_b = false;
                 DiskArchiveRequest.field_A = true;
                 wm.a(0);
               }
@@ -341,7 +341,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (58 != BufferedCacheFile.field_e) {
               if (60 != BufferedCacheFile.field_e) {
                 var4_ref = null;
-                if (!v.field_b) {
+                if (!TiledNineSlicePainter.field_b) {
                   if (MusicEnvelope.field_d) {
                     var4_ref = SecondaryNodeHashTable.field_g;
                   }
@@ -355,14 +355,14 @@ public final class ShatteredPlansClient extends GameClientShell {
                 this.e((byte) -84);
                 continue;
               }
-              if (v.field_b ||
+              if (TiledNineSlicePainter.field_b ||
                 MusicEnvelope.field_d) {
                 DiskCacheWorker.a(1048576);
-                if (v.field_b) {
+                if (TiledNineSlicePainter.field_b) {
                   PasswordInputPainter.field_x.a(false, false);
                 }
                 ProxyAuthenticationRequiredException.field_b = true;
-                v.field_b = false;
+                TiledNineSlicePainter.field_b = false;
                 PlayerRankingRequest.field_o = -2;
                 Wormhole.field_i = false;
                 MusicEnvelope.field_d = false;
@@ -434,7 +434,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             stackIn_127_1 = (var14 != 0);
             stackIn_126_0.field_L = stackIn_127_1;
             if (var9 != 0) {
-              v.field_b = true;
+              TiledNineSlicePainter.field_b = true;
               PasswordInputPainter.field_x = var13;
               LoginForm.k(8);
               wp.a(-2);
@@ -503,7 +503,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   ProxyAuthenticationRequiredException.field_b = true;
                   Wormhole.field_i = false;
                   DiskArchiveRequest.field_A = true;
-                  if (!v.field_b) {
+                  if (!TiledNineSlicePainter.field_b) {
                     MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
                   } else {
                     GameSpriteResources.field_c = RoundedFrameSupport.field_a;
@@ -512,7 +512,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   DiskCacheWorker.a(1048576);
                   LobbyPlayerEntry.field_Hb[GameRules.field_c].resetMenuInput(0, (byte) 84, false);
                   MusicEnvelope.field_d = false;
-                  v.field_b = false;
+                  TiledNineSlicePainter.field_b = false;
                   EmailValidator.field_p = false;
                   wm.a(0);
                 }
@@ -560,7 +560,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         wg.field_e.putReplacement(ChatPanelSetupSupport.field_a, 27275, "fleetinfo");
         wg.field_e.putReplacement(MouseWheelInput.field_c, param0 ^ 27274, "projects");
         wg.field_e.putReplacement(DropTargetWidget.field_B, 27275, "diplomacy");
-        wg.field_e.putReplacement(uq.field_l, 27275, "messages");
+        wg.field_e.putReplacement(PopupPlacementSupport.field_l, 27275, "messages");
         wg.field_e.putReplacement(Integer.toString(SoundPlayback.field_k[0], 16), 27275, "colmetal");
         wg.field_e.putReplacement(Integer.toString(SoundPlayback.field_k[1], 16), 27275, "colbiomass");
         wg.field_e.putReplacement(Integer.toString(SoundPlayback.field_k[2], 16), 27275, "colenergy");
@@ -704,7 +704,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                     ClientDialogSupport.setLoadingProgress(60.0f, param0 - 80, BoundsRect.a("", StrongCacheEntry.field_z, (byte) 62, ByteArrayStorage.field_a, MeshMaterial.field_b));
                     return false;
                   }
-                  ClientDialogSupport.setLoadingProgress(45.0f, 2, ve.a(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
+                  ClientDialogSupport.setLoadingProgress(45.0f, 2, SocialListEntry.formatArchiveGroupProgress(DualLinkNode.field_n, 0, ByteArrayStorage.field_a, MeshMaterial.field_b, param0 - 15012));
                   return false;
                 }
                 ClientDialogSupport.setLoadingProgress(40.0f, 2, BoundsRect.a("", ByteArrayReadRequest.field_m, (byte) 47, PlayerReportPanel.field_Db, TurnEventLog.field_e));
@@ -732,14 +732,14 @@ public final class ShatteredPlansClient extends GameClientShell {
         TutorialStageSupport.clearStatics(-6);
         MusicCrossfadeStream.clearStatics(param0 ^ 24068);
         SpriteResourceSupport.clearStatics((byte) -77);
-        va.clearStatics(102);
+        GraphicsSettings.clearStatics(102);
         GameScreen.d(param0 ^ -24389);
         InvalidMapConnectionException.clearStatics((byte) 16);
         GameRules.clearStatics(true);
         GalaxyMap.clearStatics((byte) -98);
         TextReplacementContext.clearStatics(param0 ^ -24069);
         GameKeyHandler.a((byte) -102);
-        uo.clearStatics(true);
+        LobbyRoomInteractionSupport.clearStatics(true);
         SettingsCookieSupport.releaseSettingsCookieStatics((byte) -23);
         wo.clearStatics((byte) -103);
         vo.clearStatics(256);
@@ -799,7 +799,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ClientPacketFlushSupport.clearStatics(-28065);
         MenuInputState.clearStatics(true);
         PanelNode.clearStatics(false);
-        v.clearStatics(3);
+        TiledNineSlicePainter.clearStatics(3);
         wp.clearStatics((byte) -90);
         HighscoreResponseSupport.clearStatics(-17358);
         AnimatedPanel.clearStatics(-14115);
@@ -915,7 +915,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ReflectionCheck.clearStatics((byte) -70);
         RandomAccessCacheFile.clearStatics(false);
         AccountStatusSupport.clearStatics((byte) -57);
-        vh.clearStatics((byte) 110);
+        ClientUiResourceState.clearStatics((byte) 110);
         AudioService.clearStatics(-102);
         AlignedMenuLabel.clearStatics(-110);
         VerticalMenuSlider.clearStatics(5);
@@ -984,7 +984,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ProxyAuthenticationRequiredException.clearStatics(101);
         NanoFrameTimer.clearStatics((byte) 78);
         ImageProducerRasterBuffer.clearStatics(6);
-        us.clearStatics(param0 ^ -24069);
+        ClientRenderSupport.clearStatics(param0 ^ -24069);
         DisplayModeInfo.a(param0 + 24155);
         WhirlpoolHasher.clearStatics(0);
         StarLinkPlanner.clearStatics((byte) -11);
@@ -1062,7 +1062,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         PlayerRankingRequest.clearStatics(-47);
         SoundPlayback.clearStatics((byte) -111);
         SoundEffectDefinition.clearStatics(9952);
-        uq.a(param0 + 24123);
+        PopupPlacementSupport.releasePopupPlacementStatics(param0 + 24123);
         BoundsRect.clearStatics(0);
         TextReplacementEntry.clearStatics(param0 + 24098);
         SpriteStripButtonPainter.clearStatics((byte) -128);
@@ -1070,10 +1070,10 @@ public final class ShatteredPlansClient extends GameClientShell {
         PasswordInputPainter.clearStatics(true);
         CheckboxWidgetPainter.clearStatics(-1);
         OpacityWidget.releaseOpacityWidgetStatics(124);
-        ve.clearStatics(0);
+        SocialListEntry.clearStatics(0);
         ArchiveLoadStep.clearStatics((byte) 68);
         IntroTextLine.clearStatics((byte) -99);
-        vc.clearStatics(-67);
+        ClientRandomSupport.clearStatics(-67);
         IntroGlowPoint.clearStatics(true);
         AccountBooleanRequest.releaseAccountBooleanRequestStatics((byte) 127);
         AccountConnectionPhase.clearStatics(param0 ^ -24186);
@@ -1239,7 +1239,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (EmailValidator.field_p &&
             !StripedProgressWidget.field_Q &&
             !ArchiveConnectionRetrySupport.field_a) {
-            if (v.field_b &&
+            if (TiledNineSlicePainter.field_b &&
               MeshData.field_h) {
               var3 = 0;
             }
@@ -1247,12 +1247,12 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (MusicEnvelope.field_d) {
               SecondaryNodeHashTable.field_g.b(var4 != 0, true);
             }
-            if (v.field_b) {
+            if (TiledNineSlicePainter.field_b) {
               StatusMessagePanel.a(320, 8, 180, var4 != 0);
               PasswordInputPainter.field_x.b(var4 != 0, true);
             }
             while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
-              if (v.field_b) {
+              if (TiledNineSlicePainter.field_b) {
                 if (StatefulWidgetTheme.a(13, -9861, 12, 15)) {
                   continue;
                 }
@@ -1263,7 +1263,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               if (stackIn_47_0) {
                 SecondaryNodeHashTable.field_g.g(-98);
               }
-              if (!v.field_b) {
+              if (!TiledNineSlicePainter.field_b) {
                 continue;
               }
               PasswordInputPainter.field_x.g(-99);

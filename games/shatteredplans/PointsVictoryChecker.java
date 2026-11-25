@@ -362,7 +362,7 @@ final class PointsVictoryChecker extends VictoryChecker {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        vh.field_b = param2;
+        ClientUiResourceState.field_b = param2;
         MenuButton.field_A = param3;
         we.field_c = param0;
         if (param4 != 2) {

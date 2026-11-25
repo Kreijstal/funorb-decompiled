@@ -185,17 +185,17 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
     }
 
     final static void a(int param0, int param1, String param2, String param3, int param4) {
-        uq.field_j.field_x = param1;
-        uq.field_j.field_z = param3;
+        PopupPlacementSupport.field_j.field_x = param1;
+        PopupPlacementSupport.field_j.field_z = param3;
         if (param0 > -67) {
           return;
         }
         try {
-          uq.field_j.field_u = param2;
-          uq.field_j.field_K = uq.field_j.field_K + OpacityWidget.field_C.field_K;
+          PopupPlacementSupport.field_j.field_u = param2;
+          PopupPlacementSupport.field_j.field_K = PopupPlacementSupport.field_j.field_K + OpacityWidget.field_C.field_K;
           OpacityWidget.field_C.field_hb = OpacityWidget.field_C.field_hb + OpacityWidget.field_C.field_K;
           OpacityWidget.field_C.field_K = param4;
-          uq.field_j.field_K = uq.field_j.field_K - OpacityWidget.field_C.field_K;
+          PopupPlacementSupport.field_j.field_K = PopupPlacementSupport.field_j.field_K - OpacityWidget.field_C.field_K;
           OpacityWidget.field_C.field_hb = OpacityWidget.field_C.field_hb - OpacityWidget.field_C.field_K;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

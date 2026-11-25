@@ -78,7 +78,7 @@ abstract class GameClientShell extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
-              va.a(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
+              GraphicsSettings.showLoginResult(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
               DiplomacyRowSupport.field_c = null;
             }
@@ -141,11 +141,11 @@ abstract class GameClientShell extends GameApplet {
           }
           if (var4 == 13) {
             try {
-              if (va.field_g == null) {
-                va.field_g = new UrlLoader(ValidatedTextInputWidget.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (GraphicsSettings.field_g == null) {
+                GraphicsSettings.field_g = new UrlLoader(ValidatedTextInputWidget.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (va.field_g.b(10000)) {
-                var12 = va.field_g.a(true);
+              if (GraphicsSettings.field_g.b(10000)) {
+                var12 = GraphicsSettings.field_g.a(true);
                 if (var12 == null) {
                   var9 = (String) null;
                   AccountCreationForm.a((String) null, true);
@@ -153,7 +153,7 @@ abstract class GameClientShell extends GameApplet {
                   var7 = StellarBombEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
                   AccountCreationForm.a(var7, true);
                 }
-                va.field_g = null;
+                GraphicsSettings.field_g = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ abstract class GameClientShell extends GameApplet {
               GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
               AccountCreationForm.a((String) null, true);
-              va.field_g = null;
+              GraphicsSettings.field_g = null;
             }
           }
           if (15 == var4) {
@@ -347,7 +347,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final static void f(byte param0) {
-        uq var1 = (uq) (IsaacRandom.field_d.startForward(0));
+        PopupPlacementSupport var1 = (PopupPlacementSupport) (IsaacRandom.field_d.startForward(0));
         if (var1 == null) {
           TabbedPanel.closeClientSocket(-110);
           return;
@@ -520,7 +520,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (DefensiveAi.field_p == 3 &&
           ClientUiLoadingSupport.areCommonUiArchivesReady(LinkPainter.field_g, -7526, StringList.field_f, GalaxyMap.field_g) &&
-          uq.a(GalaxyMap.field_g, 0)) {
+          PopupPlacementSupport.preloadArchive(GalaxyMap.field_g, 0)) {
           AnimatedPanel.f(-98);
           GameScreen.c(28164);
           DerelictMapGenerator.field_r = LobbyUiSetupSupport.field_c;

@@ -350,7 +350,7 @@ final class DialWidget extends FocusableWidget {
                     var7.field_Fb = var8 >> 1;
                     var7.field_Lb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-111);
                     var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-68);
-                    uo.field_a.addLast((byte) -113, var7);
+                    LobbyRoomInteractionSupport.field_a.addLast((byte) -113, var7);
                     return;
                   }
                   if (var2 == 19) {
@@ -446,11 +446,11 @@ final class DialWidget extends FocusableWidget {
             LobbyUiSupport.insertLobbyRoomByRank(0, var24);
             return;
           }
-          var3_ref_mj = (LobbyPlayerEntry) (uo.field_a.startForward(0));
+          var3_ref_mj = (LobbyPlayerEntry) (LobbyRoomInteractionSupport.field_a.startForward(0));
           while (var3_ref_mj != null) {
             var3_ref_mj.unlink((byte) -91);
             var3_ref_mj.unlinkSecondary(16);
-            var3_ref_mj = (LobbyPlayerEntry) (uo.field_a.nextForward((byte) -71));
+            var3_ref_mj = (LobbyPlayerEntry) (LobbyRoomInteractionSupport.field_a.nextForward((byte) -71));
           }
           var3_ref_mjLifetime1 = (LobbyPlayerEntry) (ShatteredPlansClient.field_H.startTraversal((byte) -109));
           while (var3_ref_mjLifetime1 != null) {

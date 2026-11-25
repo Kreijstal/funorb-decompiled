@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class vc {
+final class ClientRandomSupport {
     static BufferedCacheFile field_a;
     static String field_e;
     static Sprite field_b;
     static String[] field_c;
     static MeshData[] field_d;
 
-    final static int a(byte param0, int param1) {
+    final static int randomBelow(byte param0, int param1) {
         if (param0 != -39) {
-          vc.clearStatics(-12);
+          ClientRandomSupport.clearStatics(-12);
           return TaskAi.randomBelow(param1, DateValidationSupport.field_b, -11);
         }
         return TaskAi.randomBelow(param1, DateValidationSupport.field_b, -11);

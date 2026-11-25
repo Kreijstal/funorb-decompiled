@@ -99,7 +99,7 @@ final class Bzip2State {
           return;
         }
         try {
-          MidiPcmStream.field_L = IconTextPanel.field_zb + uq.field_h;
+          MidiPcmStream.field_L = IconTextPanel.field_zb + PopupPlacementSupport.field_h;
           RecklessAi.field_r = IconTextPanel.field_zb + TerritoryResourcePanelSupport.field_a;
           TextReplacementEntry.field_i = new String[33];
           TextReplacementEntry.field_i[14] = NotificationEntry.field_o;

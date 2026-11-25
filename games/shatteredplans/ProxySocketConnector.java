@@ -477,7 +477,7 @@ final class ProxySocketConnector extends SocketConnector {
         float var3 = (float)FleetTrailPoint.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);
-        va.field_e.draw(var1, var2);
+        GraphicsSettings.field_e.draw(var1, var2);
         var2 = -(FleetTrailPoint.field_m * 40 / 800) + 200;
         var1 = -62;
         IntNode.field_h.drawAdditive(var1, -60 + var2, 256);

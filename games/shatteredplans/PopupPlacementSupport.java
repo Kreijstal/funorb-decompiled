@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uq extends IntrusiveNode {
+final class PopupPlacementSupport extends IntrusiveNode {
     static int field_k;
     static AnimatedPanel field_j;
     static String field_n;
@@ -10,7 +10,7 @@ final class uq extends IntrusiveNode {
     static TextReplacementContext field_m;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void releasePopupPlacementStatics(int param0) {
         field_n = null;
         field_l = null;
         field_j = null;
@@ -24,11 +24,11 @@ final class uq extends IntrusiveNode {
         field_m = null;
     }
 
-    private uq() throws Throwable {
+    private PopupPlacementSupport() throws Throwable {
         throw new Error();
     }
 
-    final static boolean a(Archive param0, int param1) {
+    final static boolean preloadArchive(Archive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -92,7 +92,7 @@ final class uq extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int positionPopupY(int param0, int param1, int param2, int param3) {
         if (!(SoftwareRasterizer.field_k < param2 + param0 + param3)) {
           return param3 + param0;
         }

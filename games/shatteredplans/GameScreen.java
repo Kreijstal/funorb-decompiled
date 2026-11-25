@@ -467,7 +467,7 @@ final class GameScreen {
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = DefensiveAi.a((CharSequence) ((Object) param0.substring(9)), 2);
             SpriteResourceSupport.field_d = TextReplacementEntry.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            uq.field_m.putReplacement(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
+            PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -1327,7 +1327,7 @@ final class GameScreen {
           if (this.field_s.field_P.field_z ||
             this.field_s.field_n != null &&
             (1 << this.field_s.field_n.field_x & this.field_s.field_P.field_w) != 0) {
-            IconTextPanel.field_Cb.drawCentred(uo.field_d, var5 + 20 + 160, var6 + (var7 - 74), 16777215, -1);
+            IconTextPanel.field_Cb.drawCentred(LobbyRoomInteractionSupport.field_d, var5 + 20 + 160, var6 + (var7 - 74), 16777215, -1);
           }
           var24 = (MenuComponent) (this.field_B.startForward(0));
           do {
@@ -2312,7 +2312,7 @@ final class GameScreen {
           }
           if (this.field_cb.field_A &&
             this.field_W.field_s) {
-            us.field_a.drawColourised(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
+            ClientRenderSupport.field_a.drawColourised(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
           }
           if (this.field_J.field_A &&
             this.field_n.field_s) {
@@ -3169,7 +3169,7 @@ final class GameScreen {
               return;
             }
           }
-          vc.a((byte) -39, AccountRequestState.field_e.length);
+          ClientRandomSupport.randomBelow((byte) -39, AccountRequestState.field_e.length);
           this.field_P = this.field_s.field_P.getYearName((byte) -50);
           this.field_u = 1;
           MenuLabel.a(ScrollPane.field_yb, 63);
@@ -4314,7 +4314,7 @@ final class GameScreen {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = uq.field_k;
+          var4 = PopupPlacementSupport.field_k;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(InvalidMapConnectionException.field_f.length > var3_int)))) {
             var5 = MenuTextResources.field_a[var3_int];

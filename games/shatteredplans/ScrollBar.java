@@ -410,7 +410,7 @@ final class ScrollBar extends AnimatedPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 53) {
-            stackIn_4_0 = us.readPlayer(param2, param0.field_v, 2);
+            stackIn_4_0 = ClientRenderSupport.readPlayer(param2, param0.field_v, 2);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Player) null;
