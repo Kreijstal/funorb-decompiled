@@ -260,7 +260,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarke
         if (param4 != -92) {
           field_E = (AnimatedPanel) null;
         }
-        return LabeledChildWidget.a(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
+        return LabeledChildWidget.createBeveledNineSlice(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
     }
 
     final static boolean rectContains(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {

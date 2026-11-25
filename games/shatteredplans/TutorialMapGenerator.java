@@ -3785,7 +3785,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!BattleContribution.a(param2 - 119, param0)) {
+          if (!BattleContribution.isAccountNameCharacter(param2 - 119, param0)) {
             return false;
           }
           if (param2 != 119) {

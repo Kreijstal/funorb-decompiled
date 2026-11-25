@@ -112,7 +112,7 @@ final class VerticalMenuSlider extends MenuComponent {
 
     final static void a(byte param0, int[] param1, int[] param2) {
         try {
-          ClientException.a(0, -2147483648, param2.length - 1, param1, param2);
+          ClientException.sortPairedIntsDescending(0, -2147483648, param2.length - 1, param1, param2);
           int var3_int = -92 % ((-25 - param0) / 57);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

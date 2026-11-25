@@ -12,16 +12,16 @@ final class ClientException extends RuntimeException {
     static int field_d;
     static int field_a;
 
-    final static void a(boolean param0) {
+    final static void openDefaultQuickChatMenu(boolean param0) {
         ProductionContent.field_h = 0;
         AccountNoticeDialog.r(0);
         if (!param0) {
           int[] var2 = (int[]) null;
-          ClientException.a(-36, -67, -120, (int[]) null, (int[]) null);
+          ClientException.sortPairedIntsDescending(-36, -67, -120, (int[]) null, (int[]) null);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+    final static void drawGradientWidgetBorder(byte param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -58,13 +58,13 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void clearTutorialConditionalTextAges(boolean param0) {
         if (param0) {
           field_f = (int[]) null;
         }
     }
 
-    final static void a(int param0) {
+    final static void drawAccountChoiceMenu(int param0) {
         int var3 = 0;
         boolean stackIn_13_0 = false;
         TiledNineSlicePainter stackIn_17_0 = null;
@@ -133,7 +133,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int[] param4) {
+    final static void sortPairedIntsDescending(int param0, int param1, int param2, int[] param3, int[] param4) {
         int var10 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -181,8 +181,8 @@ final class ClientException extends RuntimeException {
             param4[var6] = var7;
             param3[param2] = param3[var6];
             param3[var6] = var8;
-            ClientException.a(param0, -2147483648, -1 + var6, param3, param4);
-            ClientException.a(1 + var6, -2147483648, param2, param3, param4);
+            ClientException.sortPairedIntsDescending(param0, -2147483648, -1 + var6, param3, param4);
+            ClientException.sortPairedIntsDescending(1 + var6, -2147483648, param2, param3, param4);
             return;
           }
           return;

@@ -81,7 +81,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           SettingsCookieSupport.field_d[1] = SoundPlayback.field_o;
           SettingsCookieSupport.field_d[0] = AccountStatusSupport.field_b;
           SettingsCookieSupport.field_d[2] = ExternalLinkSupport.field_d;
-          BattleContribution.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
+          BattleContribution.initializeQuickChat(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -90,7 +90,7 @@ final class BattleContribution extends IntrusiveNode {
         }
     }
 
-    final static Sprite a(int param0, boolean param1) {
+    final static Sprite createColourisedMenuDivider(int param0, boolean param1) {
         if (param1) {
           return (Sprite) null;
         }
@@ -102,7 +102,7 @@ final class BattleContribution extends IntrusiveNode {
         return var2;
     }
 
-    final static void d(boolean param0) {
+    final static void clearIntroSprites(boolean param0) {
         RoundedFrameSupport.field_c = null;
         MapGenerationException.field_a = false;
         GameSpriteResources.field_d = null;
@@ -128,7 +128,7 @@ final class BattleContribution extends IntrusiveNode {
         QuickChatMenu.field_Jb = null;
     }
 
-    final static void a(Archive param0, byte param1, BitmapFont param2) {
+    final static void initializeQuickChat(Archive param0, byte param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -201,7 +201,7 @@ final class BattleContribution extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAccountNameCharacter(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

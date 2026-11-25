@@ -385,7 +385,7 @@ final class Archive {
         }
     }
 
-    final static void a(int param0, byte param1, long param2) {
+    final static void writePlayerActionRequest(int param0, byte param1, long param2) {
         CipherPacketBuffer var4 = LobbyOptionSupport.field_f;
         var4.writeOpcode(param0, param1 + 253);
         if (param1 != 2) {
@@ -398,7 +398,7 @@ final class Archive {
         var4.patchLengthByte(-var5 + var4.position, (byte) 127);
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
+    private final synchronized byte[] getFileWithXtea(int[] param0, int param1, int param2, int param3) {
         boolean discarded$0 = false;
         Object stackIn_27_0 = null;
         Object stackIn_30_0 = null;
@@ -414,13 +414,13 @@ final class Archive {
           }
           if (param3 <= 81) {
             var7 = (int[]) null;
-            discarded$0 = this.a(42, (int[]) null, -94, (byte) -122);
+            discarded$0 = this.unpackGroup(42, (int[]) null, -94, (byte) -122);
           }
           var5 = null;
           if ((null == this.field_n[param2] ||
-            null == this.field_n[param2][param1]) && !this.a(param1, param0, param2, (byte) -113)) {
+            null == this.field_n[param2][param1]) && !this.unpackGroup(param1, param0, param2, (byte) -113)) {
             this.loadGroup((byte) -127, param2);
-            if (!this.a(param1, param0, param2, (byte) -114)) {
+            if (!this.unpackGroup(param1, param0, param2, (byte) -114)) {
               return null;
             }
           }
@@ -523,7 +523,7 @@ final class Archive {
         if (param1 != -1) {
           field_i = (String) (this.field_m[11]);
         }
-        return this.a((int[]) null, param2, param0, 113);
+        return this.getFileWithXtea((int[]) null, param2, param0, 113);
     }
 
     final int getFileCount(int param0, int param1) {
@@ -667,7 +667,7 @@ final class Archive {
         throw new RuntimeException();
     }
 
-    private final synchronized boolean a(int param0, int[] param1, int param2, byte param3) {
+    private final synchronized boolean unpackGroup(int param0, int[] param1, int param2, byte param3) {
         Object[] array$0 = null;
         int var20 = 0;
         byte[] array$1 = null;
@@ -924,7 +924,7 @@ final class Archive {
         }
     }
 
-    final static void c(int param0) {
+    final static void pollModalDialogInput(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

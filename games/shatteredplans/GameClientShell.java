@@ -389,7 +389,7 @@ abstract class GameClientShell extends GameApplet {
         HighscoreResponseSupport.snapshotMouseInput((byte) 62);
         if (!ArchiveLoadStep.isClientNotReady(false) &&
           SoundPlayback.field_i != 11) {
-          Archive.c(-78);
+          Archive.pollModalDialogInput(-78);
         }
         if (ClientContextMenuSupport.field_b != null) {
           BattleExplosionVisual.field_o = ClientContextMenuSupport.field_b.takeRotation(86);
@@ -403,7 +403,7 @@ abstract class GameClientShell extends GameApplet {
             TabbedPanel.closeClientSocket(-113);
             IntrusiveNode.b(-11);
             AccountStatusSupport.showLoginResult((byte) -124, 2, IntNode.field_n);
-            ClientException.b(false);
+            ClientException.clearTutorialConditionalTextAges(false);
             StripedProgressWidget.field_B = true;
             SecondaryNodeDequeIterator.field_b = 15000L + ClientClockSupport.currentTimeMillis(14274);
           }

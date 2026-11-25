@@ -66,7 +66,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
         }
     }
 
-    final static void a(int param0, TutorialScene param1) {
+    final static void setTutorialTargetScene(int param0, TutorialScene param1) {
         int var9 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;

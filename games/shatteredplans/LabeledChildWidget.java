@@ -98,7 +98,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         field_E = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] createBeveledNineSlice(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;
@@ -152,7 +152,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         }
         var11Lifetime3 = 0;
         if (param3 != -41) {
-          LabeledChildWidget.a(-7, 17, -29, (byte) 74, -118, 12, 82, -100, -35);
+          LabeledChildWidget.createBeveledNineSlice(-7, 17, -29, (byte) 74, -118, 12, 82, -100, -35);
         }
         while (var11Lifetime3 < param6 >> 1) {
           for (var12Lifetime4 = 0; param1 > var12Lifetime4; var12Lifetime4++) {
@@ -166,7 +166,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         return var10;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isCp1252Character(int param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -209,7 +209,7 @@ final class LabeledChildWidget extends SingleChildWidget {
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_m + param3;
         if (param1 != -11857) {
-          LabeledChildWidget.a(40, -66, 111, (byte) -124, 52, 3, 0, 73, -122);
+          LabeledChildWidget.createBeveledNineSlice(40, -66, 111, (byte) -124, 52, 3, 0, 73, -122);
         }
         int var6 = this.field_q + param2;
         super.drawLayer(param0, param1 ^ 0, param2, param3);

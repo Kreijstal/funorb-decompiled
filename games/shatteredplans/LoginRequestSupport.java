@@ -147,17 +147,17 @@ final class LoginRequestSupport {
                 var2 = LobbyOptionSupport.field_b[fieldTemp$1];
               }
               if (!ArchiveConnectionRetrySupport.field_b) {
-                MenuList.a(1546006977, var2);
+                MenuList.setTutorialTargetScene(1546006977, var2);
                 return;
               }
               ArchiveConnectionRetrySupport.field_b = false;
               var3 = LobbyOptionSupport.field_b[ImageProducerRasterBuffer.field_i];
               if (var3 != null &&
                 var3 != WeightedLruCache.field_g) {
-                MenuList.a(1546006977, var3);
+                MenuList.setTutorialTargetScene(1546006977, var3);
                 return;
               }
-              MenuList.a(1546006977, var2);
+              MenuList.setTutorialTargetScene(1546006977, var2);
               return;
             }
           }

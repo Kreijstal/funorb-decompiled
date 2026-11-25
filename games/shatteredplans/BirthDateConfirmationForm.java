@@ -20,7 +20,7 @@ final class BirthDateConfirmationForm extends ArrayWidgetGroup implements Button
         }
     }
 
-    final static NodeSequence a(int param0, TertiaryNodeList param1) {
+    final static NodeSequence createTertiaryListSequence(int param0, TertiaryNodeList param1) {
         RuntimeException var2 = null;
         TertiaryListSequence stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

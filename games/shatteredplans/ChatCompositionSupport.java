@@ -257,7 +257,7 @@ final class ChatCompositionSupport {
                 if (PopupPlacementSupport.field_j.field_rb != 0 &&
                   PopupPlacementSupport.field_j.field_Q < var10 &&
                   !LoginMethodPreference.field_g) {
-                  ClientException.a(true);
+                  ClientException.openDefaultQuickChatMenu(true);
                 }
               }
             }

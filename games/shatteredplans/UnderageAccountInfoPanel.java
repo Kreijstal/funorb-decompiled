@@ -100,22 +100,22 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         try {
           if (0 != param1) {
             if (param1 == 1) {
-              SoundPlayback.a(param2 ^ 104, "privacy.ws");
+              SoundPlayback.requestGameWebPage(param2 ^ 104, "privacy.ws");
               if ((var6 != 0) &&
                 (param1 == 2)) {
-                SoundPlayback.a(param2 ^ 127, "conduct.ws");
-                SoundPlayback.a(57, "terms.ws");
+                SoundPlayback.requestGameWebPage(param2 ^ 127, "conduct.ws");
+                SoundPlayback.requestGameWebPage(57, "terms.ws");
               }
             } else {
               if (param1 == 2) {
-                SoundPlayback.a(param2 ^ 127, "conduct.ws");
+                SoundPlayback.requestGameWebPage(param2 ^ 127, "conduct.ws");
                 if (var6 != 0) {
-                  SoundPlayback.a(57, "terms.ws");
+                  SoundPlayback.requestGameWebPage(57, "terms.ws");
                 }
               }
             }
           } else {
-            SoundPlayback.a(57, "terms.ws");
+            SoundPlayback.requestGameWebPage(57, "terms.ws");
           }
           if (param2 != 2) {
             UnderageAccountInfoPanel.a(false, (int[]) null, false, 25, (int[]) null, true, (MeshData) null);

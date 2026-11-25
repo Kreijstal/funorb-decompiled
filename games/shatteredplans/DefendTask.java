@@ -30,7 +30,7 @@ final class DefendTask extends AiTask {
               LobbyOptionSupport.field_b[fieldTemp$0] = var3;
             }
           }
-          MenuList.a(param0 + 1546006976, param1);
+          MenuList.setTutorialTargetScene(param0 + 1546006976, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

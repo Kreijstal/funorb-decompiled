@@ -322,7 +322,7 @@ final class ObjectList {
                 if (0 == var12.field_Mb.field_rb) {
                   TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);
                 } else {
-                  Archive.a(param4, (byte) 2, var12.field_Ib);
+                  Archive.writePlayerActionRequest(param4, (byte) 2, var12.field_Ib);
                 }
               }
             }

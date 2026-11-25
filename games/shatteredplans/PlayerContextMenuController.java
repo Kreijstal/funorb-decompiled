@@ -160,7 +160,7 @@ final class PlayerContextMenuController {
                     ClientInputSupport.resetChatChannel(54);
                   } else {
                     if (20 == param0) {
-                      ClientException.a(true);
+                      ClientException.openDefaultQuickChatMenu(true);
                     } else {
                       if (param0 != 19) {
                         return false;
@@ -564,7 +564,7 @@ final class PlayerContextMenuController {
             return true;
           }
           if (param2 == 1) {
-            Archive.a(param0, (byte) 2, this.field_b);
+            Archive.writePlayerActionRequest(param0, (byte) 2, this.field_b);
             return true;
           }
           if (param2 == 2) {
@@ -596,7 +596,7 @@ final class PlayerContextMenuController {
           return true;
         }
         if (param2 == 1) {
-          Archive.a(param0, (byte) 2, this.field_b);
+          Archive.writePlayerActionRequest(param0, (byte) 2, this.field_b);
           return true;
         }
         if (param2 == 2) {

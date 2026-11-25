@@ -52,7 +52,7 @@ final class DiplomacyRowSupport {
           var6 = new GradientMenuLabel(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, -(IconTextPanel.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.name, 16777215, true);
           var11.addChild(var6, param2 ^ 10);
           LoginMethodPreference.buildMenuDividerSprites(-2612, param1.length);
-          var7 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + IconTextPanel.field_Cb.field_J / 2 + 3, BattleContribution.a(-1, false));
+          var7 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + IconTextPanel.field_Cb.field_J / 2 + 3, BattleContribution.createColourisedMenuDivider(-1, false));
           var11.addChild(var7, 8);
           param0.field_f[var5Lifetime1][0] = var7;
           for (var8_int = 1; param1.length - 1 > var8_int; var8_int++) {

@@ -702,7 +702,7 @@ final class GameScreen {
               }
               if ((decompiledFrameCompleted2) &&
                 (decompiledFrameCompleted1)) {
-                var6_ref_ff__[0].a(-2948, BattleContribution.a(var8_int, false));
+                var6_ref_ff__[0].a(-2948, BattleContribution.createColourisedMenuDivider(var8_int, false));
               }
               if (decompiledFrameCompleted2) {
                 var9_int = 1;
@@ -745,7 +745,7 @@ final class GameScreen {
               }
               var8 = stackIn_92_0;
               var5.setLabel((byte) 122, 0, var8);
-              var6_ref_ff__[0].a(-2948, BattleContribution.a(-1, false));
+              var6_ref_ff__[0].a(-2948, BattleContribution.createColourisedMenuDivider(-1, false));
               var9_int = 1;
               do {
                 if (var9_int >= var6_ref_ff__.length) {
@@ -789,7 +789,7 @@ final class GameScreen {
             if (var4 != 0) {
               var3.field_f[0][var4].a(-2948, UiSpriteSupport.createColourisedIcon(var6, 0));
             } else {
-              var3.field_f[0][var4].a(-2948, BattleContribution.a(var6, false));
+              var3.field_f[0][var4].a(-2948, BattleContribution.createColourisedMenuDivider(var6, false));
             }
             var4++;
           }
@@ -5251,7 +5251,7 @@ final class GameScreen {
             }
             break;
           }
-          MenuList.a(1546006977, DiplomacyNotice.findTutorialSceneByTag("start", -21502));
+          MenuList.setTutorialTargetScene(1546006977, DiplomacyNotice.findTutorialSceneByTag("start", -21502));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

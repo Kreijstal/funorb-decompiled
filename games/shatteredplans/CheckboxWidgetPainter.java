@@ -124,7 +124,7 @@ final class CheckboxWidgetPainter implements WidgetPainter {
             return;
           }
           var7 = param3 + param0.field_q;
-          ClientException.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
+          ClientException.drawGradientWidgetBorder((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
           var8 = MenuList.field_w[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_z) {

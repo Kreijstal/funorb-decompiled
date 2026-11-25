@@ -28,14 +28,14 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         try {
           if (param1 != 0) {
             if (param1 == 1) {
-              SoundPlayback.a(111, "privacy.ws");
+              SoundPlayback.requestGameWebPage(111, "privacy.ws");
             } else {
               if (param1 == 2) {
-                SoundPlayback.a(62, "conduct.ws");
+                SoundPlayback.requestGameWebPage(62, "conduct.ws");
               }
             }
           } else {
-            SoundPlayback.a(64, "terms.ws");
+            SoundPlayback.requestGameWebPage(64, "terms.ws");
           }
           if (param2 != 2) {
             this.field_F = (ValidatedTextInputWidget) null;

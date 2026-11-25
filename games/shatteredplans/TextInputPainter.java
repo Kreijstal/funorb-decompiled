@@ -52,7 +52,7 @@ class TextInputPainter extends WidgetTheme {
     public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         try {
           if (param2) {
-            ClientException.a((byte) 93, param0.field_q + param3, param0.field_n, param1 + param0.field_m, param0.field_x);
+            ClientException.drawGradientWidgetBorder((byte) 93, param0.field_q + param3, param0.field_n, param1 + param0.field_m, param0.field_x);
           }
           super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

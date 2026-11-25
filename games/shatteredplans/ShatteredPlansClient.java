@@ -1484,7 +1484,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               }
             } else {
               TextHotspotWidget.drawCenteredMenuPanel(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
-              ClientException.a(94);
+              ClientException.drawAccountChoiceMenu(94);
             }
           }
         }

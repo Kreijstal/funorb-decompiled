@@ -121,7 +121,7 @@ final class WhirlpoolHasher {
           if (TaskAi.field_o.field_rb != 0 &&
             !LoginMethodPreference.field_g) {
             if (HighscoreResponseSupport.field_b) {
-              ClientException.a(true);
+              ClientException.openDefaultQuickChatMenu(true);
             } else {
               MeshData.field_h = true;
             }

@@ -322,7 +322,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void requestGameWebPage(int param0, String param1) {
         OpacityWidget.field_F = param1;
         if (param0 <= 48) {
           return;

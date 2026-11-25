@@ -318,7 +318,7 @@ final class ScrollPane extends AnimatedPanel {
                 HorizontalGradientComponent.field_v = 50;
                 MenuTransitionSupport.beginMenuTransition(0, 0, (byte) 96, false);
                 DiskCacheWorker.commitMenuTransition(param0 + 1048483);
-                BattleContribution.d(true);
+                BattleContribution.clearIntroSprites(true);
               }
               if (SolVictoryChecker.field_m == 2) {
                 QuickChatParameterType.resetIntroParticlesAndText(param0 + 29);

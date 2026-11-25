@@ -127,7 +127,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              LabeledChildWidget.a(28654, (char) var2_int)) {
+              LabeledChildWidget.isCp1252Character(28654, (char) var2_int)) {
               var3 = 1 + OpacityWidget.field_I & 127;
               if (var3 != DialogRoot.field_B) {
                 PacketBooleanSupport.field_a[OpacityWidget.field_I] = -1;

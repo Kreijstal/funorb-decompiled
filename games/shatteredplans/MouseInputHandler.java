@@ -168,7 +168,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             if (var3 != 0) {
               return false;
             }
-            ClientException.a(true);
+            ClientException.openDefaultQuickChatMenu(true);
             return true;
           }
           if (11 != TextReplacementEntry.field_j) {
@@ -210,7 +210,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             if (var3 != 0) {
               return false;
             }
-            ClientException.a(true);
+            ClientException.openDefaultQuickChatMenu(true);
             return true;
           }
           if (11 == TextReplacementEntry.field_j) {
