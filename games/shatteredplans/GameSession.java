@@ -1581,7 +1581,7 @@ final class GameSession implements AiHost {
           var2.position = var2.position + 2;
           var3 = var2.position;
           var2.writeByte(this.field_P.field_O, (byte) -109);
-          AchievementProgress.a(MapView.createDualLinkDequeSequence((byte) 81, this.field_o), -256, MapView.createDualLinkDequeSequence((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
+          AchievementProgress.writeOrders(MapView.createDualLinkDequeSequence((byte) 81, this.field_o), -256, MapView.createDualLinkDequeSequence((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
           this.field_v.clear((byte) 112);
@@ -3884,7 +3884,7 @@ final class GameSession implements AiHost {
           if (param0 >= -114) {
             this.field_Q = (TurnEventLog) null;
           }
-          AchievementProgress.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), BirthDateConfirmationForm.a(25, this.field_P.field_p), var2);
+          AchievementProgress.writeOrders(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), BirthDateConfirmationForm.a(25, this.field_P.field_p), var2);
           this.field_ab.clear((byte) 108);
           this.field_o.clear((byte) 127);
           this.field_v.clear((byte) 112);

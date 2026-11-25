@@ -492,7 +492,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (var6 == 0 ||
               var6 == 1) {
               ServerRequestRetrySupport.resendPendingRequests(4, (byte) -103);
-              AchievementProgress.a(7, true);
+              AchievementProgress.resendRankingRequests(7, true);
               TextReplacementEntry.resendByteRequests(6, 37);
               ReflectionQueueSupport.initializeReflectionCheckQueue(true);
               if (1 == var6) {
@@ -1043,7 +1043,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         DirectByteArrayStorage.a((byte) 104);
         IntList.a(19568);
         DraggableWidget.clearStatics(-950540796);
-        DropTargetWidget.f((byte) 111);
+        DropTargetWidget.clearDropTargetStatics((byte) 111);
         IterableNodeHashTable.clearStatics(-1215);
         SecondaryNodeDeque.clearStatics(param0 ^ -24167);
         WeightedCacheEntry.clearStatics(false);

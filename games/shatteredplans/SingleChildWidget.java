@@ -131,7 +131,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    void h(int param0) {
+    void layoutChild(int param0) {
         if (null != this.field_z) {
           this.field_z.reapplyBounds((byte) 70);
         }
@@ -237,12 +237,12 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
     final void setBounds(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 >= 99) {
           super.setBounds(param0, param1, (byte) 108, param3, param4);
-          this.h(1);
+          this.layoutChild(1);
           return;
         }
         this.maxLayer(73);
         super.setBounds(param0, param1, (byte) 108, param3, param4);
-        this.h(1);
+        this.layoutChild(1);
     }
 
     SingleChildWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {

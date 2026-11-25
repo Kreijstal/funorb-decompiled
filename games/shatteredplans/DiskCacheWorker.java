@@ -278,7 +278,7 @@ final class DiskCacheWorker implements Runnable {
           SoundEffectDefinition.initializeIntro((byte) -126);
         }
         if (0 == PlayerRankingRequest.field_o &&
-          !ValidationState.field_b.a(PaddedContentDialog.field_nb, (byte) -23)) {
+          !ValidationState.field_b.containsTrack(PaddedContentDialog.field_nb, (byte) -23)) {
           QuickChatCategoryRegistry.transitionMusicTrack(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
         if (PlayerRankingRequest.field_o == -6) {

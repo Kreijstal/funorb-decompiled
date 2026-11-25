@@ -6844,6 +6844,14 @@
       "renamedSymbol": "M:WidgetDragListener.onWidgetDragged(BILDraggableWidget;I)V"
     },
     {
+      "symbol": "M:ce.a(CB)Z",
+      "originalName": "a",
+      "to": "isAccountNameCharacter",
+      "evidence": "Reject ISO controls;accept ASCII alphanumeric,hyphen,NBSP,space and underscore. Complete name validation callers and ASCII helper read. Preserve full char/byte domains,guard modulo only on rejected nonunderscore branch,and original helper order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordInputPainter.isAccountNameCharacter(CB)Z"
+    },
+    {
       "symbol": "M:ce.a(Ljava/applet/Applet;Z)V",
       "originalName": "a",
       "to": "setLegacyStatusFlag",
@@ -7188,12 +7196,28 @@
       "renamedSymbol": "M:GuestPlayForm.drawLayer(IIII)V"
     },
     {
+      "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "setChatCompositionPrompt",
+      "evidence": "Set chat prompt colour/text then,when guard allows,set auxiliary text and redistribute retained prompt/input widths while anchoring input position. Chat composition callers read. Preserve first two assignments before guard/try,all signed width changes,repeated global aliases and partial writes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V"
+    },
+    {
       "symbol": "M:cq.a(Lkg;IIII)V",
       "originalName": "a",
       "to": "onButtonClicked",
       "evidence": "FocusableWidget.fireAction invokes this callback with the activated widget and pointer/action values. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GuestPlayForm.onButtonClicked(LFocusableWidget;IIII)V"
+    },
+    {
+      "symbol": "M:cq.a(Lnq;Z)V",
+      "originalName": "a",
+      "to": "initializeChatNotifications",
+      "evidence": "Retain notification font and current last chat entry,allocate pending notification deque and seven-entry notification array. Complete last-entry helper and notification tick source read. Preserve false-bool chat prompt callback before remaining initialization and allocation/global assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V"
     },
     {
       "symbol": "M:cq.d(Z)I",
@@ -9500,12 +9524,44 @@
       "renamedSymbol": "M:DraggableWidget.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "replaceCharacter",
+      "evidence": "Replace each exact char with supplied string using original sizing/search/append passes. Preserve unrestricted sizing int,capacity over/underflow,nonrecursive replacement,null and UTF16char domains,allocations and exception order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:fr.f(B)V",
+      "originalName": "f",
+      "to": "drawScrollingBackground",
+      "evidence": "Compute cosine/sine-driven background offsets from frame counter,then draw opaque sprite or filtered raster helper and top horizontal line. Complete filtered helper and menu/tutorial callers read. Preserve float then double conversions,trig/cast/shift order,byte early return after calculations,shared scratch raster state and branch draw order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DraggableWidget.drawScrollingBackground(B)V"
+    },
+    {
+      "symbol": "M:fr.h(I)V",
+      "originalName": "h",
+      "to": "layoutChild",
+      "evidence": "Call superclass child layout,then set retained child bounds to full container extent and capture current draggable position. Complete parent and bounds dispatcher read. Preserve super dispatch before child dereference,full guard domain and partial position assignments. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DraggableWidget.layoutChild(I)V"
+    },
+    {
       "symbol": "M:fr.i(I)V",
       "originalName": "i",
       "to": "clearStatics",
       "evidence": "Assigns null to 3 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DraggableWidget.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:fr.j(I)Ljava/lang/Boolean;",
+      "originalName": "j",
+      "to": "takeAccountResponseFlag",
+      "evidence": "For int0return retained nullable account-response Boolean and clear slot;other ints return null without reading/clearing. Producer response99and login consumer excerpts read. Preserve object identity,nullable value and consume order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DraggableWidget.takeAccountResponseFlag(I)Ljava/lang/Boolean;"
     },
     {
       "symbol": "M:ga.a()I",
@@ -10612,12 +10668,52 @@
       "renamedSymbol": "M:MusicCrossfadeStream.skip(I)V"
     },
     {
+      "symbol": "M:h.a(II)V",
+      "originalName": "a",
+      "to": "setMasterVolume",
+      "evidence": "Under original monitor store master mix volume;wrong guard first invokes track-membership helper with null and invalid byte. Mix consumer excerpt and music volume callers read. Preserve arbitrary signed volume,no clamp,guard side effects and exception-before-store behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.setMasterVolume(II)V"
+    },
+    {
       "symbol": "M:h.a(IIBZILgh;)V",
       "originalName": "a",
       "to": "transitionToTrack",
       "evidence": "Under original synchronized monitor,replace/reuse one of two MIDI tracks and set signed fade step,volume and tempo via retained helper;bool selects interruption/loop behavior. Preserve null==retained-track early cases,byte guard after state changes,stream stop/play/configuration order,signed negation and partial retained state on failure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MusicCrossfadeStream.transitionToTrack(IIBZILMusicTrack;)V"
+    },
+    {
+      "symbol": "M:h.a(IILga;I)V",
+      "originalName": "a",
+      "to": "configureTrackStream",
+      "evidence": "Set supplied MIDI stream all-channel volume then tempo scale;late guard clears crossfade static resources. Preserve arbitrary inputs,call order,null dereference/partial MIDI state and original runtime wrapper. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V"
+    },
+    {
+      "symbol": "M:h.a(ILjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "updateBrowserNavigationLinks",
+      "evidence": "Rewrite applet code-base settings/session parameters,then send six updatelinks JavaScript calls for home,gamelist,serverlist,options,terms,privacy. Complete URL helper read. Preserve all path/key literals,arg array allocations,guard-dependent terms bridge arg and caption clear,partial calls and nested Throwable swallowing. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V"
+    },
+    {
+      "symbol": "M:h.a(Lga;BLga;)V",
+      "originalName": "a",
+      "to": "setTrackStreams",
+      "evidence": "Store first MIDI stream before byte17guard;then store second stream and set mix position1048576. Constructor read. Preserve nullable stream aliases,guard-dependent partial state,try boundary and write order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V"
+    },
+    {
+      "symbol": "M:h.a(Lgh;B)Z",
+      "originalName": "a",
+      "to": "containsTrack",
+      "evidence": "Check supplied track reference against both retained transition tracks. Preserve null identity membership,short-circuit order,and wrong-byte stream assignment callback before comparison. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z"
     },
     {
       "symbol": "M:h.b()Ltn;",
@@ -19308,6 +19404,14 @@
       "renamedSymbol": "M:SingleChildWidget.isFocused(I)Z"
     },
     {
+      "symbol": "M:qs.h(I)V",
+      "originalName": "h",
+      "to": "layoutChild",
+      "evidence": "Reapply retained child bounds if nonnull;guard1returns,other ints then invoke original null-target hover update. Complete overriding draggable layout and bounds dispatcher read. Preserve virtual dispatch family,nullable child check,arbitrary guard domains and call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SingleChildWidget.layoutChild(I)V"
+    },
+    {
       "symbol": "M:r.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
       "to": "rethrowUnchecked",
@@ -20106,6 +20210,30 @@
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AchievementProgress.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:se.a(BLjava/lang/CharSequence;)[B",
+      "originalName": "a",
+      "to": "encodeCp1252Text",
+      "evidence": "Allocate byte array per UTF16code-unit and encode original CP1252-style printable ranges/extension table with question-mark fallback,including NUL/surrogates. Preserve byte<=79null after allocation,CharSequence access order,exact table/constants and wrapper;do not replace with charset API. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B"
+    },
+    {
+      "symbol": "M:se.a(IZ)V",
+      "originalName": "a",
+      "to": "resendRankingRequests",
+      "evidence": "For true bool iterate retained ranking requests and serialize each with supplied opcode;false returns without queue access. Complete ranking writer read. Preserve iterator state,packet opcode/byte writes,queue aliases and partial failure order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementProgress.resendRankingRequests(IZ)V"
+    },
+    {
+      "symbol": "M:se.a(Lhb;ILhb;Lhb;Lsl;)V",
+      "originalName": "a",
+      "to": "writeOrders",
+      "evidence": "Serialize project uses then placement batches of59and fleet batches of192with original marker bytes and per-order writers. Both complete session order packet callers and element writers read. Preserve initial size/first calls before guard,project wormhole second star,sequence mutation/count mismatch behavior,all literals and partial packet/cursor ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V"
     },
     {
       "symbol": "M:sf.a(B)V",
@@ -23204,6 +23332,38 @@
       "renamedSymbol": "M:DropTargetWidget.handleRelease(IIIIILUiWidget;)V"
     },
     {
+      "symbol": "M:vj.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "updateTooltipState",
+      "evidence": "Advance retained tooltip tick,track text/pointer changes,apply original display/suppression timing,store text and reset pending pointer coordinates. Previous complete tooltip visibility helper and current UI dispatch caller inspected. Preserve nullable equality branch quirks,int overflow,global read/write order,guard array clear and timeout equality. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:vj.f(B)V",
+      "originalName": "f",
+      "to": "clearDropTargetStatics",
+      "evidence": "Clear retained static arrays/deque/caption;byte111returns after clearing,other bytes first call current-account-text getter between array groups. Preserve precise partial cleanup,guard getter side effect and declaration modifiers;unique name avoids introducing static hiding. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget.clearDropTargetStatics(B)V"
+    },
+    {
+      "symbol": "M:vj.g(B)Ljava/lang/String;",
+      "originalName": "g",
+      "to": "getUiArchiveLoadingMessage",
+      "evidence": "Choose current UI archive loading message by retained stage,archive index readiness,named commonui progress and final archive preload. Preserve exact early-return precedence,progress strings,conditional byte modulo,preload side effects and null/error domains. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget.getUiArchiveLoadingMessage(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:vj.i(I)Ljava/lang/String;",
+      "originalName": "i",
+      "to": "getAccountDialogText",
+      "evidence": "Select one of two retained account-dialog text values by current request-state object identity. Setter/login consumer excerpts read. Preserve optional caption clear before state test,nullable references and full-int behavior without assuming credential subtype. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget.getAccountDialogText(I)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:vk.a()I",
       "originalName": "a",
       "to": "getSchedulingCost",
@@ -23962,6 +24122,14 @@
       "evidence": "Parses a digit string in a radix from 2 to 36.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WidgetStateStyle.parseInt(ILjava/lang/CharSequence;IZ)Z"
+    },
+    {
+      "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+      "originalName": "a",
+      "to": "wrapTextToSharedBuffer",
+      "evidence": "Wrap text into retained line buffer,initially32slots;on ArrayIndexOutOfBoundsException double buffer and retry until current length>=1024then return-1. Complete font wrap helper/callers read. Preserve catches for any bounds fault,shared buffer replacement/partial writes,original arbitrary lengths/overflow,and late guard return47instead of actual count. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I"
     },
     {
       "symbol": "M:wk.a(IZ)Lwk;",
@@ -96211,7 +96379,7 @@
     },
     {
       "symbol": "L:ce.a(CB)Z#0",
-      "renamedSymbol": "L:PasswordInputPainter.a(CB)Z#0",
+      "renamedSymbol": "L:PasswordInputPainter.isAccountNameCharacter(CB)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -101568,7 +101736,7 @@
     },
     {
       "symbol": "L:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -101656,7 +101824,7 @@
     },
     {
       "symbol": "L:cq.a(Lnq;Z)V#0",
-      "renamedSymbol": "L:GuestPlayForm.a(LBitmapFont;Z)V#0",
+      "renamedSymbol": "L:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -101667,7 +101835,7 @@
     },
     {
       "symbol": "L:cq.a(Lnq;Z)V#1",
-      "renamedSymbol": "L:GuestPlayForm.a(LBitmapFont;Z)V#1",
+      "renamedSymbol": "L:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -134975,7 +135143,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -134986,7 +135154,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -134997,7 +135165,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#10",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#10",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#10",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -135008,7 +135176,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#11",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#11",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#11",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -135019,7 +135187,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#12",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#12",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#12",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -135030,7 +135198,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#13",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#13",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#13",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -135041,7 +135209,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#14",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#14",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#14",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -135052,7 +135220,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#15",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#15",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -135063,7 +135231,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#16",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#16",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#16",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -135074,7 +135242,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#17",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#17",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#17",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -135085,7 +135253,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#18",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#18",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#18",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -135096,7 +135264,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#19",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#19",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#19",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -135107,7 +135275,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -135118,7 +135286,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#20",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#20",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -135129,7 +135297,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -135140,7 +135308,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -135151,7 +135319,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -135162,7 +135330,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -135173,7 +135341,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#7",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -135184,7 +135352,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -135195,7 +135363,7 @@
     },
     {
       "symbol": "L:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#9",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -135206,7 +135374,7 @@
     },
     {
       "symbol": "L:fr.f(B)V#0",
-      "renamedSymbol": "L:DraggableWidget.f(B)V#0",
+      "renamedSymbol": "L:DraggableWidget.drawScrollingBackground(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -135217,7 +135385,7 @@
     },
     {
       "symbol": "L:fr.f(B)V#1",
-      "renamedSymbol": "L:DraggableWidget.f(B)V#1",
+      "renamedSymbol": "L:DraggableWidget.drawScrollingBackground(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -135228,7 +135396,7 @@
     },
     {
       "symbol": "L:fr.j(I)Ljava/lang/Boolean;#0",
-      "renamedSymbol": "L:DraggableWidget.j(I)Ljava/lang/Boolean;#0",
+      "renamedSymbol": "L:DraggableWidget.takeAccountResponseFlag(I)Ljava/lang/Boolean;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -150892,7 +151060,7 @@
     },
     {
       "symbol": "L:h.a(II)V#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(II)V#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.setMasterVolume(II)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151101,7 +151269,7 @@
     },
     {
       "symbol": "L:h.a(IILga;I)V#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(IILMidiPcmStream;I)V#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -151112,7 +151280,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -151123,7 +151291,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#1",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -151134,7 +151302,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#10",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#10",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -151145,7 +151313,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#11",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#11",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -151156,7 +151324,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#2",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#2",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#2",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -151167,7 +151335,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#3",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#3",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -151178,7 +151346,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#4",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#4",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -151189,7 +151357,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#5",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#5",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#5",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -151200,7 +151368,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#6",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#6",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151211,7 +151379,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#7",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#7",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151222,7 +151390,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#8",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#8",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -151233,7 +151401,7 @@
     },
     {
       "symbol": "L:h.a(ILjava/applet/Applet;)V#9",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#9",
+      "renamedSymbol": "L:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -151244,7 +151412,7 @@
     },
     {
       "symbol": "L:h.a(Lga;BLga;)V#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMidiPcmStream;BLMidiPcmStream;)V#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -151255,7 +151423,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#0",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#0",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -151266,7 +151434,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#1",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#1",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -151277,7 +151445,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#2",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#2",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -151288,7 +151456,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#3",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#3",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#3",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -151299,7 +151467,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#4",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#4",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#4",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -151310,7 +151478,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#5",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#5",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -151321,7 +151489,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#6",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#6",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -151332,7 +151500,7 @@
     },
     {
       "symbol": "L:h.a(Lgh;B)Z#7",
-      "renamedSymbol": "L:MusicCrossfadeStream.a(LMusicTrack;B)Z#7",
+      "renamedSymbol": "L:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -260760,7 +260928,7 @@
     },
     {
       "symbol": "L:qs.h(I)V#0",
-      "renamedSymbol": "L:SingleChildWidget.h(I)V#0",
+      "renamedSymbol": "L:SingleChildWidget.layoutChild(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -272101,7 +272269,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#0",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#0",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -272112,7 +272280,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#1",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#1",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -272123,7 +272291,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#10",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#10",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -272134,7 +272302,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#11",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#11",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -272145,7 +272313,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#12",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#12",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -272156,7 +272324,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#2",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#2",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#2",
       "originalName": "stackIn_70_0",
       "renamedName": "stackIn_70_0",
       "declaration": {
@@ -272167,7 +272335,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#3",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#3",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#3",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -272178,7 +272346,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#4",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#4",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#4",
       "originalName": "stackIn_73_1",
       "renamedName": "stackIn_73_1",
       "declaration": {
@@ -272189,7 +272357,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#5",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#5",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#5",
       "originalName": "stackIn_74_2",
       "renamedName": "stackIn_74_2",
       "declaration": {
@@ -272200,7 +272368,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#6",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#6",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -272211,7 +272379,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#7",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#7",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#7",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -272222,7 +272390,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#8",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#8",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#8",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -272233,7 +272401,7 @@
     },
     {
       "symbol": "L:se.a(BLjava/lang/CharSequence;)[B#9",
-      "renamedSymbol": "L:AchievementProgress.a(BLjava/lang/CharSequence;)[B#9",
+      "renamedSymbol": "L:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#9",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -272244,7 +272412,7 @@
     },
     {
       "symbol": "L:se.a(IZ)V#0",
-      "renamedSymbol": "L:AchievementProgress.a(IZ)V#0",
+      "renamedSymbol": "L:AchievementProgress.resendRankingRequests(IZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -272255,7 +272423,7 @@
     },
     {
       "symbol": "L:se.a(IZ)V#1",
-      "renamedSymbol": "L:AchievementProgress.a(IZ)V#1",
+      "renamedSymbol": "L:AchievementProgress.resendRankingRequests(IZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -272266,7 +272434,7 @@
     },
     {
       "symbol": "L:se.a(IZ)V#2",
-      "renamedSymbol": "L:AchievementProgress.a(IZ)V#2",
+      "renamedSymbol": "L:AchievementProgress.resendRankingRequests(IZ)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -272277,7 +272445,7 @@
     },
     {
       "symbol": "L:se.a(IZ)V#3",
-      "renamedSymbol": "L:AchievementProgress.a(IZ)V#3",
+      "renamedSymbol": "L:AchievementProgress.resendRankingRequests(IZ)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -272288,7 +272456,7 @@
     },
     {
       "symbol": "L:se.a(IZ)V#4",
-      "renamedSymbol": "L:AchievementProgress.a(IZ)V#4",
+      "renamedSymbol": "L:AchievementProgress.resendRankingRequests(IZ)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -272299,7 +272467,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#0",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#0",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -272310,7 +272478,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#1",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#1",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -272321,7 +272489,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#10",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#10",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#10",
       "originalName": "stackIn_42_2",
       "renamedName": "stackIn_42_2",
       "declaration": {
@@ -272332,7 +272500,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#11",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#11",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -272343,7 +272511,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#12",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#12",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#12",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -272354,7 +272522,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#13",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#13",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#13",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -272365,7 +272533,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#14",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#14",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#14",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -272376,7 +272544,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#15",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#15",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#15",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -272387,7 +272555,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#16",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#16",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#16",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -272398,7 +272566,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#17",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#17",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -272409,7 +272577,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#18",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#18",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#18",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -272420,7 +272588,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#19",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#19",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#19",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -272431,7 +272599,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#2",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#2",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#2",
       "originalName": "stackIn_32_0",
       "renamedName": "stackIn_32_0",
       "declaration": {
@@ -272442,7 +272610,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#3",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#3",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#3",
       "originalName": "stackIn_32_1",
       "renamedName": "stackIn_32_1",
       "declaration": {
@@ -272453,7 +272621,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#4",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#4",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#4",
       "originalName": "stackIn_33_2",
       "renamedName": "stackIn_33_2",
       "declaration": {
@@ -272464,7 +272632,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#5",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#5",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#5",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -272475,7 +272643,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#6",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#6",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#6",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -272486,7 +272654,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#7",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#7",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#7",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -272497,7 +272665,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#8",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#8",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#8",
       "originalName": "stackIn_39_2",
       "renamedName": "stackIn_39_2",
       "declaration": {
@@ -272508,7 +272676,7 @@
     },
     {
       "symbol": "L:se.a(Lhb;ILhb;Lhb;Lsl;)V#9",
-      "renamedSymbol": "L:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#9",
+      "renamedSymbol": "L:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#9",
       "originalName": "stackIn_41_1",
       "renamedName": "stackIn_41_1",
       "declaration": {
@@ -311734,7 +311902,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -311745,7 +311913,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#1",
       "originalName": "stackIn_42_0",
       "renamedName": "stackIn_42_0",
       "declaration": {
@@ -311756,7 +311924,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#2",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -311767,7 +311935,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#3",
       "originalName": "stackIn_43_2",
       "renamedName": "stackIn_43_2",
       "declaration": {
@@ -311778,7 +311946,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -311789,7 +311957,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#5",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#5",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#5",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -311800,7 +311968,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#6",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#6",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -311811,7 +311979,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#7",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#7",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -311822,7 +311990,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#8",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#8",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#8",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -311833,7 +312001,7 @@
     },
     {
       "symbol": "L:vj.a(Ljava/lang/String;I)V#9",
-      "renamedSymbol": "L:DropTargetWidget.a(Ljava/lang/String;I)V#9",
+      "renamedSymbol": "L:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -311844,7 +312012,7 @@
     },
     {
       "symbol": "L:vj.g(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:DropTargetWidget.g(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:DropTargetWidget.getUiArchiveLoadingMessage(B)Ljava/lang/String;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -318752,7 +318920,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#0",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#0",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#0",
       "originalName": "arrayIndexOutOfBoundsException",
       "renamedName": "arrayIndexOutOfBoundsException",
       "declaration": {
@@ -318763,7 +318931,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#1",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#1",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -318774,7 +318942,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#10",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#10",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#10",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -318785,7 +318953,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#11",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#11",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#11",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -318796,7 +318964,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#12",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#12",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#12",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -318807,7 +318975,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#13",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#13",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#13",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -318818,7 +318986,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#14",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#14",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -318829,7 +318997,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#15",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#15",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -318840,7 +319008,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#16",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#16",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#16",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -318851,7 +319019,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#2",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#2",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -318862,7 +319030,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#3",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#3",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -318873,7 +319041,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#4",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#4",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -318884,7 +319052,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#5",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#5",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -318895,7 +319063,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#6",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#6",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -318906,7 +319074,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#7",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#7",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -318917,7 +319085,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#8",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#8",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#8",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -318928,7 +319096,7 @@
     },
     {
       "symbol": "L:wk.a(ILjava/lang/String;Lnq;[I)I#9",
-      "renamedSymbol": "L:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#9",
+      "renamedSymbol": "L:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#9",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -324472,9 +324640,9 @@
     },
     {
       "symbol": "M:ce.a(CB)Z",
-      "renamedSymbol": "M:PasswordInputPainter.a(CB)Z",
+      "renamedSymbol": "M:PasswordInputPainter.isAccountNameCharacter(CB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isAccountNameCharacter",
       "declaration": {
         "file": "ce.java",
         "start": 270,
@@ -325341,9 +325509,9 @@
     },
     {
       "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
-      "renamedSymbol": "M:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V",
+      "renamedSymbol": "M:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setChatCompositionPrompt",
       "declaration": {
         "file": "cq.java",
         "start": 6322,
@@ -325363,9 +325531,9 @@
     },
     {
       "symbol": "M:cq.a(Lnq;Z)V",
-      "renamedSymbol": "M:GuestPlayForm.a(LBitmapFont;Z)V",
+      "renamedSymbol": "M:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeChatNotifications",
       "declaration": {
         "file": "cq.java",
         "start": 5642,
@@ -330522,9 +330690,9 @@
     },
     {
       "symbol": "M:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "replaceCharacter",
       "declaration": {
         "file": "fr.java",
         "start": 3903,
@@ -330533,9 +330701,9 @@
     },
     {
       "symbol": "M:fr.f(B)V",
-      "renamedSymbol": "M:DraggableWidget.f(B)V",
+      "renamedSymbol": "M:DraggableWidget.drawScrollingBackground(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawScrollingBackground",
       "declaration": {
         "file": "fr.java",
         "start": 349,
@@ -330544,9 +330712,9 @@
     },
     {
       "symbol": "M:fr.h(I)V",
-      "renamedSymbol": "M:DraggableWidget.h(I)V",
+      "renamedSymbol": "M:DraggableWidget.layoutChild(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "layoutChild",
       "declaration": {
         "file": "fr.java",
         "start": 808,
@@ -330566,9 +330734,9 @@
     },
     {
       "symbol": "M:fr.j(I)Ljava/lang/Boolean;",
-      "renamedSymbol": "M:DraggableWidget.j(I)Ljava/lang/Boolean;",
+      "renamedSymbol": "M:DraggableWidget.takeAccountResponseFlag(I)Ljava/lang/Boolean;",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "takeAccountResponseFlag",
       "declaration": {
         "file": "fr.java",
         "start": 9752,
@@ -332799,9 +332967,9 @@
     },
     {
       "symbol": "M:h.a(II)V",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(II)V",
+      "renamedSymbol": "M:MusicCrossfadeStream.setMasterVolume(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setMasterVolume",
       "declaration": {
         "file": "h.java",
         "start": 14372,
@@ -332821,9 +332989,9 @@
     },
     {
       "symbol": "M:h.a(IILga;I)V",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(IILMidiPcmStream;I)V",
+      "renamedSymbol": "M:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureTrackStream",
       "declaration": {
         "file": "h.java",
         "start": 11051,
@@ -332832,9 +333000,9 @@
     },
     {
       "symbol": "M:h.a(ILjava/applet/Applet;)V",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(ILjava/applet/Applet;)V",
+      "renamedSymbol": "M:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateBrowserNavigationLinks",
       "declaration": {
         "file": "h.java",
         "start": 11511,
@@ -332843,9 +333011,9 @@
     },
     {
       "symbol": "M:h.a(Lga;BLga;)V",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(LMidiPcmStream;BLMidiPcmStream;)V",
+      "renamedSymbol": "M:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setTrackStreams",
       "declaration": {
         "file": "h.java",
         "start": 13893,
@@ -332854,9 +333022,9 @@
     },
     {
       "symbol": "M:h.a(Lgh;B)Z",
-      "renamedSymbol": "M:MusicCrossfadeStream.a(LMusicTrack;B)Z",
+      "renamedSymbol": "M:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "containsTrack",
       "declaration": {
         "file": "h.java",
         "start": 608,
@@ -350047,9 +350215,9 @@
     },
     {
       "symbol": "M:qs.h(I)V",
-      "renamedSymbol": "M:SingleChildWidget.h(I)V",
+      "renamedSymbol": "M:SingleChildWidget.layoutChild(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "layoutChild",
       "declaration": {
         "file": "qs.java",
         "start": 5192,
@@ -352027,9 +352195,9 @@
     },
     {
       "symbol": "M:se.a(BLjava/lang/CharSequence;)[B",
-      "renamedSymbol": "M:AchievementProgress.a(BLjava/lang/CharSequence;)[B",
+      "renamedSymbol": "M:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encodeCp1252Text",
       "declaration": {
         "file": "se.java",
         "start": 4944,
@@ -352038,9 +352206,9 @@
     },
     {
       "symbol": "M:se.a(IZ)V",
-      "renamedSymbol": "M:AchievementProgress.a(IZ)V",
+      "renamedSymbol": "M:AchievementProgress.resendRankingRequests(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resendRankingRequests",
       "declaration": {
         "file": "se.java",
         "start": 4136,
@@ -352049,9 +352217,9 @@
     },
     {
       "symbol": "M:se.a(Lhb;ILhb;Lhb;Lsl;)V",
-      "renamedSymbol": "M:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V",
+      "renamedSymbol": "M:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeOrders",
       "declaration": {
         "file": "se.java",
         "start": 387,
@@ -358088,9 +358256,9 @@
     },
     {
       "symbol": "M:vj.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:DropTargetWidget.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateTooltipState",
       "declaration": {
         "file": "vj.java",
         "start": 325,
@@ -358099,9 +358267,9 @@
     },
     {
       "symbol": "M:vj.f(B)V",
-      "renamedSymbol": "M:DropTargetWidget.f(B)V",
+      "renamedSymbol": "M:DropTargetWidget.clearDropTargetStatics(B)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "clearDropTargetStatics",
       "declaration": {
         "file": "vj.java",
         "start": 4311,
@@ -358110,9 +358278,9 @@
     },
     {
       "symbol": "M:vj.g(B)Ljava/lang/String;",
-      "renamedSymbol": "M:DropTargetWidget.g(B)Ljava/lang/String;",
+      "renamedSymbol": "M:DropTargetWidget.getUiArchiveLoadingMessage(B)Ljava/lang/String;",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getUiArchiveLoadingMessage",
       "declaration": {
         "file": "vj.java",
         "start": 3345,
@@ -358121,9 +358289,9 @@
     },
     {
       "symbol": "M:vj.i(I)Ljava/lang/String;",
-      "renamedSymbol": "M:DropTargetWidget.i(I)Ljava/lang/String;",
+      "renamedSymbol": "M:DropTargetWidget.getAccountDialogText(I)Ljava/lang/String;",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "getAccountDialogText",
       "declaration": {
         "file": "vj.java",
         "start": 6242,
@@ -359573,9 +359741,9 @@
     },
     {
       "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
-      "renamedSymbol": "M:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I",
+      "renamedSymbol": "M:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "wrapTextToSharedBuffer",
       "declaration": {
         "file": "wk.java",
         "start": 4871,
@@ -372366,7 +372534,7 @@
     },
     {
       "symbol": "P:ce.a(CB)Z#0",
-      "renamedSymbol": "P:PasswordInputPainter.a(CB)Z#0",
+      "renamedSymbol": "P:PasswordInputPainter.isAccountNameCharacter(CB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -372377,7 +372545,7 @@
     },
     {
       "symbol": "P:ce.a(CB)Z#1",
-      "renamedSymbol": "P:PasswordInputPainter.a(CB)Z#1",
+      "renamedSymbol": "P:PasswordInputPainter.isAccountNameCharacter(CB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374434,7 +374602,7 @@
     },
     {
       "symbol": "P:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374445,7 +374613,7 @@
     },
     {
       "symbol": "P:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -374456,7 +374624,7 @@
     },
     {
       "symbol": "P:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#2",
-      "renamedSymbol": "P:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#2",
+      "renamedSymbol": "P:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -374467,7 +374635,7 @@
     },
     {
       "symbol": "P:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#3",
-      "renamedSymbol": "P:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#3",
+      "renamedSymbol": "P:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -374478,7 +374646,7 @@
     },
     {
       "symbol": "P:cq.a(IILjava/lang/String;Ljava/lang/String;I)V#4",
-      "renamedSymbol": "P:GuestPlayForm.a(IILjava/lang/String;Ljava/lang/String;I)V#4",
+      "renamedSymbol": "P:GuestPlayForm.setChatCompositionPrompt(IILjava/lang/String;Ljava/lang/String;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -374544,7 +374712,7 @@
     },
     {
       "symbol": "P:cq.a(Lnq;Z)V#0",
-      "renamedSymbol": "P:GuestPlayForm.a(LBitmapFont;Z)V#0",
+      "renamedSymbol": "P:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -374555,7 +374723,7 @@
     },
     {
       "symbol": "P:cq.a(Lnq;Z)V#1",
-      "renamedSymbol": "P:GuestPlayForm.a(LBitmapFont;Z)V#1",
+      "renamedSymbol": "P:GuestPlayForm.initializeChatNotifications(LBitmapFont;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -386182,7 +386350,7 @@
     },
     {
       "symbol": "P:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -386193,7 +386361,7 @@
     },
     {
       "symbol": "P:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -386204,7 +386372,7 @@
     },
     {
       "symbol": "P:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "P:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "P:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -386215,7 +386383,7 @@
     },
     {
       "symbol": "P:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "P:DraggableWidget.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "P:DraggableWidget.replaceCharacter(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -386226,7 +386394,7 @@
     },
     {
       "symbol": "P:fr.f(B)V#0",
-      "renamedSymbol": "P:DraggableWidget.f(B)V#0",
+      "renamedSymbol": "P:DraggableWidget.drawScrollingBackground(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -386237,7 +386405,7 @@
     },
     {
       "symbol": "P:fr.h(I)V#0",
-      "renamedSymbol": "P:DraggableWidget.h(I)V#0",
+      "renamedSymbol": "P:DraggableWidget.layoutChild(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -386259,7 +386427,7 @@
     },
     {
       "symbol": "P:fr.j(I)Ljava/lang/Boolean;#0",
-      "renamedSymbol": "P:DraggableWidget.j(I)Ljava/lang/Boolean;#0",
+      "renamedSymbol": "P:DraggableWidget.takeAccountResponseFlag(I)Ljava/lang/Boolean;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392584,7 +392752,7 @@
     },
     {
       "symbol": "P:h.a(II)V#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(II)V#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.setMasterVolume(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392595,7 +392763,7 @@
     },
     {
       "symbol": "P:h.a(II)V#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(II)V#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.setMasterVolume(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392672,7 +392840,7 @@
     },
     {
       "symbol": "P:h.a(IILga;I)V#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IILMidiPcmStream;I)V#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392683,7 +392851,7 @@
     },
     {
       "symbol": "P:h.a(IILga;I)V#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IILMidiPcmStream;I)V#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392694,7 +392862,7 @@
     },
     {
       "symbol": "P:h.a(IILga;I)V#2",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IILMidiPcmStream;I)V#2",
+      "renamedSymbol": "P:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392705,7 +392873,7 @@
     },
     {
       "symbol": "P:h.a(IILga;I)V#3",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(IILMidiPcmStream;I)V#3",
+      "renamedSymbol": "P:MusicCrossfadeStream.configureTrackStream(IILMidiPcmStream;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -392716,7 +392884,7 @@
     },
     {
       "symbol": "P:h.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392727,7 +392895,7 @@
     },
     {
       "symbol": "P:h.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.updateBrowserNavigationLinks(ILjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392738,7 +392906,7 @@
     },
     {
       "symbol": "P:h.a(Lga;BLga;)V#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(LMidiPcmStream;BLMidiPcmStream;)V#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392749,7 +392917,7 @@
     },
     {
       "symbol": "P:h.a(Lga;BLga;)V#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(LMidiPcmStream;BLMidiPcmStream;)V#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392760,7 +392928,7 @@
     },
     {
       "symbol": "P:h.a(Lga;BLga;)V#2",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(LMidiPcmStream;BLMidiPcmStream;)V#2",
+      "renamedSymbol": "P:MusicCrossfadeStream.setTrackStreams(LMidiPcmStream;BLMidiPcmStream;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392771,7 +392939,7 @@
     },
     {
       "symbol": "P:h.a(Lgh;B)Z#0",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(LMusicTrack;B)Z#0",
+      "renamedSymbol": "P:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392782,7 +392950,7 @@
     },
     {
       "symbol": "P:h.a(Lgh;B)Z#1",
-      "renamedSymbol": "P:MusicCrossfadeStream.a(LMusicTrack;B)Z#1",
+      "renamedSymbol": "P:MusicCrossfadeStream.containsTrack(LMusicTrack;B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433966,7 +434134,7 @@
     },
     {
       "symbol": "P:qs.h(I)V#0",
-      "renamedSymbol": "P:SingleChildWidget.h(I)V#0",
+      "renamedSymbol": "P:SingleChildWidget.layoutChild(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438157,7 +438325,7 @@
     },
     {
       "symbol": "P:se.a(BLjava/lang/CharSequence;)[B#0",
-      "renamedSymbol": "P:AchievementProgress.a(BLjava/lang/CharSequence;)[B#0",
+      "renamedSymbol": "P:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438168,7 +438336,7 @@
     },
     {
       "symbol": "P:se.a(BLjava/lang/CharSequence;)[B#1",
-      "renamedSymbol": "P:AchievementProgress.a(BLjava/lang/CharSequence;)[B#1",
+      "renamedSymbol": "P:AchievementProgress.encodeCp1252Text(BLjava/lang/CharSequence;)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438179,7 +438347,7 @@
     },
     {
       "symbol": "P:se.a(IZ)V#0",
-      "renamedSymbol": "P:AchievementProgress.a(IZ)V#0",
+      "renamedSymbol": "P:AchievementProgress.resendRankingRequests(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438190,7 +438358,7 @@
     },
     {
       "symbol": "P:se.a(IZ)V#1",
-      "renamedSymbol": "P:AchievementProgress.a(IZ)V#1",
+      "renamedSymbol": "P:AchievementProgress.resendRankingRequests(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438201,7 +438369,7 @@
     },
     {
       "symbol": "P:se.a(Lhb;ILhb;Lhb;Lsl;)V#0",
-      "renamedSymbol": "P:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#0",
+      "renamedSymbol": "P:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -438212,7 +438380,7 @@
     },
     {
       "symbol": "P:se.a(Lhb;ILhb;Lhb;Lsl;)V#1",
-      "renamedSymbol": "P:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#1",
+      "renamedSymbol": "P:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -438223,7 +438391,7 @@
     },
     {
       "symbol": "P:se.a(Lhb;ILhb;Lhb;Lsl;)V#2",
-      "renamedSymbol": "P:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#2",
+      "renamedSymbol": "P:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -438234,7 +438402,7 @@
     },
     {
       "symbol": "P:se.a(Lhb;ILhb;Lhb;Lsl;)V#3",
-      "renamedSymbol": "P:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#3",
+      "renamedSymbol": "P:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -438245,7 +438413,7 @@
     },
     {
       "symbol": "P:se.a(Lhb;ILhb;Lhb;Lsl;)V#4",
-      "renamedSymbol": "P:AchievementProgress.a(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#4",
+      "renamedSymbol": "P:AchievementProgress.writeOrders(LNodeSequence;ILNodeSequence;LNodeSequence;LCipherPacketBuffer;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -454129,7 +454297,7 @@
     },
     {
       "symbol": "P:vj.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:DropTargetWidget.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454140,7 +454308,7 @@
     },
     {
       "symbol": "P:vj.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:DropTargetWidget.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:DropTargetWidget.updateTooltipState(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -454151,7 +454319,7 @@
     },
     {
       "symbol": "P:vj.f(B)V#0",
-      "renamedSymbol": "P:DropTargetWidget.f(B)V#0",
+      "renamedSymbol": "P:DropTargetWidget.clearDropTargetStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454162,7 +454330,7 @@
     },
     {
       "symbol": "P:vj.g(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:DropTargetWidget.g(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:DropTargetWidget.getUiArchiveLoadingMessage(B)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -454173,7 +454341,7 @@
     },
     {
       "symbol": "P:vj.i(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:DropTargetWidget.i(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:DropTargetWidget.getAccountDialogText(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -457242,7 +457410,7 @@
     },
     {
       "symbol": "P:wk.a(ILjava/lang/String;Lnq;[I)I#0",
-      "renamedSymbol": "P:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#0",
+      "renamedSymbol": "P:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -457253,7 +457421,7 @@
     },
     {
       "symbol": "P:wk.a(ILjava/lang/String;Lnq;[I)I#1",
-      "renamedSymbol": "P:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#1",
+      "renamedSymbol": "P:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -457264,7 +457432,7 @@
     },
     {
       "symbol": "P:wk.a(ILjava/lang/String;Lnq;[I)I#2",
-      "renamedSymbol": "P:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#2",
+      "renamedSymbol": "P:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -457275,7 +457443,7 @@
     },
     {
       "symbol": "P:wk.a(ILjava/lang/String;Lnq;[I)I#3",
-      "renamedSymbol": "P:WidgetStateStyle.a(ILjava/lang/String;LBitmapFont;[I)I#3",
+      "renamedSymbol": "P:WidgetStateStyle.wrapTextToSharedBuffer(ILjava/lang/String;LBitmapFont;[I)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -457928,7 +458096,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "869dfd6f92ca96bbd90aff94f9ff9c21aacfb42fb475aa4853173f691cbbc33c",
+      "outputSha256": "50fa7a0788811b59620c84ddeb4b79be58b6638faabd9b0e43912ea0840221ed",
       "edits": [
         {
           "start": 86,
@@ -460311,6 +460479,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "AchievementProgress"
+        },
+        {
+          "start": 17123,
+          "end": 17124,
+          "symbol": "M:se.a(IZ)V",
+          "original": "a",
+          "renamed": "resendRankingRequests"
         },
         {
           "start": 17149,
@@ -467201,6 +467376,13 @@
           "renamed": "DropTargetWidget"
         },
         {
+          "start": 35132,
+          "end": 35133,
+          "symbol": "M:vj.f(B)V",
+          "original": "f",
+          "renamed": "clearDropTargetStatics"
+        },
+        {
           "start": 35155,
           "end": 35157,
           "symbol": "C:rm",
@@ -470938,7 +471120,7 @@
       "original": "aa.java",
       "renamed": "AccountCreationForm.java",
       "inputSha256": "35dc0e643c81c3b478fa5541e86482b3c744b465d03d2bd7253bf9b8357b149a",
-      "outputSha256": "f013414a16689d47bbcf889a0675172198a376e3687472fab33c445c3584890f",
+      "outputSha256": "4c1ae620e0624663927147c09f736e4d0ac5c6ee2aef8a199383d1d0ac6cb078",
       "edits": [
         {
           "start": 50,
@@ -472278,6 +472460,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 17592,
+          "end": 17593,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 17601,
           "end": 17603,
           "symbol": "C:wg",
@@ -472313,6 +472502,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 17915,
+          "end": 17916,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 17924,
           "end": 17926,
           "symbol": "C:wg",
@@ -472346,6 +472542,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 18249,
+          "end": 18250,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 18266,
@@ -472390,6 +472593,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 18738,
+          "end": 18739,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 18747,
           "end": 18749,
           "symbol": "C:wg",
@@ -472423,6 +472633,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 18939,
+          "end": 18940,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 18948,
@@ -472460,6 +472677,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 19151,
+          "end": 19152,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 19160,
           "end": 19162,
           "symbol": "C:wg",
@@ -472493,6 +472717,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 19525,
+          "end": 19526,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 19534,
@@ -472530,6 +472761,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 19729,
+          "end": 19730,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 19746,
           "end": 19748,
           "symbol": "C:wg",
@@ -472563,6 +472801,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 19959,
+          "end": 19960,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 19968,
@@ -472600,6 +472845,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 20172,
+          "end": 20173,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 20181,
           "end": 20183,
           "symbol": "C:wg",
@@ -472633,6 +472885,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 20546,
+          "end": 20547,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 20555,
@@ -472670,6 +472929,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 20940,
+          "end": 20941,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 20949,
           "end": 20951,
           "symbol": "C:wg",
@@ -472703,6 +472969,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 21143,
+          "end": 21144,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 21152,
@@ -472740,6 +473013,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 21355,
+          "end": 21356,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 21364,
           "end": 21366,
           "symbol": "C:wg",
@@ -472775,6 +473055,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 21567,
+          "end": 21568,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 21584,
           "end": 21586,
           "symbol": "C:wg",
@@ -472801,6 +473088,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 21949,
+          "end": 21950,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 21958,
@@ -472836,6 +473130,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 22332,
+          "end": 22333,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 22349,
@@ -476870,7 +477171,7 @@
       "original": "ak.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "09c28e7df6409321535742b0c5b649a5cbd10bf228af3331bc1b4c912af18bc5",
-      "outputSha256": "a103a0d760fe1275da6754af294c094f0137ad747b69e258f2a5020df73bba50",
+      "outputSha256": "de8fb9345f4e1f22e679e398db2ba3715dc46b3bea5ba92768a22a03e05dbff4",
       "edits": [
         {
           "start": 50,
@@ -477454,6 +477755,13 @@
           "renamed": "ValidationState"
         },
         {
+          "start": 5243,
+          "end": 5244,
+          "symbol": "M:h.a(II)V",
+          "original": "a",
+          "renamed": "setMasterVolume"
+        },
+        {
           "start": 5349,
           "end": 5351,
           "symbol": "C:jh",
@@ -477480,6 +477788,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 5429,
+          "end": 5430,
+          "symbol": "M:h.a(II)V",
+          "original": "a",
+          "renamed": "setMasterVolume"
         },
         {
           "start": 5533,
@@ -489877,7 +490192,7 @@
       "original": "bk.java",
       "renamed": "ChatCompositionSupport.java",
       "inputSha256": "5a9407e814065d6b3573dbb8d36d09172980615c71df0343995c53b072787cc1",
-      "outputSha256": "78f37ac0599b94e1ee2caf5554cba260b7018c50bc2fe50d10ed33e5416969d5",
+      "outputSha256": "dd4a3725bdc53ac680ce022cedd92dba7fa83b68f61330947aa19977068edb6c",
       "edits": [
         {
           "start": 50,
@@ -490314,6 +490629,13 @@
           "renamed": "GuestPlayForm"
         },
         {
+          "start": 6345,
+          "end": 6346,
+          "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "setChatCompositionPrompt"
+        },
+        {
           "start": 6352,
           "end": 6354,
           "symbol": "C:ho",
@@ -490641,6 +490963,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "GuestPlayForm"
+        },
+        {
+          "start": 8975,
+          "end": 8976,
+          "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "setChatCompositionPrompt"
         },
         {
           "start": 8983,
@@ -495967,7 +496296,7 @@
       "original": "ce.java",
       "renamed": "PasswordInputPainter.java",
       "inputSha256": "ec3dfd630e32555adcd2bc1211c77d9c8016b1afa38d6619e7d09977285788d2",
-      "outputSha256": "ece8ed107ad2ecede348fc4071e1062a359ac4e54209cfb61b7f1924ca1023f0",
+      "outputSha256": "8ed7472f8eb774c31891aea1e7107af73f7b758e953e01e03a33d0a86b90c009",
       "edits": [
         {
           "start": 50,
@@ -496010,6 +496339,13 @@
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 270,
+          "end": 271,
+          "symbol": "M:ce.a(CB)Z",
+          "original": "a",
+          "renamed": "isAccountNameCharacter"
         },
         {
           "start": 392,
@@ -504387,7 +504723,7 @@
       "original": "cq.java",
       "renamed": "GuestPlayForm.java",
       "inputSha256": "a375b0d4035b7a5f722858d5d8cca089dbb7135b0d7a29792bf15e8d531b9792",
-      "outputSha256": "7ba252e596dcff695a5e8d98de2ee56104ed7b35ade3147cd36587a66115cbcc",
+      "outputSha256": "2553964715702bcd08da3494d8970fe47663b5f0a611dd9dac0dd2e60ab4d487",
       "edits": [
         {
           "start": 50,
@@ -504873,6 +505209,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 5642,
+          "end": 5643,
+          "symbol": "M:cq.a(Lnq;Z)V",
+          "original": "a",
+          "renamed": "initializeChatNotifications"
+        },
+        {
           "start": 5644,
           "end": 5646,
           "symbol": "C:nq",
@@ -504892,6 +505235,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "GuestPlayForm"
+        },
+        {
+          "start": 5799,
+          "end": 5800,
+          "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "setChatCompositionPrompt"
         },
         {
           "start": 5869,
@@ -504955,6 +505305,13 @@
           "symbol": "M:cq.a(B)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 6322,
+          "end": 6323,
+          "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "setChatCompositionPrompt"
         },
         {
           "start": 6400,
@@ -506421,7 +506778,7 @@
       "original": "da.java",
       "renamed": "DebouncedValidator.java",
       "inputSha256": "cc1863d0c246e75ec17603bb0553605c6b662932ec55848b640443c7b8f49543",
-      "outputSha256": "97350b0d820ade55ab4d181e615bb279a6e36bbcc575dd67823009ea1d7fdb8a",
+      "outputSha256": "893f34da0179fd0aa1b5bb8735226ae1eede9dd369e45aef5fba03908c9084f2",
       "edits": [
         {
           "start": 53,
@@ -506884,6 +507241,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 6175,
+          "end": 6176,
+          "symbol": "M:h.a(II)V",
+          "original": "a",
+          "renamed": "setMasterVolume"
         },
         {
           "start": 6177,
@@ -523550,7 +523914,7 @@
       "original": "ee.java",
       "renamed": "PrivateChatMessage.java",
       "inputSha256": "ca26e765ca93efb12df9fd6ad84412b085bf87ba9b15b96a3649c139da5bd266",
-      "outputSha256": "eeae7fa617abde193086970f32b46a502cc56fae2d2a2a1b6d4a84994ebfbd43",
+      "outputSha256": "e45f25384bb496d7df6c972bbce05cd398e326b6e41ad9fe147fd9787266b489",
       "edits": [
         {
           "start": 50,
@@ -523712,6 +524076,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "AchievementProgress"
+        },
+        {
+          "start": 2819,
+          "end": 2820,
+          "symbol": "M:se.a(BLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Text"
         },
         {
           "start": 2884,
@@ -554874,7 +555245,7 @@
       "original": "fr.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "3b7d9f7c920e92003ae90f5baa4196ca21d3d0ef05774396b704ffe9dbe71edb",
-      "outputSha256": "2e938190dab09dd0886f46dfcf9ae4dd79120f60b51290ebc3262a4e31282bb9",
+      "outputSha256": "e060ff5136cbc23d99d5ff7a89b4fef75cf1ca755d200acf5c748abd6bc25928",
       "edits": [
         {
           "start": 71,
@@ -554889,6 +555260,13 @@
           "symbol": "C:qs",
           "original": "qs",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 349,
+          "end": 350,
+          "symbol": "M:fr.f(B)V",
+          "original": "f",
+          "renamed": "drawScrollingBackground"
         },
         {
           "start": 432,
@@ -554952,6 +555330,20 @@
           "symbol": "M:bi.c(II)V",
           "original": "c",
           "renamed": "drawOpaque"
+        },
+        {
+          "start": 808,
+          "end": 809,
+          "symbol": "M:fr.h(I)V",
+          "original": "h",
+          "renamed": "layoutChild"
+        },
+        {
+          "start": 838,
+          "end": 839,
+          "symbol": "M:qs.h(I)V",
+          "original": "h",
+          "renamed": "layoutChild"
         },
         {
           "start": 870,
@@ -555043,6 +555435,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 3903,
+          "end": 3904,
+          "symbol": "M:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "replaceCharacter"
         },
         {
           "start": 6354,
@@ -555169,6 +555568,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 9752,
+          "end": 9753,
+          "symbol": "M:fr.j(I)Ljava/lang/Boolean;",
+          "original": "j",
+          "renamed": "takeAccountResponseFlag"
         },
         {
           "start": 9861,
@@ -570260,7 +570666,7 @@
       "original": "h.java",
       "renamed": "MusicCrossfadeStream.java",
       "inputSha256": "a729cb5b2c8eb9981959a273f43436a7b1ac1f258a6f73a34078448db5dd32f7",
-      "outputSha256": "a43087ede2301fb7c14236256036c7e7e2d2c07ebf0415e5b93b33d18b1ec052",
+      "outputSha256": "daa8c9e3b2a452ea81fc1990c9baaaff66711892a0836ace1b98c4c579d0d43f",
       "edits": [
         {
           "start": 50,
@@ -570333,6 +570739,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 608,
+          "end": 609,
+          "symbol": "M:h.a(Lgh;B)Z",
+          "original": "a",
+          "renamed": "containsTrack"
+        },
+        {
           "start": 610,
           "end": 612,
           "symbol": "C:gh",
@@ -570352,6 +570765,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 1011,
+          "end": 1012,
+          "symbol": "M:h.a(Lga;BLga;)V",
+          "original": "a",
+          "renamed": "setTrackStreams"
         },
         {
           "start": 1014,
@@ -570669,6 +571089,13 @@
           "renamed": "stop"
         },
         {
+          "start": 11051,
+          "end": 11052,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
+        },
+        {
           "start": 11077,
           "end": 11079,
           "symbol": "C:ga",
@@ -570716,6 +571143,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 11511,
+          "end": 11512,
+          "symbol": "M:h.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "updateBrowserNavigationLinks"
         },
         {
           "start": 11991,
@@ -570837,6 +571271,13 @@
           "renamed": "nextChild"
         },
         {
+          "start": 13893,
+          "end": 13894,
+          "symbol": "M:h.a(Lga;BLga;)V",
+          "original": "a",
+          "renamed": "setTrackStreams"
+        },
+        {
           "start": 13895,
           "end": 13897,
           "symbol": "C:ga",
@@ -570865,6 +571306,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 14372,
+          "end": 14373,
+          "symbol": "M:h.a(II)V",
+          "original": "a",
+          "renamed": "setMasterVolume"
+        },
+        {
           "start": 14437,
           "end": 14439,
           "symbol": "C:gh",
@@ -570877,6 +571325,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "MusicTrack"
+        },
+        {
+          "start": 14473,
+          "end": 14474,
+          "symbol": "M:h.a(Lgh;B)Z",
+          "original": "a",
+          "renamed": "containsTrack"
         },
         {
           "start": 14476,
@@ -570963,6 +571418,13 @@
           "renamed": "playTrack"
         },
         {
+          "start": 15750,
+          "end": 15751,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
+        },
+        {
           "start": 15897,
           "end": 15898,
           "symbol": "M:ga.e(I)V",
@@ -570975,6 +571437,27 @@
           "symbol": "M:ga.a(Lgh;BZ)V",
           "original": "a",
           "renamed": "playTrack"
+        },
+        {
+          "start": 16073,
+          "end": 16074,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
+        },
+        {
+          "start": 16340,
+          "end": 16341,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
+        },
+        {
+          "start": 16503,
+          "end": 16504,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
         },
         {
           "start": 17034,
@@ -571005,6 +571488,13 @@
           "renamed": "playTrack"
         },
         {
+          "start": 17399,
+          "end": 17400,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
+        },
+        {
           "start": 17573,
           "end": 17574,
           "symbol": "M:ga.e(I)V",
@@ -571031,6 +571521,13 @@
           "symbol": "M:ga.a(Lgh;BZ)V",
           "original": "a",
           "renamed": "playTrack"
+        },
+        {
+          "start": 17938,
+          "end": 17939,
+          "symbol": "M:h.a(IILga;I)V",
+          "original": "a",
+          "renamed": "configureTrackStream"
         },
         {
           "start": 18617,
@@ -571066,6 +571563,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 18903,
+          "end": 18904,
+          "symbol": "M:h.a(Lga;BLga;)V",
+          "original": "a",
+          "renamed": "setTrackStreams"
         },
         {
           "start": 18926,
@@ -580815,7 +581319,7 @@
       "original": "hp.java",
       "renamed": "DerelictVictoryChecker.java",
       "inputSha256": "e46746fa5f082ed11c7c0119644a5a87562d34f001c461bdd94535af77414d4a",
-      "outputSha256": "b9e2527f8b30437930bc678bda84420ca5b6d0530f19ee101d4482bfe3fa606d",
+      "outputSha256": "bb743be1516741df53c14769968978d97ae20e6be6c69037e8069dd94887dc08",
       "edits": [
         {
           "start": 50,
@@ -581096,6 +581600,13 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MusicCrossfadeStream"
+        },
+        {
+          "start": 6888,
+          "end": 6889,
+          "symbol": "M:h.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "updateBrowserNavigationLinks"
         },
         {
           "start": 6977,
@@ -594027,7 +594538,7 @@
       "original": "jd.java",
       "renamed": "CellVertex.java",
       "inputSha256": "e1c585403a0226bec191b9a4e7445a3b70eb444a3b06361861011e8cb8168968",
-      "outputSha256": "228af3ef10ce5af110f08e297c21eca5d1f2a3cf4a2f3d8fdd000e075b89ff71",
+      "outputSha256": "a1f05e1b99e0cd1cb585b05e76f6b4ec123a5b35cce82bcb6dc5cee94ed524cd",
       "edits": [
         {
           "start": 50,
@@ -594063,6 +594574,13 @@
           "symbol": "C:ce",
           "original": "ce",
           "renamed": "PasswordInputPainter"
+        },
+        {
+          "start": 1006,
+          "end": 1007,
+          "symbol": "M:ce.a(CB)Z",
+          "original": "a",
+          "renamed": "isAccountNameCharacter"
         },
         {
           "start": 1648,
@@ -594372,7 +594890,7 @@
       "original": "jf.java",
       "renamed": "SettingsCookieSupport.java",
       "inputSha256": "747f564ddaecf2912420207a36123c68727f9689dce1549f7b996d332d5372d7",
-      "outputSha256": "89d8e0b54e009d44e373c8654e866bbbd142320b214a736b8f757d3351b3470a",
+      "outputSha256": "4ee0485cc80253d1c183b8c97543e838ac683483328bd615a9d2629f30f3b6ac",
       "edits": [
         {
           "start": 50,
@@ -594471,6 +594989,13 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MusicCrossfadeStream"
+        },
+        {
+          "start": 2251,
+          "end": 2252,
+          "symbol": "M:h.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "updateBrowserNavigationLinks"
         },
         {
           "start": 3043,
@@ -595060,7 +595585,7 @@
       "original": "jh.java",
       "renamed": "ToggleButton.java",
       "inputSha256": "66fd8dd031a84ce44cb35839bd421489f9ecbab289a339dbec92a78f374e3580",
-      "outputSha256": "0298aeb177df867ecb31c15e0b89511cd39ec1ff364f09b4e80337f1e9565749",
+      "outputSha256": "33c1f1731e67b9595307d04fc6994288f2515784b53399e593ab7028e0167cfe",
       "edits": [
         {
           "start": 50,
@@ -595404,6 +595929,13 @@
           "symbol": "C:cq",
           "original": "cq",
           "renamed": "GuestPlayForm"
+        },
+        {
+          "start": 4598,
+          "end": 4599,
+          "symbol": "M:cq.a(IILjava/lang/String;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "setChatCompositionPrompt"
         },
         {
           "start": 4606,
@@ -614407,7 +614939,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "49df4ab30cb0a8a8cb72774ced649bc94659c9519b17a474e0a0eadacba69777",
+      "outputSha256": "91526668004e005475d5e9176bcf7246f89b84acfa7b534fa4c3d21c739a41ff",
       "edits": [
         {
           "start": 50,
@@ -617747,6 +618279,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "AchievementProgress"
+        },
+        {
+          "start": 61645,
+          "end": 61646,
+          "symbol": "M:se.a(Lhb;ILhb;Lhb;Lsl;)V",
+          "original": "a",
+          "renamed": "writeOrders"
         },
         {
           "start": 61647,
@@ -622353,6 +622892,13 @@
           "renamed": "AchievementProgress"
         },
         {
+          "start": 148807,
+          "end": 148808,
+          "symbol": "M:se.a(Lhb;ILhb;Lhb;Lsl;)V",
+          "original": "a",
+          "renamed": "writeOrders"
+        },
+        {
           "start": 148809,
           "end": 148811,
           "symbol": "C:fp",
@@ -623913,7 +624459,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "8caff63e1ba824e99c40972d383192826d3734fd839803ddbf339708ed079095",
+      "outputSha256": "2265b08f4a8c88fad0fbbf332a457611a0de4c142c36a08cb051056a902994bd",
       "edits": [
         {
           "start": 50,
@@ -637278,6 +637824,13 @@
           "renamed": "GuestPlayForm"
         },
         {
+          "start": 202323,
+          "end": 202324,
+          "symbol": "M:cq.a(Lnq;Z)V",
+          "original": "a",
+          "renamed": "initializeChatNotifications"
+        },
+        {
           "start": 202325,
           "end": 202327,
           "symbol": "C:rs",
@@ -646385,7 +646938,7 @@
       "original": "lp.java",
       "renamed": "MenuList.java",
       "inputSha256": "d346369e465b7a6a17cf031848c265338eb0859a9dac7511effcfacbf594d530",
-      "outputSha256": "7c09477caa16afdd86daedb1cf49212b3ff5d94af35968ad4050c4fe4660db67",
+      "outputSha256": "66f77fa3fd7954a2802e8c84a08c64c6e08ca00b3cb2cca5f53acda7617d62f1",
       "edits": [
         {
           "start": 50,
@@ -646766,6 +647319,13 @@
           "renamed": "WidgetStateStyle"
         },
         {
+          "start": 3346,
+          "end": 3347,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
+        },
+        {
           "start": 3361,
           "end": 3363,
           "symbol": "C:rs",
@@ -646813,6 +647373,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 3776,
+          "end": 3777,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 3800,
@@ -660450,7 +661017,7 @@
       "original": "ms.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "e63aa93bc8bb4dc8c749a023cebd0c5712ae17519fee111c9709c7d22803c2db",
-      "outputSha256": "365390d59374ed1a37ed5edbbd1061129691d372108b54121fe411ea667e4942",
+      "outputSha256": "187f91e8ccbe055318ff33502cfadfb432cee0aba7734ec11e6b2d2c950113c5",
       "edits": [
         {
           "start": 53,
@@ -660493,6 +661060,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 820,
+          "end": 821,
+          "symbol": "M:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "replaceCharacter"
         },
         {
           "start": 860,
@@ -660935,7 +661509,7 @@
       "original": "na.java",
       "renamed": "Bzip2State.java",
       "inputSha256": "ca158df6e839018ad6cb0b0b4baaffe3b3171e80e5452b91a186c966dbc74b6c",
-      "outputSha256": "aebb2bf26d329c38b9bdfffe9974ce68926e6d487db3a5421cab4db3a8326f7d",
+      "outputSha256": "00ae954bf15f7ce4295b15302f8047c5c7bc55fa6897c648de0b7220b896e5a3",
       "edits": [
         {
           "start": 71,
@@ -660971,6 +661545,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 1545,
+          "end": 1546,
+          "symbol": "M:fr.a(Ljava/lang/String;ICLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "replaceCharacter"
         },
         {
           "start": 1585,
@@ -666264,7 +666845,7 @@
       "original": "nn.java",
       "renamed": "AccountNameValidationSupport.java",
       "inputSha256": "260cd5e83efaeb7a48d3428acc73ed7989c73492e11ec4e9294a84ce978fd91e",
-      "outputSha256": "f478d454b4ddc3edd43c622c61f5d85e6f4262340615728f1cf9c45d235b14e0",
+      "outputSha256": "85100fff8b5907f0117ce8c5bc566c0600ded245322e259736a83075d014acd7",
       "edits": [
         {
           "start": 50,
@@ -666344,6 +666925,13 @@
           "renamed": "PasswordInputPainter"
         },
         {
+          "start": 2293,
+          "end": 2294,
+          "symbol": "M:ce.a(CB)Z",
+          "original": "a",
+          "renamed": "isAccountNameCharacter"
+        },
+        {
           "start": 2447,
           "end": 2449,
           "symbol": "C:as",
@@ -666370,7 +666958,7 @@
       "original": "no.java",
       "renamed": "TutorialStageSupport.java",
       "inputSha256": "7e0f6b53e5ba790bcadf77b34d0f251f41bd0696681787c7f6e480594a4bd751",
-      "outputSha256": "47bbaba0af2b3e9d299dba5636e2bbdd2c02b5523cb94a87ca0fb95e493166b2",
+      "outputSha256": "674cd326d8a101bf50d5476bd1b6e45fba37ddbfab8651fc90c5b1cfce3a0b38",
       "edits": [
         {
           "start": 50,
@@ -667351,6 +667939,13 @@
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 11121,
+          "end": 11122,
+          "symbol": "M:vj.g(B)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "getUiArchiveLoadingMessage"
         },
         {
           "start": 11136,
@@ -700726,7 +701321,7 @@
       "original": "qs.java",
       "renamed": "SingleChildWidget.java",
       "inputSha256": "aefb6bcd1c26bb310343cd9746435d5646e85083e9bc45ad2d4c959e71a7c6f6",
-      "outputSha256": "2e486ec354ff0c1ccc25cce979d7696e8d12ecbfcd677d57ac732eaa9a8b619b",
+      "outputSha256": "0abc9c24561aed6ae63bb3c51d995d514ecf163adb0f31a8f9b3a4d3e1b1659d",
       "edits": [
         {
           "start": 74,
@@ -700909,6 +701504,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 5192,
+          "end": 5193,
+          "symbol": "M:qs.h(I)V",
+          "original": "h",
+          "renamed": "layoutChild"
         },
         {
           "start": 5267,
@@ -701149,6 +701751,13 @@
           "renamed": "setBounds"
         },
         {
+          "start": 8976,
+          "end": 8977,
+          "symbol": "M:qs.h(I)V",
+          "original": "h",
+          "renamed": "layoutChild"
+        },
+        {
           "start": 9023,
           "end": 9024,
           "symbol": "M:qs.e(I)I",
@@ -701161,6 +701770,13 @@
           "symbol": "M:vg.a(IIBII)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 9104,
+          "end": 9105,
+          "symbol": "M:qs.h(I)V",
+          "original": "h",
+          "renamed": "layoutChild"
         },
         {
           "start": 9121,
@@ -701497,7 +702113,7 @@
       "original": "r.java",
       "renamed": "UrlLoader.java",
       "inputSha256": "f00cbff469999e7268a699f889ad7147f63bd197ea501e4b6398a73f49f107bf",
-      "outputSha256": "7ff72257e22925c8d4724ce012f2ff8631728ab2e961b9297978cb10eb1e2a22",
+      "outputSha256": "dc4c06126c1e9b1973843fe10054ad33cbc644400e9fc7d4fcce3d56893d02dd",
       "edits": [
         {
           "start": 69,
@@ -702366,6 +702982,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "AchievementProgress"
+        },
+        {
+          "start": 11495,
+          "end": 11496,
+          "symbol": "M:se.a(BLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Text"
         },
         {
           "start": 11628,
@@ -708581,7 +709204,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "0990cfe1aab37ea4033d912d506157af19c6b81a5ca81598b16f4cce928edb1f",
+      "outputSha256": "dc95d53dc6914faaf3442da54e92bec4f487b007c4598c77fd1d94c82fd91611",
       "edits": [
         {
           "start": 50,
@@ -710101,6 +710724,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "ValidationState"
+        },
+        {
+          "start": 10994,
+          "end": 10995,
+          "symbol": "M:h.a(Lgh;B)Z",
+          "original": "a",
+          "renamed": "containsTrack"
         },
         {
           "start": 10996,
@@ -718353,7 +718983,7 @@
       "original": "se.java",
       "renamed": "AchievementProgress.java",
       "inputSha256": "7c6a7aada930aab7954a3b2d2df7e32a3c0685504be06841830d231340aefcfe",
-      "outputSha256": "be4709dee8a11277b83f82eef0cf3115e99d83c6562f0e43df095a19f284b3a0",
+      "outputSha256": "0cc806d97f2e2ff4f5bf5567ff8b3ba53492c24f180b69b95fdbf71450f9b4b3",
       "edits": [
         {
           "start": 50,
@@ -718375,6 +719005,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 387,
+          "end": 388,
+          "symbol": "M:se.a(Lhb;ILhb;Lhb;Lsl;)V",
+          "original": "a",
+          "renamed": "writeOrders"
         },
         {
           "start": 389,
@@ -718713,6 +719350,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 4136,
+          "end": 4137,
+          "symbol": "M:se.a(IZ)V",
+          "original": "a",
+          "renamed": "resendRankingRequests"
+        },
+        {
           "start": 4198,
           "end": 4200,
           "symbol": "C:gr",
@@ -718788,6 +719432,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4944,
+          "end": 4945,
+          "symbol": "M:se.a(BLjava/lang/CharSequence;)[B",
+          "original": "a",
+          "renamed": "encodeCp1252Text"
         },
         {
           "start": 9354,
@@ -723422,7 +724073,7 @@
       "original": "sm.java",
       "renamed": "GameMenuController.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "3d63a63a69bfb3868a71544426a13f3248bc0bd468cde3fa2785c289699ceda3",
+      "outputSha256": "662190bda0758098311795c352577d405640417ff1255a5448ea9579baca957b",
       "edits": [
         {
           "start": 50,
@@ -726076,6 +726727,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 21371,
+          "end": 21372,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 21388,
@@ -734725,6 +735383,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 104654,
+          "end": 104655,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 104671,
@@ -748479,7 +749144,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "e27a6102352f751d0ee37d53008066b957b78c359f29e985e02dcebfd5f33723",
+      "outputSha256": "ef2ab02b6f5009e4bf2aa75b3b05ab7dc6ee2d203e6073bdc590df1503086cbc",
       "edits": [
         {
           "start": 53,
@@ -748692,6 +749357,13 @@
           "renamed": "DraggableWidget"
         },
         {
+          "start": 2184,
+          "end": 2185,
+          "symbol": "M:fr.j(I)Ljava/lang/Boolean;",
+          "original": "j",
+          "renamed": "takeAccountResponseFlag"
+        },
+        {
           "start": 2237,
           "end": 2239,
           "symbol": "C:bs",
@@ -748746,6 +749418,13 @@
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 2424,
+          "end": 2425,
+          "symbol": "M:vj.i(I)Ljava/lang/String;",
+          "original": "i",
+          "renamed": "getAccountDialogText"
         },
         {
           "start": 2433,
@@ -748865,6 +749544,13 @@
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 2995,
+          "end": 2996,
+          "symbol": "M:vj.i(I)Ljava/lang/String;",
+          "original": "i",
+          "renamed": "getAccountDialogText"
         },
         {
           "start": 3018,
@@ -751833,6 +752519,13 @@
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 20296,
+          "end": 20297,
+          "symbol": "M:vj.i(I)Ljava/lang/String;",
+          "original": "i",
+          "renamed": "getAccountDialogText"
         },
         {
           "start": 20319,
@@ -762577,7 +763270,7 @@
       "original": "u.java",
       "renamed": "ValidationState.java",
       "inputSha256": "8a7c71dba6689d49699ae0350b71e1d8fc6f9ac6cbb5c0c88f338b610509927b",
-      "outputSha256": "25d3236b7689cafc65a85dc0ccad47460f02fc9fb59650f0c2418d32c0be2544",
+      "outputSha256": "d2193c2b2bdcc76f85f89ec54c630217acd8a1f5ca87754ab44ac2a548ba0e95",
       "edits": [
         {
           "start": 50,
@@ -762664,6 +763357,13 @@
           "renamed": "DraggableWidget"
         },
         {
+          "start": 720,
+          "end": 721,
+          "symbol": "M:fr.f(B)V",
+          "original": "f",
+          "renamed": "drawScrollingBackground"
+        },
+        {
           "start": 783,
           "end": 785,
           "symbol": "C:on",
@@ -762725,6 +763425,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 1079,
+          "end": 1080,
+          "symbol": "M:fr.f(B)V",
+          "original": "f",
+          "renamed": "drawScrollingBackground"
         },
         {
           "start": 1136,
@@ -776943,7 +777650,7 @@
       "original": "vg.java",
       "renamed": "UiWidget.java",
       "inputSha256": "2c84d20e0e2d70d69aad4017a405741e91c777e512217e1995a2d4f8bb562b5f",
-      "outputSha256": "6743506d69f35b9acf0f30a0514820277c890e86ac07d050d28200d735591a50",
+      "outputSha256": "ebdbe9edff9078b3028853ba791530a639f987a28d0f61d4b8c18507d2117488",
       "edits": [
         {
           "start": 65,
@@ -777259,6 +777966,13 @@
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 4839,
+          "end": 4840,
+          "symbol": "M:vj.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 4846,
@@ -777925,7 +778639,7 @@
       "original": "vi.java",
       "renamed": "TutorialMapGenerator.java",
       "inputSha256": "626e1af9f93c56b8394fd9da1c39f90bab3a8a0d31e952d5ddc53e895062cc42",
-      "outputSha256": "9cb82a8d6cbae2b78fe1c28a3b4d0aa7eaea1d934f379c81345d68ecd44e5bf6",
+      "outputSha256": "0e0328aa0695c193b3f1116b302799a707f7382c991d08b98d0477a03dd1a5c4",
       "edits": [
         {
           "start": 50,
@@ -778511,6 +779225,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "DraggableWidget"
+        },
+        {
+          "start": 42107,
+          "end": 42108,
+          "symbol": "M:fr.f(B)V",
+          "original": "f",
+          "renamed": "drawScrollingBackground"
         },
         {
           "start": 42144,
@@ -794023,7 +794744,7 @@
       "original": "vj.java",
       "renamed": "DropTargetWidget.java",
       "inputSha256": "f3e00bc8b0c9e26f8d597b2e115c1b56f15ee67f1b1f2cb9b4133e408f69644e",
-      "outputSha256": "fd771c81c1849488f8e10dd1a74fb72c56dd2d1f2de8786e0bb92cb9b6999a91",
+      "outputSha256": "d9cd3a3742d0c89a8d632fbc4c3704f19b122da702e7680180ec10f22258cfab",
       "edits": [
         {
           "start": 50,
@@ -794045,6 +794766,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 325,
+          "end": 326,
+          "symbol": "M:vj.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 737,
@@ -794383,6 +795111,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3345,
+          "end": 3346,
+          "symbol": "M:vj.g(B)Ljava/lang/String;",
+          "original": "g",
+          "renamed": "getUiArchiveLoadingMessage"
+        },
+        {
           "start": 3376,
           "end": 3378,
           "symbol": "C:ma",
@@ -794607,11 +795342,25 @@
           "renamed": "IsaacBackedRandom"
         },
         {
+          "start": 4311,
+          "end": 4312,
+          "symbol": "M:vj.f(B)V",
+          "original": "f",
+          "renamed": "clearDropTargetStatics"
+        },
+        {
           "start": 4569,
           "end": 4571,
           "symbol": "C:vj",
           "original": "vj",
           "renamed": "DropTargetWidget"
+        },
+        {
+          "start": 4572,
+          "end": 4573,
+          "symbol": "M:vj.i(I)Ljava/lang/String;",
+          "original": "i",
+          "renamed": "getAccountDialogText"
         },
         {
           "start": 4697,
@@ -794766,6 +795515,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 6242,
+          "end": 6243,
+          "symbol": "M:vj.i(I)Ljava/lang/String;",
+          "original": "i",
+          "renamed": "getAccountDialogText"
         },
         {
           "start": 6336,
@@ -804061,7 +804817,7 @@
       "original": "wk.java",
       "renamed": "WidgetStateStyle.java",
       "inputSha256": "59cd76d3f6a62f71793b3c54e5616a960f62b12eeafa8598760d0b245183107a",
-      "outputSha256": "c0f3c44f52549df110b5b3fca2e03dde7756ebebccbf5c7ff541649977b045e7",
+      "outputSha256": "99aaeb3a9d115a628f58ed318a0d7f6a845a619eb20bb4e709a169d86f49290b",
       "edits": [
         {
           "start": 50,
@@ -804300,6 +805056,13 @@
           "symbol": "F:wk.field_j:I",
           "original": "field_j",
           "renamed": "offsetY"
+        },
+        {
+          "start": 4871,
+          "end": 4872,
+          "symbol": "M:wk.a(ILjava/lang/String;Lnq;[I)I",
+          "original": "a",
+          "renamed": "wrapTextToSharedBuffer"
         },
         {
           "start": 4900,
@@ -806510,10 +807273,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "5b15ac8276c2400c1139adbf0ab7313037286c2484f5886ade6bc75737a7501a",
+    "rulesSha256": "742a20c1815efe2a40c64e20e0e2901f87b94103c617b515aa416539bf001087",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "2665d07649b13b07721cd2427a6b65e95467188231445bf0dfd7c87baf4e0f19",
+    "outputTreeSha256": "8161ddc55a649ddc95d0e96a0794693f184ef110af01d86f855340953a431013",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

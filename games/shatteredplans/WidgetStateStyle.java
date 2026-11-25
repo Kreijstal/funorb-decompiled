@@ -149,7 +149,7 @@ final class WidgetStateStyle {
         return this;
     }
 
-    final static int a(int param0, String param1, BitmapFont param2, int[] param3) {
+    final static int wrapTextToSharedBuffer(int param0, String param1, BitmapFont param2, int[] param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;

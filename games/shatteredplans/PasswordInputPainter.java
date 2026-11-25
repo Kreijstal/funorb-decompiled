@@ -11,7 +11,7 @@ final class PasswordInputPainter extends TextInputPainter {
         super(param0, param1);
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAccountNameCharacter(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }

@@ -163,12 +163,12 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final static void a(BitmapFont param0, boolean param1) {
+    final static void initializeChatNotifications(BitmapFont param0, boolean param1) {
         try {
           MenuTextResources.field_b = param0;
           if (!param1) {
             String var3 = (String) null;
-            GuestPlayForm.a(-64, -115, (String) null, (String) null, 39);
+            GuestPlayForm.setChatCompositionPrompt(-64, -115, (String) null, (String) null, 39);
           }
           StandardMapGenerator.field_j = DialWidget.i(0);
           ByteArrayReadRequest.field_p = new IntrusiveDeque();
@@ -184,7 +184,7 @@ final class GuestPlayForm extends WidgetContainer implements ButtonListener {
         field_F = null;
     }
 
-    final static void a(int param0, int param1, String param2, String param3, int param4) {
+    final static void setChatCompositionPrompt(int param0, int param1, String param2, String param3, int param4) {
         PopupPlacementSupport.field_j.field_x = param1;
         PopupPlacementSupport.field_j.field_z = param3;
         if (param0 > -67) {

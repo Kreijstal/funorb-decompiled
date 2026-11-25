@@ -16,7 +16,7 @@ final class AchievementProgress {
     static AnimatedPanel field_i;
     static String field_c;
 
-    final static void a(NodeSequence param0, int param1, NodeSequence param2, NodeSequence param3, CipherPacketBuffer param4) {
+    final static void writeOrders(NodeSequence param0, int param1, NodeSequence param2, NodeSequence param3, CipherPacketBuffer param4) {
         int var9 = 0;
         int var10 = 0;
         RuntimeException stackIn_32_0 = null;
@@ -119,7 +119,7 @@ final class AchievementProgress {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resendRankingRequests(int param0, boolean param1) {
         int var3 = 0;
         PlayerRankingRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -142,7 +142,7 @@ final class AchievementProgress {
         }
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252Text(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;

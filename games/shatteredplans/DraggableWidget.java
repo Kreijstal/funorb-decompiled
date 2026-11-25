@@ -14,7 +14,7 @@ final class DraggableWidget extends SingleChildWidget {
     static String field_H;
     private int field_G;
 
-    final static void f(byte param0) {
+    final static void drawScrollingBackground(byte param0) {
         int var1 = (int)(1600.0 * (1.0 + Math.cos((double)((float)RasterStateFrame.field_n / 500.0f))));
         int var2 = (int)(1600.0 * (-Math.sin((double)((float)RasterStateFrame.field_n / 500.0f)) + 1.0));
         if (param0 > -28) {
@@ -28,8 +28,8 @@ final class DraggableWidget extends SingleChildWidget {
         Star.field_K.drawOpaque(-var1 >> 4, -var2 >> 4);
     }
 
-    final void h(int param0) {
-        super.h(param0);
+    final void layoutChild(int param0) {
+        super.layoutChild(param0);
         this.field_z.setBounds(0, this.field_n, (byte) 101, 0, this.field_x);
         this.field_J = this.field_m;
         this.field_C = this.field_q;
@@ -109,7 +109,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static String a(String param0, int param1, char param2, String param3) {
+    final static String replaceCharacter(String param0, int param1, char param2, String param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -247,7 +247,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static Boolean j(int param0) {
+    final static Boolean takeAccountResponseFlag(int param0) {
         if (param0 != 0) {
           return (Boolean) null;
         }

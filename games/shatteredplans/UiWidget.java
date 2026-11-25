@@ -135,7 +135,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         BattleExplosionVisual.field_m = AllianceExpiredEvent.field_n;
-        DropTargetWidget.a(this.getTooltip(true), 0);
+        DropTargetWidget.updateTooltipState(this.getTooltip(true), 0);
         if (param3 != 0) {
           this.reapplyBounds((byte) 58);
         }

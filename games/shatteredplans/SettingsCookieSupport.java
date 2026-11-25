@@ -55,7 +55,7 @@ final class SettingsCookieSupport {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            MusicCrossfadeStream.a(-1, param2);
+            MusicCrossfadeStream.updateBrowserNavigationLinks(-1, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

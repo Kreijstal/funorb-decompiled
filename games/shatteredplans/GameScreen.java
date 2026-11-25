@@ -5186,7 +5186,7 @@ final class GameScreen {
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
               ImageProducerRasterBuffer.field_n = false;
             }
-            GuestPlayForm.a(IconTextPanel.field_Cb, true);
+            GuestPlayForm.initializeChatNotifications(IconTextPanel.field_Cb, true);
             this.field_ob = new int[]{82, 52, 52, 52};
             this.field_Q = 0;
             this.field_ab = new String[1 + this.field_s.field_P.field_r];

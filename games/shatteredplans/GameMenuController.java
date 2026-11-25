@@ -637,7 +637,7 @@ final class GameMenuController {
           } else {
             SoftwareRasterizer.drawVerticalLine(var12, param3, var11_int - param3, param9);
           }
-          var13 = WidgetStateStyle.a(-9615, param1, IconTextPanel.field_Cb, new int[]{param6});
+          var13 = WidgetStateStyle.wrapTextToSharedBuffer(-9615, param1, IconTextPanel.field_Cb, new int[]{param6});
           if (param7 != 62) {
             return;
           }
@@ -2662,7 +2662,7 @@ final class GameMenuController {
           if (param8 != 110) {
             return;
           }
-          var13Lifetime1 = WidgetStateStyle.a(-9615, param4, IconTextPanel.field_Cb, new int[]{param6});
+          var13Lifetime1 = WidgetStateStyle.wrapTextToSharedBuffer(-9615, param4, IconTextPanel.field_Cb, new int[]{param6});
           param1 = -(var13Lifetime1 * IconTextPanel.field_Cb.field_J >> 1) + param3;
           IconTextPanel.field_Cb.a(param4, param2 + 5, param1, param6, var13Lifetime1 * IconTextPanel.field_Cb.field_J + IconTextPanel.field_Cb.field_q, param0, -1, 0, 0, IconTextPanel.field_Cb.field_J);
           return;

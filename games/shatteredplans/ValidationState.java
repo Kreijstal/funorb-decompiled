@@ -28,7 +28,7 @@ final class ValidationState {
               return;
             }
             if (null == SecondaryNodeHashTable.field_g) {
-              DraggableWidget.f((byte) -99);
+              DraggableWidget.drawScrollingBackground((byte) -99);
               return;
             }
             IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);
@@ -44,7 +44,7 @@ final class ValidationState {
             return;
           }
           if (null == SecondaryNodeHashTable.field_g) {
-            DraggableWidget.f((byte) -99);
+            DraggableWidget.drawScrollingBackground((byte) -99);
             return;
           }
           IntrusiveDequeCursor.drawClientSessionsAndMenus(1, param0);

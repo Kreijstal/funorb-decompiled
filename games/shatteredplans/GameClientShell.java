@@ -70,13 +70,13 @@ abstract class GameClientShell extends GameApplet {
               HighscoreResponseSupport.field_e = null;
               DiplomacyRowSupport.field_c = null;
             }
-            var11 = DraggableWidget.j(0);
+            var11 = DraggableWidget.takeAccountResponseFlag(0);
             if (var11 != null) {
               RasterTargetSupport.setAccountResponseFlag(var11.booleanValue(), (byte) 72);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.getAccountRequestType((byte) -24), DropTargetWidget.i(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
+            var5_intLifetime1 = MeshData.pollLoginWithTextFields(BoundsRect.d(-97), this.field_B, (byte) -42, PacketBuffer.getAccountRequestType((byte) -24), DropTargetWidget.getAccountDialogText(-100), AccountInputSupport.getCurrentAccountText((byte) 42), IntValueWriteRequest.getRegistrationEmailOptIn(11));
             if (var5_intLifetime1 != -1) {
               GraphicsSettings.showLoginResult(HighscoreResponseSupport.field_e, (byte) -113, var5_intLifetime1, DiplomacyRowSupport.field_c);
               HighscoreResponseSupport.field_e = null;
@@ -92,7 +92,7 @@ abstract class GameClientShell extends GameApplet {
             if (param0) {
               StripedProgressWidget.field_B = false;
             } else {
-              var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, DropTargetWidget.i(-116), this.field_C, BoundsRect.d(-121));
+              var5_intLifetime2 = SolVictoryChecker.a(this.field_B, (byte) -121, false, DropTargetWidget.getAccountDialogText(-116), this.field_C, BoundsRect.d(-121));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   AccountStatusSupport.showLoginResult((byte) -127, var5_intLifetime2, DiplomacyRowSupport.field_c);
@@ -674,7 +674,7 @@ abstract class GameClientShell extends GameApplet {
         if (StripedProgressWidget.field_B) {
           return -1;
         }
-        int var2 = SolVictoryChecker.a(this.field_B, (byte) -94, true, DropTargetWidget.i(-125), this.field_C, BoundsRect.d(-97));
+        int var2 = SolVictoryChecker.a(this.field_B, (byte) -94, true, DropTargetWidget.getAccountDialogText(-125), this.field_C, BoundsRect.d(-97));
         if (var2 == -1) {
           return -1;
         }

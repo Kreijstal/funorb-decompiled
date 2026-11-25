@@ -112,7 +112,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
           }
           if (param1.field_q == -1) {
             var6 = PopupPlacementSupport.field_m.expandPlaceholders(5607, param1.field_c);
-            var7 = WidgetStateStyle.a(-9615, var6, IconTextPanel.field_Cb, new int[]{-6 + var4 - 20});
+            var7 = WidgetStateStyle.wrapTextToSharedBuffer(-9615, var6, IconTextPanel.field_Cb, new int[]{-6 + var4 - 20});
             var5 = 34 + (IconTextPanel.field_Cb.field_q + var7 * 13);
             BirthDateConfirmationForm.field_L = new Sprite[var7];
             if (param1.field_f != null) {
@@ -120,7 +120,7 @@ final class MenuList extends MenuComponent implements MenuSliderListener {
               for (var9 = 0; var8.length > var9; var9++) {
                 var10 = var8[var9];
                 var6Lifetime1 = PopupPlacementSupport.field_m.expandPlaceholders(5607, var10.field_b);
-                var7Lifetime1 = WidgetStateStyle.a(-9615, var6Lifetime1, IconTextPanel.field_Cb, new int[]{-20 + (-6 + var4)});
+                var7Lifetime1 = WidgetStateStyle.wrapTextToSharedBuffer(-9615, var6Lifetime1, IconTextPanel.field_Cb, new int[]{-20 + (-6 + var4)});
                 var5 = var5 + (13 * var7Lifetime1 + IconTextPanel.field_Cb.field_q);
               }
             }

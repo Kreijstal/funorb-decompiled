@@ -198,7 +198,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
             if (param0 <= 7) {
               field_n = (Archive) null;
             }
-            MusicCrossfadeStream.a(-1, param1);
+            MusicCrossfadeStream.updateBrowserNavigationLinks(-1, param1);
           } catch (RuntimeException runtimeException) {
             throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

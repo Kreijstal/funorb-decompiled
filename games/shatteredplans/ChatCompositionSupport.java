@@ -192,7 +192,7 @@ final class ChatCompositionSupport {
             var2 = PasswordInputPainter.field_u;
           }
           if (var2 != null) {
-            GuestPlayForm.a(-73, QuickChatHelpSupport.field_c, (String) null, (String) (var2), 0);
+            GuestPlayForm.setChatCompositionPrompt(-73, QuickChatHelpSupport.field_c, (String) null, (String) (var2), 0);
           } else {
             var4 = Star.field_o;
             var4 = TiledNineSlicePainter.prefixLocalPlayerIcon(var4, (byte) 19);
@@ -261,7 +261,7 @@ final class ChatCompositionSupport {
                 }
               }
             }
-            GuestPlayForm.a(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(OpacityWidget.field_E.toString()), var8);
+            GuestPlayForm.setChatCompositionPrompt(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(OpacityWidget.field_E.toString()), var8);
             if (!MeshData.field_h) {
               OpacityWidget.field_C.field_L = false;
             }

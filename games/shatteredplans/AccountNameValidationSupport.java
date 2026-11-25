@@ -66,7 +66,7 @@ final class AccountNameValidationSupport {
             if (param1.length() <= var5) {
               return null;
             }
-            if (PasswordInputPainter.a(param1.charAt(var5), (byte) 101)) {
+            if (PasswordInputPainter.isAccountNameCharacter(param1.charAt(var5), (byte) 101)) {
               var5++;
               continue;
             }

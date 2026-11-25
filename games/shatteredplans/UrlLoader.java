@@ -337,7 +337,7 @@ final class UrlLoader implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_e.getFile() + "\n\n"));
-              var3.write(AchievementProgress.a((byte) 80, var5));
+              var3.write(AchievementProgress.encodeCp1252Text((byte) 80, var5));
               this.field_g = new DataInputStream(var4.getInputStream());
             }
             this.field_k.position = 0;

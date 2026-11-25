@@ -64,7 +64,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = DraggableWidget.a(param2, 1, '_', "");
+          param2 = DraggableWidget.replaceCharacter(param2, 1, '_', "");
           var3 = DualLinkDequeSequence.reverseString(param2, true);
           if (param1 < 126) {
             var4 = (String) null;

@@ -76,7 +76,7 @@ final class PrivateChatMessage extends ChatMessage {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = param0.position;
-          var4 = AchievementProgress.a((byte) 86, (CharSequence) ((Object) param2));
+          var4 = AchievementProgress.encodeCp1252Text((byte) 86, (CharSequence) ((Object) param2));
           param0.writeSmart(0, var4.length);
           if (param1 >= -36) {
             PrivateChatMessage.clearStatics(true);

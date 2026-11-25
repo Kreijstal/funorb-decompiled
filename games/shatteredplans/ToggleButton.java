@@ -124,7 +124,7 @@ final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
             }
           }
           var7 = (String) null;
-          GuestPlayForm.a(-114, QuickChatHelpSupport.field_c, (String) null, var5, 0);
+          GuestPlayForm.setChatCompositionPrompt(-114, QuickChatHelpSupport.field_c, (String) null, var5, 0);
           GameAssetSetupSupport.field_a = PopupPlacementSupport.field_j;
           PopupPlacementSupport.field_j.field_ab = -(8355711 & QuickChatHelpSupport.field_c >> 1) + (QuickChatHelpSupport.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
           PopupPlacementSupport.field_j.field_jb = -(8355711 & QuickChatHelpSupport.field_c >> 1) + QuickChatHelpSupport.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);

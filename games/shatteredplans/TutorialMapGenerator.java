@@ -644,7 +644,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         int var1_int = 0;
         int var2 = 0;
         try {
-          DraggableWidget.f((byte) -115);
+          DraggableWidget.drawScrollingBackground((byte) -115);
           var1_int = SecondaryNodeHashTable.field_f.field_o;
           var2 = SecondaryNodeHashTable.field_f.field_p;
           SecondaryNodeHashTable.field_f.drawAdditive((-var1_int + 640) / 2, (param0 - var2) / 2, 256);

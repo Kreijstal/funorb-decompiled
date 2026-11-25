@@ -11,7 +11,7 @@ final class DropTargetWidget extends SingleChildWidget {
     private static int[] field_H;
     static String field_B;
 
-    final static void a(String param0, int param1) {
+    final static void updateTooltipState(String param0, int param1) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -102,7 +102,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static String g(byte param0) {
+    final static String getUiArchiveLoadingMessage(byte param0) {
         if (!(DefensiveAi.field_p >= 2)) {
           return StringNode.field_h;
         }
@@ -134,7 +134,7 @@ final class DropTargetWidget extends SingleChildWidget {
         return IsaacBackedRandom.field_d;
     }
 
-    public static void f(byte param0) {
+    public static void clearDropTargetStatics(byte param0) {
         field_F = null;
         field_I = null;
         field_G = null;
@@ -145,7 +145,7 @@ final class DropTargetWidget extends SingleChildWidget {
           field_H = null;
           return;
         }
-        DropTargetWidget.i(-3);
+        DropTargetWidget.getAccountDialogText(-3);
         field_E = null;
         field_B = null;
         field_A = null;
@@ -186,7 +186,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static String i(int param0) {
+    final static String getAccountDialogText(int param0) {
         if (param0 >= -90) {
           field_B = (String) null;
           if (ExternalLinkSupport.field_a == PrivateChatMessage.field_l) {

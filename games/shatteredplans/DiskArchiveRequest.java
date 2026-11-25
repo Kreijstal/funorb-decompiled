@@ -150,14 +150,14 @@ final class DiskArchiveRequest extends ArchiveRequest {
         UiSpriteSupport.field_b = param1;
         if (ToggleButton.field_B == null) {
           if (null != ValidationState.field_b) {
-            ValidationState.field_b.a(param1, 0);
+            ValidationState.field_b.setMasterVolume(param1, 0);
           }
           var2 = -9 / ((62 - param0) / 62);
           return;
         }
         ToggleButton.field_B.setMasterVolume(598, param1);
         if (null != ValidationState.field_b) {
-          ValidationState.field_b.a(param1, 0);
+          ValidationState.field_b.setMasterVolume(param1, 0);
         }
         var2Lifetime1 = -9 / ((62 - param0) / 62);
     }

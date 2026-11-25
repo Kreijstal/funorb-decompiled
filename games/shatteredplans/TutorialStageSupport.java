@@ -269,7 +269,7 @@ final class TutorialStageSupport {
               TextReplacementEntry.field_e = false;
               var3_int = 1;
             }
-            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, ClientInputSupport.field_h);
+            ImageProducerRasterBuffer.a(DropTargetWidget.getUiArchiveLoadingMessage((byte) 120), LobbyUiSupport.getUiArchiveLoadProgress(82), var3_int != 0, 0, ClientInputSupport.field_h);
           } else {
             if (!UiTextSupport.hasLogoIntroFinished(250)) {
               SoftwareRasterizer.clear();
