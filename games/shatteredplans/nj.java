@@ -32,7 +32,7 @@ final class nj {
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param0);
-          if (!gb.a((byte) -118, var7)) {
+          if (!ServerIntArrayRequest.isValidAccountName((byte) -118, var7)) {
             stackIn_2_0 = tm.field_j;
             return stackIn_2_0;
           }

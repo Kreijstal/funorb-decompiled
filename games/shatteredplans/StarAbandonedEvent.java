@@ -4,7 +4,7 @@
 final class StarAbandonedEvent extends IntrusiveNode {
     Star field_p;
     Star[] field_j;
-    static fg field_m;
+    static AccountConnectionPhase field_m;
     static boolean[][] field_q;
     static Sprite field_k;
     static String field_n;
@@ -94,7 +94,7 @@ final class StarAbandonedEvent extends IntrusiveNode {
     }
 
     static {
-        field_m = new fg();
+        field_m = new AccountConnectionPhase();
         field_o = "You can ask to join this game";
         field_s = "Battles won in hostile space.";
         field_n = "Unable to connect to the data server. Please check any firewall you are using.";

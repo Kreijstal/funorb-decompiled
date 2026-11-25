@@ -42,9 +42,9 @@ final class MusicEnvelope {
           if (param0 != -97) {
             MusicEnvelope.a((byte) 75);
           }
-          var1_int = gd.field_b[0];
-          for (var2 = 1; var2 < gd.field_b.length; var2++) {
-            var3 = gd.field_b[var2];
+          var1_int = IntroLoadingSupport.field_b[0];
+          for (var2 = 1; var2 < IntroLoadingSupport.field_b.length; var2++) {
+            var3 = IntroLoadingSupport.field_b[var2];
             ArrayOperations.copyInts(ResizingDialog.field_M, var2 << 4, ResizingDialog.field_M, var1_int, var3);
             var1_int = var1_int + var3;
           }

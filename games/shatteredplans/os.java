@@ -160,7 +160,7 @@ final class os extends MenuComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param3);
-          if (!gb.a((byte) -80, var8)) {
+          if (!ServerIntArrayRequest.isValidAccountName((byte) -80, var8)) {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }

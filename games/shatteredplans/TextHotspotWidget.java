@@ -232,7 +232,7 @@ class TextHotspotWidget extends FocusableWidget {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (SolVictoryChecker.field_m == 0) {
-          gd.a(-114);
+          IntroLoadingSupport.drawIntroLoadingScreen(-114);
         } else {
           if (SolVictoryChecker.field_m == 1) {
             hd.a(param0 - 6373);

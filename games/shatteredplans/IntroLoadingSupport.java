@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd {
+final class IntroLoadingSupport {
     static int[] field_b;
     static String field_c;
     static String field_a;
@@ -13,7 +13,7 @@ final class gd {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void drawIntroLoadingScreen(int param0) {
         int var2 = 0;
         if (null == va.field_d) {
           va.field_d = new Sprite[]{ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[0]), ProxyAuthenticationRequiredException.a(0, MusicVoice.field_w[1])};
@@ -29,21 +29,21 @@ final class gd {
         if (param0 <= -63) {
           return;
         }
-        gd.clearStatics(-96);
+        IntroLoadingSupport.clearStatics(-96);
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeLobbyActionSelector(int param0, int param1) {
         CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
         var2.writeByte(param1, (byte) -123);
         var2.writeByte(0, (byte) -78);
     }
 
-    final static void a(lq param0, int param1, int param2) {
+    final static void queueFourIntSubmission(lq param0, int param1, int param2) {
         try {
           rs.field_Bb.addLast((byte) -113, param0);
           if (param1 != 1500005281) {
-            gd.clearStatics(66);
+            IntroLoadingSupport.clearStatics(66);
           }
           wj.a(320, param2, param0);
         } catch (RuntimeException runtimeException) {

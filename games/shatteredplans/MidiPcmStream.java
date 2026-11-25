@@ -74,7 +74,7 @@ final class MidiPcmStream extends PcmStream {
             return null;
           }
           if (param3 == -20487) {
-            stackIn_7_0 = gq.d(0);
+            stackIn_7_0 = QuickChatParameterType.createFirstDecodedSprite(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;

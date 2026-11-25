@@ -3,7 +3,7 @@
  */
 final class Wormhole extends IntrusiveNode {
     Star field_n;
-    static fg field_j;
+    static AccountConnectionPhase field_j;
     Star field_k;
     static boolean field_i;
     static v field_l;

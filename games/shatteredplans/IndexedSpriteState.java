@@ -23,7 +23,7 @@ abstract class IndexedSpriteState {
           OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
-          BattleSnapshot.field_t = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
+          BattleSnapshot.field_t = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           FleetMove.field_F = new AnimatedPanel(0L, QuickChatMenu.field_Cb, GalaxyMap.field_i);
           kh.field_Ib = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
           OpacityWidget.field_A.addChild(4, RecklessAi.field_p);

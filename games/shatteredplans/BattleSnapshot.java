@@ -204,14 +204,14 @@ final class BattleSnapshot extends IntrusiveNode {
             0 != param1.length()) {
             var2_int = param1.indexOf((int) (char)param0);
             if (-1 == var2_int) {
-              stackIn_8_0 = fg.field_a;
+              stackIn_8_0 = AccountConnectionPhase.field_a;
               return stackIn_8_0;
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
             var5 = uc.a(-77, var3);
             if (var5 == null) {
-              stackIn_13_0 = fg.a(var4, (byte) 111);
+              stackIn_13_0 = AccountConnectionPhase.validateDomainName(var4, (byte) 111);
               return stackIn_13_0;
             }
             stackIn_11_0 = var5;

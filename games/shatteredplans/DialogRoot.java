@@ -75,7 +75,7 @@ final class DialogRoot extends SingleChildWidget {
           }
           if (js.field_c.field_l) {
             if (js.field_c.field_o != null) {
-              gg.a(js.field_c.field_o, (byte) 30);
+              SoundEffectSupport.readClientBytePreference(js.field_c.field_o, (byte) 30);
             }
             ta.b((byte) -69);
             if (StringNode.field_j == -1) {
@@ -528,7 +528,7 @@ final class DialogRoot extends SingleChildWidget {
           field_C = -10;
         }
         int var3 = (2 + AchievementProgress.field_i.field_K) / 2;
-        gb.field_m.setTarget(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
+        ServerIntArrayRequest.field_m.setTarget(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
         if (!AccountStatusDialog.field_pb) {
           var3 = 0;
         }

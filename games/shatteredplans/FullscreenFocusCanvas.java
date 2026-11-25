@@ -40,13 +40,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           var5_int = 0;
           while (true) {
-            if (var5_int >= gd.field_b.length) {
+            if (var5_int >= IntroLoadingSupport.field_b.length) {
               if (param3 != 12) {
                 field_b = -26;
               }
               return;
             }
-            param1 = gd.field_b[var5_int];
+            param1 = IntroLoadingSupport.field_b[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;

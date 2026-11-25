@@ -30,16 +30,16 @@ final class FleetMove extends QuaternaryLinkNode {
     }
 
     final static MenuWindow d(int param0, int param1) {
-        gb.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, DropTargetWidget.field_B.toUpperCase());
-        MenuButton var2 = new MenuButton(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
-        var2.field_h = gb.field_n;
-        gb.field_n.addChild(var2, param0 ^ 20);
-        MenuList var3 = new MenuList(gb.field_n.field_k + 9, gb.field_n.field_t + 20, 182, param1 * ClientException.field_a);
-        gb.field_n.addChild(var3, param0 ^ 20);
-        gb.field_n.field_z = var3;
+        ServerIntArrayRequest.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, DropTargetWidget.field_B.toUpperCase());
+        MenuButton var2 = new MenuButton(-16 + (ServerIntArrayRequest.field_n.field_k + 200), 2 + ServerIntArrayRequest.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+        var2.field_h = ServerIntArrayRequest.field_n;
+        ServerIntArrayRequest.field_n.addChild(var2, param0 ^ 20);
+        MenuList var3 = new MenuList(ServerIntArrayRequest.field_n.field_k + 9, ServerIntArrayRequest.field_n.field_t + 20, 182, param1 * ClientException.field_a);
+        ServerIntArrayRequest.field_n.addChild(var3, param0 ^ 20);
+        ServerIntArrayRequest.field_n.field_z = var3;
         ListContent var4 = new ListContent(param1);
-        gb.field_n.field_x = (MenuContent) ((Object) var4);
-        return gb.field_n;
+        ServerIntArrayRequest.field_n.field_x = (MenuContent) ((Object) var4);
+        return ServerIntArrayRequest.field_n;
     }
 
     FleetMove(Star param0, Star param1, int param2) {
@@ -77,7 +77,7 @@ final class FleetMove extends QuaternaryLinkNode {
           if (param2 != 20) {
             field_A = 35;
           }
-          stackIn_3_0 = gq.a(param0.field_g.field_e, -2284, param1);
+          stackIn_3_0 = QuickChatParameterType.readStarReference(param0.field_g.field_e, -2284, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

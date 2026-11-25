@@ -9,14 +9,14 @@ final class vs {
     static String field_e;
     static String field_a;
 
-    final static gb a(byte param0, int param1) {
-        gb var2 = new gb();
+    final static ServerIntArrayRequest a(byte param0, int param1) {
+        ServerIntArrayRequest var2 = new ServerIntArrayRequest();
         SolMapGenerator.field_o.addLast((byte) -113, var2);
         AccountNoticeDialog.a(param1, 2);
         if (param0 == 88) {
           return var2;
         }
-        return (gb) null;
+        return (ServerIntArrayRequest) null;
     }
 
     public static void clearStatics(int param0) {

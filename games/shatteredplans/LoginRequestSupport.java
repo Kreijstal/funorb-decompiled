@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi {
+final class LoginRequestSupport {
     static String field_a;
     static String field_b;
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean passesPasswordChecks(String param0, int param1, String param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -59,7 +59,7 @@ final class gi {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void updateTutorialSceneTransition(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_28_0 = 0;
@@ -169,7 +169,7 @@ final class gi {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, ChatMessage param4) {
+    final static void writeLoginRequest(int param0, boolean param1, boolean param2, int param3, ChatMessage param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -247,7 +247,7 @@ final class gi {
     public static void clearStatics(int param0) {
         if (param0 != 32) {
           String var2 = (String) null;
-          gi.a((String) null, -107, (String) null);
+          LoginRequestSupport.passesPasswordChecks((String) null, -107, (String) null);
         }
         field_b = null;
         field_a = null;

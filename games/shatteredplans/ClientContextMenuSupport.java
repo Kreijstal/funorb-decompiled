@@ -54,13 +54,13 @@ final class ClientContextMenuSupport {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        fc var7 = null;
+        PlayerContextMenuController var7 = null;
         String var8 = null;
-        fc var9 = null;
+        PlayerContextMenuController var9 = null;
         String var10 = null;
-        fc var11 = null;
+        PlayerContextMenuController var11 = null;
         String var12 = null;
-        fc var13 = null;
+        PlayerContextMenuController var13 = null;
         try {
           SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, SingleChildWidget.field_y, param2, -1, param2.getRoomId(-77));
           if (param2.field_Ab && (param2.field_Fb == 2 ||
@@ -69,7 +69,7 @@ final class ClientContextMenuSupport {
             var8 = QuickChatCategoryRegistry.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
           }
-          DerelictVictoryChecker.field_m.a(false);
+          DerelictVictoryChecker.field_m.addRoomJoinActions(false);
           if (param0) {
             if (GameApplet.field_g == DerelictVictoryChecker.field_m.field_f) {
               var11 = DerelictVictoryChecker.field_m;

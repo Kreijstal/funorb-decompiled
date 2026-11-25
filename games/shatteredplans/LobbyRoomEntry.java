@@ -211,7 +211,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
         DualLinkDequeSequence.field_f.field_y = 1;
-        DualLinkDequeSequence.field_f.field_kb = fg.field_b.field_kb;
+        DualLinkDequeSequence.field_f.field_kb = AccountConnectionPhase.field_b.field_kb;
         if (Archive.field_b > 0) {
           LobbyRoomControlsSupport.updateLobbyRoomControls(param5, param0, (byte) -2, param2);
         }

@@ -17,17 +17,17 @@ final class vo {
     final static void a(Archive param0, Archive param1, int param2) {
         try {
           mj.field_Sb = new SoundCache(param1, param0);
-          gg.a(param2 + 28, 153, "shatteredplans_menu_open");
-          gg.a(128, 153, "shatteredplans_menu_close");
-          us.field_d = gg.a(128, 256, "shatteredplans_ship_selection");
-          StandardMapGenerator.field_l = gg.a(128, 256, "shatteredplans_ship_move_order");
-          ConquestVictoryChecker.field_l = gg.a(128, 256, "shatteredplans_ship_attack_order");
-          SocketArchiveNetworkClient.field_w = gg.a(128, 256, "shatteredplans_factory_noise");
+          SoundEffectSupport.loadSoundEffectDefinition(param2 + 28, 153, "shatteredplans_menu_open");
+          SoundEffectSupport.loadSoundEffectDefinition(128, 153, "shatteredplans_menu_close");
+          us.field_d = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_selection");
+          StandardMapGenerator.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_move_order");
+          ConquestVictoryChecker.field_l = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_ship_attack_order");
+          SocketArchiveNetworkClient.field_w = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_factory_noise");
           TertiaryListSequence.field_m = ConquestVictoryChecker.a((byte) -111, 120, "shatteredplans_explosion");
-          gg.a(128, param2, "shatteredplans_tab_open");
-          gg.a(128, 100, "shatteredplans_tab_close");
-          ScrollPane.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
-          sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
+          SoundEffectSupport.loadSoundEffectDefinition(128, param2, "shatteredplans_tab_open");
+          SoundEffectSupport.loadSoundEffectDefinition(128, 100, "shatteredplans_tab_close");
+          ScrollPane.field_yb = SoundEffectSupport.loadSoundEffectDefinition(param2 ^ 228, 256, "shatteredplans_next_open");
+          sf.field_g = SoundEffectSupport.loadSoundEffectDefinition(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

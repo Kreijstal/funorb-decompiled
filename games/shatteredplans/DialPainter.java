@@ -29,7 +29,7 @@ final class DialPainter implements WidgetPainter {
     final static void a(byte param0, String param1, long param2) {
         CharSequence var5 = null;
         try {
-          gi.field_a = param1;
+          LoginRequestSupport.field_a = param1;
           ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param1);
           nd.field_k = DateInputWidget.a(var5, true);

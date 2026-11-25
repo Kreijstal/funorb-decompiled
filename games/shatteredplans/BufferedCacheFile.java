@@ -778,8 +778,8 @@ final class BufferedCacheFile {
                       } else {
                         stackIn_21_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_21_0 - 1 + gd.field_b.length;
-                      var17 = gd.field_b[var16];
+                      var16 = -stackIn_21_0 - 1 + IntroLoadingSupport.field_b.length;
+                      var17 = IntroLoadingSupport.field_b[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -788,13 +788,13 @@ final class BufferedCacheFile {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = gd.field_b[var16];
+                          var17 = IntroLoadingSupport.field_b[var16];
                           continue;
                         }
                         stackIn_32_0Lifetime1 = (var16 << 4) + var17;
                         var18 = stackIn_32_0Lifetime1;
                         ResizingDialog.field_M[var18] = var8;
-                        gd.field_b[var16] = var17 + 1;
+                        IntroLoadingSupport.field_b[var16] = var17 + 1;
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {
                           dupTemp$0 = param2.field_p[var8];
@@ -930,8 +930,8 @@ final class BufferedCacheFile {
                       } else {
                         stackIn_21_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_21_0 - 1 + gd.field_b.length;
-                      var17 = gd.field_b[var16];
+                      var16 = -stackIn_21_0 - 1 + IntroLoadingSupport.field_b.length;
+                      var17 = IntroLoadingSupport.field_b[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -940,13 +940,13 @@ final class BufferedCacheFile {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = gd.field_b[var16];
+                          var17 = IntroLoadingSupport.field_b[var16];
                           continue;
                         }
                         stackIn_32_0Lifetime1 = (var16 << 4) + var17;
                         var18 = stackIn_32_0Lifetime1;
                         ResizingDialog.field_M[var18] = var8;
-                        gd.field_b[var16] = var17 + 1;
+                        IntroLoadingSupport.field_b[var16] = var17 + 1;
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {
                           dupTemp$0 = param2.field_p[var8];

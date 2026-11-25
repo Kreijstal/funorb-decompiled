@@ -141,7 +141,7 @@ final class ChatPanelSetupSupport {
                 oq.field_b[var18].addChild(4, n.field_n[var18]);
                 oq.field_b[var18].markDirty((byte) -126);
                 tg.field_c.addChild(4, oq.field_b[var18]);
-                gq.field_d = gq.field_d + 1;
+                QuickChatParameterType.field_d = QuickChatParameterType.field_d + 1;
               }
               var18++;
               continue;

@@ -274,8 +274,8 @@ final class FleetTrailPoint extends IntrusiveNode {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        fc var16 = null;
-        fc var17 = null;
+        PlayerContextMenuController var16 = null;
+        PlayerContextMenuController var17 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != -7904) {

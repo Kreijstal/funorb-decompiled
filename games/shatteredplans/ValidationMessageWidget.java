@@ -383,7 +383,7 @@ final class ValidationMessageWidget extends TextHotspotWidget {
         RuntimeException var1_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var6 = gd.field_b;
+          var6 = IntroLoadingSupport.field_b;
           var1 = var6;
           var3 = -98 % ((param0 - 2) / 53);
           var2 = 0;

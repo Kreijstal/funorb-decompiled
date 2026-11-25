@@ -249,11 +249,11 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
           }
           if (var2 != 0) {
-            if (gg.field_a > FullscreenFocusCanvas.field_b) {
+            if (SoundEffectSupport.field_a > FullscreenFocusCanvas.field_b) {
               fieldTemp$0 = FullscreenFocusCanvas.field_b + ResizingDialog.field_U;
               FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + ResizingDialog.field_U;
-              if (gg.field_a < fieldTemp$0) {
-                FullscreenFocusCanvas.field_b = gg.field_a;
+              if (SoundEffectSupport.field_a < fieldTemp$0) {
+                FullscreenFocusCanvas.field_b = SoundEffectSupport.field_a;
               }
             }
           } else {
@@ -271,7 +271,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               if (var3_ref_lq == null) {
                 break;
               }
-              gd.a(var3_ref_lq, 1500005281, 4);
+              IntroLoadingSupport.queueFourIntSubmission(var3_ref_lq, 1500005281, 4);
             }
           }
           var3Lifetime1 = -87 % ((15 - param0) / 35);
@@ -751,7 +751,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         MouseWheelInput.clearStatics(param0 ^ -24163);
         SoftwareRasterizer.clearStatics();
         Archive.clearStatics(-466);
-        gg.clearStatics(param0 + 24069);
+        SoundEffectSupport.clearStatics(param0 + 24069);
         PacketBuffer.clearStatics((byte) 78);
         pr.b(21455);
         RasterTargetSupport.clearStatics(53);
@@ -812,7 +812,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         ScrollBar.clearStatics((byte) -118);
         ul.g(param0 ^ -24045);
         SocialListPanel.clearStatics(param0 + 47949);
-        fc.clearStatics((byte) -87);
+        PlayerContextMenuController.clearStatics((byte) -87);
         ScrollPane.clearStatics(param0 ^ param0);
         kh.clearStatics(param0 ^ 24070);
         wg.clearStatics((byte) -117);
@@ -919,7 +919,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         AudioService.clearStatics(-102);
         AlignedMenuLabel.clearStatics(-110);
         VerticalMenuSlider.clearStatics(5);
-        gd.clearStatics(param0 + 24189);
+        IntroLoadingSupport.clearStatics(param0 + 24189);
         tm.clearStatics(param0 ^ 11083);
         tq.clearStatics(param0 ^ 10214);
         StringNode.clearStatics((byte) 102);
@@ -935,7 +935,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         SectorCacheStore.clearStatics(4);
         DiskArchiveRequest.clearStatics(param0 + 24092);
         CachedArchiveSource.clearStatics((byte) 114);
-        gp.clearStatics((byte) 123);
+        ClientSessionSupport.clearStatics((byte) 123);
         ArchiveRequest.clearStatics(param0 ^ 6520);
         ng.clearStatics(-109);
         AccountNoticeDialog.clearStatics(param0 ^ -24069);
@@ -955,7 +955,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         Bzip2Decoder.clearStatics();
         Bzip2State.clearStatics((byte) -105);
         lr.clearStatics(3);
-        gi.clearStatics(32);
+        LoginRequestSupport.clearStatics(32);
         CheckboxPainter.a(false);
         StatefulWidgetTheme.clearStatics(true);
         DialPainter.clearStatics(16711935);
@@ -1047,7 +1047,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         IterableNodeHashTable.clearStatics(-1215);
         SecondaryNodeDeque.clearStatics(param0 ^ -24167);
         WeightedCacheEntry.clearStatics(false);
-        gq.clearStatics(118);
+        QuickChatParameterType.clearStatics(118);
         StrongCacheEntry.clearStatics(-120);
         ProxySocketConnector.clearStatics(1);
         CandidateLink.clearStatics(param0 + 24068);
@@ -1076,9 +1076,9 @@ public final class ShatteredPlansClient extends GameClientShell {
         vc.clearStatics(-67);
         nd.clearStatics(true);
         ks.a((byte) 127);
-        fg.clearStatics(param0 ^ -24186);
+        AccountConnectionPhase.clearStatics(param0 ^ -24186);
         sk.clearStatics(param0 + 24021);
-        gb.clearStatics((byte) -115);
+        ServerIntArrayRequest.clearStatics((byte) -115);
         lq.clearStatics((byte) 67);
         ld.clearStatics(16711680);
         ByteArrayNode.a((byte) 93);
@@ -1483,7 +1483,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 SoftwareRasterizer.restoreClip(var18);
               }
             } else {
-              TextHotspotWidget.a(gq.c(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
+              TextHotspotWidget.a(QuickChatParameterType.getMenuSpanWidth(-118), param0 - 2, ValidationMessageWidget.h(param0 + 107));
               ClientException.a(94);
             }
           }

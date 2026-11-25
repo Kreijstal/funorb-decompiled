@@ -854,7 +854,7 @@ final class TaskAi implements Ai {
           GzipInflater.field_d = true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (gb.field_m.field_rb != 0) {
+        if (ServerIntArrayRequest.field_m.field_rb != 0) {
           if (!PanelNode.field_o &&
             0 >= StarAnnotation.field_m && (!(RasterTargetSupport.field_b >= 2) ||
             !FleetTrailPoint.field_p[12])) {
@@ -862,7 +862,7 @@ final class TaskAi implements Ai {
             decompiledFrameRemainder0 = false;
           }
           else {
-            gd.a(param3, 1);
+            IntroLoadingSupport.writeLobbyActionSelector(param3, 1);
           }
         }
         if (LinkPainter.field_b.field_rb != 0) {

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fg {
+final class AccountConnectionPhase {
     static ro field_a;
     static AnimatedPanel field_b;
     static int[] field_c;
 
-    final boolean a(int param0) {
+    final boolean isLoginOrConnectedPhase(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 <= 14) {
           return true;
@@ -19,7 +19,7 @@ final class fg {
         throw new IllegalStateException();
     }
 
-    final static ro a(String param0, byte param1) {
+    final static ro validateDomainName(String param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

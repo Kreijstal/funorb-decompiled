@@ -409,7 +409,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          if (!gb.a((byte) -67, var10)) {
+          if (!ServerIntArrayRequest.isValidAccountName((byte) -67, var10)) {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }

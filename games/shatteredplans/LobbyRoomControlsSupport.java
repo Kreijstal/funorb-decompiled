@@ -244,7 +244,7 @@ final class LobbyRoomControlsSupport {
                       }
                     }
                   }
-                  DualLinkDequeSequence.field_k = "<col=A00000>" + gg.field_c + "<br>" + DateInputWidget.field_F + (String) (var9);
+                  DualLinkDequeSequence.field_k = "<col=A00000>" + SoundEffectSupport.field_c + "<br>" + DateInputWidget.field_F + (String) (var9);
                 }
               }
             }

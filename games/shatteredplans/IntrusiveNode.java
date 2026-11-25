@@ -81,7 +81,7 @@ class IntrusiveNode {
           if (wg.field_f == null) {
             return false;
           }
-          if (Wormhole.field_j.a(64)) {
+          if (Wormhole.field_j.isLoginOrConnectedPhase(64)) {
             return true;
           }
           return false;
@@ -89,7 +89,7 @@ class IntrusiveNode {
         if (wg.field_f == null) {
           return false;
         }
-        if (Wormhole.field_j.a(64)) {
+        if (Wormhole.field_j.isLoginOrConnectedPhase(64)) {
           return true;
         }
         return false;

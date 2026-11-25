@@ -321,7 +321,7 @@ final class ScrollPane extends AnimatedPanel {
                 BattleContribution.d(true);
               }
               if (SolVictoryChecker.field_m == 2) {
-                gq.b(param0 + 29);
+                QuickChatParameterType.resetIntroParticlesAndText(param0 + 29);
               }
               if (SolVictoryChecker.field_m != 4) {
                 FleetTrailPoint.field_m = 0;

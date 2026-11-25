@@ -54,7 +54,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_I = param0;
-          this.field_H = new FocusableWidget(gq.field_b, (WidgetListener) null);
+          this.field_H = new FocusableWidget(QuickChatParameterType.field_b, (WidgetListener) null);
           this.field_H.field_p = (WidgetPainter) ((Object) new SpriteStripButtonPainter());
           var2 = QuickChatCategoryRegistry.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;

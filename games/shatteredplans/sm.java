@@ -441,17 +441,17 @@ final class sm {
         if (oo.field_b == null) {
           oo.field_b = new int[5];
           WhirlpoolHasher.field_q = new int[5];
-          fg.field_c = new int[5];
+          AccountConnectionPhase.field_c = new int[5];
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
             WhirlpoolHasher.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
-            fg.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
+            AccountConnectionPhase.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
           }
         }
         var6Lifetime1 = RasterStateFrame.field_n % 50;
         if (var6Lifetime1 == 0) {
           for (var4Lifetime3 = 0; 5 > var4Lifetime3; var4Lifetime3++) {
-            WhirlpoolHasher.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
-            fg.field_c[var4Lifetime3] = vc.a((byte) -39, 35);
+            WhirlpoolHasher.field_q[var4Lifetime3] = AccountConnectionPhase.field_c[var4Lifetime3];
+            AccountConnectionPhase.field_c[var4Lifetime3] = vc.a((byte) -39, 35);
           }
         }
     }
@@ -1127,7 +1127,7 @@ final class sm {
                 jm.field_r.drawOpaque(5 + param3, 5 + param0);
                 var9 = param3 + 345;
                 var10 = 120;
-                this.a(0, gp.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
+                this.a(0, ClientSessionSupport.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
                 this.a(16711680, 25 + param0, var9, 25 + param0, lr.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
                 this.a(16711680, 78 + (5 + param0), var9, 69 + param0, VerticalMenuSlider.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
                 this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, ProgressDialog.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
@@ -1328,7 +1328,7 @@ final class sm {
                 if (null != oo.field_b) {
                   var19Lifetime2 = RasterStateFrame.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    oo.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
+                    oo.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, AccountConnectionPhase.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
                   var21Lifetime2 = oo.field_b[0] + (10 + param0);

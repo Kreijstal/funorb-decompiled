@@ -70,14 +70,14 @@ final class wh {
             var7 = param0[1].field_o;
             param0[0].draw(param4, param1);
             param0[2].draw(param2 + param4 - var6, param1);
-            SoftwareRasterizer.saveClip(fc.field_g);
+            SoftwareRasterizer.saveClip(PlayerContextMenuController.field_g);
             SoftwareRasterizer.intersectClip(var5_int + param4, param1, -var6 + param2 + param4, param0[1].field_p + param1);
             var8 = var5_int + param4;
             var9 = -var6 + param4 + param2;
             for (param4 = var8; param4 < var9; param4 = param4 + var7) {
               param0[1].draw(param4, param1);
             }
-            SoftwareRasterizer.restoreClip(fc.field_g);
+            SoftwareRasterizer.restoreClip(PlayerContextMenuController.field_g);
             return;
           }
           return;

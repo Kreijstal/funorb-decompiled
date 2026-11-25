@@ -693,7 +693,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("hint_select_dest", 123);
                 if (null != var2) {
-                  gi.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LoginRequestSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("hint_placement", 123);
                 if (null != var2) {
@@ -1009,7 +1009,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_mv_time", 126);
                 if (null != var2) {
-                  gp.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ClientSessionSupport.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_mv_wormhole", 95);
                 if (var2 != null) {
@@ -1612,7 +1612,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_ships_destroyed", 116);
                 if (var2 != null) {
-                  gq.field_g = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_ships_lost", 114);
                 if (var2 != null) {

@@ -3,7 +3,7 @@
  */
 final class StrongCacheEntry extends WeightedCacheEntry {
     static int[][] field_w;
-    static gq field_A;
+    static QuickChatParameterType field_A;
     static Archive field_z;
     static int[] field_x;
     static String field_v;
@@ -322,8 +322,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var10.field_G = 1;
           var11 = var10;
           var11.field_y = 1;
-          gg.field_d = new AnimatedPanel(0L, var8);
-          gg.field_d.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-82, "lobby", param4, "heading"), 123);
+          SoundEffectSupport.field_d = new AnimatedPanel(0L, var8);
+          SoundEffectSupport.field_d.field_F = QuickChatCategoryRegistry.a(HighscoreResponseSupport.loadSpriteSetByName(-82, "lobby", param4, "heading"), 123);
           IntrusiveNode.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
           IntrusiveNode.field_a.field_F = ArchiveSourceManager.a(false, 4210752, false, 120, 8421504, (byte) -63);
           GalaxyMap.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
@@ -364,13 +364,13 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var15.field_x = 16777215;
           var15.field_Y = UniformNineSliceFactory.field_c;
           var15.field_nb = (BitmapFont) ((Object) var7);
-          fg.field_b = new AnimatedPanel(0L, SpriteState.field_u);
-          fg.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
-          fg.field_b.field_kb = 2;
+          AccountConnectionPhase.field_b = new AnimatedPanel(0L, SpriteState.field_u);
+          AccountConnectionPhase.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
+          AccountConnectionPhase.field_b.field_kb = 2;
           ObjectList.field_h = new AnimatedPanel(0L, SpriteState.field_u);
           ObjectList.field_h.field_F = ArchiveSourceManager.a(false, 1513239, false, 16, 1513239, (byte) -36);
           ObjectList.field_h.field_kb = 2;
-          AccountCreationDialog.field_zb = new AnimatedPanel(0L, fg.field_b);
+          AccountCreationDialog.field_zb = new AnimatedPanel(0L, AccountConnectionPhase.field_b);
           AccountCreationDialog.field_zb.copyFrom(StatefulWidgetTheme.field_w, false);
           ArrayWidgetGroup.field_E = new AnimatedPanel(0L, ObjectList.field_h);
           ArrayWidgetGroup.field_E.copyFrom(StatefulWidgetTheme.field_w, false);
@@ -575,7 +575,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
     }
 
     static {
-        field_A = new gq(12, 0, 1, 0);
+        field_A = new QuickChatParameterType(12, 0, 1, 0);
         field_x = new int[128];
         field_v = "PEACE DECLARED!";
     }

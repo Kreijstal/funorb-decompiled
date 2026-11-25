@@ -374,7 +374,7 @@ final class ObjectList {
                   if (var7 > var12.field_Fb) {
                     var25_int = var7 - var12.field_Fb;
                     if (var25_int == 1) {
-                      var24Lifetime2 = fc.field_d;
+                      var24Lifetime2 = PlayerContextMenuController.field_d;
                     }
                     var24Lifetime2 = QuickChatCategoryRegistry.a(FleetVisual.field_h, param1 ^ 4371, new String[]{null, Integer.toString(var25_int)});
                   } else {

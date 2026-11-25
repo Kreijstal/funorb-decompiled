@@ -40,7 +40,7 @@ final class qf {
           }
           return false;
         }
-        if (DerelictVictoryChecker.field_m.b(true)) {
+        if (DerelictVictoryChecker.field_m.pollMenuIdleState(true)) {
           LeaderboardSortSupport.clearActiveContextMenu(param0 + 3);
           return true;
         }

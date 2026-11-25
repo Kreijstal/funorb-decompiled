@@ -128,7 +128,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        gq var7 = null;
+        QuickChatParameterType var7 = null;
         int var9 = 0;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

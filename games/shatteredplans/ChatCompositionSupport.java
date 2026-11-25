@@ -174,12 +174,12 @@ final class ChatCompositionSupport {
           if (ProductionContent.field_h == 2 &&
             !VerticalMenuSlider.e((byte) 75)) {
             if (!DebouncedValidator.a(-30106, nd.field_k)) {
-              var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{gi.field_a});
+              var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               if (var11 != 0) {
-                var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{gi.field_a});
+                var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{LoginRequestSupport.field_a});
               }
             } else {
-              var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{gi.field_a});
+              var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{LoginRequestSupport.field_a});
             }
             if (QuickChatCategoryDefinition.field_t) {
               StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
@@ -201,7 +201,7 @@ final class ChatCompositionSupport {
             var7 = ProductionContent.field_h;
             var8 = 0;
             if (var7 == 2) {
-              var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
+              var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{LoginRequestSupport.field_a});
               var9 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var4});
               var8 = -485 + uq.field_j.field_K - (-OpacityWidget.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
               if (var8 < 0) {
@@ -266,7 +266,7 @@ final class ChatCompositionSupport {
               OpacityWidget.field_C.field_L = false;
             }
             if (OpacityWidget.field_C.field_L) {
-              var1 = QuickChatCategoryRegistry.a(StarLink.field_m, 4371, new String[]{var4, gi.field_a});
+              var1 = QuickChatCategoryRegistry.a(StarLink.field_m, 4371, new String[]{var4, LoginRequestSupport.field_a});
             }
           }
           stackIn_97_0 = var1;

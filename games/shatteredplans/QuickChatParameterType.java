@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gq {
+final class QuickChatParameterType {
     static String field_b;
     static String field_f;
     static int field_d;
@@ -10,14 +10,14 @@ final class gq {
     static String field_a;
     static String field_g;
 
-    final static int c(int param0) {
+    final static int getMenuSpanWidth(int param0) {
         if (param0 >= -33) {
           return -8;
         }
         return -ld.field_j + ValidationMessageWidget.field_R;
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2) {
+    final static boolean hasValidNameStructure(CharSequence param0, boolean param1, int param2) {
         int var6 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -63,7 +63,7 @@ final class gq {
                 return false;
               }
               if (param2 != -4) {
-                gq.e(46);
+                QuickChatParameterType.drawLitMeshScene(46);
               }
               return true;
             }
@@ -84,7 +84,7 @@ final class gq {
         }
     }
 
-    final static void b(int param0) {
+    final static void resetIntroParticlesAndText(int param0) {
         nd[] var6 = null;
         int var2 = 0;
         nd var3 = null;
@@ -92,7 +92,7 @@ final class gq {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 30) {
-            gq.clearStatics(-49);
+            QuickChatParameterType.clearStatics(-49);
           }
           var6 = MenuButton.field_C;
           nd[] var1 = var6;
@@ -108,7 +108,7 @@ final class gq {
         }
     }
 
-    final static Star a(Star[] param0, int param1, PacketBuffer param2) {
+    final static Star readStarReference(Star[] param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Star stackIn_2_0 = null;
@@ -150,7 +150,7 @@ final class gq {
         }
     }
 
-    final static void e(int param0) {
+    final static void drawLitMeshScene(int param0) {
         int var1_int = 0;
         int[] var21 = null;
         int[] var20 = null;
@@ -256,7 +256,7 @@ final class gq {
         throw new IllegalStateException();
     }
 
-    final static Sprite d(int param0) {
+    final static Sprite createFirstDecodedSprite(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1 = IntHashIndex.field_g[0] * WeightedCacheEntry.field_s[0];
@@ -270,7 +270,7 @@ final class gq {
         return var4;
     }
 
-    gq(int param0, int param1, int param2, int param3) {
+    QuickChatParameterType(int param0, int param1, int param2, int param3) {
         this.field_c = param0;
         this.field_e = param3;
     }

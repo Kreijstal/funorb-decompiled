@@ -56,17 +56,17 @@ final class IntrusiveDeque {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        fc var4 = null;
+        PlayerContextMenuController var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        fc var4Lifetime1;
+        PlayerContextMenuController var4Lifetime1;
         if (param2 != -1043) {
           return;
         }
         ve var3 = LinkPainter.a(true, param0, param1);
         if (var3 != null) {
-          DerelictVictoryChecker.field_m.a(false, param2 - 15618);
+          DerelictVictoryChecker.field_m.addInviteActions(false, param2 - 15618);
           var4 = DerelictVictoryChecker.field_m;
           var5_ref_String = SocketArchiveNetworkClient.field_u;
           var4.field_j.a(param2 ^ -1044, 5, var5_ref_String);

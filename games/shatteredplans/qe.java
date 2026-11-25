@@ -5,7 +5,7 @@ class qe extends IntrusiveNode {
     static String field_l;
     Star field_h;
     SoundPlayback field_i;
-    static fg field_k;
+    static AccountConnectionPhase field_k;
     static Sprite field_j;
 
     public static void clearStatics(byte param0) {
@@ -57,6 +57,6 @@ class qe extends IntrusiveNode {
 
     static {
         field_l = "Failed defences";
-        field_k = new fg();
+        field_k = new AccountConnectionPhase();
     }
 }

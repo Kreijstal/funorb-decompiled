@@ -200,7 +200,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = ArchiveSourceManager.field_b;
             return stackIn_6_0;
           }
-          if (!gi.a(var4, -12076, var3)) {
+          if (!LoginRequestSupport.passesPasswordChecks(var4, -12076, var3)) {
             stackIn_10_0 = ArchiveSourceManager.field_b;
             return stackIn_10_0;
           }

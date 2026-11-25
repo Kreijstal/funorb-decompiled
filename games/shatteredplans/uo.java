@@ -203,7 +203,7 @@ final class uo {
               var9_ref_String = np.field_a.field_Xb;
               ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
-              DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
+              DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(QuickChatParameterType.field_a, 4371, new String[]{var9_ref_String});
               var8 = DualLinkDequeSequence.field_f;
             } else {
               ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();

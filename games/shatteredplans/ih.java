@@ -6,7 +6,7 @@ final class ih {
     static int field_d;
     static int field_b;
     static SocialListPanel field_g;
-    static fg field_f;
+    static AccountConnectionPhase field_f;
     static String field_a;
     static String field_e;
 
@@ -88,7 +88,7 @@ final class ih {
     static {
         field_d = -1;
         field_a = "Victory";
-        field_f = new fg();
+        field_f = new AccountConnectionPhase();
         field_e = "Maximum total fleet size";
     }
 }

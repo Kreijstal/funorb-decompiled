@@ -76,7 +76,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     final static void a(Archive param0, byte param1, boolean param2, Archive param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ChatPanelSetupSupport.initializeSharedChatPanel(n.field_o, ObjectList.field_h, 124, fg.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
+          ChatPanelSetupSupport.initializeSharedChatPanel(n.field_o, ObjectList.field_h, 124, AccountConnectionPhase.field_b, AchievementProgress.field_m, WeightedCacheEntry.field_o, GalaxyMap.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, StatefulWidgetTheme.field_w);
           BoundsRect.field_m = HighscoreResponseSupport.loadSpriteSetByName(93, "lobby", param3, "chatfilter");
           jf.field_d[1] = SoundPlayback.field_o;
           jf.field_d[0] = AccountStatusSupport.field_b;
@@ -129,7 +129,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (WeightedLruCache.a(-126)) {
           WidgetTheme.a(param3, param6, false, param2);
           if (null != DerelictVictoryChecker.field_m &&
-            DerelictVictoryChecker.field_m.a(param6, param1, -16, param5, param3)) {
+            DerelictVictoryChecker.field_m.handleMenuSelection(param6, param1, -16, param5, param3)) {
             LeaderboardSortSupport.clearActiveContextMenu(3);
             param3 = false;
           }

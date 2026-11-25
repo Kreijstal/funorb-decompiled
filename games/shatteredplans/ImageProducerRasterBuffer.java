@@ -73,10 +73,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, (304 - 6 * param0.length()) / 2 + var7, 22 + var8);
             }
-            if (gd.field_a != null) {
+            if (IntroLoadingSupport.field_a != null) {
               var9.setFont(TextLayoutLine.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(gd.field_a, VictoryChecker.field_e / 2 - 6 * gd.field_a.length() / 2, -26 + nn.field_b / 2);
+              var9.drawString(IntroLoadingSupport.field_a, VictoryChecker.field_e / 2 - 6 * IntroLoadingSupport.field_a.length() / 2, -26 + nn.field_b / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

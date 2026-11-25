@@ -34,7 +34,7 @@ final class mj extends AnimatedPanel {
           TooltipSupport.drawTooltip((byte) 54, DualLinkDequeSequence.field_k);
         }
         if (DerelictVictoryChecker.field_m != null) {
-          DerelictVictoryChecker.field_m.a(13505, param1);
+          DerelictVictoryChecker.field_m.drawMenu(13505, param1);
           if (param0 == 0) {
             UrlLoader.clearStatics((byte) -82, param1);
             if (null != DialogRoot.field_G) {
@@ -157,14 +157,14 @@ final class mj extends AnimatedPanel {
             var8 = param5[1].field_o;
             param5[0].drawTinted(param4, param3, param2);
             param5[2].drawTinted(-var7 + (param4 + param0), param3, param2);
-            SoftwareRasterizer.saveClip(fc.field_g);
+            SoftwareRasterizer.saveClip(PlayerContextMenuController.field_g);
             SoftwareRasterizer.intersectClip(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
             var9 = param4 + var6_int;
             var10 = param0 + param4 - var7;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param5[1].drawTinted(param4, param3, param2);
             }
-            SoftwareRasterizer.restoreClip(fc.field_g);
+            SoftwareRasterizer.restoreClip(PlayerContextMenuController.field_g);
             return;
           }
           return;

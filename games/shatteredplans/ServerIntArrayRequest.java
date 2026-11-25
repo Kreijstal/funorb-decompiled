@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends IntrusiveNode {
+final class ServerIntArrayRequest extends IntrusiveNode {
     static MenuWindow field_n;
     int[] field_k;
     boolean field_l;
@@ -18,7 +18,7 @@ final class gb extends IntrusiveNode {
         int var1 = -46 % ((param0 + 22) / 47);
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void setChatChannelFilter(byte param0, int param1, int param2, int param3) {
         int var4;
         if (param3 == 0 &&
           QuickChatMenu.field_Bb != param2) {
@@ -41,7 +41,7 @@ final class gb extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidAccountName(byte param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -52,7 +52,7 @@ final class gb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!gq.a(param1, true, -4)) {
+          if (!QuickChatParameterType.hasValidNameStructure(param1, true, -4)) {
             return false;
           }
           var2_int = 0;
@@ -82,7 +82,7 @@ final class gb extends IntrusiveNode {
         }
     }
 
-    gb() {
+    ServerIntArrayRequest() {
         this.field_j = false;
         this.field_l = true;
     }

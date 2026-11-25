@@ -5,7 +5,7 @@ final class ScrollBar extends AnimatedPanel {
     static String field_yb;
     private AnimatedPanel field_Gb;
     private AnimatedPanel field_Fb;
-    static gb field_zb;
+    static ServerIntArrayRequest field_zb;
     private AnimatedPanel field_xb;
     static String[] field_Bb;
     private AnimatedPanel field_Eb;

@@ -212,32 +212,32 @@ final class TutorialAi extends LegacyAi {
     }
 
     final static void a(int param0, int param1, AnimatedPanel param2) {
-        fc var11 = null;
+        PlayerContextMenuController var11 = null;
         Sprite var12 = null;
         String var13 = null;
-        fc var14 = null;
+        PlayerContextMenuController var14 = null;
         Sprite var15 = null;
         String var16 = null;
-        fc var17 = null;
+        PlayerContextMenuController var17 = null;
         Sprite var18 = null;
         String var19 = null;
-        fc var20 = null;
+        PlayerContextMenuController var20 = null;
         String var22 = null;
-        fc var23 = null;
+        PlayerContextMenuController var23 = null;
         Sprite var24 = null;
         String var25 = null;
-        fc var26 = null;
+        PlayerContextMenuController var26 = null;
         Sprite var27 = null;
         String var28 = null;
-        fc var29 = null;
+        PlayerContextMenuController var29 = null;
         String var31 = null;
-        fc var32 = null;
+        PlayerContextMenuController var32 = null;
         Sprite var33 = null;
         String var34 = null;
-        fc var35 = null;
+        PlayerContextMenuController var35 = null;
         Sprite var36 = null;
         String var37 = null;
-        fc var38 = null;
+        PlayerContextMenuController var38 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

@@ -186,7 +186,7 @@ final class GameScreen {
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.showStatusText(10, 0, gi.field_b);
+              this.showStatusText(10, 0, LoginRequestSupport.field_b);
               if (var9 == 0) {
                 return;
               }
@@ -3964,7 +3964,7 @@ final class GameScreen {
             this.p(3);
           }
           if (this.field_s.field_W) {
-            gi.a(false);
+            LoginRequestSupport.updateTutorialSceneTransition(false);
             RandomAccessCacheFile.a(-127);
             MatchingTextValidator.field_r.bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);

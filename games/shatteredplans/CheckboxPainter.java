@@ -14,7 +14,7 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_o;
     static Sprite field_b;
     private int field_d;
-    static gq field_j;
+    static QuickChatParameterType field_j;
     private int field_h;
     private int field_s;
     private int field_k;
@@ -327,6 +327,6 @@ final class CheckboxPainter implements WidgetPainter {
     static {
         field_c = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_p = 256;
-        field_j = new gq(8, 0, 4, 1);
+        field_j = new QuickChatParameterType(8, 0, 4, 1);
     }
 }

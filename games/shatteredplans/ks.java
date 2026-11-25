@@ -4,7 +4,7 @@
 final class ks {
     static int field_i;
     private boolean field_d;
-    static gq field_a;
+    static QuickChatParameterType field_a;
     static String[] field_b;
     static String field_c;
     static Sprite field_j;
@@ -291,15 +291,15 @@ final class ks {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        fc var5 = null;
+        PlayerContextMenuController var5 = null;
         String var6 = null;
-        fc var7 = null;
+        PlayerContextMenuController var7 = null;
         String var8 = null;
-        fc var9 = null;
+        PlayerContextMenuController var9 = null;
         String var10 = null;
-        fc var11 = null;
+        PlayerContextMenuController var11 = null;
         String var12 = null;
-        fc var13 = null;
+        PlayerContextMenuController var13 = null;
         try {
           stackIn_2_0 = null;
           stackIn_2_1 = param0.field_p;
@@ -325,7 +325,7 @@ final class ks {
               var5.field_j.a(param1 + 1, 14, var6);
             }
             var7 = DerelictVictoryChecker.field_m;
-            var8 = gb.field_o;
+            var8 = ServerIntArrayRequest.field_o;
             var7.field_j.a(param1 + 1, 20, var8);
           }
           if (1 == param0.field_n &&
@@ -341,11 +341,11 @@ final class ks {
             var12 = sn.field_a;
             var11.field_j.a(1, 20, var12);
           }
-          DerelictVictoryChecker.field_m.a(false);
-          DerelictVictoryChecker.field_m.a(false, -16661);
-          DerelictVictoryChecker.field_m.a(param0.field_f, param0.field_n, (byte) -116);
-          DerelictVictoryChecker.field_m.b(17);
-          DerelictVictoryChecker.field_m.a(param0, (byte) -100);
+          DerelictVictoryChecker.field_m.addRoomJoinActions(false);
+          DerelictVictoryChecker.field_m.addInviteActions(false, -16661);
+          DerelictVictoryChecker.field_m.addSocialActions(param0.field_f, param0.field_n, (byte) -116);
+          DerelictVictoryChecker.field_m.addReportAction(17);
+          DerelictVictoryChecker.field_m.addChatFilterActions(param0, (byte) -100);
           var13 = DerelictVictoryChecker.field_m;
           var3 = PointsVictoryChecker.field_p;
           var4 = SliderWidget.field_P;
@@ -406,7 +406,7 @@ final class ks {
     }
 
     static {
-        field_a = new gq(14, 0, 4, 1);
+        field_a = new QuickChatParameterType(14, 0, 4, 1);
         field_c = "Derelict";
         field_b = new String[16];
     }

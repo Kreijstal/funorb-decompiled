@@ -39,7 +39,7 @@ final class wm {
           if (param2 != 11) {
             field_e = (String) null;
           }
-          stackIn_3_0 = fc.a(param1, param0, (byte) 124, true);
+          stackIn_3_0 = PlayerContextMenuController.parseInteger(param1, param0, (byte) 124, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

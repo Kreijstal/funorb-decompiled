@@ -181,13 +181,13 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           if (!param2.field_h) {
             if (!this.field_Eb) {
               if (param2.field_c == 5) {
-                var5.addActionButton(gg.field_b, (byte) 100, 11);
+                var5.addActionButton(SoundEffectSupport.field_b, (byte) 100, 11);
                 var5.addActionButton(ProductionContent.field_g, (byte) 100, 17);
               } else {
                 var5.addActionButton(ss.field_e, (byte) 106, -1);
               }
             } else {
-              var5.appendButton((WidgetListener) (this), param0 ^ 108, gq.field_b);
+              var5.appendButton((WidgetListener) (this), param0 ^ 108, QuickChatParameterType.field_b);
             }
             if (param2.field_c == 3) {
               var5.addActionButton(rs.field_yb, (byte) 103, 7);
@@ -201,7 +201,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
               this.setContent(new UnderageAccountInfoPanel(this), -51);
               return;
             }
-            var5.appendButton((WidgetListener) (this), param0 ^ 107, gq.field_b);
+            var5.appendButton((WidgetListener) (this), param0 ^ 107, QuickChatParameterType.field_b);
           }
           this.setContent(var5, 126);
           return;

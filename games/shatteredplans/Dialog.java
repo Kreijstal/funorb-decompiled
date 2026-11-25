@@ -149,7 +149,7 @@ abstract class Dialog extends WidgetContainer {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = fg.field_a;
+            stackIn_4_0 = AccountConnectionPhase.field_a;
             return stackIn_4_0;
           }
           if (var2_int > 63) {

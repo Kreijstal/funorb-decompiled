@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ss {
-    static gq field_c;
+    static QuickChatParameterType field_c;
     static int[] field_a;
     static String field_d;
     static String field_e;
@@ -22,7 +22,7 @@ final class ss {
 
     static {
         field_z = "ss.A(";
-        field_c = new gq(4, 1, 1, 1);
+        field_c = new QuickChatParameterType(4, 1, 1, 1);
         field_d = "Aggressiveness";
         field_e = "Back";
     }

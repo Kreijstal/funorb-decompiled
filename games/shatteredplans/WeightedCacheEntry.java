@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class WeightedCacheEntry extends DualLinkNode {
-    static gq field_r;
+    static QuickChatParameterType field_r;
     static Sprite field_u;
     static AnimatedPanel field_t;
     int field_p;
@@ -68,6 +68,6 @@ abstract class WeightedCacheEntry extends DualLinkNode {
     }
 
     static {
-        field_r = new gq(13, 0, 1, 0);
+        field_r = new QuickChatParameterType(13, 0, 1, 0);
     }
 }

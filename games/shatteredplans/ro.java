@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ro {
-    static gq field_c;
+    static QuickChatParameterType field_c;
     static String field_e;
     static String field_d;
     static java.security.SecureRandom field_b;
@@ -60,7 +60,7 @@ final class ro {
 
     static {
         field_e = "Instructions";
-        field_c = new gq(15, 0, 1, 0);
+        field_c = new QuickChatParameterType(15, 0, 1, 0);
         field_d = "Spectate";
     }
 }

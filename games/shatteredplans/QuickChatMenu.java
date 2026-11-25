@@ -182,11 +182,11 @@ final class QuickChatMenu extends AnimatedPanel {
                 var6 = 1;
               }
               if (2 == id.a(-7019, var6)) {
-                gb.a((byte) 75, param1, 1, var6);
+                ServerIntArrayRequest.setChatChannelFilter((byte) 75, param1, 1, var6);
               }
               String var8 = (String) null;
-              ih.a(gi.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
-              IntrusiveDequeSequence.a(gi.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
+              ih.a(LoginRequestSupport.field_a, 2, var5, ProductionContent.field_h, (String) null, param3);
+              IntrusiveDequeSequence.a(LoginRequestSupport.field_a, (byte) 123, hd.field_k, ProductionContent.field_h, var5);
               jp.g((byte) 119);
               GameState.a(-5883);
             } else {

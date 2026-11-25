@@ -197,7 +197,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           if (null == wg.field_f) {
             if (BufferedSocket.field_j) {
               if (wh.a(18) > 30000L) {
-                nl.field_c = gq.field_f;
+                nl.field_c = QuickChatParameterType.field_f;
               } else {
                 nl.field_c = QuaternaryNodeList.field_d;
               }

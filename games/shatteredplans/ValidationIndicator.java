@@ -223,18 +223,18 @@ final class ValidationIndicator extends FocusableWidget {
         var14 = MenuList.field_w[0];
         var9 = var14.field_o << 1;
         var10 = var14.field_p << 1;
-        if (null != gg.field_e &&
-          var9 <= gg.field_e.field_z &&
-          gg.field_e.field_w >= var10) {
-          IntValueWriteRequest.pushSpriteRaster((byte) 90, gg.field_e);
+        if (null != SoundEffectSupport.field_e &&
+          var9 <= SoundEffectSupport.field_e.field_z &&
+          SoundEffectSupport.field_e.field_w >= var10) {
+          IntValueWriteRequest.pushSpriteRaster((byte) 90, SoundEffectSupport.field_e);
           SoftwareRasterizer.clear();
         } else {
-          gg.field_e = new Sprite(var9, var10);
-          IntValueWriteRequest.pushSpriteRaster((byte) -107, gg.field_e);
+          SoundEffectSupport.field_e = new Sprite(var9, var10);
+          IntValueWriteRequest.pushSpriteRaster((byte) -107, SoundEffectSupport.field_e);
         }
         var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
         Star.f((byte) -94);
-        gg.field_e.drawAdditive(var5 - var14.field_o, -var14.field_p + var6, 256);
+        SoundEffectSupport.field_e.drawAdditive(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;
     }
 

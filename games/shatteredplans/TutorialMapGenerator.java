@@ -763,7 +763,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 Archive.field_d = param0;
                 var2 = TertiaryLinkNode.a("loginm3", 511);
                 if (null != var2) {
-                  gq.field_f = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loginm2", 511);
                 if (null != var2) {
@@ -958,7 +958,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name", 511);
                 if (var2 != null) {
-                  gd.field_c = IterableNodeHashTable.a(var2, 17746);
+                  IntroLoadingSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_rating", 511);
                 if (null != var2) {
@@ -1114,7 +1114,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_withdraw_invite_to_x", 511);
                 if (null != var2) {
-                  fc.field_c = IterableNodeHashTable.a(var2, 17746);
+                  PlayerContextMenuController.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_accept_x_into_game", 511);
                 if (var2 != null) {
@@ -1262,7 +1262,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("waiting_for_x_to_start_game", 511);
                 if (null != var2) {
-                  gq.field_a = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("game_options_changed", 511);
                 if (null != var2) {
@@ -1278,7 +1278,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("quickchat_lobby", 511);
                 if (null != var2) {
-                  gb.field_o = IterableNodeHashTable.a(var2, 17746);
+                  ServerIntArrayRequest.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("message_game", 511);
                 if (null != var2) {
@@ -1562,7 +1562,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneed1ratedgame", 511);
                 if (var2 != null) {
-                  fc.field_d = IterableNodeHashTable.a(var2, 17746);
+                  PlayerContextMenuController.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerhasntunlocked", 511);
                 if (var2 != null) {
@@ -1626,7 +1626,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_novalidcombos", 511);
                 if (null != var2) {
-                  gg.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectSupport.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleasetrychanging", 511);
                 if (var2 != null) {
@@ -1764,7 +1764,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("reloadgame", 511);
                 if (null != var2) {
-                  gg.field_b = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("toserverlist", 511);
                 if (var2 != null) {
@@ -2818,7 +2818,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("cont", 511);
                 if (null != var2) {
-                  gq.field_b = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("continue_spectating", 511);
                 if (var2 != null) {

@@ -89,12 +89,12 @@ abstract class ByteArrayStorage {
               var5 = 1;
             }
             if (id.a(-7019, var5) == 2) {
-              gb.a((byte) 91, param0, 1, var5);
-              ih.a(gi.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
+              ServerIntArrayRequest.setChatChannelFilter((byte) 91, param0, 1, var5);
+              ih.a(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
               MusicVoice.c(param2);
               return true;
             }
-            ih.a(gi.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
+            ih.a(LoginRequestSupport.field_a, 2, -1, ProductionContent.field_h, var4_ref_String, param1);
             MusicVoice.c(param2);
           }
           return true;
@@ -129,7 +129,7 @@ abstract class ByteArrayStorage {
         var16 = v.a(var17, (byte) 17);
         var18 = var16;
         if (ProductionContent.field_h == 2) {
-          var61 = (CharSequence) ((Object) gi.field_a);
+          var61 = (CharSequence) ((Object) LoginRequestSupport.field_a);
           var20 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
           var8 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var16});
           var9 = ho.field_f.stringWidth(var20);

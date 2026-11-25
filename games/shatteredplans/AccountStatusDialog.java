@@ -168,7 +168,7 @@ class AccountStatusDialog extends ContentDialog implements ButtonListener {
           var6 = new StatusMessagePanel(this, this.field_ub, param0);
           var4 = var6;
           if (5 == param1) {
-            var6.addActionButton(gg.field_b, (byte) 125, 11);
+            var6.addActionButton(SoundEffectSupport.field_b, (byte) 125, 11);
             var6.addActionButton(ProductionContent.field_g, (byte) 120, 17);
           } else {
             if (param1 == 256) {

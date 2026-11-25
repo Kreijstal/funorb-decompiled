@@ -4,7 +4,7 @@
 final class DerelictVictoryChecker extends VictoryChecker {
     static int[] field_k;
     static ScrollPane field_l;
-    static fc field_m;
+    static PlayerContextMenuController field_m;
     static Archive field_n;
     private int[] field_q;
     private int[] field_o;
@@ -144,7 +144,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
         int var9;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 0) {
-          field_m = (fc) null;
+          field_m = (PlayerContextMenuController) null;
         }
         if (null != this.field_g) {
           return this.field_g;

@@ -131,7 +131,7 @@ final class SliderPainter implements WidgetPainter {
             field_k = (String) null;
           }
           DerelictVictoryChecker.field_l = param5;
-          DerelictVictoryChecker.field_m = new fc(param6, param1, param3, param2, param8, param7, param0);
+          DerelictVictoryChecker.field_m = new PlayerContextMenuController(param6, param1, param3, param2, param8, param7, param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "tp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

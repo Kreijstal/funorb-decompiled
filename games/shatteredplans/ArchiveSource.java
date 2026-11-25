@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveSource {
-    static gq field_b;
+    static QuickChatParameterType field_b;
     static String field_d;
     static volatile int field_c;
     static String field_a;
@@ -149,7 +149,7 @@ abstract class ArchiveSource {
 
     static {
         field_d = "Click to hide the Fleet Info window.";
-        field_b = new gq(11, 0, 1, 2);
+        field_b = new QuickChatParameterType(11, 0, 1, 2);
         field_c = 0;
         field_a = "Kick";
     }

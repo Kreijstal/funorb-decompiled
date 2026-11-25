@@ -34,7 +34,7 @@ final class Bzip2State {
     int field_e;
     int[] field_l;
     int[] field_K;
-    static gq field_I;
+    static QuickChatParameterType field_I;
     byte[] field_E;
     int field_h;
     static IntrusiveDeque field_J;
@@ -150,7 +150,7 @@ final class Bzip2State {
           QuickChatPhraseRegistry.field_g[2] = LinkPainter.field_c;
           QuickChatPhraseRegistry.field_g[15] = DelegatingCanvas.field_c;
           QuickChatPhraseRegistry.field_g[13] = kh.field_Eb;
-          QuickChatPhraseRegistry.field_g[1] = gq.field_g;
+          QuickChatPhraseRegistry.field_g[1] = QuickChatParameterType.field_g;
           ChatCompositionSupport.field_b[6] = LobbyLayoutSupport.field_e;
           ChatCompositionSupport.field_b[11] = vo.field_a;
           ChatCompositionSupport.field_b[0] = MenuLabel.field_v;
@@ -202,7 +202,7 @@ final class Bzip2State {
 
     static {
         field_u = new Random();
-        field_I = new gq(9, 0, 4, 1);
+        field_I = new QuickChatParameterType(9, 0, 4, 1);
         field_s = "Production";
         field_J = new IntrusiveDeque();
         field_F = 0;

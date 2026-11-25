@@ -68,7 +68,7 @@ final class DefensiveAi extends StandardAi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 2) {
-            stackIn_4_0 = fc.a(10, param0, (byte) -108, true);
+            stackIn_4_0 = PlayerContextMenuController.parseInteger(10, param0, (byte) -108, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -125;

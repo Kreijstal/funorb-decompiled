@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SolMapReader implements MapGenerator {
-    static fg field_c;
+    static AccountConnectionPhase field_c;
     private PacketBuffer field_a;
     static int field_b;
     private int field_d;
@@ -269,6 +269,6 @@ final class SolMapReader implements MapGenerator {
     }
 
     static {
-        field_c = new fg();
+        field_c = new AccountConnectionPhase();
     }
 }

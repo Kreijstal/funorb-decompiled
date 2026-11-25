@@ -124,10 +124,10 @@ final class BoundsRect extends IntrusiveNode {
           return PlayerStats.field_j;
         }
         if (ue.field_a == MatchingTextValidator.field_s) {
-          return gp.field_b;
+          return ClientSessionSupport.field_b;
         }
         if (!wh.field_a.b(14)) {
-          return gp.field_b;
+          return ClientSessionSupport.field_b;
         }
         if (param0 < -61) {
           return MenuWindow.field_B;

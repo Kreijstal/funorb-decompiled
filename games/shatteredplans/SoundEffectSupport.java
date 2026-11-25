@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg {
+final class SoundEffectSupport {
     static String field_b;
     static Sprite field_e;
     static AnimatedPanel field_d;
     static String field_c;
     static int field_a;
 
-    final static qf a(int param0, int param1, String param2) {
+    final static qf loadSoundEffectDefinition(int param0, int param1, String param2) {
         RuntimeException var3 = null;
         qf stackIn_2_0 = null;
         qf stackIn_4_0 = null;
@@ -47,7 +47,7 @@ final class gg {
         }
     }
 
-    final static void a(byte[] param0, byte param1) {
+    final static void readClientBytePreference(byte[] param0, byte param1) {
         try {
           if (param0[0] >= 0) {
             uc.field_A = param0[1];

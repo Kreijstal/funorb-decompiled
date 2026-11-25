@@ -4,7 +4,7 @@
 class LegacyAi extends StandardAi {
     static String[] field_q;
     static Sprite[] field_s;
-    static fg field_r;
+    static AccountConnectionPhase field_r;
     static String field_p;
 
     void chooseTargetPlayer(int param0) {
@@ -148,7 +148,7 @@ class LegacyAi extends StandardAi {
         field_p = null;
         field_s = null;
         if (param0 != 19333) {
-          field_r = (fg) null;
+          field_r = (AccountConnectionPhase) null;
         }
     }
 
@@ -239,7 +239,7 @@ class LegacyAi extends StandardAi {
 
     static {
         field_q = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_r = new fg();
+        field_r = new AccountConnectionPhase();
         field_p = "Your email address is used to identify this account";
     }
 }

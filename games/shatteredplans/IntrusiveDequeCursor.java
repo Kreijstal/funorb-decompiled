@@ -5,7 +5,7 @@ final class IntrusiveDequeCursor {
     static String field_i;
     private IntrusiveDeque field_d;
     static boolean field_b;
-    static gq field_g;
+    static QuickChatParameterType field_g;
     private IntrusiveNode field_e;
     static int field_c;
     static String field_f;
@@ -335,7 +335,7 @@ final class IntrusiveDequeCursor {
         field_i = "Email (Login):";
         field_a = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_f = "Enter name of friend to delete from list";
-        field_g = new gq(0, 2, 2, 1);
+        field_g = new QuickChatParameterType(0, 2, 2, 1);
         field_h = "Loading fonts";
     }
 }

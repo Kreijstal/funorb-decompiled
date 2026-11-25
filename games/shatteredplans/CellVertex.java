@@ -24,7 +24,7 @@ final class CellVertex {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!gq.a(param2, param1, -4)) {
+          if (!QuickChatParameterType.hasValidNameStructure(param2, param1, -4)) {
             return false;
           }
           var3_int = 0;

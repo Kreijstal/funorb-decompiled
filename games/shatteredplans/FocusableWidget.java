@@ -184,7 +184,7 @@ class FocusableWidget extends UiWidget {
           return;
         }
         try {
-          gi.field_a = param2;
+          LoginRequestSupport.field_a = param2;
           ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param2);
           nd.field_k = DateInputWidget.a(var5, true);

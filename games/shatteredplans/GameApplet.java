@@ -3,7 +3,7 @@
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_e;
-    static gq field_c;
+    static QuickChatParameterType field_c;
     static int field_i;
     static int field_g;
     static String field_a;
@@ -19,7 +19,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void start() {
         if (this != TextHotspotWidget.field_G ||
-          fc.field_a) {
+          PlayerContextMenuController.field_a) {
           return;
         }
         try {
@@ -61,7 +61,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (TextHotspotWidget.field_G != this ||
-          fc.field_a) {
+          PlayerContextMenuController.field_a) {
           return;
         }
         try {
@@ -645,7 +645,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (TextHotspotWidget.field_G == this &&
-            !fc.field_a) {
+            !PlayerContextMenuController.field_a) {
             oq.field_e = true;
             if (VictoryChecker.field_a &&
               pr.currentTimeMillis(14274) - PointsVictoryChecker.field_m > 1000L) {
@@ -853,7 +853,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void destroy() {
         if (TextHotspotWidget.field_G != this ||
-          fc.field_a) {
+          PlayerContextMenuController.field_a) {
           return;
         }
         try {
@@ -952,10 +952,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3 = this;
           synchronized (var3) {
-            if (fc.field_a) {
+            if (PlayerContextMenuController.field_a) {
               return;
             }
-            fc.field_a = true;
+            PlayerContextMenuController.field_a = true;
           }
           if (null != NodeSequence.field_a) {
             NodeSequence.field_a.destroy();
@@ -1103,7 +1103,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     static {
-        field_c = new gq(7, 0, 1, 1);
+        field_c = new QuickChatParameterType(7, 0, 1, 1);
         field_i = 2;
         field_a = "Play rated game";
         field_h = "You have 1 unread message!";

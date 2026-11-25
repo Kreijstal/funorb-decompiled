@@ -83,7 +83,7 @@ final class tb {
           mk.field_e[1] = id.field_a;
           mk.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
-          SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
+          SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
           ls.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           MenuList.field_v.addChild(param13 ^ -7962, SoundPlayback.field_m);
@@ -99,7 +99,7 @@ final class tb {
           nm.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           nm.field_c.field_y = 1;
           QuickChatMenu.field_Ab = new AnimatedPanel(0L, AlignedMenuLabel.field_E, v.field_a.toUpperCase());
-          sg.field_zb = new AnimatedPanel(0L, gg.field_d, uc.field_z.toUpperCase());
+          sg.field_zb = new AnimatedPanel(0L, SoundEffectSupport.field_d, uc.field_z.toUpperCase());
           qf.field_e = new AnimatedPanel(0L, rs.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
           GameSession.field_e = new AnimatedPanel(0L, jr.field_h, FleetTrailPoint.field_j);
@@ -108,8 +108,8 @@ final class tb {
           IsaacBackedRandom.field_c = new AnimatedPanel(0L, jr.field_h, WidgetContainer.field_z);
           hq.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
           SingleChildWidget.field_y = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
-          gb.field_m = new AnimatedPanel(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
-          gb.field_m.field_s = AccountStatusDialog.field_pb;
+          ServerIntArrayRequest.field_m = new AnimatedPanel(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
+          ServerIntArrayRequest.field_m.field_s = AccountStatusDialog.field_pb;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
@@ -137,7 +137,7 @@ final class tb {
           qf.field_e.addChild(4, hq.field_b);
           qf.field_e.addChild(4, SingleChildWidget.field_y);
           if (AccountStatusDialog.field_pb) {
-            AchievementProgress.field_i.addChild(4, gb.field_m);
+            AchievementProgress.field_i.addChild(4, ServerIntArrayRequest.field_m);
           }
           AchievementProgress.field_i.addChild(4, LinkPainter.field_b);
           SoundCache.field_c = new AnimatedPanel(0L, SpriteState.field_u);
@@ -155,7 +155,7 @@ final class tb {
           so.field_t = new AnimatedPanel(0L, (AnimatedPanel) null);
           DefendTask.field_x = new AnimatedPanel(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
-          lr.field_a = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
+          lr.field_a = new AnimatedPanel(0L, SliderWidget.field_N, IntroLoadingSupport.field_c);
           MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
           ro.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.addChild(4, DefendTask.field_x);
@@ -165,7 +165,7 @@ final class tb {
           }
           so.field_t.addChild(param13 + 7970, ro.field_a);
           DialPainter.field_g = new AnimatedPanel(0L, AlignedMenuLabel.field_E, tm.field_o.toUpperCase());
-          ArchiveSourceManager.field_f = new AnimatedPanel(0L, gg.field_d);
+          ArchiveSourceManager.field_f = new AnimatedPanel(0L, SoundEffectSupport.field_d);
           NameSuggestionsPanel.field_D = new AnimatedPanel(0L, rs.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, nl.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
@@ -240,7 +240,7 @@ final class tb {
           }
           TextFieldWidget.field_I = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
           IntValueWriteRequest.field_j = new AnimatedPanel(0L, IsaacBackedRandom.field_a);
-          DualLinkDequeSequence.field_f = new AnimatedPanel(0L, fg.field_b);
+          DualLinkDequeSequence.field_f = new AnimatedPanel(0L, AccountConnectionPhase.field_b);
           DualLinkDequeSequence.field_f.copyFrom(SpriteState.field_u, false);
           var17 = DualLinkDequeSequence.field_f;
           DualLinkDequeSequence.field_f.field_G = 1;

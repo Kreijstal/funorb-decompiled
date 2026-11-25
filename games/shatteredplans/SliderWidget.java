@@ -4,7 +4,7 @@
 final class SliderWidget extends FocusableWidget {
     static int field_P;
     private int field_F;
-    static gq field_O;
+    static QuickChatParameterType field_O;
     int field_M;
     static GameRules field_K;
     private IntList field_J;
@@ -152,6 +152,6 @@ final class SliderWidget extends FocusableWidget {
 
     static {
         field_P = 0;
-        field_O = new gq(2, 4, 4, 0);
+        field_O = new QuickChatParameterType(2, 4, 4, 0);
     }
 }

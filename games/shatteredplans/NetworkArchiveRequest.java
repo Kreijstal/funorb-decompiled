@@ -94,7 +94,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             param4 = 0;
           }
           ProductionContent.field_h = param4;
-          gi.field_a = param1;
+          LoginRequestSupport.field_a = param1;
           stackIn_11_0 = (String) (param1);
           stackIn_12_1 = !(param2);
           nd.field_k = DateInputWidget.a((CharSequence) ((Object) stackIn_11_0), stackIn_12_1);

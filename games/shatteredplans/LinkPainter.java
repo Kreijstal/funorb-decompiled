@@ -169,10 +169,10 @@ final class LinkPainter implements WidgetPainter {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        fc var17 = null;
+        PlayerContextMenuController var17 = null;
         String var18 = null;
         int var19 = 0;
-        fc var17Lifetime1;
+        PlayerContextMenuController var17Lifetime1;
         String var18Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

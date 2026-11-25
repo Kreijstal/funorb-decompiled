@@ -96,11 +96,11 @@ final class IntValueWriteRequest extends IntrusiveNode {
         }
     }
 
-    final static gq findQuickChatParameterType(int param0, int param1) {
+    final static QuickChatParameterType findQuickChatParameterType(int param0, int param1) {
         int var3 = 0;
-        gq[] var2;
+        QuickChatParameterType[] var2;
         int var4;
-        gq[] var5;
+        QuickChatParameterType[] var5;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var5 = DualLinkDequeSequence.a(4);
         var2 = var5;

@@ -38,7 +38,7 @@ final class sn {
         IntValueWriteRequest.pushSpriteRaster((byte) -40, SecondaryNodeHashTable.field_i);
         wn.c();
         SoftwareRasterizer.clear();
-        gq.e(-70);
+        QuickChatParameterType.drawLitMeshScene(-70);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, 256 - var5);
         }

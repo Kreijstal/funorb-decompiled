@@ -6,7 +6,7 @@ final class RasterStateFrame extends IntrusiveNode {
     int field_r;
     int field_o;
     static int field_n;
-    static gq field_p;
+    static QuickChatParameterType field_p;
     int field_l;
     int field_h;
     int field_j;
@@ -117,7 +117,7 @@ final class RasterStateFrame extends IntrusiveNode {
 
     static {
         field_q = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
-        field_p = new gq(6, 0, 4, 2);
+        field_p = new QuickChatParameterType(6, 0, 4, 2);
         field_m = "Objective";
     }
 }

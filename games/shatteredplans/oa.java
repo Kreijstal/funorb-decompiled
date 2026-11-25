@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class oa {
-    static fg field_a;
+    static AccountConnectionPhase field_a;
     static DraggableWidget field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -135,6 +135,6 @@ final class oa {
     }
 
     static {
-        field_a = new fg();
+        field_a = new AccountConnectionPhase();
     }
 }

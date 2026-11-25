@@ -38,30 +38,30 @@ final class IsaacRandom {
             return 4;
           }
           try {
-            if (gb.field_i == 0) {
+            if (ServerIntArrayRequest.field_i == 0) {
               AccountCreationDialog.field_Gb = ClientCapabilitySupport.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
-              gb.field_i = gb.field_i + 1;
+              ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
             }
-            if (gb.field_i == 1) {
+            if (ServerIntArrayRequest.field_i == 1) {
               if (2 == AccountCreationDialog.field_Gb.field_d) {
                 stackIn_14_0 = is.a((byte) -94, -1);
                 return stackIn_14_0;
               }
               if (AccountCreationDialog.field_Gb.field_d == 1) {
-                gb.field_i = gb.field_i + 1;
+                ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
               }
             }
-            if (gb.field_i == 2) {
+            if (ServerIntArrayRequest.field_i == 2) {
               js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), ClientCapabilitySupport.field_a);
               var2 = new PacketBuffer(13);
               hq.a(HighscoreResponseSupport.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
               var2.writeInt(11135, sg.field_Cb);
               js.field_a.write(13, 0, var2.payload, -13976);
-              gb.field_i = gb.field_i + 1;
+              ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
               SocialListPanel.field_Cb = 30000L + pr.currentTimeMillis(14274);
             }
-            if (gb.field_i == 3) {
+            if (ServerIntArrayRequest.field_i == 3) {
               if (js.field_a.available(-1) <= 0) {
                 if (SocialListPanel.field_Cb < pr.currentTimeMillis(14274)) {
                   stackIn_31_0 = is.a((byte) -94, -2);
@@ -73,15 +73,15 @@ final class IsaacRandom {
                   stackIn_26_0 = is.a((byte) -94, var1_int);
                   return stackIn_26_0;
                 }
-                gb.field_i = gb.field_i + 1;
+                ServerIntArrayRequest.field_i = ServerIntArrayRequest.field_i + 1;
               }
             }
-            if (4 != gb.field_i) {
+            if (4 != ServerIntArrayRequest.field_i) {
               return -1;
             }
             TertiaryLinkNode.field_o.a((byte) 90, hq.field_c, js.field_a);
             js.field_a = null;
-            gb.field_i = 0;
+            ServerIntArrayRequest.field_i = 0;
             AccountCreationDialog.field_Gb = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;

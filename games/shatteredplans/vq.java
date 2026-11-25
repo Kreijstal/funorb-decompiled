@@ -170,7 +170,7 @@ final class vq {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!gb.a((byte) -109, var6)) {
+          if (!ServerIntArrayRequest.isValidAccountName((byte) -109, var6)) {
             stackIn_3_0 = tm.field_j;
             return stackIn_3_0;
           }

@@ -18,7 +18,7 @@ final class MusicVoice extends IntrusiveNode {
     int field_y;
     static String field_s;
     int field_J;
-    static fg field_m;
+    static AccountConnectionPhase field_m;
     int field_h;
     int field_z;
     int field_k;
@@ -116,7 +116,7 @@ final class MusicVoice extends IntrusiveNode {
     static {
         field_s = "Accept unrated rematch";
         field_l = "Confirm Password: ";
-        field_m = new fg();
+        field_m = new AccountConnectionPhase();
         field_N = "Please remove <%0> from your friend list first.";
         field_x = "Buying or selling an account";
         field_w = new String[]{"New Cambridge Colony", "Historical Archives"};

@@ -4,7 +4,7 @@
 final class ld extends IntrusiveNode {
     byte[] field_o;
     static String field_i;
-    static gq field_h;
+    static QuickChatParameterType field_h;
     boolean field_l;
     static IntrusiveDeque field_p;
     static String field_n;
@@ -126,7 +126,7 @@ final class ld extends IntrusiveNode {
 
     static {
         field_i = "to keep fullscreen or";
-        field_h = new gq(10, 2, 2, 0);
+        field_h = new QuickChatParameterType(10, 2, 2, 0);
         field_n = "TAB - hide chat temporarily";
         field_q = "Won";
         field_k = "Add friend";

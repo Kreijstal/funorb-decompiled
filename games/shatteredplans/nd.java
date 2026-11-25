@@ -8,7 +8,7 @@ final class nd {
     static String[] field_g;
     int field_e;
     static String field_k;
-    static gq field_c;
+    static QuickChatParameterType field_c;
     static String field_b;
     int field_h;
     int field_f;
@@ -141,6 +141,6 @@ final class nd {
         field_d = new int[]{1, 1, 2, 2, 3, 1, 3, 2, 2, 2, 3, 3, 1, 3, 5, 5, 5, 5, 3, 5, 3, 5, 1, 1, 5};
         field_g = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_b = "Battles won in friendly space.";
-        field_c = new gq(1, 2, 2, 0);
+        field_c = new QuickChatParameterType(1, 2, 2, 0);
     }
 }

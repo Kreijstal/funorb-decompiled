@@ -417,7 +417,7 @@ final class SolVictoryChecker extends VictoryChecker {
               StarAnnotation.a(-91, 8)) {
               Dialog.field_I = sa.field_a.readLong(110);
               sa.field_a.position = 0;
-              gi.a(param0, param2, param4, -84, mq.field_c);
+              LoginRequestSupport.writeLoginRequest(param0, param2, param4, -84, mq.field_c);
               Wormhole.field_j = IntrusiveNodeHashTable.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -549,7 +549,7 @@ final class SolVictoryChecker extends VictoryChecker {
                 if (wh.a(18) <= 30000L) {
                   nl.field_c = QuaternaryNodeList.field_d;
                 } else {
-                  nl.field_c = gq.field_f;
+                  nl.field_c = QuickChatParameterType.field_f;
                 }
                 BufferedSocket.field_j = false;
                 stackIn_102_0 = 3;

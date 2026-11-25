@@ -69,13 +69,13 @@ final class UrlLoader implements Runnable {
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
               TutorialVictoryChecker.a(var15, false);
               if (var7_intLifetime1 != 0) {
-                ul.a(0, Bzip2State.field_L, np.field_j, gp.field_c, var7_intLifetime1, ig.field_d);
+                ul.a(0, Bzip2State.field_L, np.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ig.field_d);
               } else {
                 var3.field_i = np.field_j;
                 var3.field_l = Bzip2State.field_L;
                 var3.field_h = ig.field_d;
-                var3.field_r = gp.field_c;
-                ul.a(0, Bzip2State.field_L, np.field_j, gp.field_c, var7_intLifetime1, ig.field_d);
+                var3.field_r = ClientSessionSupport.field_c;
+                ul.a(0, Bzip2State.field_L, np.field_j, ClientSessionSupport.field_c, var7_intLifetime1, ig.field_d);
               }
             }
             BoundsRect.a(var6, (byte) -111);
@@ -172,7 +172,7 @@ final class UrlLoader implements Runnable {
           wn.c();
           SoftwareRasterizer.clear();
           js.field_j = 0;
-          gq.e(-65);
+          QuickChatParameterType.drawLitMeshScene(-65);
           var2 = var1.copy();
           int var4 = 11 / ((31 - param0) / 62);
           for (var3 = 0; 15 > var3; var3++) {

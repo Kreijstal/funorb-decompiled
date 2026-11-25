@@ -121,9 +121,9 @@ final class hr {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != oq.field_b[var12]) {
-              var13 = (-4 + tg.field_c.field_mb) * var11 / (gq.field_d + 1) + 3;
+              var13 = (-4 + tg.field_c.field_mb) * var11 / (QuickChatParameterType.field_d + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + gq.field_d) + 3 - 2;
+              var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + QuickChatParameterType.field_d) + 3 - 2;
               if (5 <= var12) {
                 pr.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
               } else {

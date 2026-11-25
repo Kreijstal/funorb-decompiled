@@ -211,12 +211,12 @@ abstract class DateInputWidget extends WidgetContainer implements ValidatableWid
             return (kj) (stackIn_4_0);
           }
           if (ProjectsContent.field_g == MatchingTextValidator.field_s &&
-            param1.equals(gp.field_b)) {
+            param1.equals(ClientSessionSupport.field_b)) {
             MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;
             stackIn_8_0 = ij.field_a;
             return stackIn_8_0;
           }
-          gp.field_b = param1;
+          ClientSessionSupport.field_b = param1;
           ij.field_a = null;
           MatchingTextValidator.field_s = ue.field_a;
           stackIn_10_0 = null;

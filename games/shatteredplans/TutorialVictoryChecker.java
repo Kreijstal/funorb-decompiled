@@ -31,13 +31,13 @@ final class TutorialVictoryChecker extends VictoryChecker {
           np.field_j = param0.readUnsignedShort(-20976) << 5;
           var2_int = param0.readUnsignedByte(-101);
           np.field_j = np.field_j + (var2_int >> 3);
-          gp.field_c = 1835008 & var2_int << 18;
+          ClientSessionSupport.field_c = 1835008 & var2_int << 18;
           if (param1) {
             field_q = 21;
           }
-          gp.field_c = gp.field_c + (param0.readUnsignedShort(-20976) << 2);
+          ClientSessionSupport.field_c = ClientSessionSupport.field_c + (param0.readUnsignedShort(-20976) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(-120);
-          gp.field_c = gp.field_c + (var2_intLifetime1 >> 6);
+          ClientSessionSupport.field_c = ClientSessionSupport.field_c + (var2_intLifetime1 >> 6);
           ig.field_d = 2064384 & var2_intLifetime1 << 15;
           ig.field_d = ig.field_d + (param0.readUnsignedByte(-122) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-127);
@@ -287,7 +287,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        fc var12 = null;
+        PlayerContextMenuController var12 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -297,9 +297,9 @@ final class TutorialVictoryChecker extends VictoryChecker {
         RuntimeException var7 = null;
         try {
           SliderPainter.a((int[]) null, param1.field_Ib, param1.field_Cb, param1.field_Db, 293, param3, param1, -1, -1);
-          DerelictVictoryChecker.field_m.a(true, param6 ^ -16763);
-          DerelictVictoryChecker.field_m.a((int[]) null, 0, (byte) -36);
-          DerelictVictoryChecker.field_m.b(17);
+          DerelictVictoryChecker.field_m.addInviteActions(true, param6 ^ -16763);
+          DerelictVictoryChecker.field_m.addSocialActions((int[]) null, 0, (byte) -36);
+          DerelictVictoryChecker.field_m.addReportAction(17);
           var12 = DerelictVictoryChecker.field_m;
           var8 = param0;
           var9 = param2;

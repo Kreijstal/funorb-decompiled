@@ -23,7 +23,7 @@ final class Player {
     boolean[] field_h;
     Sprite field_n;
     int field_k;
-    static fg field_l;
+    static AccountConnectionPhase field_l;
     Sprite field_d;
     PlayerStats field_q;
     String name;
@@ -84,7 +84,7 @@ final class Player {
     final static void a(byte param0, boolean param1) {
         gr.a(true, param1, 0);
         if (param0 <= 85) {
-          field_l = (fg) null;
+          field_l = (AccountConnectionPhase) null;
         }
     }
 
@@ -117,7 +117,7 @@ final class Player {
 
     static {
         field_z = 360;
-        field_l = new fg();
+        field_l = new AccountConnectionPhase();
         field_j = "Breaking real-world laws";
     }
 
@@ -125,7 +125,7 @@ final class Player {
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
         gr.a(true, param1, 0);
         if (param0 <= 85) {
-          field_l = (fg) null;
+          field_l = (AccountConnectionPhase) null;
         }
     }
 }

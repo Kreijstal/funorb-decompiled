@@ -281,8 +281,8 @@ final class uk {
           var20Lifetime5 = param2.readUnsignedByte(-115);
           var21Lifetime4 = 0;
           while (var20Lifetime5 > var21Lifetime4) {
-            var34 = gq.a(var15.field_e, -2284, param2);
-            var35 = gq.a(var15.field_e, -2284, param2);
+            var34 = QuickChatParameterType.readStarReference(var15.field_e, -2284, param2);
+            var35 = QuickChatParameterType.readStarReference(var15.field_e, -2284, param2);
             if (var34 != null &&
               var35 != null) {
               var24Lifetime1 = param2.readUnsignedByte(-73);

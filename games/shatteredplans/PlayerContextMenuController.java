@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fc {
+final class PlayerContextMenuController {
     private int[] field_i;
     static String field_c;
     private String field_h;
@@ -15,7 +15,7 @@ final class fc {
     static String field_d;
     String field_k;
 
-    final void a(boolean param0, int param1) {
+    final void addInviteActions(boolean param0, int param1) {
         mj var4;
         String var5;
         int var6;
@@ -51,7 +51,7 @@ final class fc {
         }
         var7 = ta.a(-77, this.field_b);
         var4 = ik.a(-115, this.field_b);
-        var5 = this.a(param1 ^ 16744);
+        var5 = this.getDisplayName(param1 ^ 16744);
         if (var4 != null) {
           if (!np.field_a.field_Ab ||
             !(np.field_a.field_lc < 0)) {
@@ -84,23 +84,23 @@ final class fc {
         return;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final boolean handleMenuSelection(int param0, int param1, int param2, int param3, boolean param4) {
         boolean discarded$5 = false;
         int var6 = this.field_j.b(param4, (byte) 93);
         if (-2 == var6) {
           return false;
         }
-        boolean discarded$0 = this.c(param3, 4, var6);
-        boolean discarded$1 = this.a(var6, param0, (byte) 3);
-        boolean discarded$4 = this.b(var6, 2, param0);
+        boolean discarded$0 = this.handleLobbyAction(param3, 4, var6);
+        boolean discarded$1 = this.handleSocialAction(var6, param0, (byte) 3);
+        boolean discarded$4 = this.handleChatAction(var6, 2, param0);
         if (param2 == -16) {
-          discarded$5 = this.a(param1, var6, 125);
+          discarded$5 = this.handleReportAction(param1, var6, 125);
           return true;
         }
         return false;
     }
 
-    final boolean b(boolean param0) {
+    final boolean pollMenuIdleState(boolean param0) {
         if (!param0) {
           field_c = (String) null;
           if (null == this.field_j) {
@@ -127,7 +127,7 @@ final class fc {
         int var1 = 124 / ((27 - param0) / 51);
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handleReportAction(int param0, int param1, int param2) {
         if (param2 <= 44) {
           return false;
         }
@@ -138,7 +138,7 @@ final class fc {
         return true;
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean handleChatAction(int param0, int param1, int param2) {
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (8 == param0) {
@@ -148,13 +148,13 @@ final class fc {
             DialPainter.a((byte) 49, this.field_k, this.field_b);
           } else {
             if (param0 == 11) {
-              gb.a((byte) 49, param2, 0, this.field_l);
+              ServerIntArrayRequest.setChatChannelFilter((byte) 49, param2, 0, this.field_l);
             } else {
               if (12 == param0) {
-                gb.a((byte) -96, param2, 1, this.field_l);
+                ServerIntArrayRequest.setChatChannelFilter((byte) -96, param2, 1, this.field_l);
               } else {
                 if (param0 == 13) {
-                  gb.a((byte) -96, param2, 2, this.field_l);
+                  ServerIntArrayRequest.setChatChannelFilter((byte) -96, param2, 2, this.field_l);
                 } else {
                   if (param0 == 14) {
                     po.a(54);
@@ -179,7 +179,7 @@ final class fc {
         return true;
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean handleSocialAction(int param0, int param1, byte param2) {
         Object var4;
         String var5;
         String var6;
@@ -229,7 +229,7 @@ final class fc {
         return true;
     }
 
-    final void a(int[] param0, int param1, byte param2) {
+    final void addSocialActions(int[] param0, int param1, byte param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -242,7 +242,7 @@ final class fc {
         try {
           if (this.field_k != null && (~this.field_b != ~UsernameAvailabilityValidator.field_p ||
             param1 == 2) && po.field_b == 2) {
-            var7 = this.a(-121);
+            var7 = this.getDisplayName(-121);
             var4 = var7;
             var5 = NodeSequence.a((byte) -90, this.field_k);
             var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
@@ -276,7 +276,7 @@ final class fc {
             }
           }
           if (param2 >= -13) {
-            this.a(false, -97);
+            this.addInviteActions(false, -97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -293,7 +293,7 @@ final class fc {
         }
     }
 
-    private final String a(int param0) {
+    private final String getDisplayName(int param0) {
         String var2 = null;
         if (null != this.field_h) {
           var2 = this.field_h;
@@ -306,7 +306,7 @@ final class fc {
         return (String) null;
     }
 
-    final void b(int param0) {
+    final void addReportAction(int param0) {
         String var3 = null;
         String var2 = null;
         String var2Lifetime1;
@@ -314,7 +314,7 @@ final class fc {
           this.field_i = (int[]) null;
           if (this.field_k != null) {
             if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
-              var3 = this.a(-127);
+              var3 = this.getDisplayName(-127);
               var2 = var3;
               this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
             }
@@ -326,14 +326,14 @@ final class fc {
           return;
         }
         if (~UsernameAvailabilityValidator.field_p != ~this.field_b) {
-          var3 = this.a(-127);
+          var3 = this.getDisplayName(-127);
           var2Lifetime1 = var3;
           this.field_j.a(1, 17, QuickChatCategoryRegistry.a(TextFieldValidator.field_m, 4371, new String[]{var3}));
           return;
         }
     }
 
-    final static int a(int param0, CharSequence param1, byte param2, boolean param3) {
+    final static int parseInteger(int param0, CharSequence param1, byte param2, boolean param3) {
         int var9 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -415,7 +415,7 @@ final class fc {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void drawMenu(int param0, boolean param1) {
         if (param0 == 13505) {
           this.field_j.drawFullRaster(param1, 122);
           return;
@@ -424,7 +424,7 @@ final class fc {
         this.field_j.drawFullRaster(param1, 122);
     }
 
-    final void a(nf param0, byte param1) {
+    final void addChatFilterActions(nf param0, byte param1) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -448,7 +448,7 @@ final class fc {
             this.field_j.a(1, 13, StatefulWidgetTheme.field_A);
           }
           if (param1 >= -67) {
-            this.b(-9);
+            this.addReportAction(-9);
           }
           if (2 == param0.field_n) {
             if (0 == ul.field_Hb) {
@@ -471,7 +471,7 @@ final class fc {
         }
     }
 
-    final void a(boolean param0) {
+    final void addRoomJoinActions(boolean param0) {
         String var3;
         int var4;
         LobbyRoomEntry var6;
@@ -554,7 +554,7 @@ final class fc {
         this.field_j.a(1, 3, QuickChatCategoryRegistry.a(im.field_a, 4371, new String[]{var3}));
     }
 
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean handleLobbyAction(int param0, int param1, int param2) {
         int var5;
         CharSequence var6;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -590,7 +590,7 @@ final class fc {
           return true;
         }
         var6 = (CharSequence) null;
-        fc.a(-97, (CharSequence) null, (byte) 99, true);
+        PlayerContextMenuController.parseInteger(-97, (CharSequence) null, (byte) 99, true);
         if (0 == param2) {
           ArchiveSourceManager.a((byte) 92, param0, this.field_b);
           return true;
@@ -622,7 +622,7 @@ final class fc {
         return true;
     }
 
-    fc(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenuController(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ul(hd.field_t);
           this.field_i = param6;

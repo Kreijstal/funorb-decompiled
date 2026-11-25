@@ -6,7 +6,7 @@ final class TurnEventLog {
     static String field_e;
     IntrusiveDeque field_a;
     static boolean field_b;
-    static fg field_h;
+    static AccountConnectionPhase field_h;
     static byte[] field_c;
     static String[] field_j;
     static char[] field_f;
@@ -404,7 +404,7 @@ final class TurnEventLog {
     static {
         field_e = "Loading sound effects";
         field_b = false;
-        field_h = new fg();
+        field_h = new AccountConnectionPhase();
         field_j = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_f = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
         field_g = new int[8192];

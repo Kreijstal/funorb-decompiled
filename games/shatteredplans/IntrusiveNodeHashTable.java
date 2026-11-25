@@ -9,8 +9,8 @@ final class IntrusiveNodeHashTable {
     private int field_b;
     private IntrusiveNode[] field_a;
     private IntrusiveNode field_l;
-    static fg field_d;
-    static fg field_i;
+    static AccountConnectionPhase field_d;
+    static AccountConnectionPhase field_i;
     private int field_c;
     static Sprite field_h;
     static boolean field_e;
@@ -305,8 +305,8 @@ final class IntrusiveNodeHashTable {
 
     static {
         field_k = new java.util.zip.CRC32();
-        field_d = new fg();
+        field_d = new AccountConnectionPhase();
         field_j = "Add <%0> to friend list";
-        field_i = new fg();
+        field_i = new AccountConnectionPhase();
     }
 }

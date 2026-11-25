@@ -327,9 +327,9 @@ final class lr {
         lq var12 = null;
         CipherPacketBuffer var13 = null;
         int[] var14 = null;
-        gb var15 = null;
+        ServerIntArrayRequest var15 = null;
         Object var16 = null;
-        gb var16_ref = null;
+        ServerIntArrayRequest var16_ref = null;
         int[] var17 = null;
         var16 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -352,7 +352,7 @@ final class lr {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(16711680);
             }
-            var15 = (gb) (SolMapGenerator.field_o.startForward(0));
+            var15 = (ServerIntArrayRequest) (SolMapGenerator.field_o.startForward(0));
             if (var15 == null) {
               q.g(-112);
               return;
@@ -373,7 +373,7 @@ final class lr {
             var12.unlink((byte) -108);
           } else {
             if (var2 == 2) {
-              var16_ref = (gb) (SolMapGenerator.field_o.startForward(0));
+              var16_ref = (ServerIntArrayRequest) (SolMapGenerator.field_o.startForward(0));
               if (var16_ref == null) {
                 q.g(-120);
                 return;
