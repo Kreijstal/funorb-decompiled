@@ -242,7 +242,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 }
               } else {
                 if (!Dialog.d(true)) {
-                  GzipInflater.a(1);
+                  GzipInflater.initializeClientMenus(1);
                 }
                 DisplayModeInfo.field_e = true;
               }
@@ -1171,7 +1171,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 if (PointsVictoryChecker.isMenuScreen((byte) -111, PlayerRankingRequest.field_o)) {
                   DiskCacheWorker.commitMenuTransition(1048576);
                 }
-                GzipInflater.a(1);
+                GzipInflater.initializeClientMenus(1);
               }
               AccountStatusDialog.field_ob = false;
               BattleContribution.field_s = false;
@@ -1334,7 +1334,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           ValidationState.c(121);
         }
         GameSpriteResources.field_h = SoundCache.createArchive(3, 50);
-        ChatMessage.field_d = IterableNodeHashTable.a(5, true, param0, !param0 ? true : false, false);
+        ChatMessage.field_d = IterableNodeHashTable.createArchive(5, true, param0, !param0 ? true : false, false);
         PointsVictoryChecker.field_l = SoundCache.createArchive(6, 93);
         IntrusiveNodeHashTable.field_g = SoundCache.createArchive(7, 110);
         IntHashIndex.field_a = SoundCache.createArchive(8, 90);

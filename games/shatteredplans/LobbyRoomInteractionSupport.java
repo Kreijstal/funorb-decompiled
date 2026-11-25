@@ -471,7 +471,7 @@ final class LobbyRoomInteractionSupport {
             if (ClientRasterSupport.field_c.field_rb != 0) {
               IntrusiveNodeHashTable.field_e = false;
             }
-            AggressiveAi.a(63, false, MenuInputState.field_a, param2);
+            AggressiveAi.updateRoomOptionsAndFilters(63, false, MenuInputState.field_a, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

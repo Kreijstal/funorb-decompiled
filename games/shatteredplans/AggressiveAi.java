@@ -95,7 +95,7 @@ final class AggressiveAi extends StandardAi {
         try {
           if (param1 < 41) {
             var5 = (LobbyRoomEntry) null;
-            AggressiveAi.a(-12, false, (LobbyRoomEntry) null, -124);
+            AggressiveAi.updateRoomOptionsAndFilters(-12, false, (LobbyRoomEntry) null, -124);
           }
           if (param0.field_R != null) {
             stackIn_5_0 = param0.field_R.field_r;
@@ -174,7 +174,7 @@ final class AggressiveAi extends StandardAi {
         }
     }
 
-    final static void a(int param0, boolean param1, LobbyRoomEntry param2, int param3) {
+    final static void updateRoomOptionsAndFilters(int param0, boolean param1, LobbyRoomEntry param2, int param3) {
         IconLabelPanel dupTemp$0 = null;
         int var18_int = 0;
         int var25 = 0;

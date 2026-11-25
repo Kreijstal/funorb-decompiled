@@ -83,7 +83,7 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           PanelNode.field_o = false;
           UnderageAccountInfoPanel.field_D = ChatMessage.field_c;
           RandomAccessCacheFile.initializeChatHistory(115, 200);
-          RecklessAi.a(-94, param2, param1);
+          RecklessAi.checkLobbyArchiveSetupGuard(-94, param2, param1);
           PointsVictoryChecker.initializePromotionResources(param0, 0, 0, (byte) -3, OpacityWidget.field_B, 16777215);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

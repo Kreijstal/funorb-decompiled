@@ -21,7 +21,7 @@ final class IterableNodeHashTable implements Iterable {
         field_g = null;
         field_i = null;
         if (param0 != -1215) {
-          IterableNodeHashTable.b(57);
+          IterableNodeHashTable.loginCreatedAccount(57);
           field_c = null;
           return;
         }
@@ -32,18 +32,18 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static void b(int param0) {
+    final static void loginCreatedAccount(int param0) {
         LeaderboardSortSupport.openAccountStatusDialog(true, -1, HighscoreResponseSupport.field_g, AccountCreationForm.field_G);
         if (param0 > -28) {
           byte[] var2 = (byte[]) null;
-          IterableNodeHashTable.a((byte[]) null, -113);
+          IterableNodeHashTable.decodeCp1252((byte[]) null, -113);
           ToggleButton.field_D = true;
           return;
         }
         ToggleButton.field_D = true;
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String decodeCp1252(byte[] param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -149,7 +149,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static Archive a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    final static Archive createArchive(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
           field_c = (String) null;
           return PasswordValidator.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);

@@ -233,7 +233,7 @@ final class MapStateReader {
               var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.startForward(0));
               while (var21_ref_sd != null) {
                 QuaternaryListSequence.a(127, var21_ref_sd);
-                SolMapReader.a(var21_ref_sd, -5);
+                SolMapReader.recomputeTerritoryResourceSurplus(var21_ref_sd, -5);
                 var22_ref_lnLifetime1 = var21_ref_sd.firstStar(18229);
                 while (var22_ref_lnLifetime1 != null) {
                   QuickChatMenuSupport.updateMinimumGarrison(param7, false, var22_ref_lnLifetime1, (byte) -2);
@@ -244,7 +244,7 @@ final class MapStateReader {
             } else {
               if (null != param4[var20Lifetime1].field_m) {
                 QuaternaryListSequence.a(123, param4[var20Lifetime1].field_m);
-                SolMapReader.a(param4[var20Lifetime1].field_m, -5);
+                SolMapReader.recomputeTerritoryResourceSurplus(param4[var20Lifetime1].field_m, -5);
                 var21_ref_ln = param4[var20Lifetime1].field_m.firstStar(18229);
                 while (var21_ref_ln != null) {
                   QuickChatMenuSupport.updateMinimumGarrison(param7, false, var21_ref_ln, (byte) -2);

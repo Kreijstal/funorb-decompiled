@@ -65,7 +65,7 @@ final class SolMapReader implements MapGenerator {
         return var4;
     }
 
-    final static void a(Territory param0, int param1) {
+    final static void recomputeTerritoryResourceSurplus(Territory param0, int param1) {
         int[] var11 = null;
         int[] var9 = null;
         int[] var7 = null;
@@ -99,7 +99,7 @@ final class SolMapReader implements MapGenerator {
             }
           }
           if (param1 != -5) {
-            SolMapReader.b(31);
+            SolMapReader.tryAcquireChatSendSlot(31);
           }
           var8 = 0;
           var3Lifetime1 = var8;
@@ -115,7 +115,7 @@ final class SolMapReader implements MapGenerator {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean tryAcquireChatSendSlot(int param0) {
         int var1;
         long var2;
         long var4;
@@ -149,14 +149,14 @@ final class SolMapReader implements MapGenerator {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void readChatRestrictionFlags(int param0) {
         LoginMethodPreference.field_g = false;
         HighscoreResponseSupport.field_b = ~SpriteWipeSupport.field_a.readUnsignedByte(-99) == param0 ? true : false;
     }
 
     public static void clearStatics(byte param0) {
         if (param0 != 87) {
-          SolMapReader.a(false, 42, -4, 3);
+          SolMapReader.updateChatHistoryPanel(false, 42, -4, 3);
         }
         field_c = null;
     }
@@ -170,7 +170,7 @@ final class SolMapReader implements MapGenerator {
         }
     }
 
-    final static ChatHistoryEntry a(boolean param0, int param1, int param2, int param3) {
+    final static ChatHistoryEntry updateChatHistoryPanel(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_46_0 = false;
         Object var4;
         int var5;

@@ -382,7 +382,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = IntrusiveDequeCursor.getVisibleTooltipText(false);
         if (var5 != null) {
-          MusicVoice.field_I.a(IconTextPanel.field_Fb, RandomAccessCacheFile.field_g, 106, var5);
+          MusicVoice.field_I.drawTooltip(IconTextPanel.field_Fb, RandomAccessCacheFile.field_g, 106, var5);
         }
     }
 

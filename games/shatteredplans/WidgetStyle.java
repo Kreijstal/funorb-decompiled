@@ -23,7 +23,7 @@ final class WidgetStyle {
     int field_c;
     int field_k;
 
-    final void a(BitmapFont param0, boolean param1) {
+    final void initializeDefaultThemes(BitmapFont param0, boolean param1) {
         WidgetTheme var17 = null;
         StatefulWidgetTheme var4 = null;
         Sprite[] var5 = null;
@@ -127,17 +127,17 @@ final class WidgetStyle {
         field_m = (Sprite[][]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void fillRectAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SoftwareRasterizer.fillRectAlpha(param3, param6, param0, param4, param2, param1);
         int var8 = 31 % ((46 - param5) / 58);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = -70 / ((param1 + 2) / 63);
         SoftwareRasterizer.drawLine(param0, param4, param2, param5, param3);
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isTutorialConditionMet(String param0, byte param1) {
         boolean stackIn_3_0 = false;
         boolean stackIn_8_0 = false;
         boolean stackIn_14_0 = false;
@@ -256,7 +256,7 @@ final class WidgetStyle {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3) {
+    final void drawTooltip(int param0, int param1, int param2, String param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -264,9 +264,9 @@ final class WidgetStyle {
         RuntimeException var5 = null;
         try {
           if (this.field_n) {
-            this.a(param3, param0, param1, 0);
+            this.drawWrappedTooltip(param3, param0, param1, 0);
           } else {
-            this.a(-116, param0, param3, param1);
+            this.drawSingleLineTooltip(-116, param0, param3, param1);
           }
           if (param2 < 100) {
             this.field_k = -111;
@@ -286,7 +286,7 @@ final class WidgetStyle {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void drawWrappedTooltip(String param0, int param1, int param2, int param3) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -365,7 +365,7 @@ final class WidgetStyle {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void drawSingleLineTooltip(int param0, int param1, String param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

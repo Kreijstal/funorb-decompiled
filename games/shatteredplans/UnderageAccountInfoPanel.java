@@ -558,7 +558,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             return;
           }
           if (param0 == this.field_H) {
-            IterableNodeHashTable.b(param1 - 55);
+            IterableNodeHashTable.loginCreatedAccount(param1 - 55);
             this.field_I.closeStatusDialog((byte) -104);
           }
           return;

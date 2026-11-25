@@ -37,7 +37,7 @@ final class TextReplacementEntry {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2 = IterableNodeHashTable.a(param0, param1 ^ -17731);
+          var2 = IterableNodeHashTable.decodeCp1252(param0, param1 ^ -17731);
           if (param1 != -17) {
             field_b = (AnimatedPanel[]) null;
           }

@@ -763,2486 +763,2486 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 Archive.field_d = param0;
                 var2 = TertiaryLinkNode.a("loginm3", 511);
                 if (null != var2) {
-                  QuickChatParameterType.field_f = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loginm2", 511);
                 if (null != var2) {
-                  QuaternaryNodeList.field_d = IterableNodeHashTable.a(var2, 17746);
+                  QuaternaryNodeList.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loginm1", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("idlemessage20min", 511);
                 if (var2 != null) {
-                  IntNode.field_n = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 if (!param1) {
                   finished = true; return;
                 }
                 var2 = TertiaryLinkNode.a("error_js5crc", 511);
                 if (null != var2) {
-                  ClientInputSupport.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("error_js5io", 511);
                 if (null != var2) {
-                  SpriteWipeSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SpriteWipeSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("error_js5connect_full", 511);
                 if (null != var2) {
-                  ArchiveNetworkClient.field_r = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveNetworkClient.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("error_js5connect", 511);
                 if (null != var2) {
-                  StarAbandonedEvent.field_n = IterableNodeHashTable.a(var2, 17746);
+                  StarAbandonedEvent.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_gameupdated", 511);
                 if (var2 != null) {
-                  PasswordInputPainter.field_w = IterableNodeHashTable.a(var2, 17746);
+                  PasswordInputPainter.field_w = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_unable", 511);
                 if (var2 != null) {
-                  ClientCapabilitySupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientCapabilitySupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_ineligible", 511);
                 if (null != var2) {
-                  IconLabelPanel.field_xb = IterableNodeHashTable.a(var2, 17746);
+                  IconLabelPanel.field_xb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("usernameprompt", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("passwordprompt", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("andagainprompt", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_read", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_ignore", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_oneunread", 511);
                 if (null != var2) {
-                  GameApplet.field_h = IterableNodeHashTable.a(var2, 17746);
+                  GameApplet.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_xunread", 511);
                 if (var2 != null) {
-                  MapViewState.field_M = IterableNodeHashTable.a(var2, 17746);
+                  MapViewState.field_M = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_gotowebsite", 511);
                 if (var2 != null) {
-                  ClientClockSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ticketing_waitingformessages", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_on", 511);
                 if (null != var2) {
-                  AccountStatusSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_friends", 511);
                 if (var2 != null) {
-                  SoundPlayback.field_o = IterableNodeHashTable.a(var2, 17746);
+                  SoundPlayback.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_off", 511);
                 if (var2 != null) {
-                  ExternalLinkSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ExternalLinkSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby", 511);
                 if (var2 != null) {
-                  MessageKind.field_a = IterableNodeHashTable.a(var2, 17746);
+                  MessageKind.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_public", 511);
                 if (var2 != null) {
-                  MapView.field_Fb = IterableNodeHashTable.a(var2, 17746);
+                  MapView.field_Fb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_ignore", 511);
                 if (var2 != null) {
-                  WidgetStateStyle.field_b = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_tips", 511);
                 if (null != var2) {
-                  SocialListEntry.field_yb = IterableNodeHashTable.a(var2, 17746);
+                  SocialListEntry.field_yb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game", 511);
                 if (null != var2) {
-                  QuickChatCategoryRegistry.field_c = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryRegistry.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_private", 511);
                 if (var2 != null) {
-                  CellVertex.field_e = IterableNodeHashTable.a(var2, 17746);
+                  CellVertex.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_entered_game", 511);
                 if (var2 != null) {
-                  IsaacBackedRandom.field_e = IterableNodeHashTable.a(var2, 17746);
+                  IsaacBackedRandom.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_joined_your_game", 511);
                 if (null != var2) {
-                  CachedArchiveSource.field_y = IterableNodeHashTable.a(var2, 17746);
+                  CachedArchiveSource.field_y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_entered_other_game", 511);
                 if (null != var2) {
-                  ValidatedTextInputWidget.field_Y = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_Y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_left_lobby", 511);
                 if (null != var2) {
-                  BattleSnapshot.field_p = IterableNodeHashTable.a(var2, 17746);
+                  BattleSnapshot.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_lost_con", 511);
                 if (null != var2) {
-                  BirthDateConfirmationForm.field_N = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_N = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_cannot_join_full", 511);
                 if (null != var2) {
-                  VerticalMenuSlider.field_E = IterableNodeHashTable.a(var2, 17746);
+                  VerticalMenuSlider.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_cannot_join_inprogress", 511);
                 if (var2 != null) {
-                  GameScreen.field_i = IterableNodeHashTable.a(var2, 17746);
+                  GameScreen.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_declined_invite", 511);
                 if (null != var2) {
-                  GuestPlayForm.field_F = IterableNodeHashTable.a(var2, 17746);
+                  GuestPlayForm.field_F = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_withdrew_request", 511);
                 if (null != var2) {
-                  GzipInflater.field_b = IterableNodeHashTable.a(var2, 17746);
+                  GzipInflater.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_removed", 511);
                 if (var2 != null) {
-                  BirthDateValidator.field_l = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateValidator.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_dropped_out", 511);
                 if (null != var2) {
-                  SpriteWipeSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SpriteWipeSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_entered_other_game", 511);
                 if (null != var2) {
-                  LobbyRoomInteractionSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomInteractionSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_game_is_full", 511);
                 if (var2 != null) {
-                  field_m = IterableNodeHashTable.a(var2, 17746);
+                  field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_game_has_started", 511);
                 if (var2 != null) {
-                  GameState.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GameState.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_you_declined_invite", 511);
                 if (null != var2) {
-                  AudioService.field_g = IterableNodeHashTable.a(var2, 17746);
+                  AudioService.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_invite_withdrawn", 511);
                 if (null != var2) {
-                  ServerRequestRetrySupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_request_declined", 511);
                 if (var2 != null) {
-                  GalaxyMap.field_d = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMap.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_request_withdrawn", 511);
                 if (null != var2) {
-                  DisplayModeInfo.field_b = IterableNodeHashTable.a(var2, 17746);
+                  DisplayModeInfo.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_all_players_have_left", 511);
                 if (null != var2) {
-                  GameClientShell.field_o = IterableNodeHashTable.a(var2, 17746);
+                  GameClientShell.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name", 511);
                 if (var2 != null) {
-                  IntroLoadingSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  IntroLoadingSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_rating", 511);
                 if (null != var2) {
-                  LobbyOptionResources.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_friend_add", 511);
                 if (var2 != null) {
-                  ByteArrayReadRequest.field_k = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_friend_rm", 511);
                 if (null != var2) {
-                  SocketArchiveNetworkClient.field_u = IterableNodeHashTable.a(var2, 17746);
+                  SocketArchiveNetworkClient.field_u = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name_add", 511);
                 if (null != var2) {
-                  QuaternaryListSequence.field_f = IterableNodeHashTable.a(var2, 17746);
+                  QuaternaryListSequence.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_name_rm", 511);
                 if (var2 != null) {
-                  TutorialVictoryChecker.field_o = IterableNodeHashTable.a(var2, 17746);
+                  TutorialVictoryChecker.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_lobby_location", 511);
                 if (var2 != null) {
-                  GalaxyMap.field_i = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMap.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_all_games", 511);
                 if (null != var2) {
-                  HorizontalGradientComponent.field_z = IterableNodeHashTable.a(var2, 17746);
+                  HorizontalGradientComponent.field_z = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_status", 511);
                 if (var2 != null) {
-                  GameMenuController.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GameMenuController.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_owner", 511);
                 if (null != var2) {
-                  FleetTrailPoint.field_j = IterableNodeHashTable.a(var2, 17746);
+                  FleetTrailPoint.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_players", 511);
                 if (null != var2) {
-                  QuickChatMenu.field_Lb = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenu.field_Lb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_avg_rating", 511);
                 if (null != var2) {
-                  ValidatedTextInputWidget.field_T = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_T = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_options", 511);
                 if (var2 != null) {
-                  WidgetContainer.field_z = IterableNodeHashTable.a(var2, 17746);
+                  WidgetContainer.field_z = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_elapsed_time", 511);
                 if (null != var2) {
-                  DerelictMapGenerator.field_o = IterableNodeHashTable.a(var2, 17746);
+                  DerelictMapGenerator.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_play_rated", 511);
                 if (null != var2) {
-                  GameApplet.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GameApplet.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_create_unrated", 511);
                 if (var2 != null) {
-                  DisplayModeInfo.field_a = IterableNodeHashTable.a(var2, 17746);
+                  DisplayModeInfo.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options", 511);
                 if (null != var2) {
-                  MessageKind.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MessageKind.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_whocanjoin", 511);
                 if (null != var2) {
-                  SocialListPanel.field_Ab = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Ab = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_players", 511);
                 if (null != var2) {
-                  OrderableInsertionSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  OrderableInsertionSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_dontmind", 511);
                 if (null != var2) {
-                  DefendTask.field_r = IterableNodeHashTable.a(var2, 17746);
+                  DefendTask.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_allow_spectate", 511);
                 if (var2 != null) {
-                  TutorialScene.field_s = IterableNodeHashTable.a(var2, 17746);
+                  TutorialScene.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_options_ratedgametype", 511);
                 if (var2 != null) {
-                  QuickChatCategoryRegistry.field_e = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryRegistry.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("yes", 511);
                 if (null != var2) {
-                  IntNode.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no", 511);
                 if (null != var2) {
-                  LobbyRoomDecoder.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_invite_players", 511);
                 if (null != var2) {
-                  ListContent.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ListContent.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("close", 511);
                 if (null != var2) {
-                  PopupPlacementSupport.field_n = IterableNodeHashTable.a(var2, 17746);
+                  PopupPlacementSupport.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("add_x_to_friends", 511);
                 if (null != var2) {
-                  IntrusiveNodeHashTable.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveNodeHashTable.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("add_x_to_ignore", 511);
                 if (null != var2) {
-                  TextHotspotWidget.field_F = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_F = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rm_x_from_friends", 511);
                 if (null != var2) {
-                  FocusableWidget.field_C = IterableNodeHashTable.a(var2, 17746);
+                  FocusableWidget.field_C = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rm_x_from_ignore", 511);
                 if (var2 != null) {
-                  ByteArrayNode.field_m = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayNode.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("send_pm_to_x", 511);
                 if (null != var2) {
-                  NetworkArchiveRequest.field_B = IterableNodeHashTable.a(var2, 17746);
+                  NetworkArchiveRequest.field_B = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("send_qc_to_x", 511);
                 if (var2 != null) {
-                  AchievementProgress.field_e = IterableNodeHashTable.a(var2, 17746);
+                  AchievementProgress.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("send_pm", 511);
                 if (var2 != null) {
-                  StatusContent.field_d = IterableNodeHashTable.a(var2, 17746);
+                  StatusContent.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invite_accept_xs_game", 511);
                 if (null != var2) {
-                  Archive.field_i = IterableNodeHashTable.a(var2, 17746);
+                  Archive.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invite_decline_xs_game", 511);
                 if (var2 != null) {
-                  TutorialScene.field_i = IterableNodeHashTable.a(var2, 17746);
+                  TutorialScene.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_xs_game", 511);
                 if (var2 != null) {
-                  MenuTransitionSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  MenuTransitionSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_request_xs_game", 511);
                 if (var2 != null) {
-                  GarrisonTask.field_r = IterableNodeHashTable.a(var2, 17746);
+                  GarrisonTask.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_withdraw_request_xs_game", 511);
                 if (null != var2) {
-                  PlayerOverlaySupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  PlayerOverlaySupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_kick_x_from_this_game", 511);
                 if (null != var2) {
-                  ContentDialog.field_fb = IterableNodeHashTable.a(var2, 17746);
+                  ContentDialog.field_fb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_withdraw_invite_to_x", 511);
                 if (null != var2) {
-                  PlayerContextMenuController.field_c = IterableNodeHashTable.a(var2, 17746);
+                  PlayerContextMenuController.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_accept_x_into_game", 511);
                 if (var2 != null) {
-                  StatusContent.field_g = IterableNodeHashTable.a(var2, 17746);
+                  StatusContent.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_reject_x_from_game", 511);
                 if (null != var2) {
-                  BufferedCacheFile.field_f = IterableNodeHashTable.a(var2, 17746);
+                  BufferedCacheFile.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gameopt_invite_x_to_game", 511);
                 if (var2 != null) {
-                  WeightedLruCache.field_f = IterableNodeHashTable.a(var2, 17746);
+                  WeightedLruCache.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("report_x_for_abuse", 511);
                 if (null != var2) {
-                  TextFieldValidator.field_m = IterableNodeHashTable.a(var2, 17746);
+                  TextFieldValidator.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_send_message_password_a", 511);
                 if (var2 != null) {
-                  ClientClockSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_send_message_password_b", 511);
                 if (var2 != null) {
-                  TextFieldWidget.field_K = IterableNodeHashTable.a(var2, 17746);
+                  TextFieldWidget.field_K = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_show_all", 511);
                 if (var2 != null) {
-                  RasterSpanFactory.field_a = IterableNodeHashTable.a(var2, 17746);
+                  RasterSpanFactory.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_friends_only", 511);
                 if (var2 != null) {
-                  ClientLobbyResources.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_friends", 511);
                 if (var2 != null) {
-                  TextHotspotWidget.field_H = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_H = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_hide", 511);
                 if (var2 != null) {
-                  ValidationMessageWidget.field_O = IterableNodeHashTable.a(var2, 17746);
+                  ValidationMessageWidget.field_O = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_show_all", 511);
                 if (null != var2) {
-                  PaddedContentDialog.field_pb = IterableNodeHashTable.a(var2, 17746);
+                  PaddedContentDialog.field_pb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_friends_only", 511);
                 if (var2 != null) {
-                  IntNode.field_m = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_friends", 511);
                 if (null != var2) {
-                  BattleExplosionVisual.field_s = IterableNodeHashTable.a(var2, 17746);
+                  BattleExplosionVisual.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_hide", 511);
                 if (var2 != null) {
-                  StatefulWidgetTheme.field_A = IterableNodeHashTable.a(var2, 17746);
+                  StatefulWidgetTheme.field_A = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_pm_show_all", 511);
                 if (null != var2) {
-                  SocialListSetupSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  SocialListSetupSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_pm_friends_only", 511);
                 if (null != var2) {
-                  PlacementEvent.field_m = IterableNodeHashTable.a(var2, 17746);
+                  PlacementEvent.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_pm_friends", 511);
                 if (var2 != null) {
-                  TutorialAi.field_w = IterableNodeHashTable.a(var2, 17746);
+                  TutorialAi.field_w = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_invisible_and_silent_mode", 511);
                 if (null != var2) {
-                  SecondaryNodeDeque.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeDeque.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_have_been_removed_from_xs_game", 511);
                 if (null != var2) {
-                  LobbyUiSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyUiSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("your_rating_is_x", 511);
                 if (var2 != null) {
-                  BattleSnapshot.field_A = IterableNodeHashTable.a(var2, 17746);
+                  BattleSnapshot.field_A = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_are_on_x_server", 511);
                 if (var2 != null) {
-                  DelegatingCanvas.field_b = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_game", 511);
                 if (null != var2) {
-                  ByteArrayStorage.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayStorage.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unrated_game", 511);
                 if (null != var2) {
-                  ArrayWidgetGroup.field_G = IterableNodeHashTable.a(var2, 17746);
+                  ArrayWidgetGroup.field_G = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_game_tips", 511);
                 if (null != var2) {
-                  GameTextResources.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GameTextResources.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("searching_for_opponent_singular", 511);
                 if (var2 != null) {
-                  IntHashIndex.field_c = IterableNodeHashTable.a(var2, 17746);
+                  IntHashIndex.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("searching_for_opponents_plural", 511);
                 if (null != var2) {
-                  AccountRequestState.field_f = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("find_opponent_singular", 511);
                 if (var2 != null) {
-                  TooltipSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TooltipSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("find_opponents_plural", 511);
                 if (null != var2) {
-                  CombinedTerritory.field_A = IterableNodeHashTable.a(var2, 17746);
+                  CombinedTerritory.field_A = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_game_tips_setup_singular", 511);
                 if (var2 != null) {
-                  SpriteStripButtonPainter.field_v = IterableNodeHashTable.a(var2, 17746);
+                  SpriteStripButtonPainter.field_v = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_game_tips_setup_plural", 511);
                 if (null != var2) {
-                  DualLinkNode.field_i = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkNode.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waiting_to_start_hint", 511);
                 if (var2 != null) {
-                  ClientLobbyResources.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("your_game", 511);
                 if (null != var2) {
-                  DiplomacyNotice.field_m = IterableNodeHashTable.a(var2, 17746);
+                  DiplomacyNotice.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("game_full", 511);
                 if (null != var2) {
-                  SoundPlayback.field_j = IterableNodeHashTable.a(var2, 17746);
+                  SoundPlayback.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_requests_one", 511);
                 if (null != var2) {
-                  SolVictoryChecker.field_k = IterableNodeHashTable.a(var2, 17746);
+                  SolVictoryChecker.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("join_requests_many", 511);
                 if (var2 != null) {
-                  AudioService.field_e = IterableNodeHashTable.a(var2, 17746);
+                  AudioService.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("xs_game", 511);
                 if (null != var2) {
-                  IntNode.field_q = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waiting_for_x_to_start_game", 511);
                 if (null != var2) {
-                  QuickChatParameterType.field_a = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("game_options_changed", 511);
                 if (null != var2) {
-                  ClientRuntimeState.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientRuntimeState.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("players_x_of_y", 511);
                 if (null != var2) {
-                  BattleEvent.field_r = IterableNodeHashTable.a(var2, 17746);
+                  BattleEvent.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("message_lobby", 511);
                 if (var2 != null) {
-                  GzipInflater.field_h = IterableNodeHashTable.a(var2, 17746);
+                  GzipInflater.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_lobby", 511);
                 if (null != var2) {
-                  ServerIntArrayRequest.field_o = IterableNodeHashTable.a(var2, 17746);
+                  ServerIntArrayRequest.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("message_game", 511);
                 if (null != var2) {
-                  MenuLabel.field_z = IterableNodeHashTable.a(var2, 17746);
+                  MenuLabel.field_z = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("message_team", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_game", 511);
                 if (null != var2) {
-                  IntroLogoSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntroLogoSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("kick", 511);
                 if (var2 != null) {
-                  ArchiveSource.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveSource.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("inviting_x", 511);
                 if (var2 != null) {
-                  WidgetTheme.field_q = IterableNodeHashTable.a(var2, 17746);
+                  WidgetTheme.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("x_wants_to_join", 511);
                 if (var2 != null) {
-                  FleetMove.field_E = IterableNodeHashTable.a(var2, 17746);
+                  FleetMove.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("accept", 511);
                 if (null != var2) {
-                  WidgetTheme.field_m = IterableNodeHashTable.a(var2, 17746);
+                  WidgetTheme.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reject", 511);
                 if (null != var2) {
-                  ValidationIndicator.field_J = IterableNodeHashTable.a(var2, 17746);
+                  ValidationIndicator.field_J = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invite", 511);
                 if (var2 != null) {
-                  PlayerStats.field_p = IterableNodeHashTable.a(var2, 17746);
+                  PlayerStats.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_concluded", 511);
                 if (var2 != null) {
-                  GarrisonTask.field_q = IterableNodeHashTable.a(var2, 17746);
+                  GarrisonTask.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_spectate", 511);
                 if (var2 != null) {
-                  EmailValidationError.field_d = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidationError.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_playing", 511);
                 if (null != var2) {
-                  DialogRoot.field_F = IterableNodeHashTable.a(var2, 17746);
+                  DialogRoot.field_F = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_join", 511);
                 if (null != var2) {
-                  IntroRenderSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntroRenderSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_private", 511);
                 if (null != var2) {
-                  PacketBooleanSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  PacketBooleanSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("status_full", 511);
                 if (null != var2) {
-                  FourIntSubmissionRequest.field_r = IterableNodeHashTable.a(var2, 17746);
+                  FourIntSubmissionRequest.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("players_in_game", 511);
                 if (var2 != null) {
-                  ValidationIndicator.field_H = IterableNodeHashTable.a(var2, 17746);
+                  ValidationIndicator.field_H = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_are_invited_to_xs_game", 511);
                 if (null != var2) {
-                  StringList.field_a = IterableNodeHashTable.a(var2, 17746);
+                  StringList.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("asking_to_join_xs_game", 511);
                 if (var2 != null) {
-                  MenuPointerSupport.field_n = IterableNodeHashTable.a(var2, 17746);
+                  MenuPointerSupport.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("who_can_join", 511);
                 if (var2 != null) {
-                  SolMapGenerator.field_r = IterableNodeHashTable.a(var2, 17746);
+                  SolMapGenerator.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_join", 511);
                 if (var2 != null) {
-                  AccountStatusDialog.field_qb = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusDialog.field_qb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_ask_to_join", 511);
                 if (var2 != null) {
-                  StarAbandonedEvent.field_o = IterableNodeHashTable.a(var2, 17746);
+                  StarAbandonedEvent.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_cannot_join_in_progress", 511);
                 if (null != var2) {
-                  GalaxyMapLayoutSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_spectate", 511);
                 if (var2 != null) {
-                  KeyboardStateSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("you_can_not_spectate", 511);
                 if (var2 != null) {
-                  NumericDateInputWidget.field_K = IterableNodeHashTable.a(var2, 17746);
+                  NumericDateInputWidget.field_K = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("spectate_xs_game", 511);
                 if (var2 != null) {
-                  ByteArrayNode.field_o = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayNode.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hide_players_in_xs_game", 511);
                 if (var2 != null) {
-                  SpriteResourceSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SpriteResourceSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("show_players_in_xs_game", 511);
                 if (null != var2) {
-                  DirectByteArrayStorage.field_g = IterableNodeHashTable.a(var2, 17746);
+                  DirectByteArrayStorage.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connecting_to_friend_server_twoline", 511);
                 if (null != var2) {
-                  GameSession.field_X = IterableNodeHashTable.a(var2, 17746);
+                  GameSession.field_X = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading", 511);
                 if (var2 != null) {
-                  LobbyUiSetupSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  LobbyUiSetupSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("offline", 511);
                 if (var2 != null) {
-                  ConquestVictoryChecker.field_p = IterableNodeHashTable.a(var2, 17746);
+                  ConquestVictoryChecker.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_invite_only", 511);
                 if (null != var2) {
-                  EmailSyntaxValidator.field_p = IterableNodeHashTable.a(var2, 17746);
+                  EmailSyntaxValidator.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_clan", 511);
                 if (null != var2) {
-                  SpriteResourceSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  SpriteResourceSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_friends", 511);
                 if (var2 != null) {
-                  MouseWheelInput.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_similar_rating", 511);
                 if (null != var2) {
-                  GalaxyMapLayoutSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("multiconst_open", 511);
                 if (var2 != null) {
-                  QuickChatCategoryDefinition.field_q = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatCategoryDefinition.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no_options_available", 511);
                 if (null != var2) {
-                  KeyboardStateSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reportabuse", 511);
                 if (var2 != null) {
-                  TooltipSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  TooltipSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("presstabtochat", 511);
                 if (null != var2) {
-                  CipherPacketBuffer.field_q = IterableNodeHashTable.a(var2, 17746);
+                  CipherPacketBuffer.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pressf10toquickchat", 511);
                 if (null != var2) {
-                  LabeledChildWidget.field_E = IterableNodeHashTable.a(var2, 17746);
+                  LabeledChildWidget.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("dob_chatdisabled", 511);
                 if (var2 != null) {
-                  ArchiveLoadProgress.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("dob_enterforchat", 511);
                 if (var2 != null) {
-                  InvalidMapConnectionException.field_c = IterableNodeHashTable.a(var2, 17746);
+                  InvalidMapConnectionException.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("tab_hidechattemporarily", 511);
                 if (null != var2) {
-                  ByteArrayReadRequest.field_n = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("esc_cancelprivatemessage", 511);
                 if (var2 != null) {
-                  PlayerReportPanel.field_Kb = IterableNodeHashTable.a(var2, 17746);
+                  PlayerReportPanel.field_Kb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("esc_cancelthisline", 511);
                 if (null != var2) {
-                  StellarBombEvent.field_m = IterableNodeHashTable.a(var2, 17746);
+                  StellarBombEvent.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatequickchat_from_x", 511);
                 if (null != var2) {
-                  StatusMessagePanel.field_M = IterableNodeHashTable.a(var2, 17746);
+                  StatusMessagePanel.field_M = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatequickchat_to_x", 511);
                 if (var2 != null) {
-                  MatchingTextValidator.field_q = IterableNodeHashTable.a(var2, 17746);
+                  MatchingTextValidator.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatechat_blankarea_explanation", 511);
                 if (null != var2) {
-                  StarLink.field_m = IterableNodeHashTable.a(var2, 17746);
+                  StarLink.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("publicchat_unavailable_ratedgame", 511);
                 if (null != var2) {
-                  FleetTrailPoint.field_k = IterableNodeHashTable.a(var2, 17746);
+                  FleetTrailPoint.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatechat_friend_offline", 511);
                 if (null != var2) {
-                  GameSpriteResources.field_g = IterableNodeHashTable.a(var2, 17746);
+                  GameSpriteResources.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatechat_friend_notlisted", 511);
                 if (var2 != null) {
-                  AccountInputSupport.field_g = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("chatviewscrolledup", 511);
                 if (null != var2) {
-                  PasswordInputPainter.field_u = IterableNodeHashTable.a(var2, 17746);
+                  PasswordInputPainter.field_u = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("thisisrunescapeclan", 511);
                 if (null != var2) {
-                  ClientInputSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("thisisrunescapeclan_notowner", 511);
                 if (null != var2) {
-                  ReflectionQueueSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("runescapeclan", 511);
                 if (null != var2) {
-                  GraphicsSettings.field_i = IterableNodeHashTable.a(var2, 17746);
+                  GraphicsSettings.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_membersonly", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_membersonly", 511);
                 if (null != var2) {
-                  MenuComponent.field_r = IterableNodeHashTable.a(var2, 17746);
+                  MenuComponent.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_1moreratedgame", 511);
                 if (null != var2) {
-                  SecondaryNodeDequeIterator.field_g = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeDequeIterator.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_moreratedgames", 511);
                 if (var2 != null) {
-                  CandidateLink.field_n = IterableNodeHashTable.a(var2, 17746);
+                  CandidateLink.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needrating", 511);
                 if (var2 != null) {
-                  ClientCapabilitySupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientCapabilitySupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_unratedonly", 511);
                 if (null != var2) {
-                  MenuWindow.field_D = IterableNodeHashTable.a(var2, 17746);
+                  MenuWindow.field_D = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_notunlocked", 511);
                 if (null != var2) {
-                  ArchiveNetworkClient.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveNetworkClient.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_cannotbecombined1", 511);
                 if (var2 != null) {
-                  DiplomacyNotice.field_q = IterableNodeHashTable.a(var2, 17746);
+                  DiplomacyNotice.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_cannotbecombined2", 511);
                 if (var2 != null) {
-                  AccountRequestState.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playernotmember", 511);
                 if (null != var2) {
-                  LobbyRoomEntry.field_kc = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomEntry.field_kc = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_younotmember", 511);
                 if (var2 != null) {
-                  UiWidget.field_r = IterableNodeHashTable.a(var2, 17746);
+                  UiWidget.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneedsrating", 511);
                 if (null != var2) {
-                  TutorialOverlaySupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  TutorialOverlaySupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneedrating", 511);
                 if (var2 != null) {
-                  LobbyOptionResources.field_f = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneedsratedgames", 511);
                 if (null != var2) {
-                  ProductionContent.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ProductionContent.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneedratedgames", 511);
                 if (var2 != null) {
-                  FleetVisual.field_h = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerneeds1ratedgame", 511);
                 if (var2 != null) {
-                  NanoFrameTimer.field_i = IterableNodeHashTable.a(var2, 17746);
+                  NanoFrameTimer.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youneed1ratedgame", 511);
                 if (var2 != null) {
-                  PlayerContextMenuController.field_d = IterableNodeHashTable.a(var2, 17746);
+                  PlayerContextMenuController.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playerhasntunlocked", 511);
                 if (var2 != null) {
-                  RandomAccessCacheFile.field_j = IterableNodeHashTable.a(var2, 17746);
+                  RandomAccessCacheFile.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youhaventunlocked", 511);
                 if (null != var2) {
-                  ScrollPane.field_Eb = IterableNodeHashTable.a(var2, 17746);
+                  ScrollPane.field_Eb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_trychanging1", 511);
                 if (var2 != null) {
-                  AwtEventQueueSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AwtEventQueueSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_trychanging2", 511);
                 if (var2 != null) {
-                  BattleEvent.field_s = IterableNodeHashTable.a(var2, 17746);
+                  BattleEvent.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needchanging1", 511);
                 if (null != var2) {
-                  ReflectionQueueSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionQueueSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_needchanging2", 511);
                 if (var2 != null) {
-                  Territory.field_y = IterableNodeHashTable.a(var2, 17746);
+                  Territory.field_y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_mightchange", 511);
                 if (var2 != null) {
-                  SocialListEntry.field_Gb = IterableNodeHashTable.a(var2, 17746);
+                  SocialListEntry.field_Gb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playersdontqualify", 511);
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_playersdontqualify_selectgametab", 511);
                 if (var2 != null) {
-                  HighscoreQueryRequest.field_l = IterableNodeHashTable.a(var2, 17746);
+                  HighscoreQueryRequest.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_unselectedoptions", 511);
                 if (var2 != null) {
-                  SecondaryNodeDeque.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeDeque.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleaseselectoption1", 511);
                 if (var2 != null) {
-                  LobbyOptionSupport.field_h = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionSupport.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleaseselectoption2", 511);
                 if (var2 != null) {
-                  MusicPatch.field_l = IterableNodeHashTable.a(var2, 17746);
+                  MusicPatch.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_badnumplayers", 511);
                 if (var2 != null) {
-                  StripedProgressWidget.field_I = IterableNodeHashTable.a(var2, 17746);
+                  StripedProgressWidget.field_I = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_inviteplayers_or_trychanging1", 511);
                 if (null != var2) {
-                  UrlLoader.field_f = IterableNodeHashTable.a(var2, 17746);
+                  UrlLoader.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_inviteplayers_or_trychanging2", 511);
                 if (null != var2) {
-                  LobbyRoomDecoder.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_novalidcombos", 511);
                 if (null != var2) {
-                  SoundEffectSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_pleasetrychanging", 511);
                 if (var2 != null) {
-                  DateInputWidget.field_F = IterableNodeHashTable.a(var2, 17746);
+                  DateInputWidget.field_F = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_title", 511);
                 if (var2 != null) {
-                  AlignedMenuLabel.field_F = IterableNodeHashTable.a(var2, 17746);
+                  AlignedMenuLabel.field_F = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_mutethisplayer", 511);
                 if (var2 != null) {
-                  SolMapGenerator.field_n = IterableNodeHashTable.a(var2, 17746);
+                  SolMapGenerator.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_suggestmute", 511);
                 if (var2 != null) {
-                  StarLinkPlanner.field_e = IterableNodeHashTable.a(var2, 17746);
+                  StarLinkPlanner.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_intro", 511);
                 if (var2 != null) {
-                  WidgetTheme.field_a = IterableNodeHashTable.a(var2, 17746);
+                  WidgetTheme.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_intro_no_name", 511);
                 if (null != var2) {
-                  LobbyOptionResources.field_g = IterableNodeHashTable.a(var2, 17746);
+                  LobbyOptionResources.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ra_explanation", 511);
                 if (var2 != null) {
-                  DualLinkDequeSequence.field_j = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkDequeSequence.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_pillar_0", 511);
                 if (null != var2) {
-                  StripedProgressWidget.field_D = IterableNodeHashTable.a(var2, 17746);
+                  StripedProgressWidget.field_D = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_0", 511);
                 if (null != var2) {
-                  MusicVoice.field_x = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_x = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_1", 511);
                 if (var2 != null) {
-                  TutorialTextSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialTextSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_2", 511);
                 if (var2 != null) {
-                  SoundEffectDefinition.field_b = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectDefinition.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_3", 511);
                 if (null != var2) {
-                  GalaxyMapLayoutSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GalaxyMapLayoutSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_4", 511);
                 if (var2 != null) {
-                  Archive.field_h = IterableNodeHashTable.a(var2, 17746);
+                  Archive.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_0_5", 511);
                 if (var2 != null) {
-                  RichTextLayout.field_o = IterableNodeHashTable.a(var2, 17746);
+                  RichTextLayout.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
             }
             void loadAccountRulesAndMenuText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("rule_pillar_1", 511);
                 if (var2 != null) {
-                  StringList.field_k = IterableNodeHashTable.a(var2, 17746);
+                  StringList.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_0", 511);
                 if (null != var2) {
-                  MidiPcmStream.field_o = IterableNodeHashTable.a(var2, 17746);
+                  MidiPcmStream.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_1", 511);
                 if (var2 != null) {
-                  ArchiveIndex.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveIndex.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_2", 511);
                 if (null != var2) {
-                  TutorialStageSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialStageSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_3", 511);
                 if (null != var2) {
-                  QuickChatHelpPanelSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatHelpPanelSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_1_4", 511);
                 if (var2 != null) {
-                  MenuWindow.field_w = IterableNodeHashTable.a(var2, 17746);
+                  MenuWindow.field_w = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_pillar_2", 511);
                 if (var2 != null) {
-                  GzipInflater.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GzipInflater.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_2_0", 511);
                 if (null != var2) {
-                  OpacityWidget.field_G = IterableNodeHashTable.a(var2, 17746);
+                  OpacityWidget.field_G = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_2_1", 511);
                 if (null != var2) {
-                  Player.field_j = IterableNodeHashTable.a(var2, 17746);
+                  Player.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rule_2_2", 511);
                 if (null != var2) {
-                  ClientLobbyResources.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ClientLobbyResources.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("createafreeaccount", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("cancel", 511);
                 if (null != var2) {
-                  LobbyRoomEntry.field_bc = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomEntry.field_bc = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleaselogintoplay", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleaselogin", 511);
                 if (null != var2) {
-                  AchievementProgress.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AchievementProgress.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleaselogin_member", 511);
                 if (var2 != null) {
-                  RasterSpanFactory.field_b = IterableNodeHashTable.a(var2, 17746);
+                  RasterSpanFactory.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invaliduserorpass", 511);
                 if (null != var2) {
-                  AccountCreationForm.field_N = IterableNodeHashTable.a(var2, 17746);
+                  AccountCreationForm.field_N = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasetryagain", 511);
                 if (null != var2) {
-                  ProgressDialog.field_ib = IterableNodeHashTable.a(var2, 17746);
+                  ProgressDialog.field_ib = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasereenterpass", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("playfreeversion", 511);
                 if (var2 != null) {
-                  IntrusiveDeque.field_f = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDeque.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reloadgame", 511);
                 if (null != var2) {
-                  SoundEffectSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  SoundEffectSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("toserverlist", 511);
                 if (var2 != null) {
-                  IconTextPanel.field_yb = IterableNodeHashTable.a(var2, 17746);
+                  IconTextPanel.field_yb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("tocustomersupport", 511);
                 if (var2 != null) {
-                  AccountStatusSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("changedisplayname", 511);
                 if (null != var2) {
-                  MouseWheelInput.field_d = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntohomepage", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("justplay", 511);
                 if (null != var2) {
-                  MapView.field_Pb = IterableNodeHashTable.a(var2, 17746);
+                  MapView.field_Pb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("justplay_excl", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login", 511);
                 if (var2 != null) {
-                  OrderableInsertionSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  OrderableInsertionSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("goback", 511);
                 if (var2 != null) {
-                  DiskCacheWorker.field_a = IterableNodeHashTable.a(var2, 17746);
+                  DiskCacheWorker.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("otheroptions", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("proceed", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connectingtoserver", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasewait", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("logging_in", 511);
                 if (null != var2) {
-                  ClientException.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientException.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("backtoerror", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasecheckinternet", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("attemptingtoreconnect", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connectionlost_reconnecting", 511);
                 if (null != var2) {
-                  KeyboardStateSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  KeyboardStateSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connectionlost_withreason", 511);
                 if (var2 != null) {
-                  SecondaryNodeHashTable.field_l = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeHashTable.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("passwordverificationrequired", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invalidpass", 511);
                 if (null != var2) {
-                  QuickChatPhraseDefinition.field_p = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("retry", 511);
                 if (null != var2) {
-                  TextHotspotWidget.field_E = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("back", 511);
                 if (var2 != null) {
-                  MenuTextResources.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MenuTextResources.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("exitfullscreenmode", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quittowebsite", 511);
                 if (null != var2) {
-                  ProductionContent.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ProductionContent.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connectionrestored", 511);
                 if (var2 != null) {
-                  ClientClockSupport.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ClientClockSupport.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("warning_ifyouquit", 511);
                 if (null != var2) {
-                  MouseInputHandler.field_a = IterableNodeHashTable.a(var2, 17746);
+                  MouseInputHandler.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("warning_ifyouquitorleavepage", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resubscribe_withoutlosing_fs", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resubscribe_withoutlosing", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("customersupport_withoutlosing_fs", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("customersupport_withoutlosing", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("js5help_withoutlosing_fs", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("js5help_withoutlosing", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("checkinternet_withoutlosing_fs", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("checkinternet_withoutlosing", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_intro", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_sameaccounttip_unnamed", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("dateofbirthprompt", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fetchingcountrylist", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("countryprompt", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("countrylisterror", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("theonlypersonalquestions", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_submittingdata", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("check", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_pleasechooseausername", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_usernameblurb", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("checkingavailability", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("checking", 511);
                 if (null != var2) {
-                  AnimatedPanel.field_R = IterableNodeHashTable.a(var2, 17746);
+                  AnimatedPanel.field_R = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_namealreadytaken", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_sameaccounttip_named", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_nosuggestions", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alternativelygoback", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_available", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_willnowshowtermsandconditions", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fetchingterms", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("termserror", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_iagree", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_idisagree", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_pleasescrolldowntoaccept", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_linkaddress", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("openinpopupwindow", 511);
                 if (var2 != null) {
-                  ChatCompositionSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ChatCompositionSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create", 511);
                 if (var2 != null) {
-                  IntroRenderSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  IntroRenderSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_pleasechooseapassword", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_passwordblurb", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_nevergivepassword", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("creatingyouraccount", 511);
                 if (null != var2) {
-                  AccountRequestState.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestState.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_youmustaccept", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_passwordsdifferent", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_success", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("day", 511);
                 if (null != var2) {
-                  BoundsRect.field_n = IterableNodeHashTable.a(var2, 17746);
+                  BoundsRect.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("month", 511);
                 if (var2 != null) {
-                  DefendTask.field_p = IterableNodeHashTable.a(var2, 17746);
+                  DefendTask.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("year", 511);
                 if (var2 != null) {
-                  FleetMove.field_D = IterableNodeHashTable.a(var2, 17746);
+                  FleetMove.field_D = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,0", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[0] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,1", 511);
                 if (null != var2) {
-                  IntroGlowPoint.field_g[1] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,2", 511);
                 if (null != var2) {
-                  IntroGlowPoint.field_g[2] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,3", 511);
                 if (null != var2) {
-                  IntroGlowPoint.field_g[3] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,4", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[4] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,5", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[5] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,6", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[6] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,7", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[7] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,8", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[8] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[8] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,9", 511);
                 if (null != var2) {
-                  IntroGlowPoint.field_g[9] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[9] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,10", 511);
                 if (var2 != null) {
-                  IntroGlowPoint.field_g[10] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[10] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("monthnames,11", 511);
                 if (null != var2) {
-                  IntroGlowPoint.field_g[11] = IterableNodeHashTable.a(var2, 17746);
+                  IntroGlowPoint.field_g[11] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_welcome", 511);
                 if (var2 != null) {
-                  StarLink.field_j = IterableNodeHashTable.a(var2, 17746);
+                  StarLink.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13_welcome", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_createanaccount", 511);
                 if (var2 != null) {
-                  AccountCreationDialog.field_Ab = IterableNodeHashTable.a(var2, 17746);
+                  AccountCreationDialog.field_Ab = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_displayname", 511);
                 if (var2 != null) {
-                  MapView.field_zb = IterableNodeHashTable.a(var2, 17746);
+                  MapView.field_zb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password", 511);
                 if (null != var2) {
-                  GarrisonTask.field_t = IterableNodeHashTable.a(var2, 17746);
+                  GarrisonTask.field_t = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password_confirm", 511);
                 if (null != var2) {
-                  MusicVoice.field_l = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_email", 511);
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_i = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_email_confirm", 511);
                 if (var2 != null) {
-                  UsernameAvailabilityValidator.field_u = IterableNodeHashTable.a(var2, 17746);
+                  UsernameAvailabilityValidator.field_u = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_age", 511);
                 if (var2 != null) {
-                  SolMapGenerator.field_m = IterableNodeHashTable.a(var2, 17746);
+                  SolMapGenerator.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13_email", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13_email_confirm", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_dob", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_country", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alternatives_header", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alternatives_select", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_suggestions", 511);
                 if (var2 != null) {
-                  DebouncedValidator.field_c = IterableNodeHashTable.a(var2, 17746);
+                  DebouncedValidator.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_more_suggestions", 511);
                 if (null != var2) {
-                  SolMapGenerator.field_p = IterableNodeHashTable.a(var2, 17746);
+                  SolMapGenerator.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_select_alternative", 511);
                 if (null != var2) {
-                  SecondaryNodeDequeIterator.field_f = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeDequeIterator.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_optin_news", 511);
                 if (null != var2) {
-                  MenuButton.field_E = IterableNodeHashTable.a(var2, 17746);
+                  MenuButton.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_agreeterms", 511);
                 if (var2 != null) {
-                  AccountNoticeDialog.field_Y = IterableNodeHashTable.a(var2, 17746);
+                  AccountNoticeDialog.field_Y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13terms", 511);
                 if (var2 != null) {
-                  DiskCacheWorker.field_e = IterableNodeHashTable.a(var2, 17746);
+                  DiskCacheWorker.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_username_email", 511);
                 if (var2 != null) {
-                  ListContent.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ListContent.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_username", 511);
                 if (null != var2) {
-                  ChatPanelSetupSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelSetupSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_email", 511);
                 if (var2 != null) {
-                  QuaternaryLinkNode.field_v = IterableNodeHashTable.a(var2, 17746);
+                  QuaternaryLinkNode.field_v = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_username_tooltip", 511);
                 if (var2 != null) {
-                  SoundTriggerTick.field_a = IterableNodeHashTable.a(var2, 17746);
+                  SoundTriggerTick.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_password_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_login_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_create_tooltip", 511);
                 if (null != var2) {
-                  CandidateLink.field_m = IterableNodeHashTable.a(var2, 17746);
+                  CandidateLink.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_justplay_tooltip", 511);
                 if (var2 != null) {
-                  RasterTargetSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  RasterTargetSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_back_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_no_displayname", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.field_i = IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username_hint", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_displayname_tooltip", 511);
                 if (null != var2) {
-                  WeightedLruCache.field_i = IterableNodeHashTable.a(var2, 17746);
+                  WeightedLruCache.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_displayname_hint", 511);
                 if (var2 != null) {
-                  AllianceExpiredEvent.field_m = IterableNodeHashTable.a(var2, 17746);
+                  AllianceExpiredEvent.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password_tooltip", 511);
                 if (var2 != null) {
-                  AiTask.field_k = IterableNodeHashTable.a(var2, 17746);
+                  AiTask.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password_hint", 511);
                 if (null != var2) {
-                  AccountValidationText.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password_confirm_tooltip", 511);
                 if (var2 != null) {
-                  IntNode.field_o = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_email_tooltip", 511);
                 if (var2 != null) {
-                  LegacyAi.field_p = IterableNodeHashTable.a(var2, 17746);
+                  LegacyAi.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_email_confirm_tooltip", 511);
                 if (null != var2) {
-                  SoundTriggerTick.field_h = IterableNodeHashTable.a(var2, 17746);
+                  SoundTriggerTick.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_age_tooltip", 511);
                 if (var2 != null) {
-                  DerelictMapGenerator.field_p = IterableNodeHashTable.a(var2, 17746);
+                  DerelictMapGenerator.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_optin_news_tooltip", 511);
                 if (var2 != null) {
-                  PlayerEliminatedEvent.field_i = IterableNodeHashTable.a(var2, 17746);
+                  PlayerEliminatedEvent.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13_email_tooltip", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_u13_email_confirm_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_dob_tooltip", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_country_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_optin_tooltip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_continue", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username_unavailable", 511);
                 if (var2 != null) {
-                  ClientDrawingSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientDrawingSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_username_available", 511);
                 if (null != var2) {
-                  GameAssetSetupSupport.field_f = IterableNodeHashTable.a(var2, 17746);
+                  GameAssetSetupSupport.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_namelength", 511);
                 if (null != var2) {
-                  FrameTimer.field_a = IterableNodeHashTable.a(var2, 17746);
+                  FrameTimer.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_namechars", 511);
                 if (null != var2) {
-                  FleetVisual.field_i = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_nameleadingspace", 511);
                 if (null != var2) {
-                  UniformNineSliceFactory.field_a = IterableNodeHashTable.a(var2, 17746);
+                  UniformNineSliceFactory.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_doublespace", 511);
                 if (null != var2) {
-                  ChatMessage.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessage.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passchars", 511);
                 if (var2 != null) {
-                  WeightedLruCache.field_d = IterableNodeHashTable.a(var2, 17746);
+                  WeightedLruCache.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passrepeated", 511);
                 if (null != var2) {
-                  TutorialStageSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TutorialStageSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passlength", 511);
                 if (var2 != null) {
-                  AccountValidationText.field_b = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsname", 511);
                 if (var2 != null) {
-                  ClientInputSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientInputSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsemail", 511);
                 if (var2 != null) {
-                  AccountHandshakeSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountHandshakeSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsname_partial", 511);
                 if (var2 != null) {
-                  TutorialVictoryChecker.field_k = IterableNodeHashTable.a(var2, 17746);
+                  TutorialVictoryChecker.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_checkname", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invalidemail", 511);
                 if (var2 != null) {
-                  ClientUiLoadingSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  ClientUiLoadingSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_email_unavailable", 511);
                 if (var2 != null) {
-                  AccountValidationText.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invaliddate", 511);
                 if (var2 != null) {
-                  LoginForm.field_M = IterableNodeHashTable.a(var2, 17746);
+                  LoginForm.field_M = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invalidage", 511);
                 if (var2 != null) {
-                  ChatPanelLayoutSupport.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ChatPanelLayoutSupport.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_yearrange", 511);
                 if (null != var2) {
-                  PlayerStats.field_b = IterableNodeHashTable.a(var2, 17746);
+                  PlayerStats.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_mismatch", 511);
                 if (var2 != null) {
-                  IsaacRandom.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IsaacRandom.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_passwordvalid", 511);
                 if (var2 != null) {
-                  Archive.field_l = IterableNodeHashTable.a(var2, 17746);
+                  Archive.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_emailvalid", 511);
                 if (var2 != null) {
-                  DualLinkDequeSequence.field_g = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkDequeSequence.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_account_success", 511);
                 if (var2 != null) {
-                  GameAssetSetupSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  GameAssetSetupSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("invalid_name", 511);
                 if (var2 != null) {
-                  NotificationEntry.field_j = IterableNodeHashTable.a(var2, 17746);
+                  NotificationEntry.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("cannot_add_yourself", 511);
                 if (null != var2) {
-                  QuaternaryNodeList.field_f = IterableNodeHashTable.a(var2, 17746);
+                  QuaternaryNodeList.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_add_friend", 511);
                 if (null != var2) {
-                  AccountInputSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  AccountInputSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_add_ignore", 511);
                 if (null != var2) {
-                  SliderPainter.field_d = IterableNodeHashTable.a(var2, 17746);
+                  SliderPainter.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_delete_friend", 511);
                 if (null != var2) {
-                  StandardAi.field_f = IterableNodeHashTable.a(var2, 17746);
+                  StandardAi.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unable_to_delete_ignore", 511);
                 if (var2 != null) {
-                  MenuWindow.field_C = IterableNodeHashTable.a(var2, 17746);
+                  MenuWindow.field_C = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("friendlistfull", 511);
                 if (var2 != null) {
-                  IntroTextLine.field_p = IterableNodeHashTable.a(var2, 17746);
+                  IntroTextLine.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("friendlistdupe", 511);
                 if (null != var2) {
-                  MapView.field_pb = IterableNodeHashTable.a(var2, 17746);
+                  MapView.field_pb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("friendnotfound", 511);
                 if (null != var2) {
-                  ClientRenderSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientRenderSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ignorelistfull", 511);
                 if (var2 != null) {
-                  LobbyRoomDecoder.field_a = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomDecoder.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ignorelistdupe", 511);
                 if (null != var2) {
-                  UiTextSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  UiTextSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ignorenotfound", 511);
                 if (var2 != null) {
-                  DelegatingCanvas.field_d = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("removeignorefirst", 511);
                 if (var2 != null) {
-                  TextFieldWidget.field_G = IterableNodeHashTable.a(var2, 17746);
+                  TextFieldWidget.field_G = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("removefriendfirst", 511);
                 if (null != var2) {
-                  MusicVoice.field_N = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_N = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("enterfriend_add", 511);
                 if (null != var2) {
-                  GameSession.field_A = IterableNodeHashTable.a(var2, 17746);
+                  GameSession.field_A = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("enterfriend_del", 511);
                 if (var2 != null) {
-                  IntrusiveDequeCursor.field_f = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("enterignore_add", 511);
                 if (null != var2) {
-                  PacketBuffer.field_l = IterableNodeHashTable.a(var2, 17746);
+                  PacketBuffer.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("enterignore_del", 511);
                 if (null != var2) {
-                  Star.field_E = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_E = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("text_removed_from_game", 511);
                 if (null != var2) {
-                  RoundedFrameSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  RoundedFrameSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("text_lobby_pleaselogin_free", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("opengl", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("sse", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("purejava", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_graphics", 511);
                 if (null != var2) {
-                  ValidatedTextInputWidget.field_J = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_J = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_models", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_fonts", 511);
                 if (null != var2) {
-                  LinkPainter.field_h = IterableNodeHashTable.a(var2, 17746);
+                  LinkPainter.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_soundeffects", 511);
                 if (null != var2) {
-                  PlayerReportPanel.field_Db = IterableNodeHashTable.a(var2, 17746);
+                  PlayerReportPanel.field_Db = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_music", 511);
                 if (var2 != null) {
-                  ByteArrayStorage.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayStorage.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_instruments", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_levels", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_extradata", 511);
                 if (null != var2) {
-                  MouseInputHandler.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MouseInputHandler.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_languages", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_textures", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_animations", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_graphics", 511);
                 if (var2 != null) {
-                  SpriteState.field_r = IterableNodeHashTable.a(var2, 17746);
+                  SpriteState.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_models", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_fonts", 511);
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_h = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_soundeffects", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_e = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_music", 511);
                 if (var2 != null) {
-                  MeshMaterial.field_b = IterableNodeHashTable.a(var2, 17746);
+                  MeshMaterial.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_instruments", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_levels", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_extradata", 511);
                 if (null != var2) {
-                  ToggleButton.field_v = IterableNodeHashTable.a(var2, 17746);
+                  ToggleButton.field_v = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_languages", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_textures", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("loading_animations", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_graphics", 511);
                 if (null != var2) {
-                  PasswordValidator.field_p = IterableNodeHashTable.a(var2, 17746);
+                  PasswordValidator.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_models", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_soundeffects", 511);
                 if (null != var2) {
-                  SocialNameInputPanel.field_xb = IterableNodeHashTable.a(var2, 17746);
+                  SocialNameInputPanel.field_xb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_music", 511);
                 if (var2 != null) {
-                  GuestPlayForm.field_I = IterableNodeHashTable.a(var2, 17746);
+                  GuestPlayForm.field_I = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_levels", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_languages", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_animations", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unpacking_toolkit", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("instructions", 511);
                 if (null != var2) {
-                  EmailValidationError.field_e = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidationError.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("tutorial", 511);
                 if (null != var2) {
-                  PrivateChatMessage.field_n = IterableNodeHashTable.a(var2, 17746);
+                  PrivateChatMessage.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("playtutorial", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("sound_colon", 511);
                 if (var2 != null) {
-                  NumericDateInputWidget.field_Q = IterableNodeHashTable.a(var2, 17746);
+                  NumericDateInputWidget.field_Q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("music_colon", 511);
                 if (var2 != null) {
-                  IconTextPanel.field_zb = IterableNodeHashTable.a(var2, 17746);
+                  IconTextPanel.field_zb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fullscreen", 511);
                 if (null != var2) {
-                  IntroLogoSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  IntroLogoSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("screensize", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("highscores", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rankings", 511);
                 if (null != var2) {
-                  ClientDrawingSupport.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ClientDrawingSupport.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievements", 511);
                 if (null != var2) {
-                  ScrollBar.field_Db = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Db = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievementsthisgame", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievementsthissession", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("watchintroduction", 511);
                 if (null != var2) {
-                  MenuButton.field_z = IterableNodeHashTable.a(var2, 17746);
+                  MenuButton.field_z = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quit", 511);
                 if (var2 != null) {
-                  TextReplacementContext.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TextReplacementContext.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("login_createaccount", 511);
                 if (var2 != null) {
-                  FourIntSubmissionRequest.field_p = IterableNodeHashTable.a(var2, 17746);
+                  FourIntSubmissionRequest.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
             }
             void loadMenuAndMembershipText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("tohighscores", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntomainmenu", 511);
                 if (var2 != null) {
-                  TiledNineSlicePainter.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TiledNineSlicePainter.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntopausemenu", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntooptionsmenu_notpaused", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mainmenu", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pausemenu", 511);
                 if (null != var2) {
-                  TextLayoutLine.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TextLayoutLine.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("optionsmenu_notpaused", 511);
                 if (var2 != null) {
-                  ClientOverlaySupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlaySupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("menu", 511);
                 if (null != var2) {
-                  TutorialAi.field_v = IterableNodeHashTable.a(var2, 17746);
+                  TutorialAi.field_v = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("selectlevel", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("nextlevel", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("startgame", 511);
                 if (null != var2) {
-                  MenuList.field_u = IterableNodeHashTable.a(var2, 17746);
+                  MenuList.field_u = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("newgame", 511);
                 if (var2 != null) {
-                  ProjectsContent.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ProjectsContent.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resumegame", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resumetutorial", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("skip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("skiptutorial", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("skipending", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("restartlevel", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("endtest", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("endgame", 511);
                 if (null != var2) {
-                  HorizontalGradientComponent.field_y = IterableNodeHashTable.a(var2, 17746);
+                  HorizontalGradientComponent.field_y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("endtutorial", 511);
                 if (var2 != null) {
-                  SectorCacheStore.field_g = IterableNodeHashTable.a(var2, 17746);
+                  SectorCacheStore.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ok", 511);
                 if (var2 != null) {
-                  GameAssetSetupSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  GameAssetSetupSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("on", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("off", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("previous", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("prev", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("next", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_colon", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hotseatmultiplayer", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("entermultiplayerlobby", 511);
                 if (null != var2) {
-                  GameSession.field_a = IterableNodeHashTable.a(var2, 17746);
+                  GameSession.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("singleplayergame", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntogame", 511);
                 if (var2 != null) {
-                  StarLinkPlanner.field_a = IterableNodeHashTable.a(var2, 17746);
+                  StarLinkPlanner.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("endgameresign", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("offerdraw", 511);
                 if (null != var2) {
-                  QuickChatMenuSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenuSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("canceldraw", 511);
                 if (null != var2) {
-                  ChatAreaLayoutSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ChatAreaLayoutSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("acceptdraw", 511);
                 if (null != var2) {
-                  LobbyRoomControlsSupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomControlsSupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("resign", 511);
                 if (null != var2) {
-                  ArchiveNetworkClient.field_g = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveNetworkClient.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("returntolobby", 511);
                 if (var2 != null) {
-                  NotificationEntry.field_o = IterableNodeHashTable.a(var2, 17746);
+                  NotificationEntry.field_o = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("cont", 511);
                 if (null != var2) {
-                  QuickChatParameterType.field_b = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatParameterType.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("continue_spectating", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("messages", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_fastest", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_medium", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_best", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_directx", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_opengl", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_java", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_quality_high", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_quality_low", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_mode", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_quality", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mode", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quality", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("keys", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("objective", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("currentobjective", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pressescforpausemenu", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pressescforpausemenuortoskiptutorial", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pressescforoptionsmenu_doesntpause", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pressescforoptionsmenu_doesntpause_short", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("powerups", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("latestlevel_suffix", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_name", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_cannotplayreason", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_cannotplayreason_shorter", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedworld_cannotplayreason", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("memberslevel_name", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("memberslevel_cannotplayreason", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("membersworld_cannotplayreason", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_createtip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_createtip_line1", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_createtip_line2", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unreachedlevel_logintip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("memberslevel_logintip", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("displayname_none", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("levelxofy1", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("levelxofy2", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("levelxofy", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ingame_level", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mouseoveranicon", 511);
                 if (null != var2) {
-                  IntArrayReadRequest.field_l = IterableNodeHashTable.a(var2, 17746);
+                  IntArrayReadRequest.field_l = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("notyetachieved", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achieved", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("orbpoints", 511);
                 if (null != var2) {
-                  DelegatingCanvas.field_e = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("orbcoins", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("orbpoints_colon", 511);
                 if (var2 != null) {
-                  AccountRequestResult.field_i = IterableNodeHashTable.a(var2, 17746);
+                  AccountRequestResult.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("orbcoins_colon", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achieved_colon_description", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("secretachievement", 511);
                 if (var2 != null) {
-                  ClientOverlaySupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ClientOverlaySupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no_highscores", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_name", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_level", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_fromlevel", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_tolevel", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_score", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_end", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("ingame_score", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("score_colon", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_leavegame", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_offerrematch", 511);
                 if (var2 != null) {
-                  IntList.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_offerrematch_unrated", 511);
                 if (var2 != null) {
-                  LobbyRoomInteractionSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomInteractionSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_acceptrematch", 511);
                 if (var2 != null) {
-                  LobbyLayoutSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  LobbyLayoutSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_acceptrematch_unrated", 511);
                 if (var2 != null) {
-                  MusicVoice.field_s = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_cancelrematch", 511);
                 if (null != var2) {
-                  SocketArchiveNetworkClient.field_s = IterableNodeHashTable.a(var2, 17746);
+                  SocketArchiveNetworkClient.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_cancelrematch_unrated", 511);
                 if (var2 != null) {
-                  ReflectionCheck.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionCheck.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_rematchnewgame", 511);
                 if (var2 != null) {
-                  SecondaryNodeDequeIterator.field_d = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeDequeIterator.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_rematchnewgame_unrated", 511);
                 if (null != var2) {
-                  TutorialOverlaySupport.field_a = IterableNodeHashTable.a(var2, 17746);
+                  TutorialOverlaySupport.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_wantstodraw", 511);
                 if (null != var2) {
-                  PacketBuffer.field_i = IterableNodeHashTable.a(var2, 17746);
+                  PacketBuffer.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_offersrematch", 511);
                 if (var2 != null) {
-                  LobbyRoomControlsSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  LobbyRoomControlsSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_offersrematch_unrated", 511);
                 if (null != var2) {
-                  QuickChatMenu.field_Fb = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenu.field_Fb = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferrematch", 511);
                 if (null != var2) {
-                  WidgetContainer.field_B = IterableNodeHashTable.a(var2, 17746);
+                  WidgetContainer.field_B = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferrematch_unrated", 511);
                 if (null != var2) {
-                  HighscoreResponseSupport.field_d = IterableNodeHashTable.a(var2, 17746);
+                  HighscoreResponseSupport.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferdraw", 511);
                 if (var2 != null) {
-                  QuickChatHelpPanelSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatHelpPanelSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youresigned", 511);
                 if (null != var2) {
-                  ArchiveLoadProgress.field_e = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_e = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youresigned_rematch", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasresignedandleft", 511);
                 if (var2 != null) {
-                  ProxyAuthenticationRequiredException.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ProxyAuthenticationRequiredException.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasresigned_rematch", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasresigned", 511);
                 if (var2 != null) {
-                  ArrayWidgetGroup.field_y = IterableNodeHashTable.a(var2, 17746);
+                  ArrayWidgetGroup.field_y = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasleft", 511);
                 if (var2 != null) {
-                  NameSuggestionsPanel.field_M = IterableNodeHashTable.a(var2, 17746);
+                  NameSuggestionsPanel.field_M = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_haswon", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youhavewon", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_gamedrawn", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_timeremaining", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_turn", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_yourturn", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameover", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_hidechat", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_showchat_nounread", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_showchat_unread1", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_showchat_unread2", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("click_to_quickchat", 511);
                 if (null != var2) {
-                  TutorialTextSupport.field_c = IterableNodeHashTable.a(var2, 17746);
+                  TutorialTextSupport.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("autorespond", 511);
                 if (var2 != null) {
-                  LoginForm.field_G = IterableNodeHashTable.a(var2, 17746);
+                  LoginForm.field_G = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_help", 511);
                 if (var2 != null) {
-                  MenuWindow.field_u = IterableNodeHashTable.a(var2, 17746);
+                  MenuWindow.field_u = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_help_title", 511);
                 if (null != var2) {
-                  DiskCacheWorker.field_g = IterableNodeHashTable.a(var2, 17746);
+                  DiskCacheWorker.field_g = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,0", 511);
                 if (null != var2) {
-                  CheckboxPainter.field_c[0] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,1", 511);
                 if (var2 != null) {
-                  CheckboxPainter.field_c[1] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,2", 511);
                 if (var2 != null) {
-                  CheckboxPainter.field_c[2] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,3", 511);
                 if (null != var2) {
-                  CheckboxPainter.field_c[3] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,4", 511);
                 if (var2 != null) {
-                  CheckboxPainter.field_c[4] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_help,5", 511);
                 if (var2 != null) {
-                  CheckboxPainter.field_c[5] = IterableNodeHashTable.a(var2, 17746);
+                  CheckboxPainter.field_c[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,0", 511);
                 if (var2 != null) {
-                  LoginMethodPreference.field_d[0] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,1", 511);
                 if (null != var2) {
-                  LoginMethodPreference.field_d[1] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,2", 511);
                 if (var2 != null) {
-                  LoginMethodPreference.field_d[2] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,3", 511);
                 if (var2 != null) {
-                  LoginMethodPreference.field_d[3] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,4", 511);
                 if (null != var2) {
-                  LoginMethodPreference.field_d[4] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,5", 511);
                 if (null != var2) {
-                  LoginMethodPreference.field_d[5] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("keychar_the_character_under_questionmark", 511);
                 if (null != var2) {
@@ -3250,501 +3250,501 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rating_noratings", 511);
                 if (var2 != null) {
-                  BattleContribution.field_q = IterableNodeHashTable.a(var2, 17746);
+                  BattleContribution.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_rating", 511);
                 if (var2 != null) {
-                  BoundsRect.field_r = IterableNodeHashTable.a(var2, 17746);
+                  BoundsRect.field_r = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_played", 511);
                 if (var2 != null) {
-                  IntrusiveDequeSequence.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeSequence.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_won", 511);
                 if (var2 != null) {
-                  ByteArrayReadRequest.field_q = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_q = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_lost", 511);
                 if (null != var2) {
-                  MeshMaterial.field_c = IterableNodeHashTable.a(var2, 17746);
+                  MeshMaterial.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_drawn", 511);
                 if (null != var2) {
-                  ProgressDialog.field_X = IterableNodeHashTable.a(var2, 17746);
+                  ProgressDialog.field_X = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("benefits_fullscreen", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("benefits_noadverts", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("benefits_price", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,0", 511);
                 if (null != var2) {
-                  LeaderboardSortSupport.field_d[0] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,1", 511);
                 if (null != var2) {
-                  LeaderboardSortSupport.field_d[1] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_benefits,2", 511);
                 if (null != var2) {
-                  LeaderboardSortSupport.field_d[2] = IterableNodeHashTable.a(var2, 17746);
+                  LeaderboardSortSupport.field_d[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_price_top", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("members_expansion_price_bottom", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,0", 511);
                 if (var2 != null) {
-                  RasterStateFrame.field_q[0] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,1", 511);
                 if (var2 != null) {
-                  RasterStateFrame.field_q[1] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,2", 511);
                 if (var2 != null) {
-                  RasterStateFrame.field_q[2] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,3", 511);
                 if (null != var2) {
-                  RasterStateFrame.field_q[3] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_restored", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_please_check", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_wait", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_retry", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_resume", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_or", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_exitfs", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_exitfs_quit", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_quit", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_check_fs", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_check_nonfs", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_beforeaccept", 511);
                 if (null != var2) {
-                  RematchMenuSupport.field_b = IterableNodeHashTable.a(var2, 17746);
+                  RematchMenuSupport.field_b = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_accept", 511);
                 if (var2 != null) {
-                  ProxySocketConnector.field_h = IterableNodeHashTable.a(var2, 17746);
+                  ProxySocketConnector.field_h = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_afteraccept", 511);
                 if (var2 != null) {
-                  ByteArrayReadRequest.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayReadRequest.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_cancel", 511);
                 if (null != var2) {
-                  ChatMessageFactory.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ChatMessageFactory.field_a = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_aftercancel", 511);
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_m = IterableNodeHashTable.a(var2, 17746);
+                  ImageProducerRasterBuffer.field_m = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_countdown_sing", 511);
                 if (null != var2) {
-                  ServerRequestRetrySupport.field_f = IterableNodeHashTable.a(var2, 17746);
+                  ServerRequestRetrySupport.field_f = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_accept_countdown_pl", 511);
                 if (null != var2) {
-                  Star.field_U = IterableNodeHashTable.a(var2, 17746);
+                  Star.field_U = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_nonmember", 511);
                 if (var2 != null) {
-                  ValidationIndicator.field_D = IterableNodeHashTable.a(var2, 17746);
+                  ValidationIndicator.field_D = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_close", 511);
                 if (null != var2) {
-                  ChatHistoryEntry.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ChatHistoryEntry.field_i = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_members", 511);
                 if (null != var2) {
-                  AlternateLoginCredentials.field_s = IterableNodeHashTable.a(var2, 17746);
+                  AlternateLoginCredentials.field_s = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_unavailable", 511);
                 if (var2 != null) {
-                  BirthDateValidator.field_k = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateValidator.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_unavailable_try_signed_applet", 511);
                 if (null != var2) {
-                  BattleContribution.field_n = IterableNodeHashTable.a(var2, 17746);
+                  BattleContribution.field_n = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_focus", 511);
                 if (null != var2) {
-                  MenuList.field_z = IterableNodeHashTable.a(var2, 17746);
+                  MenuList.field_z = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_focus_or_resolution", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.field_c = IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_timeout", 511);
                 if (var2 != null) {
-                  AggressiveAi.field_p = IterableNodeHashTable.a(var2, 17746);
+                  AggressiveAi.field_p = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("fs_button_tryagain", 511);
                 if (null != var2) {
-                  MusicVoice.field_t = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_t = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_ui_fs_countdown", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_caption_title", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_including_gamename", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_full_access_1", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_full_access_2", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_achievement_count_1", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_achievement_count_2", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_exclusive_1", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mb_exclusive_2", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("me_extra_benefits", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_friend_tip", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_friend_tip_multi", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_mode_name,0", 511);
                 if (var2 != null) {
-                  AccountStatusSupport.field_a[0] = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusSupport.field_a[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_mode_name,1", 511);
                 if (null != var2) {
-                  AccountStatusSupport.field_a[1] = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusSupport.field_a[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("hs_mode_name,2", 511);
                 if (var2 != null) {
-                  AccountStatusSupport.field_a[2] = IterableNodeHashTable.a(var2, 17746);
+                  AccountStatusSupport.field_a[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_name,0", 511);
                 if (var2 != null) {
-                  ContextActionMenu.field_Fb[0] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Fb[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_name,1", 511);
                 if (null != var2) {
-                  ContextActionMenu.field_Fb[1] = IterableNodeHashTable.a(var2, 17746);
+                  ContextActionMenu.field_Fb[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_long_name,0", 511);
                 if (null != var2) {
-                  ArchiveLoadProgress.field_g[0] = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_g[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rating_mode_long_name,1", 511);
                 if (null != var2) {
-                  ArchiveLoadProgress.field_g[1] = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveLoadProgress.field_g[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_fixed_size", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_resizable", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_fullscreen", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_done", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_apply", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_title", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_instruction", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("graphics_config_need_memory", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasewait_dotdotdot", 511);
                 if (null != var2) {
-                  IsaacBackedRandom.field_d = IterableNodeHashTable.a(var2, 17746);
+                  IsaacBackedRandom.field_d = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("serviceunavailable", 511);
                 if (null != var2) {
-                  MenuPointerSupport.field_k = IterableNodeHashTable.a(var2, 17746);
+                  MenuPointerSupport.field_k = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("createtouse", 511);
                 if (var2 != null) {
-                  DraggableWidget.field_D = IterableNodeHashTable.a(var2, 17746);
+                  DraggableWidget.field_D = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievementsoffline", 511);
                 if (null != var2) {
-                  SocketConnector.field_c = IterableNodeHashTable.a(var2, 17746);
+                  SocketConnector.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("warning", 511);
                 if (var2 != null) {
-                  WeightedLruCache.field_j = IterableNodeHashTable.a(var2, 17746);
+                  WeightedLruCache.field_j = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("DEFAULT_PLAYER_NAME", 511);
                 if (var2 != null) {
-                  NodeSequence.field_c = IterableNodeHashTable.a(var2, 17746);
+                  NodeSequence.field_c = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin1", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,1", 511);
                 if (null != var2) {
-                  TurnEventLog.field_j[1] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,2", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_j[2] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,3", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_j[3] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,4", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_j[4] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,5", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_j[5] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,6", 511);
                 if (null != var2) {
-                  TurnEventLog.field_j[6] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin2,7", 511);
                 if (var2 != null) {
-                  TurnEventLog.field_j[7] = IterableNodeHashTable.a(var2, 17746);
+                  TurnEventLog.field_j[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,1", 511);
                 if (null != var2) {
-                  SocialListPanel.field_Bb[1] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,2", 511);
                 if (var2 != null) {
-                  SocialListPanel.field_Bb[2] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,3", 511);
                 if (null != var2) {
-                  SocialListPanel.field_Bb[3] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,4", 511);
                 if (var2 != null) {
-                  SocialListPanel.field_Bb[4] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,5", 511);
                 if (null != var2) {
-                  SocialListPanel.field_Bb[5] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,6", 511);
                 if (null != var2) {
-                  SocialListPanel.field_Bb[6] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin3,7", 511);
                 if (var2 != null) {
-                  SocialListPanel.field_Bb[7] = IterableNodeHashTable.a(var2, 17746);
+                  SocialListPanel.field_Bb[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("discard", 511);
                 if (var2 != null) {
-                  SpriteState.field_v = IterableNodeHashTable.a(var2, 17746);
+                  SpriteState.field_v = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,1", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[1] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,2", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[2] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,3", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[3] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,4", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[4] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,5", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[5] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,6", 511);
                 if (null != var2) {
-                  FleetVisual.field_y[6] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin4,7", 511);
                 if (var2 != null) {
-                  FleetVisual.field_y[7] = IterableNodeHashTable.a(var2, 17746);
+                  FleetVisual.field_y[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_notloggedin", 511);
                 if (null != var2) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
             }
             void loadSubscriptionText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,1", 511);
                 if (null != var2) {
-                  QuickChatPhraseDefinition.field_x[1] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,2", 511);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_x[2] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,3", 511);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_x[3] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,4", 511);
                 if (null != var2) {
-                  QuickChatPhraseDefinition.field_x[4] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,5", 511);
                 if (null != var2) {
-                  QuickChatPhraseDefinition.field_x[5] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,6", 511);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_x[6] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,7", 511);
                 if (var2 != null) {
-                  QuickChatPhraseDefinition.field_x[7] = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatPhraseDefinition.field_x[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,0", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[0] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[0] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,1", 511);
                 if (var2 != null) {
-                  EmailValidator.field_w[1] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[1] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,2", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[2] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[2] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,3", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[3] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[3] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,4", 511);
                 if (var2 != null) {
-                  EmailValidator.field_w[4] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[4] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,5", 511);
                 if (var2 != null) {
-                  EmailValidator.field_w[5] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[5] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,6", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[6] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[6] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,7", 511);
                 if (var2 != null) {
-                  EmailValidator.field_w[7] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[7] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,8", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[8] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[8] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,9", 511);
                 if (var2 != null) {
-                  EmailValidator.field_w[9] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[9] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,10", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[10] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[10] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,11", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[11] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[11] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("subscription_cost_monthly,12", 511);
                 if (null != var2) {
-                  EmailValidator.field_w[12] = IterableNodeHashTable.a(var2, 17746);
+                  EmailValidator.field_w[12] = IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("sentence_separator", 511);
                 if (var2 != null) {
-                  IterableNodeHashTable.a(var2, 17746);
+                  IterableNodeHashTable.decodeCp1252(var2, 17746);
                 }
                 Archive.field_d = null;
                 finished = true; return;

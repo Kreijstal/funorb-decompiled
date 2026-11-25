@@ -15,7 +15,7 @@ final class Particle extends IntrusiveNode {
     static int field_h;
     float field_l;
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseInput(byte param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(TertiaryListSequence.field_j);
           param1.removeMouseMotionListener(TertiaryListSequence.field_j);

@@ -189,7 +189,7 @@ final class AccountBooleanRequest {
     final static WidgetStyle getAccountDialogStyle(int param0) {
         if (GameRules.field_a == null) {
           GameRules.field_a = new WidgetStyle();
-          GameRules.field_a.a(StatefulWidgetTheme.field_u, true);
+          GameRules.field_a.initializeDefaultThemes(StatefulWidgetTheme.field_u, true);
           GameRules.field_a.field_h = EmailValidator.field_x;
           GameRules.field_a.field_l = 14;
           GameRules.field_a.field_i = 7697781;

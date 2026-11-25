@@ -1304,7 +1304,7 @@ final class GameState {
           if (null == param1.field_y.field_m.field_q) {
             param1.field_y.field_m.field_q = param1;
           }
-          SolMapReader.a(param1.field_y.field_m, -5);
+          SolMapReader.recomputeTerritoryResourceSurplus(param1.field_y.field_m, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2041,7 +2041,7 @@ final class GameState {
               var6_ref = var5.nextStar(param1 ^ -23414);
             }
             var5.unlink((byte) -118);
-            SolMapReader.a(var4_ref, -5);
+            SolMapReader.recomputeTerritoryResourceSurplus(var4_ref, -5);
           }
           this.updateMinimumGarrison(param2, false, (byte) 125);
           this.updateMinimumGarrison(param0, false, (byte) 114);
@@ -2106,7 +2106,7 @@ final class GameState {
             param1.field_R = new Territory(param1.field_y, param1);
             param1.field_R.addStar(param0 - 21771, param1);
             param1.field_y.field_i.addLast((byte) -113, param1.field_R);
-            SolMapReader.a(param1.field_R, -5);
+            SolMapReader.recomputeTerritoryResourceSurplus(param1.field_R, -5);
             return;
           }
           var11 = param1.field_R;
@@ -2127,7 +2127,7 @@ final class GameState {
               var7.unlink((byte) -118);
             }
           }
-          SolMapReader.a(param1.field_R, -5);
+          SolMapReader.recomputeTerritoryResourceSurplus(param1.field_R, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2386,7 +2386,7 @@ final class GameState {
           param1.field_f = new int[this.field_r + 1];
           param1.field_h = new boolean[this.field_r + 1];
           QuaternaryListSequence.a(126, param1.field_m);
-          SolMapReader.a(param1.field_m, param0);
+          SolMapReader.recomputeTerritoryResourceSurplus(param1.field_m, param0);
           var3 = new Player[this.field_r + 1];
           var4 = new String[this.field_r + 1];
           var10 = new int[1 + this.field_r];
@@ -2597,12 +2597,12 @@ final class GameState {
             var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
               QuaternaryListSequence.a(param0 ^ 127, var5);
-              SolMapReader.a(var5, param0 - 5);
+              SolMapReader.recomputeTerritoryResourceSurplus(var5, param0 - 5);
               var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
             QuaternaryListSequence.a(param0 ^ 125, var4.field_m);
-            SolMapReader.a(var4.field_m, -5);
+            SolMapReader.recomputeTerritoryResourceSurplus(var4.field_m, -5);
           }
         }
     }
@@ -2837,12 +2837,12 @@ final class GameState {
             var18 = (Territory) (param1.field_i.startForward(0));
             while (var18 != null) {
               QuaternaryListSequence.a(120, var18);
-              SolMapReader.a(var18, -5);
+              SolMapReader.recomputeTerritoryResourceSurplus(var18, -5);
               var18 = (Territory) (param1.field_i.nextForward((byte) -71));
             }
           } else {
             QuaternaryListSequence.a(122, param1.field_m);
-            SolMapReader.a(param1.field_m, -5);
+            SolMapReader.recomputeTerritoryResourceSurplus(param1.field_m, -5);
           }
           var11 = (FleetMove) (param0.startForward(0));
           while (var11 != null) {
@@ -3038,7 +3038,7 @@ final class GameState {
                   }
                 }
                 {
-                  SolMapReader.a(var7, -5);
+                  SolMapReader.recomputeTerritoryResourceSurplus(var7, -5);
                   param1.field_o.field_i.addLast((byte) -113, var7);
                 }
               }
@@ -3052,7 +3052,7 @@ final class GameState {
             }
             var6Lifetime1 = param1.field_o.field_m.nextStar(-23410);
           }
-          SolMapReader.a(param1.field_o.field_m, -5);
+          SolMapReader.recomputeTerritoryResourceSurplus(param1.field_o.field_m, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

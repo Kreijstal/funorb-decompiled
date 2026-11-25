@@ -78,7 +78,7 @@ final class LinkPainter implements WidgetPainter {
             ChatMessageFactory.drawDottedRectangleOutline(var8, 1, var7 + 4, -2 + var9, var10 + 2);
           }
           if (param4 != 12) {
-            LinkPainter.a(true, -120, true);
+            LinkPainter.updateFriendsListPanel(true, -120, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    final static Sprite[] a(int param0) {
+    final static Sprite[] createDecodedSprites(int param0) {
         Sprite[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -142,7 +142,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    final static SocialListEntry a(boolean param0, int param1, boolean param2) {
+    final static SocialListEntry updateFriendsListPanel(boolean param0, int param1, boolean param2) {
         ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
@@ -368,7 +368,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    final static void c(int param0) {
+    final static void showPostLoginUi(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;

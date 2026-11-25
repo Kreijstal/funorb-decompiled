@@ -271,7 +271,7 @@ final class LobbyRoomControlsSupport {
                 TextReplacementEntry.writeCancelMatchmakingRequest(param3, false);
               }
             }
-            AggressiveAi.a(-109, true, IntNode.field_p, param3);
+            AggressiveAi.updateRoomOptionsAndFilters(-109, true, IntNode.field_p, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

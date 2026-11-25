@@ -164,7 +164,7 @@ final class RoundedFrameSupport implements RoundedFrameMarker {
             RoundedFrameSupport.a((Archive) null, 22, -122, 78);
           }
           if (MenuComponent.a(param3, param2, param0, 2)) {
-            stackIn_6_0 = LinkPainter.a(0);
+            stackIn_6_0 = LinkPainter.createDecodedSprites(0);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

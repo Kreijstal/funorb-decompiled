@@ -99,7 +99,7 @@ abstract class GameClientShell extends GameApplet {
                   DiplomacyRowSupport.field_c = null;
                 } else {
                   GarrisonTask.field_o = TertiaryListSequence.field_l;
-                  LinkPainter.c(98);
+                  LinkPainter.showPostLoginUi(98);
                   BirthDateConfirmationForm.field_P = false;
                   SoundPlayback.field_i = 10;
                 }
@@ -249,7 +249,7 @@ abstract class GameClientShell extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                GzipInflater.a(true);
+                                GzipInflater.readSocialListUpdate(true);
                                 return;
                               }
                               if (var2 == 17) {
@@ -257,7 +257,7 @@ abstract class GameClientShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                SolMapReader.a(-1);
+                                SolMapReader.readChatRestrictionFlags(-1);
                                 return;
                               }
                               GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
@@ -417,7 +417,7 @@ abstract class GameClientShell extends GameApplet {
             TutorialTextSupport.field_g == 0 &&
             SoundPlayback.field_i == 11 &&
             !ArchiveRequest.shouldServiceLobbyConnection(-11)) {
-            LinkPainter.c(86);
+            LinkPainter.showPostLoginUi(86);
           }
           if (TutorialTextSupport.field_g != -1 &&
             TutorialTextSupport.field_g != 0) {
@@ -682,7 +682,7 @@ abstract class GameClientShell extends GameApplet {
           var2 == 1) {
           if (11 == SoundPlayback.field_i &&
             0 == TutorialTextSupport.field_g) {
-            LinkPainter.c(60);
+            LinkPainter.showPostLoginUi(60);
           }
           return var2;
         }
@@ -771,7 +771,7 @@ abstract class GameClientShell extends GameApplet {
         int var4 = TextInputPainter.field_t - 1;
         byte[] var5 = new byte[var4];
         SpriteWipeSupport.field_a.readBytesIsaac(var4, ~param0, 0, var5);
-        ExternalLinkSupport.openExternalUrl(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
+        ExternalLinkSupport.openExternalUrl(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.decodeCp1252(var5, 17746), -128);
     }
 
     private final void allowOpcode6(int param0) {

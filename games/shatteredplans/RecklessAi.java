@@ -49,7 +49,7 @@ final class RecklessAi extends StandardAi {
         return param1 + var2;
     }
 
-    final static void a(int param0, Archive param1, Archive param2) {
+    final static void checkLobbyArchiveSetupGuard(int param0, Archive param1, Archive param2) {
         try {
           if (param0 > -25) {
             RecklessAi.bitLength(122, 49);

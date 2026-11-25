@@ -18,7 +18,7 @@ final class GzipInflater {
         this(-1, 1000000, 1000000);
     }
 
-    final static void a(boolean param0) {
+    final static void readSocialListUpdate(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_11_0 = 0;
@@ -182,7 +182,7 @@ final class GzipInflater {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeClientMenus(int param0) {
         UsernameAvailabilityValidator.a(-1, FullscreenFocusCanvas.field_a, 5);
         if (param0 != 1) {
           return;
@@ -217,7 +217,7 @@ final class GzipInflater {
     private GzipInflater(int param0, int param1, int param2) {
     }
 
-    final void a(byte[] param0, PacketBuffer param1, int param2) {
+    final void inflateGzip(byte[] param0, PacketBuffer param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException stackIn_19_0 = null;
@@ -244,7 +244,7 @@ final class GzipInflater {
               }
               this.field_g.reset();
               if (param2 != 5591) {
-                GzipInflater.a(-110);
+                GzipInflater.initializeClientMenus(-110);
               }
               return;
             }

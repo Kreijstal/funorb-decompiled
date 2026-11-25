@@ -89,7 +89,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
           return;
         }
         try {
-          IterableNodeHashTable.b(param1 ^ -49);
+          IterableNodeHashTable.loginCreatedAccount(param1 ^ -49);
           this.closeStatusDialog((byte) -104);
           if (param1 != 6) {
             field_Fb = (AccountRequestState) null;

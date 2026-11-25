@@ -78,7 +78,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
             var11 = this.getTextY(param3, param4, 68) + Math.max(0, var8.field_e);
             var12 = this.getTextY(param3, param4, -122) + Math.min(this.getInnerHeight(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
             BufferedSocket.pushIntersectedClip(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
-            MusicVoice.field_I.a(var10, -110, var10, this.field_i, var11, var12);
+            MusicVoice.field_I.drawLine(var10, -110, var10, this.field_i, var11, var12);
             Star.popRasterState((byte) -122);
           }
         } catch (RuntimeException runtimeException) {
@@ -235,7 +235,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
                 }
               }
               var15 = stackIn_19_0;
-              MusicVoice.field_I.a(var15 - var14, this.field_e >>> 24, this.field_e, this.computeTextX((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
+              MusicVoice.field_I.fillRectAlpha(var15 - var14, this.field_e >>> 24, this.field_e, this.computeTextX((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
             }
             Star.popRasterState((byte) -49);
           }
