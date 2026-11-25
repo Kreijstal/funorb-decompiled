@@ -1556,7 +1556,7 @@ final class GameplayController {
               previousDamage = 996394 ^ this.encodedDamageCheckpoint;
               previousTurns = this.encodedTurnCheckpoint ^ 996394;
               UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
-              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (AiPlanningStrategy.pointerX ^ ko.pointerY);
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (AiPlanningStrategy.pointerX ^ HighscoreAccountEntry.pointerY);
               UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
               damageDelta = -previousDamage + currentDamageThenSpecialUnitCount;
               turnDelta = -previousTurns + currentTurns;
@@ -2467,7 +2467,7 @@ final class GameplayController {
               if (!EmailConfirmationValidator.field_l) {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (0 == var7Lifetime3) {
-                  if (SpellMenuGroup.field_h[1].isOpaqueAt(210, 100, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                  if (SpellMenuGroup.field_h[1].isOpaqueAt(210, 100, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                     stackIn_273_0 = 20;
                     return stackIn_273_0;
                   }
@@ -2478,7 +2478,7 @@ final class GameplayController {
                 } else {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (SpellMenuGroup.field_h[1].isOpaqueAt(215, 95, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                    if (SpellMenuGroup.field_h[1].isOpaqueAt(215, 95, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                       stackIn_281_0 = 20;
                       return stackIn_281_0;
                     }
@@ -2490,7 +2490,7 @@ final class GameplayController {
                   }
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2) {
-                      if (SpellMenuGroup.field_h[1].isOpaqueAt(210, 105, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                      if (SpellMenuGroup.field_h[1].isOpaqueAt(210, 105, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                         stackIn_291_0 = 20;
                         return stackIn_291_0;
                       }
@@ -2500,7 +2500,7 @@ final class GameplayController {
                       }
                     } else {
                       if (3 == var7Lifetime3) {
-                        if (SpellMenuGroup.field_h[1].isOpaqueAt(200, 110, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                        if (SpellMenuGroup.field_h[1].isOpaqueAt(200, 110, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                           stackIn_297_0 = 20;
                           return stackIn_297_0;
                         }
@@ -2516,7 +2516,7 @@ final class GameplayController {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (var7Lifetime3 == 0 &&
                   var13 == 0) {
-                  if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 138, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                  if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 138, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                     stackIn_228_0 = 20;
                     return stackIn_228_0;
                   }
@@ -2529,7 +2529,7 @@ final class GameplayController {
                 if (decompiledFrameRemainder4) {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (SpellMenuGroup.field_h[0].isOpaqueAt(190, 128, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                    if (SpellMenuGroup.field_h[0].isOpaqueAt(190, 128, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                       stackIn_236_0 = 20;
                       return stackIn_236_0;
                     }
@@ -2542,7 +2542,7 @@ final class GameplayController {
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2 &&
                       var13 == 0) {
-                      if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 137, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                      if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 137, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                         stackIn_242_0 = 20;
                         return stackIn_242_0;
                       }
@@ -2554,7 +2554,7 @@ final class GameplayController {
                     }
                     if ((decompiledFrameRemainder4) &&
                       (3 == var7Lifetime3)) {
-                      if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 95, AiPlanningStrategy.pointerX, ko.pointerY)) {
+                      if (SpellMenuGroup.field_h[0].isOpaqueAt(188, 95, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
                         stackIn_250_0 = 20;
                         return stackIn_250_0;
                       }
@@ -2924,7 +2924,7 @@ final class GameplayController {
             }
             if (-1 != this.field_y) {
               this.unitMenus[this.field_y].draw(this.battlefield.playerMana[this.controlledPlayerId], -23451, this.field_hc, var2_int, var3);
-              var4_int = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -116, ko.pointerY, 16 + var2_int, AiPlanningStrategy.pointerX, 16 + var3);
+              var4_int = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -116, HighscoreAccountEntry.pointerY, 16 + var2_int, AiPlanningStrategy.pointerX, 16 + var3);
               if (var4_int > -1) {
                 this.c(16 + var3, var4_int, 0, var2_int + 16);
               }
@@ -4680,7 +4680,7 @@ final class GameplayController {
           if (!IgnoreListLookupSupport.a(217 - this.battlefield.mapWidth * var3 + var5 + var3 * 2 * this.battlefield.mapWidth, param0 - (this.battlefield.mapWidth * var3 - var5), this.battlefield.mapWidth * (2 * var2_int) + (-450 + 2 * this.field_H) + var4, 1661761121, 2 * (-225 + this.field_H) + var4)) {
             return false;
           }
-          var6Lifetime1 = -var5 + this.battlefield.mapWidth * var3 - (217 - ko.pointerY);
+          var6Lifetime1 = -var5 + this.battlefield.mapWidth * var3 - (217 - HighscoreAccountEntry.pointerY);
           var7 = -var4 + (-(2 * (this.field_H - 225)) + AiPlanningStrategy.pointerX);
           var8 = var7 * 40 / var2_int;
           var9 = 20 * var6Lifetime1 / var3;
@@ -6017,7 +6017,7 @@ final class GameplayController {
           }
           var4 = this.field_S ? 1 : 0;
           if (AiPlanningStrategy.pointerX >= 0 &&
-            ko.pointerY >= 0) {
+            HighscoreAccountEntry.pointerY >= 0) {
             var5 = 0;
             if (0 <= this.controlledPlayerId &&
               0 != this.battlefield.runeCapOption &&
@@ -6299,14 +6299,14 @@ final class GameplayController {
                                 break;
                               }
                               if (var20 != 0) {
-                                var2 = ep.field_a;
+                                var2 = IntroSequence.field_a;
                                 var2 = PointerInputHandler.field_e;
                                 var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                               }
                             }
                           }
                         } else {
-                          var2 = ep.field_a;
+                          var2 = IntroSequence.field_a;
                           if (var20 != 0) {
                             var2 = PointerInputHandler.field_e;
                             var2 = EmailCheckResult.a(4800, QuickChatMenuDisplaySupport.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
@@ -6343,7 +6343,7 @@ final class GameplayController {
                 if (this.controlledPlayerId < 0) {
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 5, 60, var6 + 4, -4 + var6 + var7) &&
                     this.battlefield.currentPlayer >= 0) {
-                    var9 = (-4 + (-var6 + ko.pointerY)) / 25;
+                    var9 = (-4 + (-var6 + HighscoreAccountEntry.pointerY)) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6360,7 +6360,7 @@ final class GameplayController {
                   if ((decompiledFrameRemainder10) &&
                     (decompiledFrameRemainder10 = !(this.battlefield.getCollectedManaScore(this.battlefield.rankedParticipants[0], -12710) <= this.battlefield.getCollectedManaScore(this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, param0 - 121), -12710))) &&
                     (decompiledFrameRemainder10 = !(!IterableDualNodeDeque.isPointerInBounds(-33, 60, 103, 4 + var6, -4 + (var7 + var6))))) {
-                    var9 = (ko.pointerY + (-var6 - 4)) / 25;
+                    var9 = (HighscoreAccountEntry.pointerY + (-var6 - 4)) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6373,7 +6373,7 @@ final class GameplayController {
                 }
                 if (decompiledFrameRemainder10) {
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 5, 60, var6 + 4, -4 + var6 + var7)) {
-                    var9 = (ko.pointerY - var6 - 4) / 25;
+                    var9 = (HighscoreAccountEntry.pointerY - var6 - 4) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6389,7 +6389,7 @@ final class GameplayController {
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, param0 - 121) &&
                     this.battlefield.getCollectedManaScore(this.battlefield.rankedParticipants[0], param0 - 12830) > this.battlefield.getCollectedManaScore(this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1), -12710) &&
                     IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, 60, 103, var6 + 4, -4 + var6 + var7)) {
-                    var9 = (-4 - var6 + ko.pointerY) / 25;
+                    var9 = (-4 - var6 + HighscoreAccountEntry.pointerY) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -7005,7 +7005,7 @@ final class GameplayController {
                 var14 = this.camera.screenPosition[1];
                 var15 = -1;
                 if (this.godMenu != null) {
-                  var15 = this.godMenu.getChoiceAtPoint((byte) -107, ko.pointerY, 16 + var13, AiPlanningStrategy.pointerX, 16 + var14);
+                  var15 = this.godMenu.getChoiceAtPoint((byte) -107, HighscoreAccountEntry.pointerY, 16 + var13, AiPlanningStrategy.pointerX, 16 + var14);
                 }
                 if (var15 > -1) {
                   if (var15 != 0) {
@@ -7019,8 +7019,8 @@ final class GameplayController {
                 }
                 if (null == var2 &&
                   this.field_y != -1) {
-                  var15 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -121, ko.pointerY, 16 + var13, AiPlanningStrategy.pointerX, var14 + 16);
-                  var4 = this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, ko.pointerY, 16 + var14, var13 + 16, AiPlanningStrategy.pointerX) ? 1 : 0;
+                  var15 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -121, HighscoreAccountEntry.pointerY, 16 + var13, AiPlanningStrategy.pointerX, var14 + 16);
+                  var4 = this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, HighscoreAccountEntry.pointerY, 16 + var14, var13 + 16, AiPlanningStrategy.pointerX) ? 1 : 0;
                   if (var15 > -1) {
                     var16 = this.battlefield.getSummonFailureFlags(this.controlledPlayerId, 255, var15, this.field_ec, this.field_X);
                     if (var16 > 0) {
@@ -7037,7 +7037,7 @@ final class GameplayController {
               if (null == var2 &&
                 !this.field_m &&
                 !this.field_F) {
-                this.camera.screenPosition[1] = ko.pointerY;
+                this.camera.screenPosition[1] = HighscoreAccountEntry.pointerY;
                 this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
                 this.camera.screenToGrid(false);
                 var13 = this.camera.gridPosition[0];
@@ -7182,7 +7182,7 @@ final class GameplayController {
             if (null != var2 &&
               ((String) (var2)).length() > 0) {
               var6 = 10 + AiPlanningStrategy.pointerX;
-              var7 = ko.pointerY + 30;
+              var7 = HighscoreAccountEntry.pointerY + 30;
               var8 = DateInputWidget.field_E.textWidth((String) (var2));
               if (var4 != 0) {
                 var6 = var6 - (var8 + 12);
@@ -7705,14 +7705,14 @@ final class GameplayController {
                 this.field_C > -1 &&
                 ~this.controlledPlayerId == ~this.battlefield.currentPlayer &&
                 null == this.spellConfirmation) {
-                BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.field_gc][2]].drawHalfSize(AiPlanningStrategy.pointerX + 12, 12 + ko.pointerY);
-                ProjectileEffect.field_h[1].drawHalfSize(AiPlanningStrategy.pointerX + 10, ko.pointerY + 10);
+                BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[this.field_gc][2]].drawHalfSize(AiPlanningStrategy.pointerX + 12, 12 + HighscoreAccountEntry.pointerY);
+                ProjectileEffect.field_h[1].drawHalfSize(AiPlanningStrategy.pointerX + 10, HighscoreAccountEntry.pointerY + 10);
               }
               if (this.field_mb ||
                 ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
                 this.remainingTurnTicks <= 0 &&
                 !this.field_z) {
-                ChatMessage.field_s.drawTransparent(8 + AiPlanningStrategy.pointerX, ko.pointerY + 8);
+                ChatMessage.field_s.drawTransparent(8 + AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY + 8);
               }
               this.b((byte) 120);
             }
@@ -7971,7 +7971,7 @@ final class GameplayController {
           if (16 == param0) {
             boolean decompiledFrameRemainder5 = true;
             this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
-            this.camera.screenPosition[1] = ko.pointerY;
+            this.camera.screenPosition[1] = HighscoreAccountEntry.pointerY;
             this.camera.screenToGrid(false);
             this.camera.projectModelAnchor(9470337);
             var7 = this.camera.gridPosition[0];
@@ -7991,7 +7991,7 @@ final class GameplayController {
                 }
                 if (decompiledFrameRemainder4) {
                   this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
-                  this.camera.screenPosition[1] = ko.pointerY;
+                  this.camera.screenPosition[1] = HighscoreAccountEntry.pointerY;
                   this.camera.screenToGrid(false);
                   var9 = this.camera.gridPosition[0];
                   var10 = this.camera.gridPosition[1];
@@ -8001,7 +8001,7 @@ final class GameplayController {
                   ((MovementPlanner) (Object) stackIn_40_0).selectTarget(stackIn_40_1, stackIn_41_2, var9, (byte) -125);
                 }
                 this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
-                this.camera.screenPosition[1] = ko.pointerY;
+                this.camera.screenPosition[1] = HighscoreAccountEntry.pointerY;
                 this.camera.screenToGrid(false);
                 this.camera.projectModelAnchor(9470337);
                 decompiledFrameRemainder5 = (var16 != 0);
@@ -8753,7 +8753,7 @@ final class GameplayController {
           if (0 == (PasswordLoginCredentials.pointerButtonMask & 4) &&
             -1 != this.field_t) {
             var8Lifetime3 = AiPlanningStrategy.pointerX - this.field_t;
-            var9Lifetime2 = -this.field_U + ko.pointerY;
+            var9Lifetime2 = -this.field_U + HighscoreAccountEntry.pointerY;
             this.field_U = -1;
             this.field_t = -1;
             var10Lifetime2 = var8Lifetime3 * var8Lifetime3 + var9Lifetime2 * var9Lifetime2;
@@ -8783,7 +8783,7 @@ final class GameplayController {
           }
           if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             this.field_C = AiPlanningStrategy.pointerX;
-            this.field_Zb = ko.pointerY;
+            this.field_Zb = HighscoreAccountEntry.pointerY;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8849,7 +8849,7 @@ final class GameplayController {
           if (!IterableDualNodeDeque.isPointerInBounds(-33, var3 + (this.field_H - 220), var2_int * this.battlefield.mapWidth + this.field_H + (-220 + var3), var3 + 120, 120 + var3 + this.battlefield.mapHeight * var2_int)) {
             return false;
           }
-          var4Lifetime1 = -var3 - (120 - ko.pointerY);
+          var4Lifetime1 = -var3 - (120 - HighscoreAccountEntry.pointerY);
           var5 = AiPlanningStrategy.pointerX + 220 - var3 - this.field_H;
           var6 = (var5 + var4Lifetime1) * 40 / var2_int + 0;
           var7 = this.battlefield.mapWidth * 20 + (var4Lifetime1 - var5) * 20 / var2_int;
@@ -9053,7 +9053,7 @@ final class GameplayController {
             RadialSummonMenu.playDefaultSoundWithIntGuard(126, ClientUiNode.field_v[17]);
           }
           GiveTileConsoleCommand.field_G = false;
-          ep.field_f = false;
+          IntroSequence.field_f = false;
           et.field_d = false;
           uu.field_b = false;
           return;
@@ -9297,7 +9297,7 @@ final class GameplayController {
             var9 = var9 - (240 - this.field_H);
             SpellMenuGroup.field_h[1].drawTransparent(var9, var10);
             if (this.field_H == 240 &&
-              SpellMenuGroup.field_h[1].isOpaqueAt(var9, var10, AiPlanningStrategy.pointerX, ko.pointerY)) {
+              SpellMenuGroup.field_h[1].isOpaqueAt(var9, var10, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
               SpellMenuGroup.field_h[1].drawAdditive(var9, var10, 200);
             }
             return;
@@ -9352,7 +9352,7 @@ final class GameplayController {
                 damageCheckpoint = previousDamage;
                 turnCheckpoint = previousTurns;
                 UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
-                UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+                UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (HighscoreAccountEntry.pointerY ^ AiPlanningStrategy.pointerX);
                 UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
                 damageDelta = -damageCheckpoint + currentDamageThenMutationSelector;
                 turnDelta = -turnCheckpoint + currentTurnsThenMutationVariant;
@@ -9408,7 +9408,7 @@ final class GameplayController {
               }
             }
             UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
-            UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+            UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (HighscoreAccountEntry.pointerY ^ AiPlanningStrategy.pointerX);
             UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
             currentDamageThenMutationSelector = UnitModelViewer.campaignMetricMutationCounter % 8;
             currentTurnsThenMutationVariant = currentDamageThenMutationSelector;
@@ -9543,7 +9543,7 @@ final class GameplayController {
             stackIn_29_2 = true;
           }
           boolean decompiledFrameRemainder3 = true;
-          stackIn_36_3 = ko.pointerY;
+          stackIn_36_3 = HighscoreAccountEntry.pointerY;
           if (!CampaignLookupSupport.heldKeys[98] && (!CampaignLookupSupport.heldKeys[33] ||
             directionKeysEnabled == 0)) {
             stackIn_39_4 = false;
@@ -11652,7 +11652,7 @@ final class GameplayController {
             var13 = var13 - (480 - (this.field_H << 1));
             SpellMenuGroup.field_h[0].drawTransparent(var13, var14);
             if (240 == this.field_H &&
-              SpellMenuGroup.field_h[0].isOpaqueAt(var13, var14, AiPlanningStrategy.pointerX, ko.pointerY)) {
+              SpellMenuGroup.field_h[0].isOpaqueAt(var13, var14, AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY)) {
               SpellMenuGroup.field_h[0].drawAdditive(var13, var14, 200);
             }
             return;
@@ -11897,11 +11897,11 @@ final class GameplayController {
             PowerOfTwoSupport.field_n.drawRightAligned(var10, IgnoreListLookupSupport.a(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
             if (param3 <= AiPlanningStrategy.pointerX &&
               (param3 + var8) > AiPlanningStrategy.pointerX &&
-              ko.pointerY >= param4 &&
-              ko.pointerY <= (24 + param4)) {
+              HighscoreAccountEntry.pointerY >= param4 &&
+              HighscoreAccountEntry.pointerY <= (24 + param4)) {
               var11 = EmailCheckResult.a(4800, qf.field_b, new String[]{Integer.toString(var7 + UnitAnimationSelectionSupport.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.pointerX;
-              var13 = ko.pointerY;
+              var13 = HighscoreAccountEntry.pointerY;
               var14 = DateInputWidget.field_E.getWrappedWidth(var11, 320);
               var15 = DateInputWidget.field_E.getParagraphHeight(var11, 320, DateInputWidget.field_E.maxAscent);
               SoftwareRaster.fillRoundedRectangleBlended(IgnoreListLookupSupport.a(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);

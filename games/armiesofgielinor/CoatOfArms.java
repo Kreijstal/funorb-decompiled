@@ -326,11 +326,11 @@ final class CoatOfArms {
           if (param2 != 68) {
             field_d = (byte[]) null;
           }
-          ko.field_g.bindAsRasterTarget();
+          HighscoreAccountEntry.field_g.bindAsRasterTarget();
           SoftwareRaster.clearPixels();
           DropTargetWidgetContainer.field_J.drawQuarterSize(0, 0);
           NumericDateInputWidget.field_P.bindAsRasterTarget();
-          ko.field_g.drawHalfSize(param8, param6);
+          HighscoreAccountEntry.field_g.drawHalfSize(param8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

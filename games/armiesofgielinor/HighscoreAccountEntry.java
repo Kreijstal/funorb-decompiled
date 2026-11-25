@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ko {
+final class HighscoreAccountEntry {
     String field_f;
     static int field_e;
     boolean field_d;
@@ -15,7 +15,7 @@ final class ko {
         field_g = null;
         if (param0) {
           Object var2 = (Object) null;
-          ko.getStoredBytes(false, -124, (Object) null);
+          HighscoreAccountEntry.getStoredBytes(false, -124, (Object) null);
         }
     }
 
@@ -53,7 +53,7 @@ final class ko {
           }
           if (obfuscationGuard < 30) {
             var4 = (Object) null;
-            ko.getStoredBytes(false, 22, (Object) null);
+            HighscoreAccountEntry.getStoredBytes(false, 22, (Object) null);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

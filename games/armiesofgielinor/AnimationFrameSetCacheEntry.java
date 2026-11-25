@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd extends IntrusiveNode {
+final class AnimationFrameSetCacheEntry extends IntrusiveNode {
     int field_k;
     static ResourceArchive themeBackgroundArchive;
     static String field_o;
@@ -9,7 +9,7 @@ final class fd extends IntrusiveNode {
     AnimationFrameSet field_p;
     static String[][] field_n;
 
-    final static int a(boolean param0, int param1) {
+    final static int highestOneBit(boolean param0, int param1) {
         int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -19,7 +19,7 @@ final class fd extends IntrusiveNode {
           var2 = var2 | var2 >>> 16;
           return param1 & ~var2;
         }
-        fd.a(true, 15);
+        AnimationFrameSetCacheEntry.highestOneBit(true, 15);
         var2 = var2 | var2 >>> 4;
         var2 = var2 | var2 >>> 8;
         var2 = var2 | var2 >>> 16;
@@ -39,7 +39,7 @@ final class fd extends IntrusiveNode {
         field_l = null;
     }
 
-    fd(ResourceArchive param0, ResourceArchive param1, int param2) {
+    AnimationFrameSetCacheEntry(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

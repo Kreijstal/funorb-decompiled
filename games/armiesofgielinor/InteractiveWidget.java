@@ -94,11 +94,11 @@ class InteractiveWidget extends Widget {
             if (this.pressedButton == ProgressMessageDialog.pointerButton) {
               return;
             }
-            if (this.containsPointer(obfuscationGuard - 32721, originX, ko.pointerY, AiPlanningStrategy.pointerX, originY) &&
+            if (this.containsPointer(obfuscationGuard - 32721, originX, HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, originY) &&
               ProgressMessageDialog.pointerButton == 0) {
-              this.activate(this.pressedButton, AiPlanningStrategy.pointerX - originX, ko.pointerY - originY, true);
+              this.activate(this.pressedButton, AiPlanningStrategy.pointerX - originX, HighscoreAccountEntry.pointerY - originY, true);
             }
-            this.pointerReleased(originY, rootWidget, AiPlanningStrategy.pointerX, (byte) -118, ko.pointerY, originX);
+            this.pointerReleased(originY, rootWidget, AiPlanningStrategy.pointerX, (byte) -118, HighscoreAccountEntry.pointerY, originX);
           }
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "fw.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');

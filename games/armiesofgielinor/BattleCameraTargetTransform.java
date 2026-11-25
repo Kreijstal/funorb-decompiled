@@ -331,7 +331,7 @@ final class BattleCameraTargetTransform {
                 if (FixedSquareRootSupport.field_d.hovered) {
                   var9 = null;
                   if (ArchiveLoadSequence.field_a) {
-                    var9 = "<col=A00000>" + ep.field_h + "</col>";
+                    var9 = "<col=A00000>" + IntroSequence.field_h + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;

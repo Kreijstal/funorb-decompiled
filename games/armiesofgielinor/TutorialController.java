@@ -392,7 +392,7 @@ final class TutorialController {
               if (BoundedUrlRequest.field_j != 2 &&
                 IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 279), IgnoreListLookupSupport.a(true, 293), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94), MatchConditionEntry.a(60 - (-MapRepository.field_c - 24), (byte) 94))) {
                 BoundedUrlRequest.field_j = 2;
-                RgbSpriteBase.field_u = -MapRepository.field_c + (-68 + ko.pointerY);
+                RgbSpriteBase.field_u = -MapRepository.field_c + (-68 + HighscoreAccountEntry.pointerY);
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 469), IgnoreListLookupSupport.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
@@ -430,8 +430,8 @@ final class TutorialController {
             }
           }
           if (1 != BoundedUrlRequest.field_j &&
-            IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 589), IgnoreListLookupSupport.a(param0, 603), MatchConditionEntry.a(ep.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-ep.field_o - 24), (byte) 94))) {
-            RgbSpriteBase.field_u = ko.pointerY - (158 + ep.field_o);
+            IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 589), IgnoreListLookupSupport.a(param0, 603), MatchConditionEntry.a(IntroSequence.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-IntroSequence.field_o - 24), (byte) 94))) {
+            RgbSpriteBase.field_u = HighscoreAccountEntry.pointerY - (158 + IntroSequence.field_o);
             BoundedUrlRequest.field_j = 1;
           }
           if (!param0) {
@@ -617,9 +617,9 @@ final class TutorialController {
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var2_int = ep.field_o * (-155 + BattleUnitRenderer.field_a.pixelHeight) / 137;
+            var2_int = IntroSequence.field_o * (-155 + BattleUnitRenderer.field_a.pixelHeight) / 137;
             SoftwareRaster.fillRectangle(IgnoreListLookupSupport.a(true, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 2302755);
-            SocialListPanel.field_Jb.drawTransparent(IgnoreListLookupSupport.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
+            SocialListPanel.field_Jb.drawTransparent(IgnoreListLookupSupport.a(true, 590), MatchConditionEntry.a(158 + IntroSequence.field_o, (byte) 94));
           }
           if (!param0) {
             field_b = (String) null;
@@ -630,25 +630,25 @@ final class TutorialController {
           }
           if (1 == BoundedUrlRequest.field_j) {
             if (ProgressMessageDialog.pointerButton == 1) {
-              var3 = -158 - RgbSpriteBase.field_u + ko.pointerY;
+              var3 = -158 - RgbSpriteBase.field_u + HighscoreAccountEntry.pointerY;
               if (0 > var3) {
-                ep.field_o = 0;
+                IntroSequence.field_o = 0;
                 if (var4 != 0) {
                   if (var3 > 137) {
-                    ep.field_o = 137;
-                    ep.field_o = var3;
+                    IntroSequence.field_o = 137;
+                    IntroSequence.field_o = var3;
                   } else {
-                    ep.field_o = var3;
+                    IntroSequence.field_o = var3;
                   }
                 }
               } else {
                 if (var3 > 137) {
-                  ep.field_o = 137;
+                  IntroSequence.field_o = 137;
                   if (var4 != 0) {
-                    ep.field_o = var3;
+                    IntroSequence.field_o = var3;
                   }
                 } else {
-                  ep.field_o = var3;
+                  IntroSequence.field_o = var3;
                 }
               }
               if (var4 != 0) {
@@ -2434,13 +2434,13 @@ final class TutorialController {
           if (-1 < wh.field_a &&
             AiPlanningStrategy.pointerX > IgnoreListLookupSupport.a(true, 40) &&
             AiPlanningStrategy.pointerX < IgnoreListLookupSupport.a(true, 376) &&
-            ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
-            ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
-            LocalCoatSupport.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + 16 * ((ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
+            HighscoreAccountEntry.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
+            HighscoreAccountEntry.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
+            LocalCoatSupport.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + 16 * ((HighscoreAccountEntry.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
             RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[10]);
             return;
           }
-          var2_int = PrivateTextRecipientSupport.a(ko.pointerY, 24340, IgnoreListLookupSupport.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
+          var2_int = PrivateTextRecipientSupport.a(HighscoreAccountEntry.pointerY, 24340, IgnoreListLookupSupport.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
           if (param0 != 330) {
             discarded$0 = this.f(-6, -35);
           }
@@ -2467,14 +2467,14 @@ final class TutorialController {
             AiPlanningStrategy.pointerX < IgnoreListLookupSupport.a(true, 376)) {
             var4 = 0;
             while (var4 < 6) {
-              stackIn_58_0 = ~ko.pointerY;
+              stackIn_58_0 = ~HighscoreAccountEntry.pointerY;
               stackIn_58_1 = ~MatchConditionEntry.a(var4 * var3 + 60, (byte) 94);
               if (var5 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_58_0 < stackIn_58_1 &&
-                ko.pointerY < MatchConditionEntry.a(-4 + (60 + var3 * (var4 + 1)), (byte) 94)) {
+                HighscoreAccountEntry.pointerY < MatchConditionEntry.a(-4 + (60 + var3 * (var4 + 1)), (byte) 94)) {
                 wh.field_a = var4;
                 if (wh.field_a != AccountRegistrationForm.field_X) {
                   ArchiveMasterIndex.field_e = 0;
@@ -2489,7 +2489,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            var2_int = LocalCoatSupport.localCoat.a(ko.pointerY, param0 ^ 21728, IgnoreListLookupSupport.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.pointerX);
+            var2_int = LocalCoatSupport.localCoat.a(HighscoreAccountEntry.pointerY, param0 ^ 21728, IgnoreListLookupSupport.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.pointerX);
             stackIn_58_0 = ~var2_int;
             stackIn_58_1 = 1;
           }
@@ -3800,8 +3800,8 @@ final class TutorialController {
             AccountNameSelectionForm.field_F = 45;
           }
           if (TelepopEvent.field_D) {
-            BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[RasterViewportResizeHandler.field_d][2]].drawHalfSize(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
-            ProjectileEffect.field_h[0].drawHalfSize(AiPlanningStrategy.pointerX + 10, 10 + ko.pointerY);
+            BattleCharacter.field_h[SpellDefinitionTable.spellDefinitions[RasterViewportResizeHandler.field_d][2]].drawHalfSize(12 + AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY + 12);
+            ProjectileEffect.field_h[0].drawHalfSize(AiPlanningStrategy.pointerX + 10, 10 + HighscoreAccountEntry.pointerY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3945,7 +3945,7 @@ final class TutorialController {
             stackIn_18_0 = TabbedPanel.a(MatchConditionEntry.a(var4, (byte) 94), IgnoreListLookupSupport.a(true, var3), 25, false);
             if (var8 == 0) {
               if (stackIn_18_0) {
-                ep.field_o = 0;
+                IntroSequence.field_o = 0;
                 if (PreferencesWriteRequest.field_q == -1 + var2_int) {
                   return;
                 }
@@ -3986,7 +3986,7 @@ final class TutorialController {
                 var4Lifetime1++;
                 continue;
               }
-              ep.field_o = 0;
+              IntroSequence.field_o = 0;
               if (var4Lifetime1 != SetCoatConsoleCommand.field_F) {
                 MoveAttackAction.field_s = PreferencesWriteRequest.field_q;
                 TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
@@ -4068,9 +4068,9 @@ final class TutorialController {
             }
           }
           if (BoundedUrlRequest.field_j != 1 &&
-            IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 589), IgnoreListLookupSupport.a(true, 603), MatchConditionEntry.a(158 + ep.field_o, (byte) 94), MatchConditionEntry.a(150 + (ep.field_o + 24), (byte) 94))) {
+            IterableDualNodeDeque.isPointerInBounds(-33, IgnoreListLookupSupport.a(true, 589), IgnoreListLookupSupport.a(true, 603), MatchConditionEntry.a(158 + IntroSequence.field_o, (byte) 94), MatchConditionEntry.a(150 + (IntroSequence.field_o + 24), (byte) 94))) {
             BoundedUrlRequest.field_j = 1;
-            RgbSpriteBase.field_u = -ep.field_o - (158 - ko.pointerY);
+            RgbSpriteBase.field_u = -IntroSequence.field_o - (158 - HighscoreAccountEntry.pointerY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4128,7 +4128,7 @@ final class TutorialController {
           if (this.selectionState.selectedIndex != -1) {
             fallbackIndex = this.selectionState.selectedIndex;
           }
-          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(ko.pointerY, AiPlanningStrategy.pointerX, 31), 0);
+          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31), 0);
           QuickChatMenuDisplaySupport.field_a = -1;
           lm.field_c = -1;
           ManaStarParticle.field_p = fallbackIndex;
@@ -4498,7 +4498,7 @@ final class TutorialController {
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var2_int = ko.pointerY + (-RgbSpriteBase.field_u - 68);
+              var2_int = HighscoreAccountEntry.pointerY + (-RgbSpriteBase.field_u - 68);
               if (var2_int < 0) {
                 MapRepository.field_c = 0;
                 if (var3 != 0) {
@@ -4706,7 +4706,7 @@ final class TutorialController {
                   continue;
                 }
               } else {
-                ManaStarParticle.field_p = this.b(ko.pointerY, AiPlanningStrategy.pointerX, 31);
+                ManaStarParticle.field_p = this.b(HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 31);
                 this.selectionState.updatePointerSelection(0, this.b(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ManaStarParticle.field_p);
               }
               if (~GradientFrame.field_m != ~ManaStarParticle.field_p) {
@@ -4855,7 +4855,7 @@ final class TutorialController {
                           RadialSummonMenu.playDefaultSoundWithIntGuard(65, ClientUiNode.field_v[1]);
                           GameplayController.field_J = AccountNameSelectionForm.field_F;
                         }
-                        LineOfSightGrid.a((byte) -102, 224, IgnoreListLookupSupport.a(true, 380), ProgressMessageDialog.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
+                        LineOfSightGrid.a((byte) -102, 224, IgnoreListLookupSupport.a(true, 380), ProgressMessageDialog.pointerButton, HighscoreAccountEntry.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                     }
@@ -4889,7 +4889,7 @@ final class TutorialController {
                   if (var4 != 0) {
                     this.c((byte) -120);
                     if (BufferedSocket.field_i != null) {
-                      BufferedSocket.field_i.a(false);
+                      BufferedSocket.field_i.advance(false);
                     }
                   }
                 }
@@ -4898,12 +4898,12 @@ final class TutorialController {
               this.c((byte) -120);
               if ((var4 != 0) &&
                 (BufferedSocket.field_i != null)) {
-                BufferedSocket.field_i.a(false);
+                BufferedSocket.field_i.advance(false);
               }
             }
           } else {
             if (BufferedSocket.field_i != null) {
-              BufferedSocket.field_i.a(false);
+              BufferedSocket.field_i.advance(false);
             }
           }
           if (2 == this.tutorialStage &&
@@ -5365,7 +5365,7 @@ final class TutorialController {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, ko.pointerY);
+          lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, HighscoreAccountEntry.pointerY);
           if (1 == DeployEvent.pointerPressButton) {
             RadialSummonMenu.playDefaultSoundWithIntGuard(94, ClientUiNode.field_v[2]);
             var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
@@ -5602,7 +5602,7 @@ final class TutorialController {
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
-                                  BufferedSocket.field_i.a(256);
+                                  BufferedSocket.field_i.draw(256);
                                   GradientUiRenderer.drawHollowGradientFrame(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
+          AccountNameSelectionForm.field_F = LocalCoatSupport.localCoat.a(IgnoreListLookupSupport.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), HighscoreAccountEntry.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -6050,8 +6050,8 @@ final class TutorialController {
             if (var8 == 0) {
               if (stackIn_35_0 > stackIn_35_1 &&
                 var4 + 68 > AiPlanningStrategy.pointerX &&
-                var5 < ko.pointerY &&
-                (60 + (var2_int * (1 + var3) - 4)) > ko.pointerY) {
+                var5 < HighscoreAccountEntry.pointerY &&
+                (60 + (var2_int * (1 + var3) - 4)) > HighscoreAccountEntry.pointerY) {
                 if (~var3 != ~wh.field_a) {
                   GradientUiRenderer.drawGradientFrame(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
@@ -6079,9 +6079,9 @@ final class TutorialController {
           var3Lifetime1 = -1;
           if (AiPlanningStrategy.pointerX > IgnoreListLookupSupport.a(true, 40) &&
             AiPlanningStrategy.pointerX < IgnoreListLookupSupport.a(true, 376) &&
-            ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
-            ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
-            var3Lifetime1 = (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + (ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42 * 16;
+            HighscoreAccountEntry.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
+            HighscoreAccountEntry.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
+            var3Lifetime1 = (AiPlanningStrategy.pointerX - IgnoreListLookupSupport.a(true, 40)) / 21 + (HighscoreAccountEntry.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42 * 16;
           }
           if (AccountNameSelectionForm.field_F <= -1) {
             AccountNameSelectionForm.field_F = var3Lifetime1;
@@ -6130,14 +6130,14 @@ final class TutorialController {
             }
             if (stackIn_89_0 > ~AccountRegistrationForm.field_X) {
               stackIn_96_0 = !(ProgressMessageDialog.pointerButton <= 0);
-              var4Lifetime1 = PasswordValidator.a(stackIn_96_0, 352, IgnoreListLookupSupport.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, LocalCoatSupport.localCoat.parts[AccountRegistrationForm.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.a(stackIn_96_0, 352, IgnoreListLookupSupport.a(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, LocalCoatSupport.localCoat.parts[AccountRegistrationForm.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
               if (var8 != 0) {
                 stackIn_103_0 = !(ProgressMessageDialog.pointerButton <= 0);
-                var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+                var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.a(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
               }
             } else {
               stackIn_103_0 = !(ProgressMessageDialog.pointerButton <= 0);
-              var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, IgnoreListLookupSupport.a(true, 380), HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
             }
             if (AccountNameSelectionForm.field_F > -1) {
               AccountNameSelectionForm.field_F = AccountNameSelectionForm.field_F + 200;

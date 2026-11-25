@@ -673,9 +673,9 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (null == ContentTransitionDialog.field_eb) {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
-            ko.field_e = SpriteScrollBar.c((byte) 111);
+            HighscoreAccountEntry.field_e = SpriteScrollBar.c((byte) 111);
           }
-          RegistrationAgreementPane.a(LoginKind.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
+          RegistrationAgreementPane.a(LoginKind.field_g, (byte) 76, ContentTransitionDialog.field_eb, HighscoreAccountEntry.field_e);
           DisplayModeOptionPainter.field_u = null;
           CombatPresentation.field_M = null;
           LoginKind.field_g = null;

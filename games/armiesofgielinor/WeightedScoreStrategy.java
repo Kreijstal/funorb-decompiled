@@ -31,7 +31,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
     }
 
     final static boolean a(int param0, int param1) {
-        fd var2 = null;
+        AnimationFrameSetCacheEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -44,13 +44,13 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           if (param0 == MusicTrackSelectionSupport.field_e.size(false)) {
             return false;
           }
-          var2 = (fd) (MusicTrackSelectionSupport.field_e.first((byte) 111));
+          var2 = (AnimationFrameSetCacheEntry) (MusicTrackSelectionSupport.field_e.first((byte) 111));
           while (var2 != null) {
             var3 = var2.field_k;
             if (var3 == param1) {
               return true;
             }
-            var2 = (fd) (MusicTrackSelectionSupport.field_e.next((byte) 123));
+            var2 = (AnimationFrameSetCacheEntry) (MusicTrackSelectionSupport.field_e.next((byte) 123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

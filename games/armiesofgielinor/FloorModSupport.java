@@ -3,7 +3,7 @@
  */
 final class FloorModSupport {
     static int decodedPrivateMessageIdLow24;
-    static ko[] field_b;
+    static HighscoreAccountEntry[] field_b;
     static int socialListState;
 
     final static boolean a(MeshData param0, int param1) {
@@ -53,9 +53,9 @@ final class FloorModSupport {
 
     static {
         int var0 = 0;
-        field_b = new ko[255];
+        field_b = new HighscoreAccountEntry[255];
         for (var0 = 0; field_b.length > var0; var0++) {
-          field_b[var0] = new ko();
+          field_b[var0] = new HighscoreAccountEntry();
         }
     }
 }

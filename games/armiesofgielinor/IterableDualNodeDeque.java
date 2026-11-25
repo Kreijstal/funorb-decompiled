@@ -20,10 +20,10 @@ final class IterableDualNodeDeque implements Iterable {
           if (AiPlanningStrategy.pointerX > maximumX) {
             return false;
           }
-          if (minimumY > ko.pointerY) {
+          if (minimumY > HighscoreAccountEntry.pointerY) {
             return false;
           }
-          if (maximumY >= ko.pointerY) {
+          if (maximumY >= HighscoreAccountEntry.pointerY) {
             return true;
           }
           return false;
@@ -34,10 +34,10 @@ final class IterableDualNodeDeque implements Iterable {
         if (AiPlanningStrategy.pointerX > maximumX) {
           return false;
         }
-        if (minimumY > ko.pointerY) {
+        if (minimumY > HighscoreAccountEntry.pointerY) {
           return false;
         }
-        if (maximumY >= ko.pointerY) {
+        if (maximumY >= HighscoreAccountEntry.pointerY) {
           return true;
         }
         return false;

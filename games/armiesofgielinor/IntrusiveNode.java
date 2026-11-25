@@ -322,7 +322,7 @@ class IntrusiveNode {
     final static int b(int param0) {
         CheckMarkWidgetPainter.field_c.serviceProviders(18199);
         if (!ScrollWidgetContainer.field_T.poll(true)) {
-          return ep.b((byte) -120);
+          return IntroSequence.pollResourceConnection((byte) -120);
         }
         if (param0 >= 68) {
           return 0;

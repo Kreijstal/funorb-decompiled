@@ -70,7 +70,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.unpackedFiles[groupId][fileId]) {
-            fileBytes = ko.getStoredBytes(false, 80, this.unpackedFiles[groupId][fileId]);
+            fileBytes = HighscoreAccountEntry.getStoredBytes(false, 80, this.unpackedFiles[groupId][fileId]);
             fileBytesOrFailure = fileBytes;
             if (fileBytes == null) {
               throw new RuntimeException("");
@@ -506,7 +506,7 @@ final class ResourceArchive {
         RuntimeException var1 = null;
         try {
           var1_int = AiPlanningStrategy.pointerX;
-          var2 = ko.pointerY;
+          var2 = HighscoreAccountEntry.pointerY;
           if (param0 != -20193) {
             field_d = (String) null;
           }
@@ -721,7 +721,7 @@ final class ResourceArchive {
             0 != xteaKey[1] ||
             xteaKey[2] != 0 ||
             xteaKey[3] != 0)) {
-            encryptedGroupCopy = ko.getStoredBytes(true, 42, this.packedGroups[groupId]);
+            encryptedGroupCopy = HighscoreAccountEntry.getStoredBytes(true, 42, this.packedGroups[groupId]);
             encryptedCopyAlias = encryptedGroupCopy;
             encodedGroup = encryptedCopyAlias;
             decryptionPacket = new PacketBuffer(encryptedGroupCopy);
@@ -729,7 +729,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            encodedGroup = ko.getStoredBytes(false, 87, this.packedGroups[groupId]);
+            encodedGroup = HighscoreAccountEntry.getStoredBytes(false, 87, this.packedGroups[groupId]);
           }
           try {
             groupData = MouseWheelSource.decompressContainer(false, encodedGroup);

@@ -194,10 +194,10 @@ abstract class DebouncedValidator implements ValidationSource {
           var8Lifetime1 = SocketResourceClient.sine8192(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
           if (AiPlanningStrategy.pointerX != -1 &&
-            ko.pointerY != -1) {
+            HighscoreAccountEntry.pointerY != -1) {
             var9Lifetime1 = -128;
             var7Lifetime1 = AiPlanningStrategy.pointerX - 320;
-            var8Lifetime1 = -ko.pointerY + 240;
+            var8Lifetime1 = -HighscoreAccountEntry.pointerY + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);

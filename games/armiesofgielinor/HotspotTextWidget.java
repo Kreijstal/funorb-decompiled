@@ -146,7 +146,7 @@ class HotspotTextWidget extends InteractiveWidget {
           this.hoveredHotspot = null;
           if (this.hovered) {
             relativeX = -originX + (AiPlanningStrategy.pointerX - this.x);
-            relativeY = -originY + ko.pointerY - this.y;
+            relativeY = -originY + HighscoreAccountEntry.pointerY - this.y;
             this.hoveredHotspot = this.findHotspot(relativeY, (byte) -61, relativeX);
           }
         } catch (RuntimeException failure) {

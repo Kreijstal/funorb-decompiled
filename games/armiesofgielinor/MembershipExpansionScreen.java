@@ -215,7 +215,7 @@ final class MembershipExpansionScreen {
             }
           }
           if (param0) {
-            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.pointerPressX, TeleportAction.pointerPressY, -387), this.a(AiPlanningStrategy.pointerX, ko.pointerY, -387));
+            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.pointerPressX, TeleportAction.pointerPressY, -387), this.a(AiPlanningStrategy.pointerX, HighscoreAccountEntry.pointerY, -387));
             var4Lifetime1 = 0;
             if (this.field_h.hasActivationInput((byte) 96)) {
               if (0 == this.field_h.selectedIndex) {
@@ -437,8 +437,8 @@ final class MembershipExpansionScreen {
           if (ByteStorage.field_d != null) {
             ByteStorage.field_d.drawTransparent(9, 257);
             ByteStorage.field_d.drawHorizontalFlip(558, 257);
-            if (ko.pointerY > 257 &&
-              ko.pointerY < 290) {
+            if (HighscoreAccountEntry.pointerY > 257 &&
+              HighscoreAccountEntry.pointerY < 290) {
               var2_intLifetime2 = (40 * CombatViewTransition.sine2048(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
                 if (AiPlanningStrategy.pointerX > 9 &&

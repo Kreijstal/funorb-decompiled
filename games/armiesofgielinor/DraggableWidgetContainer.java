@@ -74,7 +74,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
             ((InteractiveWidget) (this.child)).enabled) &&
             this.pressedButton == 1) {
             pointerXOrReturnDelta = -originX + (AiPlanningStrategy.pointerX - this.pressOffsetX);
-            pointerY = -this.pressOffsetY + (ko.pointerY - originY);
+            pointerY = -this.pressOffsetY + (HighscoreAccountEntry.pointerY - originY);
             if (this.x != pointerXOrReturnDelta ||
               this.y != pointerY) {
               this.x = pointerXOrReturnDelta;

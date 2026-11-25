@@ -35,7 +35,7 @@ final class ArchiveLoadStep {
     }
 
     final static AnimationFrameSet findCachedFrameSet(int param0, boolean param1) {
-        fd var2;
+        AnimationFrameSetCacheEntry var2;
         int var3;
         NodeDeque stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -50,13 +50,13 @@ final class ArchiveLoadStep {
         if (!param1) {
           return (AnimationFrameSet) null;
         }
-        var2 = (fd) (MusicTrackSelectionSupport.field_e.first((byte) 109));
+        var2 = (AnimationFrameSetCacheEntry) (MusicTrackSelectionSupport.field_e.first((byte) 109));
         while (var2 != null) {
           var3 = var2.field_k;
           if (var3 == param0) {
             return var2.field_p;
           }
-          var2 = (fd) (MusicTrackSelectionSupport.field_e.next((byte) 123));
+          var2 = (AnimationFrameSetCacheEntry) (MusicTrackSelectionSupport.field_e.next((byte) 123));
         }
         return null;
     }

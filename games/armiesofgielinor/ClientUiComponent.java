@@ -434,7 +434,7 @@ class ClientUiComponent extends ClientUiNode {
             this.heldPressButton = 0;
           }
         }
-        pointerInsideClip = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
+        pointerInsideClip = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= HighscoreAccountEntry.pointerY) && (SoftwareRaster.clipBottom > HighscoreAccountEntry.pointerY);
         this.hovered = pointerInsideClip;
         if (ProgressMessageDialog.pointerButton == 0) {
           this.heldPressButton = 0;
@@ -458,7 +458,7 @@ class ClientUiComponent extends ClientUiNode {
         if (this.heldPressButton != 0 &&
           this.draggable) {
           this.x = -this.dragGrabX + AiPlanningStrategy.pointerX - parentX;
-          this.y = -this.dragGrabY + ko.pointerY - parentY;
+          this.y = -this.dragGrabY + HighscoreAccountEntry.pointerY - parentY;
           if (0 > this.x) {
             this.x = 0;
           }

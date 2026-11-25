@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ep {
+final class IntroSequence {
     private double field_d;
     private int field_g;
     private int field_m;
@@ -22,21 +22,21 @@ final class ep {
     static boolean[][] field_p;
     private int field_c;
 
-    private final int a(byte param0, int param1) {
+    private final int toScreenY(byte param0, int param1) {
         if (param0 > -22) {
           return 69;
         }
         return (-AudioShutdownSupport.field_b + FixedSquareRootSupport.field_b.height >> 1) + param1;
     }
 
-    private final RgbSprite b(int param0, int param1) {
+    private final RgbSprite loadIntroImage(int param0, int param1) {
         if (param0 >= -15) {
-          this.a(29);
+          this.draw(29);
         }
         return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
     }
 
-    final void a(boolean param0) {
+    final void advance(boolean param0) {
         int fieldTemp$0 = 0;
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -102,7 +102,7 @@ final class ep {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int discarded$0 = 0;
         int var9 = 0;
         int stackIn_43_0;
@@ -133,7 +133,7 @@ final class ep {
         int var8Lifetime1Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 256) {
-          discarded$0 = this.a(53, -105);
+          discarded$0 = this.toScreenX(53, -105);
         }
         if (this.field_j != 3) {
           SoftwareRaster.clearPixels();
@@ -141,22 +141,22 @@ final class ep {
           var13 = var12;
           var3_int = NineSliceFrame.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
           for (var4 = 0; var4 < var3_int; var4++) {
-            var5 = this.a((byte) -90, var4 * 20 + 200);
-            GradientUiRenderer.drawCenteredGradientText(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
+            var5 = this.toScreenY((byte) -90, var4 * 20 + 200);
+            GradientUiRenderer.drawCenteredGradientText(var12[var4], this.toScreenX(320, 4592), var5, ConsoleValue.field_b, true);
           }
           if (this.field_j != 1) {
             var4Lifetime1 = (this.field_m << 8) / 50;
             if (this.field_j == 2) {
               var4Lifetime1 = 256 - var4Lifetime1;
             }
-            SoftwareRaster.fillRectangleBlended(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, 65793, var4Lifetime1);
+            SoftwareRaster.fillRectangleBlended(this.toScreenX(0, param0 ^ 4336), this.toScreenY((byte) -56, 0), FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, 65793, var4Lifetime1);
           }
         } else {
           if (StructureTerrainSupport.field_c == null) {
             StructureTerrainSupport.field_c = new RgbSprite[16];
             try {
               for (var2 = 0; var2 < 16; var2++) {
-                StructureTerrainSupport.field_c[var2] = this.b(GrowthEvent.bitwiseXor(param0, -383), var2);
+                StructureTerrainSupport.field_c[var2] = this.loadIntroImage(GrowthEvent.bitwiseXor(param0, -383), var2);
               }
             } catch (java.lang.OutOfMemoryError decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,11 +167,11 @@ final class ep {
           var3 = this.field_k;
           var5 = (int)(16.0 * this.field_k);
           if (var2 > 0) {
-            var3 = (double)this.a(-320, 4592);
-            this.a(var5, (byte) -79);
+            var3 = (double)this.toScreenX(-320, 4592);
+            this.drawPanoramaStrip(var5, (byte) -79);
             SoftwareRaster.fillRectangleBlended(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, 65793, var2);
           } else {
-            this.a(var5, (byte) -79);
+            this.drawPanoramaStrip(var5, (byte) -79);
           }
           if (this.field_c < 5) {
             var6 = -1 + this.field_c;
@@ -184,7 +184,7 @@ final class ep {
               var8 = TrianglePulse.field_i.wrapLines(ParasiteEvent.field_A[var6], new int[]{620}, var7_ref_String__);
               for (var9 = 0; var9 < var8; var9++) {
                 var10 = 435 + 16 * var9;
-                TrianglePulse.field_i.drawCenteredWithAlpha(var7_ref_String__[var9], this.a(320, 4592), this.a((byte) -104, var10), 16777215, 65793, 256 - (int)(this.field_e * 256.0 / 11.904));
+                TrianglePulse.field_i.drawCenteredWithAlpha(var7_ref_String__[var9], this.toScreenX(320, 4592), this.toScreenY((byte) -104, var10), 16777215, 65793, 256 - (int)(this.field_e * 256.0 / 11.904));
               }
             }
           }
@@ -208,36 +208,36 @@ final class ep {
             var8Lifetime1 = this.field_q << 2;
             stackIn_48_0 = (var8Lifetime1 <= 256) ? var8Lifetime1 : 256;
             var8Lifetime1Lifetime1 = stackIn_48_0;
-            MaskedTextEntryPainter.field_y.drawWithOpacity(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
+            MaskedTextEntryPainter.field_y.drawWithOpacity(this.toScreenX(-(int)this.field_k + 3002, 4592), this.toScreenY((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
           } else {
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.sine8192(800 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[2]);
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, GradientUiRenderer.particlePalettes[3]);
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.sine8192(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
-            SoftwareRaster.fillRadialPaletteCircle((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.sine8192(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.sine8192(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
-            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.sine8192(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
-            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1105, param0 + 4336))), this.toScreenY((byte) -73, 119) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1068, 4592))), this.toScreenY((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.sine8192(800 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[2]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * ((double)this.toScreenX(1105, 4592) - var3)), this.toScreenY((byte) -39, 286) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, GradientUiRenderer.particlePalettes[3]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1443, 4592))), this.toScreenY((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.sine8192(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
+            SoftwareRaster.fillRadialPaletteCircle((int)((-var3 + (double)this.toScreenX(1478, 4592)) * 16.0), this.toScreenY((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.sine8192(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(1446, 4592))), this.toScreenY((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.sine8192(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
+            SoftwareRaster.b((int)(this.toScreenX(1890.0 - this.field_k, 16) * 16.0), this.toScreenY((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.sine8192(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.toScreenX(2614, 4592))), this.toScreenY((byte) -74, 219) << 4, 80, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
             var7 = 256 + (SocketResourceClient.sine8192(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
-              MidiPcmStream.field_H.drawWithOpacity((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)(-var3 + (double)this.toScreenX(2568, 4592)), this.toScreenY((byte) -29, 141), var7);
             }
             var7 = 256 + (SocketResourceClient.sine8192(var6Lifetime1 / 2, 100) - 65536);
             if (var7 > 0) {
-              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.toScreenX(2516, 4592) - var3), this.toScreenY((byte) -119, 206), var7);
             }
             var7 = -65536 + SocketResourceClient.sine8192(var6Lifetime1 / 3, 100) + 256;
             if (var7 > 0) {
-              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.toScreenX(2665, param0 + 4336) - var3), this.toScreenY((byte) -53, 168), var7);
             }
           }
         }
     }
 
-    final static void a(ClientUiComponent param0, int param1, ClientUiComponent param2) {
+    final static void initializeSocialLists(ClientUiComponent param0, int param1, ClientUiComponent param2) {
         try {
           if (null == param2.children) {
             param2.children = new NodeDeque();
@@ -262,7 +262,7 @@ final class ep {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void drawPanoramaStrip(int param0, byte param1) {
         int var4;
         int var5;
         int var6;
@@ -285,10 +285,10 @@ final class ep {
         var5 = -1;
         for (var6 = us.field_a; var6 < 16; var6++) {
           var7 = var4;
-          var8 = (var7 >> 4) + this.a(0, 4592);
+          var8 = (var7 >> 4) + this.toScreenX(0, 4592);
           if (SoftwareRaster.width > var8) {
             if (null == StructureTerrainSupport.field_c[var6]) {
-              StructureTerrainSupport.field_c[var6] = this.b(-99, var6);
+              StructureTerrainSupport.field_c[var6] = this.loadIntroImage(-99, var6);
             }
             var9 = StructureTerrainSupport.field_c[var6].pixelWidth;
             var4 = var4 + (var9 << 4);
@@ -303,7 +303,7 @@ final class ep {
               if (SoftwareRaster.width < var10) {
                 var9 = var9 - (var10 - SoftwareRaster.width);
               }
-              var12 = this.a((byte) -34, 0);
+              var12 = this.toScreenY((byte) -34, 0);
               if (var5 < 0) {
                 var5 = var8;
               }
@@ -321,12 +321,12 @@ final class ep {
           break;
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 64; var6Lifetime1++) {
-          SoftwareRaster.drawVerticalLineBlended(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.height, 0, 255 - (var6Lifetime1 << 2));
+          SoftwareRaster.drawVerticalLineBlended(var6Lifetime1 + var5, this.toScreenY((byte) -45, 0), SoftwareRaster.height, 0, 255 - (var6Lifetime1 << 2));
         }
         return;
     }
 
-    final static int b(byte param0) {
+    final static int pollResourceConnection(byte param0) {
         try {
           int stackIn_13_0 = 0;
           int stackIn_25_0 = 0;
@@ -412,7 +412,7 @@ final class ep {
         }
     }
 
-    final static void a(boolean param0, String param1, boolean param2) {
+    final static void drawChatInputWithText(boolean param0, String param1, boolean param2) {
         String var4 = null;
         try {
           if (!param0) {
@@ -428,14 +428,14 @@ final class ep {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int toScreenX(int param0, int param1) {
         if (param1 != 4592) {
           this.field_m = -45;
         }
         return (FixedSquareRootSupport.field_b.width - GuestPlayConfirmationForm.field_Q >> 1) + param0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_h = null;
         field_p = (boolean[][]) null;
@@ -445,7 +445,7 @@ final class ep {
         field_a = null;
     }
 
-    ep(ResourceArchive param0) {
+    IntroSequence(ResourceArchive param0) {
         this.field_m = 50;
         this.field_i = new int[]{350, 350, 450, 450, 3500};
         this.field_q = 0;
@@ -466,10 +466,10 @@ final class ep {
         }
     }
 
-    private final double a(double param0, int param1) {
+    private final double toScreenX(double param0, int param1) {
         RgbSprite discarded$0 = null;
         if (param1 != 16) {
-          discarded$0 = this.b(-62, 105);
+          discarded$0 = this.loadIntroImage(-62, 105);
         }
         return (double)(-GuestPlayConfirmationForm.field_Q + FixedSquareRootSupport.field_b.width >> 1) + param0;
     }

@@ -1693,7 +1693,7 @@ final class TickCounter {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  ep.field_a = uu.a(var2, (byte) 73);
+                  IntroSequence.field_a = uu.a(var2, (byte) 73);
                 }
                 var2 = DropdownSelectorPainter.a(false, "BUTTON_ANNOUNCE");
                 if (null != var2) {
@@ -4755,7 +4755,7 @@ final class TickCounter {
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREEN_POTIONS");
                 if (var2 != null) {
-                  fd.field_o = uu.a(var2, (byte) 92);
+                  AnimationFrameSetCacheEntry.field_o = uu.a(var2, (byte) 92);
                 }
                 var2 = DropdownSelectorPainter.a(false, "TTREEN_ARMOUR");
                 if (var2 != null) {

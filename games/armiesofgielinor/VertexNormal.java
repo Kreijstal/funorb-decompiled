@@ -85,15 +85,15 @@ final class VertexNormal {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (ToggleWidget.currentRoom != null && (null != ep.field_p ||
+          if (ToggleWidget.currentRoom != null && (null != IntroSequence.field_p ||
             GameAppletShell.field_e != null ||
             SoundPanSupport.field_d != null ||
             CombatPresentation.field_j != null)) {
             for (var9 = 0; var9 < NineSliceSpriteSupport.gameOptionCount; var9++) {
               var10_int = ToggleWidget.currentRoom.gameOptions[var9] & 255;
-              if (null != ep.field_p &&
-                null != ep.field_p[var9] &&
-                ep.field_p[var9][var10_int]) {
+              if (null != IntroSequence.field_p &&
+                null != IntroSequence.field_p[var9] &&
+                IntroSequence.field_p[var9][var10_int]) {
                 var5_int = 1;
               }
               if (null != GameAppletShell.field_e &&
@@ -333,7 +333,7 @@ final class VertexNormal {
                   if (var7 <= var12.ratedGamesPlayed) {
                     if (var6 <= var12.rating) {
                       if ((~var12.optionUnlockMask & var8) != 0) {
-                        var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
+                        var25_int = AnimationFrameSetCacheEntry.highestOneBit(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = EmailCheckResult.a(4800, LoginKind.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           FullscreenStatusToken.field_c != null &&
@@ -367,7 +367,7 @@ final class VertexNormal {
                   } else {
                     if (var6 <= var12.rating) {
                       if (0 != (var8 & ~var12.optionUnlockMask)) {
-                        var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
+                        var25_int = AnimationFrameSetCacheEntry.highestOneBit(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = EventPresenter.field_l;
                         if (var25_int > 0 &&
                           null != FullscreenStatusToken.field_c &&
@@ -394,9 +394,9 @@ final class VertexNormal {
                 for (var27_int = 0; var27_int < NineSliceSpriteSupport.gameOptionCount; var27_int++) {
                   var28 = ToggleWidget.currentRoom.gameOptions[var27_int] & 255;
                   var29 = 0;
-                  if (ep.field_p != null &&
-                    ep.field_p[var27_int] != null &&
-                    ep.field_p[var27_int][var28] &&
+                  if (IntroSequence.field_p != null &&
+                    IntroSequence.field_p[var27_int] != null &&
+                    IntroSequence.field_p[var27_int][var28] &&
                     !var12.packedFlag0) {
                     var29 = 1;
                   }

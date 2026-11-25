@@ -11,7 +11,7 @@ final class BufferedSocket implements Runnable {
     private int readPosition;
     private boolean closed;
     private InputStream input;
-    static ep field_i;
+    static IntroSequence field_i;
     private PlatformTask writerTask;
     static String field_a;
     private java.net.Socket socket;

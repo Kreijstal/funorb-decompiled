@@ -286,7 +286,7 @@ final class TabbedPanel extends ClientUiComponent {
         if (param3) {
           return true;
         }
-        return (ko.pointerY - param0) * (-param0 + ko.pointerY) + (-param1 + AiPlanningStrategy.pointerX) * (-param1 + AiPlanningStrategy.pointerX) < param2 * param2 ? true : false;
+        return (HighscoreAccountEntry.pointerY - param0) * (-param0 + HighscoreAccountEntry.pointerY) + (-param1 + AiPlanningStrategy.pointerX) * (-param1 + AiPlanningStrategy.pointerX) < param2 * param2 ? true : false;
     }
 
     TabbedPanel(long key, ClientUiComponent tabStyle, String[] labels, ClientUiComponent contentStyle, ClientUiComponent[] panels, int activeTab) {

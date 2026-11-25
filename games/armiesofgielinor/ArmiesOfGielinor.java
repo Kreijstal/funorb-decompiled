@@ -201,7 +201,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 14) {
                   RadialSummonItem.a(PowerOfTwoSupport.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, PowerOfTwoSupport.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, UnitAnimationPreview.d((byte) 81));
-                  ep.a(TextWidthSupport.b(-126), -72, ProjectileEffect.c(0));
+                  IntroSequence.initializeSocialLists(TextWidthSupport.b(-126), -72, ProjectileEffect.c(0));
                   s.field_d = 0;
                   ValidatedTextWidget.field_Z = true;
                   SpellCastAction.field_t = false;
@@ -1033,7 +1033,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             jt.field_a == 7);
           MusicPatch.field_w = stackIn_21_0;
           if (obfuscationGuard > ~AiPlanningStrategy.pointerX &&
-            -1 < ko.pointerY) {
+            -1 < HighscoreAccountEntry.pointerY) {
           }
           BoundedFile.a(jt.field_a, true, MusicPatch.field_w, false);
           if (null != mu.field_a) {
@@ -1177,7 +1177,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ViewportManager.releaseStatics((byte) -67);
           CoatOfArms.releaseStatics(false);
           BattlefieldTheme.releaseStatics((byte) -117);
-          ep.a((byte) 11);
+          IntroSequence.releaseStatics((byte) 11);
           PlayerProfile.releaseStatics(0);
           CampaignQuicksave.releaseStatics(obfuscationGuard + 157);
           SoundCache.a((byte) -58);
@@ -1344,7 +1344,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           LineOfSightGrid.releaseStatics(obfuscationGuard ^ -90);
           AnimationFrameSet.releaseStatics((byte) -74);
           TileMetadata.releaseStatics(23582);
-          fd.releaseStatics(-30097);
+          AnimationFrameSetCacheEntry.releaseStatics(-30097);
           AnimationSequence.releaseStatics(obfuscationGuard ^ 125);
           qf.releaseStatics((byte) 31);
           GradientFrame.releaseStatics((byte) -90);
@@ -1516,7 +1516,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           DualNodeIterator.releaseStatics((byte) -121);
           ScoreLeaderboardRequest.a(true);
           ScoreSubmissionRequest.releaseStatics(obfuscationGuard + 155);
-          ko.releaseStatics(false);
+          HighscoreAccountEntry.releaseStatics(false);
           RatingLeaderboardRequest.releaseStatics((byte) 97);
           ChannelGainProfile.releaseStatics(-4740);
           SoundPlaybackHandle.releaseStatics((byte) -75);
@@ -1707,7 +1707,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           UnitAnimationPreview.field_j = SpriteButtonPainter.a(6, true);
           CampaignLookupSupport.field_d = SpriteButtonPainter.a(7, true);
           SpellConfirmationDialog.field_f = SpriteButtonPainter.a(8, true);
-          ep.field_b = SpriteButtonPainter.a(9, true);
+          IntroSequence.field_b = SpriteButtonPainter.a(9, true);
           SummonAction.field_w = SpriteButtonPainter.a(10, true);
           CorpseConditionMarker.field_w = SpriteButtonPainter.a(11, true);
           QuinticFadeSupport.field_b = SpriteButtonPainter.a(12, true);
@@ -1942,8 +1942,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                         CampaignLookupSupport.field_d.ensureAllGroupsAvailable(-27927)) {
                         if (SpellConfirmationDialog.field_f.ensureIndex((byte) 82) &&
                           SpellConfirmationDialog.field_f.ensureAllGroupsAvailable(-27927)) {
-                          if (ep.field_b.ensureIndex((byte) 82) &&
-                            ep.field_b.ensureAllGroupsAvailable(-27927)) {
+                          if (IntroSequence.field_b.ensureIndex((byte) 82) &&
+                            IntroSequence.field_b.ensureAllGroupsAvailable(-27927)) {
                             if (SummonAction.field_w.ensureIndex((byte) 82) &&
                               SummonAction.field_w.ensureAllGroupsAvailable(-27927)) {
                               if (AchievementUnlockRequest.field_l.ensureIndex((byte) 82) &&
@@ -2048,7 +2048,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                             CalendarSupport.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, LeapYearSupport.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
-                          CalendarSupport.a((byte) -24, 33.0f, LoginForm.a(LeapYearSupport.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
+                          CalendarSupport.a((byte) -24, 33.0f, LoginForm.a(LeapYearSupport.field_d, 0, IntroSequence.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
                         CalendarSupport.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, PointerCaptureSupport.field_b, "", ResourceProtocolClient.field_k));
@@ -2106,19 +2106,19 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               var5_int++;
             } while (var18 == 0);
             var5 = BitmapTextWidgetPainter.musicCrossfadeStream.firstSequencer;
-            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
-            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
-            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);
-            var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, IgnoreRequestSupport.field_h, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, DeployRequest.field_B, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);
+            var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, IgnoreRequestSupport.field_h, (byte) 86);
             var6 = ConsoleEvaluationException.field_a;
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
-                var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
+                var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
                 break;
               }
               var8 = var6[var7_int];
-              var5.prepareTrackSamples(FullscreenStatusToken.field_d, ep.field_b, 0, var8, (byte) 86);
+              var5.prepareTrackSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, 0, var8, (byte) 86);
               var7_int++;
             } while (var18 == 0);
             var6_array = UnitLossCondition.battlefieldThemes;
@@ -2127,13 +2127,13 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               if (var6_array.length <= var7_int) {
                 var5.releasePatchSampleIds(-117);
                 SummonAction.field_w = null;
-                ep.field_b = null;
+                IntroSequence.field_b = null;
                 FullscreenStatusToken.field_d = null;
                 ModalDialog.a(0);
                 break;
               }
               var8_ref = var6_array[var7_int];
-              var8_ref.prepareMusicSamples(FullscreenStatusToken.field_d, ep.field_b, SummonAction.field_w, 0, var5);
+              var8_ref.prepareMusicSamples(FullscreenStatusToken.field_d, IntroSequence.field_b, SummonAction.field_w, 0, var5);
               var7_int++;
             } while (var18 == 0);
             return false;
@@ -2253,7 +2253,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var7_int = 0;
           do {
             if (var6_array.length <= var7_int) {
-              BufferedSocket.field_i = new ep(MusicPatchUsage.backgroundArchive);
+              BufferedSocket.field_i = new IntroSequence(MusicPatchUsage.backgroundArchive);
               HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", AchievementUnlockRequest.field_l);
               MusicPatch.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", AchievementUnlockRequest.field_l);
               ChannelBaseVolumeConsoleCommand.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", AchievementUnlockRequest.field_l);

@@ -76,7 +76,7 @@ class EditableTextWidget extends InteractiveWidget {
           if (1 == this.pressedButton) {
             if (this.painter instanceof TextWidgetPainter) {
               textPainter = (TextWidgetPainter) ((Object) this.painter);
-              hitIndex = textPainter.hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 113, originY, ko.pointerY, originX);
+              hitIndex = textPainter.hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 113, originY, HighscoreAccountEntry.pointerY, originX);
               if (hitIndex != -1) {
                 if (this.wordDragSelection &&
                   this.doubleClickWordEnd > hitIndex &&
@@ -549,7 +549,7 @@ class EditableTextWidget extends InteractiveWidget {
           if (!(this.painter instanceof TextWidgetPainter)) {
             return false;
           }
-          hitIndex = ((TextWidgetPainter) ((Object) this.painter)).hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 87, originY, ko.pointerY, originX);
+          hitIndex = ((TextWidgetPainter) ((Object) this.painter)).hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 87, originY, HighscoreAccountEntry.pointerY, originX);
           if (hitIndex != -1) {
             caretIndex = hitIndex;
           } else {

@@ -936,7 +936,7 @@ final class MatchSetupPanel {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = AiPlanningStrategy.pointerX;
-          var2 = ko.pointerY;
+          var2 = HighscoreAccountEntry.pointerY;
           stackIn_4_0 = (DeployEvent.pointerPressButton != 1) ? 0 : 1;
           var3 = stackIn_4_0;
           stackIn_7_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;

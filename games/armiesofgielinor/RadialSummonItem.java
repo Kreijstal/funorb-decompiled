@@ -50,7 +50,7 @@ final class RadialSummonItem {
         }
         if (!this.unitChoice) {
           if (availability > 0) {
-            if (this.containsPoint(112, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
+            if (this.containsPoint(112, AiPlanningStrategy.pointerX, originY, originX, HighscoreAccountEntry.pointerY)) {
               UnitModelPreview.field_d[this.godGroupId].drawTransparent(this.offsetX + originX - 25, originY + (this.offsetY - 25));
               UnitModelPreview.field_d[0].drawAdditive(originX + (this.offsetX - 25), -25 + this.offsetY + originY, 256);
               if (var6 != 0) {
@@ -72,7 +72,7 @@ final class RadialSummonItem {
           }
         }
         if (0 < availability) {
-          if (this.containsPoint(31, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
+          if (this.containsPoint(31, AiPlanningStrategy.pointerX, originY, originX, HighscoreAccountEntry.pointerY)) {
             StandardContentDialog.field_ob.drawShadedGrayscale(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
             if (var6 == 0) {
               if (this.choiceId != 81) {

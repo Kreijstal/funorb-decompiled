@@ -193,7 +193,7 @@ final class RevivalEvent extends GameEvent {
           if (param0) {
             field_B = (String) null;
           }
-          ep.a(!param0, param1, param2);
+          IntroSequence.drawChatInputWithText(!param0, param1, param2);
           if (null == DialogMessagePane.field_I) {
             return;
           }

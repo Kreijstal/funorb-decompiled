@@ -126,12 +126,12 @@ final class wh {
         int var6Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 77 / ((param0 + 24) / 63);
-        var1 = fd.field_n.length;
-        var3 = fd.field_n[0].length;
+        var1 = AnimationFrameSetCacheEntry.field_n.length;
+        var3 = AnimationFrameSetCacheEntry.field_n[0].length;
         var4 = new String[var1][var3][];
         for (var5 = 0; var1 > var5; var5++) {
           for (var6 = 0; var3 > var6; var6++) {
-            var7 = fd.field_n[var5][var6];
+            var7 = AnimationFrameSetCacheEntry.field_n[var5][var6];
             var4[var5][var6] = new String[1];
             var4[var5][var6][0] = var7;
           }

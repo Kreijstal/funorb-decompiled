@@ -231,7 +231,7 @@ final class uu {
                 }
               }
               if ((var10 >= 2) &&
-                (decompiledFrameRemainder1 = (ep.field_p != null ||
+                (decompiledFrameRemainder1 = (IntroSequence.field_p != null ||
                 null != GameAppletShell.field_e ||
                 SoundPanSupport.field_d != null ||
                 null != CombatPresentation.field_j))) {
@@ -245,9 +245,9 @@ final class uu {
                 while (!(decompiledNaturalLoopExit0 = (!(var16 < NineSliceSpriteSupport.gameOptionCount)))) {
                   var17_int = 255 & ToggleWidget.currentRoom.gameOptions[var16];
                   if (var19 == 0) {
-                    if (null != ep.field_p &&
-                      null != ep.field_p[var16] &&
-                      ep.field_p[var16][var17_int]) {
+                    if (null != IntroSequence.field_p &&
+                      null != IntroSequence.field_p[var16] &&
+                      IntroSequence.field_p[var16][var17_int]) {
                       var11_int = 1;
                     }
                     if (null != GameAppletShell.field_e &&

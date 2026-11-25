@@ -302,7 +302,7 @@ final class vq {
             var4Lifetime3++;
           }
           if (NumericDateInputWidget.field_J != 2) {
-            ProxyAuthenticationRequiredException.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, ko.pointerY), 0);
+            ProxyAuthenticationRequiredException.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, HighscoreAccountEntry.pointerY), 0);
           } else {
             ProxyAuthenticationRequiredException.field_c.restoreSelection(-1, param1, -1, 0);
           }

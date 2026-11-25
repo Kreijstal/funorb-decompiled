@@ -180,7 +180,7 @@ final class MovementPresentation implements EventPresentation {
           if (ResizableModalDialog.unitAnimationGroups.length < var2) {
             var2 = ResizableModalDialog.unitAnimationGroups.length;
           }
-          var3 = fd.field_n[0].length;
+          var3 = AnimationFrameSetCacheEntry.field_n[0].length;
           BestScoreStrategy.unitAnimationVariants = new int[var2][var3][];
           if (param0 != -11757) {
             return;

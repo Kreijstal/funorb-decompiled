@@ -152,28 +152,28 @@ final class ManaStarParticle extends IntrusiveNode {
             if (this.field_y == 0 &&
               !uu.field_b) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(29, MouseWheelSource.field_b[0]);
-              ep.field_f = false;
+              IntroSequence.field_f = false;
               uu.field_b = true;
             }
             if (this.field_y == 1 &&
               !et.field_d) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(50, MouseWheelSource.field_b[0]);
-              ep.field_f = false;
+              IntroSequence.field_f = false;
               et.field_d = true;
             }
             if (this.field_y == 2 &&
               !GiveTileConsoleCommand.field_G) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(113, MouseWheelSource.field_b[0]);
-              ep.field_f = false;
+              IntroSequence.field_f = false;
               GiveTileConsoleCommand.field_G = true;
             }
             if (this.field_y == 3 &&
-              !ep.field_f) {
+              !IntroSequence.field_f) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(57, MouseWheelSource.field_b[0]);
               et.field_d = false;
               GiveTileConsoleCommand.field_G = false;
               uu.field_b = false;
-              ep.field_f = true;
+              IntroSequence.field_f = true;
             }
           }
           if (this.field_o >= 0) {

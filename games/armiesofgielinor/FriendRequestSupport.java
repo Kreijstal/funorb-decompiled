@@ -14,7 +14,7 @@ final class FriendRequestSupport {
         int var7 = 0;
         int var8 = 0;
         int var2_int = AiPlanningStrategy.pointerX;
-        int var3 = ko.pointerY;
+        int var3 = HighscoreAccountEntry.pointerY;
         int var4 = PasswordLoginCredentials.field_h.font.getLineCount(param1, 500);
         int var5 = 6 + PasswordLoginCredentials.field_h.font.getWrappedWidth(param1, 500);
         int var6 = 2 + var4 * jn.field_d;

@@ -329,7 +329,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var22 = ImageProducerSurface.field_n[1];
             var28Lifetime1Lifetime2 = var22;
             var28Lifetime1Lifetime3 = var22;
-            var21 = fd.field_l;
+            var21 = AnimationFrameSetCacheEntry.field_l;
             var20.menu.addIconAction(param2, var21, 12, var22);
             var23 = FullscreenMembershipDialog.activeContextMenu;
             var25 = ImageProducerSurface.field_n[2];

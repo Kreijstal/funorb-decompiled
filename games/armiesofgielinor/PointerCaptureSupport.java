@@ -24,7 +24,7 @@ final class PointerCaptureSupport {
           ProgressMessageDialog.pointerButton = GridWidgetContainer.heldPointerButton;
           PointerIdleState.pointerIdleTicks = PointerIdleState.pointerIdleTicks + 1;
           AiPlanningStrategy.pointerX = DiskCacheRequest.livePointerX;
-          ko.pointerY = ResourceArchive.livePointerY;
+          HighscoreAccountEntry.pointerY = ResourceArchive.livePointerY;
           BitmapTextWidgetPainter.pointerChangedSnapshot = DropTargetWidgetContainer.pointerChanged;
           var2 = 48 / ((36 - obfuscationGuard) / 56);
           DropTargetWidgetContainer.pointerChanged = false;

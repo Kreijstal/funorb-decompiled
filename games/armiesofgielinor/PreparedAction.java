@@ -29,7 +29,7 @@ abstract class PreparedAction extends IntrusiveNode {
           if (param3 != 2378077) {
             return;
           }
-          var4_int = fd.field_n[0].length;
+          var4_int = AnimationFrameSetCacheEntry.field_n[0].length;
           for (var5 = 0; var5 < var4_int; var5++) {
             var6 = param0[var5].length;
             array$1 = new int[var6];

@@ -311,7 +311,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_options_players");
                 if (null != var2) {
-                  ep.field_h = uu.a(var2, (byte) -103);
+                  IntroSequence.field_h = uu.a(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(50, "mu_options_dontmind");
                 if (var2 != null) {
@@ -447,7 +447,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_chat_game_friends");
                 if (var2 != null) {
-                  fd.field_l = uu.a(var2, (byte) -107);
+                  AnimationFrameSetCacheEntry.field_l = uu.a(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_hide");
                 if (var2 != null) {
@@ -2848,7 +2848,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  ko.field_a = uu.a(var2, (byte) -116);
+                  HighscoreAccountEntry.field_a = uu.a(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "mustlogin1");
                 if (null != var2) {

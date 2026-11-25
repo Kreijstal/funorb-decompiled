@@ -101,7 +101,7 @@ final class ActionSpell extends Spell {
             candidateScore == 1) {
             if (1 < candidateScore) {
               UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
-              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (HighscoreAccountEntry.pointerY ^ AiPlanningStrategy.pointerX);
               UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
               mutationSelector = UnitModelViewer.campaignMetricMutationCounter % 8;
               mutationVariant = mutationSelector;

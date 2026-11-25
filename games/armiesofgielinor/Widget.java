@@ -328,7 +328,7 @@ class Widget extends IntrusiveNode {
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
-                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
                       var21 = CalendarSupport.draggedWidget;
                       if (var21 != null) {
                         if (var21.listener instanceof WidgetDropListener) {
@@ -357,7 +357,7 @@ class Widget extends IntrusiveNode {
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
-                  this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                  this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
                   var23 = CalendarSupport.draggedWidget;
                   if (var23 != null) {
                     if (var23.listener instanceof WidgetDropListener) {
@@ -385,7 +385,7 @@ class Widget extends IntrusiveNode {
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
+                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, HighscoreAccountEntry.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
               }
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -396,7 +396,7 @@ class Widget extends IntrusiveNode {
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
-                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
                       var27 = CalendarSupport.draggedWidget;
                       var6 = var27;
                       if (var27 != null) {
@@ -434,7 +434,7 @@ class Widget extends IntrusiveNode {
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
               var28 = CalendarSupport.draggedWidget;
               if (var28 != null) {
                 if (var28.listener instanceof WidgetDropListener) {
@@ -481,7 +481,7 @@ class Widget extends IntrusiveNode {
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
               var8 = CalendarSupport.draggedWidget;
               var6 = var8;
               if (var8 != null) {
@@ -500,7 +500,7 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             if (var5 != 0) {
-              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
+              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, HighscoreAccountEntry.pointerY, MouseWheelSource.field_d, param1 + 6327, this);
             }
             if (DeployEvent.pointerPressButton == 0) {
               if (ProgressMessageDialog.pointerButton != 0) {
@@ -513,7 +513,7 @@ class Widget extends IntrusiveNode {
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
               var10 = CalendarSupport.draggedWidget;
               var6 = var10;
               if (var10 != null) {
@@ -543,7 +543,7 @@ class Widget extends IntrusiveNode {
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
                 var15 = CalendarSupport.draggedWidget;
                 if (var15 != null) {
                   if (var15.listener instanceof WidgetDropListener) {
@@ -577,7 +577,7 @@ class Widget extends IntrusiveNode {
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
-            this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+            this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, HighscoreAccountEntry.pointerY, param2);
             var18 = CalendarSupport.draggedWidget;
             if (var18 != null) {
               if (var18.listener instanceof WidgetDropListener) {
@@ -742,7 +742,7 @@ class Widget extends IntrusiveNode {
           if (obfuscationGuard != 32722) {
             return;
           }
-          var5_int = this.containsPointer(obfuscationGuard - 32721, originX, ko.pointerY, AiPlanningStrategy.pointerX, originY) ? 1 : 0;
+          var5_int = this.containsPointer(obfuscationGuard - 32721, originX, HighscoreAccountEntry.pointerY, AiPlanningStrategy.pointerX, originY) ? 1 : 0;
           stackIn_4_0 = var5_int;
           if (this.hovered) {
             stackIn_5_1 = 0;

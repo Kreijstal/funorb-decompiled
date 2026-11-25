@@ -455,7 +455,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
             if (this.verticalEnabled) {
               if (this.horizontalEnabled) {
                 var5_intLifetime1 = -this.x - originX + (AiPlanningStrategy.pointerX - (this.thumb.x + (this.thumb.width >> 1)));
-                var6 = -originY + ko.pointerY - (this.y + this.thumb.y + (this.thumb.height >> 1));
+                var6 = -originY + HighscoreAccountEntry.pointerY - (this.y + this.thumb.y + (this.thumb.height >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
                     this.adjustVerticalPosition(this.verticalPageStep + this.verticalPosition, obfuscationGuard ^ 32722);
@@ -470,7 +470,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
                   }
                 }
               } else {
-                if ((this.thumb.height >> 1) + (originY + this.thumb.y) >= ko.pointerY) {
+                if ((this.thumb.height >> 1) + (originY + this.thumb.y) >= HighscoreAccountEntry.pointerY) {
                   this.adjustVerticalPosition(-this.verticalPageStep + this.verticalPosition, obfuscationGuard ^ 32722);
                 } else {
                   this.adjustVerticalPosition(this.verticalPageStep + this.verticalPosition, 0);

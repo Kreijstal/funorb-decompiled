@@ -222,7 +222,7 @@ final class BattlefieldTheme {
     final void setResourceArchives(ResourceArchive backgroundArchive, int obfuscationGuard, ResourceArchive spriteArchive) {
         try {
           SocketResourceClient.themeSpriteArchive = spriteArchive;
-          fd.themeBackgroundArchive = backgroundArchive;
+          AnimationFrameSetCacheEntry.themeBackgroundArchive = backgroundArchive;
           if (obfuscationGuard != 0) {
             this.terrainSpriteFile = (String) null;
           }
@@ -282,7 +282,7 @@ final class BattlefieldTheme {
         if (obfuscationGuard != 34) {
           return (RgbSprite) null;
         }
-        byte[] var3 = fd.themeBackgroundArchive.getFileByName(this.backgroundImageFile, obfuscationGuard ^ 108, "");
+        byte[] var3 = AnimationFrameSetCacheEntry.themeBackgroundArchive.getFileByName(this.backgroundImageFile, obfuscationGuard ^ 108, "");
         byte[] var2 = var3;
         return new RgbSprite(var3, (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
     }

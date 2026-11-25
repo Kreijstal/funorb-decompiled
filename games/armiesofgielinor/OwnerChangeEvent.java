@@ -239,7 +239,7 @@ final class OwnerChangeEvent extends GameEvent {
           RasterViewportResizeHandler.field_a = RasterViewportResizeHandler.field_a + 1;
           if (QuickChatCommandDefinition.field_e == -1 &&
             LobbyPlayer.field_Ib == -1) {
-            LobbyPlayer.field_Ib = ko.pointerY;
+            LobbyPlayer.field_Ib = HighscoreAccountEntry.pointerY;
             QuickChatCommandDefinition.field_e = AiPlanningStrategy.pointerX;
           }
           boolean decompiledFrameRemainder0 = true;

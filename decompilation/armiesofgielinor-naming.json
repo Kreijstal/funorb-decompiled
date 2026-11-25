@@ -2852,6 +2852,14 @@
       "renamedSymbol": "C:BattleUnitRenderer"
     },
     {
+      "symbol": "C:ep",
+      "originalName": "ep",
+      "to": "IntroSequence",
+      "evidence": "ep.java: Intro phases, timed fades,16JPEG panorama images, scrolling speed/position and five pause durations. Eleven private state fields and draw/advance helpers establish intro sequence role; preserve all image caching/eviction, timers, FP arithmetic, transitions and unrelated static chat/social/resource connection helpers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IntroSequence"
+    },
+    {
       "symbol": "C:eq",
       "originalName": "eq",
       "to": "PasswordLoginCredentials",
@@ -2922,6 +2930,14 @@
       "evidence": "fc.java: WidgetPainter whose paint callback draws nothing; the keyboard idle tick counter and labels are unrelated shared statics.",
       "confidence": "reviewed",
       "renamedSymbol": "C:EmptyWidgetPainter"
+    },
+    {
+      "symbol": "C:fd",
+      "originalName": "fd",
+      "to": "AnimationFrameSetCacheEntry",
+      "evidence": "fd.java: Intrusive frame-set cache entry retains frame-group ID and AnimationFrameSet value. Constructor creates frame set,sets frame archives,and busy-waits on ensureFramesAvailable. Preserve the busy-wait,argument/archive order and exception wrapper. Unrelated static animation-name table contains eight literal j suffixes that remain unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AnimationFrameSetCacheEntry"
     },
     {
       "symbol": "C:fe",
@@ -3882,6 +3898,14 @@
       "evidence": "kn.java: Diagnostic EventTelefrag on the affected unit.",
       "confidence": "reviewed",
       "renamedSymbol": "C:TelefragEvent"
+    },
+    {
+      "symbol": "C:ko",
+      "originalName": "ko",
+      "to": "HighscoreAccountEntry",
+      "evidence": "ko.java: Indexed highscore account table record holds account name,optional display alias and distinct-account visited flag. handleHighscoreResponse fills and reads it,with local account at index0. Preserve null/default values and table aliases; unrelated byte-storage and pointer/UI statics remain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:HighscoreAccountEntry"
     },
     {
       "symbol": "C:kp",
@@ -9705,7 +9729,7 @@
       "to": "themeBackgroundArchive",
       "evidence": "fd.java: Theme selection publishes these shared archive/catalog/render bindings; activeTerrainSample converts terrain sprite index one.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:fd.themeBackgroundArchive:LResourceArchive;"
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.themeBackgroundArchive:LResourceArchive;"
     },
     {
       "symbol": "F:fe.field_a:I",
@@ -15713,7 +15737,7 @@
       "to": "pointerY",
       "evidence": "ko.java: The synchronized input snapshot copies the current mouse Y coordinate here; common-client UI hit helpers consume it.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:ko.pointerY:I"
+      "renamedSymbol": "F:HighscoreAccountEntry.pointerY:I"
     },
     {
       "symbol": "F:kr.field_A:Z",
@@ -48281,7 +48305,7 @@
       "to": "byteArray",
       "evidence": "ko.java: Reviewed lexical declaration ordinal and archive name resolution, chunk sizing/copying, XTEA round arithmetic, progress or byte storage data flow. Reused size/offset roles retain qualified names.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#0"
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#0"
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#3",
@@ -48289,7 +48313,7 @@
       "to": "byteStorage",
       "evidence": "ko.java: Reviewed lexical declaration ordinal and archive name resolution, chunk sizing/copying, XTEA round arithmetic, progress or byte storage data flow. Reused size/offset roles retain qualified names.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#3"
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#3"
     },
     {
       "symbol": "L:kt.a(ILjava/lang/String;)Lgu;#0",
@@ -75444,6 +75468,94 @@
       "renamedSymbol": "M:BattleUnitRenderer.refreshUnitModel(IILUnit;)V"
     },
     {
+      "symbol": "M:ep.a(B)V",
+      "originalName": "a",
+      "to": "releaseStatics",
+      "evidence": "ep.java: Clears retained archive,text and boolean-table statics;byte!=11sets field_o=9 between clears. Preserve exact clear/guard order and all byte values. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ep.a(BI)I",
+      "originalName": "a",
+      "to": "toScreenY",
+      "evidence": "ep.java: Adds centred intro viewport vertical offset to supplied coordinate. Byte>-22returns69before any viewport access. Preserve int overflow,subtraction/shift order and guard branch. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.toScreenY(BI)I"
+    },
+    {
+      "symbol": "M:ep.a(DI)D",
+      "originalName": "a",
+      "to": "toScreenX",
+      "evidence": "ep.java: Double-coordinate overload adds the integer-computed viewport horizontal offset. Wrong int guard first loads a discarded intro106JPEG through existing helper. Preserve exact integer offset before double conversion,all double values and I/O/failure ordering. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.toScreenX(DI)D"
+    },
+    {
+      "symbol": "M:ep.a(I)V",
+      "originalName": "a",
+      "to": "draw",
+      "evidence": "ep.java: Draws intro text/fades or16image panorama plus captions,particles and ending overlay. Preserve bad-guard coordinate call,OutOfMemoryError-only catch during partial image preloading,deferred retry,all FP/casts/sine ordering,allocation/call order,alpha arithmetic and transition after terminal fade threshold. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.draw(I)V"
+    },
+    {
+      "symbol": "M:ep.a(IB)V",
+      "originalName": "a",
+      "to": "drawPanoramaStrip",
+      "evidence": "ep.java: Draws clipped scrolling panorama with16th-pixel sampling and per-row carry workspace,loading missing images and evicting fully passed ones;adds original64column left fade. Preserve byte-guard early return,global first-image/origin offsets,allocation/partial-write order and signed arithmetic. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.drawPanoramaStrip(IB)V"
+    },
+    {
+      "symbol": "M:ep.a(II)I",
+      "originalName": "a",
+      "to": "toScreenX",
+      "evidence": "ep.java: Int-coordinate overload adds centred viewport offset;guard!=4592sets phase countdown=-45before accessing viewport. Preserve subtraction/shift/add overflow and distinct guard effects from double overload. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.toScreenX(II)I"
+    },
+    {
+      "symbol": "M:ep.a(Lje;ILje;)V",
+      "originalName": "a",
+      "to": "initializeSocialLists",
+      "evidence": "ep.java: Ensures friend/ignore child deques and name hash tables exist,aliases global entry lists to supplied components,then clears social lists. Preserve component/argument order,64bucket allocations,guard-side field write and all null/partial initialization behavior. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V"
+    },
+    {
+      "symbol": "M:ep.a(Z)V",
+      "originalName": "a",
+      "to": "advance",
+      "evidence": "ep.java: Advances intro phase/countdowns,scroll speed,pauses and ending ticks,with original2835position cap. Preserve double precision/order,second tick increment during motion,zero-speed fallback0.175,11.904threshold/special2521..2552window,and transition call without added return when pause list exhausted. Boolean guard clears static flag only after phase3work. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.advance(Z)V"
+    },
+    {
+      "symbol": "M:ep.a(ZLjava/lang/String;Z)V",
+      "originalName": "a",
+      "to": "drawChatInputWithText",
+      "evidence": "ep.java: Temporarily substitutes chat-input component text,draws chat root,and restores saved text on normal return. Preserve guard-side table clear and lack of finally restoration on failure,argument identity,draw flag and RuntimeException wrapper. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V"
+    },
+    {
+      "symbol": "M:ep.b(B)I",
+      "originalName": "b",
+      "to": "pollResourceConnection",
+      "evidence": "ep.java: Polls asynchronous resource socket open,13byte handshake with opcode15/version,one-byte reply/deadline and ResourceProtocolClient transport attachment. Preserve errorCount>=4mapping,30second deadline,phase progression/reset,IOException-only retry handler,raw server reply codes and post-work byte-dependent-1/37returns. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.pollResourceConnection(B)I"
+    },
+    {
+      "symbol": "M:ep.b(II)Lwk;",
+      "originalName": "b",
+      "to": "loadIntroImage",
+      "evidence": "ep.java: Loads intro(index+1).jpg from retained archive and constructs RGB sprite against original AWT component. Wrong int guard invokes draw(29)first. Preserve full int string/index overflow,fetch/component/construction order and errors. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntroSequence.loadIntroImage(II)LRgbSprite;"
+    },
+    {
       "symbol": "M:eq.a(B)Lh;",
       "originalName": "a",
       "to": "getLoginKind",
@@ -75729,7 +75841,15 @@
       "to": "releaseStatics",
       "evidence": "fd.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fd.releaseStatics(I)V"
+      "renamedSymbol": "M:AnimationFrameSetCacheEntry.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:fd.a(ZI)I",
+      "originalName": "a",
+      "to": "highestOneBit",
+      "evidence": "fd.java: Unsigned shifts spread bits below highest set bit,then returns input & ~spread. Preserve all signed int values (negative inputs retain sign bit),zero,and false-boolean discarded recursive true call before final spreads. Naming only: preserve original descriptor,modifiers,all primitive domains/guards,aliases,literals,allocations,locks and failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AnimationFrameSetCacheEntry.highestOneBit(ZI)I"
     },
     {
       "symbol": "M:fe.a()V",
@@ -82817,7 +82937,7 @@
       "to": "releaseStatics",
       "evidence": "ko.java: Only nulls static references, apart from guard arithmetic and guard-conditioned dummy writes or calls; instance state and unrelated behaviour are untouched.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ko.releaseStatics(Z)V"
+      "renamedSymbol": "M:HighscoreAccountEntry.releaseStatics(Z)V"
     },
     {
       "symbol": "M:ko.a(ZILjava/lang/Object;)[B",
@@ -82825,7 +82945,7 @@
       "to": "getStoredBytes",
       "evidence": "ko.java: Returns byte arrays directly or cloned according to copyByteArrays; ByteStorage reads always return a fresh array; unsupported objects fail.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ko.getStoredBytes(ZILjava/lang/Object;)[B"
+      "renamedSymbol": "M:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B"
     },
     {
       "symbol": "M:kp.a(I)V",
@@ -107345,7 +107465,7 @@
       "to": "obfuscationGuard",
       "evidence": "fd.java: Only nulls static references, apart from guard arithmetic or an obfuscator self-call; instance state and unrelated helpers on the owner are untouched.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:fd.releaseStatics(I)V#0"
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.releaseStatics(I)V#0"
     },
     {
       "symbol": "P:fe.a(I)I#0",
@@ -125057,7 +125177,7 @@
       "to": "copyByteArrays",
       "evidence": "ko.java: Returns byte arrays directly or cloned according to copyByteArrays; ByteStorage reads always return a fresh array; unsupported objects fail.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#0"
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#0"
     },
     {
       "symbol": "P:ko.a(ZILjava/lang/Object;)[B#1",
@@ -125065,7 +125185,7 @@
       "to": "obfuscationGuard",
       "evidence": "ko.java: Returns byte arrays directly or cloned according to copyByteArrays; ByteStorage reads always return a fresh array; unsupported objects fail.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#1"
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#1"
     },
     {
       "symbol": "P:ko.a(ZILjava/lang/Object;)[B#2",
@@ -125073,7 +125193,7 @@
       "to": "storedData",
       "evidence": "ko.java: Returns byte arrays directly or cloned according to copyByteArrays; ByteStorage reads always return a fresh array; unsupported objects fail.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#2"
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#2"
     },
     {
       "symbol": "P:kp.a(I)V#0",
@@ -160329,9 +160449,9 @@
     },
     {
       "symbol": "C:ep",
-      "renamedSymbol": "C:ep",
+      "renamedSymbol": "C:IntroSequence",
       "originalName": "ep",
-      "renamedName": "ep",
+      "renamedName": "IntroSequence",
       "declaration": {
         "file": "ep.java",
         "start": 69,
@@ -160461,9 +160581,9 @@
     },
     {
       "symbol": "C:fd",
-      "renamedSymbol": "C:fd",
+      "renamedSymbol": "C:AnimationFrameSetCacheEntry",
       "originalName": "fd",
-      "renamedName": "fd",
+      "renamedName": "AnimationFrameSetCacheEntry",
       "declaration": {
         "file": "fd.java",
         "start": 50,
@@ -161891,9 +162011,9 @@
     },
     {
       "symbol": "C:ko",
-      "renamedSymbol": "C:ko",
+      "renamedSymbol": "C:HighscoreAccountEntry",
       "originalName": "ko",
-      "renamedName": "ko",
+      "renamedName": "HighscoreAccountEntry",
       "declaration": {
         "file": "ko.java",
         "start": 50,
@@ -175894,7 +176014,7 @@
     },
     {
       "symbol": "F:ep.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ep.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IntroSequence.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -175905,7 +176025,7 @@
     },
     {
       "symbol": "F:ep.field_b:Lkl;",
-      "renamedSymbol": "F:ep.field_b:LResourceArchive;",
+      "renamedSymbol": "F:IntroSequence.field_b:LResourceArchive;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -175916,7 +176036,7 @@
     },
     {
       "symbol": "F:ep.field_c:I",
-      "renamedSymbol": "F:ep.field_c:I",
+      "renamedSymbol": "F:IntroSequence.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -175927,7 +176047,7 @@
     },
     {
       "symbol": "F:ep.field_d:D",
-      "renamedSymbol": "F:ep.field_d:D",
+      "renamedSymbol": "F:IntroSequence.field_d:D",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -175938,7 +176058,7 @@
     },
     {
       "symbol": "F:ep.field_e:D",
-      "renamedSymbol": "F:ep.field_e:D",
+      "renamedSymbol": "F:IntroSequence.field_e:D",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -175949,7 +176069,7 @@
     },
     {
       "symbol": "F:ep.field_f:Z",
-      "renamedSymbol": "F:ep.field_f:Z",
+      "renamedSymbol": "F:IntroSequence.field_f:Z",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -175960,7 +176080,7 @@
     },
     {
       "symbol": "F:ep.field_g:I",
-      "renamedSymbol": "F:ep.field_g:I",
+      "renamedSymbol": "F:IntroSequence.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -175971,7 +176091,7 @@
     },
     {
       "symbol": "F:ep.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:ep.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:IntroSequence.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -175982,7 +176102,7 @@
     },
     {
       "symbol": "F:ep.field_i:[I",
-      "renamedSymbol": "F:ep.field_i:[I",
+      "renamedSymbol": "F:IntroSequence.field_i:[I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -175993,7 +176113,7 @@
     },
     {
       "symbol": "F:ep.field_j:I",
-      "renamedSymbol": "F:ep.field_j:I",
+      "renamedSymbol": "F:IntroSequence.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -176004,7 +176124,7 @@
     },
     {
       "symbol": "F:ep.field_k:D",
-      "renamedSymbol": "F:ep.field_k:D",
+      "renamedSymbol": "F:IntroSequence.field_k:D",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -176015,7 +176135,7 @@
     },
     {
       "symbol": "F:ep.field_l:I",
-      "renamedSymbol": "F:ep.field_l:I",
+      "renamedSymbol": "F:IntroSequence.field_l:I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -176026,7 +176146,7 @@
     },
     {
       "symbol": "F:ep.field_m:I",
-      "renamedSymbol": "F:ep.field_m:I",
+      "renamedSymbol": "F:IntroSequence.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -176037,7 +176157,7 @@
     },
     {
       "symbol": "F:ep.field_n:I",
-      "renamedSymbol": "F:ep.field_n:I",
+      "renamedSymbol": "F:IntroSequence.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -176048,7 +176168,7 @@
     },
     {
       "symbol": "F:ep.field_o:I",
-      "renamedSymbol": "F:ep.field_o:I",
+      "renamedSymbol": "F:IntroSequence.field_o:I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -176059,7 +176179,7 @@
     },
     {
       "symbol": "F:ep.field_p:[[Z",
-      "renamedSymbol": "F:ep.field_p:[[Z",
+      "renamedSymbol": "F:IntroSequence.field_p:[[Z",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -176070,7 +176190,7 @@
     },
     {
       "symbol": "F:ep.field_q:I",
-      "renamedSymbol": "F:ep.field_q:I",
+      "renamedSymbol": "F:IntroSequence.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -176774,7 +176894,7 @@
     },
     {
       "symbol": "F:fd.field_k:I",
-      "renamedSymbol": "F:fd.field_k:I",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -176785,7 +176905,7 @@
     },
     {
       "symbol": "F:fd.field_l:Ljava/lang/String;",
-      "renamedSymbol": "F:fd.field_l:Ljava/lang/String;",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.field_l:Ljava/lang/String;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -176796,7 +176916,7 @@
     },
     {
       "symbol": "F:fd.field_m:Lkl;",
-      "renamedSymbol": "F:fd.themeBackgroundArchive:LResourceArchive;",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.themeBackgroundArchive:LResourceArchive;",
       "originalName": "field_m",
       "renamedName": "themeBackgroundArchive",
       "declaration": {
@@ -176807,7 +176927,7 @@
     },
     {
       "symbol": "F:fd.field_n:[[Ljava/lang/String;",
-      "renamedSymbol": "F:fd.field_n:[[Ljava/lang/String;",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.field_n:[[Ljava/lang/String;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -176818,7 +176938,7 @@
     },
     {
       "symbol": "F:fd.field_o:Ljava/lang/String;",
-      "renamedSymbol": "F:fd.field_o:Ljava/lang/String;",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.field_o:Ljava/lang/String;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -176829,7 +176949,7 @@
     },
     {
       "symbol": "F:fd.field_p:Lwp;",
-      "renamedSymbol": "F:fd.field_p:LAnimationFrameSet;",
+      "renamedSymbol": "F:AnimationFrameSetCacheEntry.field_p:LAnimationFrameSet;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -182626,7 +182746,7 @@
     },
     {
       "symbol": "F:hi.field_i:Lep;",
-      "renamedSymbol": "F:BufferedSocket.field_i:Lep;",
+      "renamedSymbol": "F:BufferedSocket.field_i:LIntroSequence;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -192218,7 +192338,7 @@
     },
     {
       "symbol": "F:ko.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ko.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -192229,7 +192349,7 @@
     },
     {
       "symbol": "F:ko.field_b:I",
-      "renamedSymbol": "F:ko.pointerY:I",
+      "renamedSymbol": "F:HighscoreAccountEntry.pointerY:I",
       "originalName": "field_b",
       "renamedName": "pointerY",
       "declaration": {
@@ -192240,7 +192360,7 @@
     },
     {
       "symbol": "F:ko.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:ko.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -192251,7 +192371,7 @@
     },
     {
       "symbol": "F:ko.field_d:Z",
-      "renamedSymbol": "F:ko.field_d:Z",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_d:Z",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -192262,7 +192382,7 @@
     },
     {
       "symbol": "F:ko.field_e:I",
-      "renamedSymbol": "F:ko.field_e:I",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -192273,7 +192393,7 @@
     },
     {
       "symbol": "F:ko.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:ko.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -192284,7 +192404,7 @@
     },
     {
       "symbol": "F:ko.field_g:Lwk;",
-      "renamedSymbol": "F:ko.field_g:LRgbSprite;",
+      "renamedSymbol": "F:HighscoreAccountEntry.field_g:LRgbSprite;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -212612,7 +212732,7 @@
     },
     {
       "symbol": "F:th.field_b:[Lko;",
-      "renamedSymbol": "F:FloorModSupport.field_b:[Lko;",
+      "renamedSymbol": "F:FloorModSupport.field_b:[LHighscoreAccountEntry;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -280031,7 +280151,7 @@
     },
     {
       "symbol": "L:ep.<init>(Lkl;)V#0",
-      "renamedSymbol": "L:ep.<init>(LResourceArchive;)V#0",
+      "renamedSymbol": "L:IntroSequence.<init>(LResourceArchive;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -280042,7 +280162,7 @@
     },
     {
       "symbol": "L:ep.a(DI)D#0",
-      "renamedSymbol": "L:ep.a(DI)D#0",
+      "renamedSymbol": "L:IntroSequence.toScreenX(DI)D#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -280053,7 +280173,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#0",
-      "renamedSymbol": "L:ep.a(I)V#0",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -280064,7 +280184,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#1",
-      "renamedSymbol": "L:ep.a(I)V#1",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -280075,7 +280195,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#10",
-      "renamedSymbol": "L:ep.a(I)V#10",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#10",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -280086,7 +280206,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#11",
-      "renamedSymbol": "L:ep.a(I)V#11",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#11",
       "originalName": "var2_ref_OutOfMemoryError",
       "renamedName": "var2_ref_OutOfMemoryError",
       "declaration": {
@@ -280097,7 +280217,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#12",
-      "renamedSymbol": "L:ep.a(I)V#12",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -280108,7 +280228,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#13",
-      "renamedSymbol": "L:ep.a(I)V#13",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#13",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -280119,7 +280239,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#14",
-      "renamedSymbol": "L:ep.a(I)V#14",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#14",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -280130,7 +280250,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#15",
-      "renamedSymbol": "L:ep.a(I)V#15",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#15",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -280141,7 +280261,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#16",
-      "renamedSymbol": "L:ep.a(I)V#16",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#16",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -280152,7 +280272,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#17",
-      "renamedSymbol": "L:ep.a(I)V#17",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#17",
       "originalName": "var7_ref_String__",
       "renamedName": "var7_ref_String__",
       "declaration": {
@@ -280163,7 +280283,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#18",
-      "renamedSymbol": "L:ep.a(I)V#18",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#18",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -280174,7 +280294,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#19",
-      "renamedSymbol": "L:ep.a(I)V#19",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#19",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -280185,7 +280305,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#2",
-      "renamedSymbol": "L:ep.a(I)V#2",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#2",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -280196,7 +280316,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#20",
-      "renamedSymbol": "L:ep.a(I)V#20",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#20",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -280207,7 +280327,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#21",
-      "renamedSymbol": "L:ep.a(I)V#21",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#21",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -280218,7 +280338,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#22",
-      "renamedSymbol": "L:ep.a(I)V#22",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#22",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -280229,7 +280349,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#23",
-      "renamedSymbol": "L:ep.a(I)V#23",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#23",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -280240,7 +280360,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#24",
-      "renamedSymbol": "L:ep.a(I)V#24",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#24",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -280251,7 +280371,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#25",
-      "renamedSymbol": "L:ep.a(I)V#25",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#25",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -280262,7 +280382,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#26",
-      "renamedSymbol": "L:ep.a(I)V#26",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#26",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -280273,7 +280393,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#27",
-      "renamedSymbol": "L:ep.a(I)V#27",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#27",
       "originalName": "var8Lifetime1Lifetime1",
       "renamedName": "var8Lifetime1Lifetime1",
       "declaration": {
@@ -280284,7 +280404,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#28",
-      "renamedSymbol": "L:ep.a(I)V#28",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#28",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -280295,7 +280415,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#3",
-      "renamedSymbol": "L:ep.a(I)V#3",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#3",
       "originalName": "stackIn_43_1",
       "renamedName": "stackIn_43_1",
       "declaration": {
@@ -280306,7 +280426,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#4",
-      "renamedSymbol": "L:ep.a(I)V#4",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#4",
       "originalName": "stackIn_43_2",
       "renamedName": "stackIn_43_2",
       "declaration": {
@@ -280317,7 +280437,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#5",
-      "renamedSymbol": "L:ep.a(I)V#5",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#5",
       "originalName": "stackIn_43_3",
       "renamedName": "stackIn_43_3",
       "declaration": {
@@ -280328,7 +280448,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#6",
-      "renamedSymbol": "L:ep.a(I)V#6",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#6",
       "originalName": "stackIn_43_4",
       "renamedName": "stackIn_43_4",
       "declaration": {
@@ -280339,7 +280459,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#7",
-      "renamedSymbol": "L:ep.a(I)V#7",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#7",
       "originalName": "stackIn_44_5",
       "renamedName": "stackIn_44_5",
       "declaration": {
@@ -280350,7 +280470,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#8",
-      "renamedSymbol": "L:ep.a(I)V#8",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#8",
       "originalName": "stackIn_48_0",
       "renamedName": "stackIn_48_0",
       "declaration": {
@@ -280361,7 +280481,7 @@
     },
     {
       "symbol": "L:ep.a(I)V#9",
-      "renamedSymbol": "L:ep.a(I)V#9",
+      "renamedSymbol": "L:IntroSequence.draw(I)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -280372,7 +280492,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#0",
-      "renamedSymbol": "L:ep.a(IB)V#0",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -280383,7 +280503,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#1",
-      "renamedSymbol": "L:ep.a(IB)V#1",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -280394,7 +280514,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#10",
-      "renamedSymbol": "L:ep.a(IB)V#10",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#10",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -280405,7 +280525,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#11",
-      "renamedSymbol": "L:ep.a(IB)V#11",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#11",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -280416,7 +280536,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#2",
-      "renamedSymbol": "L:ep.a(IB)V#2",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -280427,7 +280547,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#3",
-      "renamedSymbol": "L:ep.a(IB)V#3",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -280438,7 +280558,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#4",
-      "renamedSymbol": "L:ep.a(IB)V#4",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -280449,7 +280569,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#5",
-      "renamedSymbol": "L:ep.a(IB)V#5",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -280460,7 +280580,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#6",
-      "renamedSymbol": "L:ep.a(IB)V#6",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -280471,7 +280591,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#7",
-      "renamedSymbol": "L:ep.a(IB)V#7",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -280482,7 +280602,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#8",
-      "renamedSymbol": "L:ep.a(IB)V#8",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -280493,7 +280613,7 @@
     },
     {
       "symbol": "L:ep.a(IB)V#9",
-      "renamedSymbol": "L:ep.a(IB)V#9",
+      "renamedSymbol": "L:IntroSequence.drawPanoramaStrip(IB)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -280504,7 +280624,7 @@
     },
     {
       "symbol": "L:ep.a(Lje;ILje;)V#0",
-      "renamedSymbol": "L:ep.a(LClientUiComponent;ILClientUiComponent;)V#0",
+      "renamedSymbol": "L:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -280515,7 +280635,7 @@
     },
     {
       "symbol": "L:ep.a(Z)V#0",
-      "renamedSymbol": "L:ep.a(Z)V#0",
+      "renamedSymbol": "L:IntroSequence.advance(Z)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -280526,7 +280646,7 @@
     },
     {
       "symbol": "L:ep.a(Z)V#1",
-      "renamedSymbol": "L:ep.a(Z)V#1",
+      "renamedSymbol": "L:IntroSequence.advance(Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -280537,7 +280657,7 @@
     },
     {
       "symbol": "L:ep.a(ZLjava/lang/String;Z)V#0",
-      "renamedSymbol": "L:ep.a(ZLjava/lang/String;Z)V#0",
+      "renamedSymbol": "L:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -280548,7 +280668,7 @@
     },
     {
       "symbol": "L:ep.a(ZLjava/lang/String;Z)V#1",
-      "renamedSymbol": "L:ep.a(ZLjava/lang/String;Z)V#1",
+      "renamedSymbol": "L:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -280559,7 +280679,7 @@
     },
     {
       "symbol": "L:ep.a(ZLjava/lang/String;Z)V#2",
-      "renamedSymbol": "L:ep.a(ZLjava/lang/String;Z)V#2",
+      "renamedSymbol": "L:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -280570,7 +280690,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#0",
-      "renamedSymbol": "L:ep.b(B)I#0",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -280581,7 +280701,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#1",
-      "renamedSymbol": "L:ep.b(B)I#1",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#1",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -280592,7 +280712,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#10",
-      "renamedSymbol": "L:ep.b(B)I#10",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -280603,7 +280723,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#11",
-      "renamedSymbol": "L:ep.b(B)I#11",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -280614,7 +280734,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#12",
-      "renamedSymbol": "L:ep.b(B)I#12",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -280625,7 +280745,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#2",
-      "renamedSymbol": "L:ep.b(B)I#2",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#2",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -280636,7 +280756,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#3",
-      "renamedSymbol": "L:ep.b(B)I#3",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#3",
       "originalName": "stackIn_34_0",
       "renamedName": "stackIn_34_0",
       "declaration": {
@@ -280647,7 +280767,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#4",
-      "renamedSymbol": "L:ep.b(B)I#4",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#4",
       "originalName": "stackIn_37_0",
       "renamedName": "stackIn_37_0",
       "declaration": {
@@ -280658,7 +280778,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#5",
-      "renamedSymbol": "L:ep.b(B)I#5",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#5",
       "originalName": "stackIn_39_0",
       "renamedName": "stackIn_39_0",
       "declaration": {
@@ -280669,7 +280789,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#6",
-      "renamedSymbol": "L:ep.b(B)I#6",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -280680,7 +280800,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#7",
-      "renamedSymbol": "L:ep.b(B)I#7",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#7",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -280691,7 +280811,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#8",
-      "renamedSymbol": "L:ep.b(B)I#8",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#8",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -280702,7 +280822,7 @@
     },
     {
       "symbol": "L:ep.b(B)I#9",
-      "renamedSymbol": "L:ep.b(B)I#9",
+      "renamedSymbol": "L:IntroSequence.pollResourceConnection(B)I#9",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -283716,7 +283836,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#0",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#0",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -283727,7 +283847,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#1",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#1",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -283738,7 +283858,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#2",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#2",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#2",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -283749,7 +283869,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#3",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#3",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#3",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -283760,7 +283880,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#4",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#4",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -283771,7 +283891,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#5",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#5",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -283782,7 +283902,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#6",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#6",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -283793,7 +283913,7 @@
     },
     {
       "symbol": "L:fd.<init>(Lkl;Lkl;I)V#7",
-      "renamedSymbol": "L:fd.<init>(LResourceArchive;LResourceArchive;I)V#7",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -283804,7 +283924,7 @@
     },
     {
       "symbol": "L:fd.a(ZI)I#0",
-      "renamedSymbol": "L:fd.a(ZI)I#0",
+      "renamedSymbol": "L:AnimationFrameSetCacheEntry.highestOneBit(ZI)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -385158,7 +385278,7 @@
     },
     {
       "symbol": "L:ko.a(Z)V#0",
-      "renamedSymbol": "L:ko.releaseStatics(Z)V#0",
+      "renamedSymbol": "L:HighscoreAccountEntry.releaseStatics(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -385169,7 +385289,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#0",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#0",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#0",
       "originalName": "var3",
       "renamedName": "byteArray",
       "declaration": {
@@ -385180,7 +385300,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#1",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#1",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -385191,7 +385311,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#10",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#10",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#10",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -385202,7 +385322,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#11",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#11",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -385213,7 +385333,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#12",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#12",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -385224,7 +385344,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#2",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#2",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -385235,7 +385355,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#3",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#3",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#3",
       "originalName": "var5",
       "renamedName": "byteStorage",
       "declaration": {
@@ -385246,7 +385366,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#4",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#4",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#4",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -385257,7 +385377,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#5",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#5",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#5",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -385268,7 +385388,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#6",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#6",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#6",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -385279,7 +385399,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#7",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#7",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#7",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -385290,7 +385410,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#8",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#8",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#8",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -385301,7 +385421,7 @@
     },
     {
       "symbol": "L:ko.a(ZILjava/lang/Object;)[B#9",
-      "renamedSymbol": "L:ko.getStoredBytes(ZILjava/lang/Object;)[B#9",
+      "renamedSymbol": "L:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#9",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -536232,9 +536352,9 @@
     },
     {
       "symbol": "M:ep.<init>(Lkl;)V",
-      "renamedSymbol": "M:ep.<init>(LResourceArchive;)V",
+      "renamedSymbol": "M:IntroSequence.<init>(LResourceArchive;)V",
       "originalName": "ep",
-      "renamedName": "ep",
+      "renamedName": "IntroSequence",
       "declaration": {
         "file": "ep.java",
         "start": 16088,
@@ -536243,9 +536363,9 @@
     },
     {
       "symbol": "M:ep.a(B)V",
-      "renamedSymbol": "M:ep.a(B)V",
+      "renamedSymbol": "M:IntroSequence.releaseStatics(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "releaseStatics",
       "declaration": {
         "file": "ep.java",
         "start": 15889,
@@ -536254,9 +536374,9 @@
     },
     {
       "symbol": "M:ep.a(BI)I",
-      "renamedSymbol": "M:ep.a(BI)I",
+      "renamedSymbol": "M:IntroSequence.toScreenY(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "toScreenY",
       "declaration": {
         "file": "ep.java",
         "start": 544,
@@ -536265,9 +536385,9 @@
     },
     {
       "symbol": "M:ep.a(DI)D",
-      "renamedSymbol": "M:ep.a(DI)D",
+      "renamedSymbol": "M:IntroSequence.toScreenX(DI)D",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "toScreenX",
       "declaration": {
         "file": "ep.java",
         "start": 16761,
@@ -536276,9 +536396,9 @@
     },
     {
       "symbol": "M:ep.a(I)V",
-      "renamedSymbol": "M:ep.a(I)V",
+      "renamedSymbol": "M:IntroSequence.draw(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "draw",
       "declaration": {
         "file": "ep.java",
         "start": 2923,
@@ -536287,9 +536407,9 @@
     },
     {
       "symbol": "M:ep.a(IB)V",
-      "renamedSymbol": "M:ep.a(IB)V",
+      "renamedSymbol": "M:IntroSequence.drawPanoramaStrip(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawPanoramaStrip",
       "declaration": {
         "file": "ep.java",
         "start": 10096,
@@ -536298,9 +536418,9 @@
     },
     {
       "symbol": "M:ep.a(II)I",
-      "renamedSymbol": "M:ep.a(II)I",
+      "renamedSymbol": "M:IntroSequence.toScreenX(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "toScreenX",
       "declaration": {
         "file": "ep.java",
         "start": 15697,
@@ -536309,9 +536429,9 @@
     },
     {
       "symbol": "M:ep.a(Lje;ILje;)V",
-      "renamedSymbol": "M:ep.a(LClientUiComponent;ILClientUiComponent;)V",
+      "renamedSymbol": "M:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeSocialLists",
       "declaration": {
         "file": "ep.java",
         "start": 9248,
@@ -536320,9 +536440,9 @@
     },
     {
       "symbol": "M:ep.a(Z)V",
-      "renamedSymbol": "M:ep.a(Z)V",
+      "renamedSymbol": "M:IntroSequence.advance(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advance",
       "declaration": {
         "file": "ep.java",
         "start": 957,
@@ -536331,9 +536451,9 @@
     },
     {
       "symbol": "M:ep.a(ZLjava/lang/String;Z)V",
-      "renamedSymbol": "M:ep.a(ZLjava/lang/String;Z)V",
+      "renamedSymbol": "M:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawChatInputWithText",
       "declaration": {
         "file": "ep.java",
         "start": 15107,
@@ -536342,9 +536462,9 @@
     },
     {
       "symbol": "M:ep.b(B)I",
-      "renamedSymbol": "M:ep.b(B)I",
+      "renamedSymbol": "M:IntroSequence.pollResourceConnection(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollResourceConnection",
       "declaration": {
         "file": "ep.java",
         "start": 12018,
@@ -536353,9 +536473,9 @@
     },
     {
       "symbol": "M:ep.b(II)Lwk;",
-      "renamedSymbol": "M:ep.b(II)LRgbSprite;",
+      "renamedSymbol": "M:IntroSequence.loadIntroImage(II)LRgbSprite;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "loadIntroImage",
       "declaration": {
         "file": "ep.java",
         "start": 725,
@@ -536980,9 +537100,9 @@
     },
     {
       "symbol": "M:fd.<init>(Lkl;Lkl;I)V",
-      "renamedSymbol": "M:fd.<init>(LResourceArchive;LResourceArchive;I)V",
+      "renamedSymbol": "M:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V",
       "originalName": "fd",
-      "renamedName": "fd",
+      "renamedName": "AnimationFrameSetCacheEntry",
       "declaration": {
         "file": "fd.java",
         "start": 1022,
@@ -536991,7 +537111,7 @@
     },
     {
       "symbol": "M:fd.a(I)V",
-      "renamedSymbol": "M:fd.releaseStatics(I)V",
+      "renamedSymbol": "M:AnimationFrameSetCacheEntry.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -537002,9 +537122,9 @@
     },
     {
       "symbol": "M:fd.a(ZI)I",
-      "renamedSymbol": "M:fd.a(ZI)I",
+      "renamedSymbol": "M:AnimationFrameSetCacheEntry.highestOneBit(ZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "highestOneBit",
       "declaration": {
         "file": "fd.java",
         "start": 229,
@@ -552292,7 +552412,7 @@
     },
     {
       "symbol": "M:ko.a(Z)V",
-      "renamedSymbol": "M:ko.releaseStatics(Z)V",
+      "renamedSymbol": "M:HighscoreAccountEntry.releaseStatics(Z)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -552303,7 +552423,7 @@
     },
     {
       "symbol": "M:ko.a(ZILjava/lang/Object;)[B",
-      "renamedSymbol": "M:ko.getStoredBytes(ZILjava/lang/Object;)[B",
+      "renamedSymbol": "M:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B",
       "originalName": "a",
       "renamedName": "getStoredBytes",
       "declaration": {
@@ -603266,7 +603386,7 @@
     },
     {
       "symbol": "P:ep.<init>(Lkl;)V#0",
-      "renamedSymbol": "P:ep.<init>(LResourceArchive;)V#0",
+      "renamedSymbol": "P:IntroSequence.<init>(LResourceArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603277,7 +603397,7 @@
     },
     {
       "symbol": "P:ep.a(B)V#0",
-      "renamedSymbol": "P:ep.a(B)V#0",
+      "renamedSymbol": "P:IntroSequence.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603288,7 +603408,7 @@
     },
     {
       "symbol": "P:ep.a(BI)I#0",
-      "renamedSymbol": "P:ep.a(BI)I#0",
+      "renamedSymbol": "P:IntroSequence.toScreenY(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603299,7 +603419,7 @@
     },
     {
       "symbol": "P:ep.a(BI)I#1",
-      "renamedSymbol": "P:ep.a(BI)I#1",
+      "renamedSymbol": "P:IntroSequence.toScreenY(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603310,7 +603430,7 @@
     },
     {
       "symbol": "P:ep.a(DI)D#0",
-      "renamedSymbol": "P:ep.a(DI)D#0",
+      "renamedSymbol": "P:IntroSequence.toScreenX(DI)D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603321,7 +603441,7 @@
     },
     {
       "symbol": "P:ep.a(DI)D#1",
-      "renamedSymbol": "P:ep.a(DI)D#1",
+      "renamedSymbol": "P:IntroSequence.toScreenX(DI)D#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603332,7 +603452,7 @@
     },
     {
       "symbol": "P:ep.a(I)V#0",
-      "renamedSymbol": "P:ep.a(I)V#0",
+      "renamedSymbol": "P:IntroSequence.draw(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603343,7 +603463,7 @@
     },
     {
       "symbol": "P:ep.a(IB)V#0",
-      "renamedSymbol": "P:ep.a(IB)V#0",
+      "renamedSymbol": "P:IntroSequence.drawPanoramaStrip(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603354,7 +603474,7 @@
     },
     {
       "symbol": "P:ep.a(IB)V#1",
-      "renamedSymbol": "P:ep.a(IB)V#1",
+      "renamedSymbol": "P:IntroSequence.drawPanoramaStrip(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603365,7 +603485,7 @@
     },
     {
       "symbol": "P:ep.a(II)I#0",
-      "renamedSymbol": "P:ep.a(II)I#0",
+      "renamedSymbol": "P:IntroSequence.toScreenX(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603376,7 +603496,7 @@
     },
     {
       "symbol": "P:ep.a(II)I#1",
-      "renamedSymbol": "P:ep.a(II)I#1",
+      "renamedSymbol": "P:IntroSequence.toScreenX(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603387,7 +603507,7 @@
     },
     {
       "symbol": "P:ep.a(Lje;ILje;)V#0",
-      "renamedSymbol": "P:ep.a(LClientUiComponent;ILClientUiComponent;)V#0",
+      "renamedSymbol": "P:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603398,7 +603518,7 @@
     },
     {
       "symbol": "P:ep.a(Lje;ILje;)V#1",
-      "renamedSymbol": "P:ep.a(LClientUiComponent;ILClientUiComponent;)V#1",
+      "renamedSymbol": "P:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603409,7 +603529,7 @@
     },
     {
       "symbol": "P:ep.a(Lje;ILje;)V#2",
-      "renamedSymbol": "P:ep.a(LClientUiComponent;ILClientUiComponent;)V#2",
+      "renamedSymbol": "P:IntroSequence.initializeSocialLists(LClientUiComponent;ILClientUiComponent;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603420,7 +603540,7 @@
     },
     {
       "symbol": "P:ep.a(Z)V#0",
-      "renamedSymbol": "P:ep.a(Z)V#0",
+      "renamedSymbol": "P:IntroSequence.advance(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603431,7 +603551,7 @@
     },
     {
       "symbol": "P:ep.a(ZLjava/lang/String;Z)V#0",
-      "renamedSymbol": "P:ep.a(ZLjava/lang/String;Z)V#0",
+      "renamedSymbol": "P:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603442,7 +603562,7 @@
     },
     {
       "symbol": "P:ep.a(ZLjava/lang/String;Z)V#1",
-      "renamedSymbol": "P:ep.a(ZLjava/lang/String;Z)V#1",
+      "renamedSymbol": "P:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -603453,7 +603573,7 @@
     },
     {
       "symbol": "P:ep.a(ZLjava/lang/String;Z)V#2",
-      "renamedSymbol": "P:ep.a(ZLjava/lang/String;Z)V#2",
+      "renamedSymbol": "P:IntroSequence.drawChatInputWithText(ZLjava/lang/String;Z)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -603464,7 +603584,7 @@
     },
     {
       "symbol": "P:ep.b(B)I#0",
-      "renamedSymbol": "P:ep.b(B)I#0",
+      "renamedSymbol": "P:IntroSequence.pollResourceConnection(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603475,7 +603595,7 @@
     },
     {
       "symbol": "P:ep.b(II)Lwk;#0",
-      "renamedSymbol": "P:ep.b(II)LRgbSprite;#0",
+      "renamedSymbol": "P:IntroSequence.loadIntroImage(II)LRgbSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -603486,7 +603606,7 @@
     },
     {
       "symbol": "P:ep.b(II)Lwk;#1",
-      "renamedSymbol": "P:ep.b(II)LRgbSprite;#1",
+      "renamedSymbol": "P:IntroSequence.loadIntroImage(II)LRgbSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604718,7 +604838,7 @@
     },
     {
       "symbol": "P:fd.<init>(Lkl;Lkl;I)V#0",
-      "renamedSymbol": "P:fd.<init>(LResourceArchive;LResourceArchive;I)V#0",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604729,7 +604849,7 @@
     },
     {
       "symbol": "P:fd.<init>(Lkl;Lkl;I)V#1",
-      "renamedSymbol": "P:fd.<init>(LResourceArchive;LResourceArchive;I)V#1",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -604740,7 +604860,7 @@
     },
     {
       "symbol": "P:fd.<init>(Lkl;Lkl;I)V#2",
-      "renamedSymbol": "P:fd.<init>(LResourceArchive;LResourceArchive;I)V#2",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.<init>(LResourceArchive;LResourceArchive;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -604751,7 +604871,7 @@
     },
     {
       "symbol": "P:fd.a(I)V#0",
-      "renamedSymbol": "P:fd.releaseStatics(I)V#0",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -604762,7 +604882,7 @@
     },
     {
       "symbol": "P:fd.a(ZI)I#0",
-      "renamedSymbol": "P:fd.a(ZI)I#0",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.highestOneBit(ZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -604773,7 +604893,7 @@
     },
     {
       "symbol": "P:fd.a(ZI)I#1",
-      "renamedSymbol": "P:fd.a(ZI)I#1",
+      "renamedSymbol": "P:AnimationFrameSetCacheEntry.highestOneBit(ZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -643240,7 +643360,7 @@
     },
     {
       "symbol": "P:ko.a(Z)V#0",
-      "renamedSymbol": "P:ko.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:HighscoreAccountEntry.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -643251,7 +643371,7 @@
     },
     {
       "symbol": "P:ko.a(ZILjava/lang/Object;)[B#0",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#0",
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#0",
       "originalName": "param0",
       "renamedName": "copyByteArrays",
       "declaration": {
@@ -643262,7 +643382,7 @@
     },
     {
       "symbol": "P:ko.a(ZILjava/lang/Object;)[B#1",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#1",
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#1",
       "originalName": "param1",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -643273,7 +643393,7 @@
     },
     {
       "symbol": "P:ko.a(ZILjava/lang/Object;)[B#2",
-      "renamedSymbol": "P:ko.getStoredBytes(ZILjava/lang/Object;)[B#2",
+      "renamedSymbol": "P:HighscoreAccountEntry.getStoredBytes(ZILjava/lang/Object;)[B#2",
       "originalName": "param2",
       "renamedName": "storedData",
       "declaration": {
@@ -711543,7 +711663,7 @@
       "original": "ArmiesOfGielinor.java",
       "renamed": "ArmiesOfGielinor.java",
       "inputSha256": "5dc18e9d91f377f97b4a752fd07b762c9ad0b241cfac5ed3e4138c3c9af9a048",
-      "outputSha256": "428d4165dff94fe77680feb7c1d8c70213c1db47155b7063ea9543c07128774a",
+      "outputSha256": "c301614b00c08f5333a79aa8809bdfb21070905d2f4ffad40eb456d8a3981fe3",
       "edits": [
         {
           "start": 103,
@@ -712209,6 +712329,20 @@
           "symbol": "C:sh",
           "original": "sh",
           "renamed": "UnitAnimationPreview"
+        },
+        {
+          "start": 6635,
+          "end": 6637,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 6638,
+          "end": 6639,
+          "symbol": "M:ep.a(Lje;ILje;)V",
+          "original": "a",
+          "renamed": "initializeSocialLists"
         },
         {
           "start": 6640,
@@ -717307,6 +717441,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 38034,
+          "end": 38036,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 38037,
           "end": 38044,
           "symbol": "F:ko.field_b:I",
@@ -718479,6 +718620,20 @@
           "start": 42360,
           "end": 42361,
           "symbol": "M:co.a(B)V",
+          "original": "a",
+          "renamed": "releaseStatics"
+        },
+        {
+          "start": 42386,
+          "end": 42388,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 42389,
+          "end": 42390,
+          "symbol": "M:ep.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
         },
@@ -720763,6 +720918,13 @@
           "symbol": "M:ca.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 46509,
+          "end": 46511,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 46512,
@@ -723229,6 +723391,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 50735,
+          "end": 50737,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 50738,
           "end": 50739,
           "symbol": "M:ko.a(Z)V",
@@ -725189,6 +725358,13 @@
           "renamed": "SpriteButtonPainter"
         },
         {
+          "start": 56618,
+          "end": 56620,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 56631,
           "end": 56633,
           "symbol": "C:nu",
@@ -726220,11 +726396,25 @@
           "renamed": "ensureAllGroupsAvailable"
         },
         {
+          "start": 64930,
+          "end": 64932,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 64941,
           "end": 64942,
           "symbol": "M:kl.a(B)Z",
           "original": "a",
           "renamed": "ensureIndex"
+        },
+        {
+          "start": 64985,
+          "end": 64987,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 64996,
@@ -727445,6 +727635,13 @@
           "renamed": "LeapYearSupport"
         },
         {
+          "start": 73070,
+          "end": 73072,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 73090,
           "end": 73092,
           "symbol": "C:vh",
@@ -728243,6 +728440,13 @@
           "renamed": "FullscreenStatusToken"
         },
         {
+          "start": 75850,
+          "end": 75852,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 75865,
           "end": 75867,
           "symbol": "C:mp",
@@ -728262,6 +728466,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "FullscreenStatusToken"
+        },
+        {
+          "start": 75921,
+          "end": 75923,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 75936,
@@ -728285,6 +728496,13 @@
           "renamed": "FullscreenStatusToken"
         },
         {
+          "start": 75991,
+          "end": 75993,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 76006,
           "end": 76008,
           "symbol": "C:oh",
@@ -728304,6 +728522,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "FullscreenStatusToken"
+        },
+        {
+          "start": 76061,
+          "end": 76063,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 76076,
@@ -728334,6 +728559,13 @@
           "renamed": "FullscreenStatusToken"
         },
         {
+          "start": 76254,
+          "end": 76256,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 76272,
           "end": 76279,
           "symbol": "F:qf.field_f:Lum;",
@@ -728353,6 +728585,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "FullscreenStatusToken"
+        },
+        {
+          "start": 76402,
+          "end": 76404,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 76520,
@@ -728383,6 +728622,13 @@
           "renamed": "SummonAction"
         },
         {
+          "start": 76707,
+          "end": 76709,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 76742,
           "end": 76744,
           "symbol": "C:jl",
@@ -728409,6 +728655,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "FullscreenStatusToken"
+        },
+        {
+          "start": 76909,
+          "end": 76911,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 76921,
@@ -730453,6 +730706,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 83670,
+          "end": 83672,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 83673,
@@ -760357,7 +760617,7 @@
       "original": "ac.java",
       "renamed": "ManaStarParticle.java",
       "inputSha256": "7afe435da5709d5d415272321449476b1a073936fcca235d3e69d32941655922",
-      "outputSha256": "356cf2afe7ee34efd22c6c9429ca867d73ad007c6c26b6cbdf8606ba98029510",
+      "outputSha256": "d1da9f7765c7fa58efdfc05e51089b8d64f37760e87b8c8cd0ba0ebd27840edd",
       "edits": [
         {
           "start": 71,
@@ -760703,6 +760963,13 @@
           "renamed": "MouseWheelSource"
         },
         {
+          "start": 5124,
+          "end": 5126,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 5271,
           "end": 5273,
           "symbol": "C:ub",
@@ -760722,6 +760989,13 @@
           "symbol": "C:el",
           "original": "el",
           "renamed": "MouseWheelSource"
+        },
+        {
+          "start": 5336,
+          "end": 5338,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 5455,
@@ -760752,11 +761026,25 @@
           "renamed": "MouseWheelSource"
         },
         {
+          "start": 5549,
+          "end": 5551,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 5583,
           "end": 5585,
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "GiveTileConsoleCommand"
+        },
+        {
+          "start": 5668,
+          "end": 5670,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 5696,
@@ -760785,6 +761073,13 @@
           "symbol": "C:wt",
           "original": "wt",
           "renamed": "GiveTileConsoleCommand"
+        },
+        {
+          "start": 5863,
+          "end": 5865,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 6051,
@@ -787827,7 +788122,7 @@
       "original": "as.java",
       "renamed": "OwnerChangeEvent.java",
       "inputSha256": "42f2f7727ced0e02dd39526139f5f722fa0eb854f529b2dc2849583841786713",
-      "outputSha256": "2edb57894f0f56a64080d153806c1b3610ba6ae89d7f552e9a982141f5cff4bc",
+      "outputSha256": "11b3ea7c7f8ada1cfe790808086c0d6341f00a159776049d00621ea3abca9512",
       "edits": [
         {
           "start": 50,
@@ -788626,6 +788921,13 @@
           "symbol": "C:of",
           "original": "of",
           "renamed": "LobbyPlayer"
+        },
+        {
+          "start": 6963,
+          "end": 6965,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 6966,
@@ -796135,7 +796437,7 @@
       "original": "ba.java",
       "renamed": "PrintCoatConsoleCommand.java",
       "inputSha256": "39b0a0347737446935c97a80ebfaf388583f5dd56e2532e0af8903de6983b6c3",
-      "outputSha256": "2da01086ad576b376a4dc88dbfbcc90f44e03ca8bcc106c812fb40cf82be7b4f",
+      "outputSha256": "0b96f11b4e0715288d449172f32d43e5116e796879ee14cfb6b4b04dbee436dc",
       "edits": [
         {
           "start": 50,
@@ -796626,6 +796928,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 2231,
+          "end": 2233,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2234,
@@ -800838,7 +801147,7 @@
       "original": "bd.java",
       "renamed": "PreparedAction.java",
       "inputSha256": "760eff3562fae5024f0869cc96b378d3f4f7a8eda4fbae82c602904f7657e7a2",
-      "outputSha256": "e1588b5d0c7b269e4b57dcf811871fe38abd180c32b0fa2bd27d0767cc298ebb",
+      "outputSha256": "1a4107ea6b2d407b37a07ad2d454a5cbd2667d2e68b108654364c67efc74a93a",
       "edits": [
         {
           "start": 53,
@@ -800888,6 +801197,13 @@
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 914,
+          "end": 916,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 1077,
@@ -827950,7 +828266,7 @@
       "original": "ci.java",
       "renamed": "TutorialController.java",
       "inputSha256": "80ac322e88dcfc245e81cb8a0641dbae8905c22f35e0b301188e432ab1eae40e",
-      "outputSha256": "99a15886982362ae6d838f9787ae4a43ec4010afd05753251ac2649553e58c46",
+      "outputSha256": "c4180166c20c58bb612cacd9da6ba71d624e09f59b47a7aac162c7200f8b57b9",
       "edits": [
         {
           "start": 50,
@@ -830410,6 +830726,13 @@
           "renamed": "MapRepository"
         },
         {
+          "start": 15629,
+          "end": 15631,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 15632,
           "end": 15639,
           "symbol": "F:ko.field_b:I",
@@ -830655,11 +830978,25 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 16990,
+          "end": 16992,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 17020,
           "end": 17021,
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 17032,
+          "end": 17034,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 17077,
@@ -830669,11 +831006,25 @@
           "renamed": "RgbSpriteBase"
         },
         {
+          "start": 17090,
+          "end": 17092,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 17093,
           "end": 17100,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 17110,
+          "end": 17112,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 17135,
@@ -832419,6 +832770,13 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 25333,
+          "end": 25335,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 25354,
           "end": 25356,
           "symbol": "C:eo",
@@ -832487,6 +832845,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 25508,
+          "end": 25510,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 25633,
@@ -832594,11 +832959,67 @@
           "renamed": "RgbSpriteBase"
         },
         {
+          "start": 25949,
+          "end": 25951,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 25952,
           "end": 25959,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 26007,
+          "end": 26009,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26112,
+          "end": 26114,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26150,
+          "end": 26152,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26216,
+          "end": 26218,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26348,
+          "end": 26350,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26421,
+          "end": 26423,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 26503,
+          "end": 26505,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 26603,
@@ -837793,6 +838214,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 170544,
+          "end": 170546,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 170547,
           "end": 170554,
           "symbol": "F:ko.field_b:I",
@@ -837805,6 +838233,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 170592,
+          "end": 170594,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 170595,
@@ -837863,6 +838298,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 170709,
+          "end": 170711,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 170712,
           "end": 170719,
           "symbol": "F:ko.field_b:I",
@@ -837903,6 +838345,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "PrivateTextRecipientSupport"
+        },
+        {
+          "start": 170886,
+          "end": 170888,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 170889,
@@ -838087,6 +838536,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 171925,
+          "end": 171927,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 171928,
           "end": 171935,
           "symbol": "F:ko.field_b:I",
@@ -838099,6 +838555,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 172187,
+          "end": 172189,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 172190,
@@ -838183,6 +838646,13 @@
           "symbol": "F:ah.field_a:Lln;",
           "original": "field_a",
           "renamed": "localCoat"
+        },
+        {
+          "start": 172731,
+          "end": 172733,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 172734,
@@ -844817,6 +845287,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 222414,
+          "end": 222416,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 222417,
           "end": 222424,
           "symbol": "F:ko.field_b:I",
@@ -844850,6 +845327,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 222482,
+          "end": 222484,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 222485,
@@ -845419,6 +845903,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 227483,
+          "end": 227485,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 227519,
           "end": 227521,
           "symbol": "C:li",
@@ -845697,6 +846188,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "IgnoreListLookupSupport"
+        },
+        {
+          "start": 229354,
+          "end": 229356,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 229405,
@@ -846931,11 +847429,25 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 233319,
+          "end": 233321,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 233343,
           "end": 233344,
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 233354,
+          "end": 233356,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 233399,
@@ -846950,6 +847462,20 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "RgbSpriteBase"
+        },
+        {
+          "start": 233441,
+          "end": 233443,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 233461,
+          "end": 233463,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 233464,
@@ -847146,6 +847672,13 @@
           "symbol": "P:ci.a(IZI)V#1",
           "original": "param1",
           "renamed": "pointerDriven"
+        },
+        {
+          "start": 235640,
+          "end": 235642,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 235643,
@@ -849979,6 +850512,13 @@
           "renamed": "BoundedUrlRequest"
         },
         {
+          "start": 253487,
+          "end": 253489,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 253490,
           "end": 253497,
           "symbol": "F:ko.field_b:I",
@@ -850966,6 +851506,13 @@
           "renamed": "ManaStarParticle"
         },
         {
+          "start": 260834,
+          "end": 260836,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 260837,
           "end": 260844,
           "symbol": "F:ko.field_b:I",
@@ -851820,6 +852367,13 @@
           "renamed": "pointerButton"
         },
         {
+          "start": 267404,
+          "end": 267406,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 267407,
           "end": 267414,
           "symbol": "F:ko.field_b:I",
@@ -852037,6 +852591,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 268844,
+          "end": 268845,
+          "symbol": "M:ep.a(Z)V",
+          "original": "a",
+          "renamed": "advance"
+        },
+        {
           "start": 269036,
           "end": 269038,
           "symbol": "C:hi",
@@ -852051,6 +852612,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 269086,
+          "end": 269087,
+          "symbol": "M:ep.a(Z)V",
+          "original": "a",
+          "renamed": "advance"
+        },
+        {
           "start": 269161,
           "end": 269163,
           "symbol": "C:hi",
@@ -852063,6 +852631,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 269208,
+          "end": 269209,
+          "symbol": "M:ep.a(Z)V",
+          "original": "a",
+          "renamed": "advance"
         },
         {
           "start": 269268,
@@ -854550,6 +855125,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 287723,
+          "end": 287725,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 287726,
           "end": 287733,
           "symbol": "F:ko.field_b:I",
@@ -857033,6 +857615,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 299564,
+          "end": 299565,
+          "symbol": "M:ep.a(I)V",
+          "original": "a",
+          "renamed": "draw"
         },
         {
           "start": 299606,
@@ -861151,6 +861740,13 @@
           "renamed": "MatchConditionEntry"
         },
         {
+          "start": 320799,
+          "end": 320801,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 320802,
           "end": 320809,
           "symbol": "F:ko.field_b:I",
@@ -861200,11 +861796,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 321285,
+          "end": 321287,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 321288,
           "end": 321295,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 321352,
+          "end": 321354,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 321355,
@@ -861417,6 +862027,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 322480,
+          "end": 322482,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 322483,
           "end": 322490,
           "symbol": "F:ko.field_b:I",
@@ -861429,6 +862046,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "MatchConditionEntry"
+        },
+        {
+          "start": 322528,
+          "end": 322530,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 322531,
@@ -861464,6 +862088,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "IgnoreListLookupSupport"
+        },
+        {
+          "start": 322630,
+          "end": 322632,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 322633,
@@ -861739,6 +862370,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 324735,
+          "end": 324737,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 324738,
           "end": 324745,
           "symbol": "F:ko.field_b:I",
@@ -861823,6 +862461,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 324980,
+          "end": 324982,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 324983,
           "end": 324990,
           "symbol": "F:ko.field_b:I",
@@ -861877,6 +862522,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "IgnoreListLookupSupport"
+        },
+        {
+          "start": 325199,
+          "end": 325201,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 325202,
@@ -871556,7 +872208,7 @@
       "original": "co.java",
       "renamed": "BattlefieldTheme.java",
       "inputSha256": "25b15e8186866e6c43d251812e4f172000f4b1c87a6d86bce302ae6b14d471b2",
-      "outputSha256": "aeef9a50a19da414a6cc2d1389db2c913c765fe0d970d5842a928be6f82dc7de",
+      "outputSha256": "9d278cbf97060535bf0d00e7cdfc17a6dc8f036d0e2a5286ba489e5a33edd328",
       "edits": [
         {
           "start": 71,
@@ -872483,6 +873135,13 @@
           "renamed": "spriteArchive"
         },
         {
+          "start": 7209,
+          "end": 7211,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 7212,
           "end": 7219,
           "symbol": "F:fd.field_m:Lkl;",
@@ -873167,6 +873826,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 9397,
+          "end": 9399,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 9400,
@@ -877982,7 +878648,7 @@
       "original": "cv.java",
       "renamed": "CampaignMenu.java",
       "inputSha256": "e6e012c51c04386e953d103a16fbdbe4b67976090decffab2fa14b8c12fc0761",
-      "outputSha256": "a567b1a4b159ee2b21e08cdffddc1968cef4bcd40e83be63f697f8c424a12704",
+      "outputSha256": "575fde6b29c4ae4b3898a6af751198cc09f2ae37b63f4abc5c114cc9ad469d90",
       "edits": [
         {
           "start": 50,
@@ -880133,6 +880799,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 13527,
+          "end": 13529,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 13530,
@@ -884038,6 +884711,13 @@
           "renamed": "displayName"
         },
         {
+          "start": 45279,
+          "end": 45281,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 45282,
           "end": 45289,
           "symbol": "F:ko.field_b:I",
@@ -886831,6 +887511,13 @@
           "renamed": "IgnoreListLookupSupport"
         },
         {
+          "start": 60577,
+          "end": 60579,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 60580,
           "end": 60587,
           "symbol": "F:ko.field_b:I",
@@ -887032,6 +887719,13 @@
           "symbol": "F:hc.field_b:I",
           "original": "field_b",
           "renamed": "campaignMetricMutationCounter"
+        },
+        {
+          "start": 61843,
+          "end": 61845,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 61846,
@@ -888047,6 +888741,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 67382,
+          "end": 67384,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 67385,
@@ -890723,6 +891424,13 @@
           "renamed": "width"
         },
         {
+          "start": 83947,
+          "end": 83949,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 83950,
           "end": 83957,
           "symbol": "F:ko.field_b:I",
@@ -890742,6 +891450,13 @@
           "symbol": "F:cq.field_x:I",
           "original": "field_x",
           "renamed": "top"
+        },
+        {
+          "start": 84018,
+          "end": 84020,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 84021,
@@ -890819,6 +891534,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "IgnoreListLookupSupport"
+        },
+        {
+          "start": 84419,
+          "end": 84421,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 84422,
@@ -897385,7 +898107,7 @@
       "original": "db.java",
       "renamed": "IgnoreListLookupSupport.java",
       "inputSha256": "3bbe1b316feae3a565247c439e89dc113a450d7d97396ecc0647ae7ef00b6290",
-      "outputSha256": "54185844f4b9965fedbfc3cafbfd2080be29418cbf2e1c1a5cf4d48dd65fb3dd",
+      "outputSha256": "ed679e6018998768229000c0000204a1f8703878125282ece4ea60c78347470c",
       "edits": [
         {
           "start": 50,
@@ -897500,11 +898222,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 1542,
+          "end": 1544,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 1545,
           "end": 1552,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 1617,
+          "end": 1619,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 1620,
@@ -897528,11 +898264,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 1940,
+          "end": 1942,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 1943,
           "end": 1950,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 2063,
+          "end": 2065,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2066,
@@ -897584,11 +898334,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 2354,
+          "end": 2356,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 2357,
           "end": 2364,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 2423,
+          "end": 2425,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2426,
@@ -897612,11 +898376,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 2802,
+          "end": 2804,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 2805,
           "end": 2812,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 2942,
+          "end": 2944,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2945,
@@ -906490,7 +907268,7 @@
       "original": "dg.java",
       "renamed": "BattleGraphicsAssets.java",
       "inputSha256": "22225cae9d940dc853657f51f6392cadb75f0ff7d54f393782a3b1be3ed7654f",
-      "outputSha256": "1d6e5bcca1070bbb283b09923ff7e1892f2bb6b4620945d47873f603ae61f699",
+      "outputSha256": "8faad03cf9b16182b93cdee6bf72bb6f23a21a135f4141361ec0856e10acc5b2",
       "edits": [
         {
           "start": 50,
@@ -906668,6 +907446,13 @@
           "renamed": "ProceduralMapSupport"
         },
         {
+          "start": 1707,
+          "end": 1709,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 1817,
           "end": 1819,
           "symbol": "C:np",
@@ -906708,6 +907493,13 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "ProceduralMapSupport"
+        },
+        {
+          "start": 2006,
+          "end": 2008,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2079,
@@ -912439,7 +913231,7 @@
       "original": "dm.java",
       "renamed": "MatchSetupPanel.java",
       "inputSha256": "c5c13313a32d8e129fd60d1becac70be05e98fb7186aeb7cc165bd6420be4087",
-      "outputSha256": "c1d849ead48f9bd723d9bce79fabfdb4bd1dbed5258f941ceea7cf0dc3ea8300",
+      "outputSha256": "eba7ae6c35de8a90d374684c6650a88ce073a021f801a57543de77ecd3eb03af",
       "edits": [
         {
           "start": 50,
@@ -915538,6 +916330,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 31934,
+          "end": 31936,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 31937,
@@ -932063,7 +932862,7 @@
       "original": "ds.java",
       "renamed": "PointerCaptureSupport.java",
       "inputSha256": "4d6c3fc785d2605626b349b87acd0f00e363cab4249cdd3c6b980da311d8e3fb",
-      "outputSha256": "723df0e62e7c9dd65ed432931d20861035fa56d07e2582fe37308cb1cb670f6b",
+      "outputSha256": "d72f4ce711d90c63ad1ae169ccdc1541e766099e2846dc4638b7719fbaeb0e10",
       "edits": [
         {
           "start": 50,
@@ -932246,6 +933045,13 @@
           "symbol": "F:nh.field_B:I",
           "original": "field_B",
           "renamed": "livePointerX"
+        },
+        {
+          "start": 635,
+          "end": 637,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 638,
@@ -962314,7 +963120,7 @@
       "original": "em.java",
       "renamed": "TickCounter.java",
       "inputSha256": "1ebc18775d6d41a5a32ccbe2a3f5cd8742312df00253103260d392054f13cb9d",
-      "outputSha256": "ebc5e13a8a148b3d3555077b14cca3d8cdba9f02849c53165e2fbe1214aeab6e",
+      "outputSha256": "d77f0de21c96681d2f78f9e8b92c6683864c3a16f38d045574f05d18d87ca1d1",
       "edits": [
         {
           "start": 50,
@@ -968811,6 +969617,13 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "DropdownSelectorPainter"
+        },
+        {
+          "start": 73223,
+          "end": 73225,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 73300,
@@ -979761,6 +980574,13 @@
           "renamed": "DropdownSelectorPainter"
         },
         {
+          "start": 201595,
+          "end": 201597,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 201672,
           "end": 201674,
           "symbol": "C:fk",
@@ -985668,16 +986488,30 @@
     },
     {
       "original": "ep.java",
-      "renamed": "ep.java",
+      "renamed": "IntroSequence.java",
       "inputSha256": "a8bb3914b3651c9182b3af4895ffe47015283c274ff721fb63e9181987fc0f96",
-      "outputSha256": "d0972b223d47b73977470d06632df90365782256aefcf021e4c3151d338670a7",
+      "outputSha256": "877ff72648b829547eacf69523e4ca6b6129d525915e01eefe5c3668cf480ffd",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
         {
           "start": 163,
           "end": 165,
           "symbol": "C:kl",
           "original": "kl",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 544,
+          "end": 545,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 649,
@@ -985708,6 +986542,20 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 725,
+          "end": 726,
+          "symbol": "M:ep.b(II)Lwk;",
+          "original": "b",
+          "renamed": "loadIntroImage"
+        },
+        {
+          "start": 797,
+          "end": 798,
+          "symbol": "M:ep.a(I)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 833,
           "end": 835,
           "symbol": "C:wk",
@@ -985736,6 +986584,13 @@
           "renamed": "VerticalScrollbar"
         },
         {
+          "start": 957,
+          "end": 958,
+          "symbol": "M:ep.a(Z)V",
+          "original": "a",
+          "renamed": "advance"
+        },
+        {
           "start": 1056,
           "end": 1063,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -985750,11 +986605,25 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 2923,
+          "end": 2924,
+          "symbol": "M:ep.a(I)V",
+          "original": "a",
+          "renamed": "draw"
+        },
+        {
           "start": 3773,
           "end": 3780,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 3848,
+          "end": 3849,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
         },
         {
           "start": 3914,
@@ -985792,6 +986661,13 @@
           "renamed": "TextLineLayout"
         },
         {
+          "start": 4128,
+          "end": 4129,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 4172,
           "end": 4174,
           "symbol": "C:fe",
@@ -985804,6 +986680,13 @@
           "symbol": "M:fe.c(Ljava/lang/String;II[IZ)V",
           "original": "c",
           "renamed": "drawCenteredGradientText"
+        },
+        {
+          "start": 4195,
+          "end": 4196,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
         },
         {
           "start": 4215,
@@ -985825,6 +986708,20 @@
           "symbol": "M:qn.b(IIIIII)V",
           "original": "b",
           "renamed": "fillRectangleBlended"
+        },
+        {
+          "start": 4459,
+          "end": 4460,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 4485,
+          "end": 4486,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 4503,
@@ -985883,6 +986780,13 @@
           "renamed": "StructureTerrainSupport"
         },
         {
+          "start": 4776,
+          "end": 4777,
+          "symbol": "M:ep.b(II)Lwk;",
+          "original": "b",
+          "renamed": "loadIntroImage"
+        },
+        {
           "start": 4778,
           "end": 4780,
           "symbol": "C:kf",
@@ -985895,6 +986799,20 @@
           "symbol": "M:kf.b(II)I",
           "original": "b",
           "renamed": "bitwiseXor"
+        },
+        {
+          "start": 5303,
+          "end": 5304,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 5335,
+          "end": 5336,
+          "symbol": "M:ep.a(IB)V",
+          "original": "a",
+          "renamed": "drawPanoramaStrip"
         },
         {
           "start": 5368,
@@ -985939,6 +986857,13 @@
           "renamed": "height"
         },
         {
+          "start": 5469,
+          "end": 5470,
+          "symbol": "M:ep.a(IB)V",
+          "original": "a",
+          "renamed": "drawPanoramaStrip"
+        },
+        {
           "start": 5690,
           "end": 5692,
           "symbol": "C:md",
@@ -985979,6 +986904,20 @@
           "symbol": "M:ka.a(Ljava/lang/String;IIIII)V",
           "original": "a",
           "renamed": "drawCenteredWithAlpha"
+        },
+        {
+          "start": 6008,
+          "end": 6009,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 6027,
+          "end": 6028,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 6449,
@@ -986037,6 +986976,20 @@
           "renamed": "drawWithOpacity"
         },
         {
+          "start": 7018,
+          "end": 7019,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7059,
+          "end": 7060,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 7151,
           "end": 7153,
           "symbol": "C:bv",
@@ -986056,6 +987009,20 @@
           "symbol": "M:qn.a(IIII[I)V",
           "original": "a",
           "renamed": "fillRadialPaletteCircle"
+        },
+        {
+          "start": 7267,
+          "end": 7268,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7298,
+          "end": 7299,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 7329,
@@ -986100,6 +987067,20 @@
           "renamed": "fillRadialPaletteCircle"
         },
         {
+          "start": 7435,
+          "end": 7436,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7457,
+          "end": 7458,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 7493,
           "end": 7495,
           "symbol": "C:ae",
@@ -986140,6 +987121,20 @@
           "symbol": "M:qn.a(IIII[I)V",
           "original": "a",
           "renamed": "fillRadialPaletteCircle"
+        },
+        {
+          "start": 7592,
+          "end": 7593,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7621,
+          "end": 7622,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 7652,
@@ -986184,6 +987179,20 @@
           "renamed": "fillRadialPaletteCircle"
         },
         {
+          "start": 7774,
+          "end": 7775,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7796,
+          "end": 7797,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 7832,
           "end": 7834,
           "symbol": "C:ae",
@@ -986224,6 +987233,20 @@
           "symbol": "M:qn.a(IIII[I)V",
           "original": "a",
           "renamed": "fillRadialPaletteCircle"
+        },
+        {
+          "start": 7933,
+          "end": 7934,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 7962,
+          "end": 7963,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 7998,
@@ -986268,6 +987291,20 @@
           "renamed": "fillRadialPaletteCircle"
         },
         {
+          "start": 8115,
+          "end": 8116,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 8137,
+          "end": 8138,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 8174,
           "end": 8176,
           "symbol": "C:ae",
@@ -986301,6 +987338,20 @@
           "symbol": "C:qn",
           "original": "qn",
           "renamed": "SoftwareRaster"
+        },
+        {
+          "start": 8258,
+          "end": 8259,
+          "symbol": "M:ep.a(DI)D",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 8301,
+          "end": 8302,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 8338,
@@ -986343,6 +987394,20 @@
           "symbol": "M:qn.a(IIII[I)V",
           "original": "a",
           "renamed": "fillRadialPaletteCircle"
+        },
+        {
+          "start": 8452,
+          "end": 8453,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 8474,
+          "end": 8475,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 8504,
@@ -986401,6 +987466,20 @@
           "renamed": "drawWithOpacity"
         },
         {
+          "start": 8710,
+          "end": 8711,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 8731,
+          "end": 8732,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 8798,
           "end": 8800,
           "symbol": "C:ae",
@@ -986429,6 +987508,20 @@
           "renamed": "drawWithOpacity"
         },
         {
+          "start": 8911,
+          "end": 8912,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 8939,
+          "end": 8940,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 9009,
           "end": 9011,
           "symbol": "C:ae",
@@ -986455,6 +987548,27 @@
           "symbol": "M:nj.e(III)V",
           "original": "e",
           "renamed": "drawWithOpacity"
+        },
+        {
+          "start": 9119,
+          "end": 9120,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
+          "start": 9156,
+          "end": 9157,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
+          "start": 9248,
+          "end": 9249,
+          "symbol": "M:ep.a(Lje;ILje;)V",
+          "original": "a",
+          "renamed": "initializeSocialLists"
         },
         {
           "start": 9250,
@@ -986646,6 +987760,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 10096,
+          "end": 10097,
+          "symbol": "M:ep.a(IB)V",
+          "original": "a",
+          "renamed": "drawPanoramaStrip"
+        },
+        {
           "start": 10390,
           "end": 10397,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -986674,6 +987795,13 @@
           "renamed": "NameSuggestionList"
         },
         {
+          "start": 10690,
+          "end": 10691,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
           "start": 10716,
           "end": 10718,
           "symbol": "C:qn",
@@ -986700,6 +987828,13 @@
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "StructureTerrainSupport"
+        },
+        {
+          "start": 10819,
+          "end": 10820,
+          "symbol": "M:ep.b(II)Lwk;",
+          "original": "b",
+          "renamed": "loadIntroImage"
         },
         {
           "start": 10866,
@@ -986742,6 +987877,13 @@
           "symbol": "F:qn.field_l:I",
           "original": "field_l",
           "renamed": "width"
+        },
+        {
+          "start": 11323,
+          "end": 11324,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
         },
         {
           "start": 11504,
@@ -986800,6 +987942,13 @@
           "renamed": "drawVerticalLineBlended"
         },
         {
+          "start": 11902,
+          "end": 11903,
+          "symbol": "M:ep.a(BI)I",
+          "original": "a",
+          "renamed": "toScreenY"
+        },
+        {
           "start": 11920,
           "end": 11922,
           "symbol": "C:qn",
@@ -986812,6 +987961,13 @@
           "symbol": "F:qn.field_g:I",
           "original": "field_g",
           "renamed": "height"
+        },
+        {
+          "start": 12018,
+          "end": 12019,
+          "symbol": "M:ep.b(B)I",
+          "original": "b",
+          "renamed": "pollResourceConnection"
         },
         {
           "start": 12368,
@@ -987241,6 +988397,13 @@
           "renamed": "OwnerChangeEvent"
         },
         {
+          "start": 15107,
+          "end": 15108,
+          "symbol": "M:ep.a(ZLjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "drawChatInputWithText"
+        },
+        {
           "start": 15296,
           "end": 15298,
           "symbol": "C:sb",
@@ -987311,6 +988474,13 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 15697,
+          "end": 15698,
+          "symbol": "M:ep.a(II)I",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
           "start": 15811,
           "end": 15813,
           "symbol": "C:so",
@@ -987330,6 +988500,20 @@
           "symbol": "C:ce",
           "original": "ce",
           "renamed": "GuestPlayConfirmationForm"
+        },
+        {
+          "start": 15889,
+          "end": 15890,
+          "symbol": "M:ep.a(B)V",
+          "original": "a",
+          "renamed": "releaseStatics"
+        },
+        {
+          "start": 16088,
+          "end": 16090,
+          "symbol": "M:ep.<init>(Lkl;)V",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 16091,
@@ -987367,11 +988551,25 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 16761,
+          "end": 16762,
+          "symbol": "M:ep.a(DI)D",
+          "original": "a",
+          "renamed": "toScreenX"
+        },
+        {
           "start": 16800,
           "end": 16802,
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 16880,
+          "end": 16881,
+          "symbol": "M:ep.b(II)Lwk;",
+          "original": "b",
+          "renamed": "loadIntroImage"
         },
         {
           "start": 16928,
@@ -993400,10 +994598,17 @@
     },
     {
       "original": "fd.java",
-      "renamed": "fd.java",
+      "renamed": "AnimationFrameSetCacheEntry.java",
       "inputSha256": "07901dce376262fae4669a1b32eeabb57bb18ebf7eacbfc030f3e53d4ef3fb4b",
-      "outputSha256": "06a380cd8ad34bc70e7868a7d560ebc032a90b8eae8edb3b70674bea1038a4fc",
+      "outputSha256": "1508e7908f0e4d5ea4a01a643cca7eac31551ccff2f14f0db3e74790d7323f19",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
         {
           "start": 61,
           "end": 63,
@@ -993433,6 +994638,27 @@
           "renamed": "AnimationFrameSet"
         },
         {
+          "start": 229,
+          "end": 230,
+          "symbol": "M:fd.a(ZI)I",
+          "original": "a",
+          "renamed": "highestOneBit"
+        },
+        {
+          "start": 544,
+          "end": 546,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 547,
+          "end": 548,
+          "symbol": "M:fd.a(ZI)I",
+          "original": "a",
+          "renamed": "highestOneBit"
+        },
+        {
           "start": 724,
           "end": 725,
           "symbol": "M:fd.a(I)V",
@@ -993459,6 +994685,13 @@
           "symbol": "P:fd.a(I)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1022,
+          "end": 1024,
+          "symbol": "M:fd.<init>(Lkl;Lkl;I)V",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 1025,
@@ -1024709,7 +1025942,7 @@
       "original": "fn.java",
       "renamed": "EditableTextWidget.java",
       "inputSha256": "de2baf2dbcd5f3a666afe06e6372d9dfcaf892368153f128be8b699ec80f8ed5",
-      "outputSha256": "8ffb11a2aa23032718cda5a758e5aab5778dcb3fd9de785709c7bd77af3e40fa",
+      "outputSha256": "7e7a2265fb07b02bef407b0d448bf51a0573b8a197060239a4d51c34a689a819",
       "edits": [
         {
           "start": 44,
@@ -1025459,6 +1026692,13 @@
           "symbol": "P:fn.a(IIILkb;)V#2",
           "original": "param2",
           "renamed": "originY"
+        },
+        {
+          "start": 2281,
+          "end": 2283,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2284,
@@ -1028539,6 +1029779,13 @@
           "symbol": "P:fn.a(IIIILkb;II)Z#2",
           "original": "param2",
           "renamed": "originY"
+        },
+        {
+          "start": 18519,
+          "end": 18521,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 18522,
@@ -1034861,7 +1036108,7 @@
       "original": "fw.java",
       "renamed": "InteractiveWidget.java",
       "inputSha256": "a7bb1cfd1c7ad2933b099fdded77dd8f85b1d32a36ff2f513ae65c502df71a2b",
-      "outputSha256": "9643bc32431b5e1d4ea7fda9777435979e4c299e16941d34652fb179aa57f1b8",
+      "outputSha256": "6ad9d6ef8969e22b18c0422d47d9cc4252deece63d9ce3f86ab6f6533080c71f",
       "edits": [
         {
           "start": 65,
@@ -1035431,6 +1036678,13 @@
           "renamed": "originX"
         },
         {
+          "start": 3202,
+          "end": 3204,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 3205,
           "end": 3212,
           "symbol": "F:ko.field_b:I",
@@ -1035508,6 +1036762,13 @@
           "renamed": "originX"
         },
         {
+          "start": 3327,
+          "end": 3329,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 3330,
           "end": 3337,
           "symbol": "F:ko.field_b:I",
@@ -1035555,6 +1036816,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 3429,
+          "end": 3431,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 3432,
@@ -1056805,7 +1058073,7 @@
       "original": "ge.java",
       "renamed": "WeightedScoreStrategy.java",
       "inputSha256": "86907a348de97021269846d7a051b352948b02a97163ca24f15bb3bf5efaceba",
-      "outputSha256": "9624f430d847185e327e86b97ca87c293a2e1a535c3ad6f6f3137d3f89e1474e",
+      "outputSha256": "5377c326553b560cc62c2c728ef055d93abaa73ad77883baabc5efab37a49ade",
       "edits": [
         {
           "start": 50,
@@ -1056990,6 +1058258,13 @@
           "renamed": "MeshObject"
         },
         {
+          "start": 1011,
+          "end": 1013,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 1204,
           "end": 1211,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1057018,6 +1058293,13 @@
           "renamed": "size"
         },
         {
+          "start": 1412,
+          "end": 1414,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 1417,
           "end": 1419,
           "symbol": "C:bk",
@@ -1057030,6 +1058312,13 @@
           "symbol": "M:at.e(B)Ltc;",
           "original": "e",
           "renamed": "first"
+        },
+        {
+          "start": 1605,
+          "end": 1607,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 1610,
@@ -1115129,7 +1116418,7 @@
       "original": "hi.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "1f9bc01ae6c0f7add122682ffaf250aac8a8682482f7f56cda295dfe9ba8384e",
-      "outputSha256": "0d1b9c9a2432a39f4e3091f108832ff99dd64a3b2779b0d7f79abb91bf201fd0",
+      "outputSha256": "1a9d2e49e755f3566e0fca7d76d423335c8c5ad5a53416c9d3b25f8efeca6154",
       "edits": [
         {
           "start": 69,
@@ -1115179,6 +1116468,13 @@
           "symbol": "F:hi.field_f:Ljava/io/InputStream;",
           "original": "field_f",
           "renamed": "input"
+        },
+        {
+          "start": 306,
+          "end": 308,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 330,
@@ -1136772,7 +1138068,7 @@
       "original": "hv.java",
       "renamed": "HotspotTextWidget.java",
       "inputSha256": "f55c45f1a3715d904e37e58d7e716265f34c23c9637af2acefa0164d17781fd0",
-      "outputSha256": "9a02c5b7111848211b72a8b69f82b9e2cbc9d0d89df9e5631e66f5fdaa0ef88d",
+      "outputSha256": "95a8a5c8c4bfb1c5fbe91d03e9d8b1f45ef80e5d39d920900748a6f737992284",
       "edits": [
         {
           "start": 44,
@@ -1138614,6 +1139910,13 @@
           "symbol": "P:hv.a(IIILkb;)V#2",
           "original": "param2",
           "renamed": "originY"
+        },
+        {
+          "start": 4824,
+          "end": 4826,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 4827,
@@ -1149605,7 +1150908,7 @@
       "original": "ic.java",
       "renamed": "GameplayController.java",
       "inputSha256": "807c18d2e3ff729e80e0e5158ab16fc972b965707919ee846c6d5759e02a1ab6",
-      "outputSha256": "2ca0ee519a832c41513fc372b53a9efaa1394654fc0fe71c603bfbd59815703c",
+      "outputSha256": "19e33e07555afeaed36211495b60305428eecbed5495cb21184bcedc15824c51",
       "edits": [
         {
           "start": 71,
@@ -1157568,6 +1158871,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 59290,
+          "end": 59292,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 59293,
           "end": 59300,
           "symbol": "F:ko.field_b:I",
@@ -1160998,6 +1162308,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 93400,
+          "end": 93402,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 93403,
           "end": 93410,
           "symbol": "F:ko.field_b:I",
@@ -1161045,6 +1162362,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 93835,
+          "end": 93837,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 93838,
@@ -1161096,6 +1162420,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 94379,
+          "end": 94381,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 94382,
           "end": 94389,
           "symbol": "F:ko.field_b:I",
@@ -1161143,6 +1162474,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 94821,
+          "end": 94823,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 94824,
@@ -1161208,6 +1162546,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 95431,
+          "end": 95433,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 95434,
           "end": 95441,
           "symbol": "F:ko.field_b:I",
@@ -1161248,6 +1162593,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 95993,
+          "end": 95995,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 95996,
@@ -1161292,6 +1162644,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 96581,
+          "end": 96583,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 96584,
           "end": 96591,
           "symbol": "F:ko.field_b:I",
@@ -1161332,6 +1162691,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 97154,
+          "end": 97156,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 97157,
@@ -1162816,6 +1164182,13 @@
           "symbol": "M:ub.a(BIIII)I",
           "original": "a",
           "renamed": "getChoiceAtPoint"
+        },
+        {
+          "start": 112538,
+          "end": 112540,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 112541,
@@ -1171149,6 +1172522,13 @@
           "renamed": "mapWidth"
         },
         {
+          "start": 183524,
+          "end": 183526,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 183527,
           "end": 183534,
           "symbol": "F:ko.field_b:I",
@@ -1175753,6 +1177133,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 233624,
+          "end": 233626,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 233627,
           "end": 233634,
           "symbol": "F:ko.field_b:I",
@@ -1177004,6 +1178391,13 @@
           "kind": "label"
         },
         {
+          "start": 247992,
+          "end": 247994,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 248043,
           "end": 248045,
           "symbol": "C:pq",
@@ -1177044,6 +1178438,13 @@
           "symbol": "F:ic.field_q:I",
           "original": "field_q",
           "renamed": "controlledPlayerId"
+        },
+        {
+          "start": 248343,
+          "end": 248345,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 248434,
@@ -1177219,6 +1178620,13 @@
           "symbol": "F:ha.field_gb:I",
           "original": "field_gb",
           "renamed": "currentPlayer"
+        },
+        {
+          "start": 249919,
+          "end": 249921,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 249922,
@@ -1177473,6 +1178881,13 @@
           "renamed": "isPointerInBounds"
         },
         {
+          "start": 251230,
+          "end": 251232,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 251233,
           "end": 251240,
           "symbol": "F:ko.field_b:I",
@@ -1177590,6 +1179005,13 @@
           "symbol": "M:wg.a(IIIII)Z",
           "original": "a",
           "renamed": "isPointerInBounds"
+        },
+        {
+          "start": 252035,
+          "end": 252037,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 252038,
@@ -1177828,6 +1179250,13 @@
           "symbol": "M:wg.a(IIIII)Z",
           "original": "a",
           "renamed": "isPointerInBounds"
+        },
+        {
+          "start": 253193,
+          "end": 253195,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 253196,
@@ -1181048,6 +1182477,13 @@
           "renamed": "getChoiceAtPoint"
         },
         {
+          "start": 281477,
+          "end": 281479,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 281480,
           "end": 281487,
           "symbol": "F:ko.field_b:I",
@@ -1181125,6 +1182561,13 @@
           "renamed": "getChoiceAtPoint"
         },
         {
+          "start": 282061,
+          "end": 282063,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 282064,
           "end": 282071,
           "symbol": "F:ko.field_b:I",
@@ -1181158,6 +1182601,13 @@
           "symbol": "M:ub.b(BIIII)Z",
           "original": "b",
           "renamed": "isSecondHalfHit"
+        },
+        {
+          "start": 282176,
+          "end": 282178,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 282179,
@@ -1181221,6 +1182671,13 @@
           "symbol": "F:v.field_e:[I",
           "original": "field_e",
           "renamed": "screenPosition"
+        },
+        {
+          "start": 282833,
+          "end": 282835,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 282836,
@@ -1181935,6 +1183392,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 290035,
+          "end": 290037,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 290038,
@@ -1184090,6 +1185554,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 309892,
+          "end": 309894,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 309895,
           "end": 309902,
           "symbol": "F:ko.field_b:I",
@@ -1184123,6 +1185594,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 309954,
+          "end": 309956,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 309957,
@@ -1184186,6 +1185664,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 310198,
+          "end": 310200,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 310201,
@@ -1185063,6 +1186548,13 @@
           "renamed": "screenPosition"
         },
         {
+          "start": 320478,
+          "end": 320480,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 320481,
           "end": 320488,
           "symbol": "F:ko.field_b:I",
@@ -1185245,6 +1186737,13 @@
           "renamed": "screenPosition"
         },
         {
+          "start": 321504,
+          "end": 321506,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 321507,
           "end": 321514,
           "symbol": "F:ko.field_b:I",
@@ -1185355,6 +1186854,13 @@
           "symbol": "F:v.field_e:[I",
           "original": "field_e",
           "renamed": "screenPosition"
+        },
+        {
+          "start": 322015,
+          "end": 322017,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 322018,
@@ -1187993,6 +1189499,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 354356,
+          "end": 354358,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 354359,
           "end": 354366,
           "symbol": "F:ko.field_b:I",
@@ -1188077,6 +1189590,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 355410,
+          "end": 355412,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 355413,
           "end": 355420,
           "symbol": "F:ko.field_b:I",
@@ -1188159,6 +1189679,13 @@
           "symbol": "F:ha.field_db:I",
           "original": "field_db",
           "renamed": "mapHeight"
+        },
+        {
+          "start": 357861,
+          "end": 357863,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 357864,
@@ -1189246,6 +1190773,13 @@
           "renamed": "GiveTileConsoleCommand"
         },
         {
+          "start": 365806,
+          "end": 365808,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 366104,
           "end": 366106,
           "symbol": "C:ig",
@@ -1190307,6 +1191841,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 375741,
+          "end": 375743,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 375744,
           "end": 375751,
           "symbol": "F:ko.field_b:I",
@@ -1190755,6 +1192296,13 @@
           "renamed": "campaignMetricMutationCounter"
         },
         {
+          "start": 377653,
+          "end": 377655,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 377656,
           "end": 377663,
           "symbol": "F:ko.field_b:I",
@@ -1191173,6 +1192721,13 @@
           "symbol": "F:hc.field_b:I",
           "original": "field_b",
           "renamed": "campaignMetricMutationCounter"
+        },
+        {
+          "start": 380102,
+          "end": 380104,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 380105,
@@ -1192055,6 +1193610,13 @@
           "symbol": "L:ic.d(B)V#17",
           "original": "var2_int",
           "renamed": "directionKeysEnabled"
+        },
+        {
+          "start": 384447,
+          "end": 384449,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 384450,
@@ -1199586,6 +1201148,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 468302,
+          "end": 468304,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 468305,
           "end": 468312,
           "symbol": "F:ko.field_b:I",
@@ -1200244,11 +1201813,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 477612,
+          "end": 477614,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 477615,
           "end": 477622,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 477650,
+          "end": 477652,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 477653,
@@ -1200298,6 +1201881,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 477842,
+          "end": 477844,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 477845,
@@ -1203149,7 +1204739,7 @@
       "original": "id.java",
       "renamed": "CampaignUnitOverride.java",
       "inputSha256": "7c4b0d55110eb17eb9968d4dd5396811ce7c61ddbd95733339b1a9f2784277c3",
-      "outputSha256": "4f44bdde251cd47d7b6aff8d3459e539951569565de66b90520d2292f3cffee5",
+      "outputSha256": "9ae60e02c3772e5e42348f7ab0908b70d451b10ff7dc776548e1f6d4b05313e5",
       "edits": [
         {
           "start": 50,
@@ -1204062,6 +1205652,13 @@
           "renamed": "NodeIterator"
         },
         {
+          "start": 12390,
+          "end": 12392,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 12469,
           "end": 12471,
           "symbol": "C:bb",
@@ -1204522,6 +1206119,13 @@
           "symbol": "C:bb",
           "original": "bb",
           "renamed": "NodeIterator"
+        },
+        {
+          "start": 18092,
+          "end": 18094,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 18171,
@@ -1211263,6 +1212867,13 @@
           "symbol": "C:bb",
           "original": "bb",
           "renamed": "NodeIterator"
+        },
+        {
+          "start": 115062,
+          "end": 115064,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 115141,
@@ -1261548,7 +1263159,7 @@
       "original": "j.java",
       "renamed": "BattleCameraTargetTransform.java",
       "inputSha256": "9cbfd0406f87f56d93e136eb68926afabb573008c99c85cc6d3871c8b0d38373",
-      "outputSha256": "5e7d559aabf1d9dbcdbbb5dbeb56c960753f0acfe3831d1d014a7f56bd8757c1",
+      "outputSha256": "50449123c66e10faad1121c1fb461deae5d2eee921b35c1948ba2cd38bc7bbd2",
       "edits": [
         {
           "start": 50,
@@ -1263873,6 +1265484,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "ArchiveLoadSequence"
+        },
+        {
+          "start": 12249,
+          "end": 12251,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 12506,
@@ -1274881,7 +1276499,7 @@
       "original": "je.java",
       "renamed": "ClientUiComponent.java",
       "inputSha256": "07ede7077ba13d1dce74bcbb147ae79987cfcd4a5d9182c0d049ebe4966d81d2",
-      "outputSha256": "6b8cfbfed1fbbfcdc2cc2733b95961c066052127724783b2b1c63a305774cce8",
+      "outputSha256": "e7dbba85e9e0d32e7bdd68ba87fcdf7fb2aff7332660a3695fa8c3b0561920c6",
       "edits": [
         {
           "start": 44,
@@ -1278979,6 +1280597,13 @@
           "renamed": "clipTop"
         },
         {
+          "start": 13770,
+          "end": 13772,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 13773,
           "end": 13780,
           "symbol": "F:ko.field_b:I",
@@ -1278998,6 +1280623,13 @@
           "symbol": "F:qn.field_f:I",
           "original": "field_f",
           "renamed": "clipBottom"
+        },
+        {
+          "start": 13799,
+          "end": 13801,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 13802,
@@ -1279355,6 +1280987,13 @@
           "symbol": "F:je.field_Ab:I",
           "original": "field_Ab",
           "renamed": "dragGrabY"
+        },
+        {
+          "start": 14682,
+          "end": 14684,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 14685,
@@ -1295594,7 +1297233,7 @@
       "original": "jr.java",
       "renamed": "RadialSummonItem.java",
       "inputSha256": "306a9cfeb9917dc17d859e7dee54be7d873fad5c20a3d9da08e0b96a30f6926d",
-      "outputSha256": "198e844308a62c3f95795769ab416157f0e78d5991ceccda118efd1ceda6ee6e",
+      "outputSha256": "c77584f00aeea8e30325092189ef3b30243f7a1782d1c49d7e820437d3b90d13",
       "edits": [
         {
           "start": 50,
@@ -1295882,6 +1297521,13 @@
           "symbol": "P:jr.a(IIZI)V#3",
           "original": "param3",
           "renamed": "originX"
+        },
+        {
+          "start": 1212,
+          "end": 1214,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 1215,
@@ -1296337,6 +1297983,13 @@
           "symbol": "P:jr.a(IIZI)V#3",
           "original": "param3",
           "renamed": "originX"
+        },
+        {
+          "start": 2357,
+          "end": 2359,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2360,
@@ -1317288,7 +1318941,7 @@
       "original": "kb.java",
       "renamed": "Widget.java",
       "inputSha256": "7b36bcce645498cd5f0f49b13343e75220e93669c0ab36479edd2c0436648dbf",
-      "outputSha256": "3f7e96b0cc875ecc9b0a1f448dfecdab1dcbfc06e435fbfb847475a730bf234e",
+      "outputSha256": "2070b79937fd6b14e17bd45bb6426d9722d9239655cd90913d0c8c1ae64bfeef",
       "edits": [
         {
           "start": 65,
@@ -1318811,6 +1320464,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 11777,
+          "end": 11779,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 11780,
           "end": 11787,
           "symbol": "F:ko.field_b:I",
@@ -1319054,6 +1320714,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 12977,
+          "end": 12979,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 12980,
@@ -1319315,6 +1320982,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 14100,
+          "end": 14102,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 14103,
           "end": 14110,
           "symbol": "F:ko.field_b:I",
@@ -1319467,6 +1321141,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 14660,
+          "end": 14662,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 14663,
@@ -1319727,6 +1321408,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 16073,
+          "end": 16075,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 16076,
@@ -1320066,6 +1321754,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 17640,
+          "end": 17642,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 17643,
           "end": 17650,
           "symbol": "F:ko.field_b:I",
@@ -1320220,6 +1321915,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 18292,
+          "end": 18294,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 18295,
           "end": 18302,
           "symbol": "F:ko.field_b:I",
@@ -1320358,6 +1322060,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 18807,
+          "end": 18809,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 18810,
@@ -1320654,6 +1322363,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 19950,
+          "end": 19952,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 19953,
           "end": 19960,
           "symbol": "F:ko.field_b:I",
@@ -1320904,6 +1322620,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 21101,
+          "end": 21103,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 21104,
@@ -1321555,6 +1323278,13 @@
           "symbol": "P:kb.a(IIILkb;)V#1",
           "original": "param1",
           "renamed": "originX"
+        },
+        {
+          "start": 26839,
+          "end": 26841,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 26842,
@@ -1328030,7 +1329760,7 @@
       "original": "kj.java",
       "renamed": "SkeletonLimitMarker.java",
       "inputSha256": "41986819ce69b2e4db3762b15b24b0423a9ef82068b967797f7c69cba313c9c3",
-      "outputSha256": "d71c9c0c08b768d6790f7cfb7bc3f9c0f491b822bf0f42a3ec428fb30f8f9075",
+      "outputSha256": "8ee3c06b573f21b5cfb86e0bdca8e869b653739124c79ed72800a6de8a0c7151",
       "edits": [
         {
           "start": 50,
@@ -1328178,6 +1329908,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 589,
+          "end": 591,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 592,
@@ -1331651,7 +1333388,7 @@
       "original": "kl.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "e1657eb917d77d8e11b609141b997aba01f5414ec9c7ab18da697fda116db8b2",
-      "outputSha256": "ebea0661b2d272852e78552345821fc1523439cd2a16d051aef6ad8a6bceb4d0",
+      "outputSha256": "0e1f397296f104347309ca435d27865952a2a7a2bd52d2d028241d7ab721bce9",
       "edits": [
         {
           "start": 50,
@@ -1332177,6 +1333914,13 @@
           "symbol": "L:kl.a([IIII)[B#9",
           "original": "var8",
           "renamed": "fileBytes"
+        },
+        {
+          "start": 2186,
+          "end": 2188,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2189,
@@ -1334335,6 +1336079,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 16849,
+          "end": 16851,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 16852,
           "end": 16859,
           "symbol": "F:ko.field_b:I",
@@ -1335679,6 +1337430,13 @@
           "renamed": "encryptedGroupCopy"
         },
         {
+          "start": 23971,
+          "end": 23973,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 23974,
           "end": 23975,
           "symbol": "M:ko.a(ZILjava/lang/Object;)[B",
@@ -1335789,6 +1337547,13 @@
           "symbol": "L:kl.a(II[II)Z#16",
           "original": "var9",
           "renamed": "encodedGroup"
+        },
+        {
+          "start": 24254,
+          "end": 24256,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 24257,
@@ -1339023,10 +1340788,17 @@
     },
     {
       "original": "ko.java",
-      "renamed": "ko.java",
+      "renamed": "HighscoreAccountEntry.java",
       "inputSha256": "2167a2ffc93c1652314253a28bebb399b8e93e8f779f9db2aa1f9669d36acdca",
-      "outputSha256": "f64bec94a14117ac027f06f7a04836a152d06b669e2c927215998946e3139a0c",
+      "outputSha256": "efaedddcb0372cb9eeb243337d2acc755d1a6ec09c4e739dc3b5504b2137a2cf",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
         {
           "start": 151,
           "end": 153,
@@ -1339047,6 +1340819,13 @@
           "symbol": "M:ko.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 377,
+          "end": 379,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 380,
@@ -1339215,6 +1340994,13 @@
           "symbol": "P:ko.a(ZILjava/lang/Object;)[B#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1586,
+          "end": 1588,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 1589,
@@ -1352936,7 +1354722,7 @@
       "original": "ld.java",
       "renamed": "MoveAttackAction.java",
       "inputSha256": "0ac4dad0fc9299bb2310523c13496d6b4d0b2fa6046886bb576661bfb3915ef2",
-      "outputSha256": "b60d8ebf9f8794aa0e1efa7515e52957bae1880285eeb02ed41be283ebce75b8",
+      "outputSha256": "72640f54a294f8c2a5848e8a7e839478215fccb5c2bb6a6f2f193ab33a1a3636",
       "edits": [
         {
           "start": 50,
@@ -1353511,6 +1355297,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 4416,
+          "end": 4418,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 4419,
@@ -1368771,7 +1370564,7 @@
       "original": "ll.java",
       "renamed": "VerticalScrollbar.java",
       "inputSha256": "6c14f30b8ea36e33cfa0f98e3b43161f272e8349c54482b9d4522d5ca437df36",
-      "outputSha256": "c749b72165a72cd9afaae63e3ab5eccbab43ece495c40ee4809f8986931db3b2",
+      "outputSha256": "6a0d02e530971483839a9aa05bb399aacbede766a89ccced9bb5f3cf09cbe8e7",
       "edits": [
         {
           "start": 50,
@@ -1372449,6 +1374242,13 @@
           "renamed": "screenY"
         },
         {
+          "start": 11576,
+          "end": 11578,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 11579,
           "end": 11586,
           "symbol": "F:ko.field_b:I",
@@ -1372559,6 +1374359,13 @@
           "symbol": "F:ll.field_Ob:I",
           "original": "field_Ob",
           "renamed": "repeatTicks"
+        },
+        {
+          "start": 12140,
+          "end": 12142,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 12143,
@@ -1372763,7 +1374570,7 @@
       "original": "ln.java",
       "renamed": "CoatOfArms.java",
       "inputSha256": "4d70a331f6823d5c1981cada2bfa31f2b4aadd27cae0b36916b17301adc504d9",
-      "outputSha256": "3bb1c89cf769557661f8bf23f39e89ebbd055ad5635886e5576392bd77156bc8",
+      "outputSha256": "46bd837dab6428305cce66d120f29093a0f6864b01ed7d54f0a46d058f6b6fea",
       "edits": [
         {
           "start": 50,
@@ -1374054,6 +1375861,13 @@
           "renamed": "drawAdditive"
         },
         {
+          "start": 12421,
+          "end": 12423,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 12432,
           "end": 12433,
           "symbol": "M:wk.b()V",
@@ -1374101,6 +1375915,13 @@
           "symbol": "M:wk.b()V",
           "original": "b",
           "renamed": "bindAsRasterTarget"
+        },
+        {
+          "start": 12521,
+          "end": 12523,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 12532,
@@ -1380782,7 +1382603,7 @@
       "original": "ma.java",
       "renamed": "ValidatedTextWidget.java",
       "inputSha256": "943c2c31292b9671921a1f8d611149e8e584e1776df0912e3654fd99d2ff6c9b",
-      "outputSha256": "a4c42492f851137f8c581173f02e5b7ff2d90966b0c144e190e2cb00b2e81bfe",
+      "outputSha256": "b8388acec349b5105fead48d149e81696f8a72c1b8177d81df6920514883c88b",
       "edits": [
         {
           "start": 50,
@@ -1380923,6 +1382744,13 @@
           "symbol": "C:ip",
           "original": "ip",
           "renamed": "WidgetStateStyle"
+        },
+        {
+          "start": 627,
+          "end": 629,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 630,
@@ -1387485,7 +1389313,7 @@
       "original": "ml.java",
       "renamed": "TabbedPanel.java",
       "inputSha256": "6900255b1aaccf30f30669acbea865332bfa0f2987c8d5d3a766fabce3385a6b",
-      "outputSha256": "121d82c033413d5f24b9807863f3122293d3f70b578ac413eb2f19390d9a1db6",
+      "outputSha256": "246b9370373578a9bca522d1c3fa3963c5c44286dab3ee24a62690a2177f64ba",
       "edits": [
         {
           "start": 50,
@@ -1389119,11 +1390947,25 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 10481,
+          "end": 10483,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 10484,
           "end": 10491,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 10515,
+          "end": 10517,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 10518,
@@ -1391816,7 +1393658,7 @@
       "original": "mq.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "70198c4fde59e0f37d2d768cbcd2c3c42d4185fb548c8669206722d94d138577",
-      "outputSha256": "e9e5f25ae5b0c8ffaf0aadaae93432d4c0b280ccc44bda35a5c52467da609df7",
+      "outputSha256": "c38376be6fcd018ef8717eb5119a8bf5b039441eb224d76dc3a946562c4a3c8c",
       "edits": [
         {
           "start": 50,
@@ -1394225,6 +1396067,13 @@
           "symbol": "C:dh",
           "original": "dh",
           "renamed": "ImageProducerSurface"
+        },
+        {
+          "start": 10817,
+          "end": 10819,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 10847,
@@ -1444454,7 +1446303,7 @@
       "original": "nl.java",
       "renamed": "SingleChildWidgetContainer.java",
       "inputSha256": "08cfa98b452f9f3b71ded2ecc09420312b4a44ed85d38f3f2524ff5ddea77aaf",
-      "outputSha256": "6cce9b403a05f2de842bb9679b3c69d769cc59c2cfa30f00c769bd6689810bc7",
+      "outputSha256": "830fd811bb950b7937c2b9892640ef8f3bacb5d6dba6fb299dfd7bae02980991",
       "edits": [
         {
           "start": 74,
@@ -1447670,6 +1449519,13 @@
           "renamed": "IconLabelControl"
         },
         {
+          "start": 17243,
+          "end": 17245,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 17282,
           "end": 17284,
           "symbol": "C:nf",
@@ -1449658,6 +1451514,13 @@
           "renamed": "AnimationSequence"
         },
         {
+          "start": 30871,
+          "end": 30873,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 31000,
           "end": 31007,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
@@ -1449677,6 +1451540,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "WeightedScoreStrategy"
+        },
+        {
+          "start": 31823,
+          "end": 31825,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 31886,
@@ -1476083,7 +1477953,7 @@
       "original": "nv.java",
       "renamed": "ScrollControlWidget.java",
       "inputSha256": "8f99f910e352811e229acc9c1c00ce4be7f70e48c59f7f4a0fe4d94f61414993",
-      "outputSha256": "cb72fe2b46c0956e2d4b7f323dbc714b8b4f0aa0230d7eb8b2b8c7d85469bb8d",
+      "outputSha256": "56ee2c6b6b18754c0bfa38aad1ba453b251d133f5cf2878c2f49ed26b5beadd9",
       "edits": [
         {
           "start": 50,
@@ -1479068,6 +1480938,13 @@
           "renamed": "originY"
         },
         {
+          "start": 16271,
+          "end": 16273,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 16274,
           "end": 16281,
           "symbol": "F:ko.field_b:I",
@@ -1479234,6 +1481111,13 @@
           "symbol": "F:kb.field_p:I",
           "original": "field_p",
           "renamed": "y"
+        },
+        {
+          "start": 17020,
+          "end": 17022,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 17023,
@@ -1502471,7 +1504355,7 @@
       "original": "oo.java",
       "renamed": "MembershipExpansionScreen.java",
       "inputSha256": "0f5d484f1d6e8ae2cd6f733834b60e2d34328bcc8143ee6bbcdb8f62f5064db3",
-      "outputSha256": "c0cba7db4212fe757e9e6d5f993e29cddaeb54bda79fbb1161548547201f515e",
+      "outputSha256": "8fff5e5ecfc6702b8c19118c5d7d2e4bd6393deb4f5c930623d3b12634b5426e",
       "edits": [
         {
           "start": 50,
@@ -1502885,6 +1504769,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 7710,
+          "end": 7712,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 7713,
@@ -1503580,11 +1505471,25 @@
           "renamed": "drawHorizontalFlip"
         },
         {
+          "start": 16212,
+          "end": 16214,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 16215,
           "end": 16222,
           "symbol": "F:ko.field_b:I",
           "original": "field_b",
           "renamed": "pointerY"
+        },
+        {
+          "start": 16246,
+          "end": 16248,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 16249,
@@ -1504873,7 +1506778,7 @@
       "original": "op.java",
       "renamed": "FriendRequestSupport.java",
       "inputSha256": "bd7fce8f206ab269e423e48ba16fc10c34d26ba865b13c430e738c2a09dbb0f9",
-      "outputSha256": "6c3705e55f1402f03a18edc1a29378b2f585a148ba2b46c90654d05409419edb",
+      "outputSha256": "10e812d5b86fae2d79b05d16579a7804994a518281c946990e9c8cd8b711562e",
       "edits": [
         {
           "start": 50,
@@ -1504902,6 +1506807,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 392,
+          "end": 394,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 395,
@@ -1590238,7 +1592150,7 @@
       "original": "qu.java",
       "renamed": "DelayedPacket.java",
       "inputSha256": "b847663497447af8a4d7ef6d00367515a55623eae8e2e9a7e2f49bed40db8444",
-      "outputSha256": "8bd6541e23c2510188a268b0fc6238b9b93e56379bbdb3f320b91b3e44b17687",
+      "outputSha256": "c702b126574e22ea05dcc97764a7ba0289fa01bac4245938f9eccea808d7ece0",
       "edits": [
         {
           "start": 50,
@@ -1590659,6 +1592571,13 @@
           "symbol": "F:hc.field_b:I",
           "original": "field_b",
           "renamed": "campaignMetricMutationCounter"
+        },
+        {
+          "start": 1371,
+          "end": 1373,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 1374,
@@ -1592052,7 +1593971,7 @@
       "original": "qv.java",
       "renamed": "MovementPresentation.java",
       "inputSha256": "c5763fdfe9358522016a4c0aae61f24809392b99aa416e86abe45b65b5ccf09e",
-      "outputSha256": "a7e3e053db4e5386527d81254c34d6e8516f689a8e08dd8e4b82b00e361d1824",
+      "outputSha256": "114148019e5cb55c360a5adaaf09e3dbbde8cf02348c0bdb6c6ec6664a3c240a",
       "edits": [
         {
           "start": 69,
@@ -1592844,6 +1594763,13 @@
           "symbol": "F:sf.field_P:[I",
           "original": "field_P",
           "renamed": "unitAnimationGroups"
+        },
+        {
+          "start": 5860,
+          "end": 5862,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 5892,
@@ -1597843,7 +1599769,7 @@
       "original": "ra.java",
       "renamed": "ActionSpell.java",
       "inputSha256": "fabe3d2bb82f3def1dee6bdcedba3ff0e6c230e6af2ead1678c59ca0bc1a57f1",
-      "outputSha256": "56145dafb8df4b5140b30f5b63673fb01159ea2c5e2710821faf14f8e999867c",
+      "outputSha256": "817568b58a42cdedc0ebb8640a468d4b2967ad688c29af5efbded51644963d78",
       "edits": [
         {
           "start": 71,
@@ -1598271,6 +1600197,13 @@
           "symbol": "F:hc.field_b:I",
           "original": "field_b",
           "renamed": "campaignMetricMutationCounter"
+        },
+        {
+          "start": 3724,
+          "end": 3726,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 3727,
@@ -1600525,7 +1602458,7 @@
       "original": "rb.java",
       "renamed": "DebouncedValidator.java",
       "inputSha256": "e7be9c1f924ef3239bfe9962a683dbe00c3b383d6c7c28d03dc12e8cfddf1288",
-      "outputSha256": "d7c8855a9d9be201d9c538ee12f25d462ce57fce7a0c0886309a63761422f4c2",
+      "outputSha256": "c1cbc59b4118ae1257e6eed5b6eb914fba6e9fe581592f415575bf2bfe808f05",
       "edits": [
         {
           "start": 53,
@@ -1601228,6 +1603161,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 7510,
+          "end": 7512,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 7513,
           "end": 7520,
           "symbol": "F:ko.field_b:I",
@@ -1601247,6 +1603187,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 7639,
+          "end": 7641,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 7642,
@@ -1634391,7 +1636338,7 @@
       "original": "rt.java",
       "renamed": "RevivalEvent.java",
       "inputSha256": "ae0df6b09d11ef8b93d27057fb4f5d7da258d200d417b1adc5b148e31f0db64f",
-      "outputSha256": "54d6116c0056fb7a77aca327b0bcb55dc2e8fc50e059ef1a3b3f7f44140095f6",
+      "outputSha256": "220be5241a51617a97283e3229eb0fa64e3593e41d5c78e7af639fdab5d63a9c",
       "edits": [
         {
           "start": 50,
@@ -1635323,6 +1637270,20 @@
           "symbol": "P:rt.a(Lha;I)V#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 7057,
+          "end": 7059,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 7060,
+          "end": 7061,
+          "symbol": "M:ep.a(ZLjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "drawChatInputWithText"
         },
         {
           "start": 7110,
@@ -1677195,7 +1679156,7 @@
       "original": "tc.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "f4ffb4519437344ffd6faf2ed345eafbba78517f635c943d31e8bf32f395517c",
-      "outputSha256": "58868b1ac6a89e3b7b73239b49f6c472c201ab2cbf73db1dd36feb23df9900e0",
+      "outputSha256": "8f50b21708b9230136436ec9a0969bc8e24c7932031aee6e42328a16dbbca138",
       "edits": [
         {
           "start": 44,
@@ -1678729,6 +1680690,20 @@
           "symbol": "M:bp.a(Z)Z",
           "original": "a",
           "renamed": "poll"
+        },
+        {
+          "start": 12450,
+          "end": 12452,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 12453,
+          "end": 12454,
+          "symbol": "M:ep.b(B)I",
+          "original": "b",
+          "renamed": "pollResourceConnection"
         }
       ]
     },
@@ -1685586,7 +1687561,7 @@
       "original": "th.java",
       "renamed": "FloorModSupport.java",
       "inputSha256": "988e58ad362eeba62792101b6a973d855dfdce37fc8e915232eaedbfedc8b1c4",
-      "outputSha256": "f6c2e5378eb0c6f90886c610db70c25114a602e99e925aed17e4d8abfc2f61ce",
+      "outputSha256": "3452a362ebe0b48ab4ce84d7d0c36236a82c4cccad4a0bcbd4f682bd3214bef6",
       "edits": [
         {
           "start": 50,
@@ -1685601,6 +1687576,13 @@
           "symbol": "F:th.field_c:I",
           "original": "field_c",
           "renamed": "decodedPrivateMessageIdLow24"
+        },
+        {
+          "start": 90,
+          "end": 92,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 119,
@@ -1685741,6 +1687723,20 @@
           "symbol": "P:th.a(III)I#2",
           "original": "param2",
           "renamed": "divisor"
+        },
+        {
+          "start": 1742,
+          "end": 1744,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
+          "start": 1837,
+          "end": 1839,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         }
       ]
     },
@@ -1732702,7 +1734698,7 @@
       "original": "ul.java",
       "renamed": "LineOfSightGrid.java",
       "inputSha256": "6075a2cc5ae7207bbd1069b7a1048bab33495dc8cff166700e0ddf2ac254d693",
-      "outputSha256": "07be44407b51dbca979fb2fbe223b154d311a7d15b0093082046c9ae34db7a58",
+      "outputSha256": "c27a3331fb866ca24bd0d65bcdb2126fe55a44ab9bfe16908e9a217437ae0b97",
       "edits": [
         {
           "start": 71,
@@ -1733515,6 +1735511,13 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "SpellMenuGroup"
+        },
+        {
+          "start": 2492,
+          "end": 2494,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 2520,
@@ -1763742,7 +1765745,7 @@
       "original": "uu.java",
       "renamed": "uu.java",
       "inputSha256": "f4f93ef66c2ad0fa7d6208a267b6ac49cf63b2dfd6cbcc0bc5f0a69eb865dfe6",
-      "outputSha256": "0faebeac1d0c5a356b30bb48dfcc8881d2a9fe6e7aa7aa3f0c8593ea0572aabe",
+      "outputSha256": "1003348319e19d6d0f22e402df8ad2f6468b9c627bafd7e2f3e6ea0fb0ca2675",
       "edits": [
         {
           "start": 244,
@@ -1764695,6 +1766698,13 @@
           "renamed": "heldKeys"
         },
         {
+          "start": 9146,
+          "end": 9148,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 9192,
           "end": 9194,
           "symbol": "C:iv",
@@ -1764749,6 +1766759,27 @@
           "symbol": "F:au.field_pc:[B",
           "original": "field_pc",
           "renamed": "gameOptions"
+        },
+        {
+          "start": 9732,
+          "end": 9734,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 9776,
+          "end": 9778,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 9819,
+          "end": 9821,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 9942,
@@ -1778341,7 +1780372,7 @@
       "original": "vf.java",
       "renamed": "TileableNoiseGenerator.java",
       "inputSha256": "b1234778293efd59380bcf623bdd19d135ba91a613eef561ce987d102ddc1f9e",
-      "outputSha256": "310e8f560f0c4c18c13c05228b598631e50efe5020ec3360882362fcc11c39ae",
+      "outputSha256": "bfa6010bbcae79334317a239a7931b3001570592dba9ba4aff2133293b2f382c",
       "edits": [
         {
           "start": 74,
@@ -1780864,6 +1782895,20 @@
           "renamed": "featureRequirementValue"
         },
         {
+          "start": 12782,
+          "end": 12784,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 12785,
+          "end": 12786,
+          "symbol": "M:fd.a(ZI)I",
+          "original": "a",
+          "renamed": "highestOneBit"
+        },
+        {
           "start": 12793,
           "end": 12795,
           "symbol": "C:sk",
@@ -1780892,6 +1782937,20 @@
           "renamed": "BoundedFile"
         },
         {
+          "start": 12870,
+          "end": 12872,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 12918,
+          "end": 12920,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 12929,
           "end": 12933,
           "symbol": "L:vf.a(IZILau;)V#59",
@@ -1780911,6 +1782970,13 @@
           "symbol": "F:df.field_M:I",
           "original": "field_M",
           "renamed": "memberEntitlementValue"
+        },
+        {
+          "start": 12993,
+          "end": 12995,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 13004,
@@ -1782598,6 +1784664,13 @@
           "symbol": "L:vf.a(IZILau;)V#77",
           "original": "var22",
           "renamed": "restrictionMessageReference"
+        },
+        {
+          "start": 20265,
+          "end": 20267,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 20331,
@@ -1802677,7 +1804750,7 @@
       "original": "vq.java",
       "renamed": "vq.java",
       "inputSha256": "b9bf02fac95b8f7fb8814ee06dd30a79af4e4b8f4bc8e9b832fe8cab23eab538",
-      "outputSha256": "dac03bb1bf7a6e7e6c3efad6bad9fe5ce3feac5dc9df7d61adc66d04a11c171e",
+      "outputSha256": "1b49657bb45d2c580495c1ed7fbafe840291914d8de8a9a9cb95ee30be804815",
       "edits": [
         {
           "start": 90,
@@ -1804281,6 +1806354,13 @@
           "symbol": "F:sm.field_d:I",
           "original": "field_d",
           "renamed": "pointerX"
+        },
+        {
+          "start": 12195,
+          "end": 12197,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 12198,
@@ -1816749,7 +1818829,7 @@
       "original": "wc.java",
       "renamed": "DraggableWidgetContainer.java",
       "inputSha256": "f7c4d5b21f563d6cea9830002f1d94ba816e461e75b2b2a243fec3e2eec3be4c",
-      "outputSha256": "4b4c62be9802873b289a12854b669a0cc84d2b9e88b18b9d44251329fbaf302e",
+      "outputSha256": "52d81c89ee9c6858682e5b30a806fe45459f7b5cafa22c02a680331ab908573a",
       "edits": [
         {
           "start": 71,
@@ -1817324,6 +1819404,13 @@
           "symbol": "F:wc.field_L:I",
           "original": "field_L",
           "renamed": "pressOffsetY"
+        },
+        {
+          "start": 2829,
+          "end": 2831,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 2832,
@@ -1820020,7 +1822107,7 @@
       "original": "we.java",
       "renamed": "ArchiveLoadStep.java",
       "inputSha256": "1c7d356bb700e107871f4db45c49ba2d44b5b7b0a862d7f6aed20fe1d1d3d383",
-      "outputSha256": "7e19d298ca5259da7df4d14bd3516fa33265baef184292dd5f76478b4195867f",
+      "outputSha256": "fd71c93b5e0322913769e64a808caaf3c831e89ae5174de151694b5f508b6674",
       "edits": [
         {
           "start": 50,
@@ -1820100,6 +1822187,13 @@
           "renamed": "findCachedFrameSet"
         },
         {
+          "start": 806,
+          "end": 808,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 841,
           "end": 843,
           "symbol": "C:at",
@@ -1820142,6 +1822236,13 @@
           "renamed": "AnimationFrameSet"
         },
         {
+          "start": 1222,
+          "end": 1224,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 1227,
           "end": 1229,
           "symbol": "C:bk",
@@ -1820154,6 +1822255,13 @@
           "symbol": "M:at.e(B)Ltc;",
           "original": "e",
           "renamed": "first"
+        },
+        {
+          "start": 1411,
+          "end": 1413,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
         },
         {
           "start": 1416,
@@ -1820546,7 +1822654,7 @@
       "original": "wf.java",
       "renamed": "NetworkGameShell.java",
       "inputSha256": "83fd1c3a97ad89c7d18c95a0270efe8f07449370ead978c48ee1daf6b0a0538a",
-      "outputSha256": "bb953c66e55cb978edc279a5431bc9f0d4aa8dec26f56d60f1cb30487e345f61",
+      "outputSha256": "2dd64d2a7118805b0345020bab1558c83bb440016e0580ff7ceffd3483671dcc",
       "edits": [
         {
           "start": 53,
@@ -1825951,6 +1828059,13 @@
           "renamed": "getEffectsMixer"
         },
         {
+          "start": 19834,
+          "end": 19836,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 19847,
           "end": 19849,
           "symbol": "C:nb",
@@ -1825977,6 +1828092,13 @@
           "symbol": "C:pt",
           "original": "pt",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 19927,
+          "end": 19929,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 19950,
@@ -1827846,7 +1829968,7 @@
       "original": "wg.java",
       "renamed": "IterableDualNodeDeque.java",
       "inputSha256": "cfd446531a82dda28b42e0fb26fb865016ed9c5a45c38a477b503986c143ba9b",
-      "outputSha256": "cebce0278ffb42313624ba0576b6c6281ae16eb59b8d45ffeec49d8c4bce592b",
+      "outputSha256": "627d477f657ad60c8ff5a08a5ea8bc98c111ce922b10f8d2db3ba3cec29d4e95",
       "edits": [
         {
           "start": 71,
@@ -1827989,6 +1830111,13 @@
           "renamed": "minimumY"
         },
         {
+          "start": 559,
+          "end": 561,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 562,
           "end": 569,
           "symbol": "F:ko.field_b:I",
@@ -1828001,6 +1830130,13 @@
           "symbol": "P:wg.a(IIIII)Z#4",
           "original": "param4",
           "renamed": "maximumY"
+        },
+        {
+          "start": 635,
+          "end": 637,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 638,
@@ -1828059,6 +1830195,13 @@
           "renamed": "minimumY"
         },
         {
+          "start": 879,
+          "end": 881,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
+        },
+        {
           "start": 882,
           "end": 889,
           "symbol": "F:ko.field_b:I",
@@ -1828071,6 +1830214,13 @@
           "symbol": "P:wg.a(IIIII)Z#4",
           "original": "param4",
           "renamed": "maximumY"
+        },
+        {
+          "start": 949,
+          "end": 951,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "HighscoreAccountEntry"
         },
         {
           "start": 952,
@@ -1828498,7 +1830648,7 @@
       "original": "wh.java",
       "renamed": "wh.java",
       "inputSha256": "10a128e24c83e88446943f6d65c222294f583850ef8104af80d3e38c605979ed",
-      "outputSha256": "e339b45c1888edefc1d02918dd94ba1d6d024b8b18379d8428ebbc19a2bc5181",
+      "outputSha256": "850f69d2390cb39088dbe0f0ddd128d20bc8b65478476ed07e67114a5dff60ac",
       "edits": [
         {
           "start": 171,
@@ -1828683,6 +1830833,27 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 4200,
+          "end": 4202,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 4234,
+          "end": 4236,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 4410,
+          "end": 4412,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
           "start": 4691,
           "end": 4693,
           "symbol": "C:jf",
@@ -1828702,7 +1830873,7 @@
       "original": "wi.java",
       "renamed": "VertexNormal.java",
       "inputSha256": "8ae1450e9d0e9a0b1c8b7474235f23c01cf20151d080688d69be2b313fe89723",
-      "outputSha256": "575a3d7468cbe47c0a2afa84d8650164329efefd47fa3842083f3b9e02d6db09",
+      "outputSha256": "97dc51285ff50ca4feae5822d8645b164b9bcc228c49ed65f3ab298722691064",
       "edits": [
         {
           "start": 50,
@@ -1828838,6 +1831009,13 @@
           "renamed": "currentRoom"
         },
         {
+          "start": 2437,
+          "end": 2439,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
           "start": 2463,
           "end": 2465,
           "symbol": "C:iv",
@@ -1828892,6 +1831070,27 @@
           "symbol": "F:au.field_pc:[B",
           "original": "field_pc",
           "renamed": "gameOptions"
+        },
+        {
+          "start": 2695,
+          "end": 2697,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 2733,
+          "end": 2735,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 2769,
+          "end": 2771,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 2872,
@@ -1830644,6 +1832843,20 @@
           "renamed": "optionUnlockMask"
         },
         {
+          "start": 12765,
+          "end": 12767,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 12768,
+          "end": 12769,
+          "symbol": "M:fd.a(ZI)I",
+          "original": "a",
+          "renamed": "highestOneBit"
+        },
+        {
           "start": 12783,
           "end": 12791,
           "symbol": "F:of.field_Ob:I",
@@ -1830812,6 +1833025,20 @@
           "renamed": "optionUnlockMask"
         },
         {
+          "start": 14468,
+          "end": 14470,
+          "symbol": "C:fd",
+          "original": "fd",
+          "renamed": "AnimationFrameSetCacheEntry"
+        },
+        {
+          "start": 14471,
+          "end": 14472,
+          "symbol": "M:fd.a(ZI)I",
+          "original": "a",
+          "renamed": "highestOneBit"
+        },
+        {
           "start": 14486,
           "end": 14494,
           "symbol": "F:of.field_Ob:I",
@@ -1830901,6 +1833128,27 @@
           "symbol": "F:au.field_pc:[B",
           "original": "field_pc",
           "renamed": "gameOptions"
+        },
+        {
+          "start": 15675,
+          "end": 15677,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 15717,
+          "end": 15719,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
+        },
+        {
+          "start": 15770,
+          "end": 15772,
+          "symbol": "C:ep",
+          "original": "ep",
+          "renamed": "IntroSequence"
         },
         {
           "start": 15829,
@@ -1855063,10 +1857311,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "e35681816fe79ad8df14d01b47386bfc95b5eca670c93764c4660292482ce296",
+    "rulesSha256": "51923919b8ee7a33165da073aa862e287c16003ffd597363d35daa011cc5798c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "27439cb1dbb8ec95bd54cacef43db9863780031d7e9f87a615cd2c213b2bd0fd",
+    "outputTreeSha256": "aec777d1d33d2916b2d71a580afa346973aef1aa23643823e82d6b971ea88374",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

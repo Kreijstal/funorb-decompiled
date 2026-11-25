@@ -359,12 +359,12 @@ abstract class TileableNoiseGenerator {
                   CombatPresentation.field_j[optionIndex] != null &&
                   (~BoundedFile.field_a & CombatPresentation.field_j[optionIndex][choiceValue]) > 0) {
                   featureRequirementFailed = 1;
-                  featureRequirementValue = fd.a(true, CombatPresentation.field_j[optionIndex][choiceValue] & ~BoundedFile.field_a);
+                  featureRequirementValue = AnimationFrameSetCacheEntry.highestOneBit(true, CombatPresentation.field_j[optionIndex][choiceValue] & ~BoundedFile.field_a);
                 }
-                if (ep.field_p != null &&
-                  null != ep.field_p[optionIndex] &&
+                if (IntroSequence.field_p != null &&
+                  null != IntroSequence.field_p[optionIndex] &&
                   LoginForm.memberEntitlementValue <= 0 &&
-                  ep.field_p[optionIndex][choiceValue]) {
+                  IntroSequence.field_p[optionIndex][choiceValue]) {
                   membersRequired = 1;
                 }
                 if (null != GameAppletShell.field_e &&
@@ -556,7 +556,7 @@ abstract class TileableNoiseGenerator {
                   !EmptyWidgetPainter.field_a) {
                   restrictionMessageReference = null;
                   if (ArchiveLoadSequence.field_a) {
-                    restrictionMessageReference = "</col>" + ep.field_h + "<col=A00000>";
+                    restrictionMessageReference = "</col>" + IntroSequence.field_h + "<col=A00000>";
                     var25Lifetime1 = restrictionMessageReference;
                     restrictionMessageReference = var25Lifetime1;
                     var25Lifetime1Lifetime1 = restrictionMessageReference;

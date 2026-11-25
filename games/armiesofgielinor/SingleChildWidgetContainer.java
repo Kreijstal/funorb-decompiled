@@ -413,7 +413,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             LogoMesh.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
-            KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ep.field_h);
+            KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, IntroSequence.field_h);
             array$0 = new IconTextComponent[1 + lm.field_e.length];
             LogoMesh.field_k[1] = array$0;
             LogoMesh.field_k[1][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
@@ -746,7 +746,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         int var10 = 0;
         int var12 = 0;
         int var13 = 0;
-        fd var14 = null;
+        AnimationFrameSetCacheEntry var14 = null;
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
@@ -771,7 +771,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
                       var12 = var17[var11] >> 16;
                       var13 = WeightedScoreStrategy.a(0, var12) ? 1 : 0;
                       if (var13 == 0) {
-                        var14 = new fd(param2, param0, var12);
+                        var14 = new AnimationFrameSetCacheEntry(param2, param0, var12);
                         if (null == MusicTrackSelectionSupport.field_e) {
                           MusicTrackSelectionSupport.field_e = new NodeDeque();
                         }

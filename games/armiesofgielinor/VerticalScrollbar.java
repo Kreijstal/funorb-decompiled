@@ -355,7 +355,7 @@ final class VerticalScrollbar extends ClientUiComponent {
         if (this.repeatTicks != 0) {
           return false;
         }
-        if (this.thumb.pendingYDelta + this.thumb.screenY <= ko.pointerY) {
+        if (this.thumb.pendingYDelta + this.thumb.screenY <= HighscoreAccountEntry.pointerY) {
           return false;
         }
         this.repeatTicks = 3;
@@ -378,7 +378,7 @@ final class VerticalScrollbar extends ClientUiComponent {
           this.repeatTicks = this.repeatTicks - 1;
         }
         if (0 == this.repeatTicks) {
-          if (ko.pointerY >= this.thumb.pendingHeightDelta + (this.thumb.height + this.thumb.pendingYDelta + this.thumb.screenY)) {
+          if (HighscoreAccountEntry.pointerY >= this.thumb.pendingHeightDelta + (this.thumb.height + this.thumb.pendingYDelta + this.thumb.screenY)) {
             this.repeatTicks = 3;
             return true;
           }

@@ -56,7 +56,7 @@ final class BattleGraphicsAssets {
             var1 = ProceduralMapSupport.b(true);
           }
           if (var1.length() == 0) {
-            var1 = ko.field_a;
+            var1 = HighscoreAccountEntry.field_a;
           }
           return var1;
         }
@@ -68,7 +68,7 @@ final class BattleGraphicsAssets {
           var1 = ProceduralMapSupport.b(true);
         }
         if (var1.length() == 0) {
-          var1 = ko.field_a;
+          var1 = HighscoreAccountEntry.field_a;
         }
         return var1;
     }
