@@ -681,7 +681,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         RuntimeException var6 = null;
         try {
           if (this.field_O == param0) {
-            WeightedLruCache.b((byte) -120);
+            WeightedLruCache.showGuestPlayForm((byte) -120);
           } else {
             if (param0 == this.field_E) {
               discarded$1 = this.submitAccountCreation(false);

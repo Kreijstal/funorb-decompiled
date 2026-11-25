@@ -10,7 +10,7 @@ final class ProxySocketConnector extends SocketConnector {
     static String field_i;
     static String field_h;
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressArchiveContainer(byte[] param0, int param1) {
         byte[] stackIn_21_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -176,7 +176,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void drawAccountLoadingScreen(int param0, java.awt.Canvas param1) {
         if (SoundPlayback.field_i == 11) {
           ProxyAuthenticationRequiredException.a(param0 - 9242);
         }
@@ -199,7 +199,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(String[] args, TutorialScene param1, byte param2) {
+    final static void appendTutorialFlags(String[] args, TutorialScene param1, byte param2) {
         int var4 = 0;
         String[] var3 = null;
         String var5 = null;
@@ -332,7 +332,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static String a(Star param0, int param1) {
+    final static String formatStarNameColour(Star param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
@@ -473,7 +473,7 @@ final class ProxySocketConnector extends SocketConnector {
         return this.connectDirect(param0 ^ -10411);
     }
 
-    final static void c(int param0) {
+    final static void drawIntroColonizationScene(int param0) {
         float var3 = (float)FleetTrailPoint.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);
@@ -496,7 +496,7 @@ final class ProxySocketConnector extends SocketConnector {
         SoftwareRasterizer.fillRect(0, RoundedFrameSupport.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
           Star var4 = (Star) null;
-          ProxySocketConnector.a((Star) null, 30);
+          ProxySocketConnector.formatStarNameColour((Star) null, 30);
         }
     }
 

@@ -436,7 +436,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           ClientContextMenuSupport.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.decodeLogoAudio(param2 - 1102, param3);
-          AccountCreationDialog.a(param2 ^ 902, param3);
+          AccountCreationDialog.loadLogoMeshes(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
           ReflectionCheck.initializeMeshRasterizer((byte) -47);
           UrlLoader.b((byte) -112);

@@ -60,7 +60,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
           WeightedCacheEntry.field_q = var8.readString(param1 + 0);
         }
         if (!param0) {
-          BufferedSocket.field_h = UnderageAccountInfoPanel.a(var8, param1 + 1, 80);
+          BufferedSocket.field_h = UnderageAccountInfoPanel.readCompressedChatText(var8, param1 + 1, 80);
           AgeValidator.field_p = null;
           return new ChatHistoryEntry(param0);
         }

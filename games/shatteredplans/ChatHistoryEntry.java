@@ -121,9 +121,9 @@ final class ChatHistoryEntry {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(OrderableInsertionSupport.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(OrderableInsertionSupport.field_c, 4371, new String[]{ProxySocketConnector.formatStarNameColour(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
+                  var7 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.formatStarNameColour(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;

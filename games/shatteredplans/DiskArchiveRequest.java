@@ -126,7 +126,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     final static boolean pollLobbyOverlays(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        if (WeightedLruCache.a(-126)) {
+        if (WeightedLruCache.hasBlockingOverlay(-126)) {
           WidgetTheme.pollQuickChatOverlays(param3, param6, false, param2);
           if (null != DerelictVictoryChecker.field_m &&
             DerelictVictoryChecker.field_m.handleMenuSelection(param6, param1, -16, param5, param3)) {

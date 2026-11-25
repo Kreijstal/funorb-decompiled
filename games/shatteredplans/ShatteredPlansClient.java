@@ -287,7 +287,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             }
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.commitMenuTransition(1048576);
-              BytePayloadNode.a(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.m(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
+              BytePayloadNode.a(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.getRoomPlayerListContent(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
               SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
               StripedProgressWidget.field_Q = false;
@@ -533,7 +533,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               var7 = 1;
             }
             if (var7 != 0) {
-              IntrusiveNode.b(-11);
+              IntrusiveNode.requestReconnectUi(-11);
             }
           }
           return;
@@ -774,7 +774,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         BufferedSocket.clearStatics((byte) -127);
         PlayerStats.clearStatics((byte) -17);
         SolVictoryChecker.clearStatics(-26088);
-        IntrusiveNode.a(true);
+        IntrusiveNode.clearIntrusiveNodeStatics(true);
         PolygonSpanIterator.clearStatics();
         BitmapFont.clearStatics();
         SocialListSetupSupport.clearStatics((byte) -106);
@@ -979,7 +979,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         QuickChatPhraseRegistry.clearStatics((byte) 125);
         QuickChatCategoryDefinition.clearStatics((byte) -117);
         QuickChatPhraseDefinition.clearStatics((byte) -50);
-        WeightedLruCache.a(false);
+        WeightedLruCache.clearWeightedLruCacheStatics(false);
         SocketConnector.clearStatics((byte) 23);
         ProxyAuthenticationRequiredException.clearStatics(101);
         NanoFrameTimer.clearStatics((byte) 78);
@@ -1015,7 +1015,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         CheckboxWidget.clearStatics(-22429);
         TextFieldValidator.clearStatics((byte) -65);
         ChatCompositionSupport.releaseChatCompositionStatics(param0 + 26631);
-        UnderageAccountInfoPanel.a((byte) -75);
+        UnderageAccountInfoPanel.clearUnderagePanelStatics((byte) -75);
         DialWidget.clearStatics(4);
         SliderWidget.clearStatics(-104);
         LobbyLayoutSupport.clearStatics(-5);
@@ -1386,12 +1386,12 @@ public final class ShatteredPlansClient extends GameClientShell {
           return;
         }
         if (!MutableIntPairNode.field_h) {
-          ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
+          ProxySocketConnector.drawAccountLoadingScreen(9242, (java.awt.Canvas) (var2));
           return;
         }
         if (!StrongCacheEntry.areClientPreferencesReady((byte) 116)) {
           ClientDialogSupport.setLoadingProgress(100.0f, 2, ToggleButton.field_v);
-          ProxySocketConnector.a(9242, (java.awt.Canvas) (var2));
+          ProxySocketConnector.drawAccountLoadingScreen(9242, (java.awt.Canvas) (var2));
           return;
         }
         if (~PlayerRankingRequest.field_o != ~GameRules.field_c) {

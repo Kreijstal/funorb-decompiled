@@ -243,7 +243,7 @@ final class QuickChatParameterType {
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + ValidatedTextInputWidget.field_Z[var15][var18];
             }
-            UnderageAccountInfoPanel.a(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
+            UnderageAccountInfoPanel.projectMeshAndBucketFaces(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
             WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);

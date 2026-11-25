@@ -75,7 +75,7 @@ final class MenuTransitionSupport {
     }
 
     final static void drawClientInterface(boolean param0, int param1) {
-        if (WeightedLruCache.a(-104)) {
+        if (WeightedLruCache.hasBlockingOverlay(-104)) {
           param0 = false;
         }
         FleetTrailPoint.a(false, param0);

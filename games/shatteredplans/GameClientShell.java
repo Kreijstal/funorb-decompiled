@@ -111,7 +111,7 @@ abstract class GameClientShell extends GameApplet {
               SoundPlayback.field_i = 10;
               BirthDateConfirmationForm.field_P = true;
             } else {
-              AccountCreationDialog.a(0, GameScreen.getHostApplet((byte) 127));
+              AccountCreationDialog.clearSessionAndReload(0, GameScreen.getHostApplet((byte) 127));
             }
           }
           if (5 == var4) {
@@ -125,7 +125,7 @@ abstract class GameClientShell extends GameApplet {
             SpriteResourceSupport.openServerListPage(GameScreen.getHostApplet((byte) 127), (byte) -119);
           }
           if (8 == var4) {
-            AccountCreationDialog.a(param1 ^ 1, GameScreen.getHostApplet((byte) 126));
+            AccountCreationDialog.clearSessionAndReload(param1 ^ 1, GameScreen.getHostApplet((byte) 126));
           }
           if (9 == var4) {
             StringNode.openCustomerSupportPage(115, GameScreen.getHostApplet((byte) 125));
@@ -401,7 +401,7 @@ abstract class GameClientShell extends GameApplet {
             !(ClientInputSupport.getMouseIdleTicks(123) <= var3)) {
             this.field_y = false;
             TabbedPanel.closeClientSocket(-113);
-            IntrusiveNode.b(-11);
+            IntrusiveNode.requestReconnectUi(-11);
             AccountStatusSupport.showLoginResult((byte) -124, 2, IntNode.field_n);
             ClientException.clearTutorialConditionalTextAges(false);
             StripedProgressWidget.field_B = true;
@@ -428,7 +428,7 @@ abstract class GameClientShell extends GameApplet {
           TutorialTextSupport.field_g != 0) {
           if (DefensiveAi.field_p >= 10) {
             if (SoundPlayback.field_i >= 10) {
-              IntrusiveNode.b(-11);
+              IntrusiveNode.requestReconnectUi(-11);
               if (3 != TutorialTextSupport.field_g) {
                 if (4 == TutorialTextSupport.field_g) {
                   AccountStatusSupport.showLoginResult((byte) -124, 256, SpriteWipeSupport.field_e);
@@ -689,7 +689,7 @@ abstract class GameClientShell extends GameApplet {
         if (!QuickChatMenu.field_Nb) {
           this.fail((byte) 58, "reconnect");
         }
-        IntrusiveNode.b(-11);
+        IntrusiveNode.requestReconnectUi(-11);
         AccountStatusSupport.showLoginResult((byte) -126, var2, DiplomacyRowSupport.field_c);
         StripedProgressWidget.field_B = true;
         SecondaryNodeDequeIterator.field_b = ClientClockSupport.currentTimeMillis(14274) + 15000L;

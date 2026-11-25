@@ -3868,7 +3868,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         int var3 = 0;
         StarLinkPlanner var4 = null;
         try {
-          var2 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
+          var2 = new GalaxyMap(UnderageAccountInfoPanel.computeMapWidth((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
           this.field_f = new Star[1];
           this.field_f[0] = this.createHexStar(0, this.field_c, this.field_b, -50, 0);
           this.field_f[0].name = IsaacRandom.field_h[21];
@@ -3923,7 +3923,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 this.field_d = 1;
                 this.field_b = 1;
               }
-              var4 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
+              var4 = new GalaxyMap(UnderageAccountInfoPanel.computeMapWidth((byte) 34, this.field_c), GalaxyMapLayoutSupport.computeMapHeight(this.field_b, 2), this.field_h, this.field_d);
               this.field_f[0] = this.createHexStar(0, this.field_c, this.field_b, -25, 0);
               this.field_f[0].name = IsaacRandom.field_h[21];
               if (var7 == 0) {

@@ -44,7 +44,7 @@ final class WeightedLruCache {
         WeightedCacheEntry var7 = (WeightedCacheEntry) (this.field_h.get(-78, param0));
         StrongCacheEntry var6Lifetime1;
         if (param1 != 0) {
-          WeightedLruCache.a(true);
+          WeightedLruCache.clearWeightedLruCacheStatics(true);
           if (var7 == null) {
             return null;
           }
@@ -93,9 +93,9 @@ final class WeightedLruCache {
         return var9;
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasBlockingOverlay(int param0) {
         if (param0 >= -79) {
-          WeightedLruCache.a(true);
+          WeightedLruCache.clearWeightedLruCacheStatics(true);
           if (null != DerelictVictoryChecker.field_m) {
             return true;
           }
@@ -125,14 +125,14 @@ final class WeightedLruCache {
         return true;
     }
 
-    final static void b(byte param0) {
+    final static void showGuestPlayForm(byte param0) {
         HighscoreResponseSupport.field_f.setContent(new GuestPlayForm(), 127);
         if (param0 >= -76) {
-          WeightedLruCache.a(false);
+          WeightedLruCache.clearWeightedLruCacheStatics(false);
         }
     }
 
-    final static RoundedMenuPanel a(byte param0) {
+    final static RoundedMenuPanel createStatusBar(byte param0) {
         SpriteButton var2 = null;
         AlignedMenuLabel var3 = null;
         AlignedMenuLabel var4 = null;
@@ -208,7 +208,7 @@ final class WeightedLruCache {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearWeightedLruCacheStatics(boolean param0) {
         field_j = null;
         field_a = null;
         field_d = null;
@@ -219,7 +219,7 @@ final class WeightedLruCache {
           field_g = null;
           return;
         }
-        WeightedLruCache.b((byte) -77);
+        WeightedLruCache.showGuestPlayForm((byte) -77);
         field_i = null;
         field_l = null;
         field_g = null;

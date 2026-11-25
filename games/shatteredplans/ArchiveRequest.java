@@ -52,7 +52,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             stackIn_4_0 = LobbyPlayerEntry.field_Rb;
             return stackIn_4_0;
           }
-          var3 = IntrusiveNode.c((byte) -90);
+          var3 = IntrusiveNode.getLoginMethods((byte) -90);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matches((byte) 80, var2)) {

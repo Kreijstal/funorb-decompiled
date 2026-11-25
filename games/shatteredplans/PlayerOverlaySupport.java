@@ -17,7 +17,7 @@ final class PlayerOverlaySupport {
 
     final static void drawInterfaceOverlays(boolean param0, boolean param1) {
         if (param0) {
-          if (WeightedLruCache.a(-128)) {
+          if (WeightedLruCache.hasBlockingOverlay(-128)) {
             param1 = false;
           }
           GameScreen.drawOverlays((byte) -57, param1);
@@ -25,7 +25,7 @@ final class PlayerOverlaySupport {
           return;
         }
         field_a = (String) null;
-        if (WeightedLruCache.a(-128)) {
+        if (WeightedLruCache.hasBlockingOverlay(-128)) {
           param1 = false;
         }
         GameScreen.drawOverlays((byte) -57, param1);

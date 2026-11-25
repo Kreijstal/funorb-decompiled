@@ -241,7 +241,7 @@ class TextHotspotWidget extends FocusableWidget {
               MenuPointerSupport.drawIntroPlanetScene(128);
             } else {
               if (SolVictoryChecker.field_m == 3) {
-                ProxySocketConnector.c(8421504);
+                ProxySocketConnector.drawIntroColonizationScene(8421504);
               } else {
                 if (4 == SolVictoryChecker.field_m) {
                   FullscreenFocusCanvas.drawIntroOrbScene(param0 - 6173);

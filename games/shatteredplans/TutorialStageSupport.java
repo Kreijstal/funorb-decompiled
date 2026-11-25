@@ -158,7 +158,7 @@ final class TutorialStageSupport {
               var26Lifetime1 = var22Lifetime1;
               var29 = var26Lifetime1;
               var26Lifetime1Lifetime1 = var22Lifetime1;
-              PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
+              PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.formatStarNameColour(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
             }
             var5 = null;
             if (GradientMenuLabel.field_x == 5) {
@@ -280,7 +280,7 @@ final class TutorialStageSupport {
                 PlayerRankingRequest.drawDialogsWithBackdrop(false, param0, param1 ^ 10);
                 WeightedCacheEntry.paintRasterToCanvas(64, 0, param2, 0);
               } else {
-                ProxySocketConnector.a(param1 ^ 9232, param2);
+                ProxySocketConnector.drawAccountLoadingScreen(param1 ^ 9232, param2);
               }
             }
           }

@@ -425,7 +425,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#0"
+      "renamedSymbol": "B:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#0"
     },
     {
       "symbol": "B:rq.a(I)[Lbi;#0",
@@ -19532,6 +19532,14 @@
       "renamedSymbol": "M:CheckboxWidgetPainter.releaseMouseHandler(Z)V"
     },
     {
+      "symbol": "M:oh.a(Z)V",
+      "originalName": "a",
+      "to": "clearIntrusiveNodeStatics",
+      "evidence": "Clear retained IntrusiveNode static sprites/panels/text in original order. Disposal context read. Preserve false-flag discarded account-socket query before any clear and partial failure behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.clearIntrusiveNodeStatics(Z)V"
+    },
+    {
       "symbol": "M:oh.b(B)V",
       "originalName": "b",
       "to": "unlink",
@@ -19540,12 +19548,36 @@
       "renamedSymbol": "M:IntrusiveNode.unlink(B)V"
     },
     {
+      "symbol": "M:oh.b(I)V",
+      "originalName": "b",
+      "to": "requestReconnectUi",
+      "evidence": "For original complemented client-state condition or failed capability guard,reset/show forced reconnect UIand set state11;always set retained loading redraw flag. Complete reset/guard helpers and exact reconnect caption read. Preserve repeated live state access,constant guard call and exact ordering. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.requestReconnectUi(I)V"
+    },
+    {
       "symbol": "M:oh.b(II)I",
       "originalName": "b",
       "to": "cosine",
       "evidence": "Looks up a cosine value for a 13-bit angle in the quarter table with sign by quadrant.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveNode.cosine(II)I"
+    },
+    {
+      "symbol": "M:oh.b(Z)Z",
+      "originalName": "b",
+      "to": "hasActiveAccountSocket",
+      "evidence": "Test retained account socket nonnull and account phase among original login/connected identities. Complete phase helper and shutdown caller read. Preserve false-flag sprite clear before socket test,short circuit and phase null failure only when socket present. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.hasActiveAccountSocket(Z)Z"
+    },
+    {
+      "symbol": "M:oh.c(B)[Lbg;",
+      "originalName": "c",
+      "to": "getLoginMethods",
+      "evidence": "Return fresh array of three retained login method preference identities in original order. Complete cookie preference consumer read. Preserve invalid-byte IntrusiveNode cleanup before allocation and no enum conversion or copied objects. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveNode.getLoginMethods(B)[LLoginMethodPreference;"
     },
     {
       "symbol": "M:oh.c(I)Z",
@@ -19596,6 +19628,30 @@
       "renamedSymbol": "M:AccountCreationDialog.animate(B)Z"
     },
     {
+      "symbol": "M:oj.a(ILbc;)V",
+      "originalName": "a",
+      "to": "loadLogoMeshes",
+      "evidence": "Read logo.fo3dmaterials/meshes in bit mode,retain mesh/center arrays,scale meshes by6,recompute bounds and translate centers to origin. Complete intro-resource and lit-mesh callers read. Preserve shared bit cursor,guard<=82partial publications,axis permutation,overflow and per-mesh partial mutations. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.loadLogoMeshes(ILArchive;)V"
+    },
+    {
+      "symbol": "M:oj.a(ILjava/applet/Applet;)V",
+      "originalName": "a",
+      "to": "clearSessionAndReload",
+      "evidence": "Clear session browser cookie then reload game page through retained helpers. Both complete helpers read. Preserve host JavaScript/navigation calls,helper exceptions and late non0static cleanup;identifier-only,no host actions executed by this pass. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.clearSessionAndReload(ILjava/applet/Applet;)V"
+    },
+    {
+      "symbol": "M:oj.a(IZLkj;)V",
+      "originalName": "a",
+      "to": "showAccountCreationResult",
+      "evidence": "Consume account creation result and replace dialog with original status/buttons or underage information panel. Complete result poll and underage constructor read. Preserve early handled flag,code248host flag/suggestion paths,guard17partial state,branch-specific buttons and construction/content order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V"
+    },
+    {
       "symbol": "M:oj.a(Lkg;IIII)V",
       "originalName": "a",
       "to": "onButtonClicked",
@@ -19604,12 +19660,36 @@
       "renamedSymbol": "M:AccountCreationDialog.onButtonClicked(LFocusableWidget;IIII)V"
     },
     {
+      "symbol": "M:oj.f(Z)V",
+      "originalName": "f",
+      "to": "showAccountIneligibleResult",
+      "evidence": "Create original code248ineligibility result and display it with host status update suppressed. Exact ineligible caption and status-result helper read. Preserve true-flag one additional invocation via falsecall after first display and all dialog state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountIneligibleResult(Z)V"
+    },
+    {
       "symbol": "M:oj.q(I)V",
       "originalName": "q",
       "to": "clearStatics",
       "evidence": "Assigns null to 7 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AccountCreationDialog.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ol.a(B)Los;",
+      "originalName": "a",
+      "to": "createStatusBar",
+      "evidence": "Allocate/retain500by45rounded in-game status panel and attach status content/icon/two labels for byte69. Actual status text/icon consumer excerpts read. Preserve global publication before guard,wrong-byte null return after first allocations,label modes and exact child order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;"
+    },
+    {
+      "symbol": "M:ol.a(I)Z",
+      "originalName": "a",
+      "to": "hasBlockingOverlay",
+      "evidence": "Check retained context menu,social-name dialog,report panel or Quick Chat help/menu overlay in original order. Complete helper and input/draw consumers read. Preserve bad-int static cleanup before queries,short circuit and helper exception domains. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WeightedLruCache.hasBlockingOverlay(I)Z"
     },
     {
       "symbol": "M:ol.a(JI)Ljava/lang/Object;",
@@ -19644,12 +19724,28 @@
       "renamedSymbol": "M:WeightedLruCache.removeEntry(LWeightedCacheEntry;B)V"
     },
     {
+      "symbol": "M:ol.a(Z)V",
+      "originalName": "a",
+      "to": "clearWeightedLruCacheStatics",
+      "evidence": "Clear seven retained cache utility static references with original interleaved guard behavior. Disposal context read. Preserve first four clears before true-flag guest-form installation and final three clears only if that call returns. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WeightedLruCache.clearWeightedLruCacheStatics(Z)V"
+    },
+    {
       "symbol": "M:ol.a(ZJ)V",
       "originalName": "a",
       "to": "remove",
       "evidence": "Removes the entry stored under the key.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WeightedLruCache.remove(ZJ)V"
+    },
+    {
+      "symbol": "M:ol.b(B)V",
+      "originalName": "b",
+      "to": "showGuestPlayForm",
+      "evidence": "Install new GuestPlayFormin retained account dialog then optionally clear cache utility statics. Complete creation/button callers read. Preserve null dialog failure,constructor/setContent ordering and late byte>=-76cleanup. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WeightedLruCache.showGuestPlayForm(B)V"
     },
     {
       "symbol": "M:om.a(III)V",
@@ -20180,6 +20276,14 @@
       "renamedSymbol": "M:ProxySocketConnector.rethrowUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
+      "originalName": "a",
+      "to": "drawAccountLoadingScreen",
+      "evidence": "For valid guard9242draw retained account loading progress then paint raster to supplied canvas;state11also evaluates original guard helper first. Complete loading UI caller and helper excerpt read. Preserve helper call even for wrong guard,redraw flag,float/string inputs and original exception boundary. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.drawAccountLoadingScreen(ILjava/awt/Canvas;)V"
+    },
+    {
       "symbol": "M:pa.a(ILjava/lang/String;Ljava/lang/String;I)Ljava/net/Socket;",
       "originalName": "a",
       "to": "connectThroughHttpProxy",
@@ -20196,12 +20300,44 @@
       "renamedSymbol": "M:ProxySocketConnector.connectThroughProxy(ILjava/net/Proxy;)Ljava/net/Socket;"
     },
     {
+      "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "formatStarNameColour",
+      "evidence": "Format star name in owner colour or neutral8421504using original numbered substitution. Incoming tutorial/combat windows read. Preserve unescaped name/null concatenation,lowercase hex conversion,guard text clear after owner access and no markup normalization. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:pa.a([BI)[B",
+      "originalName": "a",
+      "to": "decompressArchiveContainer",
+      "evidence": "Decode raw/type1bzip2/other-type gzip archive container with retained compressed/uncompressed length bounds. Complete gzip helper and archive call windows read. Preserve0means unlimited size limit,header/cursor/allocation order,Bzip offset9,synchronization on captured inflater object with live field read,and wrapped partial errors. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.decompressArchiveContainer([BI)[B"
+    },
+    {
+      "symbol": "M:pa.a([Ljava/lang/String;Lsq;B)V",
+      "originalName": "a",
+      "to": "appendTutorialFlags",
+      "evidence": "Append every supplied string to tutorial scene flags in array order. Complete scene directive parser read. Preserve array snapshot,duplicate/null strings,partial append failures and late byte>=-116text clear. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V"
+    },
+    {
       "symbol": "M:pa.b(I)Ljava/net/Socket;",
       "originalName": "b",
       "to": "connect",
       "evidence": "Opens a Socket to the stored host and port; ProxySocketConnector consults the proxy selector first. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ProxySocketConnector.connect(I)Ljava/net/Socket;"
+    },
+    {
+      "symbol": "M:pa.c(I)V",
+      "originalName": "c",
+      "to": "drawIntroColonizationScene",
+      "evidence": "Draw original star backdrop,additive city silhouettes,city layers and descending crater then black lower area for intro scene3. Asset producer and scene caller excerpts read. Preserve frame arithmetic/trigonometry,draw ordering,640by480fill and late wrong-int star-null formatting call. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProxySocketConnector.drawIntroColonizationScene(I)V"
     },
     {
       "symbol": "M:pa.d(I)V",
@@ -20308,6 +20444,30 @@
       "renamedSymbol": "M:TertiaryListSequence.clearStatics(I)V"
     },
     {
+      "symbol": "M:pe.a(B)V",
+      "originalName": "a",
+      "to": "clearUnderagePanelStatics",
+      "evidence": "Clear retained underage panel statics with original guard-derived remainder between first two and last two writes. Disposal context read. Preserve byte exception domain and partial clearing/wrapped error order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.clearUnderagePanelStatics(B)V"
+    },
+    {
+      "symbol": "M:pe.a(BI)I",
+      "originalName": "a",
+      "to": "computeMapWidth",
+      "evidence": "Return supplied hex column count times200plus100used by map generators. Complete standard generator and grid-width inverse excerpt read. Preserve arbitrary signed ints/overflow and invalid-byte recursive call before arithmetic. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.computeMapWidth(BI)I"
+    },
+    {
+      "symbol": "M:pe.a(I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "getLinkMarkupEnd",
+      "evidence": "Return exact closing colour/underline markup after original int-derived remainder. Complete underage panel constructor read. Preserve guard arithmetic/error and literal closing order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:pe.a(ICILvg;)Z",
       "originalName": "a",
       "to": "handleKey",
@@ -20330,6 +20490,46 @@
       "evidence": "FocusableWidget.fireAction invokes this callback with the activated widget and pointer/action values. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UnderageAccountInfoPanel.onButtonClicked(LFocusableWidget;IIII)V"
+    },
+    {
+      "symbol": "M:pe.a(Lob;II)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "readCompressedChatText",
+      "evidence": "Read unsigned-smart decoded length,cap to supplied maximum,Huffman decode bytes,advance packet position by consumed count and decode CP1252;return Cabbage on any inner Exception. Complete packet caller and Huffman helper read. Preserve negative maxima,smart-read partial cursor,output offset argument,position commit after successful decode and exact catch scopes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:pe.a(Z[IZI[IZLsr;)V",
+      "originalName": "a",
+      "to": "projectMeshAndBucketFaces",
+      "evidence": "Compose retained camera/model matrices,project vertices with near50sentinel,optionally save camera coordinates,transform face vectors and optional lighting normals,then bucket faces through original full-int helper. Complete lit-mesh caller/both bucket helpers and lighting consumer excerpt read. Preserve integer shift/overflow/casts,guard<11placement,nine-array gate,normal capacity bound,global frame selectors and all partial shared arrays. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V"
+    },
+    {
+      "symbol": "M:pe.k(I)V",
+      "originalName": "k",
+      "to": "handleTutorialTurnEnd",
+      "evidence": "Queue endturn event,handle two-star combat success/failure and losing scenes,and refresh combat/garrison/coloured-star text replacements. Complete queue/seen/battle/scene helpers read. Preserve scene ordering,repeat battle lookups,local-player identity tests,late guard write and partial replacement state. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V"
+    },
+    {
+      "symbol": "M:pe.l(I)Ljava/lang/String;",
+      "originalName": "l",
+      "to": "getLinkMarkupStart",
+      "evidence": "Return exact blue underline/colour opening markup for int>=71,otherwise null. Complete underage panel constructor read. Preserve literal spelling and unrestricted int domain. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:pe.m(I)Lqr;",
+      "originalName": "m",
+      "to": "getRoomPlayerListContent",
+      "evidence": "Return retained current-room player scroll pane content used by lobby list setup. Room player count caption and pane construction excerpts read. Preserve live null dereference and int<20static write before reading pane. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;"
     },
     {
       "symbol": "M:pf.a(B)Loh;",
@@ -27539,7 +27739,7 @@
     },
     {
       "symbol": "B:pe.a(Z[IZI[IZLsr;)V#0",
-      "renamedSymbol": "B:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#0",
+      "renamedSymbol": "B:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#0",
       "originalName": "L2",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -241038,7 +241238,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#0",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#0",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -241049,7 +241249,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#1",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#1",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241060,7 +241260,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#10",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#10",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#10",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -241071,7 +241271,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#11",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#11",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -241082,7 +241282,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#12",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#12",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#12",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -241093,7 +241293,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#13",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#13",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#13",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -241104,7 +241304,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#14",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#14",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -241115,7 +241315,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#2",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#2",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -241126,7 +241326,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#3",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#3",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -241137,7 +241337,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#4",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#4",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -241148,7 +241348,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#5",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#5",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -241159,7 +241359,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#6",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#6",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -241170,7 +241370,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#7",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#7",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -241181,7 +241381,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#8",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#8",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#8",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -241192,7 +241392,7 @@
     },
     {
       "symbol": "L:oj.a(ILbc;)V#9",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILArchive;)V#9",
+      "renamedSymbol": "L:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#9",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -241203,7 +241403,7 @@
     },
     {
       "symbol": "L:oj.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "L:AccountCreationDialog.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "L:AccountCreationDialog.clearSessionAndReload(ILjava/applet/Applet;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -241214,7 +241414,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#0",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#0",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#0",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -241225,7 +241425,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#1",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#1",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#1",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -241236,7 +241436,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#2",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#2",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#2",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -241247,7 +241447,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#3",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#3",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -241258,7 +241458,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#4",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#4",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241269,7 +241469,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#5",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#5",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#5",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -241280,7 +241480,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#6",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#6",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -241291,7 +241491,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#7",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#7",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -241302,7 +241502,7 @@
     },
     {
       "symbol": "L:oj.a(IZLkj;)V#8",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountRequestResult;)V#8",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -241335,7 +241535,7 @@
     },
     {
       "symbol": "L:ol.a(B)Los;#0",
-      "renamedSymbol": "L:WeightedLruCache.a(B)LRoundedMenuPanel;#0",
+      "renamedSymbol": "L:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -241346,7 +241546,7 @@
     },
     {
       "symbol": "L:ol.a(B)Los;#1",
-      "renamedSymbol": "L:WeightedLruCache.a(B)LRoundedMenuPanel;#1",
+      "renamedSymbol": "L:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -241357,7 +241557,7 @@
     },
     {
       "symbol": "L:ol.a(B)Los;#2",
-      "renamedSymbol": "L:WeightedLruCache.a(B)LRoundedMenuPanel;#2",
+      "renamedSymbol": "L:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -241368,7 +241568,7 @@
     },
     {
       "symbol": "L:ol.a(B)Los;#3",
-      "renamedSymbol": "L:WeightedLruCache.a(B)LRoundedMenuPanel;#3",
+      "renamedSymbol": "L:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -247979,7 +248179,7 @@
     },
     {
       "symbol": "L:pa.a(ILjava/awt/Canvas;)V#0",
-      "renamedSymbol": "L:ProxySocketConnector.a(ILjava/awt/Canvas;)V#0",
+      "renamedSymbol": "L:ProxySocketConnector.drawAccountLoadingScreen(ILjava/awt/Canvas;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -248485,7 +248685,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -248496,7 +248696,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -248507,7 +248707,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -248518,7 +248718,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -248529,7 +248729,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -248540,7 +248740,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#5",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -248551,7 +248751,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#6",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -248562,7 +248762,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#7",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -248573,7 +248773,7 @@
     },
     {
       "symbol": "L:pa.a(Lln;I)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#8",
+      "renamedSymbol": "L:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -248584,7 +248784,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#0",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#0",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#0",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -248595,7 +248795,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#1",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#1",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#1",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -248606,7 +248806,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#10",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#10",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#10",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -248617,7 +248817,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#11",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#11",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -248628,7 +248828,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#12",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#12",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -248639,7 +248839,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#13",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#13",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -248650,7 +248850,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#14",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#14",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -248661,7 +248861,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#15",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#15",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -248672,7 +248872,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#16",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#16",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -248683,7 +248883,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#17",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#17",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -248694,7 +248894,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#18",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#18",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -248705,7 +248905,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#2",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#2",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#2",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -248716,7 +248916,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#3",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#3",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#3",
       "originalName": "stackIn_26_1",
       "renamedName": "stackIn_26_1",
       "declaration": {
@@ -248727,7 +248927,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#4",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#4",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#4",
       "originalName": "stackIn_27_2",
       "renamedName": "stackIn_27_2",
       "declaration": {
@@ -248738,7 +248938,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#5",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#5",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -248749,7 +248949,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#6",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#6",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -248760,7 +248960,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#7",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#7",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -248771,7 +248971,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#8",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#8",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -248782,7 +248982,7 @@
     },
     {
       "symbol": "L:pa.a([BI)[B#9",
-      "renamedSymbol": "L:ProxySocketConnector.a([BI)[B#9",
+      "renamedSymbol": "L:ProxySocketConnector.decompressArchiveContainer([BI)[B#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -248793,7 +248993,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#0",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#0",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -248804,7 +249004,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#1",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#1",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -248815,7 +249015,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#10",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#10",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -248826,7 +249026,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#11",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#11",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#11",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -248837,7 +249037,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#12",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#12",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -248848,7 +249048,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#2",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#2",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -248859,7 +249059,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#3",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#3",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -248870,7 +249070,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#4",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#4",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -248881,7 +249081,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#5",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#5",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#5",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -248892,7 +249092,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#6",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#6",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -248903,7 +249103,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#7",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#7",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -248914,7 +249114,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#8",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#8",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#8",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -248925,7 +249125,7 @@
     },
     {
       "symbol": "L:pa.a([Ljava/lang/String;Lsq;B)V#9",
-      "renamedSymbol": "L:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#9",
+      "renamedSymbol": "L:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#9",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -249310,7 +249510,7 @@
     },
     {
       "symbol": "L:pa.c(I)V#0",
-      "renamedSymbol": "L:ProxySocketConnector.c(I)V#0",
+      "renamedSymbol": "L:ProxySocketConnector.drawIntroColonizationScene(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -249321,7 +249521,7 @@
     },
     {
       "symbol": "L:pa.c(I)V#1",
-      "renamedSymbol": "L:ProxySocketConnector.c(I)V#1",
+      "renamedSymbol": "L:ProxySocketConnector.drawIntroColonizationScene(I)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -249332,7 +249532,7 @@
     },
     {
       "symbol": "L:pa.c(I)V#2",
-      "renamedSymbol": "L:ProxySocketConnector.c(I)V#2",
+      "renamedSymbol": "L:ProxySocketConnector.drawIntroColonizationScene(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -249343,7 +249543,7 @@
     },
     {
       "symbol": "L:pa.c(I)V#3",
-      "renamedSymbol": "L:ProxySocketConnector.c(I)V#3",
+      "renamedSymbol": "L:ProxySocketConnector.drawIntroColonizationScene(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -250487,7 +250687,7 @@
     },
     {
       "symbol": "L:pe.a(B)V#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(B)V#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.clearUnderagePanelStatics(B)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -250498,7 +250698,7 @@
     },
     {
       "symbol": "L:pe.a(B)V#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(B)V#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.clearUnderagePanelStatics(B)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -250509,7 +250709,7 @@
     },
     {
       "symbol": "L:pe.a(BI)I#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(BI)I#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.computeMapWidth(BI)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -250520,7 +250720,7 @@
     },
     {
       "symbol": "L:pe.a(BI)I#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(BI)I#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.computeMapWidth(BI)I#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -250531,7 +250731,7 @@
     },
     {
       "symbol": "L:pe.a(BI)I#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(BI)I#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.computeMapWidth(BI)I#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -250542,7 +250742,7 @@
     },
     {
       "symbol": "L:pe.a(BI)I#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(BI)I#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.computeMapWidth(BI)I#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -250553,7 +250753,7 @@
     },
     {
       "symbol": "L:pe.a(I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#0",
       "originalName": "stackIn_1_0",
       "renamedName": "stackIn_1_0",
       "declaration": {
@@ -250564,7 +250764,7 @@
     },
     {
       "symbol": "L:pe.a(I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -250575,7 +250775,7 @@
     },
     {
       "symbol": "L:pe.a(I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#2",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -250586,7 +250786,7 @@
     },
     {
       "symbol": "L:pe.a(I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -250597,7 +250797,7 @@
     },
     {
       "symbol": "L:pe.a(I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -250839,7 +251039,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -250850,7 +251050,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -250861,7 +251061,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#10",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#10",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -250872,7 +251072,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#11",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#11",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -250883,7 +251083,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#12",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#12",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#12",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -250894,7 +251094,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#2",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -250905,7 +251105,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -250916,7 +251116,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#4",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#4",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -250927,7 +251127,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#5",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#5",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -250938,7 +251138,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#6",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#6",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#6",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -250949,7 +251149,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#7",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#7",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#7",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -250960,7 +251160,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#8",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#8",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#8",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -250971,7 +251171,7 @@
     },
     {
       "symbol": "L:pe.a(Lob;II)Ljava/lang/String;#9",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#9",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#9",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -250982,7 +251182,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#0",
       "originalName": "stackIn_65_0",
       "renamedName": "stackIn_65_0",
       "declaration": {
@@ -250993,7 +251193,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#1",
       "originalName": "stackIn_65_1",
       "renamedName": "stackIn_65_1",
       "declaration": {
@@ -251004,7 +251204,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#10",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#10",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#10",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -251015,7 +251215,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#11",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#11",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -251026,7 +251226,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#12",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#12",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -251037,7 +251237,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#13",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#13",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -251048,7 +251248,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#14",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#14",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -251059,7 +251259,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#15",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#15",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -251070,7 +251270,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#16",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#16",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -251081,7 +251281,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#17",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#17",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -251092,7 +251292,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#18",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#18",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#18",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -251103,7 +251303,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#19",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#19",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#19",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -251114,7 +251314,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#2",
       "originalName": "stackIn_70_0",
       "renamedName": "stackIn_70_0",
       "declaration": {
@@ -251125,7 +251325,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#20",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#20",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -251136,7 +251336,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#21",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#21",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#21",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -251147,7 +251347,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#22",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#22",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#22",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -251158,7 +251358,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#23",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#23",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -251169,7 +251369,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#24",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#24",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -251180,7 +251380,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#25",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#25",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -251191,7 +251391,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#26",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#26",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#26",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -251202,7 +251402,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#27",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#27",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#27",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -251213,7 +251413,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#28",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#28",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#28",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -251224,7 +251424,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#29",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#29",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#29",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -251235,7 +251435,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#3",
       "originalName": "stackIn_70_1",
       "renamedName": "stackIn_70_1",
       "declaration": {
@@ -251246,7 +251446,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#30",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#30",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#30",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -251257,7 +251457,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#31",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#31",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#31",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -251268,7 +251468,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#32",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#32",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#32",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -251279,7 +251479,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#33",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#33",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#33",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -251290,7 +251490,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#34",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#34",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#34",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -251301,7 +251501,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#35",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#35",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#35",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -251312,7 +251512,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#36",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#36",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#36",
       "originalName": "var21Lifetime2",
       "renamedName": "var21Lifetime2",
       "declaration": {
@@ -251323,7 +251523,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#37",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#37",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#37",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -251334,7 +251534,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#38",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#38",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#38",
       "originalName": "var22Lifetime2",
       "renamedName": "var22Lifetime2",
       "declaration": {
@@ -251345,7 +251545,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#39",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#39",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#39",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -251356,7 +251556,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#4",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#4",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#4",
       "originalName": "stackIn_71_2",
       "renamedName": "stackIn_71_2",
       "declaration": {
@@ -251367,7 +251567,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#40",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#40",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#40",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -251378,7 +251578,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#41",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#41",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#41",
       "originalName": "var24Lifetime1",
       "renamedName": "var24Lifetime1",
       "declaration": {
@@ -251389,7 +251589,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#42",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#42",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#42",
       "originalName": "var25Lifetime1",
       "renamedName": "var25Lifetime1",
       "declaration": {
@@ -251400,7 +251600,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#43",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#43",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#43",
       "originalName": "var26Lifetime1",
       "renamedName": "var26Lifetime1",
       "declaration": {
@@ -251411,7 +251611,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#44",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#44",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#44",
       "originalName": "var27Lifetime1",
       "renamedName": "var27Lifetime1",
       "declaration": {
@@ -251422,7 +251622,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#45",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#45",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#45",
       "originalName": "var28Lifetime1",
       "renamedName": "var28Lifetime1",
       "declaration": {
@@ -251433,7 +251633,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#46",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#46",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#46",
       "originalName": "var29Lifetime1",
       "renamedName": "var29Lifetime1",
       "declaration": {
@@ -251444,7 +251644,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#47",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#47",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#47",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -251455,7 +251655,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#5",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#5",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#5",
       "originalName": "stackIn_74_1",
       "renamedName": "stackIn_74_1",
       "declaration": {
@@ -251466,7 +251666,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#6",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#6",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#6",
       "originalName": "stackIn_75_2",
       "renamedName": "stackIn_75_2",
       "declaration": {
@@ -251477,7 +251677,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#7",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#7",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#7",
       "originalName": "stackIn_78_1",
       "renamedName": "stackIn_78_1",
       "declaration": {
@@ -251488,7 +251688,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#8",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#8",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#8",
       "originalName": "stackIn_79_2",
       "renamedName": "stackIn_79_2",
       "declaration": {
@@ -251499,7 +251699,7 @@
     },
     {
       "symbol": "L:pe.a(Z[IZI[IZLsr;)V#9",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#9",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -251510,7 +251710,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#0",
       "originalName": "stackIn_40_0",
       "renamedName": "stackIn_40_0",
       "declaration": {
@@ -251521,7 +251721,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -251532,7 +251732,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#10",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#10",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -251543,7 +251743,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -251554,7 +251754,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#3",
       "originalName": "var1_array",
       "renamedName": "var1_array",
       "declaration": {
@@ -251565,7 +251765,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#4",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#4",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#4",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -251576,7 +251776,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#5",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#5",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -251587,7 +251787,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#6",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#6",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -251598,7 +251798,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#7",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#7",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -251609,7 +251809,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#8",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#8",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -251620,7 +251820,7 @@
     },
     {
       "symbol": "L:pe.k(I)V#9",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.k(I)V#9",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#9",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -251631,7 +251831,7 @@
     },
     {
       "symbol": "L:pe.l(I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -251642,7 +251842,7 @@
     },
     {
       "symbol": "L:pe.l(I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -251653,7 +251853,7 @@
     },
     {
       "symbol": "L:pe.l(I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -251664,7 +251864,7 @@
     },
     {
       "symbol": "L:pe.l(I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -251675,7 +251875,7 @@
     },
     {
       "symbol": "L:pe.l(I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -251686,7 +251886,7 @@
     },
     {
       "symbol": "L:pe.m(I)Lqr;#0",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.m(I)LAnimatedPanel;#0",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -251697,7 +251897,7 @@
     },
     {
       "symbol": "L:pe.m(I)Lqr;#1",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.m(I)LAnimatedPanel;#1",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -251708,7 +251908,7 @@
     },
     {
       "symbol": "L:pe.m(I)Lqr;#2",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.m(I)LAnimatedPanel;#2",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -251719,7 +251919,7 @@
     },
     {
       "symbol": "L:pe.m(I)Lqr;#3",
-      "renamedSymbol": "L:UnderageAccountInfoPanel.m(I)LAnimatedPanel;#3",
+      "renamedSymbol": "L:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -348574,9 +348774,9 @@
     },
     {
       "symbol": "M:oh.a(Z)V",
-      "renamedSymbol": "M:IntrusiveNode.a(Z)V",
+      "renamedSymbol": "M:IntrusiveNode.clearIntrusiveNodeStatics(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearIntrusiveNodeStatics",
       "declaration": {
         "file": "oh.java",
         "start": 1593,
@@ -348596,9 +348796,9 @@
     },
     {
       "symbol": "M:oh.b(I)V",
-      "renamedSymbol": "M:IntrusiveNode.b(I)V",
+      "renamedSymbol": "M:IntrusiveNode.requestReconnectUi(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requestReconnectUi",
       "declaration": {
         "file": "oh.java",
         "start": 574,
@@ -348618,9 +348818,9 @@
     },
     {
       "symbol": "M:oh.b(Z)Z",
-      "renamedSymbol": "M:IntrusiveNode.b(Z)Z",
+      "renamedSymbol": "M:IntrusiveNode.hasActiveAccountSocket(Z)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "hasActiveAccountSocket",
       "declaration": {
         "file": "oh.java",
         "start": 1915,
@@ -348629,9 +348829,9 @@
     },
     {
       "symbol": "M:oh.c(B)[Lbg;",
-      "renamedSymbol": "M:IntrusiveNode.c(B)[LLoginMethodPreference;",
+      "renamedSymbol": "M:IntrusiveNode.getLoginMethods(B)[LLoginMethodPreference;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "getLoginMethods",
       "declaration": {
         "file": "oh.java",
         "start": 924,
@@ -348717,9 +348917,9 @@
     },
     {
       "symbol": "M:oj.a(ILbc;)V",
-      "renamedSymbol": "M:AccountCreationDialog.a(ILArchive;)V",
+      "renamedSymbol": "M:AccountCreationDialog.loadLogoMeshes(ILArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "loadLogoMeshes",
       "declaration": {
         "file": "oj.java",
         "start": 371,
@@ -348728,9 +348928,9 @@
     },
     {
       "symbol": "M:oj.a(ILjava/applet/Applet;)V",
-      "renamedSymbol": "M:AccountCreationDialog.a(ILjava/applet/Applet;)V",
+      "renamedSymbol": "M:AccountCreationDialog.clearSessionAndReload(ILjava/applet/Applet;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSessionAndReload",
       "declaration": {
         "file": "oj.java",
         "start": 3312,
@@ -348739,9 +348939,9 @@
     },
     {
       "symbol": "M:oj.a(IZLkj;)V",
-      "renamedSymbol": "M:AccountCreationDialog.a(IZLAccountRequestResult;)V",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showAccountCreationResult",
       "declaration": {
         "file": "oj.java",
         "start": 4807,
@@ -348761,9 +348961,9 @@
     },
     {
       "symbol": "M:oj.f(Z)V",
-      "renamedSymbol": "M:AccountCreationDialog.f(Z)V",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountIneligibleResult(Z)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "showAccountIneligibleResult",
       "declaration": {
         "file": "oj.java",
         "start": 7451,
@@ -348805,9 +349005,9 @@
     },
     {
       "symbol": "M:ol.a(B)Los;",
-      "renamedSymbol": "M:WeightedLruCache.a(B)LRoundedMenuPanel;",
+      "renamedSymbol": "M:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createStatusBar",
       "declaration": {
         "file": "ol.java",
         "start": 3795,
@@ -348816,9 +349016,9 @@
     },
     {
       "symbol": "M:ol.a(I)Z",
-      "renamedSymbol": "M:WeightedLruCache.a(I)Z",
+      "renamedSymbol": "M:WeightedLruCache.hasBlockingOverlay(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "hasBlockingOverlay",
       "declaration": {
         "file": "ol.java",
         "start": 2972,
@@ -348871,9 +349071,9 @@
     },
     {
       "symbol": "M:ol.a(Z)V",
-      "renamedSymbol": "M:WeightedLruCache.a(Z)V",
+      "renamedSymbol": "M:WeightedLruCache.clearWeightedLruCacheStatics(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearWeightedLruCacheStatics",
       "declaration": {
         "file": "ol.java",
         "start": 6425,
@@ -348893,9 +349093,9 @@
     },
     {
       "symbol": "M:ol.b(B)V",
-      "renamedSymbol": "M:WeightedLruCache.b(B)V",
+      "renamedSymbol": "M:WeightedLruCache.showGuestPlayForm(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "showGuestPlayForm",
       "declaration": {
         "file": "ol.java",
         "start": 3652,
@@ -349707,9 +349907,9 @@
     },
     {
       "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
-      "renamedSymbol": "M:ProxySocketConnector.a(ILjava/awt/Canvas;)V",
+      "renamedSymbol": "M:ProxySocketConnector.drawAccountLoadingScreen(ILjava/awt/Canvas;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawAccountLoadingScreen",
       "declaration": {
         "file": "pa.java",
         "start": 6657,
@@ -349740,9 +349940,9 @@
     },
     {
       "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
-      "renamedSymbol": "M:ProxySocketConnector.a(LStar;I)Ljava/lang/String;",
+      "renamedSymbol": "M:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "formatStarNameColour",
       "declaration": {
         "file": "pa.java",
         "start": 13076,
@@ -349751,9 +349951,9 @@
     },
     {
       "symbol": "M:pa.a([BI)[B",
-      "renamedSymbol": "M:ProxySocketConnector.a([BI)[B",
+      "renamedSymbol": "M:ProxySocketConnector.decompressArchiveContainer([BI)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decompressArchiveContainer",
       "declaration": {
         "file": "pa.java",
         "start": 256,
@@ -349762,9 +349962,9 @@
     },
     {
       "symbol": "M:pa.a([Ljava/lang/String;Lsq;B)V",
-      "renamedSymbol": "M:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V",
+      "renamedSymbol": "M:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "appendTutorialFlags",
       "declaration": {
         "file": "pa.java",
         "start": 7330,
@@ -349784,9 +349984,9 @@
     },
     {
       "symbol": "M:pa.c(I)V",
-      "renamedSymbol": "M:ProxySocketConnector.c(I)V",
+      "renamedSymbol": "M:ProxySocketConnector.drawIntroColonizationScene(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawIntroColonizationScene",
       "declaration": {
         "file": "pa.java",
         "start": 18552,
@@ -349982,9 +350182,9 @@
     },
     {
       "symbol": "M:pe.a(B)V",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.a(B)V",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.clearUnderagePanelStatics(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearUnderagePanelStatics",
       "declaration": {
         "file": "pe.java",
         "start": 310,
@@ -349993,9 +350193,9 @@
     },
     {
       "symbol": "M:pe.a(BI)I",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.a(BI)I",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.computeMapWidth(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeMapWidth",
       "declaration": {
         "file": "pe.java",
         "start": 686,
@@ -350004,9 +350204,9 @@
     },
     {
       "symbol": "M:pe.a(I)Ljava/lang/String;",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.a(I)Ljava/lang/String;",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getLinkMarkupEnd",
       "declaration": {
         "file": "pe.java",
         "start": 5847,
@@ -350048,9 +350248,9 @@
     },
     {
       "symbol": "M:pe.a(Lob;II)Ljava/lang/String;",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readCompressedChatText",
       "declaration": {
         "file": "pe.java",
         "start": 6450,
@@ -350059,9 +350259,9 @@
     },
     {
       "symbol": "M:pe.a(Z[IZI[IZLsr;)V",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "projectMeshAndBucketFaces",
       "declaration": {
         "file": "pe.java",
         "start": 12432,
@@ -350070,9 +350270,9 @@
     },
     {
       "symbol": "M:pe.k(I)V",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.k(I)V",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "handleTutorialTurnEnd",
       "declaration": {
         "file": "pe.java",
         "start": 9690,
@@ -350081,9 +350281,9 @@
     },
     {
       "symbol": "M:pe.l(I)Ljava/lang/String;",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.l(I)Ljava/lang/String;",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "getLinkMarkupStart",
       "declaration": {
         "file": "pe.java",
         "start": 5155,
@@ -350092,9 +350292,9 @@
     },
     {
       "symbol": "M:pe.m(I)Lqr;",
-      "renamedSymbol": "M:UnderageAccountInfoPanel.m(I)LAnimatedPanel;",
+      "renamedSymbol": "M:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "getRoomPlayerListContent",
       "declaration": {
         "file": "pe.java",
         "start": 22640,
@@ -426388,7 +426588,7 @@
     },
     {
       "symbol": "P:oh.a(Z)V#0",
-      "renamedSymbol": "P:IntrusiveNode.a(Z)V#0",
+      "renamedSymbol": "P:IntrusiveNode.clearIntrusiveNodeStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426410,7 +426610,7 @@
     },
     {
       "symbol": "P:oh.b(I)V#0",
-      "renamedSymbol": "P:IntrusiveNode.b(I)V#0",
+      "renamedSymbol": "P:IntrusiveNode.requestReconnectUi(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426443,7 +426643,7 @@
     },
     {
       "symbol": "P:oh.b(Z)Z#0",
-      "renamedSymbol": "P:IntrusiveNode.b(Z)Z#0",
+      "renamedSymbol": "P:IntrusiveNode.hasActiveAccountSocket(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426454,7 +426654,7 @@
     },
     {
       "symbol": "P:oh.c(B)[Lbg;#0",
-      "renamedSymbol": "P:IntrusiveNode.c(B)[LLoginMethodPreference;#0",
+      "renamedSymbol": "P:IntrusiveNode.getLoginMethods(B)[LLoginMethodPreference;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426575,7 +426775,7 @@
     },
     {
       "symbol": "P:oj.a(ILbc;)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.a(ILArchive;)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426586,7 +426786,7 @@
     },
     {
       "symbol": "P:oj.a(ILbc;)V#1",
-      "renamedSymbol": "P:AccountCreationDialog.a(ILArchive;)V#1",
+      "renamedSymbol": "P:AccountCreationDialog.loadLogoMeshes(ILArchive;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426597,7 +426797,7 @@
     },
     {
       "symbol": "P:oj.a(ILjava/applet/Applet;)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.a(ILjava/applet/Applet;)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.clearSessionAndReload(ILjava/applet/Applet;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426608,7 +426808,7 @@
     },
     {
       "symbol": "P:oj.a(ILjava/applet/Applet;)V#1",
-      "renamedSymbol": "P:AccountCreationDialog.a(ILjava/applet/Applet;)V#1",
+      "renamedSymbol": "P:AccountCreationDialog.clearSessionAndReload(ILjava/applet/Applet;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426619,7 +426819,7 @@
     },
     {
       "symbol": "P:oj.a(IZLkj;)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountRequestResult;)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426630,7 +426830,7 @@
     },
     {
       "symbol": "P:oj.a(IZLkj;)V#1",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountRequestResult;)V#1",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -426641,7 +426841,7 @@
     },
     {
       "symbol": "P:oj.a(IZLkj;)V#2",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountRequestResult;)V#2",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountCreationResult(IZLAccountRequestResult;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -426707,7 +426907,7 @@
     },
     {
       "symbol": "P:oj.f(Z)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.f(Z)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountIneligibleResult(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426762,7 +426962,7 @@
     },
     {
       "symbol": "P:ol.a(B)Los;#0",
-      "renamedSymbol": "P:WeightedLruCache.a(B)LRoundedMenuPanel;#0",
+      "renamedSymbol": "P:WeightedLruCache.createStatusBar(B)LRoundedMenuPanel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426773,7 +426973,7 @@
     },
     {
       "symbol": "P:ol.a(I)Z#0",
-      "renamedSymbol": "P:WeightedLruCache.a(I)Z#0",
+      "renamedSymbol": "P:WeightedLruCache.hasBlockingOverlay(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426905,7 +427105,7 @@
     },
     {
       "symbol": "P:ol.a(Z)V#0",
-      "renamedSymbol": "P:WeightedLruCache.a(Z)V#0",
+      "renamedSymbol": "P:WeightedLruCache.clearWeightedLruCacheStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -426938,7 +427138,7 @@
     },
     {
       "symbol": "P:ol.b(B)V#0",
-      "renamedSymbol": "P:WeightedLruCache.b(B)V#0",
+      "renamedSymbol": "P:WeightedLruCache.showGuestPlayForm(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -429578,7 +429778,7 @@
     },
     {
       "symbol": "P:pa.a(ILjava/awt/Canvas;)V#0",
-      "renamedSymbol": "P:ProxySocketConnector.a(ILjava/awt/Canvas;)V#0",
+      "renamedSymbol": "P:ProxySocketConnector.drawAccountLoadingScreen(ILjava/awt/Canvas;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -429589,7 +429789,7 @@
     },
     {
       "symbol": "P:pa.a(ILjava/awt/Canvas;)V#1",
-      "renamedSymbol": "P:ProxySocketConnector.a(ILjava/awt/Canvas;)V#1",
+      "renamedSymbol": "P:ProxySocketConnector.drawAccountLoadingScreen(ILjava/awt/Canvas;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -429666,7 +429866,7 @@
     },
     {
       "symbol": "P:pa.a(Lln;I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -429677,7 +429877,7 @@
     },
     {
       "symbol": "P:pa.a(Lln;I)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ProxySocketConnector.a(LStar;I)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ProxySocketConnector.formatStarNameColour(LStar;I)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -429688,7 +429888,7 @@
     },
     {
       "symbol": "P:pa.a([BI)[B#0",
-      "renamedSymbol": "P:ProxySocketConnector.a([BI)[B#0",
+      "renamedSymbol": "P:ProxySocketConnector.decompressArchiveContainer([BI)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -429699,7 +429899,7 @@
     },
     {
       "symbol": "P:pa.a([BI)[B#1",
-      "renamedSymbol": "P:ProxySocketConnector.a([BI)[B#1",
+      "renamedSymbol": "P:ProxySocketConnector.decompressArchiveContainer([BI)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -429710,7 +429910,7 @@
     },
     {
       "symbol": "P:pa.a([Ljava/lang/String;Lsq;B)V#0",
-      "renamedSymbol": "P:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#0",
+      "renamedSymbol": "P:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#0",
       "originalName": "args",
       "renamedName": "args",
       "declaration": {
@@ -429721,7 +429921,7 @@
     },
     {
       "symbol": "P:pa.a([Ljava/lang/String;Lsq;B)V#1",
-      "renamedSymbol": "P:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#1",
+      "renamedSymbol": "P:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -429732,7 +429932,7 @@
     },
     {
       "symbol": "P:pa.a([Ljava/lang/String;Lsq;B)V#2",
-      "renamedSymbol": "P:ProxySocketConnector.a([Ljava/lang/String;LTutorialScene;B)V#2",
+      "renamedSymbol": "P:ProxySocketConnector.appendTutorialFlags([Ljava/lang/String;LTutorialScene;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -429754,7 +429954,7 @@
     },
     {
       "symbol": "P:pa.c(I)V#0",
-      "renamedSymbol": "P:ProxySocketConnector.c(I)V#0",
+      "renamedSymbol": "P:ProxySocketConnector.drawIntroColonizationScene(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430018,7 +430218,7 @@
     },
     {
       "symbol": "P:pe.a(B)V#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(B)V#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.clearUnderagePanelStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430029,7 +430229,7 @@
     },
     {
       "symbol": "P:pe.a(BI)I#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(BI)I#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.computeMapWidth(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430040,7 +430240,7 @@
     },
     {
       "symbol": "P:pe.a(BI)I#1",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(BI)I#1",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.computeMapWidth(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430051,7 +430251,7 @@
     },
     {
       "symbol": "P:pe.a(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.getLinkMarkupEnd(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430205,7 +430405,7 @@
     },
     {
       "symbol": "P:pe.a(Lob;II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430216,7 +430416,7 @@
     },
     {
       "symbol": "P:pe.a(Lob;II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430227,7 +430427,7 @@
     },
     {
       "symbol": "P:pe.a(Lob;II)Ljava/lang/String;#2",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(LPacketBuffer;II)Ljava/lang/String;#2",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.readCompressedChatText(LPacketBuffer;II)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430238,7 +430438,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430249,7 +430449,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#1",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#1",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430260,7 +430460,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#2",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#2",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430271,7 +430471,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#3",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#3",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -430282,7 +430482,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#4",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#4",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -430293,7 +430493,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#5",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#5",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -430304,7 +430504,7 @@
     },
     {
       "symbol": "P:pe.a(Z[IZI[IZLsr;)V#6",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.a(Z[IZI[IZLMeshData;)V#6",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.projectMeshAndBucketFaces(Z[IZI[IZLMeshData;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -430315,7 +430515,7 @@
     },
     {
       "symbol": "P:pe.k(I)V#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.k(I)V#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.handleTutorialTurnEnd(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430326,7 +430526,7 @@
     },
     {
       "symbol": "P:pe.l(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.l(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.getLinkMarkupStart(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430337,7 +430537,7 @@
     },
     {
       "symbol": "P:pe.m(I)Lqr;#0",
-      "renamedSymbol": "P:UnderageAccountInfoPanel.m(I)LAnimatedPanel;#0",
+      "renamedSymbol": "P:UnderageAccountInfoPanel.getRoomPlayerListContent(I)LAnimatedPanel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -460712,7 +460912,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "2881ab6a4038591313084bb40b4d6c0de6d75c3fc40fed0b7d50f60ce9bfed50",
+      "outputSha256": "d62c2ce9ac9c877b47e95502f25a15397dd3fbf172ef209055b3754588982135",
       "edits": [
         {
           "start": 86,
@@ -462095,6 +462295,13 @@
           "renamed": "UnderageAccountInfoPanel"
         },
         {
+          "start": 9743,
+          "end": 9744,
+          "symbol": "M:pe.m(I)Lqr;",
+          "original": "m",
+          "renamed": "getRoomPlayerListContent"
+        },
+        {
           "start": 9756,
           "end": 9758,
           "symbol": "C:js",
@@ -463417,6 +463624,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 18372,
+          "end": 18373,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
         },
         {
           "start": 18793,
@@ -466443,6 +466657,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 28894,
+          "end": 28895,
+          "symbol": "M:oh.a(Z)V",
+          "original": "a",
+          "renamed": "clearIntrusiveNodeStatics"
+        },
+        {
           "start": 28911,
           "end": 28912,
           "symbol": "C:c",
@@ -469264,6 +469485,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 33674,
+          "end": 33675,
+          "symbol": "M:ol.a(Z)V",
+          "original": "a",
+          "renamed": "clearWeightedLruCacheStatics"
+        },
+        {
           "start": 33692,
           "end": 33694,
           "symbol": "C:li",
@@ -469759,6 +469987,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 34500,
+          "end": 34501,
+          "symbol": "M:pe.a(B)V",
+          "original": "a",
+          "renamed": "clearUnderagePanelStatics"
         },
         {
           "start": 34523,
@@ -472764,6 +472999,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 45245,
+          "end": 45246,
+          "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
+          "original": "a",
+          "renamed": "drawAccountLoadingScreen"
+        },
+        {
           "start": 45321,
           "end": 45322,
           "symbol": "C:m",
@@ -472804,6 +473046,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 45392,
+          "end": 45393,
+          "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
+          "original": "a",
+          "renamed": "drawAccountLoadingScreen"
         },
         {
           "start": 45468,
@@ -474079,7 +474328,7 @@
       "original": "aa.java",
       "renamed": "AccountCreationForm.java",
       "inputSha256": "35dc0e643c81c3b478fa5541e86482b3c744b465d03d2bd7253bf9b8357b149a",
-      "outputSha256": "d26352432b646260f56cbfcfb6300593016299290c80d674ed9d62c6e76d7126",
+      "outputSha256": "589c9ea325262895489bef7e219dfaf95fa901f2ccbb3ab4defda59dfb88a593",
       "edits": [
         {
           "start": 50,
@@ -476376,6 +476625,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 27054,
+          "end": 27055,
+          "symbol": "M:ol.b(B)V",
+          "original": "b",
+          "renamed": "showGuestPlayForm"
         },
         {
           "start": 27164,
@@ -480284,7 +480540,7 @@
       "original": "ak.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "09c28e7df6409321535742b0c5b649a5cbd10bf228af3331bc1b4c912af18bc5",
-      "outputSha256": "fed91065f02ea1f485c581397d8cc4d5119cbe2f1806312dc290daeb9fb22868",
+      "outputSha256": "dcf8714aacc6e9f9cddc9ab32b8cec5a0f37ce00b1cbe16a732819c47795150b",
       "edits": [
         {
           "start": 50,
@@ -480775,6 +481031,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 4582,
+          "end": 4583,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
         },
         {
           "start": 4603,
@@ -487508,7 +487771,7 @@
       "original": "bc.java",
       "renamed": "Archive.java",
       "inputSha256": "0251dde79a293019ee424a736ad340cd2fc69eff2c0fcd6b301f6a7cd2cc9dde",
-      "outputSha256": "96bd7a86f665535c2afe36867224515663b7c9946b3c376b640d4ae16a3a5dcf",
+      "outputSha256": "92a30d377bde24aae7077603b9b3474b5bbf77694e2443b5c6c2f33c793e5a99",
       "edits": [
         {
           "start": 50,
@@ -488622,6 +488885,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 26803,
+          "end": 26804,
+          "symbol": "M:pa.a([BI)[B",
+          "original": "a",
+          "renamed": "decompressArchiveContainer"
         },
         {
           "start": 27276,
@@ -501490,7 +501760,7 @@
       "original": "cg.java",
       "renamed": "OpacityWidget.java",
       "inputSha256": "cda0d8116778e9c5b6a074208577ec1de1b7219639d67831d41a604d8275e933",
-      "outputSha256": "bd847395eae2f40382097cdb0d9addee2168ffb41070b013aeff2e64991c3f21",
+      "outputSha256": "bd05e0e5b0fde21a4d1a9489fa107a30358a3b78413037f87d85b0b8ee22a33c",
       "edits": [
         {
           "start": 50,
@@ -501855,6 +502125,13 @@
           "symbol": "M:go.j(I)Z",
           "original": "j",
           "renamed": "hasStatusButtonSetting"
+        },
+        {
+          "start": 4444,
+          "end": 4445,
+          "symbol": "M:oj.f(Z)V",
+          "original": "f",
+          "renamed": "showAccountIneligibleResult"
         },
         {
           "start": 4501,
@@ -503278,7 +503555,7 @@
       "original": "ci.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "f40b227ca99424af2a84dcbfbc7d7fb579b6b9de9d001ba2def5d18139f15ace",
-      "outputSha256": "85af448959c02bcb251e6bd7f7122f54630cf9ba77645b85cfed42220e1ba5d7",
+      "outputSha256": "fd20c27e9e9a21c1d53398ceb3ad9c5e6392dcacb6467989111252344ff1b29c",
       "edits": [
         {
           "start": 50,
@@ -503349,6 +503626,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 2173,
+          "end": 2174,
+          "symbol": "M:pa.a([BI)[B",
+          "original": "a",
+          "renamed": "decompressArchiveContainer"
         },
         {
           "start": 2213,
@@ -575183,7 +575467,7 @@
       "original": "gq.java",
       "renamed": "QuickChatParameterType.java",
       "inputSha256": "ce401473a3b9659b21f4128dad97ad4741f59dc19bbe38861b4585b9d0d924e0",
-      "outputSha256": "9d23d4540035a9ae0da34a5ec24a696cabfbd4ed7db5ac2f177a0122c05e8604",
+      "outputSha256": "f9fc4915be2d379716ab6f1f02823ab990517696d3c8296c99ce800215edc261",
       "edits": [
         {
           "start": 50,
@@ -575737,6 +576021,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 8852,
+          "end": 8853,
+          "symbol": "M:pe.a(Z[IZI[IZLsr;)V",
+          "original": "a",
+          "renamed": "projectMeshAndBucketFaces"
         },
         {
           "start": 8860,
@@ -588278,7 +588569,7 @@
       "original": "hs.java",
       "renamed": "StandardMapGenerator.java",
       "inputSha256": "c8779931d828265affe2c7a870850ee24a98993940af41dc536b2f5b0a30faee",
-      "outputSha256": "21ca52396b2398164611b082e70d63615306331b2f9da8ccfcd17f7601ec9d98",
+      "outputSha256": "d608c143a3e77260f30445e5240e931530444c05165a9c3739d9ef1f7abd4c52",
       "edits": [
         {
           "start": 83,
@@ -588972,6 +589263,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 17155,
+          "end": 17156,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
         },
         {
           "start": 17183,
@@ -594949,7 +595247,7 @@
       "original": "im.java",
       "renamed": "PlayerOverlaySupport.java",
       "inputSha256": "e0af0e01d5deae5f9071fa1f804a80fef23cc8e9360c9fce5f72440472a3a9aa",
-      "outputSha256": "eca3f7bf7a7cf4f6400ceb0086601971730a21c645319f54cda6b2b9db776404",
+      "outputSha256": "86fdf01e863720fbcf148408b328aa5ce51ea5458ab0d99cb0a7965a382b74a8",
       "edits": [
         {
           "start": 50,
@@ -594987,6 +595285,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 407,
+          "end": 408,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
+        },
+        {
           "start": 468,
           "end": 470,
           "symbol": "C:kq",
@@ -595020,6 +595325,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 593,
+          "end": 594,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
         },
         {
           "start": 648,
@@ -600226,7 +600538,7 @@
       "original": "jc.java",
       "renamed": "ArchiveRequest.java",
       "inputSha256": "d9296a9ddeafbd379e2873893951773949205131a47d5e7ecb668e02ba42c09d",
-      "outputSha256": "a2371019d071bcd58cefdff1be17167b390d8adfec4d6efc744122f15fd95742",
+      "outputSha256": "adda654855cd6726fd7744d04659d95c05605ca8eb9480c08a65982ee96f41ec",
       "edits": [
         {
           "start": 53,
@@ -600381,6 +600693,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1499,
+          "end": 1500,
+          "symbol": "M:oh.c(B)[Lbg;",
+          "original": "c",
+          "renamed": "getLoginMethods"
         },
         {
           "start": 1621,
@@ -621587,7 +621906,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "4d6454cf016cb3ee2c2a48680b9d93cc7a2170b6255254977bc045b06e7d3806",
+      "outputSha256": "31f2a3937cb2f83284551f4550ba29f9c76f29c7fd8eb4f431e30bd638cd4407",
       "edits": [
         {
           "start": 50,
@@ -628163,6 +628482,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 126923,
+          "end": 126924,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
+        },
+        {
           "start": 126951,
           "end": 126952,
           "symbol": "M:km.j(I)V",
@@ -631219,7 +631545,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "9c688412c1eb40a6f2a5a41e978281a795a6325d36eeb985e78571c983f648bc",
+      "outputSha256": "db4ba62041fedce03a8b9fec620413a75802fe2086db064121ffc94f39f1f0c5",
       "edits": [
         {
           "start": 50,
@@ -632186,6 +632512,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 16490,
+          "end": 16491,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
         },
         {
           "start": 16492,
@@ -638789,6 +639122,13 @@
           "renamed": "UnderageAccountInfoPanel"
         },
         {
+          "start": 120517,
+          "end": 120518,
+          "symbol": "M:pe.k(I)V",
+          "original": "k",
+          "renamed": "handleTutorialTurnEnd"
+        },
+        {
           "start": 120542,
           "end": 120543,
           "symbol": "M:kq.a(B)V",
@@ -643761,6 +644101,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 196423,
+          "end": 196424,
+          "symbol": "M:ol.a(B)Los;",
+          "original": "a",
+          "renamed": "createStatusBar"
         },
         {
           "start": 196460,
@@ -671177,7 +671524,7 @@
       "original": "nd.java",
       "renamed": "IntroGlowPoint.java",
       "inputSha256": "989531981dae27a3d39c6c7c129e4f363db3a70d8def2c91cae94cf65e0cf748",
-      "outputSha256": "d373ad18e44045aba227e7503074a4fba8e3f498b1307bd6e56aa742ae77b068",
+      "outputSha256": "c5781944fa33f1c21a20e27425e478aebc7abea191c8df54502d19e5811df214",
       "edits": [
         {
           "start": 50,
@@ -671381,6 +671728,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 3455,
+          "end": 3456,
+          "symbol": "M:pa.a([Ljava/lang/String;Lsq;B)V",
+          "original": "a",
+          "renamed": "appendTutorialFlags"
         },
         {
           "start": 3816,
@@ -672250,7 +672604,7 @@
       "original": "nf.java",
       "renamed": "ChatHistoryEntry.java",
       "inputSha256": "e09ca9039222dfd3c5dcb2e0539262d9bba4d0c723f15ad01918e335a855a4ef",
-      "outputSha256": "71df55f535d97ed66651c9305844b677088066f815fa77da0b11824cc8b4afd8",
+      "outputSha256": "90ef9798ed994e3255015c0feacfce6ddf4f3a09ba3f5d60946934bfb264baa4",
       "edits": [
         {
           "start": 50,
@@ -672470,6 +672824,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 3382,
+          "end": 3383,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
+        },
+        {
           "start": 3488,
           "end": 3490,
           "symbol": "C:re",
@@ -672496,6 +672857,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 3527,
+          "end": 3528,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
         },
         {
           "start": 3720,
@@ -675097,7 +675465,7 @@
       "original": "no.java",
       "renamed": "TutorialStageSupport.java",
       "inputSha256": "7e0f6b53e5ba790bcadf77b34d0f251f41bd0696681787c7f6e480594a4bd751",
-      "outputSha256": "13d02ada347cf74649344c45a62db2ef8b64d33c7189999272bfb94351696a8e",
+      "outputSha256": "2003dd0446c1e8b15a254c8939b5b7ff19a6334a7ac73dfc7e974bde076f0dca",
       "edits": [
         {
           "start": 50,
@@ -675560,6 +675928,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 5972,
+          "end": 5973,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
         },
         {
           "start": 6092,
@@ -676211,6 +676586,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 11522,
+          "end": 11523,
+          "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
+          "original": "a",
+          "renamed": "drawAccountLoadingScreen"
         },
         {
           "start": 12089,
@@ -684448,7 +684830,7 @@
       "original": "oh.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "17d35fe2b28688a825a296efb3de42f8b1c198dfa870c11f450083ce5b1ec879",
-      "outputSha256": "2bb93e28027f81387c843f2865c20ae10a0ce420b0bb0784d18df3fe2ff21c99",
+      "outputSha256": "af735adad41742a03cc39c6deff6a385826bf838207abadfa670dd92d0136038",
       "edits": [
         {
           "start": 44,
@@ -684549,6 +684931,13 @@
           "renamed": "MusicPatch"
         },
         {
+          "start": 574,
+          "end": 575,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
+        },
+        {
           "start": 613,
           "end": 615,
           "symbol": "C:gm",
@@ -684626,6 +685015,13 @@
           "renamed": "LoginMethodPreference"
         },
         {
+          "start": 924,
+          "end": 925,
+          "symbol": "M:oh.c(B)[Lbg;",
+          "original": "c",
+          "renamed": "getLoginMethods"
+        },
+        {
           "start": 991,
           "end": 993,
           "symbol": "C:bg",
@@ -684659,6 +685055,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1055,
+          "end": 1056,
+          "symbol": "M:oh.a(Z)V",
+          "original": "a",
+          "renamed": "clearIntrusiveNodeStatics"
         },
         {
           "start": 1084,
@@ -684801,11 +685204,32 @@
           "renamed": "next"
         },
         {
+          "start": 1593,
+          "end": 1594,
+          "symbol": "M:oh.a(Z)V",
+          "original": "a",
+          "renamed": "clearIntrusiveNodeStatics"
+        },
+        {
           "start": 1775,
           "end": 1777,
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1778,
+          "end": 1779,
+          "symbol": "M:oh.b(Z)Z",
+          "original": "b",
+          "renamed": "hasActiveAccountSocket"
+        },
+        {
+          "start": 1915,
+          "end": 1916,
+          "symbol": "M:oh.b(Z)Z",
+          "original": "b",
+          "renamed": "hasActiveAccountSocket"
         },
         {
           "start": 1979,
@@ -684876,6 +685300,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 2479,
+          "end": 2480,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
         }
       ]
     },
@@ -685262,7 +685693,7 @@
       "original": "oj.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "976948de6ad9f45ab94f9099172da1710f34c35084d3a75bbd760f008635a398",
-      "outputSha256": "5d9efcd61d00346440885f935890f3c574e780d9e358be30ef65f4b694f6b30e",
+      "outputSha256": "e07decb9502aa1ea60a924b305862b0d525756261139da4bec7e9fd41e7d11eb",
       "edits": [
         {
           "start": 50,
@@ -685312,6 +685743,13 @@
           "symbol": "C:aa",
           "original": "aa",
           "renamed": "AccountCreationForm"
+        },
+        {
+          "start": 371,
+          "end": 372,
+          "symbol": "M:oj.a(ILbc;)V",
+          "original": "a",
+          "renamed": "loadLogoMeshes"
         },
         {
           "start": 385,
@@ -685552,6 +685990,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 3312,
+          "end": 3313,
+          "symbol": "M:oj.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "clearSessionAndReload"
+        },
+        {
           "start": 3379,
           "end": 3381,
           "symbol": "C:hp",
@@ -685650,6 +686095,13 @@
           "renamed": "pollAccountRequestResult"
         },
         {
+          "start": 4187,
+          "end": 4188,
+          "symbol": "M:oj.a(IZLkj;)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
           "start": 4291,
           "end": 4292,
           "symbol": "M:il.a(B)Z",
@@ -685711,6 +686163,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 4807,
+          "end": 4808,
+          "symbol": "M:oj.a(IZLkj;)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
         },
         {
           "start": 4837,
@@ -685937,6 +686396,20 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 7451,
+          "end": 7452,
+          "symbol": "M:oj.f(Z)V",
+          "original": "f",
+          "renamed": "showAccountIneligibleResult"
+        },
+        {
+          "start": 7484,
+          "end": 7485,
+          "symbol": "M:oj.a(IZLkj;)V",
+          "original": "a",
+          "renamed": "showAccountCreationResult"
+        },
+        {
           "start": 7496,
           "end": 7498,
           "symbol": "C:ck",
@@ -685956,6 +686429,13 @@
           "symbol": "C:sg",
           "original": "sg",
           "renamed": "IconLabelPanel"
+        },
+        {
+          "start": 7564,
+          "end": 7565,
+          "symbol": "M:oj.f(Z)V",
+          "original": "f",
+          "renamed": "showAccountIneligibleResult"
         },
         {
           "start": 7743,
@@ -685985,7 +686465,7 @@
       "original": "ol.java",
       "renamed": "WeightedLruCache.java",
       "inputSha256": "cff33d3fcfba8bbca1d1fdee67f6e1f1538da13b0d269e8ef7c16db36caa2240",
-      "outputSha256": "a881bbd4daebd4205542594d24ccdc0dbfefaa77e43eb549000efea97992e7fd",
+      "outputSha256": "c83791e2aa859426d25de24a4c2e6658165e5b272de4cf276054fc672ba24bb9",
       "edits": [
         {
           "start": 50,
@@ -686156,6 +686636,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 1524,
+          "end": 1525,
+          "symbol": "M:ol.a(Z)V",
+          "original": "a",
+          "renamed": "clearWeightedLruCacheStatics"
+        },
+        {
           "start": 1622,
           "end": 1623,
           "symbol": "M:mc.e(B)Ljava/lang/Object;",
@@ -686324,11 +686811,25 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 2972,
+          "end": 2973,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
+        },
+        {
           "start": 3027,
           "end": 3029,
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 3030,
+          "end": 3031,
+          "symbol": "M:ol.a(Z)V",
+          "original": "a",
+          "renamed": "clearWeightedLruCacheStatics"
         },
         {
           "start": 3061,
@@ -686415,6 +686916,13 @@
           "renamed": "hasClientOverlay"
         },
         {
+          "start": 3652,
+          "end": 3653,
+          "symbol": "M:ol.b(B)V",
+          "original": "b",
+          "renamed": "showGuestPlayForm"
+        },
+        {
           "start": 3677,
           "end": 3679,
           "symbol": "C:ae",
@@ -686443,11 +686951,25 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 3748,
+          "end": 3749,
+          "symbol": "M:ol.a(Z)V",
+          "original": "a",
+          "renamed": "clearWeightedLruCacheStatics"
+        },
+        {
           "start": 3792,
           "end": 3794,
           "symbol": "C:os",
           "original": "os",
           "renamed": "RoundedMenuPanel"
+        },
+        {
+          "start": 3795,
+          "end": 3796,
+          "symbol": "M:ol.a(B)Los;",
+          "original": "a",
+          "renamed": "createStatusBar"
         },
         {
           "start": 3820,
@@ -686758,11 +687280,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 6425,
+          "end": 6426,
+          "symbol": "M:ol.a(Z)V",
+          "original": "a",
+          "renamed": "clearWeightedLruCacheStatics"
+        },
+        {
           "start": 6678,
           "end": 6680,
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 6681,
+          "end": 6682,
+          "symbol": "M:ol.b(B)V",
+          "original": "b",
+          "renamed": "showGuestPlayForm"
         },
         {
           "start": 6787,
@@ -692667,7 +693203,7 @@
       "original": "pa.java",
       "renamed": "ProxySocketConnector.java",
       "inputSha256": "682fcec0a1aadf74ecdbbb74fe9c01affc627b9ce0c53bd46f20b5e88dd1293b",
-      "outputSha256": "32c36465b5297b9af65c6e45efb6739d196fcb5fcde01adc0f40b3cf625ad469",
+      "outputSha256": "96a814de8009a56abcfcb810ad5e189c44b8dd1ab1e63258173d297a1927c215",
       "edits": [
         {
           "start": 89,
@@ -692682,6 +693218,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 256,
+          "end": 257,
+          "symbol": "M:pa.a([BI)[B",
+          "original": "a",
+          "renamed": "decompressArchiveContainer"
         },
         {
           "start": 736,
@@ -692859,6 +693402,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 6657,
+          "end": 6658,
+          "symbol": "M:pa.a(ILjava/awt/Canvas;)V",
+          "original": "a",
+          "renamed": "drawAccountLoadingScreen"
+        },
+        {
           "start": 6709,
           "end": 6711,
           "symbol": "C:gm",
@@ -692941,6 +693491,13 @@
           "symbol": "M:pa.d(I)V",
           "original": "d",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 7330,
+          "end": 7331,
+          "symbol": "M:pa.a([Ljava/lang/String;Lsq;B)V",
+          "original": "a",
+          "renamed": "appendTutorialFlags"
         },
         {
           "start": 7347,
@@ -693032,6 +693589,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 13076,
+          "end": 13077,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
         },
         {
           "start": 13078,
@@ -693165,6 +693729,13 @@
           "symbol": "M:li.a(I)Ljava/net/Socket;",
           "original": "a",
           "renamed": "connectDirect"
+        },
+        {
+          "start": 18552,
+          "end": 18553,
+          "symbol": "M:pa.c(I)V",
+          "original": "c",
+          "renamed": "drawIntroColonizationScene"
         },
         {
           "start": 18596,
@@ -693333,6 +693904,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 19456,
+          "end": 19457,
+          "symbol": "M:pa.a(Lln;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "formatStarNameColour"
         },
         {
           "start": 19459,
@@ -694540,7 +695118,7 @@
       "original": "pe.java",
       "renamed": "UnderageAccountInfoPanel.java",
       "inputSha256": "a4a5152f8cc51eb372158637f2a67b697aae86b5aefab5afc739b4f89a8568fc",
-      "outputSha256": "61745072492c73a85f310bdb8d8c6cb09e56b7836efe7272f6dfbf3f9d2e5ef9",
+      "outputSha256": "996ae6465f8031a53be79624aab969e48c1e710af4a181ca6a6ab87a172beb56",
       "edits": [
         {
           "start": 50,
@@ -694599,6 +695177,13 @@
           "renamed": "AccountNoticeKind"
         },
         {
+          "start": 310,
+          "end": 311,
+          "symbol": "M:pe.a(B)V",
+          "original": "a",
+          "renamed": "clearUnderagePanelStatics"
+        },
+        {
           "start": 578,
           "end": 579,
           "symbol": "C:r",
@@ -694613,11 +695198,25 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 686,
+          "end": 687,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
+        },
+        {
           "start": 897,
           "end": 899,
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 900,
+          "end": 901,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
         },
         {
           "start": 1203,
@@ -694716,6 +695315,20 @@
           "symbol": "C:rn",
           "original": "rn",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 1921,
+          "end": 1922,
+          "symbol": "M:pe.l(I)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getLinkMarkupStart"
+        },
+        {
+          "start": 1933,
+          "end": 1934,
+          "symbol": "M:pe.a(I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getLinkMarkupEnd"
         },
         {
           "start": 1984,
@@ -694921,6 +695534,13 @@
           "renamed": "UnderageAccountInfoPanel"
         },
         {
+          "start": 4382,
+          "end": 4383,
+          "symbol": "M:pe.a(Z[IZI[IZLsr;)V",
+          "original": "a",
+          "renamed": "projectMeshAndBucketFaces"
+        },
+        {
           "start": 4437,
           "end": 4439,
           "symbol": "C:sr",
@@ -694942,6 +695562,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 5155,
+          "end": 5156,
+          "symbol": "M:pe.l(I)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getLinkMarkupStart"
+        },
+        {
           "start": 5747,
           "end": 5748,
           "symbol": "C:r",
@@ -694956,6 +695583,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 5847,
+          "end": 5848,
+          "symbol": "M:pe.a(I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getLinkMarkupEnd"
+        },
+        {
           "start": 6351,
           "end": 6352,
           "symbol": "C:r",
@@ -694968,6 +695602,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 6450,
+          "end": 6451,
+          "symbol": "M:pe.a(Lob;II)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "readCompressedChatText"
         },
         {
           "start": 6452,
@@ -695101,6 +695742,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 9690,
+          "end": 9691,
+          "symbol": "M:pe.k(I)V",
+          "original": "k",
+          "renamed": "handleTutorialTurnEnd"
         },
         {
           "start": 9803,
@@ -695481,6 +696129,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 12432,
+          "end": 12433,
+          "symbol": "M:pe.a(Z[IZI[IZLsr;)V",
+          "original": "a",
+          "renamed": "projectMeshAndBucketFaces"
+        },
+        {
           "start": 12522,
           "end": 12524,
           "symbol": "C:sr",
@@ -695726,6 +696381,13 @@
           "symbol": "C:qr",
           "original": "qr",
           "renamed": "AnimatedPanel"
+        },
+        {
+          "start": 22640,
+          "end": 22641,
+          "symbol": "M:pe.m(I)Lqr;",
+          "original": "m",
+          "renamed": "getRoomPlayerListContent"
         },
         {
           "start": 22702,
@@ -714687,7 +715349,7 @@
       "original": "rd.java",
       "renamed": "StandardMapReader.java",
       "inputSha256": "115e869443dd0943b3f8bc9ccf0747b17b8e00ebb037758748e31a8f41488615",
-      "outputSha256": "3ce7bcf8516f2792490ef11d264d6536fa2165215a24dfbde4a60e8947fed9f8",
+      "outputSha256": "b437aab3533f6b12b0c28ebca4d4951957333144b89d1f52cc25bb79b853127d",
       "edits": [
         {
           "start": 50,
@@ -714793,6 +715455,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 656,
+          "end": 657,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
         },
         {
           "start": 684,
@@ -716757,7 +717426,7 @@
       "original": "ri.java",
       "renamed": "LoginForm.java",
       "inputSha256": "8f8b5ad2325108553cf90f8769ad363cad3625c04ae8063cfde58de11a16a5fc",
-      "outputSha256": "ff42e5457d6496f734d7fa87326964a4eec3ed7589aae849df3acae934287607",
+      "outputSha256": "ead3702b2c182d3a0416b201e8881cfb5b1f1c1f9d15ec6e4a8f356776d7190f",
       "edits": [
         {
           "start": 50,
@@ -717859,6 +718528,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 14716,
+          "end": 14717,
+          "symbol": "M:ol.b(B)V",
+          "original": "b",
+          "renamed": "showGuestPlayForm"
+        },
+        {
           "start": 14779,
           "end": 14781,
           "symbol": "C:qc",
@@ -718862,7 +719538,7 @@
       "original": "rn.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "5ca8332d6cdb32529a2614e2768c0d7b4029d75b1014a3b7dc2b23b195988bb8",
-      "outputSha256": "999761f95085f1570115c4b83000aa4c8938790e476be262c3a85da79c742cb3",
+      "outputSha256": "779988ae2be0d28ffa067e978f5b4237ad1abef09c653e2c2a6502f49c46038d",
       "edits": [
         {
           "start": 50,
@@ -721019,6 +721695,13 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "AccountCreationDialog"
+        },
+        {
+          "start": 16631,
+          "end": 16632,
+          "symbol": "M:oj.a(ILbc;)V",
+          "original": "a",
+          "renamed": "loadLogoMeshes"
         },
         {
           "start": 16666,
@@ -730009,7 +730692,7 @@
       "original": "sh.java",
       "renamed": "SolMapReader.java",
       "inputSha256": "0740a169845de1d7a06ce0018f7b5d52f33cdd49b6a3d4176d832ef40b2d1d4e",
-      "outputSha256": "f41908ec7c8a38f3c58517b0b59e1addf2a89832f539fc27f250f118aa48d5d6",
+      "outputSha256": "dfd2846ce28dd22751ecfbb24d5bc5e1864aa286550217386bc8fbc0a1199a79",
       "edits": [
         {
           "start": 50,
@@ -730101,6 +730784,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 579,
+          "end": 580,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
         },
         {
           "start": 612,
@@ -732910,7 +733600,7 @@
       "original": "sk.java",
       "renamed": "DelayedInboundPacket.java",
       "inputSha256": "1325d7bcea85f79b41d69fc0c356163f74da4c1230198fee55f206b780c0dfa1",
-      "outputSha256": "bc1f21ade5f65a34cee21aa4e2de8b78af7fe311619b53ea8ba49dc9ee1a8ff5",
+      "outputSha256": "a1a3cacb3216734e64f8f9c2efb52c30f71d3e84f74aa5d1e810d521f9d02cfc",
       "edits": [
         {
           "start": 50,
@@ -733205,6 +733895,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 1745,
+          "end": 1746,
+          "symbol": "M:pe.a(Lob;II)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "readCompressedChatText"
         },
         {
           "start": 1780,
@@ -749745,7 +750442,7 @@
       "original": "ta.java",
       "renamed": "MenuTransitionSupport.java",
       "inputSha256": "73732b64e10db806f07507e76b061212f1b9e18c1ecf0986447d65f5886ab5bf",
-      "outputSha256": "5f7a060185eacaac71a1a10cdeddd64b24d6e5ec8a21bea19d29d85f8c8dd24e",
+      "outputSha256": "efd60b85daf7b51dd7e89677efdabe874ad5b82d8a635f5baffeb697c5f6eeca",
       "edits": [
         {
           "start": 50,
@@ -749858,6 +750555,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 2793,
+          "end": 2794,
+          "symbol": "M:ol.a(I)Z",
+          "original": "a",
+          "renamed": "hasBlockingOverlay"
         },
         {
           "start": 2848,
@@ -759726,7 +760430,7 @@
       "original": "tl.java",
       "renamed": "GameClientShell.java",
       "inputSha256": "6582e21836e96a58084b10e2a84761a43d703b8c313b9cf8192c638fda00c443",
-      "outputSha256": "55a07e8185e3ea7e3242af2c464888095838f9c4b09e0ae3b9ee038817059278",
+      "outputSha256": "e51f555920186205a2fe7f009b1a4a8c4ad4ae7ffc6c47e628ae6e435973c79f",
       "edits": [
         {
           "start": 53,
@@ -760240,6 +760944,13 @@
           "renamed": "AccountCreationDialog"
         },
         {
+          "start": 3616,
+          "end": 3617,
+          "symbol": "M:oj.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "clearSessionAndReload"
+        },
+        {
           "start": 3621,
           "end": 3623,
           "symbol": "C:kq",
@@ -760329,6 +761040,13 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "AccountCreationDialog"
+        },
+        {
+          "start": 3977,
+          "end": 3978,
+          "symbol": "M:oj.a(ILjava/applet/Applet;)V",
+          "original": "a",
+          "renamed": "clearSessionAndReload"
         },
         {
           "start": 3991,
@@ -761514,6 +762232,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 12446,
+          "end": 12447,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
+        },
+        {
           "start": 12466,
           "end": 12468,
           "symbol": "C:bf",
@@ -761715,6 +762440,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 13253,
+          "end": 13254,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
         },
         {
           "start": 13284,
@@ -763262,6 +763994,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 20659,
+          "end": 20660,
+          "symbol": "M:oh.b(I)V",
+          "original": "b",
+          "renamed": "requestReconnectUi"
         },
         {
           "start": 20675,
@@ -772969,7 +773708,7 @@
       "original": "ts.java",
       "renamed": "TextHotspotWidget.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "becf694df999db3241614041fe69667e1e41e1537e5fee6e81e90064eb8fee17",
+      "outputSha256": "7b1c1e9b1ee69583d5e2665f9fea036abe867c8b25b289108df20de0f1c45872",
       "edits": [
         {
           "start": 63,
@@ -773621,6 +774360,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 8871,
+          "end": 8872,
+          "symbol": "M:pa.c(I)V",
+          "original": "c",
+          "renamed": "drawIntroColonizationScene"
         },
         {
           "start": 8931,
@@ -789739,7 +790485,7 @@
       "original": "vi.java",
       "renamed": "TutorialMapGenerator.java",
       "inputSha256": "626e1af9f93c56b8394fd9da1c39f90bab3a8a0d31e952d5ddc53e895062cc42",
-      "outputSha256": "d543fd8141b1b9d19d157369a3bb6a9b0be40bb171247be1b1e7f73f3891b3b0",
+      "outputSha256": "0ce32d4202f7d83293ff0925132f53dd630ffac4f7582059c8403bb5cd922867",
       "edits": [
         {
           "start": 50,
@@ -804775,6 +805521,13 @@
           "renamed": "UnderageAccountInfoPanel"
         },
         {
+          "start": 167743,
+          "end": 167744,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
+        },
+        {
           "start": 167771,
           "end": 167773,
           "symbol": "C:ls",
@@ -804948,6 +805701,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "UnderageAccountInfoPanel"
+        },
+        {
+          "start": 169677,
+          "end": 169678,
+          "symbol": "M:pe.a(BI)I",
+          "original": "a",
+          "renamed": "computeMapWidth"
         },
         {
           "start": 169705,
@@ -811174,7 +811934,7 @@
       "original": "w.java",
       "renamed": "Dialog.java",
       "inputSha256": "6042a3f10f29e620916ab0f4c99c0c93e073be6934598a175d993ec0a6af251c",
-      "outputSha256": "e3fee104e3a5e3eaa0a1728e4d23d4390636454b12ecfd13ab036275f01966ff",
+      "outputSha256": "5af7c5663c1c3a5e307b8423f378af9c4ab5123cbf79a9b3443df020ee009f99",
       "edits": [
         {
           "start": 53,
@@ -811791,6 +812551,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6692,
+          "end": 6693,
+          "symbol": "M:oh.b(Z)Z",
+          "original": "b",
+          "renamed": "hasActiveAccountSocket"
         },
         {
           "start": 6713,
@@ -818513,10 +819280,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "101c32c87253b4c75df72fedef130b5daafd95a77c3ebca2ce37aada6238817e",
+    "rulesSha256": "756ac775c1bdf025643e7524000db6c6d973f7d1981c963da3610bcecef78eb0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "645b11e95652f2239ebbb1789b3099eee1b800b04ad31efc169c8845d22b21a5",
+    "outputTreeSha256": "a1a4d11afc2714881fb7e5ac42cae8111c3f839e501414101e753562f91c41da",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

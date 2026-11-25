@@ -3293,7 +3293,7 @@ final class GameSession implements AiHost {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 &&
-            !WeightedLruCache.a(-114)) {
+            !WeightedLruCache.hasBlockingOverlay(-114)) {
             this.handleCameraInput(50);
             if (var4 != 0) {
               this.field_Y.handlePointerInput(false, (byte) 110);

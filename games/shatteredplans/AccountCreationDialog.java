@@ -13,7 +13,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
     private boolean field_Hb;
     static String field_Ab;
 
-    final static void a(int param0, Archive param1) {
+    final static void loadLogoMeshes(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
         MeshData var5 = null;
@@ -99,7 +99,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void clearSessionAndReload(int param0, java.applet.Applet param1) {
         try {
           DerelictVictoryChecker.writeSessionCookie((byte) 28, param1, "");
           ChatPanelLayoutSupport.reloadGamePage(param1, (byte) -127);
@@ -126,7 +126,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         }
         AccountRequestResult var2_ref_kj = MusicPatch.pollAccountRequestResult(65536);
         if (var2_ref_kj != null) {
-          this.a(17, false, var2_ref_kj);
+          this.showAccountCreationResult(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
           return super.animate((byte) 30);
         }
@@ -143,7 +143,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         }
     }
 
-    private final void a(int param0, boolean param1, AccountRequestResult param2) {
+    private final void showAccountCreationResult(int param0, boolean param1, AccountRequestResult param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -219,10 +219,10 @@ final class AccountCreationDialog extends AccountStatusDialog implements ButtonL
         }
     }
 
-    final void f(boolean param0) {
-        this.a(17, true, GameAssetSetupSupport.createStatusResult(IconLabelPanel.field_xb, 248, -110));
+    final void showAccountIneligibleResult(boolean param0) {
+        this.showAccountCreationResult(17, true, GameAssetSetupSupport.createStatusResult(IconLabelPanel.field_xb, 248, -110));
         if (param0) {
-          this.f(false);
+          this.showAccountIneligibleResult(false);
         }
     }
 

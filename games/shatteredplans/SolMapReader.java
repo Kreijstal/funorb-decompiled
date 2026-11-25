@@ -24,7 +24,7 @@ final class SolMapReader implements MapGenerator {
         int var11Lifetime1;
         int var12Lifetime1;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = UnderageAccountInfoPanel.a((byte) 34, 11);
+        var2 = UnderageAccountInfoPanel.computeMapWidth((byte) 34, 11);
         var3 = GalaxyMapLayoutSupport.computeMapHeight(11, 2);
         var5 = -65 / ((-67 - param0) / 44);
         var4 = new GalaxyMap(var2, var3, this.field_d, 73);

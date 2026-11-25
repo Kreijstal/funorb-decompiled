@@ -467,7 +467,7 @@ final class GameScreen {
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = DefensiveAi.parseDecimalInteger((CharSequence) ((Object) param0.substring(9)), 2);
             SpriteResourceSupport.field_d = TextReplacementEntry.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.a(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
+            PopupPlacementSupport.field_m.putReplacement(ProxySocketConnector.formatStarNameColour(SpriteResourceSupport.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -3163,7 +3163,7 @@ final class GameScreen {
             this.selectStatisticsCategory(0, (byte) 1);
           }
           if (this.field_s.field_W) {
-            UnderageAccountInfoPanel.k(112);
+            UnderageAccountInfoPanel.handleTutorialTurnEnd(112);
             this.finishTurnIntroduction((byte) -109);
             if (var5 == 0) {
               return;
@@ -5084,7 +5084,7 @@ final class GameScreen {
             this.field_nb = SecondaryNodeHashTable.a(var2_int, true);
             this.field_y.addLast((byte) -113, this.field_nb);
           }
-          this.field_k = WeightedLruCache.a((byte) 69);
+          this.field_k = WeightedLruCache.createStatusBar((byte) 69);
           this.field_y.addLast((byte) -113, this.field_k);
           if (null != this.field_s.field_n) {
             this.field_S = new ToggleButton(511, 25, MusicCrossfadeStream.field_F.field_z, MusicCrossfadeStream.field_F.field_w, -1, MusicCrossfadeStream.field_F, (String) null, 0, -1, DiskArchiveRequest.field_x, (String) null, 0);

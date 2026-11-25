@@ -19,7 +19,7 @@ class IntrusiveNode {
         return 6144 <= param0 ? MusicPatch.field_o[-6144 + param0] : -MusicPatch.field_o[-param0 + 6144];
     }
 
-    final static void b(int param0) {
+    final static void requestReconnectUi(int param0) {
         if (param0 == ~SoundPlayback.field_i) {
           MenuLabel.g(-125);
           SoundPlayback.field_i = 11;
@@ -35,11 +35,11 @@ class IntrusiveNode {
         GameSpriteResources.field_f = true;
     }
 
-    final static LoginMethodPreference[] c(byte param0) {
+    final static LoginMethodPreference[] getLoginMethods(byte param0) {
         if (param0 == -90) {
           return new LoginMethodPreference[]{CheckboxWidgetPainter.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
         }
-        IntrusiveNode.a(false);
+        IntrusiveNode.clearIntrusiveNodeStatics(false);
         return new LoginMethodPreference[]{CheckboxWidgetPainter.field_b, ObjectList.field_f, LobbyPlayerEntry.field_Rb};
     }
 
@@ -60,7 +60,7 @@ class IntrusiveNode {
         this.next = null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearIntrusiveNodeStatics(boolean param0) {
         if (param0) {
           field_g = null;
           field_d = null;
@@ -68,14 +68,14 @@ class IntrusiveNode {
           field_a = null;
           return;
         }
-        IntrusiveNode.b(true);
+        IntrusiveNode.hasActiveAccountSocket(true);
         field_g = null;
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean hasActiveAccountSocket(boolean param0) {
         if (!param0) {
           field_d = (Sprite[]) null;
           if (ClientLobbyResources.field_f == null) {
@@ -100,7 +100,7 @@ class IntrusiveNode {
           return false;
         }
         if (param0 != 2048) {
-          IntrusiveNode.b(12);
+          IntrusiveNode.requestReconnectUi(12);
           return true;
         }
         return true;

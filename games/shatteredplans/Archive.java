@@ -784,7 +784,7 @@ final class Archive {
             var9 = TutorialScene.unwrapByteArray(-1, this.field_m[param2], false);
           }
           try {
-            var34 = ProxySocketConnector.a(var9, 200);
+            var34 = ProxySocketConnector.decompressArchiveContainer(var9, 200);
             var27 = var34;
             var23 = var27;
             var41 = var23;

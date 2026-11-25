@@ -126,7 +126,7 @@ final class OpacityWidget extends SingleChildWidget {
           var8 = new AccountCreationDialog(ByteArrayStorage.field_e, param5);
           ByteArrayStorage.field_e.addDialog(true, var8);
           if (TextFieldWidget.hasStatusButtonSetting(0)) {
-            var8.f(false);
+            var8.showAccountIneligibleResult(false);
             return true;
           }
           PrivateChatMessage.field_l = ExternalLinkSupport.field_a;

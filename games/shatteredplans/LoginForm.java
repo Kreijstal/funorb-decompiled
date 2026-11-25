@@ -386,7 +386,7 @@ final class LoginForm extends WidgetContainer implements TextFieldListener, Butt
                   WidgetTheme.requestQuitToWebsite(0);
                 } else {
                   if (this.field_D) {
-                    WeightedLruCache.b((byte) -125);
+                    WeightedLruCache.showGuestPlayForm((byte) -125);
                   } else {
                     SocketArchiveNetworkClient.requestLoginBackAction(30252);
                   }

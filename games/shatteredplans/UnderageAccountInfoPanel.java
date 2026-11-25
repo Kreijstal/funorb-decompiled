@@ -11,7 +11,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
     static int field_K;
     static String field_F;
 
-    public static void a(byte param0) {
+    public static void clearUnderagePanelStatics(byte param0) {
         try {
           field_F = null;
           field_E = null;
@@ -23,13 +23,13 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int computeMapWidth(byte param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 34) {
-            UnderageAccountInfoPanel.a((byte) 11, 4);
+            UnderageAccountInfoPanel.computeMapWidth((byte) 11, 4);
           }
           stackIn_4_0 = param1 * 200 + 100;
           return stackIn_4_0;
@@ -56,7 +56,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           this.field_I = param0;
           this.field_H = new FocusableWidget(QuickChatParameterType.field_b, (WidgetListener) null);
           this.field_H.field_p = (WidgetPainter) ((Object) new SpriteStripButtonPainter());
-          var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          var2 = QuickChatPhraseRegistry.replaceNumberedPlaceholders(DiskCacheWorker.field_e, 4371, new String[]{this.getLinkMarkupStart(98), this.getLinkMarkupEnd(56)});
           var3 = 20;
           var4 = new WidgetTheme(StatefulWidgetTheme.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
           this.field_G = new TextHotspotWidget(var2, var4);
@@ -118,7 +118,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
             SoundPlayback.requestGameWebPage(57, "terms.ws");
           }
           if (param2 != 2) {
-            UnderageAccountInfoPanel.a(false, (int[]) null, false, 25, (int[]) null, true, (MeshData) null);
+            UnderageAccountInfoPanel.projectMeshAndBucketFaces(false, (int[]) null, false, 25, (int[]) null, true, (MeshData) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    private final String l(int param0) {
+    private final String getLinkMarkupStart(int param0) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -154,7 +154,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    private final String a(int param0) {
+    private final String getLinkMarkupEnd(int param0) {
         String stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -170,7 +170,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static String a(PacketBuffer param0, int param1, int param2) {
+    final static String readCompressedChatText(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -248,7 +248,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static void k(int param0) {
+    final static void handleTutorialTurnEnd(int param0) {
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
         BattleEvent var1 = null;
@@ -318,7 +318,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static void a(boolean param0, int[] param1, boolean param2, int param3, int[] param4, boolean param5, MeshData param6) {
+    final static void projectMeshAndBucketFaces(boolean param0, int[] param1, boolean param2, int param3, int[] param4, boolean param5, MeshData param6) {
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -530,7 +530,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
         }
     }
 
-    final static AnimatedPanel m(int param0) {
+    final static AnimatedPanel getRoomPlayerListContent(int param0) {
         RuntimeException var1 = null;
         AnimatedPanel stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;

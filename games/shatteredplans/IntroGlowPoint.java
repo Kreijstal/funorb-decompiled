@@ -94,7 +94,7 @@ final class IntroGlowPoint {
                                 var8.field_r = true;
                               }
                             } else {
-                              ProxySocketConnector.a((String[]) (var6), var8, (byte) -127);
+                              ProxySocketConnector.appendTutorialFlags((String[]) (var6), var8, (byte) -127);
                             }
                           }
                         }

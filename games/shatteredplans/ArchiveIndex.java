@@ -82,7 +82,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var17 = new PacketBuffer(ProxySocketConnector.a(param0, 200));
+          var17 = new PacketBuffer(ProxySocketConnector.decompressArchiveContainer(param0, 200));
           var4 = var17.readUnsignedByte(-89);
           if (var4 >= 5 &&
             var4 <= 7) {
